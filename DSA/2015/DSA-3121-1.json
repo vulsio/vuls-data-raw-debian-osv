@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3121-1",
+	"modified": "2023-10-16T00:11:47.276725Z",
+	"published": "2015-01-08T00:00:00Z",
+	"related": [
+		"CVE-2014-8116",
+		"CVE-2014-8117",
+		"CVE-2014-9620",
+		"CVE-2014-9652"
+	],
+	"summary": "file - security update",
+	"details": "\nMultiple security issues have been found in file, a tool/library to \ndetermine a file type. Processing a malformed file could result in\ndenial of service. Most of the changes are related to parsing ELF\nfiles.\n\n\nAs part of the fixes, several limits on aspects of the detection were\nadded or tightened, sometimes resulting in messages like recursion\nlimit exceeded or too many program header sections.\n\n\nTo mitigate such shortcomings, these limits are controllable by a new\n- -P, --parameter option in the file program.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 5.11-2+deb7u7.\n\n\nFor the upcoming stable distribution (jessie), these problems will be\nfixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:5.21+15-1.\n\n\nWe recommend that you upgrade your file packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "file",
+				"purl": "pkg:deb/debian/file?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.11-2+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.11-2",
+				"5.11-2+deb7u1",
+				"5.11-2+deb7u2",
+				"5.11-2+deb7u3",
+				"5.11-2+deb7u4",
+				"5.11-2+deb7u5",
+				"5.11-2+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3121-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3121"
+		}
+	]
+}

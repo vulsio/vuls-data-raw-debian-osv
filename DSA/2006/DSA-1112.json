@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1112",
+	"modified": "2023-10-16T00:05:12.573178Z",
+	"published": "2006-07-18T00:00:00Z",
+	"related": [
+		"CVE-2006-3081",
+		"CVE-2006-3469"
+	],
+	"summary": "mysql-dfsg-4.1 - several vulnerabilities",
+	"details": "\nSeveral local vulnerabilities have been discovered in the MySQL database\nserver, which may lead to denial of service. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2006-3081](https://security-tracker.debian.org/tracker/CVE-2006-3081)\n\"Kanatoko\" discovered that the server can be crashed with feeding\n NULL values to the str\\_to\\_date() function.\n* [CVE-2006-3469](https://security-tracker.debian.org/tracker/CVE-2006-3469)\nJean-David Maillefer discovered that the server can be crashed with\n specially crafted date\\_format() function calls.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 4.1.11a-4sarge5.\n\n\nFor the unstable distribution (sid) does no longer contain MySQL 4.1\npackages. MySQL 5.0 from sid is not affected.\n\n\nWe recommend that you upgrade your mysql-dfsg-4.1 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mysql-dfsg-4.1",
+				"purl": "pkg:deb/debian/mysql-dfsg-4.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.11a-4sarge5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.11a-4",
+				"4.1.11a-4sarge1",
+				"4.1.11a-4sarge2",
+				"4.1.11a-4sarge3",
+				"4.1.11a-4sarge4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1112.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1112"
+		}
+	]
+}

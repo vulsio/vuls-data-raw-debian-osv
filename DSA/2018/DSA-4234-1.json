@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4234-1",
+	"modified": "2023-10-16T00:13:47.535689Z",
+	"published": "2018-06-22T00:00:00Z",
+	"related": [
+		"CVE-2018-12564",
+		"CVE-2018-12565"
+	],
+	"summary": "lava-server - security update",
+	"details": "\nTwo vulnerabilities were discovered in LAVA, a continuous integration\nsystem for deploying operating systems for running tests, which could\nresult in information disclosure of files readable by the lavaserver\nsystem user or the execution of arbitrary code via a XMLRPC call.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2016.12-3.\n\n\nWe recommend that you upgrade your lava-server packages.\n\n\nFor the detailed security status of lava-server please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/lava-server](https://security-tracker.debian.org/tracker/lava-server)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "lava-server",
+				"purl": "pkg:deb/debian/lava-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2016.12-3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2016.12-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4234-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4234"
+		}
+	]
+}

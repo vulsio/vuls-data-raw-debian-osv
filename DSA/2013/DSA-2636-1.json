@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2636-1",
+	"modified": "2023-10-16T00:11:22.523574Z",
+	"published": "2013-03-03T00:00:00Z",
+	"related": [
+		"CVE-2012-2625",
+		"CVE-2012-4544",
+		"CVE-2012-5511",
+		"CVE-2012-5634",
+		"CVE-2012-6333",
+		"CVE-2013-0153"
+	],
+	"summary": "xen - several",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2012-4544](https://security-tracker.debian.org/tracker/CVE-2012-4544)\nInsufficient validation of kernel or ramdisk sizes in the Xen PV\n domain builder could result in denial of service.\n* [CVE-2012-5511](https://security-tracker.debian.org/tracker/CVE-2012-5511)\nSeveral HVM control operations performed insufficient validation of\n input, which could result in denial of service through resource\n exhaustion.\n* [CVE-2012-5634](https://security-tracker.debian.org/tracker/CVE-2012-5634)\nIncorrect interrupt handling when using VT-d hardware could result\n in denial of service.\n* [CVE-2013-0153](https://security-tracker.debian.org/tracker/CVE-2013-0153)\nInsufficient restriction of interrupt access could result in denial\n of service.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 4.0.1-5.8.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 4.1.4-2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.1.4-2.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.1-5.7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.1-2",
+				"4.0.1-4",
+				"4.0.1-5",
+				"4.0.1-5.1",
+				"4.0.1-5.2",
+				"4.0.1-5.3",
+				"4.0.1-5.4",
+				"4.0.1-5.5",
+				"4.0.1-5.6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2636-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2636"
+		}
+	]
+}

@@ -1,0 +1,102 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4217-1",
+	"modified": "2023-10-16T00:05:06.371482Z",
+	"published": "2018-06-03T00:00:00Z",
+	"related": [
+		"CVE-2018-11358",
+		"CVE-2018-11362",
+		"CVE-2018-7334",
+		"CVE-2018-7335",
+		"CVE-2018-7419",
+		"CVE-2018-9261"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nIt was discovered that Wireshark, a network protocol analyzer, contained\nseveral vulnerabilities in the dissectors for PCP, ADB, NBAP, UMTS MAC,\nIEEE 802.11, SIGCOMP, LDSS, GSM A DTAP and Q.931, which result in denial\nof service or the execution of arbitrary code.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.12.1+g01b65bf-4+deb8u14.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.2.6+g32dac6a-2+deb9u3.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\nFor the detailed security status of wireshark please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/wireshark>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.1+g01b65bf-4+deb8u14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.1+g01b65bf-4",
+				"1.12.1+g01b65bf-4+deb8u1",
+				"1.12.1+g01b65bf-4+deb8u10",
+				"1.12.1+g01b65bf-4+deb8u11",
+				"1.12.1+g01b65bf-4+deb8u12",
+				"1.12.1+g01b65bf-4+deb8u13",
+				"1.12.1+g01b65bf-4+deb8u2",
+				"1.12.1+g01b65bf-4+deb8u3",
+				"1.12.1+g01b65bf-4+deb8u4",
+				"1.12.1+g01b65bf-4+deb8u5",
+				"1.12.1+g01b65bf-4+deb8u6",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u1",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u10",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u11",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u2",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u3",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u4",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u5",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u6",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u7",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u8",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u9",
+				"1.12.1+g01b65bf-4+deb8u7",
+				"1.12.1+g01b65bf-4+deb8u8",
+				"1.12.1+g01b65bf-4+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4217-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.6+g32dac6a-2+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.6+g32dac6a-2",
+				"2.2.6+g32dac6a-2+deb9u1",
+				"2.2.6+g32dac6a-2+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4217-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4217"
+		}
+	]
+}

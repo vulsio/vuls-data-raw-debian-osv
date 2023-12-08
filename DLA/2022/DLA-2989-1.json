@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2989-1",
+	"modified": "2023-06-28T06:26:45.598706Z",
+	"published": "2022-05-01T00:00:00Z",
+	"related": [
+		"CVE-2019-25059"
+	],
+	"summary": "ghostscript - security update",
+	"details": "\nA security vulnerability was found in Ghostscript, the GPL PostScript/PDF\ninterpreter. It was discovered that some privileged Postscript operators\nremained accessible from various places. For instance a specially crafted\nPostScript file could use this flaw in order to have access to the file\nsystem outside of the constrains imposed by -dSAFER.\n\n\nThis problem exists because of an incomplete fix for [CVE-2019-3839](https://security-tracker.debian.org/tracker/CVE-2019-3839).\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n9.26a~dfsg-0+deb9u9.\n\n\nWe recommend that you upgrade your ghostscript packages.\n\n\nFor the detailed security status of ghostscript please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ghostscript>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ghostscript",
+				"purl": "pkg:deb/debian/ghostscript?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.26a~dfsg-0+deb9u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.20~dfsg-3.2",
+				"9.20~dfsg-3.2+deb9u1",
+				"9.20~dfsg-3.2+deb9u2",
+				"9.20~dfsg-3.2+deb9u3",
+				"9.20~dfsg-3.2+deb9u4",
+				"9.20~dfsg-3.2+deb9u5",
+				"9.21~dfsg-1",
+				"9.21~dfsg-1~exp1",
+				"9.22~dfsg-1",
+				"9.22~dfsg-2",
+				"9.22~dfsg-2.1",
+				"9.22~dfsg-2~riscv64",
+				"9.22~dfsg-3",
+				"9.22~~rc1~dfsg-1",
+				"9.24~~rc2~dfsg-1",
+				"9.25~dfsg-0+deb9u1",
+				"9.25~dfsg-1",
+				"9.25~dfsg-1~exp1",
+				"9.25~dfsg-2",
+				"9.25~dfsg-3",
+				"9.25~dfsg-4",
+				"9.25~dfsg-5",
+				"9.25~dfsg-6",
+				"9.25~dfsg-7",
+				"9.26a~dfsg-0+deb9u1",
+				"9.26a~dfsg-0+deb9u2",
+				"9.26a~dfsg-0+deb9u3",
+				"9.26a~dfsg-0+deb9u4",
+				"9.26a~dfsg-0+deb9u5",
+				"9.26a~dfsg-0+deb9u6",
+				"9.26a~dfsg-0+deb9u7",
+				"9.26a~dfsg-0+deb9u8",
+				"9.26~dfsg-0+deb9u1",
+				"9.26~dfsg-0+deb9u2",
+				"9.26~dfsg-1",
+				"9.26~dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2989-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2989"
+		}
+	]
+}

@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3394-1",
+	"modified": "2023-06-28T06:42:55.775870Z",
+	"published": "2023-04-19T00:00:00Z",
+	"related": [
+		"CVE-2023-27585"
+	],
+	"summary": "asterisk - security update",
+	"details": "\nA flaw was found in Asterisk, an Open Source Private Branch Exchange. A\nbuffer overflow vulnerability affects users that use PJSIP DNS resolver.\nThis vulnerability is related to [CVE-2022-24793](https://security-tracker.debian.org/tracker/CVE-2022-24793). The difference is that\nthis issue is in parsing the query record `parse\\_query()`, while the issue\nin [CVE-2022-24793](https://security-tracker.debian.org/tracker/CVE-2022-24793) is in `parse\\_rr()`. A workaround is to disable DNS\nresolution in PJSIP config (by setting `nameserver\\_count` to zero) or use\nan external resolver implementation instead.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1:16.28.0~dfsg-0+deb10u3.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\nFor the detailed security status of asterisk please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/asterisk>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.28.0~dfsg-0+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:16.10.0~dfsg-1",
+				"1:16.12.0~dfsg-1",
+				"1:16.15.0~dfsg-1",
+				"1:16.15.1~dfsg-1",
+				"1:16.16.1~dfsg+~2.10-1",
+				"1:16.16.1~dfsg+~2.10-2",
+				"1:16.16.1~dfsg-1",
+				"1:16.16.1~dfsg-1~bpo10+1",
+				"1:16.16.1~dfsg-2",
+				"1:16.16.1~dfsg-3",
+				"1:16.16.1~dfsg-4",
+				"1:16.2.1~dfsg-1",
+				"1:16.2.1~dfsg-1+deb10u1",
+				"1:16.2.1~dfsg-1+deb10u2",
+				"1:16.2.1~dfsg-2",
+				"1:16.23.0~dfsg+~2.10-1",
+				"1:16.23.0~dfsg+~cs6.10.20220309-1",
+				"1:16.23.0~dfsg+~cs6.10.20220309-2",
+				"1:16.23.0~dfsg+~cs6.10.40431411-1",
+				"1:16.28.0~dfsg-0+deb10u1",
+				"1:16.28.0~dfsg-0+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3394-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3394"
+		}
+	]
+}

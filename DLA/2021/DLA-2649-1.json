@@ -1,0 +1,89 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2649-1",
+	"modified": "2023-06-28T06:26:39.108101Z",
+	"published": "2021-05-04T00:00:00Z",
+	"related": [
+		"CVE-2020-28601",
+		"CVE-2020-28602",
+		"CVE-2020-28603",
+		"CVE-2020-28604",
+		"CVE-2020-28605",
+		"CVE-2020-28606",
+		"CVE-2020-28607",
+		"CVE-2020-28608",
+		"CVE-2020-28609",
+		"CVE-2020-28610",
+		"CVE-2020-28611",
+		"CVE-2020-28612",
+		"CVE-2020-28613",
+		"CVE-2020-28614",
+		"CVE-2020-28615",
+		"CVE-2020-28616",
+		"CVE-2020-28617",
+		"CVE-2020-28618",
+		"CVE-2020-28619",
+		"CVE-2020-28620",
+		"CVE-2020-28621",
+		"CVE-2020-28622",
+		"CVE-2020-28623",
+		"CVE-2020-28624",
+		"CVE-2020-28625",
+		"CVE-2020-28626",
+		"CVE-2020-28627",
+		"CVE-2020-28628",
+		"CVE-2020-28629",
+		"CVE-2020-28630",
+		"CVE-2020-28631",
+		"CVE-2020-28632",
+		"CVE-2020-28633",
+		"CVE-2020-28634",
+		"CVE-2020-28635",
+		"CVE-2020-28636",
+		"CVE-2020-35628",
+		"CVE-2020-35629",
+		"CVE-2020-35630",
+		"CVE-2020-35631",
+		"CVE-2020-35632",
+		"CVE-2020-35633",
+		"CVE-2020-35634",
+		"CVE-2020-35635",
+		"CVE-2020-35636"
+	],
+	"summary": "cgal - security update",
+	"details": "\nFour security issues have been discovered in cgal. A code execution vulnerability exists\nin the Nef polygon-parsing functionality of CGAL.\n\n\n* [CVE-2020-28601](https://security-tracker.debian.org/tracker/CVE-2020-28601)\nAn oob read vulnerability exists in Nef\\_2/PM\\_io\\_parser.h PM\\_io\\_parser::read\\_vertex()\n Face\\_of[] OOB read. An attacker can provide malicious input to trigger this vulnerability.\n* [CVE-2020-28636](https://security-tracker.debian.org/tracker/CVE-2020-28636)\nAn oob read vulnerability exists in Nef\\_S2/SNC\\_io\\_parser.h SNC\\_io\\_parser::read\\_sloop()\n slh->twin() An attacker can provide malicious input to trigger this vulnerability.\n* [CVE-2020-35628](https://security-tracker.debian.org/tracker/CVE-2020-35628)\nAn oob read vulnerability exists in Nef\\_S2/SNC\\_io\\_parser.h SNC\\_io\\_parser::read\\_sloop()\n slh->incident\\_sface. An attacker can provide malicious input to trigger this vulnerability.\n* [CVE-2020-35636](https://security-tracker.debian.org/tracker/CVE-2020-35636)\nAn oob read vulnerability exists in Nef\\_S2/SNC\\_io\\_parser.h SNC\\_io\\_parser::read\\_sface()\n sfh->volume(). An attacker can provide malicious input to trigger this vulnerability.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.9-1+deb9u1.\n\n\nWe recommend that you upgrade your cgal packages.\n\n\nFor the detailed security status of cgal please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cgal>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "cgal",
+				"purl": "pkg:deb/debian/cgal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2649-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2649"
+		}
+	]
+}

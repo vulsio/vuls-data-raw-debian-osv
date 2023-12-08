@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4429-1",
+	"modified": "2023-10-16T00:18:08.967472Z",
+	"published": "2019-04-10T00:00:00Z",
+	"related": [
+		"CVE-2019-11071"
+	],
+	"summary": "spip - security update",
+	"details": "\nIt was discovered that SPIP, a website engine for publishing, did not\nproperly sanitize its user input. This would allow an authenticated\nuser to perform arbitrary command execution.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3.1.4-4~deb9u2.\n\n\nWe recommend that you upgrade your spip packages.\n\n\nFor the detailed security status of spip please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/spip](https://security-tracker.debian.org/tracker/spip)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "spip",
+				"purl": "pkg:deb/debian/spip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.4-4~deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.4-2",
+				"3.1.4-3",
+				"3.1.4-3~deb9u1",
+				"3.1.4-4~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4429-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4429"
+		}
+	]
+}

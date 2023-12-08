@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4247-1",
+	"modified": "2023-10-16T00:17:01.398175Z",
+	"published": "2018-07-16T00:00:00Z",
+	"related": [
+		"CVE-2018-1000119"
+	],
+	"summary": "ruby-rack-protection - security update",
+	"details": "\nA timing attack was discovered in the function for CSRF token validation\nof the Ruby rack protection framework.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.5.3-2+deb9u1.\n\n\nWe recommend that you upgrade your ruby-rack-protection packages.\n\n\nFor the detailed security status of ruby-rack-protection please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ruby-rack-protection](https://security-tracker.debian.org/tracker/ruby-rack-protection)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby-rack-protection",
+				"purl": "pkg:deb/debian/ruby-rack-protection?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.3-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.3-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4247-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4247"
+		}
+	]
+}

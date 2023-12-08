@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5267-1",
+	"modified": "2023-10-16T00:27:27.577800Z",
+	"published": "2022-10-30T00:00:00Z",
+	"related": [
+		"CVE-2022-37454"
+	],
+	"summary": "pysha3 - security update",
+	"details": "\nNicky Mouha discovered a buffer overflow in sha3, a Python library for\nthe SHA-3 hashing functions.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.0.2-4.1+deb11u1.\n\n\nWe recommend that you upgrade your pysha3 packages.\n\n\nFor the detailed security status of pysha3 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/pysha3](https://security-tracker.debian.org/tracker/pysha3)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "pysha3",
+				"purl": "pkg:deb/debian/pysha3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-4.1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5267-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5267"
+		}
+	]
+}

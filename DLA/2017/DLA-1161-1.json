@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1161-1",
+	"modified": "2023-06-28T06:20:26.146104Z",
+	"published": "2017-11-05T00:00:00Z",
+	"related": [
+		"CVE-2016-10517"
+	],
+	"summary": "redis - security update",
+	"details": "\nIt was discovered that there was a Cross Protocol Scripting attack in\nthe Redis key-value database.\n\n\n\"POST\" and \"Host:\" command strings (which are not valid in the Redis\nprotocol) were not immediately rejected when an attacker makes HTTP\nrequest to the Redis TCP port.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in redis version\n2:2.4.14-1+deb7u2.\n\n\nWe recommend that you upgrade your redis packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "redis",
+				"purl": "pkg:deb/debian/redis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.4.14-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:2.4.14-1",
+				"2:2.4.14-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1161-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1161"
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1011-1",
+	"modified": "2023-06-28T06:20:07.662973Z",
+	"published": "2017-07-03T00:00:00Z",
+	"related": [
+		"CVE-2017-1000368"
+	],
+	"summary": "sudo - security update",
+	"details": "\nTodd Miller's sudo version 1.8.20p1 and earlier is vulnerable to an\ninput validation (embedded newlines) in the get\\_process\\_ttyname()\nfunction resulting in information disclosure and command execution.\n\n\nThe previous announcement (DLA-970-1) was about a similar security\nissue ([CVE-2017-1000367](https://security-tracker.debian.org/tracker/CVE-2017-1000367)) which wasn't completely fixed.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8.5p2-1+nmu3+deb7u4.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.5p2-1+nmu3+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.5p2-1+nmu1",
+				"1.8.5p2-1+nmu2",
+				"1.8.5p2-1+nmu3",
+				"1.8.5p2-1+nmu3+deb7u1",
+				"1.8.5p2-1+nmu3+deb7u2",
+				"1.8.5p2-1+nmu3+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1011-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1011"
+		}
+	]
+}

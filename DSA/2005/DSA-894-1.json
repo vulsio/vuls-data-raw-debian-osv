@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-894-1",
+	"modified": "2023-10-16T00:29:36.252593Z",
+	"published": "2005-11-14T00:00:00Z",
+	"related": [
+		"CVE-2005-2964",
+		"CVE-2005-2972"
+	],
+	"summary": "abiword - buffer overflows",
+	"details": "\nChris Evans discovered several buffer overflows in the RTF import\nmechanism of AbiWord, a WYSIWYG word processor based on GTK 2.\nOpening a specially crafted RTF file could lead to the execution of\narbitrary code.\n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 1.0.2+cvs.2002.06.05-1woody3.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.2.7-3sarge2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.4.1-1.\n\n\nWe recommend that you upgrade your abiword package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "abiword",
+				"purl": "pkg:deb/debian/abiword?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2+cvs.2002.06.05-1woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2+cvs.2002.06.05-1woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-894-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "abiword",
+				"purl": "pkg:deb/debian/abiword?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.7-3sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.7-3",
+				"2.2.7-3sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-894-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-894"
+		}
+	]
+}

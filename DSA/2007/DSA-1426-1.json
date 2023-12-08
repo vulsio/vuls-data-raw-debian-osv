@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1426-1",
+	"modified": "2023-10-16T00:10:23.717663Z",
+	"published": "2007-12-08T00:00:00Z",
+	"related": [
+		"CVE-2007-3388",
+		"CVE-2007-4137"
+	],
+	"summary": "qt-x11-free - several vulnerabilities",
+	"details": "\nSeveral local/remote vulnerabilities have been discovered in the Qt GUI\nlibrary. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-3388](https://security-tracker.debian.org/tracker/CVE-2007-3388)\nTim Brown and Dirk MĂźller discovered several format string\n vulnerabilities in the handling of error messages, which might lead\n to the execution of arbitrary code.\n* [CVE-2007-4137](https://security-tracker.debian.org/tracker/CVE-2007-4137)\nDirk MĂźller discovered an off-by-one buffer overflow in the Unicode\n handling, which might lead to the execution of arbitrary code.\n\n\nFor the old stable distribution (sarge), these problems have been fixed\nin version 3:3.3.4-3sarge3. Packages for m68k will be provided later.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 3:3.3.7-4etch1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3:3.3.7-8.\n\n\nWe recommend that you upgrade your qt-x11-free packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "qt-x11-free",
+				"purl": "pkg:deb/debian/qt-x11-free?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3:3.3.4-3sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3:3.3.4-3",
+				"3:3.3.4-3sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1426-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "qt-x11-free",
+				"purl": "pkg:deb/debian/qt-x11-free?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3:3.3.7-4etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3:3.3.7-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1426-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1426"
+		}
+	]
+}

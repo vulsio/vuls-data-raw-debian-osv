@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4346-2",
+	"modified": "2023-10-16T00:13:50.278562Z",
+	"published": "2018-11-27T00:00:00Z",
+	"summary": "ghostscript - regression update",
+	"details": "\nSeveral vulnerabilities were discovered in Ghostscript, the GPL\nPostScript/PDF interpreter, which may result in denial of service or the\nexecution of arbitrary code if a malformed Postscript file is processed\n(despite the -dSAFER sandbox being enabled).\n\n\nThis update rebases ghostscript for stretch to the upstream version 9.26\nwhich includes additional changes.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 9.26~dfsg-0+deb9u1.\n\n\nWe recommend that you upgrade your ghostscript packages.\n\n\nFor the detailed security status of ghostscript please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/ghostscript>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ghostscript",
+				"purl": "pkg:deb/debian/ghostscript?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.26~dfsg-0+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.20~dfsg-3.2",
+				"9.20~dfsg-3.2+deb9u1",
+				"9.20~dfsg-3.2+deb9u2",
+				"9.20~dfsg-3.2+deb9u3",
+				"9.20~dfsg-3.2+deb9u4",
+				"9.20~dfsg-3.2+deb9u5",
+				"9.21~dfsg-1",
+				"9.21~dfsg-1~exp1",
+				"9.22~dfsg-1",
+				"9.22~dfsg-2",
+				"9.22~dfsg-2.1",
+				"9.22~dfsg-2~riscv64",
+				"9.22~dfsg-3",
+				"9.22~~rc1~dfsg-1",
+				"9.24~~rc2~dfsg-1",
+				"9.25~dfsg-0+deb9u1",
+				"9.25~dfsg-1",
+				"9.25~dfsg-1~exp1",
+				"9.25~dfsg-2",
+				"9.25~dfsg-3",
+				"9.25~dfsg-4",
+				"9.25~dfsg-5",
+				"9.25~dfsg-6",
+				"9.25~dfsg-7",
+				"9.26~dfsg-0+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4346-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4346"
+		}
+	]
+}

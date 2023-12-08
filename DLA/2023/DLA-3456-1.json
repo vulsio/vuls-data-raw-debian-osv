@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3456-1",
+	"modified": "2023-06-28T06:30:54.573675Z",
+	"published": "2023-06-18T00:00:00Z",
+	"related": [
+		"CVE-2023-32681"
+	],
+	"summary": "requests - security update",
+	"details": "\nRequests, a Python HTTP library, has been leaking Proxy-Authorization headers\nto destination servers when redirected to an HTTPS endpoint. For HTTP\nconnections sent through the tunnel, the proxy will identify the header in the\nrequest itself and remove it prior to forwarding to the destination server.\nHowever when sent over HTTPS, the `Proxy-Authorization` header must be sent in\nthe CONNECT request as the proxy has no visibility into the tunneled request.\nThis results in Requests forwarding proxy credentials to the destination\nserver unintentionally, allowing a malicious actor to potentially exfiltrate\nsensitive information.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.21.0-1+deb10u1.\n\n\nWe recommend that you upgrade your requests packages.\n\n\nFor the detailed security status of requests please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/requests>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "requests",
+				"purl": "pkg:deb/debian/requests?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.21.0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.21.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3456-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3456"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4572-1",
+	"modified": "2023-10-16T00:14:17.149014Z",
+	"published": "2019-11-18T00:00:00Z",
+	"related": [
+		"CVE-2019-12838"
+	],
+	"summary": "slurm-llnl - security update",
+	"details": "\nIt was discovered that the Simple Linux Utility for Resource Management\n(SLURM), a cluster resource management and job scheduling system, did\nnot escape strings when importing an archive file into the\naccounting\\_storage/mysql backend, resulting in SQL injection.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 18.08.5.2-1+deb10u1.\n\n\nWe recommend that you upgrade your slurm-llnl packages.\n\n\nFor the detailed security status of slurm-llnl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/slurm-llnl](https://security-tracker.debian.org/tracker/slurm-llnl)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "slurm-llnl",
+				"purl": "pkg:deb/debian/slurm-llnl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "18.08.5.2-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"18.08.5.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4572-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4572"
+		}
+	]
+}

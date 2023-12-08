@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4985-1",
+	"modified": "2023-10-16T00:15:18.049931Z",
+	"published": "2021-10-14T00:00:00Z",
+	"related": [
+		"CVE-2021-39201"
+	],
+	"summary": "wordpress - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Wordpress, a web blogging\ntool. They allowed remote attackers to perform Cross-Site Scripting\n(XSS) attacks or impersonate other users.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 5.0.14+dfsg1-0+deb10u1.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.7.3+dfsg1-0+deb11u1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFor the detailed security status of wordpress please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/wordpress](https://security-tracker.debian.org/tracker/wordpress)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.14+dfsg1-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.10+dfsg1-0+deb10u1",
+				"5.0.11+dfsg1-0+deb10u1",
+				"5.0.12+dfsg1-0+deb10u1",
+				"5.0.4+dfsg1-1",
+				"5.0.4+dfsg1-1+deb10u1",
+				"5.0.4+dfsg1-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4985-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.3+dfsg1-0+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.1+dfsg1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4985-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4985"
+		}
+	]
+}

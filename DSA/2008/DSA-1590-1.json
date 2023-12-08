@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1590-1",
+	"modified": "2023-10-16T00:05:30.904399Z",
+	"published": "2008-05-30T00:00:00Z",
+	"related": [
+		"CVE-2008-1105"
+	],
+	"summary": "samba - arbitrary code execution",
+	"details": "\nAlin Rad Pop discovered that Samba contained a buffer overflow condition\nwhen processing certain responses received while acting as a client,\nleading to arbitrary code execution ([CVE-2008-1105](https://security-tracker.debian.org/tracker/CVE-2008-1105)).\n\n\nFor the stable distribution (etch), this problem has been fixed in version \n3.0.24-6etch10.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.0.30-1.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.24-6etch10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.24-6",
+				"3.0.24-6etch1",
+				"3.0.24-6etch2",
+				"3.0.24-6etch4",
+				"3.0.24-6etch5",
+				"3.0.24-6etch6",
+				"3.0.24-6etch7",
+				"3.0.24-6etch8",
+				"3.0.24-6etch9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1590-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1590"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5489-1",
+	"modified": "2023-10-16T00:16:41.576617Z",
+	"published": "2023-09-04T00:00:00Z",
+	"related": [
+		"CVE-2022-48554"
+	],
+	"summary": "file - security update",
+	"details": "\nA buffer overflow was found in file, a file type classification tool,\nwhich may result in denial of service if a specially crafted file is\nprocessed.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 1:5.39-3+deb11u1.\n\n\nWe recommend that you upgrade your file packages.\n\n\nFor the detailed security status of file please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/file>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "file",
+				"purl": "pkg:deb/debian/file?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:5.39-3+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:5.39-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5489-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5489"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1357-1",
+	"modified": "2023-10-16T00:05:20.524009Z",
+	"published": "2007-08-19T00:00:00Z",
+	"related": [
+		"CVE-2007-3387"
+	],
+	"summary": "koffice - integer overflow",
+	"details": "\nIt was discovered that an integer overflow in the xpdf PDF viewer may lead\nto the execution of arbitrary code if a malformed PDF file is opened.\n\n\nkoffice includes a copy of the xpdf code and required an update as well.\n\n\nThe oldstable distribution (sarge) will be fixed later.\n\n\nFor the stable distribution (etch) this problem has been fixed in\nversion 1.6.1-2etch1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.6.3-2.\n\n\nWe recommend that you upgrade your koffice packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "koffice",
+				"purl": "pkg:deb/debian/koffice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.6.1-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.6.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1357-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1357"
+		}
+	]
+}

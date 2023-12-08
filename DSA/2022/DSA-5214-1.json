@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5214-1",
+	"modified": "2023-10-16T00:15:48.649785Z",
+	"published": "2022-08-21T00:00:00Z",
+	"related": [
+		"CVE-2022-23803",
+		"CVE-2022-23804",
+		"CVE-2022-23946",
+		"CVE-2022-23947"
+	],
+	"summary": "kicad - security update",
+	"details": "\nMultiple buffer overflows were discovered in Kicad, a suite of programs\nfor the creation of printed circuit boards, which could result in the\nexecution of arbitrary code if malformed Gerber/Excellon files.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.1.9+dfsg1-1+deb11u1.\n\n\nWe recommend that you upgrade your kicad packages.\n\n\nFor the detailed security status of kicad please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/kicad](https://security-tracker.debian.org/tracker/kicad)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "kicad",
+				"purl": "pkg:deb/debian/kicad?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.1.9+dfsg1-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.1.9+dfsg1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5214-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5214"
+		}
+	]
+}

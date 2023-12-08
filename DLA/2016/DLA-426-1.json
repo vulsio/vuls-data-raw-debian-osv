@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-426-1",
+	"modified": "2023-06-28T06:20:12.794626Z",
+	"published": "2016-02-23T00:00:00Z",
+	"related": [
+		"CVE-2016-0787"
+	],
+	"summary": "libssh2 - security update",
+	"details": "\nAndreas Schneider reported that libssh2, an SSH2 protocol\nimplementation used by many applications, did not generate\nsufficiently long Diffie-Hellman secrets.\n\n\nThis vulnerability could be exploited by an eavesdropper to decrypt\nand to intercept SSH sessions.\n\n\nFor the oldoldstable distribution (squeeze), this has been fixed in\nversion 1.2.6-1+deb6u2. Although the changelog refers to sha256,\nthis version only supports DH SHA-1 key exchange and it is that key\nexchange method that has been fixed.\n\n\nFor the oldstable (wheezy) and stable (jessie) distributions, this\nwill be fixed soon.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libssh2",
+				"purl": "pkg:deb/debian/libssh2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.6-1+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-426-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-426"
+		}
+	]
+}

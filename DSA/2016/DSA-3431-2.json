@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3431-2",
+	"modified": "2023-10-16T00:12:00.762911Z",
+	"published": "2016-01-01T00:00:00Z",
+	"summary": "ganeti - regression update",
+	"details": "\nPierre Kim discovered two vulnerabilities in the restful API of Ganeti,\na virtual server cluster management tool. SSL parameter negotiation\ncould result in denial of service and the DRBD secret could leak.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 2.5.2-1+deb7u1.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.12.4-1+deb8u2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.15.2-1.\n\n\nWe recommend that you upgrade your ganeti packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ganeti",
+				"purl": "pkg:deb/debian/ganeti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.2-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.2-1",
+				"2.5.2-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3431-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ganeti",
+				"purl": "pkg:deb/debian/ganeti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.12.4-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.12.0-3",
+				"2.12.3-1",
+				"2.12.4-1",
+				"2.12.4-1+deb8u2",
+				"2.12.4-1~bpo8+1",
+				"2.12.4-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3431-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3431"
+		}
+	]
+}

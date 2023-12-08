@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2562-1",
+	"modified": "2023-06-28T06:29:15.679725Z",
+	"published": "2021-02-18T00:00:00Z",
+	"related": [
+		"CVE-2021-27229"
+	],
+	"summary": "mumble - security update",
+	"details": "\nIt was discovered that there was a a remote code execution vulnerability in\n[Mumble](https://www.mumble.info/), a VoIP client commonly used for\ngroup chats. The exploit could have been been triggered by a maliciously\ncrafted URL on the server list.\n\n\n* [CVE-2021-27229](https://security-tracker.debian.org/tracker/CVE-2021-27229)\nMumble before 1.3.4 allows remote code execution if a victim navigates\n to a crafted URL on a server list and clicks on the Open Webpage\n text.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.2.18-1+deb9u2.\n\n\nWe recommend that you upgrade your mumble packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mumble",
+				"purl": "pkg:deb/debian/mumble?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.18-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.18-1",
+				"1.2.18-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2562-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2562"
+		}
+	]
+}

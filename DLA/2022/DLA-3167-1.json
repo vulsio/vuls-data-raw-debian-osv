@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3167-1",
+	"modified": "2023-06-28T06:33:36.550176Z",
+	"published": "2022-10-29T00:00:00Z",
+	"related": [
+		"CVE-2022-29458"
+	],
+	"summary": "ncurses - security update",
+	"details": "\nAn issue has been found in ncurses, a collection of shared libraries for\nterminal handling.\nThis issue is about an out-of-bounds read in convert\\_strings in the\nterminfo library.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n6.1+20181013-2+deb10u3.\n\n\nWe recommend that you upgrade your ncurses packages.\n\n\nFor the detailed security status of ncurses please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ncurses>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LT>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ncurses",
+				"purl": "pkg:deb/debian/ncurses?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1+20181013-2+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1+20181013-2",
+				"6.1+20181013-2+deb10u1",
+				"6.1+20181013-2+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3167-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3167"
+		}
+	]
+}

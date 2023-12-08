@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2720-1",
+	"modified": "2023-06-28T06:20:10.630322Z",
+	"published": "2021-07-25T00:00:00Z",
+	"related": [
+		"CVE-2019-17544",
+		"CVE-2019-25051"
+	],
+	"summary": "aspell - security update",
+	"details": "\nTwo issue have been found in aspell, the GNU Aspell spell-checker.\n\n\nOne issue is related to a stack-based buffer over-read via an isolated \\\ncharacter when processing a configuration file.\nThe other issue is related to a heap-based buffer overflow.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.60.7~20110707-3+deb9u1.\n\n\nWe recommend that you upgrade your aspell packages.\n\n\nFor the detailed security status of aspell please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/aspell>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "aspell",
+				"purl": "pkg:deb/debian/aspell?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.60.7~20110707-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.60.7~20110707-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2720-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2720"
+		}
+	]
+}

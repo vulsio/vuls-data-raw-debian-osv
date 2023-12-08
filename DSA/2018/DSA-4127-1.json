@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4127-1",
+	"modified": "2023-10-16T00:16:55.778203Z",
+	"published": "2018-03-02T00:00:00Z",
+	"related": [
+		"CVE-2017-12867",
+		"CVE-2017-12869",
+		"CVE-2017-12873",
+		"CVE-2017-12874",
+		"CVE-2017-18121",
+		"CVE-2017-18122",
+		"CVE-2018-6519",
+		"CVE-2018-6521",
+		"CVE-2018-7644"
+	],
+	"summary": "simplesamlphp - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in SimpleSAMLphp, a\nframework for authentication, primarily via the SAML protocol.\n\n\n* [CVE-2017-12867](https://security-tracker.debian.org/tracker/CVE-2017-12867)\nAttackers with access to a secret token could extend its validity\n period by manipulating the prepended time offset.\n* [CVE-2017-12869](https://security-tracker.debian.org/tracker/CVE-2017-12869)\nWhen using the multiauth module, attackers can bypass authentication\n context restrictions and use any authentication source defined in\n the config.\n* [CVE-2017-12873](https://security-tracker.debian.org/tracker/CVE-2017-12873)\nDefensive measures have been taken to prevent the administrator\n from misconfiguring persistent NameIDs to avoid identifier clash.\n (Affects Debian 8 Jessie only.)\n* [CVE-2017-12874](https://security-tracker.debian.org/tracker/CVE-2017-12874)\nThe InfoCard module could accept incorrectly signed XML messages\n in rare occasions.\n* [CVE-2017-18121](https://security-tracker.debian.org/tracker/CVE-2017-18121)\nThe consentAdmin module was vulnerable to a Cross-Site Scripting\n attack, allowing an attacker to craft links that could execute\n arbitrary JavaScript code in the victim's browser.\n* [CVE-2017-18122](https://security-tracker.debian.org/tracker/CVE-2017-18122)\nThe (deprecated) SAML 1.1 implementation would regard as valid any\n unsigned SAML response containing more than one signed assertion,\n provided that the signature of at least one of the assertions was\n valid, allowing an attacker that could obtain a valid signed\n assertion from an IdP to impersonate users from that IdP.\n* [CVE-2018-6519](https://security-tracker.debian.org/tracker/CVE-2018-6519)\nRegular expression denial of service when parsing extraordinarily\n long timestamps.\n* [CVE-2018-6521](https://security-tracker.debian.org/tracker/CVE-2018-6521)\nChange sqlauth module MySQL charset from utf8 to utf8mb to\n prevent theoretical query truncation that could allow remote\n attackers to bypass intended access restrictions\n* [CVE-2018-7644](https://security-tracker.debian.org/tracker/CVE-2018-7644)\nCritical signature validation vulnerability.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.13.1-2+deb8u1.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.14.11-1+deb9u1.\n\n\nWe recommend that you upgrade your simplesamlphp packages.\n\n\nFor the detailed security status of simplesamlphp please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/simplesamlphp](https://security-tracker.debian.org/tracker/simplesamlphp)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "simplesamlphp",
+				"purl": "pkg:deb/debian/simplesamlphp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.13.1-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.13.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4127-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "simplesamlphp",
+				"purl": "pkg:deb/debian/simplesamlphp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.11-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.14.11-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4127-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4127"
+		}
+	]
+}

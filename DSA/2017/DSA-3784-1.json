@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3784-1",
+	"modified": "2023-10-16T00:12:18.594113Z",
+	"published": "2017-02-09T00:00:00Z",
+	"related": [
+		"CVE-2017-5938"
+	],
+	"summary": "viewvc - security update",
+	"details": "\nThomas Gerbet discovered that viewvc, a web interface for CVS and\nSubversion repositories, did not properly sanitize user input. This\nproblem resulted in a potential Cross-Site Scripting vulnerability.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.1.22-1+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.26-1.\n\n\nWe recommend that you upgrade your viewvc packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "viewvc",
+				"purl": "pkg:deb/debian/viewvc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.22-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.22-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3784-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3784"
+		}
+	]
+}

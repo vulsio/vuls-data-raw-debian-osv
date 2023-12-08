@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-222-1",
+	"modified": "2023-06-28T06:26:27.833303Z",
+	"published": "2015-05-19T00:00:00Z",
+	"related": [
+		"CVE-2012-5783",
+		"CVE-2012-6153",
+		"CVE-2014-3577"
+	],
+	"summary": "commons-httpclient - security update",
+	"details": "\n* [CVE-2012-5783](https://security-tracker.debian.org/tracker/CVE-2012-5783)\nand [CVE-2012-6153](https://security-tracker.debian.org/tracker/CVE-2012-6153)\n Apache Commons HttpClient 3.1 did not verify that the server hostname\n matches a domain name in the subject's Common Name (CN) or subjectAltName\n field of the X.509 certificate, which allows man-in-the-middle attackers to\n spoof SSL servers via an arbitrary valid certificate.\n Thanks to Alberto Fernandez Martinez for the patch.\n* [CVE-2014-3577](https://security-tracker.debian.org/tracker/CVE-2014-3577)\nIt was found that the fix for [CVE-2012-6153](https://security-tracker.debian.org/tracker/CVE-2012-6153) was incomplete: the code added\n to check that the server hostname matches the domain name in a subject's\n Common Name (CN) field in X.509 certificates was flawed. A man-in-the-middle\n attacker could use this flaw to spoof an SSL server using a specially\n crafted X.509 certificate. The fix for [CVE-2012-6153](https://security-tracker.debian.org/tracker/CVE-2012-6153) was intended to address\n the incomplete patch for [CVE-2012-5783](https://security-tracker.debian.org/tracker/CVE-2012-5783). The issue is now completely resolved\n by applying this patch and the one for the previous CVEs\n\n\nThis upload was prepared by Markus Koschany.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "commons-httpclient",
+				"purl": "pkg:deb/debian/commons-httpclient?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1-9+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-222-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-222"
+		}
+	]
+}

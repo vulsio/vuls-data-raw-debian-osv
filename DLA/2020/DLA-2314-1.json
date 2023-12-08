@@ -1,0 +1,86 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2314-1",
+	"modified": "2023-06-28T06:28:49.821829Z",
+	"published": "2020-08-06T00:00:00Z",
+	"related": [
+		"CVE-2020-3327",
+		"CVE-2020-3350",
+		"CVE-2020-3481"
+	],
+	"summary": "clamav - security update",
+	"details": "\nSeveral vulnerabilities have been found in the ClamAV antivirus toolkit:\n\n\n* [CVE-2020-3327](https://security-tracker.debian.org/tracker/CVE-2020-3327)\nAn out of bounds read in the ARJ archive-parsing module could cause\n denial of service. The fix in 0.102.3 was incomplete.\n* [CVE-2020-3350](https://security-tracker.debian.org/tracker/CVE-2020-3350)\nA malicious user could trick clamscan, clamdscan or clamonacc into\n moving or removing a different file than intended when those are\n used with one of the --move or --remove options. This could be used\n to get rid of special system files.\n* [CVE-2020-3481](https://security-tracker.debian.org/tracker/CVE-2020-3481)\nThe EGG archive module was vulnerable to denial of service via NULL\n pointer dereference due to improper error handling. The official\n signature database avoided this problem because the signatures there\n avoided the use of the EGG archive parser.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.102.4+dfsg-0+deb9u1.\n\n\nWe recommend that you upgrade your clamav packages.\n\n\nFor the detailed security status of clamav please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/clamav>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "clamav",
+				"purl": "pkg:deb/debian/clamav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.102.4+dfsg-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.100.0+dfsg-0+deb9u1",
+				"0.100.0+dfsg-0+deb9u2",
+				"0.100.0+dfsg-1",
+				"0.100.0~beta+dfsg-1",
+				"0.100.0~beta+dfsg-2",
+				"0.100.1+dfsg-0+deb9u1",
+				"0.100.1+dfsg-1",
+				"0.100.2+dfsg-0+deb9u1",
+				"0.100.2+dfsg-1",
+				"0.100.2+dfsg-2",
+				"0.100.3+dfsg-0+deb9u1",
+				"0.101.0+dfsg-1",
+				"0.101.1+dfsg-1",
+				"0.101.1+dfsg-2",
+				"0.101.1+dfsg-3",
+				"0.101.2+dfsg-0+deb9u1",
+				"0.101.2+dfsg-1",
+				"0.101.2+dfsg-2",
+				"0.101.2+dfsg-3",
+				"0.101.4+dfsg-0+deb9u1",
+				"0.101.4+dfsg-1",
+				"0.102.1+dfsg-0+deb9u1",
+				"0.102.1+dfsg-0+deb9u2",
+				"0.102.1+dfsg-1",
+				"0.102.1+dfsg-2",
+				"0.102.1+dfsg-3",
+				"0.102.2+dfsg-0~deb9u1",
+				"0.102.2+dfsg-1",
+				"0.102.2+dfsg-2",
+				"0.102.3+dfsg-0~deb9u1",
+				"0.102.3+dfsg-1",
+				"0.99.2+dfsg-6",
+				"0.99.2+dfsg-6+deb9u1",
+				"0.99.3~beta1+dfsg-1",
+				"0.99.3~beta1+dfsg-2",
+				"0.99.3~beta1+dfsg-3",
+				"0.99.3~beta1+dfsg-4",
+				"0.99.3~beta2+dfsg-1",
+				"0.99.3~snapshot20170704+dfsg-1",
+				"0.99.4+dfsg-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2314-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2314"
+		}
+	]
+}

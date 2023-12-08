@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2334-1",
+	"modified": "2023-06-28T06:26:30.930206Z",
+	"published": "2020-08-19T00:00:00Z",
+	"related": [
+		"CVE-2020-7663"
+	],
+	"summary": "ruby-websocket-extensions - security update",
+	"details": "\nIt was discovered that there was a denial of service vulnerability in\nruby-websocket-extensions, a library for managing long-lived HTTP\n\"WebSocket\" connections.\n\n\nThe parser took quadratic time when parsing a header containing an unclosed\nstring parameter value whose content is a repeating two-byte sequence. This\ncould be abused by an attacker to conduct a Regex Denial Of Service (ReDoS) on\na single-threaded server by providing a malicious payload in the\nSec-WebSocket-Extensions HTTP header.\n\n\n* [CVE-2020-7663](https://security-tracker.debian.org/tracker/CVE-2020-7663)\nwebsocket-extensions ruby module prior to 0.1.5 allows Denial of Service\n (DoS) via Regex Backtracking. The extension parser may take quadratic time\n when parsing a header containing an unclosed string parameter value whose\n content is a repeating two-byte sequence of a backslash and some other\n character. This could be abused by an attacker to conduct Regex Denial Of\n Service (ReDoS) on a single-threaded server by providing a malicious\n payload with the Sec-WebSocket-Extensions header.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n0.1.2-1+deb9u1.\n\n\nWe recommend that you upgrade your ruby-websocket-extensions packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby-websocket-extensions",
+				"purl": "pkg:deb/debian/ruby-websocket-extensions?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.2-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2334-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2334"
+		}
+	]
+}

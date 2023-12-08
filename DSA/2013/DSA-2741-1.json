@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2741-1",
+	"modified": "2023-10-16T00:11:28.899712Z",
+	"published": "2013-08-25T00:00:00Z",
+	"related": [
+		"CVE-2013-2887",
+		"CVE-2013-2900",
+		"CVE-2013-2901",
+		"CVE-2013-2902",
+		"CVE-2013-2903",
+		"CVE-2013-2904",
+		"CVE-2013-2905"
+	],
+	"summary": "chromium-browser - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the Chromium web browser.\n\n\n* [CVE-2013-2887](https://security-tracker.debian.org/tracker/CVE-2013-2887)\nThe chrome 29 development team found various issues from internal\n fuzzing, audits, and other studies.\n* [CVE-2013-2900](https://security-tracker.debian.org/tracker/CVE-2013-2900)\nKrystian Bigaj discovered a file handling path sanitization issue.\n* [CVE-2013-2901](https://security-tracker.debian.org/tracker/CVE-2013-2901)\nAlex Chapman discovered an integer overflow issue in ANGLE, the\n Almost Native Graphics Layer.\n* [CVE-2013-2902](https://security-tracker.debian.org/tracker/CVE-2013-2902)\ncloudfuzzer discovered a use-after-free issue in XSLT.\n* [CVE-2013-2903](https://security-tracker.debian.org/tracker/CVE-2013-2903)\ncloudfuzzer discovered a use-after-free issue in HTMLMediaElement.\n* [CVE-2013-2904](https://security-tracker.debian.org/tracker/CVE-2013-2904)\ncloudfuzzer discovered a use-after-free issue in XML document\n parsing.\n* [CVE-2013-2905](https://security-tracker.debian.org/tracker/CVE-2013-2905)\nChristian Jaeger discovered an information leak due to insufficient\n file permissions.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 29.0.1547.57-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 29.0.1547.57-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "29.0.1547.57-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"26.0.1410.43-1",
+				"27.0.1453.110-1",
+				"27.0.1453.110-1~deb7u1",
+				"27.0.1453.110-2",
+				"27.0.1453.93-1",
+				"27.0.1453.93-1~deb7u1",
+				"28.0.1500.71-1",
+				"28.0.1500.71-1~deb7u1",
+				"28.0.1500.71-2",
+				"28.0.1500.95-1",
+				"28.0.1500.95-1~deb7u1",
+				"28.0.1500.95-2",
+				"28.0.1500.95-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2741-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2741"
+		}
+	]
+}

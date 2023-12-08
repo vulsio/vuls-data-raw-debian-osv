@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1412-1",
+	"modified": "2023-06-28T06:20:39.509896Z",
+	"published": "2018-07-03T00:00:00Z",
+	"related": [
+		"CVE-2017-18190",
+		"CVE-2017-18248"
+	],
+	"summary": "cups - security update",
+	"details": "\nTwo vulnerabilities affecting the cups printing server were found\nwhich can lead to arbitrary IPP command execution and denial of\nservice.\n\n\n* [CVE-2017-18190](https://security-tracker.debian.org/tracker/CVE-2017-18190)\nA localhost.localdomain whitelist entry in valid\\_host() in\n scheduler/client.c in CUPS before 2.2.2 allows remote attackers to\n execute arbitrary IPP commands by sending POST requests to the\n CUPS daemon in conjunction with DNS rebinding. The\n localhost.localdomain name is often resolved via a DNS server\n (neither the OS nor the web browser is responsible for ensuring\n that localhost.localdomain is 127.0.0.1).\n* [CVE-2017-18248](https://security-tracker.debian.org/tracker/CVE-2017-18248)\nThe add\\_job function in scheduler/ipp.c in CUPS before 2.2.6, when\n D-Bus support is enabled, can be crashed by remote attackers by\n sending print jobs with an invalid username, related to a D-Bus\n notification.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.7.5-11+deb8u3.\n\n\nWe recommend that you upgrade your cups packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.5-11+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.5-11",
+				"1.7.5-11+deb8u1",
+				"1.7.5-11+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1412-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1412"
+		}
+	]
+}

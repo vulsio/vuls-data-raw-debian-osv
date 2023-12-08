@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-463",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-03-12T00:00:00Z",
+	"related": [
+		"CVE-2004-0186"
+	],
+	"summary": "samba - privilege escalation",
+	"details": "\nSamba, a LanManager-like file and printer server for Unix, was found\nto contain a vulnerability whereby a local user could use the \"smbmnt\"\nutility, which is setuid root, to mount a file share from a remote\nserver which contained setuid programs under the control of the user.\nThese programs could then be executed to gain privileges on the local\nsystem.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 2.2.3a-13.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 3.0.2-2.\n\n\nWe recommend that you update your samba package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.3a-13"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-463.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-463"
+		}
+	]
+}

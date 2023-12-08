@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-543-1",
+	"modified": "2023-06-28T06:34:10.028909Z",
+	"published": "2016-07-06T00:00:00Z",
+	"related": [
+		"CVE-2016-6153"
+	],
+	"summary": "sqlite3 - security update",
+	"details": "\nIt was discovered that sqlite3, a C library that implements a SQL\ndatabase engine, would reject a temporary directory (e.g., as specified\nby the TMPDIR environment variable) to which the executing user did not\nhave read permissions. This could result in information leakage as less\nsecure global temporary directories (e.g., /var/tmp or /tmp) would be\nused instead.\n\n\nFor Debian 7 Wheezy, this problem has been fixed in version\n3.7.13-1+deb7u3.\n\n\nWe recommend that you upgrade your sqlite3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "sqlite3",
+				"purl": "pkg:deb/debian/sqlite3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.7.13-1+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.7.13-1+deb7u1",
+				"3.7.13-1+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-543-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-543"
+		}
+	]
+}

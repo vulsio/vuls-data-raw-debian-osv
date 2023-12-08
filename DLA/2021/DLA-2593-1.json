@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2593-1",
+	"modified": "2023-06-28T06:30:10.226166Z",
+	"published": "2021-03-14T00:00:00Z",
+	"summary": "ca-certificates - whitelist Symantec CA",
+	"details": "\nThis update reverts the Symantec CA blacklist (which was originally\n#911289). The following root certificates were added back (+):\n + GeoTrust Global CA\n + GeoTrust Primary Certification Authority\n + \"GeoTrust Primary Certification Authority - G2\"\n + \"GeoTrust Primary Certification Authority - G3\"\n + GeoTrust Universal CA\n + thawte Primary Root CA\n + \"thawte Primary Root CA - G2\"\n + \"thawte Primary Root CA - G3\"\n + \"VeriSign Class 3 Public Primary Certification Authority - G4\"\n + \"VeriSign Class 3 Public Primary Certification Authority - G5\"\n + VeriSign Universal Root Certification Authority\n**Note**: due to bug #743339, CA certificates added back in this version\nwon't automatically be trusted again on upgrade. Affected users may\nneed to reconfigure the package to restore the desired state.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n20200601~deb9u2.\n\n\nWe recommend that you upgrade your ca-certificates packages.\n\n\nFor the detailed security status of ca-certificates please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ca-certificates>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ca-certificates",
+				"purl": "pkg:deb/debian/ca-certificates?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20200601~deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20161130+nmu1",
+				"20161130+nmu1+deb9u1",
+				"20170717",
+				"20180409",
+				"20190110",
+				"20200601~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2593-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2593"
+		}
+	]
+}

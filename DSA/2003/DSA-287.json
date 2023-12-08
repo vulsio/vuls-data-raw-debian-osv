@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-287",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-04-15T00:00:00Z",
+	"related": [
+		"CVE-2003-0324"
+	],
+	"summary": "epic - buffer overflows",
+	"details": "\nTimo Sirainen discovered several problems in EPIC, a popular client\nfor Internet Relay Chat (IRC). A malicious server could craft special\nreply strings, triggering the client to write beyond buffer\nboundaries. This could lead to a denial of service if the client only\ncrashes, but may also lead to executing of arbitrary code under the\nuser id of the chatting user.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.004-17.1.\n\n\nFor the old stable distribution (potato) these problems have been\nfixed in version 3.004-16.1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.004-19.\n\n\nWe recommend that you upgrade your EPIC package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "epic",
+				"purl": "pkg:deb/debian/epic?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.004-17.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-287.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-287"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3848-1",
+	"modified": "2023-10-16T00:12:22.827675Z",
+	"published": "2017-05-10T00:00:00Z",
+	"related": [
+		"CVE-2017-8386"
+	],
+	"summary": "git - security update",
+	"details": "\nTimo Schmid of ERNW GmbH discovered that the Git git-shell, a restricted\nlogin shell for Git-only SSH access, allows a user to run an interactive\npager by causing it to spawn \"git upload-pack --help\".\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:2.1.4-2.1+deb8u3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:2.11.0-3.\n\n\nWe recommend that you upgrade your git packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.4-2.1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.4-2.1",
+				"1:2.1.4-2.1+deb8u1",
+				"1:2.1.4-2.1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3848-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3848"
+		}
+	]
+}

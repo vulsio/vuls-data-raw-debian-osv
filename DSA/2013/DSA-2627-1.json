@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2627-1",
+	"modified": "2023-10-16T00:06:02.364634Z",
+	"published": "2013-02-17T00:00:00Z",
+	"related": [
+		"CVE-2012-4929"
+	],
+	"summary": "nginx - information leak",
+	"details": "\nJuliano Rizzo and Thai Duong discovered a weakness in the TLS/SSL\nprotocol when using compression. This side channel attack, dubbed\nCRIME, allows eavesdroppers to gather information to recover the\noriginal plaintext in the protocol. This update to nginx disables\nSSL compression.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.7.67-3+squeeze3.\n\n\nFor the testing distribution (wheezy), and unstable distribution (sid),\nthis problem has been fixed in version 1.1.16-1.\n\n\nWe recommend that you upgrade your nginx packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.67-3+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.67-3",
+				"0.7.67-3+squeeze1",
+				"0.7.67-3+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2627-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2627"
+		}
+	]
+}

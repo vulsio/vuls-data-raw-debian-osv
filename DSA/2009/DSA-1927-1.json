@@ -1,0 +1,70 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1927-1",
+	"modified": "2023-10-16T00:10:47.050373Z",
+	"published": "2009-11-05T00:00:00Z",
+	"related": [
+		"CVE-2009-3228",
+		"CVE-2009-3238",
+		"CVE-2009-3547",
+		"CVE-2009-3612",
+		"CVE-2009-3620",
+		"CVE-2009-3621",
+		"CVE-2009-3638"
+	],
+	"summary": "linux-2.6 - several vulnerabilities",
+	"details": "\nNotice: Debian 5.0.4, the next point release of Debian 'lenny', will\ninclude a new default value for the mmap\\_min\\_addr tunable. This\nchange will add an additional safeguard against a class of security\nvulnerabilities known as \"NULL pointer dereference\" vulnerabilities,\nbut it will need to be overridden when using certain applications.\nAdditional information about this change, including instructions for\nmaking this change locally in advance of 5.0.4 (recommended), can be\nfound at:\n<https://wiki.debian.org/mmap_min_addr>.\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, sensitive memory leak or privilege\nescalation. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-3228](https://security-tracker.debian.org/tracker/CVE-2009-3228)\nEric Dumazet reported an instance of uninitialized kernel memory\n in the network packet scheduler. Local users may be able to\n exploit this issue to read the contents of sensitive kernel\n memory.\n* [CVE-2009-3238](https://security-tracker.debian.org/tracker/CVE-2009-3238)\nLinus Torvalds provided a change to the get\\_random\\_int() function\n to increase its randomness.\n* [CVE-2009-3547](https://security-tracker.debian.org/tracker/CVE-2009-3547)\nEarl Chew discovered a NULL pointer dereference issue in the\n pipe\\_rdwr\\_open function which can be used by local users to gain\n elevated privileges.\n* [CVE-2009-3612](https://security-tracker.debian.org/tracker/CVE-2009-3612)\nJiri Pirko discovered a typo in the initialization of a structure\n in the netlink subsystem that may allow local users to gain access\n to sensitive kernel memory.\n* [CVE-2009-3620](https://security-tracker.debian.org/tracker/CVE-2009-3620)\nBen Hutchings discovered an issue in the DRM manager for ATI Rage\n 128 graphics adapters. Local users may be able to exploit this\n vulnerability to cause a denial of service (NULL pointer\n dereference).\n* [CVE-2009-3621](https://security-tracker.debian.org/tracker/CVE-2009-3621)\nTomoki Sekiyama discovered a deadlock condition in the UNIX domain\n socket implementation. Local users can exploit this vulnerability\n to cause a denial of service (system hang).\n* [CVE-2009-3638](https://security-tracker.debian.org/tracker/CVE-2009-3638)\nDavid Wagner reported an overflow in the KVM subsystem on i386\n systems. This issue is exploitable by local users with access to\n the /dev/kvm device file.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.26-19lenny2.\n\n\nFor the oldstable distribution (etch), these problems, where\napplicable, will be fixed in updates to linux-2.6 and linux-2.6.24.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\nThe following matrix lists additional source packages that were\nrebuilt for compatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 5.0 (lenny) |\n| --- | --- |\n| user-mode-linux | 2.6.26-1um-2+19lenny2 |\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-19lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-13",
+				"2.6.26-13lenny2",
+				"2.6.26-13lenny2~bpo40+1",
+				"2.6.26-14",
+				"2.6.26-15",
+				"2.6.26-15lenny1",
+				"2.6.26-15lenny2",
+				"2.6.26-15lenny3",
+				"2.6.26-15~bpo40+1",
+				"2.6.26-15~bpo40+2",
+				"2.6.26-16",
+				"2.6.26-17",
+				"2.6.26-17lenny1",
+				"2.6.26-17lenny2",
+				"2.6.26-17lenny2~bpo40+1",
+				"2.6.26-17~bpo40+1",
+				"2.6.26-18",
+				"2.6.26-19",
+				"2.6.26-19lenny1",
+				"2.6.26-19~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1927-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1927"
+		}
+	]
+}

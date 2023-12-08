@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-713-1",
+	"modified": "2023-10-16T00:31:57.493274Z",
+	"published": "2005-04-21T00:00:00Z",
+	"related": [
+		"CVE-2005-1108",
+		"CVE-2005-1109"
+	],
+	"summary": "junkbuster - several",
+	"details": "\nSeveral bugs have been found in junkbuster, a HTTP proxy and filter.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing vulnerabilities:\n\n\n* [CAN-2005-1108](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1108)\nJames Ranson discovered that an attacker can modify the referrer\n setting with a carefully crafted URL by accidentally overwriting a\n global variable.\n\n* [CAN-2005-1109](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1109)\nTavis Ormandy from the Gentoo Security Team discovered several\n heap corruptions due to inconsistent use of an internal function\n that can crash the daemon or possibly lead to the execution of\n arbitrary code.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.0.2-0.2woody1.\n\n\nThe unstable distribution (sid) doesn't contain the junkbuster package\nanymore.\n\n\nWe recommend that you upgrade your junkbuster package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "junkbuster",
+				"purl": "pkg:deb/debian/junkbuster?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.2-0.2woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.2-0.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-713-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-713"
+		}
+	]
+}

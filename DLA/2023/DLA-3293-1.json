@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3293-1",
+	"modified": "2023-06-28T06:26:55.445953Z",
+	"published": "2023-01-30T00:00:00Z",
+	"related": [
+		"CVE-2018-16384",
+		"CVE-2019-13464",
+		"CVE-2020-22669",
+		"CVE-2022-39955",
+		"CVE-2022-39956",
+		"CVE-2022-39957",
+		"CVE-2022-39958"
+	],
+	"summary": "modsecurity-crs - security update",
+	"details": "\nMultiple issues were found in modsecurity-crs, a set of generic attack\ndetection rules for use with ModSecurity or compatible web application\nfirewalls, which allows remote attackers to bypass the web applications\nfirewall.\n\n\nIf you are using modsecurity-crs with apache2 / libapache2-modsecurity, please\nmake sure to review your modsecurity configuration, usually\n/etc/modsecurity/modsecurity.conf, against the updated recommended\nconfigration, available in /etc/modsecurity/modsecurity.conf-recommended:\nSome of the changes to the recommended rules are required to avoid WAF bypasses\nin certain circumstances.\n\n\nPlease note that [CVE-2022-39956](https://security-tracker.debian.org/tracker/CVE-2022-39956) requires an updated modsecurity-apache packge,\nwhich has been previously uploaded to buster-security, see Debian LTS Advisory\nDLA-3283-1 for details.\n\n\nIf you are using some other solution in connection with the\nmodsecurity-ruleset, for example one that it is using libmodsecurity3, your\nsolution might error out with an error message like \"Error creating rule:\nUnknown variable: MULTIPART\\_PART\\_HEADERS\". In this case you can disable the\nmitigation for [CVE-2022-29956](https://security-tracker.debian.org/tracker/CVE-2022-29956) by removing the rule file\nREQUEST-922-MULTIPART-ATTACK.conf. However, be aware that this will disable\nthe protection and could allow attackers to bypass your Web Application\nFirewall.\n\n\nThere is no package in Debian which depends on libmodsecurity3, so if you are\nonly using software which is available from Debian, you are not affected by\nthis limitation.\n\n\nKudos to @airween for the support and help while perparing the update.\n\n\n* [CVE-2018-16384](https://security-tracker.debian.org/tracker/CVE-2018-16384)\nA SQL injection bypass (aka PL1 bypass) exists in OWASP ModSecurity Core Rule\n Set (owasp-modsecurity-crs) through v3.1.0-rc3 via {`a`b} where a is a special\n function name (such as if) and b is the SQL statement to be executed.\n* [CVE-2020-22669](https://security-tracker.debian.org/tracker/CVE-2020-22669)\nModsecurity owasp-modsecurity-crs 3.2.0 (Paranoia level at PL1) has a SQL\n injection bypass vulnerability. Attackers can use the comment characters and\n variable assignments in the SQL syntax to bypass Modsecurity WAF protection and\n implement SQL injection attacks on Web applications.\n* [CVE-2022-39955](https://security-tracker.debian.org/tracker/CVE-2022-39955)\nThe OWASP ModSecurity Core Rule Set (CRS) is affected by a partial rule set\n bypass by submitting a specially crafted HTTP Content-Type header field that\n indicates multiple character encoding schemes. A vulnerable back-end can\n potentially be exploited by declaring multiple Content-Type charset names and\n therefore bypassing the configurable CRS Content-Type header charset allow\n list. An encoded payload can bypass CRS detection this way and may then be\n decoded by the backend. The legacy CRS versions 3.0.x and 3.1.x are affected,\n as well as the currently supported versions 3.2.1 and 3.3.2. Integrators and\n users are advised to upgrade to 3.2.2 and 3.3.3 respectively.\n* [CVE-2022-39956](https://security-tracker.debian.org/tracker/CVE-2022-39956)\nThe OWASP ModSecurity Core Rule Set (CRS) is affected by a partial rule set\n bypass for HTTP multipart requests by submitting a payload that uses a\n character encoding scheme via the Content-Type or the deprecated\n Content-Transfer-Encoding multipart MIME header fields that will not be decoded\n and inspected by the web application firewall engine and the rule set. The\n multipart payload will therefore bypass detection. A vulnerable backend that\n supports these encoding schemes can potentially be exploited. The legacy CRS\n versions 3.0.x and 3.1.x are affected, as well as the currently supported\n versions 3.2.1 and 3.3.2. Integrators and users are advised upgrade to 3.2.2\n and 3.3.3 respectively. The mitigation against these vulnerabilities depends on\n the installation of the latest ModSecurity version (v2.9.6 / v3.0.8).\n* [CVE-2022-39957](https://security-tracker.debian.org/tracker/CVE-2022-39957)\nThe OWASP ModSecurity Core Rule Set (CRS) is affected by a response body\n bypass. A client can issue an HTTP Accept header field containing an optional\n charset parameter in order to receive the response in an encoded form.\n Depending on the charset, this response can not be decoded by the web\n application firewall. A restricted resource, access to which would ordinarily\n be detected, may therefore bypass detection. The legacy CRS versions 3.0.x and\n 3.1.x are affected, as well as the currently supported versions 3.2.1 and\n 3.3.2. Integrators and users are advised to upgrade to 3.2.2 and 3.3.3\n respectively.\n* [CVE-2022-39958](https://security-tracker.debian.org/tracker/CVE-2022-39958)\nThe OWASP ModSecurity Core Rule Set (CRS) is affected by a response body bypass\n to sequentially exfiltrate small and undetectable sections of data by\n repeatedly submitting an HTTP Range header field with a small byte range. A\n restricted resource, access to which would ordinarily be detected, may be\n exfiltrated from the backend, despite being protected by a web application\n firewall that uses CRS. Short subsections of a restricted resource may bypass\n pattern matching techniques and allow undetected access. The legacy CRS\n versions 3.0.x and 3.1.x are affected, as well as the currently supported\n versions 3.2.1 and 3.3.2. Integrators and users are advised to upgrade to 3.2.2\n and 3.3.3 respectively and to configure a CRS paranoia level of 3 or higher.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.2.3-0+deb10u3.\n\n\nWe recommend that you upgrade your modsecurity-crs packages.\n\n\nFor the detailed security status of modsecurity-crs please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/modsecurity-crs>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "modsecurity-crs",
+				"purl": "pkg:deb/debian/modsecurity-crs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.3-0+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.0-1",
+				"3.1.0-1+deb10u1",
+				"3.1.0-1+deb10u2",
+				"3.1.1-1",
+				"3.2.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3293-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3293"
+		}
+	]
+}

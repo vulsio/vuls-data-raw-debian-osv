@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1476-1",
+	"modified": "2023-06-28T06:20:44.012014Z",
+	"published": "2018-08-27T00:00:00Z",
+	"related": [
+		"CVE-2018-15599"
+	],
+	"summary": "dropbear - security update",
+	"details": "\nA vulnerability in dropbear, a lightweight SSH2 server and client, making it\npossible to guess valid usernames has been found:\n\n\n* [CVE-2018-15599](https://security-tracker.debian.org/tracker/CVE-2018-15599)\nThe recv\\_msg\\_userauth\\_request function in svr-auth.c in is prone\n to a user enumeration vulnerability, similar to \n [CVE-2018-15473](https://security-tracker.debian.org/tracker/CVE-2018-15473) in OpenSSH.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2014.65-1+deb8u3.\n\n\nWe recommend that you upgrade your dropbear packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "dropbear",
+				"purl": "pkg:deb/debian/dropbear?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2014.65-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2014.65-1",
+				"2014.65-1+deb8u1",
+				"2014.65-1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1476-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1476"
+		}
+	]
+}

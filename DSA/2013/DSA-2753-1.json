@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2753-1",
+	"modified": "2023-10-16T00:11:29.596258Z",
+	"published": "2013-09-13T00:00:00Z",
+	"related": [
+		"CVE-2013-4302"
+	],
+	"summary": "mediawiki - cross-site request forgery token disclosure",
+	"details": "\nIt was discovered that in Mediawiki, a wiki engine, several API modules\nallowed anti-CSRF tokens to be accessed via JSONP. These tokens protect\nagainst cross site request forgeries and are confidential.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1.15.5-2squeeze6.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.19.5-1+deb7u1.\n\n\nFor the testing distribution (jessie) and unstable distribution (sid),\nthis problem has been fixed in version 1.19.8+dfsg-1.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.15.5-2squeeze6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.15.5-2",
+				"1:1.15.5-2squeeze1",
+				"1:1.15.5-2squeeze2",
+				"1:1.15.5-2squeeze3",
+				"1:1.15.5-2squeeze4",
+				"1:1.15.5-2squeeze5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2753-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.19.5-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.19.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2753-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2753"
+		}
+	]
+}

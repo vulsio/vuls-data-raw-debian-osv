@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-440-1",
+	"modified": "2023-06-28T06:34:02.547026Z",
+	"published": "2016-02-28T00:00:00Z",
+	"summary": "dansguardian - security update",
+	"details": "\nAs described in [DLA-437-1](./dla-437), clamav has been updated to the most recent upstream\nversion, 0.99. Due to a soname change in libclamav, packages depending on\nlibclamav needed to be recompiled to work with the new libclamav7. At the\ntime DLA-437-1 was sent, updated dansguardian packages were not available.\n\n\nAn update to dansguardian has now been uploaded and packages should be\navailable shortly. The recommendation in DLA-437-1 not to upgrade clamav if\nusing it with dansguardian in no longer applicable.\n\n\nUpgrading clamav and dansguardian is recommended for the reasons described in\nDLA-437-1.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "dansguardian",
+				"purl": "pkg:deb/debian/dansguardian?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.10.1.1-3+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.1.1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-440-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-440"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2594-1",
+	"modified": "2023-10-16T00:11:20.884025Z",
+	"published": "2012-12-30T00:00:00Z",
+	"related": [
+		"CVE-2012-3221"
+	],
+	"summary": "virtualbox-ose - programming error",
+	"details": "\nhalfdog discovered that incorrect interrupt handling in VirtualBox,\na x86 virtualization solution, can lead to denial of service.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.2.10-dfsg-1+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution \n(sid), this problem has been fixed in version 4.1.18-dfsg-1.1 of\nthe virtualbox source package.\n\n\nWe recommend that you upgrade your virtualbox-ose packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "virtualbox-ose",
+				"purl": "pkg:deb/debian/virtualbox-ose?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.10-dfsg-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.10-dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2594-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2594"
+		}
+	]
+}

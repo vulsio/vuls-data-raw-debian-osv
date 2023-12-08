@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2287-1",
+	"modified": "2023-10-16T00:11:05.615058Z",
+	"published": "2011-07-28T00:00:00Z",
+	"related": [
+		"CVE-2011-2501",
+		"CVE-2011-2690",
+		"CVE-2011-2691",
+		"CVE-2011-2692"
+	],
+	"summary": "libpng - several vulnerabilities",
+	"details": "\nThe PNG library libpng has been affected by several vulnerabilities. The most \ncritical one is the identified as \n[\\\nCVE-2011-2690](https://security-tracker.debian.org/tracker/CVE-2011-2690). Using this vulnerability, an attacker is able to overwrite \nmemory with an arbitrary amount of data controlled by her via a crafted PNG \nimage.\n\n\nThe other vulnerabilities are less critical and allow an attacker to \ncause a crash in the program (denial of service) via a crafted PNG \nimage.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.2.27-2+lenny5. Due to a technical limitation in the Debian\narchive processing scripts, the updated packages cannot be released\nin parallel with the packages for Squeeze. They will appear shortly.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.2.44-1+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.2.46-1.\n\n\nWe recommend that you upgrade your libpng packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.44-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.44-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2287-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.27-2+lenny5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.27-2",
+				"1.2.27-2+lenny2",
+				"1.2.27-2+lenny3",
+				"1.2.27-2+lenny4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2287-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2287"
+		}
+	]
+}

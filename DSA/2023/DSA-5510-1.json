@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5510-1",
+	"modified": "2023-10-16T00:21:41.419109Z",
+	"published": "2023-09-29T00:00:00Z",
+	"related": [
+		"CVE-2023-5217"
+	],
+	"summary": "libvpx - security update",
+	"details": "\nClement Lecigne discovered a heap-based buffer overflow in libvpx, a\nmultimedia library for the VP8 and VP9 video codecs, which may result in\nthe execution of arbitrary code if a specially crafted VP8 media stream\nis processed.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 1.9.0-1+deb11u1.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 1.12.0-1+deb12u1.\n\n\nWe recommend that you upgrade your libvpx packages.\n\n\nFor the detailed security status of libvpx please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libvpx](https://security-tracker.debian.org/tracker/libvpx)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libvpx",
+				"purl": "pkg:deb/debian/libvpx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.0-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5510-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "libvpx",
+				"purl": "pkg:deb/debian/libvpx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.0-1+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5510-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5510"
+		}
+	]
+}

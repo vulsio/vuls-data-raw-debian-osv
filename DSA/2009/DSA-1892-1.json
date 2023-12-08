@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1892-1",
+	"modified": "2023-10-16T00:10:45.078439Z",
+	"published": "2009-09-23T00:00:00Z",
+	"related": [
+		"CVE-2009-2632",
+		"CVE-2009-3235"
+	],
+	"summary": "dovecot - arbitrary code execution",
+	"details": "\nIt was discovered that the SIEVE component of dovecot, a mail server\nthat supports mbox and maildir mailboxes, is vulnerable to a buffer\noverflow when processing SIEVE scripts. This can be used to elevate\nprivileges to the dovecot system user. An attacker who is able to\ninstall SIEVE scripts executed by the server is therefore able to read\nand modify arbitrary email messages on the system.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in version\n1.0.rc15-2etch5.\n\n\nFor the stable distribution (lenny), this problem has been fixed in version\n1:1.0.15-2.3+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), this problem has been fixed in version 1:1.2.1-1.\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "dovecot",
+				"purl": "pkg:deb/debian/dovecot?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.rc15-2etch5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.rc15-2",
+				"1.0.rc15-2etch1",
+				"1.0.rc15-2etch2",
+				"1.0.rc15-2etch3",
+				"1.0.rc15-2etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1892-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "dovecot",
+				"purl": "pkg:deb/debian/dovecot?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.0.15-2.3+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.0.15-2.3",
+				"1:1.0.15-2.3+lenny1~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1892-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1892"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4521-1",
+	"modified": "2023-10-16T00:25:01.894364Z",
+	"published": "2019-09-09T00:00:00Z",
+	"related": [
+		"CVE-2019-13139",
+		"CVE-2019-13509",
+		"CVE-2019-14271"
+	],
+	"summary": "docker.io - security update",
+	"details": "\nThree security vulnerabilities have been discovered in the Docker\ncontainer runtime: Insecure loading of NSS libraries in docker cp\ncould result in execution of code with root privileges, sensitive data\ncould be logged in debug mode and there was a command injection\nvulnerability in the docker build command.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 18.09.1+dfsg1-7.1+deb10u1.\n\n\nWe recommend that you upgrade your docker.io packages.\n\n\nFor the detailed security status of docker.io please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/docker.io](https://security-tracker.debian.org/tracker/docker.io)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "docker.io",
+				"purl": "pkg:deb/debian/docker.io?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "18.09.1+dfsg1-7.1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"18.09.1+dfsg1-7.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4521-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4521"
+		}
+	]
+}

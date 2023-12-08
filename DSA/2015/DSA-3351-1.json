@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3351-1",
+	"modified": "2023-10-16T00:11:56.298900Z",
+	"published": "2015-09-03T00:00:00Z",
+	"related": [
+		"CVE-2015-1291",
+		"CVE-2015-1292",
+		"CVE-2015-1293",
+		"CVE-2015-1294",
+		"CVE-2015-1295",
+		"CVE-2015-1296",
+		"CVE-2015-1297",
+		"CVE-2015-1298",
+		"CVE-2015-1299",
+		"CVE-2015-1300",
+		"CVE-2015-1301"
+	],
+	"summary": "chromium-browser - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the chromium web browser.\n\n\n* [CVE-2015-1291](https://security-tracker.debian.org/tracker/CVE-2015-1291)\nA cross-origin bypass issue was discovered in DOM.\n* [CVE-2015-1292](https://security-tracker.debian.org/tracker/CVE-2015-1292)\nMariusz Mlynski discovered a cross-origin bypass issue in ServiceWorker.\n* [CVE-2015-1293](https://security-tracker.debian.org/tracker/CVE-2015-1293)\nMariusz Mlynski discovered a cross-origin bypass issue in DOM.\n* [CVE-2015-1294](https://security-tracker.debian.org/tracker/CVE-2015-1294)\ncloudfuzzer discovered a use-after-free issue in the Skia graphics\n library.\n* [CVE-2015-1295](https://security-tracker.debian.org/tracker/CVE-2015-1295)\nA use-after-free issue was discovered in the printing component.\n* [CVE-2015-1296](https://security-tracker.debian.org/tracker/CVE-2015-1296)\nzcorpan discovered a character spoofing issue.\n* [CVE-2015-1297](https://security-tracker.debian.org/tracker/CVE-2015-1297)\nAlexander Kashev discovered a permission scoping error.\n* [CVE-2015-1298](https://security-tracker.debian.org/tracker/CVE-2015-1298)\nRob Wu discovered an error validating the URL of extensions.\n* [CVE-2015-1299](https://security-tracker.debian.org/tracker/CVE-2015-1299)\ntaro.suzuki.dev discovered a use-after-free issue in the Blink/WebKit\n library.\n* [CVE-2015-1300](https://security-tracker.debian.org/tracker/CVE-2015-1300)\ncgvwzq discovered an information disclosure issue in the Blink/WebKit\n library.\n* [CVE-2015-1301](https://security-tracker.debian.org/tracker/CVE-2015-1301)\nThe chrome 45 development team found and fixed various issues\n during internal auditing. Also multiple issues were fixed in\n the libv8 library, version 4.5.103.29.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 45.0.2454.85-1~deb8u1.\n\n\nFor the testing distribution (stretch), these problems will be fixed\nonce the gcc-5 transition completes.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 45.0.2454.85-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "45.0.2454.85-1~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"41.0.2272.118-1",
+				"42.0.2311.135-1",
+				"42.0.2311.135-1~deb8u1",
+				"42.0.2311.135-2",
+				"42.0.2311.90-1",
+				"42.0.2311.90-1~deb8u1",
+				"42.0.2311.90-2",
+				"43.0.2357.124-1",
+				"43.0.2357.124-2",
+				"43.0.2357.124-3",
+				"43.0.2357.130-1",
+				"43.0.2357.65-1",
+				"43.0.2357.65-1~deb8u1",
+				"43.0.2357.81-1",
+				"44.0.2403.107-1",
+				"44.0.2403.107-2",
+				"44.0.2403.157-1",
+				"44.0.2403.89-1",
+				"44.0.2403.89-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3351-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3351"
+		}
+	]
+}

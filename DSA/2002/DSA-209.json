@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-209",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-12T00:00:00Z",
+	"related": [
+		"CVE-2002-1344"
+	],
+	"summary": "wget - directory traversal",
+	"details": "\nTwo problems have been found in the wget package as distributed in\nDebian GNU/Linux:\n\n\n* Stefano Zacchiroli found a buffer overrun in the url\\_filename function,\n which would make wget segfault on very long URLs\n* Steven M. Christey discovered that wget did not verify the FTP server\n response to a NLST command: it must not contain any directory information,\n since that can be used to make an FTP client overwrite arbitrary files.\n\n\nBoth problems have been fixed in version 1.5.3-3.1 for Debian GNU/Linux\n2.2/potato and version 1.8.1-6.1 for Debian GNU/Linux 3.0/woody.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "wget",
+				"purl": "pkg:deb/debian/wget?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.1-6.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-209.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-209"
+		}
+	]
+}

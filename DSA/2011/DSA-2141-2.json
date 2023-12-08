@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2141-2",
+	"modified": "2023-10-16T00:10:59.107253Z",
+	"published": "2011-01-06T00:00:00Z",
+	"related": [
+		"CVE-2009-3555"
+	],
+	"summary": "nss - protocol design flaw",
+	"details": "\nDSA-2141 consists of three individual parts, which can be viewed in the \nmailing list archive:\n[DSA 2141-1](https://lists.debian.org/debian-security-announce/2011/msg00001.html) (openssl),\n[DSA 2141-2](https://lists.debian.org/debian-security-announce/2011/msg00002.html) (nss),\n[DSA 2141-3](https://lists.debian.org/debian-security-announce/2011/msg00003.html) (apache2), and\n[DSA 2141-4](https://lists.debian.org/debian-security-announce/2011/msg00006.html) (lighttpd).\nThis page only covers the first part, openssl.\n\n\n* [CVE-2009-3555](https://security-tracker.debian.org/tracker/CVE-2009-3555)\nMarsh Ray, Steve Dispensa, and Martin Rex discovered a flaw in the TLS\nand SSLv3 protocols. If an attacker could perform a man in the middle\nattack at the start of a TLS connection, the attacker could inject\narbitrary content at the beginning of the user's session. This update\nadds backported support for the new RFC5746 renegotiation extension\nwhich fixes this issue.\n\n\nIf openssl is used in a server application, it will by default no\nlonger accept renegotiation from clients that do not support the\nRFC5746 secure renegotiation extension. A separate advisory will add\nRFC5746 support for nss, the security library used by the iceweasel\nweb browser. For apache2, there will be an update which allows to\nre-enable insecure renegotiation.\n\n\nThis version of openssl is not compatible with older versions of tor.\nYou have to use at least tor version 0.2.1.26-1~lenny+1, which has\nbeen included in the point release 5.0.7 of Debian stable.\n\n\nCurrently we are not aware of other software with similar compatibility\nproblems.\n* [CVE-2010-4180](https://security-tracker.debian.org/tracker/CVE-2010-4180)\nIn addition, this update fixes a flaw that allowed a client to bypass\nrestrictions configured in the server for the used cipher suite.\n\n\nFor the stable distribution (lenny), this problem has been fixed\nin version 0.9.8g-15+lenny11.\n\n\nFor the unstable distribution (sid), and the testing distribution\n(squeeze), this problem has been fixed in version 0.9.8o-4.\n\n\nWe recommend that you upgrade your openssl package.\n\n\nFurther information about Debian Security Advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: [https://www.debian.org/security/]($(HOME)/security/)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.12.3.1-0lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.12.0-5",
+				"3.12.0-6",
+				"3.12.1-1",
+				"3.12.2.with.ckbi.1.73-1",
+				"3.12.2.with.ckbi.1.73-2",
+				"3.12.3-1",
+				"3.12.3.1-0lenny1",
+				"3.12.3.1-0lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2141-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2141"
+		}
+	]
+}

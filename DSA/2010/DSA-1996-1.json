@@ -1,0 +1,83 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1996-1",
+	"modified": "2023-10-16T00:10:52.063381Z",
+	"published": "2010-02-12T00:00:00Z",
+	"related": [
+		"CVE-2009-3939",
+		"CVE-2009-4027",
+		"CVE-2009-4536",
+		"CVE-2009-4538",
+		"CVE-2010-0003",
+		"CVE-2010-0007",
+		"CVE-2010-0291",
+		"CVE-2010-0298",
+		"CVE-2010-0306",
+		"CVE-2010-0307",
+		"CVE-2010-0309",
+		"CVE-2010-0410",
+		"CVE-2010-0415"
+	],
+	"summary": "linux-2.6 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, sensitive memory leak or privilege\nescalation. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-3939](https://security-tracker.debian.org/tracker/CVE-2009-3939)\nJoseph Malicki reported that the dbg\\_lvl sysfs attribute for the\n megaraid\\_sas device driver had world-writable permissions,\n permitting local users to modify logging settings.\n* [CVE-2009-4027](https://security-tracker.debian.org/tracker/CVE-2009-4027)\nLennert Buytenhek reported a race in the mac80211 subsystem that\n may allow remote users to cause a denial of service (system crash)\n on a system connected to the same wireless network.\n* [CVE-2009-4536](https://security-tracker.debian.org/tracker/CVE-2009-4536) [CVE-2009-4538](https://security-tracker.debian.org/tracker/CVE-2009-4538)\nFabian Yamaguchi reported issues in the e1000 and e1000e drivers\n for Intel gigabit network adapters which allow remote users to\n bypass packet filters using specially crafted ethernet frames.\n* [CVE-2010-0003](https://security-tracker.debian.org/tracker/CVE-2010-0003)\nAndi Kleen reported a defect which allows local users to gain read\n access to memory reachable by the kernel when the\n print-fatal-signals option is enabled. This option is disabled by\n default.\n* [CVE-2010-0007](https://security-tracker.debian.org/tracker/CVE-2010-0007)\nFlorian Westphal reported a lack of capability checking in the\n ebtables netfilter subsystem. If the ebtables module is loaded,\n local users can add and modify ebtables rules.\n* [CVE-2010-0291](https://security-tracker.debian.org/tracker/CVE-2010-0291)\nAl Viro reported several issues with the mmap/mremap system calls\n that allow local users to cause a denial of service (system panic)\n or obtain elevated privileges.\n* [CVE-2010-0298](https://security-tracker.debian.org/tracker/CVE-2010-0298) & [CVE-2010-0306](https://security-tracker.debian.org/tracker/CVE-2010-0306)\nGleb Natapov discovered issues in the KVM subsystem where missing\n permission checks (CPL/IOPL) permit a user in a guest system to\n denial of service a guest (system crash) or gain escalated\n privileges with the guest.\n* [CVE-2010-0307](https://security-tracker.debian.org/tracker/CVE-2010-0307)\nMathias Krause reported an issue with the load\\_elf\\_binary code on\n the amd64 flavor kernels that allows local users to cause a denial\n of service (system crash).\n* [CVE-2010-0309](https://security-tracker.debian.org/tracker/CVE-2010-0309)\nMarcelo Tosatti fixed an issue in the PIT emulation code in the\n KVM subsystem that allows privileged users in a guest domain to\n cause a denial of service (crash) of the host system.\n* [CVE-2010-0410](https://security-tracker.debian.org/tracker/CVE-2010-0410)\nSebastian Krahmer discovered an issue in the netlink connector\n subsystem that permits local users to allocate large amounts of\n system memory resulting in a denial of service (out of memory).\n* [CVE-2010-0415](https://security-tracker.debian.org/tracker/CVE-2010-0415)\nRamon de Carvalho Valle discovered an issue in the sys\\_move\\_pages\n interface, limited to amd64, ia64 and powerpc64 flavors in Debian.\n Local users can exploit this issue to cause a denial of service\n (system crash) or gain access to sensitive kernel memory.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.26-21lenny3.\n\n\nFor the oldstable distribution (etch), these problems, where\napplicable, will be fixed in updates to linux-2.6 and linux-2.6.24.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\nThe following matrix lists additional source packages that were\nrebuilt for compatibility with or to take advantage of this update:\n\n\n\n\n|  | stable/lenny |\n| --- | --- |\n| user-mode-linux | 2.6.26-1um-2+21lenny3 |\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-21lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-13",
+				"2.6.26-13lenny2",
+				"2.6.26-13lenny2~bpo40+1",
+				"2.6.26-14",
+				"2.6.26-15",
+				"2.6.26-15lenny1",
+				"2.6.26-15lenny2",
+				"2.6.26-15lenny3",
+				"2.6.26-15~bpo40+1",
+				"2.6.26-15~bpo40+2",
+				"2.6.26-16",
+				"2.6.26-17",
+				"2.6.26-17lenny1",
+				"2.6.26-17lenny2",
+				"2.6.26-17lenny2~bpo40+1",
+				"2.6.26-17~bpo40+1",
+				"2.6.26-18",
+				"2.6.26-19",
+				"2.6.26-19lenny1",
+				"2.6.26-19lenny2",
+				"2.6.26-19~bpo40+1",
+				"2.6.26-20",
+				"2.6.26-20~bpo40+1",
+				"2.6.26-21",
+				"2.6.26-21lenny1",
+				"2.6.26-21lenny2",
+				"2.6.26-21~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1996-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-1996"
+		}
+	]
+}

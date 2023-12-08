@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1940-1",
+	"modified": "2023-06-28T06:21:05.591333Z",
+	"published": "2019-10-01T00:00:00Z",
+	"related": [
+		"CVE-2019-14821",
+		"CVE-2019-14835",
+		"CVE-2019-15117",
+		"CVE-2019-15118",
+		"CVE-2019-15902"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2019-14821](https://security-tracker.debian.org/tracker/CVE-2019-14821)\nMatt Delco reported a race condition in KVM's coalesced MMIO\n facility, which could lead to out-of-bounds access in the kernel.\n A local attacker permitted to access /dev/kvm could use this to\n cause a denial of service (memory corruption or crash) or possibly\n for privilege escalation.\n* [CVE-2019-14835](https://security-tracker.debian.org/tracker/CVE-2019-14835)\nPeter Pi of Tencent Blade Team discovered a missing bounds check\n in vhost\\_net, the network back-end driver for KVM hosts, leading\n to a buffer overflow when the host begins live migration of a VM.\n An attacker in control of a VM could use this to cause a denial of\n service (memory corruption or crash) or possibly for privilege\n escalation on the host.\n* [CVE-2019-15117](https://security-tracker.debian.org/tracker/CVE-2019-15117)\nHui Peng and Mathias Payer reported a missing bounds check in the\n usb-audio driver's descriptor parsing code, leading to a buffer\n over-read. An attacker able to add USB devices could possibly use\n this to cause a denial of service (crash).\n* [CVE-2019-15118](https://security-tracker.debian.org/tracker/CVE-2019-15118)\nHui Peng and Mathias Payer reported unbounded recursion in the\n usb-audio driver's descriptor parsing code, leading to a stack\n overflow. An attacker able to add USB devices could use this to\n cause a denial of service (memory corruption or crash) or possibly\n for privilege escalation. On the amd64 architecture this is\n mitigated by a guard page on the kernel stack, so that it is only\n possible to cause a crash.\n* [CVE-2019-15902](https://security-tracker.debian.org/tracker/CVE-2019-15902)\nBrad Spengler reported that a backporting error reintroduced a\n spectre-v1 vulnerability in the ptrace subsystem in the\n ptrace\\_get\\_debugreg() function.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.189-3+deb9u1~deb8u1.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.189-3+deb9u1~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.110-1~deb8u1",
+				"4.9.144-3.1~deb8u1",
+				"4.9.168-1~deb8u1",
+				"4.9.189-3~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1940-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1940"
+		}
+	]
+}

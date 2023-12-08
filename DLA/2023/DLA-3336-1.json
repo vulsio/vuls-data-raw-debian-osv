@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3336-1",
+	"modified": "2023-06-28T06:25:31.936645Z",
+	"published": "2023-02-23T00:00:00Z",
+	"related": [
+		"CVE-2021-27515",
+		"CVE-2021-3664",
+		"CVE-2022-0512",
+		"CVE-2022-0639",
+		"CVE-2022-0686",
+		"CVE-2022-0691"
+	],
+	"summary": "node-url-parse - security update",
+	"details": "\nMultiple vulnerabilities were found in node-types-url-parse, a Node.js\nmodule used to parse URLs, which may result in authorization bypass or\nredirection to untrusted sites.\n\n\n* [CVE-2021-3664](https://security-tracker.debian.org/tracker/CVE-2021-3664)\nurl-parse mishandles certain uses of a single (back)slash such as\n `https:\\` and `https:/`, and interprets\n the URI as a relative path. Browsers accept a single backslash\n after the protocol, and treat it as a normal slash, while url-parse\n sees it as a relative path. Depending on library usage, this may\n result in allow/block list bypasses, SSRF attacks, open redirects,\n or other undesired behavior.\n* [CVE-2021-27515](https://security-tracker.debian.org/tracker/CVE-2021-27515)\nUsing backslash in the protocol is valid in the browser, while\n url-parse thinks it's a relative path. An application that\n validates a URL using url-parse might pass a malicious link.\n* [CVE-2022-0512](https://security-tracker.debian.org/tracker/CVE-2022-0512)\nIncorrect handling of username and password can lead to failure to\n properly identify the hostname, which in turn could result in\n authorization bypass.\n* [CVE-2022-0639](https://security-tracker.debian.org/tracker/CVE-2022-0639)\nIncorrect conversion of `@` characters in protocol in\n the `href` field can lead to lead to failure to properly\n identify the hostname, which in turn could result in authorization\n bypass.\n* [CVE-2022-0686](https://security-tracker.debian.org/tracker/CVE-2022-0686)\nRohan Sharma reported that url-parse is unable to find the correct\n hostname when no port number is provided in the URL, such as in\n `http://example.com:`. This could in turn result in SSRF\n attacks, open redirects or any other vulnerability which depends on\n the `hostname` field of the parsed URL.\n* [CVE-2022-0691](https://security-tracker.debian.org/tracker/CVE-2022-0691)\nurl-parse is unable to find the correct hostname when the URL\n contains a backspace `\\b` character. This tricks\n the parser into interpreting the URL as a relative path, bypassing\n all hostname checks. It can also lead to false positive in\n `extractProtocol()`.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.2.0-2+deb10u2.\n\n\nWe recommend that you upgrade your node-url-parse packages.\n\n\nFor the detailed security status of node-url-parse please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-url-parse>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "node-url-parse",
+				"purl": "pkg:deb/debian/node-url-parse?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.0-2+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.0-2",
+				"1.2.0-2+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3336-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3336"
+		}
+	]
+}

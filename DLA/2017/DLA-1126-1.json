@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1126-1",
+	"modified": "2023-06-28T06:20:15.441224Z",
+	"published": "2017-10-07T00:00:00Z",
+	"related": [
+		"CVE-2017-13720",
+		"CVE-2017-13722"
+	],
+	"summary": "libxfont - security update",
+	"details": "\nIt was discovered that there two vulnerabilities the library providing\nfont selection and rasterisation, libxfont:\n\n\n* [CVE-2017-13720](https://security-tracker.debian.org/tracker/CVE-2017-13720)\nIf a pattern contained a '?' character any character\n in the string is skipped even if it was a '\\0'. The rest of the\n matching then read invalid memory.\n* [CVE-2017-13722](https://security-tracker.debian.org/tracker/CVE-2017-13722)\nA malformed PCF file could cause the library to make\n reads from random heap memory that was behind the `strings` buffer,\n leading to an application crash or a information leak.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libxfont version\n1:1.4.5-5+deb7u1.\n\n\nWe recommend that you upgrade your libxfont packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libxfont",
+				"purl": "pkg:deb/debian/libxfont?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.4.5-5+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.4.5-2",
+				"1:1.4.5-3",
+				"1:1.4.5-4",
+				"1:1.4.5-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1126-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1126"
+		}
+	]
+}

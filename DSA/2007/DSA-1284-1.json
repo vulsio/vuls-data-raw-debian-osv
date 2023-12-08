@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1284-1",
+	"modified": "2023-10-16T00:10:19.266273Z",
+	"published": "2007-05-01T00:00:00Z",
+	"related": [
+		"CVE-2007-1320",
+		"CVE-2007-1321",
+		"CVE-2007-1322",
+		"CVE-2007-1366",
+		"CVE-2007-5729",
+		"CVE-2007-5730"
+	],
+	"summary": "qemu",
+	"details": "\nSeveral vulnerabilities have been discovered in the QEMU processor\nemulator, which may lead to the execution of arbitrary code or denial of\nservice. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-1320](https://security-tracker.debian.org/tracker/CVE-2007-1320)\nTavis Ormandy discovered that a memory management routine of the Cirrus\n video driver performs insufficient bounds checking, which might\n allow the execution of arbitrary code through a heap overflow.\n* [CVE-2007-1321](https://security-tracker.debian.org/tracker/CVE-2007-1321)\nTavis Ormandy discovered that the NE2000 network driver and the socket\n code perform insufficient input validation, which might allow the\n execution of arbitrary code through a heap overflow.\n* [CVE-2007-1322](https://security-tracker.debian.org/tracker/CVE-2007-1322)\nTavis Ormandy discovered that the icebp instruction can be abused to\n terminate the emulation, resulting in denial of service.\n* [CVE-2007-1323](https://security-tracker.debian.org/tracker/CVE-2007-1323)\nTavis Ormandy discovered that the NE2000 network driver and the socket\n code perform insufficient input validation, which might allow the\n execution of arbitrary code through a heap overflow.\n* [CVE-2007-1366](https://security-tracker.debian.org/tracker/CVE-2007-1366)\nTavis Ormandy discovered that the aam instruction can be abused to\n crash qemu through a division by zero, resulting in denial of\n service.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 0.6.1+20050407-1sarge1.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 0.8.2-4etch1.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.1+20050407-1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.1+20050407-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1284-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.2-4etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.2-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1284-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1284"
+		}
+	]
+}

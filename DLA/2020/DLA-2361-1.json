@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2361-1",
+	"modified": "2023-06-28T06:25:13.337662Z",
+	"published": "2020-09-01T00:00:00Z",
+	"related": [
+		"CVE-2020-14363"
+	],
+	"summary": "libx11 - security update",
+	"details": "\nJayden Rivers found an integer overflow in the init\\_om function of\nlibX11, the X11 client-side library, which could lead to a double\nfree.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2:1.6.4-3+deb9u3.\n\n\nWe recommend that you upgrade your libx11 packages.\n\n\nFor the detailed security status of libx11 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libx11>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libx11",
+				"purl": "pkg:deb/debian/libx11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.6.4-3+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.6.4-3",
+				"2:1.6.4-3+deb9u1",
+				"2:1.6.4-3+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2361-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2361"
+		}
+	]
+}

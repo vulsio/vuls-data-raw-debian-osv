@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2385-1",
+	"modified": "2023-10-16T00:11:12.767589Z",
+	"published": "2012-01-10T00:00:00Z",
+	"related": [
+		"CVE-2012-0206"
+	],
+	"summary": "pdns - packet loop",
+	"details": "\nRay Morris discovered that the PowerDNS authoritative server responds\nto response packets. An attacker who can spoof the source address of\nIP packets can cause an endless packet loop between a PowerDNS\nauthoritative server and another DNS server, leading to a denial of\nservice.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.9.21.2-1+lenny1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.9.22-8+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your pdns packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "pdns",
+				"purl": "pkg:deb/debian/pdns?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.21.2-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.21.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2385-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "pdns",
+				"purl": "pkg:deb/debian/pdns?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.22-8+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.22-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2385-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2385"
+		}
+	]
+}

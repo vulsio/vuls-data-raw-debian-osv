@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1702-1",
+	"modified": "2023-10-16T00:10:36.060102Z",
+	"published": "2009-01-12T00:00:00Z",
+	"related": [
+		"CVE-2009-0021"
+	],
+	"summary": "ntp - cryptographic weakness",
+	"details": "\nIt has been discovered that NTP, an implementation of the Network Time\nProtocol, does not properly check the result of an OpenSSL function\nfor verifying cryptographic signatures, which may ultimately lead to\nthe acceptance of unauthenticated time information. (Note that\ncryptographic authentication of time servers is often not enabled in\nthe first place.)\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 4.2.2.p4+dfsg-2etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.2.4p4+dfsg-8.\n\n\nThe testing distribution (lenny) will be fixed soon.\n\n\nWe recommend that you upgrade your ntp package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ntp",
+				"purl": "pkg:deb/debian/ntp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.2.2.p4+dfsg-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.2.2.p4+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1702-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1702"
+		}
+	]
+}

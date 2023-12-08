@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4194-1",
+	"modified": "2023-10-16T00:13:07.390374Z",
+	"published": "2018-05-06T00:00:00Z",
+	"related": [
+		"CVE-2018-1308"
+	],
+	"summary": "lucene-solr - security update",
+	"details": "\nAn XML external entity expansion vulnerability was discovered in the\nDataImportHandler of Solr, a search server based on Lucene, which could\nresult in information disclosure.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 3.6.2+dfsg-5+deb8u2.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3.6.2+dfsg-10+deb9u2.\n\n\nWe recommend that you upgrade your lucene-solr packages.\n\n\nFor the detailed security status of lucene-solr please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/lucene-solr](https://security-tracker.debian.org/tracker/lucene-solr)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "lucene-solr",
+				"purl": "pkg:deb/debian/lucene-solr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.2+dfsg-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.2+dfsg-5",
+				"3.6.2+dfsg-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4194-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "lucene-solr",
+				"purl": "pkg:deb/debian/lucene-solr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.2+dfsg-10+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.2+dfsg-10",
+				"3.6.2+dfsg-10+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4194-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4194"
+		}
+	]
+}

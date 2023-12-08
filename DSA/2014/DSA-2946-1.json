@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2946-1",
+	"modified": "2023-10-16T00:11:39.640226Z",
+	"published": "2014-06-04T00:00:00Z",
+	"related": [
+		"CVE-2013-7323",
+		"CVE-2014-1927",
+		"CVE-2014-1928",
+		"CVE-2014-1929"
+	],
+	"summary": "python-gnupg - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the Python wrapper for the \nGnu Privacy Guard (GPG). Insufficient sanitising could lead to the \nexecution of arbitrary shell commands.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.3.6-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 0.3.6-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.3.6-1.\n\n\nWe recommend that you upgrade your python-gnupg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "python-gnupg",
+				"purl": "pkg:deb/debian/python-gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.3.6-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.3.0-1.1",
+				"0.3.4-1",
+				"0.3.5-1",
+				"0.3.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2946-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2946"
+		}
+	]
+}

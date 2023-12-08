@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1486-1",
+	"modified": "2023-10-16T00:10:27.794885Z",
+	"published": "2008-02-04T00:00:00Z",
+	"related": [
+		"CVE-2007-2808"
+	],
+	"summary": "gnatsweb - cross-site scripting",
+	"details": "\nr0t discovered that gnatsweb, a web interface to GNU GNATS, did not\ncorrectly sanitize the database parameter in the main CGI script. This\ncould allow the injection of arbitrary HTML, or JavaScript code.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n4.00-1etch1.\n\n\nWe recommend that you upgrade your gnatsweb package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "gnatsweb",
+				"purl": "pkg:deb/debian/gnatsweb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.00-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.00-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1486-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1486"
+		}
+	]
+}

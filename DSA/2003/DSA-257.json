@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-257",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-03-04T00:00:00Z",
+	"related": [
+		"CVE-2002-1337"
+	],
+	"summary": "sendmail - remote exploit",
+	"details": "\nMark Dowd of ISS X-Force found a bug in the header parsing routines\nof sendmail: it could overflow a buffer overflow when encountering\naddresses with very long comments. Since sendmail also parses headers\nwhen forwarding emails this vulnerability can hit mail-servers which do\nnot deliver the email as well.\n\n\nThis has been fixed in upstream release 8.12.8, version 8.12.3-5 of\nthe package for Debian GNU/Linux 3.0/woody and version 8.9.3-25 of the\npackage for Debian GNU/Linux 2.2/potato.\n\n\nDSA-257-2: Updated sendmail-wide packages are available in package\nversion 8.9.3+3.2W-24 for Debian 2.2 (potato) and\nversion 8.12.3+3.5Wbeta-5.2 for Debian 3.0 (woody).\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "sendmail",
+				"purl": "pkg:deb/debian/sendmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.12.3-5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-257.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "sendmail-wide",
+				"purl": "pkg:deb/debian/sendmail-wide?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.12.3+3.5Wbeta-5.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-257.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-257"
+		}
+	]
+}

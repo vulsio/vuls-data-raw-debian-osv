@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4598-1",
+	"modified": "2023-10-16T00:19:05.176677Z",
+	"published": "2020-01-07T00:00:00Z",
+	"related": [
+		"CVE-2019-19844"
+	],
+	"summary": "python-django - security update",
+	"details": "\nSimon Charette reported that the password reset functionality in Django,\na high-level Python web development framework, uses a Unicode\ncase-insensitive query to retrieve accounts matching the email address\nrequesting the password reset. An attacker can take advantage of this\nflaw to potentially retrieve password reset tokens and hijack accounts.\n\n\nFor details please refer to\n<https://www.djangoproject.com/weblog/2019/dec/18/security-releases/>\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1:1.10.7-2+deb9u7.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1:1.11.27-1~deb10u1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFor the detailed security status of python-django please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/python-django>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.10.7-2+deb9u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.10.7-2",
+				"1:1.10.7-2+deb9u1",
+				"1:1.10.7-2+deb9u2",
+				"1:1.10.7-2+deb9u3",
+				"1:1.10.7-2+deb9u4",
+				"1:1.10.7-2+deb9u5",
+				"1:1.10.7-2+deb9u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4598-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.11.27-1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.11.21-1",
+				"1:1.11.22-1",
+				"1:1.11.22-1~deb10u1",
+				"1:1.11.23-1~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4598-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4598"
+		}
+	]
+}

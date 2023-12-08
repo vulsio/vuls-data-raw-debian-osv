@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2130-1",
+	"modified": "2023-06-28T06:21:13.364971Z",
+	"published": "2020-02-29T00:00:00Z",
+	"related": [
+		"CVE-2019-20479"
+	],
+	"summary": "libapache2-mod-auth-openidc - security update",
+	"details": "\nAn issue has been found in libapache2-mod-auth-openidc, an OpenID Connect\nauthentication module for Apache.\nDue to insufficient validatation of URLs an Open Redirect vulnerability\nfor URLs beginning with a slash and backslash could be abused.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.6.0-1+deb8u3.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-openidc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libapache2-mod-auth-openidc",
+				"purl": "pkg:deb/debian/libapache2-mod-auth-openidc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.0-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.0-1",
+				"1.6.0-1+deb8u1",
+				"1.6.0-1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2130-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2130"
+		}
+	]
+}

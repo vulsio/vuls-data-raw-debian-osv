@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3258-1",
+	"modified": "2023-06-28T06:21:28.571870Z",
+	"published": "2022-12-31T00:00:00Z",
+	"related": [
+		"CVE-2022-37601"
+	],
+	"summary": "node-loader-utils - security update",
+	"details": "\nSupraja Baskar discovered prototype pollution vulnerability in\nnode-loader-utils, a Node.js module for webpack loaders.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.1.0-2+deb10u1.\n\n\nWe recommend that you upgrade your node-loader-utils packages.\n\n\nFor the detailed security status of node-loader-utils please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-loader-utils>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "node-loader-utils",
+				"purl": "pkg:deb/debian/node-loader-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3258-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3258"
+		}
+	]
+}

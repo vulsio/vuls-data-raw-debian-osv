@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3025-1",
+	"modified": "2023-06-28T06:26:47.231811Z",
+	"published": "2022-05-26T00:00:00Z",
+	"related": [
+		"CVE-2019-13045"
+	],
+	"summary": "irssi - security update",
+	"details": "\nIt was discovered that there was a user-after-free vulnerability in irssi,\nthe popular terminal-based IRC client.\n\n\n* [CVE-2019-13045](https://security-tracker.debian.org/tracker/CVE-2019-13045)\nIrssi before 1.0.8, 1.1.x before 1.1.3, and 1.2.x before 1.2.1, when\n SASL is enabled, has a use after free when sending SASL login to the\n server.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.0.7-1~deb9u2.\n\n\nWe recommend that you upgrade your irssi packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "irssi",
+				"purl": "pkg:deb/debian/irssi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.7-1~deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-1",
+				"1.0.2-1+deb9u1",
+				"1.0.2-1+deb9u2",
+				"1.0.2-1+deb9u3",
+				"1.0.3-1",
+				"1.0.4-1",
+				"1.0.5-1",
+				"1.0.7-1~deb9u1",
+				"1.0.7-1~deb9u1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3025-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3025"
+		}
+	]
+}

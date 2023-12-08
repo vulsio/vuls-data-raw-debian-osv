@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-291",
+	"modified": "2023-10-16T00:11:37.501506Z",
+	"published": "2003-04-22T00:00:00Z",
+	"related": [
+		"CVE-2003-0323"
+	],
+	"summary": "ircii - buffer overflows",
+	"details": "\nTimo Sirainen discovered several problems in ircII, a popular\nclient for Internet Relay Chat (IRC). A malicious server could\ncraft special reply strings, triggering the client to write beyond\nbuffer boundaries. This could lead to a denial of service if the\nclient only crashes, but may also lead to executing of arbitrary code\nunder the user id of the chatting user.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 20020322-1.1.\n\n\nFor the old stable distribution (potato) these problems have been\nfixed in version 4.4M-1.1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 20030315-1.\n\n\nWe recommend that you upgrade your ircII package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "ircii",
+				"purl": "pkg:deb/debian/ircii?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20020322-1.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.16beta-1",
+				"2.8.2-1",
+				"2.9.3roof-1",
+				"2.9.3roof-2",
+				"20020322-1",
+				"4.4-3",
+				"4.4M-1",
+				"4.4M-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-291.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-291"
+		}
+	]
+}

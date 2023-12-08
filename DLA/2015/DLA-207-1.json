@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-207-1",
+	"modified": "2023-06-28T06:21:10.784897Z",
+	"published": "2015-04-24T00:00:00Z",
+	"related": [
+		"CVE-2013-1845",
+		"CVE-2013-1846",
+		"CVE-2013-1847",
+		"CVE-2013-1849",
+		"CVE-2014-0032",
+		"CVE-2015-0248",
+		"CVE-2015-0251"
+	],
+	"summary": "subversion - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Subversion, a version control\nsystem. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2015-0248](https://security-tracker.debian.org/tracker/CVE-2015-0248)\nSubversion mod\\_dav\\_svn and svnserve were vulnerable to a remotely\n triggerable assertion DoS vulnerability for certain requests with\n dynamically evaluated revision numbers.\n* [CVE-2015-0251](https://security-tracker.debian.org/tracker/CVE-2015-0251)\nSubversion HTTP servers allow spoofing svn:author property values for\n new revisions via specially crafted v1 HTTP protocol request\n sequences.\n* [CVE-2013-1845](https://security-tracker.debian.org/tracker/CVE-2013-1845)\nSubversion mod\\_dav\\_svn was vulnerable to a denial of service attack\n through a remotely triggered memory exhaustion.\n* [CVE-2013-1846](https://security-tracker.debian.org/tracker/CVE-2013-1846) / [CVE-2013-1847](https://security-tracker.debian.org/tracker/CVE-2013-1847) / [CVE-2013-1849](https://security-tracker.debian.org/tracker/CVE-2013-1849) / [CVE-2014-0032](https://security-tracker.debian.org/tracker/CVE-2014-0032)\nSubversion mod\\_dav\\_svn was vulnerable to multiple remotely triggered\n crashes.\n\n\nThis update has been prepared by James McCoy.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "subversion",
+				"purl": "pkg:deb/debian/subversion?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.12dfsg-7+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.12dfsg-4",
+				"1.6.12dfsg-5",
+				"1.6.12dfsg-5~bpo50+1",
+				"1.6.12dfsg-6",
+				"1.6.12dfsg-6~bpo50+1",
+				"1.6.12dfsg-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-207-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-207"
+		}
+	]
+}

@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1701-1",
+	"modified": "2023-10-16T00:10:35.989477Z",
+	"published": "2009-01-12T00:00:00Z",
+	"related": [
+		"CVE-2008-5077"
+	],
+	"summary": "openssl openssl097 - cryptographic weakness",
+	"details": "\nIt was discovered that OpenSSL does not properly verify DSA signatures\non X.509 certificates due to an API misuse, potentially leading to the\nacceptance of incorrect X.509 certificates as genuine ([CVE-2008-5077](https://security-tracker.debian.org/tracker/CVE-2008-5077)).\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 0.9.8c-4etch4 of the openssl package, and version\n0.9.7k-3.1etch2 of the openssl097 package.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.9.8g-15.\n\n\nThe testing distribution (lenny) will be fixed soon.\n\n\nWe recommend that you upgrade your OpenSSL packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "openssl097",
+				"purl": "pkg:deb/debian/openssl097?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.7k-3.1etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.7k-3.1",
+				"0.9.7k-3.1etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1701-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.8c-4etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.8c-4",
+				"0.9.8c-4etch1",
+				"0.9.8c-4etch2",
+				"0.9.8c-4etch3",
+				"0.9.8c-4etch3+m68k1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1701-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1701"
+		}
+	]
+}

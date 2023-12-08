@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2364-1",
+	"modified": "2023-10-16T00:11:11.491078Z",
+	"published": "2011-12-18T00:00:00Z",
+	"related": [
+		"CVE-2011-4613"
+	],
+	"summary": "xorg - incorrect permission check",
+	"details": "\nThe Debian X wrapper enforces that the X server can only be started from\na console. vladz discovered that this wrapper could be bypassed.\n\n\nThe oldstable distribution (lenny) is not affected.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 7.5+8+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:7.6+10.\n\n\nWe recommend that you upgrade your xorg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "xorg",
+				"purl": "pkg:deb/debian/xorg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:7.5+8+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:7.5+8",
+				"1:7.5+8+armhf"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2364-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2364"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2166-1",
+	"modified": "2023-10-16T00:11:00.937463Z",
+	"published": "2011-02-16T00:00:00Z",
+	"related": [
+		"CVE-2011-0777",
+		"CVE-2011-0778",
+		"CVE-2011-0783",
+		"CVE-2011-0981",
+		"CVE-2011-0983",
+		"CVE-2011-0984",
+		"CVE-2011-0985"
+	],
+	"summary": "chromium-browser - several",
+	"details": "\nSeveral vulnerabilities were discovered in the Chromium browser.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2011-0777](https://security-tracker.debian.org/tracker/CVE-2011-0777)\nUse-after-free vulnerability in Google Chrome before 9.0.597.84 allows remote\n attackers to cause a denial of service or possibly have unspecified other\n impact via vectors related to image loading.\n* [CVE-2011-0778](https://security-tracker.debian.org/tracker/CVE-2011-0778)\nGoogle Chrome before 9.0.597.84 does not properly restrict drag and drop\n operations, which might allow remote attackers to bypass the Same Origin\n Policy via unspecified vectors.\n* [CVE-2011-0783](https://security-tracker.debian.org/tracker/CVE-2011-0783)\nUnspecified vulnerability in Google Chrome before 9.0.597.84 allows\n user-assisted remote attackers to cause a denial of service\n (application crash) via vectors involving a bad volume setting.\n* [CVE-2011-0983](https://security-tracker.debian.org/tracker/CVE-2011-0983)\nGoogle Chrome before 9.0.597.94 does not properly handle anonymous blocks,\n which allows remote attackers to cause a denial of service or possibly have\n unspecified other impact via unknown vectors that lead to a stale pointer.\n* [CVE-2011-0981](https://security-tracker.debian.org/tracker/CVE-2011-0981)\nGoogle Chrome before 9.0.597.94 does not properly perform event handling for\n animations, which allows remote attackers to cause a denial of service or \n possibly have unspecified other impact via unknown vectors that lead to a\n stale pointer.\n* [CVE-2011-0984](https://security-tracker.debian.org/tracker/CVE-2011-0984)\nGoogle Chrome before 9.0.597.94 does not properly handle plug-ins, which\n allows remote attackers to cause a denial of service (out-of-bounds read)\n via unspecified vectors.\n* [CVE-2011-0985](https://security-tracker.debian.org/tracker/CVE-2011-0985)\nGoogle Chrome before 9.0.597.94 does not properly perform process termination\n upon memory exhaustion, which has unspecified impact and remote attack vectors.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 6.0.472.63~r59945-5+squeeze2.\n\n\nFor the testing distribution (wheezy), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed\nin version 9.0.597.98~r74359-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.472.63~r59945-5+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.472.63~r59945-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2166-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2166"
+		}
+	]
+}

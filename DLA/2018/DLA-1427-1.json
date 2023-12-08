@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1427-1",
+	"modified": "2023-06-28T06:20:41.614363Z",
+	"published": "2018-07-15T00:00:00Z",
+	"related": [
+		"CVE-2018-14055",
+		"CVE-2018-14056"
+	],
+	"summary": "znc - security update",
+	"details": "\nIt was discovered that there were two issues in znc, a modular IRC\nbouncer:\n\n\n* There was insufficient validation of lines coming from the network\n allowing a non-admin user to escalate his privilege and inject rogue\n values into znc.conf. ([CVE-2018-14055](https://security-tracker.debian.org/tracker/CVE-2018-14055))\n* A path traversal vulnerability (via \"../\" being embedded in a web skin\n name) to access files outside of the allowed directory.\n ([CVE-2018-14056](https://security-tracker.debian.org/tracker/CVE-2018-14056))\n\n\nFor Debian 8 Jessie, these issues have been fixed in znc version\n1.4-2+deb8u1.\n\n\nWe recommend that you upgrade your znc packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "znc",
+				"purl": "pkg:deb/debian/znc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1427-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1427"
+		}
+	]
+}

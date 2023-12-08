@@ -1,0 +1,89 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3998-1",
+	"modified": "2023-10-16T00:12:32.805039Z",
+	"published": "2017-10-11T00:00:00Z",
+	"related": [
+		"CVE-2017-7805"
+	],
+	"summary": "nss - security update",
+	"details": "\nMartin Thomson discovered that nss, the Mozilla Network Security Service\nlibrary, is prone to a use-after-free vulnerability in the TLS 1.2\nimplementation when handshake hashes are generated. A remote attacker\ncan take advantage of this flaw to cause an application using the nss\nlibrary to crash, resulting in a denial of service, or potentially to\nexecute arbitrary code.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2:3.26-1+debu8u3.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:3.26.2-1.1+deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 2:3.33-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:3.33-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.26-1+debu8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.17.2-1.1",
+				"2:3.17.2-1.1+deb8u1",
+				"2:3.17.2-1.1+deb8u2",
+				"2:3.17.2-1.1+x32",
+				"2:3.17.4-1",
+				"2:3.18-1",
+				"2:3.19-1",
+				"2:3.19.1-1",
+				"2:3.19.1-2",
+				"2:3.19.2-1",
+				"2:3.19.2-1+x32.1",
+				"2:3.20-1",
+				"2:3.20.1-1",
+				"2:3.21-1",
+				"2:3.21-1.1",
+				"2:3.23-1",
+				"2:3.23-2",
+				"2:3.25-1",
+				"2:3.26-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3998-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.26.2-1.1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.26.2-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3998-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3998"
+		}
+	]
+}

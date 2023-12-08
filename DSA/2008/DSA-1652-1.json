@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1652-1",
+	"modified": "2023-10-16T00:05:36.194972Z",
+	"published": "2008-10-12T00:00:00Z",
+	"related": [
+		"CVE-2008-3655",
+		"CVE-2008-3656",
+		"CVE-2008-3657",
+		"CVE-2008-3790",
+		"CVE-2008-3905"
+	],
+	"summary": "ruby1.9 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for\nthe Ruby language, which may lead to denial of service and other\nsecurity problems. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2008-3655](https://security-tracker.debian.org/tracker/CVE-2008-3655)\nKeita Yamaguchi discovered that several safe level restrictions\n are insufficiently enforced.\n* [CVE-2008-3656](https://security-tracker.debian.org/tracker/CVE-2008-3656)\nChristian Neukirchen discovered that the WebRick module uses\n inefficient algorithms for HTTP header splitting, resulting in\n denial of service through resource exhaustion.\n* [CVE-2008-3657](https://security-tracker.debian.org/tracker/CVE-2008-3657)\nIt was discovered that the dl module doesn't perform taintness\n checks.\n* [CVE-2008-3790](https://security-tracker.debian.org/tracker/CVE-2008-3790)\nLuka Treiber and Mitja Kolsek discovered that recursively nested\n XML entities can lead to denial of service through resource\n exhaustion in rexml.\n* [CVE-2008-3905](https://security-tracker.debian.org/tracker/CVE-2008-3905)\nTanaka Akira discovered that the resolv module uses sequential\n transaction IDs and a fixed source port for DNS queries, which\n makes it more vulnerable to DNS spoofing attacks.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.9.0+20060609-1etch3. Packages for arm will be provided later.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.0.2-6.\n\n\nWe recommend that you upgrade your ruby1.9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ruby1.9",
+				"purl": "pkg:deb/debian/ruby1.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.0+20060609-1etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.0+20060609-1",
+				"1.9.0+20060609-1etch1",
+				"1.9.0+20060609-1etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1652-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1652"
+		}
+	]
+}

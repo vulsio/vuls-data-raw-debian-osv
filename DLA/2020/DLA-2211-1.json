@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2211-1",
+	"modified": "2023-06-28T06:20:03.458978Z",
+	"published": "2020-05-15T00:00:00Z",
+	"related": [
+		"CVE-2018-1285"
+	],
+	"summary": "log4net - security update",
+	"details": "\nIt was discovered that there was an XML external entity vulnerability in\nlog4net, a logging API for the ECMA Common Language Infrastructure\n(CLI), sometimes referred to as \"Mono\".\n\n\n* [CVE-2018-1285](https://security-tracker.debian.org/tracker/CVE-2018-1285)\nApache log4net before 2.0.8 does not disable XML external entities when parsing log4net configuration files. This could allow for XXE-based attacks in applications that accept arbitrary configuration files from users.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.2.10+dfsg-6+deb8u1.\n\n\nWe recommend that you upgrade your log4net packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "log4net",
+				"purl": "pkg:deb/debian/log4net?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.10+dfsg-6+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.10+dfsg-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2211-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2211"
+		}
+	]
+}

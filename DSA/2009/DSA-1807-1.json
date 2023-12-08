@@ -1,0 +1,97 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1807-1",
+	"modified": "2023-10-16T00:10:39.115392Z",
+	"published": "2009-06-01T00:00:00Z",
+	"related": [
+		"CVE-2009-0688"
+	],
+	"summary": "cyrus-sasl2 cyrus-sasl2-heimdal - arbitrary code execution",
+	"details": "\nJames Ralston discovered that the sasl\\_encode64() function of cyrus-sasl2,\na free library implementing the Simple Authentication and Security Layer,\nsuffers from a missing null termination in certain situations. This causes\nseveral buffer overflows in situations where cyrus-sasl2 itself requires\nthe string to be null terminated which can lead to denial of service or\narbitrary code execution.\n\n\nImportant notice (Quoting from US-CERT):\nWhile this patch will fix currently vulnerable code, it can cause\nnon-vulnerable existing code to break. Here's a function prototype from\ninclude/saslutil.h to clarify my explanation:\n\n\n\n```\n/* base64 encode\n* in -- input data\n* inlen -- input data length\n* out -- output buffer (will be NUL terminated)\n* outmax -- max size of output buffer\n* result:\n* outlen -- gets actual length of output buffer (optional)\n*\n* Returns SASL_OK on success, SASL_BUFOVER if result won't fit\n*/\nLIBSASL_API int sasl_encode64(const char *in, unsigned inlen,\nchar *out, unsigned outmax,\nunsigned *outlen);\n```\n\nAssume a scenario where calling code has been written in such a way that it\ncalculates the exact size required for base64 encoding in advance, then\nallocates a buffer of that exact size, passing a pointer to the buffer into\nsasl\\_encode64() as \\*out. As long as this code does not anticipate that the\nbuffer is NUL-terminated (does not call any string-handling functions like\nstrlen(), for example) the code will work and it will not be vulnerable.\n\n\nOnce this patch is applied, that same code will break because sasl\\_encode64()\nwill begin to return SASL\\_BUFOVER.\n\n\nFor the oldstable distribution (etch), this problem has been fixed\nin version 2.1.22.dfsg1-8+etch1 of cyrus-sasl2.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.1.22.dfsg1-23+lenny1 of cyrus-sasl2 and cyrus-sasl2-heimdal.\n\n\nFor the testing distribution (squeeze), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.1.23.dfsg1-1 of cyrus-sasl2 and cyrus-sasl2-heimdal.\n\n\nWe recommend that you upgrade your cyrus-sasl2/cyrus-sasl2-heimdal packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "cyrus-sasl2-heimdal",
+				"purl": "pkg:deb/debian/cyrus-sasl2-heimdal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.22.dfsg1-23+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.22.dfsg1-23"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1807-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "cyrus-sasl2",
+				"purl": "pkg:deb/debian/cyrus-sasl2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.22.dfsg1-23+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.22.dfsg1-23"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1807-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "cyrus-sasl2",
+				"purl": "pkg:deb/debian/cyrus-sasl2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.22.dfsg1-8+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.22.dfsg1-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1807-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1807"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2833-1",
+	"modified": "2023-06-28T06:23:18.999226Z",
+	"published": "2021-11-30T00:00:00Z",
+	"related": [
+		"CVE-2018-5764"
+	],
+	"summary": "rsync - security update",
+	"details": "\nIn rsync, a remote file-copying tool, remote attackers were able to\nbypass the argument-sanitization protection mechanism by passing\nadditional --protect-args.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n3.1.2-1+deb9u3.\n\n\nWe recommend that you upgrade your rsync packages.\n\n\nFor the detailed security status of rsync please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/rsync>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "rsync",
+				"purl": "pkg:deb/debian/rsync?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.2-1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.2-1",
+				"3.1.2-1+deb9u1",
+				"3.1.2-1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2833-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2833"
+		}
+	]
+}

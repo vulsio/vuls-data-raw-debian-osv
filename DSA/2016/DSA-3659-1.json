@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3659-1",
+	"modified": "2023-10-16T00:12:13.040934Z",
+	"published": "2016-09-04T00:00:00Z",
+	"related": [
+		"CVE-2016-5696",
+		"CVE-2016-6136",
+		"CVE-2016-6480",
+		"CVE-2016-6828"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or have other\nimpacts.\n\n\n* [CVE-2016-5696](https://security-tracker.debian.org/tracker/CVE-2016-5696)\nYue Cao, Zhiyun Qian, Zhongjie Wang, Tuan Dao, and Srikanth V.\n Krishnamurthy of the University of California, Riverside; and Lisa\n M. Marvel of the United States Army Research Laboratory discovered\n that Linux's implementation of the TCP Challenge ACK feature\n results in a side channel that can be used to find TCP connections\n between specific IP addresses, and to inject messages into those\n connections.\n\n\nWhere a service is made available through TCP, this may allow\n remote attackers to impersonate another connected user to the\n server or to impersonate the server to another connected user. In\n case the service uses a protocol with message authentication\n (e.g. TLS or SSH), this vulnerability only allows denial of\n service (connection failure). An attack takes tens of seconds, so\n short-lived TCP connections are also unlikely to be vulnerable.\n\n\nThis may be mitigated by increasing the rate limit for TCP\n Challenge ACKs so that it is never exceeded:\n sysctl net.ipv4.tcp\\_challenge\\_ack\\_limit=1000000000\n* [CVE-2016-6136](https://security-tracker.debian.org/tracker/CVE-2016-6136)\nPengfei Wang discovered that the audit subsystem has a\n 'double-fetch' or TOCTTOU bug in its handling of special\n characters in the name of an executable. Where audit logging of\n execve() is enabled, this allows a local user to generate\n misleading log messages.\n* [CVE-2016-6480](https://security-tracker.debian.org/tracker/CVE-2016-6480)\nPengfei Wang discovered that the aacraid driver for Adaptec RAID\n controllers has a 'double-fetch' or TOCTTOU bug in its\n validation of FIB messages passed through the ioctl() system\n call. This has no practical security impact in current Debian\n releases.\n* [CVE-2016-6828](https://security-tracker.debian.org/tracker/CVE-2016-6828)\nMarco Grassi reported a 'use-after-free' bug in the TCP\n implementation, which can be triggered by local users. The\n security impact is unclear, but might include denial of service or\n privilege escalation.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.36-1+deb8u1. In addition, this update contains several\nchanges originally targeted for the upcoming jessie point release.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.36-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.36-1",
+				"3.16.36-1+deb8u1~bpo70+1",
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3659-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3659"
+		}
+	]
+}

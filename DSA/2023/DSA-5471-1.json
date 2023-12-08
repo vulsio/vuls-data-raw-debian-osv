@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5471-1",
+	"modified": "2023-10-16T00:23:18.216497Z",
+	"published": "2023-08-07T00:00:00Z",
+	"related": [
+		"CVE-2023-34624"
+	],
+	"summary": "libhtmlcleaner-java - security update",
+	"details": "\nA security vulnerability has been discovered in libhtmlcleaner-java, a Java\nHTML parser library. An attacker was able to cause a denial of service\n(StackOverflowError) if the parser runs on user supplied input with deeply\nnested HTML elements. This update introduces a new nesting depth limit which\ncan be overridden in cleaner properties.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 2.24-1+deb11u1.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 2.26-1+deb12u1.\n\n\nWe recommend that you upgrade your libhtmlcleaner-java packages.\n\n\nFor the detailed security status of libhtmlcleaner-java please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libhtmlcleaner-java](https://security-tracker.debian.org/tracker/libhtmlcleaner-java)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libhtmlcleaner-java",
+				"purl": "pkg:deb/debian/libhtmlcleaner-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.24-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.24-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5471-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "libhtmlcleaner-java",
+				"purl": "pkg:deb/debian/libhtmlcleaner-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.26-1+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.26-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5471-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5471"
+		}
+	]
+}

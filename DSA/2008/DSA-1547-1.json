@@ -1,0 +1,88 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1547-1",
+	"modified": "2023-10-16T00:10:29.772898Z",
+	"published": "2008-04-17T00:00:00Z",
+	"related": [
+		"CVE-2007-5745",
+		"CVE-2007-5746",
+		"CVE-2007-5747",
+		"CVE-2008-0320"
+	],
+	"summary": "openoffice.org",
+	"details": "\nSeveral security related problems have been discovered in\nOpenOffice.org, the free office suite. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2007-5745](https://security-tracker.debian.org/tracker/CVE-2007-5745), [CVE-2007-5747](https://security-tracker.debian.org/tracker/CVE-2007-5747)\nSeveral bugs have been discovered in the way OpenOffice.org parses\n Quattro Pro files that may lead to a overflow in the heap\n potentially leading to the execution of arbitrary code.\n* [CVE-2007-5746](https://security-tracker.debian.org/tracker/CVE-2007-5746)\nSpecially crafted EMF files can trigger a buffer overflow in the\n heap that may lead to the execution of arbitrary code.\n* [CVE-2008-0320](https://security-tracker.debian.org/tracker/CVE-2008-0320)\nA bug has been discovered in the processing of OLE files that can\n cause a buffer overflow in the heap potentially leading to the\n execution of arbitrary code.\n\n\nRecently reported problems in the ICU library are fixed in separate\nlibicu packages with [DSA 1511](dsa-1511) against which OpenOffice.org is linked.\n\n\nFor the old stable distribution (sarge) these problems have been fixed in\nversion 1.1.3-9sarge9.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 2.0.4.dfsg.2-7etch5.\n\n\nFor the testing (lenny) and unstable (sid) distributions these\nproblems have been fixed in version 2.4.0~ooh680m5-1.\n\n\nWe recommend that you upgrade your openoffice.org packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "openoffice.org",
+				"purl": "pkg:deb/debian/openoffice.org?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.4.dfsg.2-7etch5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.4.dfsg.2-5etch1",
+				"2.0.4.dfsg.2-5etch2",
+				"2.0.4.dfsg.2-6",
+				"2.0.4.dfsg.2-7",
+				"2.0.4.dfsg.2-7etch1",
+				"2.0.4.dfsg.2-7etch2",
+				"2.0.4.dfsg.2-7etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1547-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "openoffice.org",
+				"purl": "pkg:deb/debian/openoffice.org?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.3-9sarge9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.3-9",
+				"1.1.3-9sarge1",
+				"1.1.3-9sarge2",
+				"1.1.3-9sarge3",
+				"1.1.3-9sarge4",
+				"1.1.3-9sarge5",
+				"1.1.3-9sarge6",
+				"1.1.3-9sarge7",
+				"1.1.3-9sarge8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1547-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1547"
+		}
+	]
+}

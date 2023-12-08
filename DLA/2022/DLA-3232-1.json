@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3232-1",
+	"modified": "2023-06-28T06:25:39.348173Z",
+	"published": "2022-12-07T00:00:00Z",
+	"related": [
+		"CVE-2019-18388",
+		"CVE-2019-18389",
+		"CVE-2019-18390",
+		"CVE-2019-18391",
+		"CVE-2020-8002",
+		"CVE-2020-8003",
+		"CVE-2022-0135"
+	],
+	"summary": "virglrenderer - security update",
+	"details": "\nSeveral security vulnerabilities were discovered in virglrenderer, a\nvirtual GPU for KVM virtualization.\n\n\n* [CVE-2019-18388](https://security-tracker.debian.org/tracker/CVE-2019-18388)\nA NULL pointer dereference in vrend\\_renderer.c in virglrenderer through\n 0.8.0 allows guest OS users to cause a denial of service via malformed\n commands.\n* [CVE-2019-18389](https://security-tracker.debian.org/tracker/CVE-2019-18389)\nA heap-based buffer overflow in the vrend\\_renderer\\_transfer\\_write\\_iov\n function in vrend\\_renderer.c in virglrenderer through 0.8.0 allows\n guest OS users to cause a denial of service, or QEMU guest-to-host\n escape and code execution, via VIRGL\\_CCMD\\_RESOURCE\\_INLINE\\_WRITE\n commands.\n* [CVE-2019-18390](https://security-tracker.debian.org/tracker/CVE-2019-18390)\nAn out-of-bounds read in the vrend\\_blit\\_need\\_swizzle function in\n vrend\\_renderer.c in virglrenderer through 0.8.0 allows guest OS\n users to cause a denial of service via VIRGL\\_CCMD\\_BLIT commands.\n* [CVE-2019-18391](https://security-tracker.debian.org/tracker/CVE-2019-18391)\nA heap-based buffer overflow in the vrend\\_renderer\\_transfer\\_write\\_iov\n function in vrend\\_renderer.c in virglrenderer through 0.8.0 allows\n guest OS users to cause a denial of service via\n VIRGL\\_CCMD\\_RESOURCE\\_INLINE\\_WRITE commands.\n* [CVE-2020-8002](https://security-tracker.debian.org/tracker/CVE-2020-8002)\nA NULL pointer dereference in vrend\\_renderer.c in virglrenderer through\n 0.8.1 allows attackers to cause a denial of service via commands that attempt\n to launch a grid without previously providing a Compute Shader (CS).\n* [CVE-2020-8003](https://security-tracker.debian.org/tracker/CVE-2020-8003)\nA double-free vulnerability in vrend\\_renderer.c in virglrenderer through\n 0.8.1 allows attackers to cause a denial of service by triggering texture\n allocation failure, because vrend\\_renderer\\_resource\\_allocated\\_texture is not an\n appropriate place for a free.\n* [CVE-2022-0135](https://security-tracker.debian.org/tracker/CVE-2022-0135)\nAn out-of-bounds write issue was found in the VirGL virtual OpenGL renderer\n (virglrenderer). This flaw allows a malicious guest to create a specially\n crafted virgil resource and then issue a VIRTGPU\\_EXECBUFFER ioctl, leading to a\n denial of service or possible code execution.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.7.0-2+deb10u1.\n\n\nWe recommend that you upgrade your virglrenderer packages.\n\n\nFor the detailed security status of virglrenderer please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/virglrenderer>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "virglrenderer",
+				"purl": "pkg:deb/debian/virglrenderer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.0-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3232-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3232"
+		}
+	]
+}

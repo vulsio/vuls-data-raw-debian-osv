@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1374-1",
+	"modified": "2023-10-16T00:06:54.441508Z",
+	"published": "2007-09-11T00:00:00Z",
+	"related": [
+		"CVE-2007-3189",
+		"CVE-2007-3190",
+		"CVE-2007-3191",
+		"CVE-2007-3192"
+	],
+	"summary": "jffnms - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in jffnms, a web-based\nNetwork Management System for IP networks. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2007-3189](https://security-tracker.debian.org/tracker/CVE-2007-3189)\n\n Cross-site scripting (XSS) vulnerability in auth.php, which allows\n a remote attacker to inject arbitrary web script or HTML via the\n user parameter.\n* [CVE-2007-3190](https://security-tracker.debian.org/tracker/CVE-2007-3190)\n\n Multiple SQL injection vulnerabilities in auth.php, which allow \n remote attackers to execute arbitrary SQL commands via the\n user and pass parameters.\n* [CVE-2007-3192](https://security-tracker.debian.org/tracker/CVE-2007-3192)\n\n Direct requests to URLs make it possible for remote attackers to\n access configuration information, bypassing login restrictions.\n\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n0.8.3dfsg.1-2.1etch1.\n\n\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.8.3dfsg.1-4.\n\n\n\n\nWe recommend that you upgrade your jffnms package.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "jffnms",
+				"purl": "pkg:deb/debian/jffnms?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.3dfsg.1-2.1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.3dfsg.1-2.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1374-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1374"
+		}
+	]
+}

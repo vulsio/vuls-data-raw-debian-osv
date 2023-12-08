@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4086-1",
+	"modified": "2023-10-16T00:12:38.668467Z",
+	"published": "2018-01-13T00:00:00Z",
+	"related": [
+		"CVE-2017-15412"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\nNick Wellnhofer discovered that certain function calls inside XPath\npredicates can lead to use-after-free and double-free errors when\nexecuted by libxml2's XPath engine via an XSLT transformation.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2.9.1+dfsg1-5+deb8u6.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.9.4+dfsg1-2.2+deb9u2.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFor the detailed security status of libxml2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/libxml2>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.1+dfsg1-5+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.1+dfsg1-5",
+				"2.9.1+dfsg1-5+deb8u1",
+				"2.9.1+dfsg1-5+deb8u2",
+				"2.9.1+dfsg1-5+deb8u3",
+				"2.9.1+dfsg1-5+deb8u4",
+				"2.9.1+dfsg1-5+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4086-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.4+dfsg1-2.2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.4+dfsg1-2.2",
+				"2.9.4+dfsg1-2.2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4086-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4086"
+		}
+	]
+}

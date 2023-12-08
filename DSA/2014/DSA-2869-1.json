@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2869-1",
+	"modified": "2023-10-16T00:11:35.894308Z",
+	"published": "2014-03-03T00:00:00Z",
+	"related": [
+		"CVE-2014-0092"
+	],
+	"summary": "gnutls26 - incorrect certificate verification",
+	"details": "\nNikos Mavrogiannopoulos of Red Hat discovered an X.509 certificate\nverification issue in GnuTLS, an SSL/TLS library. A certificate\nvalidation could be reported sucessfully even in cases were an error\nwould prevent all verification steps to be performed.\n\n\nAn attacker doing a man-in-the-middle of a TLS connection could use this\nvulnerability to present a carefully crafted certificate that would be\naccepted by GnuTLS as valid even if not signed by one of the trusted\nauthorities.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.8.6-1+squeeze3.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.12.20-8+deb7u1.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 2.12.23-13.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.12.23-13.\n\n\nWe recommend that you upgrade your gnutls26 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gnutls26",
+				"purl": "pkg:deb/debian/gnutls26?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.6-1+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.6-1",
+				"2.8.6-1+squeeze1",
+				"2.8.6-1+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2869-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "gnutls26",
+				"purl": "pkg:deb/debian/gnutls26?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.12.20-8+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.12.20-6",
+				"2.12.20-7",
+				"2.12.20-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2869-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2869"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-715-1",
+	"modified": "2023-10-16T00:26:24.501471Z",
+	"published": "2005-04-27T00:00:00Z",
+	"related": [
+		"CVE-2004-1342",
+		"CVE-2004-1343"
+	],
+	"summary": "cvs - several",
+	"details": "\nSeveral problems have been discovered in the CVS server, which serves\nthe popular Concurrent Versions System. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CAN-2004-1342](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1342)\nMaks Polunin and Alberto Garcia discovered independently that\n using the pserver access method in connection with the repouid\n patch that Debian uses it is possible to bypass the password and\n gain access to the repository in question.\n\n* [CAN-2004-1343](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1343)\nAlberto Garcia discovered that a remote user can cause the cvs\n server to crash when the cvs-repouids file exists but does not\n contain a mapping for the current repository, which can be used as\n a denial of service attack.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.11.1p1debian-10.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.12.9-11.\n\n\nWe recommend that you upgrade your cvs package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "cvs",
+				"purl": "pkg:deb/debian/cvs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.11.1p1debian-10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.11.1p1debian-9woody7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-715-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-715"
+		}
+	]
+}

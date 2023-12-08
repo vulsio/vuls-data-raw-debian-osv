@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-324",
+	"modified": "2017-12-01T20:23:19Z",
+	"published": "2003-06-18T00:00:00Z",
+	"related": [
+		"CVE-2003-0428",
+		"CVE-2003-0429",
+		"CVE-2003-0431",
+		"CVE-2003-0432"
+	],
+	"summary": "ethereal - several vulnerabilities",
+	"details": "\nSeveral of the packet dissectors in ethereal contain string handling\nbugs which could be exploited using a maliciously crafted packet to\ncause ethereal to consume excessive amounts of memory, crash, or\nexecute arbitrary code.\n\n\nThese vulnerabilities were announced in the following Ethereal security\nadvisory:\n\n\n\nEthereal 0.9.4 in Debian 3.0 (woody) is affected by most of the\nproblems described in the advisory, including:\n\n\n* The DCERPC dissector could try to allocate too much memory\n while trying to decode an NDR string.\n* Bad IPv4 or IPv6 prefix lengths could cause an overflow in the\n OSI dissector.\n* The tvb\\_get\\_nstringz0() routine incorrectly handled a\n zero-length buffer size.\n* The BGP, WTP, DNS, 802.11, ISAKMP, WSP, CLNP, and ISIS\n dissectors handled strings improperly.\n\n\nThe following problems do **not** affect this version:\n\n\n* The SPNEGO dissector could segfault while parsing an invalid\n ASN.1 value.\n* The RMI dissector handled strings improperly\n\n\nas these modules are not present.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 0.9.4-1woody5.\n\n\nFor the old stable distribution (potato) these problems will be fixed in a\nfuture advisory.\n\n\nFor the unstable distribution (sid) these problems are fixed in\nversion 0.9.13-1.\n\n\nWe recommend that you update your ethereal package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "ethereal",
+				"purl": "pkg:deb/debian/ethereal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.4-1woody5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-324.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-324"
+		}
+	]
+}

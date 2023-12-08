@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-480-1",
+	"modified": "2023-06-28T06:27:02.406710Z",
+	"published": "2016-05-18T00:00:00Z",
+	"related": [
+		"CVE-2015-7181",
+		"CVE-2015-7182",
+		"CVE-2016-1938",
+		"CVE-2016-1950",
+		"CVE-2016-1978",
+		"CVE-2016-1979"
+	],
+	"summary": "nss - security update",
+	"details": "\nThis security update fixes serious security issues in NSS including\narbitrary code execution and remote denial service attacks.\n\n\nFor Debian 7 wheezy, these problems have been fixed in\n3.14.5-1+deb7u6. We recommend you upgrade your nss packages as soon as\npossible.\n\n\n* [CVE-2015-7181](https://security-tracker.debian.org/tracker/CVE-2015-7181)\nThe sec\\_asn1d\\_parse\\_leaf function improperly restricts access to\n an unspecified data structure.\n* [CVE-2015-7182](https://security-tracker.debian.org/tracker/CVE-2015-7182)\nHeap-based buffer overflow in the ASN.1 decoder.\n* [CVE-2016-1938](https://security-tracker.debian.org/tracker/CVE-2016-1938)\nThe s\\_mp\\_div function in lib/freebl/mpi/mpi.c in improperly\n divides numbers, which might make it easier for remote attackers\n to defeat cryptographic protection mechanisms.\n* [CVE-2016-1950](https://security-tracker.debian.org/tracker/CVE-2016-1950)\nHeap-based buffer overflow allows remote attackers to execute\n arbitrary code via crafted ASN.1 data in an X.509 certificate.\n* [CVE-2016-1978](https://security-tracker.debian.org/tracker/CVE-2016-1978)\nUse-after-free vulnerability in the ssl3\\_HandleECDHServerKeyExchange\n function allows remote attackers to cause a denial of service or\n possibly have unspecified other impact by making an SSL (1) DHE or\n (2) ECDHE handshake at a time of high memory consumption.\n* [CVE-2016-1979](https://security-tracker.debian.org/tracker/CVE-2016-1979)\nUse-after-free vulnerability in the PK11\\_ImportDERPrivateKeyInfoAndReturnKey\n function allows remote attackers to cause a denial of service or\n possibly have unspecified other impact via crafted key data with\n DER encoding.\n\n\nFurther information about Debian LTS security Advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.14.5-1+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.14.3-1",
+				"2:3.14.4-1",
+				"2:3.14.5-1",
+				"2:3.14.5-1+deb7u1",
+				"2:3.14.5-1+deb7u2",
+				"2:3.14.5-1+deb7u3",
+				"2:3.14.5-1+deb7u4",
+				"2:3.14.5-1+deb7u5",
+				"2:3.14.5-1~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-480-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-480"
+		}
+	]
+}

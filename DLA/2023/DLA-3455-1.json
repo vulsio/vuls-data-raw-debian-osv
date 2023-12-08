@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3455-1",
+	"modified": "2023-06-28T06:21:30.499097Z",
+	"published": "2023-06-16T00:00:00Z",
+	"related": [
+		"CVE-2019-11840",
+		"CVE-2019-11841",
+		"CVE-2020-9283"
+	],
+	"summary": "golang-go.crypto - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in golang-go.crypto, the\nsupplementary Go cryptography libraries.\n\n\n* [CVE-2019-11840](https://security-tracker.debian.org/tracker/CVE-2019-11840)\nAn issue was discovered in supplementary Go cryptography libraries, aka\n golang-googlecode-go-crypto. If more than 256 GiB of keystream is\n generated, or if the counter otherwise grows greater than 32 bits, the\n amd64 implementation will first generate incorrect output, and then cycle\n back to previously generated keystream. Repeated keystream bytes can lead\n to loss of confidentiality in encryption applications, or to predictability\n in CSPRNG applications.\n* [CVE-2019-11841](https://security-tracker.debian.org/tracker/CVE-2019-11841)\nA message-forgery issue was discovered in\n crypto/openpgp/clearsign/clearsign.go in supplementary Go cryptography\n libraries. The Hash Armor Header specifies the message digest\n algorithm(s) used for the signature. Since the library skips Armor Header\n parsing in general, an attacker can not only embed arbitrary Armor Headers,\n but also prepend arbitrary text to cleartext messages without invalidating\n the signatures.\n* [CVE-2020-9283](https://security-tracker.debian.org/tracker/CVE-2020-9283)\ngolang.org/x/crypto allows a panic during signature verification in the\n golang.org/x/crypto/ssh package. A client can attack an SSH server that\n accepts public keys. Also, a server can attack any SSH client.\n\n\nThe following Go packages have been rebuilt in order to fix the aforementioned\nissues.\n\n\nrclone: 1.45-3+deb10u1  \n\nobfs4proxy: 0.0.7-4+deb10u1  \n\ngobuster: 2.0.1-1+deb10u1  \n\nrestic: 0.9.4+ds-2+deb10u1  \n\ngopass: 1.2.0-2+deb10u1  \n\naptly: 1.3.0+ds1-2.2~deb10u2  \n\ndnscrypt-proxy: 2.0.19+ds1-2+deb10u1  \n\ng10k: 0.5.7-1+deb10u1  \n\nhub: 2.7.0~ds1-1+deb10u1  \n\nacmetool: 0.0.62-3+deb10u1  \n\nsyncthing: 1.0.0~ds1-1+deb10u1  \n\npacker: 1.3.4+dfsg-4+deb10u1  \n\netcd: 3.2.26+dfsg-3+deb10u1  \n\nnotary: 0.6.1~ds1-3+deb10u1\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:0.0~git20181203.505ab14-1+deb10u1.\n\n\nWe recommend that you upgrade your golang-go.crypto packages.\n\n\nFor the detailed security status of golang-go.crypto please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/golang-go.crypto>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "golang-go.crypto",
+				"purl": "pkg:deb/debian/golang-go.crypto?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.0~git20181203.505ab14-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.0~git20181203.505ab14-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3455-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3455"
+		}
+	]
+}

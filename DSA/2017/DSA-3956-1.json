@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3956-1",
+	"modified": "2023-10-16T00:12:30.669393Z",
+	"published": "2017-08-27T00:00:00Z",
+	"related": [
+		"CVE-2017-12865"
+	],
+	"summary": "connman - security update",
+	"details": "\nSecurity consultants in NRI Secure Technologies discovered a stack\noverflow vulnerability in ConnMan, a network manager for embedded\ndevices. An attacker with control of the DNS responses to the DNS proxy\nin ConnMan might crash the service and, in same cases, remotely execute\narbitrary commands in the host running the service.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.21-1.2+deb8u1.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.33-3+deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 1.33-3+deb9u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.35-1.\n\n\nWe recommend that you upgrade your connman packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "connman",
+				"purl": "pkg:deb/debian/connman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.21-1.2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.21-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3956-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "connman",
+				"purl": "pkg:deb/debian/connman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.33-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.33-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3956-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3956"
+		}
+	]
+}

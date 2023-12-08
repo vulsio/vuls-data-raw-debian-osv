@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1314-1",
+	"modified": "2023-06-28T06:20:33.244760Z",
+	"published": "2018-03-23T00:00:00Z",
+	"related": [
+		"CVE-2018-7711"
+	],
+	"summary": "simplesamlphp - security update",
+	"details": "\nCure53 discovered that in SimpleSAMLphp, in rare circumstances an\ninvalid signature on the SAML 2.0 HTTP Redirect binding could be\nconsidered valid.\n\n\nAdditionally this update fixes a regression introduced in DLA-1298\nby the backported patch for SSA-201802-01/[CVE-2018-7644](https://security-tracker.debian.org/tracker/CVE-2018-7644).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.9.2-1+deb7u4.\n\n\nWe recommend that you upgrade your simplesamlphp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "simplesamlphp",
+				"purl": "pkg:deb/debian/simplesamlphp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.2-1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.2-1",
+				"1.9.2-1+deb7u1",
+				"1.9.2-1+deb7u2",
+				"1.9.2-1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1314-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1314"
+		}
+	]
+}

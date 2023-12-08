@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4332-1",
+	"modified": "2023-10-16T00:13:46.039019Z",
+	"published": "2018-11-03T00:00:00Z",
+	"related": [
+		"CVE-2018-16395",
+		"CVE-2018-16396"
+	],
+	"summary": "ruby2.3 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for the\nRuby language. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2018-16395](https://security-tracker.debian.org/tracker/CVE-2018-16395)\nTyler Eckstein reported that the equality check of\n OpenSSL::X509::Name could return true for non-equal objects. If a\n malicious X.509 certificate is passed to compare with an existing\n certificate, there is a possibility to be judged incorrectly that\n they are equal.\n* [CVE-2018-16396](https://security-tracker.debian.org/tracker/CVE-2018-16396)\nChris Seaton discovered that tainted flags are not propagated in\n Array#pack and String#unpack with some directives.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.3.3-1+deb9u4.\n\n\nWe recommend that you upgrade your ruby2.3 packages.\n\n\nFor the detailed security status of ruby2.3 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/ruby2.3>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby2.3",
+				"purl": "pkg:deb/debian/ruby2.3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.3-1+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.3-1",
+				"2.3.3-1+deb9u1",
+				"2.3.3-1+deb9u2",
+				"2.3.3-1+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4332-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4332"
+		}
+	]
+}

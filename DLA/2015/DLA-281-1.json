@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-281-1",
+	"modified": "2023-06-28T06:36:57.128797Z",
+	"published": "2015-07-25T00:00:00Z",
+	"related": [
+		"CVE-2015-1283"
+	],
+	"summary": "expat - security update",
+	"details": "\nMultiple integer overflows in the XML\\_GetBuffer function in Expat\n through 2.1.0, as used in Google Chrome before 44.0.2403.89 and\n other products, allow remote attackers to cause a denial of service\n (heap-based buffer overflow) or possibly have unspecified other\n impact via crafted XML data, a related issue to [CVE-2015-2716](https://security-tracker.debian.org/tracker/CVE-2015-2716).\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "expat",
+				"purl": "pkg:deb/debian/expat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.1-7+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.1-7",
+				"2.0.1-7+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-281-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-281"
+		}
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-662-1",
+	"modified": "2023-06-28T06:27:05.322953Z",
+	"published": "2016-10-18T00:00:00Z",
+	"related": [
+		"CVE-2016-1245"
+	],
+	"summary": "quagga - security update",
+	"details": "\nIt was discovered that there was stack overrun in IPv6 RA receive code in\nquagga, a BGP/OSPF/RIP routing daemon.\n\n\nThe buffer size specified when receiving mixed up two constants that have\ndifferent values.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in quagga version\n0.99.22.4-1+wheezy3+deb7u1.\n\n\nWe recommend that you upgrade your quagga packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "quagga",
+				"purl": "pkg:deb/debian/quagga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.99.22.4-1+wheezy3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.99.21-4+wheezy1",
+				"0.99.21-4+wheezy2",
+				"0.99.22-1",
+				"0.99.22.1-1",
+				"0.99.22.1-2",
+				"0.99.22.4-1",
+				"0.99.22.4-1+wheezy1",
+				"0.99.22.4-1+wheezy2",
+				"0.99.22.4-1+wheezy3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-662-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-662"
+		}
+	]
+}

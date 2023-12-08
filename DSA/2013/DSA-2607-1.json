@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2607-1",
+	"modified": "2023-10-16T00:11:21.607709Z",
+	"published": "2013-01-15T00:00:00Z",
+	"related": [
+		"CVE-2012-6075"
+	],
+	"summary": "qemu-kvm - buffer overflow",
+	"details": "\nIt was discovered that the e1000 emulation code in QEMU does not\nenforce frame size limits in the same way as the real hardware does.\nThis could trigger buffer overflows in the guest operating system\ndriver for that network card, assuming that the host system does not\ndiscard such frames (which it will by default).\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.12.5+dfsg-5+squeeze10.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.2+dfsg-4.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.12.5+dfsg-5+squeeze10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.12.5+dfsg-5",
+				"0.12.5+dfsg-5+squeeze1",
+				"0.12.5+dfsg-5+squeeze2",
+				"0.12.5+dfsg-5+squeeze3",
+				"0.12.5+dfsg-5+squeeze4",
+				"0.12.5+dfsg-5+squeeze4~bpo50+1",
+				"0.12.5+dfsg-5+squeeze5",
+				"0.12.5+dfsg-5+squeeze6",
+				"0.12.5+dfsg-5+squeeze7",
+				"0.12.5+dfsg-5+squeeze8",
+				"0.12.5+dfsg-5+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2607-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2607"
+		}
+	]
+}

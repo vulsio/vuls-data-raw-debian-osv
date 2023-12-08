@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1055-1",
+	"modified": "2023-06-28T06:20:17.830504Z",
+	"published": "2017-08-12T00:00:00Z",
+	"related": [
+		"CVE-2017-7890"
+	],
+	"summary": "libgd2 - security update",
+	"details": "\nMatviy Kotoniy reported that the gdImageCreateFromGifCtx() function used\nto load images from GIF format files in libgd2, a library for\nprogrammatic graphics creation and manipulation, does not zero stack\nallocated color map buffers before their use, which may result in\ninformation disclosure if a specially crafted file is processed.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.0.36~rc1~dfsg-6.1+deb7u9.\n\n\nWe recommend that you upgrade your libgd2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libgd2",
+				"purl": "pkg:deb/debian/libgd2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.36~rc1~dfsg-6.1+deb7u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.36~rc1~dfsg-6.1",
+				"2.0.36~rc1~dfsg-6.1+deb7u1",
+				"2.0.36~rc1~dfsg-6.1+deb7u2",
+				"2.0.36~rc1~dfsg-6.1+deb7u3",
+				"2.0.36~rc1~dfsg-6.1+deb7u4",
+				"2.0.36~rc1~dfsg-6.1+deb7u5",
+				"2.0.36~rc1~dfsg-6.1+deb7u6",
+				"2.0.36~rc1~dfsg-6.1+deb7u7",
+				"2.0.36~rc1~dfsg-6.1+deb7u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1055-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1055"
+		}
+	]
+}

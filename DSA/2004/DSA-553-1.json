@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-553-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-09-27T00:00:00Z",
+	"related": [
+		"CVE-2004-0880",
+		"CVE-2004-0881"
+	],
+	"summary": "getmail - symlink vulnerability",
+	"details": "\nA security problem has been discovered in getmail, a POP3 and APOP\nmail gatherer and forwarder. An attacker with a shell account on the\nvictims host could utilise getmail to overwrite arbitrary files when\nit is running as root.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.3.7-2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 3.2.5-1.\n\n\nWe recommend that you upgrade your getmail package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "getmail",
+				"purl": "pkg:deb/debian/getmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.7-2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-553-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-553"
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-364-1",
+	"modified": "2023-06-28T06:26:58.930080Z",
+	"published": "2015-12-09T00:00:00Z",
+	"related": [
+		"CVE-2015-8313"
+	],
+	"summary": "gnutls26 - security update",
+	"details": "\nHanno BĂśck discovered that GnuTLS, a library implementing the TLS and SSL\nprotocols, incorrectly validated the first padding byte in CBC modes. A remote\nattacker can possibly take advantage of this flaw to perform a padding oracle\nattack.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in gnutls26 version\n2.8.6-1+squeeze6. We recommend you to upgrade your gnutls26 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gnutls26",
+				"purl": "pkg:deb/debian/gnutls26?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.6-1+squeeze6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.6-1",
+				"2.8.6-1+squeeze1",
+				"2.8.6-1+squeeze2",
+				"2.8.6-1+squeeze3",
+				"2.8.6-1+squeeze4",
+				"2.8.6-1+squeeze5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-364-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-364"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3597-1",
+	"modified": "2023-10-16T00:06:24.278474Z",
+	"published": "2016-06-07T00:00:00Z",
+	"related": [
+		"CVE-2012-6702",
+		"CVE-2016-5300"
+	],
+	"summary": "expat - security update",
+	"details": "\nTwo related issues have been discovered in Expat, a C library for parsing\nXML.\n\n\n* [CVE-2012-6702](https://security-tracker.debian.org/tracker/CVE-2012-6702)\nIt was introduced when \n [CVE-2012-0876](https://security-tracker.debian.org/tracker/CVE-2012-0876) \n was addressed. Stefan SĂ¸rensen discovered that the use of the function \n XML\\_Parse() seeds the random number generator generating repeated outputs \n for rand() calls.\n* [CVE-2016-5300](https://security-tracker.debian.org/tracker/CVE-2016-5300)\nIt is the product of an incomplete solution for \n [CVE-2012-0876](https://security-tracker.debian.org/tracker/CVE-2012-0876). \n The parser poorly seeds the random number generator allowing an attacker to \n cause a denial of service (CPU consumption) via an XML file with crafted \n identifiers.\n\n\nYou might need to manually restart programs and services using expat\nlibraries.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.1.0-6+deb8u3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.1.1-3.\n\n\nWe recommend that you upgrade your expat packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "expat",
+				"purl": "pkg:deb/debian/expat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.0-6+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.0-6",
+				"2.1.0-6+deb8u1",
+				"2.1.0-6+deb8u2",
+				"2.1.0-6+deb8u3~kbsd8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3597-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3597"
+		}
+	]
+}

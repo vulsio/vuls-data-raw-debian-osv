@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5501-1",
+	"modified": "2023-10-16T00:31:22.641361Z",
+	"published": "2023-09-18T00:00:00Z",
+	"related": [
+		"CVE-2023-43090"
+	],
+	"summary": "gnome-shell - security update",
+	"details": "\nMickael Karatekin discovered that the GNOME session locking didn't\nrestrict a keyboard shortcut used for taking screenshots in GNOME\nScreenshot which could result in information disclosure.\n\n\nThe oldstable distribution (bullseye) is not affected.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 43.6-1~deb12u2.\n\n\nWe recommend that you upgrade your gnome-shell packages.\n\n\nFor the detailed security status of gnome-shell please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/gnome-shell](https://security-tracker.debian.org/tracker/gnome-shell)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "gnome-shell",
+				"purl": "pkg:deb/debian/gnome-shell?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "43.6-1~deb12u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"43.4-1",
+				"43.6-1~deb12u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5501-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5501"
+		}
+	]
+}

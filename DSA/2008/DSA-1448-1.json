@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1448-1",
+	"modified": "2023-10-16T00:10:26.479632Z",
+	"published": "2008-01-05T00:00:00Z",
+	"related": [
+		"CVE-2007-2807"
+	],
+	"summary": "eggdrop arbitrary code execution",
+	"details": "\nIt was discovered that eggdrop, an advanced IRC robot, was vulnerable\nto a buffer overflow which could result in a remote user executing\narbitrary code.\n\n\nFor the old stable distribution (sarge), this problem has been fixed in\nversion 1.6.17-3sarge1.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1.6.18-1etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6.18-1.1\n\n\nWe recommend that you upgrade your eggdrop package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "eggdrop",
+				"purl": "pkg:deb/debian/eggdrop?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.18-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.18-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1448-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "eggdrop",
+				"purl": "pkg:deb/debian/eggdrop?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.17-3sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.17-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1448-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1448"
+		}
+	]
+}

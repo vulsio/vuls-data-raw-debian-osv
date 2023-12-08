@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2910-1",
+	"modified": "2023-06-28T06:26:42.790416Z",
+	"published": "2022-02-04T00:00:00Z",
+	"related": [
+		"CVE-2017-1000231",
+		"CVE-2017-1000232",
+		"CVE-2020-19860",
+		"CVE-2020-19861"
+	],
+	"summary": "ldns - security update",
+	"details": "\nIt was discovered that there were four issues in ldns, a library used in\nDomain Name System (DNS) related programs:\n\n\n* [CVE-2020-19860](https://security-tracker.debian.org/tracker/CVE-2020-19860)\nWhen ldns version 1.7.1 verifies a zone file, the\n ldns\\_rr\\_new\\_frm\\_str\\_internal function has a heap out of bounds read\n vulnerability. An attacker can leak information on the heap by constructing\n a zone file payload.\n* [CVE-2020-19861](https://security-tracker.debian.org/tracker/CVE-2020-19861)\nWhen a zone file in ldns 1.7.1 is parsed, the function\n ldns\\_nsec3\\_salt\\_data is too trusted for the length value obtained from the\n zone file. When the memcpy is copied, the 0xfe - ldns\\_rdf\\_size(salt\\_rdf)\n byte data can be copied, causing heap overflow information\n leakage.\n* [CVE-2017-1000231](https://security-tracker.debian.org/tracker/CVE-2017-1000231)\nA double-free vulnerability in parse.c in ldns 1.7.0 have unspecified\n impact and attack vectors.\n* [CVE-2017-1000232](https://security-tracker.debian.org/tracker/CVE-2017-1000232)\nA double-free vulnerability in str2host.c in ldns 1.7.0 have unspecified\n impact and attack vectors.\n\n\nFor Debian 9 Stretch, these four problems have been fixed in version\n1.7.0-1+deb9u1.\n\n\nWe recommend that you upgrade your ldns packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ldns",
+				"purl": "pkg:deb/debian/ldns?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.0-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2910-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2910"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-678-1",
+	"modified": "2023-10-16T00:27:41.338869Z",
+	"published": "2005-02-11T00:00:00Z",
+	"related": [
+		"CVE-2004-1180"
+	],
+	"summary": "netkit-rwho - missing input validation",
+	"details": "\n\"Vlad902\" discovered a vulnerability in the rwhod program that can be\nused to crash the listening process. The broadcasting one is\nunaffected. This vulnerability only affects little endian\narchitectures (i.e. on Debian: alpha, arm, ia64, i386, mipsel,\nand s390).\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.17-4woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.17-8.\n\n\nWe recommend that you upgrade your rwhod package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "netkit-rwho",
+				"purl": "pkg:deb/debian/netkit-rwho?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.17-4woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.17-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-678-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-678"
+		}
+	]
+}

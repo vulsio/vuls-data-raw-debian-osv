@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5071-1",
+	"modified": "2023-10-16T00:15:28.437067Z",
+	"published": "2022-02-11T00:00:00Z",
+	"related": [
+		"CVE-2021-44142"
+	],
+	"summary": "samba - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix.\n\n\n* [CVE-2021-44142](https://security-tracker.debian.org/tracker/CVE-2021-44142)\nOrange Tsai reported an out-of-bounds heap write vulnerability in\n the VFS module vfs\\_fruit, which could result in remote execution of\n arbitrary code as root.\n* [CVE-2022-0336](https://security-tracker.debian.org/tracker/CVE-2022-0336)\nKees van Vloten reported that Samba AD users with permission to\n write to an account can impersonate arbitrary services.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 2:4.9.5+dfsg-5+deb10u3. As per DSA 5015-1, [CVE-2022-0336](https://security-tracker.debian.org/tracker/CVE-2022-0336) has\nnot been addressed for the oldstable distribution (buster).\n\n\nFor the stable distribution (bullseye), these problems have been fixed\nin version 2:4.13.13+dfsg-1~deb11u3. Additionally, some followup fixes\nfor [CVE-2020-25717](https://security-tracker.debian.org/tracker/CVE-2020-25717) are included in this update (Cf. #1001068).\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFor the detailed security status of samba please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/samba>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.9.5+dfsg-5+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.9.5+dfsg-5",
+				"2:4.9.5+dfsg-5+deb10u1",
+				"2:4.9.5+dfsg-5+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5071-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.13.13+dfsg-1~deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.13.13+dfsg-1~deb11u1",
+				"2:4.13.13+dfsg-1~deb11u2",
+				"2:4.13.5+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5071-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5071"
+		}
+	]
+}

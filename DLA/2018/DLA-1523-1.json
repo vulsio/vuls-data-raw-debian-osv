@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1523-1",
+	"modified": "2023-06-28T06:26:22.972870Z",
+	"published": "2018-09-27T00:00:00Z",
+	"related": [
+		"CVE-2018-17281"
+	],
+	"summary": "asterisk - security update",
+	"details": "\nSean Bright discovered that Asterisk, a PBX and telephony toolkit,\ncontained a stack overflow vulnerability in the res\\_http\\_websocket.so\nmodule that allowed remote attackers to crash Asterisk via specially\ncrafted HTTP requests to upgrade the connection to a websocket.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1:11.13.1~dfsg-2+deb8u6.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:11.13.1~dfsg-2+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:11.13.1~dfsg-2",
+				"1:11.13.1~dfsg-2+deb8u1",
+				"1:11.13.1~dfsg-2+deb8u2",
+				"1:11.13.1~dfsg-2+deb8u3",
+				"1:11.13.1~dfsg-2+deb8u4",
+				"1:11.13.1~dfsg-2+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1523-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1523"
+		}
+	]
+}

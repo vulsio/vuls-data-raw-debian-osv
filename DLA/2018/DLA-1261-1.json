@@ -1,0 +1,107 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1261-1",
+	"modified": "2023-06-28T06:29:32.015162Z",
+	"published": "2018-01-28T00:00:00Z",
+	"related": [
+		"CVE-2017-12374",
+		"CVE-2017-12375",
+		"CVE-2017-12376",
+		"CVE-2017-12377",
+		"CVE-2017-12378",
+		"CVE-2017-12379",
+		"CVE-2017-12380",
+		"CVE-2017-6418",
+		"CVE-2017-6420"
+	],
+	"summary": "clamav - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in clamav, the ClamAV\nAntiVirus toolkit for Unix. Effects range from denial of service to\npotential arbitrary code execution. Additionally, this version fixes\na longstanding issue that has recently resurfaced whereby a malformed\nvirus signature database can cause an application crash and denial of\nservice.\n\n\n* [CVE-2017-12374](https://security-tracker.debian.org/tracker/CVE-2017-12374)\nClamAV has a use-after-free condition arising from a lack of input\n validation. A remote attacker could exploit this vulnerability with\n a crafted email message to cause a denial of service.\n* [CVE-2017-12375](https://security-tracker.debian.org/tracker/CVE-2017-12375)\nClamAV has a buffer overflow vulnerability arising from a lack of\n input validation. An unauthenticated remote attacker could send a\n crafted email message to the affected device, triggering a buffer\n overflow and potentially a denial of service when the malicious\n message is scanned.\n* [CVE-2017-12376](https://security-tracker.debian.org/tracker/CVE-2017-12376)\nClamAV has a buffer overflow vulnerability arising from improper\n input validation when handling Portable Document Format (PDF) files.\n An unauthenticated remote attacker could send a crafted PDF file to\n the affected device, triggering a buffer overflow and potentially a\n denial of service or arbitrary code execution when the malicious\n file is scanned.\n* [CVE-2017-12377](https://security-tracker.debian.org/tracker/CVE-2017-12377)\nClamAV has a heap overflow vulnerability arising from improper input\n validation when handling mew packets. An attacker could exploit this\n by sending a crafted message to the affected device, triggering a\n denial of service or possible arbitrary code execution when the\n malicious file is scanned.\n* [CVE-2017-12378](https://security-tracker.debian.org/tracker/CVE-2017-12378)\nClamAV has a buffer overread vulnerability arising from improper\n input validation when handling tape archive (TAR) files. An\n unauthenticated remote attacker could send a crafted TAR file to\n the affected device, triggering a buffer overread and potentially a\n denial of service when the malicious file is scanned.\n* [CVE-2017-12379](https://security-tracker.debian.org/tracker/CVE-2017-12379)\nClamAV has a buffer overflow vulnerability arising from improper\n input validation in the message parsing function. An unauthenticated\n remote attacker could send a crafted email message to the affected\n device, triggering a buffer overflow and potentially a denial of\n service or arbitrary code execution when the malicious message is\n scanned.\n* [CVE-2017-12380](https://security-tracker.debian.org/tracker/CVE-2017-12380)\nClamAV has a NULL dereference vulnerability arising from improper\n input validation in the message parsing function. An unauthenticated\n remote attacker could send a crafted email message to the affected\n device, triggering a NULL pointer dereference, which may result in a\n denial of service.\n\n* Debian Bug #824196\n\n A malformed virus signature database could cause an application\n crash and denial of service.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.99.2+dfsg-0+deb7u4.\n\n\nWe recommend that you upgrade your clamav packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "clamav",
+				"purl": "pkg:deb/debian/clamav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.99.2+dfsg-0+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.97.8+dfsg-1",
+				"0.97.8+dfsg-1+powerpcspe1",
+				"0.98+dfsg-1",
+				"0.98.1+dfsg-1",
+				"0.98.1+dfsg-1+deb7u1",
+				"0.98.1+dfsg-1+deb7u2",
+				"0.98.1+dfsg-1+deb7u3",
+				"0.98.1+dfsg-1+deb7u4",
+				"0.98.1+dfsg-1+squeeze1",
+				"0.98.1+dfsg-2",
+				"0.98.1+dfsg-3",
+				"0.98.1+dfsg-4",
+				"0.98.1+dfsg-5",
+				"0.98.1+dfsg-6",
+				"0.98.3+dfsg-1",
+				"0.98.4+dfsg-0+deb7u1",
+				"0.98.4+dfsg-0+deb7u2",
+				"0.98.4+dfsg-1",
+				"0.98.4+dfsg-2",
+				"0.98.4~rc1+dfsg-1",
+				"0.98.4~rc1+dfsg-2",
+				"0.98.4~rc1+dfsg-3",
+				"0.98.5+dfsg-0+deb7u1",
+				"0.98.5+dfsg-0+deb7u2",
+				"0.98.5+dfsg-0+deb7u3",
+				"0.98.5+dfsg-1",
+				"0.98.5+dfsg-2",
+				"0.98.5+dfsg-3",
+				"0.98.5~beta1+dfsg-1",
+				"0.98.5~beta1+dfsg-2",
+				"0.98.5~beta1+dfsg-3",
+				"0.98.5~rc1+dfsg-1",
+				"0.98.5~rc1+dfsg-2",
+				"0.98.5~rc1+dfsg-3",
+				"0.98.5~rc1+dfsg-4",
+				"0.98.6+dfsg-0+deb7u1",
+				"0.98.6+dfsg-1",
+				"0.98.6+dfsg-2",
+				"0.98.6+dfsg-3",
+				"0.98.7+dfsg-0+deb7u1",
+				"0.98.7+dfsg-1",
+				"0.98.7+dfsg-2",
+				"0.98.7+dfsg-3",
+				"0.98.7+dfsg-4",
+				"0.98.7+dfsg-5",
+				"0.99+dfsg-0+deb7u1",
+				"0.99+dfsg-0+deb7u2",
+				"0.99+dfsg-1",
+				"0.99+dfsg-2",
+				"0.99.1+dfsg-1",
+				"0.99.2+dfsg-0+deb7u2",
+				"0.99.2+dfsg-0+deb7u3",
+				"0.99~beta1+dfsg-1",
+				"0.99~rc2+dfsg-1",
+				"0.99~rc2+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1261-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1261"
+		}
+	]
+}

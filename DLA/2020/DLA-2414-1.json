@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2414-1",
+	"modified": "2023-06-28T06:30:42.140191Z",
+	"published": "2020-10-25T00:00:00Z",
+	"related": [
+		"CVE-2020-27638"
+	],
+	"summary": "fastd - security update",
+	"details": "\nIn fastd, a fast and secure tunnelling daemon, a receive buffer\nhandling problem was discovered which allows a denial of service\n(memory exhaustion) when receiving packets with an invalid type code.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n18-2+deb9u1.\n\n\nWe recommend that you upgrade your fastd packages.\n\n\nFor the detailed security status of fastd please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/fastd>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "fastd",
+				"purl": "pkg:deb/debian/fastd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "18-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"18-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2414-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2414"
+		}
+	]
+}

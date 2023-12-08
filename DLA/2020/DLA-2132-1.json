@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2132-1",
+	"modified": "2023-06-28T06:21:13.523684Z",
+	"published": "2020-03-03T00:00:00Z",
+	"related": [
+		"CVE-2019-18900"
+	],
+	"summary": "libzypp - security update",
+	"details": "\nIt was discovered that there was an issue where incorrect default\npermissions on a HTTP cookie store could have allowed local attackers to read\nprivate credentials in libzypp, a package management library that\npowers applications like YaST, zypper and the openSUSE/SLE implementation of\nPackageKit\n\n\n* [CVE-2019-18900](https://security-tracker.debian.org/tracker/CVE-2019-18900)\nIncorrect Default Permissions vulnerability in libzypp of SUSE CaaS Platform 3.0, SUSE Linux Enterprise Server 12, SUSE Linux Enterprise Server 15 allowed local attackers to read a cookie store used by libzypp, exposing private cookies. This issue affects: SUSE CaaS Platform 3.0 libzypp versions prior to 16.21.2-27.68.1. SUSE Linux Enterprise Server 12 libzypp versions prior to 16.21.2-2.45.1. SUSE Linux Enterprise Server 15 17.19.0-3.34.1.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n14.29.1-2+deb8u1.\n\n\nWe recommend that you upgrade your libzypp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libzypp",
+				"purl": "pkg:deb/debian/libzypp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "14.29.1-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"14.29.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2132-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2132"
+		}
+	]
+}

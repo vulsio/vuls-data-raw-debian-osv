@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5542-1",
+	"modified": "2023-10-31T01:15:31.472510Z",
+	"published": "2023-10-30T00:00:00Z",
+	"related": [
+		"CVE-2023-41259",
+		"CVE-2023-41260"
+	],
+	"summary": "request-tracker4 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in Request Tracker, an\nextensible trouble-ticket tracking system.\n\n\n* [CVE-2023-41259](https://security-tracker.debian.org/tracker/CVE-2023-41259)\nTom Wolters reported that Request Tracker is vulnerable to accepting\n unvalidated RT email headers in incoming email and the mail-gateway\n REST interface.\n* [CVE-2023-41260](https://security-tracker.debian.org/tracker/CVE-2023-41260)\nTom Wolters reported that Request Tracker is vulnerable to\n information leakage via response messages returned from requests\n sent via the mail-gateway REST interface.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 4.4.4+dfsg-2+deb11u3.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 4.4.6+dfsg-1.1+deb12u1.\n\n\nWe recommend that you upgrade your request-tracker4 packages.\n\n\nFor the detailed security status of request-tracker4 please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/request-tracker4](https://security-tracker.debian.org/tracker/request-tracker4)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "request-tracker4",
+				"purl": "pkg:deb/debian/request-tracker4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.4+dfsg-2+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.4+dfsg-2",
+				"4.4.4+dfsg-2+deb11u1",
+				"4.4.4+dfsg-2+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5542-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "request-tracker4",
+				"purl": "pkg:deb/debian/request-tracker4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.6+dfsg-1.1+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.6+dfsg-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5542-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5542"
+		}
+	]
+}

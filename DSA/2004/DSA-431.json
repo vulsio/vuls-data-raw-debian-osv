@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-431",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-02-01T00:00:00Z",
+	"related": [
+		"CVE-2003-0618"
+	],
+	"summary": "perl - information leak",
+	"details": "\nPaul Szabo discovered a number of similar bugs in suidperl, a helper\nprogram to run perl scripts with setuid privileges. By exploiting\nthese bugs, an attacker could abuse suidperl to discover information\nabout files (such as testing for their existence and some of their\npermissions) that should not be accessible to unprivileged users.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 5.6.1-8.6.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon. Refer\nto Debian bug [#220486](https://bugs.debian.org/220486).\n\n\nWe recommend that you update your perl package if you have the\n\"perl-suid\" package installed.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "perl",
+				"purl": "pkg:deb/debian/perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.6.1-8.6"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-431.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-431"
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5446-1",
+	"modified": "2023-10-16T00:23:13.652833Z",
+	"published": "2023-07-03T00:00:00Z",
+	"related": [
+		"CVE-2023-36664"
+	],
+	"summary": "ghostscript - security update",
+	"details": "\nIt was discovered that Ghostscript, the GPL PostScript/PDF interpreter,\ndoes not properly handle permission validation for pipe devices, which\ncould result in the execution of arbitrary commands if malformed\ndocument files are processed.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 9.53.3~dfsg-7+deb11u5.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 10.0.0~dfsg-11+deb12u1.\n\n\nWe recommend that you upgrade your ghostscript packages.\n\n\nFor the detailed security status of ghostscript please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ghostscript](https://security-tracker.debian.org/tracker/ghostscript)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "ghostscript",
+				"purl": "pkg:deb/debian/ghostscript?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.53.3~dfsg-7+deb11u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.53.3~dfsg-7",
+				"9.53.3~dfsg-7+deb11u1",
+				"9.53.3~dfsg-7+deb11u2",
+				"9.53.3~dfsg-7+deb11u3",
+				"9.53.3~dfsg-7+deb11u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5446-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "ghostscript",
+				"purl": "pkg:deb/debian/ghostscript?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "10.0.0~dfsg-11+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"10.0.0~dfsg-11"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5446-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5446"
+		}
+	]
+}

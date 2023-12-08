@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1492-1",
+	"modified": "2023-10-16T00:06:44.307018Z",
+	"published": "2008-02-10T00:00:00Z",
+	"related": [
+		"CVE-2008-0665",
+		"CVE-2008-0666"
+	],
+	"summary": "wml",
+	"details": "\nFrank Lichtenheld and Nico Golde discovered that WML, an off-line HTML\ngeneration toolkit, creates insecure temporary files in the eperl and\nipp backends and in the wmg.cgi script, which could lead to a local denial\nof service by overwriting files.\n\n\nThe old stable distribution (sarge) is not affected.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.0.11-1etch1.\n\n\nWe recommend that you upgrade your wml packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "wml",
+				"purl": "pkg:deb/debian/wml?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.11-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.11-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1492-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1492"
+		}
+	]
+}

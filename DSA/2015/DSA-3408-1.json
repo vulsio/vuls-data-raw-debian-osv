@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3408-1",
+	"modified": "2023-10-16T00:11:59.270012Z",
+	"published": "2015-12-01T00:00:00Z",
+	"related": [
+		"CVE-2015-8313"
+	],
+	"summary": "gnutls26 - security update",
+	"details": "\nIt was discovered that GnuTLS, a library implementing the TLS and SSL\nprotocols, incorrectly validates the first byte of padding in CBC modes.\nA remote attacker can possibly take advantage of this flaw to perform a\npadding oracle attack.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 2.12.20-8+deb7u4.\n\n\nWe recommend that you upgrade your gnutls26 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "gnutls26",
+				"purl": "pkg:deb/debian/gnutls26?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.12.20-8+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.12.20-6",
+				"2.12.20-7",
+				"2.12.20-8",
+				"2.12.20-8+deb7u1",
+				"2.12.20-8+deb7u2",
+				"2.12.20-8+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3408-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3408"
+		}
+	]
+}

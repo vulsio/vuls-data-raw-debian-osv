@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1662-1",
+	"modified": "2023-06-28T06:20:00.072757Z",
+	"published": "2019-02-06T00:00:00Z",
+	"related": [
+		"CVE-2018-1320"
+	],
+	"summary": "libthrift-java - security update",
+	"details": "\nIt was discovered that it was possible to bypass SASL negotiation\nisComplete validation in libthrift-java, Java language support for the\nApache Thrift software framework. An assert used to determine if the\nSASL handshake had successfully completed could be disabled in\nproduction settings making the validation incomplete.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n0.9.1-2+deb8u1.\n\n\nWe recommend that you upgrade your libthrift-java packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libthrift-java",
+				"purl": "pkg:deb/debian/libthrift-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.1-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1662-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1662"
+		}
+	]
+}

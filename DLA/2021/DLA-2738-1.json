@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2738-1",
+	"modified": "2023-06-28T06:21:21.320564Z",
+	"published": "2021-08-10T00:00:00Z",
+	"related": [
+		"CVE-2021-3672"
+	],
+	"summary": "c-ares - security update",
+	"details": "\nAn issue has been found in c-ares, an asynchronous name resolver.\nMissing input validation of host names returned by Domain Name Servers can\nlead to output of wrong hostnames.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.12.0-1+deb9u2.\n\n\nWe recommend that you upgrade your c-ares packages.\n\n\nFor the detailed security status of c-ares please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/c-ares>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "c-ares",
+				"purl": "pkg:deb/debian/c-ares?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.0-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.0-1",
+				"1.12.0-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2738-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2738"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-703-1",
+	"modified": "2023-10-16T00:26:14.929972Z",
+	"published": "2005-04-01T00:00:00Z",
+	"related": [
+		"CVE-2005-0468",
+		"CVE-2005-0469"
+	],
+	"summary": "krb5 - buffer overflows",
+	"details": "\nSeveral problems have been discovered in telnet clients that could be\nexploited by malicious daemons the client connects to. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CAN-2005-0468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0468)\nGaĂŤl Delalleau discovered a buffer overflow in the env\\_opt\\_add()\n function that allow a remote attacker to execute arbitrary code.\n\n* [CAN-2005-0469](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0469)\nGaĂŤl Delalleau discovered a buffer overflow in the handling of the\n LINEMODE suboptions in telnet clients. This can lead to the\n execution of arbitrary code when connected to a malicious server.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.2.4-5woody8.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.3.6-1.\n\n\nWe recommend that you upgrade your krb5 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "krb5",
+				"purl": "pkg:deb/debian/krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.4-5woody8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.4-5woody6",
+				"1.2.4-5woody7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-703-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-703"
+		}
+	]
+}

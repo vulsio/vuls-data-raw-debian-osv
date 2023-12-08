@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1253-1",
+	"modified": "2023-10-16T00:06:32.523989Z",
+	"published": "2007-01-27T00:00:00Z",
+	"related": [
+		"CVE-2006-6497",
+		"CVE-2006-6498",
+		"CVE-2006-6499",
+		"CVE-2006-6501",
+		"CVE-2006-6502",
+		"CVE-2006-6503"
+	],
+	"summary": "mozilla-firefox",
+	"details": "\nSeveral security related problems have been discovered in Mozilla and\nderived products such as Mozilla Firefox. The Common Vulnerabilities\nand Exposures project identifies the following vulnerabilities:\n\n\n* [CVE-2006-6497](https://security-tracker.debian.org/tracker/CVE-2006-6497)\nSeveral vulnerabilities in the layout engine allow remote\n attackers to cause a denial of service and possibly permit them to\n execute arbitrary code. [MFSA 2006-68]\n* [CVE-2006-6498](https://security-tracker.debian.org/tracker/CVE-2006-6498)\nSeveral vulnerabilities in the JavaScript engine allow remote\n attackers to cause a denial of service and possibly permit them to\n execute arbitrary code. [MFSA 2006-68]\n* [CVE-2006-6499](https://security-tracker.debian.org/tracker/CVE-2006-6499)\nA bug in the js\\_dtoa function allows remote attackers to cause a\n denial of service. [MFSA 2006-68]\n* [CVE-2006-6501](https://security-tracker.debian.org/tracker/CVE-2006-6501)\n\"shutdown\" discovered a vulnerability that allows remote attackers\n to gain privileges and install malicious code via the watch\n JavaScript function. [MFSA 2006-70]\n* [CVE-2006-6502](https://security-tracker.debian.org/tracker/CVE-2006-6502)\nSteven Michaud discovered a programming bug that allows remote\n attackers to cause a denial of service. [MFSA 2006-71]\n* [CVE-2006-6503](https://security-tracker.debian.org/tracker/CVE-2006-6503)\n\"moz\\_bug\\_r\\_a4\" reported that the src attribute of an IMG element\n could be used to inject JavaScript code. [MFSA 2006-72]\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.0.4-2sarge15.\n\n\nFor the testing (etch) and unstable (sid) distribution these problems\nhave been fixed in version 2.0.0.1+dfsg-2 of iceweasel.\n\n\nWe recommend that you upgrade your firefox and iceweasel packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mozilla-firefox",
+				"purl": "pkg:deb/debian/mozilla-firefox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.4-2sarge15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.4-2",
+				"1.0.4-2sarge1",
+				"1.0.4-2sarge10",
+				"1.0.4-2sarge11",
+				"1.0.4-2sarge12",
+				"1.0.4-2sarge13",
+				"1.0.4-2sarge14",
+				"1.0.4-2sarge2",
+				"1.0.4-2sarge3",
+				"1.0.4-2sarge4",
+				"1.0.4-2sarge5",
+				"1.0.4-2sarge6",
+				"1.0.4-2sarge7",
+				"1.0.4-2sarge9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1253-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1253"
+		}
+	]
+}

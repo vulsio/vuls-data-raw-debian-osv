@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1528-1",
+	"modified": "2023-10-16T00:18:17.453958Z",
+	"published": "2008-03-24T00:00:00Z",
+	"related": [
+		"CVE-2007-6205",
+		"CVE-2008-0124",
+		"CVE-2008-1476"
+	],
+	"summary": "serendipity - cross site scripting",
+	"details": "\nPeter Hüwe and Hanno Böck discovered that Serendipity, a weblog manager,\ndid not properly sanitise input to several scripts which allowed\ncross site scripting.\n\n\nThe old stable distribution (sarge) does not contain a serendipity package.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1.0.4-1+etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.3-1.\n\n\nWe recommend that you upgrade your serendipity package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "serendipity",
+				"purl": "pkg:deb/debian/serendipity?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.4-1+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1528-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1528"
+		}
+	]
+}

@@ -1,0 +1,62 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-0003-1",
+	"modified": "2023-06-28T06:19:08.127636Z",
+	"published": "2014-06-05T00:00:00Z",
+	"related": [
+		"CVE-2014-0076",
+		"CVE-2014-0195",
+		"CVE-2014-0221",
+		"CVE-2014-0224",
+		"CVE-2014-3470"
+	],
+	"summary": "openssl - security update",
+	"details": "\n* [CVE-2014-0195](https://security-tracker.debian.org/tracker/CVE-2014-0195)\nJueri Aedla discovered that a buffer overflow in processing DTLS\n fragments could lead to the execution of arbitrary code or denial\n of service.\n* [CVE-2014-0221](https://security-tracker.debian.org/tracker/CVE-2014-0221)\nImre Rad discovered the processing of DTLS hello packets is\n susceptible to denial of service.\n* [CVE-2014-0224](https://security-tracker.debian.org/tracker/CVE-2014-0224)\nKIKUCHI Masashi discovered that carefully crafted handshakes can\n force the use of weak keys, resulting in potential man-in-the-middle\n attacks.\n* [CVE-2014-3470](https://security-tracker.debian.org/tracker/CVE-2014-3470)\nFelix Groebert and Ivan Fratric discovered that the implementation of\n anonymous ECDH ciphersuites is suspectible to denial of service.\n* [CVE-2014-0076](https://security-tracker.debian.org/tracker/CVE-2014-0076)\nFix for the attack described in the paper \"Recovering\n OpenSSL ECDSA Nonces Using the FLUSH+RELOAD Cache Side-channel Attack\"\n Reported by Yuval Yarom and Naomi Benger.\n\n\nAdditional information can be found at\n<http://www.openssl.org/news/secadv_20140605.txt>\n\n\nAll applications linked to openssl need to be restarted. You can\nuse the tool checkrestart from the package debian-goodies to\ndetect affected programs or reboot your system.\n\n\nIt's important that you upgrade the libssl0.9.8 package and not\njust the openssl package.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in openssl version 0.9.8o-4squeeze15\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.8o-4squeeze15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.8o-4",
+				"0.9.8o-4squeeze1",
+				"0.9.8o-4squeeze11",
+				"0.9.8o-4squeeze12",
+				"0.9.8o-4squeeze13",
+				"0.9.8o-4squeeze14",
+				"0.9.8o-4squeeze2",
+				"0.9.8o-4squeeze3",
+				"0.9.8o-4squeeze4",
+				"0.9.8o-4squeeze4~bpo50+1",
+				"0.9.8o-4squeeze5",
+				"0.9.8o-4squeeze7",
+				"0.9.8o-4squeeze8",
+				"0.9.8o-4squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-0003-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-0003"
+		}
+	]
+}

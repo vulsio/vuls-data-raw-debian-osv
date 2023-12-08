@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3193-1",
+	"modified": "2023-06-28T06:37:15.312712Z",
+	"published": "2022-11-17T00:00:00Z",
+	"summary": "joblib - security update",
+	"details": "\nIt was discovered that joblib did not properly sanitize arguments\nto pre\\_dispatch, allowing arbitrary code execution.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n0.13.0-2+deb10u1.\n\n\nWe recommend that you upgrade your joblib packages.\n\n\nFor the detailed security status of joblib please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/joblib>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "joblib",
+				"purl": "pkg:deb/debian/joblib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.13.0-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.13.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3193-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3193"
+		}
+	]
+}

@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1539-1",
+	"modified": "2023-06-28T06:20:46.871938Z",
+	"published": "2018-10-08T00:00:00Z",
+	"related": [
+		"CVE-2018-10858",
+		"CVE-2018-10919"
+	],
+	"summary": "samba - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix. The Common Vulnerabilities and\nExposures project identifies the following issues:\n\n\n* [CVE-2018-10858](https://security-tracker.debian.org/tracker/CVE-2018-10858)\nSvyatoslav Phirsov discovered that insufficient input validation in\n libsmbclient allowed a malicious Samba server to write to the\n client's heap memory.\n* [CVE-2018-10919](https://security-tracker.debian.org/tracker/CVE-2018-10919)\nPhillip Kuhrt discovered that Samba when acting as an Active Domain\n controller disclosed some sensitive attributes.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.2.14+dfsg-0+deb8u10.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.2.14+dfsg-0+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.1.17+dfsg-2",
+				"2:4.1.17+dfsg-2+deb8u1",
+				"2:4.1.17+dfsg-2+deb8u2",
+				"2:4.1.17+dfsg-3",
+				"2:4.1.17+dfsg-4",
+				"2:4.1.17+dfsg-5",
+				"2:4.1.20+dfsg-1",
+				"2:4.1.21+dfsg-1",
+				"2:4.1.21+dfsg-2",
+				"2:4.1.22+dfsg-1",
+				"2:4.2.1+dfsg-1",
+				"2:4.2.10+dfsg-0+deb8u1",
+				"2:4.2.10+dfsg-0+deb8u2",
+				"2:4.2.10+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u1",
+				"2:4.2.14+dfsg-0+deb8u2",
+				"2:4.2.14+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u4",
+				"2:4.2.14+dfsg-0+deb8u5",
+				"2:4.2.14+dfsg-0+deb8u6",
+				"2:4.2.14+dfsg-0+deb8u7",
+				"2:4.2.14+dfsg-0+deb8u8",
+				"2:4.2.14+dfsg-0+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1539-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1539"
+		}
+	]
+}

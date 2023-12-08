@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1158",
+	"modified": "2023-10-16T00:06:31.594174Z",
+	"published": "2006-08-25T00:00:00Z",
+	"related": [
+		"CVE-2006-3124"
+	],
+	"summary": "streamripper",
+	"details": "\nUlf HĂ¤rnhammar from the Debian Security Audit Project discovered that\nstreamripper, a utility to record online radio-streams, performs\ninsufficient sanitising of data received from the streaming server,\nwhich might lead to buffer overflows and the execution of arbitrary\ncode.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.61.7-1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.61.25-2.\n\n\nWe recommend that you upgrade your streamripper package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "streamripper",
+				"purl": "pkg:deb/debian/streamripper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.61.7-1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.61.7-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1158.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1158"
+		}
+	]
+}

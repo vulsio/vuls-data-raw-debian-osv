@@ -1,0 +1,89 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2547-1",
+	"modified": "2023-06-28T06:25:16.866160Z",
+	"published": "2021-02-06T00:00:00Z",
+	"related": [
+		"CVE-2019-12295",
+		"CVE-2019-13619",
+		"CVE-2019-16319",
+		"CVE-2019-19553",
+		"CVE-2020-11647",
+		"CVE-2020-13164",
+		"CVE-2020-15466",
+		"CVE-2020-25862",
+		"CVE-2020-25863",
+		"CVE-2020-26418",
+		"CVE-2020-26421",
+		"CVE-2020-26575",
+		"CVE-2020-28030",
+		"CVE-2020-7045",
+		"CVE-2020-9428",
+		"CVE-2020-9430",
+		"CVE-2020-9431"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nSeveral vulnerabilities were fixed in Wireshark, a network sniffer.\n\n\n* [CVE-2019-13619](https://security-tracker.debian.org/tracker/CVE-2019-13619)\nASN.1 BER and related dissectors crash\n* [CVE-2019-16319](https://security-tracker.debian.org/tracker/CVE-2019-16319)\nThe Gryphon dissector could go into an infinite loop.\n* [CVE-2019-19553](https://security-tracker.debian.org/tracker/CVE-2019-19553)\nThe CMS dissector could crash.\n* [CVE-2020-7045](https://security-tracker.debian.org/tracker/CVE-2020-7045)\nThe BT ATT dissector could crash.\n* [CVE-2020-9428](https://security-tracker.debian.org/tracker/CVE-2020-9428)\nThe EAP dissector could crash.\n* [CVE-2020-9430](https://security-tracker.debian.org/tracker/CVE-2020-9430)\nThe WiMax DLMAP dissector could crash.\n* [CVE-2020-9431](https://security-tracker.debian.org/tracker/CVE-2020-9431)\nThe LTE RRC dissector could leak memory.\n* [CVE-2020-11647](https://security-tracker.debian.org/tracker/CVE-2020-11647)\nThe BACapp dissector could crash.\n* [CVE-2020-13164](https://security-tracker.debian.org/tracker/CVE-2020-13164)\nThe NFS dissector could crash.\n* [CVE-2020-15466](https://security-tracker.debian.org/tracker/CVE-2020-15466)\nThe GVCP dissector could go into an infinite loop.\n* [CVE-2020-25862](https://security-tracker.debian.org/tracker/CVE-2020-25862)\nThe TCP dissector could crash.\n* [CVE-2020-25863](https://security-tracker.debian.org/tracker/CVE-2020-25863)\nThe MIME Multipart dissector could crash.\n* [CVE-2020-26418](https://security-tracker.debian.org/tracker/CVE-2020-26418)\nMemory leak in the Kafka protocol dissector.\n* [CVE-2020-26421](https://security-tracker.debian.org/tracker/CVE-2020-26421)\nCrash in USB HID protocol dissector.\n* [CVE-2020-26575](https://security-tracker.debian.org/tracker/CVE-2020-26575)\nThe Facebook Zero Protocol (aka FBZERO) dissector could enter an infinite loop.\n* [CVE-2020-28030](https://security-tracker.debian.org/tracker/CVE-2020-28030)\nThe GQUIC dissector could crash.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.6.20-0+deb9u1.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\nFor the detailed security status of wireshark please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/wireshark>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.20-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.6+g32dac6a-2",
+				"2.2.6+g32dac6a-2+deb9u1",
+				"2.2.6+g32dac6a-2+deb9u2",
+				"2.2.6+g32dac6a-2+deb9u3",
+				"2.2.7-1",
+				"2.4.0-1",
+				"2.4.1-1",
+				"2.4.2-1",
+				"2.4.3-1",
+				"2.4.4-1",
+				"2.4.5-1",
+				"2.4.6-1",
+				"2.6.1-1",
+				"2.6.10-1",
+				"2.6.2-1",
+				"2.6.2-2",
+				"2.6.3-1",
+				"2.6.3-1~deb9u1",
+				"2.6.4-1",
+				"2.6.4-2",
+				"2.6.5-1",
+				"2.6.5-1~deb9u1",
+				"2.6.6-1",
+				"2.6.7-1",
+				"2.6.7-1~deb9u1",
+				"2.6.8-1",
+				"2.6.8-1.1",
+				"2.6.8-1.1~deb9u1",
+				"2.6.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2547-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2547"
+		}
+	]
+}

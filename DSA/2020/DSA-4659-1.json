@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4659-1",
+	"modified": "2023-10-16T00:19:42.248631Z",
+	"published": "2020-04-20T00:00:00Z",
+	"related": [
+		"CVE-2020-11008"
+	],
+	"summary": "git - security update",
+	"details": "\nCarlo Arenas discovered a flaw in git, a fast, scalable, distributed\nrevision control system. With a crafted URL that contains a newline or\nempty host, or lacks a scheme, the credential helper machinery can be\nfooled into providing credential information that is not appropriate for\nthe protocol in use and host being contacted.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1:2.11.0-3+deb9u7.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1:2.20.1-2+deb10u3.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFor the detailed security status of git please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/git>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.11.0-3+deb9u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.11.0-3",
+				"1:2.11.0-3+deb9u1",
+				"1:2.11.0-3+deb9u2",
+				"1:2.11.0-3+deb9u3",
+				"1:2.11.0-3+deb9u4",
+				"1:2.11.0-3+deb9u5",
+				"1:2.11.0-3+deb9u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4659-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.20.1-2+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.20.1-2",
+				"1:2.20.1-2+deb10u1",
+				"1:2.20.1-2+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4659-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4659"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3136-1",
+	"modified": "2023-06-28T06:26:52.406357Z",
+	"published": "2022-10-04T00:00:00Z",
+	"related": [
+		"CVE-2022-3100"
+	],
+	"summary": "barbican - security update",
+	"details": "\nIt was found that Barbican, a service for secret management and storage,\nwas vulnerable to access bypass via query string injection.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1:7.0.0-1+deb10u1.\n\n\nWe recommend that you upgrade your barbican packages.\n\n\nFor the detailed security status of barbican please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/barbican>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "barbican",
+				"purl": "pkg:deb/debian/barbican?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:7.0.0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:7.0.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3136-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3136"
+		}
+	]
+}

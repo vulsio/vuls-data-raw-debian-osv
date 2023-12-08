@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2925-1",
+	"modified": "2023-10-16T00:11:38.473814Z",
+	"published": "2014-05-08T00:00:00Z",
+	"related": [
+		"CVE-2014-3121"
+	],
+	"summary": "rxvt-unicode - security update",
+	"details": "\nPhillip Hallam-Baker discovered that window property values could be \nqueried in rxvt-unicode, resulting in the potential execution of \narbitrary commands.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 9.07-2+deb6u1.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 9.15-2+deb7u1.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 9.20-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 9.20-1.\n\n\nWe recommend that you upgrade your rxvt-unicode packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "rxvt-unicode",
+				"purl": "pkg:deb/debian/rxvt-unicode?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.07-2+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.07-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2925-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "rxvt-unicode",
+				"purl": "pkg:deb/debian/rxvt-unicode?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.15-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.15-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2925-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2925"
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1857-1",
+	"modified": "2023-06-28T06:21:00.829087Z",
+	"published": "2019-07-20T00:00:00Z",
+	"related": [
+		"CVE-2019-11719",
+		"CVE-2019-11729"
+	],
+	"summary": "nss - security update",
+	"details": "\nVulnerabilities have been discovered in nss, the Mozilla Network\nSecurity Service library.\n\n\n* [CVE-2019-11719](https://security-tracker.debian.org/tracker/CVE-2019-11719):\n\nOut-of-bounds read when importing curve25519 private key\n\n\nWhen importing a curve25519 private key in PKCS#8format with leading\n 0x00 bytes, it is possible to trigger an out-of-bounds read in the\n Network Security Services (NSS) library. This could lead to\n information disclosure.\n* [CVE-2019-11729](https://security-tracker.debian.org/tracker/CVE-2019-11729):\n\nEmpty or malformed p256-ECDH public keys may trigger a\n segmentation fault\n\n\nEmpty or malformed p256-ECDH public keys may trigger a segmentation\n fault due values being improperly sanitized before being copied into\n memory and used.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2:3.26-1+debu8u5.\n\n\nWe recommend that you upgrade your nss packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.26-1+debu8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.17.2-1.1",
+				"2:3.17.2-1.1+deb8u1",
+				"2:3.17.2-1.1+deb8u2",
+				"2:3.17.2-1.1+x32",
+				"2:3.17.4-1",
+				"2:3.18-1",
+				"2:3.19-1",
+				"2:3.19.1-1",
+				"2:3.19.1-2",
+				"2:3.19.2-1",
+				"2:3.19.2-1+x32.1",
+				"2:3.20-1",
+				"2:3.20.1-1",
+				"2:3.21-1",
+				"2:3.21-1.1",
+				"2:3.23-1",
+				"2:3.23-2",
+				"2:3.25-1",
+				"2:3.26-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1857-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1857"
+		}
+	]
+}

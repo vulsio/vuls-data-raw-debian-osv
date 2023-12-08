@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-809-3",
+	"modified": "2023-10-16T00:29:14.523277Z",
+	"published": "2005-09-13T00:00:00Z",
+	"related": [
+		"CVE-2005-2794"
+	],
+	"summary": "squid - assertion error",
+	"details": "\nCertain aborted requests that trigger an assertion in squid, the\npopular WWW proxy cache, may allow remote attackers to cause a denial\nof service. Â This update also fixes a regression caused by\n[DSA 751](dsa-751).\nFor completeness below is the original advisory text:\n\n\n\n> \n> Several vulnerabilities have been discovered in Squid, the popular WWW\n> proxy cache. The Common Vulnerabilities and Exposures project\n> identifies the following problems:\n> \n> \n> * [CAN-2005-2794](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2794)\n> Certain aborted requests that trigger an assert may allow remote\n>  attackers to cause a denial of service.\n> \n> * [CAN-2005-2796](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2796)\n> Specially crafted requests can cause a denial of service.\n> \n> \n> \n\n\nFor the oldstable distribution (woody) this problem has been fixed in\nversion 2.4.6-2woody10.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.5.9-10sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.5.10-5.\n\n\nWe recommend that you upgrade your squid package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "squid",
+				"purl": "pkg:deb/debian/squid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.6-2woody11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.6-2woody10",
+				"2.4.6-2woody4",
+				"2.4.6-2woody7",
+				"2.4.6-2woody8",
+				"2.4.6-2woody9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-809-3.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "squid",
+				"purl": "pkg:deb/debian/squid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.9-10sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.9-10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-809-3.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-809"
+		}
+	]
+}

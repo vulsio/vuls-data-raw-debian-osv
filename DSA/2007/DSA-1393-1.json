@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1393-1",
+	"modified": "2023-10-16T00:10:23.663060Z",
+	"published": "2007-10-23T00:00:00Z",
+	"related": [
+		"CVE-2007-3770"
+	],
+	"summary": "xfce4-terminal - insecure execution",
+	"details": "\nIt was discovered that xfce-terminal, a terminal emulator for the xfce \nenvironment, did not correctly escape arguments passed to the processes\nspawned by Open Link. This allowed malicious links to execute arbitrary\ncommands upon the local system.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n0.2.5.6rc1-2etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in version\n0.2.6-3.\n\n\nWe recommend that you upgrade your xfce4-terminal package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "xfce4-terminal",
+				"purl": "pkg:deb/debian/xfce4-terminal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.2.5.6rc1-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.2.5.6rc1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1393-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1393"
+		}
+	]
+}

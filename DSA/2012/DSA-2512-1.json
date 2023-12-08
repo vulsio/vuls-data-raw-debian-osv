@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2512-1",
+	"modified": "2023-10-16T00:11:15.861246Z",
+	"published": "2012-07-12T00:00:00Z",
+	"related": [
+		"CVE-2012-3382"
+	],
+	"summary": "mono - missing input sanitising",
+	"details": "\nMarcus Meissner discovered that the web server included in Mono performed\ninsufficient sanitising of requests, resulting in cross-site scripting.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.6.7-5.1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.10.8.1-5.\n\n\nWe recommend that you upgrade your mono packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mono",
+				"purl": "pkg:deb/debian/mono?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.7-5.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.7-5",
+				"2.6.7-5+s390x"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2512-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2512"
+		}
+	]
+}

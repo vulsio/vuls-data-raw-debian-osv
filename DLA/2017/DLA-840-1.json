@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-840-1",
+	"modified": "2023-06-28T06:27:08.630743Z",
+	"published": "2017-02-28T00:00:00Z",
+	"related": [
+		"CVE-2017-5834",
+		"CVE-2017-5835"
+	],
+	"summary": "libplist - security update",
+	"details": "\nSeveral vulnerabilities were discovered in libplist, a library for\nreading and writing the Apple binary and XML property lists format. A\nmaliciously crafted plist file could cause an application to crash by\ntriggering a heap-based buffer overflow and memory allocation error in\nthe plist\\_from\\_bin function.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8-1+deb7u2.\n\n\nWe recommend that you upgrade your libplist packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libplist",
+				"purl": "pkg:deb/debian/libplist?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8-1",
+				"1.8-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-840-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-840"
+		}
+	]
+}

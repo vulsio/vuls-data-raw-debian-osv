@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3261-1",
+	"modified": "2023-10-16T00:11:53.268578Z",
+	"published": "2015-05-15T00:00:00Z",
+	"related": [
+		"CVE-2015-3406",
+		"CVE-2015-3407",
+		"CVE-2015-3408",
+		"CVE-2015-3409"
+	],
+	"summary": "libmodule-signature-perl - security update",
+	"details": "\nMultiple vulnerabilities were discovered in libmodule-signature-perl, a\nPerl module to manipulate CPAN SIGNATURE files. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2015-3406](https://security-tracker.debian.org/tracker/CVE-2015-3406)\nJohn Lightsey discovered that Module::Signature could parse the\n unsigned portion of the SIGNATURE file as the signed portion due to\n incorrect handling of PGP signature boundaries.\n* [CVE-2015-3407](https://security-tracker.debian.org/tracker/CVE-2015-3407)\nJohn Lightsey discovered that Module::Signature incorrectly handles\n files that are not listed in the SIGNATURE file. This includes some\n files in the t/ directory that would execute when tests are run.\n* [CVE-2015-3408](https://security-tracker.debian.org/tracker/CVE-2015-3408)\nJohn Lightsey discovered that Module::Signature uses two argument\n open() calls to read the files when generating checksums from the\n signed manifest. This allows to embed arbitrary shell commands into\n the SIGNATURE file that would execute during the signature\n verification process.\n* [CVE-2015-3409](https://security-tracker.debian.org/tracker/CVE-2015-3409)\nJohn Lightsey discovered that Module::Signature incorrectly handles\n module loading, allowing to load modules from relative paths in\n @INC. A remote attacker providing a malicious module could use this\n issue to execute arbitrary code during signature verification.\n\n\nNote that libtest-signature-perl received an update for compatibility\nwith the fix for [CVE-2015-3407](https://security-tracker.debian.org/tracker/CVE-2015-3407)\nin libmodule-signature-perl.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 0.68-1+deb7u2.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 0.73-1+deb8u1.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 0.78-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.78-1.\n\n\nWe recommend that you upgrade your libmodule-signature-perl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libmodule-signature-perl",
+				"purl": "pkg:deb/debian/libmodule-signature-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.68-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.68-1",
+				"0.68-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3261-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libmodule-signature-perl",
+				"purl": "pkg:deb/debian/libmodule-signature-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.73-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.73-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3261-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3261"
+		}
+	]
+}

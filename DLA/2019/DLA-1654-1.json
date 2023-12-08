@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1654-1",
+	"modified": "2023-06-28T06:20:52.103430Z",
+	"published": "2019-02-06T00:00:00Z",
+	"related": [
+		"CVE-2014-8542",
+		"CVE-2015-1207",
+		"CVE-2017-14169",
+		"CVE-2017-14223",
+		"CVE-2017-7863",
+		"CVE-2017-7865"
+	],
+	"summary": "libav - security update",
+	"details": "\nSeveral security issues have been corrected in multiple demuxers and\ndecoders of the libav multimedia library.\n\n\n* [CVE-2014-8542](https://security-tracker.debian.org/tracker/CVE-2014-8542)\nlibavcodec/utils.c omitted a certain codec ID during enforcement of\n alignment, which allowed remote attackers to cause a denial of ervice\n (out-of-bounds access) or possibly have unspecified other impact via\n crafted JV data.\n* [CVE-2015-1207](https://security-tracker.debian.org/tracker/CVE-2015-1207)\nDouble-free vulnerability in libavformat/mov.c allowed remote\n attackers to cause a denial of service (memory corruption and crash)\n via a crafted .m4a file.\n* [CVE-2017-7863](https://security-tracker.debian.org/tracker/CVE-2017-7863)\nlibav had an out-of-bounds write caused by a heap-based buffer\n overflow related to the decode\\_frame\\_common function in\n libavcodec/pngdec.c.\n* [CVE-2017-7865](https://security-tracker.debian.org/tracker/CVE-2017-7865)\nlibav had an out-of-bounds write caused by a heap-based buffer\n overflow related to the ipvideo\\_decode\\_block\\_opcode\\_0xA function in\n libavcodec/interplayvideo.c and the avcodec\\_align\\_dimensions2\n function in libavcodec/utils.c.\n* [CVE-2017-14169](https://security-tracker.debian.org/tracker/CVE-2017-14169)\nIn the mxf\\_read\\_primer\\_pack function in libavformat/mxfdec.c in, an\n integer signedness error might have occured when a crafted file,\n claiming a large item\\_num field such as 0xffffffff, was provided.\n As a result, the variable item\\_num turned negative, bypassing the\n check for a large value.\n* [CVE-2017-14223](https://security-tracker.debian.org/tracker/CVE-2017-14223)\nIn libavformat/asfdec\\_f.c a DoS in asf\\_build\\_simple\\_index() due to\n lack of an EOF (End of File) check might have caused huge CPU\n consumption. When a crafted ASF file, claiming a large ict field in\n the header but not containing sufficient backing data, was provided,\n the for loop would have consumed huge CPU and memory resources, since\n there was no EOF check inside the loop.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n6:11.12-1~deb8u5.\n\n\nWe recommend that you upgrade your libav packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libav",
+				"purl": "pkg:deb/debian/libav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:11.12-1~deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:11.11-1~deb8u1",
+				"6:11.12-1~deb8u1",
+				"6:11.12-1~deb8u2",
+				"6:11.12-1~deb8u3",
+				"6:11.12-1~deb8u4",
+				"6:11.3-1",
+				"6:11.3-1+deb8u1",
+				"6:11.3-2",
+				"6:11.3-3",
+				"6:11.4-1",
+				"6:11.4-1~deb8u1",
+				"6:11.4-2",
+				"6:11.4-2+x32.1",
+				"6:11.6-1~deb8u1",
+				"6:11.7-1~deb8u1",
+				"6:11.8-1~deb8u1",
+				"6:11.9-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1654-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1654"
+		}
+	]
+}

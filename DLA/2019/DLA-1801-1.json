@@ -1,0 +1,62 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1801-1",
+	"modified": "2023-06-28T06:20:00.794027Z",
+	"published": "2019-05-24T00:00:00Z",
+	"related": [
+		"CVE-2019-0201"
+	],
+	"summary": "zookeeper - security update",
+	"details": "\nIt was discovered that there was an information disclosure\nvulnerability in zookeeper, a distributed co-ordination server.\n\n\n* [CVE-2019-0201](https://security-tracker.debian.org/tracker/CVE-2019-0201)\nUsers who were not authorised to read data were able to view the access control list.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.4.9-3+deb8u2.\n\n\nWe recommend that you upgrade your zookeeper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "zookeeper",
+				"purl": "pkg:deb/debian/zookeeper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.9-3+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.4.5+dfsg-2",
+				"3.4.5+dfsg-2+deb8u1",
+				"3.4.5+dfsg-2+deb8u2",
+				"3.4.6-1",
+				"3.4.6-2",
+				"3.4.6-3",
+				"3.4.6-4",
+				"3.4.6-5",
+				"3.4.6-6",
+				"3.4.6-7",
+				"3.4.6-8",
+				"3.4.7-1",
+				"3.4.8-1",
+				"3.4.8-2",
+				"3.4.9-1",
+				"3.4.9-2",
+				"3.4.9-3",
+				"3.4.9-3+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1801-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1801"
+		}
+	]
+}

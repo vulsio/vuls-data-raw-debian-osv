@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3068-1",
+	"modified": "2023-06-28T06:25:25.201773Z",
+	"published": "2022-08-04T00:00:00Z",
+	"related": [
+		"CVE-2022-2319",
+		"CVE-2022-2320"
+	],
+	"summary": "xorg-server - security update",
+	"details": "\nJan-Niklas Sohn discovered two out of bound memory writes in X.Org Server's\nProcXkbSetGeometry and ProcXkbSetDeviceInfo Xkb extensions. These issues\ncould be exploited by an attacker to cause denial of service, privilege\nescalation or arbitrary code execution.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2:1.20.4-1+deb10u5.\n\n\nWe recommend that you upgrade your xorg-server packages.\n\n\nFor the detailed security status of xorg-server please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/xorg-server>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "xorg-server",
+				"purl": "pkg:deb/debian/xorg-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.20.4-1+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.20.4-1",
+				"2:1.20.4-1+deb10u1",
+				"2:1.20.4-1+deb10u2",
+				"2:1.20.4-1+deb10u3",
+				"2:1.20.4-1+deb10u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3068-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3068"
+		}
+	]
+}

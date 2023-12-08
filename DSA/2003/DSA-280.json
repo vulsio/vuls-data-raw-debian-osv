@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-280",
+	"modified": "2014-09-07T10:53:50Z",
+	"published": "2003-04-07T00:00:00Z",
+	"related": [
+		"CVE-2003-0196",
+		"CVE-2003-0201"
+	],
+	"summary": "samba - buffer overflow",
+	"details": "\nDigital Defense, Inc. has alerted the Samba Team to a serious\nvulnerability in Samba, a LanManager-like file and printer server for Unix.\nThis vulnerability can lead to an anonymous user gaining root access\non a Samba serving system. An exploit for this problem is already\ncirculating and in use.\n\n\nSince the packages for potato are quite old it is likely that they\ncontain more security-relevant bugs that we don't know of. You are\ntherefore advised to upgrade your systems running Samba to woody\nsoon.\n\n\nUnofficial backported packages from the Samba maintainers for version\n2.2.8 of Samba for woody are available at\n[~peloy](https://people.debian.org/~peloy/samba/) and\n[~vorlon](https://people.debian.org/~vorlon/samba/).\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.2.3a-12.3.\n\n\nFor the old stable distribution (potato) this problem has been fixed in\nversion 2.0.7-5.1.\n\n\nThe unstable distribution (sid) is not affected since it contains\nversion 3.0 packages already.\n\n\nWe recommend that you upgrade your Samba packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.3a-12.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-280.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-280"
+		}
+	]
+}

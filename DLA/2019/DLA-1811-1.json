@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1811-1",
+	"modified": "2023-06-28T06:29:45.420626Z",
+	"published": "2019-05-30T00:00:00Z",
+	"related": [
+		"CVE-2017-1000494",
+		"CVE-2019-12107",
+		"CVE-2019-12108",
+		"CVE-2019-12109",
+		"CVE-2019-12110",
+		"CVE-2019-12111"
+	],
+	"summary": "miniupnpd - security update",
+	"details": "\nBen Barnea and colleagues from VDOO discovered several vulnerabilities in\nminiupnpd, a small daemon that provides UPnP Internet Gateway Device and\nPort Mapping Protocol services.\nThe issues are basically information leak, null pointer dereferences and\nuses after free.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.8.20140523-4+deb8u1.\n\n\nWe recommend that you upgrade your miniupnpd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "miniupnpd",
+				"purl": "pkg:deb/debian/miniupnpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.20140523-4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.20140523-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1811-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1811"
+		}
+	]
+}

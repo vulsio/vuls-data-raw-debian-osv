@@ -1,0 +1,91 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3291-1",
+	"modified": "2023-10-16T00:11:54.522292Z",
+	"published": "2015-06-18T00:00:00Z",
+	"related": [
+		"CVE-2015-3231",
+		"CVE-2015-3232",
+		"CVE-2015-3233",
+		"CVE-2015-3234"
+	],
+	"summary": "drupal7 - security update",
+	"details": "\nSeveral vulnerabilities were found in drupal7, a content management\nplatform used to power websites.\n\n\n* [CVE-2015-3231](https://security-tracker.debian.org/tracker/CVE-2015-3231)\nIncorrect cache handling made private content viewed by user 1\n exposed to other, non-privileged users.\n* [CVE-2015-3232](https://security-tracker.debian.org/tracker/CVE-2015-3232)\nA flaw in the Field UI module made it possible for attackers to\n redirect users to malicious sites.\n* [CVE-2015-3233](https://security-tracker.debian.org/tracker/CVE-2015-3233)\nDue to insufficient URL validation, the Overlay module could be\n used to redirect users to malicious sites.\n* [CVE-2015-3234](https://security-tracker.debian.org/tracker/CVE-2015-3234)\nThe OpenID module allowed an attacker to log in as other users,\n including administrators.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 7.14-2+deb7u10.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 7.32-1+deb8u4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 7.38.1.\n\n\nWe recommend that you upgrade your drupal7 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "drupal7",
+				"purl": "pkg:deb/debian/drupal7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.14-2+deb7u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.14-2",
+				"7.14-2+deb7u1",
+				"7.14-2+deb7u10~bpo60+1",
+				"7.14-2+deb7u1~bpo60+1",
+				"7.14-2+deb7u2",
+				"7.14-2+deb7u2~bpo60+1",
+				"7.14-2+deb7u3",
+				"7.14-2+deb7u4",
+				"7.14-2+deb7u4~bpo60+1",
+				"7.14-2+deb7u5",
+				"7.14-2+deb7u6",
+				"7.14-2+deb7u6~bpo60+1",
+				"7.14-2+deb7u7",
+				"7.14-2+deb7u7~bpo60+1",
+				"7.14-2+deb7u8",
+				"7.14-2+deb7u9",
+				"7.14-2+deb7u9~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3291-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "drupal7",
+				"purl": "pkg:deb/debian/drupal7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.32-1+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.32-1+deb8u3",
+				"7.32-1+deb8u4~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3291-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3291"
+		}
+	]
+}

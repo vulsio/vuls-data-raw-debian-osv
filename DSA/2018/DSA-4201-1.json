@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4201-1",
+	"modified": "2023-10-16T00:13:10.076833Z",
+	"published": "2018-05-15T00:00:00Z",
+	"related": [
+		"CVE-2017-5715",
+		"CVE-2018-10471",
+		"CVE-2018-10472",
+		"CVE-2018-10981",
+		"CVE-2018-10982",
+		"CVE-2018-8897"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor:\n\n\n* [CVE-2018-8897](https://security-tracker.debian.org/tracker/CVE-2018-8897)\nAndy Lutomirski and Nick Peterson discovered that incorrect handling\n of debug exceptions could result in privilege escalation.\n* [CVE-2018-10471](https://security-tracker.debian.org/tracker/CVE-2018-10471)\nAn error was discovered in the mitigations against Meltdown which\n could result in denial of service.\n* [CVE-2018-10472](https://security-tracker.debian.org/tracker/CVE-2018-10472)\nAnthony Perard discovered that incorrect parsing of CDROM images\n can result in information disclosure.\n* [CVE-2018-10981](https://security-tracker.debian.org/tracker/CVE-2018-10981)\nJan Beulich discovered that malformed device models could result\n in denial of service.\n* [CVE-2018-10982](https://security-tracker.debian.org/tracker/CVE-2018-10982)\nRoger Pau Monne discovered that incorrect handling of high precision\n event timers could result in denial of service and potentially\n privilege escalation.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.8.3+xsa262+shim4.10.0+comet3-1+deb9u6.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFor the detailed security status of xen please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/xen](https://security-tracker.debian.org/tracker/xen)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.8.3+xsa262+shim4.10.0+comet3-1+deb9u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.8.1-1+deb9u1",
+				"4.8.1-1+deb9u2",
+				"4.8.1-1+deb9u3",
+				"4.8.2+xsa245-0+deb9u1",
+				"4.8.3+comet2+shim4.10.0+comet3-1+deb9u4",
+				"4.8.3+comet2+shim4.10.0+comet3-1+deb9u4.1",
+				"4.8.3+comet2+shim4.10.0+comet3-1+deb9u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4201-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4201"
+		}
+	]
+}

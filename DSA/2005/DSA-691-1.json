@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-691-1",
+	"modified": "2023-10-16T00:36:24.488874Z",
+	"published": "2005-03-07T00:00:00Z",
+	"related": [
+		"CVE-2005-0098",
+		"CVE-2005-0099"
+	],
+	"summary": "abuse - several",
+	"details": "\nSeveral vulnerabilities have been discovered in abuse, the SDL port of\nthe Abuse action game. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CAN-2005-0098](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0098)\nErik SjĂślund discovered several buffer overflows in the command line\n handling, which could lead to the execution of arbitrary code with\n elevated privileges since it is installed setuid root.\n\n* [CAN-2005-0099](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0099)\nSteve Kemp discovered that abuse creates some files without\n dropping privileges first, which may lead to the creation and\n overwriting of arbitrary files.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.00+-3woody4.\n\n\nThe unstable distribution (sid) does not contain an abuse package anymore.\n\n\nWe recommend that you upgrade your abuse package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "abuse",
+				"purl": "pkg:deb/debian/abuse?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.00+-3woody4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.00+-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-691-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-691"
+		}
+	]
+}

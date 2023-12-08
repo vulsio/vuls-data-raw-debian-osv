@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-378",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2003-09-07T00:00:00Z",
+	"related": [
+		"CVE-2003-0705",
+		"CVE-2003-0706"
+	],
+	"summary": "mah-jong - buffer overflows, denial of service",
+	"details": "\nNicolas Boullis discovered two vulnerabilities in mah-jong, a\nnetwork-enabled game.\n\n\n* [CAN-2003-0705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0705) (buffer overflow)\n\nThis vulnerability could be exploited by a remote attacker to\n execute arbitrary code with the privileges of the user running the\n mah-jong server.\n* [CAN-2003-0706](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0706) (denial of service)\n\nThis vulnerability could be exploited by a remote attacker to cause\n the mah-jong server to enter a tight loop and stop responding to\n commands.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.4-2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.5.6-2.\n\n\nWe recommend that you update your mah-jong package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mah-jong",
+				"purl": "pkg:deb/debian/mah-jong?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4-2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-378.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-378"
+		}
+	]
+}

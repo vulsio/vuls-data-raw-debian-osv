@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2035-1",
+	"modified": "2023-10-16T00:05:43.615864Z",
+	"published": "2010-04-17T00:00:00Z",
+	"related": [
+		"CVE-2010-0408",
+		"CVE-2010-0434"
+	],
+	"summary": "apache2 - several issues",
+	"details": "\nTwo issues have been found in the Apache HTTPD web server:\n\n\n* [CVE-2010-0408](https://security-tracker.debian.org/tracker/CVE-2010-0408)\nmod\\_proxy\\_ajp would return the wrong status code if it encountered an\nerror, causing a backend server to be put into an error state until the\nretry timeout expired. A remote attacker could send malicious requests\nto trigger this issue, resulting in denial of service.\n* [CVE-2010-0434](https://security-tracker.debian.org/tracker/CVE-2010-0434)\nA flaw in the core subrequest process code was found, which could lead\nto a daemon crash (segfault) or disclosure of sensitive information\nif the headers of a subrequest were modified by modules such as\nmod\\_headers.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.2.9-10+lenny7.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 2.2.15-1.\n\n\nThis advisory also provides updated apache2-mpm-itk packages which\nhave been recompiled against the new apache2 packages.\n\n\nWe recommend that you upgrade your apache2 and apache2-mpm-itk packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.9-10+lenny7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.9-10+lenny2",
+				"2.2.9-10+lenny3",
+				"2.2.9-10+lenny4",
+				"2.2.9-10+lenny5",
+				"2.2.9-10+lenny6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2035-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2035"
+		}
+	]
+}

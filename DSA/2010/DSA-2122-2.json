@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2122-2",
+	"modified": "2023-10-16T00:05:46.292999Z",
+	"published": "2010-10-22T00:00:00Z",
+	"related": [
+		"CVE-2010-3847",
+		"CVE-2010-3856"
+	],
+	"summary": "glibc - privilege escalation",
+	"details": "\nBen Hawkes and Tavis Ormandy discovered that the dynamic loader in GNU\nlibc allows local users to gain root privileges using a crafted\nLD\\_AUDIT environment variable.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.7-18lenny6.\n\n\nFor the upcoming stable distribution (squeeze), this problem has been\nfixed in version 2.11.2-6+squeeze1 of the eglibc package.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your glibc packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "glibc",
+				"purl": "pkg:deb/debian/glibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7-18lenny7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7-18",
+				"2.7-18lenny1",
+				"2.7-18lenny2",
+				"2.7-18lenny4",
+				"2.7-18lenny6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2122-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2122"
+		}
+	]
+}

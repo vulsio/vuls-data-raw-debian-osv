@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3584-1",
+	"modified": "2023-10-16T00:12:09.152008Z",
+	"published": "2016-05-19T00:00:00Z",
+	"related": [
+		"CVE-2015-7558",
+		"CVE-2016-4348"
+	],
+	"summary": "librsvg - security update",
+	"details": "\nGustavo Grieco discovered several flaws in the way librsvg, a SAX-based\nrenderer library for SVG files, parses SVG files with circular\ndefinitions. A remote attacker can take advantage of these flaws to\ncause an application using the librsvg library to crash.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.40.5-1+deb8u2.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 2.40.12-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.40.12-1.\n\n\nWe recommend that you upgrade your librsvg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "librsvg",
+				"purl": "pkg:deb/debian/librsvg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.40.5-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.40.5-1",
+				"2.40.5-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3584-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3584"
+		}
+	]
+}

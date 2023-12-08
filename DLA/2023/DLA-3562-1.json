@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3562-1",
+	"modified": "2023-09-12T09:17:53.255511Z",
+	"published": "2023-09-12T00:00:00Z",
+	"related": [
+		"CVE-2023-33466"
+	],
+	"summary": "orthanc - security update",
+	"details": "\nA security vulnerability was identified in Orthanc, a DICOM server used for\nmedical imaging, whereby authenticated API users had the capability to overwrite\narbitrary files and, in certain configurations, execute unauthorized code.\n\n\nThis update addresses the issue by backporting a safeguard mechanism: the\nRestApiWriteToFileSystemEnabled option is now included, and it is set to true\nby default in the /etc/orthanc/orthanc.json configuration file. Should users\nwish to revert to the previous behavior, they can manually set this option\nto true themselves.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.5.6+dfsg-1+deb10u1.\n\n\nWe recommend that you upgrade your orthanc packages.\n\n\nFor the detailed security status of orthanc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/orthanc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "orthanc",
+				"purl": "pkg:deb/debian/orthanc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.6+dfsg-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.6+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3562-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3562"
+		}
+	]
+}

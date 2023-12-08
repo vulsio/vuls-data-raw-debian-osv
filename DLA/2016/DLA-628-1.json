@@ -1,0 +1,101 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-628-1",
+	"modified": "2023-06-28T06:25:36.192078Z",
+	"published": "2016-09-18T00:00:00Z",
+	"related": [
+		"CVE-2016-4473",
+		"CVE-2016-4538",
+		"CVE-2016-5114",
+		"CVE-2016-5399",
+		"CVE-2016-5768",
+		"CVE-2016-5769",
+		"CVE-2016-5770",
+		"CVE-2016-5771",
+		"CVE-2016-5772",
+		"CVE-2016-5773",
+		"CVE-2016-6289",
+		"CVE-2016-6290",
+		"CVE-2016-6291",
+		"CVE-2016-6292",
+		"CVE-2016-6294",
+		"CVE-2016-6295",
+		"CVE-2016-6296",
+		"CVE-2016-6297",
+		"CVE-2016-7125"
+	],
+	"summary": "php5 - security update",
+	"details": "\n* [CVE-2016-4473](https://security-tracker.debian.org/tracker/CVE-2016-4473)\nAn invalid free may occur under certain conditions when processing\n phar-compatible archives.\n* [CVE-2016-4538](https://security-tracker.debian.org/tracker/CVE-2016-4538)\nThe bcpowmod function in ext/bcmath/bcmath.c in PHP before 5.5.35,\n 5.6.x before 5.6.21, and 7.x before 7.0.6 accepts a negative integer\n for the scale argument, which allows remote attackers to cause a\n denial of service or possibly have unspecified other impact via a\n crafted call.\n (already fixed with patch for [CVE-2016-4537](https://security-tracker.debian.org/tracker/CVE-2016-4537))\n* [CVE-2016-5114](https://security-tracker.debian.org/tracker/CVE-2016-5114)\nsapi/fpm/fpm/fpm\\_log.c in PHP before 5.5.31, 5.6.x before 5.6.17,\n and 7.x before 7.0.2 misinterprets the semantics of the snprintf\n return value, which allows attackers to obtain sensitive information\n from process memory or cause a denial of service (out-of-bounds read\n and buffer overflow) via a long string, as demonstrated by a long URI\n in a configuration with custom REQUEST\\_URI logging.\n* [CVE-2016-5399](https://security-tracker.debian.org/tracker/CVE-2016-5399)\nImproper error handling in bzread()\n* [CVE-2016-5768](https://security-tracker.debian.org/tracker/CVE-2016-5768)\nDouble free vulnerability in the \\_php\\_mb\\_regex\\_ereg\\_replace\\_exec\n function in php\\_mbregex.c in the mbstring extension in PHP before\n 5.5.37, 5.6.x before 5.6.23, and 7.x before 7.0.8 allows remote\n attackers to execute arbitrary code or cause a denial of service\n (application crash) by leveraging a callback exception.\n* [CVE-2016-5769](https://security-tracker.debian.org/tracker/CVE-2016-5769)\nMultiple integer overflows in mcrypt.c in the mcrypt extension in\n PHP before 5.5.37, 5.6.x before 5.6.23, and 7.x before 7.0.8 allow\n remote attackers to cause a denial of service (heap-based buffer\n overflow and application crash) or possibly have unspecified other\n impact via a crafted length value, related to the\n (1) mcrypt\\_generic and (2) mdecrypt\\_generic functions.\n* [CVE-2016-5770](https://security-tracker.debian.org/tracker/CVE-2016-5770)\nInteger overflow in the SplFileObject::fread function in\n spl\\_directory.c in the SPL extension in PHP before 5.5.37 and\n 5.6.x before 5.6.23 allows remote attackers to cause a denial\n of service or possibly have unspecified other impact via a\n large integer argument, a related issue to [CVE-2016-5096](https://security-tracker.debian.org/tracker/CVE-2016-5096).\n* [CVE-2016-5771](https://security-tracker.debian.org/tracker/CVE-2016-5771)\nspl\\_array.c in the SPL extension in PHP before 5.5.37 and 5.6.x\n before 5.6.23 improperly interacts with the unserialize\n implementation and garbage collection, which allows remote\n attackers to execute arbitrary code or cause a denial of service\n (use-after-free and application crash) via crafted serialized data.\n* [CVE-2016-5772](https://security-tracker.debian.org/tracker/CVE-2016-5772)\nDouble free vulnerability in the php\\_wddx\\_process\\_data function in\n wddx.c in the WDDX extension in PHP before 5.5.37, 5.6.x before\n 5.6.23, and 7.x before 7.0.8 allows remote attackers to cause a\n denial of service (application crash) or possibly execute arbitrary\n code via crafted XML data that is mishandled in a wddx\\_deserialize\n call.\n* [CVE-2016-5773](https://security-tracker.debian.org/tracker/CVE-2016-5773)\nphp\\_zip.c in the zip extension in PHP before 5.5.37, 5.6.x before\n 5.6.23, and 7.x before 7.0.8 improperly interacts with the\n unserialize implementation and garbage collection, which allows\n remote attackers to execute arbitrary code or cause a denial of\n service (use-after-free and application crash) via crafted\n serialized data containing a ZipArchive object.\n* [CVE-2016-6289](https://security-tracker.debian.org/tracker/CVE-2016-6289)\nInteger overflow in the virtual\\_file\\_ex function in\n TSRM/tsrm\\_virtual\\_cwd.c in PHP before 5.5.38, 5.6.x before 5.6.24,\n and 7.x before 7.0.9 allows remote attackers to cause a denial of\n service (stack-based buffer overflow) or possibly have unspecified\n other impact via a crafted extract operation on a ZIP archive.\n* [CVE-2016-6290](https://security-tracker.debian.org/tracker/CVE-2016-6290)\next/session/session.c in PHP before 5.5.38, 5.6.x before 5.6.24,\n and 7.x before 7.0.9 does not properly maintain a certain hash\n data structure, which allows remote attackers to cause a denial\n of service (use-after-free) or possibly have unspecified other\n impact via vectors related to session deserialization.\n* [CVE-2016-6291](https://security-tracker.debian.org/tracker/CVE-2016-6291)\nThe exif\\_process\\_IFD\\_in\\_MAKERNOTE function in ext/exif/exif.c in\n PHP before 5.5.38, 5.6.x before 5.6.24, and 7.x before 7.0.9 allows\n remote attackers to cause a denial of service (out-of-bounds array\n access and memory corruption), obtain sensitive information from\n process memory, or possibly have unspecified other impact via a\n crafted JPEG image.\n* [CVE-2016-6292](https://security-tracker.debian.org/tracker/CVE-2016-6292)\nThe exif\\_process\\_user\\_comment function in ext/exif/exif.c in PHP\n before 5.5.38, 5.6.x before 5.6.24, and 7.x before 7.0.9 allows\n remote attackers to cause a denial of service (NULL pointer\n dereference and application crash) via a crafted JPEG image.\n* [CVE-2016-6294](https://security-tracker.debian.org/tracker/CVE-2016-6294)\nThe locale\\_accept\\_from\\_http function in\n ext/intl/locale/locale\\_methods.c in PHP before 5.5.38, 5.6.x before\n 5.6.24, and 7.x before 7.0.9 does not properly restrict calls to\n the ICU uloc\\_acceptLanguageFromHTTP function, which allows remote\n attackers to cause a denial of service (out-of-bounds read) or\n possibly have unspecified other impact via a call with a long argument.\n* [CVE-2016-6295](https://security-tracker.debian.org/tracker/CVE-2016-6295)\next/snmp/snmp.c in PHP before 5.5.38, 5.6.x before 5.6.24, and 7.x\n before 7.0.9 improperly interacts with the unserialize implementation\n and garbage collection, which allows remote attackers to cause a\n denial of service (use-after-free and application crash) or possibly\n have unspecified other impact via crafted serialized data, a related\n issue to [CVE-2016-5773](https://security-tracker.debian.org/tracker/CVE-2016-5773).\n* [CVE-2016-6296](https://security-tracker.debian.org/tracker/CVE-2016-6296)\nInteger signedness error in the simplestring\\_addn function in\n simplestring.c in xmlrpc-epi through 0.54.2, as used in PHP before\n 5.5.38, 5.6.x before 5.6.24, and 7.x before 7.0.9, allows remote\n attackers to cause a denial of service (heap-based buffer overflow)\n or possibly have unspecified other impact via a long first argument\n to the PHP xmlrpc\\_encode\\_request function.\n* [CVE-2016-6297](https://security-tracker.debian.org/tracker/CVE-2016-6297)\nInteger overflow in the php\\_stream\\_zip\\_opener function in\n ext/zip/zip\\_stream.c in PHP before 5.5.38, 5.6.x before 5.6.24, and\n 7.x before 7.0.9 allows remote attackers to cause a denial of\n service (stack-based buffer overflow) or possibly have unspecified\n other impact via a crafted zip:// URL.\n* BUG-70436\n Use After Free Vulnerability in unserialize()\n* BUG-72681\n PHP Session Data Injection Vulnerability, consume data even if we're\n not storing them.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in php5 version 5.4.45-0+deb7u5\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.45-0+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.36-0+deb7u3",
+				"5.4.38-0+deb7u1",
+				"5.4.39-0+deb7u1",
+				"5.4.39-0+deb7u2",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.41-0+deb7u1",
+				"5.4.44-0+deb7u1",
+				"5.4.45-0+deb7u1",
+				"5.4.45-0+deb7u2",
+				"5.4.45-0+deb7u3",
+				"5.4.45-0+deb7u4",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-628-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-628"
+		}
+	]
+}

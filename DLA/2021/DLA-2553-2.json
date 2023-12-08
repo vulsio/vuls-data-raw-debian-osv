@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2553-2",
+	"modified": "2023-06-28T06:36:45.056997Z",
+	"published": "2021-02-10T00:00:00Z",
+	"summary": "xcftools - regression update",
+	"details": "\nClaudio Bozzato of Cisco Talos discovered an exploitable integer overflow\nvulnerability in the flattenIncrementally function in the xcf2png and xcf2pnm\nbinaries of xcftools. An integer overflow can occur while walking through tiles\nthat could be exploited to corrupt memory and execute arbitrary code. In order\nto trigger this vulnerability, a victim would need to open a specially crafted\nXCF file.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.0.7-6+deb9u1.\n\n\nWe recommend that you upgrade your xcftools packages.\n\n\nFor the detailed security status of xcftools please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/xcftools>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "xcftools",
+				"purl": "pkg:deb/debian/xcftools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.7-6+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.7-6",
+				"1.0.7-6+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2553-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2553"
+		}
+	]
+}

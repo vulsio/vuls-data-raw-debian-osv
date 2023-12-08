@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1333-1",
+	"modified": "2023-10-16T00:10:20.336756Z",
+	"published": "2007-07-18T00:00:00Z",
+	"related": [
+		"CVE-2007-3564"
+	],
+	"summary": "curl",
+	"details": "\nIt has been discovered that the GnuTLS certificate verification methods\nimplemented in libcurl-gnutls, a solid, usable, and portable multi-protocol\nfile transfer library, did not check for expired or invalid dates.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 7.15.5-1etch1.\n\n\nWe recommend that you upgrade your libcurl3-gnutls package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.15.5-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.15.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1333-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1333"
+		}
+	]
+}

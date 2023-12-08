@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2968-1",
+	"modified": "2023-06-28T06:26:45.226369Z",
+	"published": "2022-04-03T00:00:00Z",
+	"related": [
+		"CVE-2018-25032"
+	],
+	"summary": "zlib - security update",
+	"details": "\nOne security issue has been found in a compression library zlib.\n\n\nDanilo Ramos discovered that incorrect memory handling in zlib's deflate\nhandling could result in denial of service or potentially the execution\nof arbitrary code if specially crafted input is processed.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1:1.2.8.dfsg-5+deb9u1.\n\n\nWe recommend that you upgrade your zlib packages.\n\n\nFor the detailed security status of zlib please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/zlib>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "zlib",
+				"purl": "pkg:deb/debian/zlib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.2.8.dfsg-5+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.2.8.dfsg-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2968-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2968"
+		}
+	]
+}

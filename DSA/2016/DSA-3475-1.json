@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3475-1",
+	"modified": "2023-10-16T00:12:02.610116Z",
+	"published": "2016-02-13T00:00:00Z",
+	"related": [
+		"CVE-2015-5288",
+		"CVE-2016-0766",
+		"CVE-2016-0773"
+	],
+	"summary": "postgresql-9.1 - security update",
+	"details": "\nSeveral vulnerabilities have been found in PostgreSQL-9.1, a SQL\ndatabase system.\n\n\n* [CVE-2015-5288](https://security-tracker.debian.org/tracker/CVE-2015-5288)\nJosh Kupershmidt discovered a vulnerability in the crypt() function\n in the pgCrypto extension. Certain invalid salt arguments can cause\n the server to crash or to disclose a few bytes of server memory.\n* [CVE-2016-0766](https://security-tracker.debian.org/tracker/CVE-2016-0766)\nA privilege escalation vulnerability for users of PL/Java was\n discovered. Certain custom configuration settings (GUCs) for PL/Java\n will now be modifiable only by the database superuser to mitigate\n this issue.\n* [CVE-2016-0773](https://security-tracker.debian.org/tracker/CVE-2016-0773)\nTom Lane and Greg Stark discovered a flaw in the way PostgreSQL\n processes specially crafted regular expressions. Very large\n character ranges in bracket expressions could cause infinite\n loops or memory overwrites. A remote attacker can exploit this\n flaw to cause a denial of service or, potentially, to execute\n arbitrary code.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 9.1.20-0+deb7u1.\n\n\nWe recommend that you upgrade your postgresql-9.1 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "postgresql-9.1",
+				"purl": "pkg:deb/debian/postgresql-9.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.1.20-0+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.1.10-0wheezy1",
+				"9.1.10-1",
+				"9.1.11-0wheezy1",
+				"9.1.11-1",
+				"9.1.11-1~bpo60+1",
+				"9.1.11-2",
+				"9.1.12-0wheezy1",
+				"9.1.12-0wheezy1~bpo60+1",
+				"9.1.12-1",
+				"9.1.13-0wheezy1",
+				"9.1.13-0wheezy1~bpo60+1",
+				"9.1.13-1",
+				"9.1.14-0+deb7u1",
+				"9.1.14-0wheezy1",
+				"9.1.15-0+deb7u1",
+				"9.1.15-0+deb7u1~bpo60+1",
+				"9.1.16-0+deb7u1",
+				"9.1.16-0+deb7u2",
+				"9.1.17-0+deb7u1",
+				"9.1.18-0+deb7u1",
+				"9.1.19-0+deb7u1",
+				"9.1.9-1",
+				"9.1.9-2",
+				"9.1.9-3",
+				"9.1.9-4",
+				"9.1.9-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3475-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3475"
+		}
+	]
+}

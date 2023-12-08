@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4269-1",
+	"modified": "2023-10-16T00:18:00.379287Z",
+	"published": "2018-08-10T00:00:00Z",
+	"related": [
+		"CVE-2018-10915",
+		"CVE-2018-10925"
+	],
+	"summary": "postgresql-9.6 - security update",
+	"details": "\nTwo vulnerabilities have been found in the PostgreSQL database system:\n\n\n* [CVE-2018-10915](https://security-tracker.debian.org/tracker/CVE-2018-10915)\nAndrew Krasichkov discovered that libpq did not reset all its\n connection state during reconnects.\n* [CVE-2018-10925](https://security-tracker.debian.org/tracker/CVE-2018-10925)\nIt was discovered that some CREATE TABLE statements could\n disclose server memory.\n\n\nFor additional information please refer to the upstream announcement\nat <https://www.postgresql.org/about/news/1878/>\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 9.6.10-0+deb9u1.\n\n\nWe recommend that you upgrade your postgresql-9.6 packages.\n\n\nFor the detailed security status of postgresql-9.6 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/postgresql-9.6](https://security-tracker.debian.org/tracker/postgresql-9.6)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "postgresql-9.6",
+				"purl": "pkg:deb/debian/postgresql-9.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.6.10-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.6.3-3",
+				"9.6.3-4",
+				"9.6.4-0+deb9u1",
+				"9.6.4-1",
+				"9.6.5-0+deb9u1",
+				"9.6.5-0+deb9u1~bpo8+1",
+				"9.6.5-1",
+				"9.6.6-0+deb9u1",
+				"9.6.6-0+deb9u1~bpo8+1",
+				"9.6.7-0+deb9u1",
+				"9.6.8-0+deb9u1",
+				"9.6.9-0+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4269-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4269"
+		}
+	]
+}

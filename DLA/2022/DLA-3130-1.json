@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3130-1",
+	"modified": "2023-06-28T06:26:51.929294Z",
+	"published": "2022-09-30T00:00:00Z",
+	"related": [
+		"CVE-2021-42260"
+	],
+	"summary": "tinyxml - security update",
+	"details": "\nAn issue has been found in tinyxml, a C++ XML parsing library.\nCrafted XML messages could lead to an infinite loop in\nTiXmlParsingData::Stamp(), which results in a denial of service.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.6.2-4+deb10u1.\n\n\nWe recommend that you upgrade your tinyxml packages.\n\n\nFor the detailed security status of tinyxml please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tinyxml>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "tinyxml",
+				"purl": "pkg:deb/debian/tinyxml?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.2-4+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.2-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3130-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3130"
+		}
+	]
+}

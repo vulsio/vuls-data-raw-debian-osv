@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4550-1",
+	"modified": "2023-10-16T00:13:57.366750Z",
+	"published": "2019-10-25T00:00:00Z",
+	"related": [
+		"CVE-2019-18218"
+	],
+	"summary": "file - security update",
+	"details": "\nA buffer overflow was found in file, a file type classification tool,\nwhich may result in denial of service or potentially the execution of\narbitrary code if a malformed CDF (Composite Document File) file is\nprocessed.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1:5.30-1+deb9u3.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1:5.35-4+deb10u1.\n\n\nWe recommend that you upgrade your file packages.\n\n\nFor the detailed security status of file please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/file](https://security-tracker.debian.org/tracker/file)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "file",
+				"purl": "pkg:deb/debian/file?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:5.30-1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:5.30-1",
+				"1:5.30-1+deb9u1",
+				"1:5.30-1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4550-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "file",
+				"purl": "pkg:deb/debian/file?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:5.35-4+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:5.35-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4550-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4550"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4068-1",
+	"modified": "2023-10-16T00:12:37.498910Z",
+	"published": "2017-12-17T00:00:00Z",
+	"related": [
+		"CVE-2017-16548",
+		"CVE-2017-17433",
+		"CVE-2017-17434"
+	],
+	"summary": "rsync - security update",
+	"details": "\nSeveral vulnerabilities were discovered in rsync, a fast, versatile,\nremote (and local) file-copying tool, allowing a remote attacker to\nbypass intended access restrictions or cause a denial of service.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 3.1.1-3+deb8u1.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 3.1.2-1+deb9u1.\n\n\nWe recommend that you upgrade your rsync packages.\n\n\nFor the detailed security status of rsync please refer to its security\ntracker page at: <https://security-tracker.debian.org/tracker/rsync>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "rsync",
+				"purl": "pkg:deb/debian/rsync?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.1-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4068-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "rsync",
+				"purl": "pkg:deb/debian/rsync?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.2-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4068-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4068"
+		}
+	]
+}

@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5326-1",
+	"modified": "2023-10-16T00:21:26.067997Z",
+	"published": "2023-01-24T00:00:00Z",
+	"related": [
+		"CVE-2022-32212",
+		"CVE-2022-32213",
+		"CVE-2022-32214",
+		"CVE-2022-32215",
+		"CVE-2022-35255",
+		"CVE-2022-35256",
+		"CVE-2022-43548"
+	],
+	"summary": "nodejs - security update",
+	"details": "\nMultiple vulnerabilities were discovered in Node.js, which could result\nin HTTP request smuggling, bypass of host IP address validation and weak\nrandomness setup.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 12.22.12~dfsg-1~deb11u3.\n\n\nWe recommend that you upgrade your nodejs packages.\n\n\nFor the detailed security status of nodejs please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/nodejs](https://security-tracker.debian.org/tracker/nodejs)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "nodejs",
+				"purl": "pkg:deb/debian/nodejs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "12.22.12~dfsg-1~deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"12.21.0~dfsg-5",
+				"12.22.10~dfsg-1",
+				"12.22.10~dfsg-2",
+				"12.22.12~dfsg-1~deb11u1",
+				"12.22.12~dfsg-1~deb11u2",
+				"12.22.4~dfsg-1",
+				"12.22.5~dfsg-1",
+				"12.22.5~dfsg-2",
+				"12.22.5~dfsg-2~11u1",
+				"12.22.5~dfsg-3",
+				"12.22.5~dfsg-4",
+				"12.22.5~dfsg-5",
+				"12.22.5~dfsg-6",
+				"12.22.5~dfsg-7",
+				"12.22.7~dfsg-1",
+				"12.22.7~dfsg-2",
+				"12.22.9~dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5326-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5326"
+		}
+	]
+}

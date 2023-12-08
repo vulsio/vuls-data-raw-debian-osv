@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-541-1",
+	"modified": "2023-06-28T06:34:09.231605Z",
+	"published": "2016-07-01T00:00:00Z",
+	"related": [
+		"CVE-2016-5008"
+	],
+	"summary": "libvirt - security update",
+	"details": "\nIt was discovered that there was a password policy issue in libvirt, a\nlibrary for interfacing with different virtualization systems.\n\n\nSetting an empty graphics password is documented as a way to disable\nVNC/SPICE access, but QEMU does not always behave like that. VNC would\nhappily accept the empty password. We enforce the behavior by setting\npassword expiration to now.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libvirt version\n0.9.12.3-1+deb7u2.\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libvirt",
+				"purl": "pkg:deb/debian/libvirt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.12.3-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.12-11",
+				"0.9.12-11+deb7u1",
+				"0.9.12-11+deb7u3",
+				"0.9.12-11+deb7u4",
+				"0.9.12.3-1",
+				"0.9.12.3-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-541-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-541"
+		}
+	]
+}

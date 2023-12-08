@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2812-1",
+	"modified": "2023-06-28T06:36:58.215135Z",
+	"published": "2021-11-09T00:00:00Z",
+	"related": [
+		"CVE-2017-14737"
+	],
+	"summary": "botan1.10 - security update",
+	"details": "\nOne security issue has been discovered in botan1.10: a C++ cryptography\nlibrary.\n\n\nAn attacker of a local or a cross-VM may be able to recover bits of\nsecret exponents as used in RSA, DH, etc. with help of cache analysis.\n<https://www.usenix.org/conference/usenixsecurity17/technical-sessions/presentation/wang-shuai>\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.10.17-1+deb9u1.\n\n\nWe recommend that you upgrade your botan1.10 packages.\n\n\nFor the detailed security status of botan1.10 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/botan1.10>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "botan1.10",
+				"purl": "pkg:deb/debian/botan1.10?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.10.17-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.10.16-1",
+				"1.10.17-0.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2812-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2812"
+		}
+	]
+}

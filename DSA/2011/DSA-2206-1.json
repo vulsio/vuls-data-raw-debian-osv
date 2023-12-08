@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2206-1",
+	"modified": "2023-10-16T00:11:02.745433Z",
+	"published": "2011-03-29T00:00:00Z",
+	"related": [
+		"CVE-2011-0439",
+		"CVE-2011-0440"
+	],
+	"summary": "mahara - several",
+	"details": "\nTwo security vulnerabilities have been discovered in Mahara, a fully\nfeatured electronic portfolio, weblog, resume builder and social\nnetworking system:\n\n\n* [CVE-2011-0439](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0439)\nA security review commissioned by a Mahara user discovered that\n Mahara processes unsanitized input which can lead to cross-site\n scripting (XSS).\n* [CVE-2011-0440](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2011-0440)\nMahara Developers discovered that Mahara doesn't check the session\n key under certain circumstances which can be exploited as\n cross-site request forgery (CSRF) and can lead to the deletion of\n blogs.\n\n\nFor the old stable distribution (lenny) these problems have been fixed in\nversion 1.0.4-4+lenny8.\n\n\nFor the stable distribution (squeeze) these problems have been fixed in\nversion 1.2.6-2+squeeze1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.2.7.\n\n\nWe recommend that you upgrade your mahara package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mahara",
+				"purl": "pkg:deb/debian/mahara?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.6-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.6-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2206-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mahara",
+				"purl": "pkg:deb/debian/mahara?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.4-4+lenny8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.4-4",
+				"1.0.4-4+lenny1",
+				"1.0.4-4+lenny2",
+				"1.0.4-4+lenny3",
+				"1.0.4-4+lenny4",
+				"1.0.4-4+lenny5",
+				"1.0.4-4+lenny6",
+				"1.0.4-4+lenny7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2206-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2206"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3289-1",
+	"modified": "2023-06-28T06:26:54.792081Z",
+	"published": "2023-01-29T00:00:00Z",
+	"related": [
+		"CVE-2020-4051",
+		"CVE-2021-23450"
+	],
+	"summary": "dojo - security update",
+	"details": "\nTwo vulnerabilities were found in dojo, a modular JavaScript toolkit,\nthat could result in information disclosure.\n\n\n* [CVE-2020-4051](https://security-tracker.debian.org/tracker/CVE-2020-4051)\nThe Dijit Editor's LinkDialog plugin of dojo 1.14.0 to 1.14.7 is\n vulnerable to cross-site scripting (XSS) attacks.\n* [CVE-2021-23450](https://security-tracker.debian.org/tracker/CVE-2021-23450)\nPrototype pollution vulnerability via the `setObject()` function.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.14.2+dfsg1-1+deb10u3.\n\n\nWe recommend that you upgrade your dojo packages.\n\n\nFor the detailed security status of dojo please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/dojo>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "dojo",
+				"purl": "pkg:deb/debian/dojo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.2+dfsg1-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.14.2+dfsg1-1",
+				"1.14.2+dfsg1-1+deb10u1",
+				"1.14.2+dfsg1-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3289-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3289"
+		}
+	]
+}

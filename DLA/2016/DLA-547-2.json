@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-547-2",
+	"modified": "2023-06-28T06:34:10.989626Z",
+	"published": "2016-07-11T00:00:00Z",
+	"summary": "graphicsmagick - regression update",
+	"details": "\nIt was discovered that there were two denial of service vulnerabilities\nin graphicsmagick, a collection of image processing tools:\n\n\n* [CVE-2016-5240](https://security-tracker.debian.org/tracker/CVE-2016-5240)\nPrevent denial-of-service by detecting and rejecting\n negative stroke-dasharray arguments which were resulting in an\n endless loop.\n* [CVE-2016-5241](https://security-tracker.debian.org/tracker/CVE-2016-5241)\nFix divide-by-zero problem if fill or stroke pattern\n image has zero columns or rows to prevent DoS attack.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in graphicsmagick version\n1.3.16-1.1+deb7u3.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "graphicsmagick",
+				"purl": "pkg:deb/debian/graphicsmagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.16-1.1+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.16-1.1",
+				"1.3.16-1.1+deb7u1",
+				"1.3.16-1.1+deb7u2",
+				"1.3.16-1.1+deb7u3",
+				"1.3.16-1.1+deb7u4",
+				"1.3.16-1.1+deb7u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-547-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-547"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2356-1",
+	"modified": "2023-10-16T00:11:10.722485Z",
+	"published": "2011-12-01T00:00:00Z",
+	"related": [
+		"CVE-2011-3389",
+		"CVE-2011-3521",
+		"CVE-2011-3544",
+		"CVE-2011-3547",
+		"CVE-2011-3548",
+		"CVE-2011-3551",
+		"CVE-2011-3552",
+		"CVE-2011-3553",
+		"CVE-2011-3554",
+		"CVE-2011-3556",
+		"CVE-2011-3557",
+		"CVE-2011-3560"
+	],
+	"summary": "openjdk-6 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in OpenJDK, an\nimplementation of the Java platform:\n\n\n* [CVE-2011-3389](https://security-tracker.debian.org/tracker/CVE-2011-3389)\nThe TLS implementation does not guard properly against certain\n chosen-plaintext attacks when block ciphers are used in CBC\n mode.\n* [CVE-2011-3521](https://security-tracker.debian.org/tracker/CVE-2011-3521)\nThe CORBA implementation contains a deserialization\n vulnerability in the IIOP implementation, allowing untrusted\n Java code (such as applets) to elevate its privileges.\n* [CVE-2011-3544](https://security-tracker.debian.org/tracker/CVE-2011-3544)\nThe Java scripting engine lacks necessary security manager\n checks, allowing untrusted Java code (such as applets) to\n elevate its privileges.\n* [CVE-2011-3547](https://security-tracker.debian.org/tracker/CVE-2011-3547)\nThe skip() method in java.io.InputStream uses a shared buffer,\n allowing untrusted Java code (such as applets) to access data\n that is skipped by other code.\n* [CVE-2011-3548](https://security-tracker.debian.org/tracker/CVE-2011-3548)\nThe java.awt.AWTKeyStroke class contains a flaw which allows\n untrusted Java code (such as applets) to elevate its\n privileges.\n* [CVE-2011-3551](https://security-tracker.debian.org/tracker/CVE-2011-3551)\nThe Java2D C code contains an integer overflow which results\n in a heap-based buffer overflow, potentially allowing\n untrusted Java code (such as applets) to elevate its\n privileges.\n* [CVE-2011-3552](https://security-tracker.debian.org/tracker/CVE-2011-3552)\nMalicous Java code can use up an excessive amount of UDP\n ports, leading to a denial of service.\n* [CVE-2011-3553](https://security-tracker.debian.org/tracker/CVE-2011-3553)\nJAX-WS enables stack traces for certain server responses by\n default, potentially leaking sensitive information.\n* [CVE-2011-3554](https://security-tracker.debian.org/tracker/CVE-2011-3554)\nJAR files in pack200 format are not properly checked for\n errors, potentially leading to arbitrary code execution when\n unpacking crafted pack200 files.\n* [CVE-2011-3556](https://security-tracker.debian.org/tracker/CVE-2011-3556)\nThe RMI Registry server lacks access restrictions on certain\n methods, allowing a remote client to execute arbitary code.\n* [CVE-2011-3557](https://security-tracker.debian.org/tracker/CVE-2011-3557)\nThe RMI Registry server fails to properly restrict privileges\n of untrusted Java code, allowing RMI clients to elevate their\n privileges on the RMI Registry server.\n* [CVE-2011-3560](https://security-tracker.debian.org/tracker/CVE-2011-3560)\nThe com.sun.net.ssl.HttpsURLConnection class does not perform\n proper security manager checks in the setSSLSocketFactory()\n method, allowing untrusted Java code to bypass security policy\n restrictions.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 6b18-1.8.10-0+squeeze2.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 6b23~pre11-1.\n\n\nWe recommend that you upgrade your openjdk-6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "openjdk-6",
+				"purl": "pkg:deb/debian/openjdk-6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6b18-1.8.10-0+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6b18-1.8.10-0+squeeze1",
+				"6b18-1.8.10-0~lenny1",
+				"6b18-1.8.10-0~lenny2",
+				"6b18-1.8.3-2",
+				"6b18-1.8.3-2+squeeze1",
+				"6b18-1.8.4-1",
+				"6b18-1.8.5-1",
+				"6b18-1.8.7-1",
+				"6b18-1.8.7-2",
+				"6b18-1.8.7-2~lenny1",
+				"6b18-1.8.7-2~squeeze1",
+				"6b18-1.8.7-3",
+				"6b18-1.8.7-4",
+				"6b18-1.8.7-5",
+				"6b18-1.8.9-0.1",
+				"6b18-1.8.9-0.1~squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2356-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2356"
+		}
+	]
+}

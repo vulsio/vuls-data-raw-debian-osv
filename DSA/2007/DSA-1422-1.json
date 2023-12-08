@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1422-1",
+	"modified": "2023-10-16T00:10:24.723807Z",
+	"published": "2007-12-07T00:00:00Z",
+	"related": [
+		"CVE-2007-5497"
+	],
+	"summary": "e2fsprogs - arbitrary code execution",
+	"details": "\nRafal Wojtczuk of McAfee AVERT Research discovered that e2fsprogs, the\next2 file system utilities and libraries, contained multiple\ninteger overflows in memory allocations, based on sizes taken directly \nfrom filesystem information. These could result in heap-based\noverflows potentially allowing the execution of arbitrary code.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1.39+1.40-WIP-2006.11.14+dfsg-2etch1.\n\n\nFor the unstable distribution (sid), this problem will be fixed shortly.\n\n\nWe recommend that you upgrade your e2fsprogs package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "e2fsprogs",
+				"purl": "pkg:deb/debian/e2fsprogs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.39+1.40-WIP-2006.11.14+dfsg-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.39+1.40-WIP-2006.11.14+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1422-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1422"
+		}
+	]
+}

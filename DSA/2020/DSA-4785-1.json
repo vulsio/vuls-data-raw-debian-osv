@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4785-1",
+	"modified": "2023-10-16T00:20:26.246850Z",
+	"published": "2020-11-07T00:00:00Z",
+	"related": [
+		"CVE-2017-18926"
+	],
+	"summary": "raptor2 - security update",
+	"details": "\nIt was discovered that raptor2, an RDF parser library, is prone to\nheap-based buffer overflow flaws, which could result in denial of\nservice, or potentially the execution of arbitrary code, if a specially\ncrafted file is processed.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2.0.14-1.1~deb10u1.\n\n\nWe recommend that you upgrade your raptor2 packages.\n\n\nFor the detailed security status of raptor2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/raptor2>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "raptor2",
+				"purl": "pkg:deb/debian/raptor2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.14-1.1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.14-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4785-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4785"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2577-1",
+	"modified": "2023-06-28T06:36:43.511636Z",
+	"published": "2021-02-26T00:00:00Z",
+	"related": [
+		"CVE-2017-1000433",
+		"CVE-2021-21239"
+	],
+	"summary": "python-pysaml2 - security update",
+	"details": "\nSeveral issues have been found in python-pysaml2, a pure python\nimplementation of SAML Version 2 Standard.\n\n\n* [CVE-2017-1000433](https://security-tracker.debian.org/tracker/CVE-2017-1000433)\npysaml2 accept any password when run with python optimizations\n enabled. This allows attackers to log in as any user without\n knowing their password.\n* [CVE-2021-21239](https://security-tracker.debian.org/tracker/CVE-2021-21239)\npysaml2 has an improper verification of cryptographic signature\n vulnerability. Users of pysaml2 that use the default\n CryptoBackendXmlSec1 backend and need to verify signed SAML\n documents are impacted. PySAML2 does not ensure that a signed\n SAML document is correctly signed. The default\n CryptoBackendXmlSec1 backend is using the xmlsec1 binary to\n verify the signature of signed SAML documents, but by default\n xmlsec1 accepts any type of key found within the given document.\n xmlsec1 needs to be configured explicitly to only use only \\_x509\n certificates\\_ for the verification process of the SAML document signature.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.0.0-5+deb9u2.\n\n\nWe recommend that you upgrade your python-pysaml2 packages.\n\n\nFor the detailed security status of python-pysaml2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-pysaml2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-pysaml2",
+				"purl": "pkg:deb/debian/python-pysaml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.0-5+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.0-5",
+				"3.0.0-5+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2577-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2577"
+		}
+	]
+}

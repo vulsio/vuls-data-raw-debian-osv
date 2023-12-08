@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1787-1",
+	"modified": "2023-06-28T06:20:58.946742Z",
+	"published": "2019-05-15T00:00:00Z",
+	"related": [
+		"CVE-2018-12126",
+		"CVE-2018-12127",
+		"CVE-2018-12130",
+		"CVE-2019-11091"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nMultiple researchers have discovered vulnerabilities in the way the\nIntel processor designs have implemented speculative forwarding of data\nfilled into temporary microarchitectural structures (buffers). This\nflaw could allow an attacker controlling an unprivileged process to\nread sensitive information, including from the kernel and all other\nprocesses running on the system or cross guest/host boundaries to read\nhost memory.\n\n\nSee <https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html>\nfor more details.\n\n\nTo fully resolve these vulnerabilities it is also necessary to install\nupdated CPU microcode. An updated intel-microcode package (only\navailable in Debian non-free) will be provided via a separate DLA. The\nupdated CPU microcode may also be available as part of a system firmware\n(\"BIOS\") update.\n\n\nIn addition, this update includes a fix for a regression causing\ndeadlocks inside the loopback driver, which was introduced by the update\nto 4.9.168 in the last security update.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.168-1+deb9u2~deb8u1.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.168-1+deb9u2~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.110-1~deb8u1",
+				"4.9.144-3.1~deb8u1",
+				"4.9.168-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1787-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1787"
+		}
+	]
+}

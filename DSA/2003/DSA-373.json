@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-373",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-08-16T00:00:00Z",
+	"related": [
+		"CVE-2003-0654"
+	],
+	"summary": "autorespond - buffer overflow",
+	"details": "\nChristian Jaeger discovered a buffer overflow in autorespond, an email\nautoresponder used with qmail. This vulnerability could potentially\nbe exploited by a remote attacker to gain the privileges of a user who\nhas configured qmail to forward messages to autorespond. This\nvulnerability is currently not believed to be exploitable due to\nincidental limits on the length of the problematic input, but there\nmay be situations in which these limits do not apply.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.0.2-2woody1.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you update your autorespond package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "autorespond",
+				"purl": "pkg:deb/debian/autorespond?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.2-2woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-373.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-373"
+		}
+	]
+}

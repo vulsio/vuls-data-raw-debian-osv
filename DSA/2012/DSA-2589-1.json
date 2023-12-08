@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2589-1",
+	"modified": "2023-10-16T00:11:20.591077Z",
+	"published": "2012-12-16T00:00:00Z",
+	"related": [
+		"CVE-2012-5581"
+	],
+	"summary": "tiff - buffer overflow",
+	"details": "\nThe tiff library for handling TIFF image files contained a stack-based\nbuffer overflow, potentially allowing attackers who can submit such\nfiles to a vulnerable system to execute arbitrary code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.9.4-5+squeeze8.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 4.0.2-1 of the tiff\npackage, and version 3.9.6-10 of the tiff3 package.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.9.4-5+squeeze8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.9.4-5",
+				"3.9.4-5+squeeze1",
+				"3.9.4-5+squeeze2",
+				"3.9.4-5+squeeze3",
+				"3.9.4-5+squeeze4",
+				"3.9.4-5+squeeze5",
+				"3.9.4-5+squeeze6",
+				"3.9.4-5+squeeze7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2589-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2589"
+		}
+	]
+}

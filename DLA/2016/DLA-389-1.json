@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-389-1",
+	"modified": "2023-06-28T06:25:32.965796Z",
+	"published": "2016-01-15T00:00:00Z",
+	"related": [
+		"CVE-2015-7555"
+	],
+	"summary": "giflib - security update",
+	"details": "\nIt was discovered that a maliciously crafted GIF can crash the giffix\nutility which is part of giflib-tools.\n\n\nWe recommend that you upgrade your giflib-tools package to version\n4.1.6-9+deb6u1 (Debian squeeze LTS).\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "giflib",
+				"purl": "pkg:deb/debian/giflib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.6-9+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.6-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-389-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-389"
+		}
+	]
+}

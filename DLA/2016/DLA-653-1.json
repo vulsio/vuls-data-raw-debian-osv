@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-653-1",
+	"modified": "2023-06-28T06:27:04.632023Z",
+	"published": "2016-10-11T00:00:00Z",
+	"related": [
+		"CVE-2016-7161",
+		"CVE-2016-7170",
+		"CVE-2016-7908"
+	],
+	"summary": "qemu-kvm - security update",
+	"details": "\nMultiple vulnerabilities have been found in qemu-kvm:\n\n\n* [CVE-2016-7161](https://security-tracker.debian.org/tracker/CVE-2016-7161)\nHeap-based buffer overflow in the .receive callback of xlnx.xps-ethernetlite\n in qemu-kvm allows attackers to execute arbitrary code on the QEMU host via\n a large ethlite packet.\n* [CVE-2016-7170](https://security-tracker.debian.org/tracker/CVE-2016-7170)\nThe vmsvga\\_fifo\\_run function in hw/display/vmware\\_vga.c in qemu-kvm is\n vulnerable to an OOB memory access.\n* [CVE-2016-7908](https://security-tracker.debian.org/tracker/CVE-2016-7908)\nThe mcf\\_fec\\_do\\_tx function in hw/net/mcf\\_fec.c in qemu-kvm does not\n properly limit the buffer descriptor count when transmitting packets, which\n allows local guest OS administrators to cause a denial of service (infinite\n loop and QEMU process crash) via vectors involving a buffer descriptor with\n a length of 0 and crafted values in bd.flags.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u16.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u16"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6",
+				"1.1.2+dfsg-6+deb7u1",
+				"1.1.2+dfsg-6+deb7u10",
+				"1.1.2+dfsg-6+deb7u11",
+				"1.1.2+dfsg-6+deb7u12",
+				"1.1.2+dfsg-6+deb7u13",
+				"1.1.2+dfsg-6+deb7u14",
+				"1.1.2+dfsg-6+deb7u15",
+				"1.1.2+dfsg-6+deb7u2",
+				"1.1.2+dfsg-6+deb7u3",
+				"1.1.2+dfsg-6+deb7u4",
+				"1.1.2+dfsg-6+deb7u5",
+				"1.1.2+dfsg-6+deb7u6",
+				"1.1.2+dfsg-6+deb7u7",
+				"1.1.2+dfsg-6+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6+deb7u8",
+				"1.1.2+dfsg-6+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-653-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-653"
+		}
+	]
+}

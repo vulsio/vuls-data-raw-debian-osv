@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-987-1",
+	"modified": "2023-06-28T06:34:21.779571Z",
+	"published": "2017-06-15T00:00:00Z",
+	"related": [
+		"CVE-2016-6127",
+		"CVE-2017-5361",
+		"CVE-2017-5943",
+		"CVE-2017-5944"
+	],
+	"summary": "request-tracker4 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in Request Tracker, an\nextensible trouble-ticket tracking system. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2016-6127](https://security-tracker.debian.org/tracker/CVE-2016-6127)\nIt was discovered that Request Tracker is vulnerable to a cross-site\n scripting (XSS) attack if an attacker uploads a malicious file with\n a certain content type. Installations which use the\n AlwaysDownloadAttachments config setting are unaffected by this\n flaw. The applied fix addresses all existant and future uploaded\n attachments.\n* [CVE-2017-5361](https://security-tracker.debian.org/tracker/CVE-2017-5361)\nIt was discovered that Request Tracker is vulnerable to timing\n side-channel attacks for user passwords.\n* [CVE-2017-5943](https://security-tracker.debian.org/tracker/CVE-2017-5943)\nIt was discovered that Request Tracker is prone to an information\n leak of cross-site request forgery (CSRF) verification tokens if a\n user is tricked into visiting a specially crafted URL by an\n attacker.\n* [CVE-2017-5944](https://security-tracker.debian.org/tracker/CVE-2017-5944)\nIt was discovered that Request Tracker is prone to a remote code\n execution vulnerability in the dashboard subscription interface. A\n privileged attacker can take advantage of this flaw through\n carefully-crafted saved search names to cause unexpected code to be\n executed. The applied fix addresses all existant and future saved\n searches.\n\n\nAdditionally to the above mentioned CVEs, this update works around\n[CVE-2015-7686](https://security-tracker.debian.org/tracker/CVE-2015-7686) \nin Email::Address which could induce a denial of service\nof Request Tracker itself.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.0.7-5+deb7u5.\n\n\nWe recommend that you upgrade your request-tracker4 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "request-tracker4",
+				"purl": "pkg:deb/debian/request-tracker4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.7-5+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.7-5",
+				"4.0.7-5+deb7u1",
+				"4.0.7-5+deb7u2",
+				"4.0.7-5+deb7u2~bpo60+1",
+				"4.0.7-5+deb7u3",
+				"4.0.7-5+deb7u3~bpo60+1",
+				"4.0.7-5+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-987-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-987"
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4100-1",
+	"modified": "2023-10-16T00:12:39.690991Z",
+	"published": "2018-01-27T00:00:00Z",
+	"related": [
+		"CVE-2017-11335",
+		"CVE-2017-12944",
+		"CVE-2017-13726",
+		"CVE-2017-13727",
+		"CVE-2017-18013",
+		"CVE-2017-9935"
+	],
+	"summary": "tiff - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the libtiff library and\nthe included tools, which may result in denial of service or the\nexecution of arbitrary code.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 4.0.3-12.3+deb8u5.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.0.8-2+deb9u2.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFor the detailed security status of tiff please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tiff](https://security-tracker.debian.org/tracker/tiff)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.3-12.3+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.3-12.3",
+				"4.0.3-12.3+deb8u1",
+				"4.0.3-12.3+deb8u2",
+				"4.0.3-12.3+deb8u3",
+				"4.0.3-12.3+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4100-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.8-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.8-2",
+				"4.0.8-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4100-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4100"
+		}
+	]
+}

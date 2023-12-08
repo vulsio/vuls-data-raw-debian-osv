@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4829-1",
+	"modified": "2023-10-16T00:22:11.382201Z",
+	"published": "2021-01-11T00:00:00Z",
+	"related": [
+		"CVE-2020-26262"
+	],
+	"summary": "coturn - security update",
+	"details": "\nA flaw was discovered in coturn, a TURN and STUN server for VoIP. By\ndefault coturn does not allow peers on the loopback addresses\n(127.x.x.x and ::1). A remote attacker can bypass the protection via a\nspecially crafted request using a peer address of 0.0.0.0 and trick\ncoturn in relaying to the loopback interface. If listening on IPv6 the\nloopback interface can also be reached by using either [::1] or [::] as\nthe address.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 4.5.1.1-1.1+deb10u2.\n\n\nWe recommend that you upgrade your coturn packages.\n\n\nFor the detailed security status of coturn please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/coturn>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "coturn",
+				"purl": "pkg:deb/debian/coturn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.5.1.1-1.1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.5.1.1-1.1",
+				"4.5.1.1-1.1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4829-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4829"
+		}
+	]
+}

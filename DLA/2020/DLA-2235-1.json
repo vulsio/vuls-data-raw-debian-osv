@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2235-1",
+	"modified": "2023-06-28T06:30:06.171992Z",
+	"published": "2020-06-05T00:00:00Z",
+	"related": [
+		"CVE-2020-12049"
+	],
+	"summary": "dbus - security update",
+	"details": "\nIt was discovered that there was a file descriptor leak in the D-Bus message\nbus.\n\n\nAn unprivileged local attacker could use this to attack the system DBus\ndaemon, leading to denial of service for all users of the machine.\n\n\n* [CVE-2020-12049](https://security-tracker.debian.org/tracker/CVE-2020-12049)\nFile descriptor leak in \\_dbus\\_read\\_socket\\_with\\_unix\\_fds\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.8.22-0+deb8u3.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "dbus",
+				"purl": "pkg:deb/debian/dbus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.22-0+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.16-1",
+				"1.8.16-2",
+				"1.8.18-0+deb8u1",
+				"1.8.18-1",
+				"1.8.20-0+deb8u1",
+				"1.8.20-1",
+				"1.8.22-0+deb8u1",
+				"1.8.22-0+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2235-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2235"
+		}
+	]
+}

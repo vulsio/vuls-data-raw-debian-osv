@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2949-1",
+	"modified": "2023-10-16T00:10:39.836248Z",
+	"published": "2014-06-05T00:00:00Z",
+	"related": [
+		"CVE-2014-3144",
+		"CVE-2014-3145",
+		"CVE-2014-3153"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation:\n\n\n* [CVE-2014-3144](https://security-tracker.debian.org/tracker/CVE-2014-3144)\n\n/ [CVE-2014-3145](https://security-tracker.debian.org/tracker/CVE-2014-3145)\nA local user can cause a denial of service (system crash) via\n crafted BPF instructions.\n* [CVE-2014-3153](https://security-tracker.debian.org/tracker/CVE-2014-3153)\nPinkie Pie discovered an issue in the futex subsystem that allows a\n local user to gain ring 0 control via the futex syscall. An\n unprivileged user could use this flaw to crash the kernel (resulting\n in denial of service) or for privilege escalation.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.2.57-3+deb7u2.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.57-3+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2949-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2949"
+		}
+	]
+}

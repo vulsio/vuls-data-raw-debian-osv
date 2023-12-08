@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1719-1",
+	"modified": "2023-10-16T00:05:36.848933Z",
+	"published": "2009-02-10T00:00:00Z",
+	"related": [
+		"CVE-2008-4989"
+	],
+	"summary": "gnutls13 - certificate validation",
+	"details": "\nMartin von Gagern discovered that GNUTLS, an implementation of the\nTLS/SSL protocol, handles verification of X.509 certificate chains\nincorrectly if a self-signed certificate is configured as a trusted\ncertificate. This could cause clients to accept forged server\ncertificates as genuine. ([CVE-2008-4989](https://security-tracker.debian.org/tracker/CVE-2008-4989))\n\n\nIn addition, this update tightens the checks for X.509v1 certificates\nwhich causes GNUTLS to reject certain certificate chains it accepted\nbefore. (In certificate chain processing, GNUTLS does not recognize\nX.509v1 certificates as valid unless explicitly requested by the\napplication.)\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 1.4.4-3+etch3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.4.2-3 of the gnutls26 package.\n\n\nWe recommend that you upgrade your gnutls13 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "gnutls13",
+				"purl": "pkg:deb/debian/gnutls13?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.4-3+etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.4-3",
+				"1.4.4-3+etch1",
+				"1.4.4-3+etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1719-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1719"
+		}
+	]
+}

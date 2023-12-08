@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2443-1",
+	"modified": "2023-10-16T00:11:14.953646Z",
+	"published": "2012-03-26T00:00:00Z",
+	"related": [
+		"CVE-2009-4307",
+		"CVE-2011-1833",
+		"CVE-2011-4127",
+		"CVE-2011-4347",
+		"CVE-2012-0045",
+		"CVE-2012-1090",
+		"CVE-2012-1097"
+	],
+	"summary": "linux-2.6 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service or privilege escalation. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-4307](https://security-tracker.debian.org/tracker/CVE-2009-4307)\nNageswara R Sastry reported an issue in the ext4 filesystem. Local users\n with the privileges to mount a filesystem can cause a denial of service\n (BUG) by providing a s\\_log\\_groups\\_per\\_flex value greater than 31.\n* [CVE-2011-1833](https://security-tracker.debian.org/tracker/CVE-2011-1833)\nVasiliy Kulikov of Openwall and Dan Rosenberg discovered an information\n leak in the eCryptfs filesystem. Local users were able to mount arbitrary\n directories.\n* [CVE-2011-4347](https://security-tracker.debian.org/tracker/CVE-2011-4347)\nSasha Levin reported an issue in the device assignment functionality in\n KVM. Local users with permission to access /dev/kvm could assign unused pci\n devices to a guest and cause a denial of service (crash).\n* [CVE-2012-0045](https://security-tracker.debian.org/tracker/CVE-2012-0045)\nStephan Barwolf reported an issue in KVM. Local users in a 32-bit guest\n running on a 64-bit system can crash the guest with a syscall instruction.\n* [CVE-2012-1090](https://security-tracker.debian.org/tracker/CVE-2012-1090)\nCAI Qian reported an issue in the CIFS filesystem. A reference count leak\n can occur during the lookup of special files, resulting in a denial of\n service (oops) on umount.\n* [CVE-2012-1097](https://security-tracker.debian.org/tracker/CVE-2012-1097)\nH. Peter Anvin reported an issue in the regset infrastructure. Local users\n can cause a denial of service (NULL pointer dereference) by triggering the\n write methods of readonly regsets.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in version\n2.6.32-41squeeze2.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+41squeeze2 |\n\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\nThanks to Micah Anderson for proof reading this text.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-41squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35squeeze1",
+				"2.6.32-35squeeze2",
+				"2.6.32-35~bpo50+1",
+				"2.6.32-36",
+				"2.6.32-37",
+				"2.6.32-38",
+				"2.6.32-39",
+				"2.6.32-39squeeze1",
+				"2.6.32-40",
+				"2.6.32-41"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2443-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2443"
+		}
+	]
+}

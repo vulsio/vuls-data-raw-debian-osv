@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5324-1",
+	"modified": "2023-10-16T00:21:08.059817Z",
+	"published": "2023-01-23T00:00:00Z",
+	"related": [
+		"CVE-2022-2873",
+		"CVE-2022-3545",
+		"CVE-2022-3623",
+		"CVE-2022-36280",
+		"CVE-2022-41218",
+		"CVE-2022-45934",
+		"CVE-2022-4696",
+		"CVE-2022-47929",
+		"CVE-2023-0179",
+		"CVE-2023-0266",
+		"CVE-2023-0394",
+		"CVE-2023-23454",
+		"CVE-2023-23455"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2022-2873](https://security-tracker.debian.org/tracker/CVE-2022-2873)\nZheyu Ma discovered that an out-of-bounds memory access flaw in the\n Intel iSMT SMBus 2.0 host controller driver may result in denial of\n service (system crash).\n* [CVE-2022-3545](https://security-tracker.debian.org/tracker/CVE-2022-3545)\nIt was discovered that the Netronome Flow Processor (NFP) driver\n contained a use-after-free flaw in area\\_cache\\_get(), which may\n result in denial of service or the execution of arbitrary code.\n* [CVE-2022-3623](https://security-tracker.debian.org/tracker/CVE-2022-3623)\nA race condition when looking up a CONT-PTE/PMD size hugetlb page\n may result in denial of service or an information leak.\n* [CVE-2022-4696](https://security-tracker.debian.org/tracker/CVE-2022-4696)\nA use-after-free vulnerability was discovered in the io\\_uring\n subsystem.\n* [CVE-2022-36280](https://security-tracker.debian.org/tracker/CVE-2022-36280)\nAn out-of-bounds memory write vulnerability was discovered in the\n vmwgfx driver, which may allow a local unprivileged user to cause a\n denial of service (system crash).\n* [CVE-2022-41218](https://security-tracker.debian.org/tracker/CVE-2022-41218)\nHyunwoo Kim reported a use-after-free flaw in the Media DVB core\n subsystem caused by refcount races, which may allow a local user to\n cause a denial of service or escalate privileges.\n* [CVE-2022-45934](https://security-tracker.debian.org/tracker/CVE-2022-45934)\nAn integer overflow in l2cap\\_config\\_req() in the Bluetooth subsystem\n was discovered, which may allow a physically proximate attacker to\n cause a denial of service (system crash).\n* [CVE-2022-47929](https://security-tracker.debian.org/tracker/CVE-2022-47929)\nFrederick Lawler reported a NULL pointer dereference in the traffic\n control subsystem allowing an unprivileged user to cause a denial of\n service by setting up a specially crafted traffic control\n configuration.\n* [CVE-2023-0179](https://security-tracker.debian.org/tracker/CVE-2023-0179)\nDavide Ornaghi discovered incorrect arithmetics when fetching VLAN\n header bits in the netfilter subsystem, allowing a local user to\n leak stack and heap addresses or potentially local privilege\n escalation to root.\n* [CVE-2023-0266](https://security-tracker.debian.org/tracker/CVE-2023-0266)\nA use-after-free flaw in the sound subsystem due to missing locking\n may result in denial of service or privilege escalation.\n* [CVE-2023-0394](https://security-tracker.debian.org/tracker/CVE-2023-0394)\nKyle Zeng discovered a NULL pointer dereference flaw in\n rawv6\\_push\\_pending\\_frames() in the network subsystem allowing a\n local user to cause a denial of service (system crash).\n* [CVE-2023-23454](https://security-tracker.debian.org/tracker/CVE-2023-23454)\nKyle Zeng reported that the Class Based Queueing (CBQ) network\n scheduler was prone to denial of service due to interpreting\n classification results before checking the classification\n return code.\n* [CVE-2023-23455](https://security-tracker.debian.org/tracker/CVE-2023-23455)\nKyle Zeng reported that the ATM Virtual Circuits (ATM) network\n scheduler was prone to a denial of service due to interpreting\n classification results before checking the classification\n return code.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.162-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.162-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.103-1",
+				"5.10.103-1~bpo10+1",
+				"5.10.106-1",
+				"5.10.113-1",
+				"5.10.120-1",
+				"5.10.120-1~bpo10+1",
+				"5.10.127-1",
+				"5.10.127-2",
+				"5.10.127-2~bpo10+1",
+				"5.10.136-1",
+				"5.10.140-1",
+				"5.10.148-1",
+				"5.10.149-1",
+				"5.10.149-2",
+				"5.10.158-1",
+				"5.10.158-2",
+				"5.10.46-4",
+				"5.10.46-5",
+				"5.10.70-1",
+				"5.10.70-1~bpo10+1",
+				"5.10.84-1",
+				"5.10.92-1",
+				"5.10.92-1~bpo10+1",
+				"5.10.92-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5324-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5324"
+		}
+	]
+}

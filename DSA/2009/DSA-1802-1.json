@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1802-1",
+	"modified": "2023-10-16T00:08:03.133582Z",
+	"published": "2009-05-21T00:00:00Z",
+	"related": [
+		"CVE-2009-1578",
+		"CVE-2009-1579",
+		"CVE-2009-1580",
+		"CVE-2009-1581"
+	],
+	"summary": "squirrelmail - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in SquirrelMail,\na webmail application. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-1578](https://security-tracker.debian.org/tracker/CVE-2009-1578)\nCross site scripting was possible through a number of pages which\n allowed an attacker to steal sensitive session data.\n* [CVE-2009-1579](https://security-tracker.debian.org/tracker/CVE-2009-1579),\n[CVE-2009-1381](https://security-tracker.debian.org/tracker/CVE-2009-1381)\nCode injection was possible when SquirrelMail was configured to\n use the map\\_yp\\_alias function to authenticate users. This is not\n the default.\n* [CVE-2009-1580](https://security-tracker.debian.org/tracker/CVE-2009-1580)\nIt was possible to hijack an active user session by planting a\n specially crafted cookie into the user's browser.\n* [CVE-2009-1581](https://security-tracker.debian.org/tracker/CVE-2009-1581)\nSpecially crafted HTML emails could use the CSS positioning feature\n to place email content over the SquirrelMail user interface, allowing\n for phishing.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 1.4.9a-5.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.4.15-4+lenny2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.4.19-1.\n\n\nWe recommend that you upgrade your squirrelmail package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "squirrelmail",
+				"purl": "pkg:deb/debian/squirrelmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.4.9a-4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.4.9a-1",
+				"2:1.4.9a-2",
+				"2:1.4.9a-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1802-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "squirrelmail",
+				"purl": "pkg:deb/debian/squirrelmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.4.15-4+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.4.15-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1802-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1802"
+		}
+	]
+}

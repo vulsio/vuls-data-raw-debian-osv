@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3344-1",
+	"modified": "2023-06-28T06:26:56.613184Z",
+	"published": "2023-02-26T00:00:00Z",
+	"related": [
+		"CVE-2022-43548",
+		"CVE-2023-23920"
+	],
+	"summary": "nodejs - security update",
+	"details": "\nVulnerabilities have been found in Node.js, which could result in DNS\nrebinding or arbitrary code execution.\n\n\n* [CVE-2022-43548](https://security-tracker.debian.org/tracker/CVE-2022-43548)\nThe Node.js rebinding protector for `--inspect` still allows invalid\n IP addresses, specifically in octal format, which browsers such as\n Firefox attempt to resolve via DNS. When combined with an active\n `--inspect` session, such as when using VSCode, an attacker can\n perform DNS rebinding and execute arbitrary code.\n* [CVE-2023-23920](https://security-tracker.debian.org/tracker/CVE-2023-23920)\nBen Noordhuis reported that Node.js would search and potentially\n load ICU data when running with elevated privileges. Node.js now\n builds with `ICU_NO_USER_DATA_OVERRIDE` to avoid this.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n10.24.0~dfsg-1~deb10u3.\n\n\nWe recommend that you upgrade your nodejs packages.\n\n\nFor the detailed security status of nodejs please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/nodejs>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "nodejs",
+				"purl": "pkg:deb/debian/nodejs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "10.24.0~dfsg-1~deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"10.15.2~dfsg-2",
+				"10.15.3~dfsg-1",
+				"10.16.3~dfsg-1",
+				"10.17.0~dfsg-1",
+				"10.17.0~dfsg-2",
+				"10.19.0~dfsg-1",
+				"10.19.0~dfsg-2",
+				"10.19.0~dfsg-3",
+				"10.19.0~dfsg1-1",
+				"10.20.0~dfsg-1",
+				"10.20.1~dfsg-1",
+				"10.21.0~dfsg-1",
+				"10.21.0~dfsg-1~deb10u1",
+				"10.23.1~dfsg-1~deb10u1",
+				"10.24.0~dfsg-1~deb10u1",
+				"10.24.0~dfsg-1~deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3344-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3344"
+		}
+	]
+}

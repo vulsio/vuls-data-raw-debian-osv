@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2160-1",
+	"modified": "2023-10-16T00:11:00.277929Z",
+	"published": "2011-02-13T00:00:00Z",
+	"related": [
+		"CVE-2010-3718",
+		"CVE-2011-0013",
+		"CVE-2011-0534"
+	],
+	"summary": "tomcat6 - several",
+	"details": "\n\nSeveral vulnerabilities were discovered in the Tomcat Servlet and JSP\nengine:\n\n\n\n* [CVE-2010-3718](https://security-tracker.debian.org/tracker/CVE-2010-3718)\n\n It was discovered that the SecurityManager insufficiently\n restricted the working directory.\n* [CVE-2011-0013](https://security-tracker.debian.org/tracker/CVE-2011-0013)\n\n It was discovered that the HTML manager interface is affected\n by cross-site scripting.\n* [CVE-2011-0534](https://security-tracker.debian.org/tracker/CVE-2011-0534)\n\n It was discovered that NIO connector performs insufficient\n validation of the HTTP headers, which could lead to denial\n of service.\n\n\n\nThe oldstable distribution (lenny) is not affected by these issues.\n\n\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 6.0.28-9+squeeze1.\n\n\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 6.0.28-10.\n\n\n\n\nWe recommend that you upgrade your tomcat6 packages.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tomcat6",
+				"purl": "pkg:deb/debian/tomcat6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.28-9+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.28-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2160-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2160"
+		}
+	]
+}

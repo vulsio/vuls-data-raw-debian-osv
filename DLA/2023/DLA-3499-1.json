@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3499-1",
+	"modified": "2023-07-18T23:18:01.693927Z",
+	"published": "2023-07-19T00:00:00Z",
+	"related": [
+		"CVE-2021-39191",
+		"CVE-2022-23527"
+	],
+	"summary": "libapache2-mod-auth-openidc - security update",
+	"details": "\nOpen Redirect vulnerabilities were found in libapache2-mod-auth-openidc,\nOpenID Connect Relying Party implementation for Apache, which could lead\nto information disclosure via phishing attacks.\n\n\n* [CVE-2021-39191](https://security-tracker.debian.org/tracker/CVE-2021-39191)\nThe 3rd-party init SSO functionality of `mod_auth_openidc` was\n reported to be vulnerable to an open redirect attack by supplying a\n crafted URL in the `target_link_uri` parameter.\n* [CVE-2022-23527](https://security-tracker.debian.org/tracker/CVE-2022-23527)\nWhen providing a logout parameter to the redirect URI,\n `mod_auth_openidc` failed to properly check for URLs starting with\n \"`/\\t`\", leading to an open redirect.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.3.10.2-1+deb10u3.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-openidc packages.\n\n\nFor the detailed security status of libapache2-mod-auth-openidc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libapache2-mod-auth-openidc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libapache2-mod-auth-openidc",
+				"purl": "pkg:deb/debian/libapache2-mod-auth-openidc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.10.2-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.10.2-1",
+				"2.3.10.2-1+deb10u1",
+				"2.3.10.2-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3499-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3499"
+		}
+	]
+}

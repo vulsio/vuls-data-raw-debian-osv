@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1315-1",
+	"modified": "2023-10-16T00:05:18.540257Z",
+	"published": "2007-06-21T00:00:00Z",
+	"related": [
+		"CVE-2007-3215"
+	],
+	"summary": "libphp-phpmailer",
+	"details": "\nThor Larholm discovered that libphp-phpmailer, an email transfer class\nfor PHP, performs insufficient input validition if configured to use\nSendmail. This allows the execution of arbitrary shell commands.\n\n\nThe oldstable distribution (sarge) doesn't include libphp-phpmailer.\n\n\nFor the stable distribution (etch) this problem has been fixed in\nversion 1.73-2etch1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.73-4.\n\n\nWe recommend that you upgrade your libphp-phpmailer package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libphp-phpmailer",
+				"purl": "pkg:deb/debian/libphp-phpmailer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.73-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.73-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1315-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1315"
+		}
+	]
+}

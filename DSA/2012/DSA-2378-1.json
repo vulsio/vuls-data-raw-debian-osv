@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2378-1",
+	"modified": "2023-10-16T00:11:12.137260Z",
+	"published": "2012-01-03T00:00:00Z",
+	"related": [
+		"CVE-2011-4351",
+		"CVE-2011-4353",
+		"CVE-2011-4364",
+		"CVE-2011-4579"
+	],
+	"summary": "ffmpeg - several",
+	"details": "\nSeveral vulnerabilities have been discovered in FFmpeg, a multimedia \nplayer, server and encoder. Multiple input validations in the decoders\nfor QDM2, VP5, VP6, VMD and SVQ1 files could lead to the execution of\narbitrary code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4:0.5.6-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4:0.7.3-1 of the libav source package.\n\n\nWe recommend that you upgrade your ffmpeg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ffmpeg",
+				"purl": "pkg:deb/debian/ffmpeg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:0.5.6-3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:0.5.2-6",
+				"4:0.5.4-1",
+				"4:0.5.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2378-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2378"
+		}
+	]
+}

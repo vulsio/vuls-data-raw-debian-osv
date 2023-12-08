@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-345-1",
+	"modified": "2023-06-28T06:30:38.094756Z",
+	"published": "2015-11-19T00:00:00Z",
+	"related": [
+		"CVE-2015-8023"
+	],
+	"summary": "strongswan - security update",
+	"details": "\nTobias Brunner found an authentication bypass vulnerability in\nstrongSwan, an IKE/IPsec suite.\n\n\nDue to insufficient validation of its local state the server\nimplementation of the EAP-MSCHAPv2 protocol in the eap-mschapv2 plugin\ncan be tricked into successfully concluding the authentication without\nproviding valid credentials.\n\n\nIt's possible to recognize such attacks by looking at the server logs.\nThe following log message would be seen during the client\nauthentication:\n\n\nEAP method EAP\\_MSCHAPV2 succeeded, no MSK established\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "strongswan",
+				"purl": "pkg:deb/debian/strongswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.1-5.8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.1-5.1",
+				"4.4.1-5.2",
+				"4.4.1-5.3",
+				"4.4.1-5.4",
+				"4.4.1-5.5",
+				"4.4.1-5.6",
+				"4.4.1-5.7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-345-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-345"
+		}
+	]
+}

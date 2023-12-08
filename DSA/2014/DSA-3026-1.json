@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3026-1",
+	"modified": "2023-10-16T00:11:43.103369Z",
+	"published": "2014-09-16T00:00:00Z",
+	"related": [
+		"CVE-2014-3635",
+		"CVE-2014-3636",
+		"CVE-2014-3637",
+		"CVE-2014-3638",
+		"CVE-2014-3639"
+	],
+	"summary": "dbus - security update",
+	"details": "\nAlban Crequy and Simon McVittie discovered several vulnerabilities in\nthe D-Bus message daemon.\n\n\n* [CVE-2014-3635](https://security-tracker.debian.org/tracker/CVE-2014-3635)\nOn 64-bit platforms, file descriptor passing could be abused by\n local users to cause heap corruption in dbus-daemon,\n leading to a crash, or potentially to arbitrary code execution.\n* [CVE-2014-3636](https://security-tracker.debian.org/tracker/CVE-2014-3636)\nA denial-of-service vulnerability in dbus-daemon allowed local\n attackers to prevent new connections to dbus-daemon, or disconnect\n existing clients, by exhausting descriptor limits.\n* [CVE-2014-3637](https://security-tracker.debian.org/tracker/CVE-2014-3637)\nMalicious local users could create D-Bus connections to\n dbus-daemon which could not be terminated by killing the\n participating processes, resulting in a denial-of-service\n vulnerability.\n* [CVE-2014-3638](https://security-tracker.debian.org/tracker/CVE-2014-3638)\ndbus-daemon suffered from a denial-of-service vulnerability in the\n code which tracks which messages expect a reply, allowing local\n attackers to reduce the performance of dbus-daemon.\n* [CVE-2014-3639](https://security-tracker.debian.org/tracker/CVE-2014-3639)\ndbus-daemon did not properly reject malicious connections from\n local users, resulting in a denial-of-service vulnerability.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.6.8-1+deb7u4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.8.8-1.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "dbus",
+				"purl": "pkg:deb/debian/dbus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.8-1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.8-1",
+				"1.6.8-1+deb7u1",
+				"1.6.8-1+deb7u2",
+				"1.6.8-1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3026-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3026"
+		}
+	]
+}

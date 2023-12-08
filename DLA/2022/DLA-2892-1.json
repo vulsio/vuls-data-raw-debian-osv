@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2892-1",
+	"modified": "2023-06-28T06:20:12.282942Z",
+	"published": "2022-01-21T00:00:00Z",
+	"related": [
+		"CVE-2021-33196",
+		"CVE-2021-36221",
+		"CVE-2021-39293",
+		"CVE-2021-41771",
+		"CVE-2021-44716",
+		"CVE-2021-44717"
+	],
+	"summary": "golang-1.7 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the Go programming\nlanguage. An attacker could trigger a denial-of-service (DoS) and\ninformation leak.\n\n\n* [CVE-2021-33196](https://security-tracker.debian.org/tracker/CVE-2021-33196)\nIn archive/zip, a crafted file count (in an archive's header) can\n cause a NewReader or OpenReader panic.\n* [CVE-2021-36221](https://security-tracker.debian.org/tracker/CVE-2021-36221)\nGo has a race condition that can lead to a net/http/httputil\n ReverseProxy panic upon an ErrAbortHandler abort.\n* [CVE-2021-39293](https://security-tracker.debian.org/tracker/CVE-2021-39293)\nFollow-up fix to [CVE-2021-33196](https://security-tracker.debian.org/tracker/CVE-2021-33196)\n* [CVE-2021-41771](https://security-tracker.debian.org/tracker/CVE-2021-41771)\nImportedSymbols in debug/macho (for Open or OpenFat) accesses a\n Memory Location After the End of a Buffer, aka an out-of-bounds\n slice situation.\n* [CVE-2021-44716](https://security-tracker.debian.org/tracker/CVE-2021-44716)\nnet/http allows uncontrolled memory consumption in the header\n canonicalization cache via HTTP/2 requests.\n* [CVE-2021-44717](https://security-tracker.debian.org/tracker/CVE-2021-44717)\nGo on UNIX allows write operations to an unintended file or\n unintended network connection as a consequence of erroneous\n closing of file descriptor 0 after file-descriptor exhaustion.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.7.4-2+deb9u4.\n\n\nWe recommend that you upgrade your golang-1.7 packages.\n\n\nFor the detailed security status of golang-1.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/golang-1.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "golang-1.7",
+				"purl": "pkg:deb/debian/golang-1.7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.4-2+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.4-2",
+				"1.7.4-2+deb9u1",
+				"1.7.4-2+deb9u2",
+				"1.7.4-2+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2892-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2892"
+		}
+	]
+}

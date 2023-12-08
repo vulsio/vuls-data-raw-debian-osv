@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3958-1",
+	"modified": "2023-10-16T00:12:30.289215Z",
+	"published": "2017-08-29T00:00:00Z",
+	"related": [
+		"CVE-2017-11568",
+		"CVE-2017-11569",
+		"CVE-2017-11571",
+		"CVE-2017-11572",
+		"CVE-2017-11574",
+		"CVE-2017-11575",
+		"CVE-2017-11576",
+		"CVE-2017-11577"
+	],
+	"summary": "fontforge - security update",
+	"details": "\nIt was discovered that FontForge, a font editor, did not correctly\nvalidate its input. An attacker could use this flaw by tricking a user\ninto opening a maliciously crafted OpenType font file, thus causing a\ndenial-of-service via application crash, or execution of arbitrary\ncode.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 20120731.b-5+deb8u1.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1:20161005~dfsg-4+deb9u1.\n\n\nWe recommend that you upgrade your fontforge packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "fontforge",
+				"purl": "pkg:deb/debian/fontforge?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20120731.b-5+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20120731.b-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3958-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "fontforge",
+				"purl": "pkg:deb/debian/fontforge?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:20161005~dfsg-4+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:20161005~dfsg-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3958-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3958"
+		}
+	]
+}

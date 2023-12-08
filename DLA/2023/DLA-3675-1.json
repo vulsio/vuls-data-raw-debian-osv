@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3675-1",
+	"modified": "2023-12-04T18:18:00.360565Z",
+	"published": "2023-12-04T00:00:00Z",
+	"related": [
+		"CVE-2023-40889",
+		"CVE-2023-40890"
+	],
+	"summary": "zbar - security update",
+	"details": "\nzbar, a barcode and qrcode scanner was vulnerable.\n\n\n* [CVE-2023-40889](https://security-tracker.debian.org/tracker/CVE-2023-40889)\nA heap-based buffer overflow existed\n in the qr\\_reader\\_match\\_centers function.\n Specially crafted QR codes may lead to information disclosure\n and/or arbitrary code execution. To trigger this\n vulnerability, an attacker can digitally input the\n malicious QR code, or prepare it to be physically scanned\n by the vulnerable scanner.\n* [CVE-2023-40890](https://security-tracker.debian.org/tracker/CVE-2023-40890)\nA stack overflow was present in lookup\\_sequence\n function. Specially crafted QR codes may lead\n to information disclosure and/or arbitrary code execution.\n To trigger this vulnerability, an attacker can digitally input\n the malicious QR code, or prepare it to be physically scanned\n by the vulnerable scanner.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.22-1+deb10u1.\n\n\nWe recommend that you upgrade your zbar packages.\n\n\nFor the detailed security status of zbar please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/zbar>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "zbar",
+				"purl": "pkg:deb/debian/zbar?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.22-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.22-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3675-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3675"
+		}
+	]
+}

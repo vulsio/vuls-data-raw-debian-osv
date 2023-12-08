@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3048-1",
+	"modified": "2023-10-16T00:06:11.184655Z",
+	"published": "2014-10-08T00:00:00Z",
+	"related": [
+		"CVE-2014-7206"
+	],
+	"summary": "apt - security update",
+	"details": "\nGuillem Jover discovered that the changelog retrieval functionality in\napt-get used temporary files in an insecure way, allowing a local user\nto cause arbitrary files to be overwritten.\n\n\nThis vulnerability is neutralized by the fs.protected\\_symlinks setting in\nthe Linux kernel, which is enabled by default in Debian 7 Wheezy and up.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.9.7.9+deb7u6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.0.9.2.\n\n\nWe recommend that you upgrade your apt packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.7.9+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.7.8",
+				"0.9.7.9",
+				"0.9.7.9+deb7u1",
+				"0.9.7.9+deb7u2",
+				"0.9.7.9+deb7u3",
+				"0.9.7.9+deb7u4",
+				"0.9.7.9+deb7u5",
+				"0.9.7.9~exp1",
+				"0.9.7.9~exp2",
+				"0.9.7.9~exp3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3048-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3048"
+		}
+	]
+}

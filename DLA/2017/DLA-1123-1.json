@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1123-1",
+	"modified": "2023-06-28T06:19:29.670009Z",
+	"published": "2017-10-06T00:00:00Z",
+	"related": [
+		"CVE-2017-1000098"
+	],
+	"summary": "golang - security update",
+	"details": "\nIt was discovered that there was an issue in the Go programming language\nlibrary where an attacker could generate a MIME request such that the\nserver ran out of file descriptors.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in golang version\n2:1.0.2-1.1+deb7u1.\n\n\nWe recommend that you upgrade your golang packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "golang",
+				"purl": "pkg:deb/debian/golang?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.0.2-1.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.0.2-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1123-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1123"
+		}
+	]
+}

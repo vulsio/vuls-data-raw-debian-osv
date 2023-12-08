@@ -1,0 +1,137 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1529-1",
+	"modified": "2023-06-28T06:26:23.170055Z",
+	"published": "2018-10-04T00:00:00Z",
+	"related": [
+		"CVE-2018-10021",
+		"CVE-2018-10323",
+		"CVE-2018-10876",
+		"CVE-2018-10877",
+		"CVE-2018-10878",
+		"CVE-2018-10879",
+		"CVE-2018-10880",
+		"CVE-2018-10881",
+		"CVE-2018-10882",
+		"CVE-2018-10883",
+		"CVE-2018-10902",
+		"CVE-2018-13093",
+		"CVE-2018-13094",
+		"CVE-2018-13405",
+		"CVE-2018-13406",
+		"CVE-2018-14609",
+		"CVE-2018-14617",
+		"CVE-2018-14633",
+		"CVE-2018-14634",
+		"CVE-2018-14678",
+		"CVE-2018-14734",
+		"CVE-2018-15572",
+		"CVE-2018-15594",
+		"CVE-2018-16276",
+		"CVE-2018-16658",
+		"CVE-2018-17182",
+		"CVE-2018-3620",
+		"CVE-2018-3639",
+		"CVE-2018-5391",
+		"CVE-2018-6554",
+		"CVE-2018-6555",
+		"CVE-2018-7755",
+		"CVE-2018-9363",
+		"CVE-2018-9516"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2018-3620](https://security-tracker.debian.org/tracker/CVE-2018-3620)\nMultiple researchers have discovered a vulnerability in the way\n the Intel processor designs have implemented speculative execution\n of instructions in combination with handling of page-faults. This\n flaw could allow an attacker controlling an unprivileged process\n to read memory from arbitrary (non-user controlled) addresses,\n including from the kernel and all other processes running on the\n system or cross guest/host boundaries to read host memory.\n\n\nThis issue covers only attackers running normal processes. A\n related issue ([CVE-2018-3646](https://security-tracker.debian.org/tracker/CVE-2018-3646)) \n exists with KVM guests, and is not yet fixed.\n* [CVE-2018-3639](https://security-tracker.debian.org/tracker/CVE-2018-3639)\nMultiple researchers have discovered that Speculative Store Bypass\n (SSB), a feature implemented in many processors, could be used to\n read sensitive information from another context. In particular,\n code in a software sandbox may be able to read sensitive\n information from outside the sandbox. This issue is also known as\n Spectre variant 4.\n\n\nThis update allows the issue to be mitigated on some x86\n processors by disabling SSB. This requires an update to the\n processor's microcode, which is non-free. DLA 1446-1 and DLA\n 1506-1 provided this for some Intel processors. For other\n processors, it may be included in an update to the system BIOS or\n UEFI firmware, or in a future update to the intel-microcode or\n amd64-microcode packages.\n\n\nDisabling SSB can reduce performance significantly, so by default\n it is only done in tasks that use the seccomp feature.\n Applications that require this mitigation should request it\n explicitly through the prctl() system call. Users can control\n where the mitigation is enabled with the spec\\_store\\_bypass\\_disable\n kernel parameter.\n* [CVE-2018-5391](https://security-tracker.debian.org/tracker/CVE-2018-5391)\n(FragmentSmack)\n\n\nJuha-Matti Tilli discovered a flaw in the way the Linux kernel\n handled reassembly of fragmented IPv4 and IPv6 packets. A remote\n attacker can take advantage of this flaw to trigger time and\n calculation expensive fragment reassembly algorithms by sending\n specially crafted packets, leading to remote denial of service.\n\n\nThis is mitigated by reducing the default limits on memory usage\n for incomplete fragmented packets. The same mitigation can be\n achieved without the need to reboot, by setting the sysctls:\n\n\nnet.ipv4.ipfrag\\_low\\_thresh = 196608  \n\n net.ipv6.ip6frag\\_low\\_thresh = 196608  \n\n net.ipv4.ipfrag\\_high\\_thresh = 262144  \n\n net.ipv6.ip6frag\\_high\\_thresh = 262144\n\n\nThe default values may still be increased by local configuration\n if necessary.\n* [CVE-2018-6554](https://security-tracker.debian.org/tracker/CVE-2018-6554)\nA memory leak in the irda\\_bind function in the irda subsystem was\n discovered. A local user can take advantage of this flaw to cause a\n denial of service (memory consumption).\n* [CVE-2018-6555](https://security-tracker.debian.org/tracker/CVE-2018-6555)\nA flaw was discovered in the irda\\_setsockopt function in the irda\n subsystem, allowing a local user to cause a denial of service\n (use-after-free and system crash).\n* [CVE-2018-7755](https://security-tracker.debian.org/tracker/CVE-2018-7755)\nBrian Belleville discovered a flaw in the fd\\_locked\\_ioctl function\n in the floppy driver in the Linux kernel. The floppy driver copies a\n kernel pointer to user memory in response to the FDGETPRM ioctl. A\n local user with access to a floppy drive device can take advantage\n of this flaw to discover the location kernel code and data.\n* [CVE-2018-9363](https://security-tracker.debian.org/tracker/CVE-2018-9363)\nIt was discovered that the Bluetooth HIDP implementation did not\n correctly check the length of received report messages. A paired\n HIDP device could use this to cause a buffer overflow, leading to\n denial of service (memory corruption or crash) or potentially\n remote code execution.\n* [CVE-2018-9516](https://security-tracker.debian.org/tracker/CVE-2018-9516)\nIt was discovered that the HID events interface in debugfs did not\n correctly limit the length of copies to user buffers. A local\n user with access to these files could use this to cause a\n denial of service (memory corruption or crash) or possibly for\n privilege escalation. However, by default debugfs is only\n accessible by the root user.\n* [CVE-2018-10021](https://security-tracker.debian.org/tracker/CVE-2018-10021)\nA physically present attacker who unplugs a SAS cable can cause a\n denial of service (memory leak and WARN).\n* [CVE-2018-10323](https://security-tracker.debian.org/tracker/CVE-2018-10323) /\n [CVE-2018-13093](https://security-tracker.debian.org/tracker/CVE-2018-13093) /\n [CVE-2018-13094](https://security-tracker.debian.org/tracker/CVE-2018-13094)\nWen Xu from SSLab at Gatech reported several NULL pointer\n dereference flaws that may be triggered when mounting and\n operating a crafted XFS volume. An attacker able to mount\n arbitrary XFS volumes could use this to cause a denial of service\n (crash).\n* [CVE-2018-10876](https://security-tracker.debian.org/tracker/CVE-2018-10876) /\n [CVE-2018-10877](https://security-tracker.debian.org/tracker/CVE-2018-10877) /\n [CVE-2018-10878](https://security-tracker.debian.org/tracker/CVE-2018-10878) /\n [CVE-2018-10879](https://security-tracker.debian.org/tracker/CVE-2018-10879) /\n [CVE-2018-10880](https://security-tracker.debian.org/tracker/CVE-2018-10880) /\n [CVE-2018-10881](https://security-tracker.debian.org/tracker/CVE-2018-10881) /\n [CVE-2018-10882](https://security-tracker.debian.org/tracker/CVE-2018-10882) /\n [CVE-2018-10883](https://security-tracker.debian.org/tracker/CVE-2018-10883)\nWen Xu from SSLab at Gatech reported that crafted ext4 volumes\n could trigger a crash or memory corruption. An attacker able to\n mount arbitrary ext4 volumes could use this for denial of service\n or possibly for privilege escalation.\n* [CVE-2018-10902](https://security-tracker.debian.org/tracker/CVE-2018-10902)\nIt was discovered that the rawmidi kernel driver does not protect\n against concurrent access which leads to a double-realloc (double\n free) flaw. A local attacker can take advantage of this issue for\n privilege escalation.\n* [CVE-2018-13405](https://security-tracker.debian.org/tracker/CVE-2018-13405)\nJann Horn discovered that the inode\\_init\\_owner function in\n fs/inode.c in the Linux kernel allows local users to create files\n with an unintended group ownership allowing attackers to escalate\n privileges by making a plain file executable and SGID.\n* [CVE-2018-13406](https://security-tracker.debian.org/tracker/CVE-2018-13406)\nDr Silvio Cesare of InfoSect reported a potential integer overflow\n in the uvesafb driver. A local user with permission to access\n such a device might be able to use this for denial of service or\n privilege escalation.\n* [CVE-2018-14609](https://security-tracker.debian.org/tracker/CVE-2018-14609)\nWen Xu from SSLab at Gatech reported a potential null pointer\n dereference in the F2FS implementation. An attacker able to mount\n arbitrary F2FS volumes could use this to cause a denial of service\n (crash).\n* [CVE-2018-14617](https://security-tracker.debian.org/tracker/CVE-2018-14617)\nWen Xu from SSLab at Gatech reported a potential null pointer\n dereference in the HFS+ implementation. An attacker able to mount\n arbitrary HFS+ volumes could use this to cause a denial of service\n (crash).\n* [CVE-2018-14633](https://security-tracker.debian.org/tracker/CVE-2018-14633)\nVincent Pelletier discovered a stack-based buffer overflow flaw in\n the chap\\_server\\_compute\\_md5() function in the iSCSI target code. An\n unauthenticated remote attacker can take advantage of this flaw to\n cause a denial of service or possibly to get a non-authorized access\n to data exported by an iSCSI target.\n* [CVE-2018-14634](https://security-tracker.debian.org/tracker/CVE-2018-14634)\nQualys reported an integer overflow in the initialisation of the\n stack for ELF executables, which can cause the stack to overlap\n the argument or environment strings. A local user may use this to\n defeat environment variable filtering in setuid programs, leading\n to privilege escalation.\n* [CVE-2018-14678](https://security-tracker.debian.org/tracker/CVE-2018-14678)\nM. Vefa Bicakci and Andy Lutomirski discovered a flaw in the\n kernel exit code used on amd64 systems running as Xen PV guests.\n A local user could use this to cause a denial of service (crash).\n* [CVE-2018-14734](https://security-tracker.debian.org/tracker/CVE-2018-14734)\nA use-after-free bug was discovered in the InfiniBand\n communication manager. A local user could use this to cause a\n denial of service (crash or memory corruption) or possible for\n privilege escalation.\n* [CVE-2018-15572](https://security-tracker.debian.org/tracker/CVE-2018-15572)\nEsmaiel Mohammadian Koruyeh, Khaled Khasawneh, Chengyu Song, and\n Nael Abu-Ghazaleh, from University of California, Riverside,\n reported a variant of Spectre variant 2, dubbed SpectreRSB. A\n local user may be able to use this to read sensitive information\n from processes owned by other users.\n* [CVE-2018-15594](https://security-tracker.debian.org/tracker/CVE-2018-15594)\nNadav Amit reported that some indirect function calls used in\n paravirtualised guests were vulnerable to Spectre variant 2. A\n local user may be able to use this to read sensitive information\n from the kernel.\n* [CVE-2018-16276](https://security-tracker.debian.org/tracker/CVE-2018-16276)\nJann Horn discovered that the yurex driver did not correctly limit\n the length of copies to user buffers. A local user with access to\n a yurex device node could use this to cause a denial of service\n (memory corruption or crash) or possibly for privilege escalation.\n* [CVE-2018-16658](https://security-tracker.debian.org/tracker/CVE-2018-16658)\nIt was discovered that the cdrom driver does not correctly\n validate the parameter to the CDROM\\_DRIVE\\_STATUS ioctl. A user\n with access to a cdrom device could use this to read sensitive\n information from the kernel or to cause a denial of service\n (crash).\n* [CVE-2018-17182](https://security-tracker.debian.org/tracker/CVE-2018-17182)\nJann Horn discovered that the vmacache\\_flush\\_all function mishandles\n sequence number overflows. A local user can take advantage of this\n flaw to trigger a use-after-free, causing a denial of service\n (crash or memory corruption) or privilege escalation.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.16.59-1. This version also includes a fix for bug #898137 and\nseveral other fixes included in upstream stable updates.\n\n\nWe recommend that you upgrade your linux packages. Since the kernel\nABI and binary package names have changed, you will need to use an\nupgrade command that installs new dependencies, such as apt upgrade\nor \"apt-get upgrade --with-new-pkgs\".\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.59-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.36-1",
+				"3.16.36-1+deb8u1",
+				"3.16.36-1+deb8u1~bpo70+1",
+				"3.16.36-1+deb8u2",
+				"3.16.36-1+deb8u2~bpo70+1",
+				"3.16.39-1",
+				"3.16.39-1+deb8u1",
+				"3.16.39-1+deb8u1~bpo70+1",
+				"3.16.39-1+deb8u1~bpo70+1+gcc4.4",
+				"3.16.39-1+deb8u2",
+				"3.16.39-1~bpo70+1",
+				"3.16.43-1",
+				"3.16.43-2",
+				"3.16.43-2+deb8u1",
+				"3.16.43-2+deb8u2",
+				"3.16.43-2+deb8u3",
+				"3.16.43-2+deb8u4",
+				"3.16.43-2+deb8u5",
+				"3.16.48-1",
+				"3.16.51-1",
+				"3.16.51-2",
+				"3.16.51-3",
+				"3.16.51-3+deb8u1",
+				"3.16.56-1",
+				"3.16.56-1+deb8u1",
+				"3.16.57-1",
+				"3.16.57-2",
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1529-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1529"
+		}
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1557-1",
+	"modified": "2023-06-28T06:24:50.100310Z",
+	"published": "2018-10-28T00:00:00Z",
+	"related": [
+		"CVE-2018-17100",
+		"CVE-2018-17101",
+		"CVE-2018-18557"
+	],
+	"summary": "tiff - security update",
+	"details": "\n* [CVE-2018-17100](https://security-tracker.debian.org/tracker/CVE-2018-17100)\nAn int32 overflow can cause a denial of service (application\n crash) or possibly have unspecified other impact via a crafted\n image file\n* [CVE-2018-17101](https://security-tracker.debian.org/tracker/CVE-2018-17101)\nOut-of-bounds writes can cause a denial of service (application\n crash) or possibly have unspecified other impact via a crafted\n image file\n* [CVE-2018-18557](https://security-tracker.debian.org/tracker/CVE-2018-18557)\nOut-of-bounds write due to ignoring buffer size can cause a denial\n of service (application crash) or possibly have unspecified other\n impact via a crafted image file\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.0.3-12.3+deb8u7.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.3-12.3+deb8u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.3-12.3",
+				"4.0.3-12.3+deb8u1",
+				"4.0.3-12.3+deb8u2",
+				"4.0.3-12.3+deb8u3",
+				"4.0.3-12.3+deb8u4",
+				"4.0.3-12.3+deb8u5",
+				"4.0.3-12.3+deb8u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1557-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1557"
+		}
+	]
+}

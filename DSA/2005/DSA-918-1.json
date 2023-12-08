@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-918-1",
+	"modified": "2023-10-16T00:30:00.240190Z",
+	"published": "2005-12-09T00:00:00Z",
+	"related": [
+		"CVE-2005-3346",
+		"CVE-2005-3533"
+	],
+	"summary": "osh - programming error",
+	"details": "\nSeveral security related problems have been discovered in osh, the\noperator's shell for executing defined programs in a privileged\nenvironment. The Common Vulnerabilities and Exposures project\nidentifies the following vulnerabilities:\n\n\n* [CVE-2005-3346](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3346)\nCharles Stevenson discovered a bug in the substitution of\n variables that allows a local attacker to open a root shell.\n* [CVE-2005-3533](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3533)\nSolar Eclipse discovered a buffer overflow caused by the current\n working directory plus a filename that could be used to execute\n arbitrary code and e.g. open a root shell.\n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 1.7-11woody2.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.7-13sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.7-15, however, the package has been removed entirely.\n\n\nWe recommend that you upgrade your osh package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "osh",
+				"purl": "pkg:deb/debian/osh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7-11woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7-11woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-918-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "osh",
+				"purl": "pkg:deb/debian/osh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7-13sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7-13"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-918-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-918"
+		}
+	]
+}

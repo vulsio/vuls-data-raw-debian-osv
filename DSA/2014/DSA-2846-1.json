@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2846-1",
+	"modified": "2023-10-16T00:11:34.623593Z",
+	"published": "2014-01-17T00:00:00Z",
+	"related": [
+		"CVE-2013-6458",
+		"CVE-2014-1447"
+	],
+	"summary": "libvirt - several",
+	"details": "\nMultiple security issues have been found in Libvirt, a virtualisation\nabstraction library:\n\n\n* [CVE-2013-6458](https://security-tracker.debian.org/tracker/CVE-2013-6458)\nIt was discovered that insecure job usage could lead to denial of\n service against libvirtd.\n* [CVE-2014-1447](https://security-tracker.debian.org/tracker/CVE-2014-1447)\nIt was discovered that a race condition in keepalive handling could\n lead to denial of service against libvirtd.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.9.12.3-1. This bugfix point release also addresses some \nadditional bugfixes.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.2.1-1.\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libvirt",
+				"purl": "pkg:deb/debian/libvirt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.12.3-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.12-11",
+				"0.9.12-11+deb7u1",
+				"0.9.12-11+deb7u3",
+				"0.9.12-11+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2846-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2846"
+		}
+	]
+}

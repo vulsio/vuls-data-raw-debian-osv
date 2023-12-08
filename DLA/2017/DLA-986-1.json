@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-986-1",
+	"modified": "2023-06-28T06:34:21.478722Z",
+	"published": "2017-06-15T00:00:00Z",
+	"related": [
+		"CVE-2017-5637"
+	],
+	"summary": "zookeeper - security update",
+	"details": "\nIt was discovered that Zookeeper, a service for maintaining\nconfiguration information, didn't restrict access to the computationally\nexpensive wchp/wchc commands which could result in denial of service by\nelevated CPU consumption.\n\n\nThis update disables those two commands by default. The new\nconfiguration option 4lw.commands.whitelist can be used to whitelist\ncommands selectively (and the full set of commands can be restored\nwith '\\*')\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.4.5+dfsg-2+deb7u1.\n\n\nWe recommend that you upgrade your zookeeper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "zookeeper",
+				"purl": "pkg:deb/debian/zookeeper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.5+dfsg-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.5+dfsg1-2",
+				"3.3.5+dfsg1-2+deb7u1",
+				"3.3.5+dfsg1-2+deb7u2",
+				"3.3.6+dfsg-1",
+				"3.4.5+dfsg-1",
+				"3.4.5+dfsg-1~exp1",
+				"3.4.5+dfsg-1~exp2",
+				"3.4.5+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-986-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-986"
+		}
+	]
+}

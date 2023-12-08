@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-105-1",
+	"modified": "2023-06-28T06:20:16.907431Z",
+	"published": "2014-12-11T00:00:00Z",
+	"related": [
+		"CVE-2014-9157"
+	],
+	"summary": "graphviz - security update",
+	"details": "\nJoshua Rogers discovered a format string vulnerability in the yyerror\nfunction in lib/cgraph/scan.l in Graphviz, a rich set of graph drawing\ntools. An attacker could use this flaw to cause graphviz to crash or\npossibly execute arbitrary code.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in graphviz version 2.26.3-5+squeeze3\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "graphviz",
+				"purl": "pkg:deb/debian/graphviz?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.26.3-5+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.26.3-5",
+				"2.26.3-5+hurd.1",
+				"2.26.3-5+squeeze1",
+				"2.26.3-5+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-105-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-105"
+		}
+	]
+}

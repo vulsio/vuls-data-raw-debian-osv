@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-78-1",
+	"modified": "2023-06-28T06:27:08.380588Z",
+	"published": "2014-10-27T00:00:00Z",
+	"related": [
+		"CVE-2014-3684"
+	],
+	"summary": "torque - security update",
+	"details": "\nChad Vizino reported a vulnerability in torque, a PBS-derived batch\nprocessing queueing system. A non-root user could exploit the flaw in\nthe tm\\_adopt() library call to kill any process, including root-owned\nones on any node in a job.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in torque version 2.4.8+dfsg-9squeeze5\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "torque",
+				"purl": "pkg:deb/debian/torque?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.8+dfsg-9squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.8+dfsg-9",
+				"2.4.8+dfsg-9squeeze1",
+				"2.4.8+dfsg-9squeeze2",
+				"2.4.8+dfsg-9squeeze3",
+				"2.4.8+dfsg-9squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-78-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-78"
+		}
+	]
+}

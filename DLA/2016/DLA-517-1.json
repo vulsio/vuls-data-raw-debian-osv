@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-517-1",
+	"modified": "2023-06-28T06:21:34.285059Z",
+	"published": "2016-06-17T00:00:00Z",
+	"related": [
+		"CVE-2016-4563"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nThe code did not check the integer didn't overflow before trying to\nresize a buffer. A specially crafted file could result in using memory\npast the end of the allocated buffer.\n\n\nThis security CVEs for this issue ([CVE-2016-4563](https://security-tracker.debian.org/tracker/CVE-2016-4563)) along with\n[CVE-2016-4562](https://security-tracker.debian.org/tracker/CVE-2016-4562) and [CVE-2016-4564](https://security-tracker.debian.org/tracker/CVE-2016-4564) were based on a security advisory that\nwill not be made public. This security fix was generated based only on\nthe surface-level code-change information that is public in GitHub. For\nmore information on this, see: <http://seclists.org/oss-sec/2016/q2/476>\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n8:6.7.7.10-5+deb7u7.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.7.7.10-5+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.7.7.10-5",
+				"8:6.7.7.10-5+deb7u2",
+				"8:6.7.7.10-5+deb7u3",
+				"8:6.7.7.10-5+deb7u4",
+				"8:6.7.7.10-5+deb7u5",
+				"8:6.7.7.10-5+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-517-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-517"
+		}
+	]
+}

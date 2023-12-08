@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2511-1",
+	"modified": "2023-06-28T06:26:35.401043Z",
+	"published": "2020-12-30T00:00:00Z",
+	"related": [
+		"CVE-2020-26237"
+	],
+	"summary": "highlight.js - security update",
+	"details": "\nAn issue has been found in highlight.js, a JavaScript library for syntax\nhighlighting. If a website or application renders user provided data it\nmight be affected by a Prototype Pollution. This might result in strange\nbehavior or crashes of applications that do not correctly handle unknown\nproperties.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n8.2+ds-5+deb9u1.\n\n\nWe recommend that you upgrade your highlight.js packages.\n\n\nFor the detailed security status of highlight.js please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/highlight.js>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "highlight.js",
+				"purl": "pkg:deb/debian/highlight.js?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.2+ds-5+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.2+ds-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2511-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2511"
+		}
+	]
+}

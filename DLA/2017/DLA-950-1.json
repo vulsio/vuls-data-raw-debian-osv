@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-950-1",
+	"modified": "2023-06-28T06:27:12.913309Z",
+	"published": "2017-05-23T00:00:00Z",
+	"related": [
+		"CVE-2017-6891"
+	],
+	"summary": "libtasn1-3 - security update",
+	"details": "\nSecunia Research has discovered multiple vulnerabilities in GnuTLS\nlibtasn1, which can be exploited by malicious people to compromise\na vulnerable system.\n\n\nTwo errors in the \"asn1\\_find\\_node()\" function (lib/parser\\_aux.c)\ncan be exploited to cause a stacked-based buffer overflow.\n\n\nSuccessful exploitation of the vulnerabilities allows execution\nof arbitrary code but requires tricking a user into processing\na specially crafted assignments file by e.g. asn1Coding utility.\n\n\nFor Debian 7 Wheezy, this problem has been fixed in version\n2.13-2+deb7u4.\n\n\nWe recommend that you upgrade your libtasn1-3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libtasn1-3",
+				"purl": "pkg:deb/debian/libtasn1-3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.13-2+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13-2",
+				"2.13-2+deb7u1",
+				"2.13-2+deb7u2",
+				"2.13-2+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-950-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-950"
+		}
+	]
+}

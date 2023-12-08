@@ -1,0 +1,114 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2713-1",
+	"modified": "2023-06-28T06:21:20.655538Z",
+	"published": "2021-07-20T00:00:00Z",
+	"related": [
+		"CVE-2021-21781",
+		"CVE-2021-33909",
+		"CVE-2021-34693",
+		"CVE-2021-3609"
+	],
+	"summary": "linux - security update",
+	"details": "\nBrief introduction\n\n\n* [CVE-2021-3609](https://security-tracker.debian.org/tracker/CVE-2021-3609)\nNorbert Slusarek reported a race condition vulnerability in the CAN\n BCM networking protocol, allowing a local attacker to escalate\n privileges.\n* [CVE-2021-21781](https://security-tracker.debian.org/tracker/CVE-2021-21781)\n\"Lilith >\\_>\" of Cisco Talos discovered that the Arm initialisation\n code does not fully initialise the sigpage that is mapped into\n user-space processes to support signal handling. This could\n result in leaking sensitive information, particularly when the\n system is rebooted.\n* [CVE-2021-33909](https://security-tracker.debian.org/tracker/CVE-2021-33909)\nThe Qualys Research Labs discovered a size\\_t-to-int conversion\n vulnerability in the Linux kernel's filesystem layer. An\n unprivileged local attacker able to create, mount, and then delete a\n deep directory structure whose total path length exceeds 1GB, can\n take advantage of this flaw for privilege escalation.\n\n\nDetails can be found in the Qualys advisory at\n <https://www.qualys.com/2021/07/20/cve-2021-33909/sequoia-local-privilege-escalation-linux.txt>\n* [CVE-2021-34693](https://security-tracker.debian.org/tracker/CVE-2021-34693)\nNorbert Slusarek discovered an information leak in the CAN BCM\n networking protocol. A local attacker can take advantage of this\n flaw to obtain sensitive information from kernel stack memory.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.9.272-2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.272-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.107-1",
+				"4.9.110-1",
+				"4.9.110-2",
+				"4.9.110-3",
+				"4.9.110-3+deb9u1",
+				"4.9.110-3+deb9u2",
+				"4.9.110-3+deb9u3",
+				"4.9.110-3+deb9u4",
+				"4.9.110-3+deb9u5",
+				"4.9.110-3+deb9u6",
+				"4.9.130-1",
+				"4.9.130-2",
+				"4.9.135-1",
+				"4.9.144-1",
+				"4.9.144-2",
+				"4.9.144-3",
+				"4.9.144-3.1",
+				"4.9.161-1",
+				"4.9.168-1",
+				"4.9.168-1+deb9u2",
+				"4.9.168-1+deb9u3",
+				"4.9.168-1+deb9u4",
+				"4.9.168-1+deb9u5",
+				"4.9.184-1",
+				"4.9.185-1",
+				"4.9.189-1",
+				"4.9.189-2",
+				"4.9.189-3",
+				"4.9.189-3+deb9u1",
+				"4.9.189-3+deb9u2",
+				"4.9.210-1",
+				"4.9.210-1+deb9u1",
+				"4.9.228-1",
+				"4.9.240-1",
+				"4.9.240-2",
+				"4.9.246-1",
+				"4.9.246-2",
+				"4.9.258-1",
+				"4.9.272-1",
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1",
+				"4.9.30-2+deb9u3",
+				"4.9.30-2+deb9u4",
+				"4.9.30-2+deb9u5",
+				"4.9.30-2+deb9u5~bpo8+1",
+				"4.9.47-1",
+				"4.9.51-1",
+				"4.9.51-1~bpo8+1",
+				"4.9.65-1",
+				"4.9.65-2",
+				"4.9.65-3",
+				"4.9.65-3+deb9u1",
+				"4.9.65-3+deb9u1~bpo8+1",
+				"4.9.65-3+deb9u2",
+				"4.9.65-3+deb9u2~bpo8+1",
+				"4.9.65-3~bpo8+1",
+				"4.9.80-1",
+				"4.9.80-2",
+				"4.9.82-1+deb9u2",
+				"4.9.82-1+deb9u3",
+				"4.9.82-1+deb9u3~bpo8+1",
+				"4.9.88-1",
+				"4.9.88-1+deb9u1",
+				"4.9.88-1+deb9u1~bpo8+1",
+				"4.9.88-1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2713-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2713"
+		}
+	]
+}

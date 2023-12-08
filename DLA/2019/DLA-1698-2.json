@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1698-2",
+	"modified": "2023-06-28T06:24:53.302518Z",
+	"published": "2019-02-28T00:00:00Z",
+	"summary": "file - regression update",
+	"details": "\nPotential buffer over-reads in readelf.c have been found in file,\na popular file type guesser.\n\n\n[CVE-2019-8905](https://security-tracker.debian.org/tracker/CVE-2019-8905)\n\n\nWe recommend that you upgrade your file packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "file",
+				"purl": "pkg:deb/debian/file?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:5.22+15-2+deb8u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:5.22+15-2",
+				"1:5.22+15-2+deb8u1",
+				"1:5.22+15-2+deb8u2",
+				"1:5.22+15-2+deb8u3",
+				"1:5.22+15-2+deb8u4",
+				"1:5.22+15-2+deb8u5",
+				"1:5.22+15-2+deb8u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1698-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1698"
+		}
+	]
+}

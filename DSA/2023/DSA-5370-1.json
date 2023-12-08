@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5370-1",
+	"modified": "2023-10-16T00:22:59.977271Z",
+	"published": "2023-03-07T00:00:00Z",
+	"related": [
+		"CVE-2022-24963"
+	],
+	"summary": "apr - security update",
+	"details": "\nRonald Crane discovered that missing input sanitizing in the apr\\_encode\nfunctions of apr, the Apache Portable Runtime library, may result in\ndenial of service or potentially the execution of arbitrary code.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.7.0-6+deb11u2.\n\n\nWe recommend that you upgrade your apr packages.\n\n\nFor the detailed security status of apr please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/apr](https://security-tracker.debian.org/tracker/apr)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "apr",
+				"purl": "pkg:deb/debian/apr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.0-6+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.0-6",
+				"1.7.0-6+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5370-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5370"
+		}
+	]
+}

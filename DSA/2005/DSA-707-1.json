@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-707-1",
+	"modified": "2023-10-16T00:26:18.461144Z",
+	"published": "2005-04-13T00:00:00Z",
+	"related": [
+		"CVE-2004-0957",
+		"CVE-2005-0709",
+		"CVE-2005-0710",
+		"CVE-2005-0711"
+	],
+	"summary": "mysql - several",
+	"details": "\nSeveral vulnerabilities have been discovered in MySQL, a popular\ndatabase. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CAN-2004-0957](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0957)\nSergei Golubchik discovered a problem in the access handling for\n similar named databases. If a user is granted privileges to a\n database with a name containing an underscore (\"\\_\"), the user also\n gains privileges to other databases with similar names.\n\n* [CAN-2005-0709](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0709)\nStefano Di Paola discovered that MySQL allows remote\n authenticated users with INSERT and DELETE privileges to execute\n arbitrary code by using CREATE FUNCTION to access libc calls.\n\n* [CAN-2005-0710](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0710)\nStefano Di Paola discovered that MySQL allows remote authenticated\n users with INSERT and DELETE privileges to bypass library path\n restrictions and execute arbitrary libraries by using INSERT INTO\n to modify the mysql.func table.\n\n* [CAN-2005-0711](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0711)\nStefano Di Paola discovered that MySQL uses predictable file names\n when creating temporary tables, which allows local users with\n CREATE TEMPORARY TABLE privileges to overwrite arbitrary files via\n a symlink attack.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.23.49-8.11.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.0.24-5 of mysql-dfsg and in version 4.1.10a-6 of\nmysql-dfsg-4.1.\n\n\nWe recommend that you upgrade your mysql packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mysql",
+				"purl": "pkg:deb/debian/mysql?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.23.49-8.11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.23.49-8.10",
+				"3.23.49-8.8",
+				"3.23.49-8.9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-707-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-707"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1728-1",
+	"modified": "2023-10-16T00:05:38.487731Z",
+	"published": "2009-02-27T00:00:00Z",
+	"related": [
+		"CVE-2009-0770"
+	],
+	"summary": "dkim-milter - denial of service",
+	"details": "\nIt was discovered that dkim-milter, an implementation of the DomainKeys\nIdentified Mail protocol, may crash during DKIM verification if it\nencounters a specially-crafted or revoked public key record in DNS.\n\n\nThe old stable distribution (etch) does not contain dkim-milter packages.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.0.dfsg-1+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.6.0.dfsg-2.\n\n\nWe recommend that you upgrade your dkim-milter packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "dkim-milter",
+				"purl": "pkg:deb/debian/dkim-milter?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.0.dfsg-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.0.dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1728-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1728"
+		}
+	]
+}

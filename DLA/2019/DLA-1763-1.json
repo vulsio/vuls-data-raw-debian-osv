@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1763-1",
+	"modified": "2023-06-28T06:20:57.725160Z",
+	"published": "2019-04-24T00:00:00Z",
+	"related": [
+		"CVE-2019-9894",
+		"CVE-2019-9897",
+		"CVE-2019-9898"
+	],
+	"summary": "putty - security update",
+	"details": "\nMultiple vulnerabilities were found in the PuTTY SSH client, which could\nresult in denial of service and potentially the execution of arbitrary\ncode. In addition, in some situations random numbers could potentially be\nre-used.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.63-10+deb8u2.\n\n\nWe recommend that you upgrade your putty packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "putty",
+				"purl": "pkg:deb/debian/putty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.63-10+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.63-10",
+				"0.63-10+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1763-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1763"
+		}
+	]
+}

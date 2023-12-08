@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1000-1",
+	"modified": "2023-06-28T06:20:07.535195Z",
+	"published": "2017-06-24T00:00:00Z",
+	"related": [
+		"CVE-2017-9261",
+		"CVE-2017-9262",
+		"CVE-2017-9405",
+		"CVE-2017-9407",
+		"CVE-2017-9409",
+		"CVE-2017-9439",
+		"CVE-2017-9500",
+		"CVE-2017-9501"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nThis update fixes several vulnerabilities in imagemagick: Various memory\nhandling problems and cases of missing or incomplete input sanitising\nmay result in denial of service if malformed MNG, JNG, ICON, PALM, MPC,\nor PDB files are processed.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n8:6.7.7.10-5+deb7u15.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.7.7.10-5+deb7u15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.7.7.10-5",
+				"8:6.7.7.10-5+deb7u10",
+				"8:6.7.7.10-5+deb7u11",
+				"8:6.7.7.10-5+deb7u12",
+				"8:6.7.7.10-5+deb7u13",
+				"8:6.7.7.10-5+deb7u14",
+				"8:6.7.7.10-5+deb7u2",
+				"8:6.7.7.10-5+deb7u3",
+				"8:6.7.7.10-5+deb7u4",
+				"8:6.7.7.10-5+deb7u5",
+				"8:6.7.7.10-5+deb7u6",
+				"8:6.7.7.10-5+deb7u7",
+				"8:6.7.7.10-5+deb7u8",
+				"8:6.7.7.10-5+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1000-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1000"
+		}
+	]
+}

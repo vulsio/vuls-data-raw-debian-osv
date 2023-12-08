@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-336",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2003-06-29T00:00:00Z",
+	"related": [
+		"CVE-2002-0429",
+		"CVE-2002-1380",
+		"CVE-2003-0001",
+		"CVE-2003-0127",
+		"CVE-2003-0244",
+		"CVE-2003-0246",
+		"CVE-2003-0247",
+		"CVE-2003-0248",
+		"CVE-2003-0364"
+	],
+	"summary": "linux-kernel-2.2.20 - several vulnerabilities",
+	"details": "\nA number of vulnerabilities have been discovered in the Linux kernel.\n\n\n* [CAN-2002-1380](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1380): Linux kernel 2.2.x allows local users to cause a denial\n of service (crash) by using the mmap() function with a PROT\\_READ\n parameter to access non-readable memory pages through the /proc/pid/mem\n interface.\n* [CVE-2002-0429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0429): The iBCS routines in arch/i386/kernel/traps.c for\n Linux kernels 2.4.18 and earlier on x86 systems allow local users to\n kill arbitrary processes via a binary compatibility interface\n (lcall)\n* [CAN-2003-0001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0001): Multiple ethernet Network Interface Card (NIC) device\n drivers do not pad frames with null bytes, which allows remote\n attackers to obtain information from previous packets or kernel\n memory by using malformed packets\n* [CAN-2003-0127](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0127): The kernel module loader allows local users to gain\n root privileges by using ptrace to attach to a child process that is\n spawned by the kernel\n* [CAN-2003-0244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0244): The route cache implementation in Linux 2.4, and the\n Netfilter IP conntrack module, allows remote attackers to cause a\n denial of service (CPU consumption) via packets with forged source\n addresses that cause a large number of hash table collisions related\n to the PREROUTING chain\n* [CAN-2003-0246](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0246): The ioperm system call in Linux kernel 2.4.20 and\n earlier does not properly restrict privileges, which allows local\n users to gain read or write access to certain I/O ports.\n* [CAN-2003-0247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0247): vulnerability in the TTY layer of the Linux kernel\n 2.4 allows attackers to cause a denial of service (\"kernel oops\")\n* [CAN-2003-0248](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0248): The mxcsr code in Linux kernel 2.4 allows attackers\n to modify CPU state registers via a malformed address.\n* [CAN-2003-0364](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0364): The TCP/IP fragment reassembly handling in the Linux\n kernel 2.4 allows remote attackers to cause a denial of service (CPU\n consumption) via certain packets that cause a large number of hash\n table collisions\n\n\nThis advisory provides updated 2.2.20 kernel source, and binary kernel\nimages for the i386 architecture. Other architectures and kernel\nversions will be covered by separate advisories.\n\n\nFor the stable distribution (woody) on the i386 architecture, these\nproblems have been fixed in kernel-source-2.2.20 version\n2.2.20-5woody2 and kernel-image-i386 version 2.2.20-5woody3.\n\n\nFor the unstable distribution (sid) these problems are fixed in\nkernel-source-2.2.25 and kernel-image-2.2.25-i386 version 2.2.25-2.\n\n\nWe recommend that you update your kernel packages.\n\n\nNOTE: A system reboot will be required immediately after the upgrade\nin order to replace the running kernel. Remember to read carefully\nand follow the instructions given during the kernel upgrade process.\n\n\nNOTE: These kernels are not binary-compatible with the previous\nversion. Any loadable modules will need to be recompiled in order to\nwork with the new kernel.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-source-2.2.20",
+				"purl": "pkg:deb/debian/kernel-source-2.2.20?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-5woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-336.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-i386",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-i386?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-5woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-336.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-336"
+		}
+	]
+}

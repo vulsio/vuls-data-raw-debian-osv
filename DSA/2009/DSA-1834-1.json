@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1834-1",
+	"modified": "2023-10-16T00:10:40.813336Z",
+	"published": "2009-07-15T00:00:00Z",
+	"related": [
+		"CVE-2009-1890",
+		"CVE-2009-1891"
+	],
+	"summary": "apache2 apache2-mpm-itk - denial of service",
+	"details": "\n* [CVE-2009-1890](https://security-tracker.debian.org/tracker/CVE-2009-1890)\nA denial of service flaw was found in the Apache mod\\_proxy module when\nit was used as a reverse proxy. A remote attacker could use this flaw\nto force a proxy process to consume large amounts of CPU time. This\nissue did not affect Debian 4.0 \"etch\".\n* [CVE-2009-1891](https://security-tracker.debian.org/tracker/CVE-2009-1891)\nA denial of service flaw was found in the Apache mod\\_deflate module.\nThis module continued to compress large files until compression was\ncomplete, even if the network connection that requested the content\nwas closed before compression completed. This would cause mod\\_deflate\nto consume large amounts of CPU if mod\\_deflate was enabled for a large\nfile. A similar flaw related to HEAD requests for compressed content\nwas also fixed.\n\n\nThe oldstable distribution (etch), these problems have been fixed in\nversion 2.2.3-4+etch9.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.2.9-10+lenny4.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems will be fixed in version 2.2.11-7.\n\n\nThis advisory also provides updated apache2-mpm-itk packages which\nhave been recompiled against the new apache2 packages.\n\n\nUpdated packages for the s390 and mipsel architectures are not\nincluded yet. They will be released as soon as they become available.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.3-4+etch9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.3-4",
+				"2.2.3-4+etch1",
+				"2.2.3-4+etch2",
+				"2.2.3-4+etch3",
+				"2.2.3-4+etch4",
+				"2.2.3-4+etch5",
+				"2.2.3-4+etch6",
+				"2.2.3-4+etch8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1834-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.9-10+lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.9-10+lenny2",
+				"2.2.9-10+lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1834-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1834"
+		}
+	]
+}

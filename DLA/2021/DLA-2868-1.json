@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2868-1",
+	"modified": "2023-06-28T06:30:20.002698Z",
+	"published": "2021-12-29T00:00:00Z",
+	"related": [
+		"CVE-2018-1056",
+		"CVE-2019-8379",
+		"CVE-2019-8383",
+		"CVE-2019-9210"
+	],
+	"summary": "advancecomp - security update",
+	"details": "\nSeveral vulnerabilities have been fixed in the AdvanceCOMP recompression utilities.\n\n\n* [CVE-2018-1056](https://security-tracker.debian.org/tracker/CVE-2018-1056)\nOut-of-bounds heap buffer read in advzip.\n* [CVE-2019-8379](https://security-tracker.debian.org/tracker/CVE-2019-8379)\nNULL pointer dereference in be\\_uint32\\_read().\n* [CVE-2019-8383](https://security-tracker.debian.org/tracker/CVE-2019-8383)\nInvalid memory access in adv\\_png\\_unfilter\\_8().\n* [CVE-2019-9210](https://security-tracker.debian.org/tracker/CVE-2019-9210)\nInteger overflow in advpng with invalid PNG size.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.20-1+deb9u1.\n\n\nWe recommend that you upgrade your advancecomp packages.\n\n\nFor the detailed security status of advancecomp please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/advancecomp>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "advancecomp",
+				"purl": "pkg:deb/debian/advancecomp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.20-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.20-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2868-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2868"
+		}
+	]
+}

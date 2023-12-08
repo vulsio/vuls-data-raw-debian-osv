@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4435-1",
+	"modified": "2023-10-16T00:31:33.834246Z",
+	"published": "2019-04-27T00:00:00Z",
+	"related": [
+		"CVE-2019-7317"
+	],
+	"summary": "libpng1.6 - security update",
+	"details": "\nA use-after-free vulnerability was discovered in the png\\_image\\_free()\nfunction in the libpng PNG library, which could lead to denial of\nservice or potentially the execution of arbitrary code if a malformed\nimage is processed.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.6.28-1+deb9u1.\n\n\nWe recommend that you upgrade your libpng1.6 packages.\n\n\nFor the detailed security status of libpng1.6 please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/libpng1.6>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libpng1.6",
+				"purl": "pkg:deb/debian/libpng1.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.28-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.28-1",
+				"1.6.28-1exp1",
+				"1.6.28-1exp2",
+				"1.6.28-1exp3",
+				"1.6.28-1exp4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4435-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4435"
+		}
+	]
+}

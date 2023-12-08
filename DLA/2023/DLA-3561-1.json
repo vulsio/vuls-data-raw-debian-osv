@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3561-1",
+	"modified": "2023-09-11T20:18:05.158562Z",
+	"published": "2023-09-11T00:00:00Z",
+	"related": [
+		"CVE-2022-25901"
+	],
+	"summary": "node-cookiejar - security update",
+	"details": "\nIt was discovered that there was a potential Regular Expression Denial of\nService (ReDoS) attack in node-cookiejar, a Node.js library for parsing and\nmanipulating HTTP cookies. An attack was possible via passing a large value to\nthe `Cookie.parse` function.\n\n\n* [CVE-2022-25901](https://security-tracker.debian.org/tracker/CVE-2022-25901)\nVersions of the package cookiejar before 2.1.4 are vulnerable to Regular\n Expression Denial of Service (ReDoS) via the Cookie.parse function, which\n uses an insecure regular expression.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n2.0.1-1+deb10u1.\n\n\nWe recommend that you upgrade your node-cookiejar packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "node-cookiejar",
+				"purl": "pkg:deb/debian/node-cookiejar?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.1-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3561-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3561"
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2214-1",
+	"modified": "2023-06-28T06:21:15.365496Z",
+	"published": "2020-05-18T00:00:00Z",
+	"related": [
+		"CVE-2016-6328",
+		"CVE-2017-7544",
+		"CVE-2018-20030",
+		"CVE-2020-0093",
+		"CVE-2020-12767"
+	],
+	"summary": "libexif - security update",
+	"details": "\nVarious vulnerabilities have been addressed in libexif, a library to\nparse EXIF metadata files.\n\n\n* [CVE-2016-6328](https://security-tracker.debian.org/tracker/CVE-2016-6328)\nAn integer overflow when parsing the MNOTE entry data of the input\n file had been found. This could have caused Denial-of-Service (DoS)\n and Information Disclosure (disclosing some critical heap chunk\n metadata, even other applications' private data).\n* [CVE-2017-7544](https://security-tracker.debian.org/tracker/CVE-2017-7544)\nlibexif had been vulnerable to out-of-bounds heap read vulnerability\n in exif\\_data\\_save\\_data\\_entry function in libexif/exif-data.c caused\n by improper length computation of the allocated data of an ExifMnote\n entry which could have caused denial-of-service or possibly information\n disclosure.\n* [CVE-2018-20030](https://security-tracker.debian.org/tracker/CVE-2018-20030)\nAn error when processing the EXIF\\_IFD\\_INTEROPERABILITY and\n EXIF\\_IFD\\_EXIF tags within libexif version could have been exploited\n to exhaust available CPU resources.\n* [CVE-2020-0093](https://security-tracker.debian.org/tracker/CVE-2020-0093)\nIn exif\\_data\\_save\\_data\\_entry of exif-data.c, there was a possible out\n of bounds read due to a missing bounds check. This could have lead to\n local information disclosure with no additional execution privileges\n needed. User interaction was needed for exploitation.\n* [CVE-2020-12767](https://security-tracker.debian.org/tracker/CVE-2020-12767)\nlibexif had a divide-by-zero error in exif\\_entry\\_get\\_value in\n exif-entry.c\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.6.21-2+deb8u2.\n\n\nWe recommend that you upgrade your libexif packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libexif",
+				"purl": "pkg:deb/debian/libexif?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.21-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.21-2",
+				"0.6.21-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2214-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2214"
+		}
+	]
+}

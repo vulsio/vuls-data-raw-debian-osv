@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-266-1",
+	"modified": "2023-06-28T06:30:11.472188Z",
+	"published": "2015-07-03T00:00:00Z",
+	"related": [
+		"CVE-2015-1819",
+		"CVE-2015-7941",
+		"CVE-2015-8710"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\nThis upload to Debian squeeze-lts fixes three issues found in the libxml2\npackage.\n\n\n(1) [CVE-2015-1819](https://security-tracker.debian.org/tracker/CVE-2015-1819) / #782782\n\n\nFlorian Weimer from Red Hat reported an issue against libxml2, where a\nparser which uses libxml2 chokes on a crafted XML document, allocating\ngigabytes of data. This is a fine line issue between API misuse and a bug\nin libxml2. This issue got addressed in libxml2 upstream and the patch\nhas been backported to libxml2 in squeeze-lts.\n\n\n(2) #782985\n\n\nJun Kokatsu reported an out-of-bounds memory access in libxml2. By\nentering an unclosed html comment the libxml2 parser didn't stop parsing\nat the end of the buffer, causing random memory to be included in the\nparsed comment that was returned to the evoking application.\n\n\nIn the Shopify application (where this issue was originally discovered),\nthis caused ruby objects from previous http requests to be disclosed in\nthe rendered page.\n\n\n(3) #783010\n\n\nMichal Zalewski reported another out-of-bound reads issue in libxml2 that\ndid not cause any crashes but could be detected under ASAN and Valgrind.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.8.dfsg-2+squeeze12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.8.dfsg-2",
+				"2.7.8.dfsg-2+squeeze1",
+				"2.7.8.dfsg-2+squeeze10",
+				"2.7.8.dfsg-2+squeeze11",
+				"2.7.8.dfsg-2+squeeze2",
+				"2.7.8.dfsg-2+squeeze3",
+				"2.7.8.dfsg-2+squeeze4",
+				"2.7.8.dfsg-2+squeeze5",
+				"2.7.8.dfsg-2+squeeze6",
+				"2.7.8.dfsg-2+squeeze7",
+				"2.7.8.dfsg-2+squeeze8",
+				"2.7.8.dfsg-2+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-266-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-266"
+		}
+	]
+}

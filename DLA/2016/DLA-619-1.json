@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-619-1",
+	"modified": "2023-06-28T06:27:04.320447Z",
+	"published": "2016-09-11T00:00:00Z",
+	"related": [
+		"CVE-2016-7116"
+	],
+	"summary": "qemu-kvm - security update",
+	"details": "\nqemu-kvm built with the VirtFS, host directory sharing via Plan 9 File System\n(9pfs) support, is vulnerable to a directory/path traversal issue. It could\noccur while creating or accessing files on a shared host directory.\n\n\nA privileged user inside guest could use this flaw to access undue files on the\nhost.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u15.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6",
+				"1.1.2+dfsg-6+deb7u1",
+				"1.1.2+dfsg-6+deb7u10",
+				"1.1.2+dfsg-6+deb7u11",
+				"1.1.2+dfsg-6+deb7u12",
+				"1.1.2+dfsg-6+deb7u13",
+				"1.1.2+dfsg-6+deb7u14",
+				"1.1.2+dfsg-6+deb7u2",
+				"1.1.2+dfsg-6+deb7u3",
+				"1.1.2+dfsg-6+deb7u4",
+				"1.1.2+dfsg-6+deb7u5",
+				"1.1.2+dfsg-6+deb7u6",
+				"1.1.2+dfsg-6+deb7u7",
+				"1.1.2+dfsg-6+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6+deb7u8",
+				"1.1.2+dfsg-6+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-619-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-619"
+		}
+	]
+}

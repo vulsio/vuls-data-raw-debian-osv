@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1777-1",
+	"modified": "2023-10-16T00:05:41.423628Z",
+	"published": "2009-04-21T00:00:00Z",
+	"summary": "git-core - privilege escalation",
+	"details": "\nPeter Palfrader discovered that in the Git revision control system,\non some architectures files under /usr/share/git-core/templates/ were\nowned by a non-root user. This allows a user with that uid on the local\nsystem to write to these files and possibly escalate their privileges.\n\n\nThis issue only affects the DEC Alpha and MIPS (big and little endian)\narchitectures.\n\n\nFor the old stable distribution (etch), this problem has been fixed in\nversion 1.4.4.4-4+etch2.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.5.6.5-3+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6.2.1-1.\n\n\nWe recommend that you upgrade your git-core package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "git-core",
+				"purl": "pkg:deb/debian/git-core?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.4.4.4-4+etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.4.4.4-2",
+				"1:1.4.4.4-2.1+etch1",
+				"1:1.4.4.4-3",
+				"1:1.4.4.4-4",
+				"1:1.4.4.4-4+etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1777-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "git-core",
+				"purl": "pkg:deb/debian/git-core?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.5.6.5-3+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.5.6.5-2",
+				"1:1.5.6.5-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1777-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1777"
+		}
+	]
+}

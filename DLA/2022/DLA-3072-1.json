@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3072-1",
+	"modified": "2023-06-28T06:25:26.044084Z",
+	"published": "2022-08-11T00:00:00Z",
+	"related": [
+		"CVE-2022-2625"
+	],
+	"summary": "postgresql-11 - security update",
+	"details": "\nSven Klemm found that some extensions in the PostgreSQL database system\ncould replace objects not belonging to the extension. An attacker could\nleverage this to run arbitrary commands as another user.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n11.17-0+deb10u1.\n\n\nWe recommend that you upgrade your postgresql-11 packages.\n\n\nFor the detailed security status of postgresql-11 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/postgresql-11>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "postgresql-11",
+				"purl": "pkg:deb/debian/postgresql-11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "11.17-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"11.10-0+deb10u1",
+				"11.11-0+deb10u1",
+				"11.12-0+deb10u1",
+				"11.13-0+deb10u1",
+				"11.14-0+deb10u1",
+				"11.16-0+deb10u1",
+				"11.4-1",
+				"11.5-1",
+				"11.5-1+deb10u1",
+				"11.5-2",
+				"11.5-3sid1",
+				"11.5-3sid2",
+				"11.6-0+deb10u1",
+				"11.6-2~sid1",
+				"11.7-0+deb10u1",
+				"11.9-0+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3072-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3072"
+		}
+	]
+}

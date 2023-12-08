@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1970-1",
+	"modified": "2023-10-16T00:10:50.470129Z",
+	"published": "2010-01-13T00:00:00Z",
+	"related": [
+		"CVE-2009-4355"
+	],
+	"summary": "openssl - denial of service",
+	"details": "\nIt was discovered that a significant memory leak could occur in OpenSSL,\nrelated to the reinitialization of zlib. This could result in a remotely\nexploitable denial of service vulnerability when using the Apache httpd\nserver in a configuration where mod\\_ssl, mod\\_php5, and the php5-curl\nextension are loaded.\n\n\nThe old stable distribution (etch) is not affected by this issue.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.9.8g-15+lenny6.\n\n\nThe packages for the arm architecture are not included in this advisory.\nThey will be released as soon as they become available.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), this problem will be fixed soon. The issue does not seem to be\nexploitable with the apache2 package contained in squeeze/sid.\n\n\nWe recommend that you upgrade your openssl packages. You also need to\nrestart your Apache httpd server to make sure it uses the updated\nlibraries.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.8g-15+lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.8g-15",
+				"0.9.8g-15+lenny1",
+				"0.9.8g-15+lenny3",
+				"0.9.8g-15+lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1970-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-1970"
+		}
+	]
+}

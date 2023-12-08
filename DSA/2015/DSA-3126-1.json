@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3126-1",
+	"modified": "2023-10-16T00:06:13.618383Z",
+	"published": "2015-01-12T00:00:00Z",
+	"related": [
+		"CVE-2014-9652"
+	],
+	"summary": "php5 - security update",
+	"details": "\nIt was discovered that libmagic as used by PHP, would trigger an out\nof bounds memory access when trying to identify a crafted file.\n\n\nAdditionally, this updates fixes a potential dependency loop in dpkg\ntrigger handling.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 5.4.36-0+deb7u3.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.36-0+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3126-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3126"
+		}
+	]
+}

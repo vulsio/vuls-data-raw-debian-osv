@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1716-1",
+	"modified": "2023-10-16T00:05:37.140223Z",
+	"published": "2009-01-31T00:00:00Z",
+	"related": [
+		"CVE-2008-4770"
+	],
+	"summary": "vnc4 - remote code execution",
+	"details": "\nIt was discovered that xvnc4viewer, a virtual network computing client\nsoftware for X, is prone to an integer overflow via a malicious\nencoding value that could lead to arbitrary code execution.\n\n\nFor the stable distribution (etch) this problem has been fixed in\nversion 4.1.1+X4.3.0-21+etch1.\n\n\nFor the unstable (sid) distribution this problem has been fixed in\nversion 4.1.1+X4.3.0-31.\n\n\nFor the testing (lenny) distribution this problem will be fixed soon.\n\n\nWe recommend that you upgrade your vnc4 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "vnc4",
+				"purl": "pkg:deb/debian/vnc4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.1+X4.3.0-21+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.1+X4.3.0-21"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1716-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1716"
+		}
+	]
+}

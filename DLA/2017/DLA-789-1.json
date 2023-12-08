@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-789-1",
+	"modified": "2023-06-28T06:43:17.392737Z",
+	"published": "2017-01-17T00:00:00Z",
+	"related": [
+		"CVE-2017-5208",
+		"CVE-2017-5331",
+		"CVE-2017-5332",
+		"CVE-2017-5333"
+	],
+	"summary": "icoutils - security update",
+	"details": "\nBrief introduction\n\n\n* [CVE-2017-5208](https://security-tracker.debian.org/tracker/CVE-2017-5208)\nChoongwoo Han reported[0] an exploitable crash in wrestool from\n icoutils. The command line tools is e.g. used in KDE's\n metadataparsing.\n* [CVE-2017-5331](https://security-tracker.debian.org/tracker/CVE-2017-5331)\nIt turned out that the correction for [CVE-2017-5208](https://security-tracker.debian.org/tracker/CVE-2017-5208) was not enough\n so an additional correction was needed.\n* [CVE-2017-5332](https://security-tracker.debian.org/tracker/CVE-2017-5332)\nBut as I see it there are still combinations of the arguments which\n make the test succeed even though the the memory block identified by\n offset size is not fully inside memory total\\_size.\n* [CVE-2017-5333](https://security-tracker.debian.org/tracker/CVE-2017-5333)\nThe memory check was not stringent enough on 64 bit systems.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.29.1-5deb7u1.\n\n\nWe recommend that you upgrade your icoutils packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "icoutils",
+				"purl": "pkg:deb/debian/icoutils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.29.1-5deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.29.1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-789-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-789"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-442-1",
+	"modified": "2023-06-28T06:34:02.640917Z",
+	"published": "2016-02-29T00:00:00Z",
+	"related": [
+		"CVE-2013-6441",
+		"CVE-2015-1335"
+	],
+	"summary": "lxc - security update",
+	"details": "\n* [CVE-2013-6441](https://security-tracker.debian.org/tracker/CVE-2013-6441)\nThe template script lxc-sshd used to mount itself as /sbin/init in the\n container using a writable bind-mount.\n\n\nThis update resolved the above issue by using a read-only bind-mount\n instead preventing any form of potentially accidental damage.\n* [CVE-2015-1335](https://security-tracker.debian.org/tracker/CVE-2015-1335)\nOn container startup, lxc sets up the container's initial file system\n tree by doing a bunch of mounting, guided by the container's configuration\n file.\n\n\nThe container config is owned by the admin or user on the host, so we\n do not try to guard against bad entries. However, since the mount\n target is in the container, it's possible that the container admin\n could divert the mount with symbolic links. This could bypass proper\n container startup (i.e. confinement of a root-owned container by the\n restrictive apparmor policy, by diverting the required write to\n /proc/self/attr/current), or bypass the (path-based) apparmor policy\n by diverting, say, /proc to /mnt in the container.\n\n\nThis update implements a safe\\_mount() function that prevents lxc from\n doing mounts onto symbolic links.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "lxc",
+				"purl": "pkg:deb/debian/lxc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.2-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-442-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-442"
+		}
+	]
+}

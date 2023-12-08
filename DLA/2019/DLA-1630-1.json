@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1630-1",
+	"modified": "2023-06-28T06:26:25.428249Z",
+	"published": "2019-01-07T00:00:00Z",
+	"related": [
+		"CVE-2017-14055",
+		"CVE-2017-14056",
+		"CVE-2017-14057",
+		"CVE-2017-14170",
+		"CVE-2017-14171",
+		"CVE-2017-14767",
+		"CVE-2017-15672",
+		"CVE-2017-17130",
+		"CVE-2017-9993",
+		"CVE-2017-9994",
+		"CVE-2018-14394",
+		"CVE-2018-1999010",
+		"CVE-2018-6621",
+		"CVE-2018-7557"
+	],
+	"summary": "libav - security update",
+	"details": "\nSeveral security vulnerabilities were corrected in the libav\nmultimedia library which may lead to a denial-of-service, information\ndisclosure or the execution of arbitrary code if a malformed file is\nprocessed.\n\n\n* [CVE-2017-9993](https://security-tracker.debian.org/tracker/CVE-2017-9993)\nLibav does not properly restrict HTTP Live Streaming filename\n extensions and demuxer names, which allows attackers to read\n arbitrary files via crafted playlist data.\n* [CVE-2017-9994](https://security-tracker.debian.org/tracker/CVE-2017-9994)\nlibavcodec/webp.c in Libav does not ensure that pix\\_fmt is set,\n which allows remote attackers to cause a denial of service\n (heap-based buffer overflow and application crash) or possibly have\n unspecified other impact via a crafted file, related to the\n vp8\\_decode\\_mb\\_row\\_no\\_filter and pred8x8\\_128\\_dc\\_8\\_c functions.\n* [CVE-2017-14055](https://security-tracker.debian.org/tracker/CVE-2017-14055)\nDenial-of-service in mv\\_read\\_header() due to lack of an EOF (End of\n File) check might cause huge CPU and memory consumption.\n* [CVE-2017-14056](https://security-tracker.debian.org/tracker/CVE-2017-14056)\nDenial-of-service in rl2\\_read\\_header() due to lack of an EOF\n (End of File) check might cause huge CPU and memory consumption.\n* [CVE-2017-14057](https://security-tracker.debian.org/tracker/CVE-2017-14057)\nDenial-of-service in asf\\_read\\_marker() due to lack of an EOF\n (End of File) check might cause huge CPU and memory consumption.\n* [CVE-2017-14170](https://security-tracker.debian.org/tracker/CVE-2017-14170)\nDenial-of-service in mxf\\_read\\_index\\_entry\\_array() due to lack of an\n EOF (End of File) check might cause huge CPU consumption.\n* [CVE-2017-14171](https://security-tracker.debian.org/tracker/CVE-2017-14171)\nDenial-of-service in nsv\\_parse\\_NSVf\\_header() due to lack of an EOF\n (End of File) check might cause huge CPU consumption.\n* [CVE-2017-14767](https://security-tracker.debian.org/tracker/CVE-2017-14767)\nThe sdp\\_parse\\_fmtp\\_config\\_h264 function in\n libavformat/rtpdec\\_h264.c mishandles empty sprop-parameter-sets\n values, which allows remote attackers to cause a denial of service\n (heap buffer overflow) or possibly have unspecified other impact via\n a crafted sdp file.\n* [CVE-2017-15672](https://security-tracker.debian.org/tracker/CVE-2017-15672)\nThe read\\_header function in libavcodec/ffv1dec.c allows remote\n attackers to have unspecified impact via a crafted MP4 file, which\n triggers an out-of-bounds read.\n* [CVE-2017-17130](https://security-tracker.debian.org/tracker/CVE-2017-17130)\nThe ff\\_free\\_picture\\_tables function in libavcodec/mpegpicture.c\n allows remote attackers to cause a denial of service\n (heap-based buffer overflow and application crash) or possibly have\n unspecified other impact via a crafted file, related to\n vc1\\_decode\\_i\\_blocks\\_adv.\n* [CVE-2018-6621](https://security-tracker.debian.org/tracker/CVE-2018-6621)\nThe decode\\_frame function in libavcodec/utvideodec.c in Libav allows\n remote attackers to cause a denial of service (out of array read)\n via a crafted AVI file.\n* [CVE-2018-7557](https://security-tracker.debian.org/tracker/CVE-2018-7557)\nThe decode\\_init function in libavcodec/utvideodec.c in\n Libav allows remote attackers to cause a denial of service\n (Out of array read) via an AVI file with crafted dimensions within\n chroma subsampling data.\n* [CVE-2018-14394](https://security-tracker.debian.org/tracker/CVE-2018-14394)\nlibavformat/movenc.c in Libav allows attackers to cause a\n denial of service (application crash caused by a divide-by-zero\n error) with a user crafted Waveform audio file.\n* [CVE-2018-1999010](https://security-tracker.debian.org/tracker/CVE-2018-1999010)\nLibav contains multiple out of array access vulnerabilities in the\n mms protocol that can result in attackers accessing out of bound\n data.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n6:11.12-1~deb8u4.\n\n\nWe recommend that you upgrade your libav packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libav",
+				"purl": "pkg:deb/debian/libav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:11.12-1~deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:11.11-1~deb8u1",
+				"6:11.12-1~deb8u1",
+				"6:11.12-1~deb8u2",
+				"6:11.12-1~deb8u3",
+				"6:11.3-1",
+				"6:11.3-1+deb8u1",
+				"6:11.3-2",
+				"6:11.3-3",
+				"6:11.4-1",
+				"6:11.4-1~deb8u1",
+				"6:11.4-2",
+				"6:11.4-2+x32.1",
+				"6:11.6-1~deb8u1",
+				"6:11.7-1~deb8u1",
+				"6:11.8-1~deb8u1",
+				"6:11.9-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1630-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1630"
+		}
+	]
+}

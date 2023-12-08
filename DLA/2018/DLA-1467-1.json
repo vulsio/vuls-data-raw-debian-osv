@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1467-1",
+	"modified": "2023-06-28T06:24:33.199124Z",
+	"published": "2018-08-15T00:00:00Z",
+	"related": [
+		"CVE-2018-1000544"
+	],
+	"summary": "ruby-zip - security update",
+	"details": "\nIt was found that rubyzip, a Ruby module for reading and writing zip\nfiles, contained a Directory Traversal vulnerability that can be\nexploited to write arbitrary files to the filesystem.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.1.6-1+deb8u2.\n\n\nWe recommend that you upgrade your ruby-zip packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ruby-zip",
+				"purl": "pkg:deb/debian/ruby-zip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.6-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.6-1",
+				"1.1.6-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1467-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1467"
+		}
+	]
+}

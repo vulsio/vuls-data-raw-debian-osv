@@ -1,0 +1,150 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3434-1",
+	"modified": "2023-10-16T00:12:00.861284Z",
+	"published": "2016-01-05T00:00:00Z",
+	"related": [
+		"CVE-2015-7513",
+		"CVE-2015-7550",
+		"CVE-2015-8550",
+		"CVE-2015-8551",
+		"CVE-2015-8552",
+		"CVE-2015-8569",
+		"CVE-2015-8575"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleak.\n\n\n* [CVE-2015-7513](https://security-tracker.debian.org/tracker/CVE-2015-7513)\nIt was discovered that a local user permitted to use the x86 KVM\n subsystem could configure the PIT emulation to cause a denial of\n service (crash).\n* [CVE-2015-7550](https://security-tracker.debian.org/tracker/CVE-2015-7550)\nDmitry Vyukov discovered a race condition in the keyring subsystem\n that allows a local user to cause a denial of service (crash).\n* [CVE-2015-8543](https://security-tracker.debian.org/tracker/CVE-2015-8543)\nIt was discovered that a local user permitted to create raw sockets\n could cause a denial-of-service by specifying an invalid protocol\n number for the socket. The attacker must have the CAP\\_NET\\_RAW\n capability.\n* [CVE-2015-8550](https://security-tracker.debian.org/tracker/CVE-2015-8550)\nFelix Wilhelm of ERNW discovered that the Xen PV backend drivers\n may read critical data from shared memory multiple times. This\n flaw can be used by a guest kernel to cause a denial of service\n (crash) on the host, or possibly for privilege escalation.\n* [CVE-2015-8551](https://security-tracker.debian.org/tracker/CVE-2015-8551) /\n [CVE-2015-8552](https://security-tracker.debian.org/tracker/CVE-2015-8552)\nKonrad Rzeszutek Wilk of Oracle discovered that the Xen PCI\n backend driver does not adequately validate the device state when\n a guest configures MSIs. This flaw can be used by a guest kernel\n to cause a denial of service (crash or disk space exhaustion) on\n the host.\n* [CVE-2015-8569](https://security-tracker.debian.org/tracker/CVE-2015-8569)\nDmitry Vyukov discovered a flaw in the PPTP sockets implementation\n that leads to an information leak to local users.\n* [CVE-2015-8575](https://security-tracker.debian.org/tracker/CVE-2015-8575)\nDavid Miller discovered a flaw in the Bluetooth SCO sockets\n implementation that leads to an information leak to local users.\n* [CVE-2015-8709](https://security-tracker.debian.org/tracker/CVE-2015-8709)\nJann Horn discovered a flaw in the permission checks for use of\n the ptrace feature. A local user who has the CAP\\_SYS\\_PTRACE\n capability within their own user namespace could use this flaw for\n privilege escalation if a more privileged process ever enters that\n user namespace. This affects at least the LXC system.\n\n\nIn addition, this update fixes some regressions in the previous update:\n\n\n* [#808293](https://bugs.debian.org/808293)\nA regression in the UDP implementation prevented freeradius and\n some other applications from receiving data.\n* [#808602](https://bugs.debian.org/808602) / \n [#808953](https://bugs.debian.org/808953)\nA regression in the USB XHCI driver prevented use of some devices\n in USB 3 SuperSpeed ports.\n* [#808973](https://bugs.debian.org/808973)\nA fix to the radeon driver interacted with an existing bug to\n cause a crash at boot when using some AMD/ATI graphics cards.\n This issue only affects wheezy.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 3.2.73-2+deb7u2. The oldstable distribution (wheezy) is not\naffected by [CVE-2015-8709](https://security-tracker.debian.org/tracker/CVE-2015-8709).\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.7-ckt20-1+deb8u2. \n[CVE-2015-8543](https://security-tracker.debian.org/tracker/CVE-2015-8543) \nwas already fixed in version 3.16.7-ckt20-1+deb8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.3.3-3 or earlier.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.73-2+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1",
+				"3.2.63-2+deb7u1~bpo60+1",
+				"3.2.63-2+deb7u2",
+				"3.2.63-2+deb7u2~bpo60+1",
+				"3.2.65-1",
+				"3.2.65-1+deb7u1",
+				"3.2.65-1+deb7u1~bpo60+1",
+				"3.2.65-1+deb7u2",
+				"3.2.65-1+deb7u2~bpo60+1",
+				"3.2.68-1",
+				"3.2.68-1+deb7u1",
+				"3.2.68-1+deb7u1~bpo60+1",
+				"3.2.68-1+deb7u2",
+				"3.2.68-1+deb7u2~bpo60+1",
+				"3.2.68-1+deb7u3",
+				"3.2.68-1+deb7u3~bpo60+1",
+				"3.2.68-1+deb7u4",
+				"3.2.68-1+deb7u4~bpo60+1",
+				"3.2.68-1+deb7u5",
+				"3.2.68-1+deb7u6",
+				"3.2.68-1+deb7u6~bpo60+1",
+				"3.2.71-1",
+				"3.2.71-2",
+				"3.2.73-1",
+				"3.2.73-2",
+				"3.2.73-2+deb7u1",
+				"3.2.73-2+deb7u2~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3434-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.7-ckt20-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3434-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3434"
+		}
+	]
+}

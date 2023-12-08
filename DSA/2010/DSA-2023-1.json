@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2023-1",
+	"modified": "2023-10-16T00:10:53.936082Z",
+	"published": "2010-03-28T00:00:00Z",
+	"related": [
+		"CVE-2010-0734"
+	],
+	"summary": "curl - arbitrary code execution",
+	"details": "\nWesley Miaw discovered that libcurl, a multi-protocol file transfer\nlibrary, is prone to a buffer overflow via the callback function when\nan application relies on libcurl to automatically uncompress data. Note\nthat this only affects applications that trust libcurl's maximum limit\nfor a fixed buffer size and do not perform any sanity checks themselves.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 7.18.2-8lenny4.\n\n\nDue to a problem with the archive software, we are unable to release all\narchitectures simultaneously. Binaries for the hppa, ia64, mips, mipsel\nand s390 architectures will be provided once they are available.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), this problem has been fixed in version 7.20.0-1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.18.2-8lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.18.2-8",
+				"7.18.2-8lenny2",
+				"7.18.2-8lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2023-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2023"
+		}
+	]
+}

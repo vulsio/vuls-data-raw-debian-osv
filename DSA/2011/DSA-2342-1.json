@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2342-1",
+	"modified": "2023-10-16T00:11:09.646475Z",
+	"published": "2011-11-09T00:00:00Z",
+	"related": [
+		"CVE-2011-3647",
+		"CVE-2011-3648",
+		"CVE-2011-3650"
+	],
+	"summary": "iceape - several",
+	"details": "\nSeveral vulnerabilities have been found in the Iceape internet suite, an\nunbranded version of Seamonkey:\n\n\n* [CVE-2011-3647](https://security-tracker.debian.org/tracker/CVE-2011-3647)\nmoz\\_bug\\_r\\_a4 discovered a privilege escalation vulnerability in\n addon handling.\n* [CVE-2011-3648](https://security-tracker.debian.org/tracker/CVE-2011-3648)\nYosuke Hasegawa discovered that incorrect handling of Shift-JIS\n encodings could lead to cross-site scripting.\n* [CVE-2011-3650](https://security-tracker.debian.org/tracker/CVE-2011-3650)\nMarc Schoenefeld discovered that profiling the JavaScript code\n could lead to memory corruption.\n\n\nThe oldstable distribution (lenny) is not affected. The iceape package only\nprovides the XPCOM code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.0.11-9.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.0.14-9.\n\n\nWe recommend that you upgrade your iceape packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "iceape",
+				"purl": "pkg:deb/debian/iceape?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.11-9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.11-2",
+				"2.0.11-3",
+				"2.0.11-4",
+				"2.0.11-5",
+				"2.0.11-6",
+				"2.0.11-7",
+				"2.0.11-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2342-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2342"
+		}
+	]
+}

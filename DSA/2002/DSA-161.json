@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-161",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-09-04T00:00:00Z",
+	"related": [
+		"CVE-2002-1115",
+		"CVE-2002-1116"
+	],
+	"summary": "mantis - privilege escalation",
+	"details": "\nA problem with user privileges has been discovered in the Mantis\npackage, a PHP based bug tracking system. The Mantis system didn't\ncheck whether a user is permitted to view a bug, but displays it right\naway if the user entered a valid bug id.\n\n\nAnother bug in Mantis caused the 'View Bugs' page to list bugs from\nboth public and private projects when no projects are accessible to\nthe current user.\n\n\nThese problems have been fixed in version 0.17.1-2.5 for the current\nstable distribution (woody) and in version 0.17.5-2 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected, since it doesn't contain the mantis package.\n\n\nAdditional information:\n\n\n* [Mantis Advisory/2002-06](http://mantisbt.sourceforge.net/advisories/2002/2002-06.txt)* [Mantis Advisory/2002-07](http://mantisbt.sourceforge.net/advisories/2002/2002-07.txt)\n\n\nWe recommend that you upgrade your mantis packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mantis",
+				"purl": "pkg:deb/debian/mantis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.17.1-2.5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-161.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-161"
+		}
+	]
+}

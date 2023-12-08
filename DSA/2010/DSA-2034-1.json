@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2034-1",
+	"modified": "2023-10-16T00:05:42.978821Z",
+	"published": "2010-04-17T00:00:00Z",
+	"related": [
+		"CVE-2008-7251",
+		"CVE-2008-7252",
+		"CVE-2009-4605"
+	],
+	"summary": "phpmyadmin - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in phpMyAdmin, a tool\nto administer MySQL over the web. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2008-7251](https://security-tracker.debian.org/tracker/CVE-2008-7251)\nphpMyAdmin may create a temporary directory, if the configured directory\n does not exist yet, with insecure filesystem permissions.\n* [CVE-2008-7252](https://security-tracker.debian.org/tracker/CVE-2008-7252)\nphpMyAdmin uses predictable filenames for temporary files, which may\n lead to a local denial of service attack or privilege escalation.\n* [CVE-2009-4605](https://security-tracker.debian.org/tracker/CVE-2009-4605)\nThe setup.php script shipped with phpMyAdmin may unserialize untrusted\n data, allowing for cross site request forgery.\n\n\nFor the stable distribution (lenny), these problems have been fixed in version\nphpmyadmin 2.11.8.1-5+lenny4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.2.4-1.\n\n\nWe recommend that you upgrade your phpmyadmin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.11.8.1-5+lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.11.8.1-5",
+				"4:2.11.8.1-5+lenny1",
+				"4:2.11.8.1-5+lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2034-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2034"
+		}
+	]
+}

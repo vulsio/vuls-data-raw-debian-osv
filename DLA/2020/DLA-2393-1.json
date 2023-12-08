@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2393-1",
+	"modified": "2023-06-28T06:26:32.877720Z",
+	"published": "2020-10-02T00:00:00Z",
+	"related": [
+		"CVE-2020-24361"
+	],
+	"summary": "snmptt - security update",
+	"details": "\nIt was found that SNMP Trap Translator does not drop privileges as configured and does not properly escape shell commands in certain functions. A remote attacker, by sending a malicious crafted SNMP trap, could possibly execute arbitrary shell code with the privileges of the process or cause a Denial of Service condition.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.4-1+deb9u1.\n\n\nWe recommend that you upgrade your snmptt packages.\n\n\nFor the detailed security status of snmptt please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/snmptt>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "snmptt",
+				"purl": "pkg:deb/debian/snmptt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2393-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2393"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-136-1",
+	"modified": "2023-06-28T06:19:55.823917Z",
+	"published": "2015-01-24T00:00:00Z",
+	"related": [
+		"CVE-2013-6892"
+	],
+	"summary": "websvn - security update",
+	"details": "\nJames Clawson discovered that websvn, a web viewer for Subversion\nrepositories, would follow symlinks in a repository when presenting a\nfile for download. An attacker with repository write access could\nthereby access any file on disk readable by the user the webserver\nruns as.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in websvn version 2.3.3-1+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "websvn",
+				"purl": "pkg:deb/debian/websvn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.1-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-136-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-136"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1870-1",
+	"modified": "2023-10-16T00:10:43.016224Z",
+	"published": "2009-08-19T00:00:00Z",
+	"related": [
+		"CVE-2009-2694"
+	],
+	"summary": "pidgin - insufficient input sanitization",
+	"details": "\nFederico Muttis discovered that libpurple, the shared library that adds\nsupport for various instant messaging networks to the pidgin IM client, is\nvulnerable to a heap-based buffer overflow. This issue exists because of\nan incomplete fix for [CVE-2008-2927](https://security-tracker.debian.org/tracker/CVE-2008-2927) and [CVE-2009-1376](https://security-tracker.debian.org/tracker/CVE-2009-1376). An attacker can\nexploit this by sending two consecutive SLP packets to a victim via MSN.\n\n\nThe first packet is used to create an SLP message object with an offset of\nzero, the second packet then contains a crafted offset which hits the\nvulnerable code originally fixed in [CVE-2008-2927](https://security-tracker.debian.org/tracker/CVE-2008-2927) and [CVE-2009-1376](https://security-tracker.debian.org/tracker/CVE-2009-1376) and\nallows an attacker to execute arbitrary code.\n\n\nNote: Users with the \"Allow only the users below\" setting are not vulnerable\nto this attack. If you can't install the below updates you may want to\nset this via Tools->Privacy.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.4.3-4lenny3.\n\n\nFor the testing distribution (squeeze), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.5.9-1.\n\n\nWe recommend that you upgrade your pidgin packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "pidgin",
+				"purl": "pkg:deb/debian/pidgin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.3-4lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.3-4",
+				"2.4.3-4lenny1",
+				"2.4.3-4lenny1~bpo40+1",
+				"2.4.3-4lenny1~volatile0",
+				"2.4.3-4lenny2",
+				"2.4.3-4lenny2~bpo40+1",
+				"2.4.3-4lenny3~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1870-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1870"
+		}
+	]
+}

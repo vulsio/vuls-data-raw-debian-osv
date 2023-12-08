@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-234-1",
+	"modified": "2023-06-28T06:26:31.042863Z",
+	"published": "2015-05-30T00:00:00Z",
+	"related": [
+		"CVE-2015-4047"
+	],
+	"summary": "ipsec-tools - security update",
+	"details": "\nJavantea discovered a NULL pointer dereference flaw in racoon, the\nInternet Key Exchange daemon of ipsec-tools. A remote attacker can use\nthis flaw to cause the IKE daemon to crash via specially crafted UDP\npackets, resulting in a denial of service.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ipsec-tools",
+				"purl": "pkg:deb/debian/ipsec-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.7.3-12+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.7.3-12"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-234-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-234"
+		}
+	]
+}

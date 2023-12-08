@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4962-2",
+	"modified": "2023-10-16T00:32:09.743573Z",
+	"published": "2021-08-23T00:00:00Z",
+	"summary": "ledgersmb - regression update",
+	"details": "\nSeveral vulnerabilities were discovered in LedgerSMB, a financial\naccounting and ERP program, which could result in cross-site scripting\nor clickjacking.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 1.6.9+ds-1+deb10u2.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.6.9+ds-2+deb11u2.\n\n\nWe recommend that you upgrade your ledgersmb packages.\n\n\nFor the detailed security status of ledgersmb please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ledgersmb](https://security-tracker.debian.org/tracker/ledgersmb)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ledgersmb",
+				"purl": "pkg:deb/debian/ledgersmb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.9+ds-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.9+ds-1",
+				"1.6.9+ds-1+deb10u1",
+				"1.6.9+ds-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4962-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "ledgersmb",
+				"purl": "pkg:deb/debian/ledgersmb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.9+ds-2+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.9+ds-2",
+				"1.6.9+ds-2+deb11u1",
+				"1.6.9+ds-2+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4962-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4962"
+		}
+	]
+}

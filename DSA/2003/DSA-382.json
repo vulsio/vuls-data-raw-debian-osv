@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-382",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-09-16T00:00:00Z",
+	"related": [
+		"CVE-2003-0682",
+		"CVE-2003-0693",
+		"CVE-2003-0695"
+	],
+	"summary": "ssh - possible remote vulnerability",
+	"details": "\nA bug has been found in OpenSSH's buffer handling where a buffer could\nbe marked as grown when the actual reallocation failed.\n\n\n*DSA-382-2*:\nThis advisory is an addition to the earlier DSA-382-1 advisory: two more\nbuffer handling problems have been found in addition to the one\ndescribed in DSA-382-1. It is not known if these bugs are exploitable,\nbut as a precaution an upgrade is advised.\n\n\n*DSA-382-3*:\nThis advisory is an addition to the earlier DSA-382-1 and DSA-382-2\nadvisories: Solar Designer found four more bugs in OpenSSH that may be\nexploitable.\n\n\nFor the Debian stable distribution (woody) these bugs have been fixed \nin version\n1:3.4p1-1.woody.3.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "openssh",
+				"purl": "pkg:deb/debian/openssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:3.4p1-1.woody.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-382.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-382"
+		}
+	]
+}

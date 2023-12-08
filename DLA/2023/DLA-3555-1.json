@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3555-1",
+	"modified": "2023-09-05T22:15:20.695974Z",
+	"published": "2023-09-05T00:00:00Z",
+	"related": [
+		"CVE-2023-3823",
+		"CVE-2023-3824"
+	],
+	"summary": "php7.3 - security update",
+	"details": "\nSecurity issues were found in PHP, a widely-used open source general\npurpose scripting language, which could result in information\ndisclosure, denial of service or potentially remote code execution.\n\n\n* [CVE-2023-3823](https://security-tracker.debian.org/tracker/CVE-2023-3823)\nVarious XML functions rely on libxml global state to track\n configuration variables, like whether external entities are loaded.\n This state is assumed to be unchanged unless the user explicitly\n changes it by calling appropriate function. Joas Schilling and\n Baptista Katapi discovered that, since the state is process-global,\n other modules â such as ImageMagick â may also use this library\n within the same process and change that global state for their\n internal purposes, and leave it in a state where external entities\n loading is enabled. This can lead to the situation where external\n XML is parsed with external entities loaded, which can lead to\n disclosure of any local files accessible to PHP. This vulnerable\n state may persist in the same process across many requests, until\n the process is shut down.\n* [CVE-2023-3824](https://security-tracker.debian.org/tracker/CVE-2023-3824)\nNiels Dossche discovered that when loading a Phar file, while\n reading PHAR directory entries, insufficient length checking may\n lead to a stack buffer overflow, leading potentially to memory\n corruption or RCE.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n7.3.31-1~deb10u5.\n\n\nWe recommend that you upgrade your php7.3 packages.\n\n\nFor the detailed security status of php7.3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/php7.3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "php7.3",
+				"purl": "pkg:deb/debian/php7.3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.3.31-1~deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.3.10-1",
+				"7.3.11-1~deb10u1",
+				"7.3.12-1",
+				"7.3.14-1~deb10u1",
+				"7.3.15-1",
+				"7.3.15-2",
+				"7.3.15-3",
+				"7.3.19-1~deb10u1",
+				"7.3.27-1~deb10u1",
+				"7.3.29-1~deb10u1",
+				"7.3.31-1~deb10u1",
+				"7.3.31-1~deb10u2",
+				"7.3.31-1~deb10u3",
+				"7.3.31-1~deb10u4",
+				"7.3.4-2",
+				"7.3.6-1",
+				"7.3.8-1",
+				"7.3.9-1",
+				"7.3.9-1~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3555-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3555"
+		}
+	]
+}

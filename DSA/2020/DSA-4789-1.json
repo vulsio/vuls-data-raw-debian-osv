@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4789-1",
+	"modified": "2023-10-16T00:29:32.598333Z",
+	"published": "2020-11-12T00:00:00Z",
+	"related": [
+		"CVE-2020-7760"
+	],
+	"summary": "codemirror-js - security update",
+	"details": "\nIt was discovered that codemirror, a browser-based text editor\nimplemented in JavaScript, was vulnerable to regular expression\ndenial-of-service.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 5.43.0-1+deb10u1.\n\n\nWe recommend that you upgrade your codemirror-js packages.\n\n\nFor the detailed security status of codemirror-js please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/codemirror-js](https://security-tracker.debian.org/tracker/codemirror-js)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "codemirror-js",
+				"purl": "pkg:deb/debian/codemirror-js?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.43.0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.43.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4789-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4789"
+		}
+	]
+}

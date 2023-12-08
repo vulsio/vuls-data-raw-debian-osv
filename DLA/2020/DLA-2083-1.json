@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2083-1",
+	"modified": "2023-06-28T06:26:27.484525Z",
+	"published": "2020-01-29T00:00:00Z",
+	"related": [
+		"CVE-2020-7105"
+	],
+	"summary": "hiredis - security update",
+	"details": "\nIt was discovered that there were a large number of NULL pointer\ndereferences due to unchecked return values from malloc\nand friends in hiredis, a minimalistic C client library.\n\n\n* [CVE-2020-7105](https://security-tracker.debian.org/tracker/CVE-2020-7105)\nasync.c and dict.c in libhiredis.a in hiredis through 0.14.0 allow a\n NULL pointer dereference because malloc return values are\n unchecked.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.11.0-4+deb8u1.\n\n\nWe recommend that you upgrade your hiredis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "hiredis",
+				"purl": "pkg:deb/debian/hiredis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.11.0-4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.11.0-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2083-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2083"
+		}
+	]
+}

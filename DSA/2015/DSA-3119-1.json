@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3119-1",
+	"modified": "2023-10-16T00:06:13.470658Z",
+	"published": "2015-01-06T00:00:00Z",
+	"related": [
+		"CVE-2014-6272",
+		"CVE-2015-6525"
+	],
+	"summary": "libevent - security update",
+	"details": "\nAndrew Bartlett of Catalyst reported a defect affecting certain\napplications using the Libevent evbuffer API. This defect leaves\napplications which pass insanely large inputs to evbuffers open to a\npossible heap overflow or infinite loop. In order to exploit this flaw,\nan attacker needs to be able to find a way to provoke the program into\ntrying to make a buffer chunk larger than what will fit into a single\nsize\\_t or off\\_t.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.0.19-stable-3+deb7u1.\n\n\nFor the upcoming stable distribution (jessie) and the unstable\ndistribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your libevent packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libevent",
+				"purl": "pkg:deb/debian/libevent?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.19-stable-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.19-stable-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3119-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3119"
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-992-1",
+	"modified": "2023-06-28T06:39:05.355431Z",
+	"published": "2017-06-19T00:00:00Z",
+	"related": [
+		"CVE-2017-1000366"
+	],
+	"summary": "eglibc - security update",
+	"details": "\nThe Qualys Research Labs discovered various problems in the dynamic\nlinker of the GNU C Library which allow local privilege escalation by\nclashing the stack. For the full details, please refer to their advisory\npublished at:\n<https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt>\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.13-38+deb7u12.\n\n\nWe recommend that you upgrade your eglibc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "eglibc",
+				"purl": "pkg:deb/debian/eglibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.13-38+deb7u12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13-38",
+				"2.13-38+deb7u1",
+				"2.13-38+deb7u10",
+				"2.13-38+deb7u11",
+				"2.13-38+deb7u2",
+				"2.13-38+deb7u3",
+				"2.13-38+deb7u4",
+				"2.13-38+deb7u5",
+				"2.13-38+deb7u6",
+				"2.13-38+deb7u7",
+				"2.13-38+deb7u8",
+				"2.13-38+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-992-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-992"
+		}
+	]
+}

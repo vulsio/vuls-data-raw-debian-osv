@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-426",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-01-18T00:00:00Z",
+	"related": [
+		"CVE-2003-0924"
+	],
+	"summary": "netpbm-free - insecure temporary files",
+	"details": "\nnetpbm is a graphics conversion toolkit made up of a large number of\nsingle-purpose programs. Many of these programs were found to create\ntemporary files in an insecure manner, which could allow a local\nattacker to overwrite files with the privileges of the user invoking a\nvulnerable netpbm tool.\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 2:9.20-8.4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2:9.25-9.\n\n\nWe recommend that you update your netpbm-free package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "netpbm-free",
+				"purl": "pkg:deb/debian/netpbm-free?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:9.20-8.4"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-426.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-426"
+		}
+	]
+}

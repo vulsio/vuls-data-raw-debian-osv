@@ -1,0 +1,86 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5024-1",
+	"modified": "2023-10-16T00:29:09.345859Z",
+	"published": "2021-12-18T00:00:00Z",
+	"related": [
+		"CVE-2021-45105"
+	],
+	"summary": "apache-log4j2 - security update",
+	"details": "\nIt was found that Apache Log4j2, a Logging Framework for Java, did not protect\nfrom uncontrolled recursion from self-referential lookups. When the logging\nconfiguration uses a non-default Pattern Layout with a Context Lookup (for\nexample, $${ctx:loginId}), attackers with control over Thread Context Map (MDC)\ninput data can craft malicious input data that contains a recursive lookup,\nresulting in a denial of service.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2.17.0-1~deb10u1.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.17.0-1~deb11u1.\n\n\nWe recommend that you upgrade your apache-log4j2 packages.\n\n\nFor the detailed security status of apache-log4j2 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/apache-log4j2](https://security-tracker.debian.org/tracker/apache-log4j2)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "apache-log4j2",
+				"purl": "pkg:deb/debian/apache-log4j2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.17.0-1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11.1-2",
+				"2.11.2-1",
+				"2.13.3-1",
+				"2.15.0-1",
+				"2.15.0-1~deb10u1",
+				"2.15.0-1~deb11u1",
+				"2.16.0-1",
+				"2.16.0-1~deb10u1",
+				"2.16.0-1~deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5024-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "apache-log4j2",
+				"purl": "pkg:deb/debian/apache-log4j2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.17.0-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13.3-1",
+				"2.15.0-1",
+				"2.15.0-1~deb10u1",
+				"2.15.0-1~deb11u1",
+				"2.16.0-1",
+				"2.16.0-1~deb10u1",
+				"2.16.0-1~deb11u1",
+				"2.17.0-1~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5024-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-5024"
+		}
+	]
+}

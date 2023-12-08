@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4579-1",
+	"modified": "2023-10-16T00:14:20.557088Z",
+	"published": "2019-12-06T00:00:00Z",
+	"related": [
+		"CVE-2019-11745",
+		"CVE-2019-17007"
+	],
+	"summary": "nss - security update",
+	"details": "\nTwo vulnerabilities were discovered in NSS, a set of cryptographic\nlibraries, which may result in denial of service and potentially the\nexecution of arbitrary code.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2:3.42.1-1+deb10u2.\n\n\nWe recommend that you upgrade your nss packages.\n\n\nFor the detailed security status of nss please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/nss](https://security-tracker.debian.org/tracker/nss)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.42.1-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.42.1-1",
+				"2:3.42.1-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4579-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4579"
+		}
+	]
+}

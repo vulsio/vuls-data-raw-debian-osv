@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1556-2",
+	"modified": "2023-10-16T00:05:28.301238Z",
+	"published": "2008-04-24T00:00:00Z",
+	"related": [
+		"CVE-2008-1927"
+	],
+	"summary": "perl - denial of service",
+	"details": "\nIt has been discovered that the Perl interpreter may encounter a buffer\noverflow condition when compiling certain regular expressions containing\nUnicode characters. This also happens if the offending characters are\ncontained in a variable reference protected by the \\Q...\\E quoting\nconstruct. When encountering this condition, the Perl interpreter\ntypically crashes, but arbitrary code execution cannot be ruled out.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 5.8.8-7etch3.\n\n\nThe unstable distribution (sid) will be fixed soon.\n\n\nWe recommend that you upgrade your perl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "perl",
+				"purl": "pkg:deb/debian/perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.8.8-7etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.8.8-7",
+				"5.8.8-7etch1",
+				"5.8.8-7etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1556-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1556"
+		}
+	]
+}

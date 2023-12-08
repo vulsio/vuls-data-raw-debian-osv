@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2719-1",
+	"modified": "2023-10-16T00:11:27.846972Z",
+	"published": "2013-07-10T00:00:00Z",
+	"related": [
+		"CVE-2013-1788",
+		"CVE-2013-1790"
+	],
+	"summary": "poppler - multiple issues",
+	"details": "\nMultiple vulnerabilities were discovered in the poppler PDF rendering\nlibrary.\n\n\n* [CVE-2013-1788](https://security-tracker.debian.org/tracker/CVE-2013-1788)\nMultiple invalid memory access issues, which could potentially lead\n to arbitrary code execution if the user were tricked into opening a\n malformed PDF document.\n* [CVE-2013-1790](https://security-tracker.debian.org/tracker/CVE-2013-1790)\nAn uninitialized memory issue, which could potentially lead to\n arbitrary code execution if the user were tricked into opening a\n malformed PDF document.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 0.12.4-1.2+squeeze3.\n\n\nFor the stable (wheezy), testing (jessie), and unstable (sid)\ndistributions, these problems have been fixed in version 0.18.4-6.\n\n\nWe recommend that you upgrade your poppler packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "poppler",
+				"purl": "pkg:deb/debian/poppler?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.12.4-1.2+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.12.4-1.2",
+				"0.12.4-1.2+squeeze1",
+				"0.12.4-1.2+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2719-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2719"
+		}
+	]
+}

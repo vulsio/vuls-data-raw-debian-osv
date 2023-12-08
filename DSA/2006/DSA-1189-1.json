@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1189-1",
+	"modified": "2023-10-16T00:10:11.377042Z",
+	"published": "2006-10-04T00:00:00Z",
+	"related": [
+		"CVE-2006-4924",
+		"CVE-2006-5051"
+	],
+	"summary": "openssh-krb5",
+	"details": "\nSeveral remote vulnerabilities have been discovered in OpenSSH, a free\nimplementation of the Secure Shell protocol, which may lead to denial of\nservice and potentially the execution of arbitrary code. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2006-4924](https://security-tracker.debian.org/tracker/CVE-2006-4924)\nTavis Ormandy of the Google Security Team discovered a denial of\n service vulnerability in the mitigation code against complexity\n attacks, which might lead to increased CPU consumption until a\n timeout is triggered. This is only exploitable if support for \n SSH protocol version 1 is enabled.\n* [CVE-2006-5051](https://security-tracker.debian.org/tracker/CVE-2006-5051)\nMark Dowd discovered that insecure signal handler usage could\n potentially lead to execution of arbitrary code through a double\n free. The Debian Security Team doesn't believe the general openssh\n package without Kerberos support to be exploitable by this issue.\n However, due to the complexity of the underlying code we will\n issue an update to rule out all eventualities.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 3.8.1p1-7sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.3p2-4 of openssh. openssh-krb5 will soon be converted towards\na transitional package against openssh.\n\n\nWe recommend that you upgrade your openssh-krb5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "openssh-krb5",
+				"purl": "pkg:deb/debian/openssh-krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.8.1p1-7sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.8.1p1-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1189-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1189"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2223-1",
+	"modified": "2023-10-16T00:05:50.287395Z",
+	"published": "2011-04-20T00:00:00Z",
+	"related": [
+		"CVE-2011-1522"
+	],
+	"summary": "doctrine - SQL injection",
+	"details": "\nIt was discovered that Doctrine, a PHP library for implementing object\npersistence, contains SQL injection vulnerabilities.\nThe exact impact depends on the application which uses the Doctrine\nlibrary.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.2.2-2+squeeze1.\n\n\nWe recommend that you upgrade your doctrine packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "doctrine",
+				"purl": "pkg:deb/debian/doctrine?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.2-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2223-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2223"
+		}
+	]
+}

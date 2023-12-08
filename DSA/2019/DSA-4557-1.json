@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4557-1",
+	"modified": "2023-10-16T00:13:59.667983Z",
+	"published": "2019-10-31T00:00:00Z",
+	"related": [
+		"CVE-2019-18408"
+	],
+	"summary": "libarchive - security update",
+	"details": "\nA use-after-free was found in libarchive, a multi-format archive and\ncompression library, which could result in denial of service and\npotentially the execution of arbitrary code is a malformed archive\nis processed.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 3.2.2-2+deb9u2.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 3.3.3-4+deb10u1.\n\n\nWe recommend that you upgrade your libarchive packages.\n\n\nFor the detailed security status of libarchive please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libarchive](https://security-tracker.debian.org/tracker/libarchive)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.2-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.2-2",
+				"3.2.2-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4557-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.3-4+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.3-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4557-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4557"
+		}
+	]
+}

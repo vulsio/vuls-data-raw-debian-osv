@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5271-1",
+	"modified": "2023-10-16T00:16:26.503460Z",
+	"published": "2022-11-05T00:00:00Z",
+	"related": [
+		"CVE-2022-40303",
+		"CVE-2022-40304"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in libxml2, a library providing\nsupport to read, modify and write XML and HTML files.\n\n\n* [CVE-2022-40303](https://security-tracker.debian.org/tracker/CVE-2022-40303)\nMaddie Stone discovered that missing safety checks in several\n functions can result in integer overflows when parsing a XML\n document with the XML\\_PARSE\\_HUGE option enabled.\n* [CVE-2022-40304](https://security-tracker.debian.org/tracker/CVE-2022-40304)\nNed Williamson and Nathan Wachholz discovered a vulnerability when\n handling detection of entity reference cycles, which may result in\n corrupted dictionary entries. This flaw may lead to logic errors,\n including memory errors like double free flaws.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2.9.10+dfsg-6.7+deb11u3.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFor the detailed security status of libxml2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/libxml2>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.10+dfsg-6.7+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.10+dfsg-6.7",
+				"2.9.10+dfsg-6.7+deb11u1",
+				"2.9.10+dfsg-6.7+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5271-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5271"
+		}
+	]
+}

@@ -1,0 +1,87 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2399-1",
+	"modified": "2023-10-16T00:11:13.587246Z",
+	"published": "2012-01-31T00:00:00Z",
+	"related": [
+		"CVE-2011-1938",
+		"CVE-2011-2483",
+		"CVE-2011-4566",
+		"CVE-2011-4885",
+		"CVE-2012-0057"
+	],
+	"summary": "php5 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in PHP, the web scripting\nlanguage. The Common Vulnerabilities and Exposures project identifies\nthe following issues:\n\n\n* [CVE-2011-1938](https://security-tracker.debian.org/tracker/CVE-2011-1938)\nThe UNIX socket handling allowed attackers to trigger a buffer overflow\n via a long path name.\n* [CVE-2011-2483](https://security-tracker.debian.org/tracker/CVE-2011-2483)\nThe crypt\\_blowfish function did not properly handle 8-bit characters,\n which made it easier for attackers to determine a cleartext password\n by using knowledge of a password hash.\n* [CVE-2011-4566](https://security-tracker.debian.org/tracker/CVE-2011-4566)\nWhen used on 32 bit platforms, the exif extension could be used to\n trigger an integer overflow in the exif\\_process\\_IFD\\_TAG function\n when processing a JPEG file.\n* [CVE-2011-4885](https://security-tracker.debian.org/tracker/CVE-2011-4885)\nIt was possible to trigger hash collisions predictably when parsing\n form parameters, which allows remote attackers to cause a denial of\n service by sending many crafted parameters.\n* [CVE-2012-0057](https://security-tracker.debian.org/tracker/CVE-2012-0057)\nWhen applying a crafted XSLT transform, an attacker could write files\n to arbitrary places in the filesystem.\n\n\nNOTE: the fix for \n[CVE-2011-2483](https://security-tracker.debian.org/tracker/CVE-2011-2483) \nrequired changing the behaviour of this function: it is now incompatible with \nsome old (wrongly) generated hashes for passwords containing 8-bit characters. \nSee the package NEWS entry for details. This change has not been applied to the \nLenny version of PHP.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed\nin version 5.2.6.dfsg.1-1+lenny15.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 5.3.3-7+squeeze6.\n\n\nFor the testing distribution (wheezy) and unstable distribution (sid),\nthese problems have been fixed in version 5.3.9-1.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3-7+squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2399-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.2.6.dfsg.1-1+lenny14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.2.6.dfsg.1-1+lenny10",
+				"5.2.6.dfsg.1-1+lenny11",
+				"5.2.6.dfsg.1-1+lenny12",
+				"5.2.6.dfsg.1-1+lenny13",
+				"5.2.6.dfsg.1-1+lenny2",
+				"5.2.6.dfsg.1-1+lenny3",
+				"5.2.6.dfsg.1-1+lenny4",
+				"5.2.6.dfsg.1-1+lenny6",
+				"5.2.6.dfsg.1-1+lenny8",
+				"5.2.6.dfsg.1-1+lenny9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2399-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2399"
+		}
+	]
+}

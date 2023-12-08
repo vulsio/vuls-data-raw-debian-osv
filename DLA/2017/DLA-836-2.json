@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-836-2",
+	"modified": "2023-06-28T06:31:06.582047Z",
+	"published": "2017-02-25T00:00:00Z",
+	"summary": "munin - regression update",
+	"details": "\nStevie Trujillo discovered a command injection vulnerability in munin,\na network-wide graphing framework. The CGI script for drawing graphs\nallowed to pass arbitrary GET parameters to local shell command,\nallowing command execution as the user that runs the webserver.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.0.6-4+deb7u3.\n\n\nWe recommend that you upgrade your munin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "munin",
+				"purl": "pkg:deb/debian/munin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.6-4+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.6-4",
+				"2.0.6-4+deb7u1",
+				"2.0.6-4+deb7u1~bpo60+1",
+				"2.0.6-4+deb7u2",
+				"2.0.6-4+deb7u2~bpo60+1",
+				"2.0.6-4+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-836-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-836"
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1628-1",
+	"modified": "2023-06-28T06:26:25.109147Z",
+	"published": "2019-01-02T00:00:00Z",
+	"related": [
+		"CVE-2018-18873",
+		"CVE-2018-19539",
+		"CVE-2018-19540",
+		"CVE-2018-19541",
+		"CVE-2018-19542",
+		"CVE-2018-20570",
+		"CVE-2018-20584",
+		"CVE-2018-20622"
+	],
+	"summary": "jasper - security update",
+	"details": "\nMultiple issues were found in the JasPer JPEG-2000 library that could\nlead to a denial-of-service (application crash), memory leaks and\npotentially the execution of arbitrary code if a malformed image file\nis processed.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.900.1-debian1-2.4+deb8u5.\n\n\nWe recommend that you upgrade your jasper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jasper",
+				"purl": "pkg:deb/debian/jasper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.900.1-debian1-2.4+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.900.1-debian1-2.4",
+				"1.900.1-debian1-2.4+deb8u1",
+				"1.900.1-debian1-2.4+deb8u2",
+				"1.900.1-debian1-2.4+deb8u3",
+				"1.900.1-debian1-2.4+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1628-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1628"
+		}
+	]
+}

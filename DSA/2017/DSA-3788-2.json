@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3788-2",
+	"modified": "2023-10-16T00:12:19.008739Z",
+	"published": "2017-02-13T00:00:00Z",
+	"summary": "tomcat8 - regression update",
+	"details": "\nIt was discovered that a programming error in the processing of HTTPS\nrequests in the Apache Tomcat servlet and JSP engine may result in\ndenial of service via an infinite loop.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 8.0.14-1+deb8u7.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.14-1+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.14-1",
+				"8.0.14-1+deb8u1",
+				"8.0.14-1+deb8u2",
+				"8.0.14-1+deb8u3",
+				"8.0.14-1+deb8u4",
+				"8.0.14-1+deb8u5",
+				"8.0.14-1+deb8u6",
+				"8.0.14-1+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3788-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3788"
+		}
+	]
+}

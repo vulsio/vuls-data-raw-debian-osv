@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4594-1",
+	"modified": "2023-10-16T00:19:02.772154Z",
+	"published": "2019-12-27T00:00:00Z",
+	"related": [
+		"CVE-2019-1551"
+	],
+	"summary": "openssl1.0 - security update",
+	"details": "\nGuido Vranken discovered an overflow bug in the x64\\_64 Montgomery\nsquaring procedure used in exponentiation with 512-bit moduli.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1.0.2u-1~deb9u1.\n\n\nWe recommend that you upgrade your openssl1.0 packages.\n\n\nFor the detailed security status of openssl1.0 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssl1.0](https://security-tracker.debian.org/tracker/openssl1.0)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openssl1.0",
+				"purl": "pkg:deb/debian/openssl1.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2u-1~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2l-2",
+				"1.0.2l-2+deb9u1",
+				"1.0.2l-2+deb9u2",
+				"1.0.2l-2+deb9u3",
+				"1.0.2m-1",
+				"1.0.2m-2",
+				"1.0.2m-3",
+				"1.0.2n-1",
+				"1.0.2n-1+riscv64",
+				"1.0.2o-1",
+				"1.0.2o-1+riscv64",
+				"1.0.2q-1",
+				"1.0.2q-1~deb9u1",
+				"1.0.2q-2",
+				"1.0.2r-1~deb9u1",
+				"1.0.2s-1~deb9u1",
+				"1.0.2t-1~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4594-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4594"
+		}
+	]
+}

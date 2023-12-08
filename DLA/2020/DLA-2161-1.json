@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2161-1",
+	"modified": "2023-06-28T06:30:06.117425Z",
+	"published": "2020-03-28T00:00:00Z",
+	"related": [
+		"CVE-2020-1950",
+		"CVE-2020-1951"
+	],
+	"summary": "tika - security update",
+	"details": "\nTwo security issues have been detected in tika.\n\n\n* [CVE-2020-1950](https://security-tracker.debian.org/tracker/CVE-2020-1950)\ncarefully crafted or corrupt PSD file can cause excessive memory\n usage in Apache.\n* [CVE-2020-1951](https://security-tracker.debian.org/tracker/CVE-2020-1951)\nInfinite Loop (DoS) vulnerability in Apache Tika's PSDParser.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.5-1+deb8u1.\n\n\nWe recommend that you upgrade your tika packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tika",
+				"purl": "pkg:deb/debian/tika?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2161-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2161"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4885-1",
+	"modified": "2023-10-16T00:22:27.683510Z",
+	"published": "2021-04-05T00:00:00Z",
+	"related": [
+		"CVE-2019-20444",
+		"CVE-2019-20445",
+		"CVE-2020-11612",
+		"CVE-2020-7238",
+		"CVE-2021-21290",
+		"CVE-2021-21295",
+		"CVE-2021-21409"
+	],
+	"summary": "netty - security update",
+	"details": "\nMultiple security issues were discovered in Netty, a Java NIO\nclient/server framework, which could result in HTTP request smuggling,\ndenial of service or information disclosure.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1:4.1.33-1+deb10u2.\n\n\nWe recommend that you upgrade your netty packages.\n\n\nFor the detailed security status of netty please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/netty](https://security-tracker.debian.org/tracker/netty)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "netty",
+				"purl": "pkg:deb/debian/netty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.1.33-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.1.33-1",
+				"1:4.1.33-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4885-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4885"
+		}
+	]
+}

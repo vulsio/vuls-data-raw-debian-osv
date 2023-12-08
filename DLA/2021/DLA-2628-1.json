@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2628-1",
+	"modified": "2023-06-28T06:26:37.745065Z",
+	"published": "2021-04-17T00:00:00Z",
+	"related": [
+		"CVE-2019-16935",
+		"CVE-2021-23336"
+	],
+	"summary": "python2.7 - security update",
+	"details": "\nTwo security issues have been discovered in python2.7:\n\n\n* [CVE-2019-16935](https://security-tracker.debian.org/tracker/CVE-2019-16935)\nThe documentation XML-RPC server in Python 2.7 has XSS via the server\\_title\n field. This occurs in Lib/DocXMLRPCServer.py in Python 2.x, and in\n Lib/xmlrpc/server.py in Python 3.x. If set\\_server\\_title is called with\n untrusted input, arbitrary JavaScript can be delivered to clients that\n visit the http URL for this server.\n* [CVE-2021-23336](https://security-tracker.debian.org/tracker/CVE-2021-23336)\nThe Python2.7 vulnerable to Web Cache Poisoning via urllib.parse.parse\\_qsl\n and urllib.parse.parse\\_qs by using a vector called parameter cloaking. When\n the attacker can separate query parameters using a semicolon (;), they can\n cause a difference in the interpretation of the request between the proxy\n (running with default configuration) and the server. This can result in malicious\n requests being cached as completely safe ones, as the proxy would usually not\n see the semicolon as a separator, and therefore would not include it in a cache\n key of an unkeyed parameter.\n\n\n\\*\\*Attention, API-change!\\*\\*\n Please be sure your software is working properly if it uses `urllib.parse.parse\\_qs`\n or `urllib.parse.parse\\_qsl`, `cgi.parse` or `cgi.parse\\_multipart`.\n\n\nEarlier Python versions allowed using both ``;`` and ``&`` as query parameter\n separators in `urllib.parse.parse\\_qs` and `urllib.parse.parse\\_qsl`.\n Due to security concerns, and to conform with\n newer W3C recommendations, this has been changed to allow only a single\n separator key, with ``&`` as the default. This change also affects\n `cgi.parse` and `cgi.parse\\_multipart` as they use the affected\n functions internally. For more details, please see their respective\n documentation.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.7.13-2+deb9u5.\n\n\nWe recommend that you upgrade your python2.7 packages.\n\n\nFor the detailed security status of python2.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python2.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python2.7",
+				"purl": "pkg:deb/debian/python2.7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.13-2+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.13-2",
+				"2.7.13-2+deb9u1",
+				"2.7.13-2+deb9u2",
+				"2.7.13-2+deb9u3",
+				"2.7.13-2+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2628-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2628"
+		}
+	]
+}

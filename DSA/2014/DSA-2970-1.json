@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2970-1",
+	"modified": "2023-10-16T00:06:08.346626Z",
+	"published": "2014-06-29T00:00:00Z",
+	"related": [
+		"CVE-2014-2326",
+		"CVE-2014-2327",
+		"CVE-2014-2328",
+		"CVE-2014-2708",
+		"CVE-2014-2709",
+		"CVE-2014-4002"
+	],
+	"summary": "cacti - security update",
+	"details": "\nMultiple security issues (cross-site scripting, cross-site request \nforgery, SQL injections, missing input sanitising) have been found in \nCacti, a web frontend for RRDTool.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.8.8a+dfsg-5+deb7u3.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 0.8.8b+dfsg-6.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.8.8b+dfsg-6.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "cacti",
+				"purl": "pkg:deb/debian/cacti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.8a+dfsg-5+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.8a+dfsg-5",
+				"0.8.8a+dfsg-5+deb7u1",
+				"0.8.8a+dfsg-5+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2970-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2970"
+		}
+	]
+}

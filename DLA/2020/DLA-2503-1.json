@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2503-1",
+	"modified": "2023-06-28T06:25:16.467659Z",
+	"published": "2020-12-21T00:00:00Z",
+	"related": [
+		"CVE-2020-7788"
+	],
+	"summary": "node-ini - security update",
+	"details": "\nIt was discovered that there was an issue in node-ini, a .ini format parser\nand serializer for Node.js, where an application could be exploited by a\nmalicious input file.\n\n\n* [CVE-2020-7788](https://security-tracker.debian.org/tracker/CVE-2020-7788)\nThis affects the package ini before 1.3.6. If an attacker submits a\n malicious INI file to an application that parses it with ini.parse, they\n will pollute the prototype on the application. This can be exploited\n further depending on the context.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.1.0-1+deb9u1.\n\n\nWe recommend that you upgrade your node-ini packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "node-ini",
+				"purl": "pkg:deb/debian/node-ini?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2503-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2503"
+		}
+	]
+}

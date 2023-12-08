@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-483",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-04-14T00:00:00Z",
+	"related": [
+		"CVE-2004-0381",
+		"CVE-2004-0388"
+	],
+	"summary": "mysql - insecure temporary file creation",
+	"details": "\nTwo vulnerabilities have been discovered in mysql, a common database\nsystem. Two scripts contained in the package don't create temporary\nfiles in a secure fashion. This could allow a local attacker to\noverwrite files with the privileges of the user invoking the MySQL\nserver, which is often the root user. The Common Vulnerabilities and\nExposures identifies the following problems:\n\n\n* [CAN-2004-0381](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0381)\nThe script mysqlbug in MySQL allows local users to overwrite\n arbitrary files via a symlink attack.\n\n* [CAN-2004-0388](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0388)\nThe script mysqld\\_multi in MySQL allows local users to overwrite\n arbitrary files via a symlink attack.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.23.49-8.6.\n\n\nFor the unstable distribution (sid) these problems will be fixed in\nversion 4.0.18-6 of mysql-dfsg.\n\n\nWe recommend that you upgrade your mysql, mysql-dfsg and related\npackages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mysql",
+				"purl": "pkg:deb/debian/mysql?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.23.49-8.6"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-483.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-483"
+		}
+	]
+}

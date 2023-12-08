@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3363-1",
+	"modified": "2023-06-28T06:25:32.670394Z",
+	"published": "2023-03-16T00:00:00Z",
+	"related": [
+		"CVE-2019-20454",
+		"CVE-2022-1586",
+		"CVE-2022-1587"
+	],
+	"summary": "pcre2 - security update",
+	"details": "\nMultiple out-of-bounds read vulnerabilities were found in pcre2, a Perl\nCompatible Regular Expression library, which could result in information\ndisclosure or denial or service.\n\n\n* [CVE-2019-20454](https://security-tracker.debian.org/tracker/CVE-2019-20454)\nOut-of-bounds read when the pattern `\\X` is JIT\n compiled and used to match specially crafted subjects in non-UTF\n mode.\n* [CVE-2022-1586](https://security-tracker.debian.org/tracker/CVE-2022-1586)\nOut-of-bounds read involving unicode property matching in\n JIT-compiled regular expressions. The issue occurs because the\n character was not fully read in case-less matching within JIT.\n* [CVE-2022-1587](https://security-tracker.debian.org/tracker/CVE-2022-1587)\nOut-of-bounds read affecting recursions in JIT-compiled regular\n expressions caused by duplicate data transfers.\n\n\nThis upload also fixes a subject buffer overread in JIT when UTF is\ndisabled and `\\X` or `\\R` has a greater\nthan 1 fixed quantifier. This issue was found by Yunho Kim.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n10.32-5+deb10u1.\n\n\nWe recommend that you upgrade your pcre2 packages.\n\n\nFor the detailed security status of pcre2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/pcre2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "pcre2",
+				"purl": "pkg:deb/debian/pcre2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "10.32-5+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"10.32-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3363-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3363"
+		}
+	]
+}

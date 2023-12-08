@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2929-1",
+	"modified": "2023-10-16T00:11:38.279348Z",
+	"published": "2014-05-16T00:00:00Z",
+	"related": [
+		"CVE-2014-0081",
+		"CVE-2014-0082",
+		"CVE-2014-0130"
+	],
+	"summary": "ruby-actionpack-3.2 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Action Pack, a component\nof Ruby on Rails.\n\n\n* [CVE-2014-0081](https://security-tracker.debian.org/tracker/CVE-2014-0081)\nactionview/lib/action\\_view/helpers/number\\_helper.rb contains\n multiple cross-site scripting vulnerabilities\n* [CVE-2014-0082](https://security-tracker.debian.org/tracker/CVE-2014-0082)\nactionpack/lib/action\\_view/template/text.rb performs symbol\n interning on MIME type strings, allowing remote denial-of-service\n attacks via increased memory consumption.\n* [CVE-2014-0130](https://security-tracker.debian.org/tracker/CVE-2014-0130)\nA directory traversal vulnerability in\n actionpack/lib/abstract\\_controller/base.rb allows remote attackers\n to read arbitrary files.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.2.6-6+deb7u2.\n\n\nWe recommend that you upgrade your ruby-actionpack-3.2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ruby-actionpack-3.2",
+				"purl": "pkg:deb/debian/ruby-actionpack-3.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.6-6+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.6-6",
+				"3.2.6-6+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2929-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2929"
+		}
+	]
+}

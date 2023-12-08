@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3619-1",
+	"modified": "2023-10-14T23:18:56.155804Z",
+	"published": "2023-10-14T00:00:00Z",
+	"related": [
+		"CVE-2020-11987",
+		"CVE-2022-38398",
+		"CVE-2022-38648",
+		"CVE-2022-40146",
+		"CVE-2022-44729",
+		"CVE-2022-44730"
+	],
+	"summary": "batik - security update",
+	"details": "\nBatik is a toolkit for applications or applets that want to use images\nin the Scalable Vector Graphics (SVG) format for various purposes,\nsuch as viewing, generation or manipulation.\n\n\n* [CVE-2020-11987](https://security-tracker.debian.org/tracker/CVE-2020-11987)\nA server-side request forgery was found,\n caused by improper input validation by the NodePickerPanel.\n By using a specially-crafted argument, an attacker could exploit\n this vulnerability to cause the underlying server to make\n arbitrary GET requests.\n* [CVE-2022-38398](https://security-tracker.debian.org/tracker/CVE-2022-38398)\nA Server-Side Request Forgery (SSRF) vulnerability\n was found that allows an attacker to load a url thru the jar\n protocol.\n* [CVE-2022-38648](https://security-tracker.debian.org/tracker/CVE-2022-38648)\nA Server-Side Request Forgery (SSRF) vulnerability\n was found that allows an attacker to fetch external resources.\n* [CVE-2022-40146](https://security-tracker.debian.org/tracker/CVE-2022-40146)\nA Server-Side Request Forgery (SSRF) vulnerability\n was found that allows an attacker to access files using a Jar url.\n* [CVE-2022-44729](https://security-tracker.debian.org/tracker/CVE-2022-44729)\nA Server-Side Request Forgery (SSRF) vulnerability\n was found. A malicious SVG could trigger loading external resources\n by default, causing resource consumption or in some\n cases even information disclosure.\n* [CVE-2022-44730](https://security-tracker.debian.org/tracker/CVE-2022-44730)\nA Server-Side Request Forgery (SSRF) vulnerability\n was found. A malicious SVG can probe user profile / data and send\n it directly as parameter to a URL.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.10-2+deb10u3.\n\n\nWe recommend that you upgrade your batik packages.\n\n\nFor the detailed security status of batik please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/batik>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "batik",
+				"purl": "pkg:deb/debian/batik?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.10-2+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.10-2",
+				"1.10-2+deb10u1",
+				"1.10-2+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3619-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3619"
+		}
+	]
+}

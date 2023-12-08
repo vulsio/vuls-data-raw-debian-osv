@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1275-1",
+	"modified": "2023-10-16T00:10:18.512261Z",
+	"published": "2007-04-02T00:00:00Z",
+	"related": [
+		"CVE-2007-0240"
+	],
+	"summary": "zope2.7 - cross-site scripting",
+	"details": "\nA cross-site scripting vulnerability in zope, a web application\nserver, could allow an attacker to inject arbitrary HTML and/or\nJavaScript into the victim's web browser. This code would run within\nthe security context of the web browser, potentially allowing the\nattacker to access private data such as authentication cookies, or to\naffect the rendering or behavior of zope web pages.\n\n\nFor the stable distribution (sarge), this problem has been fixed in\nversion 2.7.5-2sarge4.\n\n\nThe upcoming stable distribution (etch) and the unstable distribution\n(sid) include zope2.9, and this vulnerability is fixed in version\n2.9.6-4etch1 for etch and 2.9.7-1 for sid.\n\n\nWe recommend that you upgrade your zope2.7 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "zope2.7",
+				"purl": "pkg:deb/debian/zope2.7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.5-2sarge4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.5-2",
+				"2.7.5-2sarge1",
+				"2.7.5-2sarge2",
+				"2.7.5-2sarge3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1275-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1275"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3554-1",
+	"modified": "2023-10-16T00:06:23.698981Z",
+	"published": "2016-04-21T00:00:00Z",
+	"related": [
+		"CVE-2016-3158",
+		"CVE-2016-3159",
+		"CVE-2016-3960"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2016-3158](https://security-tracker.debian.org/tracker/CVE-2016-3158),\n[CVE-2016-3159](https://security-tracker.debian.org/tracker/CVE-2016-3159) (XSA-172)\n\n Jan Beulich from SUSE discovered that Xen does not properly handle\n writes to the hardware FSW.ES bit when running on AMD64 processors.\n A malicious domain can take advantage of this flaw to obtain address\n space usage and timing information, about another domain, at a\n fairly low rate.\n* [CVE-2016-3960](https://security-tracker.debian.org/tracker/CVE-2016-3960) (XSA-173)\n\n Ling Liu and Yihan Lian of the Cloud Security Team, Qihoo 360\n discovered an integer overflow in the x86 shadow pagetable code. A\n HVM guest using shadow pagetables can cause the host to crash. A PV\n guest using shadow pagetables (i.e. being migrated) with PV\n superpages enabled (which is not the default) can crash the host, or\n corrupt hypervisor memory, potentially leading to privilege\n escalation.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 4.4.1-9+deb8u5.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.1-9+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.1-9",
+				"4.4.1-9+deb8u1",
+				"4.4.1-9+deb8u2",
+				"4.4.1-9+deb8u3",
+				"4.4.1-9+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3554-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3554"
+		}
+	]
+}

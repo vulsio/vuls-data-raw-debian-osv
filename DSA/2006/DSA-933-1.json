@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-933-1",
+	"modified": "2023-10-16T00:13:41.504772Z",
+	"published": "2006-01-09T00:00:00Z",
+	"related": [
+		"CVE-2005-3539"
+	],
+	"summary": "hylafax - arbitrary command execution",
+	"details": "\nPatrice Fournier found that hylafax passes unsanitized user data in the\nnotify script, allowing users with the ability to submit jobs to run\narbitrary commands with the privileges of the hylafax server.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 4.1.1-4woody1.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 4.2.1-5sarge3.\n\n\nFor the unstable distribution the problem has been fixed in version\n4.2.4-2.\n\n\nWe recommend that you upgrade your hylafax package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "hylafax",
+				"purl": "pkg:deb/debian/hylafax?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.1-4woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-933-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "hylafax",
+				"purl": "pkg:deb/debian/hylafax?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.2.1-5sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.2.1-5",
+				"1:4.2.1-5sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-933-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-933"
+		}
+	]
+}

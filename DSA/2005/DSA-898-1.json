@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-898-1",
+	"modified": "2023-10-16T00:29:27.183737Z",
+	"published": "2005-11-17T00:00:00Z",
+	"related": [
+		"CVE-2005-0870",
+		"CVE-2005-3347",
+		"CVE-2005-3348"
+	],
+	"summary": "phpgroupware - programming errors",
+	"details": "\nSeveral vulnerabilities have been discovered in phpsysinfo, a PHP\nbased host information application that is included in phpgroupware.\nThe Common Vulnerabilities and\nExposures project identifies the following problems: \n\n\n* [CVE-2005-0870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0870)\nMaksymilian Arciemowicz discovered several cross site scripting\n problems, of which not all were fixed in\n DSA [724](dsa-724).\n* [CVE-2005-3347](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3347)\nChristopher Kunz discovered that local variables get overwritten\n unconditionally and are trusted later, which could lead to the\n inclusion of arbitrary files.\n* [CVE-2005-3348](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3348)\nChristopher Kunz discovered that user-supplied input is used\n unsanitised, causing a HTTP Response splitting problem.\n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 0.9.14-0.RC3.2.woody5.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.9.16.005-3.sarge4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.9.16.008-2.\n\n\nWe recommend that you upgrade your phpgroupware packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "phpgroupware",
+				"purl": "pkg:deb/debian/phpgroupware?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.14-0.RC3.2.woody5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.14-0.RC3.2.woody3",
+				"0.9.14-0.RC3.2.woody4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-898-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "phpgroupware",
+				"purl": "pkg:deb/debian/phpgroupware?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.16.005-3.sarge4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.16.005-3",
+				"0.9.16.005-3.sarge0",
+				"0.9.16.005-3.sarge1",
+				"0.9.16.005-3.sarge2",
+				"0.9.16.005-3.sarge3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-898-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-898"
+		}
+	]
+}

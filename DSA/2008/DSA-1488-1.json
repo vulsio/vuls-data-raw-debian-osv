@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1488-1",
+	"modified": "2023-10-16T00:17:45.039698Z",
+	"published": "2008-02-09T00:00:00Z",
+	"related": [
+		"CVE-2006-4758",
+		"CVE-2006-6508",
+		"CVE-2006-6839",
+		"CVE-2006-6840",
+		"CVE-2006-6841",
+		"CVE-2008-0471"
+	],
+	"summary": "phpbb2 - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in phpBB, a web\nbased bulletin board. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2008-0471](https://security-tracker.debian.org/tracker/CVE-2008-0471)\nPrivate messaging allowed cross site request forgery, making\n it possible to delete all private messages of a user by sending\n them to a crafted web page.\n* [CVE-2006-6841](https://security-tracker.debian.org/tracker/CVE-2006-6841) / [CVE-2006-6508](https://security-tracker.debian.org/tracker/CVE-2006-6508)\nCross site request forgery enabled an attacker to perform various\n actions on behalf of a logged in user. (Applies to sarge only.)\n* [CVE-2006-6840](https://security-tracker.debian.org/tracker/CVE-2006-6840)\nA negative start parameter could allow an attacker to create\n invalid output. (Applies to sarge only.)\n* [CVE-2006-6839](https://security-tracker.debian.org/tracker/CVE-2006-6839)\nRedirection targets were not fully checked, leaving room for\n unauthorised external redirections via a phpBB forum.\n (Applies to sarge only.)\n* [CVE-2006-4758](https://security-tracker.debian.org/tracker/CVE-2006-4758)\nAn authenticated forum administrator may upload files of any\n type by using specially crafted filenames. (Applies to sarge only.)\n\n\nFor the old stable distribution (sarge), these problems have been\nfixed in version 2.0.13+1-6sarge4.\n\n\nFor the stable distribution (etch), these problems have been fixed\nin version 2.0.21-7.\n\n\nFor the unstable distribution (sid) these problems have been fixed\nin version 2.0.22-3.\n\n\nWe recommend that you upgrade your phpbb2 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "phpbb2",
+				"purl": "pkg:deb/debian/phpbb2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.13+1-6sarge4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.13+1-6",
+				"2.0.13+1-6sarge1",
+				"2.0.13+1-6sarge2",
+				"2.0.13+1-6sarge3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1488-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "phpbb2",
+				"purl": "pkg:deb/debian/phpbb2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.21-7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.21-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1488-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1488"
+		}
+	]
+}

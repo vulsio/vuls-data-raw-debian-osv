@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-574-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-10-28T00:00:00Z",
+	"related": [
+		"CVE-2004-0916"
+	],
+	"summary": "cabextract - missing directory sanitising",
+	"details": "\nThe upstream developers discovered a problem in cabextract, a tool to\nextract cabinet files. The program was able to overwrite files in\nupper directories. This could lead an attacker to overwrite arbitrary\nfiles.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.2-2b.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.1-1.\n\n\nWe recommend that you upgrade your cabextract package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "cabextract",
+				"purl": "pkg:deb/debian/cabextract?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.2-2b"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-574-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-574"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5242-1",
+	"modified": "2023-10-16T00:20:55.162610Z",
+	"published": "2022-09-28T00:00:00Z",
+	"related": [
+		"CVE-2022-29599"
+	],
+	"summary": "maven-shared-utils - security update",
+	"details": "\nIt was discovered that the Commandline class in maven-shared-utils, a\ncollection of various utility classes for the Maven build system, can\nemit double-quoted strings without proper escaping, allowing shell\ninjection attacks.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 3.3.0-1+deb11u1.\n\n\nWe recommend that you upgrade your maven-shared-utils packages.\n\n\nFor the detailed security status of maven-shared-utils please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/maven-shared-utils](https://security-tracker.debian.org/tracker/maven-shared-utils)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "maven-shared-utils",
+				"purl": "pkg:deb/debian/maven-shared-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.0-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5242-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5242"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2844-1",
+	"modified": "2023-10-16T00:11:34.799060Z",
+	"published": "2014-01-15T00:00:00Z",
+	"related": [
+		"CVE-2012-6535"
+	],
+	"summary": "djvulibre - arbitrary code execution",
+	"details": "\nIt was discovered that djvulibre, the Open Source DjVu implementation\nproject, can be crashed or possibly make it execute arbitrary code when\nprocessing a specially crafted djvu file.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 3.5.23-3+squeeze1.\n\n\nThis problem has been fixed before the release of the stable distribution\n(wheezy), therefore it is not affected.\n\n\nWe recommend that you upgrade your djvulibre packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "djvulibre",
+				"purl": "pkg:deb/debian/djvulibre?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.23-3+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.23-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2844-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2844"
+		}
+	]
+}

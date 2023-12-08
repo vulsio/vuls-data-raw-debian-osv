@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3231-1",
+	"modified": "2023-06-28T06:25:28.867543Z",
+	"published": "2022-12-07T00:00:00Z",
+	"related": [
+		"CVE-2020-29394",
+		"CVE-2020-36244",
+		"CVE-2022-31291"
+	],
+	"summary": "dlt-daemon - security update",
+	"details": "\ndlt-daemon, a Diagnostic Log and Trace logging daemon, had the following\nvulnerabilities reported:\n\n\n* [CVE-2020-29394](https://security-tracker.debian.org/tracker/CVE-2020-29394)\nA buffer overflow in the dlt\\_filter\\_load function in dlt\\_common.c\n from dlt-daemon allows arbitrary code execution because fscanf is\n misused (no limit on the number of characters to be read in the\n format argument).\n* [CVE-2020-36244](https://security-tracker.debian.org/tracker/CVE-2020-36244)\ndlt-daemon was vulnerable to a heap-based buffer overflow that\n could allow an attacker to remotely execute arbitrary code.\n* [CVE-2022-31291](https://security-tracker.debian.org/tracker/CVE-2022-31291)\nAn issue in dlt\\_config\\_file\\_parser.c of dlt-daemon allows attackers\n to cause a double free via crafted TCP packets.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.18.0-1+deb10u1.\n\n\nWe recommend that you upgrade your dlt-daemon packages.\n\n\nFor the detailed security status of dlt-daemon please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/dlt-daemon>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "dlt-daemon",
+				"purl": "pkg:deb/debian/dlt-daemon?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.18.0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.18.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3231-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3231"
+		}
+	]
+}

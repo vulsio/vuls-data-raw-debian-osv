@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-680-2",
+	"modified": "2023-06-28T06:27:06.781680Z",
+	"published": "2016-10-26T00:00:00Z",
+	"summary": "bash - version number correction",
+	"details": "\nAn old attack vector has been corrected in bash, a sh-compatible\ncommand language interpreter.\n\n\n* [CVE-2016-7543](https://security-tracker.debian.org/tracker/CVE-2016-7543)\nSpecially crafted SHELLOPTS+PS4 environment variables in combination\n with insecure setuid binaries can result in root privilege\n escalation.\n\n\nThe setuid binary had to both use setuid() function call in\ncombination with a system() or popen() function call. With this\ncombination it is possible to gain root access.\n\n\nI addition bash have to be the default shell (/bin/sh have to point\nto bash) for the system to be vulnerable.\n\n\nThe default shell in Debian is dash and there are no known setuid\nbinaries in Debian with the, above described, insecure combination.\n\n\nThere could however be local software with the, above described,\ninsecure combination that could benefit from this correction.\n\n\nFor Debian 7 Wheezy, this problem have been fixed in version\n4.2+dfsg-0.1+deb7u3.\n\n\nWe recommend that you upgrade your bash packages.\n\n\nIf there are local software that have the insecure combination and\ndo a setuid() to some other user than root, then the update will not\ncorrect that problem. That problem have to be addressed in the\ninsecure setuid binary.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "bash",
+				"purl": "pkg:deb/debian/bash?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2+dfsg-0.1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2+dfsg-0.1",
+				"4.2+dfsg-0.1+deb7u1",
+				"4.2+dfsg-0.1+deb7u2",
+				"4.2+dfsg-0.1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-680-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-680"
+		}
+	]
+}

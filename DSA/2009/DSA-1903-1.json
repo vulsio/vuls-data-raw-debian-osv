@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1903-1",
+	"modified": "2023-10-16T00:05:42.575781Z",
+	"published": "2009-10-07T00:00:00Z",
+	"related": [
+		"CVE-2007-1667",
+		"CVE-2007-1797",
+		"CVE-2007-4985",
+		"CVE-2007-4986",
+		"CVE-2007-4988",
+		"CVE-2008-1096",
+		"CVE-2008-3134",
+		"CVE-2008-6070",
+		"CVE-2008-6071",
+		"CVE-2008-6072",
+		"CVE-2008-6621",
+		"CVE-2009-1882"
+	],
+	"summary": "graphicsmagick - several",
+	"details": "\nSeveral vulnerabilities have been discovered in graphicsmagick, a\ncollection of image processing tool, which can lead to the execution\nof arbitrary code, exposure of sensitive information or cause DoS.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-1667](https://security-tracker.debian.org/tracker/CVE-2007-1667)\nMultiple integer overflows in XInitImage function in xwd.c for\n GraphicsMagick, allow user-assisted remote attackers to cause a\n denial of service (crash) or obtain sensitive information via\n crafted images with large or negative values that trigger a\n buffer overflow. It only affects the oldstable distribution (etch).\n* [CVE-2007-1797](https://security-tracker.debian.org/tracker/CVE-2007-1797)\nMultiple integer overflows allow remote attackers to execute arbitrary\n code via a crafted DCM image, or the colors or comments field in a\n crafted XWD image. It only affects the oldstable distribution (etch).\n* [CVE-2007-4985](https://security-tracker.debian.org/tracker/CVE-2007-4985)\nA crafted image file can trigger an infinite loop in the ReadDCMImage\n function or in the ReadXCFImage function. It only affects the oldstable\n distribution (etch).\n* [CVE-2007-4986](https://security-tracker.debian.org/tracker/CVE-2007-4986)\nMultiple integer overflows allow context-dependent attackers to execute\n arbitrary code via a crafted .dcm, .dib, .xbm, .xcf, or .xwd image file,\n which triggers a heap-based buffer overflow. It only affects the\n oldstable distribution (etch).\n* [CVE-2007-4988](https://security-tracker.debian.org/tracker/CVE-2007-4988)\nA sign extension error allows context-dependent attackers to execute\n arbitrary code via a crafted width value in an image file, which\n triggers an integer overflow and a heap-based buffer overflow. It\n affects only the oldstable distribution (etch).\n* [CVE-2008-1096](https://security-tracker.debian.org/tracker/CVE-2008-1096)\nThe load\\_tile function in the XCF coder allows user-assisted remote\n attackers to cause a denial of service or possibly execute arbitrary\n code via a crafted .xcf file that triggers an out-of-bounds heap write.\n It affects only oldstable (etch).\n* [CVE-2008-3134](https://security-tracker.debian.org/tracker/CVE-2008-3134)\nMultiple vulnerabilities in GraphicsMagick before 1.2.4 allow remote\n attackers to cause a denial of service (crash, infinite loop, or\n memory consumption) via vectors in the AVI, AVS, DCM, EPT, FITS,\n MTV, PALM, RLA, and TGA decoder readers; and the\n GetImageCharacteristics function in magick/image.c, as reachable\n from a crafted PNG, JPEG, BMP, or TIFF file.\n* [CVE-2008-6070](https://security-tracker.debian.org/tracker/CVE-2008-6070)\nMultiple heap-based buffer underflows in the ReadPALMImage function in\n coders/palm.c in GraphicsMagick before 1.2.3 allow remote attackers\n to cause a denial of service (crash) or possibly execute arbitrary\n code via a crafted PALM image.\n* [CVE-2008-6071](https://security-tracker.debian.org/tracker/CVE-2008-6071)\nHeap-based buffer overflow in the DecodeImage function in\n coders/pict.c in GraphicsMagick before 1.1.14, and 1.2.x before\n 1.2.3, allows remote attackers to cause a denial of service (crash)\n or possibly execute arbitrary code via a crafted PICT image.\n* [CVE-2008-6072](https://security-tracker.debian.org/tracker/CVE-2008-6072)\nMultiple vulnerabilities in GraphicsMagick allow remote attackers to\n cause a denial of service (crash) via vectors in XCF and CINEON images.\n* [CVE-2008-6621](https://security-tracker.debian.org/tracker/CVE-2008-6621)\nVulnerability in GraphicsMagick allows remote attackers to cause a denial\n of service (crash) via vectors in DPX images.\n* [CVE-2009-1882](https://security-tracker.debian.org/tracker/CVE-2009-1882)\nInteger overflow allows remote attackers to cause a denial of service\n (crash) and possibly execute arbitrary code via a crafted TIFF file,\n which triggers a buffer overflow.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 1.1.7-13+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.1.11-3.2+lenny1.\n\n\nFor the upcoming stable distribution (squeeze) and the unstable\ndistribution (sid), these problems have been fixed in version\n1.3.5-5.1.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "graphicsmagick",
+				"purl": "pkg:deb/debian/graphicsmagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.7-13+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.7-13"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1903-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "graphicsmagick",
+				"purl": "pkg:deb/debian/graphicsmagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.11-3.2+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.11-3.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1903-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1903"
+		}
+	]
+}

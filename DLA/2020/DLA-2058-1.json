@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2058-1",
+	"modified": "2023-06-28T06:25:05.863532Z",
+	"published": "2020-01-07T00:00:00Z",
+	"related": [
+		"CVE-2019-17006"
+	],
+	"summary": "nss - security update",
+	"details": "\nIt was found that certain cryptographic primitives in nss, the Network\nSecurity Service libraries, did not check the length of the input\ntext. This could result in a potential heap-based buffer overflow.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2:3.26-1+debu8u10.\n\n\nWe recommend that you upgrade your nss packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.26-1+debu8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.17.2-1.1",
+				"2:3.17.2-1.1+deb8u1",
+				"2:3.17.2-1.1+deb8u2",
+				"2:3.17.2-1.1+x32",
+				"2:3.17.4-1",
+				"2:3.18-1",
+				"2:3.19-1",
+				"2:3.19.1-1",
+				"2:3.19.1-2",
+				"2:3.19.2-1",
+				"2:3.19.2-1+x32.1",
+				"2:3.20-1",
+				"2:3.20.1-1",
+				"2:3.21-1",
+				"2:3.21-1.1",
+				"2:3.23-1",
+				"2:3.23-2",
+				"2:3.25-1",
+				"2:3.26-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2058-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2058"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4951-1",
+	"modified": "2023-10-16T00:20:28.190319Z",
+	"published": "2021-08-07T00:00:00Z",
+	"related": [
+		"CVE-2020-26558",
+		"CVE-2020-27153",
+		"CVE-2021-0129"
+	],
+	"summary": "bluez - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Bluez, the Linux Bluetooth\nprotocol stack.\n\n\n* [CVE-2020-26558](https://security-tracker.debian.org/tracker/CVE-2020-26558)\n/ [CVE-2021-0129](https://security-tracker.debian.org/tracker/CVE-2021-0129)\n\n\nIt was discovered that Bluez does not properly check permissions\n during pairing operation, which could allow an attacker to\n impersonate the initiating device.\n* [CVE-2020-27153](https://security-tracker.debian.org/tracker/CVE-2020-27153)\nJay LV discovered a double free flaw in the disconnect\\_cb() routine\n in the gattool. A remote attacker can take advantage of this flaw\n during service discovery for denial of service, or potentially,\n execution of arbitrary code.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 5.50-1.2~deb10u2.\n\n\nWe recommend that you upgrade your bluez packages.\n\n\nFor the detailed security status of bluez please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/bluez>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "bluez",
+				"purl": "pkg:deb/debian/bluez?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.50-1.2~deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.50-1",
+				"5.50-1.1",
+				"5.50-1.2~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4951-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4951"
+		}
+	]
+}

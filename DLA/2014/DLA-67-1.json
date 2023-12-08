@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-67-1",
+	"modified": "2023-06-28T06:27:05.774752Z",
+	"published": "2014-09-30T00:00:00Z",
+	"related": [
+		"CVE-2014-3538",
+		"CVE-2014-3587",
+		"CVE-2014-3597"
+	],
+	"summary": "php5 - security update",
+	"details": "\n* [CVE-2014-3538](https://security-tracker.debian.org/tracker/CVE-2014-3538)\nIt was discovered that the original fix for [CVE-2013-7345](https://security-tracker.debian.org/tracker/CVE-2013-7345) did not\n sufficiently address the problem. A remote attacker could still\n cause a denial of service (CPU consumption) via a specially-crafted\n input file that triggers backtracking during processing of an awk\n regular expression rule.\n* [CVE-2014-3587](https://security-tracker.debian.org/tracker/CVE-2014-3587)\nIt was discovered that the CDF parser of the fileinfo module does\n not properly process malformed files in the Composite Document File\n (CDF) format, leading to crashes.\n* [CVE-2014-3597](https://security-tracker.debian.org/tracker/CVE-2014-3597)\nIt was discovered that the original fix for [CVE-2014-4049](https://security-tracker.debian.org/tracker/CVE-2014-4049) did not\n completely address the issue. A malicious server or\n man-in-the-middle attacker could cause a denial of service (crash)\n and possibly execute arbitrary code via a crafted DNS TXT record.\n* [CVE-2014-4670](https://security-tracker.debian.org/tracker/CVE-2014-4670)\nIt was discovered that PHP incorrectly handled certain SPL\n Iterators. A local attacker could use this flaw to cause PHP to\n crash, resulting in a denial of service.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in php5 version 5.3.3-7+squeeze22\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3-7+squeeze22"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze13",
+				"5.3.3-7+squeeze14",
+				"5.3.3-7+squeeze15",
+				"5.3.3-7+squeeze16",
+				"5.3.3-7+squeeze17",
+				"5.3.3-7+squeeze18",
+				"5.3.3-7+squeeze19",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze20",
+				"5.3.3-7+squeeze21",
+				"5.3.3-7+squeeze3",
+				"5.3.3-7+squeeze5",
+				"5.3.3-7+squeeze6",
+				"5.3.3-7+squeeze7",
+				"5.3.3-7+squeeze8",
+				"5.3.3-7+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-67-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-67"
+		}
+	]
+}

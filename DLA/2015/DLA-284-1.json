@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-284-1",
+	"modified": "2023-06-28T06:25:21.464333Z",
+	"published": "2015-07-28T00:00:00Z",
+	"related": [
+		"CVE-2015-3183"
+	],
+	"summary": "apache2 - security update",
+	"details": "\nA vulnerability has been found in the Apache HTTP Server.\n\n\n* [CVE-2015-3183](https://security-tracker.debian.org/tracker/CVE-2015-3183)\nApache HTTP Server did not properly parse chunk headers, which\n allowed remote attackers to conduct HTTP request smuggling via a\n crafted request. This flaw relates to mishandling of large\n chunk-size values and invalid chunk-extension characters in\n modules/http/http\\_filters.c.\n\n\nFor the squeeze distribution, these issues have been fixed in version\n2.2.16-6+squeeze15 of apache2.\n\n\nWe recommend you to upgrade your apache2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.16-6+squeeze15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.16-6",
+				"2.2.16-6+squeeze1",
+				"2.2.16-6+squeeze10",
+				"2.2.16-6+squeeze11",
+				"2.2.16-6+squeeze12",
+				"2.2.16-6+squeeze13",
+				"2.2.16-6+squeeze14",
+				"2.2.16-6+squeeze1~bpo50+1",
+				"2.2.16-6+squeeze2",
+				"2.2.16-6+squeeze2~bpo50+1",
+				"2.2.16-6+squeeze3",
+				"2.2.16-6+squeeze4",
+				"2.2.16-6+squeeze4~bpo50+1",
+				"2.2.16-6+squeeze6",
+				"2.2.16-6+squeeze7",
+				"2.2.16-6+squeeze8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-284-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-284"
+		}
+	]
+}

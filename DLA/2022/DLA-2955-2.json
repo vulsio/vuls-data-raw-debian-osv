@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2955-2",
+	"modified": "2023-06-28T06:26:44.258591Z",
+	"published": "2022-03-19T00:00:00Z",
+	"summary": "bind9 - regression update",
+	"details": "\nIt was found that bind9, an internet domain name server, was vulnerable to\ncache poisoning. When using forwarders, bogus NS records supplied by, or via,\nthose forwarders may be cached and used by named if it needs to recurse for any\nreason, causing it to obtain and pass on potentially incorrect answers.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1:9.10.3.dfsg.P4-12.3+deb9u11.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\nFor the detailed security status of bind9 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/bind9>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.10.3.dfsg.P4-12.3+deb9u12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.10.3.dfsg.P4-12.3",
+				"1:9.10.3.dfsg.P4-12.3+deb9u1",
+				"1:9.10.3.dfsg.P4-12.3+deb9u10",
+				"1:9.10.3.dfsg.P4-12.3+deb9u11",
+				"1:9.10.3.dfsg.P4-12.3+deb9u2",
+				"1:9.10.3.dfsg.P4-12.3+deb9u3",
+				"1:9.10.3.dfsg.P4-12.3+deb9u4",
+				"1:9.10.3.dfsg.P4-12.3+deb9u5",
+				"1:9.10.3.dfsg.P4-12.3+deb9u6",
+				"1:9.10.3.dfsg.P4-12.3+deb9u7",
+				"1:9.10.3.dfsg.P4-12.3+deb9u8",
+				"1:9.10.3.dfsg.P4-12.3+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2955-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2955"
+		}
+	]
+}

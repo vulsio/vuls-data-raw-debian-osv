@@ -1,0 +1,95 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-818-1",
+	"modified": "2023-06-28T06:43:20.042414Z",
+	"published": "2017-02-07T00:00:00Z",
+	"related": [
+		"CVE-2016-10158",
+		"CVE-2016-10159",
+		"CVE-2016-10160",
+		"CVE-2016-10161",
+		"CVE-2016-10712",
+		"CVE-2016-2554",
+		"CVE-2016-3141",
+		"CVE-2016-3142",
+		"CVE-2016-4342",
+		"CVE-2016-9934",
+		"CVE-2016-9935"
+	],
+	"summary": "php5 - security update",
+	"details": "\nSeveral issues have been discovered in PHP (recursive acronym for PHP:\nHypertext Preprocessor), a widely-used open source general-purpose\nscripting language that is especially suited for web development and can\nbe embedded into HTML.\n\n\n* [CVE-2016-2554](https://security-tracker.debian.org/tracker/CVE-2016-2554)\nStack-based buffer overflow in ext/phar/tar.c allows remote\n attackers to cause a denial of service (application crash) or\n possibly have unspecified other impact via a crafted TAR archive.\n* [CVE-2016-3141](https://security-tracker.debian.org/tracker/CVE-2016-3141)\nUse-after-free vulnerability in wddx.c in the WDDX extension allows\n remote attackers to cause a denial of service (memory corruption and\n application crash) or possibly have unspecified other impact by\n triggering a wddx\\_deserialize call on XML data containing a crafted\n var element.\n* [CVE-2016-3142](https://security-tracker.debian.org/tracker/CVE-2016-3142)\nThe phar\\_parse\\_zipfile function in zip.c in the PHAR extension in\n PHP before 5.5.33 and 5.6.x before 5.6.19 allows remote attackers to\n obtain sensitive information from process memory or cause a denial\n of service (out-of-bounds read and application crash) by placing a\n PK\\x05\\x06 signature at an invalid location.\n* [CVE-2016-4342](https://security-tracker.debian.org/tracker/CVE-2016-4342)\next/phar/phar\\_object.c in PHP before 5.5.32, 5.6.x before 5.6.18,\n and 7.x before 7.0.3 mishandles zero-length uncompressed data, which\n allows remote attackers to cause a denial of service (heap memory\n corruption) or possibly have unspecified other impact via a crafted\n (1) TAR, (2) ZIP, or (3) PHAR archive.\n* [CVE-2016-9934](https://security-tracker.debian.org/tracker/CVE-2016-9934)\next/wddx/wddx.c in PHP before 5.6.28 and 7.x before 7.0.13 allows\n remote attackers to cause a denial of service (NULL pointer\n dereference) via crafted serialized data in a wddxPacket XML\n document, as demonstrated by a PDORow string.\n* [CVE-2016-9935](https://security-tracker.debian.org/tracker/CVE-2016-9935)\nThe php\\_wddx\\_push\\_element function in ext/wddx/wddx.c in PHP before\n 5.6.29 and 7.x before 7.0.14 allows remote attackers to cause a\n denial of service (out-of-bounds read and memory corruption) or\n possibly have unspecified other impact via an empty boolean element\n in a wddxPacket XML document.\n* [CVE-2016-10158](https://security-tracker.debian.org/tracker/CVE-2016-10158)\nThe exif\\_convert\\_any\\_to\\_int function in ext/exif/exif.c in PHP\n before 5.6.30, 7.0.x before 7.0.15, and 7.1.x before 7.1.1 allows\n remote attackers to cause a denial of service (application crash)\n via crafted EXIF data that triggers an attempt to divide the minimum\n representable negative integer by -1.\n* [CVE-2016-10159](https://security-tracker.debian.org/tracker/CVE-2016-10159)\nInteger overflow in the phar\\_parse\\_pharfile function in\n ext/phar/phar.c in PHP before 5.6.30 and 7.0.x before 7.0.15 allows\n remote attackers to cause a denial of service (memory consumption or\n application crash) via a truncated manifest entry in a PHAR archive.\n* [CVE-2016-10160](https://security-tracker.debian.org/tracker/CVE-2016-10160)\nOff-by-one error in the phar\\_parse\\_pharfile function in\n ext/phar/phar.c in PHP before 5.6.30 and 7.0.x before 7.0.15 allows\n remote attackers to cause a denial of service (memory corruption) or\n possibly execute arbitrary code via a crafted PHAR archive with an\n alias mismatch.\n* [CVE-2016-10161](https://security-tracker.debian.org/tracker/CVE-2016-10161)\nThe object\\_common1 function in ext/standard/var\\_unserializer.c in\n PHP before 5.6.30, 7.0.x before 7.0.15, and 7.1.x before 7.1.1\n allows remote attackers to cause a denial of service (buffer\n over-read and application crash) via crafted serialized data that is\n mishandled in a finish\\_nested\\_data call.\n* BUG-71323\n\n Output of stream\\_get\\_meta\\_data can be falsified by its input\n* BUG-70979\n\n Crash on bad SOAP request\n* BUG-71039\n\n exec functions ignore length but look for NULL termination\n* BUG-71459\n\n Integer overflow in iptcembed()\n* BUG-71391\n\n NULL Pointer Dereference in phar\\_tar\\_setupmetadata()\n* BUG-71335\n\n Type confusion vulnerability in WDDX packet deserialization\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.4.45-0+deb7u7.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.45-0+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.36-0+deb7u3",
+				"5.4.38-0+deb7u1",
+				"5.4.39-0+deb7u1",
+				"5.4.39-0+deb7u2",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.41-0+deb7u1",
+				"5.4.44-0+deb7u1",
+				"5.4.45-0+deb7u1",
+				"5.4.45-0+deb7u2",
+				"5.4.45-0+deb7u3",
+				"5.4.45-0+deb7u4",
+				"5.4.45-0+deb7u5",
+				"5.4.45-0+deb7u6",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-818-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-818"
+		}
+	]
+}

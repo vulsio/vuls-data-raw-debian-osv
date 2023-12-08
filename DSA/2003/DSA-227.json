@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-227",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-01-13T00:00:00Z",
+	"related": [
+		"CVE-2002-1378",
+		"CVE-2002-1379",
+		"CVE-2002-1508"
+	],
+	"summary": "openldap2 - buffer overflows and other bugs",
+	"details": "\nThe SuSE Security Team reviewed critical parts of openldap2, an\nimplementation of the Lightweight Directory Access Protocol (LDAP)\nversion 2 and 3, and found several buffer overflows and other bugs\nremote attackers could exploit to gain access on systems running\nvulnerable LDAP servers. In addition to these bugs, various local\nexploitable bugs within the OpenLDAP2 libraries have been fixed.\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 2.0.23-6.3.\n\n\nThe old stable distribution (potato) does not contain OpenLDAP2\npackages.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.0.27-3.\n\n\nWe recommend that you upgrade your openldap2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "openldap2",
+				"purl": "pkg:deb/debian/openldap2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.23-6.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-227.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-227"
+		}
+	]
+}

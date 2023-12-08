@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2914-1",
+	"modified": "2023-10-16T00:11:37.526516Z",
+	"published": "2014-04-25T00:00:00Z",
+	"related": [
+		"CVE-2014-2983"
+	],
+	"summary": "drupal6 - security update",
+	"details": "\nAn information disclosure vulnerability was discovered in Drupal, a\nfully-featured content management framework. When pages are cached for\nanonymous users, form state may leak between anonymous users. Sensitive\nor private information recorded for one anonymous user could thus be\ndisclosed to other users interacting with the same form at the same\ntime.\n\n\nThis security update introduces small API changes, see the upstream\nadvisory at [\\\ndrupal.org/SA-CORE-2014-002](https://drupal.org/SA-CORE-2014-002) for further information.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 6.31-1.\n\n\nWe recommend that you upgrade your drupal6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "drupal6",
+				"purl": "pkg:deb/debian/drupal6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.31-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.18-1",
+				"6.18-1squeeze1",
+				"6.20-1",
+				"6.20-1~bpo50+1",
+				"6.20-1~bpo60+1",
+				"6.20-2",
+				"6.22-1",
+				"6.22-1~bpo60+1",
+				"6.26-1",
+				"6.26-1.1",
+				"6.26-1~bpo60+1",
+				"6.28-1",
+				"6.29-1",
+				"6.30-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2914-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2914"
+		}
+	]
+}

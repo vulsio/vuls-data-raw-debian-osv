@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2368-1",
+	"modified": "2023-06-28T06:26:31.940908Z",
+	"published": "2020-09-09T00:00:00Z",
+	"related": [
+		"CVE-2020-7729"
+	],
+	"summary": "grunt - security update",
+	"details": "\nIt was discovered that there was an arbitrary code execution vulnerability\nin [Grunt](https://gruntjs.com/), a Javascript task runner. This was\npossible due to the unsafe loading of YAML documents.\n\n\n* [CVE-2020-7729](https://security-tracker.debian.org/tracker/CVE-2020-7729)\nThe package grunt before 1.3.0 are vulnerable to Arbitrary Code\n Execution due to the default usage of the function load() instead of its\n secure replacement safeLoad() of the package js-yaml inside\n grunt.file.readYAML.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.0.1-5+deb9u1.\n\n\nWe recommend that you upgrade your grunt packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "grunt",
+				"purl": "pkg:deb/debian/grunt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1-5+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2368-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2368"
+		}
+	]
+}

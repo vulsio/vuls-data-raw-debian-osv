@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4387-1",
+	"modified": "2023-10-16T00:20:18.215021Z",
+	"published": "2019-02-09T00:00:00Z",
+	"related": [
+		"CVE-2018-20685",
+		"CVE-2019-6109",
+		"CVE-2019-6111"
+	],
+	"summary": "openssh - security update",
+	"details": "\nHarry Sintonen from F-Secure Corporation discovered multiple vulnerabilities in\nOpenSSH, an implementation of the SSH protocol suite. All the vulnerabilities\nare in found in the scp client implementing the SCP protocol.\n\n\n* [CVE-2018-20685](https://security-tracker.debian.org/tracker/CVE-2018-20685)\nDue to improper directory name validation, the scp client allows servers to\n modify permissions of the target directory by using empty or dot directory\n name.\n* [CVE-2019-6109](https://security-tracker.debian.org/tracker/CVE-2019-6109)\nDue to missing character encoding in the progress display, the object name\n can be used to manipulate the client output, for example to employ ANSI\n codes to hide additional files being transferred.\n* [CVE-2019-6111](https://security-tracker.debian.org/tracker/CVE-2019-6111)\nDue to scp client insufficient input validation in path names sent by\n server, a malicious server can do arbitrary file overwrites in target\n directory. If the recursive (-r) option is provided, the server can also\n manipulate subdirectories as well.\n\n\nThe check added in this version can lead to regression if the client and\n the server have differences in wildcard expansion rules. If the server is\n trusted for that purpose, the check can be disabled with a new -T option to\n the scp client.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1:7.4p1-10+deb9u5.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\nFor the detailed security status of openssh please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssh](https://security-tracker.debian.org/tracker/openssh)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openssh",
+				"purl": "pkg:deb/debian/openssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:7.4p1-10+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:7.4p1-10",
+				"1:7.4p1-10+deb9u1",
+				"1:7.4p1-10+deb9u2",
+				"1:7.4p1-10+deb9u3",
+				"1:7.4p1-10+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4387-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4387"
+		}
+	]
+}

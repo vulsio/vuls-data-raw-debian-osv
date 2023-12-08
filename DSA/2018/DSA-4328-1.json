@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4328-1",
+	"modified": "2023-10-16T00:13:44.984937Z",
+	"published": "2018-10-25T00:00:00Z",
+	"related": [
+		"CVE-2018-14665"
+	],
+	"summary": "xorg-server - security update",
+	"details": "\nNarendra Shinde discovered that incorrect command-line parameter\nvalidation in the Xorg X server may result in arbitary file overwrite,\nwhich can result in privilege escalation.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:1.19.2-1+deb9u4.\n\n\nWe recommend that you upgrade your xorg-server packages.\n\n\nFor the detailed security status of xorg-server please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/xorg-server](https://security-tracker.debian.org/tracker/xorg-server)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "xorg-server",
+				"purl": "pkg:deb/debian/xorg-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.19.2-1+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.19.2-1",
+				"2:1.19.2-1+deb9u1",
+				"2:1.19.2-1+deb9u2",
+				"2:1.19.2-1+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4328-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4328"
+		}
+	]
+}

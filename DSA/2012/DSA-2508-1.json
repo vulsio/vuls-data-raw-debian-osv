@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2508-1",
+	"modified": "2023-10-16T00:06:00.480373Z",
+	"published": "2012-07-22T00:00:00Z",
+	"related": [
+		"CVE-2012-0217"
+	],
+	"summary": "kfreebsd-8 - privilege escalation",
+	"details": "\nRafal Wojtczuk from Bromium discovered that FreeBSD wasn't handling correctly\nuncanonical return addresses on Intel amd64 CPUs, allowing privilege escalation\nto kernel for local users.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 8.1+dfsg-8+squeeze3.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 8.3-4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8.3-4.\n\n\nWe recommend that you upgrade your kfreebsd-8 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "kfreebsd-8",
+				"purl": "pkg:deb/debian/kfreebsd-8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.1+dfsg-8+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.1+dfsg-7.1",
+				"8.1+dfsg-8",
+				"8.1+dfsg-8+squeeze1",
+				"8.1+dfsg-8+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2508-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2508"
+		}
+	]
+}

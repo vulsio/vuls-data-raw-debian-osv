@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5085-1",
+	"modified": "2023-10-16T00:15:31.262827Z",
+	"published": "2022-02-22T00:00:00Z",
+	"related": [
+		"CVE-2022-25235",
+		"CVE-2022-25236",
+		"CVE-2022-25313",
+		"CVE-2022-25314",
+		"CVE-2022-25315"
+	],
+	"summary": "expat - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Expat, an XML parsing C\nlibrary, which could result in denial of service or potentially the\nexecution of arbitrary code, if a malformed XML file is processed.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 2.2.6-2+deb10u3.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2.2.10-2+deb11u2.\n\n\nWe recommend that you upgrade your expat packages.\n\n\nFor the detailed security status of expat please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/expat>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "expat",
+				"purl": "pkg:deb/debian/expat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.6-2+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.6-2",
+				"2.2.6-2+deb10u1",
+				"2.2.6-2+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5085-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "expat",
+				"purl": "pkg:deb/debian/expat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.10-2+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.10-2",
+				"2.2.10-2+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5085-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5085"
+		}
+	]
+}

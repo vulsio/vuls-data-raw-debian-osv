@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-565-1",
+	"modified": "2023-06-28T06:27:04.071523Z",
+	"published": "2016-07-28T00:00:00Z",
+	"related": [
+		"CVE-2016-1238",
+		"CVE-2016-6185"
+	],
+	"summary": "perl - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the implementation of the\nPerl programming language. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2016-1238](https://security-tracker.debian.org/tracker/CVE-2016-1238)\nJohn Lightsey and Todd Rinaldo reported that the opportunistic\n loading of optional modules can make many programs unintentionally\n load code from the current working directory (which might be changed\n to another directory without the user realising) and potentially\n leading to privilege escalation, as demonstrated in Debian with\n certain combinations of installed packages.\n\n\nThe problem relates to Perl loading modules from the includes\n directory array (\"@INC\") in which the last element is the current\n directory (\".\"). That means that, when perl wants to load a module\n (during first compilation or during lazy loading of a module in run\n time), perl will look for the module in the current directory at the\n end, since '.' is the last include directory in its array of include\n directories to seek. The issue is with requiring libraries that are\n in \".\" but are not otherwise installed.\n\n\nWith this update several modules which are known to be vulnerable\n are updated to not load modules from current directory.\n\n\nAdditionally the update allows configurable removal of \".\" from @INC\n in /etc/perl/sitecustomize.pl for a transitional period. It is\n recommended to enable this setting if the possible breakage for a\n specific site has been evaluated. Problems in packages provided in\n Debian resulting from the switch to the removal of '.' from @INC\n should be reported to the Perl maintainers at\n perl@packages.debian.org .\n* [CVE-2016-6185](https://security-tracker.debian.org/tracker/CVE-2016-6185)\nIt was discovered that XSLoader, a core module from Perl to\n dynamically load C libraries into Perl code, could load shared\n library from incorrect location. XSLoader uses caller() information\n to locate the .so file to load. This can be incorrect if\n XSLoader::load() is called in a string eval. An attacker can take\n advantage of this flaw to execute arbitrary code.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.14.2-21+deb7u4.\n\n\nWe recommend that you upgrade your perl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "perl",
+				"purl": "pkg:deb/debian/perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.14.2-21+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.14.2-21",
+				"5.14.2-21+deb7u1",
+				"5.14.2-21+deb7u2",
+				"5.14.2-21+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-565-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-565"
+		}
+	]
+}

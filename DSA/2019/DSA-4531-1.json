@@ -1,0 +1,138 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4531-1",
+	"modified": "2023-10-16T00:18:48.523703Z",
+	"published": "2019-09-25T00:00:00Z",
+	"related": [
+		"CVE-2019-14821",
+		"CVE-2019-14835",
+		"CVE-2019-15117",
+		"CVE-2019-15118",
+		"CVE-2019-15902"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2019-14821](https://security-tracker.debian.org/tracker/CVE-2019-14821)\nMatt Delco reported a race condition in KVM's coalesced MMIO\n facility, which could lead to out-of-bounds access in the kernel.\n A local attacker permitted to access /dev/kvm could use this to\n cause a denial of service (memory corruption or crash) or possibly\n for privilege escalation.\n* [CVE-2019-14835](https://security-tracker.debian.org/tracker/CVE-2019-14835)\nPeter Pi of Tencent Blade Team discovered a missing bounds check\n in vhost\\_net, the network back-end driver for KVM hosts, leading\n to a buffer overflow when the host begins live migration of a VM.\n An attacker in control of a VM could use this to cause a denial of\n service (memory corruption or crash) or possibly for privilege\n escalation on the host.\n* [CVE-2019-15117](https://security-tracker.debian.org/tracker/CVE-2019-15117)\nHui Peng and Mathias Payer reported a missing bounds check in the\n usb-audio driver's descriptor parsing code, leading to a buffer\n over-read. An attacker able to add USB devices could possibly use\n this to cause a denial of service (crash).\n* [CVE-2019-15118](https://security-tracker.debian.org/tracker/CVE-2019-15118)\nHui Peng and Mathias Payer reported unbounded recursion in the\n usb-audio driver's descriptor parsing code, leading to a stack\n overflow. An attacker able to add USB devices could use this to\n cause a denial of service (memory corruption or crash) or possibly\n for privilege escalation. On the amd64 architecture, and on the\n arm64 architecture in buster, this is mitigated by a guard page\n on the kernel stack, so that it is only possible to cause a crash.\n* [CVE-2019-15902](https://security-tracker.debian.org/tracker/CVE-2019-15902)\nBrad Spengler reported that a backporting error reintroduced a\n spectre-v1 vulnerability in the ptrace subsystem in the\n ptrace\\_get\\_debugreg() function.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 4.9.189-3+deb9u1.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.19.67-2+deb10u1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.189-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.107-1",
+				"4.9.110-1",
+				"4.9.110-2",
+				"4.9.110-3",
+				"4.9.110-3+deb9u1",
+				"4.9.110-3+deb9u2",
+				"4.9.110-3+deb9u3",
+				"4.9.110-3+deb9u4",
+				"4.9.110-3+deb9u5",
+				"4.9.110-3+deb9u6",
+				"4.9.130-1",
+				"4.9.130-2",
+				"4.9.135-1",
+				"4.9.144-1",
+				"4.9.144-2",
+				"4.9.144-3",
+				"4.9.144-3.1",
+				"4.9.161-1",
+				"4.9.168-1",
+				"4.9.168-1+deb9u2",
+				"4.9.168-1+deb9u3",
+				"4.9.168-1+deb9u4",
+				"4.9.168-1+deb9u5",
+				"4.9.184-1",
+				"4.9.185-1",
+				"4.9.189-1",
+				"4.9.189-2",
+				"4.9.189-3",
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1",
+				"4.9.30-2+deb9u3",
+				"4.9.30-2+deb9u4",
+				"4.9.30-2+deb9u5",
+				"4.9.30-2+deb9u5~bpo8+1",
+				"4.9.47-1",
+				"4.9.51-1",
+				"4.9.51-1~bpo8+1",
+				"4.9.65-1",
+				"4.9.65-2",
+				"4.9.65-3",
+				"4.9.65-3+deb9u1",
+				"4.9.65-3+deb9u1~bpo8+1",
+				"4.9.65-3+deb9u2",
+				"4.9.65-3+deb9u2~bpo8+1",
+				"4.9.65-3~bpo8+1",
+				"4.9.80-1",
+				"4.9.80-2",
+				"4.9.82-1+deb9u2",
+				"4.9.82-1+deb9u3",
+				"4.9.82-1+deb9u3~bpo8+1",
+				"4.9.88-1",
+				"4.9.88-1+deb9u1",
+				"4.9.88-1+deb9u1~bpo8+1",
+				"4.9.88-1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4531-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.19.67-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.19.37-5",
+				"4.19.37-5+deb10u1",
+				"4.19.37-5+deb10u2",
+				"4.19.37-5+deb10u2~bpo9+1",
+				"4.19.37-6",
+				"4.19.67-1",
+				"4.19.67-2",
+				"4.19.67-2+deb10u1~bpo9+1",
+				"4.19.67-2~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4531-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4531"
+		}
+	]
+}

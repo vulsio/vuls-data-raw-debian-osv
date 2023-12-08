@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2637-1",
+	"modified": "2023-10-16T00:11:22.591028Z",
+	"published": "2013-03-04T00:00:00Z",
+	"related": [
+		"CVE-2012-3499",
+		"CVE-2012-4558",
+		"CVE-2013-1048"
+	],
+	"summary": "apache2 - several",
+	"details": "\nSeveral vulnerabilities have been found in the Apache HTTPD server.\n\n\n* [CVE-2012-3499](https://security-tracker.debian.org/tracker/CVE-2012-3499)\nThe modules mod\\_info, mod\\_status, mod\\_imagemap, mod\\_ldap, and\n mod\\_proxy\\_ftp did not properly escape hostnames and URIs in\n HTML output, causing cross site scripting vulnerabilities.\n* [CVE-2012-4558](https://security-tracker.debian.org/tracker/CVE-2012-4558)\nMod\\_proxy\\_balancer did not properly escape hostnames and URIs\n in its balancer-manager interface, causing a cross site scripting\n vulnerability.\n* [CVE-2013-1048](https://security-tracker.debian.org/tracker/CVE-2013-1048)\nHayawardh Vijayakumar noticed that the apache2ctl script created\n the lock directory in an unsafe manner, allowing a local attacker\n to gain elevated privileges via a symlink attack. This is a Debian\n specific issue.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 2.2.16-6+squeeze11.\n\n\nFor the testing distribution (wheezy), these problems will be fixed in\nversion 2.2.22-13.\n\n\nFor the unstable distribution (sid), these problems will be fixed in\nversion 2.2.22-13.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.16-6+squeeze11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.16-6",
+				"2.2.16-6+squeeze1",
+				"2.2.16-6+squeeze10",
+				"2.2.16-6+squeeze1~bpo50+1",
+				"2.2.16-6+squeeze2",
+				"2.2.16-6+squeeze2~bpo50+1",
+				"2.2.16-6+squeeze3",
+				"2.2.16-6+squeeze4",
+				"2.2.16-6+squeeze4~bpo50+1",
+				"2.2.16-6+squeeze6",
+				"2.2.16-6+squeeze7",
+				"2.2.16-6+squeeze8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2637-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2637"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2276-1",
+	"modified": "2023-06-28T06:26:30.047216Z",
+	"published": "2020-07-11T00:00:00Z",
+	"related": [
+		"CVE-2020-12108",
+		"CVE-2020-15011"
+	],
+	"summary": "mailman - security update",
+	"details": "\nThe following CVEs were reported against src:mailman.\n\n\n* [CVE-2020-12108](https://security-tracker.debian.org/tracker/CVE-2020-12108)\n/options/mailman in GNU Mailman before 2.1.31 allows Arbitrary\n Content Injection.\n* [CVE-2020-15011](https://security-tracker.debian.org/tracker/CVE-2020-15011)\nGNU Mailman before 2.1.33 allows arbitrary content injection via\n the Cgi/private.py private archive login page.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:2.1.23-1+deb9u6.\n\n\nWe recommend that you upgrade your mailman packages.\n\n\nFor the detailed security status of mailman please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mailman>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mailman",
+				"purl": "pkg:deb/debian/mailman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.23-1+deb9u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.23-1",
+				"1:2.1.23-1+deb9u1",
+				"1:2.1.23-1+deb9u2",
+				"1:2.1.23-1+deb9u3",
+				"1:2.1.23-1+deb9u4",
+				"1:2.1.23-1+deb9u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2276-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2276"
+		}
+	]
+}

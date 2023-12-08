@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3002-1",
+	"modified": "2023-06-28T06:26:46.465353Z",
+	"published": "2022-05-13T00:00:00Z",
+	"related": [
+		"CVE-2021-43008"
+	],
+	"summary": "adminer - security update",
+	"details": "\nIt was discovered that there was an issue in the web-based database tool\nAdminer whereby an attacker could have performed an Arbitrary File Read on the\nremote server by requesting Adminer connect to a crafted remote MySQL\ndatabase.\n\n\n* [CVE-2021-43008](https://security-tracker.debian.org/tracker/CVE-2021-43008)\nCVE-2021-43008: Improper Access Control in Adminer versions 1.12.0 to\n 4.6.2 (fixed in version 4.6.3) allows an attacker to achieve Arbitrary File\n Read on the remote server by requesting the Adminer to connect to a remote\n MySQL database.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n4.2.5-3+deb9u3.\n\n\nWe recommend that you upgrade your adminer packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "adminer",
+				"purl": "pkg:deb/debian/adminer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.5-3+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.5-3",
+				"4.2.5-3+deb9u1",
+				"4.2.5-3+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3002-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3002"
+		}
+	]
+}

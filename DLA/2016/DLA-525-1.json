@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-525-1",
+	"modified": "2023-06-28T06:25:34.618723Z",
+	"published": "2016-06-25T00:00:00Z",
+	"related": [
+		"CVE-2016-4994"
+	],
+	"summary": "gimp - security update",
+	"details": "\nIt was discovered that there was a use-after-free vulnerability\nin the channel and layer properties parsing process in Gimp, the\nGNU Image Manipulation Program.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in gimp version\n2.8.2-2+deb7u2.\n\n\nWe recommend that you upgrade your gimp packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "gimp",
+				"purl": "pkg:deb/debian/gimp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.2-2+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.2-2",
+				"2.8.2-2+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-525-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-525"
+		}
+	]
+}

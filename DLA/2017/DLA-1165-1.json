@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1165-1",
+	"modified": "2023-06-28T06:20:26.283900Z",
+	"published": "2017-11-07T00:00:00Z",
+	"related": [
+		"CVE-2017-12197"
+	],
+	"summary": "libpam4j - security update",
+	"details": "\nIt was discovered that libpam4j, a Java binding for libpam.so, does\nnot call pam\\_acct\\_mgmt(). As a consequence, the PAM account is not\nproperly\nverified. Any user with a valid password but with deactivated or\ndisabled account was able to log in.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.4-2+deb7u1.\n\n\nWe recommend that you upgrade your libpam4j packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libpam4j",
+				"purl": "pkg:deb/debian/libpam4j?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1165-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1165"
+		}
+	]
+}

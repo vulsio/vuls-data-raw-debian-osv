@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2441-1",
+	"modified": "2023-06-28T06:21:17.648278Z",
+	"published": "2020-11-09T00:00:00Z",
+	"related": [
+		"CVE-2018-1000671"
+	],
+	"summary": "sympa - security update",
+	"details": "\nA privilege escalation was discovered in Sympa, a modern mailing list\nmanager. It is fixed when Sympa is used in conjunction with common\nMTAs (such as Exim or Postfix) by disabling a setuid executable,\nalthough no fix is currently available for all environments (such as\nsendmail). Additionally, an open-redirect vulnerability was\ndiscovered and fixed.\n\n\n* [CVE-2020-26880](https://security-tracker.debian.org/tracker/CVE-2020-26880)\nSympa allows a local privilege escalation from the sympa user\n account to full root access by modifying the sympa.conf\n configuration file (which is owned by sympa) and parsing it\n through the setuid sympa\\_newaliases-wrapper executable.\n* [CVE-2018-1000671](https://security-tracker.debian.org/tracker/CVE-2018-1000671)\nSympa contains a CWE-601: URL Redirection to Untrusted Site ('Open\n Redirect') vulnerability in The referer parameter of the\n wwsympa.fcgi login action. that can result in Open redirection and\n reflected XSS via data URIs.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n6.2.16~dfsg-3+deb9u4.\n\n\nWe recommend that you upgrade your sympa packages.\n\n\nFor the detailed security status of sympa please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/sympa>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sympa",
+				"purl": "pkg:deb/debian/sympa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.2.16~dfsg-3+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.2.16~dfsg-3",
+				"6.2.16~dfsg-3+deb9u1",
+				"6.2.16~dfsg-3+deb9u2",
+				"6.2.16~dfsg-3+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2441-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2441"
+		}
+	]
+}

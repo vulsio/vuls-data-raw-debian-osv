@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-515-1",
+	"modified": "2023-06-28T06:21:34.049603Z",
+	"published": "2016-06-14T00:00:00Z",
+	"related": [
+		"CVE-2016-3062"
+	],
+	"summary": "libav - security update",
+	"details": "\nIt was discovered that there was a memory corruption issue in\nlibav (a multimedia player, server, encoder and transcoder) when\nparsing .mp4 files which could lead to crash or possibly execute\narbitrary code.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libav version\n6:0.8.17-2+deb7u2.\n\n\nWe recommend that you upgrade your libav packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libav",
+				"purl": "pkg:deb/debian/libav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:0.8.17-2+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:0.8.10-1",
+				"6:0.8.12-1",
+				"6:0.8.13-1",
+				"6:0.8.15-1",
+				"6:0.8.16-1",
+				"6:0.8.17-1",
+				"6:0.8.17-2",
+				"6:0.8.17-2+deb7u1",
+				"6:0.8.6-1",
+				"6:0.8.7-1",
+				"6:0.8.8-1",
+				"6:0.8.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-515-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-515"
+		}
+	]
+}

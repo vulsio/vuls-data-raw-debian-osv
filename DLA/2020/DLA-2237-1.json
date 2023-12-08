@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2237-1",
+	"modified": "2023-06-28T06:26:28.152319Z",
+	"published": "2020-06-07T00:00:00Z",
+	"related": [
+		"CVE-2019-8842",
+		"CVE-2020-3898"
+	],
+	"summary": "cups - security update",
+	"details": "\nThe following CVE(s) were reported against src:cups.\n\n\n* [CVE-2019-8842](https://security-tracker.debian.org/tracker/CVE-2019-8842)\nThe `ippReadIO` function may under-read an extension field.\n* [CVE-2020-3898](https://security-tracker.debian.org/tracker/CVE-2020-3898)\nThere was a heap based buffer overflow in libcups's\n ppdFindOption() in ppd-mark.c.\n The `ppdOpen` function did not handle invalid UI constraint.\n `ppdcSource::get\\_resolution` function did not handle invalid\n resolution strings.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.7.5-11+deb8u8.\n\n\nWe recommend that you upgrade your cups packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.5-11+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.5-11",
+				"1.7.5-11+deb8u1",
+				"1.7.5-11+deb8u2",
+				"1.7.5-11+deb8u3",
+				"1.7.5-11+deb8u4",
+				"1.7.5-11+deb8u5",
+				"1.7.5-11+deb8u6",
+				"1.7.5-11+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2237-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2237"
+		}
+	]
+}

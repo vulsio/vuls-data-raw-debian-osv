@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4125-1",
+	"modified": "2023-10-16T00:16:54.705134Z",
+	"published": "2018-02-27T00:00:00Z",
+	"related": [
+		"CVE-2018-6767",
+		"CVE-2018-7253",
+		"CVE-2018-7254"
+	],
+	"summary": "wavpack - security update",
+	"details": "\nJoonun Jang discovered several problems in wavpack, an audio\ncompression format suite. Incorrect processing of input resulted in\nseveral heap- and stack-based buffer overflows, leading to application\ncrash or potential code execution.\n\n\nFor the stable distribution (stretch), these problems have been fixed\nin version 5.0.0-2+deb9u1.\n\n\nWe recommend that you upgrade your wavpack packages.\n\n\nFor the detailed security status of wavpack please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/wavpack](https://security-tracker.debian.org/tracker/wavpack)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "wavpack",
+				"purl": "pkg:deb/debian/wavpack?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.0-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4125-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4125"
+		}
+	]
+}

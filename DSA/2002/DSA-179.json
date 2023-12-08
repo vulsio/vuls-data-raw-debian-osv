@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-179",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-10-18T00:00:00Z",
+	"related": [
+		"CVE-2002-0838"
+	],
+	"summary": "gnome-gv - buffer overflow",
+	"details": "\nZen-parse discovered a buffer overflow in gv, a PostScript and PDF\nviewer for X11. The same code is present in gnome-gv. This problem\nis triggered by scanning the PostScript file and can be exploited by\nan attacker sending a malformed PostScript or PDF file. The attacker\nis able to cause arbitrary code to be run with the privileges of the\nvictim.\n\n\nThis problem has been fixed in version 1.1.96-3.1 for the current\nstable distribution (woody), in version 0.82-2.1 for the old stable\ndistribution (potato) and version 1.99.7-9 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your gnome-gv package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gnome-gv",
+				"purl": "pkg:deb/debian/gnome-gv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.96-3.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-179.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-179"
+		}
+	]
+}

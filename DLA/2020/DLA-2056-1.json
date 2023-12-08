@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2056-1",
+	"modified": "2023-06-28T06:25:16.478480Z",
+	"published": "2020-01-01T00:00:00Z",
+	"related": [
+		"CVE-2019-16789"
+	],
+	"summary": "waitress - security update",
+	"details": "\nIt was discovered that there was a HTTP request smuggling\nvulnerability in waitress, pure-Python WSGI server.\n\n\n* [CVE-2019-16789](https://security-tracker.debian.org/tracker/CVE-2019-16789)\nIn Waitress through version 1.4.0, if a proxy server is used in front of\n waitress, an invalid request may be sent by an attacker that bypasses the\n front-end and is parsed differently by waitress leading to a potential for\n HTTP request smuggling. Specially crafted requests containing special\n whitespace characters in the Transfer-Encoding header would get parsed by\n Waitress as being a chunked request, but a front-end server would use the\n Content-Length instead as the Transfer-Encoding header is considered\n invalid due to containing invalid characters. If a front-end server does\n HTTP pipelining to a backend Waitress server this could lead to HTTP\n request splitting which may lead to potential cache poisoning or unexpected\n information disclosure. This issue is fixed in Waitress 1.4.1 through more\n strict HTTP field validation.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.8.9-2+deb8u1.\n\n\nWe recommend that you upgrade your waitress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "waitress",
+				"purl": "pkg:deb/debian/waitress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.9-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.9-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2056-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2056"
+		}
+	]
+}

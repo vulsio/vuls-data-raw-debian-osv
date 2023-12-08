@@ -1,0 +1,92 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3404-1",
+	"modified": "2023-10-16T00:11:58.938466Z",
+	"published": "2015-11-25T00:00:00Z",
+	"related": [
+		"CVE-2015-8213"
+	],
+	"summary": "python-django - security update",
+	"details": "\nRyan Butterfield discovered a vulnerability in the date template filter\nin python-django, a high-level Python web development framework. A\nremote attacker can take advantage of this flaw to obtain any secret in\nthe application's settings.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.4.5-1+deb7u14.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.7.7-1+deb8u3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.7-1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.5-1+deb7u14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.5-1",
+				"1.4.5-1+deb7u1",
+				"1.4.5-1+deb7u10",
+				"1.4.5-1+deb7u11",
+				"1.4.5-1+deb7u11~bpo60+1",
+				"1.4.5-1+deb7u12",
+				"1.4.5-1+deb7u13",
+				"1.4.5-1+deb7u13~bpo60+1",
+				"1.4.5-1+deb7u14~bpo60+1",
+				"1.4.5-1+deb7u2",
+				"1.4.5-1+deb7u3",
+				"1.4.5-1+deb7u4",
+				"1.4.5-1+deb7u4~bpo60+1",
+				"1.4.5-1+deb7u5",
+				"1.4.5-1+deb7u6",
+				"1.4.5-1+deb7u7",
+				"1.4.5-1+deb7u7~bpo60+1",
+				"1.4.5-1+deb7u8",
+				"1.4.5-1+deb7u8~bpo60+1",
+				"1.4.5-1+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3404-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.7-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.7-1",
+				"1.7.7-1+deb8u1",
+				"1.7.7-1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3404-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3404"
+		}
+	]
+}

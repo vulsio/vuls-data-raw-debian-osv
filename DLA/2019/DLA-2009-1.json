@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2009-1",
+	"modified": "2023-06-28T06:26:26.100588Z",
+	"published": "2019-11-26T00:00:00Z",
+	"related": [
+		"CVE-2017-17095",
+		"CVE-2018-12900",
+		"CVE-2018-18661",
+		"CVE-2019-17546",
+		"CVE-2019-6128"
+	],
+	"summary": "tiff - security update",
+	"details": "\nSeveral issues have been found in tiff, a Tag Image File Format library.\n\n\n* [CVE-2019-17546](https://security-tracker.debian.org/tracker/CVE-2019-17546)\nThe RGBA interface contains an integer overflow that might lead\n to heap buffer overflow write.\n* [CVE-2019-6128](https://security-tracker.debian.org/tracker/CVE-2019-6128)\nA memory leak exists due to missing cleanup code.\n* [CVE-2018-18661](https://security-tracker.debian.org/tracker/CVE-2018-18661)\nIn case of exhausted memory there is a null pointer dereference\n in tiff2bw.\n* [CVE-2018-12900](https://security-tracker.debian.org/tracker/CVE-2018-12900)\nFix for heap-based buffer overflow, that could be used to crash an\n application or even to execute arbitrary code (with the permission\n of the user running this application).\n\n\n[CVE-2017-17095](https://security-tracker.debian.org/tracker/CVE-2017-17095)\n\n\nA crafted tiff file could lead to a heap buffer overflow in pal2rgb.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.0.3-12.3+deb8u10.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.3-12.3+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.3-12.3",
+				"4.0.3-12.3+deb8u1",
+				"4.0.3-12.3+deb8u2",
+				"4.0.3-12.3+deb8u3",
+				"4.0.3-12.3+deb8u4",
+				"4.0.3-12.3+deb8u5",
+				"4.0.3-12.3+deb8u6",
+				"4.0.3-12.3+deb8u7",
+				"4.0.3-12.3+deb8u8",
+				"4.0.3-12.3+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2009-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-2009"
+		}
+	]
+}

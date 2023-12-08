@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4772-1",
+	"modified": "2023-10-16T00:20:25.288593Z",
+	"published": "2020-10-14T00:00:00Z",
+	"related": [
+		"CVE-2020-13956"
+	],
+	"summary": "httpcomponents-client - security update",
+	"details": "\nPriyank Nigam discovered that HttpComponents Client, a Java HTTP agent\nimplementation, could misinterpret malformed authority component in a\nrequest URI and pick the wrong target host for request execution.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 4.5.7-1+deb10u1.\n\n\nWe recommend that you upgrade your httpcomponents-client packages.\n\n\nFor the detailed security status of httpcomponents-client please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/httpcomponents-client](https://security-tracker.debian.org/tracker/httpcomponents-client)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "httpcomponents-client",
+				"purl": "pkg:deb/debian/httpcomponents-client?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.5.7-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.5.7-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4772-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4772"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-959-1",
+	"modified": "2023-06-28T06:25:41.068212Z",
+	"published": "2017-05-28T00:00:00Z",
+	"related": [
+		"CVE-2016-5824",
+		"CVE-2016-9584"
+	],
+	"summary": "libical - security update",
+	"details": "\nIt was discovered that there was a use-after-free vulnerability in the libical\niCalendar library. Remote attackers could cause a denial of service and\npossibly read heap memory via a specially crafted .ICS file.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libical version\n0.48-2+deb7u1.\n\n\nWe recommend that you upgrade your libical packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libical",
+				"purl": "pkg:deb/debian/libical?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.48-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.48-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-959-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-959"
+		}
+	]
+}

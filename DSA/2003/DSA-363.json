@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-363",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2003-08-03T00:00:00Z",
+	"related": [
+		"CVE-2003-0468",
+		"CVE-2003-0540"
+	],
+	"summary": "postfix - denial of service, bounce-scanning",
+	"details": "\nThe postfix mail transport agent in Debian 3.0 contains two\nvulnerabilities:\n\n\n* [\\\n CAN-2003-0468](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0468): Postfix would allow an attacker to bounce-scan private\n networks or use the daemon as a DDoS tool by forcing the daemon to\n connect to an arbitrary service at an arbitrary IP address and\n either receiving a bounce message or observing queue operations to\n infer the status of the delivery attempt.\n* [\\\n CAN-2003-0540](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0540): a malformed envelope address can 1) cause the queue\n manager to lock up until an entry is removed from the queue and 2)\n lock up the smtp listener leading to a denial of service.\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 1.1.11-0.woody3.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you update your postfix package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "postfix",
+				"purl": "pkg:deb/debian/postfix?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.11-0.woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-363.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-363"
+		}
+	]
+}

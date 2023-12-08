@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-223",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-01-07T00:00:00Z",
+	"related": [
+		"CVE-2002-1390"
+	],
+	"summary": "geneweb - information exposure",
+	"details": "\nA security issue has been discovered by Daniel de Rauglaudre, upstream\nauthor of geneweb, a genealogical software with web interface. It\nruns as a daemon on port 2317 by default. Paths are not properly\nsanitized, so a carefully crafted URL lead geneweb to read and display\narbitrary files of the system it runs on.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 4.06-2.\n\n\nThe old stable distribution (potato) is not affected.\n\n\nFor the unstable distribution (sid) this problem has been\nfixed in version 4.09-1.\n\n\nWe recommend that you upgrade your geneweb package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "geneweb",
+				"purl": "pkg:deb/debian/geneweb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.06-2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-223.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-223"
+		}
+	]
+}

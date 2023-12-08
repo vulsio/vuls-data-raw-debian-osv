@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2301-1",
+	"modified": "2023-06-28T06:29:12.227889Z",
+	"published": "2020-07-30T00:00:00Z",
+	"related": [
+		"CVE-2020-12762"
+	],
+	"summary": "json-c - security update",
+	"details": "\nTobias Stoeckmann found an integer overflow issue in JSON-C, a C\nlibrary to manipulate JSON objects, when reading maliciously crafted\nlarge files. The issue could be exploited to cause denial of service\nor possibly execute arbitrary code.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n0.12.1-1.1+deb9u1.\n\n\nWe recommend that you upgrade your json-c packages.\n\n\nFor the detailed security status of json-c please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/json-c>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "json-c",
+				"purl": "pkg:deb/debian/json-c?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.12.1-1.1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.12.1-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2301-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2301"
+		}
+	]
+}

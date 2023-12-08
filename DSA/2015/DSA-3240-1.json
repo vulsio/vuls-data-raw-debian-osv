@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3240-1",
+	"modified": "2023-10-16T00:11:51.058477Z",
+	"published": "2015-04-29T00:00:00Z",
+	"related": [
+		"CVE-2015-3153"
+	],
+	"summary": "curl - security update",
+	"details": "\nIt was discovered that cURL, an URL transfer library, if configured to\nuse a proxy server with the HTTPS protocol, by default could send to the\nproxy the same HTTP headers it sends to the destination server, possibly\nleaking sensitive information.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 7.38.0-4+deb8u2.\n\n\nFor the testing distribution (stretch), this problem will be fixed in\nversion 7.42.1-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 7.42.1-1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.38.0-4+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.38.0-4",
+				"7.38.0-4+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3240-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3240"
+		}
+	]
+}

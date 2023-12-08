@@ -1,0 +1,93 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2959-1",
+	"modified": "2023-10-16T00:10:40.020967Z",
+	"published": "2014-06-14T00:00:00Z",
+	"related": [
+		"CVE-2014-3154",
+		"CVE-2014-3155",
+		"CVE-2014-3156",
+		"CVE-2014-3157"
+	],
+	"summary": "chromium-browser - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the chromium web browser.\n\n\n* [CVE-2014-3154](https://security-tracker.debian.org/tracker/CVE-2014-3154)\nCollin Payne discovered a use-after-free issue in the filesystem API.\n* [CVE-2014-3155](https://security-tracker.debian.org/tracker/CVE-2014-3155)\nJames March, Daniel Sommermann, and Alan Frindell discovered several\n out-of-bounds read issues in the SPDY protocol implementation.\n* [CVE-2014-3156](https://security-tracker.debian.org/tracker/CVE-2014-3156)\nAtte Kettunen discovered a buffer overflow issue in bitmap handling\n in the clipboard implementation.\n* [CVE-2014-3157](https://security-tracker.debian.org/tracker/CVE-2014-3157)\nA heap-based buffer overflow issue was discovered in chromium's\n ffmpeg media filter.\n\n\nIn addition, this version corrects a regression in the previous update.\nSupport for older i386 processors had been dropped. This functionality\nis now restored.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 35.0.1916.153-1~deb7u1.\n\n\nFor the testing (jessie) and unstable (sid) distribution, these problems\nhave been fixed in version 35.0.1916.153-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "35.0.1916.153-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"26.0.1410.43-1",
+				"27.0.1453.110-1",
+				"27.0.1453.110-1~deb7u1",
+				"27.0.1453.110-2",
+				"27.0.1453.93-1",
+				"27.0.1453.93-1~deb7u1",
+				"28.0.1500.71-1",
+				"28.0.1500.71-1~deb7u1",
+				"28.0.1500.71-2",
+				"28.0.1500.95-1",
+				"28.0.1500.95-1~deb7u1",
+				"28.0.1500.95-2",
+				"28.0.1500.95-3",
+				"29.0.1547.57-1",
+				"29.0.1547.57-1~deb7u1",
+				"29.0.1547.57-2",
+				"29.0.1547.57-3",
+				"29.0.1547.57-3+exp1",
+				"30.0.1599.101-1",
+				"30.0.1599.101-1~deb7u1",
+				"30.0.1599.101-2",
+				"30.0.1599.101-3",
+				"31.0.1650.57-1",
+				"31.0.1650.57-1~deb7u1",
+				"31.0.1650.63-1",
+				"31.0.1650.63-1~deb7u1",
+				"32.0.1700.123-1",
+				"32.0.1700.123-1~deb7u1",
+				"32.0.1700.123-2",
+				"32.0.1700.123-3",
+				"32.0.1700.123-4",
+				"33.0.1750.152-1",
+				"33.0.1750.152-1~deb7u1",
+				"34.0.1847.116-1",
+				"34.0.1847.116-1~deb7u1",
+				"34.0.1847.116-2",
+				"34.0.1847.132-1",
+				"34.0.1847.132-1~deb7u1",
+				"34.0.1847.137-1",
+				"34.0.1847.137-1~deb7u1",
+				"35.0.1916.114-1",
+				"35.0.1916.114-1~deb7u1",
+				"35.0.1916.114-1~deb7u2",
+				"35.0.1916.114-2",
+				"35.0.1916.86-1",
+				"35.0.1916.99-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2959-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2959"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4879-1",
+	"modified": "2023-10-16T00:22:24.029976Z",
+	"published": "2021-03-27T00:00:00Z",
+	"related": [
+		"CVE-2020-1946"
+	],
+	"summary": "spamassassin - security update",
+	"details": "\nDamian Lukowski discovered a flaw in spamassassin, a Perl-based spam\nfilter using text analysis. Malicious rule configuration files, possibly\ndownloaded from an updates server, could execute arbitrary commands\nunder multiple scenarios.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 3.4.2-1+deb10u3.\n\n\nWe recommend that you upgrade your spamassassin packages.\n\n\nFor the detailed security status of spamassassin please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/spamassassin>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "spamassassin",
+				"purl": "pkg:deb/debian/spamassassin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.2-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.4.2-1",
+				"3.4.2-1+deb10u1",
+				"3.4.2-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4879-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4879"
+		}
+	]
+}

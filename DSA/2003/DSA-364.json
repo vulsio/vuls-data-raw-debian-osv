@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-364",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2003-08-04T00:00:00Z",
+	"related": [
+		"CVE-2003-0620",
+		"CVE-2003-0645"
+	],
+	"summary": "man-db - buffer overflows, arbitrary command execution",
+	"details": "\nman-db provides the standard man(1) command on Debian systems. During\nconfiguration of this package, the administrator is asked whether\nman(1) should run setuid to a dedicated user (\"man\") in order to\nprovide a shared cache of preformatted manual pages. The default is\nfor man(1) NOT to be setuid, and in this configuration no known\nvulnerability exists. However, if the user explicitly requests setuid\noperation, a local attacker could exploit either of the following bugs to\nexecute arbitrary code as the \"man\" user.\n\n\nAgain, these vulnerabilities do not affect the default configuration,\nwhere man is not setuid.\n\n\n* [CAN-2003-0620](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0620): Multiple buffer overflows in man-db 2.4.1 and\n earlier, when installed setuid, allow local users to gain privileges\n via (1) MANDATORY\\_MANPATH, MANPATH\\_MAP, and MANDB\\_MAP arguments to\n add\\_to\\_dirlist in manp.c, (2) a long pathname to ult\\_src in\n ult\\_src.c, (3) a long .so argument to test\\_for\\_include in ult\\_src.c,\n (4) a long MANPATH environment variable, or (5) a long PATH\n environment variable.\n* [CAN-2003-0645](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0645): Certain DEFINE directives in `~/.manpath`, which\n contained commands to be executed, would be honored even when\n running setuid, allowing any user to execute commands as the\n \"man\" user.\n\n\nFor the current stable distribution (woody), these problems have been\nfixed in version 2.3.20-18.woody.4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.4.1-13.\n\n\nWe recommend that you update your man-db package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "man-db",
+				"purl": "pkg:deb/debian/man-db?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.20-18.woody.4"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-364.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-364"
+		}
+	]
+}

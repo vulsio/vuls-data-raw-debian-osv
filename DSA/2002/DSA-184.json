@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-184",
+	"modified": "2023-10-16T00:10:41.699974Z",
+	"published": "2002-10-30T00:00:00Z",
+	"related": [
+		"CVE-2002-1235"
+	],
+	"summary": "krb4 - buffer overflow",
+	"details": "\nTom Yu and Sam Hartman of MIT discovered another stack buffer overflow\nin the kadm\\_ser\\_wrap\\_in function in the Kerberos v4 administration\nserver. This kadmind bug has a working exploit code circulating,\nhence it is considered serious.\n\n\nThis problem has been fixed in version 1.1-8-2.2 for the current\nstable distribution (woody), in version 1.0-2.2 for the old stable\ndistribution (potato) and in version 1.1-11-8 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your krb4 packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "krb4",
+				"purl": "pkg:deb/debian/krb4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1-8-2.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.9-2",
+				"0.9.9-3",
+				"0.9.9-4",
+				"1.0-2",
+				"1.0-2.2",
+				"1.0-2.3",
+				"1.1-8-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-184.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-184"
+		}
+	]
+}

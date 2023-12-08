@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-458-3",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-10-10T00:00:00Z",
+	"related": [
+		"CVE-2004-0150"
+	],
+	"summary": "python2.2 - buffer overflow",
+	"details": "\nThis security advisory corrects DSA 458-2 which caused a problem in\nthe gethostbyaddr routine.\n\n\nThe original advisory said:\n\n\n\n> \n> Sebastian Schmidt discovered a buffer overflow bug in Python's\n> getaddrinfo function, which could allow an IPv6 address, supplied by a\n> remote attacker via DNS, to overwrite memory on the stack.\n> \n> \n> This bug only exists in python 2.2 and 2.2.1, and only when IPv6\n> support is disabled. The python2.2 package in Debian woody meets\n> these conditions (the 'python' package does not).\n> \n> \n> \n\n\nFor the stable distribution (woody), this bug has been fixed in\nversion 2.2.1-4.6.\n\n\nThe testing and unstable distribution (sarge and sid) are not\naffected by this problem.\n\n\nWe recommend that you update your python2.2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "python2.2",
+				"purl": "pkg:deb/debian/python2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.1-4.6"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-458-3.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-458"
+		}
+	]
+}

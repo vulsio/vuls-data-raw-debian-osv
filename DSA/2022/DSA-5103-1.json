@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5103-1",
+	"modified": "2023-10-16T00:15:38.559212Z",
+	"published": "2022-03-15T00:00:00Z",
+	"related": [
+		"CVE-2021-4160",
+		"CVE-2022-0778"
+	],
+	"summary": "openssl - security update",
+	"details": "\nTavis Ormandy discovered that the BN\\_mod\\_sqrt() function of OpenSSL\ncould be tricked into an infinite loop. This could result in denial of\nservice via malformed certificates.\n\n\nAdditional details can be found in the upstream advisory:\n[\\\nhttps://www.openssl.org/news/secadv/20220315.txt](https://www.openssl.org/news/secadv/20220315.txt)\n\n\nIn addition this update corrects a carry propagation bug specific to\nMIPS architectures.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 1.1.1d-0+deb10u8.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.1.1k-1+deb11u2.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssl](https://security-tracker.debian.org/tracker/openssl)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1d-0+deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1c-1",
+				"1.1.1d-0+deb10u1",
+				"1.1.1d-0+deb10u2",
+				"1.1.1d-0+deb10u3",
+				"1.1.1d-0+deb10u4",
+				"1.1.1d-0+deb10u5",
+				"1.1.1d-0+deb10u6",
+				"1.1.1d-0+deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5103-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1k-1+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1k-1",
+				"1.1.1k-1+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5103-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5103"
+		}
+	]
+}

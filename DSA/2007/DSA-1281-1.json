@@ -1,0 +1,88 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1281-1",
+	"modified": "2023-10-16T00:10:18.998152Z",
+	"published": "2007-04-25T00:00:00Z",
+	"related": [
+		"CVE-2007-1745",
+		"CVE-2007-1997",
+		"CVE-2007-2029"
+	],
+	"summary": "clamav - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Clam\nanti-virus toolkit. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2007-1745](https://security-tracker.debian.org/tracker/CVE-2007-1745)\nIt was discovered that a file descriptor leak in the CHM handler may\n lead to denial of service.\n* [CVE-2007-1997](https://security-tracker.debian.org/tracker/CVE-2007-1997)\nIt was discovered that a buffer overflow in the CAB handler may lead\n to the execution of arbitrary code.\n* [CVE-2007-2029](https://security-tracker.debian.org/tracker/CVE-2007-2029)\nIt was discovered that a file descriptor leak in the PDF handler may\n lead to denial of service.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 0.84-2.sarge.16.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 0.90.1-3etch1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.90.2-1.\n\n\nWe recommend that you upgrade your clamav packages. Packages for\nthe arm, sparc, m68k, mips and mipsel architectures are not yet available.\nThey will be provided later.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "clamav",
+				"purl": "pkg:deb/debian/clamav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.84-2.sarge.16"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.84-2",
+				"0.84-2.sarge.1",
+				"0.84-2.sarge.10",
+				"0.84-2.sarge.11",
+				"0.84-2.sarge.12",
+				"0.84-2.sarge.13",
+				"0.84-2.sarge.14",
+				"0.84-2.sarge.15",
+				"0.84-2.sarge.2",
+				"0.84-2.sarge.3",
+				"0.84-2.sarge.4",
+				"0.84-2.sarge.5",
+				"0.84-2.sarge.6",
+				"0.84-2.sarge.7",
+				"0.84-2.sarge.8",
+				"0.84-2.sarge.9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1281-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "clamav",
+				"purl": "pkg:deb/debian/clamav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.90.1-3etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.90.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1281-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1281"
+		}
+	]
+}

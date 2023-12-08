@@ -1,0 +1,62 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1531-1",
+	"modified": "2023-06-28T06:26:23.280855Z",
+	"published": "2018-10-03T00:00:00Z",
+	"related": [
+		"CVE-2018-10902",
+		"CVE-2018-10938",
+		"CVE-2018-13099",
+		"CVE-2018-14609",
+		"CVE-2018-14617",
+		"CVE-2018-14633",
+		"CVE-2018-14678",
+		"CVE-2018-14734",
+		"CVE-2018-15572",
+		"CVE-2018-15594",
+		"CVE-2018-16276",
+		"CVE-2018-16658",
+		"CVE-2018-17182",
+		"CVE-2018-6554",
+		"CVE-2018-6555",
+		"CVE-2018-7755",
+		"CVE-2018-9363",
+		"CVE-2018-9516"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2018-6554](https://security-tracker.debian.org/tracker/CVE-2018-6554)\nA memory leak in the irda\\_bind function in the irda subsystem was\n discovered. A local user can take advantage of this flaw to cause a\n denial of service (memory consumption).\n* [CVE-2018-6555](https://security-tracker.debian.org/tracker/CVE-2018-6555)\nA flaw was discovered in the irda\\_setsockopt function in the irda\n subsystem, allowing a local user to cause a denial of service\n (use-after-free and system crash).\n* [CVE-2018-7755](https://security-tracker.debian.org/tracker/CVE-2018-7755)\nBrian Belleville discovered a flaw in the fd\\_locked\\_ioctl function\n in the floppy driver in the Linux kernel. The floppy driver copies a\n kernel pointer to user memory in response to the FDGETPRM ioctl. A\n local user with access to a floppy drive device can take advantage\n of this flaw to discover the location kernel code and data.\n* [CVE-2018-9363](https://security-tracker.debian.org/tracker/CVE-2018-9363)\nIt was discovered that the Bluetooth HIDP implementation did not\n correctly check the length of received report messages. A paired\n HIDP device could use this to cause a buffer overflow, leading to\n denial of service (memory corruption or crash) or potentially\n remote code execution.\n* [CVE-2018-9516](https://security-tracker.debian.org/tracker/CVE-2018-9516)\nIt was discovered that the HID events interface in debugfs did not\n correctly limit the length of copies to user buffers. A local\n user with access to these files could use this to cause a\n denial of service (memory corruption or crash) or possibly for\n privilege escalation. However, by default debugfs is only\n accessible by the root user.\n* [CVE-2018-10902](https://security-tracker.debian.org/tracker/CVE-2018-10902)\nIt was discovered that the rawmidi kernel driver does not protect\n against concurrent access which leads to a double-realloc (double\n free) flaw. A local attacker can take advantage of this issue for\n privilege escalation.\n* [CVE-2018-10938](https://security-tracker.debian.org/tracker/CVE-2018-10938)\nYves Younan from Cisco reported that the Cipso IPv4 module did not\n correctly check the length of IPv4 options. On custom kernels with\n CONFIG\\_NETLABEL enabled, a remote attacker could use this to cause\n a denial of service (hang).\n* [CVE-2018-13099](https://security-tracker.debian.org/tracker/CVE-2018-13099)\nWen Xu from SSLab at Gatech reported a use-after-free bug in the\n F2FS implementation. An attacker able to mount a crafted F2FS\n volume could use this to cause a denial of service (crash or\n memory corruption) or possibly for privilege escalation.\n* [CVE-2018-14609](https://security-tracker.debian.org/tracker/CVE-2018-14609)\nWen Xu from SSLab at Gatech reported a potential null pointer\n dereference in the F2FS implementation. An attacker able to mount\n arbitrary F2FS volumes could use this to cause a denial of service\n (crash).\n* [CVE-2018-14617](https://security-tracker.debian.org/tracker/CVE-2018-14617)\nWen Xu from SSLab at Gatech reported a potential null pointer\n dereference in the HFS+ implementation. An attacker able to mount\n arbitrary HFS+ volumes could use this to cause a denial of service\n (crash).\n* [CVE-2018-14633](https://security-tracker.debian.org/tracker/CVE-2018-14633)\nVincent Pelletier discovered a stack-based buffer overflow flaw in\n the chap\\_server\\_compute\\_md5() function in the iSCSI target code. An\n unauthenticated remote attacker can take advantage of this flaw to\n cause a denial of service or possibly to get a non-authorized access\n to data exported by an iSCSI target.\n* [CVE-2018-14678](https://security-tracker.debian.org/tracker/CVE-2018-14678)\nM. Vefa Bicakci and Andy Lutomirski discovered a flaw in the\n kernel exit code used on amd64 systems running as Xen PV guests.\n A local user could use this to cause a denial of service (crash).\n* [CVE-2018-14734](https://security-tracker.debian.org/tracker/CVE-2018-14734)\nA use-after-free bug was discovered in the InfiniBand\n communication manager. A local user could use this to cause a\n denial of service (crash or memory corruption) or possible for\n privilege escalation.\n* [CVE-2018-15572](https://security-tracker.debian.org/tracker/CVE-2018-15572)\nEsmaiel Mohammadian Koruyeh, Khaled Khasawneh, Chengyu Song, and\n Nael Abu-Ghazaleh, from University of California, Riverside,\n reported a variant of Spectre variant 2, dubbed SpectreRSB. A\n local user may be able to use this to read sensitive information\n from processes owned by other users.\n* [CVE-2018-15594](https://security-tracker.debian.org/tracker/CVE-2018-15594)\nNadav Amit reported that some indirect function calls used in\n paravirtualised guests were vulnerable to Spectre variant 2. A\n local user may be able to use this to read sensitive information\n from the kernel.\n* [CVE-2018-16276](https://security-tracker.debian.org/tracker/CVE-2018-16276)\nJann Horn discovered that the yurex driver did not correctly limit\n the length of copies to user buffers. A local user with access to\n a yurex device node could use this to cause a denial of service\n (memory corruption or crash) or possibly for privilege escalation.\n* [CVE-2018-16658](https://security-tracker.debian.org/tracker/CVE-2018-16658)\nIt was discovered that the cdrom driver does not correctly\n validate the parameter to the CDROM\\_DRIVE\\_STATUS ioctl. A user\n with access to a cdrom device could use this to read sensitive\n information from the kernel or to cause a denial of service\n (crash).\n* [CVE-2018-17182](https://security-tracker.debian.org/tracker/CVE-2018-17182)\nJann Horn discovered that the vmacache\\_flush\\_all function mishandles\n sequence number overflows. A local user can take advantage of this\n flaw to trigger a use-after-free, causing a denial of service\n (crash or memory corruption) or privilege escalation.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.110-3+deb9u5~deb8u1.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.110-3+deb9u5~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.110-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1531-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1531"
+		}
+	]
+}

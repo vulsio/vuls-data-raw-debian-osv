@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2129-1",
+	"modified": "2023-10-16T00:10:58.901464Z",
+	"published": "2010-12-01T00:00:00Z",
+	"related": [
+		"CVE-2010-1323"
+	],
+	"summary": "krb5 - checksum verification weakness",
+	"details": "\nA vulnerability has been found in krb5, the MIT implementation of\nKerberos.\n\n\nMIT krb5 clients incorrectly accept unkeyed checksums in the SAM-2\npreauthentication challenge: an unauthenticated remote attacker could\nalter a SAM-2 challenge, affecting the prompt text seen by the user or\nthe kind of response sent to the KDC. Under some circumstances, this\ncan negate the incremental security benefit of using a single-use\nauthentication mechanism token.\n\n\nMIT krb5 incorrectly accepts RFC 3961 key-derivation checksums using\nRC4 keys when verifying KRB-SAFE messages: an unauthenticated remote\nattacker has a 1/256 chance of forging KRB-SAFE messages in an\napplication protocol if the targeted pre-existing session uses an RC4\nsession key. Few application protocols use KRB-SAFE messages.\n\n\nThe Common Vulnerabilities and Exposures project has assigned\n[CVE-2010-1323](https://security-tracker.debian.org/tracker/CVE-2010-1323) to these issues.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.6.dfsg.4~beta1-5lenny6.\n\n\nThe builds for the mips architecture are not included in this advisory.\nThey will be released as soon as they are available.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problem have been fixed in version 1.8.3+dfsg-3.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "krb5",
+				"purl": "pkg:deb/debian/krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.dfsg.4~beta1-5lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.dfsg.4~beta1-5",
+				"1.6.dfsg.4~beta1-5lenny1",
+				"1.6.dfsg.4~beta1-5lenny2",
+				"1.6.dfsg.4~beta1-5lenny3",
+				"1.6.dfsg.4~beta1-5lenny4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2129-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2129"
+		}
+	]
+}

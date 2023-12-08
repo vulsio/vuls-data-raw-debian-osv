@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4685-1",
+	"modified": "2023-10-16T00:14:37.410975Z",
+	"published": "2020-05-14T00:00:00Z",
+	"related": [
+		"CVE-2020-3810"
+	],
+	"summary": "apt - security update",
+	"details": "\nShuaibing Lu discovered that missing input validation in the ar/tar\nimplementations of APT, the high level package manager, could result in\ndenial of service when processing specially crafted deb files.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1.4.10.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.8.2.1.\n\n\nWe recommend that you upgrade your apt packages.\n\n\nFor the detailed security status of apt please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/apt>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.6",
+				"1.4.7",
+				"1.4.8",
+				"1.4.9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4685-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4685-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4685"
+		}
+	]
+}

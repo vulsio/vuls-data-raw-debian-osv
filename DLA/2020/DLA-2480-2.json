@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2480-2",
+	"modified": "2023-06-28T06:26:34.033340Z",
+	"published": "2020-12-04T00:00:00Z",
+	"summary": "salt - regression update",
+	"details": "\nSeveral vulnerabilities were discovered in salt.\n\n\n* [CVE-2020-16846](https://security-tracker.debian.org/tracker/CVE-2020-16846)\nAn unauthenticated user with network access to the Salt API can use\n shell injections to run code on the Salt-API using the SSH client\n* [CVE-2020-17490](https://security-tracker.debian.org/tracker/CVE-2020-17490)\nWhen using the functions create\\_ca, create\\_csr, and\n create\\_self\\_signed\\_cert in the tls execution module, it would not\n ensure the key was created with the correct permissions.\n* [CVE-2020-25592](https://security-tracker.debian.org/tracker/CVE-2020-25592)\nProperly validate eauth credentials and tokens along with their Access\n Control Lists â ACLs. Prior to this change, eauth was not properly\n validated when calling Salt SSH via the salt-api. Any value for âeauthâ\n or âtokenâ would allow a user to bypass authentication and make calls\n to Salt SSH\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2016.11.2+ds-1+deb9u6.\n\n\nWe recommend that you upgrade your salt packages.\n\n\nFor the detailed security status of salt please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/salt>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "salt",
+				"purl": "pkg:deb/debian/salt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2016.11.2+ds-1+deb9u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2016.11.2+ds-1",
+				"2016.11.2+ds-1+deb9u1",
+				"2016.11.2+ds-1+deb9u2",
+				"2016.11.2+ds-1+deb9u3",
+				"2016.11.2+ds-1+deb9u4",
+				"2016.11.2+ds-1+deb9u5",
+				"2016.11.2+ds-1+deb9u6",
+				"2016.11.2+ds-1+deb9u7",
+				"2016.11.2+ds-1+deb9u8",
+				"2016.11.2+ds-1+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2480-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2480"
+		}
+	]
+}

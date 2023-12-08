@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3417-1",
+	"modified": "2023-10-16T00:20:02.801848Z",
+	"published": "2015-12-14T00:00:00Z",
+	"related": [
+		"CVE-2015-7940"
+	],
+	"summary": "bouncycastle - security update",
+	"details": "\nTibor Jager, JĂśrg Schwenk, and Juraj Somorovsky, from Horst GĂśrtz\nInstitute for IT Security, published a paper in ESORICS 2015 where they\ndescribe an invalid curve attack in Bouncy Castle Crypto, a Java library\nfor cryptography. An attacker is able to recover private Elliptic Curve\nkeys from different applications, for example, TLS servers.\n\n\nMore information:\n[\\\nhttp://web-in-security.blogspot.ca/2015/09/practical-invalid-curve-attacks.html](http://web-in-security.blogspot.ca/2015/09/practical-invalid-curve-attacks.html)\n  \n\nPractical Invalid Curve Attacks on TLS-ECDH:\n[\\\nhttp://euklid.org/pdf/ECC\\_Invalid\\_Curve.pdf](http://euklid.org/pdf/ECC_Invalid_Curve.pdf)\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.44+dfsg-3.1+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.49+dfsg-3+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.51-2.\n\n\nWe recommend that you upgrade your bouncycastle packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "bouncycastle",
+				"purl": "pkg:deb/debian/bouncycastle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.44+dfsg-3.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.44+dfsg-3.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3417-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "bouncycastle",
+				"purl": "pkg:deb/debian/bouncycastle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.49+dfsg-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.49+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3417-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3417"
+		}
+	]
+}

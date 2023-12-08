@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4541-1",
+	"modified": "2023-10-16T00:18:55.344347Z",
+	"published": "2019-10-04T00:00:00Z",
+	"related": [
+		"CVE-2019-12412"
+	],
+	"summary": "libapreq2 - security update",
+	"details": "\nMax Kellermann reported a NULL pointer dereference flaw in libapreq2, a\ngeneric Apache request library, allowing a remote attacker to cause a\ndenial of service against an application using the library (application\ncrash) if an invalid nested multipart body is processed.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 2.13-7~deb9u1.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2.13-7~deb10u1.\n\n\nWe recommend that you upgrade your libapreq2 packages.\n\n\nFor the detailed security status of libapreq2 please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/libapreq2>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libapreq2",
+				"purl": "pkg:deb/debian/libapreq2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.13-7~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13-5",
+				"2.13-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4541-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libapreq2",
+				"purl": "pkg:deb/debian/libapreq2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.13-7~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13-5",
+				"2.13-6",
+				"2.13-7~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4541-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4541"
+		}
+	]
+}

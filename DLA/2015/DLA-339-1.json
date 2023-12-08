@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-339-1",
+	"modified": "2023-06-28T06:34:19.004465Z",
+	"published": "2015-11-03T00:00:00Z",
+	"related": [
+		"CVE-2015-5667"
+	],
+	"summary": "libhtml-scrubber-perl - security update",
+	"details": "\nHTML::Scrubber is vulnerable to a cross-site scripting (XSS) vulnerability\nwhen the comment feature is enabled. It allows remote attackers to inject\narbitrary web script or HTML via a crafted comment.\n\n\nFor Debian 6 squeeze, this has been fixed in libhtml-scrubber-perl version\n0.08-4+deb6u1.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libhtml-scrubber-perl",
+				"purl": "pkg:deb/debian/libhtml-scrubber-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.08-4+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.08-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-339-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-339"
+		}
+	]
+}

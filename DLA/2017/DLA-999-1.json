@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-999-1",
+	"modified": "2023-06-28T06:39:04.519191Z",
+	"published": "2017-06-22T00:00:00Z",
+	"related": [
+		"CVE-2017-7520"
+	],
+	"summary": "openvpn - security update",
+	"details": "\nIt was discovered that there were multiple out-of-bounds memory read\nvulnerabilities in openvpn, a popular virtual private network (VPN) daemon.\n\n\nIf clients used a HTTP proxy with NTLM authentication, a man-in-the-middle\nattacker could cause the client to crash or disclose at most 96 bytes of stack\nmemory, likely to contain the proxy password.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in openvpn version\n2.2.1-8+deb7u5.\n\n\nWe recommend that you upgrade your openvpn packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openvpn",
+				"purl": "pkg:deb/debian/openvpn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.1-8+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.1-8",
+				"2.2.1-8+deb7u1",
+				"2.2.1-8+deb7u2",
+				"2.2.1-8+deb7u3",
+				"2.2.1-8+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-999-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-999"
+		}
+	]
+}

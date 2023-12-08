@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2366-1",
+	"modified": "2023-10-16T00:11:11.169129Z",
+	"published": "2011-12-18T00:00:00Z",
+	"related": [
+		"CVE-2011-1578",
+		"CVE-2011-1579",
+		"CVE-2011-1580",
+		"CVE-2011-1587",
+		"CVE-2011-4360",
+		"CVE-2011-4361"
+	],
+	"summary": "mediawiki - multiple",
+	"details": "\nSeveral problems have been discovered in MediaWiki, a website engine for\ncollaborative work.\n\n\n* [CVE-2011-1578](https://security-tracker.debian.org/tracker/CVE-2011-1578) [CVE-2011-1587](https://security-tracker.debian.org/tracker/CVE-2011-1587)\nMasato Kinugawa discovered a cross-site scripting (XSS) issue, which\n affects Internet Explorer clients only, and only version 6 and\n earlier. Web server configuration changes are required to fix this\n issue. Upgrading MediaWiki will only be sufficient for people who use\n Apache with AllowOverride enabled.\n\n\nFor details of the required configuration changes, see the [upstream](http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-April/000096.html)\n[\\\n announcements](http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-April/000097.html).\n* [CVE-2011-1579](https://security-tracker.debian.org/tracker/CVE-2011-1579)\nWikipedia user Suffusion of Yellow discovered a CSS validation error\n in the wikitext parser. This is an XSS issue for Internet Explorer\n clients, and a privacy loss issue for other clients since it allows\n the embedding of arbitrary remote images.\n* [CVE-2011-1580](https://security-tracker.debian.org/tracker/CVE-2011-1580)\nMediaWiki developer Happy-Melon discovered that the transwiki import\n feature neglected to perform access control checks on form submission.\n The transwiki import feature is disabled by default. If it is enabled,\n it allows wiki pages to be copied from a remote wiki listed in\n $wgImportSources. The issue means that any user can trigger such an\n import to occur.\n* [CVE-2011-4360](https://security-tracker.debian.org/tracker/CVE-2011-4360)\nAlexandre Emsenhuber discovered an issue where page titles on private\n wikis could be exposed bypassing different page ids to index.php. In the\n case of the user not having correct permissions, they will now be redirected\n to Special:BadTitle.\n* [CVE-2011-4361](https://security-tracker.debian.org/tracker/CVE-2011-4361)\nTim Starling discovered that action=ajax requests were dispatched to the\n relevant function without any read permission checks being done. This could\n have led to data leakage on private wikis.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 1:1.12.0-2lenny9.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1:1.15.5-2squeeze2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:1.15.5-5.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.15.5-2squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.15.5-2",
+				"1:1.15.5-2squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2366-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.12.0-2lenny9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.12.0-2lenny2",
+				"1:1.12.0-2lenny3",
+				"1:1.12.0-2lenny3~bpo40+1",
+				"1:1.12.0-2lenny4",
+				"1:1.12.0-2lenny5",
+				"1:1.12.0-2lenny6",
+				"1:1.12.0-2lenny7",
+				"1:1.12.0-2lenny8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2366-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2366"
+		}
+	]
+}

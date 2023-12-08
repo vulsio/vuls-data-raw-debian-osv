@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2156-1",
+	"modified": "2023-10-16T00:10:59.938529Z",
+	"published": "2011-01-31T00:00:00Z",
+	"related": [
+		"CVE-2010-4531"
+	],
+	"summary": "pcsc-lite - buffer overflow",
+	"details": "\nMWR InfoSecurity identified a buffer overflow in pcscd, middleware\nto access a smart card via PC/SC, which could lead to the execution\nof arbitrary code.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.4.102-1+lenny4.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 1.5.5-4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.5.5-4.\n\n\nWe recommend that you upgrade your pcscd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "pcsc-lite",
+				"purl": "pkg:deb/debian/pcsc-lite?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.102-1+lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.102-1",
+				"1.4.102-1+lenny1",
+				"1.4.102-1+lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2156-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2156"
+		}
+	]
+}

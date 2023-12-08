@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2953-1",
+	"modified": "2023-10-16T00:11:39.357730Z",
+	"published": "2014-06-08T00:00:00Z",
+	"related": [
+		"CVE-2014-3864",
+		"CVE-2014-3865"
+	],
+	"summary": "dpkg - security update",
+	"details": "\nMultiple vulnerabilities were discovered in dpkg that allow file\nmodification through path traversal when unpacking source packages with\nspecially crafted patch files.\n\n\nThis update had been scheduled before the end of security support for\nthe oldstable distribution (squeeze), hence an exception has been made\nand was released through the security archive. However, no further updates\nshould be expected.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1.15.11.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.16.15.\n\n\nFor the testing distribution (jessie), these problems will be fixed\nsoon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.17.10.\n\n\nWe recommend that you upgrade your dpkg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "dpkg",
+				"purl": "pkg:deb/debian/dpkg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.15.11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.15.10",
+				"1.15.8.10",
+				"1.15.8.10+armhf",
+				"1.15.8.11",
+				"1.15.8.12",
+				"1.15.8.13",
+				"1.15.9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2953-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "dpkg",
+				"purl": "pkg:deb/debian/dpkg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.16.15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.16.10",
+				"1.16.11",
+				"1.16.12",
+				"1.16.13",
+				"1.16.14"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2953-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2953"
+		}
+	]
+}

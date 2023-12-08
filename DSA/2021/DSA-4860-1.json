@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4860-1",
+	"modified": "2023-10-16T00:20:26.344798Z",
+	"published": "2021-02-20T00:00:00Z",
+	"related": [
+		"CVE-2021-27212"
+	],
+	"summary": "openldap - security update",
+	"details": "\nA vulnerability in the Certificate List Exact Assertion validation was\ndiscovered in OpenLDAP, a free implementation of the Lightweight\nDirectory Access Protocol. An unauthenticated remote attacker can take\nadvantage of this flaw to cause a denial of service (slapd daemon crash)\nvia specially crafted packets.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2.4.47+dfsg-3+deb10u6.\n\n\nWe recommend that you upgrade your openldap packages.\n\n\nFor the detailed security status of openldap please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/openldap>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openldap",
+				"purl": "pkg:deb/debian/openldap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.47+dfsg-3+deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.47+dfsg-3",
+				"2.4.47+dfsg-3+deb10u1",
+				"2.4.47+dfsg-3+deb10u1~bpo9+1",
+				"2.4.47+dfsg-3+deb10u2",
+				"2.4.47+dfsg-3+deb10u2~bpo9+1",
+				"2.4.47+dfsg-3+deb10u3",
+				"2.4.47+dfsg-3+deb10u4",
+				"2.4.47+dfsg-3+deb10u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4860-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4860"
+		}
+	]
+}

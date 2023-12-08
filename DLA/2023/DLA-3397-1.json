@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3397-1",
+	"modified": "2023-06-28T06:42:57.294236Z",
+	"published": "2023-04-21T00:00:00Z",
+	"related": [
+		"CVE-2023-28488"
+	],
+	"summary": "connman - security update",
+	"details": "\nIt was discovered that there was a potential denial of service vulnerabilty\nin connman, a command-line network manager designed for use on embedded\ndevices.\n\n\nNetwork-adjacent attackers operating a crafted DHCP server could have caused\na stack-based buffer overflow, resulting in a denial of service through\nterminating the connman process.\n\n\n* [CVE-2023-28488](https://security-tracker.debian.org/tracker/CVE-2023-28488)\nclient.c in gdhcp in ConnMan through 1.41 could be used by\n network-adjacent attackers (operating a crafted DHCP server) to cause a\n stack-based buffer overflow and denial of service, terminating the connman\n process.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1.36-2.1~deb10u4.\n\n\nWe recommend that you upgrade your connman packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "connman",
+				"purl": "pkg:deb/debian/connman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.36-2.1~deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.36-2",
+				"1.36-2.1~deb10u1",
+				"1.36-2.1~deb10u2",
+				"1.36-2.1~deb10u3",
+				"1.36-2.1~deb10u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3397-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3397"
+		}
+	]
+}

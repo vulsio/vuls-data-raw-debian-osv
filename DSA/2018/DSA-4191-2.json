@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4191-2",
+	"modified": "2023-10-16T00:13:05.844855Z",
+	"published": "2018-05-03T00:00:00Z",
+	"summary": "redmine - regression update",
+	"details": "\nMultiple vulnerabilities were discovered in Redmine, a project\nmanagement web application. They could lead to remote code execution,\ninformation disclosure or cross-site scripting attacks.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 3.3.1-4+deb9u1.\n\n\nWe recommend that you upgrade your redmine packages.\n\n\nIn addition, this message serves as an announcement that security\nsupport for redmine in the Debian 8 oldstable release (jessie) is now\ndiscontinued.\n\n\nUsers of redmine in Debian 8 that want security updates are strongly\nencouraged to upgrade now to the current Debian 9 stable release\n(stretch).\n\n\nFor the detailed security status of redmine please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/redmine>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "redmine",
+				"purl": "pkg:deb/debian/redmine?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.1-4+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.1-4",
+				"3.3.1-4+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4191-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4191"
+		}
+	]
+}

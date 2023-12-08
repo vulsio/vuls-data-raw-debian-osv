@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3267-1",
+	"modified": "2023-10-16T00:11:53.507956Z",
+	"published": "2015-05-22T00:00:00Z",
+	"related": [
+		"CVE-2015-1251",
+		"CVE-2015-1252",
+		"CVE-2015-1253",
+		"CVE-2015-1254",
+		"CVE-2015-1255",
+		"CVE-2015-1256",
+		"CVE-2015-1257",
+		"CVE-2015-1258",
+		"CVE-2015-1259",
+		"CVE-2015-1260",
+		"CVE-2015-1261",
+		"CVE-2015-1262",
+		"CVE-2015-1263",
+		"CVE-2015-1264",
+		"CVE-2015-1265",
+		"CVE-2015-3910"
+	],
+	"summary": "chromium-browser - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the chromium web browser.\n\n\n* [CVE-2015-1251](https://security-tracker.debian.org/tracker/CVE-2015-1251)\nSkyLined discovered a use-after-free issue in speech \n recognition.\n* [CVE-2015-1252](https://security-tracker.debian.org/tracker/CVE-2015-1252)\nAn out-of-bounds write issue was discovered that could be used to\n escape from the sandbox.\n* [CVE-2015-1253](https://security-tracker.debian.org/tracker/CVE-2015-1253)\nA cross-origin bypass issue was discovered in the DOM parser.\n* [CVE-2015-1254](https://security-tracker.debian.org/tracker/CVE-2015-1254)\nA cross-origin bypass issue was discovered in the DOM editing \n feature.\n* [CVE-2015-1255](https://security-tracker.debian.org/tracker/CVE-2015-1255)\nKhalil Zhani discovered a use-after-free issue in WebAudio.\n* [CVE-2015-1256](https://security-tracker.debian.org/tracker/CVE-2015-1256)\nAtte Kettunen discovered a use-after-free issue in the SVG\n implementation.\n* [CVE-2015-1257](https://security-tracker.debian.org/tracker/CVE-2015-1257)\nmiaubiz discovered an overflow issue in the SVG implementation.\n* [CVE-2015-1258](https://security-tracker.debian.org/tracker/CVE-2015-1258)\ncloudfuzzer discovered an invalid size parameter used in the\n libvpx library.\n* [CVE-2015-1259](https://security-tracker.debian.org/tracker/CVE-2015-1259)\nAtte Kettunen discovered an uninitialized memory issue in the\n pdfium library.\n* [CVE-2015-1260](https://security-tracker.debian.org/tracker/CVE-2015-1260)\nKhalil Zhani discovered multiple use-after-free issues in chromium's\n interface to the WebRTC library.\n* [CVE-2015-1261](https://security-tracker.debian.org/tracker/CVE-2015-1261)\nJuho Nurminen discovered a URL bar spoofing issue.\n* [CVE-2015-1262](https://security-tracker.debian.org/tracker/CVE-2015-1262)\nmiaubiz discovered the use of an uninitialized class member in\n font handling.\n* [CVE-2015-1263](https://security-tracker.debian.org/tracker/CVE-2015-1263)\nMike Ruddy discovered that downloading the spellcheck dictionary\n was not done over HTTPS.\n* [CVE-2015-1264](https://security-tracker.debian.org/tracker/CVE-2015-1264)\nK0r3Ph1L discovered a cross-site scripting issue that could be\n triggered by bookmarking a site.\n* [CVE-2015-1265](https://security-tracker.debian.org/tracker/CVE-2015-1265)\nThe chrome 43 development team found and fixed various issues\n during internal auditing. Also multiple issues were fixed in\n the libv8 library, version 4.3.61.21.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 43.0.2357.65-1~deb8u1.\n\n\nFor the testing distribution (stretch), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 43.0.2357.65-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "43.0.2357.65-1~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"41.0.2272.118-1",
+				"42.0.2311.135-1",
+				"42.0.2311.135-1~deb8u1",
+				"42.0.2311.135-2",
+				"42.0.2311.90-1",
+				"42.0.2311.90-1~deb8u1",
+				"42.0.2311.90-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3267-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3267"
+		}
+	]
+}

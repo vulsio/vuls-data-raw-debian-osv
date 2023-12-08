@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3375-1",
+	"modified": "2023-10-16T00:06:20.551417Z",
+	"published": "2015-10-19T00:00:00Z",
+	"related": [
+		"CVE-2015-5714",
+		"CVE-2015-5715",
+		"CVE-2015-7989"
+	],
+	"summary": "wordpress - security update",
+	"details": "\nSeveral vulnerabilities have been fixed in Wordpress, the popular\nblogging engine.\n\n\n* [CVE-2015-5714](https://security-tracker.debian.org/tracker/CVE-2015-5714)\nA cross-site scripting vulnerability when processing shortcode tags\n has been discovered.\n\n\nThe issue has been fixed by not allowing unclosed HTML elements in\n attributes.\n* [CVE-2015-5715](https://security-tracker.debian.org/tracker/CVE-2015-5715)\nA vulnerability has been discovered, allowing users without proper\n permissions to publish private posts and make them sticky.\n\n\nThe issue has been fixed in the XMLRPC code of Wordpress by not\n allowing private posts to be sticky.\n* [CVE-2015-7989](https://security-tracker.debian.org/tracker/CVE-2015-7989)\nA cross-site scripting vulnerability in user list tables has been\n discovered.\n\n\nThe issue has been fixed by URL-escaping email addresses in those\n user lists.\n\n\nFor the oldstable distribution (wheezy), these problems will be fixed\nin later update.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 4.1+dfsg-1+deb8u5.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 4.3.1+dfsg-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.3.1+dfsg-1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1+dfsg-1+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1+dfsg-1",
+				"4.1+dfsg-1+deb8u1",
+				"4.1+dfsg-1+deb8u2",
+				"4.1+dfsg-1+deb8u3",
+				"4.1+dfsg-1+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3375-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3375"
+		}
+	]
+}

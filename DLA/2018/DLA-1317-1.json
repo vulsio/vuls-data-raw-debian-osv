@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1317-1",
+	"modified": "2023-06-28T06:17:57.687864Z",
+	"published": "2018-03-26T00:00:00Z",
+	"related": [
+		"CVE-2015-5621",
+		"CVE-2018-1000116"
+	],
+	"summary": "net-snmp - security update",
+	"details": "\nIt was discovered that there was a heap corruption vulnerability in the\nnet-snmp framework which exchanges server management information in a\nnetwork.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in net-snmp version\n5.7.2.1+dfsg-1+deb8u1.\n\n\nWe recommend that you upgrade your net-snmp packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "net-snmp",
+				"purl": "pkg:deb/debian/net-snmp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.3~dfsg-2.8+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.3~dfsg-2.7",
+				"5.4.3~dfsg-2.8",
+				"5.4.3~dfsg-2.8+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1317-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1317"
+		}
+	]
+}

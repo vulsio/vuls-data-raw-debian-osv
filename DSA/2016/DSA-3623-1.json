@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3623-1",
+	"modified": "2023-10-16T00:12:10.865350Z",
+	"published": "2016-07-20T00:00:00Z",
+	"related": [
+		"CVE-2016-5387"
+	],
+	"summary": "apache2 - security update",
+	"details": "\nScott Geary of VendHQ discovered that the Apache HTTPD server used the\nvalue of the Proxy header from HTTP requests to initialize the\nHTTP\\_PROXY environment variable for CGI scripts, which in turn was\nincorrectly used by certain HTTP client implementations to configure the\nproxy for outgoing HTTP requests. A remote attacker could possibly use\nthis flaw to redirect HTTP requests performed by a CGI script to an\nattacker-controlled proxy via a malicious HTTP request.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.4.10-10+deb8u5.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.10-10+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.10-10",
+				"2.4.10-10+deb8u1",
+				"2.4.10-10+deb8u2",
+				"2.4.10-10+deb8u3",
+				"2.4.10-10+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3623-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3623"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3949-1",
+	"modified": "2023-10-16T00:12:30.120479Z",
+	"published": "2017-08-21T00:00:00Z",
+	"related": [
+		"CVE-2017-7555"
+	],
+	"summary": "augeas - security update",
+	"details": "\nHan Han of Red Hat discovered that augeas, a configuration editing\ntool, improperly handled some escaped strings. A remote attacker could\nleverage this flaw by sending maliciously crafted strings, thus\ncausing an augeas-enabled application to crash or potentially execute\narbitrary code.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.2.0-0.2+deb8u2.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.8.0-1+deb9u1.\n\n\nWe recommend that you upgrade your augeas packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "augeas",
+				"purl": "pkg:deb/debian/augeas?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.0-0.2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.0-0.2",
+				"1.2.0-0.2+deb8u1",
+				"1.2.0-0.2+deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3949-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "augeas",
+				"purl": "pkg:deb/debian/augeas?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.0-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3949-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3949"
+		}
+	]
+}

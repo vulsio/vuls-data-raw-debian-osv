@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1866-1",
+	"modified": "2023-10-16T00:10:42.900616Z",
+	"published": "2009-08-19T00:00:00Z",
+	"related": [
+		"CVE-2009-0945",
+		"CVE-2009-1709"
+	],
+	"summary": "kdegraphics - several vulnerabilities",
+	"details": "\nTwo security issues have been discovered in kdegraphics, the graphics\napps from the official KDE release. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-0945](https://security-tracker.debian.org/tracker/CVE-2009-0945)\nIt was discovered that the KSVG animation element implementation suffers\nfrom a null pointer dereference flaw, which could lead to the execution\nof arbitrary code.\n* [CVE-2009-1709](https://security-tracker.debian.org/tracker/CVE-2009-1709)\nIt was discovered that the KSVG animation element implementation is\nprone to a use-after-free flaw, which could lead to the execution of\narbitrary code.\n\n\nFor the oldstable distribution (etch), these problems have been fixed\nin version 4:3.5.5-3etch4.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 4:3.5.9-3+lenny2.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 4:4.0.\n\n\nWe recommend that you upgrade your kdegraphics packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "kdegraphics",
+				"purl": "pkg:deb/debian/kdegraphics?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.5.5-3etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.5.5-3",
+				"4:3.5.5-3etch1",
+				"4:3.5.5-3etch2",
+				"4:3.5.5-3etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1866-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "kdegraphics",
+				"purl": "pkg:deb/debian/kdegraphics?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.5.9-3+lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.5.9-3",
+				"4:3.5.9-3+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1866-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1866"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-324-1",
+	"modified": "2023-06-28T06:25:29.723182Z",
+	"published": "2015-10-02T00:00:00Z",
+	"related": [
+		"CVE-2012-3509",
+		"CVE-2014-9939"
+	],
+	"summary": "binutils - security update",
+	"details": "\nThis update fixes several issues as described below.\n\n\n* PR ld/12613 (no CVE assigned)\n\n Niranjan Hasabnis discovered that passing an malformed linker\n script to GNU ld, part of binutils, may result in a stack buffer\n overflow. If the linker is used with untrusted object files, this\n would allow remote attackers to cause a denial of service (crash)\n or possibly privilege escalation.\n* [CVE-2012-3509](https://security-tracker.debian.org/tracker/CVE-2012-3509), #688951\n\n Sang Kil Cha discovered that a buffer size calculation in\n libiberty, part of binutils, may result in integer overflow and\n then a heap buffer overflow. If libiberty or the commands in\n binutils are used to read untrusted binaries, this would allow\n remote attackers to cause a denial of service (crash) or possibly\n privilege escalation.\n* PR binutils/18750 (no CVE assigned)\n\n Joshua Rogers reported that passing a malformed ihex (Intel\n hexadecimal) file to to various commands in binutils may result in\n a stack buffer overflow. A similar issue was found in readelf.\n If these commands are used to read untrusted binaries, this would\n allow remote attackers to cause a denial of service (crash) or\n possibly privilege escalation.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 2.20.1-16+deb6u2.\n\n\nFor the oldstable distribution (wheezy) and the stable distribution\n(jessie), PR ld/12613 and [CVE-2012-3509](https://security-tracker.debian.org/tracker/CVE-2012-3509) were fixed before release, and\nPR binutils/18750 will be fixed in a later update.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "binutils",
+				"purl": "pkg:deb/debian/binutils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.20.1-16+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.20.1-16"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-324-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-324"
+		}
+	]
+}

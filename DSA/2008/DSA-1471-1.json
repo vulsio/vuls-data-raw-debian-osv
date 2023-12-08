@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1471-1",
+	"modified": "2023-10-16T00:06:35.244498Z",
+	"published": "2008-01-21T00:00:00Z",
+	"related": [
+		"CVE-2007-3106",
+		"CVE-2007-4029",
+		"CVE-2007-4065",
+		"CVE-2007-4066"
+	],
+	"summary": "libvorbis - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities were found in the Vorbis General Audio\nCompression Codec, which may lead to denial of service or the\nexecution of arbitrary code, if a user is tricked into opening\na malformed Ogg Audio file with an application linked against\nlibvorbis.\n\n\nFor the old stable distribution (sarge), these problems have been fixed\nin version 1.1.0-2.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.1.2.dfsg-1.3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.2.0.dfsg-1.\n\n\nWe recommend that you upgrade your libvorbis packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libvorbis",
+				"purl": "pkg:deb/debian/libvorbis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2.dfsg-1.3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2.dfsg-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1471-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "libvorbis",
+				"purl": "pkg:deb/debian/libvorbis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1471-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1471"
+		}
+	]
+}

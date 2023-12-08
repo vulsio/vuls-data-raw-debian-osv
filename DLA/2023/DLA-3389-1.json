@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3389-1",
+	"modified": "2023-06-28T06:26:57.893354Z",
+	"published": "2023-04-10T00:00:00Z",
+	"related": [
+		"CVE-2020-27827",
+		"CVE-2021-43612"
+	],
+	"summary": "lldpd - security update",
+	"details": "\nIt was discovered that there were two potential denial of service (DoS)\nattacks in lldpd, a implementation of the IEEE 802.1ab (LLDP) protocol used to\nadminister and monitor networking devices.\n\n\n* [CVE-2020-27827](https://security-tracker.debian.org/tracker/CVE-2020-27827)\nA flaw was found in multiple versions of OpenvSwitch. Specially crafted\n LLDP packets can cause memory to be lost when allocating data to handle\n specific optional TLVs, potentially causing a denial of service. The\n highest threat from this vulnerability is to system availability.\n* [CVE-2021-43612](https://security-tracker.debian.org/tracker/CVE-2021-43612)\ncrash in SONMP decoder\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n1.0.3-1+deb10u1.\n\n\nWe recommend that you upgrade your lldpd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "lldpd",
+				"purl": "pkg:deb/debian/lldpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.3-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3389-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3389"
+		}
+	]
+}

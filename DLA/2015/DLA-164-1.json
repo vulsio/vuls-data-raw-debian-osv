@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-164-1",
+	"modified": "2023-06-28T06:19:57.803569Z",
+	"published": "2015-03-03T00:00:00Z",
+	"related": [
+		"CVE-2015-2063"
+	],
+	"summary": "unace - security update",
+	"details": "\nJakub Wilk discovered that unace, an utility to extract, test and view\n.ace archives, contained an integer overflow leading to a buffer\noverflow. If a user or automated system were tricked into processing a\nspecially crafted ace archive, an attacker could cause a denial of\nservice (application crash) or, possibly, execute arbitrary code.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in unace version 1.2b-7+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "unace",
+				"purl": "pkg:deb/debian/unace?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2b-7+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2b-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-164-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-164"
+		}
+	]
+}

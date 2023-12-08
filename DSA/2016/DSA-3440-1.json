@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3440-1",
+	"modified": "2023-10-16T00:12:01.119256Z",
+	"published": "2016-01-11T00:00:00Z",
+	"related": [
+		"CVE-2015-5602"
+	],
+	"summary": "sudo - security update",
+	"details": "\nWhen sudo is configured to allow a user to edit files under a directory\nthat they can already write to without using sudo, they can actually\nedit (read and write) arbitrary files. Daniel Svartman reported that a\nconfiguration like this might be introduced unintentionally if the\neditable files are specified using wildcards, for example:\n\n\n\n```\noperator ALL=(root) sudoedit /home/*/*/test.txt\n```\n\nThe default behaviour of sudo has been changed so that it does not allow\nediting of a file in a directory that the user can write to, or that is\nreached by following a symlink in a directory that the user can write\nto. These restrictions can be disabled, but this is strongly\ndiscouraged.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.8.5p2-1+nmu3+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.8.10p3-1+deb8u3.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 1.8.15-1.1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.15-1.1.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.5p2-1+nmu3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.5p2-1+nmu1",
+				"1.8.5p2-1+nmu2",
+				"1.8.5p2-1+nmu3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3440-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.10p3-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.10p3-1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3440-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3440"
+		}
+	]
+}

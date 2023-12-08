@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5495-1",
+	"modified": "2023-10-16T00:37:12.902843Z",
+	"published": "2023-09-11T00:00:00Z",
+	"related": [
+		"CVE-2023-31490",
+		"CVE-2023-38802",
+		"CVE-2023-41358"
+	],
+	"summary": "frr - security update",
+	"details": "\nMultiple vulnerabilities were discovered in frr, the FRRouting suite of\ninternet protocols, while processing malformed requests and packets the BGP\ndaemon may have reachable assertions, NULL pointer dereference, out-of-bounds\nmemory access, which may lead to denial of service attack.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 7.5.1-1.1+deb11u2.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 8.4.4-1.1~deb12u1.\n\n\nWe recommend that you upgrade your frr packages.\n\n\nFor the detailed security status of frr please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/frr](https://security-tracker.debian.org/tracker/frr)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "frr",
+				"purl": "pkg:deb/debian/frr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.5.1-1.1+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.5.1-1.1",
+				"7.5.1-1.1+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5495-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "frr",
+				"purl": "pkg:deb/debian/frr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.4.4-1.1~deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.4.2-1",
+				"8.4.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5495-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5495"
+		}
+	]
+}

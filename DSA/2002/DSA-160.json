@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-160",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-09-03T00:00:00Z",
+	"related": [
+		"CVE-2002-0662"
+	],
+	"summary": "scrollkeeper - insecure temporary file creation",
+	"details": "\nSpybreak discovered a problem in scrollkeeper, a free electronic\ncataloging system for documentation. The scrollkeeper-get-cl program\ncreates temporary files in an insecure manner in /tmp using guessable\nfilenames. Since scrollkeeper is called automatically when a user\nlogs into a Gnome session, an attacker with local access can easily\ncreate and overwrite files as another user.\n\n\nThis problem has been fixed in version 0.3.6-3.1 for the current\nstable distribution (woody) and in version 0.3.11-2 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected, since it doesn't contain the scrollkeeper package.\n\n\nWe recommend that you upgrade your scrollkeeper packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "scrollkeeper",
+				"purl": "pkg:deb/debian/scrollkeeper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.3.6-3.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-160.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-160"
+		}
+	]
+}

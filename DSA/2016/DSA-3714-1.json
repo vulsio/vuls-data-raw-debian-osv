@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3714-1",
+	"modified": "2023-10-16T00:12:16.397152Z",
+	"published": "2016-11-15T00:00:00Z",
+	"summary": "akonadi - update",
+	"details": "\nIn some configurations the MySQL storage backend for Akonadi, an\nextensible cross-desktop Personal Information Management (PIM) storage\nservice failed to start after applying the MySQL 5.5.53 security upgrade.\n\n\nThis update extends the /etc/akonadi/mysql-global.conf configuration\nfile to restore compatibility (version 1.13.0-2+deb8u2).\n\n\nWe recommend that you upgrade your akonadi packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "akonadi",
+				"purl": "pkg:deb/debian/akonadi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.13.0-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.13.0-2",
+				"1.13.0-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3714-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3714"
+		}
+	]
+}

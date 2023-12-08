@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-693-1",
+	"modified": "2023-06-28T06:27:07.209970Z",
+	"published": "2016-11-02T00:00:00Z",
+	"related": [
+		"CVE-2014-8128",
+		"CVE-2015-7554",
+		"CVE-2015-8668",
+		"CVE-2016-3186",
+		"CVE-2016-3619",
+		"CVE-2016-3620",
+		"CVE-2016-3621",
+		"CVE-2016-3631",
+		"CVE-2016-3632",
+		"CVE-2016-3633",
+		"CVE-2016-3634",
+		"CVE-2016-5102",
+		"CVE-2016-5318",
+		"CVE-2016-5319",
+		"CVE-2016-5652",
+		"CVE-2016-6223",
+		"CVE-2016-8331"
+	],
+	"summary": "tiff - security update",
+	"details": "\nThe libtiff library and associated tools provided in libtiff-tools are\nvulnerable to many security problems.\n\n\nThis update drops many tools which are no longer supported upstream\nand which are affected by multiple memory corruption issues:\n\n\n* bmp2tiff ([CVE-2016-3619](https://security-tracker.debian.org/tracker/CVE-2016-3619),\n [CVE-2016-3620](https://security-tracker.debian.org/tracker/CVE-2016-3620),\n [CVE-2016-3621](https://security-tracker.debian.org/tracker/CVE-2016-3621),\n [CVE-2016-5319](https://security-tracker.debian.org/tracker/CVE-2016-5319),\n [CVE-2015-8668](https://security-tracker.debian.org/tracker/CVE-2015-8668))\n* gif2tiff ([CVE-2016-3186](https://security-tracker.debian.org/tracker/CVE-2016-3186),\n [CVE-2016-5102](https://security-tracker.debian.org/tracker/CVE-2016-5102))\n* ras2tiff\n* sgi2tiff\n* sgisv\n* ycbcr\n* rgb2ycbcr ([CVE-2016-3623](https://security-tracker.debian.org/tracker/CVE-2016-3623),\n [CVE-2016-3624](https://security-tracker.debian.org/tracker/CVE-2016-3624))\n* thumbnail ([CVE-2016-3631](https://security-tracker.debian.org/tracker/CVE-2016-3631),\n [CVE-2016-3632](https://security-tracker.debian.org/tracker/CVE-2016-3632),\n [CVE-2016-3633](https://security-tracker.debian.org/tracker/CVE-2016-3633),\n [CVE-2016-3634](https://security-tracker.debian.org/tracker/CVE-2016-3634),\n [CVE-2016-8331](https://security-tracker.debian.org/tracker/CVE-2016-8331))\n\n\nThis update also fixes the following issues:\n\n\n* [CVE-2014-8128](https://security-tracker.debian.org/tracker/CVE-2014-8128) /\n [CVE-2015-7554](https://security-tracker.debian.org/tracker/CVE-2015-7554),\n [CVE-2016-5318](https://security-tracker.debian.org/tracker/CVE-2016-5318)\nMultiple buffer overflows triggered through TIFFGetField() on unknown\n tags. Lacking an upstream fix, the list of known tags has been\n extended to cover all those that are in use by the TIFF tools.\n* [CVE-2016-5652](https://security-tracker.debian.org/tracker/CVE-2016-5652)\nHeap based buffer overflow in tiff2pdf.\n* [CVE-2016-6223](https://security-tracker.debian.org/tracker/CVE-2016-6223)\nInformation leak in libtiff/tif\\_read.c. Fix out-of-bounds read on\n memory-mapped files in TIFFReadRawStrip1() and TIFFReadRawTile1()\n when stripoffset is beyond tmsize\\_t max value (reported by\n Mathias Svensson).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.0.2-6+deb7u7.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.2-6+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.2-6",
+				"4.0.2-6+deb7u1",
+				"4.0.2-6+deb7u2",
+				"4.0.2-6+deb7u3",
+				"4.0.2-6+deb7u4",
+				"4.0.2-6+deb7u5",
+				"4.0.2-6+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-693-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-693"
+		}
+	]
+}

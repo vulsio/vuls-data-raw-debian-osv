@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3060-1",
+	"modified": "2023-10-16T00:11:44.697264Z",
+	"published": "2014-10-31T00:00:00Z",
+	"related": [
+		"CVE-2014-3610",
+		"CVE-2014-3611",
+		"CVE-2014-3645",
+		"CVE-2014-3646",
+		"CVE-2014-3647",
+		"CVE-2014-3673",
+		"CVE-2014-3687",
+		"CVE-2014-3688",
+		"CVE-2014-3690",
+		"CVE-2014-7207"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service:\n\n\n* [CVE-2014-3610](https://security-tracker.debian.org/tracker/CVE-2014-3610)\nLars Bull of Google and Nadav Amit reported a flaw in how KVM\n handles noncanonical writes to certain MSR registers. A privileged\n guest user can exploit this flaw to cause a denial of service\n (kernel panic) on the host.\n* [CVE-2014-3611](https://security-tracker.debian.org/tracker/CVE-2014-3611)\nLars Bull of Google reported a race condition in the PIT\n emulation code in KVM. A local guest user with access to PIT i/o\n ports could exploit this flaw to cause a denial of service (crash)\n on the host.\n* [CVE-2014-3645](https://security-tracker.debian.org/tracker/CVE-2014-3645)\n\n/ [CVE-2014-3646](https://security-tracker.debian.org/tracker/CVE-2014-3646)\nThe Advanced Threat Research team at Intel Security discovered\n that the KVM subsystem did not handle the VM exits gracefully\n for the invept (Invalidate Translations Derived from EPT) and\n invvpid (Invalidate Translations Based on VPID) instructions. On\n hosts with an Intel processor and invept/invppid VM exit\n support, an unprivileged guest user could use these instructions\n to crash the guest.\n* [CVE-2014-3647](https://security-tracker.debian.org/tracker/CVE-2014-3647)\nNadav Amit reported that KVM mishandles noncanonical addresses when\n emulating instructions that change rip, potentially causing a failed\n VM-entry. A guest user with access to I/O or the MMIO can use this\n flaw to cause a denial of service (system crash) of the guest.\n* [CVE-2014-3673](https://security-tracker.debian.org/tracker/CVE-2014-3673)\nLiu Wei of Red Hat discovered a flaw in net/core/skbuff.c leading to\n a kernel panic when receiving malformed ASCONF chunks. A remote\n attacker could use this flaw to crash the system.\n* [CVE-2014-3687](https://security-tracker.debian.org/tracker/CVE-2014-3687)\nA flaw in the sctp stack was discovered leading to a kernel panic\n when receiving duplicate ASCONF chunks. A remote attacker could use\n this flaw to crash the system.\n* [CVE-2014-3688](https://security-tracker.debian.org/tracker/CVE-2014-3688)\nIt was found that the sctp stack is prone to a remotely triggerable\n memory pressure issue caused by excessive queueing. A remote\n attacker could use this flaw to cause denial-of-service conditions\n on the system.\n* [CVE-2014-3690](https://security-tracker.debian.org/tracker/CVE-2014-3690)\nAndy Lutomirski discovered that incorrect register handling in KVM\n may lead to denial of service.\n* [CVE-2014-7207](https://security-tracker.debian.org/tracker/CVE-2014-7207)\nSeveral Debian developers reported an issue in the IPv6 networking\n subsystem. A local user with access to tun or macvtap devices, or a\n virtual machine connected to such a device, can cause a denial of\n service (system crash).\n\n\nThis update includes a bug fix related to [CVE-2014-7207](https://security-tracker.debian.org/tracker/CVE-2014-7207) that disables\nUFO (UDP Fragmentation Offload) in the macvtap, tun, and virtio\\_net\ndrivers. This will cause migration of a running VM from a host running\nan earlier kernel version to a host running this kernel version to fail,\nif the VM has been assigned a virtio network device. In order to migrate\nsuch a VM, it must be shut down first.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.2.63-2+deb7u1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.63-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3060-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3060"
+		}
+	]
+}

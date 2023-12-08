@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2477-1",
+	"modified": "2023-06-28T06:26:33.942502Z",
+	"published": "2020-12-02T00:00:00Z",
+	"related": [
+		"CVE-2020-26215"
+	],
+	"summary": "jupyter-notebook - security update",
+	"details": "\nIt was discovered that there was an issue in the [Jupyter](https://jupyter.org/) interactive notebook system where a\nmaliciously-crafted link could redirect the browser to a malicious/spoofed\nwebsite.\n\n\n* [CVE-2020-26215](https://security-tracker.debian.org/tracker/CVE-2020-26215)\nJupyter Notebook before version 6.1.5 has an Open redirect\n vulnerability. A maliciously crafted link to a notebook server could\n redirect the browser to a different website. All notebook servers are\n technically affected, however, these maliciously crafted links can only be\n reasonably made for known notebook server hosts. A link to your notebook\n server may appear safe, but ultimately redirect to a spoofed server on the\n public internet. The issue is patched in version 6.1.5.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n4.2.3-4+deb9u2.\n\n\nWe recommend that you upgrade your jupyter-notebook packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "jupyter-notebook",
+				"purl": "pkg:deb/debian/jupyter-notebook?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.3-4+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.3-4",
+				"4.2.3-4+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2477-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2477"
+		}
+	]
+}

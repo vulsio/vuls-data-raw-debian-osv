@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-263-1",
+	"modified": "2023-06-28T06:26:37.966376Z",
+	"published": "2015-07-01T00:00:00Z",
+	"related": [
+		"CVE-2012-5371",
+		"CVE-2013-0269"
+	],
+	"summary": "ruby1.9.1 - security update",
+	"details": "\nTwo vulnerabilities were identified in the Ruby language interpreter,\nversion 1.9.1.\n\n\n* [CVE-2012-5371](https://security-tracker.debian.org/tracker/CVE-2012-5371)\nJean-Philippe Aumasson identified that Ruby computed hash values\n without properly restricting the ability to trigger hash collisions\n predictably, allowing context-dependent attackers to cause a denial\n of service (CPU consumption). This is a different vulnerability than\n [CVE-2011-4815](https://security-tracker.debian.org/tracker/CVE-2011-4815).\n* [CVE-2013-0269](https://security-tracker.debian.org/tracker/CVE-2013-0269)\nThomas Hollstegge and Ben Murphy found that the JSON gem for Ruby\n allowed remote attackers to cause a denial of service (resource\n consumption) or bypass the mass assignment protection mechanism via\n a crafted JSON document that triggers the creation of arbitrary Ruby\n symbols or certain internal objects.\n\n\nFor the squeeze distribution, theses vulnerabilities have been fixed in\nversion 1.9.2.0-2+deb6u5 of ruby1.9.1. We recommend that you upgrade\nyour ruby1.9.1 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ruby1.9.1",
+				"purl": "pkg:deb/debian/ruby1.9.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.2.0-2+deb6u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.2.0-2",
+				"1.9.2.0-2+armhf"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-263-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-263"
+		}
+	]
+}

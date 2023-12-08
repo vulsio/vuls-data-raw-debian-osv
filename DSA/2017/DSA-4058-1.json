@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4058-1",
+	"modified": "2023-10-16T00:12:36.972529Z",
+	"published": "2017-12-08T00:00:00Z",
+	"related": [
+		"CVE-2017-1000229",
+		"CVE-2017-16938"
+	],
+	"summary": "optipng - security update",
+	"details": "\nTwo vulnerabilities were discovered in optipng, an advanced PNG\noptimizer, which may result in denial of service or the execution of\narbitrary code if a malformed file is processed.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 0.7.5-1+deb8u2.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 0.7.6-1+deb9u1.\n\n\nWe recommend that you upgrade your optipng packages.\n\n\nFor the detailed security status of optipng please refer to its security\ntracker page at: <https://security-tracker.debian.org/tracker/optipng>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "optipng",
+				"purl": "pkg:deb/debian/optipng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.5-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.5-1",
+				"0.7.5-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4058-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "optipng",
+				"purl": "pkg:deb/debian/optipng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.6-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4058-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4058"
+		}
+	]
+}

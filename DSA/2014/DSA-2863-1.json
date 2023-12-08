@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2863-1",
+	"modified": "2023-10-16T00:11:35.825160Z",
+	"published": "2014-02-18T00:00:00Z",
+	"related": [
+		"CVE-2013-4420"
+	],
+	"summary": "libtar - directory traversal",
+	"details": "\nA directory traversal attack was reported against libtar, a C library for\nmanipulating tar archives. The application does not validate the\nfilenames inside the tar archive, allowing to extract files in arbitrary\npath. An attacker can craft a tar file to override files beyond the\ntar\\_extract\\_glob and tar\\_extract\\_all prefix parameter.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1.2.11-6+deb6u2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.2.16-1+deb7u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.2.20-2.\n\n\nWe recommend that you upgrade your libtar packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libtar",
+				"purl": "pkg:deb/debian/libtar?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.11-6+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.11-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2863-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libtar",
+				"purl": "pkg:deb/debian/libtar?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.16-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.16-1",
+				"1.2.16-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2863-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2863"
+		}
+	]
+}

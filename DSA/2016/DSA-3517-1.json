@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3517-1",
+	"modified": "2023-10-16T00:12:04.646155Z",
+	"published": "2016-03-14T00:00:00Z",
+	"related": [
+		"CVE-2016-1531"
+	],
+	"summary": "exim4 - security update",
+	"details": "\nA local root privilege escalation vulnerability was found in Exim,\nDebian's default mail transfer agent, in configurations using the\nperl\\_startup option (Only Exim via exim4-daemon-heavy enables Perl\nsupport).\n\n\nTo address the vulnerability, updated Exim versions clean the complete\nexecution environment by default, affecting Exim and subprocesses such\nas transports calling other programs, and thus may break existing\ninstallations. New configuration options (keep\\_environment,\nadd\\_environment) were introduced to adjust this behavior.\n\n\nMore information can be found in the upstream advisory at\n[\\\nhttps://www.exim.org/static/doc/CVE-2016-1531.txt](https://www.exim.org/static/doc/CVE-2016-1531.txt)\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 4.80-7+deb7u2.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 4.84.2-1.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 4.86.2-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.86.2-1.\n\n\nWe recommend that you upgrade your exim4 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "exim4",
+				"purl": "pkg:deb/debian/exim4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.80-7+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.80-7",
+				"4.80-7+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3517-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "exim4",
+				"purl": "pkg:deb/debian/exim4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.84.2-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.84-8",
+				"4.84-8+deb8u1",
+				"4.84-8+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3517-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3517"
+		}
+	]
+}

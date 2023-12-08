@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2471-1",
+	"modified": "2023-06-28T06:29:00.773730Z",
+	"published": "2020-12-01T00:00:00Z",
+	"related": [
+		"CVE-2020-26217"
+	],
+	"summary": "libxstream-java - security update",
+	"details": "\nIt was found that XStream is vulnerable to Remote Code Execution. The\nvulnerability may allow a remote attacker to run arbitrary shell commands only\nby manipulating the processed input stream. Users who rely on blocklists\nare affected (the default in Debian). We strongly recommend to use the\nwhitelist approach of XStream's Security Framework because there are likely\nmore class combinations the blacklist approach may not address.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.4.9-2+deb9u1.\n\n\nWe recommend that you upgrade your libxstream-java packages.\n\n\nFor the detailed security status of libxstream-java please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxstream-java>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libxstream-java",
+				"purl": "pkg:deb/debian/libxstream-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.9-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.9-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2471-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2471"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2374-1",
+	"modified": "2023-06-28T06:21:16.666076Z",
+	"published": "2020-09-15T00:00:00Z",
+	"related": [
+		"CVE-2020-17489"
+	],
+	"summary": "gnome-shell - security update",
+	"details": "\nIt was discovered that there was an issue around revealing passwords in the\ngnome-shell component of the GNOME desktop.\n\n\nIn certain configurations, when logging out of an account the password box\nfrom the login dialog could reappear with the password visible in\ncleartext.\n\n\n* [CVE-2020-17489](https://security-tracker.debian.org/tracker/CVE-2020-17489)\nAn issue was discovered in certain configurations of GNOME gnome-shell\n through 3.36.4. When logging out of an account, the password box from the\n login dialog reappears with the password still visible. If the user had\n decided to have the password shown in cleartext at login time, it is then\n visible for a brief moment upon a logout. (If the password were never shown\n in cleartext, only the password length is revealed.)\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n3.22.3-3+deb9u1.\n\n\nWe recommend that you upgrade your gnome-shell packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gnome-shell",
+				"purl": "pkg:deb/debian/gnome-shell?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.22.3-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.22.3-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2374-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2374"
+		}
+	]
+}

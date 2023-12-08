@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4272-1",
+	"modified": "2023-10-16T00:18:01.539872Z",
+	"published": "2018-08-14T00:00:00Z",
+	"related": [
+		"CVE-2018-5391"
+	],
+	"summary": "linux - security update",
+	"details": "\n* [CVE-2018-5391](https://security-tracker.debian.org/tracker/CVE-2018-5391) (FragmentSmack)\n\n Juha-Matti Tilli discovered a flaw in the way the Linux kernel\n handled reassembly of fragmented IPv4 and IPv6 packets. A remote\n attacker can take advantage of this flaw to trigger time and\n calculation expensive fragment reassembly algorithms by sending\n specially crafted packets, leading to remote denial of service.\n\n\nThis is mitigated by reducing the default limits on memory usage\n for incomplete fragmented packets. The same mitigation can be\n achieved without the need to reboot, by setting the sysctls:\n\n\n`net.ipv4.ipfrag_low_thresh = 196608  \n\n net.ipv6.ip6frag_low_thresh = 196608  \n\n net.ipv4.ipfrag_high_thresh = 262144  \n\n net.ipv6.ip6frag_high_thresh = 262144`\nThe default values may still be increased by local configuration\n if necessary.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 4.9.110-3+deb9u2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.110-3+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.107-1",
+				"4.9.110-1",
+				"4.9.110-2",
+				"4.9.110-3",
+				"4.9.110-3+deb9u1",
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1",
+				"4.9.30-2+deb9u3",
+				"4.9.30-2+deb9u4",
+				"4.9.30-2+deb9u5",
+				"4.9.30-2+deb9u5~bpo8+1",
+				"4.9.47-1",
+				"4.9.51-1",
+				"4.9.51-1~bpo8+1",
+				"4.9.65-1",
+				"4.9.65-2",
+				"4.9.65-3",
+				"4.9.65-3+deb9u1",
+				"4.9.65-3+deb9u1~bpo8+1",
+				"4.9.65-3+deb9u2",
+				"4.9.65-3+deb9u2~bpo8+1",
+				"4.9.65-3~bpo8+1",
+				"4.9.80-1",
+				"4.9.80-2",
+				"4.9.82-1+deb9u2",
+				"4.9.82-1+deb9u3",
+				"4.9.82-1+deb9u3~bpo8+1",
+				"4.9.88-1",
+				"4.9.88-1+deb9u1",
+				"4.9.88-1+deb9u1~bpo8+1",
+				"4.9.88-1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4272-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4272"
+		}
+	]
+}

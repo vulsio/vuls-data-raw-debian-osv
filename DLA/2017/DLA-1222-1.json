@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1222-1",
+	"modified": "2023-06-28T06:20:30.410964Z",
+	"published": "2017-12-25T00:00:00Z",
+	"related": [
+		"CVE-2017-17405",
+		"CVE-2017-17790"
+	],
+	"summary": "ruby1.8 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for the\nRuby language. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2017-17405](https://security-tracker.debian.org/tracker/CVE-2017-17405)\nA command injection vulnerability in Net::FTP might allow a\n malicious FTP server the execution of arbitrary commands.\n* [CVE-2017-17790](https://security-tracker.debian.org/tracker/CVE-2017-17790)\nA command injection vulnerability in lib/resolv.rb's lazy\\_initialze\n might allow a command injection attack. However untrusted input to\n this function is rather unlikely.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8.7.358-7.1+deb7u5.\n\n\nWe recommend that you upgrade your ruby1.8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ruby1.8",
+				"purl": "pkg:deb/debian/ruby1.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.7.358-7.1+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.7.358-7",
+				"1.8.7.358-7.1",
+				"1.8.7.358-7.1+deb7u1",
+				"1.8.7.358-7.1+deb7u2",
+				"1.8.7.358-7.1+deb7u3",
+				"1.8.7.358-7.1+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1222-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1222"
+		}
+	]
+}

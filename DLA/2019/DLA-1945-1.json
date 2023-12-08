@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1945-1",
+	"modified": "2023-06-28T06:21:06.045297Z",
+	"published": "2019-10-03T00:00:00Z",
+	"related": [
+		"CVE-2019-16239"
+	],
+	"summary": "openconnect - security update",
+	"details": "\nA vulnerability was discovered by Lukas Kupczyk of the Advanced Research\nTeam at CrowdStrike Intelligence in OpenConnect, an open client for\nCisco AnyConnect, Pulse, GlobalProtect VPN. A malicious HTTP server\n(after its identity certificate has been accepted) can provide bogus\nchunk lengths for chunked HTTP encoding and cause a heap overflow.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n6.00-2+deb8u1.\n\n\nWe recommend that you upgrade your openconnect packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "openconnect",
+				"purl": "pkg:deb/debian/openconnect?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.00-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.00-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1945-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1945"
+		}
+	]
+}

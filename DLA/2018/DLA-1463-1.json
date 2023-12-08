@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1463-1",
+	"modified": "2023-06-28T06:24:28.622400Z",
+	"published": "2018-08-10T00:00:00Z",
+	"related": [
+		"CVE-2018-12578",
+		"CVE-2018-12601"
+	],
+	"summary": "sam2p - security update",
+	"details": "\nVarious vulnerabilities leading to denial of service or possible unspecified\nother impacts were discovered in sam2p, an utility to convert raster images to\nEPS, PDF, and other formats.\n\n\n* [CVE-2018-12578](https://security-tracker.debian.org/tracker/CVE-2018-12578)\nA heap-buffer-overflow in bmp\\_compress1\\_row. Thanks to Peter Szabo for\n providing a fix.\n* [CVE-2018-12601](https://security-tracker.debian.org/tracker/CVE-2018-12601)\nA heap-buffer-overflow in function ReadImage, in file input-tga.ci. Thanks\n to Peter Szabo for providing a fix.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.49.2-3+deb8u3.\n\n\nWe recommend that you upgrade your sam2p packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sam2p",
+				"purl": "pkg:deb/debian/sam2p?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.49.2-3+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.49.2-3",
+				"0.49.2-3+deb8u1",
+				"0.49.2-3+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1463-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1463"
+		}
+	]
+}

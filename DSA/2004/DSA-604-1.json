@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-604-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-12-03T00:00:00Z",
+	"related": [
+		"CVE-2004-0993"
+	],
+	"summary": "hpsockd - missing input sanitising",
+	"details": "\n\"infamous41md\" discovered a buffer overflow condition in hpsockd, the\nsocks server written at Hewlett-Packard. An exploit could cause the\nprogram to crash or may have worse effect.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.6.woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.14.\n\n\nWe recommend that you upgrade your hpsockd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "hpsockd",
+				"purl": "pkg:deb/debian/hpsockd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-604-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-604"
+		}
+	]
+}

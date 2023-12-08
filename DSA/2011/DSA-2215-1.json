@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2215-1",
+	"modified": "2023-10-16T00:05:49.627666Z",
+	"published": "2011-04-09T00:00:00Z",
+	"related": [
+		"CVE-2011-1572"
+	],
+	"summary": "gitolite - directory traversal",
+	"details": "\nDylan Simon discovered that gitolite, a SSH-based gatekeeper for Git\nrepositories, is prone to directory traversal attacks when restricting\nadmin defined commands (ADC). This allows an attacker to execute arbitrary\ncommands with privileges of the gitolite server via crafted command names.\n\n\nPlease note that this only affects installations that have ADC enabled\n(not the Debian default).\n\n\nThe oldstable distribution (lenny) is not affected by this problem,\nit does not include gitolite.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.5.4-2+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1.5.7-2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.5.7-2.\n\n\nWe recommend that you upgrade your gitolite packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gitolite",
+				"purl": "pkg:deb/debian/gitolite?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.4-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.4-2",
+				"1.5.4-2+squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2215-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2215"
+		}
+	]
+}

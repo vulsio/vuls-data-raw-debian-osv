@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1957-1",
+	"modified": "2023-10-16T00:10:49.954298Z",
+	"published": "2009-12-28T00:00:00Z",
+	"related": [
+		"CVE-2009-3575"
+	],
+	"summary": "aria2 - arbitrary code execution",
+	"details": "\nIt was discovered that aria2, a high speed download utility, is prone\nto a buffer overflow in the DHT routing code, which might lead to the\nexecution of arbitrary code.\n\n\nThe oldstable distribution (etch) is not affected by this problem.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.14.0-1+lenny1. Binaries for powerpc, arm, ia64 and hppa will\nbe provided once they are available.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), this problem has been fixed in version 1.2.0-1.\n\n\nWe recommend that you upgrade your aria2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "aria2",
+				"purl": "pkg:deb/debian/aria2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.14.0-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.14.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1957-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1957"
+		}
+	]
+}

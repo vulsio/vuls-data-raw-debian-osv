@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-555-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-09-30T00:00:00Z",
+	"related": [
+		"CVE-2004-0563"
+	],
+	"summary": "freenet6 - file permissions",
+	"details": "\nSimon Josefsson noticed that the tspc.conf configuration file in\nfreenet6, a client to configure an IPv6 tunnel to freenet6.net, is set\nworld readable. This file can contain the username and the password\nused to contact the IPv6 tunnelbroker freenet6.net.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.9.6-1woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0-2.2.\n\n\nWe recommend that you upgrade your freenet6 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "freenet6",
+				"purl": "pkg:deb/debian/freenet6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.6-1woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-555-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-555"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1961-1",
+	"modified": "2023-06-28T06:25:02.663657Z",
+	"published": "2019-10-21T00:00:00Z",
+	"related": [
+		"CVE-2019-14464",
+		"CVE-2019-14496",
+		"CVE-2019-14497"
+	],
+	"summary": "milkytracker - security update",
+	"details": "\nFredric discovered a couple of buffer overflows in MilkyTracker, of which,\na brief description is given below.\n\n\n* [CVE-2019-14464](https://security-tracker.debian.org/tracker/CVE-2019-14464)\nXMFile::read in XMFile.cpp in milkyplay in MilkyTracker had a heap-based\n buffer overflow.\n* [CVE-2019-14496](https://security-tracker.debian.org/tracker/CVE-2019-14496)\nLoaderXM::load in LoaderXM.cpp in milkyplay in MilkyTracker had a\n stack-based buffer overflow.\n* [CVE-2019-14497](https://security-tracker.debian.org/tracker/CVE-2019-14497)\nModuleEditor::convertInstrument in tracker/ModuleEditor.cpp in MilkyTracker\n had a heap-based buffer overflow.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.90.85+dfsg-2.2+deb8u1.\n\n\nWe recommend that you upgrade your milkytracker packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "milkytracker",
+				"purl": "pkg:deb/debian/milkytracker?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.90.85+dfsg-2.2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.90.85+dfsg-2.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1961-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1961"
+		}
+	]
+}

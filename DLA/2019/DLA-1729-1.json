@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1729-1",
+	"modified": "2023-06-28T06:20:54.996311Z",
+	"published": "2019-03-25T00:00:00Z",
+	"related": [
+		"CVE-2017-9344",
+		"CVE-2017-9349",
+		"CVE-2019-9209"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nSeveral vulnerabilities have been found in wireshark, a network traffic\nanalyzer.\n\n\n* [CVE-2019-9209](https://security-tracker.debian.org/tracker/CVE-2019-9209):\n\n Preventing the crash of the ASN.1 BER and related dissectors by\n avoiding a buffer overflow associated with excessive digits in\n time values.\n* [CVE-2017-9349](https://security-tracker.debian.org/tracker/CVE-2017-9349):\n\n Fixing an infinite loop in the DICOM dissector by validating\n a length value.\n* [CVE-2017-9344](https://security-tracker.debian.org/tracker/CVE-2017-9344):\n\n Avoid a divide by zero, by validating an interval value in the\n Bluetooth L2CAP dissector.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.12.1+g01b65bf-4+deb8u18.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.1+g01b65bf-4+deb8u18"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.1+g01b65bf-4",
+				"1.12.1+g01b65bf-4+deb8u1",
+				"1.12.1+g01b65bf-4+deb8u10",
+				"1.12.1+g01b65bf-4+deb8u11",
+				"1.12.1+g01b65bf-4+deb8u12",
+				"1.12.1+g01b65bf-4+deb8u13",
+				"1.12.1+g01b65bf-4+deb8u14",
+				"1.12.1+g01b65bf-4+deb8u15",
+				"1.12.1+g01b65bf-4+deb8u16",
+				"1.12.1+g01b65bf-4+deb8u17",
+				"1.12.1+g01b65bf-4+deb8u2",
+				"1.12.1+g01b65bf-4+deb8u3",
+				"1.12.1+g01b65bf-4+deb8u4",
+				"1.12.1+g01b65bf-4+deb8u5",
+				"1.12.1+g01b65bf-4+deb8u6",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u1",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u10",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u11",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u2",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u3",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u4",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u5",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u6",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u7",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u8",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u9",
+				"1.12.1+g01b65bf-4+deb8u7",
+				"1.12.1+g01b65bf-4+deb8u8",
+				"1.12.1+g01b65bf-4+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1729-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1729"
+		}
+	]
+}

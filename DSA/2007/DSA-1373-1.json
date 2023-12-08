@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1373-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2007-09-11T00:00:00Z",
+	"related": [
+		"CVE-2007-1799"
+	],
+	"summary": "ktorrent - directory traversal vulnerabilities",
+	"details": "\nIt was discovered that ktorrent, a BitTorrent client for KDE, was vulnerable\nto a directory traversal bug which potentially allowed remote users to\noverwrite arbitrary files.\n\n\nFor the old stable distribution (sarge), this package was not present.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n2.0.3+dfsg1-2.2etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in version\n2.2.1.dfsg.1-1.\n\n\nWe recommend that you upgrade your ktorrent package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ktorrent",
+				"purl": "pkg:deb/debian/ktorrent?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.3+dfsg1-2etch1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1373-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1373"
+		}
+	]
+}

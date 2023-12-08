@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1582-1",
+	"modified": "2023-06-28T06:20:49.856384Z",
+	"published": "2018-11-20T00:00:00Z",
+	"related": [
+		"CVE-2018-4013"
+	],
+	"summary": "liblivemedia - security update",
+	"details": "\nA stack based buffer overflow vulnerability was found in liblivemedia, the\nLIVE555 RTSP server library. This issue might be leveraged by remote\nattackers to cause code execution, by sending a crafted packet.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2014.01.13-1+deb8u1.\n\n\nWe recommend that you upgrade your liblivemedia packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "liblivemedia",
+				"purl": "pkg:deb/debian/liblivemedia?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2014.01.13-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2014.01.13-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1582-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1582"
+		}
+	]
+}

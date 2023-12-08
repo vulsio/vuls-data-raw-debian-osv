@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2936-1",
+	"modified": "2023-10-16T00:06:08.221521Z",
+	"published": "2014-05-23T00:00:00Z",
+	"related": [
+		"CVE-2014-0749"
+	],
+	"summary": "torque - security update",
+	"details": "\nJohn Fitzpatrick from MWR Labs reported a stack-based buffer overflow\nvulnerability in torque, a PBS-derived batch processing queueing system.\nAn unauthenticated remote attacker could exploit this flaw to execute\narbitrary code with root privileges.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.4.8+dfsg-9squeeze4.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.4.16+dfsg-1+deb7u3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.4.16+dfsg-1.4.\n\n\nWe recommend that you upgrade your torque packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "torque",
+				"purl": "pkg:deb/debian/torque?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.8+dfsg-9squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.8+dfsg-9",
+				"2.4.8+dfsg-9squeeze1",
+				"2.4.8+dfsg-9squeeze2",
+				"2.4.8+dfsg-9squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2936-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "torque",
+				"purl": "pkg:deb/debian/torque?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.16+dfsg-1+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.16+dfsg-1",
+				"2.4.16+dfsg-1+deb7u1",
+				"2.4.16+dfsg-1+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2936-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2936"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-468-1",
+	"modified": "2023-06-28T06:27:01.982093Z",
+	"published": "2016-05-12T00:00:00Z",
+	"related": [
+		"CVE-2015-3245",
+		"CVE-2015-3246"
+	],
+	"summary": "libuser - security update",
+	"details": "\nTwo security vulnerabilities were discovered in libuser, a library\nthat implements a standardized interface for manipulating and\nadministering user and group accounts, that could lead to a denial of\nservice or privilege escalation by local users.\n\n\n* [CVE-2015-3245](https://security-tracker.debian.org/tracker/CVE-2015-3245)\nIncomplete blacklist vulnerability in the chfn function in libuser\n before 0.56.13-8 and 0.60 before 0.60-7, as used in the userhelper\n program in the usermode package, allows local users to cause a\n denial of service (/etc/passwd corruption) via a newline character\n in the GECOS field.\n* [CVE-2015-3246](https://security-tracker.debian.org/tracker/CVE-2015-3246)\nlibuser before 0.56.13-8 and 0.60 before 0.60-7, as used in the\n userhelper program in the usermode package, directly modifies\n /etc/passwd, which allows local users to cause a denial of service\n (inconsistent file state) by causing an error during the\n modification. NOTE: this issue can be combined with [CVE-2015-3245](https://security-tracker.debian.org/tracker/CVE-2015-3245)\n to gain privileges.\n\n\nIn addition the usermode package, which depends on libuser, was\nrebuilt against the updated version.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in\n\n\nlibuser 1:0.56.9.dfsg.1-1.2+deb7u1\nusermode 1.109-1+deb7u2\n\n\nWe recommend that you upgrade your libuser and usermode packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libuser",
+				"purl": "pkg:deb/debian/libuser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.56.9.dfsg.1-1.2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.56.9.dfsg.1-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-468-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-468"
+		}
+	]
+}

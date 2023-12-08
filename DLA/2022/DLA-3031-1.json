@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3031-1",
+	"modified": "2023-06-28T06:26:47.701546Z",
+	"published": "2022-05-28T00:00:00Z",
+	"related": [
+		"CVE-2021-42717"
+	],
+	"summary": "modsecurity-apache - security update",
+	"details": "\nIt was discovered that there was a potential resource exhaustion attack in\nmodsecurity-apache, an Apache module which inspects HTTP requests with the aim\nof preventing typical web application attacks such as XSS and SQL.\n\n\n* [CVE-2021-42717](https://security-tracker.debian.org/tracker/CVE-2021-42717)\nModSecurity 3.x through 3.0.5 mishandles excessively nested JSON\n objects. Crafted JSON objects with nesting tens-of-thousands deep could\n result in the web server being unable to service legitimate requests. Even\n a moderately large (e.g., 300KB) HTTP request can occupy one of the limited\n NGINX worker processes for minutes and consume almost all of the available\n CPU on the machine. Modsecurity 2 is similarly vulnerable: the affected\n versions include 2.8.0 through 2.9.4.\n\n\nFor Debian 9 Stretch, this problem has been fixed in version\n2.9.1-2+deb9u1.\n\n\nWe recommend that you upgrade your modsecurity-apache packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "modsecurity-apache",
+				"purl": "pkg:deb/debian/modsecurity-apache?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.1-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3031-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3031"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1180-1",
+	"modified": "2023-06-28T06:20:28.005039Z",
+	"published": "2017-11-19T00:00:00Z",
+	"related": [
+		"CVE-2017-8028"
+	],
+	"summary": "libspring-ldap-java - security update",
+	"details": "\nTobias Schneider discovered that Spring-LDAP would allow authentication\nwith an arbitrary password when the username is correct, no additional\nattributes are bound and when using LDAP BindAuthenticator with\nDefaultTlsDirContextAuthenticationStrategy as the authentication\nstrategy and setting userSearch. This occurs because some LDAP vendors\nrequire an explicit operation for the LDAP bind to take effect.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.1.RELEASE-4+deb7u1.\n\n\nWe recommend that you upgrade your libspring-ldap-java packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libspring-ldap-java",
+				"purl": "pkg:deb/debian/libspring-ldap-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.1.RELEASE-4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.1.RELEASE-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1180-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1180"
+		}
+	]
+}

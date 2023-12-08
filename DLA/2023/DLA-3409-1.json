@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3409-1",
+	"modified": "2023-06-28T06:21:29.400067Z",
+	"published": "2023-04-30T00:00:00Z",
+	"related": [
+		"CVE-2019-20479",
+		"CVE-2021-32785",
+		"CVE-2021-32786",
+		"CVE-2021-32791",
+		"CVE-2021-32792",
+		"CVE-2023-28625"
+	],
+	"summary": "libapache2-mod-auth-openidc - security update",
+	"details": "\nSeveral vulnerabilities were fixed in libapache2-mod-auth-openidc,\nan OpenID Connect Relying Party implementation for Apache.\n\n\n* [CVE-2019-20479](https://security-tracker.debian.org/tracker/CVE-2019-20479)\nInsufficient validatation of URLs beginning with a slash and backslash.\n* [CVE-2021-32785](https://security-tracker.debian.org/tracker/CVE-2021-32785)\nCrash when using an unencrypted Redis cache.\n* [CVE-2021-32786](https://security-tracker.debian.org/tracker/CVE-2021-32786)\nOpen Redirect vulnerability in the logout functionality.\n* [CVE-2021-32791](https://security-tracker.debian.org/tracker/CVE-2021-32791)\nAES GCM encryption in used static IV and AAD.\n* [CVE-2021-32792](https://security-tracker.debian.org/tracker/CVE-2021-32792)\nXSS vulnerability when using OIDCPreservePost.\n* [CVE-2023-28625](https://security-tracker.debian.org/tracker/CVE-2023-28625)\nNULL pointer dereference with OIDCStripCookies.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.3.10.2-1+deb10u2.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-openidc packages.\n\n\nFor the detailed security status of libapache2-mod-auth-openidc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libapache2-mod-auth-openidc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libapache2-mod-auth-openidc",
+				"purl": "pkg:deb/debian/libapache2-mod-auth-openidc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.10.2-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.10.2-1",
+				"2.3.10.2-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3409-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3409"
+		}
+	]
+}

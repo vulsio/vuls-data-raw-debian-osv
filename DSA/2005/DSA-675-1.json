@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-675-1",
+	"modified": "2023-10-16T00:27:39.755224Z",
+	"published": "2005-02-10T00:00:00Z",
+	"related": [
+		"CVE-2005-0019"
+	],
+	"summary": "hztty - privilege escalation",
+	"details": "\nErik SjĂślund discovered that hztty, a converter for GB, Big5 and zW/HZ\nChinese encodings in a tty session, can be triggered to execute\narbitrary commands with group utmp privileges.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.0-5.2woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.0-6.1.\n\n\nWe recommend that you upgrade your hztty package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "hztty",
+				"purl": "pkg:deb/debian/hztty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0-5.2woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0-5.2woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-675-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-675"
+		}
+	]
+}

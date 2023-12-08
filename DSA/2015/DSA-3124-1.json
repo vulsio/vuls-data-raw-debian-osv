@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3124-1",
+	"modified": "2023-10-16T00:06:13.419895Z",
+	"published": "2015-01-10T00:00:00Z",
+	"related": [
+		"CVE-2014-9324"
+	],
+	"summary": "otrs2 - security update",
+	"details": "\nThorsten Eckel of Znuny GMBH and Remo Staeuble of InfoGuard discovered\na privilege escalation vulnerability in otrs2, the Open Ticket Request\nSystem. An attacker with valid OTRS credentials could access and\nmanipulate ticket data of other users via the GenericInterface, if a\nticket webservice is configured and not additionally secured.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 3.1.7+dfsg1-8+deb7u5.\n\n\nFor the upcoming stable distribution (jessie), this problem has been\nfixed in version 3.3.9-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.3.9-3.\n\n\nWe recommend that you upgrade your otrs2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "otrs2",
+				"purl": "pkg:deb/debian/otrs2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.7+dfsg1-8+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.7+dfsg1-8",
+				"3.1.7+dfsg1-8+deb7u1",
+				"3.1.7+dfsg1-8+deb7u2",
+				"3.1.7+dfsg1-8+deb7u3",
+				"3.1.7+dfsg1-8+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3124-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3124"
+		}
+	]
+}

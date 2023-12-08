@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1678-1",
+	"modified": "2023-10-16T00:07:05.346156Z",
+	"published": "2008-12-03T00:00:00Z",
+	"related": [
+		"CVE-2004-0452",
+		"CVE-2005-0448",
+		"CVE-2008-5302",
+		"CVE-2008-5303"
+	],
+	"summary": "perl - privilege escalation",
+	"details": "\nPaul Szabo rediscovered a vulnerability in the File::Path::rmtree\nfunction of Perl. It was possible to exploit a race condition to create\nsetuid binaries in a directory tree or remove arbitrary files when a\nprocess is deleting this tree. This issue was originally known as\n[CVE-2005-0448](https://security-tracker.debian.org/tracker/CVE-2005-0448) and [CVE-2004-0452](https://security-tracker.debian.org/tracker/CVE-2004-0452), which were addressed by DSA-696-1 and\nDSA-620-1. Unfortunately, they were reintroduced later.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 5.8.8-7etch5.\n\n\nFor the unstable distribution (sid), these problems have been fixed in \nversion 5.10.0-18 and will migrate to the testing distribution (lenny) \nshortly.\n\n\nWe recommend that you upgrade your perl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "perl",
+				"purl": "pkg:deb/debian/perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.8.8-7etch5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.8.8-7",
+				"5.8.8-7etch1",
+				"5.8.8-7etch2",
+				"5.8.8-7etch3",
+				"5.8.8-7etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1678-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1678"
+		}
+	]
+}

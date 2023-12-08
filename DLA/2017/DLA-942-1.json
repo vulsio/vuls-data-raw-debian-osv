@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-942-1",
+	"modified": "2023-06-28T06:25:40.269970Z",
+	"published": "2017-05-15T00:00:00Z",
+	"related": [
+		"CVE-2017-7885",
+		"CVE-2017-7975",
+		"CVE-2017-7976"
+	],
+	"summary": "jbig2dec - security update",
+	"details": "\n* [CVE-2017-7885](https://security-tracker.debian.org/tracker/CVE-2017-7885)\nArtifex jbig2dec 0.13 has a heap-based buffer over-read leading to\n denial of service (application crash) or disclosure of sensitive\n information from process memory, because of an integer overflow\n in the jbig2\\_decode\\_symbol\\_dict function in jbig2\\_symbol\\_dict.c\n in libjbig2dec.a during operation on a crafted .jb2 file.\n* [CVE-2017-7975](https://security-tracker.debian.org/tracker/CVE-2017-7975)\nArtifex jbig2dec 0.13, as used in Ghostscript, allows out-of-bounds\n writes because of an integer overflow in the jbig2\\_build\\_huffman\\_table\n function in jbig2\\_huffman.c during operations on a crafted JBIG2 file,\n leading to a denial of service (application crash) or possibly\n execution of arbitrary code.\n* [CVE-2017-7976](https://security-tracker.debian.org/tracker/CVE-2017-7976)\nArtifex jbig2dec 0.13 allows out-of-bounds writes and reads because\n of an integer overflow in the jbig2\\_image\\_compose function in\n jbig2\\_image.c during operations on a crafted .jb2 file, leading\n to a denial of service (application crash) or disclosure of\n sensitive information from process memory.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.13-4~deb7u2.\n\n\nWe recommend that you upgrade your jbig2dec packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "jbig2dec",
+				"purl": "pkg:deb/debian/jbig2dec?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.13-4~deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.11+20120125-1",
+				"0.12+20150918-1",
+				"0.12-1",
+				"0.12-2",
+				"0.13-1",
+				"0.13-2",
+				"0.13-3",
+				"0.13-4~deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-942-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-942"
+		}
+	]
+}

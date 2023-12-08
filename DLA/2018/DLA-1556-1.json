@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1556-1",
+	"modified": "2023-06-28T06:26:00.479117Z",
+	"published": "2018-10-27T00:00:00Z",
+	"related": [
+		"CVE-2018-1000805",
+		"CVE-2018-7750"
+	],
+	"summary": "paramiko - security update",
+	"details": "\n* [CVE-2018-1000805](https://security-tracker.debian.org/tracker/CVE-2018-1000805)\nFix to prevent malicious clients to trick the Paramiko server into\n thinking an unauthenticated client is authenticated.\n* [CVE-2018-7750](https://security-tracker.debian.org/tracker/CVE-2018-7750)\nFix check whether authentication is completed before processing\n other requests. A customized SSH client can simply skip the\n authentication step.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.15.1-1+deb8u1.\n\n\nWe recommend that you upgrade your paramiko packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "paramiko",
+				"purl": "pkg:deb/debian/paramiko?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.15.1-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.15.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1556-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1556"
+		}
+	]
+}

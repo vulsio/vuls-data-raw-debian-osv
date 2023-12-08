@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4146-1",
+	"modified": "2023-10-16T00:12:58.452099Z",
+	"published": "2018-03-20T00:00:00Z",
+	"related": [
+		"CVE-2017-1000487"
+	],
+	"summary": "plexus-utils - security update",
+	"details": "\nCharles Duffy discovered that the Commandline class in the utilities for\nthe Plexus framework performs insufficient quoting of double-encoded\nstrings, which could result in the execution of arbitrary shell commands.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1:1.5.15-4+deb8u1.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1:1.5.15-4+deb9u1.\n\n\nWe recommend that you upgrade your plexus-utils packages.\n\n\nFor the detailed security status of plexus-utils please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/plexus-utils](https://security-tracker.debian.org/tracker/plexus-utils)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "plexus-utils",
+				"purl": "pkg:deb/debian/plexus-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.5.15-4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.5.15-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4146-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "plexus-utils",
+				"purl": "pkg:deb/debian/plexus-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.5.15-4+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.5.15-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4146-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4146"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2697-1",
+	"modified": "2023-06-28T06:25:17.850667Z",
+	"published": "2021-06-29T00:00:00Z",
+	"related": [
+		"CVE-2021-21417"
+	],
+	"summary": "fluidsynth - security update",
+	"details": "\nA vulnerbility has been found in fluidsynth, a real-time MIDI software\nsynthesizer.\nUsing a special crafted soundfont2 file, a use after free vulnerability\nmight result in arbitrary code execution or a denial of service (DoS).\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.1.6-4+deb9u1.\n\n\nWe recommend that you upgrade your fluidsynth packages.\n\n\nFor the detailed security status of fluidsynth please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/fluidsynth>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "fluidsynth",
+				"purl": "pkg:deb/debian/fluidsynth?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.6-4+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.6-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2697-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2697"
+		}
+	]
+}

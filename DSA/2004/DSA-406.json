@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-406",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-01-05T00:00:00Z",
+	"related": [
+		"CVE-2003-0963"
+	],
+	"summary": "lftp - buffer overflow",
+	"details": "\nUlf HĂ¤rnhammar discovered a buffer overflow in lftp, a set of\nsophisticated command-line FTP/HTTP client programs. An attacker\ncould create a carefully crafted directory on a website so that the\nexecution of an 'ls' or 'rels' command would lead to the execution of\narbitrary code on the client machine.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.4.9-1woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.6.10-1.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "lftp",
+				"purl": "pkg:deb/debian/lftp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.9-1woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-406.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-406"
+		}
+	]
+}

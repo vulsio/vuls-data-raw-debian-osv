@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2892-1",
+	"modified": "2023-10-16T00:11:37.256763Z",
+	"published": "2014-03-31T00:00:00Z",
+	"related": [
+		"CVE-2001-1593",
+		"CVE-2014-0466"
+	],
+	"summary": "a2ps - security update",
+	"details": "\nSeveral vulnerabilities have been found in a2ps, an Anything to\nPostScript converter and pretty-printer. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2001-1593](https://security-tracker.debian.org/tracker/CVE-2001-1593)\nThe spy\\_user function which is called when a2ps is invoked with the\n --debug flag insecurely used temporary files.\n* [CVE-2014-0466](https://security-tracker.debian.org/tracker/CVE-2014-0466)\nBrian M. Carlson reported that a2ps's fixps script does not invoke\n gs with the -dSAFER option. Consequently executing fixps on a\n malicious PostScript file could result in files being deleted or\n arbitrary commands being executed with the privileges of the user\n running fixps.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed\nin version 1:4.14-1.1+deb6u1.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1:4.14-1.1+deb7u1.\n\n\nFor the testing distribution (jessie) and the unstable distribution\n(sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your a2ps packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "a2ps",
+				"purl": "pkg:deb/debian/a2ps?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.14-1.1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.14-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2892-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "a2ps",
+				"purl": "pkg:deb/debian/a2ps?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.14-1.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.14-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2892-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2892"
+		}
+	]
+}

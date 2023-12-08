@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4991-1",
+	"modified": "2023-10-16T00:22:34.724804Z",
+	"published": "2021-10-22T00:00:00Z",
+	"related": [
+		"CVE-2020-12108",
+		"CVE-2020-15011",
+		"CVE-2021-42096",
+		"CVE-2021-42097"
+	],
+	"summary": "mailman - security update",
+	"details": "\nSeveral vulnerabilities were discovered in mailman, a web-based mailing\nlist manager, which could result in arbitrary content injection via the\noptions and private archive login pages, and CSRF attacks or privilege\nescalation via the user options page.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 1:2.1.29-1+deb10u2.\n\n\nWe recommend that you upgrade your mailman packages.\n\n\nFor the detailed security status of mailman please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mailman](https://security-tracker.debian.org/tracker/mailman)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "mailman",
+				"purl": "pkg:deb/debian/mailman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.29-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.29-1",
+				"1:2.1.29-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4991-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4991"
+		}
+	]
+}

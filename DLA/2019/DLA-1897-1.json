@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1897-1",
+	"modified": "2023-06-28T06:29:56.556335Z",
+	"published": "2019-08-25T00:00:00Z",
+	"related": [
+		"CVE-2019-14973"
+	],
+	"summary": "tiff - security update",
+	"details": "\nEven Rouault found an issue in tiff, a library providing support for the\nTag Image File Format.\nWrong handling off integer overflow checks, that are based on undefined\ncompiler behavior, might result in an application crash.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n4.0.3-12.3+deb8u9.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.3-12.3+deb8u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.3-12.3",
+				"4.0.3-12.3+deb8u1",
+				"4.0.3-12.3+deb8u2",
+				"4.0.3-12.3+deb8u3",
+				"4.0.3-12.3+deb8u4",
+				"4.0.3-12.3+deb8u5",
+				"4.0.3-12.3+deb8u6",
+				"4.0.3-12.3+deb8u7",
+				"4.0.3-12.3+deb8u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1897-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1897"
+		}
+	]
+}

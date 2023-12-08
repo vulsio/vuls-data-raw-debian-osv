@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2648-1",
+	"modified": "2023-06-28T06:26:38.992811Z",
+	"published": "2021-05-11T00:00:00Z",
+	"related": [
+		"CVE-2021-20270",
+		"CVE-2021-27291",
+		"CVE-2021-30152",
+		"CVE-2021-30155",
+		"CVE-2021-30158",
+		"CVE-2021-30159"
+	],
+	"summary": "mediawiki - security update",
+	"details": "\nSeveral vulnerabilities were discovered in mediawiki, a wiki\nwebsite engine for collaborative work.\n\n\n* [CVE-2021-20270](https://security-tracker.debian.org/tracker/CVE-2021-20270)\nAn infinite loop in SMLLexer in Pygments used by mediawiki as\n one if its lexers may lead to denial of service when performing\n syntax highlighting of a Standard ML (SML) source file, as\n demonstrated by input that only contains the exception keyword.\n* [CVE-2021-27291](https://security-tracker.debian.org/tracker/CVE-2021-27291)\npygments, the lexers used by mediawiki rely heavily on regular\n expressions. Some of the regular expressions have exponential or\n cubic worst-case complexity and are vulnerable to ReDoS. By\n crafting malicious input, an attacker can cause a denial of service.\n* [CVE-2021-30152](https://security-tracker.debian.org/tracker/CVE-2021-30152)\nAn issue was discovered in MediaWiki. When using the MediaWiki\n API to protect a page, a user is currently able to protect to a\n higher level than they currently have permissions for.\n* [CVE-2021-30155](https://security-tracker.debian.org/tracker/CVE-2021-30155)\nAn issue was discovered in MediaWiki before. ContentModelChange\n does not check if a user has correct permissions to create and set\n the content model of a nonexistent page.\n* [CVE-2021-30158](https://security-tracker.debian.org/tracker/CVE-2021-30158)\nAn issue was discovered in MediaWiki. Blocked users are unable to\n use Special:ResetTokens. This has security relevance because a\n blocked user might have accidentally shared a token, or might know\n that a token has been compromised, and yet is not able to block\n any potential future use of the token by an unauthorized party.\n* [CVE-2021-30159](https://security-tracker.debian.org/tracker/CVE-2021-30159)\nAn issue was discovered in MediaWiki. Users can bypass intended\n restrictions on deleting pages in certain fast double move\n situations. MovePage::isValidMoveTarget() uses FOR UPDATE, but\n it's only called if Title::getArticleID() returns non-zero with no\n special flags. Next, MovePage::moveToInternal() will delete the\n page if getArticleID(READ\\_LATEST) is non-zero. Therefore, if the\n page is missing in the replica DB, isValidMove() will return true,\n and then moveToInternal() will unconditionally delete the page if\n it can be found in the master.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:1.27.7-1~deb9u8.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\nFor the detailed security status of mediawiki please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mediawiki>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.27.7-1~deb9u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.27.3-1",
+				"1:1.27.4-1",
+				"1:1.27.4-1~bpo8+1",
+				"1:1.27.4-1~deb9u1",
+				"1:1.27.4-2",
+				"1:1.27.4-3",
+				"1:1.27.5-1~deb9u1",
+				"1:1.27.6-1~deb9u1",
+				"1:1.27.7-1~deb9u1",
+				"1:1.27.7-1~deb9u2",
+				"1:1.27.7-1~deb9u3",
+				"1:1.27.7-1~deb9u4",
+				"1:1.27.7-1~deb9u5",
+				"1:1.27.7-1~deb9u6",
+				"1:1.27.7-1~deb9u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2648-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2648"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2698-1",
+	"modified": "2023-06-28T06:25:48.747137Z",
+	"published": "2021-06-30T00:00:00Z",
+	"related": [
+		"CVE-2020-8244"
+	],
+	"summary": "node-bl - security update",
+	"details": "\nAn issue has been found in node-bl, a Node.js module to access multiple\nbuffers with Buffer interface.\nDue to a buffer over-read, uninitialized memory might be exposed by\nproviding crafted user input.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.1.2-1+deb9u1.\n\n\nWe recommend that you upgrade your node-bl packages.\n\n\nFor the detailed security status of node-bl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-bl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "node-bl",
+				"purl": "pkg:deb/debian/node-bl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2698-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2698"
+		}
+	]
+}

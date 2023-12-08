@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3423-1",
+	"modified": "2023-06-28T06:30:26.074928Z",
+	"published": "2023-05-15T00:00:00Z",
+	"related": [
+		"CVE-2023-26081"
+	],
+	"summary": "epiphany-browser - security update",
+	"details": "\nIt was discovered that there was a potential credential stealing attack in\n`epiphany-browser`, the default GNOME web browser.\n\n\nWhen using a sandboxed Content Security Policy (CSP) or the HTML\n`iframe` tag, the sandboxed web content was trusted by the\nmain/surrounding resource. After this change, however, the password manager is\ndisabled entirely in this situations, so that the untrusted web content cannot\nexfiltrate passwords.\n\n\n* [CVE-2023-26081](https://security-tracker.debian.org/tracker/CVE-2023-26081)\nIn Epiphany (aka GNOME Web) through 43.0, untrusted web content can\n trick users into exfiltrating passwords, because autofill occurs in\n sandboxed contexts.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n3.32.1.2-3~deb10u3.\n\n\nWe recommend that you upgrade your epiphany-browser packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "epiphany-browser",
+				"purl": "pkg:deb/debian/epiphany-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.32.1.2-3~deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.32.1.2-2",
+				"3.32.1.2-3~deb10u1",
+				"3.32.1.2-3~deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3423-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3423"
+		}
+	]
+}

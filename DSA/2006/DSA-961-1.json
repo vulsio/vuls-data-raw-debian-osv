@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-961-1",
+	"modified": "2023-10-16T00:30:17.811116Z",
+	"published": "2006-02-01T00:00:00Z",
+	"related": [
+		"CVE-2005-3191",
+		"CVE-2005-3192",
+		"CVE-2005-3193",
+		"CVE-2005-3624",
+		"CVE-2005-3625",
+		"CVE-2005-3626",
+		"CVE-2005-3627",
+		"CVE-2005-3628"
+	],
+	"summary": "pdfkit.framework - buffer overflows",
+	"details": "\n\"infamous41md\" and Chris Evans discovered several heap based buffer\noverflows in xpdf which are also present in pdfkit.framework, the\nGNUstep framework for rendering PDF content, and which can lead to a\ndenial of service by crashing the application or possibly to the\nexecution of arbitrary code.\n\n\nThe old stable distribution (woody) does not contain pdfkit.framework\npackages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.8-2sarge1.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your pdfkit.framework package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "pdfkit.framework",
+				"purl": "pkg:deb/debian/pdfkit.framework?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8-2sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-961-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-961"
+		}
+	]
+}

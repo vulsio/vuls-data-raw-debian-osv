@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1902-1",
+	"modified": "2023-06-28T06:29:57.656259Z",
+	"published": "2019-08-29T00:00:00Z",
+	"related": [
+		"CVE-2019-15142",
+		"CVE-2019-15143",
+		"CVE-2019-15144",
+		"CVE-2019-15145"
+	],
+	"summary": "djvulibre - security update",
+	"details": "\nHongxu Chen found several issues in djvulibre, a library and set of tools\nto handle images in the DjVu format.\n\n\nThe issues are a heap-buffer-overflow, a stack-overflow, an infinite loop\nand an invalid read when working with crafted files as input.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.5.25.4-4+deb8u1.\n\n\nWe recommend that you upgrade your djvulibre packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "djvulibre",
+				"purl": "pkg:deb/debian/djvulibre?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.25.4-4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.25.4-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1902-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1902"
+		}
+	]
+}

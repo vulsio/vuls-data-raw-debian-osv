@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2669-1",
+	"modified": "2023-06-28T06:30:13.118487Z",
+	"published": "2021-05-30T00:00:00Z",
+	"related": [
+		"CVE-2021-3541"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\nAn issue has been found in libxml2, the GNOME XML library.\nThis issue is called \"Parameter Laughs\"-attack and is related to parameter\nentities expansion.\nIt is similar to the \"Billion Laughs\"-attacks found earlier in libexpat.\nMore information can be found at [1]\n\n\n[1] <https://blog.hartwork.org/posts/cve-2021-3541-parameter-laughs-fixed-in-libxml2-2-9-11/>\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.9.4+dfsg1-2.2+deb9u5.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFor the detailed security status of libxml2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxml2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.4+dfsg1-2.2+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.4+dfsg1-2.2",
+				"2.9.4+dfsg1-2.2+deb9u1",
+				"2.9.4+dfsg1-2.2+deb9u2",
+				"2.9.4+dfsg1-2.2+deb9u3",
+				"2.9.4+dfsg1-2.2+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2669-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2669"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-869-1",
+	"modified": "2023-06-28T06:27:10.100347Z",
+	"published": "2017-03-24T00:00:00Z",
+	"related": [
+		"CVE-2017-5613",
+		"CVE-2017-5614",
+		"CVE-2017-5615",
+		"CVE-2017-5616"
+	],
+	"summary": "cgiemail - security update",
+	"details": "\nThe cPanel Security Team discovered several security vulnerabilities in\ncgiemail, a CGI program used to create HTML forms for sending mails:\n\n\n* [CVE-2017-5613](https://security-tracker.debian.org/tracker/CVE-2017-5613)\nA format string injection vulnerability allowed to supply arbitrary\n format strings to cgiemail and cgiecho. A local attacker with\n permissions to provide a cgiemail template could use this\n vulnerability to execute code as webserver user.\n Format strings in cgiemail tempaltes are now restricted to simple\n %s, %U and %H sequences.\n* [CVE-2017-5614](https://security-tracker.debian.org/tracker/CVE-2017-5614)\nAn open redirect vulnerability in cgiemail and cgiecho binaries\n could be exploited by a local attacker to force redirect to an\n arbitrary URL. These redirects are now limited to the domain that\n handled the request.\n* [CVE-2017-5615](https://security-tracker.debian.org/tracker/CVE-2017-5615)\nA vulnerability in cgiemail and cgiecho binaries allowed injection\n of additional HTTP headers. Newline characters are now stripped\n from the redirect location to protect against this.\n* [CVE-2017-5616](https://security-tracker.debian.org/tracker/CVE-2017-5616)\nMissing escaping of the addendum parameter lead to a reflected\n cross-site (XSS) vulnerability in cgiemail and cgiecho binaries.\n The output is now html escaped.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.6-37+deb7u1.\n\n\nWe recommend that you upgrade your cgiemail packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "cgiemail",
+				"purl": "pkg:deb/debian/cgiemail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6-37+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6-37"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-869-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-869"
+		}
+	]
+}

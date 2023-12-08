@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4428-1",
+	"modified": "2023-10-16T00:18:08.004883Z",
+	"published": "2019-04-08T00:00:00Z",
+	"related": [
+		"CVE-2019-3842"
+	],
+	"summary": "systemd - security update",
+	"details": "\nJann Horn discovered that the PAM module in systemd insecurely uses the\nenvironment and lacks seat verification permitting spoofing an active\nsession to PolicyKit. A remote attacker with SSH access can take\nadvantage of this issue to gain PolicyKit privileges that are normally\nonly granted to clients in an active session on the local console.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 232-25+deb9u11.\n\n\nThis update includes updates previously scheduled to be released in the\nstretch 9.9 point release.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFor the detailed security status of systemd please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/systemd>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "systemd",
+				"purl": "pkg:deb/debian/systemd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "232-25+deb9u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"232-25",
+				"232-25+deb9u1",
+				"232-25+deb9u10",
+				"232-25+deb9u2",
+				"232-25+deb9u3",
+				"232-25+deb9u4",
+				"232-25+deb9u5",
+				"232-25+deb9u6",
+				"232-25+deb9u7",
+				"232-25+deb9u8",
+				"232-25+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4428-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4428"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2877-1",
+	"modified": "2023-06-28T06:26:41.199829Z",
+	"published": "2022-01-12T00:00:00Z",
+	"related": [
+		"CVE-2019-17545",
+		"CVE-2021-45943"
+	],
+	"summary": "gdal - security update",
+	"details": "\nTwo issues were found in GDAL, a geospatial library, that could lead to\ndenial of service via application crash or possibly the execution of\narbitrary code if maliciously crafted data was parsed.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.1.2+dfsg-5+deb9u1.\n\n\nWe recommend that you upgrade your gdal packages.\n\n\nFor the detailed security status of gdal please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/gdal>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gdal",
+				"purl": "pkg:deb/debian/gdal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.2+dfsg-5+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.2+dfsg-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2877-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2877"
+		}
+	]
+}

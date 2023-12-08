@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2394-1",
+	"modified": "2023-06-28T06:26:32.559221Z",
+	"published": "2020-10-02T00:00:00Z",
+	"related": [
+		"CVE-2020-15049",
+		"CVE-2020-15810",
+		"CVE-2020-15811",
+		"CVE-2020-24606"
+	],
+	"summary": "squid3 - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in Squid, a highperformance proxy caching server for web clients.\n\n\n* [CVE-2020-15049](https://security-tracker.debian.org/tracker/CVE-2020-15049)\nAn issue was discovered in http/ContentLengthInterpreter.cc in\n Squid. A Request Smuggling and Poisoning attack can succeed against\n the HTTP cache. The client sends an HTTP request with a Content Length header containing \"+\\ \"-\" or an uncommon shell whitespace\n character prefix to the length field-value.\n This update also includes several other improvements to the\n HttpHeader parsing code.\n* [CVE-2020-15810](https://security-tracker.debian.org/tracker/CVE-2020-15810)\nand [CVE-2020-15811](https://security-tracker.debian.org/tracker/CVE-2020-15811)\n\n\nDue to incorrect data validation, HTTP Request Smuggling attacks may\n succeed against HTTP and HTTPS traffic. This leads to cache\n poisoning and allows any client, including browser scripts, to\n bypass local security and poison the proxy cache and any downstream\n caches with content from an arbitrary source. When configured for\n relaxed header parsing (the default), Squid relays headers\n containing whitespace characters to upstream servers. When this\n occurs as a prefix to a Content-Length header, the frame length\n specified will be ignored by Squid (allowing for a conflicting\n length to be used from another Content-Length header) but relayed\n upstream.\n* [CVE-2020-24606](https://security-tracker.debian.org/tracker/CVE-2020-24606)\nSquid allows a trusted peer to perform Denial of Service by\n consuming all available CPU cycles during handling of a crafted\n Cache Digest response message. This only occurs when cache\\_peer is\n used with the cache digests feature. The problem exists because\n peerDigestHandleReply() livelocking in peer\\_digest.cc mishandles\n EOF.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.5.23-5+deb9u5.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\nFor the detailed security status of squid3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/squid3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.23-5+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.23-5",
+				"3.5.23-5+deb9u1",
+				"3.5.23-5+deb9u2",
+				"3.5.23-5+deb9u3",
+				"3.5.23-5+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2394-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2394"
+		}
+	]
+}

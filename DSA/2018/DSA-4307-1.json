@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4307-1",
+	"modified": "2023-10-16T00:17:23.358425Z",
+	"published": "2018-09-28T00:00:00Z",
+	"related": [
+		"CVE-2017-1000158",
+		"CVE-2018-1060",
+		"CVE-2018-1061",
+		"CVE-2018-14647"
+	],
+	"summary": "python3.5 - security update",
+	"details": "\nMultiple security issues were discovered in Python: ElementTree failed\nto initialise Expat's hash salt, two denial of service issues were found\nin difflib and poplib and a buffer overflow in PyString\\_DecodeEscape.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 3.5.3-1+deb9u1.\n\n\nWe recommend that you upgrade your python3.5 packages.\n\n\nFor the detailed security status of python3.5 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/python3.5](https://security-tracker.debian.org/tracker/python3.5)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python3.5",
+				"purl": "pkg:deb/debian/python3.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.3-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4307-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4307"
+		}
+	]
+}

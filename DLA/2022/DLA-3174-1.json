@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3174-1",
+	"modified": "2023-06-28T06:26:53.938591Z",
+	"published": "2022-10-31T00:00:00Z",
+	"related": [
+		"CVE-2022-37454"
+	],
+	"summary": "pysha3 - security update",
+	"details": "\nNicky Mouha discovered a buffer overflow in sha3, a Python library for\nthe SHA-3 hashing functions.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.0.2-2+deb10u1.\n\n\nWe recommend that you upgrade your pysha3 packages.\n\n\nFor the detailed security status of pysha3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/pysha3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "pysha3",
+				"purl": "pkg:deb/debian/pysha3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3174-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3174"
+		}
+	]
+}

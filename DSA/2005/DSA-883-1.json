@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-883-1",
+	"modified": "2023-10-16T00:29:31.777074Z",
+	"published": "2005-11-04T00:00:00Z",
+	"related": [
+		"CVE-2005-3124"
+	],
+	"summary": "thttpd - insecure temporary file",
+	"details": "\nJavier FernĂĄndez-Sanguino PeĂąa from the Debian Security Audit team\ndiscovered that the syslogtocern script from thttpd, a tiny webserver,\nuses a temporary file insecurely, allowing a local attacker to craft a\nsymlink attack to overwrite arbitrary files.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 2.21b-11.3.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.23beta1-3sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.23beta1-4.\n\n\nWe recommend that you upgrade your thttpd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "thttpd",
+				"purl": "pkg:deb/debian/thttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.21b-11.3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.21b-11.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-883-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "thttpd",
+				"purl": "pkg:deb/debian/thttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.23beta1-3sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.23beta1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-883-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-883"
+		}
+	]
+}

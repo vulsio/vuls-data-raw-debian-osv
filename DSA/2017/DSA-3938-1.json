@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3938-1",
+	"modified": "2023-10-16T00:12:29.008473Z",
+	"published": "2017-08-12T00:00:00Z",
+	"related": [
+		"CVE-2017-7890"
+	],
+	"summary": "libgd2 - security update",
+	"details": "\nMatviy Kotoniy reported that the gdImageCreateFromGifCtx() function used\nto load images from GIF format files in libgd2, a library for\nprogrammatic graphics creation and manipulation, does not zero stack\nallocated color map buffers before their use, which may result in\ninformation disclosure if a specially crafted file is processed.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2.1.0-5+deb8u10.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.2.4-2+deb9u1.\n\n\nWe recommend that you upgrade your libgd2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libgd2",
+				"purl": "pkg:deb/debian/libgd2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.0-5+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.0-5",
+				"2.1.0-5+deb8u1",
+				"2.1.0-5+deb8u2",
+				"2.1.0-5+deb8u3",
+				"2.1.0-5+deb8u4",
+				"2.1.0-5+deb8u5",
+				"2.1.0-5+deb8u6",
+				"2.1.0-5+deb8u7",
+				"2.1.0-5+deb8u8",
+				"2.1.0-5+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3938-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libgd2",
+				"purl": "pkg:deb/debian/libgd2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.4-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3938-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3938"
+		}
+	]
+}

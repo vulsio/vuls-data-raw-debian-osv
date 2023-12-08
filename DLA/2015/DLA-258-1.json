@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-258-1",
+	"modified": "2023-06-28T06:21:19.321625Z",
+	"published": "2015-06-29T00:00:00Z",
+	"related": [
+		"CVE-2010-5312"
+	],
+	"summary": "jqueryui - security update",
+	"details": "\nShadowman131 discovered that jqueryui, a JavaScript UI library for\ndynamic web applications, failed to properly sanitize its title\noption. This would allow a remote attacker to inject arbitrary code\nthrough cross-site scripting.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "jqueryui",
+				"purl": "pkg:deb/debian/jqueryui?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.dfsg-3+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-258-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-258"
+		}
+	]
+}

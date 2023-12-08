@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-407",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-01-05T00:00:00Z",
+	"related": [
+		"CVE-2003-0925",
+		"CVE-2003-0926",
+		"CVE-2003-0927",
+		"CVE-2003-1012",
+		"CVE-2003-1013"
+	],
+	"summary": "ethereal - buffer overflows",
+	"details": "\nSeveral vulnerabilities were discovered upstream in ethereal, a\nnetwork traffic analyzer. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CAN-2003-0925](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0925)\nA buffer overflow allows remote attackers to cause a denial of\n service and possibly execute arbitrary code via a malformed GTP\n MSISDN string.\n\n* [CAN-2003-0926](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0926)\nVia certain malformed ISAKMP or MEGACO packets remote attackers are\n able to cause a denial of service (crash).\n\n* [CAN-2003-0927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0927)\nA heap-based buffer overflow allows remote attackers to cause a\n denial of service (crash) and possibly execute arbitrary code via\n the SOCKS dissector.\n\n* [CAN-2003-1012](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-1012)\nThe SMB dissector allows remote attackers to cause a denial of\n service via a malformed SMB packet that triggers a segmentation\n fault during processing of selected packets.\n\n* [CAN-2003-1013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-1013)\nThe Q.931 dissector allows remote attackers to cause a denial of\n service (crash) via a malformed Q.931, which triggers a null\n dereference.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.9.4-1woody6.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.10.0-1.\n\n\nWe recommend that you upgrade your ethereal and tethereal packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "ethereal",
+				"purl": "pkg:deb/debian/ethereal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.4-1woody6"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-407.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-407"
+		}
+	]
+}

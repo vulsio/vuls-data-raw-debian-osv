@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4473-1",
+	"modified": "2023-10-16T00:20:20.408062Z",
+	"published": "2019-06-28T00:00:00Z",
+	"related": [
+		"CVE-2019-15682"
+	],
+	"summary": "rdesktop - security update",
+	"details": "\nMultiple security issues were found in the rdesktop RDP client, which\ncould result in denial of service and the execution of arbitrary code.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.8.6-2~deb9u1.\n\n\nWe recommend that you upgrade your rdesktop packages.\n\n\nFor the detailed security status of rdesktop please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/rdesktop](https://security-tracker.debian.org/tracker/rdesktop)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "rdesktop",
+				"purl": "pkg:deb/debian/rdesktop?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.6-2~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.3-2",
+				"1.8.4-1",
+				"1.8.4-1~deb9u1",
+				"1.8.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4473-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4473"
+		}
+	]
+}

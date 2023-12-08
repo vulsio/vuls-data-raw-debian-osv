@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-716-1",
+	"modified": "2023-10-16T00:26:25.568851Z",
+	"published": "2005-04-27T00:00:00Z",
+	"related": [
+		"CVE-2005-0472"
+	],
+	"summary": "gaim - denial of service",
+	"details": "\nIt has been discovered that certain malformed SNAC packets sent by\nother AIM or ICQ users can trigger an infinite loop in Gaim, a\nmulti-protocol instant messaging client, and hence lead to a denial of\nservice of the client.\n\n\nTwo more denial of service conditions have been discovered in newer\nversions of Gaim which are fixed in the package in sid but are not\npresent in the package in woody.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.58-2.5.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.1.3-1.\n\n\nWe recommend that you upgrade your gaim packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gaim",
+				"purl": "pkg:deb/debian/gaim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.58-2.5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.58-2.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-716-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-716"
+		}
+	]
+}

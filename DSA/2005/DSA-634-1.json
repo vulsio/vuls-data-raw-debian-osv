@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-634-1",
+	"modified": "2023-10-16T00:26:03.894703Z",
+	"published": "2005-01-11T00:00:00Z",
+	"related": [
+		"CVE-2004-1182"
+	],
+	"summary": "hylafax - weak hostname and username validation",
+	"details": "\nPatrice Fournier discovered a vulnerability in the authorisation\nsubsystem of hylafax, a flexible client/server fax system. A local or\nremote user guessing the contents of the hosts.hfaxd database could\ngain unauthorised access to the fax system.\n\n\nSome installations of hylafax may actually utilise the weak hostname\nand username validation for authorized uses. For example, hosts.hfaxd\nentries that may be common are\n\n\n\n```\n\n  192.168.0\n  username:uid:pass:adminpass\n  user@host\n\n```\n\nAfter updating, these entries will need to be modified in order to\ncontinue to function. Respectively, the correct entries should be\n\n\n\n```\n\n  192.168.0.[0-9]+\n  username@:uid:pass:adminpass\n  user@host\n\n```\n\nUnless such matching of \"username\" with \"otherusername\" and \"host\" with\n\"hostname\" is desired, the proper form of these entries should include\nthe delimiter and markers like this\n\n\n\n```\n\n  @192.168.0.[0-9]+$\n  ^username@:uid:pass:adminpass\n  ^user@host$\n\n```\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 4.1.1-3.1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 4.2.1-1.\n\n\nWe recommend that you upgrade your hylafax packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "hylafax",
+				"purl": "pkg:deb/debian/hylafax?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.1.1-3.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.1.1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-634-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-634"
+		}
+	]
+}

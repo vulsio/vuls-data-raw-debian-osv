@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1580-1",
+	"modified": "2023-06-28T06:20:49.383844Z",
+	"published": "2018-11-19T00:00:00Z",
+	"related": [
+		"CVE-2018-1049",
+		"CVE-2018-15686",
+		"CVE-2018-15688"
+	],
+	"summary": "systemd - security update",
+	"details": "\nsystemd was found to suffer from multiple security vulnerabilities\nranging from denial of service attacks to possible root privilege\nescalation.\n\n\n* [CVE-2018-1049](https://security-tracker.debian.org/tracker/CVE-2018-1049)\nA race condition exists between .mount and .automount units such\n that automount requests from kernel may not be serviced by systemd\n resulting in kernel holding the mountpoint and any processes that\n try to use said mount will hang. A race condition like this may\n lead to denial of service, until mount points are unmounted.\n* [CVE-2018-15686](https://security-tracker.debian.org/tracker/CVE-2018-15686)\nA vulnerability in unit\\_deserialize of systemd allows an attacker\n to supply arbitrary state across systemd re-execution via\n NotifyAccess. This can be used to improperly influence systemd\n execution and possibly lead to root privilege escalation.\n* [CVE-2018-15688](https://security-tracker.debian.org/tracker/CVE-2018-15688)\nA buffer overflow vulnerability in the dhcp6 client of systemd\n allows a malicious dhcp6 server to overwrite heap memory in\n systemd-networkd, which is not enabled by default in Debian.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n215-17+deb8u8.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "systemd",
+				"purl": "pkg:deb/debian/systemd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "215-17+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"215-17",
+				"215-17+deb8u1",
+				"215-17+deb8u2",
+				"215-17+deb8u3",
+				"215-17+deb8u4",
+				"215-17+deb8u5",
+				"215-17+deb8u6",
+				"215-17+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1580-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1580"
+		}
+	]
+}

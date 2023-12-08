@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1015-1",
+	"modified": "2023-10-16T00:06:28.871332Z",
+	"published": "2006-03-23T00:00:00Z",
+	"related": [
+		"CVE-2006-0058"
+	],
+	"summary": "sendmail - programming error",
+	"details": "\nMark Dowd discovered a flaw in the handling of asynchronous signals in\nsendmail, a powerful, efficient, and scalable mail transport agent.\nThis allows a remote attacker to exploit a race condition to\nexecute arbitrary code as root.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 8.12.3-7.2.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 8.13.4-3sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 8.13.6-1.\n\n\nWe recommend that you upgrade your sendmail package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "sendmail",
+				"purl": "pkg:deb/debian/sendmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.12.3-7.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.12.3-7.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1015-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "sendmail",
+				"purl": "pkg:deb/debian/sendmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.13.4-3sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.13.4-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1015-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1015"
+		}
+	]
+}

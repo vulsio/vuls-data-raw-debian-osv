@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-679-1",
+	"modified": "2023-10-16T00:36:43.717131Z",
+	"published": "2005-02-14T00:00:00Z",
+	"related": [
+		"CVE-2005-0159"
+	],
+	"summary": "toolchain-source - insecure temporary files",
+	"details": "\nSean Finney discovered several insecure temporary file uses in\ntoolchain-source, the GNU binutils and GCC source code and scripts.\nThese bugs can lead a local attacker with minimal knowledge to trick\nthe admin into overwriting arbitrary files via a symlink attack. The\nproblems exist inside the Debian-specific tpkg-\\* scripts.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.0.4-1woody1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.4-5.\n\n\nWe recommend that you upgrade your toolchain-source package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "toolchain-source",
+				"purl": "pkg:deb/debian/toolchain-source?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.4-1woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-679-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-679"
+		}
+	]
+}

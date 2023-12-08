@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-304-1",
+	"modified": "2023-06-28T06:26:48.205598Z",
+	"published": "2015-09-03T00:00:00Z",
+	"related": [
+		"CVE-2010-3609",
+		"CVE-2012-4428",
+		"CVE-2015-5177"
+	],
+	"summary": "openslp-dfsg - security update",
+	"details": "\nSeveral issues have been found and solved in OpenSLP, that implements the\nInternet Engineering Task Force (IETF) Service Location Protocol standards\nprotocol.\n\n\n* [CVE-2010-3609](https://security-tracker.debian.org/tracker/CVE-2010-3609)\nRemote attackers could cause a Denial of Service in the Service Location\n Protocol daemon (SLPD) via a crafted packet with a next extension offset.\n* [CVE-2012-4428](https://security-tracker.debian.org/tracker/CVE-2012-4428)\nGeorgi Geshev discovered that an out-of-bounds read error in the\n SLPIntersectStringList() function could be used to cause a DoS.\n* [CVE-2015-5177](https://security-tracker.debian.org/tracker/CVE-2015-5177)\nA double free in the SLPDProcessMessage() function could be used to cause\n openslp to crash.\n\n\nFor Debian 6 Squeeze, these problems have been fixed in openslp-dfsg\nversion 1.2.1-7.8+deb6u1.\n\n\nWe recommend that you upgrade your openslp-dfsg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "openslp-dfsg",
+				"purl": "pkg:deb/debian/openslp-dfsg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.1-7.8+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.1-7.8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-304-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-304"
+		}
+	]
+}

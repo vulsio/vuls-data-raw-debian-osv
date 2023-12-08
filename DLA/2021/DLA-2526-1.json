@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2526-1",
+	"modified": "2023-06-28T06:18:44.199266Z",
+	"published": "2021-01-15T00:00:00Z",
+	"related": [
+		"CVE-2020-26298"
+	],
+	"summary": "ruby-redcarpet - security update",
+	"details": "\nIn Redcarpet before version 3.5.1, there is an injection\nvulnerability which can enable a cross-site scripting attack.\n\n\nIn affected versions, no HTML escaping was being performed when\nprocessing quotes. This applies even when the `:escape\\_html`\noption was being used.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n3.3.4-2+deb9u1.\n\n\nWe recommend that you upgrade your ruby-redcarpet packages.\n\n\nFor the detailed security status of ruby-redcarpet please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ruby-redcarpet>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby-redcarpet",
+				"purl": "pkg:deb/debian/ruby-redcarpet?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.4-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2526-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2526"
+		}
+	]
+}

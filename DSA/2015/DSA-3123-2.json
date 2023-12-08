@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3123-2",
+	"modified": "2023-10-16T00:06:13.753082Z",
+	"published": "2015-01-09T00:00:00Z",
+	"related": [
+		"CVE-2014-8484",
+		"CVE-2014-8485",
+		"CVE-2014-8501",
+		"CVE-2014-8502",
+		"CVE-2014-8503",
+		"CVE-2014-8504",
+		"CVE-2014-8737",
+		"CVE-2014-8738"
+	],
+	"summary": "binutils-mingw-w64 - security update",
+	"details": "\nMultiple security issues have been found in binutils, a toolbox for\nbinary file manipulation. These vulnerabilities include multiple memory\nsafety errors, buffer overflows, use-after-frees and other implementation\nerrors may lead to the execution of arbitrary code, the bypass of security\nrestrictions, path traversal attack or denial of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.22-8+deb7u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.25-3.\n\n\nWe recommend that you upgrade your binutils packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "binutils-mingw-w64",
+				"purl": "pkg:deb/debian/binutils-mingw-w64?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3123-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3123"
+		}
+	]
+}

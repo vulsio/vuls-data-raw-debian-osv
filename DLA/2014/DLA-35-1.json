@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-35-1",
+	"modified": "2023-06-28T06:25:33.211047Z",
+	"published": "2014-08-11T00:00:00Z",
+	"related": [
+		"CVE-2014-4607"
+	],
+	"summary": "lzo2 - security update",
+	"details": "\nFix integer overflow in lzo1x\\_decompress\\_safe() allowing denial of service or\ncode execution.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in lzo2 version 2.03-2+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "lzo2",
+				"purl": "pkg:deb/debian/lzo2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.03-2+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.03-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-35-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-35"
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-779-1",
+	"modified": "2023-10-16T00:28:29.771880Z",
+	"published": "2005-08-20T00:00:00Z",
+	"related": [
+		"CVE-2005-2260",
+		"CVE-2005-2261",
+		"CVE-2005-2262",
+		"CVE-2005-2263",
+		"CVE-2005-2264",
+		"CVE-2005-2265",
+		"CVE-2005-2266",
+		"CVE-2005-2267",
+		"CVE-2005-2268",
+		"CVE-2005-2269",
+		"CVE-2005-2270"
+	],
+	"summary": "mozilla-firefox - several",
+	"details": "\nWe experienced that the update for Mozilla Firefox from DSA 779-1\nunfortunately was a regression in several cases. Â Since the usual\npraxis of backporting apparently does not work, this update is\nbasically version 1.0.6 with the version number rolled back, and hence\nstill named 1.0.4-\\*. Â For completeness below is the original advisory\ntext:\n\n\n\n> \n> Several problems have been discovered in Mozilla Firefox, a\n> lightweight web browser based on Mozilla. The Common Vulnerabilities\n> and Exposures project identifies the following problems:\n> \n> \n> * [CAN-2005-2260](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2260)\n> The browser user interface does not properly distinguish between\n>  user-generated events and untrusted synthetic events, which makes\n>  it easier for remote attackers to perform dangerous actions that\n>  normally could only be performed manually by the user.\n> \n> * [CAN-2005-2261](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2261)\n> XML scripts ran even when Javascript disabled.\n> \n> * [CAN-2005-2262](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2262)\n> The user can be tricked to executing arbitrary JavaScript code by\n>  using a JavaScript URL as wallpaper.\n> \n> * [CAN-2005-2263](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2263)\n> It is possible for a remote attacker to execute a callback\n>  function in the context of another domain (i.e. frame).\n> \n> * [CAN-2005-2264](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2264)\n> By opening a malicious link in the sidebar it is possible for\n>  remote attackers to steal sensitive information.\n> \n> * [CAN-2005-2265](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2265)\n> Missing input sanitising of InstallVersion.compareTo() can cause\n>  the application to crash.\n> \n> * [CAN-2005-2266](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2266)\n> Remote attackers could steal sensitive information such as cookies\n>  and passwords from web sites by accessing data in alien frames.\n> \n> * [CAN-2005-2267](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2267)\n> By using standalone applications such as Flash and QuickTime to\n>  open a javascript: URL, it is possible for a remote attacker to\n>  steal sensitive information and possibly execute arbitrary code.\n> \n> * [CAN-2005-2268](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2268)\n> It is possible for a Javascript dialog box to spoof a dialog box\n>  from a trusted site and facilitates phishing attacks.\n> \n> * [CAN-2005-2269](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2269)\n> Remote attackers could modify certain tag properties of DOM nodes\n>  that could lead to the execution of arbitrary script or code.\n> \n> * [CAN-2005-2270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2270)\n> The Mozilla browser family does not properly clone base objects,\n>  which allows remote attackers to execute arbitrary code.\n> \n> \n> \n\n\nThe old stable distribution (woody) is not affected by these problems.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.0.4-2sarge3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.0.6-1.\n\n\nWe recommend that you upgrade your Mozilla Firefox packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mozilla-firefox",
+				"purl": "pkg:deb/debian/mozilla-firefox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.4-2sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.4-2",
+				"1.0.4-2sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-779-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-779"
+		}
+	]
+}

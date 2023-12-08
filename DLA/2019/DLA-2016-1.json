@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2016-1",
+	"modified": "2023-06-28T06:25:04.744815Z",
+	"published": "2019-11-29T00:00:00Z",
+	"related": [
+		"CVE-2018-20020",
+		"CVE-2018-20021",
+		"CVE-2018-20022",
+		"CVE-2018-20024"
+	],
+	"summary": "ssvnc - security update",
+	"details": "\nSeveral vulnerabilities have been identified in the VNC code of ssvnc, an\nencryption-capable VNC client..\n\n\nThe vulnerabilities referenced below are issues that have originally been\nreported against Debian source package libvncserver (which also ships the\nlibvncclient shared library). The ssvnc source package in Debian ships a\ncustom-patched, stripped down and outdated variant of libvncclient, thus\nsome of libvncclient's security fixes required porting over.\n\n\n* [CVE-2018-20020](https://security-tracker.debian.org/tracker/CVE-2018-20020)\nLibVNC contained heap out-of-bound write vulnerability inside\n structure in VNC client code that can result remote code execution\n* [CVE-2018-20021](https://security-tracker.debian.org/tracker/CVE-2018-20021)\nLibVNC contained a CWE-835: Infinite loop vulnerability in VNC client\n code. Vulnerability allows attacker to consume excessive amount of\n resources like CPU and RAM\n* [CVE-2018-20022](https://security-tracker.debian.org/tracker/CVE-2018-20022)\nLibVNC contained multiple weaknesses CWE-665: Improper Initialization\n vulnerability in VNC client code that allowed attackers to read stack\n memory and could be abused for information disclosure. Combined with\n another vulnerability, it could be used to leak stack memory layout\n and in bypassing ASLR.\n* [CVE-2018-20024](https://security-tracker.debian.org/tracker/CVE-2018-20024)\nLibVNC contained null pointer dereference in VNC client code that\n could result DoS.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.0.29-2+deb8u1.\n\n\nWe recommend that you upgrade your ssvnc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ssvnc",
+				"purl": "pkg:deb/debian/ssvnc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.29-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.29-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2016-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-2016"
+		}
+	]
+}

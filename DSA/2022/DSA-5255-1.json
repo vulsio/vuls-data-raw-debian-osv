@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5255-1",
+	"modified": "2023-10-16T00:16:11.670150Z",
+	"published": "2022-10-17T00:00:00Z",
+	"related": [
+		"CVE-2022-3515"
+	],
+	"summary": "libksba - security update",
+	"details": "\nAn integer overflow flaw was discovered in the CRL parser in libksba, an\nX.509 and CMS support library, which could result in denial of service\nor the execution of arbitrary code.\n\n\nDetails can be found in the upstream advisory at\n<https://gnupg.org/blog/20221017-pepe-left-the-ksba.html>\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.5.0-3+deb11u1.\n\n\nWe recommend that you upgrade your libksba packages.\n\n\nFor the detailed security status of libksba please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/libksba>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libksba",
+				"purl": "pkg:deb/debian/libksba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.0-3+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.0-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5255-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5255"
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2210-1",
+	"modified": "2023-06-28T06:20:02.865007Z",
+	"published": "2020-05-15T00:00:00Z",
+	"related": [
+		"CVE-2020-3810"
+	],
+	"summary": "apt - security update",
+	"details": "\nWhen normalizing ar member names by removing trailing whitespace\nand slashes, an out-out-bound read can be caused if the ar member\nname consists only of such characters, because the code did not\nstop at 0, but would wrap around and continue reading from the\nstack, without any limit.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.0.9.8.6.\n\n\nWe recommend that you upgrade your apt packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.9.8.6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.9.8",
+				"1.0.9.8.1",
+				"1.0.9.8.2",
+				"1.0.9.8.3",
+				"1.0.9.8.4",
+				"1.0.9.8.5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2210-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2210"
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2064-1",
+	"modified": "2023-10-16T00:10:56.119709Z",
+	"published": "2010-06-27T00:00:00Z",
+	"related": [
+		"CVE-2010-0183",
+		"CVE-2010-1196",
+		"CVE-2010-1197",
+		"CVE-2010-1198",
+		"CVE-2010-1199",
+		"CVE-2010-1200",
+		"CVE-2010-1201",
+		"CVE-2010-1202"
+	],
+	"summary": "xulrunner - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Xulrunner, a \nruntime environment for XUL applications. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2010-0183](https://security-tracker.debian.org/tracker/CVE-2010-0183)\n\"wushi\" discovered that incorrect pointer handling in the frame\n processing code could lead to the execution of arbitrary code.\n* [CVE-2010-1196](https://security-tracker.debian.org/tracker/CVE-2010-1196)\n\"Nils\" discovered that an integer overflow in DOM node parsing could\n lead to the execution of arbitrary code.\n* [CVE-2010-1197](https://security-tracker.debian.org/tracker/CVE-2010-1197)\nIlja von Sprundel discovered that incorrect parsing of\n Content-Disposition headers could lead to cross-site scripting.\n* [CVE-2010-1198](https://security-tracker.debian.org/tracker/CVE-2010-1198)\nMicrosoft engineers discovered that incorrect memory handling in the\n interaction of browser plugins could lead to the execution of\n arbitrary code.\n* [CVE-2010-1199](https://security-tracker.debian.org/tracker/CVE-2010-1199)\nMartin Barbella discovered that an integer overflow in XSLT node\n parsing could lead to the execution of arbitrary code.\n* [CVE-2010-1200](https://security-tracker.debian.org/tracker/CVE-2010-1200)\nOlli Pettay, Martijn Wargers, Justin Lebar, Jesse Ruderman, Ben\n Turner, Jonathan Kew and David Humphrey discovered crashes in the\n layout engine, which might allow the execution of arbitrary code.\n* [CVE-2010-1201](https://security-tracker.debian.org/tracker/CVE-2010-1201)\n\"boardraider\" and \"stedenon\" discovered crashes in the layout engine,\n which might allow the execution of arbitrary code.\n* [CVE-2010-1202](https://security-tracker.debian.org/tracker/CVE-2010-1202)\nBob Clary, Igor Bukanov, Gary Kwong and Andreas Gal discovered crashes\n in the Javascript engine, which might allow the execution of arbitrary\n code.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.9.0.19-2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.1.10-1 \n\n\nFor the experimental distribution, these problems have been fixed in\nversion 1.9.2.4-1.\n\n\nWe recommend that you upgrade your xulrunner packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "xulrunner",
+				"purl": "pkg:deb/debian/xulrunner?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.0.19-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.0.10-1",
+				"1.9.0.11-0lenny1",
+				"1.9.0.11-1",
+				"1.9.0.12-0lenny1",
+				"1.9.0.12-1",
+				"1.9.0.13-0lenny1",
+				"1.9.0.13-1",
+				"1.9.0.14-0lenny1",
+				"1.9.0.14-1",
+				"1.9.0.15-0lenny1",
+				"1.9.0.16-1",
+				"1.9.0.18-1",
+				"1.9.0.19-1",
+				"1.9.0.5-1",
+				"1.9.0.6-1",
+				"1.9.0.7-0lenny1",
+				"1.9.0.7-0lenny2",
+				"1.9.0.7-1",
+				"1.9.0.8-1",
+				"1.9.0.9-0lenny2",
+				"1.9.0.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2064-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2064"
+		}
+	]
+}

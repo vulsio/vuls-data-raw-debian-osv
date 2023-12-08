@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3240-1",
+	"modified": "2023-06-28T06:25:29.209366Z",
+	"published": "2022-12-15T00:00:00Z",
+	"related": [
+		"CVE-2020-21595",
+		"CVE-2020-21597",
+		"CVE-2020-21598",
+		"CVE-2020-21599",
+		"CVE-2020-21600",
+		"CVE-2020-21601",
+		"CVE-2020-21602",
+		"CVE-2020-21603",
+		"CVE-2020-21604",
+		"CVE-2020-21605",
+		"CVE-2020-21606",
+		"CVE-2021-35452",
+		"CVE-2021-36408",
+		"CVE-2021-36409",
+		"CVE-2021-36410",
+		"CVE-2021-36411"
+	],
+	"summary": "libde265 - security update",
+	"details": "\nMultiple issues were found in libde265, an open source implementation of the\nh.265 video codec, which may result in denial of or have unspecified other\nimpact.\n\n\n\n* [CVE-2020-21599](https://security-tracker.debian.org/tracker/CVE-2020-21599)\nlibde265 v1.0.4 contains a heap buffer overflow in the\n de265\\_image::available\\_zscan function, which can be exploited via a crafted\n a file.\n* [CVE-2021-35452](https://security-tracker.debian.org/tracker/CVE-2021-35452)\nAn Incorrect Access Control vulnerability exists in libde265 v1.0.8 due to\n a SEGV in slice.cc.\n* [CVE-2021-36408](https://security-tracker.debian.org/tracker/CVE-2021-36408)\nlibde265 v1.0.8 contains a Heap-use-after-free in intrapred.h when decoding\n file using dec265.\n* [CVE-2021-36409](https://security-tracker.debian.org/tracker/CVE-2021-36409)\nThere is an Assertion `scaling\\_list\\_pred\\_matrix\\_id\\_delta==1' failed at\n sps.cc:925 in libde265 v1.0.8 when decoding file, which allows attackers to\n cause a Denial of Service (DoS) by running the application with a crafted\n file or possibly have unspecified other impact.\n* [CVE-2021-36410](https://security-tracker.debian.org/tracker/CVE-2021-36410)\nA stack-buffer-overflow exists in libde265 v1.0.8 via fallback-motion.cc in\n function put\\_epel\\_hv\\_fallback when running program dec265.\n* [CVE-2021-36411](https://security-tracker.debian.org/tracker/CVE-2021-36411)\nAn issue has been found in libde265 v1.0.8 due to incorrect access control.\n A SEGV caused by a READ memory access in function derive\\_boundaryStrength of\n deblock.cc has occurred. The vulnerability causes a segmentation fault and\n application crash, which leads to remote denial of service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.0.3-1+deb10u1.\n\n\nWe recommend that you upgrade your libde265 packages.\n\n\nFor the detailed security status of libde265 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libde265>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libde265",
+				"purl": "pkg:deb/debian/libde265?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.3-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3240-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3240"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2032-1",
+	"modified": "2023-10-16T00:10:54.645051Z",
+	"published": "2010-04-11T00:00:00Z",
+	"related": [
+		"CVE-2009-2042",
+		"CVE-2010-0205"
+	],
+	"summary": "libpng - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in libpng, a library for\nreading and writing PNG files. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-2042](https://security-tracker.debian.org/tracker/CVE-2009-2042)\nlibpng does not properly parse 1-bit interlaced images with width values\nthat are not divisible by 8, which causes libpng to include\nuninitialized bits in certain rows of a PNG file and might allow remote\nattackers to read portions of sensitive memory via \"out-of-bounds\npixels\" in the file.\n* [CVE-2010-0205](https://security-tracker.debian.org/tracker/CVE-2010-0205)\nlibpng does not properly handle compressed ancillary-chunk data that has\na disproportionately large uncompressed representation, which allows\nremote attackers to cause a denial of service (memory and CPU\nconsumption, and application hang) via a crafted PNG file\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.2.27-2+lenny3.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, these\nproblems have been fixed in version 1.2.43-1\n\n\nWe recommend that you upgrade your libpng package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.27-2+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.27-2",
+				"1.2.27-2+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2032-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2032"
+		}
+	]
+}

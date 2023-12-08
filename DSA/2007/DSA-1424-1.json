@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1424-1",
+	"modified": "2023-10-16T00:10:24.448285Z",
+	"published": "2007-12-08T00:00:00Z",
+	"related": [
+		"CVE-2007-5947",
+		"CVE-2007-5959",
+		"CVE-2007-5960"
+	],
+	"summary": "iceweasel - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Iceweasel web\nbrowser, an unbranded version of the Firefox browser. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-5947](https://security-tracker.debian.org/tracker/CVE-2007-5947)\nJesse Ruderman and Petko D. Petkov discovered that the URI handler\n for JAR archives allows cross-site scripting.\n* [CVE-2007-5959](https://security-tracker.debian.org/tracker/CVE-2007-5959)\nSeveral crashes in the layout engine were discovered, which might\n allow the execution of arbitrary code.\n* [CVE-2007-5960](https://security-tracker.debian.org/tracker/CVE-2007-5960)\nGregory Fleischer discovered a race condition in the handling of\n the window.location property, which might lead to cross-site\n request forgery.\n\n\nThe Mozilla products in the oldstable distribution (sarge) are no longer\nsupported with security updates.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 2.0.0.10-0etch1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.0.0.10-2.\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "iceweasel",
+				"purl": "pkg:deb/debian/iceweasel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0.10-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0.3-1",
+				"2.0.0.3-2",
+				"2.0.0.4-0etch1",
+				"2.0.0.4-1",
+				"2.0.0.5-0etch1",
+				"2.0.0.5-0etch1+lenny1",
+				"2.0.0.5-1",
+				"2.0.0.5-2",
+				"2.0.0.6+2.0.0.8-0etch1",
+				"2.0.0.6-0etch1",
+				"2.0.0.6-0etch1+lenny1",
+				"2.0.0.6-1",
+				"2.0.0.7-1",
+				"2.0.0.7-2",
+				"2.0.0.8-1",
+				"2.0.0.9-1",
+				"2.0.0.9-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1424-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1424"
+		}
+	]
+}

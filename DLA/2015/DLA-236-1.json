@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-236-1",
+	"modified": "2023-06-28T06:25:13.441227Z",
+	"published": "2015-06-01T00:00:00Z",
+	"related": [
+		"CVE-2014-9031",
+		"CVE-2014-9033",
+		"CVE-2014-9034",
+		"CVE-2014-9035",
+		"CVE-2014-9036",
+		"CVE-2014-9037",
+		"CVE-2014-9038",
+		"CVE-2014-9039",
+		"CVE-2015-3438",
+		"CVE-2015-3439",
+		"CVE-2015-3440"
+	],
+	"summary": "wordpress - security update",
+	"details": "\nIn the Debian squeeze-lts version of Wordpress, multiple security issues\nhave been fixed:\n\n\nRemote attackers could...\n\n\n* ... upload files with invalid or unsafe names\n* ... mount social engineering attacks\n* ... compromise a site via cross-site scripting\n* ... inject SQL commands\n* ... cause denial of service or information disclosure\n\n\n* [CVE-2014-9031](https://security-tracker.debian.org/tracker/CVE-2014-9031)\nJouko Pynnonen discovered an unauthenticated cross site scripting\n vulnerability (XSS) in wptexturize(), exploitable via comments or\n posts.\n* [CVE-2014-9033](https://security-tracker.debian.org/tracker/CVE-2014-9033)\nCross site request forgery (CSRF) vulnerability in the password\n changing process, which could be used by an attacker to trick an user\n into changing her password.\n* [CVE-2014-9034](https://security-tracker.debian.org/tracker/CVE-2014-9034)\nJavier Nieto Arevalo and Andres Rojas Guerrero reported a potential\n denial of service in the way the phpass library is used to handle\n passwords, since no maximum password length was set.\n* [CVE-2014-9035](https://security-tracker.debian.org/tracker/CVE-2014-9035)\nJohn Blackbourn reported an XSS in the Press This function (used\n for quick publishing using a browser bookmarklet).\n* [CVE-2014-9036](https://security-tracker.debian.org/tracker/CVE-2014-9036)\nRobert Chapin reported an XSS in the HTML filtering of CSS in posts.\n* [CVE-2014-9037](https://security-tracker.debian.org/tracker/CVE-2014-9037)\nDavid Anderson reported a hash comparison vulnerability for passwords\n stored using the old-style MD5 scheme. While unlikely, this could be\n exploited to compromise an account, if the user had not logged in\n after a Wordpress 2.5 update (uploaded to Debian on 2 Apr, 2008) and\n the password MD5 hash could be collided with due to PHP dynamic\n comparison.\n* [CVE-2014-9038](https://security-tracker.debian.org/tracker/CVE-2014-9038)\nBen Bidner reported a server side request forgery (SSRF) in the core\n HTTP layer which unsufficiently blocked the loopback IP address\n space.\n* [CVE-2014-9039](https://security-tracker.debian.org/tracker/CVE-2014-9039)\nMomen Bassel, Tanoy Bose, and Bojan Slavkovic reported a\n vulnerability in the password reset process: an email address change\n would not invalidate a previous password reset email.\n* [CVE-2015-3438](https://security-tracker.debian.org/tracker/CVE-2015-3438)\nCedric Van Bockhaven reported and Gary Pendergast, Mike Adams, and Andrew Nacin of the\n WordPress security team fixed a cross-site-scripting vulnerabilitity, which could enable anonymous users\n to compromise a site.\n* [CVE-2015-3439](https://security-tracker.debian.org/tracker/CVE-2015-3439)\nJakub Zoczek discovered a very limited cross-site scripting\n vulnerability, that could be used as part of a social engineering\n attack.\n* [CVE-2015-3440](https://security-tracker.debian.org/tracker/CVE-2015-3440)\nJouko PynnĂśnen discovered a cross-site scripting vulnerability,\n which could enable commenters to compromise a site.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.1+dfsg-1~deb6u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.4+dfsg-1",
+				"3.0.5+dfsg-0+squeeze1",
+				"3.0.5+dfsg-1",
+				"3.2.1+dfsg-1",
+				"3.2.1+dfsg-2",
+				"3.2.1+dfsg-3",
+				"3.3+dfsg-1",
+				"3.3.1+dfsg-1",
+				"3.3.2+dfsg-1",
+				"3.3.2+dfsg-1~squeeze1",
+				"3.4+dfsg-1",
+				"3.4+dfsg-2",
+				"3.4+dfsg-3",
+				"3.4.1+dfsg-1",
+				"3.4.2+dfsg-1",
+				"3.5+dfsg-1",
+				"3.5.1+dfsg-1",
+				"3.5.1+dfsg-2",
+				"3.5.2+dfsg-1",
+				"3.5.2+dfsg-1~deb6u1",
+				"3.5.2+dfsg-1~deb7u1",
+				"3.6+dfsg-1",
+				"3.6.1+dfsg-1~deb6u1",
+				"3.6.1+dfsg-1~deb6u2",
+				"3.6.1+dfsg-1~deb6u3",
+				"3.6.1+dfsg-1~deb6u4",
+				"3.6.1+dfsg-1~deb6u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-236-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-236"
+		}
+	]
+}

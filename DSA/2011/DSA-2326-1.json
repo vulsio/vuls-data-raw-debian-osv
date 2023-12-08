@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2326-1",
+	"modified": "2023-10-16T00:13:40.319335Z",
+	"published": "2011-10-24T00:00:00Z",
+	"related": [
+		"CVE-2011-3148",
+		"CVE-2011-3149"
+	],
+	"summary": "pam - several",
+	"details": "\nKees Cook of the ChromeOS security team discovered a buffer overflow\nin pam\\_env, a PAM module to set environment variables through the\nPAM stack, which allowed the execution of arbitrary code. An additional\nissue in argument parsing allows denial of service.\n\n\nThe oldstable distribution (lenny) is not affected.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.1.1-6.1+squeeze1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon\n(the impact in sid is limited to denial of service for both issues).\n\n\nWe recommend that you upgrade your pam packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "pam",
+				"purl": "pkg:deb/debian/pam?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1-6.1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1-6.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2326-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2326"
+		}
+	]
+}

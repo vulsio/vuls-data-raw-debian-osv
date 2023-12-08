@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1638-1",
+	"modified": "2023-10-16T00:05:35.082131Z",
+	"published": "2008-09-16T00:00:00Z",
+	"related": [
+		"CVE-2006-5051",
+		"CVE-2008-4109"
+	],
+	"summary": "openssh - denial of service",
+	"details": "\nIt has been discovered that the signal handler implementing the login\ntimeout in Debian's version of the OpenSSH server uses functions which\nare not async-signal-safe, leading to a denial of service\nvulnerability ([CVE-2008-4109](https://security-tracker.debian.org/tracker/CVE-2008-4109)).\n\n\nThe problem was originally corrected in OpenSSH 4.4p1 ([CVE-2006-5051](https://security-tracker.debian.org/tracker/CVE-2006-5051)),\nbut the patch backported to the version released with etch was\nincorrect.\n\n\nSystems affected by this issue suffer from lots of zombie sshd\nprocesses. Processes stuck with a \"[net]\" process title have also been\nobserved. Over time, a sufficient number of processes may accumulate\nsuch that further login attempts are impossible. Presence of these\nprocesses does not indicate active exploitation of this vulnerability.\nIt is possible to trigger this denial of service condition by accident.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 4.3p2-9etch3.\n\n\nFor the unstable distribution (sid) and the testing distribution\n(lenny), this problem has been fixed in version 4.6p1-1.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "openssh",
+				"purl": "pkg:deb/debian/openssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.3p2-9etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.3p2-9",
+				"1:4.3p2-9etch1",
+				"1:4.3p2-9etch2",
+				"1:4.3p2-9etch2+m68k1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1638-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1638"
+		}
+	]
+}

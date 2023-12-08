@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1581-1",
+	"modified": "2023-10-16T00:05:30.320028Z",
+	"published": "2008-05-20T00:00:00Z",
+	"related": [
+		"CVE-2008-1948",
+		"CVE-2008-1949",
+		"CVE-2008-1950"
+	],
+	"summary": "gnutls13 - potential code execution",
+	"details": "\nSeveral remote vulnerabilities have been discovered in GNUTLS, an\nimplementation of the SSL/TLS protocol suite.\n\n\nNOTE: The libgnutls13 package, which provides the GNUTLS library, does\nnot contain logic to automatically restart potentially affected\nservices. You must restart affected services manually (mainly Exim,\nusing /etc/init.d/exim4 restart) after applying the update, to make\nthe changes fully effective. Alternatively, you can reboot the system.\n\n\nThe Common Vulnerabilities and Exposures project identifies the following \nproblems:\n\n\n* [CVE-2008-1948](https://security-tracker.debian.org/tracker/CVE-2008-1948)\nA pre-authentication heap overflow involving oversized session\n resumption data may lead to arbitrary code execution.\n* [CVE-2008-1949](https://security-tracker.debian.org/tracker/CVE-2008-1949)\nRepeated client hellos may result in a pre-authentication denial of\n service condition due to a null pointer dereference.\n* [CVE-2008-1950](https://security-tracker.debian.org/tracker/CVE-2008-1950)\nDecoding cipher padding with an invalid record length may cause GNUTLS\n to read memory beyond the end of the received record, leading to a\n pre-authentication denial of service condition.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.4.4-3+etch1. (Builds for the arm architecture are currently\nnot available and will be released later.)\n\n\nFor the unstable distribution (sid), these problems will be fixed soon. \n\n\nWe recommend that you upgrade your GNUTLS packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "gnutls13",
+				"purl": "pkg:deb/debian/gnutls13?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.4-3+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.4-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1581-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1581"
+		}
+	]
+}

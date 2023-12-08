@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2386-1",
+	"modified": "2023-06-28T06:26:32.487850Z",
+	"published": "2020-09-28T00:00:00Z",
+	"related": [
+		"CVE-2019-20919",
+		"CVE-2020-14392",
+		"CVE-2020-14393"
+	],
+	"summary": "libdbi-perl - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the Perl5 Database\nInterface (DBI). An attacker could trigger a denial-of-service (DoS)\nand possibly execute arbitrary code.\n\n\n* [CVE-2019-20919](https://security-tracker.debian.org/tracker/CVE-2019-20919)\nThe hv\\_fetch() documentation requires checking for NULL and the\n code does that. But, shortly thereafter, it calls SvOK(profile),\n causing a NULL pointer dereference.\n* [CVE-2020-14392](https://security-tracker.debian.org/tracker/CVE-2020-14392)\nAn untrusted pointer dereference flaw was found in Perl-DBI. A\n local attacker who is able to manipulate calls to\n dbd\\_db\\_login6\\_sv() could cause memory corruption, affecting the\n service's availability.\n* [CVE-2020-14393](https://security-tracker.debian.org/tracker/CVE-2020-14393)\nA buffer overflow on via an overlong DBD class name in\n dbih\\_setup\\_handle function may lead to data be written past the\n intended limit.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.636-1+deb9u1.\n\n\nWe recommend that you upgrade your libdbi-perl packages.\n\n\nFor the detailed security status of libdbi-perl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libdbi-perl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libdbi-perl",
+				"purl": "pkg:deb/debian/libdbi-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.636-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.636-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2386-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2386"
+		}
+	]
+}

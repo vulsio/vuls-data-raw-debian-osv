@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3194-1",
+	"modified": "2023-06-28T06:37:16.391056Z",
+	"published": "2022-11-17T00:00:00Z",
+	"related": [
+		"CVE-2021-37706",
+		"CVE-2021-43299",
+		"CVE-2021-43300",
+		"CVE-2021-43301",
+		"CVE-2021-43302",
+		"CVE-2021-43303",
+		"CVE-2021-43804",
+		"CVE-2021-43845",
+		"CVE-2021-46837",
+		"CVE-2022-21722",
+		"CVE-2022-21723",
+		"CVE-2022-23608",
+		"CVE-2022-24763",
+		"CVE-2022-24764",
+		"CVE-2022-24786",
+		"CVE-2022-24792",
+		"CVE-2022-24793",
+		"CVE-2022-26498",
+		"CVE-2022-26499",
+		"CVE-2022-26651"
+	],
+	"summary": "asterisk - security update",
+	"details": "\nMultiple security vulnerabilities have been found in Asterisk, an Open Source\nPrivate Branch Exchange. Buffer overflows and other programming errors could be\nexploited for information disclosure or the execution of arbitrary code.\n\n\nSpecial care should be taken when upgrading to this new upstream release.\nSome configuration files and options have changed in order to remedy\ncertain security vulnerabilities. Most notably the pjsip TLS listener only\naccepts TLSv1.3 connections in the default configuration now. This can be\nreverted by adding method=tlsv1\\_2 to the transport in pjsip.conf. See also\n<https://issues.asterisk.org/jira/browse/ASTERISK-29017>.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:16.28.0~dfsg-0+deb10u1.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\nFor the detailed security status of asterisk please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/asterisk>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:16.28.0~dfsg-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:16.10.0~dfsg-1",
+				"1:16.12.0~dfsg-1",
+				"1:16.15.0~dfsg-1",
+				"1:16.15.1~dfsg-1",
+				"1:16.16.1~dfsg+~2.10-1",
+				"1:16.16.1~dfsg+~2.10-2",
+				"1:16.16.1~dfsg-1",
+				"1:16.16.1~dfsg-1~bpo10+1",
+				"1:16.16.1~dfsg-2",
+				"1:16.16.1~dfsg-3",
+				"1:16.16.1~dfsg-4",
+				"1:16.2.1~dfsg-1",
+				"1:16.2.1~dfsg-1+deb10u1",
+				"1:16.2.1~dfsg-1+deb10u2",
+				"1:16.2.1~dfsg-2",
+				"1:16.23.0~dfsg+~2.10-1",
+				"1:16.23.0~dfsg+~cs6.10.20220309-1",
+				"1:16.23.0~dfsg+~cs6.10.20220309-2",
+				"1:16.23.0~dfsg+~cs6.10.40431411-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3194-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3194"
+		}
+	]
+}

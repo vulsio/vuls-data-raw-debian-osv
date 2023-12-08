@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2628-1",
+	"modified": "2023-10-16T00:06:02.640783Z",
+	"published": "2013-06-18T00:00:00Z",
+	"related": [
+		"CVE-2013-0288"
+	],
+	"summary": "nss-pam-ldapd - buffer overflow",
+	"details": "\nGarth Mollett discovered that a file descriptor overflow issue in the\nuse of FD\\_SET() in nss-pam-ldapd, which provides NSS and PAM modules for\nusing LDAP as a naming service, can lead to a stack-based buffer\noverflow. An attacker could, under some circumstances, use this flaw to\ncause a process that has the NSS or PAM module loaded to crash or\npotentially execute arbitrary code.\n\n\nFor the stable distribution (squeeze) this problem has been fixed in\nversion 0.7.15+squeeze4.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 0.8.10-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.8.10-3.\n\n\nWe recommend that you upgrade your nss-pam-ldapd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "nss-pam-ldapd",
+				"purl": "pkg:deb/debian/nss-pam-ldapd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.15+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.13",
+				"0.7.14",
+				"0.7.15",
+				"0.7.15+squeeze1",
+				"0.7.15+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2628-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2628"
+		}
+	]
+}

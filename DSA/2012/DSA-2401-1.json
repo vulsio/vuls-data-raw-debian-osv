@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2401-1",
+	"modified": "2023-10-16T00:05:52.991125Z",
+	"published": "2012-02-02T00:00:00Z",
+	"related": [
+		"CVE-2011-1184",
+		"CVE-2011-2204",
+		"CVE-2011-2526",
+		"CVE-2011-3190",
+		"CVE-2011-3375",
+		"CVE-2011-4858",
+		"CVE-2011-5062",
+		"CVE-2011-5063",
+		"CVE-2011-5064",
+		"CVE-2012-0022"
+	],
+	"summary": "tomcat6 - several",
+	"details": "\nSeveral vulnerabilities have been found in Tomcat, a servlet and JSP\nengine:\n\n\n* [CVE-2011-1184](https://security-tracker.debian.org/tracker/CVE-2011-1184) [CVE-2011-5062](https://security-tracker.debian.org/tracker/CVE-2011-5062) [CVE-2011-5063](https://security-tracker.debian.org/tracker/CVE-2011-5063) [CVE-2011-5064](https://security-tracker.debian.org/tracker/CVE-2011-5064)\nThe HTTP Digest Access Authentication implementation performed\n insufficient countermeasures against replay attacks.\n* [CVE-2011-2204](https://security-tracker.debian.org/tracker/CVE-2011-2204)\nIn rare setups passwords were written into a logfile.\n* [CVE-2011-2526](https://security-tracker.debian.org/tracker/CVE-2011-2526)\nMissing input sanitising in the HTTP APR or HTTP NIO connectors\n could lead to denial of service.\n* [CVE-2011-3190](https://security-tracker.debian.org/tracker/CVE-2011-3190)\nAJP requests could be spoofed in some setups.\n* [CVE-2011-3375](https://security-tracker.debian.org/tracker/CVE-2011-3375)\nIncorrect request caching could lead to information disclosure.\n* [CVE-2011-4858](https://security-tracker.debian.org/tracker/CVE-2011-4858) [CVE-2012-0022](https://security-tracker.debian.org/tracker/CVE-2012-0022)\nThis update adds countermeasures against a collision denial of\n service vulnerability in the Java hashtable implementation and\n addresses denial of service potentials when processing large\n amounts of requests.\n\n\nAdditional information can be\nfound at \n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 6.0.35-1+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 6.0.35-1.\n\n\nWe recommend that you upgrade your tomcat6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tomcat6",
+				"purl": "pkg:deb/debian/tomcat6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.35-1+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.28-10",
+				"6.0.28-9",
+				"6.0.28-9+squeeze1",
+				"6.0.32-1",
+				"6.0.32-2",
+				"6.0.32-3",
+				"6.0.32-4",
+				"6.0.32-5",
+				"6.0.32-6",
+				"6.0.32-7",
+				"6.0.33-1",
+				"6.0.35-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2401-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2401"
+		}
+	]
+}

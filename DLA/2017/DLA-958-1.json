@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-958-1",
+	"modified": "2023-06-28T06:25:40.636384Z",
+	"published": "2017-05-28T00:00:00Z",
+	"related": [
+		"CVE-2017-9224",
+		"CVE-2017-9226",
+		"CVE-2017-9227",
+		"CVE-2017-9228",
+		"CVE-2017-9229"
+	],
+	"summary": "libonig - security update",
+	"details": "\n* [CVE-2017-9224](https://security-tracker.debian.org/tracker/CVE-2017-9224)\nAn issue was discovered in Oniguruma 6.2.0, as used in Oniguruma-mod in\n Ruby through 2.4.1 and mbstring in PHP through 7.1.5. A stack\n out-of-bounds read occurs in match\\_at() during regular expression\n searching. A logical error involving order of validation and access in\n match\\_at() could result in an out-of-bounds read from a stack buffer.\n* [CVE-2017-9226](https://security-tracker.debian.org/tracker/CVE-2017-9226)\nAn issue was discovered in Oniguruma 6.2.0, as used in Oniguruma-mod in\n Ruby through 2.4.1 and mbstring in PHP through 7.1.5. A heap\n out-of-bounds write or read occurs in next\\_state\\_val() during regular\n expression compilation. Octal numbers larger than 0xff are not handled\n correctly in fetch\\_token() and fetch\\_token\\_in\\_cc(). A malformed regular\n expression containing an octal number in the form of '\\700' would\n produce an invalid code point value larger than 0xff in\n next\\_state\\_val(), resulting in an out-of-bounds write memory\n corruption.\n* [CVE-2017-9227](https://security-tracker.debian.org/tracker/CVE-2017-9227)\nAn issue was discovered in Oniguruma 6.2.0, as used in Oniguruma-mod in\n Ruby through 2.4.1 and mbstring in PHP through 7.1.5. A stack\n out-of-bounds read occurs in mbc\\_enc\\_len() during regular expression\n searching. Invalid handling of reg->dmin in forward\\_search\\_range()\n could result in an invalid pointer dereference, as an out-of-bounds\n read from a stack buffer.\n* [CVE-2017-9228](https://security-tracker.debian.org/tracker/CVE-2017-9228)\nAn issue was discovered in Oniguruma 6.2.0, as used in Oniguruma-mod in\n Ruby through 2.4.1 and mbstring in PHP through 7.1.5. A heap\n out-of-bounds write occurs in bitset\\_set\\_range() during regular\n expression compilation due to an uninitialized variable from an\n incorrect state transition. An incorrect state transition in\n parse\\_char\\_class() could create an execution path that leaves a\n critical local variable uninitialized until it's used as an index,\n resulting in an out-of-bounds write memory corruption.\n* [CVE-2017-9229](https://security-tracker.debian.org/tracker/CVE-2017-9229)\nAn issue was discovered in Oniguruma 6.2.0, as used in Oniguruma-mod in\n Ruby through 2.4.1 and mbstring in PHP through 7.1.5. A SIGSEGV occurs\n in left\\_adjust\\_char\\_head() during regular expression compilation.\n Invalid handling of reg->dmax in forward\\_search\\_range() could result in\n an invalid pointer dereference, normally as an immediate\n denial-of-service condition.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.9.1-1+deb7u1.\n\n\nWe recommend that you upgrade your libonig packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libonig",
+				"purl": "pkg:deb/debian/libonig?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.9.1-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.9.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-958-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-958"
+		}
+	]
+}

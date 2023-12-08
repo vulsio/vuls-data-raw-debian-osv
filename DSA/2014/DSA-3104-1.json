@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3104-1",
+	"modified": "2023-10-16T00:06:12.297558Z",
+	"published": "2014-12-16T00:00:00Z",
+	"related": [
+		"CVE-2014-7844"
+	],
+	"summary": "bsd-mailx - security update",
+	"details": "\nIt was discovered that bsd-mailx, an implementation of the mail \ncommand, had an undocumented feature which treats syntactically valid \nemail addresses as shell commands to execute.\n\n\nUsers who need this feature can re-enable it using the expandaddr in \nan appropriate mailrc file. This update also removes the obsolete \n`-T` option. An older security vulnerability, \n[\\\nCVE-2004-2771](https://security-tracker.debian.org/tracker/CVE-2004-2771), had already been addressed in the Debian's bsd-mailx \npackage.\n\n\nNote that this security update does not remove all mailx facilities \nfor command execution, though. Scripts which send mail to addresses \nobtained from an untrusted source (such as a web form) should use the \n`--` separator before the email addresses (which was fixed to work \nproperly in this update), or they should be changed to invoke \n`mail -t` or `sendmail -i -t` instead, passing the \nrecipient addresses as part of the mail header.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 8.1.2-0.20111106cvs-1+deb7u1.\n\n\nWe recommend that you upgrade your bsd-mailx packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "bsd-mailx",
+				"purl": "pkg:deb/debian/bsd-mailx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.1.2-0.20111106cvs-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.1.2-0.20111106cvs-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3104-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3104"
+		}
+	]
+}

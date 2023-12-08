@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4037-1",
+	"modified": "2023-10-16T00:12:35.427534Z",
+	"published": "2017-11-16T00:00:00Z",
+	"related": [
+		"CVE-2017-15095"
+	],
+	"summary": "jackson-databind - security update",
+	"details": "\nIt was discovered that jackson-databind, a Java library used to parse\nJSON and other data formats, improperly validated user input prior to\ndeserializing: following DSA-4004-1 for \n[\\\nCVE-2017-7525](https://security-tracker.debian.org/tracker/CVE-2017-7525), an additional set of classes was identified as unsafe \nfor deserialization.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2.4.2-2+deb8u2.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.8.6-1+deb9u2.\n\n\nWe recommend that you upgrade your jackson-databind packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jackson-databind",
+				"purl": "pkg:deb/debian/jackson-databind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.2-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.2-2",
+				"2.4.2-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4037-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "jackson-databind",
+				"purl": "pkg:deb/debian/jackson-databind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.6-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.6-1",
+				"2.8.6-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4037-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4037"
+		}
+	]
+}

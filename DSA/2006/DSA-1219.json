@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1219",
+	"modified": "2023-10-16T00:10:16.468243Z",
+	"published": "2006-11-27T00:00:00Z",
+	"related": [
+		"CVE-2005-3011",
+		"CVE-2006-4810"
+	],
+	"summary": "texinfo",
+	"details": "\nMultiple vulnerabilities have been found in the GNU texinfo package, a\ndocumentation system for on-line information and printed output.\n\n\n* [CVE-2005-3011](https://security-tracker.debian.org/tracker/CVE-2005-3011)\nHandling of temporary files is performed in an insecure manner, allowing\n an attacker to overwrite any file writable by the victim.\n* [CVE-2006-4810](https://security-tracker.debian.org/tracker/CVE-2006-4810)\nA buffer overflow in util/texindex.c could allow an attacker to execute\n arbitrary code with the victim's access rights by inducing the victim to\n run texindex or tex2dvi on a specially crafted texinfo file.\n\n\nFor the stable distribution (sarge), these problems have been fixed in\nversion 4.7-2.2sarge2. Note that binary packages for the mipsel\narchitecture are not currently available due to technical problems with\nthe build host. These packages will be made available as soon as\npossible.\n\n\nFor unstable (sid) and the upcoming stable release (etch), these\nproblems have been fixed in version 4.8.dfsg.1-4.\n\n\nWe recommend that you upgrade your texinfo package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "texinfo",
+				"purl": "pkg:deb/debian/texinfo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.7-2.2sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.7-2.2",
+				"4.7-2.2sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1219.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1219"
+		}
+	]
+}

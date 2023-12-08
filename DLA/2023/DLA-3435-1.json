@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3435-1",
+	"modified": "2023-06-28T06:26:58.130117Z",
+	"published": "2023-05-28T00:00:00Z",
+	"related": [
+		"CVE-2019-13389",
+		"CVE-2022-29360"
+	],
+	"summary": "rainloop - security update",
+	"details": "\nCross-site scripting (XSS) vulnerabilities were found in rainloop, a\nweb-based email client, which could lead to information disclosure\nincluding passphrase leak.\n\n\n* [CVE-2019-13389](https://security-tracker.debian.org/tracker/CVE-2019-13389)\nIt was discovered that RainLoop Webmail lacked XSS protection\n mechanisms such as `xlink:href` validation, the\n X-XSS-Protection header, and the Content-Security-Policy\n header.\n* [CVE-2022-29360](https://security-tracker.debian.org/tracker/CVE-2022-29360)\nSimon Scannell discovered that RainLoop's Email Viewer allows XSS\n via a crafted text/html email message.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.12.1-2+deb10u1.\n\n\nWe recommend that you upgrade your rainloop packages.\n\n\nFor the detailed security status of rainloop please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/rainloop>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "rainloop",
+				"purl": "pkg:deb/debian/rainloop?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.1-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3435-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3435"
+		}
+	]
+}

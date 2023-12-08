@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2176-1",
+	"modified": "2023-10-16T00:05:47.828113Z",
+	"published": "2011-03-02T00:00:00Z",
+	"related": [
+		"CVE-2008-5183",
+		"CVE-2009-3553",
+		"CVE-2010-0540",
+		"CVE-2010-0542",
+		"CVE-2010-1748",
+		"CVE-2010-2431",
+		"CVE-2010-2432",
+		"CVE-2010-2941"
+	],
+	"summary": "cups - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the Common UNIX Printing\nSystem:\n\n\n* [CVE-2008-5183](https://security-tracker.debian.org/tracker/CVE-2008-5183)\nA null pointer dereference in RSS job completion notifications\n could lead to denial of service.\n* [CVE-2009-3553](https://security-tracker.debian.org/tracker/CVE-2009-3553)\nIt was discovered that incorrect file descriptor handling\n could lead to denial of service.\n* [CVE-2010-0540](https://security-tracker.debian.org/tracker/CVE-2010-0540)\nA cross-site request forgery vulnerability was discovered in\n the web interface.\n* [CVE-2010-0542](https://security-tracker.debian.org/tracker/CVE-2010-0542)\nIncorrect memory management in the filter subsystem could lead\n to denial of service.\n* [CVE-2010-1748](https://security-tracker.debian.org/tracker/CVE-2010-1748)\nInformation disclosure in the web interface.\n* [CVE-2010-2431](https://security-tracker.debian.org/tracker/CVE-2010-2431)\nEmmanuel Bouillon discovered a symlink vulnerability in handling\n of cache files.\n* [CVE-2010-2432](https://security-tracker.debian.org/tracker/CVE-2010-2432)\nDenial of service in the authentication code.\n* [CVE-2010-2941](https://security-tracker.debian.org/tracker/CVE-2010-2941)\nIncorrect memory management in the IPP code could lead to denial\n of service or the execution of arbitrary code.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.3.8-1+lenny9.\n\n\nThe stable distribution (squeeze) and the unstable distribution (sid)\nhad already been fixed prior to the initial Squeeze release.\n\n\nWe recommend that you upgrade your cups packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.8-1+lenny9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.8-1+lenny6",
+				"1.3.8-1+lenny7",
+				"1.3.8-1+lenny8",
+				"1.3.8-1lenny4.1",
+				"1.3.8-1lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2176-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2176"
+		}
+	]
+}

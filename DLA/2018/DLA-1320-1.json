@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1320-1",
+	"modified": "2023-06-28T06:19:51.872273Z",
+	"published": "2018-03-27T00:00:00Z",
+	"related": [
+		"CVE-2018-1050"
+	],
+	"summary": "samba - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix. The Common Vulnerabilities and\nExposures project identifies the following issues:\n\n\n* [CVE-2018-1050](https://security-tracker.debian.org/tracker/CVE-2018-1050)\nIt was discovered that Samba is prone to a denial of service\n attack when the RPC spoolss service is configured to be run as an\n external daemon. Thanks for Jeremy Allison for the patch.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.6.6-6+deb7u16.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.6.6-6+deb7u16"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.6.6-6",
+				"2:3.6.6-6+deb7u1",
+				"2:3.6.6-6+deb7u10",
+				"2:3.6.6-6+deb7u11",
+				"2:3.6.6-6+deb7u12",
+				"2:3.6.6-6+deb7u13",
+				"2:3.6.6-6+deb7u14",
+				"2:3.6.6-6+deb7u15",
+				"2:3.6.6-6+deb7u1~bpo60+1",
+				"2:3.6.6-6+deb7u2",
+				"2:3.6.6-6+deb7u2~bpo60+1",
+				"2:3.6.6-6+deb7u3",
+				"2:3.6.6-6+deb7u4",
+				"2:3.6.6-6+deb7u4~bpo60+1",
+				"2:3.6.6-6+deb7u5",
+				"2:3.6.6-6+deb7u5~bpo60+1",
+				"2:3.6.6-6+deb7u6",
+				"2:3.6.6-6+deb7u7",
+				"2:3.6.6-6+deb7u8",
+				"2:3.6.6-6+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1320-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1320"
+		}
+	]
+}

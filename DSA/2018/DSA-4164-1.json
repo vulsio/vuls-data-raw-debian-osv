@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4164-1",
+	"modified": "2023-10-16T00:12:46.415066Z",
+	"published": "2018-04-03T00:00:00Z",
+	"related": [
+		"CVE-2017-15710",
+		"CVE-2017-15715",
+		"CVE-2018-1283",
+		"CVE-2018-1301",
+		"CVE-2018-1303",
+		"CVE-2018-1312"
+	],
+	"summary": "apache2 - security update",
+	"details": "\nSeveral vulnerabilities have been found in the Apache HTTPD server.\n\n\n* [CVE-2017-15710](https://security-tracker.debian.org/tracker/CVE-2017-15710)\nAlex Nichols and Jakob Hirsch reported that mod\\_authnz\\_ldap, if\n configured with AuthLDAPCharsetConfig, could cause an out of bound write\n if supplied with a crafted Accept-Language header. This could\n potentially be used for a Denial of Service attack.\n* [CVE-2017-15715](https://security-tracker.debian.org/tracker/CVE-2017-15715)\nElar Lang discovered that expression specified in <FilesMatch> could\n match '$' to a newline character in a malicious filename, rather\n than matching only the end of the filename. This could be exploited\n in environments where uploads of some files are externally\n blocked, but only by matching the trailing portion of the filename.\n* [CVE-2018-1283](https://security-tracker.debian.org/tracker/CVE-2018-1283)\nWhen mod\\_session is configured to forward its session data to CGI\n applications (SessionEnv on, not the default), a remote user could\n influence their content by using a Session header.\n* [CVE-2018-1301](https://security-tracker.debian.org/tracker/CVE-2018-1301)\nRobert Swiecki reported that a specially crafted request could have\n crashed the Apache HTTP Server, due to an out of bound access after\n a size limit is reached by reading the HTTP header.\n* [CVE-2018-1303](https://security-tracker.debian.org/tracker/CVE-2018-1303)\nRobert Swiecki reported that a specially crafted HTTP request header\n could have crashed the Apache HTTP Server if using\n mod\\_cache\\_socache, due to an out of bound read while preparing data\n to be cached in shared memory.\n* [CVE-2018-1312](https://security-tracker.debian.org/tracker/CVE-2018-1312)\nNicolas Daniels discovered that when generating an HTTP Digest\n authentication challenge, the nonce sent by mod\\_auth\\_digest to\n prevent replay attacks was not correctly generated using a\n pseudo-random seed. In a cluster of servers using a common Digest\n authentication configuration, HTTP requests could be replayed across\n servers by an attacker without detection.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 2.4.10-10+deb8u12.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.4.25-3+deb9u4.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFor the detailed security status of apache2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/apache2>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.10-10+deb8u12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.10-10",
+				"2.4.10-10+deb8u1",
+				"2.4.10-10+deb8u10",
+				"2.4.10-10+deb8u11",
+				"2.4.10-10+deb8u2",
+				"2.4.10-10+deb8u3",
+				"2.4.10-10+deb8u4",
+				"2.4.10-10+deb8u5",
+				"2.4.10-10+deb8u6",
+				"2.4.10-10+deb8u7",
+				"2.4.10-10+deb8u8",
+				"2.4.10-10+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4164-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.25-3+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.25-3",
+				"2.4.25-3+deb9u1",
+				"2.4.25-3+deb9u2",
+				"2.4.25-3+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4164-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4164"
+		}
+	]
+}

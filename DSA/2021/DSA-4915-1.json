@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4915-1",
+	"modified": "2023-10-16T00:27:14.515119Z",
+	"published": "2021-05-13T00:00:00Z",
+	"related": [
+		"CVE-2021-32027",
+		"CVE-2021-32028",
+		"CVE-2021-32029"
+	],
+	"summary": "postgresql-11 - security update",
+	"details": "\nMultiple security issues have been discovered in the PostgreSQL database\nsystem, which could result in the execution of arbitrary code or\ndisclosure of memory content.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 11.12-0+deb10u1.\n\n\nWe recommend that you upgrade your postgresql-11 packages.\n\n\nFor the detailed security status of postgresql-11 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/postgresql-11](https://security-tracker.debian.org/tracker/postgresql-11)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "postgresql-11",
+				"purl": "pkg:deb/debian/postgresql-11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "11.12-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"11.10-0+deb10u1",
+				"11.11-0+deb10u1",
+				"11.4-1",
+				"11.5-1",
+				"11.5-1+deb10u1",
+				"11.5-2",
+				"11.5-3sid1",
+				"11.5-3sid2",
+				"11.6-0+deb10u1",
+				"11.6-2~sid1",
+				"11.7-0+deb10u1",
+				"11.9-0+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4915-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4915"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1179-1",
+	"modified": "2023-06-28T06:20:27.653367Z",
+	"published": "2017-11-18T00:00:00Z",
+	"related": [
+		"CVE-2017-16852"
+	],
+	"summary": "shibboleth-sp2 - security update",
+	"details": "\nRod Widdowson of Steading System Software LLP discovered a coding error\nin the Dynamic metadata plugin of the Shibboleth Service Provider,\ncausing the plugin to fail configuring itself with the filters provided\nand omitting whatever checks they are intended to perform.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.4.3+dfsg-5+deb7u2.\n\n\nWe recommend that you upgrade your shibboleth-sp2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "shibboleth-sp2",
+				"purl": "pkg:deb/debian/shibboleth-sp2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.3+dfsg-5+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.3+dfsg-5",
+				"2.4.3+dfsg-5+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1179-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1179"
+		}
+	]
+}

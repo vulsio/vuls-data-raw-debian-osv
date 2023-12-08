@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-220-1",
+	"modified": "2023-06-28T06:20:02.665449Z",
+	"published": "2015-05-15T00:00:00Z",
+	"related": [
+		"CVE-2015-0840"
+	],
+	"summary": "dpkg - security update",
+	"details": "\nJann Horn discovered that the source package integrity verification in\ndpkg-source can be bypassed via a specially crafted Debian source\ncontrol file (.dsc). Note that this flaw only affects extraction of\nlocal Debian source packages via dpkg-source but not the installation of\npackages from the Debian archive.\n\n\nFor the oldoldstable distribution (squeeze), this problem has been\nfixed in version 1.15.12. This also fixes a similar bug discovered\nby Ansgar Burchardt and a bug in the same area discovered by Roger\nLeigh.\n\n\nFor the oldstable distribution (wheezy), this problem was fixed in\nversion 1.16.16.\n\n\nThe stable distribution (jessie) was not affected by this problem as\nit was fixed before release.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "dpkg",
+				"purl": "pkg:deb/debian/dpkg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.15.12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.15.10",
+				"1.15.11",
+				"1.15.8.10",
+				"1.15.8.10+armhf",
+				"1.15.8.11",
+				"1.15.8.12",
+				"1.15.8.13",
+				"1.15.9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-220-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-220"
+		}
+	]
+}

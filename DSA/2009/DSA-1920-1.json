@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1920-1",
+	"modified": "2023-10-16T00:10:46.517932Z",
+	"published": "2009-10-26T00:00:00Z",
+	"related": [
+		"CVE-2009-3896"
+	],
+	"summary": "nginx - denial of service",
+	"details": "\nA denial of service vulnerability has been found in nginx, a small and\nefficient web server.\n\n\nJasson Bell discovered that a remote attacker could cause a denial of service\n(segmentation fault) by sending a crafted request.\n\n\nFor the old stable distribution (etch), this problem has been fixed in version\n0.4.13-2+etch3.\n\n\nFor the stable distribution (lenny), this problem has been fixed in version\n0.6.32-3+lenny3.\n\n\nFor the testing (squeeze) and unstable (sid) distributions, this problem has\nbeen fixed in version 0.7.62-1.\n\n\nWe recommend that you upgrade your nginx package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.4.13-2+etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.4.13-2",
+				"0.4.13-2+etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1920-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.32-3+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.32-3",
+				"0.6.32-3+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1920-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1920"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4725-1",
+	"modified": "2023-10-16T00:25:22.709166Z",
+	"published": "2020-07-15T00:00:00Z",
+	"related": [
+		"CVE-2020-14928"
+	],
+	"summary": "evolution-data-server - security update",
+	"details": "\nDamian Poddebniak and Fabian Ising discovered a response injection\nvulnerability in Evolution data server, which could enable MITM\nattacks.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 3.30.5-1+deb10u1.\n\n\nWe recommend that you upgrade your evolution-data-server packages.\n\n\nFor the detailed security status of evolution-data-server please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/evolution-data-server](https://security-tracker.debian.org/tracker/evolution-data-server)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "evolution-data-server",
+				"purl": "pkg:deb/debian/evolution-data-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.30.5-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.30.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4725-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4725"
+		}
+	]
+}

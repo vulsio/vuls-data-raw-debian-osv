@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5088-1",
+	"modified": "2023-10-16T00:15:32.729665Z",
+	"published": "2022-03-03T00:00:00Z",
+	"related": [
+		"CVE-2021-36740",
+		"CVE-2022-23959"
+	],
+	"summary": "varnish - security update",
+	"details": "\n* [CVE-2021-36740](https://security-tracker.debian.org/tracker/CVE-2021-36740)\nMartin Blix Grydeland discovered that Varnish is vulnerable to\n request smuggling attacks if the HTTP/2 protocol is enabled.\n* [CVE-2022-23959](https://security-tracker.debian.org/tracker/CVE-2022-23959)\nJames Kettle discovered a request smuggling attack against the\n HTTP/1 protocol implementation in Varnish.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 6.1.1-1+deb10u3.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 6.5.1-1+deb11u2.\n\n\nWe recommend that you upgrade your varnish packages.\n\n\nFor the detailed security status of varnish please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/varnish](https://security-tracker.debian.org/tracker/varnish)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "varnish",
+				"purl": "pkg:deb/debian/varnish?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.1-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1.1-1",
+				"6.1.1-1+deb10u1",
+				"6.1.1-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5088-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "varnish",
+				"purl": "pkg:deb/debian/varnish?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.5.1-1+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.5.1-1",
+				"6.5.1-1+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5088-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5088"
+		}
+	]
+}

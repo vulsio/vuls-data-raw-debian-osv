@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1199-1",
+	"modified": "2023-10-16T00:10:12.451866Z",
+	"published": "2006-10-23T00:00:00Z",
+	"related": [
+		"CVE-2005-3912",
+		"CVE-2006-3392",
+		"CVE-2006-4542"
+	],
+	"summary": "webmin",
+	"details": "\nSeveral vulnerabilities have been identified in webmin, a web-based\nadministration toolkit. The Common Vulnerabilities and Exposures project\nidentifies the following vulnerabilities:\n\n\n* [CVE-2005-3912](https://security-tracker.debian.org/tracker/CVE-2005-3912)\nA format string vulnerability in miniserv.pl could allow an\n attacker to cause a denial of service by crashing the\n application or exhausting system resources, and could\n potentially allow arbitrary code execution.\n* [CVE-2006-3392](https://security-tracker.debian.org/tracker/CVE-2006-3392)\nImproper input sanitization in miniserv.pl could allow an\n attacker to read arbitrary files on the webmin host by providing\n a specially crafted URL path to the miniserv http server.\n* [CVE-2006-4542](https://security-tracker.debian.org/tracker/CVE-2006-4542)\nImproper handling of null characters in URLs in miniserv.pl\n could allow an attacker to conduct cross-site scripting attacks,\n read CGI program source code, list local directories, and\n potentially execute arbitrary code.\n\n\nStable updates are available for alpha, amd64, arm, hppa, i386, ia64,\nm68k, mips, mipsel, powerpc, s390 and sparc.\n\n\nFor the stable distribution (sarge), these problems have been fixed in\nversion 1.180-3sarge1.\n\n\nWebmin is not included in unstable (sid) or testing (etch), so these\nproblems are not present.\n\n\nWe recommend that you upgrade your webmin (1.180-3sarge1) package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "webmin",
+				"purl": "pkg:deb/debian/webmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.180-3sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.180-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1199-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1199"
+		}
+	]
+}

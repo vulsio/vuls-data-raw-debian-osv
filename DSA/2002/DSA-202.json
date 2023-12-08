@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-202",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-03T00:00:00Z",
+	"related": [
+		"CVE-2002-1395"
+	],
+	"summary": "im - insecure temporary files",
+	"details": "\nTatsuya Kinoshita discovered that IM, which contains interface\ncommands and Perl libraries for E-mail and NetNews, creates temporary\nfiles insecurely.\n\n\n* The impwagent program creates a temporary directory in an insecure\n manner in /tmp using predictable directory names without checking\n the return code of mkdir, so it's possible to seize a permission\n of the temporary directory by local access as another user.\n* The immknmz program creates a temporary file in an insecure manner\n in /tmp using a predictable filename, so an attacker with local\n access can easily create and overwrite files as another user.\n\n\nThese problems have been fixed in version 141-18.1 for the current\nstable distribution (woody), in version 133-2.2 of the old stable\ndistribution (potato) and in version 141-20 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your IM package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "im",
+				"purl": "pkg:deb/debian/im?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "141-18.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-202.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-202"
+		}
+	]
+}

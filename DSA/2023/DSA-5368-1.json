@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5368-1",
+	"modified": "2023-10-16T00:22:58.856492Z",
+	"published": "2023-03-03T00:00:00Z",
+	"related": [
+		"CVE-2023-23009"
+	],
+	"summary": "libreswan - security update",
+	"details": "\nIt was discovered that the libreswan IPsec implementation could be\nforced into a crash/restart via malformed IKEv2 packets after peer\nauthentication, resulting in denial of service.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 4.3-1+deb11u3.\n\n\nWe recommend that you upgrade your libreswan packages.\n\n\nFor the detailed security status of libreswan please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libreswan](https://security-tracker.debian.org/tracker/libreswan)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libreswan",
+				"purl": "pkg:deb/debian/libreswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.3-1+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.3-1",
+				"4.3-1+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5368-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5368"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2336-1",
+	"modified": "2023-10-16T00:11:09.256589Z",
+	"published": "2011-11-07T00:00:00Z",
+	"related": [
+		"CVE-2011-3362",
+		"CVE-2011-3504",
+		"CVE-2011-3973",
+		"CVE-2011-3974"
+	],
+	"summary": "ffmpeg - several",
+	"details": "\nMultiple vulnerabilities were found in FFmpeg, a multimedia player,\nserver and encoder:\n\n\n* [CVE-2011-3362](https://security-tracker.debian.org/tracker/CVE-2011-3362)\nAn integer signedness error in decode\\_residual\\_block function of \n the Chinese AVS video (CAVS) decoder in libavcodec can lead to \n denial of service (memory corruption and application crash) or \n possible code execution via a crafted CAVS file.\n* [CVE-2011-3973](https://security-tracker.debian.org/tracker/CVE-2011-3973)/[CVE-2011-3974](https://security-tracker.debian.org/tracker/CVE-2011-3974)\nMultiple errors in the Chinese AVS video (CAVS) decoder can lead to \n denial of service (memory corruption and application crash) via an \n invalid bitstream.\n* [CVE-2011-3504](https://security-tracker.debian.org/tracker/CVE-2011-3504)\nA memory allocation problem in the Matroska format decoder can lead \n to code execution via a crafted file.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4:0.5.5-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4:0.7.2-1 of the libav source package.\n\n\nSecurity support for ffmpeg has been discontinued for the oldstable\ndistribution (lenny) before in [DSA 2306](dsa-2306).\nThe current version in oldstable is not supported by upstream anymore\nand is affected by several security issues. Backporting fixes for these\nand any future issues has become unfeasible and therefore we needed to\ndrop our security support for the version in oldstable.\n\n\nWe recommend that you upgrade your ffmpeg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ffmpeg",
+				"purl": "pkg:deb/debian/ffmpeg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:0.5.5-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:0.5.2-6",
+				"4:0.5.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2336-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2336"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2296-1",
+	"modified": "2023-06-28T06:18:18.284041Z",
+	"published": "2020-07-28T00:00:00Z",
+	"related": [
+		"CVE-2020-15890"
+	],
+	"summary": "luajit - security update",
+	"details": "\nAn issue has been found in luajit, a just in time compiler for Lua.\n\n\nAn out-of-bounds read could happen because \\_\\_gc handler frame traversal is\nmishandled.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.0.4+dfsg-1+deb9u1.\n\n\nWe recommend that you upgrade your luajit packages.\n\n\nFor the detailed security status of luajit please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/luajit>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "luajit",
+				"purl": "pkg:deb/debian/luajit?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.4+dfsg-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.4+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2296-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2296"
+		}
+	]
+}

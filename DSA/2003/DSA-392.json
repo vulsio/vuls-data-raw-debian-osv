@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-392",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2003-09-29T00:00:00Z",
+	"related": [
+		"CVE-2003-0832",
+		"CVE-2003-0833"
+	],
+	"summary": "webfs - buffer overflows, file and directory exposure",
+	"details": "\nJens Steube reported two vulnerabilities in webfs, a lightweight HTTP\nserver for static content.\n\n\n [CAN-2003-0832](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0832) - When virtual hosting is enabled, a remote client\n could specify \"..\" as the hostname in a request, allowing retrieval\n of directory listings or files above the document root.\n\n\n [CAN-2003-0833](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0833) - A long pathname could overflow a buffer allocated on\n the stack, allowing execution of arbitrary code. In order to exploit\n this vulnerability, it would be necessary to be able to create\n directories on the server in a location which could be accessed by\n the web server. In conjunction with [CAN-2003-0832](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0832), this could be a\n world-writable directory such as `/var/tmp`.\n\n\nFor the current stable distribution (woody) these problems have been fixed\nin version 1.17.2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.20.\n\n\nWe recommend that you update your webfs package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "webfs",
+				"purl": "pkg:deb/debian/webfs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-392.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-392"
+		}
+	]
+}

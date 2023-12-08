@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1157-1",
+	"modified": "2023-06-28T06:20:25.449601Z",
+	"published": "2017-11-09T00:00:00Z",
+	"related": [
+		"CVE-2017-3735"
+	],
+	"summary": "openssl - security update",
+	"details": "\nA security vulnerability was discovered in OpenSSL, the Secure Sockets\nLayer toolkit.\n\n\n* [CVE-2017-3735](https://security-tracker.debian.org/tracker/CVE-2017-3735)\nIt was discovered that OpenSSL is prone to a one-byte buffer\n overread while parsing a malformed IPAddressFamily extension in an\n X.509 certificate.\n\n\nDetails can be found in the upstream advisory:\n <https://www.openssl.org/news/secadv/20170828.txt>\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.0.1t-1+deb7u3.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1t-1+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1e-2",
+				"1.0.1e-2+deb7u1",
+				"1.0.1e-2+deb7u10",
+				"1.0.1e-2+deb7u11",
+				"1.0.1e-2+deb7u12",
+				"1.0.1e-2+deb7u13",
+				"1.0.1e-2+deb7u14",
+				"1.0.1e-2+deb7u15",
+				"1.0.1e-2+deb7u16",
+				"1.0.1e-2+deb7u17",
+				"1.0.1e-2+deb7u18",
+				"1.0.1e-2+deb7u19",
+				"1.0.1e-2+deb7u2",
+				"1.0.1e-2+deb7u20",
+				"1.0.1e-2+deb7u21",
+				"1.0.1e-2+deb7u3",
+				"1.0.1e-2+deb7u4",
+				"1.0.1e-2+deb7u5",
+				"1.0.1e-2+deb7u6",
+				"1.0.1e-2+deb7u7",
+				"1.0.1e-2+deb7u8",
+				"1.0.1e-2+deb7u9",
+				"1.0.1e-3",
+				"1.0.1e-4",
+				"1.0.1e-5",
+				"1.0.1e-6",
+				"1.0.1f-1",
+				"1.0.1g-1",
+				"1.0.1g-2",
+				"1.0.1g-2+alpha",
+				"1.0.1g-3",
+				"1.0.1g-4",
+				"1.0.1h-1",
+				"1.0.1h-2",
+				"1.0.1h-3",
+				"1.0.1i-1",
+				"1.0.1i-2",
+				"1.0.1i-2+alpha",
+				"1.0.1j-1",
+				"1.0.1j-1+alpha",
+				"1.0.1k-1",
+				"1.0.1k-2",
+				"1.0.1k-3",
+				"1.0.1k-3+alpha",
+				"1.0.1t-1+deb7u1",
+				"1.0.1t-1+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1157-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1157"
+		}
+	]
+}

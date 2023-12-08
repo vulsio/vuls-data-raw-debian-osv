@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2549-1",
+	"modified": "2023-10-16T00:11:18.265237Z",
+	"published": "2012-09-15T00:00:00Z",
+	"related": [
+		"CVE-2012-2240",
+		"CVE-2012-2241",
+		"CVE-2012-2242",
+		"CVE-2012-3500"
+	],
+	"summary": "devscripts - multiple",
+	"details": "\nMultiple vulnerabilities have been discovered in devscripts, a set of\nscripts to make the life of a Debian Package maintainer easier.\nThe following Common Vulnerabilities and Exposures project ids have\nbeen assigned to identify them:\n\n\n* [CVE-2012-2240](https://security-tracker.debian.org/tracker/CVE-2012-2240):\n\n Raphael Geissert discovered that dscverify does not perform\n sufficient validation and does not properly escape arguments to\n external commands, allowing a remote attacker (as when dscverify is\n used by dget) to execute arbitrary code.\n* [CVE-2012-2241](https://security-tracker.debian.org/tracker/CVE-2012-2241):\n\n Raphael Geissert discovered that dget allows an attacker to delete\n arbitrary files when processing a specially-crafted .dsc or\n .changes file, due to insuficient input validation.\n* [CVE-2012-2242](https://security-tracker.debian.org/tracker/CVE-2012-2242):\n\n Raphael Geissert discovered that dget does not properly escape\n arguments to external commands when processing .dsc and .changes\n files, allowing an attacker to execute arbitrary code.\n This issue is limited with the fix for [CVE-2012-2241](https://security-tracker.debian.org/tracker/CVE-2012-2241), and had\n already been fixed in version 2.10.73 due to changes to the code,\n without considering its security implications.\n* [CVE-2012-3500](https://security-tracker.debian.org/tracker/CVE-2012-3500):\n\n Jim Meyering, Red Hat, discovered that annotate-output determines\n the name of temporary named pipes in a way that allows a local\n attacker to make it abort, leading to denial of service.\n\n\nAdditionally, a regression in the exit code of debdiff introduced in\n[DSA-2409-1](dsa-2409) has been fixed.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 2.10.69+squeeze4.\n\n\nFor the testing distribution (wheezy), these problems will be fixed\nsoon.\n\n\nFor the unstable distribution (sid), these problems will be fixed in\nversion 2.12.3.\n\n\nWe recommend that you upgrade your devscripts packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "devscripts",
+				"purl": "pkg:deb/debian/devscripts?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.10.69+squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.69",
+				"2.10.69+squeeze1",
+				"2.10.69+squeeze2",
+				"2.10.69+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2549-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2549"
+		}
+	]
+}

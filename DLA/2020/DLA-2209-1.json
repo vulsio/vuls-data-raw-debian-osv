@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2209-1",
+	"modified": "2023-06-28T06:19:58.958968Z",
+	"published": "2020-05-28T00:00:00Z",
+	"related": [
+		"CVE-2019-17563",
+		"CVE-2020-1935",
+		"CVE-2020-1938",
+		"CVE-2020-9484"
+	],
+	"summary": "tomcat8 - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\nWARNING: The fix for [CVE-2020-1938](https://security-tracker.debian.org/tracker/CVE-2020-1938) may disrupt services that rely on a\nworking AJP configuration. The option secretRequired defaults to true\nnow. You should define a secret in your server.xml or you can revert\nback by setting secretRequired to false.\n\n\n* [CVE-2019-17563](https://security-tracker.debian.org/tracker/CVE-2019-17563)\nWhen using FORM authentication with Apache Tomcat there was a narrow\n window where an attacker could perform a session fixation attack.\n The window was considered too narrow for an exploit to be practical\n but, erring on the side of caution, this issue has been treated as a\n security vulnerability.\n* [CVE-2020-1935](https://security-tracker.debian.org/tracker/CVE-2020-1935)\nIn Apache Tomcat the HTTP header parsing code used an approach to\n end-of-line parsing that allowed some invalid HTTP headers to be\n parsed as valid. This led to a possibility of HTTP Request Smuggling\n if Tomcat was located behind a reverse proxy that incorrectly\n handled the invalid Transfer-Encoding header in a particular manner.\n Such a reverse proxy is considered unlikely.\n* [CVE-2020-1938](https://security-tracker.debian.org/tracker/CVE-2020-1938)\nWhen using the Apache JServ Protocol (AJP), care must be taken when\n trusting incoming connections to Apache Tomcat. Tomcat treats AJP\n connections as having higher trust than, for example, a similar HTTP\n connection. If such connections are available to an attacker, they\n can be exploited in ways that may be surprising. Previously Tomcat\n shipped with an AJP Connector enabled by default that listened on\n all configured IP addresses. It was expected (and recommended in the\n security guide) that this Connector would be disabled if not\n required.\n .\n Note that Debian already disabled the AJP connector by default.\n Mitigation is only required if the AJP port was made accessible to\n untrusted users.\n* [CVE-2020-9484](https://security-tracker.debian.org/tracker/CVE-2020-9484)\nWhen using Apache Tomcat and an attacker is able to control the\n contents and name of a file on the server; and b) the server is\n configured to use the PersistenceManager with a FileStore; and c)\n the PersistenceManager is configured with\n sessionAttributeValueClassNameFilter=\"null\" (the default unless a\n SecurityManager is used) or a sufficiently lax filter to allow the\n attacker provided object to be deserialized; and d) the attacker\n knows the relative file path from the storage location used by\n FileStore to the file the attacker has control over; then, using a\n specifically crafted request, the attacker will be able to trigger\n remote code execution via deserialization of the file under their\n control. Note that all of conditions a) to d) must be true for the\n attack to succeed.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n8.0.14-1+deb8u17.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.14-1+deb8u17"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.14-1",
+				"8.0.14-1+deb8u1",
+				"8.0.14-1+deb8u10",
+				"8.0.14-1+deb8u11",
+				"8.0.14-1+deb8u12",
+				"8.0.14-1+deb8u13",
+				"8.0.14-1+deb8u14",
+				"8.0.14-1+deb8u15",
+				"8.0.14-1+deb8u16",
+				"8.0.14-1+deb8u2",
+				"8.0.14-1+deb8u3",
+				"8.0.14-1+deb8u4",
+				"8.0.14-1+deb8u5",
+				"8.0.14-1+deb8u6",
+				"8.0.14-1+deb8u7",
+				"8.0.14-1+deb8u8",
+				"8.0.14-1+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2209-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2209"
+		}
+	]
+}

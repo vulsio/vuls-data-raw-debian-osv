@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-622-1",
+	"modified": "2023-10-16T00:23:51.226404Z",
+	"published": "2005-01-03T00:00:00Z",
+	"related": [
+		"CVE-2004-1181"
+	],
+	"summary": "htmlheadline - insecure temporary files",
+	"details": "\nJavier FernĂĄndez-Sanguino PeĂąa from the Debian Security Audit Project\nhas discovered multiple insecure uses\nof temporary files that could lead to overwriting arbitrary files via\na symlink attack.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 21.8-3.\n\n\nThe unstable distribution (sid) does not contain this package.\n\n\nWe recommend that you upgrade your htmlheadline package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "htmlheadline",
+				"purl": "pkg:deb/debian/htmlheadline?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "21.8-3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"21.8-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-622-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-622"
+		}
+	]
+}

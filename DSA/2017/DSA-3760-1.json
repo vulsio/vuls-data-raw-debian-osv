@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3760-1",
+	"modified": "2023-10-16T00:20:08.604437Z",
+	"published": "2017-01-12T00:00:00Z",
+	"related": [
+		"CVE-2016-10026",
+		"CVE-2016-9646",
+		"CVE-2017-0356"
+	],
+	"summary": "ikiwiki - security update",
+	"details": "\nMultiple vulnerabilities have been found in the Ikiwiki wiki compiler:\n\n\n* [CVE-2016-9646](https://security-tracker.debian.org/tracker/CVE-2016-9646)\nCommit metadata forgery via CGI::FormBuilder context-dependent APIs\n* [CVE-2016-10026](https://security-tracker.debian.org/tracker/CVE-2016-10026)\nEditing restriction bypass for git revert\n* [CVE-2017-0356](https://security-tracker.debian.org/tracker/CVE-2017-0356)\nAuthentication bypass via repeated parameters\n\n\nAdditional details on these vulnerabilities can be found at\n<https://ikiwiki.info/security/>\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.20141016.4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.20170111.\n\n\nWe recommend that you upgrade your ikiwiki packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ikiwiki",
+				"purl": "pkg:deb/debian/ikiwiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.20141016.4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.20141016.2",
+				"3.20141016.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3760-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3760"
+		}
+	]
+}

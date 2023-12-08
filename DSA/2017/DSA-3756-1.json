@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3756-1",
+	"modified": "2023-10-16T00:20:06.928106Z",
+	"published": "2017-01-09T00:00:00Z",
+	"related": [
+		"CVE-2017-5208"
+	],
+	"summary": "icoutils - security update",
+	"details": "\nChoongwoo Han discovered that a programming error in the wrestool tool\nof the icoutils suite allows denial of service or the execution of\narbitrary code if a malformed binary is parsed.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 0.31.0-2+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.31.0-4.\n\n\nWe recommend that you upgrade your icoutils packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "icoutils",
+				"purl": "pkg:deb/debian/icoutils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.31.0-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.31.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3756-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3756"
+		}
+	]
+}

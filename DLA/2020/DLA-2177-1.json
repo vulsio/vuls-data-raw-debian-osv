@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2177-1",
+	"modified": "2023-06-28T06:26:27.061022Z",
+	"published": "2020-04-15T00:00:00Z",
+	"related": [
+		"CVE-2020-5260"
+	],
+	"summary": "git - security update",
+	"details": "\nFelix Wilhelm of Google Project Zero discovered a flaw in git, a fast,\nscalable, distributed revision control system. With a crafted URL that\ncontains a newline, the credential helper machinery can be fooled to\nreturn credential information for a wrong host.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1:2.1.4-2.1+deb8u9.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.4-2.1+deb8u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.4-2.1",
+				"1:2.1.4-2.1+deb8u1",
+				"1:2.1.4-2.1+deb8u2",
+				"1:2.1.4-2.1+deb8u3",
+				"1:2.1.4-2.1+deb8u4",
+				"1:2.1.4-2.1+deb8u5",
+				"1:2.1.4-2.1+deb8u6",
+				"1:2.1.4-2.1+deb8u7",
+				"1:2.1.4-2.1+deb8u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2177-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2177"
+		}
+	]
+}

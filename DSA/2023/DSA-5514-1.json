@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5514-1",
+	"modified": "2023-10-16T00:21:44.012432Z",
+	"published": "2023-10-03T00:00:00Z",
+	"related": [
+		"CVE-2023-4911"
+	],
+	"summary": "glibc - security update",
+	"details": "\nThe Qualys Research Labs discovered a buffer overflow in the dynamic\nloader's processing of the GLIBC\\_TUNABLES environment variable. An\nattacker can exploit this flaw for privilege escalation.\n\n\nDetails can be found in the Qualys advisory at\n[\\\nhttps://www.qualys.com/2023/10/03/cve-2023-4911/looney-tunables-local-privilege-escalation-glibc-ld-so.txt](https://www.qualys.com/2023/10/03/cve-2023-4911/looney-tunables-local-privilege-escalation-glibc-ld-so.txt)\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 2.31-13+deb11u7.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 2.36-9+deb12u3. This update includes fixes for\n[CVE-2023-4527](https://security-tracker.debian.org/tracker/CVE-2023-4527) and\n[CVE-2023-4806](https://security-tracker.debian.org/tracker/CVE-2023-4806)\noriginally planned for the upcoming bookworm point release.\n\n\nWe recommend that you upgrade your glibc packages.\n\n\nFor the detailed security status of glibc please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/glibc](https://security-tracker.debian.org/tracker/glibc)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "glibc",
+				"purl": "pkg:deb/debian/glibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.31-13+deb11u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.31-13",
+				"2.31-13+deb11u1",
+				"2.31-13+deb11u2",
+				"2.31-13+deb11u3",
+				"2.31-13+deb11u4",
+				"2.31-13+deb11u5",
+				"2.31-13+deb11u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5514-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "glibc",
+				"purl": "pkg:deb/debian/glibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.36-9+deb12u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.36-9",
+				"2.36-9+deb12u1",
+				"2.36-9+deb12u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5514-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5514"
+		}
+	]
+}

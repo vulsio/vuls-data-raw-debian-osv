@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1832-1",
+	"modified": "2023-10-16T00:10:40.544042Z",
+	"published": "2009-07-13T00:00:00Z",
+	"related": [
+		"CVE-2009-2295"
+	],
+	"summary": "camlimages - arbitrary code execution",
+	"details": "\nTielei Wang discovered that CamlImages, an open source image processing\nlibrary, suffers from several integer overflows which may lead to a\npotentially exploitable heap overflow and result in arbitrary code\nexecution.\n\n\nFor the old stable distribution (etch), this problem has been fixed in\nversion 2.20-8+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.2.0-4+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.0.1-2.\n\n\nWe recommend that you upgrade your camlimages package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "camlimages",
+				"purl": "pkg:deb/debian/camlimages?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.20-8+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.20-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1832-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "camlimages",
+				"purl": "pkg:deb/debian/camlimages?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.2.0-4+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.2.0-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1832-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1832"
+		}
+	]
+}

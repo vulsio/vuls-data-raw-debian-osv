@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1640-1",
+	"modified": "2023-10-16T00:05:35.499100Z",
+	"published": "2008-09-20T00:00:00Z",
+	"related": [
+		"CVE-2007-5712",
+		"CVE-2008-3909"
+	],
+	"summary": "python-django - cross site request forgery",
+	"details": "\nSimon Willison discovered that in Django, a Python web framework, the\nfeature to retain HTTP POST data during user reauthentication allowed\na remote attacker to perform unauthorized modification of data through\ncross site request forgery. This is possible regardless of the Django\nplugin to prevent cross site request forgery being enabled. The Common\nVulnerabilities and Exposures project identifies this issue as\n[CVE-2008-3909](https://security-tracker.debian.org/tracker/CVE-2008-3909).\n\n\nIn this update the affected feature is disabled; this is in accordance\nwith upstream's preferred solution for this situation.\n\n\nThis update takes the opportunity to also include a relatively minor\ndenial of service attack in the internationalisation framework, known\nas [CVE-2007-5712](https://security-tracker.debian.org/tracker/CVE-2007-5712).\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 0.95.1-1etch2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0-1.\n\n\nWe recommend that you upgrade your python-django package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.95.1-1etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.95.1-1",
+				"0.95.1-1etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1640-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1640"
+		}
+	]
+}

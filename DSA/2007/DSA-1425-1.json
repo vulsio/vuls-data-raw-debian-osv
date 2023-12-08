@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1425-1",
+	"modified": "2023-10-16T00:10:24.455878Z",
+	"published": "2007-12-08T00:00:00Z",
+	"related": [
+		"CVE-2007-5947",
+		"CVE-2007-5959",
+		"CVE-2007-5960"
+	],
+	"summary": "xulrunner - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Xulrunner, a\nruntime environment for XUL applications. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2007-5947](https://security-tracker.debian.org/tracker/CVE-2007-5947)\nJesse Ruderman and Petko D. Petkov discovered that the URI handler\n for JAR archives allows cross-site scripting.\n* [CVE-2007-5959](https://security-tracker.debian.org/tracker/CVE-2007-5959)\nSeveral crashes in the layout engine were discovered, which might\n allow the execution of arbitrary code.\n* [CVE-2007-5960](https://security-tracker.debian.org/tracker/CVE-2007-5960)\nGregory Fleischer discovered a race condition in the handling of\n the window.location property, which might lead to cross-site\n request forgery.\n\n\nThe oldstable distribution (sarge) doesn't contain xulrunner.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 1.8.0.14~pre071019c-0etch1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.8.1.11-1.\n\n\nWe recommend that you upgrade your xulrunner packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "xulrunner",
+				"purl": "pkg:deb/debian/xulrunner?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.0.14~pre071019c-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.0.11-2",
+				"1.8.0.11-3",
+				"1.8.0.11-4",
+				"1.8.0.11-4.1",
+				"1.8.0.12-0etch1",
+				"1.8.0.13~pre070720-0etch1",
+				"1.8.0.13~pre070720-0etch2",
+				"1.8.0.13~pre070720-0etch3",
+				"1.8.0.13~pre070720-0etch3+lenny1",
+				"1.8.0.14~pre071019b-0etch1",
+				"1.8.0.14~pre071019b-0lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1425-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1425"
+		}
+	]
+}

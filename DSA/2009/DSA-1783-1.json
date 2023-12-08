@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1783-1",
+	"modified": "2023-10-16T00:05:42.122992Z",
+	"published": "2009-04-29T00:00:00Z",
+	"related": [
+		"CVE-2008-3963",
+		"CVE-2008-4456"
+	],
+	"summary": "mysql-dfsg-5.0 - several vulnerabilities",
+	"details": "\nMultiple vulnerabilities have been identified affecting MySQL, a\nrelational database server, and its associated interactive client\napplication. The Common Vulnerabilities and Exposures project\nidentifies the following two problems:\n\n\n* [CVE-2008-3963](https://security-tracker.debian.org/tracker/CVE-2008-3963)\nKay Roepke reported that the MySQL server would not properly handle\n an empty bit-string literal in an SQL statement, allowing an\n authenticated remote attacker to cause a denial of service (a crash)\n in mysqld. This issue affects the oldstable distribution (etch), but\n not the stable distribution (lenny).\n* [CVE-2008-4456](https://security-tracker.debian.org/tracker/CVE-2008-4456)\nThomas Henlich reported that the MySQL commandline client application\n did not encode HTML special characters when run in HTML output mode\n (that is, \"mysql --html ...\"). This could potentially lead to\n cross-site scripting or unintended script privilege escalation if\n the resulting output is viewed in a browser or incorporated into\n a web site.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 5.0.32-7etch10.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 5.0.51a-24+lenny1.\n\n\nWe recommend that you upgrade your mysql-dfsg-5.0 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "mysql-dfsg-5.0",
+				"purl": "pkg:deb/debian/mysql-dfsg-5.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.32-7etch10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.32-7etch1",
+				"5.0.32-7etch3",
+				"5.0.32-7etch3~bpo31+1",
+				"5.0.32-7etch4",
+				"5.0.32-7etch5",
+				"5.0.32-7etch5~bpo31+1",
+				"5.0.32-7etch6",
+				"5.0.32-7etch8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1783-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mysql-dfsg-5.0",
+				"purl": "pkg:deb/debian/mysql-dfsg-5.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.51a-24+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.51a-23",
+				"5.0.51a-24",
+				"5.0.51a-24+lenny1~bpo40+1",
+				"5.0.51a-24~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1783-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1783"
+		}
+	]
+}

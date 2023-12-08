@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3516-1",
+	"modified": "2023-08-05T16:15:20.207914Z",
+	"published": "2023-08-05T00:00:00Z",
+	"related": [
+		"CVE-2017-16516",
+		"CVE-2022-24795"
+	],
+	"summary": "burp - security update",
+	"details": "\nMultiple vulnerabilities have been found in the version of yajl bundled\nwith burp, a simple cross-platform network BackUp and Restore Program.\nyajl is a JSON parser and small validating JSON generator.\n\n\n* [CVE-2017-16516](https://security-tracker.debian.org/tracker/CVE-2017-16516)\nWhen a crafted JSON file is supplied to yajl, the process might\n crash with a SIGABRT in the yajl\\_string\\_decode function in\n yajl\\_encode.c. This potentially results in a denial of service.\n* [CVE-2022-24795](https://security-tracker.debian.org/tracker/CVE-2022-24795)\nThe 1.x branch and the 2.x branch of `yajl` contain an integer\n overflow which leads to subsequent heap memory corruption when dealing\n with large (~2GB) inputs.\n* [CVE-2023-33460](https://security-tracker.debian.org/tracker/CVE-2023-33460)\nThere's a memory leak in yajl 2.1.0 with use of yajl\\_tree\\_parse\n function, which potentially cause the server to run out of memory and\n crash.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.1.32-2+deb10u1.\n\n\nWe recommend that you upgrade your burp packages.\n\n\nFor the detailed security status of burp please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/burp>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "burp",
+				"purl": "pkg:deb/debian/burp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.32-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.32-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3516-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3516"
+		}
+	]
+}

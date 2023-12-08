@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2327-1",
+	"modified": "2023-06-28T06:25:12.531561Z",
+	"published": "2020-08-16T00:00:00Z",
+	"related": [
+		"CVE-2019-0193"
+	],
+	"summary": "lucene-solr - security update",
+	"details": "\nA security vulnerability was discovered in lucene-solr, an enterprise\nsearch server.\n\n\nThe DataImportHandler, an optional but popular module to pull in data\nfrom databases and other sources, has a feature in which the whole DIH\nconfiguration can come from a request's dataConfig parameter. The\ndebug mode of the DIH admin screen uses this to allow convenient\ndebugging / development of a DIH config. Since a DIH config can contain\nscripts, this parameter is a security risk. Starting from now on, use\nof this parameter requires setting the Java System property\nenable.dih.dataConfigParam to true. For example this can be achieved\nwith solr-tomcat by adding -Denable.dih.dataConfigParam=true to\nJAVA\\_OPTS in /etc/default/tomcat8.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n3.6.2+dfsg-10+deb9u3.\n\n\nWe recommend that you upgrade your lucene-solr packages.\n\n\nFor the detailed security status of lucene-solr please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/lucene-solr>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "lucene-solr",
+				"purl": "pkg:deb/debian/lucene-solr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.2+dfsg-10+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.2+dfsg-10",
+				"3.6.2+dfsg-10+deb9u1",
+				"3.6.2+dfsg-10+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2327-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2327"
+		}
+	]
+}

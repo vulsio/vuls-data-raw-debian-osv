@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2707-1",
+	"modified": "2023-10-16T00:11:26.847889Z",
+	"published": "2013-06-13T00:00:00Z",
+	"related": [
+		"CVE-2013-2168"
+	],
+	"summary": "dbus - denial of service",
+	"details": "\nAlexandru Cornea discovered a vulnerability in libdbus caused by an\nimplementation bug in \\_dbus\\_printf\\_string\\_upper\\_bound(). This\nvulnerability can be exploited by a local user to crash system services\nthat use libdbus, causing denial of service. Depending on the dbus\nservices running, it could lead to complete system crash.\n\n\nThe oldstable distribution (squeeze) is not affected by this problem.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.6.8-1+deb7u1.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 1.6.12-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6.12-1.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "dbus",
+				"purl": "pkg:deb/debian/dbus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.8-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.8-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2707-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2707"
+		}
+	]
+}

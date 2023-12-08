@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-724-1",
+	"modified": "2023-10-16T00:26:30.831436Z",
+	"published": "2005-05-18T00:00:00Z",
+	"related": [
+		"CVE-2005-0870"
+	],
+	"summary": "phpsysinfo - design flaw",
+	"details": "\nMaksymilian Arciemowicz discovered several cross site scripting issues\nin phpsysinfo, a PHP based host information application.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.0-3woody2.\n\n\nFor the testing (sarge) and unstable (sid) distribution these problems\nhave been fixed in version 2.3-3.\n\n\nWe recommend that you upgrade your phpsysinfo package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "phpsysinfo",
+				"purl": "pkg:deb/debian/phpsysinfo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0-3woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0-3woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-724-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-724"
+		}
+	]
+}

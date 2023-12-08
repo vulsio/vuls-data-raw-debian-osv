@@ -1,0 +1,103 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2941-1",
+	"modified": "2023-06-28T06:26:43.541399Z",
+	"published": "2022-03-09T00:00:00Z",
+	"related": [
+		"CVE-2020-29374",
+		"CVE-2020-36322",
+		"CVE-2021-20317",
+		"CVE-2021-20321",
+		"CVE-2021-20322",
+		"CVE-2021-22600",
+		"CVE-2021-28711",
+		"CVE-2021-28712",
+		"CVE-2021-28713",
+		"CVE-2021-28714",
+		"CVE-2021-28715",
+		"CVE-2021-28950",
+		"CVE-2021-3640",
+		"CVE-2021-3744",
+		"CVE-2021-3752",
+		"CVE-2021-3760",
+		"CVE-2021-3764",
+		"CVE-2021-3772",
+		"CVE-2021-38300",
+		"CVE-2021-39685",
+		"CVE-2021-39686",
+		"CVE-2021-39698",
+		"CVE-2021-39713",
+		"CVE-2021-4002",
+		"CVE-2021-4083",
+		"CVE-2021-4135",
+		"CVE-2021-4155",
+		"CVE-2021-41864",
+		"CVE-2021-4203",
+		"CVE-2021-42739",
+		"CVE-2021-43389",
+		"CVE-2021-43975",
+		"CVE-2021-43976",
+		"CVE-2021-44733",
+		"CVE-2021-45095",
+		"CVE-2021-45469",
+		"CVE-2021-45480",
+		"CVE-2022-0001",
+		"CVE-2022-0002",
+		"CVE-2022-0322",
+		"CVE-2022-0330",
+		"CVE-2022-0435",
+		"CVE-2022-0487",
+		"CVE-2022-0492",
+		"CVE-2022-0617",
+		"CVE-2022-22942",
+		"CVE-2022-24448",
+		"CVE-2022-24959",
+		"CVE-2022-25258",
+		"CVE-2022-25375"
+	],
+	"summary": "linux-4.19 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2020-29374](https://security-tracker.debian.org/tracker/CVE-2020-29374)\nJann Horn of Google reported a flaw in Linux's virtual memory\n management. A parent and child process initially share all their\n memory, but when either writes to a shared page, the page is\n duplicated and unshared (copy-on-write). However, in case an\n operation such as vmsplice() required the kernel to take an\n additional reference to a shared page, and a copy-on-write occurs\n during this operation, the kernel might have accessed the wrong\n process's memory. For some programs, this could lead to an\n information leak or data corruption.\n\n\nThis issue was already fixed for most architectures, but not on\n MIPS and System z. This update corrects that.\n* [CVE-2020-36322](https://security-tracker.debian.org/tracker/CVE-2020-36322)\n, [CVE-2021-28950](https://security-tracker.debian.org/tracker/CVE-2021-28950)\n\n\nThe syzbot tool found that the FUSE (filesystem-in-user-space)\n implementation did not correctly handle a FUSE server returning\n invalid attributes for a file. A local user permitted to run a\n FUSE server could use this to cause a denial of service (crash).\n\n\nThe original fix for this introduced a different potential denial\n of service (infinite loop in kernel space), which has also been\n fixed.\n* [CVE-2021-3640](https://security-tracker.debian.org/tracker/CVE-2021-3640)\nLin Ma discovered a race condiiton in the Bluetooth protocol\n implementation that can lead to a use-after-free. A local\n user could exploit this to cause a denial of service (memory\n corruption or crash) or possibly for privilege escalation.\n* [CVE-2021-3744](https://security-tracker.debian.org/tracker/CVE-2021-3744)\n, [CVE-2021-3764](https://security-tracker.debian.org/tracker/CVE-2021-3764)\n\n\nminihanshen reported bugs in the ccp driver for AMD\n Cryptographic Coprocessors that could lead to a resource leak.\n On systems using this driver, a local user could exploit this to\n cause a denial of service.\n* [CVE-2021-3752](https://security-tracker.debian.org/tracker/CVE-2021-3752)\nLikang Luo of NSFOCUS Security Team discovered a flaw in the\n Bluetooth L2CAP implementation that can lead to a user-after-free.\n A local user could exploit this to cause a denial of service\n (memory corruption or crash) or possibly for privilege escalation.\n* [CVE-2021-3760](https://security-tracker.debian.org/tracker/CVE-2021-3760)\n, [CVE-2021-4202](https://security-tracker.debian.org/tracker/CVE-2021-4202)\n\n\nLin Ma discovered race conditions in the NCI (NFC Controller\n Interface) driver, which could lead to a use-after-free. A local\n user could exploit this to cause a denial of service (memory\n corruption or crash) or possibly for privilege escalation.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2021-3772](https://security-tracker.debian.org/tracker/CVE-2021-3772)\nA flaw was found in the SCTP protocol implementation, which would\n allow a networked attacker to break an SCTP association. The\n attacker would only need to know or guess the IP addresses and\n ports for the association.\n* [CVE-2021-4002](https://security-tracker.debian.org/tracker/CVE-2021-4002)\nIt was discovered that hugetlbfs, the virtual filesystem used by\n applications to allocate huge pages in RAM, did not flush the\n CPU's TLB in one case where it was necessary. In some\n circumstances a local user would be able to read and write huge\n pages after they are freed and reallocated to a different process.\n This could lead to privilege escalation, denial of service or\n information leaks.\n* [CVE-2021-4083](https://security-tracker.debian.org/tracker/CVE-2021-4083)\nJann Horn reported a race condition in the local (Unix) sockets\n garbage collector, that can lead to use-after-free. A local user\n could exploit this to cause a denial of service (memory corruption\n or crash) or possibly for privilege escalation.\n* [CVE-2021-4135](https://security-tracker.debian.org/tracker/CVE-2021-4135)\nA flaw was found in the netdevsim driver which would lead to an\n information leak.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2021-4155](https://security-tracker.debian.org/tracker/CVE-2021-4155)\nKirill Tkhai discovered a data leak in the way the XFS\\_IOC\\_ALLOCSP\n IOCTL in the XFS filesystem allowed for a size increase of files\n with unaligned size. A local attacker can take advantage of this\n flaw to leak data on the XFS filesystem.\n* [CVE-2021-4203](https://security-tracker.debian.org/tracker/CVE-2021-4203)\nJann Horn reported a race condition in the local (Unix) sockets\n implementation that can lead to a use-after-free. A local user\n could exploit this to leak sensitive information from the kernel.\n* [CVE-2021-20317](https://security-tracker.debian.org/tracker/CVE-2021-20317)\nIt was discovered that the timer queue structure could become\n corrupt, leading to waiting tasks never being woken up. A local\n user with certain privileges could exploit this to cause a denial\n of service (system hang).\n* [CVE-2021-20321](https://security-tracker.debian.org/tracker/CVE-2021-20321)\nA race condition was discovered in the overlayfs filesystem\n driver. A local user with access to an overlayfs mount and to its\n underlying upper directory could exploit this for privilege\n escalation.\n* [CVE-2021-20322](https://security-tracker.debian.org/tracker/CVE-2021-20322)\nAn information leak was discovered in the IPv4 implementation. A\n remote attacker could exploit this to quickly discover which UDP\n ports a system is using, making it easier for them to carry out a\n DNS poisoning attack against that system.\n* [CVE-2021-22600](https://security-tracker.debian.org/tracker/CVE-2021-22600)\nThe syzbot tool found a flaw in the packet socket (AF\\_PACKET)\n implementation which could lead to incorrectly freeing memory. A\n local user with CAP\\_NET\\_RAW capability (in any user namespace)\n could exploit this for denial of service (memory corruption or\n crash) or possibly for privilege escalation.\n* [CVE-2021-28711](https://security-tracker.debian.org/tracker/CVE-2021-28711)\n, [CVE-2021-28712](https://security-tracker.debian.org/tracker/CVE-2021-28712), [CVE-2021-28713](https://security-tracker.debian.org/tracker/CVE-2021-28713) (XSA-391)\n\n\nJuergen Gross reported that malicious PV backends can cause a denial\n of service to guests being serviced by those backends via high\n frequency events, even if those backends are running in a less\n privileged environment.\n* [CVE-2021-28714](https://security-tracker.debian.org/tracker/CVE-2021-28714)\n, [CVE-2021-28715](https://security-tracker.debian.org/tracker/CVE-2021-28715) (XSA-392)\n\n\nJuergen Gross discovered that Xen guests can force the Linux\n netback driver to hog large amounts of kernel memory, resulting in\n denial of service.\n* [CVE-2021-38300](https://security-tracker.debian.org/tracker/CVE-2021-38300)\nPiotr Krysiuk discovered a flaw in the classic BPF (cBPF) JIT\n compiler for MIPS architectures. A local user could exploit\n this to excute arbitrary code in the kernel.\n\n\nThis issue is mitigated by setting sysctl\n net.core.bpf\\_jit\\_enable=0, which is the default. It is \\*not\\*\n mitigated by disabling unprivileged use of eBPF.\n* [CVE-2021-39685](https://security-tracker.debian.org/tracker/CVE-2021-39685)\nSzymon Heidrich discovered a buffer overflow vulnerability in the\n USB gadget subsystem, resulting in information disclosure, denial of\n service or privilege escalation.\n* [CVE-2021-39686](https://security-tracker.debian.org/tracker/CVE-2021-39686)\nA race condition was discovered in the Android binder driver, that\n could lead to incorrect security checks. On systems where the\n binder driver is loaded, a local user could exploit this for\n privilege escalation.\n* [CVE-2021-39698](https://security-tracker.debian.org/tracker/CVE-2021-39698)\nLinus Torvalds reported a flaw in the file polling implementation,\n which could lead to a use-after-free. A local user could exploit\n this for denial of service (memory corruption or crash) or\n possibly for privilege escalation.\n* [CVE-2021-39713](https://security-tracker.debian.org/tracker/CVE-2021-39713)\nThe syzbot tool found a race condition in the network scheduling\n subsystem which could lead to a use-after-free. A local user\n could exploit this for denial of service (memory corruption or\n crash) or possibly for privilege escalation.\n* [CVE-2021-41864](https://security-tracker.debian.org/tracker/CVE-2021-41864)\nAn integer overflow was discovered in the Extended BPF (eBPF)\n subsystem. A local user could exploit this for denial of service\n (memory corruption or crash), or possibly for privilege\n escalation.\n\n\nThis can be mitigated by setting sysctl\n kernel.unprivileged\\_bpf\\_disabled=1, which disables eBPF use by\n unprivileged users.\n* [CVE-2021-42739](https://security-tracker.debian.org/tracker/CVE-2021-42739)\nA heap buffer overflow was discovered in the firedtv driver for\n FireWire-connected DVB receivers. A local user with access to a\n firedtv device could exploit this for denial of service (memory\n corruption or crash), or possibly for privilege escalation.\n* [CVE-2021-43389](https://security-tracker.debian.org/tracker/CVE-2021-43389)\nThe Active Defense Lab of Venustech discovered a flaw in the CMTP\n subsystem as used by Bluetooth, which could lead to an\n out-of-bounds read and object type confusion. A local user with\n CAP\\_NET\\_ADMIN capability in the initial user namespace could\n exploit this for denial of service (memory corruption or crash),\n or possibly for privilege escalation.\n* [CVE-2021-43975](https://security-tracker.debian.org/tracker/CVE-2021-43975)\nBrendan Dolan-Gavitt reported a flaw in the\n hw\\_atl\\_utils\\_fw\\_rpc\\_wait() function in the aQuantia AQtion ethernet\n device driver which can result in denial of service or the execution\n of arbitrary code.\n* [CVE-2021-43976](https://security-tracker.debian.org/tracker/CVE-2021-43976)\nZekun Shen and Brendan Dolan-Gavitt discovered a flaw in the\n mwifiex\\_usb\\_recv() function of the Marvell WiFi-Ex USB Driver. An\n attacker able to connect a crafted USB device can take advantage of\n this flaw to cause a denial of service.\n* [CVE-2021-44733](https://security-tracker.debian.org/tracker/CVE-2021-44733)\nA race condition was discovered in the Trusted Execution\n Environment (TEE) subsystem for Arm processors, which could lead\n to a use-after-free. A local user permitted to access a TEE\n device could exploit this for denial of service (memory corruption\n or crash) or possibly for privilege escalation.\n* [CVE-2021-45095](https://security-tracker.debian.org/tracker/CVE-2021-45095)\nIt was discovered that the Phone Network protocol (PhoNet) driver\n has a reference count leak in the pep\\_sock\\_accept() function.\n* [CVE-2021-45469](https://security-tracker.debian.org/tracker/CVE-2021-45469)\nWenqing Liu reported an out-of-bounds memory access in the f2fs\n implementation if an inode has an invalid last xattr entry. An\n attacker able to mount a specially crafted image can take advantage\n of this flaw for denial of service.\n* [CVE-2021-45480](https://security-tracker.debian.org/tracker/CVE-2021-45480)\nA memory leak flaw was discovered in the \\_\\_rds\\_conn\\_create()\n function in the RDS (Reliable Datagram Sockets) protocol subsystem.\n* [CVE-2022-0001](https://security-tracker.debian.org/tracker/CVE-2022-0001)\n(INTEL-SA-00598)\n\n\nResearchers at VUSec discovered that the Branch History Buffer in\n Intel processors can be exploited to create information side channels with speculative execution. This issue is similar to\n Spectre variant 2, but requires additional mitigations on some\n processors.\n\n\nThis can be exploited to obtain sensitive information from a\n different security context, such as from user-space to the kernel,\n or from a KVM guest to the kernel.\n* [CVE-2022-0002](https://security-tracker.debian.org/tracker/CVE-2022-0002)\n(INTEL-SA-00598)\n\n\nThis is a similar issue to [CVE-2022-0001](https://security-tracker.debian.org/tracker/CVE-2022-0001), but covers exploitation\n within a security context, such as from JIT-compiled code in a\n sandbox to hosting code in the same process.\n\n\nThis can be partly mitigated by disabling eBPF for unprivileged\n users with the sysctl: kernel.unprivileged\\_bpf\\_disabled=2. This\n update does that by default.\n* [CVE-2022-0322](https://security-tracker.debian.org/tracker/CVE-2022-0322)\nEiichi Tsukata discovered a flaw in the sctp\\_make\\_strreset\\_req()\n function in the SCTP network protocol implementation which can\n result in denial of service.\n* [CVE-2022-0330](https://security-tracker.debian.org/tracker/CVE-2022-0330)\nSushma Venkatesh Reddy discovered a missing GPU TLB flush in the\n i915 driver, resulting in denial of service or privilege escalation.\n* [CVE-2022-0435](https://security-tracker.debian.org/tracker/CVE-2022-0435)\nSamuel Page and Eric Dumazet reported a stack overflow in the\n networking module for the Transparent Inter-Process Communication\n (TIPC) protocol, resulting in denial of service or potentially the\n execution of arbitrary code.\n* [CVE-2022-0487](https://security-tracker.debian.org/tracker/CVE-2022-0487)\nA use-after-free was discovered in the MOXART SD/MMC Host Controller\n support driver. This flaw does not impact the Debian binary packages\n as CONFIG\\_MMC\\_MOXART is not set.\n* [CVE-2022-0492](https://security-tracker.debian.org/tracker/CVE-2022-0492)\nYiqi Sun and Kevin Wang reported that the cgroup-v1 subsystem does\n not properly restrict access to the release-agent feature. A local\n user can take advantage of this flaw for privilege escalation and\n bypass of namespace isolation.\n* [CVE-2022-0617](https://security-tracker.debian.org/tracker/CVE-2022-0617)\nbutt3rflyh4ck discovered a NULL pointer dereference in the UDF\n filesystem. A local user that can mount a specially crafted UDF\n image can use this flaw to crash the system.\n* [CVE-2022-22942](https://security-tracker.debian.org/tracker/CVE-2022-22942)\nIt was discovered that wrong file file descriptor handling in the\n VMware Virtual GPU driver (vmwgfx) could result in information leak\n or privilege escalation.\n* [CVE-2022-24448](https://security-tracker.debian.org/tracker/CVE-2022-24448)\nLyu Tao reported a flaw in the NFS implementation in the Linux\n kernel when handling requests to open a directory on a regular file,\n which could result in a information leak.\n* [CVE-2022-24959](https://security-tracker.debian.org/tracker/CVE-2022-24959)\nA memory leak was discovered in the yam\\_siocdevprivate() function of\n the YAM driver for AX.25, which could result in denial of service.\n* [CVE-2022-25258](https://security-tracker.debian.org/tracker/CVE-2022-25258)\nSzymon Heidrich reported the USB Gadget subsystem lacks certain\n validation of interface OS descriptor requests, resulting in memory\n corruption.\n* [CVE-2022-25375](https://security-tracker.debian.org/tracker/CVE-2022-25375)\nSzymon Heidrich reported that the RNDIS USB gadget lacks validation\n of the size of the RNDIS\\_MSG\\_SET command, resulting in information\n leak from kernel memory.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.19.232-1~deb9u1. This update additionally includes many more bug\nfixes from stable updates 4.19.209-4.19.232 inclusive.\n\n\nWe recommend that you upgrade your linux-4.19 packages.\n\n\nFor the detailed security status of linux-4.19 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-4.19>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux-4.19",
+				"purl": "pkg:deb/debian/linux-4.19?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.19.232-1~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.19.132-1~deb9u1",
+				"4.19.132-1~deb9u2",
+				"4.19.146-1~deb9u1",
+				"4.19.152-1~deb9u1",
+				"4.19.160-2~deb9u1",
+				"4.19.171-2~deb9u1",
+				"4.19.181-1~deb9u1",
+				"4.19.194-1~deb9u1",
+				"4.19.194-3~deb9u1",
+				"4.19.208-1~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2941-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2941"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1469-1",
+	"modified": "2023-06-28T06:24:48.875332Z",
+	"published": "2018-08-18T00:00:00Z",
+	"related": [
+		"CVE-2015-9262"
+	],
+	"summary": "libxcursor - security update",
+	"details": "\nIt was discovered that there was a denial of service or (potentially code\nexecution) vulnerability in libxcursor, a library designed to help locate\nand load cursors for the X Window System.\n\n\nFor Debian 8 Jessie, this issue has been fixed in libxcursor version\n1:1.1.14-1+deb8u2.\n\n\nWe recommend that you upgrade your libxcursor packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libxcursor",
+				"purl": "pkg:deb/debian/libxcursor?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.1.14-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.1.14-1",
+				"1:1.1.14-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1469-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1469"
+		}
+	]
+}

@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-536",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-08-04T00:00:00Z",
+	"related": [
+		"CVE-2004-0597",
+		"CVE-2004-0598",
+		"CVE-2004-0599",
+		"CVE-2004-0768"
+	],
+	"summary": "libpng - several vulnerabilities",
+	"details": "\nChris Evans discovered several vulnerabilities in libpng:\n\n\n* [CAN-2004-0597](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0597)\nMultiple buffer overflows exist, including when\n handling transparency chunk data, which could be exploited to cause\n arbitrary code to be executed when a specially crafted PNG image is\n processed\n\n* [CAN-2004-0598](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0598)\nMultiple NULL pointer dereferences in\n png\\_handle\\_iCPP() and elsewhere could be exploited to cause an\n application to crash when a specially crafted PNG image is processed\n\n* [CAN-2004-0599](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0599)\nMultiple integer overflows in the png\\_handle\\_sPLT(),\n png\\_read\\_png() functions and elsewhere could be exploited to cause an\n application to crash, or potentially arbitrary code to be executed,\n when a specially crafted PNG image is processed\n\n\nIn addition, a bug related to [CAN-2002-1363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1363) was fixed:\n\n* [CAN-2004-0768](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0768)\nA buffer overflow could be caused by incorrect\n calculation of buffer offsets, possibly leading to the execution of\n arbitrary code\n\n\nFor the current stable distribution (woody), these problems have been\nfixed in libpng3 version 1.2.1-1.1.woody.7 and libpng version\n1.0.12-3.woody.7.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you update your libpng and libpng3 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.12-3.woody.7"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-536.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "libpng3",
+				"purl": "pkg:deb/debian/libpng3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.1-1.1.woody.7"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-536.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-536"
+		}
+	]
+}

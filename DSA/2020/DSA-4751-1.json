@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4751-1",
+	"modified": "2023-10-16T00:21:54.139648Z",
+	"published": "2020-08-27T00:00:00Z",
+	"related": [
+		"CVE-2020-15810",
+		"CVE-2020-15811",
+		"CVE-2020-24606"
+	],
+	"summary": "squid - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Squid, a fully featured web\nproxy cache, which could result in request splitting, request smuggling\n(leading to cache poisoning) and denial of service when processing\ncrafted cache digest responses messages.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.6-1+deb10u4.\n\n\nWe recommend that you upgrade your squid packages.\n\n\nFor the detailed security status of squid please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/squid>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "squid",
+				"purl": "pkg:deb/debian/squid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.6-1+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.6-1",
+				"4.6-1+deb10u1",
+				"4.6-1+deb10u2",
+				"4.6-1+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4751-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4751"
+		}
+	]
+}

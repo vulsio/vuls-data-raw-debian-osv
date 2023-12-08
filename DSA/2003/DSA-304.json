@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-304",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-05-15T00:00:00Z",
+	"related": [
+		"CVE-2003-0188"
+	],
+	"summary": "lv - privilege escalation",
+	"details": "\nLeonard Stiles discovered that lv, a multilingual file viewer, would\nread options from a configuration file in the current directory.\nBecause such a file could be placed there by a malicious user, and lv\nconfiguration options can be used to execute commands, this\nrepresented a security vulnerability. An attacker could gain the\nprivileges of the user invoking lv, including root.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 4.49.4-7woody2.\n\n\nFor the old stable distribution (potato) this problem has been fixed\nin version 4.49.3-4potato2.\n\n\nFor the unstable distribution (sid) this problem is fixed in version\n4.49.5-2.\n\n\nWe recommend that you update your lv package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "lv",
+				"purl": "pkg:deb/debian/lv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.49.4-7woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-304.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-304"
+		}
+	]
+}

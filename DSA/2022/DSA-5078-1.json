@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5078-1",
+	"modified": "2023-10-16T00:21:05.826034Z",
+	"published": "2022-02-16T00:00:00Z",
+	"related": [
+		"CVE-2021-45444"
+	],
+	"summary": "zsh - security update",
+	"details": "\nIt was discovered that zsh, a powerful shell and scripting language,\ndid not prevent recursive prompt expansion. This would allow an\nattacker to execute arbitrary commands into a user's shell, for\ninstance by tricking a vcs\\_info user into checking out a git branch\nwith a specially crafted name.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 5.7.1-1+deb10u1.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 5.8-6+deb11u1.\n\n\nWe recommend that you upgrade your zsh packages.\n\n\nFor the detailed security status of zsh please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/zsh](https://security-tracker.debian.org/tracker/zsh)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "zsh",
+				"purl": "pkg:deb/debian/zsh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.1-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5078-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "zsh",
+				"purl": "pkg:deb/debian/zsh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.8-6+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.8-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5078-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5078"
+		}
+	]
+}

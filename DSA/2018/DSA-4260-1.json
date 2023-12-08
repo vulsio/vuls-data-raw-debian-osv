@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4260-1",
+	"modified": "2023-10-16T00:17:56.080649Z",
+	"published": "2018-08-02T00:00:00Z",
+	"related": [
+		"CVE-2018-14679",
+		"CVE-2018-14680",
+		"CVE-2018-14681",
+		"CVE-2018-14682"
+	],
+	"summary": "libmspack - security update",
+	"details": "\nSeveral vulnerabilities were discovered in libsmpack, a library used to\nhandle Microsoft compression formats. A remote attacker could craft\nmalicious CAB, CHM or KWAJ files and use these flaws to cause a denial\nof service via application crash, or potentially execute arbitrary code.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 0.5-1+deb9u2.\n\n\nWe recommend that you upgrade your libmspack packages.\n\n\nFor the detailed security status of libmspack please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/libmspack>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libmspack",
+				"purl": "pkg:deb/debian/libmspack?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.5-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.5-1",
+				"0.5-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4260-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4260"
+		}
+	]
+}

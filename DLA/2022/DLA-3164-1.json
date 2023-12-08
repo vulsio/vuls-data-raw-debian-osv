@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3164-1",
+	"modified": "2023-06-28T06:33:34.363990Z",
+	"published": "2022-10-28T00:00:00Z",
+	"related": [
+		"CVE-2020-24583",
+		"CVE-2020-24584",
+		"CVE-2021-23336",
+		"CVE-2021-3281",
+		"CVE-2022-34265"
+	],
+	"summary": "python-django - security update",
+	"details": "\nMultiple vulnerabilities were discovered in Django, a popular Python-based\nweb development framework:\n\n\n* [CVE-2020-24583](https://security-tracker.debian.org/tracker/CVE-2020-24583):\n Fix incorrect permissions on intermediate-level directories on Python 3.7+.\n FILE\\_UPLOAD\\_DIRECTORY\\_PERMISSIONS mode was not applied to intermediate-level\n directories created in the process of uploading files and to\n intermediate-level collected static directories when using the collectstatic\n management command. You should review and manually fix permissions on\n existing intermediate-level directories.\n* [CVE-2020-24584](https://security-tracker.debian.org/tracker/CVE-2020-24584):\n Correct permission escalation vulnerability in intermediate-level directories\n of the file system cache. On Python 3.7 and above, the intermediate-level\n directories of the file system cache had the system's standard umask rather\n than 0o077 (no group or others permissions).\n* [CVE-2021-3281](https://security-tracker.debian.org/tracker/CVE-2021-3281):\n Fix a potential directory-traversal exploit via archive.extract(). The\n django.utils.archive.extract() function, used by startapp --template and\n startproject --template, allowed directory traversal via an archive with\n absolute paths or relative paths with dot segments.\n* [CVE-2021-23336](https://security-tracker.debian.org/tracker/CVE-2021-23336):\n Prevent a web cache poisoning attack via \"parameter cloaking\". Django\n contains a copy of urllib.parse.parse\\_qsl() which was added to backport some\n security fixes. A further security fix has been issued recently such that\n parse\\_qsl() no longer allows using \";\" as a query parameter separator by\n default.\n* [CVE-2022-34265](https://security-tracker.debian.org/tracker/CVE-2022-34265):\n The Trunc() and Extract() database functions were subject to a potential SQL\n injection attack if untrusted data was used as a value for the \"kind\" or\n \"lookup\\_name\" parameters. Applications that constrain the choice to a known\n safe list were unaffected.\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n1:1.11.29-1+deb10u2.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.11.29-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.11.21-1",
+				"1:1.11.22-1",
+				"1:1.11.22-1~deb10u1",
+				"1:1.11.23-1~deb10u1",
+				"1:1.11.27-1~deb10u1",
+				"1:1.11.28-1~deb10u1",
+				"1:1.11.29-1~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3164-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3164"
+		}
+	]
+}

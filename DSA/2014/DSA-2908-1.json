@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2908-1",
+	"modified": "2023-10-16T00:11:36.928787Z",
+	"published": "2014-04-17T00:00:00Z",
+	"related": [
+		"CVE-2010-5298",
+		"CVE-2014-0076"
+	],
+	"summary": "openssl - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL. The following\nCommon Vulnerabilities and Exposures project ids identify them:\n\n\n* [CVE-2010-5298](https://security-tracker.debian.org/tracker/CVE-2010-5298)\nA read buffer can be freed even when it still contains data that is\nused later on, leading to a use-after-free. Given a race condition in a\nmulti-threaded application it may permit an attacker to inject data from\none connection into another or cause denial of service.\n* [CVE-2014-0076](https://security-tracker.debian.org/tracker/CVE-2014-0076)\nECDSA nonces can be recovered through the Yarom/Benger FLUSH+RELOAD\ncache side-channel attack.\n\n\nA third issue, with no CVE id, is the missing detection of the\ncritical flag for the TSA extended key usage under certain cases.\n\n\nAdditionally, this update checks for more services that might need to\nbe restarted after upgrades of libssl, corrects the detection of\napache2 and postgresql, and adds support for the\n'libraries/restart-without-asking' debconf configuration. This allows\nservices to be restarted on upgrade without prompting.\n\n\nThe oldstable distribution (squeeze) is not affected by [CVE-2010-5298](https://security-tracker.debian.org/tracker/CVE-2010-5298)\nand it might be updated at a later time to address the remaining\nvulnerabilities.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.0.1e-2+deb7u7.\n\n\nFor the testing distribution (jessie), these problems will be fixed\nsoon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.1g-3.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1e-2+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1e-2",
+				"1.0.1e-2+deb7u1",
+				"1.0.1e-2+deb7u2",
+				"1.0.1e-2+deb7u3",
+				"1.0.1e-2+deb7u4",
+				"1.0.1e-2+deb7u5",
+				"1.0.1e-2+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2908-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2908"
+		}
+	]
+}

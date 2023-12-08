@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1964-1",
+	"modified": "2023-06-28T06:21:06.202770Z",
+	"published": "2019-10-17T00:00:00Z",
+	"related": [
+		"CVE-2019-14287"
+	],
+	"summary": "sudo - security update",
+	"details": "\nIn sudo, a program that provides limited super user privileges to\nspecific users, an attacker with access to a Runas ALL sudoer account\ncan bypass certain policy blacklists and session PAM modules, and can\ncause incorrect logging, by invoking sudo with a crafted user ID. For\nexample, this allows bypass of (ALL,!root) configuration for a\n\"sudo -u#-1\" command.\n\n\nSee <https://www.sudo.ws/alerts/minus_1_uid.html> for further\ninformation.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.8.10p3-1+deb8u6.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.10p3-1+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.10p3-1+deb8u2",
+				"1.8.10p3-1+deb8u3",
+				"1.8.10p3-1+deb8u4",
+				"1.8.10p3-1+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1964-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1964"
+		}
+	]
+}

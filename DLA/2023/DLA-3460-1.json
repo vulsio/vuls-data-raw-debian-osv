@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3460-1",
+	"modified": "2023-06-28T06:31:12.334049Z",
+	"published": "2023-06-20T00:00:00Z",
+	"related": [
+		"CVE-2021-32837"
+	],
+	"summary": "python-mechanize - security update",
+	"details": "\nErik Krogh Kristensen and Rasmus Petersen from the GitHub Security Lab\ndiscovered a ReDoS (Regular Expression Denial of Service) vulnerability\nin python-mechanize, a library to automate interaction with websites\nmodeled after the Perl module `WWW::Mechanize`, which could lead to\nDenial of Service when parsing a malformed authentication header.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1:0.2.5-3+deb10u1.\n\n\nWe recommend that you upgrade your python-mechanize packages.\n\n\nFor the detailed security status of python-mechanize please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-mechanize>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python-mechanize",
+				"purl": "pkg:deb/debian/python-mechanize?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.2.5-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.2.5-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3460-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3460"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-927-1",
+	"modified": "2023-10-16T00:30:36.924769Z",
+	"published": "2005-12-27T00:00:00Z",
+	"related": [
+		"CVE-2005-3343"
+	],
+	"summary": "tkdiff - insecure temporary file",
+	"details": "\nThe last update of tkdiff contained a programming error which is\nfixed by this version. Â For completeness we're adding the original\nadvisory text:\n\n\n\n> \n> Javier FernĂĄndez-Sanguino PeĂąa from the Debian Security Audit project\n> discovered that tkdiff, a graphical side by side \"diff\" utility,\n> creates temporary files in an insecure fashion.\n> \n> \n> \n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 3.08-3woody1.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 4.0.2-1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 4.0.2-4.\n\n\nWe recommend that you upgrade your tkdiff package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tkdiff",
+				"purl": "pkg:deb/debian/tkdiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:3.08-3woody0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:3.08-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-927-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "tkdiff",
+				"purl": "pkg:deb/debian/tkdiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.0.2-1sarge0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.0.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-927-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-927"
+		}
+	]
+}

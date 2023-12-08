@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2896-1",
+	"modified": "2023-10-16T00:06:07.104437Z",
+	"published": "2014-04-07T00:00:00Z",
+	"related": [
+		"CVE-2014-0160"
+	],
+	"summary": "openssl - security update",
+	"details": "\nA vulnerability has been discovered in OpenSSL's support for the\nTLS/DTLS Heartbeat extension. Up to 64KB of memory from either client or\nserver can be recovered by an attacker. This vulnerability might allow an\nattacker to compromise the private key and other sensitive data in\nmemory.\n\n\nAll users are urged to upgrade their openssl packages (especially\nlibssl1.0.0) and restart applications as soon as possible.\n\n\nAccording to the currently available information, private keys should be\nconsidered as compromised and regenerated as soon as possible. More\ndetails will be communicated at a later time.\n\n\nThe oldstable distribution (squeeze) is not affected by this\nvulnerability.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.0.1e-2+deb7u5.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 1.0.1g-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.0.1g-1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1e-2+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1e-2",
+				"1.0.1e-2+deb7u1",
+				"1.0.1e-2+deb7u2",
+				"1.0.1e-2+deb7u3",
+				"1.0.1e-2+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2896-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2896"
+		}
+	]
+}

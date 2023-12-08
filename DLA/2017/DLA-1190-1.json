@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1190-1",
+	"modified": "2023-06-28T06:20:28.619229Z",
+	"published": "2017-11-24T00:00:00Z",
+	"related": [
+		"CVE-2017-1000158"
+	],
+	"summary": "python2.6 - security update",
+	"details": "\nA minor security vulnerability has been discovered in Python 2.7, an\ninteractive high-level object-oriented language.\n\n\n* [CVE-2017-1000158](https://security-tracker.debian.org/tracker/CVE-2017-1000158)\nCPython (the reference implementation of Python also commonly known\n as simply Python) versions 2.6 and 2.7 are vulnerable to an integer\n overflow and heap corruption, leading to possible arbitrary code\n execution. The nature of the error has to do with improper handling\n of large strings with escaped characters.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.6.8-1.1+deb7u1.\n\n\nWe recommend that you upgrade your python2.6 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "python2.6",
+				"purl": "pkg:deb/debian/python2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-1.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1190-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1190"
+		}
+	]
+}

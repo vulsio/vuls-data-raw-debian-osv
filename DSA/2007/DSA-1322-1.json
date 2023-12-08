@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1322-1",
+	"modified": "2023-10-16T00:10:19.850630Z",
+	"published": "2007-06-27T00:00:00Z",
+	"related": [
+		"CVE-2007-3390",
+		"CVE-2007-3392",
+		"CVE-2007-3393"
+	],
+	"summary": "wireshark",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Wireshark\nnetwork traffic analyzer, which may lead to denial of service. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-3390](https://security-tracker.debian.org/tracker/CVE-2007-3390)\nOff-by-one overflows were discovered in the iSeries dissector.\n* [CVE-2007-3392](https://security-tracker.debian.org/tracker/CVE-2007-3392)\nThe MMS and SSL dissectors could be forced into an infinite loop.\n* [CVE-2007-3393](https://security-tracker.debian.org/tracker/CVE-2007-3393)\nAn off-by-one overflow was discovered in the DHCP/BOOTP dissector.\n\n\nThe oldstable distribution (sarge) is not affected by these problems.\n(In Sarge Wireshark used to be called Ethereal).\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 0.99.4-5.etch.0. Packages for the big endian MIPS architecture\nare not yet available. They will be provided later.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.99.6pre1-1.\n\n\nWe recommend that you upgrade your Wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.99.4-5.etch.0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.99.4-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1322-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1322"
+		}
+	]
+}

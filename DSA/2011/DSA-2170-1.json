@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2170-1",
+	"modified": "2023-10-16T00:11:01.028069Z",
+	"published": "2011-02-18T00:00:00Z",
+	"related": [
+		"CVE-2010-3089",
+		"CVE-2011-0707"
+	],
+	"summary": "mailman - several vulnerabilities",
+	"details": "\nTwo cross site scripting vulnerabilities were been discovered in\nMailman, a web-based mailing list manager. These allowed an attacker\nto retrieve session cookies via inserting crafted JavaScript into\nconfirmation messages ([CVE-2011-0707](https://security-tracker.debian.org/tracker/CVE-2011-0707)) and in the list admin interface\n([CVE-2010-3089](https://security-tracker.debian.org/tracker/CVE-2010-3089); oldstable only).\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 1:2.1.11-11+lenny2.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:2.1.13-5.\n\n\nFor the testing (wheezy) and unstable distribution (sid), this problem\nhas been fixed in version 1:2.1.14-1.\n\n\nWe recommend that you upgrade your mailman packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mailman",
+				"purl": "pkg:deb/debian/mailman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.11-11+lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.11-11",
+				"1:2.1.11-11+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2170-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mailman",
+				"purl": "pkg:deb/debian/mailman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.13-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.13-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2170-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2170"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3532-1",
+	"modified": "2023-08-17T02:19:02.914335Z",
+	"published": "2023-08-17T00:00:00Z",
+	"related": [
+		"CVE-2023-38408"
+	],
+	"summary": "openssh - security update",
+	"details": "\nIt was discovered that OpenSSH incorrectly handled loading certain\nPKCS#11 providers. If a user forwarded their ssh-agent to an untrusted\nsystem, a remote attacker could possibly use this issue to load\narbitrary libraries from the userâs system and execute arbitrary code.\n\n\nIn addition to the above security issue, this update also fixed\nanother bug - bad interaction between the ssh\\_config ConnectTimeout\nand ConnectionAttempts directives - connection attempts after the\nfirst attempt were ignoring the requested timeout. More details about\nthis can be found at <https://bugzilla.mindrot.org/show_bug.cgi?id)18.>\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1:7.9p1-10+deb10u3.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\nFor the detailed security status of openssh please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openssh>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openssh",
+				"purl": "pkg:deb/debian/openssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:7.9p1-10+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:7.9p1-10",
+				"1:7.9p1-10+deb10u1",
+				"1:7.9p1-10+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3532-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3532"
+		}
+	]
+}

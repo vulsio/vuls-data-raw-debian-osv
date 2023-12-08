@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3716-1",
+	"modified": "2023-10-16T00:12:16.054754Z",
+	"published": "2016-11-16T00:00:00Z",
+	"related": [
+		"CVE-2016-5290",
+		"CVE-2016-5291",
+		"CVE-2016-5296",
+		"CVE-2016-5297",
+		"CVE-2016-9064",
+		"CVE-2016-9066",
+		"CVE-2016-9074"
+	],
+	"summary": "firefox-esr - security update",
+	"details": "\nMultiple security issues have been found in the Mozilla Firefox web\nbrowser: Multiple memory safety errors, buffer overflows and other\nimplementation errors may lead to the execution of arbitrary code or\nbypass of the same-origin policy. Also, a man-in-the-middle attack in\nthe addon update mechanism has been fixed.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 45.5.0esr-1~deb8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 45.5.0esr-1 and version 50.0-1 of the firefox source package.\n\n\nWe recommend that you upgrade your firefox-esr packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "firefox-esr",
+				"purl": "pkg:deb/debian/firefox-esr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "45.5.0esr-1~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"45.0.1esr-1",
+				"45.0.2esr-1",
+				"45.0esr-1",
+				"45.0esr-2",
+				"45.1.0esr-1",
+				"45.1.1esr-1",
+				"45.2.0esr-1",
+				"45.2.0esr-1~deb7u1",
+				"45.2.0esr-1~deb8u1",
+				"45.3.0esr-1",
+				"45.3.0esr-1~deb7u1",
+				"45.3.0esr-1~deb8u1",
+				"45.3.0esr-2",
+				"45.4.0esr-1",
+				"45.4.0esr-1~deb7u1",
+				"45.4.0esr-1~deb7u2",
+				"45.4.0esr-1~deb8u1",
+				"45.4.0esr-1~deb8u2",
+				"45.4.0esr-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3716-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3716"
+		}
+	]
+}

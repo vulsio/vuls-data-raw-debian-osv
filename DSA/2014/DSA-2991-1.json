@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2991-1",
+	"modified": "2023-10-16T00:06:09.967429Z",
+	"published": "2014-07-27T00:00:00Z",
+	"related": [
+		"CVE-2013-5705"
+	],
+	"summary": "modsecurity-apache - security update",
+	"details": "\nMartin Holst Swende discovered a flaw in the way chunked requests are\nhandled in ModSecurity, an Apache module whose purpose is to tighten the\nWeb application security. A remote attacker could use this flaw to\nbypass intended mod\\_security restrictions by using chunked transfer\ncoding with a capitalized Chunked value in the Transfer-Encoding HTTP\nheader, allowing to send requests containing content that should have\nbeen removed by mod\\_security.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.6.6-6+deb7u2.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 2.7.7-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.7.7-1.\n\n\nWe recommend that you upgrade your modsecurity-apache packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "modsecurity-apache",
+				"purl": "pkg:deb/debian/modsecurity-apache?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.6-6+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.6-6",
+				"2.6.6-6+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2991-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2991"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2161-1",
+	"modified": "2023-10-16T00:11:00.387079Z",
+	"published": "2011-02-13T00:00:00Z",
+	"related": [
+		"CVE-2010-4476"
+	],
+	"summary": "openjdk-6 - denial of service",
+	"details": "\nIt was discovered that the floating point parser in OpenJDK, an\nimplementation of the Java platform, can enter an infinite loop when\nprocessing certain input strings. Such input strings represent valid\nnumbers and can be contained in data supplied by an attacker over the\nnetwork, leading to a denial-of-service attack.\n\n\nFor the oldstable distribution (lenny), this problem will be fixed in\nversion 6b18-1.8.3-2~lenny1. For technical reasons, this update will\nbe released separately.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 6b18-1.8.3-2+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your openjdk-6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "openjdk-6",
+				"purl": "pkg:deb/debian/openjdk-6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6b18-1.8.3-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6b18-1.8.3-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2161-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2161"
+		}
+	]
+}

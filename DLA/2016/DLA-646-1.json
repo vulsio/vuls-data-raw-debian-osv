@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-646-1",
+	"modified": "2023-06-28T06:34:16.313802Z",
+	"published": "2016-10-05T00:00:00Z",
+	"related": [
+		"CVE-2016-4861"
+	],
+	"summary": "zendframework - security update",
+	"details": "\n* [CVE-2016-4861](https://security-tracker.debian.org/tracker/CVE-2016-4861)\nThe implementation of ORDER BY and GROUP BY in Zend\\_Db\\_Select\n remained prone to SQL injection when a combination of SQL\n expressions and comments were used. This security patch provides\n a comprehensive solution that identifies and removes comments\n prior to checking validity of the statement to ensure no SQLi\n vectors occur.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.11.13-1.1+deb7u5.\n\n\nWe recommend that you upgrade your zendframework packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "zendframework",
+				"purl": "pkg:deb/debian/zendframework?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.11.13-1.1+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.11.13-1.1",
+				"1.11.13-1.1+deb7u1",
+				"1.11.13-1.1+deb7u2",
+				"1.11.13-1.1+deb7u3",
+				"1.11.13-1.1+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-646-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-646"
+		}
+	]
+}

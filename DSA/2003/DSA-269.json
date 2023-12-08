@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-269",
+	"modified": "2023-10-16T00:11:25.684426Z",
+	"published": "2003-03-26T00:00:00Z",
+	"related": [
+		"CVE-2003-0138"
+	],
+	"summary": "heimdal - Cryptographic weakness",
+	"details": "\nA cryptographic weakness in version 4 of the Kerberos protocol allows\nan attacker to use a chosen-plaintext attack to impersonate any\nprincipal in a realm. Additional cryptographic weaknesses in the krb4\nimplementation permit the use of cut-and-paste attacks to fabricate\nkrb4 tickets for unauthorized client principals if triple-DES keys are\nused to key krb4 services. These attacks can subvert a site's entire\nKerberos authentication infrastructure.\n\n\nThis version of the heimdal package changes the default behavior and\ndisallows cross-realm authentication for Kerberos version 4. Because\nof the fundamental nature of the problem, cross-realm authentication\nin Kerberos version 4 cannot be made secure and sites should avoid its\nuse. A new option (--kerberos4-cross-realm) is provided to the kdc \ncommand to re-enable version 4 cross-realm authentication for those\nsites that must use this functionality but desire the other security\nfixes.\n\n\nFor the stable distribution (woody) this problem has been\nfixed in version 0.4e-7.woody.8.\n\n\nThe old stable distribution (potato) is not affected by this problem,\nsince it isn't compiled against kerberos 4.\n\n\nFor the unstable distribution (sid) this problem has been\nfixed in version 0.5.2-1.\n\n\nWe recommend that you upgrade your heimdal packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "heimdal",
+				"purl": "pkg:deb/debian/heimdal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.4e-7.woody.8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.2l-7",
+				"0.2l-7.6",
+				"0.4e-7.woody.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-269.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-269"
+		}
+	]
+}

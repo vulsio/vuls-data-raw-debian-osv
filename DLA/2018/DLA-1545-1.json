@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1545-1",
+	"modified": "2023-06-28T06:20:47.470382Z",
+	"published": "2018-10-15T00:00:00Z",
+	"related": [
+		"CVE-2018-11784"
+	],
+	"summary": "tomcat8 - security update",
+	"details": "\nSergey Bobrov discovered that when the default servlet returned a\nredirect to a directory (e.g. redirecting to /foo/ when the user\nrequested /foo) a specially crafted URL could be used to cause the\nredirect to be generated to any URI of the attackers choice.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n8.0.14-1+deb8u14.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.14-1+deb8u14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.14-1",
+				"8.0.14-1+deb8u1",
+				"8.0.14-1+deb8u10",
+				"8.0.14-1+deb8u11",
+				"8.0.14-1+deb8u12",
+				"8.0.14-1+deb8u13",
+				"8.0.14-1+deb8u2",
+				"8.0.14-1+deb8u3",
+				"8.0.14-1+deb8u4",
+				"8.0.14-1+deb8u5",
+				"8.0.14-1+deb8u6",
+				"8.0.14-1+deb8u7",
+				"8.0.14-1+deb8u8",
+				"8.0.14-1+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1545-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1545"
+		}
+	]
+}

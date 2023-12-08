@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2329-1",
+	"modified": "2023-10-16T00:11:08.590261Z",
+	"published": "2011-10-27T00:00:00Z",
+	"related": [
+		"CVE-2011-2193"
+	],
+	"summary": "torque - buffer overflow",
+	"details": "\nBartlomiej Balcerek discovered several buffer overflows in TORQUE server,\na PBS-derived batch processing server. This allows an attacker to crash the\nservice or execute arbitrary code with privileges of the server via crafted\njob or host names.\n\n\nThe oldstable distribution (lenny) does not contain torque.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.4.8+dfsg-9squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2.4.15+dfsg-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.4.15+dfsg-1.\n\n\nWe recommend that you upgrade your torque packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "torque",
+				"purl": "pkg:deb/debian/torque?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.8+dfsg-9squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.8+dfsg-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2329-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2329"
+		}
+	]
+}

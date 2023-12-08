@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3616-1",
+	"modified": "2023-10-16T00:12:10.482765Z",
+	"published": "2016-07-04T00:00:00Z",
+	"related": [
+		"CVE-2014-9904",
+		"CVE-2016-5728",
+		"CVE-2016-5828",
+		"CVE-2016-5829",
+		"CVE-2016-6130"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2014-9904](https://security-tracker.debian.org/tracker/CVE-2014-9904)\nIt was discovered that the snd\\_compress\\_check\\_input function used in\n the ALSA subsystem does not properly check for an integer overflow,\n allowing a local user to cause a denial of service.\n* [CVE-2016-5728](https://security-tracker.debian.org/tracker/CVE-2016-5728)\nPengfei Wang discovered a race condition in the MIC VOP driver that\n could allow a local user to obtain sensitive information from kernel\n memory or cause a denial of service.\n* [CVE-2016-5828](https://security-tracker.debian.org/tracker/CVE-2016-5828)\nCyril Bur and Michael Ellerman discovered a flaw in the handling of\n Transactional Memory on powerpc systems allowing a local user to\n cause a denial of service (kernel crash) or possibly have\n unspecified other impact, by starting a transaction, suspending it,\n and then calling any of the exec() class system calls.\n* [CVE-2016-5829](https://security-tracker.debian.org/tracker/CVE-2016-5829)\nA heap-based buffer overflow vulnerability was found in the hiddev\n driver, allowing a local user to cause a denial of service or,\n potentially escalate their privileges.\n* [CVE-2016-6130](https://security-tracker.debian.org/tracker/CVE-2016-6130)\nPengfei Wang discovered a flaw in the S/390 character device drivers\n potentially leading to information leak with /dev/sclp.\n\n\nAdditionally this update fixes a regression in the ebtables facility\n(#828914) that was introduced in DSA-3607-1.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.7-ckt25-2+deb8u3.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.7-ckt25-2+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3616-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3616"
+		}
+	]
+}

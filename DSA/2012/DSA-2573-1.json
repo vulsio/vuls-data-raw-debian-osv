@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2573-1",
+	"modified": "2023-10-16T00:06:00.929216Z",
+	"published": "2012-11-10T00:00:00Z",
+	"related": [
+		"CVE-2012-4523",
+		"CVE-2012-4566"
+	],
+	"summary": "radsecproxy - SSL certificate verification weakness",
+	"details": "\nRalf Paffrath reported that Radsecproxy, a RADIUS protocol proxy, mixed up \npre- and post-handshake verification of clients. This vulnerability may\nwrongly accept clients without checking their certificate chain under \ncertain configurations.\n\n\nRaphael Geissert spotted that the fix for [CVE-2012-4523](https://security-tracker.debian.org/tracker/CVE-2012-4523) was incomplete, \ngiving origin to [CVE-2012-4566](https://security-tracker.debian.org/tracker/CVE-2012-4566). Both vulnerabilities are fixed with this \nupdate.\n\n\nNotice that this fix may make Radsecproxy reject some clients that are \ncurrently (erroneously) being accepted.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1.4-1+squeeze1.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 1.6.2-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.6.2-1.\n\n\nWe recommend that you upgrade your radsecproxy packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "radsecproxy",
+				"purl": "pkg:deb/debian/radsecproxy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2573-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2573"
+		}
+	]
+}

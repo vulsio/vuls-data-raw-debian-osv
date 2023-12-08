@@ -1,0 +1,197 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1794-1",
+	"modified": "2023-10-16T00:10:38.530950Z",
+	"published": "2009-05-06T00:00:00Z",
+	"related": [
+		"CVE-2008-4307",
+		"CVE-2008-5395",
+		"CVE-2008-5701",
+		"CVE-2008-5702",
+		"CVE-2008-5713",
+		"CVE-2009-0028",
+		"CVE-2009-0029",
+		"CVE-2009-0031",
+		"CVE-2009-0065",
+		"CVE-2009-0322",
+		"CVE-2009-0675",
+		"CVE-2009-0676",
+		"CVE-2009-0834",
+		"CVE-2009-0859",
+		"CVE-2009-1192",
+		"CVE-2009-1265",
+		"CVE-2009-1336",
+		"CVE-2009-1337",
+		"CVE-2009-1439"
+	],
+	"summary": "linux-2.6 - multiple vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to denial of service, privilege escalation, or information\nleak. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2008-4307](https://security-tracker.debian.org/tracker/CVE-2008-4307)\nBryn M. Reeves reported a denial of service in the NFS filesystem.\n Local users can trigger a kernel BUG() due to a race condition in\n the do\\_setlk function.\n* [CVE-2008-5395](https://security-tracker.debian.org/tracker/CVE-2008-5395)\nHelge Deller discovered a denial of service condition that allows\n local users on PA-RISC to crash the system by attempting to unwind\n a stack containing userspace addresses.\n* [CVE-2008-5701](https://security-tracker.debian.org/tracker/CVE-2008-5701)\nVlad Malov reported an issue on 64-bit MIPS where a local user\n could cause a system crash by crafting a malicious binary which\n makes o32 syscalls with a number less than 4000.\n* [CVE-2008-5702](https://security-tracker.debian.org/tracker/CVE-2008-5702)\nZvonimir Rakamaric reported an off-by-one error in the ib700wdt\n watchdog driver which allows local users to cause a buffer\n underflow by making a specially crafted WDIOC\\_SETTIMEOUT ioctl\n call.\n* [CVE-2008-5713](https://security-tracker.debian.org/tracker/CVE-2008-5713)\nFlavio Leitner discovered that a local user can cause a denial of\n service by generating large amounts of traffic on a large SMP\n system, resulting in soft lockups.\n* [CVE-2009-0028](https://security-tracker.debian.org/tracker/CVE-2009-0028)\nChris Evans discovered a situation in which a child process can\n send an arbitrary signal to its parent.\n* [CVE-2009-0029](https://security-tracker.debian.org/tracker/CVE-2009-0029)\nChristian Borntraeger discovered an issue effecting the alpha,\n mips, powerpc, s390 and sparc64 architectures that allows local\n users to cause a denial of service or potentially gain elevated\n privileges.\n* [CVE-2009-0031](https://security-tracker.debian.org/tracker/CVE-2009-0031)\nVegard Nossum discovered a memory leak in the keyctl subsystem\n that allows local users to cause a denial of service by consuming\n all available kernel memory.\n* [CVE-2009-0065](https://security-tracker.debian.org/tracker/CVE-2009-0065)\nWei Yongjun discovered a memory overflow in the SCTP\n implementation that can be triggered by remote users, permitting\n remote code execution.\n* [CVE-2009-0322](https://security-tracker.debian.org/tracker/CVE-2009-0322)\nPavel Roskin provided a fix for an issue in the dell\\_rbu driver\n that allows a local user to cause a denial of service (oops) by\n reading 0 bytes from a sysfs entry.\n* [CVE-2009-0675](https://security-tracker.debian.org/tracker/CVE-2009-0675)\nRoel Kluin discovered inverted logic in the skfddi driver that\n permits local, unprivileged users to reset the driver statistics.\n* [CVE-2009-0676](https://security-tracker.debian.org/tracker/CVE-2009-0676)\nClement LECIGNE discovered a bug in the sock\\_getsockopt function\n that may result in leaking sensitive kernel memory.\n* [CVE-2009-0834](https://security-tracker.debian.org/tracker/CVE-2009-0834)\nRoland McGrath discovered an issue on amd64 kernels that allows\n local users to circumvent system call audit configurations which\n filter based on the syscall numbers or argument details.\n* [CVE-2009-0859](https://security-tracker.debian.org/tracker/CVE-2009-0859)\nJiri Olsa discovered that a local user can cause a denial of\n service (system hang) using a SHM\\_INFO shmctl call on kernels\n compiled with CONFIG\\_SHMEM disabled. This issue does not affect\n prebuilt Debian kernels.\n* [CVE-2009-1192](https://security-tracker.debian.org/tracker/CVE-2009-1192)\nShaohua Li reported an issue in the AGP subsystem that may allow\n local users to read sensitive kernel memory due to a leak of\n uninitialized memory.\n* [CVE-2009-1265](https://security-tracker.debian.org/tracker/CVE-2009-1265)\nThomas Pollet reported an overflow in the af\\_rose implementation\n that allows remote attackers to retrieve uninitialized kernel\n memory that may contain sensitive data.\n* [CVE-2009-1336](https://security-tracker.debian.org/tracker/CVE-2009-1336)\nTrond Myklebust reported an issue in the encode\\_lookup() function\n in the nfs server subsystem that allows local users to cause a\n denial of service (oops in encode\\_lookup()) by use of a long\n filename.\n* [CVE-2009-1337](https://security-tracker.debian.org/tracker/CVE-2009-1337)\nOleg Nesterov discovered an issue in the exit\\_notify function that\n allows local users to send an arbitrary signal to a process by\n running a program that modifies the exit\\_signal field and then\n uses an exec system call to launch a setuid application.\n* [CVE-2009-1439](https://security-tracker.debian.org/tracker/CVE-2009-1439)\nPavan Naregundi reported an issue in the CIFS filesystem code that\n allows remote users to overwrite memory via a long\n nativeFileSystem field in a Tree Connect response during mount.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.6.18.dfsg.1-24etch2.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-24etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12",
+				"2.6.18.dfsg.1-12etch1",
+				"2.6.18.dfsg.1-12etch2",
+				"2.6.18.dfsg.1-13",
+				"2.6.18.dfsg.1-13etch1",
+				"2.6.18.dfsg.1-13etch2",
+				"2.6.18.dfsg.1-13etch3",
+				"2.6.18.dfsg.1-13etch4",
+				"2.6.18.dfsg.1-13etch5",
+				"2.6.18.dfsg.1-13etch6",
+				"2.6.18.dfsg.1-13lenny1",
+				"2.6.18.dfsg.1-14",
+				"2.6.18.dfsg.1-15",
+				"2.6.18.dfsg.1-16",
+				"2.6.18.dfsg.1-17",
+				"2.6.18.dfsg.1-17etch1",
+				"2.6.18.dfsg.1-18",
+				"2.6.18.dfsg.1-18etch1",
+				"2.6.18.dfsg.1-18etch3",
+				"2.6.18.dfsg.1-18etch4",
+				"2.6.18.dfsg.1-18etch5",
+				"2.6.18.dfsg.1-18etch6",
+				"2.6.18.dfsg.1-19",
+				"2.6.18.dfsg.1-20",
+				"2.6.18.dfsg.1-21",
+				"2.6.18.dfsg.1-22",
+				"2.6.18.dfsg.1-22etch1",
+				"2.6.18.dfsg.1-22etch2",
+				"2.6.18.dfsg.1-22etch3",
+				"2.6.18.dfsg.1-23",
+				"2.6.18.dfsg.1-23etch1",
+				"2.6.18.dfsg.1-24",
+				"2.6.18.dfsg.1-24etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1794-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "fai-kernels",
+				"purl": "pkg:deb/debian/fai-kernels?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17+etch.24etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17",
+				"1.17+etch.13etch3",
+				"1.17+etch.13etch4",
+				"1.17+etch.13etch5",
+				"1.17+etch.13etch6",
+				"1.17+etch.16",
+				"1.17+etch.17",
+				"1.17+etch.17etch1",
+				"1.17+etch.18etch1",
+				"1.17+etch.18etch2",
+				"1.17+etch.18etch3",
+				"1.17+etch.18etch4",
+				"1.17+etch.18etch5",
+				"1.17+etch.18etch6",
+				"1.17+etch.21",
+				"1.17+etch.22etch1",
+				"1.17+etch.22etch2",
+				"1.17+etch.22etch3",
+				"1.17+etch.23",
+				"1.17+etch.23etch1",
+				"1.17+etch.24",
+				"1.17+etch1",
+				"1.17+etch2",
+				"1.17+etch3",
+				"1.17+etch4",
+				"1.17+etch5",
+				"1.17etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1794-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "user-mode-linux",
+				"purl": "pkg:deb/debian/user-mode-linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18-1um-2etch.24etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18-1um-2",
+				"2.6.18-1um-2etch.13etch3",
+				"2.6.18-1um-2etch.13etch4",
+				"2.6.18-1um-2etch.13etch5",
+				"2.6.18-1um-2etch.13etch6",
+				"2.6.18-1um-2etch.16",
+				"2.6.18-1um-2etch.17",
+				"2.6.18-1um-2etch.17etch1",
+				"2.6.18-1um-2etch.18etch1",
+				"2.6.18-1um-2etch.18etch2",
+				"2.6.18-1um-2etch.18etch3",
+				"2.6.18-1um-2etch.18etch4",
+				"2.6.18-1um-2etch.18etch5",
+				"2.6.18-1um-2etch.18etch6",
+				"2.6.18-1um-2etch.21",
+				"2.6.18-1um-2etch.22etch1",
+				"2.6.18-1um-2etch.22etch2",
+				"2.6.18-1um-2etch.22etch3",
+				"2.6.18-1um-2etch.23",
+				"2.6.18-1um-2etch.23etch1",
+				"2.6.18-1um-2etch.24",
+				"2.6.18-1um-2etch1",
+				"2.6.18-1um-2etch2",
+				"2.6.18-1um-2etch3",
+				"2.6.18-1um-2etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1794-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1794"
+		}
+	]
+}

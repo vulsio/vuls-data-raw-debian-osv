@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1888-1",
+	"modified": "2023-06-28T06:29:54.696510Z",
+	"published": "2019-08-16T00:00:00Z",
+	"related": [
+		"CVE-2019-12974",
+		"CVE-2019-13135",
+		"CVE-2019-13295",
+		"CVE-2019-13297",
+		"CVE-2019-13304",
+		"CVE-2019-13305",
+		"CVE-2019-13306"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nMultiple vulnerabilities have been found in imagemagick, an image processing\ntoolkit.\n\n\n* [CVE-2019-12974](https://security-tracker.debian.org/tracker/CVE-2019-12974)\nNULL pointer dereference in ReadPANGOImage and ReadVIDImage (coders/pango.c\n and coders/vid.c). This vulnerability might be leveraged by remote attackers\n to cause denial of service via crafted image data.\n* [CVE-2019-13135](https://security-tracker.debian.org/tracker/CVE-2019-13135)\nMultiple use of uninitialized values in ReadCUTImage, UnpackWPG2Raster and\n UnpackWPGRaster (coders/wpg.c and coders/cut.c). These vulnerabilities might\n be leveraged by remote attackers to cause denial of service or unauthorized\n disclosure or modification of information via crafted image data.\n* [CVE-2019-13295](https://security-tracker.debian.org/tracker/CVE-2019-13295),\n[CVE-2019-13297](https://security-tracker.debian.org/tracker/CVE-2019-13297)\nMultiple heap buffer over-reads in AdaptiveThresholdImage\n (magick/threshold.c). These vulnerabilities might be leveraged by remote\n attackers to cause denial of service or unauthorized disclosure or\n modification of information via crafted image data.\n* [CVE-2019-13304](https://security-tracker.debian.org/tracker/CVE-2019-13304),\n[CVE-2019-13305](https://security-tracker.debian.org/tracker/CVE-2019-13305), [CVE-2019-13306](https://security-tracker.debian.org/tracker/CVE-2019-13306)\nMultiple stack buffer overflows in WritePNMImage (coders/pnm.c), leading to\n stack buffer over write up to ten bytes. Remote attackers might leverage\n these flaws to potentially perform code execution or denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n8:6.8.9.9-5+deb8u17.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.8.9.9-5+deb8u17"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.8.9.9-5",
+				"8:6.8.9.9-5+deb8u1",
+				"8:6.8.9.9-5+deb8u10",
+				"8:6.8.9.9-5+deb8u11",
+				"8:6.8.9.9-5+deb8u12",
+				"8:6.8.9.9-5+deb8u13",
+				"8:6.8.9.9-5+deb8u14",
+				"8:6.8.9.9-5+deb8u15",
+				"8:6.8.9.9-5+deb8u16",
+				"8:6.8.9.9-5+deb8u2",
+				"8:6.8.9.9-5+deb8u3",
+				"8:6.8.9.9-5+deb8u4",
+				"8:6.8.9.9-5+deb8u5",
+				"8:6.8.9.9-5+deb8u6",
+				"8:6.8.9.9-5+deb8u7",
+				"8:6.8.9.9-5+deb8u8",
+				"8:6.8.9.9-5+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1888-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1888"
+		}
+	]
+}

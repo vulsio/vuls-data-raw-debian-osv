@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3748-1",
+	"modified": "2023-10-16T00:12:18.078418Z",
+	"published": "2016-12-26T00:00:00Z",
+	"related": [
+		"CVE-2016-9939"
+	],
+	"summary": "libcrypto++ - security update",
+	"details": "\nGergely GĂĄbor Nagy from Tresorit discovered that libcrypto++, a C++\ncryptographic library, contained a bug in several ASN.1 parsing\nroutines. This would allow an attacker to remotely cause a denial of\nservice.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 5.6.1-6+deb8u3.\n\n\nFor the testing (stretch) and unstable (sid) distributions, this\nproblem has been fixed in version 5.6.4-5.\n\n\nWe recommend that you upgrade your libcrypto++ packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libcrypto++",
+				"purl": "pkg:deb/debian/libcrypto%2B%2B?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.6.1-6+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.6.1-6",
+				"5.6.1-6+deb8u1",
+				"5.6.1-6+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3748-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3748"
+		}
+	]
+}

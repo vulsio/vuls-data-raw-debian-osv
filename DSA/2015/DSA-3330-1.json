@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3330-1",
+	"modified": "2023-10-16T00:06:20.322918Z",
+	"published": "2015-08-07T00:00:00Z",
+	"related": [
+		"CVE-2014-3576"
+	],
+	"summary": "activemq - security update",
+	"details": "\nIt was discovered that the Apache ActiveMQ message broker is susceptible\nto denial of service through an undocumented, remote shutdown command. \n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 5.6.0+dfsg-1+deb7u1. This update also fixes [CVE-2014-3612](https://security-tracker.debian.org/tracker/CVE-2014-3612)\nand [CVE-2014-3600](https://security-tracker.debian.org/tracker/CVE-2014-3600).\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 5.6.0+dfsg1-4+deb8u1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your activemq packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "activemq",
+				"purl": "pkg:deb/debian/activemq?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.6.0+dfsg-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.6.0+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3330-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "activemq",
+				"purl": "pkg:deb/debian/activemq?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.6.0+dfsg1-4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.6.0+dfsg1-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3330-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3330"
+		}
+	]
+}

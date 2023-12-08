@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-215",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-23T00:00:00Z",
+	"related": [
+		"CVE-2002-1580"
+	],
+	"summary": "cyrus-imapd - buffer overflow",
+	"details": "\nTimo Sirainen discovered a buffer overflow in the Cyrus IMAP server,\nwhich could be exploited by a remote attacker prior to logging in. A\nmalicious user could craft a request to run commands on the server under\nthe UID and GID of the cyrus server.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.5.19-9.1.\n\n\nFor the old stable distribution (potato) this problem has been fixed\nin version 1.5.19-2.2.\n\n\nFor the unstable distribution (sid) this problem has been\nfixed in version 1.5.19-9.10. Current cyrus21-imapd packages are not\nvulnerable.\n\n\nWe recommend that you upgrade your cyrus-imapd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "cyrus-imapd",
+				"purl": "pkg:deb/debian/cyrus-imapd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.19-9.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-215.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-215"
+		}
+	]
+}

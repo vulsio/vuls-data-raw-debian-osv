@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-289-1",
+	"modified": "2023-06-28T06:20:12.039107Z",
+	"published": "2015-08-07T00:00:00Z",
+	"related": [
+		"CVE-2015-5957"
+	],
+	"summary": "remind - security update",
+	"details": "\nAlexander Keller discovered a buffer overflow issue in remind, a tool for\nsophisticatedly reminding you of upcoming events.\n\n\nIf running Debian squeeze LTS, we recommend upgrading remind to the latest\nversion provided.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "remind",
+				"purl": "pkg:deb/debian/remind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "03.01.05-2+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"03.01.05-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-289-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-289"
+		}
+	]
+}

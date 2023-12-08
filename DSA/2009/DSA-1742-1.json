@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1742-1",
+	"modified": "2023-10-16T00:07:26.178757Z",
+	"published": "2009-03-16T00:00:00Z",
+	"related": [
+		"CVE-2009-0186"
+	],
+	"summary": "libsndfile - arbitrary code execution",
+	"details": "\nAlan Rad Pop discovered that libsndfile, a library to read and write\nsampled audio data, is prone to an integer overflow. This causes a\nheap-based buffer overflow when processing crafted CAF description\nchunks possibly leading to arbitrary code execution.\n\n\nFor the oldstable distribution (etch) this problem has been fixed in\nversion 1.0.16-2+etch1.\n\n\nFor the stable distribution (lenny) this problem has been fixed in\nversion 1.0.17-4+lenny1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0.19-1.\n\n\nWe recommend that you upgrade your libsndfile packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libsndfile",
+				"purl": "pkg:deb/debian/libsndfile?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.16-2+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.16-1",
+				"1.0.16-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1742-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libsndfile",
+				"purl": "pkg:deb/debian/libsndfile?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.17-4+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.17-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1742-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1742"
+		}
+	]
+}

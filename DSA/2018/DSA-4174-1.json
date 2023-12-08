@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4174-1",
+	"modified": "2023-10-16T00:18:10.851662Z",
+	"published": "2018-04-17T00:00:00Z",
+	"related": [
+		"CVE-2018-1084"
+	],
+	"summary": "corosync - security update",
+	"details": "\nThe Citrix Security Response Team discovered that corosync, a cluster\nengine implementation, allowed an unauthenticated user to cause a\ndenial-of-service by application crash.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.4.2-3+deb9u1.\n\n\nWe recommend that you upgrade your corosync packages.\n\n\nFor the detailed security status of corosync please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/corosync](https://security-tracker.debian.org/tracker/corosync)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "corosync",
+				"purl": "pkg:deb/debian/corosync?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.2-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.2-3",
+				"2.4.2-3+deb9u1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4174-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4174"
+		}
+	]
+}

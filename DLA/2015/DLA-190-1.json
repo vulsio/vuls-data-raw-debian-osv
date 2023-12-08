@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-190-1",
+	"modified": "2023-06-28T06:29:56.891529Z",
+	"published": "2015-04-09T00:00:00Z",
+	"related": [
+		"CVE-2014-3591",
+		"CVE-2015-0837"
+	],
+	"summary": "libgcrypt11 - security update",
+	"details": "\nMultiple vulnerabilities were discovered in libgcrypt:\n\n\n* [CVE-2014-3591](https://security-tracker.debian.org/tracker/CVE-2014-3591)\nThe Elgamal decryption routine was susceptible to a side-channel\n attack discovered by researchers of Tel Aviv University. Ciphertext\n blinding was enabled to counteract it. Note that this may have a\n quite noticeable impact on Elgamal decryption performance.\n* [CVE-2015-0837](https://security-tracker.debian.org/tracker/CVE-2015-0837)\nThe modular exponentiation routine mpi\\_powm() was susceptible to a\n side-channel attack caused by data-dependent timing variations when\n accessing its internal pre-computed table.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libgcrypt11",
+				"purl": "pkg:deb/debian/libgcrypt11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.5-2+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.5-2",
+				"1.4.5-2+squeeze1",
+				"1.4.5-2+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-190-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-190"
+		}
+	]
+}

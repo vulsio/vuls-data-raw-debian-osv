@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5266-1",
+	"modified": "2023-10-16T00:16:20.524766Z",
+	"published": "2022-10-30T00:00:00Z",
+	"related": [
+		"CVE-2022-43680"
+	],
+	"summary": "expat - security update",
+	"details": "\nA heap use-after-free vulnerability after overeager destruction of a\nshared DTD in the XML\\_ExternalEntityParserCreate function in Expat, an\nXML parsing C library, may result in denial of service or potentially\nthe execution of arbitrary code.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.2.10-2+deb11u5.\n\n\nWe recommend that you upgrade your expat packages.\n\n\nFor the detailed security status of expat please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/expat](https://security-tracker.debian.org/tracker/expat)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "expat",
+				"purl": "pkg:deb/debian/expat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.10-2+deb11u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.10-2",
+				"2.2.10-2+deb11u1",
+				"2.2.10-2+deb11u2",
+				"2.2.10-2+deb11u3",
+				"2.2.10-2+deb11u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5266-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5266"
+		}
+	]
+}

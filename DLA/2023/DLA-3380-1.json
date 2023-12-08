@@ -1,0 +1,150 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3380-1",
+	"modified": "2023-06-28T06:42:52.181553Z",
+	"published": "2023-04-01T00:00:00Z",
+	"related": [
+		"CVE-2020-12362",
+		"CVE-2020-12363",
+		"CVE-2020-12364",
+		"CVE-2020-24586",
+		"CVE-2020-24587",
+		"CVE-2020-24588",
+		"CVE-2021-23168",
+		"CVE-2021-23223",
+		"CVE-2021-37409",
+		"CVE-2021-44545",
+		"CVE-2022-21181"
+	],
+	"summary": "firmware-nonfree - security update",
+	"details": "\nThe firmware-nonfree package has been updated to include addtional firmware\nthat may be requested by some drivers in Linux 5.10, availble for Debian LTS as\nbackported kernel.\n\n\nSome of the updated firmware files adresses security vulnerabilities, which may\nallow Escalation of Privileges, Denial of Services and Information Disclosures.\n\n\n* [CVE-2020-24586](https://security-tracker.debian.org/tracker/CVE-2020-24586)\n(INTEL-SA-00473)\n\n\nThe 802.11 standard that underpins Wi-Fi Protected Access (WPA,\n WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require\n that received fragments be cleared from memory after (re)connecting\n to a network. Under the right circumstances, when another device\n sends fragmented frames encrypted using WEP, CCMP, or GCMP, this can\n be abused to inject arbitrary network packets and/or exfiltrate user\n data.\n* [CVE-2020-24587](https://security-tracker.debian.org/tracker/CVE-2020-24587)\n(INTEL-SA-00473)\n\n\nThe 802.11 standard that underpins Wi-Fi Protected Access (WPA,\n WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require\n that all fragments of a frame are encrypted under the same key. An\n adversary can abuse this to decrypt selected fragments when another\n device sends fragmented frames and the WEP, CCMP, or GCMP encryption\n key is periodically renewed.\n* [CVE-2020-24588](https://security-tracker.debian.org/tracker/CVE-2020-24588)\n(INTEL-SA-00473)\n\n\nThe 802.11 standard that underpins Wi-Fi Protected Access (WPA,\n WPA2, and WPA3) and Wired Equivalent Privacy (WEP) doesn't require\n that the A-MSDU flag in the plaintext QoS header field is\n authenticated. Against devices that support receiving non-SSP A-MSDU\n frames (which is mandatory as part of 802.11n), an adversary can\n abuse this to inject arbitrary network packets.\n* [CVE-2021-23168](https://security-tracker.debian.org/tracker/CVE-2021-23168)\n(INTEL-SA-00621)\n\n\nOut of bounds read for some Intel(R) PROSet/Wireless WiFi and\n Killer(TM) WiFi products may allow an unauthenticated user to\n potentially enable denial of service via adjacent access.\n* [CVE-2021-23223](https://security-tracker.debian.org/tracker/CVE-2021-23223)\n(INTEL-SA-00621)\n\n\nImproper initialization for some Intel(R) PROSet/Wireless WiFi and\n Killer(TM) WiFi products may allow a privileged user to potentially\n enable escalation of privilege via local access.\n* [CVE-2021-37409](https://security-tracker.debian.org/tracker/CVE-2021-37409)\n(INTEL-SA-00621)\n\n\nImproper access control for some Intel(R) PROSet/Wireless WiFi and\n Killer(TM) WiFi products may allow a privileged user to potentially\n enable escalation of privilege via local access.\n* [CVE-2021-44545](https://security-tracker.debian.org/tracker/CVE-2021-44545)\n(INTEL-SA-00621)\n\n\nImproper input validation for some Intel(R) PROSet/Wireless WiFi and\n Killer(TM) WiFi products may allow an unauthenticated user to\n potentially enable denial of service via adjacent access.\n* [CVE-2022-21181](https://security-tracker.debian.org/tracker/CVE-2022-21181)\n(INTEL-SA-00621)\n\n\nImproper input validation for some Intel(R) PROSet/Wireless WiFi and\n Killer(TM) WiFi products may allow a privileged user to potentially\n enable escalation of privilege via local access.\n\n\nThe following advisories are also fixed by this upload, but needs an\nupdated Linux kernel to load the updated firmware:\n* [CVE-2020-12362](https://security-tracker.debian.org/tracker/CVE-2020-12362)\n(INTEL-SA-00438)\n\n\nInteger overflow in the firmware for some Intel(R) Graphics Drivers\n for Windows \\* before version 26.20.100.7212 and before Linux kernel\n version 5.5 may allow a privileged user to potentially enable an\n escalation of privilege via local access.\n* [CVE-2020-12363](https://security-tracker.debian.org/tracker/CVE-2020-12363)\n(INTEL-SA-00438)\n\n\nImproper input validation in some Intel(R) Graphics Drivers for\n Windows\\* before version 26.20.100.7212 and before Linux kernel\n version 5.5 may allow a privileged user to potentially enable a\n denial of service via local access.\n* [CVE-2020-12364](https://security-tracker.debian.org/tracker/CVE-2020-12364)\n(INTEL-SA-00438)\n\n\nNull pointer reference in some Intel(R) Graphics Drivers for\n Windows\\* before version 26.20.100.7212 and before version Linux\n kernel version 5.5 may allow a privileged user to potentially enable\n a denial of service via local access.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n20190114+really20220913-0+deb10u1.\n\n\nWe recommend that you upgrade your firmware-nonfree packages.\n\n\nFor the detailed security status of firmware-nonfree please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/firmware-nonfree>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "firmware-nonfree",
+				"purl": "pkg:deb/debian/firmware-nonfree?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20190114+really20220913-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1",
+				"0.10",
+				"0.11",
+				"0.12",
+				"0.13",
+				"0.13~bpo40+1",
+				"0.14",
+				"0.14+lenny1",
+				"0.14+lenny2",
+				"0.15",
+				"0.16",
+				"0.16~bpo50+1",
+				"0.17",
+				"0.17~bpo50+1",
+				"0.18",
+				"0.19",
+				"0.2",
+				"0.20",
+				"0.21",
+				"0.22",
+				"0.23",
+				"0.23~bpo50+1",
+				"0.24",
+				"0.24~bpo50+1",
+				"0.25",
+				"0.26",
+				"0.27",
+				"0.27~bpo50+1",
+				"0.28",
+				"0.28+squeeze1",
+				"0.29",
+				"0.3",
+				"0.30",
+				"0.31",
+				"0.32",
+				"0.32~bpo60+1",
+				"0.33",
+				"0.34",
+				"0.35",
+				"0.35~bpo60+1",
+				"0.36",
+				"0.36+wheezy.1",
+				"0.36+wheezy.1~bpo60+1",
+				"0.37",
+				"0.38",
+				"0.38~bpo70+1",
+				"0.39",
+				"0.39~bpo70+1",
+				"0.4",
+				"0.4+etchnhalf.1",
+				"0.40",
+				"0.40~bpo70+1",
+				"0.41",
+				"0.41~bpo70+1",
+				"0.42",
+				"0.43",
+				"0.43~bpo70+1",
+				"0.44",
+				"0.44~bpo8+1",
+				"0.4etch1",
+				"0.5",
+				"0.6",
+				"0.7",
+				"0.8",
+				"0.9",
+				"20151018-1",
+				"20151018-2",
+				"20151018-2~bpo8+1",
+				"20151207-1",
+				"20151207-1~bpo8+1",
+				"20160110-1",
+				"20160110-1~bpo8+1",
+				"20160824-1",
+				"20160824-1~bpo8+1",
+				"20161130-1",
+				"20161130-2",
+				"20161130-2~bpo8+1",
+				"20161130-3",
+				"20161130-3~bpo8+1",
+				"20161130-4",
+				"20161130-4~deb8u1",
+				"20161130-5",
+				"20161130-5~deb8u1",
+				"20170823-1",
+				"20170823-1~bpo9+1",
+				"20180518-1",
+				"20180518-1~bpo9+1",
+				"20180825+dfsg-1",
+				"20180825+dfsg-1~bpo9+1",
+				"20180825-1",
+				"20190114-1",
+				"20190114-1~bpo9+1",
+				"20190114-1~bpo9+2",
+				"20190114-2",
+				"20190114-2~bpo9+1",
+				"20190114-2~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3380-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3380"
+		}
+	]
+}

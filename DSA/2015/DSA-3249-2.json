@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3249-2",
+	"modified": "2023-10-16T00:11:53.488007Z",
+	"published": "2015-05-03T00:00:00Z",
+	"summary": "jqueryui - security update",
+	"details": "\nShadowman131 discovered that jqueryui, a JavaScript UI library for\ndynamic web applications, failed to properly sanitize its title\noption. This would allow a remote attacker to inject arbitrary code\nthrough cross-site scripting.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.8.ooops.21+dfsg-2+deb7u1.\n\n\nFor the stable distribution (jessie), testing distribution (stretch)\nand unstable distribution (sid), this problem has been fixed in\nversion 1.10.1+dfsg-1.\n\n\nWe recommend that you upgrade your jqueryui packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "jqueryui",
+				"purl": "pkg:deb/debian/jqueryui?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.ooops.21+dfsg-2+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.ooops.21+dfsg-2",
+				"1.8.ooops.21+dfsg-2+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3249-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3249"
+		}
+	]
+}

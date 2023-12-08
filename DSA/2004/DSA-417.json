@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-417",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-01-07T00:00:00Z",
+	"related": [
+		"CVE-2003-0961",
+		"CVE-2003-0985"
+	],
+	"summary": "linux-kernel-2.4.18-powerpc+alpha - missing boundary check",
+	"details": "\nPaul Starzetz discovered a flaw in bounds checking in mremap() in the\nLinux kernel (present in version 2.4.x and 2.6.x) which may allow a\nlocal attacker to gain root privileges. Version 2.2 is not affected\nby this bug.\n\n\nAndrew Morton discovered a missing boundary check for the brk system\ncall which can be used to craft a local root exploit.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.4.18-12 for the alpha architecture and in\nversion 2.4.18-1woody3 for the powerpc architecture.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon\nwith newly uploaded packages.\n\n\nWe recommend that you upgrade your kernel packages. These problems have\nbeen fixed in the upstream version 2.4.24 as well.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-patch-2.4.18-powerpc",
+				"purl": "pkg:deb/debian/kernel-patch-2.4.18-powerpc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.18-1woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-417.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.4.18-1-alpha",
+				"purl": "pkg:deb/debian/kernel-image-2.4.18-1-alpha?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.18-12"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-417.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-417"
+		}
+	]
+}

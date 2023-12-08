@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2631-1",
+	"modified": "2023-10-16T00:11:22.260675Z",
+	"published": "2013-02-24T00:00:00Z",
+	"related": [
+		"CVE-2012-5643",
+		"CVE-2013-0189"
+	],
+	"summary": "squid3 - denial of service",
+	"details": "\nSquid3, a fully featured Web proxy cache, is prone to a denial of\nservice attack due to memory consumption caused by memory leaks in\ncachemgr.cgi:\n\n\n* [CVE-2012-5643](https://security-tracker.debian.org/tracker/CVE-2012-5643)\nsquid's cachemgr.cgi was vulnerable to excessive resource use.\n A remote attacker could exploit this flaw to perform a denial of\n service attack on the server and other hosted services.\n* [CVE-2013-0189](https://security-tracker.debian.org/tracker/CVE-2013-0189)\nThe original patch for [CVE-2012-5643](https://security-tracker.debian.org/tracker/CVE-2012-5643)\n was incomplete. A remote attacker still could exploit this flaw\n to perform a denial of service attack.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 3.1.6-1.2+squeeze3.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 3.1.20-2.1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.1.20-2.1.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.6-1.2+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.6-1.2",
+				"3.1.6-1.2+squeeze1",
+				"3.1.6-1.2+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2631-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2631"
+		}
+	]
+}

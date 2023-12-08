@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1359-1",
+	"modified": "2023-06-28T06:19:55.319408Z",
+	"published": "2018-04-23T00:00:00Z",
+	"related": [
+		"CVE-2017-17742",
+		"CVE-2018-6914",
+		"CVE-2018-8777",
+		"CVE-2018-8778",
+		"CVE-2018-8779",
+		"CVE-2018-8780"
+	],
+	"summary": "ruby1.8 - security update",
+	"details": "\nMultiple vulnerabilities were found in the interpreter for the Ruby\nlanguage. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues:\n\n\n* [CVE-2017-17742](https://security-tracker.debian.org/tracker/CVE-2017-17742)\nAaron Patterson reported that WEBrick bundled with Ruby was vulnerable to\n an HTTP response splitting vulnerability. It was possible for an attacker\n to inject fake HTTP responses if a script accepted an external input and\n output it without modifications.\n* [CVE-2018-6914](https://security-tracker.debian.org/tracker/CVE-2018-6914)\nooooooo\\_q discovered a directory traversal vulnerability in the\n Dir.mktmpdir method in the tmpdir library. It made it possible for\n attackers to create arbitrary directories or files via a .. (dot dot) in\n the prefix argument.\n* [CVE-2018-8777](https://security-tracker.debian.org/tracker/CVE-2018-8777)\nEric Wong reported an out-of-memory DoS vulnerability related to a large\n request in WEBrick bundled with Ruby.\n* [CVE-2018-8778](https://security-tracker.debian.org/tracker/CVE-2018-8778)\naerodudrizzt found a buffer under-read vulnerability in the Ruby\n String#unpack method. If a big number was passed with the specifier @,\n the number was treated as a negative value, and an out-of-buffer read\n occurred. Attackers could read data on heaps if an script accepts an\n external input as the argument of String#unpack.\n* [CVE-2018-8779](https://security-tracker.debian.org/tracker/CVE-2018-8779)\nooooooo\\_q reported that the UNIXServer.open and UNIXSocket.open\n methods of the socket library bundled with Ruby did not check for NUL\n bytes in the path argument. The lack of check made the methods\n vulnerable to unintentional socket creation and unintentional socket\n access.\n* [CVE-2018-8780](https://security-tracker.debian.org/tracker/CVE-2018-8780)\nooooooo\\_q discovered an unintentional directory traversal in\n some methods in Dir, by the lack of checking for NUL bytes in their\n parameter.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8.7.358-7.1+deb7u6.\n\n\nWe recommend that you upgrade your ruby1.8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ruby1.8",
+				"purl": "pkg:deb/debian/ruby1.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.7.358-7.1+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.7.358-7",
+				"1.8.7.358-7.1",
+				"1.8.7.358-7.1+deb7u1",
+				"1.8.7.358-7.1+deb7u2",
+				"1.8.7.358-7.1+deb7u3",
+				"1.8.7.358-7.1+deb7u4",
+				"1.8.7.358-7.1+deb7u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1359-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1359"
+		}
+	]
+}

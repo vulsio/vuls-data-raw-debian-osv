@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3890-1",
+	"modified": "2023-10-16T00:12:25.662155Z",
+	"published": "2017-06-21T00:00:00Z",
+	"related": [
+		"CVE-2017-9736"
+	],
+	"summary": "spip - security update",
+	"details": "\nEmeric Boit of ANSSI reported that SPIP, a website engine for\npublishing, insufficiently sanitises the value from the X-Forwarded-Host\nHTTP header field. An unauthenticated attacker can take advantage of\nthis flaw to cause remote code execution.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3.1.4-3~deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 3.1.4-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.1.4-3.\n\n\nWe recommend that you upgrade your spip packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "spip",
+				"purl": "pkg:deb/debian/spip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.4-3~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3890-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3890"
+		}
+	]
+}

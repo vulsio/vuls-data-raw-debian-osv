@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3305-1",
+	"modified": "2023-06-28T06:26:55.570053Z",
+	"published": "2023-01-31T00:00:00Z",
+	"related": [
+		"CVE-2018-16981",
+		"CVE-2019-13217",
+		"CVE-2019-13218",
+		"CVE-2019-13219",
+		"CVE-2019-13220",
+		"CVE-2019-13221",
+		"CVE-2019-13222",
+		"CVE-2019-13223",
+		"CVE-2021-28021",
+		"CVE-2021-37789",
+		"CVE-2021-42715",
+		"CVE-2022-28041",
+		"CVE-2022-28042"
+	],
+	"summary": "libstb - security update",
+	"details": "\nSeveral vulnerabilities have been fixed in the libstb library.\n\n\n* [CVE-2018-16981](https://security-tracker.debian.org/tracker/CVE-2018-16981)\nHeap-based buffer overflow in stbi\\_\\_out\\_gif\\_code().\n* [CVE-2019-13217](https://security-tracker.debian.org/tracker/CVE-2019-13217)\nHeap buffer overflow in the Vorbis start\\_decoder().\n* [CVE-2019-13218](https://security-tracker.debian.org/tracker/CVE-2019-13218)\nDivision by zero in the Vorbis predict\\_point().\n* [CVE-2019-13219](https://security-tracker.debian.org/tracker/CVE-2019-13219)\nNULL pointer dereference in the Vorbis get\\_window().\n* [CVE-2019-13220](https://security-tracker.debian.org/tracker/CVE-2019-13220)\nUninitialized stack variables in the Vorbis start\\_decoder().\n* [CVE-2019-13221](https://security-tracker.debian.org/tracker/CVE-2019-13221)\nBuffer overflow in the Vorbis compute\\_codewords().\n* [CVE-2019-13222](https://security-tracker.debian.org/tracker/CVE-2019-13222)\nOut-of-bounds read of a global buffer in the Vorbis draw\\_line().\n* [CVE-2019-13223](https://security-tracker.debian.org/tracker/CVE-2019-13223)\nReachable assertion in the Vorbis lookup1\\_values().\n* [CVE-2021-28021](https://security-tracker.debian.org/tracker/CVE-2021-28021)\nBuffer overflow in stbi\\_\\_extend\\_receive().\n* [CVE-2021-37789](https://security-tracker.debian.org/tracker/CVE-2021-37789)\nHeap-based buffer overflow in stbi\\_\\_jpeg\\_load().\n* [CVE-2021-42715](https://security-tracker.debian.org/tracker/CVE-2021-42715)\nThe HDR loader parsed truncated end-of-file RLE scanlines as an\n infinite sequence of zero-length runs.\n* [CVE-2022-28041](https://security-tracker.debian.org/tracker/CVE-2022-28041)\nInteger overflow in stbi\\_\\_jpeg\\_decode\\_block\\_prog\\_dc().\n* [CVE-2022-28042](https://security-tracker.debian.org/tracker/CVE-2022-28042)\nHeap-based use-after-free in stbi\\_\\_jpeg\\_huff\\_decode().\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.0~git20180212.15.e6afb9c-1+deb10u1.\n\n\nWe recommend that you upgrade your libstb packages.\n\n\nFor the detailed security status of libstb please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libstb>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libstb",
+				"purl": "pkg:deb/debian/libstb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.0~git20180212.15.e6afb9c-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.0~git20180212.15.e6afb9c-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3305-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3305"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5025-1",
+	"modified": "2023-10-16T00:22:37.966294Z",
+	"published": "2021-12-19T00:00:00Z",
+	"related": [
+		"CVE-2021-4076"
+	],
+	"summary": "tang - security update",
+	"details": "\nA flaw was discovered in tang, a network-based cryptographic binding\nserver, which could result in leak of private keys.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 8-3+deb11u1.\n\n\nWe recommend that you upgrade your tang packages.\n\n\nFor the detailed security status of tang please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tang](https://security-tracker.debian.org/tracker/tang)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "tang",
+				"purl": "pkg:deb/debian/tang?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8-3+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5025-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-5025"
+		}
+	]
+}

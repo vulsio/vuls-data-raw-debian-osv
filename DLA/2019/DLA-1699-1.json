@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1699-1",
+	"modified": "2023-06-28T06:25:04.481649Z",
+	"published": "2019-03-01T00:00:00Z",
+	"related": [
+		"CVE-2019-3824"
+	],
+	"summary": "ldb - security update",
+	"details": "\nGarming Sam reported an out-of-bounds read in the ldb\\_wildcard\\_compare()\nfunction of ldb, a LDAP-like embedded database, resulting in denial of\nservice.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2:1.1.20-0+deb8u2.\n\n\nWe recommend that you upgrade your ldb packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ldb",
+				"purl": "pkg:deb/debian/ldb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.1.20-0+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.1.17-2",
+				"2:1.1.17-2+deb8u1",
+				"2:1.1.20-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1699-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1699"
+		}
+	]
+}

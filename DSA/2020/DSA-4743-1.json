@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4743-1",
+	"modified": "2023-10-16T00:26:28.423736Z",
+	"published": "2020-08-10T00:00:00Z",
+	"related": [
+		"CVE-2020-14001"
+	],
+	"summary": "ruby-kramdown - security update",
+	"details": "\nA flaw was discovered in ruby-kramdown, a fast, pure ruby, Markdown\nparser and converter, which could result in unintended read access to\nfiles or unintended embedded Ruby code execution when the {::options /}\nextension is used together with the template option.\n\n\nThe update introduces a new option forbidden\\_inline\\_options to\nrestrict the options allowed with the {::options /} extension. By\ndefault the template option is forbidden.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.17.0-1+deb10u1.\n\n\nWe recommend that you upgrade your ruby-kramdown packages.\n\n\nFor the detailed security status of ruby-kramdown please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ruby-kramdown](https://security-tracker.debian.org/tracker/ruby-kramdown)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ruby-kramdown",
+				"purl": "pkg:deb/debian/ruby-kramdown?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17.0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4743-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4743"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1109",
+	"modified": "2023-10-16T00:05:11.837737Z",
+	"published": "2006-07-16T00:00:00Z",
+	"related": [
+		"CVE-2006-1320"
+	],
+	"summary": "rssh - programming error",
+	"details": "\nRuss Allbery discovered that rssh, a restricted shell, performs\ninsufficient checking of incoming commands, which might lead to a bypass\nof access restrictions.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.2.3-1.sarge.2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.3.0-1.1.\n\n\nWe recommend that you upgrade your rssh package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "rssh",
+				"purl": "pkg:deb/debian/rssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.3-1.sarge.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.3-1",
+				"2.2.3-1.sarge.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1109.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1109"
+		}
+	]
+}

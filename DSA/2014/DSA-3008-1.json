@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3008-1",
+	"modified": "2023-10-16T00:11:41.973983Z",
+	"published": "2014-08-21T00:00:00Z",
+	"related": [
+		"CVE-2014-3538",
+		"CVE-2014-3587",
+		"CVE-2014-3597",
+		"CVE-2014-4670"
+	],
+	"summary": "php5 - security update",
+	"details": "\nSeveral vulnerabilities were found in PHP, a general-purpose scripting\nlanguage commonly used for web application development. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2014-3538](https://security-tracker.debian.org/tracker/CVE-2014-3538)\nIt was discovered that the original fix for [CVE-2013-7345](https://security-tracker.debian.org/tracker/CVE-2013-7345) did not\n sufficiently address the problem. A remote attacker could still\n cause a denial of service (CPU consumption) via a specially-crafted\n input file that triggers backtracking during processing of an awk\n regular expression rule.\n* [CVE-2014-3587](https://security-tracker.debian.org/tracker/CVE-2014-3587)\nIt was discovered that the CDF parser of the fileinfo module does\n not properly process malformed files in the Composite Document File\n (CDF) format, leading to crashes.\n* [CVE-2014-3597](https://security-tracker.debian.org/tracker/CVE-2014-3597)\nIt was discovered that the original fix for [CVE-2014-4049](https://security-tracker.debian.org/tracker/CVE-2014-4049) did not\n completely address the issue. A malicious server or\n man-in-the-middle attacker could cause a denial of service (crash)\n and possibly execute arbitrary code via a crafted DNS TXT record.\n* [CVE-2014-4670](https://security-tracker.debian.org/tracker/CVE-2014-4670)\nIt was discovered that PHP incorrectly handled certain SPL\n Iterators. A local attacker could use this flaw to cause PHP to\n crash, resulting in a denial of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 5.4.4-14+deb7u13. In addition, this update contains several\nbugfixes originally targeted for the upcoming Wheezy point release.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.4-14+deb7u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3008-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3008"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-709-1",
+	"modified": "2023-06-28T06:32:31.979477Z",
+	"published": "2016-11-16T00:00:00Z",
+	"summary": "postgresql-9.1 - bugfix update",
+	"details": "\nSeveral bugs were discovered in PostgreSQL, a relational database server\n system. This update corrects various stability issues.\n\n\n9.1.24 marks the end of life of the PostgreSQL 9.1 branch. No further\n releases will be made by the PostgreSQL Global Development Group.\n\n\nUsers of PostgreSQL 9.1 should look into upgrading to a newer PostgreSQL\n release. Options are:\n\n\n* Upgrading to Debian 8 (Jessie), providing postgresql-9.4.\n* The use of the apt.postgresql.org repository, providing packages for all\n active PostgreSQL branches (9.2 up to 9.6 at the time of writing).\n\n\nSee <https://wiki.postgresql.org/wiki/Apt> for more information about the\n repository.\n\n\nA helper script to activate the repository is provided in\n /usr/share/doc/postgresql-9.1/examples/apt.postgresql.org.sh.gz.\n* In Debian, an LTS version of 9.1 is in planning that will cover the\n lifetime of wheezy-lts. Updates will made on a best-effort basis. Users\n can take advantage of this, but should still consider upgrading to newer\n PostgreSQL versions over the next months.\n\n\nSee <https://wiki.debian.org/LTS> for more information about Debian LTS.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in postgresql-9.1 version 9.1.24-0+deb7u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "postgresql-9.1",
+				"purl": "pkg:deb/debian/postgresql-9.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.1.24-0+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.1.10-0wheezy1",
+				"9.1.10-1",
+				"9.1.11-0wheezy1",
+				"9.1.11-1",
+				"9.1.11-1~bpo60+1",
+				"9.1.11-2",
+				"9.1.12-0wheezy1",
+				"9.1.12-0wheezy1~bpo60+1",
+				"9.1.12-1",
+				"9.1.13-0wheezy1",
+				"9.1.13-0wheezy1~bpo60+1",
+				"9.1.13-1",
+				"9.1.14-0+deb7u1",
+				"9.1.14-0wheezy1",
+				"9.1.15-0+deb7u1",
+				"9.1.15-0+deb7u1~bpo60+1",
+				"9.1.16-0+deb7u1",
+				"9.1.16-0+deb7u2",
+				"9.1.17-0+deb7u1",
+				"9.1.18-0+deb7u1",
+				"9.1.19-0+deb7u1",
+				"9.1.20-0+deb7u1",
+				"9.1.21-0+deb7u1",
+				"9.1.22-0+deb7u1",
+				"9.1.23-0+deb7u1",
+				"9.1.9-1",
+				"9.1.9-2",
+				"9.1.9-3",
+				"9.1.9-4",
+				"9.1.9-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-709-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-709"
+		}
+	]
+}

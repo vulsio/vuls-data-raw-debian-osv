@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3263-1",
+	"modified": "2023-06-28T06:33:40.553663Z",
+	"published": "2023-01-09T00:00:00Z",
+	"related": [
+		"CVE-2021-46848"
+	],
+	"summary": "libtasn1-6 - security update",
+	"details": "\nIt was discovered that there was an off-by-one array size issue in\nlibtasn1-6, a library to manage the generic ASN.1 data structure.\n\n\n* [CVE-2021-46848](https://security-tracker.debian.org/tracker/CVE-2021-46848)\nGNU Libtasn1 before 4.19.0 has an ETYPE\\_OK off-by-one array size check that affects asn1\\_encode\\_simple\\_der.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n4.13-3+deb10u1.\n\n\nWe recommend that you upgrade your libtasn1-6 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libtasn1-6",
+				"purl": "pkg:deb/debian/libtasn1-6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.13-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.13-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3263-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3263"
+		}
+	]
+}

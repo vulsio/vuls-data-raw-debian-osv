@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-162",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-09-06T00:00:00Z",
+	"related": [
+		"CVE-2002-0834"
+	],
+	"summary": "ethereal - buffer overflow",
+	"details": "\nEthereal developers discovered a buffer overflow in the ISIS protocol\ndissector. It may be possible to make Ethereal crash or hang by\ninjecting a purposefully malformed packet onto the wire, or by\nconvincing someone to read a malformed packet trace file. It may be\npossible to make Ethereal run arbitrary code by exploiting the buffer\nand pointer problems.\n\n\nThis problem has been fixed in version 0.9.4-1woody2 for the current\nstable distribution (woody), in version 0.8.0-4potato.1 for\nthe old stable distribution (potato) and in version 0.9.6-1 for the\nunstable distribution (sid).\n\n\nWe recommend that you upgrade your ethereal packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "ethereal",
+				"purl": "pkg:deb/debian/ethereal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.4-1woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-162.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-162"
+		}
+	]
+}

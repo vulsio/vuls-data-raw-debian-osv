@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-737-1",
+	"modified": "2023-06-28T06:25:38.359888Z",
+	"published": "2016-12-08T00:00:00Z",
+	"related": [
+		"CVE-2016-9920"
+	],
+	"summary": "roundcube - security update",
+	"details": "\nIt was discovered that there was a vulnerability where a remote user could\nexecute arbitrary commands in Roundcube, a webmail solution for IMAP\nservers, by sending a specially crafted email.\n\n\nThis was due to lack of sanitisation of the arguments to PHP's mail\nfunction.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in roundcube version\n0.7.2-9+deb7u5.\n\n\nWe recommend that you upgrade your roundcube packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "roundcube",
+				"purl": "pkg:deb/debian/roundcube?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.2-9+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.2-9",
+				"0.7.2-9+deb7u1",
+				"0.7.2-9+deb7u2",
+				"0.7.2-9+deb7u3",
+				"0.7.2-9+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-737-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-737"
+		}
+	]
+}

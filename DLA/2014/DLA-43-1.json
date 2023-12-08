@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-43-1",
+	"modified": "2023-06-28T06:27:00.730890Z",
+	"published": "2014-09-02T00:00:00Z",
+	"related": [
+		"CVE-2014-0475",
+		"CVE-2014-5119"
+	],
+	"summary": "eglibc - security update",
+	"details": "\n* [CVE-2014-0475](https://security-tracker.debian.org/tracker/CVE-2014-0475)\nStephane Chazelas discovered that the GNU C library, glibc, processed\n \"..\" path segments in locale-related environment variables, possibly\n allowing attackers to circumvent intended restrictions, such as\n ForceCommand in OpenSSH, assuming that they can supply crafted locale\n settings.\n* [CVE-2014-5119](https://security-tracker.debian.org/tracker/CVE-2014-5119)\nTavis Ormandy discovered a heap-based buffer overflow in the\n transliteration module loading code in eglibc, Debian's version of the\n GNU C Library. As a result, an attacker who can supply a crafted\n destination character set argument to iconv-related character\n conversation functions could achieve arbitrary code execution.\n\n\nThis update removes support of loadable gconv transliteration modules.\n Besides the security vulnerability, the module loading code had\n functionality defects which prevented it from working for the intended\n purpose.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in eglibc version 2.11.3-4+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "eglibc",
+				"purl": "pkg:deb/debian/eglibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11.3-4+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11.2-10",
+				"2.11.2-10+m68k.1",
+				"2.11.2-11",
+				"2.11.2-11+m68k.1",
+				"2.11.2-12",
+				"2.11.2-13",
+				"2.11.3-1",
+				"2.11.3-2",
+				"2.11.3-3",
+				"2.11.3-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-43-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-43"
+		}
+	]
+}

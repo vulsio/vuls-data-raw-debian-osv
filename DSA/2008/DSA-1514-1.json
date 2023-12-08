@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1514-1",
+	"modified": "2023-10-16T00:05:26.577718Z",
+	"published": "2008-03-09T00:00:00Z",
+	"related": [
+		"CVE-2007-2423",
+		"CVE-2007-2637",
+		"CVE-2008-0780",
+		"CVE-2008-0781",
+		"CVE-2008-0782",
+		"CVE-2008-1098",
+		"CVE-2008-1099"
+	],
+	"summary": "moin",
+	"details": "\nSeveral remote vulnerabilities have been discovered in MoinMoin, a\nPython clone of WikiWiki. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2007-2423](https://security-tracker.debian.org/tracker/CVE-2007-2423)\nA cross-site-scripting vulnerability has been discovered in\n attachment handling.\n* [CVE-2007-2637](https://security-tracker.debian.org/tracker/CVE-2007-2637)\nAccess control lists for calendars and includes were\n insufficiently enforced, which could lead to information\n disclosure.\n* [CVE-2008-0780](https://security-tracker.debian.org/tracker/CVE-2008-0780)\nA cross-site-scripting vulnerability has been discovered in\n the login code.\n* [CVE-2008-0781](https://security-tracker.debian.org/tracker/CVE-2008-0781)\nA cross-site-scripting vulnerability has been discovered in\n attachment handling.\n* [CVE-2008-0782](https://security-tracker.debian.org/tracker/CVE-2008-0782)\nA directory traversal vulnerability in cookie handling could\n lead to local denial of service by overwriting files.\n* [CVE-2008-1098](https://security-tracker.debian.org/tracker/CVE-2008-1098)\nCross-site-scripting vulnerabilities have been discovered in\n the GUI editor formatter and the code to delete pages.\n* [CVE-2008-1099](https://security-tracker.debian.org/tracker/CVE-2008-1099)\nThe macro code validates access control lists insufficiently,\n which could lead to information disclosure.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.5.3-1.2etch1. This update also includes a bugfix with respect to the\nencoding of password reminder mails, which doesn't have security\nimplications.\n\n\nThe old stable distribution (sarge) will not be updated due to\nthe many changes and support for Sarge ending end of this month\nanyway. You're advised to upgrade to the stable distribution if\nyou run moinmoin.\n\n\nWe recommend that you upgrade your moin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "moin",
+				"purl": "pkg:deb/debian/moin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.3-1.2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.3-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1514-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1514"
+		}
+	]
+}

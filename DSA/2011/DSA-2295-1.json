@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2295-1",
+	"modified": "2023-10-16T00:11:06.126700Z",
+	"published": "2011-08-17T00:00:00Z",
+	"related": [
+		"CVE-2011-0084",
+		"CVE-2011-2378",
+		"CVE-2011-2981",
+		"CVE-2011-2982",
+		"CVE-2011-2983",
+		"CVE-2011-2984"
+	],
+	"summary": "iceape - several",
+	"details": "\nSeveral vulnerabilities have been found in the Iceape internet suite, an\nunbranded version of Seamonkey:\n\n\n* [CVE-2011-0084](https://security-tracker.debian.org/tracker/CVE-2011-0084)\nregenrecht discovered that incorrect pointer handling in the SVG\n processing code could lead to the execution of arbitrary code.\n* [CVE-2011-2378](https://security-tracker.debian.org/tracker/CVE-2011-2378)\nregenrecht discovered that incorrect memory management in DOM\n processing could lead to the execution of arbitrary code.\n* [CVE-2011-2981](https://security-tracker.debian.org/tracker/CVE-2011-2981)\nmoz\\_bug\\_r\\_a\\_4 discovered a Chrome privilege escalation\n vulnerability in the event handler code.\n* [CVE-2011-2982](https://security-tracker.debian.org/tracker/CVE-2011-2982)\nGary Kwong, Igor Bukanov, Nils and Bob Clary discovered memory\n corruption bugs, which may lead to the execution of arbitrary code.\n* [CVE-2011-2983](https://security-tracker.debian.org/tracker/CVE-2011-2983)\nshutdown discovered an information leak in the handling of\n RegExp.input.\n* [CVE-2011-2984](https://security-tracker.debian.org/tracker/CVE-2011-2984)\nmoz\\_bug\\_r\\_a4 discovered a Chrome privilege escalation\n vulnerability.\n\n\nThe oldstable distribution (lenny) is not affected. The iceape\npackage only provides the XPCOM code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.0.11-7.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.0.14-5.\n\n\nWe recommend that you upgrade your iceape packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "iceape",
+				"purl": "pkg:deb/debian/iceape?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.11-7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.11-2",
+				"2.0.11-3",
+				"2.0.11-4",
+				"2.0.11-5",
+				"2.0.11-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2295-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2295"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-32-1",
+	"modified": "2023-06-28T06:21:26.973440Z",
+	"published": "2014-08-07T00:00:00Z",
+	"related": [
+		"CVE-2014-1545"
+	],
+	"summary": "nspr - security update",
+	"details": "\nAbhiskek Arya discovered an out of bounds write in the cvt\\_t() function of the\nNetScape Portable Runtime Library which could result in the execution of\narbitrary code.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in nspr version 4.8.6-1+squeeze2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "nspr",
+				"purl": "pkg:deb/debian/nspr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.8.6-1+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.8.6-1",
+				"4.8.6-1+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-32-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-32"
+		}
+	]
+}

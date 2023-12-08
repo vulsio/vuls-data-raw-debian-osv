@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4152-1",
+	"modified": "2023-10-16T00:12:43.117690Z",
+	"published": "2018-03-27T00:00:00Z",
+	"related": [
+		"CVE-2018-1000051",
+		"CVE-2018-6544"
+	],
+	"summary": "mupdf - security update",
+	"details": "\nTwo vulnerabilities were discovered in MuPDF, a PDF, XPS, and e-book\nviewer, which may result in denial of service or remote code execution.\nAn attacker can craft a PDF document which, when opened in the victim\nhost, might consume vast amounts of memory, crash the program, or, in\nsome cases, execute code in the context in which the application is\nrunning.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.5-1+deb8u4.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.9a+ds1-4+deb9u3.\n\n\nWe recommend that you upgrade your mupdf packages.\n\n\nFor the detailed security status of mupdf please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mupdf](https://security-tracker.debian.org/tracker/mupdf)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mupdf",
+				"purl": "pkg:deb/debian/mupdf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5-1+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5-1",
+				"1.5-1+deb8u1",
+				"1.5-1+deb8u2",
+				"1.5-1+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4152-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mupdf",
+				"purl": "pkg:deb/debian/mupdf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9a+ds1-4+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9a+ds1-4",
+				"1.9a+ds1-4+deb9u1",
+				"1.9a+ds1-4+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4152-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4152"
+		}
+	]
+}

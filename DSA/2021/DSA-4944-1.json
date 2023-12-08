@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4944-1",
+	"modified": "2023-10-16T00:20:27.184860Z",
+	"published": "2021-07-25T00:00:00Z",
+	"related": [
+		"CVE-2021-36222"
+	],
+	"summary": "krb5 - security update",
+	"details": "\nIt was discovered that the Key Distribution Center (KDC) in krb5, the\nMIT implementation of Kerberos, is prone to a NULL pointer dereference\nflaw. An unauthenticated attacker can take advantage of this flaw to\ncause a denial of service (KDC crash) by sending a request containing a\nPA-ENCRYPTED-CHALLENGE padata element without using FAST.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.17-3+deb10u2.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\nFor the detailed security status of krb5 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/krb5](https://security-tracker.debian.org/tracker/krb5)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "krb5",
+				"purl": "pkg:deb/debian/krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17-3+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17-3",
+				"1.17-3+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4944-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4944"
+		}
+	]
+}

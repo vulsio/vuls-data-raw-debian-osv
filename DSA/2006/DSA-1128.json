@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1128",
+	"modified": "2023-10-16T00:05:14.647909Z",
+	"published": "2006-07-28T00:00:00Z",
+	"related": [
+		"CVE-2006-3815"
+	],
+	"summary": "heartbeat - permission error",
+	"details": "\nYan Rong Ge discovered that wrong permissions on a shared memory page\nin heartbeat, the subsystem for High-Availability Linux could be\nexploited by a local attacker to cause a denial of service.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.2.3-9sarge5.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your heartbeat packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "heartbeat",
+				"purl": "pkg:deb/debian/heartbeat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3-9sarge5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3-9",
+				"1.2.3-9sarge1",
+				"1.2.3-9sarge2",
+				"1.2.3-9sarge3",
+				"1.2.3-9sarge4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1128.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1128"
+		}
+	]
+}

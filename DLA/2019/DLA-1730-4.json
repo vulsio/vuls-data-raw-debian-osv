@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1730-4",
+	"modified": "2023-06-28T06:20:55.247762Z",
+	"published": "2019-03-26T00:00:00Z",
+	"related": [
+		"CVE-2019-3860"
+	],
+	"summary": "libssh2 - regression update",
+	"details": "\nSeveral vulnerabilities have recently been discovered in libssh2, a\nclient-side C library implementing the SSH2 protocol \n\n\n* [CVE-2019-3855](https://security-tracker.debian.org/tracker/CVE-2019-3855)\nAn integer overflow flaw which could have lead to an out of bounds\n write was discovered in libssh2 in the way packets were read from the\n server. A remote attacker who compromised an SSH server could have\n been able to execute code on the client system when a user connected\n to the server.\n* [CVE-2019-3856](https://security-tracker.debian.org/tracker/CVE-2019-3856)\nAn integer overflow flaw, which could have lead to an out of bounds\n write, was discovered in libssh2 in the way keyboard prompt requests\n were parsed. A remote attacker who compromised an SSH server could have\n been able to execute code on the client system when a user connected\n to the server.\n* [CVE-2019-3857](https://security-tracker.debian.org/tracker/CVE-2019-3857)\nAn integer overflow flaw which could have lead to an out of bounds\n write was discovered in libssh2 in the way SSH\\_MSG\\_CHANNEL\\_REQUEST\n packets with an exit signal were parsed. A remote attacker who\n compromises an SSH server could have been able to execute code on the\n client system when a user connected to the server.\n* [CVE-2019-3858](https://security-tracker.debian.org/tracker/CVE-2019-3858)\nAn out of bounds read flaw was discovered in libssh2 when a specially\n crafted SFTP packet was received from the server. A remote attacker\n who compromised an SSH server could have been able to cause a Denial\n of Service or read data in the client memory.\n* [CVE-2019-3859](https://security-tracker.debian.org/tracker/CVE-2019-3859)\nAn out of bounds read flaw was discovered in libssh2's\n \\_libssh2\\_packet\\_require and \\_libssh2\\_packet\\_requirev functions. A\n remote attacker who compromised an SSH server could have be able to\n cause a Denial of Service or read data in the client memory.\n* [CVE-2019-3860](https://security-tracker.debian.org/tracker/CVE-2019-3860)\nAn out of bounds read flaw was discovered in libssh2 in the way SFTP\n packets with empty payloads were parsed. A remote attacker who\n compromised an SSH server could have be able to cause a Denial of\n Service or read data in the client memory.\n* [CVE-2019-3861](https://security-tracker.debian.org/tracker/CVE-2019-3861)\nAn out of bounds read flaw was discovered in libssh2 in the way SSH\n packets with a padding length value greater than the packet length\n were parsed. A remote attacker who compromised a SSH server could\n have been able to cause a Denial of Service or read data in the\n client memory.\n* [CVE-2019-3862](https://security-tracker.debian.org/tracker/CVE-2019-3862)\nAn out of bounds read flaw was discovered in libssh2 in the way\n SSH\\_MSG\\_CHANNEL\\_REQUEST packets with an exit status message and no\n payload were parsed. A remote attacker who compromised an SSH server\n could have been able to cause a Denial of Service or read data in the\n client memory.\n* [CVE-2019-3863](https://security-tracker.debian.org/tracker/CVE-2019-3863)\nA server could have sent multiple keyboard interactive response\n messages whose total length were greater than unsigned char max\n characters. This value was used as an index to copy memory causing\n an out of bounds memory write error.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.4.3-4.1+deb8u2.\n\n\nWe recommend that you upgrade your libssh2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libssh2",
+				"purl": "pkg:deb/debian/libssh2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.3-4.1+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.3-4.1",
+				"1.4.3-4.1+deb8u1",
+				"1.4.3-4.1+deb8u2",
+				"1.4.3-4.1+deb8u3",
+				"1.4.3-4.1+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1730-4.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1730"
+		}
+	]
+}

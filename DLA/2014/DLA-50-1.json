@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-50-1",
+	"modified": "2023-06-28T06:27:03.001012Z",
+	"published": "2014-09-10T00:00:00Z",
+	"related": [
+		"CVE-2014-3538",
+		"CVE-2014-3587"
+	],
+	"summary": "file - security update",
+	"details": "\n* [CVE-2014-3538](https://security-tracker.debian.org/tracker/CVE-2014-3538)\nfile does not properly restrict the amount of data read during\n a regex search, which allows remote attackers to cause a\n denial of service (CPU consumption).\n* [CVE-2014-3587](https://security-tracker.debian.org/tracker/CVE-2014-3587)\nInteger overflow in the cdf\\_read\\_property\\_info function in\n cdf.c allows remote attackers to cause a denial of service\n (application crash).\n\n\n**Note**: The other seven issues for wheezy, fixed in 5.11-2+deb7u4\n([DSA-3021-1](./dsa-3021)), were already handled in 5.04-5+squeeze6 ([DLA 27-1](./dla-27)) in\nJuly 2014. Also, as an amendment, as a side effect of the changes\ndone back then, the MIME type detection of some files had\nimproved from \"application/octet-stream\" to something more specific\nlike \"application/x-dosexec\" or \"application/x-iso9660-image\".\n\n\nFor Debian 6 Squeeze, these issues have been fixed in file version 5.04-5+squeeze7\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "file",
+				"purl": "pkg:deb/debian/file?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.04-5+squeeze7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.04-5",
+				"5.04-5+squeeze1",
+				"5.04-5+squeeze2",
+				"5.04-5+squeeze3",
+				"5.04-5+squeeze4",
+				"5.04-5+squeeze5",
+				"5.04-5+squeeze6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-50-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-50"
+		}
+	]
+}

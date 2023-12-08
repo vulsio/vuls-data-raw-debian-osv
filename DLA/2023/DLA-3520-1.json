@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3520-1",
+	"modified": "2023-08-07T21:15:24.305445Z",
+	"published": "2023-08-07T00:00:00Z",
+	"related": [
+		"CVE-2023-34624"
+	],
+	"summary": "libhtmlcleaner-java - security update",
+	"details": "\nA security vulnerability has been discovered in libhtmlcleaner-java, a Java\nHTML parser library. An attacker was able to cause a denial of service\n(StackOverflowError) if the parser runs on user supplied input with deeply\nnested HTML elements. This update introduces a new nesting depth limit\nwhich can be overridden in cleaner properties.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.21-5+deb10u1.\n\n\nWe recommend that you upgrade your libhtmlcleaner-java packages.\n\n\nFor the detailed security status of libhtmlcleaner-java please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libhtmlcleaner-java>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libhtmlcleaner-java",
+				"purl": "pkg:deb/debian/libhtmlcleaner-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.21-5+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.21-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3520-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3520"
+		}
+	]
+}

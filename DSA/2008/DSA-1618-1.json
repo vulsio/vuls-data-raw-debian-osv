@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1618-1",
+	"modified": "2023-10-16T00:05:32.294384Z",
+	"published": "2008-07-26T00:00:00Z",
+	"related": [
+		"CVE-2008-2376",
+		"CVE-2008-2662",
+		"CVE-2008-2663",
+		"CVE-2008-2664",
+		"CVE-2008-2725",
+		"CVE-2008-2726"
+	],
+	"summary": "ruby1.9 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for\nthe Ruby language, which may lead to denial of service or the\nexecution of arbitrary code. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2008-2662](https://security-tracker.debian.org/tracker/CVE-2008-2662)\nDrew Yao discovered that multiple integer overflows in the string\n processing code may lead to denial of service and potentially the\n execution of arbitrary code.\n* [CVE-2008-2663](https://security-tracker.debian.org/tracker/CVE-2008-2663)\nDrew Yao discovered that multiple integer overflows in the string\n processing code may lead to denial of service and potentially the\n execution of arbitrary code.\n* [CVE-2008-2664](https://security-tracker.debian.org/tracker/CVE-2008-2664)\nDrew Yao discovered that a programming error in the string\n processing code may lead to denial of service and potentially the\n execution of arbitrary code.\n* [CVE-2008-2725](https://security-tracker.debian.org/tracker/CVE-2008-2725)\nDrew Yao discovered that an integer overflow in the array handling\n code may lead to denial of service and potentially the execution\n of arbitrary code.\n* [CVE-2008-2726](https://security-tracker.debian.org/tracker/CVE-2008-2726)\nDrew Yao discovered that an integer overflow in the array handling\n code may lead to denial of service and potentially the execution\n of arbitrary code.\n* [CVE-2008-2376](https://security-tracker.debian.org/tracker/CVE-2008-2376)\nIt was discovered that an integer overflow in the array handling\n code may lead to denial of service and potentially the execution\n of arbitrary code.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.9.0+20060609-1etch2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.0.2-2.\n\n\nWe recommend that you upgrade your ruby1.9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ruby1.9",
+				"purl": "pkg:deb/debian/ruby1.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.0+20060609-1etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.0+20060609-1",
+				"1.9.0+20060609-1etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1618-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1618"
+		}
+	]
+}

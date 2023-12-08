@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2425-1",
+	"modified": "2023-10-16T00:05:55.367866Z",
+	"published": "2012-03-04T00:00:00Z",
+	"related": [
+		"CVE-2011-4620"
+	],
+	"summary": "plib - buffer overflow",
+	"details": "\nIt was discovered that PLIB, a library used by TORCS, contains a\nbuffer overflow in error message processing, which could allow remote\nattackers to execute arbitrary code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.8.5-5+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 1.8.5-5.1.\n\n\nWe recommend that you upgrade your plib packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "plib",
+				"purl": "pkg:deb/debian/plib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.5-5+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.5-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2425-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2425"
+		}
+	]
+}

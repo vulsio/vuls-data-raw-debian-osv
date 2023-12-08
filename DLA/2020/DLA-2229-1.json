@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2229-1",
+	"modified": "2023-06-28T06:28:28.987766Z",
+	"published": "2020-05-31T00:00:00Z",
+	"related": [
+		"CVE-2020-8034"
+	],
+	"summary": "php-horde-gollem - security update",
+	"details": "\nGollem, as used in Horde Groupware Webmail Edition and other products,\nhad been affected by a reflected Cross-Site Scripting (XSS) vulnerability\nvia the HTTP GET dir parameter in the browser functionality, affecting\nbreadcrumb output. An attacker could have obtained access to a victim's\nwebmail account by making them visit a malicious URL.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.0.3-2+deb8u1.\n\n\nWe recommend that you upgrade your php-horde-gollem packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "php-horde-gollem",
+				"purl": "pkg:deb/debian/php-horde-gollem?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.3-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.3-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2229-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2229"
+		}
+	]
+}

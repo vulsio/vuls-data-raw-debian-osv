@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2079-1",
+	"modified": "2023-06-28T06:26:26.457818Z",
+	"published": "2020-01-29T00:00:00Z",
+	"related": [
+		"CVE-2020-1765",
+		"CVE-2020-1766",
+		"CVE-2020-1767"
+	],
+	"summary": "otrs2 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the otrs2 package that\nmay lead to unauthorized access, remote code execution and spoofing.\n\n\n* [CVE-2020-1765](https://security-tracker.debian.org/tracker/CVE-2020-1765)\nAn improper control of parameters allows the spoofing of the from\n fields of the following screens: AgentTicketCompose,\n AgentTicketForward, AgentTicketBounce.\n* [CVE-2020-1766](https://security-tracker.debian.org/tracker/CVE-2020-1766)\nDue to improper handling of uploaded images it is possible in very\n unlikely and rare conditions to force the agents browser to execute\n malicious javascript from a special crafted SVG file rendered as\n inline jpg file.\n* [CVE-2020-1767](https://security-tracker.debian.org/tracker/CVE-2020-1767)\nUnauthorized view of drafts, change the text completely and send it\n in the name of draft owner. For the customer it will not be visible\n that the message was sent by another agent.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.3.18-1+deb8u13.\n\n\nWe recommend that you upgrade your otrs2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "otrs2",
+				"purl": "pkg:deb/debian/otrs2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.18-1+deb8u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.10-1",
+				"3.3.11-1",
+				"3.3.18-1+deb8u1",
+				"3.3.18-1+deb8u10",
+				"3.3.18-1+deb8u11",
+				"3.3.18-1+deb8u12",
+				"3.3.18-1+deb8u2",
+				"3.3.18-1+deb8u3",
+				"3.3.18-1+deb8u4",
+				"3.3.18-1+deb8u5",
+				"3.3.18-1+deb8u6",
+				"3.3.18-1+deb8u7",
+				"3.3.18-1+deb8u8",
+				"3.3.18-1+deb8u9",
+				"3.3.18-1~deb7u1",
+				"3.3.18-1~deb7u2",
+				"3.3.18-1~deb7u3",
+				"3.3.9-3",
+				"3.3.9-3+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2079-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2079"
+		}
+	]
+}

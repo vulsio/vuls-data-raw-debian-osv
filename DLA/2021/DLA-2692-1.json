@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2692-1",
+	"modified": "2023-06-28T06:21:19.759199Z",
+	"published": "2021-06-26T00:00:00Z",
+	"related": [
+		"CVE-2020-26558",
+		"CVE-2021-0129"
+	],
+	"summary": "bluez - security update",
+	"details": "\nTwo issues have been found in bluez, a package with Bluetooth tools and\ndaemons. One issue is about a man-in-the-middle attack during secure\npairing, the other is about information disclosure due to improper access\ncontrol.\n\n\nIn order to completely fix both issues, you need an updated kernel as\nwell! For Debian 9 Stretch this has been uploaded some days ago.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n5.43-2+deb9u4.\n\n\nWe recommend that you upgrade your bluez packages.\n\n\nFor the detailed security status of bluez please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/bluez>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "bluez",
+				"purl": "pkg:deb/debian/bluez?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.43-2+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.43-2",
+				"5.43-2+deb9u1",
+				"5.43-2+deb9u2",
+				"5.43-2+deb9u2~deb8u1",
+				"5.43-2+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2692-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2692"
+		}
+	]
+}

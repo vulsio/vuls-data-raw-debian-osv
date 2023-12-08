@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-189-1",
+	"modified": "2023-06-28T06:29:54.965106Z",
+	"published": "2015-04-08T00:00:00Z",
+	"related": [
+		"CVE-2014-2497",
+		"CVE-2014-9709"
+	],
+	"summary": "libgd2 - security update",
+	"details": "\nMultiple vulnerabilities were discovered in libgd2, a graphics library:\n\n\n* [CVE-2014-2497](https://security-tracker.debian.org/tracker/CVE-2014-2497)\nThe gdImageCreateFromXpm() function would try to dereference a NULL\n pointer when reading an XPM file with a special color table. This\n could allow remote attackers to cause a denial of service (crash) via\n crafted XPM files.\n* [CVE-2014-9709](https://security-tracker.debian.org/tracker/CVE-2014-9709)\nImporting an invalid GIF file using the gdImageCreateFromGif() function\n would cause a read buffer overflow that could allow remote attackers to\n cause a denial of service (crash) via crafted GIF files.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libgd2",
+				"purl": "pkg:deb/debian/libgd2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.36~rc1~dfsg-5+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.36~rc1~dfsg-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-189-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-189"
+		}
+	]
+}

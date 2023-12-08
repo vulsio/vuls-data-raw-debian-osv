@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1517-1",
+	"modified": "2023-10-16T00:10:28.258397Z",
+	"published": "2008-03-15T00:00:00Z",
+	"related": [
+		"CVE-2007-5373"
+	],
+	"summary": "ldapscripts - information disclosure",
+	"details": "\nDon Armstrong discovered that ldapscripts, a suite of tools to manipulate\nuser accounts in LDAP, sends the password as a command line argument when\ncalling LDAP programs, which may allow a local attacker to read this password\nfrom the process listing.\n\n\nThe old stable distribution (sarge) does not contain an ldapscripts package.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1.4-2etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in version\n1.7.1-2.\n\n\nWe recommend that you upgrade your ldapscripts package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ldapscripts",
+				"purl": "pkg:deb/debian/ldapscripts?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1517-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1517"
+		}
+	]
+}

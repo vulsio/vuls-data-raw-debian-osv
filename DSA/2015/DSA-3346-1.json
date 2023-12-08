@@ -1,0 +1,96 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3346-1",
+	"modified": "2023-10-16T00:11:56.050728Z",
+	"published": "2015-08-31T00:00:00Z",
+	"related": [
+		"CVE-2015-6658",
+		"CVE-2015-6659",
+		"CVE-2015-6660",
+		"CVE-2015-6661",
+		"CVE-2015-6665"
+	],
+	"summary": "drupal7 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Drupal, a content management\nframework:\n\n\n* [CVE-2015-6658](https://security-tracker.debian.org/tracker/CVE-2015-6658)\nThe form autocomplete functionality did not properly sanitize the\n requested URL, allowing remote attackers to perform a cross-site\n scripting attack.\n* [CVE-2015-6659](https://security-tracker.debian.org/tracker/CVE-2015-6659)\nThe SQL comment filtering system could allow a user with elevated\n permissions to inject malicious code in SQL comments.\n* [CVE-2015-6660](https://security-tracker.debian.org/tracker/CVE-2015-6660)\nThe form API did not perform form token validation early enough,\n allowing the file upload callbacks to be run with untrusted input.\n This could allow remote attackers to upload files to the site under\n another user's account.\n* [CVE-2015-6661](https://security-tracker.debian.org/tracker/CVE-2015-6661)\nUsers without the access content permission could see the titles\n of nodes that they do not have access to, if the nodes were added to\n a menu on the site that the users have access to.\n* [CVE-2015-6665](https://security-tracker.debian.org/tracker/CVE-2015-6665)\nRemote attackers could perform a cross-site scripting attack by\n invoking Drupal.ajax() on a whitelisted HTML element.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 7.14-2+deb7u11.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 7.32-1+deb8u5.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 7.39-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 7.39-1.\n\n\nWe recommend that you upgrade your drupal7 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "drupal7",
+				"purl": "pkg:deb/debian/drupal7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.14-2+deb7u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.14-2",
+				"7.14-2+deb7u1",
+				"7.14-2+deb7u10",
+				"7.14-2+deb7u10~bpo60+1",
+				"7.14-2+deb7u11~bpo60+1",
+				"7.14-2+deb7u1~bpo60+1",
+				"7.14-2+deb7u2",
+				"7.14-2+deb7u2~bpo60+1",
+				"7.14-2+deb7u3",
+				"7.14-2+deb7u4",
+				"7.14-2+deb7u4~bpo60+1",
+				"7.14-2+deb7u5",
+				"7.14-2+deb7u6",
+				"7.14-2+deb7u6~bpo60+1",
+				"7.14-2+deb7u7",
+				"7.14-2+deb7u7~bpo60+1",
+				"7.14-2+deb7u8",
+				"7.14-2+deb7u9",
+				"7.14-2+deb7u9~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3346-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "drupal7",
+				"purl": "pkg:deb/debian/drupal7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.32-1+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.32-1+deb8u3",
+				"7.32-1+deb8u4",
+				"7.32-1+deb8u4~bpo70+1",
+				"7.32-1+deb8u5~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3346-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3346"
+		}
+	]
+}

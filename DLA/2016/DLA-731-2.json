@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-731-2",
+	"modified": "2023-06-28T06:25:37.697671Z",
+	"published": "2016-12-02T00:00:00Z",
+	"summary": "imagemagick - regression update",
+	"details": "\nSeveral issues have been discovered in ImageMagick, a popular set of\nprograms and libraries for image manipulation. These issues include\nseveral problems in memory handling that can result in a denial of\nservice attack or in execution of arbitrary code by an attacker with\ncontrol on the image input.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n8:6.7.7.10-5+deb7u8.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.7.7.10-5+deb7u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.7.7.10-5",
+				"8:6.7.7.10-5+deb7u2",
+				"8:6.7.7.10-5+deb7u3",
+				"8:6.7.7.10-5+deb7u4",
+				"8:6.7.7.10-5+deb7u5",
+				"8:6.7.7.10-5+deb7u6",
+				"8:6.7.7.10-5+deb7u7",
+				"8:6.7.7.10-5+deb7u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-731-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-731"
+		}
+	]
+}

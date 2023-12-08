@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2349-1",
+	"modified": "2023-10-16T00:11:09.977961Z",
+	"published": "2011-11-19T00:00:00Z",
+	"summary": "spip - several",
+	"details": "\nTwo vulnerabilities have been found in SPIP, a website engine for \npublishing, which allow privilege escalation to site administrator\nprivileges and cross-site scripting.\n\n\nThe oldstable distribution (lenny) doesn't include spip.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.1.1-3squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.1.12-1.\n\n\nWe recommend that you upgrade your spip packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "spip",
+				"purl": "pkg:deb/debian/spip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.1-3squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.1-3",
+				"2.1.1-3squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2349-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2349"
+		}
+	]
+}

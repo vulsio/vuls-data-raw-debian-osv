@@ -1,0 +1,70 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1555-1",
+	"modified": "2023-10-16T00:05:28.234238Z",
+	"published": "2008-04-23T00:00:00Z",
+	"related": [
+		"CVE-2008-1380"
+	],
+	"summary": "iceweasel - arbitrary code execution",
+	"details": "\nIt was discovered that crashes in the Javascript engine of Iceweasel,\nan unbranded version of the Firefox browser, could potentially lead to \nthe execution of arbitrary code.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 2.0.0.14-0etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.0.0.14-1.\n\n\nWe recommend that you upgrade your iceweasel package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "iceweasel",
+				"purl": "pkg:deb/debian/iceweasel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0.14-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0.10-0etch1",
+				"2.0.0.10-1",
+				"2.0.0.10-2",
+				"2.0.0.11-1",
+				"2.0.0.12-0etch1",
+				"2.0.0.12-1",
+				"2.0.0.12-2",
+				"2.0.0.13-0etch1",
+				"2.0.0.13-1",
+				"2.0.0.3-1",
+				"2.0.0.3-2",
+				"2.0.0.4-0etch1",
+				"2.0.0.4-1",
+				"2.0.0.5-0etch1",
+				"2.0.0.5-0etch1+lenny1",
+				"2.0.0.5-1",
+				"2.0.0.5-2",
+				"2.0.0.6+2.0.0.8-0etch1",
+				"2.0.0.6-0etch1",
+				"2.0.0.6-0etch1+lenny1",
+				"2.0.0.6-1",
+				"2.0.0.7-1",
+				"2.0.0.7-2",
+				"2.0.0.8-1",
+				"2.0.0.9-1",
+				"2.0.0.9-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1555-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1555"
+		}
+	]
+}

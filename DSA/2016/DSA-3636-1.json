@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3636-1",
+	"modified": "2023-10-16T00:12:11.690662Z",
+	"published": "2016-07-30T00:00:00Z",
+	"related": [
+		"CVE-2016-6254"
+	],
+	"summary": "collectd - security update",
+	"details": "\nEmilien Gaspar discovered that collectd, a statistics collection and\nmonitoring daemon, incorrectly processed incoming network\npackets. This resulted in a heap overflow, allowing a remote attacker\nto either cause a DoS via application crash, or potentially execute\narbitrary code.\n\n\nAdditionally, security researchers at Columbia University and the\nUniversity of Virginia discovered that collectd failed to verify a\nreturn value during initialization. This meant the daemon could\nsometimes be started without the desired, secure settings.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 5.4.1-6+deb8u1.\n\n\nFor the testing (stretch) and unstable (sid) distributions, this\nproblem has been fixed in version 5.5.2-1.\n\n\nWe recommend that you upgrade your collectd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "collectd",
+				"purl": "pkg:deb/debian/collectd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.1-6+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.1-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3636-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3636"
+		}
+	]
+}

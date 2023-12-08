@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-603-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-12-01T00:00:00Z",
+	"related": [
+		"CVE-2004-0975"
+	],
+	"summary": "openssl - insecure temporary file",
+	"details": "\nTrustix developers discovered insecure temporary file creation in a\nsupplemental script (der\\_chop) of the openssl package which may allow\nlocal users to overwrite files via a symlink attack.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.9.6c-2.woody.7.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.9.7e-1.\n\n\nWe recommend that you upgrade your openssl package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.6c-2.woody.7"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-603-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-603"
+		}
+	]
+}

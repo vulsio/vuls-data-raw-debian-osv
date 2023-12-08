@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2325-1",
+	"modified": "2023-10-16T00:11:08.491773Z",
+	"published": "2011-10-23T00:00:00Z",
+	"related": [
+		"CVE-2011-4062"
+	],
+	"summary": "kfreebsd-8 - privilege escalation/denial of service",
+	"details": "\nBuffer overflow in the Linux emulation support in FreeBSD kernel\nallows local users to cause a denial of service (panic) and possibly\nexecute arbitrary code by calling the bind system call with a long path\nfor a UNIX-domain socket, which is not properly handled when the\naddress is used by other unspecified system calls.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 8.1+dfsg-8+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8.2-9.\n\n\nWe recommend that you upgrade your kfreebsd-8 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "kfreebsd-8",
+				"purl": "pkg:deb/debian/kfreebsd-8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.1+dfsg-8+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.1+dfsg-7.1",
+				"8.1+dfsg-8",
+				"8.1+dfsg-8+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2325-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2325"
+		}
+	]
+}

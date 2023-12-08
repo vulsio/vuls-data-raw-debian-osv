@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1335-1",
+	"modified": "2023-10-16T00:10:20.900346Z",
+	"published": "2007-07-18T00:00:00Z",
+	"related": [
+		"CVE-2006-4519",
+		"CVE-2007-2949"
+	],
+	"summary": "gimp",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Gimp, the GNU Image\nManipulation Program, which might lead to the execution of arbitrary code.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2006-4519](https://security-tracker.debian.org/tracker/CVE-2006-4519)\nSean Larsson discovered several integer overflows in the processing\n code for DICOM, PNM, PSD, RAS, XBM and XWD images, which might lead\n to the execution of arbitrary code if a user is tricked into opening\n such a malformed media file.\n* [CVE-2007-2949](https://security-tracker.debian.org/tracker/CVE-2007-2949)\nStefan Cornelius discovered an integer overflow in the processing\n code for PSD images, which might lead to the execution of arbitrary\n code if a user is tricked into opening such a malformed media file.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 2.2.6-1sarge4. Packages for mips and mipsel are not yet\navailable.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 2.2.13-1etch4. Packages for mips are not yet available.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.2.17-1.\n\n\nWe recommend that you upgrade your gimp packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gimp",
+				"purl": "pkg:deb/debian/gimp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.6-1sarge4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.6-1",
+				"2.2.6-1sarge1",
+				"2.2.6-1sarge2",
+				"2.2.6-1sarge3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1335-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "gimp",
+				"purl": "pkg:deb/debian/gimp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-1etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-1",
+				"2.2.13-1etch1",
+				"2.2.13-1etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1335-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1335"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2387-1",
+	"modified": "2023-10-16T00:11:12.789602Z",
+	"published": "2012-01-11T00:00:00Z",
+	"related": [
+		"CVE-2012-0040",
+		"CVE-2012-0908"
+	],
+	"summary": "simplesamlphp - cross site scripting",
+	"details": "\ntimtai1 discovered that simpleSAMLphp, an authentication and federation\nplatform, is vulnerable to a cross site scripting attack, allowing a\nremote attacker to access sensitive client data.\n\n\nThe oldstable distribution (lenny) does not contain a simplesamlphp\npackage.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.6.3-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.2-1.\n\n\nWe recommend that you upgrade your simplesamlphp packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "simplesamlphp",
+				"purl": "pkg:deb/debian/simplesamlphp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.3-3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.3-1",
+				"1.6.3-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2387-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2387"
+		}
+	]
+}

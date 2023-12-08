@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3495-2",
+	"modified": "2023-08-10T23:17:49.316929Z",
+	"published": "2023-07-13T00:00:00Z",
+	"related": [
+		"CVE-2021-3838"
+	],
+	"summary": "php-dompdf - regression update",
+	"details": "\nMultiple vulnerabilies were fixed in php-dompdf a CSS 2.1 compliant HTML\nto PDF converter, written in PHP.\n\n\n* [CVE-2021-3838](https://security-tracker.debian.org/tracker/CVE-2021-3838)\nphp-dompdf was vulnerable to deserialization of Untrusted Data using\n PHAR deserialization (phar://) as url for image.\n* [CVE-2022-2400](https://security-tracker.debian.org/tracker/CVE-2022-2400)\nphp-dompdf was vulnerable to External Control of File Name bypassing\n unallowed access verification.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.6.2+dfsg-3+deb10u1.\n\n\nWe recommend that you upgrade your php-dompdf packages.\n\n\nFor the detailed security status of php-dompdf please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/php-dompdf>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "php-dompdf",
+				"purl": "pkg:deb/debian/php-dompdf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.2+dfsg-3+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.2+dfsg-3",
+				"0.6.2+dfsg-3+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3495-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3495"
+		}
+	]
+}

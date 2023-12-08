@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-467-1",
+	"modified": "2023-06-28T06:25:34.136736Z",
+	"published": "2016-05-12T00:00:00Z",
+	"related": [
+		"CVE-2016-2099"
+	],
+	"summary": "xerces-c - security update",
+	"details": "\nXMLReader class can raise an exception if an invalid character is\nencountered, and the exception crosses stack frames in an unsafe way that\ncauses a higher level exception handler to access an already-freed object.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in xerces-c version 3.1.1-3+deb7u3\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xerces-c",
+				"purl": "pkg:deb/debian/xerces-c?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.1-3+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.1-3",
+				"3.1.1-3+deb7u1",
+				"3.1.1-3+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-467-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-467"
+		}
+	]
+}

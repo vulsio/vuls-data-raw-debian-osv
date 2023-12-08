@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1611-1",
+	"modified": "2023-06-28T06:29:40.364984Z",
+	"published": "2018-12-20T00:00:00Z",
+	"related": [
+		"CVE-2014-9317",
+		"CVE-2015-6761",
+		"CVE-2015-6818",
+		"CVE-2015-6820",
+		"CVE-2015-6821",
+		"CVE-2015-6822",
+		"CVE-2015-6825",
+		"CVE-2015-6826",
+		"CVE-2015-8216",
+		"CVE-2015-8217",
+		"CVE-2015-8363",
+		"CVE-2015-8364",
+		"CVE-2015-8661",
+		"CVE-2015-8662",
+		"CVE-2015-8663",
+		"CVE-2016-10190",
+		"CVE-2016-10191"
+	],
+	"summary": "libav - security update",
+	"details": "\nSeveral security issues have been corrected in multiple demuxers and\ndecoders of the libav multimedia library.\n\n\n* [CVE-2014-9317](https://security-tracker.debian.org/tracker/CVE-2014-9317)\nThe decode\\_ihdr\\_chunk function in libavcodec/pngdec.c allowed remote\n attackers to cause a denial of service (out-of-bounds heap access)\n and possibly had other unspecified impact via an IDAT before an IHDR\n in a PNG file. The issue got addressed by checking IHDR/IDAT order.\n* [CVE-2015-6761](https://security-tracker.debian.org/tracker/CVE-2015-6761)\nThe update\\_dimensions function in libavcodec/vp8.c in libav relies on\n a coefficient-partition count during multi-threaded operation, which\n allowed remote attackers to cause a denial of service (race condition\n and memory corruption) or possibly have unspecified other impact via\n a crafted WebM file. This issue has been resolved by using\n num\\_coeff\\_partitions in thread/buffer setup. The variable is not a\n constant and can lead to race conditions.\n* [CVE-2015-6818](https://security-tracker.debian.org/tracker/CVE-2015-6818)\nThe decode\\_ihdr\\_chunk function in libavcodec/pngdec.c did not enforce\n uniqueness of the IHDR (aka image header) chunk in a PNG image, which\n allowed remote attackers to cause a denial of service (out-of-bounds\n array access) or possibly have unspecified other impact via a crafted\n image with two or more of these chunks. This has now been fixed by\n only allowing one IHDR chunk. Multiple IHDR chunks are forbidden in\n PNG.\n* [CVE-2015-6820](https://security-tracker.debian.org/tracker/CVE-2015-6820)\nThe ff\\_sbr\\_apply function in libavcodec/aacsbr.c did not check for a\n matching AAC frame syntax element before proceeding with Spectral\n Band Replication calculations, which allowed remote attackers to\n cause a denial of service (out-of-bounds array access) or possibly\n have unspecified other impact via crafted AAC data. This has now been\n fixed by checking that the element type matches before applying SBR.\n* [CVE-2015-6821](https://security-tracker.debian.org/tracker/CVE-2015-6821)\nThe ff\\_mpv\\_common\\_init function in libavcodec/mpegvideo.c did not\n properly maintain the encoding context, which allowed remote\n attackers to cause a denial of service (invalid pointer access) or\n possibly have unspecified other impact via crafted MPEG data. The\n issue has been resolved by clearing pointers in ff\\_mpv\\_common\\_init().\n This ensures that no stale pointers leak through on any path.\n* [CVE-2015-6822](https://security-tracker.debian.org/tracker/CVE-2015-6822)\nThe destroy\\_buffers function in libavcodec/sanm.c did not properly\n maintain height and width values in the video context, which allowed\n remote attackers to cause a denial of service (segmentation violation\n and application crash) or possibly have unspecified other impact via\n crafted LucasArts Smush video data. The solution to this was to reset\n sizes in destroy\\_buffers() in avcodec/sanm.c.\n* [CVE-2015-6823](https://security-tracker.debian.org/tracker/CVE-2015-6823)\nOther than stated in the debian/changelog file, this issue\n has not yet been fixed for libav in Debian jessie LTS.\n* [CVE-2015-6824](https://security-tracker.debian.org/tracker/CVE-2015-6824)\nOther than stated in the debian/changelog file, this issue\n has not yet been fixed for libav in Debian jessie LTS.\n* [CVE-2015-6825](https://security-tracker.debian.org/tracker/CVE-2015-6825)\nThe ff\\_frame\\_thread\\_init function in libavcodec/pthread\\_frame.c\n mishandled certain memory-allocation failures, which allowed remote\n attackers to cause a denial of service (invalid pointer access) or\n possibly have unspecified other impact via a crafted file, as\n demonstrated by an AVI file. Clearing priv\\_data in\n avcodec/pthread\\_frame.c has resolved this and now avoids stale\n pointer in error case.\n* [CVE-2015-6826](https://security-tracker.debian.org/tracker/CVE-2015-6826)\nThe ff\\_rv34\\_decode\\_init\\_thread\\_copy function in libavcodec/rv34.c did\n not initialize certain structure members, which allowed remote\n attackers to cause a denial of service (invalid pointer access) or\n possibly have unspecified other impact via crafted (1) RV30 or (2)\n RV40 RealVideo data. This issue got addressed by clearing pointers in\n ff\\_rv34\\_decode\\_init\\_thread\\_copy() in avcodec/rv34.c, which avoids\n leaving stale pointers.\n* [CVE-2015-8216](https://security-tracker.debian.org/tracker/CVE-2015-8216)\nThe ljpeg\\_decode\\_yuv\\_scan function in libavcodec/mjpegdec.c in FFmpeg\n omitted certain width and height checks, which allowed remote\n attackers to cause a denial of service (out-of-bounds array access)\n or possibly have unspecified other impact via crafted MJPEG data. The\n issues have been fixed by adding a check for index to\n avcodec/mjpegdec.c in ljpeg\\_decode\\_yuv\\_scan() before using it, which\n fixes an out of array access.\n* [CVE-2015-8217](https://security-tracker.debian.org/tracker/CVE-2015-8217)\nThe ff\\_hevc\\_parse\\_sps function in libavcodec/hevc\\_ps.c did not\n validate the Chroma Format Indicator, which allowed remote attackers\n to cause a denial of service (out-of-bounds array access) or possibly\n have unspecified other impact via crafted High Efficiency Video\n Coding (HEVC) data. A check of chroma\\_format\\_idc in avcodec/hevc\\_ps.c\n has now been added to fix this out of array access.\n* [CVE-2015-8363](https://security-tracker.debian.org/tracker/CVE-2015-8363)\nThe jpeg2000\\_read\\_main\\_headers function in libavcodec/jpeg2000dec.c\n did not enforce uniqueness of the SIZ marker in a JPEG 2000 image,\n which allowed remote attackers to cause a denial of service\n (out-of-bounds heap-memory access) or possibly have unspecified other\n impact via a crafted image with two or more of these markers. In\n avcodec/jpeg2000dec.c a check for duplicate SIZ marker has been added\n to fix this.\n* [CVE-2015-8364](https://security-tracker.debian.org/tracker/CVE-2015-8364)\nInteger overflow in the ff\\_ivi\\_init\\_planes function in\n libavcodec/ivi.c allowed remote attackers to cause a denial of\n service (out-of-bounds heap-memory access) or possibly have\n unspecified other impact via crafted image dimensions in Indeo Video\n Interactive data. A check of image dimensions has been added to the\n code (in avcodec/ivi.c) that fixes this integer overflow now.\n* [CVE-2015-8661](https://security-tracker.debian.org/tracker/CVE-2015-8661)\nThe h264\\_slice\\_header\\_init function in libavcodec/h264\\_slice.c did\n not validate the relationship between the number of threads and the\n number of slices, which allowed remote attackers to cause a denial of\n service (out-of-bounds array access) or possibly have unspecified\n other impact via crafted H.264 data. In avcodec/h264\\_slice.c now\n max\\_contexts gets limited when slice\\_context\\_count is initialized.\n This avoids an out of array access.\n* [CVE-2015-8662](https://security-tracker.debian.org/tracker/CVE-2015-8662)\nThe ff\\_dwt\\_decode function in libavcodec/jpeg2000dwt.c did not\n validate the number of decomposition levels before proceeding with\n Discrete Wavelet Transform decoding, which allowed remote attackers\n to cause a denial of service (out-of-bounds array access) or possibly\n have unspecified other impact via crafted JPEG 2000 data. In\n avcodec/jpeg2000dwt.c a check of ndeclevels has been added before\n calling dwt\\_decode\\*(). This fixes an out of array access.\n* [CVE-2015-8663](https://security-tracker.debian.org/tracker/CVE-2015-8663)\nThe ff\\_get\\_buffer function in libavcodec/utils.c preserved width and\n height values after a failure, which allowed remote attackers to\n cause a denial of service (out-of-bounds array access) or possibly\n have unspecified other impact via a crafted .mov file. Now,\n dimensions get cleared in ff\\_get\\_buffer() on failure, which fixes\n the cause for an out of array access.\n* [CVE-2016-10190](https://security-tracker.debian.org/tracker/CVE-2016-10190)\nA heap-based buffer overflow in libavformat/http.c allowed remote web\n servers to execute arbitrary code via a negative chunk size in an\n HTTP response. In libavformat/http.c the length/offset-related\n variables have been made unsigned. This fix required inclusion of\n two other changes ported from ffmpeg upstream Git (commits 3668701f\n and 362c17e6).\n* [CVE-2016-10191](https://security-tracker.debian.org/tracker/CVE-2016-10191)\nAnother heap-based buffer overflow in libavformat/rtmppkt.c allowed\n remote attackers to execute arbitrary code by leveraging failure to\n check for RTMP packet size mismatches. By checking for packet size\n mismatched, this out of array access has been resolved.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n6:11.12-1~deb8u2.\n\n\nWe recommend that you upgrade your libav packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libav",
+				"purl": "pkg:deb/debian/libav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:11.12-1~deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:11.11-1~deb8u1",
+				"6:11.12-1~deb8u1",
+				"6:11.3-1",
+				"6:11.3-1+deb8u1",
+				"6:11.3-2",
+				"6:11.3-3",
+				"6:11.4-1",
+				"6:11.4-1~deb8u1",
+				"6:11.4-2",
+				"6:11.4-2+x32.1",
+				"6:11.6-1~deb8u1",
+				"6:11.7-1~deb8u1",
+				"6:11.8-1~deb8u1",
+				"6:11.9-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1611-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1611"
+		}
+	]
+}

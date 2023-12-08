@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4978-1",
+	"modified": "2023-10-16T00:15:15.895174Z",
+	"published": "2021-09-25T00:00:00Z",
+	"related": [
+		"CVE-2020-16119",
+		"CVE-2020-3702",
+		"CVE-2021-3653",
+		"CVE-2021-3656",
+		"CVE-2021-3679",
+		"CVE-2021-3732",
+		"CVE-2021-3739",
+		"CVE-2021-3743",
+		"CVE-2021-3753",
+		"CVE-2021-37576",
+		"CVE-2021-38160",
+		"CVE-2021-38166",
+		"CVE-2021-38199",
+		"CVE-2021-40490",
+		"CVE-2021-41073"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel\nthat may lead to a privilege escalation, denial of service or\ninformation leaks.\n\n\n* [CVE-2020-3702](https://security-tracker.debian.org/tracker/CVE-2020-3702)\nA flaw was found in the driver for Atheros IEEE 802.11n family of\n chipsets (ath9k) allowing information disclosure.\n* [CVE-2020-16119](https://security-tracker.debian.org/tracker/CVE-2020-16119)\nHadar Manor reported a use-after-free in the DCCP protocol\n implementation in the Linux kernel. A local attacker can take\n advantage of this flaw to cause a denial of service or potentially\n to execute arbitrary code.\n* [CVE-2021-3653](https://security-tracker.debian.org/tracker/CVE-2021-3653)\nMaxim Levitsky discovered a vulnerability in the KVM hypervisor\n implementation for AMD processors in the Linux kernel: Missing\n validation of the `int\\_ctl` VMCB field could allow a malicious L1\n guest to enable AVIC support (Advanced Virtual Interrupt Controller)\n for the L2 guest. The L2 guest can take advantage of this flaw to\n write to a limited but still relatively large subset of the host\n physical memory.\n* [CVE-2021-3656](https://security-tracker.debian.org/tracker/CVE-2021-3656)\nMaxim Levitsky and Paolo Bonzini discovered a flaw in the KVM\n hypervisor implementation for AMD processors in the Linux kernel.\n Missing validation of the `virt\\_ext` VMCB field could allow a\n malicious L1 guest to disable both VMLOAD/VMSAVE intercepts and VLS\n (Virtual VMLOAD/VMSAVE) for the L2 guest. Under these circumstances,\n the L2 guest is able to run VMLOAD/VMSAVE unintercepted and thus\n read/write portions of the host's physical memory.\n* [CVE-2021-3679](https://security-tracker.debian.org/tracker/CVE-2021-3679)\nA flaw in the Linux kernel tracing module functionality could allow\n a privileged local user (with CAP\\_SYS\\_ADMIN capability) to cause a\n denial of service (resource starvation).\n* [CVE-2021-3732](https://security-tracker.debian.org/tracker/CVE-2021-3732)\nAlois Wohlschlager reported a flaw in the implementation of the\n overlayfs subsystem, allowing a local attacker with privileges to\n mount a filesystem to reveal files hidden in the original mount.\n* [CVE-2021-3739](https://security-tracker.debian.org/tracker/CVE-2021-3739)\nA NULL pointer dereference flaw was found in the btrfs filesystem,\n allowing a local attacker with CAP\\_SYS\\_ADMIN capabilities to cause a\n denial of service.\n* [CVE-2021-3743](https://security-tracker.debian.org/tracker/CVE-2021-3743)\nAn out-of-bounds memory read was discovered in the Qualcomm IPC\n router protocol implementation, allowing to cause a denial of\n service or information leak.\n* [CVE-2021-3753](https://security-tracker.debian.org/tracker/CVE-2021-3753)\nMinh Yuan reported a race condition in the vt\\_k\\_ioctl in\n drivers/tty/vt/vt\\_ioctl.c, which may cause an out of bounds\n read in vt.\n* [CVE-2021-37576](https://security-tracker.debian.org/tracker/CVE-2021-37576)\nAlexey Kardashevskiy reported a buffer overflow in the KVM subsystem\n on the powerpc platform, which allows KVM guest OS users to cause\n memory corruption on the host.\n* [CVE-2021-38160](https://security-tracker.debian.org/tracker/CVE-2021-38160)\nA flaw in the virtio\\_console was discovered allowing data corruption\n or data loss by an untrusted device.\n* [CVE-2021-38166](https://security-tracker.debian.org/tracker/CVE-2021-38166)\nAn integer overflow flaw in the BPF subsystem could allow a local\n attacker to cause a denial of service or potentially the execution\n of arbitrary code. This flaw is mitigated by default in Debian as\n unprivileged calls to bpf() are disabled.\n* [CVE-2021-38199](https://security-tracker.debian.org/tracker/CVE-2021-38199)\nMichael Wakabayashi reported a flaw in the NFSv4 client\n implementation, where incorrect connection setup ordering allows\n operations of a remote NFSv4 server to cause a denial of service.\n* [CVE-2021-40490](https://security-tracker.debian.org/tracker/CVE-2021-40490)\nA race condition was discovered in the ext4 subsystem when writing\n to an inline\\_data file while its xattrs are changing. This could\n result in denial of service.\n* [CVE-2021-41073](https://security-tracker.debian.org/tracker/CVE-2021-41073)\nValentina Palmiotti discovered a flaw in io\\_uring allowing a local\n attacker to escalate privileges.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.46-5. This update includes fixes for #993948 and #993978.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.46-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.46-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4978-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4978"
+		}
+	]
+}

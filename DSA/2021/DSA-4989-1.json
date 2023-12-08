@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4989-1",
+	"modified": "2023-10-16T00:15:18.861664Z",
+	"published": "2021-10-18T00:00:00Z",
+	"related": [
+		"CVE-2021-41990",
+		"CVE-2021-41991"
+	],
+	"summary": "strongswan - security update",
+	"details": "\nResearchers at the United States of America National Security Agency (NSA)\nidentified two denial of services vulnerability in strongSwan, an IKE/IPsec\nsuite.\n\n\n* [CVE-2021-41990](https://security-tracker.debian.org/tracker/CVE-2021-41990)\nRSASSA-PSS signatures whose parameters define a very high salt length can\n trigger an integer overflow that can lead to a segmentation fault.\n\n\nGenerating a signature that bypasses the padding check to trigger the crash\n requires access to the private key that signed the certificate. However,\n the certificate does not have to be trusted. Because the gmp and the\n openssl plugins both check if a parsed certificate is self-signed (and the\n signature is valid), this can e.g. be triggered by an unrelated\n self-signed CA certificate sent by an initiator.\n* [CVE-2021-41991](https://security-tracker.debian.org/tracker/CVE-2021-41991)\nOnce the in-memory certificate cache is full it tries to randomly replace\n lesser used entries. Depending on the generated random value, this could\n lead to an integer overflow that results in a double-dereference and a call\n using out-of-bounds memory that most likely leads to a segmentation fault.\n\n\nRemote code execution can't be ruled out completely, but attackers have no\n control over the dereferenced memory, so it seems unlikely at this point.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 5.7.2-1+deb10u1.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.9.1-1+deb11u1.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\nFor the detailed security status of strongswan please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/strongswan](https://security-tracker.debian.org/tracker/strongswan)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "strongswan",
+				"purl": "pkg:deb/debian/strongswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.2-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4989-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "strongswan",
+				"purl": "pkg:deb/debian/strongswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.9.1-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.9.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4989-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4989"
+		}
+	]
+}

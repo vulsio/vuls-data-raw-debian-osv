@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-651-1",
+	"modified": "2023-06-28T06:34:17.644833Z",
+	"published": "2016-10-11T00:00:00Z",
+	"related": [
+		"CVE-2016-7446",
+		"CVE-2016-7447",
+		"CVE-2016-7449",
+		"CVE-2016-7800"
+	],
+	"summary": "graphicsmagick - security update",
+	"details": "\nVarious security issues were found and fixed in graphicsmagick in Debian\nwheezy LTS.\n\n\n* [CVE-2016-7446](https://security-tracker.debian.org/tracker/CVE-2016-7446)\nHeap buffer overflow issue in MVG/SVG rendering.\n* [CVE-2016-7447](https://security-tracker.debian.org/tracker/CVE-2016-7447)\nHeap overflow of the EscapeParenthesis() function\n* [CVE-2016-7449](https://security-tracker.debian.org/tracker/CVE-2016-7449)\nTIFF related problems due to use of strlcpy use.\n* [CVE-2016-7800](https://security-tracker.debian.org/tracker/CVE-2016-7800)\nFix unsigned underflow leading to heap overflow when\n parsing 8BIM chunk.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.16-1.1+deb7u4.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "graphicsmagick",
+				"purl": "pkg:deb/debian/graphicsmagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.16-1.1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.16-1.1",
+				"1.3.16-1.1+deb7u1",
+				"1.3.16-1.1+deb7u2",
+				"1.3.16-1.1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-651-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-651"
+		}
+	]
+}

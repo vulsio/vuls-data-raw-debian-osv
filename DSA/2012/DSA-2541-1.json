@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2541-1",
+	"modified": "2023-10-16T00:11:18.341932Z",
+	"published": "2012-09-07T00:00:00Z",
+	"related": [
+		"CVE-2012-3458"
+	],
+	"summary": "beaker - information disclosure",
+	"details": "\nIt was discovered that Beaker, a cache and session library for Python,\nwhen using the python-crypto backend, is vulnerable to information\ndisclosure due to a cryptographic weakness related to the use of the\nAES cipher in ECB mode.\n\n\nSystems that have the python-pycryptopp package should not be\nvulnerable, as this backend is preferred over python-crypto.\n\n\nAfter applying this update, existing sessions will be invalidated.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.5.4-4+squeeze1.\n\n\nFor the testing distribution (wheezy), and the unstable distribution\n(sid), this problem has been fixed in version 1.6.3-1.1.\n\n\nWe recommend that you upgrade your beaker packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "beaker",
+				"purl": "pkg:deb/debian/beaker?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.4-4+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.4-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2541-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2541"
+		}
+	]
+}

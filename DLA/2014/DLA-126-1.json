@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-126-1",
+	"modified": "2023-06-28T06:44:12.538382Z",
+	"published": "2014-12-29T00:00:00Z",
+	"related": [
+		"CVE-2014-9380",
+		"CVE-2014-9381"
+	],
+	"summary": "ettercap - security update",
+	"details": "\nPatches a bunch of security vulnerabilities:\n\n\n* [CVE-2014-9380](https://security-tracker.debian.org/tracker/CVE-2014-9380) (Buffer over-read)\n* [CVE-2014-9381](https://security-tracker.debian.org/tracker/CVE-2014-9381) (Signedness error)\n\n\nSee: <https://www.obrela.com/home/security-labs/advisories/osi-advisory-osi-1402/>\n Patches taken from upstream\n\n\n* 6b196e011fa456499ed4650a360961a2f1323818 pull/608\n* 31b937298c8067e6b0c3217c95edceb983dfc4a2 pull/609\n\n\nThanks to Nick Sampanis who is responsible for\n both finding and repairing these issues.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in ettercap version 1:0.7.3-2.1+squeeze2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ettercap",
+				"purl": "pkg:deb/debian/ettercap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.7.3-2.1+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.7.3-2.1",
+				"1:0.7.3-2.1+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-126-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-126"
+		}
+	]
+}

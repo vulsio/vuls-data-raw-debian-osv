@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2277-1",
+	"modified": "2023-06-28T06:26:30.191462Z",
+	"published": "2020-07-11T00:00:00Z",
+	"related": [
+		"CVE-2019-12973",
+		"CVE-2020-15389",
+		"CVE-2020-6851",
+		"CVE-2020-8112"
+	],
+	"summary": "openjpeg2 - security update",
+	"details": "\nThe following CVEs were reported against src:openjpeg2.\n\n\n* [CVE-2019-12973](https://security-tracker.debian.org/tracker/CVE-2019-12973)\nIn OpenJPEG 2.3.1, there is excessive iteration in the\n opj\\_t1\\_encode\\_cblks function of openjp2/t1.c. Remote attackers\n could leverage this vulnerability to cause a denial of service\n via a crafted bmp file. This issue is similar to [CVE-2018-6616](https://security-tracker.debian.org/tracker/CVE-2018-6616).\n* [CVE-2020-6851](https://security-tracker.debian.org/tracker/CVE-2020-6851)\nOpenJPEG through 2.3.1 has a heap-based buffer overflow in\n opj\\_t1\\_clbl\\_decode\\_processor in openjp2/t1.c because of lack\n of opj\\_j2k\\_update\\_image\\_dimensions validation.\n* [CVE-2020-8112](https://security-tracker.debian.org/tracker/CVE-2020-8112)\nopj\\_t1\\_clbl\\_decode\\_processor in openjp2/t1.c in OpenJPEG 2.3.1\n through 2020-01-28 has a heap-based buffer overflow in the\n qmfbid==1 case, a different issue than [CVE-2020-6851](https://security-tracker.debian.org/tracker/CVE-2020-6851).\n* [CVE-2020-15389](https://security-tracker.debian.org/tracker/CVE-2020-15389)\njp2/opj\\_decompress.c in OpenJPEG through 2.3.1 has a\n use-after-free that can be triggered if there is a mix of\n valid and invalid files in a directory operated on by the\n decompressor. Triggering a double-free may also be possible.\n This is related to calling opj\\_image\\_destroy twice.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.1.2-1.1+deb9u5.\n\n\nWe recommend that you upgrade your openjpeg2 packages.\n\n\nFor the detailed security status of openjpeg2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openjpeg2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openjpeg2",
+				"purl": "pkg:deb/debian/openjpeg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.2-1.1+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.2-1.1",
+				"2.1.2-1.1+deb9u1",
+				"2.1.2-1.1+deb9u2",
+				"2.1.2-1.1+deb9u3",
+				"2.1.2-1.1+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2277-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2277"
+		}
+	]
+}

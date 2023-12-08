@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2535-1",
+	"modified": "2023-06-28T06:29:07.070618Z",
+	"published": "2021-01-27T00:00:00Z",
+	"related": [
+		"CVE-2017-7481",
+		"CVE-2019-10156",
+		"CVE-2019-14846",
+		"CVE-2019-14904"
+	],
+	"summary": "ansible - security update",
+	"details": "\nSeveral security vulnerabilities were discovered in ansible, a configuration\nmanagement, deployment, and task execution system.\n\n\n* [CVE-2017-7481](https://security-tracker.debian.org/tracker/CVE-2017-7481)\nAnsible fails to properly mark lookup-plugin results as unsafe. If an\n attacker could control the results of lookup() calls, they could inject\n Unicode strings to be parsed by the jinja2 templating system, resulting in\n code execution. By default, the jinja2 templating language is now marked as\n unsafe and is not evaluated.\n* [CVE-2019-10156](https://security-tracker.debian.org/tracker/CVE-2019-10156)\nA flaw was discovered in the way Ansible templating was implemented,\n causing the possibility of information disclosure through unexpected\n variable substitution. By taking advantage of unintended variable\n substitution the content of any variable may be disclosed.\n* [CVE-2019-14846](https://security-tracker.debian.org/tracker/CVE-2019-14846)\nAnsible was logging at the DEBUG level which lead to a disclosure of\n credentials if a plugin used a library that logged credentials at the DEBUG\n level. This flaw does not affect Ansible modules, as those are executed in\n a separate process.\n* [CVE-2019-14904](https://security-tracker.debian.org/tracker/CVE-2019-14904)\nA flaw was found in the solaris\\_zone module from the Ansible Community\n modules. When setting the name for the zone on the Solaris host, the zone\n name is checked by listing the process with the ps bare command on the\n remote machine. An attacker could take advantage of this flaw by crafting\n the name of the zone and executing arbitrary commands in the remote host.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.2.1.0-2+deb9u2.\n\n\nWe recommend that you upgrade your ansible packages.\n\n\nFor the detailed security status of ansible please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ansible>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ansible",
+				"purl": "pkg:deb/debian/ansible?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.1.0-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.1.0-2",
+				"2.2.1.0-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2535-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2535"
+		}
+	]
+}

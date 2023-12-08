@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-937-1",
+	"modified": "2023-06-28T06:25:40.181346Z",
+	"published": "2017-05-10T00:00:00Z",
+	"related": [
+		"CVE-2017-8779"
+	],
+	"summary": "rpcbind - security update",
+	"details": "\nGuido Vranken discovered that incorrect memory management in libtirpc,\na transport-independent RPC library used by rpcbind and other programs\nmay result in denial of service via memory exhaustion (depending on\nmemory management settings).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.2.0-8+deb7u2.\n\n\nWe recommend that you upgrade your rpcbind packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "rpcbind",
+				"purl": "pkg:deb/debian/rpcbind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.2.0-8+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.2.0-8",
+				"0.2.0-8+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-937-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-937"
+		}
+	]
+}

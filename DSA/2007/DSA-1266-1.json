@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1266-1",
+	"modified": "2023-10-16T00:10:17.886239Z",
+	"published": "2007-03-13T00:00:00Z",
+	"related": [
+		"CVE-2007-1263"
+	],
+	"summary": "gnupg - several vulnerabilities",
+	"details": "\nGerardo Richarte discovered that GnuPG, a free PGP replacement, provides\ninsufficient user feedback if an OpenPGP message contains both unsigned\nand signed portions. Inserting text segments into an otherwise signed\nmessage could be exploited to forge the content of signed messages.\nThis update prevents such attacks; the old behaviour can still be\nactivated by passing the --allow-multiple-messages option.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.4.1-1.sarge7.\n\n\nFor the upcoming stable distribution (etch) these problems have been\nfixed in version 1.4.6-2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.4.6-2.\n\n\nWe recommend that you upgrade your gnupg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.1-1.sarge7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.1-1",
+				"1.4.1-1.sarge2",
+				"1.4.1-1.sarge3",
+				"1.4.1-1.sarge4",
+				"1.4.1-1.sarge5",
+				"1.4.1-1.sarge6",
+				"1.4.1-1sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1266-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1266"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-393-1",
+	"modified": "2023-06-28T06:25:33.660611Z",
+	"published": "2016-01-18T00:00:00Z",
+	"related": [
+		"CVE-2015-6360"
+	],
+	"summary": "srtp - security update",
+	"details": "\nPrevent potential DoS attack due to lack of bounds checking on RTP header CSRC\ncount and extension header length. Credit goes to Randell Jesup and the Firefox\nteam for reporting this issue.\n\n\n(As there is no aead mode available in the Squeeze version, only srtp\\_unprotect() needed to be patched)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "srtp",
+				"purl": "pkg:deb/debian/srtp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.4~dfsg-6+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.4~dfsg-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-393-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-393"
+		}
+	]
+}

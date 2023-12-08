@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-810-1",
+	"modified": "2023-10-16T00:29:17.642778Z",
+	"published": "2005-09-13T00:00:00Z",
+	"related": [
+		"CVE-2004-0718",
+		"CVE-2005-1937",
+		"CVE-2005-2260",
+		"CVE-2005-2261",
+		"CVE-2005-2263",
+		"CVE-2005-2265",
+		"CVE-2005-2266",
+		"CVE-2005-2268",
+		"CVE-2005-2269",
+		"CVE-2005-2270"
+	],
+	"summary": "mozilla - several",
+	"details": "\nSeveral problems have been discovered in Mozilla, the web browser of\nthe Mozilla suite. Since the usual praxis of backporting apparently\ndoes not work for this package, this update is basically version\n1.7.10 with the version number rolled back, and hence still named\n1.7.8. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CAN-2004-0718](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0718), [CAN-2005-1937](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1937)\nA vulnerability has been discovered in Mozilla that allows remote\n attackers to inject arbitrary Javascript from one page into the\n frameset of another site.\n* [CAN-2005-2260](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2260)\nThe browser user interface does not properly distinguish between\n user-generated events and untrusted synthetic events, which makes\n it easier for remote attackers to perform dangerous actions that\n normally could only be performed manually by the user.\n* [CAN-2005-2261](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2261)\nXML scripts ran even when Javascript disabled.\n* [CAN-2005-2263](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2263)\nIt is possible for a remote attacker to execute a callback\n function in the context of another domain (i.e. frame).\n* [CAN-2005-2265](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2265)\nMissing input sanitising of InstallVersion.compareTo() can cause\n the application to crash.\n* [CAN-2005-2266](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2266)\nRemote attackers could steal sensitive information such as cookies\n and passwords from web sites by accessing data in alien frames.\n* [CAN-2005-2268](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2268)\nIt is possible for a Javascript dialog box to spoof a dialog box\n from a trusted site and facilitates phishing attacks.\n* [CAN-2005-2269](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2269)\nRemote attackers could modify certain tag properties of DOM nodes\n that could lead to the execution of arbitrary script or code.\n* [CAN-2005-2270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2270)\nThe Mozilla browser family does not properly clone base objects,\n which allows remote attackers to execute arbitrary code.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.7.8-1sarge2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.7.10-1.\n\n\nWe recommend that you upgrade your Mozilla packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mozilla",
+				"purl": "pkg:deb/debian/mozilla?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.7.8-1sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.7.8-1",
+				"2:1.7.8-1sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-810-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-810"
+		}
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5494-1",
+	"modified": "2023-10-16T00:21:28.319586Z",
+	"published": "2023-09-10T00:00:00Z",
+	"related": [
+		"CVE-2023-4874",
+		"CVE-2023-4875"
+	],
+	"summary": "mutt - security update",
+	"details": "\nSeveral NULL pointer dereference flaws were discovered in Mutt, a\ntext-based mailreader supporting MIME, GPG, PGP and threading, which may\nresult in denial of service (application crash) when viewing a specially\ncrafted email or when composing from a specially crafted draft message.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 2.0.5-4.1+deb11u3.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 2.2.9-1+deb12u1.\n\n\nWe recommend that you upgrade your mutt packages.\n\n\nFor the detailed security status of mutt please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mutt](https://security-tracker.debian.org/tracker/mutt)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "mutt",
+				"purl": "pkg:deb/debian/mutt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.5-4.1+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.5-4.1",
+				"2.0.5-4.1+deb11u1",
+				"2.0.5-4.1+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5494-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "mutt",
+				"purl": "pkg:deb/debian/mutt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.9-1+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5494-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5494"
+		}
+	]
+}

@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2563-1",
+	"modified": "2023-06-28T06:29:15.813474Z",
+	"published": "2021-02-18T00:00:00Z",
+	"related": [
+		"CVE-2021-23840",
+		"CVE-2021-23841"
+	],
+	"summary": "openssl - security update",
+	"details": "\nIt was discovered that there were two issues in the openssl cryptographic\nsystem:\n\n\n* [CVE-2021-23840](https://security-tracker.debian.org/tracker/CVE-2021-23840)\nCalls to EVP\\_CipherUpdate, EVP\\_EncryptUpdate and EVP\\_DecryptUpdate may\n overflow the output length argument in some cases where the input length is\n close to the maximum permissable length for an integer on the platform. In\n such cases the return value from the function call will be 1 (indicating\n success), but the output length value will be negative. This could cause\n applications to behave incorrectly or crash. OpenSSL versions 1.1.1i and\n below are affected by this issue. Users of these versions should upgrade to\n OpenSSL 1.1.1j. OpenSSL versions 1.0.2x and below are affected by this\n issue. However OpenSSL 1.0.2 is out of support and no longer receiving\n public updates. Premium support customers of OpenSSL 1.0.2 should upgrade\n to 1.0.2y. Other users should upgrade to 1.1.1j. Fixed in OpenSSL 1.1.1j\n (Affected 1.1.1-1.1.1i). Fixed in OpenSSL 1.0.2y (Affected\n 1.0.2-1.0.2x).\n* [CVE-2021-23841](https://security-tracker.debian.org/tracker/CVE-2021-23841)\nThe OpenSSL public API function X509\\_issuer\\_and\\_serial\\_hash() attempts\n to create a unique hash value based on the issuer and serial number data\n contained within an X509 certificate. However it fails to correctly handle\n any errors that may occur while parsing the issuer field (which might occur\n if the issuer field is maliciously constructed). This may subsequently\n result in a NULL pointer deref and a crash leading to a potential\n denial of service attack.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.1.0l-1~deb9u3.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0l-1~deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0f-3",
+				"1.1.0f-3+deb9u1",
+				"1.1.0f-3+deb9u2",
+				"1.1.0f-4",
+				"1.1.0f-5",
+				"1.1.0g-1",
+				"1.1.0g-2",
+				"1.1.0g-2+riscv64",
+				"1.1.0h-1",
+				"1.1.0h-2",
+				"1.1.0h-3",
+				"1.1.0h-4",
+				"1.1.0j-1~deb9u1",
+				"1.1.0k-1~deb9u1",
+				"1.1.0l-1~deb9u1",
+				"1.1.0l-1~deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2563-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2563"
+		}
+	]
+}

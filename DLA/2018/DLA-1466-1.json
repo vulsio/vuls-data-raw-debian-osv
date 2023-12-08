@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1466-1",
+	"modified": "2023-06-28T06:24:31.659974Z",
+	"published": "2018-08-15T00:00:00Z",
+	"related": [
+		"CVE-2018-13405",
+		"CVE-2018-5390",
+		"CVE-2018-5391"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation or denial of service.\n\n\n* [CVE-2018-5390](https://security-tracker.debian.org/tracker/CVE-2018-5390)\n(SegmentSmack)\n\n\nJuha-Matti Tilli discovered that a remote attacker can trigger the\n worst case code paths for TCP stream reassembly with low rates of\n specially crafted packets, leading to remote denial of service.\n* [CVE-2018-5391](https://security-tracker.debian.org/tracker/CVE-2018-5391)\n(FragmentSmack)\n\n\nJuha-Matti Tilli discovered a flaw in the way the Linux kernel\n handled reassembly of fragmented IPv4 and IPv6 packets. A remote\n attacker can take advantage of this flaw to trigger time and\n calculation expensive fragment reassembly algorithms by sending\n specially crafted packets, leading to remote denial of service.\n\n\nThis is mitigated by reducing the default limits on memory usage\n for incomplete fragmented packets. The same mitigation can be\n achieved without the need to reboot, by setting the sysctls:\n\n\nnet.ipv4.ipfrag\\_high\\_thresh = 262144  \n\n net.ipv6.ip6frag\\_high\\_thresh = 262144  \n\n net.ipv4.ipfrag\\_low\\_thresh = 196608  \n\n net.ipv6.ip6frag\\_low\\_thresh = 196608\n\n\nThe default values may still be increased by local configuration\n if necessary.\n* [CVE-2018-13405](https://security-tracker.debian.org/tracker/CVE-2018-13405)\nJann Horn discovered that the inode\\_init\\_owner function in\n fs/inode.c in the Linux kernel allows local users to create files\n with an unintended group ownership allowing attackers to escalate\n privileges by making a plain file executable and SGID.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.110-3+deb9u2~deb8u1. This update includes fixes for several\nregressions in the latest point release.\n\n\nThe earlier version 4.9.110-3+deb9u1~deb8u1 included all the above\nfixes except for [CVE-2018-5391](https://security-tracker.debian.org/tracker/CVE-2018-5391), \nwhich may be mitigated as explained above.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.110-3+deb9u2~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.110-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1466-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1466"
+		}
+	]
+}

@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2835-1",
+	"modified": "2023-10-16T00:11:33.830842Z",
+	"published": "2014-01-05T00:00:00Z",
+	"related": [
+		"CVE-2013-7100"
+	],
+	"summary": "asterisk - buffer overflow",
+	"details": "\nJan Juergens discovered a buffer overflow in the parser for SMS messages\nin Asterisk.\n\n\nAn additional change was backported, which is fully described in\n<http://downloads.asterisk.org/pub/security/AST-2013-007.html>\n\n\nWith the fix for AST-2013-007, a new configuration option was added in\norder to allow the system adminitrator to disable the expansion of\ndangerous functions (such as SHELL()) from any interface which is not\nthe dialplan. In stable and oldstable this option is disabled by default.\nTo enable it add the following line to the section '[options]' in\n/etc/asterisk/asterisk.conf (and restart asterisk)\n\n\n\n```\nlive_dangerously = no\n```\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1:1.6.2.9-2+squeeze12.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1:1.8.13.1~dfsg1-3+deb7u3.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 1:11.7.0~dfsg-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:11.7.0~dfsg-1.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.6.2.9-2+squeeze12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.6.2.9-2",
+				"1:1.6.2.9-2+squeeze1",
+				"1:1.6.2.9-2+squeeze10",
+				"1:1.6.2.9-2+squeeze11",
+				"1:1.6.2.9-2+squeeze2",
+				"1:1.6.2.9-2+squeeze3",
+				"1:1.6.2.9-2+squeeze4",
+				"1:1.6.2.9-2+squeeze5",
+				"1:1.6.2.9-2+squeeze6",
+				"1:1.6.2.9-2+squeeze7",
+				"1:1.6.2.9-2+squeeze8",
+				"1:1.6.2.9-2+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2835-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.8.13.1~dfsg1-3+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.8.13.1~dfsg-3",
+				"1:1.8.13.1~dfsg-3+deb7u1",
+				"1:1.8.13.1~dfsg-3+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2835-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2835"
+		}
+	]
+}

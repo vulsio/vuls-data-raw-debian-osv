@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2519-1",
+	"modified": "2023-06-28T06:26:35.638841Z",
+	"published": "2021-01-06T00:00:00Z",
+	"related": [
+		"CVE-2018-16877",
+		"CVE-2018-16878",
+		"CVE-2020-25654"
+	],
+	"summary": "pacemaker - security update",
+	"details": "\nSeveral security vulnerabilities were addressed in pacemaker, a cluster\nresource manager.\n\n\n* [CVE-2018-16877](https://security-tracker.debian.org/tracker/CVE-2018-16877)\nA flaw was found in the way pacemaker's client-server authentication was\n implemented. A local attacker could use this flaw, and combine it with\n other IPC weaknesses, to achieve local privilege escalation.\n* [CVE-2018-16878](https://security-tracker.debian.org/tracker/CVE-2018-16878)\nAn insufficient verification inflicted preference of uncontrolled processes\n can lead to denial-of-service.\n* [CVE-2020-25654](https://security-tracker.debian.org/tracker/CVE-2020-25654)\nAn ACL bypass flaw was found in pacemaker. An attacker having a local\n account on the cluster and in the haclient group could use IPC\n communication with various daemons directly to perform certain tasks that\n they would be prevented by ACLs from doing if they went through the\n configuration.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.1.24-0+deb9u1.\n\n\nWe recommend that you upgrade your pacemaker packages.\n\n\nFor the detailed security status of pacemaker please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/pacemaker>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "pacemaker",
+				"purl": "pkg:deb/debian/pacemaker?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.24-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.16-1",
+				"1.1.16-1+deb9u1",
+				"1.1.16-1+deb9u2",
+				"1.1.17-1",
+				"1.1.18-1",
+				"1.1.18-2",
+				"1.1.18~rc3-1",
+				"1.1.18~rc4-1",
+				"1.1.19-1",
+				"1.1.19-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2519-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2519"
+		}
+	]
+}

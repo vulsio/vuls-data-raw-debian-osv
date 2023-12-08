@@ -1,0 +1,62 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5192-1",
+	"modified": "2023-10-16T00:25:52.955881Z",
+	"published": "2022-07-26T00:00:00Z",
+	"related": [
+		"CVE-2022-21540",
+		"CVE-2022-21541",
+		"CVE-2022-21549",
+		"CVE-2022-34169"
+	],
+	"summary": "openjdk-17 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the OpenJDK Java runtime,\nwhich may result in the execution of arbitrary Java bytecode or the\nbypass of the Java sandbox.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 17.0.4+8-1~deb11u1.\n\n\nWe recommend that you upgrade your openjdk-17 packages.\n\n\nFor the detailed security status of openjdk-17 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openjdk-17](https://security-tracker.debian.org/tracker/openjdk-17)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "openjdk-17",
+				"purl": "pkg:deb/debian/openjdk-17?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "17.0.4+8-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"17+35-1",
+				"17.0.1+12-1",
+				"17.0.1+12-1+deb11u1",
+				"17.0.1+12-1+deb11u2",
+				"17.0.2+8-1",
+				"17.0.2+8-1~deb11u1",
+				"17.0.3+7-1",
+				"17.0.3+7-1~deb11u1",
+				"17~19-1",
+				"17~24-1",
+				"17~27-1",
+				"17~29-1",
+				"17~31ea-1",
+				"17~33ea-1",
+				"17~35ea-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5192-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5192"
+		}
+	]
+}

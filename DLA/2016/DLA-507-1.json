@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-507-1",
+	"modified": "2023-06-28T06:34:08.012838Z",
+	"published": "2016-06-07T00:00:00Z",
+	"related": [
+		"CVE-2015-4000"
+	],
+	"summary": "nss - security update",
+	"details": "\nA vulnerability has been found in nss.\n\n\n* [CVE-2015-4000](https://security-tracker.debian.org/tracker/CVE-2015-4000)\nWith TLS protocol 1.2 and earlier, when a DHE\\_EXPORT ciphersuite is\n enabled on a server but not on a client, does not properly convey\n a DHE\\_EXPORT choice, which allows man-in-the-middle attackers to\n conduct cipher-downgrade attacks by rewriting a ClientHello with\n DHE replaced by DHE\\_EXPORT and then rewriting a ServerHello with\n DHE\\_EXPORT replaced by DHE, aka the Logjam issue.\n\n\nThe solution in nss was to not accept bit lengths less than 1024.\nThis may potentially be a backwards incompatibility issue but such\nlow bit lengths should not be in use so it was deemed acceptable.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2:3.14.5-1+deb7u7.\n\n\nWe recommend that you upgrade your nss packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.14.5-1+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.14.3-1",
+				"2:3.14.4-1",
+				"2:3.14.5-1",
+				"2:3.14.5-1+deb7u1",
+				"2:3.14.5-1+deb7u2",
+				"2:3.14.5-1+deb7u3",
+				"2:3.14.5-1+deb7u4",
+				"2:3.14.5-1+deb7u5",
+				"2:3.14.5-1+deb7u6",
+				"2:3.14.5-1~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-507-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-507"
+		}
+	]
+}

@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5492-1",
+	"modified": "2023-11-15T21:15:38.757457Z",
+	"published": "2023-09-09T00:00:00Z",
+	"related": [
+		"CVE-2023-1206",
+		"CVE-2023-1989",
+		"CVE-2023-20588",
+		"CVE-2023-2430",
+		"CVE-2023-2898",
+		"CVE-2023-34319",
+		"CVE-2023-3611",
+		"CVE-2023-3772",
+		"CVE-2023-3773",
+		"CVE-2023-3776",
+		"CVE-2023-3777",
+		"CVE-2023-3863",
+		"CVE-2023-4004",
+		"CVE-2023-4015",
+		"CVE-2023-40283",
+		"CVE-2023-4132",
+		"CVE-2023-4147",
+		"CVE-2023-4155",
+		"CVE-2023-4194",
+		"CVE-2023-4206",
+		"CVE-2023-4207",
+		"CVE-2023-4208",
+		"CVE-2023-4273",
+		"CVE-2023-4569",
+		"CVE-2023-4622"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2023-1206](https://security-tracker.debian.org/tracker/CVE-2023-1206)\nIt was discovered that the networking stack permits attackers to\n force hash collisions in the IPv6 connection lookup table, which may\n result in denial of service (significant increase in the cost of\n lookups, increased CPU utilization).\n* [CVE-2023-1989](https://security-tracker.debian.org/tracker/CVE-2023-1989)\nZheng Wang reported a race condition in the btsdio Bluetooth adapter\n driver that can lead to a use-after-free. An attacker able to insert\n and remove SDIO devices can use this to cause a denial of service\n (crash or memory corruption) or possibly to run arbitrary code in\n the kernel.\n* [CVE-2023-2430](https://security-tracker.debian.org/tracker/CVE-2023-2430)\nXingyuan Mo discovered that the io\\_uring subsystem did not properly\n handle locking when the target ring is configured with IOPOLL, which\n may result in denial of service.\n* [CVE-2023-2898](https://security-tracker.debian.org/tracker/CVE-2023-2898)\nIt was discovered that missing sanitising in the f2fs file\n system may result in denial of service if a malformed file\n system is accessed.\n* [CVE-2023-3611](https://security-tracker.debian.org/tracker/CVE-2023-3611)\nIt was discovered that an out-of-bounds write in the traffic control\n subsystem for the Quick Fair Queueing scheduler (QFQ) may result in\n denial of service or privilege escalation.\n* [CVE-2023-3772](https://security-tracker.debian.org/tracker/CVE-2023-3772)\nLin Ma discovered a NULL pointer dereference flaw in the XFRM\n subsystem which may result in denial of service.\n* [CVE-2023-3773](https://security-tracker.debian.org/tracker/CVE-2023-3773)\nLin Ma discovered a flaw in the XFRM subsystem, which may result\n in denial of service for a user with the CAP\\_NET\\_ADMIN capability in\n any user or network namespace.\n* [CVE-2023-3776](https://security-tracker.debian.org/tracker/CVE-2023-3776),\n [CVE-2023-4206](https://security-tracker.debian.org/tracker/CVE-2023-4206), \n [CVE-2023-4207](https://security-tracker.debian.org/tracker/CVE-2023-4207), \n [CVE-2023-4208](https://security-tracker.debian.org/tracker/CVE-2023-4208)\nIt was discovered that a use-after-free in the cls\\_fw, cls\\_u32 and\n cls\\_route network classifiers may result in denial of service or\n potential local privilege escalation.\n* [CVE-2023-3777](https://security-tracker.debian.org/tracker/CVE-2023-3777)\nKevin Rich discovered a use-after-free in Netfilter when flushing\n table rules, which may result in local privilege escalation for a\n user with the CAP\\_NET\\_ADMIN capability in any user or network\n namespace.\n* [CVE-2023-3863](https://security-tracker.debian.org/tracker/CVE-2023-3863)\nIt was discovered that a use-after-free in the NFC implementation\n may result in denial of service, an information leak or potential\n local privilege escalation.\n* [CVE-2023-4004](https://security-tracker.debian.org/tracker/CVE-2023-4004)\nIt was discovered that a use-after-free in Netfilter's\n implementation of PIPAPO (PIle PAcket POlicies) may result in denial\n of service or potential local privilege escalation for a user with\n the CAP\\_NET\\_ADMIN capability in any user or network namespace.\n* [CVE-2023-4015](https://security-tracker.debian.org/tracker/CVE-2023-4015)\nKevin Rich discovered a use-after-free in Netfilter when handling\n bound chain deactivation in certain circumstances, may result in\n denial of service or potential local privilege escalation for a user\n with the CAP\\_NET\\_ADMIN capability in any user or network namespace.\n* [CVE-2023-4132](https://security-tracker.debian.org/tracker/CVE-2023-4132)\nA use-after-free in the driver for Siano SMS1xxx based MDTV\n receivers may result in local denial of service.\n* [CVE-2023-4147](https://security-tracker.debian.org/tracker/CVE-2023-4147)\nKevin Rich discovered a use-after-free in Netfilter when adding a\n rule with NFTA\\_RULE\\_CHAIN\\_ID, which may result in local privilege\n escalation for a user with the CAP\\_NET\\_ADMIN capability in any user\n or network namespace.\n* [CVE-2023-4155](https://security-tracker.debian.org/tracker/CVE-2023-4155)\nAndy Nguyen discovered a flaw in the KVM subsystem allowing a KVM\n guest using EV-ES or SEV-SNP to cause a denial of service.\n* [CVE-2023-4194](https://security-tracker.debian.org/tracker/CVE-2023-4194)\nA type confusion in the implementation of TUN/TAP network devices\n may allow a local user to bypass network filters.\n* [CVE-2023-4273](https://security-tracker.debian.org/tracker/CVE-2023-4273)\nMaxim Suhanov discovered a stack overflow in the exFAT driver, which\n may result in local denial of service via a malformed file system.\n* [CVE-2023-4569](https://security-tracker.debian.org/tracker/CVE-2023-4569)\nlonial con discovered flaw in the Netfilter subsystem, which may\n allow a local attacker to cause a double-deactivations of catchall\n elements, which results in a memory leak.\n* [CVE-2023-4622](https://security-tracker.debian.org/tracker/CVE-2023-4622)\nBing-Jhong Billy Jheng discovered a use-after-free within the Unix\n domain sockets component, which may result in local privilege\n escalation.\n* [CVE-2023-20588](https://security-tracker.debian.org/tracker/CVE-2023-20588)\nJana Hofmann, Emanuele Vannacci, Cedric Fournet, Boris Koepf and\n Oleksii Oleksenko discovered that on some AMD CPUs with the Zen1\n micro architecture an integer division by zero may leave stale\n quotient data from a previous division, resulting in a potential\n leak of sensitive data.\n* [CVE-2023-34319](https://security-tracker.debian.org/tracker/CVE-2023-34319)\nRoss Lagerwall discovered a buffer overrun in Xen's netback driver\n which may allow a Xen guest to cause denial of service to the\n virtualisation host my sending malformed packets.\n* [CVE-2023-40283](https://security-tracker.debian.org/tracker/CVE-2023-40283)\nA use-after-free was discovered in Bluetooth L2CAP socket handling.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 6.1.52-1. This update is released without armel builds. Changes\nin the new stable series import cause a substantial increase of the\ncompressed image for marvell flavour. This issue will be addressed in a\nfuture linux update.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.52-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1.27-1",
+				"6.1.37-1",
+				"6.1.38-1",
+				"6.1.38-2",
+				"6.1.38-2~bpo11+1",
+				"6.1.38-3",
+				"6.1.38-4",
+				"6.1.38-4~bpo11+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5492-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5492"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1454-1",
+	"modified": "2023-10-16T00:10:26.632145Z",
+	"published": "2008-01-07T00:00:00Z",
+	"related": [
+		"CVE-2007-1351"
+	],
+	"summary": "freetype - arbitrary code execution",
+	"details": "\n\nGreg MacManus discovered an integer overflow in the font handling of\nlibfreetype, a FreeType 2 font engine, which might lead to denial of\nservice or possibly the execution of arbitrary code if a user is tricked\ninto opening a malformed font.\n\n\n\n\nFor the old stable distribution (sarge) this problem will be fixed\nsoon.\n\n\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 2.2.1-5+etch2.\n\n\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.3.5-1.\n\n\n\n\nWe recommend that you upgrade your freetype packages.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "freetype",
+				"purl": "pkg:deb/debian/freetype?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.1-5+etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.1-5",
+				"2.2.1-5+etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1454-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1454"
+		}
+	]
+}

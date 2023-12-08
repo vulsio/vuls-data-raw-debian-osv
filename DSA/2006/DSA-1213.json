@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1213",
+	"modified": "2023-10-16T00:10:14.804773Z",
+	"published": "2006-11-19T00:00:00Z",
+	"related": [
+		"CVE-2006-0082",
+		"CVE-2006-4144",
+		"CVE-2006-5456",
+		"CVE-2006-5868"
+	],
+	"summary": "imagemagick",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Imagemagick,\na collection of image manipulation programs, which may lead to the\nexecution of arbitrary code. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2006-0082](https://security-tracker.debian.org/tracker/CVE-2006-0082)\nDaniel Kobras discovered that Imagemagick is vulnerable to format\n string attacks in the filename parsing code.\n* [CVE-2006-4144](https://security-tracker.debian.org/tracker/CVE-2006-4144)\nDamian Put discovered that Imagemagick is vulnerable to buffer\n overflows in the module for SGI images.\n* [CVE-2006-5456](https://security-tracker.debian.org/tracker/CVE-2006-5456)\nM Joonas Pihlaja discovered that Imagemagick is vulnerable to buffer\n overflows in the module for DCM and PALM images.\n* [CVE-2006-5868](https://security-tracker.debian.org/tracker/CVE-2006-5868)\nDaniel Kobras discovered that Imagemagick is vulnerable to buffer\n overflows in the module for SGI images.\n\n\nThis update also addresses regressions in the XCF codec, which were\nintroduced in the previous security update.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 6:6.0.6.2-2.8.\n\n\nFor the upcoming stable distribution (etch) these problems have been\nfixed in version 7:6.2.4.5.dfsg1-0.11.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 7:6.2.4.5.dfsg1-0.11.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:6.0.6.2-2.8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:6.0.6.2-2.4",
+				"6:6.0.6.2-2.5",
+				"6:6.0.6.2-2.6",
+				"6:6.0.6.2-2.7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1213.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1213"
+		}
+	]
+}

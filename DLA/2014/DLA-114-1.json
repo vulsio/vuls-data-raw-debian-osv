@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-114-1",
+	"modified": "2023-06-28T06:23:47.909939Z",
+	"published": "2014-12-17T00:00:00Z",
+	"related": [
+		"CVE-2004-2771",
+		"CVE-2014-7844"
+	],
+	"summary": "heirloom-mailx - security update",
+	"details": "\nTwo security vulnerabilities were discovered in Heirloom mailx, an\nimplementation of the mail command:\n\n\n* [CVE-2004-2771](https://security-tracker.debian.org/tracker/CVE-2004-2771)\nmailx interprets shell meta-characters in certain email\n addresses.\n* [CVE-2014-7844](https://security-tracker.debian.org/tracker/CVE-2014-7844)\nAn unexpected feature of mailx treats syntactically valid email\n addresses as shell commands to execute.\n\n\nShell command execution can be re-enabled using the expandaddr\noption.\n\n\nNote that this security update does not remove all mailx facilities\nfor command execution, though. Scripts which send mail to addresses\nobtained from an untrusted source (such as a web form) should use the\n\"--\" separator before the email addresses (which was fixed to work\nproperly in this update), or they should be changed to invoke\n\"mail -t\" or \"sendmail -i -t\" instead, passing the recipient addresses\nas part of the mail header.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 12.4-2+deb6u1.\n\n\nWe recommend that you upgrade your heirloom-mailx packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "heirloom-mailx",
+				"purl": "pkg:deb/debian/heirloom-mailx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "12.4-2+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"12.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-114-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-114"
+		}
+	]
+}

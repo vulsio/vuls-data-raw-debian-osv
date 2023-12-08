@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1827-1",
+	"modified": "2023-06-28T06:29:49.178624Z",
+	"published": "2019-06-19T00:00:00Z",
+	"related": [
+		"CVE-2019-12795"
+	],
+	"summary": "gvfs - security update",
+	"details": "\nSimon McVittie discovered a flaw in gvfs, the Gnome Virtual File\nSystem. The gvfsd daemon opened a private D-Bus server socket without\nconfiguring an authorization rule. A local attacker could connect to\nthis server socket and issue D-Bus method calls.\n\n\n(Note that the server socket only accepts a single connection, so the\nattacker would have to discover the server and connect to the socket\nbefore its owner does.)\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.22.2-1+deb8u1.\n\n\nWe recommend that you upgrade your gvfs packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gvfs",
+				"purl": "pkg:deb/debian/gvfs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.22.2-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.22.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1827-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1827"
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1331-1",
+	"modified": "2023-10-16T00:10:20.300348Z",
+	"published": "2007-07-07T00:00:00Z",
+	"related": [
+		"CVE-2006-0207",
+		"CVE-2006-4486",
+		"CVE-2007-1864"
+	],
+	"summary": "php4 - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in PHP, a\nserver-side, HTML-embedded scripting language, which may lead to the\nexecution of arbitrary code. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2006-0207](https://security-tracker.debian.org/tracker/CVE-2006-0207)\nStefan Esser discovered HTTP response splitting vulnerabilities\n in the session extension. This only affects Debian 3.1 (Sarge).\n* [CVE-2006-4486](https://security-tracker.debian.org/tracker/CVE-2006-4486)\nStefan Esser discovered that an integer overflow in memory allocation\n routines allows the bypass of memory limit restrictions. This only\n affects Debian 3.1 (Sarge) on 64 bit architectures.\n* [CVE-2007-1864](https://security-tracker.debian.org/tracker/CVE-2007-1864)\nIt was discovered that a buffer overflow in the xmlrpc extension\n allows the execution of arbitrary code.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed\nin version 4.3.10-22.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 4.4.4-8+etch4.\n\n\nThe unstable distribution (sid) no longer contains php4.\n\n\nWe recommend that you upgrade your PHP packages. Sarge packages for\nhppa, mips and powerpc are not yet available, due to problems on the\nbuild hosts. They will be provided later.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "php4",
+				"purl": "pkg:deb/debian/php4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:4.3.10-22"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:4.3.10-15",
+				"4:4.3.10-16",
+				"4:4.3.10-17",
+				"4:4.3.10-18",
+				"4:4.3.10-19",
+				"4:4.3.10-20",
+				"4:4.3.10-21"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1331-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "php4",
+				"purl": "pkg:deb/debian/php4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:4.4.4-8+etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:4.4.4-8+etch1",
+				"6:4.4.4-8+etch2",
+				"6:4.4.4-8+etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1331-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1331"
+		}
+	]
+}

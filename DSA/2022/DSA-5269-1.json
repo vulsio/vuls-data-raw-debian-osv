@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5269-1",
+	"modified": "2023-10-16T00:16:53.668965Z",
+	"published": "2022-11-02T00:00:00Z",
+	"related": [
+		"CVE-2022-37454"
+	],
+	"summary": "pypy3 - security update",
+	"details": "\nNicky Mouha discovered a buffer overflow in the sha3 module of PyPy, a\nfast, compliant alternative implementation of the Python language.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 7.3.5+dfsg-2+deb11u2.\n\n\nWe recommend that you upgrade your pypy3 packages.\n\n\nFor the detailed security status of pypy3 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/pypy3](https://security-tracker.debian.org/tracker/pypy3)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "pypy3",
+				"purl": "pkg:deb/debian/pypy3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.3.5+dfsg-2+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.3.5+dfsg-2",
+				"7.3.5+dfsg-2+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5269-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5269"
+		}
+	]
+}

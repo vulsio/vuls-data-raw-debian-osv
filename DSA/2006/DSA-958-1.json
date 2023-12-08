@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-958-1",
+	"modified": "2023-10-16T00:30:17.110020Z",
+	"published": "2006-01-27T00:00:00Z",
+	"related": [
+		"CVE-2005-3973",
+		"CVE-2005-3974",
+		"CVE-2005-3975"
+	],
+	"summary": "drupal - several",
+	"details": "\nSeveral security related problems have been discovered in drupal, a\nfully-featured content management/discussion engine. The Common\nVulnerabilities and Exposures project identifies the following\nvulnerabilities:\n\n\n* [CVE-2005-3973](https://security-tracker.debian.org/tracker/CVE-2005-3973)\nSeveral cross-site scripting vulnerabilities allow remote\n attackers to inject arbitrary web script or HTML.\n* [CVE-2005-3974](https://security-tracker.debian.org/tracker/CVE-2005-3974)\nWhen running on PHP5, Drupal does not correctly enforce user\n privileges, which allows remote attackers to bypass the \"access\n user profiles\" permission.\n* [CVE-2005-3975](https://security-tracker.debian.org/tracker/CVE-2005-3975)\nAn interpretation conflict allows remote authenticated users to\n inject arbitrary web script or HTML via HTML in a file with a GIF\n or JPEG file extension.\n\n\nThe old stable distribution (woody) does not contain drupal packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 4.5.3-5.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.5.6-1.\n\n\nWe recommend that you upgrade your drupal package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "drupal",
+				"purl": "pkg:deb/debian/drupal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.5.3-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.5.3-2",
+				"4.5.3-3",
+				"4.5.3-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-958-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-958"
+		}
+	]
+}

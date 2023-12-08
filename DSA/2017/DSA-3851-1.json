@@ -1,0 +1,70 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3851-1",
+	"modified": "2023-10-16T00:12:22.957511Z",
+	"published": "2017-05-12T00:00:00Z",
+	"related": [
+		"CVE-2017-7484",
+		"CVE-2017-7485",
+		"CVE-2017-7486"
+	],
+	"summary": "postgresql-9.4 - security update",
+	"details": "\nSeveral vulnerabilities have been found in the PostgreSQL database\nsystem:\n\n\n* [CVE-2017-7484](https://security-tracker.debian.org/tracker/CVE-2017-7484)\nRobert Haas discovered that some selectivity estimators did not\n validate user privileges which could result in information\n disclosure.\n* [CVE-2017-7485](https://security-tracker.debian.org/tracker/CVE-2017-7485)\nDaniel Gustafsson discovered that the PGREQUIRESSL environment\n variable did no longer enforce a TLS connection.\n* [CVE-2017-7486](https://security-tracker.debian.org/tracker/CVE-2017-7486)\nAndrew Wheelwright discovered that user mappings were insufficiently\n restricted.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 9.4.12-0+deb8u1.\n\n\nWe recommend that you upgrade your postgresql-9.4 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "postgresql-9.4",
+				"purl": "pkg:deb/debian/postgresql-9.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.4.12-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.4.1-1",
+				"9.4.10-0+deb8u1",
+				"9.4.11-0+deb8u1",
+				"9.4.11-0+deb8u1~bpo7+1",
+				"9.4.11-0+deb8u2",
+				"9.4.12-0+deb8u1~bpo7+1",
+				"9.4.2-0+deb8u1",
+				"9.4.2-1",
+				"9.4.3-0+deb8u1",
+				"9.4.3-1",
+				"9.4.4-0+deb8u1",
+				"9.4.4-1",
+				"9.4.4-2",
+				"9.4.5-0+deb8u1",
+				"9.4.5-0+deb8u1~bpo70+1",
+				"9.4.5-1",
+				"9.4.5-2",
+				"9.4.6-0+deb8u1",
+				"9.4.6-0+deb8u1~bpo70+1",
+				"9.4.7-0+deb8u1",
+				"9.4.7-0+deb8u1~bpo70+1",
+				"9.4.7-0+deb8u1~bpo70+2",
+				"9.4.8-0+deb8u1",
+				"9.4.9-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3851-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3851"
+		}
+	]
+}

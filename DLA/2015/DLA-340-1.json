@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-340-1",
+	"modified": "2023-06-28T06:42:59.120413Z",
+	"published": "2015-11-07T00:00:00Z",
+	"related": [
+		"CVE-2015-2695",
+		"CVE-2015-2697"
+	],
+	"summary": "krb5 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in krb5, the MIT implementation\nof Kerberos. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2015-2695](https://security-tracker.debian.org/tracker/CVE-2015-2695)\nIt was discovered that applications which call gss\\_inquire\\_context()\n on a partially-established SPNEGO context can cause the GSS-API\n library to read from a pointer using the wrong type, leading to a\n process crash.\n* [CVE-2015-2697](https://security-tracker.debian.org/tracker/CVE-2015-2697)\nIt was discovered that the build\\_principal\\_va() function incorrectly\n handles input strings. An authenticated attacker can take advantage\n of this flaw to cause a KDC to crash using a TGS request with a\n large realm field beginning with a null byte.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 1.8.3+dfsg-4squeeze10.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "krb5",
+				"purl": "pkg:deb/debian/krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.3+dfsg-4squeeze10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.3+dfsg-4",
+				"1.8.3+dfsg-4squeeze1",
+				"1.8.3+dfsg-4squeeze2",
+				"1.8.3+dfsg-4squeeze5",
+				"1.8.3+dfsg-4squeeze6",
+				"1.8.3+dfsg-4squeeze7",
+				"1.8.3+dfsg-4squeeze8",
+				"1.8.3+dfsg-4squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-340-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-340"
+		}
+	]
+}

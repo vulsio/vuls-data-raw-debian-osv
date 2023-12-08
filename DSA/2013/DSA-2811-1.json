@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2811-1",
+	"modified": "2023-10-16T00:11:32.101921Z",
+	"published": "2013-12-07T00:00:00Z",
+	"related": [
+		"CVE-2013-6634",
+		"CVE-2013-6635",
+		"CVE-2013-6636",
+		"CVE-2013-6637",
+		"CVE-2013-6638",
+		"CVE-2013-6639",
+		"CVE-2013-6640",
+		"CVE-2014-1681"
+	],
+	"summary": "chromium-browser - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the chromium web browser.\n\n\n* [CVE-2013-6634](https://security-tracker.debian.org/tracker/CVE-2013-6634)\nAndrey Labunets discovered that the wrong URL was used during\n validation in the one-click sign on helper.\n* [CVE-2013-6635](https://security-tracker.debian.org/tracker/CVE-2013-6635)\ncloudfuzzer discovered use-after-free issues in the InsertHTML and\n Indent DOM editing commands.\n* [CVE-2013-6636](https://security-tracker.debian.org/tracker/CVE-2013-6636)\nBas Venis discovered an address bar spoofing issue.\n* [CVE-2013-6637](https://security-tracker.debian.org/tracker/CVE-2013-6637)\nThe chrome 31 development team discovered and fixed multiple issues\n with potential security impact.\n* [CVE-2013-6638](https://security-tracker.debian.org/tracker/CVE-2013-6638)\nJakob Kummerow of the Chromium project discovered a buffer overflow in\n the v8 javascript library.\n* [CVE-2013-6639](https://security-tracker.debian.org/tracker/CVE-2013-6639)\nJakob Kummerow of the Chromium project discovered an out-of-bounds\n write in the v8 javascript library.\n* [CVE-2013-6640](https://security-tracker.debian.org/tracker/CVE-2013-6640)\nJakob Kummerow of the Chromium project discovered an out-of-bounds\n read in the v8 javascript library.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 31.0.1650.63-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 31.0.1650.63-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "31.0.1650.63-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"26.0.1410.43-1",
+				"27.0.1453.110-1",
+				"27.0.1453.110-1~deb7u1",
+				"27.0.1453.110-2",
+				"27.0.1453.93-1",
+				"27.0.1453.93-1~deb7u1",
+				"28.0.1500.71-1",
+				"28.0.1500.71-1~deb7u1",
+				"28.0.1500.71-2",
+				"28.0.1500.95-1",
+				"28.0.1500.95-1~deb7u1",
+				"28.0.1500.95-2",
+				"28.0.1500.95-3",
+				"29.0.1547.57-1",
+				"29.0.1547.57-1~deb7u1",
+				"29.0.1547.57-2",
+				"29.0.1547.57-3",
+				"29.0.1547.57-3+exp1",
+				"30.0.1599.101-1",
+				"30.0.1599.101-1~deb7u1",
+				"30.0.1599.101-2",
+				"30.0.1599.101-3",
+				"31.0.1650.57-1",
+				"31.0.1650.57-1~deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2811-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2811"
+		}
+	]
+}

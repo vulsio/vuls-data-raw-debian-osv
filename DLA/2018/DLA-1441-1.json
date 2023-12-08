@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1441-1",
+	"modified": "2023-06-28T06:29:37.493951Z",
+	"published": "2018-07-24T00:00:00Z",
+	"related": [
+		"CVE-2018-1000550"
+	],
+	"summary": "sympa - security update",
+	"details": "\nA vulnerability has been discovered in Sympa, a modern mailing list\nmanager, that allows write access to files on the server filesystem.\nThis flaw allows to create or modify any file writable by the Sympa\nuser, located on the server filesystem, using the function of Sympa\nweb interface template file saving.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n6.1.23~dfsg-2+deb8u2.\n\n\nWe recommend that you upgrade your sympa packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sympa",
+				"purl": "pkg:deb/debian/sympa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.23~dfsg-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1.23~dfsg-2",
+				"6.1.23~dfsg-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1441-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1441"
+		}
+	]
+}

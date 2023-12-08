@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-923-1",
+	"modified": "2023-06-28T06:35:34.679318Z",
+	"published": "2017-04-28T00:00:00Z",
+	"related": [
+		"CVE-2017-6596"
+	],
+	"summary": "partclone - security update",
+	"details": "\nIt was discovered that partclone, an utility to backup partitions,\nwas prone to a heap-based buffer overflow vulnerability due to\ninsufficient validation of the partclone image header. This could allow\nremote attackers to cause a Denial of Service attack in the context\nof the user running the affected application via a crafted partition\nimage.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.2.48-1+deb7u1.\n\n\nWe recommend that you upgrade your partclone packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "partclone",
+				"purl": "pkg:deb/debian/partclone?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.2.48-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.2.48-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-923-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-923"
+		}
+	]
+}

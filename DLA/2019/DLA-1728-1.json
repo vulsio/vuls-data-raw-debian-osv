@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1728-1",
+	"modified": "2023-06-28T06:20:54.894396Z",
+	"published": "2019-03-25T00:00:00Z",
+	"related": [
+		"CVE-2018-20685",
+		"CVE-2019-6109",
+		"CVE-2019-6111"
+	],
+	"summary": "openssh - security update",
+	"details": "\nMultiple scp client vulnerabilities have been discovered in OpenSSH, the\npremier connectivity tool for secure remote shell login and secure file\ntransfer.\n\n\n* [CVE-2018-20685](https://security-tracker.debian.org/tracker/CVE-2018-20685)\nIn scp.c, the scp client allowed remote SSH servers to bypass\n intended access restrictions via the filename of . or an empty\n filename. The impact was modifying the permissions of the target\n directory on the client side.\n* [CVE-2019-6109](https://security-tracker.debian.org/tracker/CVE-2019-6109)\nDue to missing character encoding in the progress display, a\n malicious server (or Man-in-The-Middle attacker) was able to employ\n crafted object names to manipulate the client output, e.g., by using\n ANSI control codes to hide additional files being transferred. This\n affected refresh\\_progress\\_meter() in progressmeter.c.\n* [CVE-2019-6111](https://security-tracker.debian.org/tracker/CVE-2019-6111)\nDue to the scp implementation being derived from 1983 rcp, the server\n chooses which files/directories are sent to the client. However, the\n scp client only performed cursory validation of the object name\n returned (only directory traversal attacks are prevented). A\n malicious scp server (or Man-in-The-Middle attacker) was able to\n overwrite arbitrary files in the scp client target directory. If\n recursive operation (-r) was performed, the server was able to\n manipulate subdirectories, as well (for example, to overwrite the\n .ssh/authorized\\_keys file).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:6.7p1-5+deb8u8.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "openssh",
+				"purl": "pkg:deb/debian/openssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:6.7p1-5+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:6.7p1-5",
+				"1:6.7p1-5+deb8u1",
+				"1:6.7p1-5+deb8u2",
+				"1:6.7p1-5+deb8u3",
+				"1:6.7p1-5+deb8u4",
+				"1:6.7p1-5+deb8u5",
+				"1:6.7p1-5+deb8u6",
+				"1:6.7p1-5+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1728-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1728"
+		}
+	]
+}

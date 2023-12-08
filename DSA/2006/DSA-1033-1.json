@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1033-1",
+	"modified": "2023-10-16T00:08:45.739789Z",
+	"published": "2006-04-12T00:00:00Z",
+	"related": [
+		"CVE-2005-4190",
+		"CVE-2006-1260",
+		"CVE-2006-1491"
+	],
+	"summary": "horde3 - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Horde web\napplication framework, which may lead to the execution of arbitrary \nweb script code. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2005-4190](https://security-tracker.debian.org/tracker/CVE-2005-4190)\nSeveral Cross-Site-Scripting vulnerabilities have been discovered in\n the \"share edit window\".\n* [CVE-2006-1260](https://security-tracker.debian.org/tracker/CVE-2006-1260)\nNull characters in the URL parameter bypass a sanity check, which\n allowed remote attackers to read arbitrary files, which allowed\n information disclosure.\n* [CVE-2006-1491](https://security-tracker.debian.org/tracker/CVE-2006-1491)\nUser input in the help viewer was passed unsanitised to the eval()\n function, which allowed injection of arbitrary web code.\n\n\nThe old stable distribution (woody) doesn't contain horde3 packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 3.0.4-4sarge3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.1.1-1.\n\n\nWe recommend that you upgrade your horde3 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "horde3",
+				"purl": "pkg:deb/debian/horde3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.4-4sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.4-4",
+				"3.0.4-4sarge1",
+				"3.0.4-4sarge2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1033-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1033"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3007-1",
+	"modified": "2023-06-28T06:37:05.982123Z",
+	"published": "2022-05-14T00:00:00Z",
+	"related": [
+		"CVE-2021-3596",
+		"CVE-2022-28463"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\n* [CVE-2021-3596](https://security-tracker.debian.org/tracker/CVE-2021-3596)\nA NULL pointer dereference flaw was found in\n ImageMagick in versions prior to 7.0.10-31 in ReadSVGImage() in\n coders/svg.c. This issue is due to not checking the return value from\n libxml2's xmlCreatePushParserCtxt() and uses the value directly, which\n leads to a crash and segmentation fault.\n* [CVE-2022-28463](https://security-tracker.debian.org/tracker/CVE-2022-28463)\nImageMagick is vulnerable to Buffer Overflow.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n8:6.9.7.4+dfsg-11+deb9u14.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\nFor the detailed security status of imagemagick please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/imagemagick>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.9.7.4+dfsg-11+deb9u14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.9.7.4+dfsg-11",
+				"8:6.9.7.4+dfsg-11+deb9u1",
+				"8:6.9.7.4+dfsg-11+deb9u10",
+				"8:6.9.7.4+dfsg-11+deb9u11",
+				"8:6.9.7.4+dfsg-11+deb9u12",
+				"8:6.9.7.4+dfsg-11+deb9u13",
+				"8:6.9.7.4+dfsg-11+deb9u2",
+				"8:6.9.7.4+dfsg-11+deb9u3",
+				"8:6.9.7.4+dfsg-11+deb9u4",
+				"8:6.9.7.4+dfsg-11+deb9u5",
+				"8:6.9.7.4+dfsg-11+deb9u6",
+				"8:6.9.7.4+dfsg-11+deb9u7",
+				"8:6.9.7.4+dfsg-11+deb9u8",
+				"8:6.9.7.4+dfsg-11+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3007-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3007"
+		}
+	]
+}

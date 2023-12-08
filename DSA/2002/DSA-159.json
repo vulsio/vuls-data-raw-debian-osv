@@ -1,0 +1,91 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-159",
+	"modified": "2023-10-16T00:05:32.231988Z",
+	"published": "2002-08-28T00:00:00Z",
+	"related": [
+		"CVE-2002-1119"
+	],
+	"summary": "python - insecure temporary files",
+	"details": "\nZack Weinberg discovered an insecure use of a temporary file in\nos.\\_execvpe from os.py. It uses a predictable name which could lead\nexecution of arbitrary code.\n\n\nThis problem has been fixed in several versions of Python: For the\ncurrent stable distribution (woody) it has been fixed in version\n1.5.2-23.1 of Python 1.5, in version 2.1.3-3.1 of Python 2.1 and in\nversion 2.2.1-4.1 of Python 2.2. For the old stable distribution\n(potato) this has been fixed in version 1.5.2-10potato12 for Python\n1.5. For the unstable distribution (sid) this has been fixed in\nversion 1.5.2-24 of Python 1.5, in version 2.1.3-6a of Python 2.1 and\nin version 2.2.1-8 of Python 2.2. Python 2.3 is not affected by this\nproblem.\n\n\nWe recommend that you upgrade your Python packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "python1.5",
+				"purl": "pkg:deb/debian/python1.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.2-23.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-159.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "python2.1",
+				"purl": "pkg:deb/debian/python2.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.3-3.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.3-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-159.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "python2.2",
+				"purl": "pkg:deb/debian/python2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.1-4.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-159.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-159"
+		}
+	]
+}

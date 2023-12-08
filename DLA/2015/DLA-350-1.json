@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-350-1",
+	"modified": "2023-06-28T06:25:32.895032Z",
+	"published": "2015-11-26T00:00:00Z",
+	"summary": "eglibc - security update",
+	"details": "\nThe strxfrm() function is vulnerable to integer overflows when computing\nmemory allocation sizes (similar to [CVE-2012-4412](https://security-tracker.debian.org/tracker/CVE-2012-4412)). Furthermore since\nit fallbacks to use alloca() when malloc() fails, it is vulnerable to\nstack-based buffer overflows (similar to [CVE-2012-4424](https://security-tracker.debian.org/tracker/CVE-2012-4424)).\n\n\nThose issues have been fixed in Debian 6 Squeeze with eglibc\n2.11.3-4+deb6u8. We recommend that you upgrade libc6 and other\npackages provided by eglibc.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "eglibc",
+				"purl": "pkg:deb/debian/eglibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11.3-4+deb6u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11.2-10",
+				"2.11.2-10+m68k.1",
+				"2.11.2-11",
+				"2.11.2-11+m68k.1",
+				"2.11.2-12",
+				"2.11.2-13",
+				"2.11.3-1",
+				"2.11.3-2",
+				"2.11.3-3",
+				"2.11.3-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-350-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-350"
+		}
+	]
+}

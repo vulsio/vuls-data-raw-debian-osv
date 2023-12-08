@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1985-1",
+	"modified": "2023-06-28T06:21:07.512749Z",
+	"published": "2019-11-08T00:00:00Z",
+	"related": [
+		"CVE-2019-18804"
+	],
+	"summary": "djvulibre - security update",
+	"details": "\nIt was discovered that there was a NULL pointer dereference issue\nin the IW44 encoder/decoder within DjVu, a set of compression\ntechnologies for high-resolution images.\n\n\n* [CVE-2019-18804](https://security-tracker.debian.org/tracker/CVE-2019-18804)\nDjVuLibre 3.5.27 has a NULL pointer dereference in the function DJVU::filter\\_fv at IW44EncodeCodec.cpp.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.5.25.4-4+deb8u2.\n\n\nWe recommend that you upgrade your djvulibre packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "djvulibre",
+				"purl": "pkg:deb/debian/djvulibre?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.25.4-4+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.25.4-4",
+				"3.5.25.4-4+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1985-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1985"
+		}
+	]
+}

@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4111-2",
+	"modified": "2023-10-16T00:12:40.598895Z",
+	"published": "2018-02-11T00:00:00Z",
+	"related": [
+		"CVE-2018-6871"
+	],
+	"summary": "libreoffice - security update",
+	"details": "\nMikhail Klementev, Ronnie Goodrich and Andrew Krasichkov discovered that\nmissing restrictions in the implementation of the WEBSERVICE function\nin LibreOffice could result in the disclosure of arbitrary files\nreadable by the user who opens a malformed document.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1:5.2.7-1+deb9u2.\n\n\nWe recommend that you upgrade your libreoffice packages.\n\n\nFor the detailed security status of libreoffice please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libreoffice>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libreoffice",
+				"purl": "pkg:deb/debian/libreoffice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.3.3-2+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.3.3-2",
+				"1:4.3.3-2+deb8u1",
+				"1:4.3.3-2+deb8u1~bpo70+1",
+				"1:4.3.3-2+deb8u2",
+				"1:4.3.3-2+deb8u3",
+				"1:4.3.3-2+deb8u3~bpo70+1",
+				"1:4.3.3-2+deb8u4",
+				"1:4.3.3-2+deb8u5",
+				"1:4.3.3-2+deb8u6",
+				"1:4.3.3-2+deb8u6~bpo70+1",
+				"1:4.3.3-2+deb8u7",
+				"1:4.3.3-2+deb8u7~bpo70+1",
+				"1:4.3.3-2+deb8u8",
+				"1:4.3.3-2+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4111-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4111"
+		}
+	]
+}

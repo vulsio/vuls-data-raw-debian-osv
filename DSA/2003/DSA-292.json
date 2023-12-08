@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-292",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-04-22T00:00:00Z",
+	"related": [
+		"CVE-2003-0214"
+	],
+	"summary": "mime-support - insecure temporary file creation",
+	"details": "\nColin Phipps discovered several problems in mime-support, that contains\nsupport programs for the MIME control files 'mime.types' and 'mailcap'.\nWhen a temporary file is to be used it is created insecurely, allowing\nan attacker to overwrite arbitrary under the user id of the person\nexecuting run-mailcap.\n\n\nWhen run-mailcap is executed on a file with a potentially\nproblematic filename, a temporary file is created (not insecurely\nanymore), removed and a symbolic link to this filename is created. An\nattacker could recreate the file before the symbolic link is created,\nforcing the display program to display different content.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.18-1.3.\n\n\nFor the old stable distribution (potato) these problems have been\nfixed in version 3.9-1.3.\n\n\nFor the unstable distribution (sid) these problems have been\nfixed in version 3.23-1.\n\n\nWe recommend that you upgrade your mime-support packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mime-support",
+				"purl": "pkg:deb/debian/mime-support?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.18-1.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-292.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-292"
+		}
+	]
+}

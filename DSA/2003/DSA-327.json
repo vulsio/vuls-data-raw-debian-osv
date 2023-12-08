@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-327",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-06-19T00:00:00Z",
+	"related": [
+		"CVE-2003-0451"
+	],
+	"summary": "xbl - buffer overflows",
+	"details": "\nSteve Kemp discovered several buffer overflows in xbl, a game, which\ncan be triggered by long command line arguments. This vulnerability\ncould be exploited by a local attacker to gain gid 'games'.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0k-3woody1.\n\n\nFor the old stable distribution (potato) this problem has been fixed\nin version 1.0i-7potato1.\n\n\nFor the unstable distribution (sid) this problem is fixed in version\n1.0k-5.\n\n\nWe recommend that you update your xbl package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "xbl",
+				"purl": "pkg:deb/debian/xbl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0k-3woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-327.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-327"
+		}
+	]
+}

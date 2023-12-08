@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2284-1",
+	"modified": "2023-06-28T06:25:11.424533Z",
+	"published": "2020-07-21T00:00:00Z",
+	"related": [
+		"CVE-2019-14868"
+	],
+	"summary": "ksh - security update",
+	"details": "\nA flaw was found in the way it evaluates certain\nenvironment variables. An attacker could use this\nflaw to override or bypass environment restrictions\nto execute shell commands. Services and\napplications that allow remote unauthenticated\nattackers to provide one of those environment\nvariables could allow them to exploit this issue\nremotely.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n93u+20120801-3.1+deb9u1.\n\n\nWe recommend that you upgrade your ksh packages.\n\n\nFor the detailed security status of ksh please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ksh>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ksh",
+				"purl": "pkg:deb/debian/ksh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "93u+20120801-3.1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"93u+20120801-3.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2284-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2284"
+		}
+	]
+}

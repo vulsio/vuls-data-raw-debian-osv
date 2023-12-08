@@ -1,0 +1,189 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1872-1",
+	"modified": "2023-10-16T00:10:43.215418Z",
+	"published": "2009-08-24T00:00:00Z",
+	"related": [
+		"CVE-2009-2698",
+		"CVE-2009-2846",
+		"CVE-2009-2847",
+		"CVE-2009-2848",
+		"CVE-2009-2849"
+	],
+	"summary": "fai-kernels linux-2.6 user-mode-linux - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to denial of service, privilege escalation or a leak of\nsensitive memory. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-2698](https://security-tracker.debian.org/tracker/CVE-2009-2698)\nHerbert Xu discovered an issue in the way UDP tracks corking\n status that could allow local users to cause a denial of service\n (system crash). Tavis Ormandy and Julien Tinnes discovered that\n this issue could also be used by local users to gain elevated\n privileges.\n* [CVE-2009-2846](https://security-tracker.debian.org/tracker/CVE-2009-2846)\nMichael Buesch noticed a typing issue in the eisa-eeprom driver\n for the hppa architecture. Local users could exploit this issue to\n gain access to restricted memory.\n* [CVE-2009-2847](https://security-tracker.debian.org/tracker/CVE-2009-2847)\nUlrich Drepper noticed an issue in the do\\_sigalstack routine on\n 64-bit systems. This issue allows local users to gain access to\n potentially sensitive memory on the kernel stack.\n* [CVE-2009-2848](https://security-tracker.debian.org/tracker/CVE-2009-2848)\nEric Dumazet discovered an issue in the execve path, where the\n clear\\_child\\_tid variable was not being properly cleared. Local\n users could exploit this issue to cause a denial of service\n (memory corruption).\n* [CVE-2009-2849](https://security-tracker.debian.org/tracker/CVE-2009-2849)\nNeil Brown discovered an issue in the sysfs interface to md\n devices. When md arrays are not active, local users can exploit\n this vulnerability to cause a denial of service (oops).\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.6.18.dfsg.1-24etch4.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17+etch.24etch4 |\n| user-mode-linux | 2.6.18-1um-2etch.24etch4 |\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-24etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12",
+				"2.6.18.dfsg.1-12etch1",
+				"2.6.18.dfsg.1-12etch2",
+				"2.6.18.dfsg.1-13",
+				"2.6.18.dfsg.1-13etch1",
+				"2.6.18.dfsg.1-13etch2",
+				"2.6.18.dfsg.1-13etch3",
+				"2.6.18.dfsg.1-13etch4",
+				"2.6.18.dfsg.1-13etch5",
+				"2.6.18.dfsg.1-13etch6",
+				"2.6.18.dfsg.1-13lenny1",
+				"2.6.18.dfsg.1-14",
+				"2.6.18.dfsg.1-15",
+				"2.6.18.dfsg.1-16",
+				"2.6.18.dfsg.1-17",
+				"2.6.18.dfsg.1-17etch1",
+				"2.6.18.dfsg.1-18",
+				"2.6.18.dfsg.1-18etch1",
+				"2.6.18.dfsg.1-18etch3",
+				"2.6.18.dfsg.1-18etch4",
+				"2.6.18.dfsg.1-18etch5",
+				"2.6.18.dfsg.1-18etch6",
+				"2.6.18.dfsg.1-19",
+				"2.6.18.dfsg.1-20",
+				"2.6.18.dfsg.1-21",
+				"2.6.18.dfsg.1-22",
+				"2.6.18.dfsg.1-22etch1",
+				"2.6.18.dfsg.1-22etch2",
+				"2.6.18.dfsg.1-22etch3",
+				"2.6.18.dfsg.1-23",
+				"2.6.18.dfsg.1-23etch1",
+				"2.6.18.dfsg.1-24",
+				"2.6.18.dfsg.1-24etch1",
+				"2.6.18.dfsg.1-24etch2",
+				"2.6.18.dfsg.1-24etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1872-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "fai-kernels",
+				"purl": "pkg:deb/debian/fai-kernels?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17+etch.24etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17",
+				"1.17+etch.13etch3",
+				"1.17+etch.13etch4",
+				"1.17+etch.13etch5",
+				"1.17+etch.13etch6",
+				"1.17+etch.16",
+				"1.17+etch.17",
+				"1.17+etch.17etch1",
+				"1.17+etch.18etch1",
+				"1.17+etch.18etch2",
+				"1.17+etch.18etch3",
+				"1.17+etch.18etch4",
+				"1.17+etch.18etch5",
+				"1.17+etch.18etch6",
+				"1.17+etch.21",
+				"1.17+etch.22etch1",
+				"1.17+etch.22etch2",
+				"1.17+etch.22etch3",
+				"1.17+etch.23",
+				"1.17+etch.23etch1",
+				"1.17+etch.24",
+				"1.17+etch.24etch2",
+				"1.17+etch.24etch3",
+				"1.17+etch1",
+				"1.17+etch2",
+				"1.17+etch3",
+				"1.17+etch4",
+				"1.17+etch5",
+				"1.17etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1872-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "user-mode-linux",
+				"purl": "pkg:deb/debian/user-mode-linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18-1um-2etch.24etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18-1um-2",
+				"2.6.18-1um-2etch.13etch3",
+				"2.6.18-1um-2etch.13etch4",
+				"2.6.18-1um-2etch.13etch5",
+				"2.6.18-1um-2etch.13etch6",
+				"2.6.18-1um-2etch.16",
+				"2.6.18-1um-2etch.17",
+				"2.6.18-1um-2etch.17etch1",
+				"2.6.18-1um-2etch.18etch1",
+				"2.6.18-1um-2etch.18etch2",
+				"2.6.18-1um-2etch.18etch3",
+				"2.6.18-1um-2etch.18etch4",
+				"2.6.18-1um-2etch.18etch5",
+				"2.6.18-1um-2etch.18etch6",
+				"2.6.18-1um-2etch.21",
+				"2.6.18-1um-2etch.22etch1",
+				"2.6.18-1um-2etch.22etch2",
+				"2.6.18-1um-2etch.22etch3",
+				"2.6.18-1um-2etch.23",
+				"2.6.18-1um-2etch.23etch1",
+				"2.6.18-1um-2etch.24",
+				"2.6.18-1um-2etch.24etch2",
+				"2.6.18-1um-2etch.24etch3",
+				"2.6.18-1um-2etch1",
+				"2.6.18-1um-2etch2",
+				"2.6.18-1um-2etch3",
+				"2.6.18-1um-2etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1872-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1872"
+		}
+	]
+}

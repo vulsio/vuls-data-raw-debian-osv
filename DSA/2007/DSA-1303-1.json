@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1303-1",
+	"modified": "2023-10-16T00:06:33.294607Z",
+	"published": "2007-06-10T00:00:00Z",
+	"related": [
+		"CVE-2007-1869",
+		"CVE-2007-1870"
+	],
+	"summary": "lighttpd - denial of service",
+	"details": "\nTwo problems were discovered with lighttpd, a fast webserver with\nminimal memory footprint, which could allow denial of service.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-1869](https://security-tracker.debian.org/tracker/CVE-2007-1869)\nRemote attackers could cause denial of service by disconnecting\n partway through making a request.\n* [CVE-2007-1870](https://security-tracker.debian.org/tracker/CVE-2007-1870)\nA NULL pointer dereference could cause a crash when serving files\n with a mtime of 0.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 1.4.13-4etch1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.4.14-1.\n\n\nWe recommend that you upgrade your lighttpd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "lighttpd",
+				"purl": "pkg:deb/debian/lighttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.13-4etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.13-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1303-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1303"
+		}
+	]
+}

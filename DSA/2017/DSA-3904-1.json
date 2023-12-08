@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3904-1",
+	"modified": "2023-10-16T00:12:27.790176Z",
+	"published": "2017-07-08T00:00:00Z",
+	"related": [
+		"CVE-2017-3142",
+		"CVE-2017-3143"
+	],
+	"summary": "bind9 - security update",
+	"details": "\nClĂŠment Berthaux from Synaktiv discovered two vulnerabilities in BIND, a DNS\nserver implementation. They allow an attacker to bypass TSIG authentication by\nsending crafted DNS packets to a server.\n\n\n* [CVE-2017-3142](https://security-tracker.debian.org/tracker/CVE-2017-3142)\nAn attacker who is able to send and receive messages to an authoritative\n DNS server and who has knowledge of a valid TSIG key name may be able to\n circumvent TSIG authentication of AXFR requests via a carefully constructed\n request packet. A server that relies solely on TSIG keys for protection\n with no other ACL protection could be manipulated into:\n \n\n\n\t+ providing an AXFR of a zone to an unauthorized recipient\n\t+ accepting bogus NOTIFY packets\n* [CVE-2017-3143](https://security-tracker.debian.org/tracker/CVE-2017-3143)\nAn attacker who is able to send and receive messages to an authoritative\n DNS server and who has knowledge of a valid TSIG key name for the zone and\n service being targeted may be able to manipulate BIND into accepting an\n unauthorized dynamic update.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1:9.9.5.dfsg-9+deb8u12.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1:9.10.3.dfsg.P4-12.3+deb9u1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.9.5.dfsg-9+deb8u12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.9.5.dfsg-9",
+				"1:9.9.5.dfsg-9+deb8u1",
+				"1:9.9.5.dfsg-9+deb8u10",
+				"1:9.9.5.dfsg-9+deb8u11",
+				"1:9.9.5.dfsg-9+deb8u2",
+				"1:9.9.5.dfsg-9+deb8u3",
+				"1:9.9.5.dfsg-9+deb8u4",
+				"1:9.9.5.dfsg-9+deb8u5",
+				"1:9.9.5.dfsg-9+deb8u6",
+				"1:9.9.5.dfsg-9+deb8u7",
+				"1:9.9.5.dfsg-9+deb8u8",
+				"1:9.9.5.dfsg-9+deb8u8+kbsd8u1~reallyis+deb8u7",
+				"1:9.9.5.dfsg-9+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3904-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.10.3.dfsg.P4-12.3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.10.3.dfsg.P4-12.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3904-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3904"
+		}
+	]
+}

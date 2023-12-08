@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1020-1",
+	"modified": "2023-06-28T06:20:08.778555Z",
+	"published": "2017-07-09T00:00:00Z",
+	"related": [
+		"CVE-2017-9735"
+	],
+	"summary": "jetty - security update",
+	"details": "\nIt was discovered that Jetty, a Java servlet engine and webserver, was\nvulnerable to a timing attack which might reveal cryptographic\ncredentials such as passwords to a local user.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n6.1.26-1+deb7u1.\n\n\nWe recommend that you upgrade your jetty packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "jetty",
+				"purl": "pkg:deb/debian/jetty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.26-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1.26-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1020-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1020"
+		}
+	]
+}

@@ -1,0 +1,108 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2340-1",
+	"modified": "2023-10-16T00:11:09.499413Z",
+	"published": "2011-11-07T00:00:00Z",
+	"related": [
+		"CVE-2011-2483"
+	],
+	"summary": "postgresql - weak password hashing",
+	"details": "\nmagnum discovered that the blowfish password hashing used amongst\nothers in PostgreSQL contained a weakness that would give passwords\nwith 8 bit characters the same hash as weaker equivalents.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\npostgresql-8.3 version 8.3.16-0lenny1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\npostgresql-8.4 version 8.4.9-0squeeze1.\n\n\nFor the testing distribution (wheezy) and unstable distribution (sid),\nthis problem has been fixed in postgresql-8.4 version 8.4.9-1,\npostgresql-9.0 9.0.5-1 and postgresql-9.1 9.1~rc1-1.\n\n\nThe updates also include reliability improvements, originally scheduled\nfor inclusion into the next point release; for details see the respective\nchangelogs.\n\n\nWe recommend that you upgrade your postgresql packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "postgresql-8.4",
+				"purl": "pkg:deb/debian/postgresql-8.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.4.9-0squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.4.5-0squeeze2",
+				"8.4.5-1",
+				"8.4.5-1~bpo50+1",
+				"8.4.5-2",
+				"8.4.5-2~bpo50+1",
+				"8.4.6-1",
+				"8.4.7-0squeeze1~bpo50+1",
+				"8.4.7-0squeeze2",
+				"8.4.7-1",
+				"8.4.8-0squeeze1",
+				"8.4.8-0squeeze1~bpo50+1",
+				"8.4.8-0squeeze2",
+				"8.4.8-0squeeze2~bpo50+1",
+				"8.4.8-1",
+				"8.4.8-2",
+				"8.4.9-0squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2340-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "postgresql-8.3",
+				"purl": "pkg:deb/debian/postgresql-8.3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.3.16-0lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.3.10-0lenny1",
+				"8.3.11-0lenny1",
+				"8.3.12-0lenny1",
+				"8.3.13-0lenny1",
+				"8.3.14-0lenny1",
+				"8.3.5-1",
+				"8.3.5-2",
+				"8.3.6-1",
+				"8.3.6-1~bpo40+1",
+				"8.3.7-0lenny1",
+				"8.3.7-0lenny1~bpo40+1",
+				"8.3.7-1",
+				"8.3.7-2",
+				"8.3.7-3",
+				"8.3.7-4",
+				"8.3.8-0lenny1",
+				"8.3.8-0lenny1~bpo40+1",
+				"8.3.8-0lenny1~bpo40+2",
+				"8.3.8-1",
+				"8.3.8-1+sh4",
+				"8.3.9-0lenny1",
+				"8.3.9-0lenny1~bpo40+1",
+				"8.3.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2340-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2340"
+		}
+	]
+}

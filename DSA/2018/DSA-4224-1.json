@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4224-1",
+	"modified": "2023-10-16T00:05:27.517981Z",
+	"published": "2018-06-08T00:00:00Z",
+	"related": [
+		"CVE-2018-12020"
+	],
+	"summary": "gnupg - security update",
+	"details": "\nMarcus Brinkmann discovered that GnuPG performed insufficient\nsanitisation of file names displayed in status messages, which could be\nabused to fake the verification status of a signed email.\n\n\nDetails can be found in the upstream advisory at\n<https://lists.gnupg.org/pipermail/gnupg-announce/2018q2/000425.html>\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.4.18-7+deb8u5.\n\n\nWe recommend that you upgrade your gnupg packages.\n\n\nFor the detailed security status of gnupg please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/gnupg>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.18-7+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.18-7",
+				"1.4.18-7+deb8u1",
+				"1.4.18-7+deb8u2",
+				"1.4.18-7+deb8u3",
+				"1.4.18-7+deb8u3~kbsd8u1",
+				"1.4.18-7+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4224-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4224"
+		}
+	]
+}

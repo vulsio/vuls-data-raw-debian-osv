@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2544-1",
+	"modified": "2023-06-28T06:25:16.773623Z",
+	"published": "2021-02-03T00:00:00Z",
+	"related": [
+		"CVE-2020-36221",
+		"CVE-2020-36222",
+		"CVE-2020-36223",
+		"CVE-2020-36224",
+		"CVE-2020-36225",
+		"CVE-2020-36226",
+		"CVE-2020-36227",
+		"CVE-2020-36228",
+		"CVE-2020-36229",
+		"CVE-2020-36230"
+	],
+	"summary": "openldap - security update",
+	"details": "\nSeveral vulnerabilities were discovered in OpenLDAP, a free\nimplementation of the Lightweight Directory Access Protocol. An\nunauthenticated remote attacker can take advantage of these flaws to\ncause a denial of service (slapd daemon crash, infinite loops) via\nspecially crafted packets.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.4.44+dfsg-5+deb9u7.\n\n\nWe recommend that you upgrade your openldap packages.\n\n\nFor the detailed security status of openldap please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openldap>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openldap",
+				"purl": "pkg:deb/debian/openldap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.44+dfsg-5+deb9u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.44+dfsg-5",
+				"2.4.44+dfsg-5+deb9u1",
+				"2.4.44+dfsg-5+deb9u1~bpo8+1",
+				"2.4.44+dfsg-5+deb9u2",
+				"2.4.44+dfsg-5+deb9u3",
+				"2.4.44+dfsg-5+deb9u4",
+				"2.4.44+dfsg-5+deb9u5",
+				"2.4.44+dfsg-5+deb9u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2544-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2544"
+		}
+	]
+}

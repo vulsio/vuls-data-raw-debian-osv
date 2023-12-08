@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-260",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-03-13T00:00:00Z",
+	"related": [
+		"CVE-2003-0102"
+	],
+	"summary": "file - buffer overflow",
+	"details": "\n\niDEFENSE discovered a buffer overflow vulnerability in the ELF format\nparsing of the \"file\" command, one which can be used to execute\narbitrary code with the privileges of the user running the command. The\nvulnerability can be exploited by crafting a special ELF binary which is\nthen input to file. This could be accomplished by leaving the binary on\nthe file system and waiting for someone to use file to identify it, or\nby passing it to a service that uses file to classify input. (For\nexample, some printer filters run file to determine how to process input\ngoing to a printer.)\n\n\nFixed packages are available in version 3.28-1.potato.1 for Debian 2.2\n(potato) and version 3.37-3.1.woody.1 for Debian 3.0 (woody). We\nrecommend you upgrade your file package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "file",
+				"purl": "pkg:deb/debian/file?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.37-3.1.woody.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-260.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-260"
+		}
+	]
+}

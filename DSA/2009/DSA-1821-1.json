@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1821-1",
+	"modified": "2023-10-16T00:08:27.033699Z",
+	"published": "2009-06-22T00:00:00Z",
+	"related": [
+		"CVE-2009-1440"
+	],
+	"summary": "amule - insufficient input sanitising",
+	"details": "\nSam Hocevar discovered that amule, a client for the eD2k and Kad\nnetworks, does not properly sanitise the filename, when using the\npreview function. This could lead to the injection of arbitrary commands\npassed to the video player.\n\n\nThe oldstable distribution (etch) is not affected by this issue.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.2.1-1+lenny2.\n\n\nFor the testing distribution (squeeze) this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.2.5-1.1.\n\n\nWe recommend that you upgrade your amule packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "amule",
+				"purl": "pkg:deb/debian/amule?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.1-1+lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1821-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1821"
+		}
+	]
+}

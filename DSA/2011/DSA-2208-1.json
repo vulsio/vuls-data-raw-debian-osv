@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2208-1",
+	"modified": "2023-10-16T00:11:02.757516Z",
+	"published": "2011-03-30T00:00:00Z",
+	"related": [
+		"CVE-2011-0414"
+	],
+	"summary": "bind9 - denial of service",
+	"details": "\nIt was discovered that BIND, a DNS server, contains a race condition\nwhen processing zones updates in an authoritative server, either\nthrough dynamic DNS updates or incremental zone transfer (IXFR). Such\nan update while processing a query could result in deadlock and denial\nof service. \n([\\\nCVE-2011-0414](https://security-tracker.debian.org/tracker/CVE-2011-0414))\n\n\nIn addition, this security update addresses a defect related to the\nprocessing of new DNSSEC DS records by the caching resolver, which may\nlead to name resolution failures in the delegated zone. If DNSSEC\nvalidation is enabled, this issue can make domains ending in .COM\nunavailable when the DS record for .COM is added to the DNS root zone\non March 31st, 2011. An unpatched server which is affected by this\nissue can be restarted, thus re-enabling resolution of .COM domains.\nThis workaround applies to the version in oldstable, too.\n\n\nConfigurations not using DNSSEC validations are not affected by this\nsecond issue.\n\n\nFor the oldstable distribution (lenny), the DS record issue has been\nfixed in version 1:9.6.ESV.R4+dfsg-0+lenny1.\n([\\\nCVE-2011-0414](https://security-tracker.debian.org/tracker/CVE-2011-0414) does not affect the lenny version.)\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:9.7.3.dfsg-1~squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 1:9.7.3.dfsg-1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.7.3.dfsg-1~squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.7.2.dfsg.P3-1.1",
+				"1:9.7.3.dfsg-1~squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2208-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2208"
+		}
+	]
+}

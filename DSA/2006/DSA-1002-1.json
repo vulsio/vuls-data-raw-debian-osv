@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1002-1",
+	"modified": "2023-10-16T00:04:30.263536Z",
+	"published": "2006-03-15T00:00:00Z",
+	"related": [
+		"CVE-2005-3949",
+		"CVE-2005-3961",
+		"CVE-2005-3982",
+		"CVE-2005-3984"
+	],
+	"summary": "webcalendar - several",
+	"details": "\nSeveral security related problems have been discovered in webcalendar,\na PHP based multi-user calendar. The Common Vulnerabilities and\nExposures project identifies the following vulnerabilities:\n\n\n* [CVE-2005-3949](https://security-tracker.debian.org/tracker/CVE-2005-3949)\nMultiple SQL injection vulnerabilities allow remote attackers to\n execute arbitrary SQL commands.\n* [CVE-2005-3961](https://security-tracker.debian.org/tracker/CVE-2005-3961)\nMissing input sanitising allows an attacker to overwrite local\n files.\n* [CVE-2005-3982](https://security-tracker.debian.org/tracker/CVE-2005-3982)\nA CRLF injection vulnerability allows remote attackers to modify\n HTTP headers and conduct HTTP response splitting attacks.\n\n\nThe old stable distribution (woody) does not contain webcalendar packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.9.45-4sarge3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.0.2-1.\n\n\nWe recommend that you upgrade your webcalendar package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "webcalendar",
+				"purl": "pkg:deb/debian/webcalendar?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.45-4sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.45-4",
+				"0.9.45-4sarge1",
+				"0.9.45-4sarge2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1002-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1002"
+		}
+	]
+}

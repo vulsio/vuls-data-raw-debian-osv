@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-925-1",
+	"modified": "2023-10-16T00:30:02.401317Z",
+	"published": "2005-12-22T00:00:00Z",
+	"related": [
+		"CVE-2005-3310",
+		"CVE-2005-3415",
+		"CVE-2005-3416",
+		"CVE-2005-3417",
+		"CVE-2005-3418",
+		"CVE-2005-3419",
+		"CVE-2005-3420",
+		"CVE-2005-3536",
+		"CVE-2005-3537"
+	],
+	"summary": "phpbb2 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in phpBB, a fully\nfeatured and skinnable flat webforum. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2005-3310](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3310)\nMultiple interpretation errors allow remote authenticated users to\n inject arbitrary web script when remote avatars and avatar\n uploading are enabled.\n* [CVE-2005-3415](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3415)\nphpBB allows remote attackers to bypass protection mechanisms that\n deregister global variables that allows attackers to manipulate\n the behaviour of phpBB.\n* [CVE-2005-3416](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3416)\nphpBB allows remote attackers to bypass security checks when\n register\\_globals is enabled and the session\\_start function has not\n been called to handle a session.\n* [CVE-2005-3417](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3417)\nphpBB allows remote attackers to modify global variables and\n bypass security mechanisms.\n* [CVE-2005-3418](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3418)\nMultiple cross-site scripting (XSS) vulnerabilities allow remote\n attackers to inject arbitrary web scripts.\n* [CVE-2005-3419](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3419)\nAn SQL injection vulnerability allows remote attackers to execute\n arbitrary SQL commands.\n* [CVE-2005-3420](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3420)\nphpBB allows remote attackers to modify regular expressions and\n execute PHP code via the signature\\_bbcode\\_uid parameter.\n* [CVE-2005-3536](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3536)\nMissing input sanitising of the topic type allows remote attackers\n to inject arbitrary SQL commands.\n* [CVE-2005-3537](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3537)\nMissing request validation permitted remote attackers to edit\n private messages of other users.\n\n\nThe old stable distribution (woody) does not contain phpbb2 packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.0.13+1-6sarge2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.0.18-1.\n\n\nWe recommend that you upgrade your phpbb2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "phpbb2",
+				"purl": "pkg:deb/debian/phpbb2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.13+1-6sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.13+1-6",
+				"2.0.13+1-6sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-925-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-925"
+		}
+	]
+}

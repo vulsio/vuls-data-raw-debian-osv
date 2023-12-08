@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2956-1",
+	"modified": "2023-10-16T00:11:39.603564Z",
+	"published": "2014-06-11T00:00:00Z",
+	"related": [
+		"CVE-2013-7106",
+		"CVE-2013-7107",
+		"CVE-2013-7108",
+		"CVE-2014-1878",
+		"CVE-2014-2386"
+	],
+	"summary": "icinga - security update",
+	"details": "\nMultiple security issues have been found in the Icinga host and network\nmonitoring system (buffer overflows, cross-site request forgery, off-by\nones) which could result in the execution of arbitrary code, denial of\nservice or session hijacking.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.7.1-7.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 1.11.0-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.11.0-1.\n\n\nWe recommend that you upgrade your icinga packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "icinga",
+				"purl": "pkg:deb/debian/icinga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.1-7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.1-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2956-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2956"
+		}
+	]
+}

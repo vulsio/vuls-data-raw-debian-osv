@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4887-1",
+	"modified": "2023-10-16T00:27:00.555975Z",
+	"published": "2021-04-08T00:00:00Z",
+	"related": [
+		"CVE-2021-21772"
+	],
+	"summary": "lib3mf - security update",
+	"details": "\nA use-after-free was discovered in Lib3MF, a C++ implementation of the\n3D Manufacturing Format, which could result in the execution of\narbitrary code if a malformed file is opened.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.8.1+ds-3+deb10u1.\n\n\nWe recommend that you upgrade your lib3mf packages.\n\n\nFor the detailed security status of lib3mf please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/lib3mf](https://security-tracker.debian.org/tracker/lib3mf)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "lib3mf",
+				"purl": "pkg:deb/debian/lib3mf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.1+ds-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.1+ds-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4887-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4887"
+		}
+	]
+}

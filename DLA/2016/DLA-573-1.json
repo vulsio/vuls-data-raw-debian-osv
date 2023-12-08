@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-573-1",
+	"modified": "2023-06-28T06:21:35.392795Z",
+	"published": "2016-07-30T00:00:00Z",
+	"related": [
+		"CVE-2015-5239",
+		"CVE-2016-2857",
+		"CVE-2016-4020",
+		"CVE-2016-4439",
+		"CVE-2016-5403",
+		"CVE-2016-6351"
+	],
+	"summary": "qemu - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in QEMU, a fast processor\nemulator. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2015-5239](https://security-tracker.debian.org/tracker/CVE-2015-5239)\nLian Yihan discovered that QEMU incorrectly handled certain payload\n messages in the VNC display driver. A malicious guest could use this\n issue to cause the QEMU process to hang, resulting in a denial of\n service.\n* [CVE-2016-2857](https://security-tracker.debian.org/tracker/CVE-2016-2857)\nLing Liu discovered that QEMU incorrectly handled IP checksum\n routines. An attacker inside the guest could use this issue to cause\n QEMU to crash, resulting in a denial of service, or possibly leak\n host memory bytes.\n* [CVE-2016-4020](https://security-tracker.debian.org/tracker/CVE-2016-4020)\nDonghai Zdh discovered that QEMU incorrectly handled the Task\n Priority Register(TPR). A privileged attacker inside the guest could\n use this issue to possibly leak host memory bytes.\n* [CVE-2016-4439](https://security-tracker.debian.org/tracker/CVE-2016-4439)\n, [CVE-2016-6351](https://security-tracker.debian.org/tracker/CVE-2016-6351)\n\n\nLi Qiang disovered that the emulation of the 53C9X Fast SCSI\n Controller is affected by out of bound access issues.\n* [CVE-2016-5403](https://security-tracker.debian.org/tracker/CVE-2016-5403)\nZhenhao Hong discovered that a malicious guest administrator can\n cause unbounded memory allocation in QEMU (which can cause an\n Out-of-Memory condition) by submitting virtio requests without\n bothering to wait for completion.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u14.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6a",
+				"1.1.2+dfsg-6a+deb7u1",
+				"1.1.2+dfsg-6a+deb7u10",
+				"1.1.2+dfsg-6a+deb7u11",
+				"1.1.2+dfsg-6a+deb7u12",
+				"1.1.2+dfsg-6a+deb7u13",
+				"1.1.2+dfsg-6a+deb7u2",
+				"1.1.2+dfsg-6a+deb7u3",
+				"1.1.2+dfsg-6a+deb7u4",
+				"1.1.2+dfsg-6a+deb7u5",
+				"1.1.2+dfsg-6a+deb7u6",
+				"1.1.2+dfsg-6a+deb7u7",
+				"1.1.2+dfsg-6a+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6a+deb7u8",
+				"1.1.2+dfsg-6a+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-573-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-573"
+		}
+	]
+}

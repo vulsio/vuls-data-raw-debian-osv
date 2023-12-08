@@ -1,0 +1,83 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2849-1",
+	"modified": "2023-10-16T00:11:34.750627Z",
+	"published": "2014-01-31T00:00:00Z",
+	"related": [
+		"CVE-2014-0015"
+	],
+	"summary": "curl - information disclosure",
+	"details": "\nParas Sethia discovered that libcurl, a client-side URL transfer\nlibrary, would sometimes mix up multiple HTTP and HTTPS connections\nwith NTLM authentication to the same server, sending requests for one\nuser over the connection authenticated as a different user.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 7.21.0-2.1+squeeze7.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 7.26.0-1+wheezy8.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 7.35.0-1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.21.0-2.1+squeeze7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.21.0-1",
+				"7.21.0-2",
+				"7.21.0-2.1+squeeze1",
+				"7.21.0-2.1+squeeze2",
+				"7.21.0-2.1+squeeze3",
+				"7.21.0-2.1+squeeze4",
+				"7.21.0-2.1+squeeze5",
+				"7.21.0-2.1+squeeze6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2849-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.26.0-1+wheezy8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.26.0-1+wheezy2",
+				"7.26.0-1+wheezy3",
+				"7.26.0-1+wheezy4",
+				"7.26.0-1+wheezy5",
+				"7.26.0-1+wheezy6",
+				"7.26.0-1+wheezy7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2849-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2849"
+		}
+	]
+}

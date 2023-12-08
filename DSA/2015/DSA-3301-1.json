@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3301-1",
+	"modified": "2023-10-16T00:06:17.943791Z",
+	"published": "2015-07-05T00:00:00Z",
+	"related": [
+		"CVE-2015-3281"
+	],
+	"summary": "haproxy - security update",
+	"details": "\nCharlie Smurthwaite of aTech Media discovered a flaw in HAProxy, a fast\nand reliable load balancing reverse proxy, when HTTP pipelining is used.\nA client can take advantage of this flaw to cause data corruption and\nretrieve uninitialized memory contents that exhibit data from a past\nrequest or session.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.5.8-3+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.5.14-1.\n\n\nWe recommend that you upgrade your haproxy packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "haproxy",
+				"purl": "pkg:deb/debian/haproxy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.8-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.8-3",
+				"1.5.8-3+deb8u1~bpo60+1",
+				"1.5.8-3+deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3301-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3301"
+		}
+	]
+}

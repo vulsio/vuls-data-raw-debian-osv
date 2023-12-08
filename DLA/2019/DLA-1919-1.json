@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1919-1",
+	"modified": "2023-06-28T06:21:03.912033Z",
+	"published": "2019-09-14T00:00:00Z",
+	"related": [
+		"CVE-2019-0136",
+		"CVE-2019-11487",
+		"CVE-2019-15211",
+		"CVE-2019-15212",
+		"CVE-2019-15215",
+		"CVE-2019-15216",
+		"CVE-2019-15218",
+		"CVE-2019-15219",
+		"CVE-2019-15220",
+		"CVE-2019-15221",
+		"CVE-2019-15292",
+		"CVE-2019-15538",
+		"CVE-2019-15666",
+		"CVE-2019-15807",
+		"CVE-2019-15924",
+		"CVE-2019-15926",
+		"CVE-2019-9506"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2019-0136](https://security-tracker.debian.org/tracker/CVE-2019-0136)\nIt was discovered that the wifi soft-MAC implementation (mac80211)\n did not properly authenticate Tunneled Direct Link Setup (TDLS)\n messages. A nearby attacker could use this for denial of service\n (loss of wifi connectivity).\n* [CVE-2019-9506](https://security-tracker.debian.org/tracker/CVE-2019-9506)\nDaniele Antonioli, Nils Ole Tippenhauer, and Kasper Rasmussen\n discovered a weakness in the Bluetooth pairing protocols, dubbed\n the KNOB attack. An attacker that is nearby during pairing\n could use this to weaken the encryption used between the paired\n devices, and then to eavesdrop on and/or spoof communication\n between them.\n\n\nThis update mitigates the attack by requiring a minimum encryption\n key length of 56 bits.\n* [CVE-2019-11487](https://security-tracker.debian.org/tracker/CVE-2019-11487)\nJann Horn discovered that the FUSE (Filesystem-in-Userspace)\n facility could be used to cause integer overflow in page reference\n counts, leading to a use-after-free. On a system with sufficient\n physical memory, a local user permitted to create arbitrary FUSE\n mounts could use this for privilege escalation.\n\n\nBy default, unprivileged users can only mount FUSE filesystems\n through fusermount, which limits the number of mounts created and\n should completely mitigate the issue.\n* [CVE-2019-15211](https://security-tracker.debian.org/tracker/CVE-2019-15211)\nThe syzkaller tool found a bug in the radio-raremono driver that\n could lead to a use-after-free. An attacker able to add and\n remove USB devices could use this to cause a denial of service\n (memory corruption or crash) or possibly for privilege escalation.\n* [CVE-2019-15212](https://security-tracker.debian.org/tracker/CVE-2019-15212)\nThe syzkaller tool found that the rio500 driver does not work\n correctly if more than one device is bound to it. An attacker\n able to add USB devices could use this to cause a denial of\n service (memory corruption or crash) or possibly for privilege\n escalation.\n* [CVE-2019-15215](https://security-tracker.debian.org/tracker/CVE-2019-15215)\nThe syzkaller tool found a bug in the cpia2\\_usb driver that leads\n to a use-after-free. An attacker able to add and remove USB\n devices could use this to cause a denial of service (memory\n corruption or crash) or possibly for privilege escalation.\n* [CVE-2019-15216](https://security-tracker.debian.org/tracker/CVE-2019-15216)\nThe syzkaller tool found a bug in the yurex driver that leads to\n a use-after-free. An attacker able to add and remove USB\n devices could use this to cause a denial of service (memory\n corruption or crash) or possibly for privilege escalation.\n* [CVE-2019-15218](https://security-tracker.debian.org/tracker/CVE-2019-15218)\nThe syzkaller tool found that the smsusb driver did not validate\n that USB devices have the expected endpoints, potentially leading\n to a null pointer dereference. An attacker able to add USB\n devices could use this to cause a denial of service (BUG/oops).\n* [CVE-2019-15219](https://security-tracker.debian.org/tracker/CVE-2019-15219)\nThe syzkaller tool found that a device initialisation error in the\n sisusbvga driver could lead to a null pointer dereference. An\n attacker able to add USB devices could use this to cause a denial\n of service (BUG/oops).\n* [CVE-2019-15220](https://security-tracker.debian.org/tracker/CVE-2019-15220)\nThe syzkaller tool found a race condition in the p54usb driver\n which could lead to a use-after-free. An attacker able to add and\n remove USB devices could use this to cause a denial of service\n (memory corruption or crash) or possibly for privilege escalation.\n* [CVE-2019-15221](https://security-tracker.debian.org/tracker/CVE-2019-15221)\nThe syzkaller tool found that the line6 driver did not validate\n USB devices' maximum packet sizes, which could lead to a heap\n buffer overrun. An attacker able to add USB devices could use\n this to cause a denial of service (memory corruption or crash) or\n possibly for privilege escalation.\n* [CVE-2019-15292](https://security-tracker.debian.org/tracker/CVE-2019-15292)\nThe Hulk Robot tool found missing error checks in the Appletalk\n protocol implementation, which could lead to a use-after-free.\n The security impact of this is unclear.\n* [CVE-2019-15538](https://security-tracker.debian.org/tracker/CVE-2019-15538)\nBenjamin Moody reported that operations on XFS hung after a\n chgrp command failed due to a disk quota. A local user on a\n system using XFS and disk quotas could use this for denial of\n service.\n* [CVE-2019-15666](https://security-tracker.debian.org/tracker/CVE-2019-15666)\nThe Hulk Robot tool found an incorrect range check in the network\n transformation (xfrm) layer, leading to out-of-bounds memory\n accesses. A local user with CAP\\_NET\\_ADMIN capability (in any user\n namespace) could use this to cause a denial of service (memory\n corruption or crash) or possibly for privilege escalation.\n* [CVE-2019-15807](https://security-tracker.debian.org/tracker/CVE-2019-15807)\nJian Luo reported that the Serial Attached SCSI library (libsas)\n did not correctly handle failure to discover devices beyond a SAS\n expander. This could lead to a resource leak and crash (BUG).\n The security impact of this is unclear.\n* [CVE-2019-15924](https://security-tracker.debian.org/tracker/CVE-2019-15924)\nThe Hulk Robot tool found a missing error check in the fm10k\n Ethernet driver, which could lead to a null pointer dereference\n and crash (BUG/oops). The security impact of this is unclear.\n* [CVE-2019-15926](https://security-tracker.debian.org/tracker/CVE-2019-15926)\nIt was found that the ath6kl wifi driver did not consistently\n validate traffic class numbers in received control packets,\n leading to out-of-bounds memory accesses. A nearby attacker on\n the same wifi network could use this to cause a denial of service\n (memory corruption or crash) or possibly for privilege escalation.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.189-3~deb8u1.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.189-3~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.110-1~deb8u1",
+				"4.9.144-3.1~deb8u1",
+				"4.9.168-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1919-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1919"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3145-1",
+	"modified": "2023-06-28T06:26:52.608534Z",
+	"published": "2022-10-11T00:00:00Z",
+	"related": [
+		"CVE-2021-21300",
+		"CVE-2021-40330"
+	],
+	"summary": "git - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in Git, a fast, scalable,\ndistributed revision control system, which may affect multi-user systems.\n\n\n* [CVE-2021-21300](https://security-tracker.debian.org/tracker/CVE-2021-21300)\nA specially crafted repository that contains symbolic links as well as\n files using a clean/smudge filter such as Git LFS, may cause just-checked\n out script to be executed while cloning onto a case-insensitive file system\n such as NTFS, HFS+ or APFS (i.e. the default file systems on Windows and\n macOS).\n* [CVE-2021-40330](https://security-tracker.debian.org/tracker/CVE-2021-40330)\ngit\\_connect\\_git in connect.c allows a repository path to contain a newline\n character, which may result in unexpected cross-protocol requests, as\n demonstrated by the git://localhost:1234/%0d%0a%0d%0aGET%20/%20HTTP/1.1\n substring.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:2.20.1-2+deb10u4.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFor the detailed security status of git please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/git>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.20.1-2+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.20.1-2",
+				"1:2.20.1-2+deb10u1",
+				"1:2.20.1-2+deb10u2",
+				"1:2.20.1-2+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3145-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3145"
+		}
+	]
+}

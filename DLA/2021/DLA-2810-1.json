@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2810-1",
+	"modified": "2023-06-28T06:36:57.217136Z",
+	"published": "2021-11-05T00:00:00Z",
+	"related": [
+		"CVE-2021-32626",
+		"CVE-2021-32672",
+		"CVE-2021-32675",
+		"CVE-2021-32687",
+		"CVE-2021-32762",
+		"CVE-2021-41099"
+	],
+	"summary": "redis - security update",
+	"details": "\nIt was discovered that there were a number of issues in redis, a popular\nkey-value database system:\n\n\n* [CVE-2021-41099](https://security-tracker.debian.org/tracker/CVE-2021-41099):\n Integer to heap buffer overflow handling certain string commands and network\n payloads, when proto-max-bulk-len is manually configured to a non-default, very\n large value.\n* [CVE-2021-32762](https://security-tracker.debian.org/tracker/CVE-2021-32762):\n Integer to heap buffer overflow issue in redis-cli and redis-sentinel parsing\n large multi-bulk replies on some older and less common platforms.\n* [CVE-2021-32687](https://security-tracker.debian.org/tracker/CVE-2021-32687):\n Integer to heap buffer overflow with intsets, when set-max-intset-entries is\n manually configured to a non-default, very large value.\n* [CVE-2021-32675](https://security-tracker.debian.org/tracker/CVE-2021-32675):\n Denial Of Service when processing RESP request payloads with a large number of\n elements on many connections.\n* [CVE-2021-32672](https://security-tracker.debian.org/tracker/CVE-2021-32672):\n Random heap reading issue with Lua Debugger.\n* [CVE-2021-32626](https://security-tracker.debian.org/tracker/CVE-2021-32626):\n Specially crafted Lua scripts may result with Heap buffer overflow.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n3:3.2.6-3+deb9u8.\n\n\nWe recommend that you upgrade your redis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "redis",
+				"purl": "pkg:deb/debian/redis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3:3.2.6-3+deb9u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3:3.2.6-1",
+				"3:3.2.6-2",
+				"3:3.2.6-3",
+				"3:3.2.6-3+deb9u1",
+				"3:3.2.6-3+deb9u2",
+				"3:3.2.6-3+deb9u3",
+				"3:3.2.6-3+deb9u4",
+				"3:3.2.6-3+deb9u5",
+				"3:3.2.6-3+deb9u6",
+				"3:3.2.6-3+deb9u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2810-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2810"
+		}
+	]
+}

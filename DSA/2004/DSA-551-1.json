@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-551-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-09-21T00:00:00Z",
+	"related": [
+		"CVE-2004-0794"
+	],
+	"summary": "lukemftpd - incorrect internal variable handling",
+	"details": "\nPrzemyslaw Frasunek discovered a vulnerability in tnftpd or lukemftpd\nrespectively, the enhanced ftp daemon from NetBSD. An attacker could\nutilise this to execute arbitrary code on the server.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.1-1woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.1-2.2.\n\n\nWe recommend that you upgrade your lukemftpd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "lukemftpd",
+				"purl": "pkg:deb/debian/lukemftpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1-1woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-551-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-551"
+		}
+	]
+}

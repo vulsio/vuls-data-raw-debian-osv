@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2483-1",
+	"modified": "2023-10-16T00:05:57.641310Z",
+	"published": "2012-05-31T00:00:00Z",
+	"related": [
+		"CVE-2012-2388"
+	],
+	"summary": "strongswan - authentication bypass",
+	"details": "\nAn authentication bypass issue was discovered by the Codenomicon CROSS\nproject in strongSwan, an IPsec-based VPN solution. When using\nRSA-based setups, a missing check in the gmp plugin could allow an\nattacker presenting a forged signature to successfully authenticate\nagainst a strongSwan responder.\n\n\nThe default configuration in Debian does not use the gmp plugin for\nRSA operations but rather the OpenSSL plugin, so the packages as\nshipped by Debian are not vulnerable.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4.4.1-5.2.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 4.5.2-1.4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.5.2-1.4.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "strongswan",
+				"purl": "pkg:deb/debian/strongswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.1-5.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.1-5.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2483-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2483"
+		}
+	]
+}

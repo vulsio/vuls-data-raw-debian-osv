@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2887-1",
+	"modified": "2023-06-28T06:26:42.246868Z",
+	"published": "2022-01-18T00:00:00Z",
+	"related": [
+		"CVE-2018-19052"
+	],
+	"summary": "lighttpd - security update",
+	"details": "\nOne issue has been discovered in lighttpd: fast webserver with minimal memory\nfootprint.\n\n\n* [CVE-2018-19052](https://security-tracker.debian.org/tracker/CVE-2018-19052):\n\nan issue was discovered in mod\\_alias\\_physical\\_handler in\nmod\\_alias.c in lighttpd before 1.4.50. There is potential ../ path traversal of\na single directory above an alias target, with a specific mod\\_alias\nconfiguration where the matched alias lacks a trailing '/' character, but the\nalias target filesystem path does have a trailing '/' character.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.4.45-1+deb9u1.\n\n\nWe recommend that you upgrade your lighttpd packages.\n\n\nFor the detailed security status of lighttpd please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/lighttpd>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "lighttpd",
+				"purl": "pkg:deb/debian/lighttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.45-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.45-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2887-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2887"
+		}
+	]
+}

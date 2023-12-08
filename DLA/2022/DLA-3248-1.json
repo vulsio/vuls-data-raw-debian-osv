@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3248-1",
+	"modified": "2023-06-28T06:25:29.919443Z",
+	"published": "2022-12-24T00:00:00Z",
+	"related": [
+		"CVE-2022-47629"
+	],
+	"summary": "libksba - security update",
+	"details": "\nAn integer overflow flaw was discovered in the CRL signature parser in\nlibksba, an X.509 and CMS support library, which could result in denial\nof service or the execution of arbitrary code.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.3.5-2+deb10u2.\n\n\nWe recommend that you upgrade your libksba packages.\n\n\nFor the detailed security status of libksba please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libksba>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libksba",
+				"purl": "pkg:deb/debian/libksba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.5-2+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.5-2",
+				"1.3.5-2+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3248-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3248"
+		}
+	]
+}

@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3002-1",
+	"modified": "2023-10-16T00:11:41.505234Z",
+	"published": "2014-08-10T00:00:00Z",
+	"related": [
+		"CVE-2014-5161",
+		"CVE-2014-5162",
+		"CVE-2014-5163",
+		"CVE-2014-5164",
+		"CVE-2014-5165"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the dissectors for Catapult \nDCT2000, IrDA, GSM Management, RLC ASN.1 BER, which could result in \ndenial of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.8.2-5wheezy11.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2-5wheezy11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2-5wheezy10",
+				"1.8.2-5wheezy2",
+				"1.8.2-5wheezy3",
+				"1.8.2-5wheezy4",
+				"1.8.2-5wheezy5",
+				"1.8.2-5wheezy6",
+				"1.8.2-5wheezy7",
+				"1.8.2-5wheezy8",
+				"1.8.2-5wheezy9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3002-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3002"
+		}
+	]
+}

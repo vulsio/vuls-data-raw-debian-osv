@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2295-1",
+	"modified": "2023-06-28T06:18:01.281124Z",
+	"published": "2020-07-28T00:00:00Z",
+	"related": [
+		"CVE-2020-8177"
+	],
+	"summary": "curl - security update",
+	"details": "\nA vulnerbailty was found in curl, a command line tool for transferring\ndata with URL syntax.\n\n\nWhen using when using -J (--remote-header-name) and -i (--include) in\nthe same command line, a malicious server could force curl to overwrite\nthe contents of local files with incoming HTTP headers.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n7.52.1-5+deb9u11.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFor the detailed security status of curl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/curl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.52.1-5+deb9u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.52.1-5",
+				"7.52.1-5+deb9u1",
+				"7.52.1-5+deb9u10",
+				"7.52.1-5+deb9u2",
+				"7.52.1-5+deb9u3",
+				"7.52.1-5+deb9u4",
+				"7.52.1-5+deb9u5",
+				"7.52.1-5+deb9u6",
+				"7.52.1-5+deb9u7",
+				"7.52.1-5+deb9u8",
+				"7.52.1-5+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2295-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2295"
+		}
+	]
+}

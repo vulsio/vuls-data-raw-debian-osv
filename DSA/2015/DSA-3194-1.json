@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3194-1",
+	"modified": "2023-10-16T00:06:15.949930Z",
+	"published": "2015-03-17T00:00:00Z",
+	"related": [
+		"CVE-2015-1802",
+		"CVE-2015-1803",
+		"CVE-2015-1804"
+	],
+	"summary": "libxfont - security update",
+	"details": "\nIlja van Sprundel, Alan Coopersmith and William Robinet discovered\nmultiple issues in libxfont's code to process BDF fonts, which might\nresult in privilege escalation.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.4.5-5.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your libxfont packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libxfont",
+				"purl": "pkg:deb/debian/libxfont?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.4.5-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.4.5-2",
+				"1:1.4.5-3",
+				"1:1.4.5-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3194-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3194"
+		}
+	]
+}

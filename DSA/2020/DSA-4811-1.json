@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4811-1",
+	"modified": "2023-10-16T00:22:02.801704Z",
+	"published": "2020-12-15T00:00:00Z",
+	"related": [
+		"CVE-2020-26217"
+	],
+	"summary": "libxstream-java - security update",
+	"details": "\nIt was discovered that the default blacklist of XStream, a Java library\nto serialise objects to XML and back again, was vulnerable to the\nexecution of arbitrary shell commands by manipulating the processed\ninput stream.\n\n\nFor additional defense-in-depth it is recommended to switch to the\nwhitelist approach of XStream's security framework. For additional\ninformation please refer to\n[\\\nhttps://github.com/x-stream/xstream/security/advisories/GHSA-mw36-7c6c-q4q2](https://github.com/x-stream/xstream/security/advisories/GHSA-mw36-7c6c-q4q2)\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.4.11.1-1+deb10u1.\n\n\nWe recommend that you upgrade your libxstream-java packages.\n\n\nFor the detailed security status of libxstream-java please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libxstream-java](https://security-tracker.debian.org/tracker/libxstream-java)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libxstream-java",
+				"purl": "pkg:deb/debian/libxstream-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.11.1-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.11.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4811-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4811"
+		}
+	]
+}

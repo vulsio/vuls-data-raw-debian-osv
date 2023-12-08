@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2259-1",
+	"modified": "2011-06-12T22:01:06Z",
+	"published": "2011-06-12T00:00:00Z",
+	"related": [
+		"CVE-2011-1409"
+	],
+	"summary": "fex - authentication bypass",
+	"details": "\nIt was discovered that F\\*EX, a web service for transferring very large\nfiles, is not properly validating authentication IDs. While the service\nproperly validates existing authentication IDs, an attacker who is not\nspecifying any authentication ID at all can bypass the authentication\nprocedure.\n\n\nThe oldstable distribution (lenny) does not include fex.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 20100208+debian1-1+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 20110610-1.\n\n\nWe recommend that you upgrade your fex packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "fex",
+				"purl": "pkg:deb/debian/fex?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20100208+debian1-1+squeeze1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2259-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2259"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-930-1",
+	"modified": "2023-10-16T00:31:58.831824Z",
+	"published": "2006-01-09T00:00:00Z",
+	"related": [
+		"CVE-2006-0083"
+	],
+	"summary": "smstools - format string error",
+	"details": "\nUlf HĂ¤rnhammar from the Debian Security Audit project discovered a\nformat string attack in the logging code of smstools, which may be\nexploited to execute arbitrary code with root privileges.\n\n\nThe original advisory for this issue said that the old stable\ndistribution (woody) was not affected because it did not contain\nsmstools. This was incorrect, and the only change in this updated\nadvisory is the inclusion of corrected packages for woody.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 1.5.0-2woody0.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.14.8-1sarge0.\n\n\nFor the unstable distribution the package will be updated shortly.\n\n\nWe recommend that you upgrade your smstools package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "smstools",
+				"purl": "pkg:deb/debian/smstools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.8-1sarge0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.14.8-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-930-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-930"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4684-1",
+	"modified": "2023-10-16T00:14:48.310182Z",
+	"published": "2020-05-13T00:00:00Z",
+	"related": [
+		"CVE-2020-1763"
+	],
+	"summary": "libreswan - security update",
+	"details": "\nStephan Zeisberg discovered that the libreswan IPsec implementation\ncould be forced into a crash/restart via a malformed IKEv1 Informational\nExchange packet, resulting in denial of service.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 3.27-6+deb10u1.\n\n\nWe recommend that you upgrade your libreswan packages.\n\n\nFor the detailed security status of libreswan please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/libreswan>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libreswan",
+				"purl": "pkg:deb/debian/libreswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.27-6+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.27-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4684-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4684"
+		}
+	]
+}

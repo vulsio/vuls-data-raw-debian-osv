@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2748-1",
+	"modified": "2023-06-28T06:25:19.038572Z",
+	"published": "2021-08-23T00:00:00Z",
+	"related": [
+		"CVE-2019-18849"
+	],
+	"summary": "tnef - security update",
+	"details": "\nAn issue has been found in tnef, a tool to unpack MIME application/ms-tnef\nattachments.\nUsing emails with a crafted winmail.dat application/ms-tnef attachment\nmight allow an attacker to change .ssh/authorized\\_keys.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.4.12-1.2+deb9u1.\n\n\nWe recommend that you upgrade your tnef packages.\n\n\nFor the detailed security status of tnef please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tnef>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "tnef",
+				"purl": "pkg:deb/debian/tnef?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.12-1.2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.12-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2748-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2748"
+		}
+	]
+}

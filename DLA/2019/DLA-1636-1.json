@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1636-1",
+	"modified": "2023-06-28T06:19:57.561940Z",
+	"published": "2019-01-22T00:00:00Z",
+	"related": [
+		"CVE-2019-3500"
+	],
+	"summary": "aria2 - security update",
+	"details": "\nIt was discovered that aria2 (the lightweight command-line download\nutility) can store passed user credentials in a log file when using\nthe --log option. This might allow local users to obtain sensitive\ninformation by reading this file.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.18.8-1+deb8u1.\n\n\nWe recommend that you upgrade your aria2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "aria2",
+				"purl": "pkg:deb/debian/aria2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.18.8-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.18.8-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1636-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1636"
+		}
+	]
+}

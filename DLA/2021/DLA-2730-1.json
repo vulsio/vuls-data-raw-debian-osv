@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2730-1",
+	"modified": "2023-06-28T06:30:14.264149Z",
+	"published": "2021-08-04T00:00:00Z",
+	"related": [
+		"CVE-2020-13881"
+	],
+	"summary": "libpam-tacplus - security update",
+	"details": "\nIt was discovered that there was an issue in libpam-tacplus (a\nsecurity module for using the TACACS+ authentication service) where\nshared secrets such as private server keys were being added in\nthe clear to various logs.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.3.8-2+deb9u1.\n\n\nWe recommend that you upgrade your libpam-tacplus packages.\n\n\nFor the detailed security status of libpam-tacplus please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libpam-tacplus>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libpam-tacplus",
+				"purl": "pkg:deb/debian/libpam-tacplus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.8-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.8-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2730-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2730"
+		}
+	]
+}

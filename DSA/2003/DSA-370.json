@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-370",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-08-08T00:00:00Z",
+	"related": [
+		"CVE-2003-0672"
+	],
+	"summary": "pam-pgsql - format string",
+	"details": "\nFlorian Zumbiehl reported a vulnerability in pam-pgsql whereby the\nusername to be used for authentication is used as a format string when\nwriting a log message. This vulnerability may allow an attacker to\nexecute arbitrary code with the privileges of the program requesting\nPAM authentication.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.5.2-3woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.5.2-7.\n\n\nWe recommend that you update your pam-pgsql package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "pam-pgsql",
+				"purl": "pkg:deb/debian/pam-pgsql?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.5.2-3woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-370.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-370"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1922-1",
+	"modified": "2023-10-16T00:10:46.689705Z",
+	"published": "2009-10-28T00:00:00Z",
+	"related": [
+		"CVE-2009-3007",
+		"CVE-2009-3274",
+		"CVE-2009-3370",
+		"CVE-2009-3372",
+		"CVE-2009-3373",
+		"CVE-2009-3374",
+		"CVE-2009-3375",
+		"CVE-2009-3376",
+		"CVE-2009-3380",
+		"CVE-2009-3382",
+		"CVE-2009-3385"
+	],
+	"summary": "xulrunner - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Xulrunner, a\nruntime environment for XUL applications, such as the Iceweasel web\nbrowser. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2009-3380](https://security-tracker.debian.org/tracker/CVE-2009-3380)\nVladimir Vukicevic, Jesse Ruderman, Martijn Wargers, Daniel\n Banchero, David Keeler and Boris Zbarsky reported crashes in\n layout engine, which might allow the execution of arbitrary code.\n* [CVE-2009-3382](https://security-tracker.debian.org/tracker/CVE-2009-3382)\nCarsten Book reported a crash in the layout engine, which might\n allow the execution of arbitrary code.\n* [CVE-2009-3376](https://security-tracker.debian.org/tracker/CVE-2009-3376)\nJesse Ruderman and Sid Stamm discovered spoofing vulnerability\n in the file download dialog.\n* [CVE-2009-3375](https://security-tracker.debian.org/tracker/CVE-2009-3375)\nGregory Fleischer discovered a bypass of the same-origin policy\n using the document.getSelection() function.\n* [CVE-2009-3374](https://security-tracker.debian.org/tracker/CVE-2009-3374)\n\"moz\\_bug\\_r\\_a4\" discovered a privilege escalation to Chrome status\n in the XPCOM utility XPCVariant::VariantDataToJS.\n* [CVE-2009-3373](https://security-tracker.debian.org/tracker/CVE-2009-3373)\n\"regenrecht\" discovered a buffer overflow in the GIF parser, which\n might lead to the execution of arbitrary code.\n* [CVE-2009-3372](https://security-tracker.debian.org/tracker/CVE-2009-3372)\nMarco C. discovered that a programming error in the proxy auto\n configuration code might lead to denial of service or the\n execution of arbitrary code.\n* [CVE-2009-3274](https://security-tracker.debian.org/tracker/CVE-2009-3274)\nJeremy Brown discovered that the filename of a downloaded file\n which is opened by the user is predictable, which might lead to\n tricking the user into a malicious file if the attacker has local\n access to the system.\n* [CVE-2009-3370](https://security-tracker.debian.org/tracker/CVE-2009-3370)\nPaul Stone discovered that history information from web forms\n could be stolen.\n\n\nFor the stable distribution (lenny), these problems have been fixed\nin version 1.9.0.15-0lenny1.\n\n\nAs indicated in the [Etch\nrelease notes]($(HOME)/releases/etch/i386/release-notes/ch-information#s-mozilla-security), security support for the Mozilla products in the oldstable\ndistribution needed to be stopped before the end of the regular Etch security\nmaintenance life cycle. You are strongly encouraged to upgrade to stable or\nswitch to a still supported browser.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.1.4-1.\n\n\nWe recommend that you upgrade your xulrunner packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "xulrunner",
+				"purl": "pkg:deb/debian/xulrunner?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.0.15-0lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.0.10-1",
+				"1.9.0.11-0lenny1",
+				"1.9.0.11-1",
+				"1.9.0.12-0lenny1",
+				"1.9.0.12-1",
+				"1.9.0.13-0lenny1",
+				"1.9.0.13-1",
+				"1.9.0.14-0lenny1",
+				"1.9.0.14-1",
+				"1.9.0.5-1",
+				"1.9.0.6-1",
+				"1.9.0.7-0lenny1",
+				"1.9.0.7-0lenny2",
+				"1.9.0.7-1",
+				"1.9.0.8-1",
+				"1.9.0.9-0lenny2",
+				"1.9.0.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1922-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1922"
+		}
+	]
+}

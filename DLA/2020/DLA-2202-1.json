@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2202-1",
+	"modified": "2023-06-28T06:20:02.837899Z",
+	"published": "2020-05-05T00:00:00Z",
+	"related": [
+		"CVE-2019-14846",
+		"CVE-2020-1733",
+		"CVE-2020-1739",
+		"CVE-2020-1740"
+	],
+	"summary": "ansible - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Ansible, a configuration\nmanagement, deployment, and task execution system.\n\n\n* [CVE-2019-14846](https://security-tracker.debian.org/tracker/CVE-2019-14846)\nAnsible was logging at the DEBUG level which lead to a disclosure\n of credentials if a plugin used a library that logged credentials\n at the DEBUG level. This flaw does not affect Ansible modules, as\n those are executed in a separate process.\n* [CVE-2020-1733](https://security-tracker.debian.org/tracker/CVE-2020-1733)\nA race condition flaw was found when running a playbook with an\n unprivileged become user. When Ansible needs to run a module with\n become user, the temporary directory is created in /var/tmp. This\n directory is created with \"umask 77 && mkdir -p dir\"; this\n operation does not fail if the directory already exists and is\n owned by another user. An attacker could take advantage to gain\n control of the become user as the target directory can be\n retrieved by iterating '/proc/pid/cmdline'.\n* [CVE-2020-1739](https://security-tracker.debian.org/tracker/CVE-2020-1739)\nA flaw was found when a password is set with the argument\n password of svn module, it is used on svn command line,\n disclosing to other users within the same node. An attacker could\n take advantage by reading the cmdline file from that particular\n PID on the procfs.\n* [CVE-2020-1740](https://security-tracker.debian.org/tracker/CVE-2020-1740)\nA flaw was found when using Ansible Vault for editing encrypted\n files. When a user executes \"ansible-vault edit\", another user on\n the same computer can read the old and new secret, as it is\n created in a temporary file with mkstemp and the returned file\n descriptor is closed and the method write\\_data is called to write\n the existing secret in the file. This method will delete the file\n before recreating it insecurely.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.7.2+dfsg-2+deb8u3.\n\n\nWe recommend that you upgrade your ansible packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ansible",
+				"purl": "pkg:deb/debian/ansible?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.2+dfsg-2+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.2+dfsg-2",
+				"1.7.2+dfsg-2+deb8u1",
+				"1.7.2+dfsg-2+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2202-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2202"
+		}
+	]
+}

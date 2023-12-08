@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1771-1",
+	"modified": "2023-06-28T06:24:58.583632Z",
+	"published": "2019-05-03T00:00:00Z",
+	"related": [
+		"CVE-2018-1000026",
+		"CVE-2018-14625",
+		"CVE-2018-16884",
+		"CVE-2018-19824",
+		"CVE-2018-19985",
+		"CVE-2018-20169",
+		"CVE-2019-3459",
+		"CVE-2019-3460",
+		"CVE-2019-3701",
+		"CVE-2019-3819",
+		"CVE-2019-6974",
+		"CVE-2019-7221",
+		"CVE-2019-7222",
+		"CVE-2019-8980",
+		"CVE-2019-9213"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2018-14625](https://security-tracker.debian.org/tracker/CVE-2018-14625)\nA use-after-free bug was found in the vhost driver for the Virtual\n Socket protocol. If this driver is used to communicate with a\n malicious virtual machine guest, the guest could read sensitive\n information from the host kernel.\n* [CVE-2018-16884](https://security-tracker.debian.org/tracker/CVE-2018-16884)\nA flaw was found in the NFS 4.1 client implementation. Mounting\n NFS shares in multiple network namespaces at the same time could\n lead to a user-after-free. Local users might be able to use this\n for denial of service (memory corruption or crash) or possibly\n for privilege escalation.\n\n\nThis can be mitigated by disabling unprivileged users from\n creating user namespaces, which is the default in Debian.\n* [CVE-2018-19824](https://security-tracker.debian.org/tracker/CVE-2018-19824)\nHui Peng and Mathias Payer discovered a use-after-free bug in the\n USB audio driver. A physically present attacker able to attach a\n specially designed USB device could use this for privilege\n escalation.\n* [CVE-2018-19985](https://security-tracker.debian.org/tracker/CVE-2018-19985)\nHui Peng and Mathias Payer discovered a missing bounds check in the\n hso USB serial driver. A physically present user able to attach a\n specially designed USB device could use this to read sensitive\n information from the kernel or to cause a denial of service\n (crash).\n* [CVE-2018-20169](https://security-tracker.debian.org/tracker/CVE-2018-20169)\nHui Peng and Mathias Payer discovered missing bounds checks in the\n USB core. A physically present attacker able to attach a specially\n designed USB device could use this to cause a denial of service\n (crash) or possibly for privilege escalation.\n* [CVE-2018-1000026](https://security-tracker.debian.org/tracker/CVE-2018-1000026)\nIt was discovered that Linux could forward aggregated network\n packets with a segmentation size too large for the output device.\n In the specific case of Broadcom NetXtremeII 10Gb adapters, this\n would result in a denial of service (firmware crash). This update\n adds a mitigation to the bnx2x driver for this hardware.\n* [CVE-2019-3459](https://security-tracker.debian.org/tracker/CVE-2019-3459), [CVE-2019-3460](https://security-tracker.debian.org/tracker/CVE-2019-3460)\nShlomi Oberman, Yuli Shapiro and Karamba Security Ltd. research\n team discovered missing range checks in the Bluetooth L2CAP\n implementation. If Bluetooth is enabled, a nearby attacker\n could use these to read sensitive information from the kernel.\n* [CVE-2019-3701](https://security-tracker.debian.org/tracker/CVE-2019-3701)\nMuyu Yu and Marcus Meissner reported that the CAN gateway\n implementation allowed the frame length to be modified, typically\n resulting in out-of-bounds memory-mapped I/O writes. On a system\n with CAN devices present, a local user with CAP\\_NET\\_ADMIN\n capability in the initial net namespace could use this to cause a\n crash (oops) or other hardware-dependent impact.\n* [CVE-2019-3819](https://security-tracker.debian.org/tracker/CVE-2019-3819)\nA potential infinite loop was discovered in the HID debugfs\n interface exposed under /sys/kernel/debug/hid. A user with access\n to these files could use this for denial of service.\n\n\nThis interface is only accessible to root by default, which fully\n mitigates the issue.\n* [CVE-2019-6974](https://security-tracker.debian.org/tracker/CVE-2019-6974)\nJann Horn reported a use-after-free bug in KVM. A local user\n with access to /dev/kvm could use this to cause a denial of\n service (memory corruption or crash) or possibly for privilege\n escalation.\n* [CVE-2019-7221](https://security-tracker.debian.org/tracker/CVE-2019-7221)\nJim Mattson and Felix Wilhelm reported a user-after-free bug in\n KVM's nested VMX implementation. On systems with Intel CPUs, a\n local user with access to /dev/kvm could use this to cause a\n denial of service (memory corruption or crash) or possibly for\n privilege escalation.\n\n\nNested VMX is disabled by default, which fully mitigates the\n issue.\n* [CVE-2019-7222](https://security-tracker.debian.org/tracker/CVE-2019-7222)\nFelix Wilhelm reported an information leak in KVM for x86.\n A local user with access to /dev/kvm could use this to read\n sensitive information from the kernel.\n* [CVE-2019-8980](https://security-tracker.debian.org/tracker/CVE-2019-8980)\nA bug was discovered in the kernel\\_read\\_file() function used to\n load firmware files. In certain error conditions it could leak\n memory, which might lead to a denial of service. This is probbaly\n not exploitable in a Debian system.\n* [CVE-2019-9213](https://security-tracker.debian.org/tracker/CVE-2019-9213)\nJann Horn reported that privileged tasks could cause stack\n segments, including those in other processes, to grow downward to\n address 0. On systems lacking SMAP (x86) or PAN (ARM), this\n exacerbated other vulnerabilities: a null pointer dereference\n could be exploited for privilege escalation rather than only for\n denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.168-1~deb8u1. This version also includes fixes for Debian\nbugs #904385, #918103, and #922306; and other fixes included in upstream\nstable updates.\n\n\nWe recommend that you upgrade your linux-4.9 and linux-latest-4.9\npackages. You will need to use `apt-get upgrade --with-new-pkgs`\nor `apt upgrade` as the binary package names have changed.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.168-1~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.110-1~deb8u1",
+				"4.9.144-3.1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1771-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1771"
+		}
+	]
+}

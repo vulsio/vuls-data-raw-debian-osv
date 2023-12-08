@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3725-1",
+	"modified": "2023-10-16T00:12:16.682290Z",
+	"published": "2016-11-27T00:00:00Z",
+	"related": [
+		"CVE-2014-9911",
+		"CVE-2015-2632",
+		"CVE-2015-4844",
+		"CVE-2016-0494",
+		"CVE-2016-6293",
+		"CVE-2016-7415"
+	],
+	"summary": "icu - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the International Components\nfor Unicode (ICU) library.\n\n\n* [CVE-2014-9911](https://security-tracker.debian.org/tracker/CVE-2014-9911)\nMichele Spagnuolo discovered a buffer overflow vulnerability which\n might allow remote attackers to cause a denial of service or possibly\n execute arbitrary code via crafted text.\n* [CVE-2015-2632](https://security-tracker.debian.org/tracker/CVE-2015-2632)\nAn integer overflow vulnerability might lead into a denial of service\n or disclosure of portion of application memory if an attacker has\n control on the input file.\n* [CVE-2015-4844](https://security-tracker.debian.org/tracker/CVE-2015-4844)\nBuffer overflow vulnerabilities might allow an attacker with control\n on the font file to perform a denial of service or,\n possibly, execute arbitrary code.\n* [CVE-2016-0494](https://security-tracker.debian.org/tracker/CVE-2016-0494)\nInteger signedness issues were introduced as part of the\n [CVE-2015-4844](https://security-tracker.debian.org/tracker/CVE-2015-4844) fix.\n* [CVE-2016-6293](https://security-tracker.debian.org/tracker/CVE-2016-6293)\nA buffer overflow might allow an attacker to perform a denial of\n service or disclosure of portion of application memory.\n* [CVE-2016-7415](https://security-tracker.debian.org/tracker/CVE-2016-7415)\nA stack-based buffer overflow might allow an attacker with control on\n the locale string to perform a denial of service and, possibly,\n execute arbitrary code.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 52.1-8+deb8u4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 57.1-5.\n\n\nWe recommend that you upgrade your icu packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "icu",
+				"purl": "pkg:deb/debian/icu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "52.1-8+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"52.1-8",
+				"52.1-8+deb8u2",
+				"52.1-8+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3725-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3725"
+		}
+	]
+}

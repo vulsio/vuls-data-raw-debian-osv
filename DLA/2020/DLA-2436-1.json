@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2436-1",
+	"modified": "2023-06-28T06:21:17.106562Z",
+	"published": "2020-11-06T00:00:00Z",
+	"related": [
+		"CVE-2020-28049"
+	],
+	"summary": "sddm - security update",
+	"details": "\nIt was discovered that there was an issue in the sddm display manager\nwhere local unprivileged users could create a connection to the X\nserver.\n\n\n* [CVE-2020-28049](https://security-tracker.debian.org/tracker/CVE-2020-28049)\nAn issue was discovered in SDDM before 0.19.0. It incorrectly starts the\n X server in a way that - for a short time period - allows local\n unprivileged users to create a connection to the X server without providing\n proper authentication. A local attacker can thus access X server display\n contents and, for example, intercept keystrokes or access the clipboard.\n This is caused by a race condition during Xauthority file\n creation.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n0.14.0-4+deb9u2.\n\n\nWe recommend that you upgrade your sddm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sddm",
+				"purl": "pkg:deb/debian/sddm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.14.0-4+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.14.0-4",
+				"0.14.0-4+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2436-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2436"
+		}
+	]
+}

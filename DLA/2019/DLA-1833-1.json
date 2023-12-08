@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1833-1",
+	"modified": "2023-06-28T06:29:50.138746Z",
+	"published": "2019-06-24T00:00:00Z",
+	"related": [
+		"CVE-2016-3189",
+		"CVE-2019-12900"
+	],
+	"summary": "bzip2 - security update",
+	"details": "\nTwo issues in bzip2, a high-quality block-sorting file compressor, have\nbeen fixed. One, [CVE-2019-12900](https://security-tracker.debian.org/tracker/CVE-2019-12900), is a out-of-bounds write when using a\ncrafted compressed file. The other, [CVE-2016-3189](https://security-tracker.debian.org/tracker/CVE-2016-3189), is a potential\nuser-after-free.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.0.6-7+deb8u1.\n\n\nWe recommend that you upgrade your bzip2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "bzip2",
+				"purl": "pkg:deb/debian/bzip2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.6-7+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.6-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1833-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1833"
+		}
+	]
+}

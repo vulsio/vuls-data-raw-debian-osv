@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2750-1",
+	"modified": "2023-10-16T00:11:29.317519Z",
+	"published": "2013-09-03T00:00:00Z",
+	"related": [
+		"CVE-2013-4298"
+	],
+	"summary": "imagemagick - buffer overflow",
+	"details": "\nAnton Kortunov reported a heap corruption in ImageMagick, a program\ncollection and library for converting and manipulating image files.\nCrafted GIF files could cause ImageMagick to crash, potentially\nleading to arbitrary code execution.\n\n\nThe oldstable distribution (squeeze) is not affected by this problem.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 8:6.7.7.10-5+deb7u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8:6.7.7.10-6.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.7.7.10-5+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.7.7.10-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2750-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2750"
+		}
+	]
+}

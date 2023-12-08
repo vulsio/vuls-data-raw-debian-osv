@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2367-1",
+	"modified": "2023-10-16T00:11:11.203986Z",
+	"published": "2011-12-19T00:00:00Z",
+	"related": [
+		"CVE-2011-4597",
+		"CVE-2011-4598"
+	],
+	"summary": "asterisk - several",
+	"details": "\nSeveral vulnerabilities have been discovered in Asterisk, an Open \nSource PBX and telephony toolkit:\n\n\n* [CVE-2011-4597](https://security-tracker.debian.org/tracker/CVE-2011-4597)\nBen Williams discovered that it was possible to enumerate SIP\n user names in some configurations. Please see the [upstream\n advisory](http://downloads.asterisk.org/pub/security/AST-2011-013.html) for details.\n\n\nThis update only modifies the sample sip.conf configuration\n file. Please see README.Debian for more information on how\n to update your installation.\n* [CVE-2011-4598](https://security-tracker.debian.org/tracker/CVE-2011-4598)\nKristijan Vrban discovered that Asterisk can be crashed with\n malformed SIP packets if the automon feature is enabled.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1:1.4.21.2~dfsg-3+lenny6.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:1.6.2.9-2+squeeze4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:1.8.8.0~dfsg-1.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.6.2.9-2+squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.6.2.9-2",
+				"1:1.6.2.9-2+squeeze1",
+				"1:1.6.2.9-2+squeeze2",
+				"1:1.6.2.9-2+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2367-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.4.21.2~dfsg-3+lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.4.21.2~dfsg-3",
+				"1:1.4.21.2~dfsg-3+lenny1",
+				"1:1.4.21.2~dfsg-3+lenny2",
+				"1:1.4.21.2~dfsg-3+lenny2.1",
+				"1:1.4.21.2~dfsg-3+lenny3",
+				"1:1.4.21.2~dfsg-3+lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2367-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2367"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-865-1",
+	"modified": "2023-06-28T06:34:19.993710Z",
+	"published": "2017-03-22T00:00:00Z",
+	"related": [
+		"CVE-2017-7177"
+	],
+	"summary": "suricata - security update",
+	"details": "\nIt was discovered that there was a vulnerability in suricata, an intrusion\ndetection tool; the IP protocol was not being used to match fragments with\ntheir packets allowing a carefully constructed packet (with a different\nprotocol) to be matched, thus creating a packet that would not be\nre-assembled by the destination host.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in suricata version\n1.2.1-2+deb7u1.\n\n\nWe recommend that you upgrade your suricata packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "suricata",
+				"purl": "pkg:deb/debian/suricata?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.1-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-865-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-865"
+		}
+	]
+}

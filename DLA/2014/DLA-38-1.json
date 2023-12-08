@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-38-1",
+	"modified": "2023-06-28T06:21:30.685521Z",
+	"published": "2014-08-20T00:00:00Z",
+	"related": [
+		"CVE-2014-5161",
+		"CVE-2014-5162",
+		"CVE-2014-5163"
+	],
+	"summary": "wireshark - security update",
+	"details": "\n* [CVE-2014-5161](https://security-tracker.debian.org/tracker/CVE-2014-5161) /\n [CVE-2014-5162](https://security-tracker.debian.org/tracker/CVE-2014-5162)\nThe Catapult DCT2000 and IrDA dissectors could underrun a buffer.\n It may be possible to make Wireshark crash by injecting a malformed packet onto \n the wire or by convincing someone to read a malformed packet trace file.\n* [CVE-2014-5163](https://security-tracker.debian.org/tracker/CVE-2014-5163)\nThe GSM Management dissector could crash.\n It may be possible to make Wireshark crash by injecting a malformed packet onto\n the wire or by convincing someone to read a malformed packet trace file.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in wireshark version 1.2.11-6+squeeze15\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.11-6+squeeze15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.11-6",
+				"1.2.11-6+squeeze1",
+				"1.2.11-6+squeeze10",
+				"1.2.11-6+squeeze11",
+				"1.2.11-6+squeeze12",
+				"1.2.11-6+squeeze13",
+				"1.2.11-6+squeeze14",
+				"1.2.11-6+squeeze2",
+				"1.2.11-6+squeeze4",
+				"1.2.11-6+squeeze5",
+				"1.2.11-6+squeeze6",
+				"1.2.11-6+squeeze7",
+				"1.2.11-6+squeeze8",
+				"1.2.11-6+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-38-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-38"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-947-1",
+	"modified": "2023-06-28T06:38:58.630794Z",
+	"published": "2017-05-20T00:00:00Z",
+	"related": [
+		"CVE-2017-7867",
+		"CVE-2017-7868"
+	],
+	"summary": "icu - security update",
+	"details": "\nIt was discovered that icu, the International Components for Unicode\nlibrary, did not correctly validate its input. An attacker could use\nthis problem to trigger an out-of-bound write through a heap-based\nbuffer overflow, thus causing a denial of service via application\ncrash, or potential execution of arbitrary code.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.8.1.1-12+deb7u7.\n\n\nWe recommend that you upgrade your icu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "icu",
+				"purl": "pkg:deb/debian/icu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.8.1.1-12+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.8.1.1-12",
+				"4.8.1.1-12+deb7u1",
+				"4.8.1.1-12+deb7u2",
+				"4.8.1.1-12+deb7u3",
+				"4.8.1.1-12+deb7u4",
+				"4.8.1.1-12+deb7u5",
+				"4.8.1.1-12+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-947-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-947"
+		}
+	]
+}

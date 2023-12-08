@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2338-1",
+	"modified": "2023-06-28T06:26:30.794076Z",
+	"published": "2020-08-22T00:00:00Z",
+	"summary": "proftpd-dfsg - security update",
+	"details": "\nSeveral memory leaks were discovered in proftpd-dfsg, a versatile,\nvirtual-hosting FTP daemon, when mod\\_facl or mod\\_sftp\nis used which could lead to memory exhaustion and a denial-of-service.\n\n\nThe update also makes automatic upgrades of proftpd-dfsg from Debian 8\nto Debian 9 possible again.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.3.5e+r1.3.5b-4+deb9u1.\n\n\nWe recommend that you upgrade your proftpd-dfsg packages.\n\n\nFor the detailed security status of proftpd-dfsg please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/proftpd-dfsg>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "proftpd-dfsg",
+				"purl": "pkg:deb/debian/proftpd-dfsg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.5e+r1.3.5b-4+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.5b-4",
+				"1.3.5b-4+deb9u1",
+				"1.3.5b-4+deb9u2",
+				"1.3.5b-4+deb9u3",
+				"1.3.5b-4+deb9u4",
+				"1.3.5b-4+deb9u5",
+				"1.3.5d-1",
+				"1.3.5e-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2338-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2338"
+		}
+	]
+}

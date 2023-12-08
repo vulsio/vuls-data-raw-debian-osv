@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4397-1",
+	"modified": "2023-10-16T00:17:31.782093Z",
+	"published": "2019-02-28T00:00:00Z",
+	"related": [
+		"CVE-2019-3824"
+	],
+	"summary": "ldb - security update",
+	"details": "\nGarming Sam reported an out-of-bounds read in the ldb\\_wildcard\\_compare()\nfunction of ldb, a LDAP-like embedded database, resulting in denial of\nservice.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:1.1.27-1+deb9u1.\n\n\nWe recommend that you upgrade your ldb packages.\n\n\nFor the detailed security status of ldb please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ldb](https://security-tracker.debian.org/tracker/ldb)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ldb",
+				"purl": "pkg:deb/debian/ldb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.1.27-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.1.27-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4397-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4397"
+		}
+	]
+}

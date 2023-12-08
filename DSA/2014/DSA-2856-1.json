@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2856-1",
+	"modified": "2023-10-16T00:11:35.239793Z",
+	"published": "2014-02-07T00:00:00Z",
+	"related": [
+		"CVE-2014-0050"
+	],
+	"summary": "libcommons-fileupload-java - security update",
+	"details": "\nIt was discovered that the Apache Commons FileUpload package for Java\ncould enter an infinite loop while processing a multipart request with\na crafted Content-Type, resulting in a denial-of-service condition.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1.2.2-1+deb6u2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.2.2-1+deb7u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.3.1-1.\n\n\nWe recommend that you upgrade your libcommons-fileupload-java packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libcommons-fileupload-java",
+				"purl": "pkg:deb/debian/libcommons-fileupload-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.2-1+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2856-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libcommons-fileupload-java",
+				"purl": "pkg:deb/debian/libcommons-fileupload-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.2-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.2-1",
+				"1.2.2-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2856-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2856"
+		}
+	]
+}

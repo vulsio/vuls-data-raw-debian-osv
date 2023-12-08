@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-492-1",
+	"modified": "2023-06-28T06:34:06.227385Z",
+	"published": "2016-05-29T00:00:00Z",
+	"related": [
+		"CVE-2014-7210"
+	],
+	"summary": "pdns - security update",
+	"details": "\nIt was discovered that the maintainer scripts of pdns-backend-mysql\ngrant too wide database permissions for the pdns user. Other backends\nare not affected.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.1-4.1+deb7u1.\n\n\nNote that if you're running the pdns server with the mysql backend these\nadditional grants are not removed automatically since they might have\nbeen added on purpose. Check\n\n\n/usr/share/doc/pdns-backend-mysql/NEWS.Debian.gz\n\n\non how to remove them.\n\n\nWe recommend that you upgrade your pdns packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "pdns",
+				"purl": "pkg:deb/debian/pdns?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1-4.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1-4",
+				"3.1-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-492-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-492"
+		}
+	]
+}

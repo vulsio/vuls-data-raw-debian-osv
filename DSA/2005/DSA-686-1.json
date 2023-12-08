@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-686-1",
+	"modified": "2023-10-16T00:27:48.420991Z",
+	"published": "2005-02-17T00:00:00Z",
+	"related": [
+		"CVE-2005-0372"
+	],
+	"summary": "gftp - missing input sanitising",
+	"details": "\nAlbert Puigsech Galicia discovered a directory traversal vulnerability\nin a proprietary FTP client ([CAN-2004-1376](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1376)) which is also present in\ngftp, a GTK+ FTP client. A malicious server could provide a specially\ncrafted filename that could cause arbitrary files to be overwritten or\ncreated by the client.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.0.11-1woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.0.18-1.\n\n\nWe recommend that you upgrade your gftp package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gftp",
+				"purl": "pkg:deb/debian/gftp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.11-1woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.11-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-686-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-686"
+		}
+	]
+}

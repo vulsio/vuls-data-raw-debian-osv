@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-448-1",
+	"modified": "2023-06-28T06:34:04.760998Z",
+	"published": "2016-05-01T00:00:00Z",
+	"related": [
+		"CVE-2016-2167",
+		"CVE-2016-2168"
+	],
+	"summary": "subversion - security update",
+	"details": "\n* [CVE-2016-2167](https://security-tracker.debian.org/tracker/CVE-2016-2167)\nsvnserve, the svn:// protocol server, can optionally use the Cyrus\n SASL library for authentication, integrity protection, and encryption.\n Due to a programming oversight, authentication against Cyrus SASL\n would permit the remote user to specify a realm string which is\n a prefix of the expected realm string.\n* [CVE-2016-2168](https://security-tracker.debian.org/tracker/CVE-2016-2168)\nSubversion's httpd servers are vulnerable to a remotely triggerable crash\n in the mod\\_authz\\_svn module. The crash can occur during an authorization\n check for a COPY or MOVE request with a specially crafted header value.\n\n\nThis allows remote attackers to cause a denial of service.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in subversion version 1.6.17dfsg-4+deb7u11\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "subversion",
+				"purl": "pkg:deb/debian/subversion?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.17dfsg-4+deb7u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.17dfsg-4+deb7u10",
+				"1.6.17dfsg-4+deb7u2",
+				"1.6.17dfsg-4+deb7u3",
+				"1.6.17dfsg-4+deb7u4",
+				"1.6.17dfsg-4+deb7u5",
+				"1.6.17dfsg-4+deb7u6",
+				"1.6.17dfsg-4+deb7u7",
+				"1.6.17dfsg-4+deb7u8",
+				"1.6.17dfsg-4+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-448-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-448"
+		}
+	]
+}

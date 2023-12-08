@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1124",
+	"modified": "2023-10-16T00:05:13.939291Z",
+	"published": "2006-07-24T00:00:00Z",
+	"related": [
+		"CVE-2006-3119"
+	],
+	"summary": "fbi - typo",
+	"details": "\nToth Andras discovered that the fbgs framebuffer postscript/PDF viewer\ncontains a typo, which prevents the intended filter against malicious\npostscript commands from working correctly. This might lead to the\ndeletion of user data when displaying a postscript file.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.01-1.2sarge2.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your fbi package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "fbi",
+				"purl": "pkg:deb/debian/fbi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.01-1.2sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.01-1.2",
+				"2.01-1.2sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1124.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1124"
+		}
+	]
+}

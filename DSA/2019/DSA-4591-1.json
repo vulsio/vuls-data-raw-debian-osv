@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4591-1",
+	"modified": "2023-10-16T00:19:00.657907Z",
+	"published": "2019-12-20T00:00:00Z",
+	"related": [
+		"CVE-2019-19906"
+	],
+	"summary": "cyrus-sasl2 - security update",
+	"details": "\nStephan Zeisberg reported an out-of-bounds write vulnerability in the\n\\_sasl\\_add\\_string() function in cyrus-sasl2, a library implementing the\nSimple Authentication and Security Layer. A remote attacker can take\nadvantage of this issue to cause denial-of-service conditions for\napplications using the library.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 2.1.27~101-g0780600+dfsg-3+deb9u1.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2.1.27+dfsg-1+deb10u1.\n\n\nWe recommend that you upgrade your cyrus-sasl2 packages.\n\n\nFor the detailed security status of cyrus-sasl2 please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/cyrus-sasl2>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "cyrus-sasl2",
+				"purl": "pkg:deb/debian/cyrus-sasl2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.27~101-g0780600+dfsg-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.27~101-g0780600+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4591-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "cyrus-sasl2",
+				"purl": "pkg:deb/debian/cyrus-sasl2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.27+dfsg-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.27+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4591-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4591"
+		}
+	]
+}

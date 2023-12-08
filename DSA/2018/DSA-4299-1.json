@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4299-1",
+	"modified": "2023-10-16T00:23:37.391755Z",
+	"published": "2018-09-21T00:00:00Z",
+	"related": [
+		"CVE-2018-17407"
+	],
+	"summary": "texlive-bin - security update",
+	"details": "\nNick Roessler from the University of Pennsylvania has found a buffer overflow\nin texlive-bin, the executables for TexLive, the popular distribution of TeX\ndocument production system.\n\n\nThis buffer overflow can be used for arbitrary code execution by crafting a\nspecial type1 font (.pfb) and provide it to users running pdf(la)tex, dvips or\nluatex in a way that the font is loaded.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2016.20160513.41080.dfsg-2+deb9u1.\n\n\nWe recommend that you upgrade your texlive-bin packages.\n\n\nFor the detailed security status of texlive-bin please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/texlive-bin](https://security-tracker.debian.org/tracker/texlive-bin)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "texlive-bin",
+				"purl": "pkg:deb/debian/texlive-bin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2016.20160513.41080.dfsg-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2016.20160513.41080.dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4299-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4299"
+		}
+	]
+}

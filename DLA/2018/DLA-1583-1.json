@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1583-1",
+	"modified": "2023-06-28T06:20:49.630775Z",
+	"published": "2018-11-21T00:00:00Z",
+	"related": [
+		"CVE-2015-5203",
+		"CVE-2015-5221",
+		"CVE-2016-8690",
+		"CVE-2017-13748",
+		"CVE-2017-14132"
+	],
+	"summary": "jasper - security update",
+	"details": "\nSeveral security vulnerabilities were discovered in the JasPer\nJPEG-2000 library.\n\n\n* [CVE-2015-5203](https://security-tracker.debian.org/tracker/CVE-2015-5203)\nGustavo Grieco discovered an integer overflow vulnerability that\n allows remote attackers to cause a denial of service or may have\n other unspecified impact via a crafted JPEG 2000 image file.\n* [CVE-2015-5221](https://security-tracker.debian.org/tracker/CVE-2015-5221)\nJosselin Feist found a double-free vulnerability that allows remote\n attackers to cause a denial-of-service (application crash) by\n processing a malformed image file.\n* [CVE-2016-8690](https://security-tracker.debian.org/tracker/CVE-2016-8690)\nGustavo Grieco discovered a NULL pointer dereference vulnerability\n that can cause a denial-of-service via a crafted BMP image file. The\n update also includes the fixes for the related issues [CVE-2016-8884](https://security-tracker.debian.org/tracker/CVE-2016-8884)\n and [CVE-2016-8885](https://security-tracker.debian.org/tracker/CVE-2016-8885) which complete the patch for [CVE-2016-8690](https://security-tracker.debian.org/tracker/CVE-2016-8690).\n* [CVE-2017-13748](https://security-tracker.debian.org/tracker/CVE-2017-13748)\nIt was discovered that jasper does not properly release memory used\n to store image tile data when image decoding fails which may lead to\n a denial-of-service.\n* [CVE-2017-14132](https://security-tracker.debian.org/tracker/CVE-2017-14132)\nA heap-based buffer over-read was found related to the\n jas\\_image\\_ishomosamp function that could be triggered via a crafted\n image file and may cause a denial-of-service (application crash) or\n have other unspecified impact.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.900.1-debian1-2.4+deb8u4.\n\n\nWe recommend that you upgrade your jasper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jasper",
+				"purl": "pkg:deb/debian/jasper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.900.1-debian1-2.4+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.900.1-debian1-2.4",
+				"1.900.1-debian1-2.4+deb8u1",
+				"1.900.1-debian1-2.4+deb8u2",
+				"1.900.1-debian1-2.4+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1583-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1583"
+		}
+	]
+}

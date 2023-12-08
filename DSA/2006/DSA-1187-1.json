@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1187-1",
+	"modified": "2023-10-16T00:10:11.061059Z",
+	"published": "2006-09-30T00:00:00Z",
+	"related": [
+		"CVE-2006-0512"
+	],
+	"summary": "migrationtools",
+	"details": "\nJason Hoover discovered that migrationtools, a collection of scripts\nto migrate user data to LDAP creates several temporary files insecurely,\nwhich might lead to denial of service through a symlink attack.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 46-1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 46-2.1.\n\n\nWe recommend that you upgrade your migrationtools package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "migrationtools",
+				"purl": "pkg:deb/debian/migrationtools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "46-1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"46-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1187-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1187"
+		}
+	]
+}

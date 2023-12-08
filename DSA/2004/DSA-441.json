@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-441",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-02-18T00:00:00Z",
+	"related": [
+		"CVE-2004-0077"
+	],
+	"summary": "linux-kernel-2.4.17-mips+mipsel - missing function return value check",
+	"details": "\nPaul Starzetz and Wojciech Purczynski of isec.pl [discovered](http://isec.pl/vulnerabilities/isec-0014-mremap-unmap.txt) a critical\nsecurity vulnerability in the memory management code of Linux inside\nthe mremap(2) system call. Due to missing function return value check\nof internal functions a local attacker can gain root privileges.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.4.17-0.020226.2.woody5 for mips and mipsel kernel images.\n\n\nOther architectures will probably mentioned in a separate advisory or\nare not affected (m68k).\n\n\nFor the unstable distribution (sid) this problem will be fixed soon\nwith the next upload of a 2.4.19 kernel image and in version\n2.4.22-0.030928.3 for 2.4.22 for the mips and mipsel architectures.\n\n\nThis problem is also fixed in the upstream version of Linux 2.4.25 and\n2.6.3.\n\n\nWe recommend that you upgrade your Linux kernel packages immediately.\n\n\n[Vulnerability matrix](CAN-2004-0077) for CAN-2004-0077\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-patch-2.4.17-mips",
+				"purl": "pkg:deb/debian/kernel-patch-2.4.17-mips?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.17-0.020226.2.woody5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-441.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-441"
+		}
+	]
+}

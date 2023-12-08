@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3562-1",
+	"modified": "2023-10-16T00:12:07.679988Z",
+	"published": "2016-05-01T00:00:00Z",
+	"related": [
+		"CVE-2015-0857",
+		"CVE-2015-0858"
+	],
+	"summary": "tardiff - security update",
+	"details": "\nSeveral vulnerabilities were discovered in tardiff, a tarball comparison\ntool. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2015-0857](https://security-tracker.debian.org/tracker/CVE-2015-0857)\nRainer Mueller and Florian Weimer discovered that tardiff is prone\n to shell command injections via shell meta-characters in filenames\n in tar files or via shell meta-characters in the tar filename\n itself.\n* [CVE-2015-0858](https://security-tracker.debian.org/tracker/CVE-2015-0858)\nFlorian Weimer discovered that tardiff uses predictable temporary\n directories for unpacking tarballs. A malicious user can use this\n flaw to overwrite files with permissions of the user running the\n tardiff command line tool.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 0.1-2+deb8u2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.1-5 and partially in earlier versions.\n\n\nWe recommend that you upgrade your tardiff packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tardiff",
+				"purl": "pkg:deb/debian/tardiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1-2",
+				"0.1-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3562-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3562"
+		}
+	]
+}

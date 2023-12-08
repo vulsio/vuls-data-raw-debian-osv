@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-705-1",
+	"modified": "2023-10-16T00:26:15.993373Z",
+	"published": "2005-04-04T00:00:00Z",
+	"related": [
+		"CVE-2005-0256"
+	],
+	"summary": "wu-ftpd - missing input sanitising",
+	"details": "\nSeveral denial of service conditions have been discovered in wu-ftpd,\nthe popular FTP daemon. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CAN-2005-0256](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0256)\nAdam Zabrocki discovered a denial of service condition in wu-ftpd\n that could be exploited by a remote user and cause the server to\n slow down by resource exhaustion.\n\n* [CAN-2003-0854](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0854)\nGeorgi Guninski discovered that /bin/ls may be called from within\n wu-ftpd in a way that will result in large memory consumption and\n hence slow down the server.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.6.2-3woody5.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.6.2-19.\n\n\nWe recommend that you upgrade your wu-ftpd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "wu-ftpd",
+				"purl": "pkg:deb/debian/wu-ftpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.2-3woody5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.2-3woody4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-705-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-705"
+		}
+	]
+}

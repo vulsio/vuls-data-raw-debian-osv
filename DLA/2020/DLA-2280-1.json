@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2280-1",
+	"modified": "2023-06-28T06:25:10.881769Z",
+	"published": "2020-07-15T00:00:00Z",
+	"related": [
+		"CVE-2018-20406",
+		"CVE-2018-20852",
+		"CVE-2019-10160",
+		"CVE-2019-16056",
+		"CVE-2019-16935",
+		"CVE-2019-18348",
+		"CVE-2019-5010",
+		"CVE-2019-9636",
+		"CVE-2019-9740",
+		"CVE-2019-9947",
+		"CVE-2019-9948",
+		"CVE-2020-14422",
+		"CVE-2020-8492"
+	],
+	"summary": "python3.5 - security update",
+	"details": "\nMultiple security issues were discovered in Python, an interactive\nhigh-level object-oriented language.\n\n\n* [CVE-2018-20406](https://security-tracker.debian.org/tracker/CVE-2018-20406)\nModules/\\_pickle.c has an integer overflow via a large LONG\\_BINPUT\n value that is mishandled during a resize to twice the size\n attempt. This issue might cause memory exhaustion, but is only\n relevant if the pickle format is used for serializing tens or\n hundreds of gigabytes of data.\n* [CVE-2018-20852](https://security-tracker.debian.org/tracker/CVE-2018-20852)\nhttp.cookiejar.DefaultPolicy.domain\\_return\\_ok in\n Lib/http/cookiejar.py does not correctly validate the domain: it\n can be tricked into sending existing cookies to the wrong\n server. An attacker may abuse this flaw by using a server with a\n hostname that has another valid hostname as a suffix (e.g.,\n pythonicexample.com to steal cookies for example.com). When a\n program uses http.cookiejar.DefaultPolicy and tries to do an HTTP\n connection to an attacker-controlled server, existing cookies can\n be leaked to the attacker.\n* [CVE-2019-5010](https://security-tracker.debian.org/tracker/CVE-2019-5010)\nAn exploitable denial-of-service vulnerability exists in the X509\n certificate parser. A specially crafted X509 certificate can cause\n a NULL pointer dereference, resulting in a denial of service. An\n attacker can initiate or accept TLS connections using crafted\n certificates to trigger this vulnerability.\n* [CVE-2019-9636](https://security-tracker.debian.org/tracker/CVE-2019-9636)\nImproper Handling of Unicode Encoding (with an incorrect netloc)\n during NFKC normalization. The impact is: Information disclosure\n (credentials, cookies, etc. that are cached against a given\n hostname). The components are: urllib.parse.urlsplit,\n urllib.parse.urlparse. The attack vector is: A specially crafted\n URL could be incorrectly parsed to locate cookies or\n authentication data and send that information to a different host\n than when parsed correctly.\n* [CVE-2019-9740](https://security-tracker.debian.org/tracker/CVE-2019-9740)\nAn issue was discovered in urllib2. CRLF injection is possible if\n the attacker controls a url parameter, as demonstrated by the\n first argument to urllib.request.urlopen with \\r\\n (specifically\n in the query string after a ? character) followed by an HTTP\n header or a Redis command.\n* [CVE-2019-9947](https://security-tracker.debian.org/tracker/CVE-2019-9947)\nAn issue was discovered in urllib2. CRLF injection is possible if\n the attacker controls a url parameter, as demonstrated by the\n first argument to urllib.request.urlopen with \\r\\n (specifically\n in the path component of a URL that lacks a ? character) followed\n by an HTTP header or a Redis command. This is similar to the\n [CVE-2019-9740](https://security-tracker.debian.org/tracker/CVE-2019-9740) query string issue.\n* [CVE-2019-9948](https://security-tracker.debian.org/tracker/CVE-2019-9948)\nurllib supports the local\\_file: scheme, which makes it easier for\n remote attackers to bypass protection mechanisms that blacklist\n file: URIs, as demonstrated by triggering a\n urllib.urlopen('local\\_file:///etc/passwd') call.\n* [CVE-2019-10160](https://security-tracker.debian.org/tracker/CVE-2019-10160)\nA security regression was discovered in python, which still allows\n an attacker to exploit [CVE-2019-9636](https://security-tracker.debian.org/tracker/CVE-2019-9636) by abusing the user and\n password parts of a URL. When an application parses user-supplied\n URLs to store cookies, authentication credentials, or other kind\n of information, it is possible for an attacker to provide\n specially crafted URLs to make the application locate host-related\n information (e.g. cookies, authentication data) and send them to a\n different host than where it should, unlike if the URLs had been\n correctly parsed. The result of an attack may vary based on the\n application.\n* [CVE-2019-16056](https://security-tracker.debian.org/tracker/CVE-2019-16056)\nThe email module wrongly parses email addresses that contain\n multiple @ characters. An application that uses the email module\n and implements some kind of checks on the From/To headers of a\n message could be tricked into accepting an email address that\n should be denied. An attack may be the same as in [CVE-2019-11340](https://security-tracker.debian.org/tracker/CVE-2019-11340);\n however, this CVE applies to Python more generally.\n* [CVE-2019-16935](https://security-tracker.debian.org/tracker/CVE-2019-16935)\nThe documentation XML-RPC server has XSS via the server\\_title\n field. This occurs in Lib/xmlrpc/server.py. If set\\_server\\_title is\n called with untrusted input, arbitrary JavaScript can be delivered\n to clients that visit the http URL for this server.\n* [CVE-2019-18348](https://security-tracker.debian.org/tracker/CVE-2019-18348)\nAn issue was discovered in urllib2. CRLF injection is possible if\n the attacker controls a url parameter, as demonstrated by the\n first argument to urllib.request.urlopen with \\r\\n (specifically\n in the host component of a URL) followed by an HTTP header. This\n is similar to the [CVE-2019-9740](https://security-tracker.debian.org/tracker/CVE-2019-9740) query string issue and the\n [CVE-2019-9947](https://security-tracker.debian.org/tracker/CVE-2019-9947) path string issue\n* [CVE-2020-8492](https://security-tracker.debian.org/tracker/CVE-2020-8492)\nPython allows an HTTP server to conduct Regular Expression Denial\n of Service (ReDoS) attacks against a client because of\n urllib.request.AbstractBasicAuthHandler catastrophic backtracking.\n* [CVE-2020-14422](https://security-tracker.debian.org/tracker/CVE-2020-14422)\nLib/ipaddress.py improperly computes hash values in the\n IPv4Interface and IPv6Interface classes, which might allow a\n remote attacker to cause a denial of service if an application is\n affected by the performance of a dictionary containing\n IPv4Interface or IPv6Interface objects, and this attacker can\n cause many dictionary entries to be created.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.5.3-1+deb9u2.\n\n\nWe recommend that you upgrade your python3.5 packages.\n\n\nFor the detailed security status of python3.5 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python3.5>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python3.5",
+				"purl": "pkg:deb/debian/python3.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.3-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.3-1",
+				"3.5.3-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2280-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2280"
+		}
+	]
+}

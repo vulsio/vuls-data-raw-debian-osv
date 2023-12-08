@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-710-1",
+	"modified": "2023-06-28T06:37:04.987116Z",
+	"published": "2016-11-17T00:00:00Z",
+	"summary": "akonadi - security update",
+	"details": "\nIn some configurations the MySQL storage backend for Akonadi, an\nextensible cross-desktop Personal Information Management (PIM)\nstorage service failed to start after applying the MySQL 5.5.53\nsecurity upgrade.\n\n\nThis update extends the /etc/akonadi/mysql-global.conf configuration\nfile to restore compatibility (version 1.7.2-3+deb7u1 in Wheezy).\n\n\nWe recommend that you upgrade your akonadi packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\nFor Debian 7 Wheezy, these issues have been fixed in akonadi version 1.7.2-3+deb7u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "akonadi",
+				"purl": "pkg:deb/debian/akonadi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.2-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.2-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-710-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-710"
+		}
+	]
+}

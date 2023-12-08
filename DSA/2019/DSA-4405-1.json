@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4405-1",
+	"modified": "2023-10-16T00:13:51.269391Z",
+	"published": "2019-03-10T00:00:00Z",
+	"related": [
+		"CVE-2017-17480",
+		"CVE-2018-14423",
+		"CVE-2018-18088",
+		"CVE-2018-5785",
+		"CVE-2018-6616"
+	],
+	"summary": "openjpeg2 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in openjpeg2, the\nopen-source JPEG 2000 codec, that could be leveraged to cause a denial\nof service or possibly remote code execution.\n\n\n* [CVE-2017-17480](https://security-tracker.debian.org/tracker/CVE-2017-17480)\nWrite stack buffer overflow in the jp3d and jpwl codecs can result\n in a denial of service or remote code execution via a crafted jp3d\n or jpwl file.\n* [CVE-2018-5785](https://security-tracker.debian.org/tracker/CVE-2018-5785)\nInteger overflow can result in a denial of service via a crafted bmp\n file.\n* [CVE-2018-6616](https://security-tracker.debian.org/tracker/CVE-2018-6616)\nExcessive iteration can result in a denial of service via a crafted\n bmp file.\n* [CVE-2018-14423](https://security-tracker.debian.org/tracker/CVE-2018-14423)\nDivision-by-zero vulnerabilities can result in a denial of service via\n a crafted j2k file.\n* [CVE-2018-18088](https://security-tracker.debian.org/tracker/CVE-2018-18088)\nNull pointer dereference can result in a denial of service via a\n crafted bmp file.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.1.2-1.1+deb9u3.\n\n\nWe recommend that you upgrade your openjpeg2 packages.\n\n\nFor the detailed security status of openjpeg2 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openjpeg2](https://security-tracker.debian.org/tracker/openjpeg2)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openjpeg2",
+				"purl": "pkg:deb/debian/openjpeg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.2-1.1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.2-1.1",
+				"2.1.2-1.1+deb9u1",
+				"2.1.2-1.1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4405-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4405"
+		}
+	]
+}

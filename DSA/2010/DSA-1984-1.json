@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1984-1",
+	"modified": "2023-10-16T00:10:52.467304Z",
+	"published": "2010-01-30T00:00:00Z",
+	"related": [
+		"CVE-2009-2625"
+	],
+	"summary": "libxerces2-java - denial of service",
+	"details": "\nIt was discovered that libxerces2-java, a validating XML parser for Java,\ndoes not properly process malformed XML files.\nThis vulnerability could allow an attacker to cause a denial of service while parsing\na malformed XML file.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.8.1-1+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.9.1-2+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.9.1-4.1, and will migrate to the testing distribution (squeeze)\nshortly.\n\n\nWe recommend that you upgrade your libxerces2-java package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libxerces2-java",
+				"purl": "pkg:deb/debian/libxerces2-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.1-1+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1984-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libxerces2-java",
+				"purl": "pkg:deb/debian/libxerces2-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.1-2+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1984-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-1984"
+		}
+	]
+}

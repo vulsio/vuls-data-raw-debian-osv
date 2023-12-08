@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-637-1",
+	"modified": "2023-10-16T00:26:04.969758Z",
+	"published": "2005-01-13T00:00:00Z",
+	"related": [
+		"CVE-2005-0021"
+	],
+	"summary": "exim-tls - buffer overflow",
+	"details": "\nPhilip Hazel announced a buffer overflow in the host\\_aton function in\nexim-tls, the SSL-enabled version of the default mail-transport-agent\nin Debian, which can lead to the execution of arbitrary code via an\nillegal IPv6 address.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 3.35-3woody3.\n\n\nIn the unstable distribution (sid) this package does not exist\nanymore.\n\n\nWe recommend that you upgrade your exim-tls package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "exim-tls",
+				"purl": "pkg:deb/debian/exim-tls?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.35-3woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.35-3woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-637-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-637"
+		}
+	]
+}

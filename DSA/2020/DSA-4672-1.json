@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4672-1",
+	"modified": "2023-10-16T00:20:23.067586Z",
+	"published": "2020-05-01T00:00:00Z",
+	"related": [
+		"CVE-2019-17559",
+		"CVE-2019-17565",
+		"CVE-2020-1944",
+		"CVE-2020-9481"
+	],
+	"summary": "trafficserver - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Apache Traffic Server, a\nreverse and forward proxy server, which could result in denial of service\nor request smuggling attacks.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 8.0.2+ds-1+deb10u2.\n\n\nWe recommend that you upgrade your trafficserver packages.\n\n\nFor the detailed security status of trafficserver please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/trafficserver](https://security-tracker.debian.org/tracker/trafficserver)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "trafficserver",
+				"purl": "pkg:deb/debian/trafficserver?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.2+ds-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.2+ds-1",
+				"8.0.2+ds-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4672-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4672"
+		}
+	]
+}

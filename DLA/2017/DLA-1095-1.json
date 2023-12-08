@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1095-1",
+	"modified": "2023-06-28T06:20:22.044220Z",
+	"published": "2017-09-11T00:00:00Z",
+	"related": [
+		"CVE-2017-2835",
+		"CVE-2017-2836",
+		"CVE-2017-2837",
+		"CVE-2017-2838",
+		"CVE-2017-2839"
+	],
+	"summary": "freerdp - security update",
+	"details": "\nTyler Bohan of Talos discovered that FreeRDP, a free implementation of\nthe Remote Desktop Protocol (RDP), contained several vulnerabilities\nthat allowed a malicious remote server or a man-in-the-middle to\neither cause a DoS by forcibly terminating the client, or execute\narbitrary code on the client side.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.0.1-1.1+deb7u4.\n\n\nWe recommend that you upgrade your freerdp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "freerdp",
+				"purl": "pkg:deb/debian/freerdp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1-1.1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1-1.1+deb7u2",
+				"1.0.1-1.1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1095-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1095"
+		}
+	]
+}

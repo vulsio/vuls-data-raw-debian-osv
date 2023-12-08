@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1440-1",
+	"modified": "2023-10-16T00:10:25.969885Z",
+	"published": "2007-12-28T00:00:00Z",
+	"related": [
+		"CVE-2007-5037"
+	],
+	"summary": "inotify-tools",
+	"details": "\n\nIt was discovered that a buffer overflow in the filename processing of\nthe inotify-tools, a command-line interface to inotify, may lead to\nthe execution of arbitrary code. This only affects the internal \nlibrary and none of the frontend tools shipped in Debian.\n\n\n\n\nThe old stable distribution (sarge) does not provide inotify-tools.\n\n\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 3.3-2.\n\n\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.11-1.\n\n\n\n\nWe recommend that you upgrade your inotify-tools package.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "inotify-tools",
+				"purl": "pkg:deb/debian/inotify-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1440-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1440"
+		}
+	]
+}

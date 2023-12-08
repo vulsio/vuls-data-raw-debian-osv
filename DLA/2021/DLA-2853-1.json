@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2853-1",
+	"modified": "2023-06-28T06:37:00.496810Z",
+	"published": "2021-12-28T00:00:00Z",
+	"related": [
+		"CVE-2021-41817",
+		"CVE-2021-41819"
+	],
+	"summary": "ruby2.3 - security update",
+	"details": "\nA cookie prefix spoofing vulnerability in CGI::Cookie.parse and a\nregular expression denial of service vulnerability (ReDoS) on date\nparsing methods was discovered in src:ruby2.1, the Ruby interpreter.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.3.3-1+deb9u11.\n\n\nWe recommend that you upgrade your ruby2.3 packages.\n\n\nFor the detailed security status of ruby2.3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ruby2.3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby2.3",
+				"purl": "pkg:deb/debian/ruby2.3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.3-1+deb9u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.3-1",
+				"2.3.3-1+deb9u1",
+				"2.3.3-1+deb9u10",
+				"2.3.3-1+deb9u2",
+				"2.3.3-1+deb9u3",
+				"2.3.3-1+deb9u4",
+				"2.3.3-1+deb9u5",
+				"2.3.3-1+deb9u6",
+				"2.3.3-1+deb9u7",
+				"2.3.3-1+deb9u8",
+				"2.3.3-1+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2853-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2853"
+		}
+	]
+}

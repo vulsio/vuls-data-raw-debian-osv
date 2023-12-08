@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3235-1",
+	"modified": "2023-06-28T06:25:29.006770Z",
+	"published": "2022-12-11T00:00:00Z",
+	"related": [
+		"CVE-2022-1650"
+	],
+	"summary": "node-eventsource - security update",
+	"details": "\nTimothee Desurmont discovered an information leak vulnerability in\nnode-eventsource, a W3C compliant EventSource client for Node.js: the\nmodule was not honoring the same-origin-policy and upon following a\nredirect would leak cookies to the the target URL.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n0.2.1-1+deb10u1.\n\n\nWe recommend that you upgrade your node-eventsource packages.\n\n\nFor the detailed security status of node-eventsource please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-eventsource>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "node-eventsource",
+				"purl": "pkg:deb/debian/node-eventsource?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.2.1-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.2.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3235-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3235"
+		}
+	]
+}

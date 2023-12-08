@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2066-1",
+	"modified": "2023-10-16T00:10:56.111872Z",
+	"published": "2010-07-01T00:00:00Z",
+	"related": [
+		"CVE-2010-2283",
+		"CVE-2010-2284",
+		"CVE-2010-2285",
+		"CVE-2010-2286",
+		"CVE-2010-2287"
+	],
+	"summary": "wireshark - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Wireshark\nnetwork traffic analyzer. It was discovered that null pointer\ndereferences, buffer overflows and infinite loops in the SMB, SMB\nPIPE, ASN1.1 and SigComp dissectors could lead to denial of service\nor the execution of arbitrary code.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.0.2-3+lenny9.\n\n\nFor the upcoming stable distribution (squeeze) and the unstable \ndistribution (sid), these problems have been fixed in version \n1.2.9-1.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-3+lenny9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-3+lenny3",
+				"1.0.2-3+lenny4",
+				"1.0.2-3+lenny5",
+				"1.0.2-3+lenny6",
+				"1.0.2-3+lenny7",
+				"1.0.2-3+lenny8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2066-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2066"
+		}
+	]
+}

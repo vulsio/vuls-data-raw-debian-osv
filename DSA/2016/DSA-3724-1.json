@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3724-1",
+	"modified": "2023-10-16T00:12:16.529785Z",
+	"published": "2016-11-24T00:00:00Z",
+	"related": [
+		"CVE-2016-9634",
+		"CVE-2016-9635",
+		"CVE-2016-9636"
+	],
+	"summary": "gst-plugins-good0.10 - security update",
+	"details": "\nChris Evans discovered that the GStreamer 0.10 plugin used to decode\nfiles in the FLIC format allowed execution of arbitrary code. Further\ndetails can be found in his advisory at\n[\\\nhttps://scarybeastsecurity.blogspot.de/2016/11/0day-exploit-advancing-exploitation.html](https://scarybeastsecurity.blogspot.de/2016/11/0day-exploit-advancing-exploitation.html)\n\n\nThis update removes the insecure FLIC file format plugin.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 0.10.31-3+nmu4+deb8u2.\n\n\nWe recommend that you upgrade your gst-plugins-good0.10 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gst-plugins-good0.10",
+				"purl": "pkg:deb/debian/gst-plugins-good0.10?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.10.31-3+nmu4+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.10.31-3+nmu4",
+				"0.10.31-3+nmu4+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3724-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3724"
+		}
+	]
+}

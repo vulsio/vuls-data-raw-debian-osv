@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3289-1",
+	"modified": "2023-10-16T00:11:54.248869Z",
+	"published": "2015-06-15T00:00:00Z",
+	"related": [
+		"CVE-2015-1038"
+	],
+	"summary": "p7zip - security update",
+	"details": "\nAlexander Cherepanov discovered that p7zip is susceptible to a\ndirectory traversal vulnerability. While extracting an archive, it\nwill extract symlinks and then follow them if they are referenced in\nfurther entries. This can be exploited by a rogue archive to write\nfiles outside the current directory.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 9.20.1~dfsg.1-4+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 9.20.1~dfsg.1-4.1+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 9.20.1~dfsg.1-4.2.\n\n\nWe recommend that you upgrade your p7zip packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "p7zip",
+				"purl": "pkg:deb/debian/p7zip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.20.1~dfsg.1-4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.20.1~dfsg.1-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3289-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "p7zip",
+				"purl": "pkg:deb/debian/p7zip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.20.1~dfsg.1-4.1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.20.1~dfsg.1-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3289-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3289"
+		}
+	]
+}

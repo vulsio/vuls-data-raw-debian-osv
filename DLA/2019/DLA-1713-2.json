@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1713-2",
+	"modified": "2023-06-28T06:29:43.230179Z",
+	"published": "2019-03-13T00:00:00Z",
+	"summary": "libsdl1.2 - regression update",
+	"details": "\nMultiple buffer overflow security issues have been found in libsdl1.2,\na library that allows low level access to a video frame buffer, audio\noutput, mouse, and keyboard.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.2.15-10+deb8u1.\n\n\nWe recommend that you upgrade your libsdl1.2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libsdl1.2",
+				"purl": "pkg:deb/debian/libsdl1.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.15-10+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.15-10",
+				"1.2.15-10+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1713-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1713"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3250-1",
+	"modified": "2023-06-28T06:25:30.617902Z",
+	"published": "2022-12-29T00:00:00Z",
+	"related": [
+		"CVE-2022-41973",
+		"CVE-2022-41974"
+	],
+	"summary": "multipath-tools - security update",
+	"details": "\nMultiple issues were found in multipath-tools, a tool-chain to manage disk\nmultipath device maps, which may be used by local attackers to obtain root\nprivileges or create a directories or overwrite files via symlink attacks.\n\n\nPlease note that the fix for [CVE-2022-41973](https://security-tracker.debian.org/tracker/CVE-2022-41973) involves switching from\n/dev/shm to systemd-tmpfiles (/run/multipath-tools).\nIf you have previously accesssed /dev/shm directly, please update your\nsetup to the new path to facilitate this change.\n\n\n\n* [CVE-2022-41973](https://security-tracker.debian.org/tracker/CVE-2022-41973)\nmultipath-tools 0.7.7 through 0.9.x before 0.9.2 allows local users to\n obtain root access, as exploited in conjunction with [CVE-2022-41974](https://security-tracker.debian.org/tracker/CVE-2022-41974).\n Local users able to access /dev/shm can change symlinks in multipathd\n due to incorrect symlink handling, which could lead to controlled file\n writes outside of the /dev/shm directory. This could be used indirectly\n for local privilege escalation to root.\n* [CVE-2022-41974](https://security-tracker.debian.org/tracker/CVE-2022-41974)\nmultipath-tools 0.7.0 through 0.9.x before 0.9.2 allows local users to\n obtain root access, as exploited alone or in conjunction with\n [CVE-2022-41973](https://security-tracker.debian.org/tracker/CVE-2022-41973). Local users able to write to UNIX domain sockets can\n bypass access controls and manipulate the multipath setup. This can lead\n to local privilege escalation to root. This occurs because an attacker\n can repeat a keyword, which is mishandled because arithmetic ADD is used\n instead of bitwise OR.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.7.9-3+deb10u2.\n\n\nWe recommend that you upgrade your multipath-tools packages.\n\n\nFor the detailed security status of multipath-tools please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/multipath-tools>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "multipath-tools",
+				"purl": "pkg:deb/debian/multipath-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.9-3+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.9-3",
+				"0.7.9-3+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3250-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3250"
+		}
+	]
+}

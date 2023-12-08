@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5343-1",
+	"modified": "2023-10-16T00:28:02.878162Z",
+	"published": "2023-02-07T00:00:00Z",
+	"related": [
+		"CVE-2022-2097",
+		"CVE-2022-4304",
+		"CVE-2022-4450",
+		"CVE-2023-0215",
+		"CVE-2023-0286"
+	],
+	"summary": "openssl - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit, which may result in incomplete encryption, side\nchannel attacks, denial of service or information disclosure.\n\n\nAdditional details can be found in the upstream advisories at\n<https://www.openssl.org/news/secadv/20220705.txt> and\n<https://www.openssl.org/news/secadv/20230207.txt>\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.1.1n-0+deb11u4.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssl](https://security-tracker.debian.org/tracker/openssl)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1n-0+deb11u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1k-1",
+				"1.1.1k-1+deb11u1",
+				"1.1.1k-1+deb11u2",
+				"1.1.1l-1",
+				"1.1.1m-0+deb11u1",
+				"1.1.1m-1",
+				"1.1.1n-0+deb11u1",
+				"1.1.1n-0+deb11u2",
+				"1.1.1n-0+deb11u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5343-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5343"
+		}
+	]
+}

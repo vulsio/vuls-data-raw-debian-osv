@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4850-1",
+	"modified": "2023-10-16T00:30:25.896931Z",
+	"published": "2021-02-10T00:00:00Z",
+	"related": [
+		"CVE-2021-24031"
+	],
+	"summary": "libzstd - security update",
+	"details": "\nIt was discovered that zstd, a compression utility, temporarily\nexposed a world-readable version of its input even if the original\nfile had restrictive permissions.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.3.8+dfsg-3+deb10u1.\n\n\nWe recommend that you upgrade your libzstd packages.\n\n\nFor the detailed security status of libzstd please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libzstd](https://security-tracker.debian.org/tracker/libzstd)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libzstd",
+				"purl": "pkg:deb/debian/libzstd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.8+dfsg-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.8+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4850-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4850"
+		}
+	]
+}

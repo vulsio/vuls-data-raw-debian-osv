@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1591-1",
+	"modified": "2023-10-16T00:05:31.281055Z",
+	"published": "2008-06-03T00:00:00Z",
+	"related": [
+		"CVE-2008-1419",
+		"CVE-2008-1420",
+		"CVE-2008-1423"
+	],
+	"summary": "libvorbis - several vulnerabilities",
+	"details": "\nSeveral local (remote) vulnerabilities have been discovered in libvorbis,\na library for the Vorbis general-purpose compressed audio codec. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-1419](https://security-tracker.debian.org/tracker/CVE-2008-1419)\nlibvorbis does not properly handle a zero value which allows remote\n attackers to cause a denial of service (crash or infinite loop) or\n trigger an integer overflow.\n* [CVE-2008-1420](https://security-tracker.debian.org/tracker/CVE-2008-1420)\nInteger overflow in libvorbis allows remote attackers to execute\n arbitrary code via a crafted OGG file, which triggers a heap overflow.\n* [CVE-2008-1423](https://security-tracker.debian.org/tracker/CVE-2008-1423)\nInteger overflow in libvorbis allows remote attackers to cause a denial\n of service (crash) or execute arbitrary code via a crafted OGG file\n which triggers a heap overflow.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n1.1.2.dfsg-1.4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.2.0.dfsg-3.1. \n\n\nWe recommend that you upgrade your libvorbis package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libvorbis",
+				"purl": "pkg:deb/debian/libvorbis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2.dfsg-1.4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2.dfsg-1.2",
+				"1.1.2.dfsg-1.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1591-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1591"
+		}
+	]
+}

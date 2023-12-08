@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2836-1",
+	"modified": "2023-06-28T06:25:21.165901Z",
+	"published": "2021-12-06T00:00:00Z",
+	"related": [
+		"CVE-2021-43527"
+	],
+	"summary": "nss - security update",
+	"details": "\nTavis Ormandy discovered that nss, the Mozilla Network Security Service\nlibrary, is prone to a heap overflow flaw when verifying DSA or RSA-PPS\nsignatures, which could result in denial of service or potentially the\nexecution of arbitrary code.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2:3.26.2-1.1+deb9u3.\n\n\nWe recommend that you upgrade your nss packages.\n\n\nFor the detailed security status of nss please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/nss>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.26.2-1.1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.26.2-1.1",
+				"2:3.26.2-1.1+deb9u1",
+				"2:3.26.2-1.1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2836-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2836"
+		}
+	]
+}

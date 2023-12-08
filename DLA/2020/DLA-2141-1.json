@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2141-1",
+	"modified": "2023-06-28T06:30:02.693870Z",
+	"published": "2020-03-13T00:00:00Z",
+	"related": [
+		"CVE-2020-10184",
+		"CVE-2020-10185"
+	],
+	"summary": "yubikey-val - security update",
+	"details": "\nThe following CVEs were reported against yubikey-val.\n\n\n* [CVE-2020-10184](https://security-tracker.debian.org/tracker/CVE-2020-10184)\nThe verify endpoint in YubiKey Validation Server before 2.40 does\n not check the length of SQL queries, which allows remote attackers\n to cause a denial of service, aka SQL injection.\n* [CVE-2020-10185](https://security-tracker.debian.org/tracker/CVE-2020-10185)\nThe sync endpoint in YubiKey Validation Server before 2.40 allows\n remote attackers to replay an OTP.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.27-1+deb8u1.\n\n\nWe recommend that you upgrade your yubikey-val packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "yubikey-val",
+				"purl": "pkg:deb/debian/yubikey-val?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.27-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.27-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2141-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2141"
+		}
+	]
+}

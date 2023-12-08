@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-404",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-12-04T00:00:00Z",
+	"related": [
+		"CVE-2003-0962"
+	],
+	"summary": "rsync - heap overflow",
+	"details": "\nThe rsync team has received evidence that a vulnerability in all\nversions of rsync prior to 2.5.7, a fast remote file copy program, was\nrecently used in combination with a Linux kernel vulnerability to\ncompromise the security of a public rsync server.\n\n\nWhile this heap overflow vulnerability could not be used by itself to\nobtain root access on an rsync server, it could be used in combination\nwith the recently announced do\\_brk() vulnerability in the Linux kernel\nto produce a full remote compromise.\n\n\nPlease note that this vulnerability only affects the use of rsync as\nan \"rsync server\". To see if you are running a rsync server you\nshould use the command \"`netstat -a -n`\" to see if you are listening on\nTCP port 873. If you are not listening on TCP port 873 then you are\nnot running an rsync server.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.5.5-0.2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.5.6-1.1.\n\n\nHowever, since the Debian infrastructure is not yet fully functional\nafter the recent break-in, packages for the unstable distribution are\nnot able to enter the archive for a while. Hence they were placed in\nJoey's home [directory](http://klecker.debian.org/~joey/rsync/) on the security machine.\n\n\nWe recommend that you upgrade your rsync package immediately if you\nare providing remote sync services. If you are running testing and\nprovide remote sync services please use the packages for woody.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "rsync",
+				"purl": "pkg:deb/debian/rsync?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.5-0.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-404.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-404"
+		}
+	]
+}

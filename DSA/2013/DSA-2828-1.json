@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2828-1",
+	"modified": "2023-10-16T00:11:33.308163Z",
+	"published": "2013-12-28T00:00:00Z",
+	"related": [
+		"CVE-2013-6385",
+		"CVE-2013-6386"
+	],
+	"summary": "drupal6 - several",
+	"details": "\nMultiple vulnerabilities have been discovered in Drupal, a fully-featured\ncontent management framework: vulnerabilities due to optimistic cross-site\nrequest forgery protection, insecure pseudo random number generation, code\nexecution and incorrect security token validation.\n\n\nIn order to avoid the remote code execution vulnerability, it is\nrecommended to create a .htaccess file (or an equivalent configuration\ndirective in case you are not using Apache to serve your Drupal sites)\nin each of your sites' files directories (both public and private, in\ncase you have both configured).\n\n\nPlease refer to the NEWS file provided with this update and the upstream\nadvisory at [\\\ndrupal.org/SA-CORE-2013-003](https://drupal.org/SA-CORE-2013-003) for further information.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 6.29-1.\n\n\nWe recommend that you upgrade your drupal6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "drupal6",
+				"purl": "pkg:deb/debian/drupal6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.29-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.18-1",
+				"6.18-1squeeze1",
+				"6.20-1",
+				"6.20-1~bpo50+1",
+				"6.20-1~bpo60+1",
+				"6.20-2",
+				"6.22-1",
+				"6.22-1~bpo60+1",
+				"6.26-1",
+				"6.26-1.1",
+				"6.26-1~bpo60+1",
+				"6.28-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2828-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2828"
+		}
+	]
+}

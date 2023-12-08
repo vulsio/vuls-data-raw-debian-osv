@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4138-1",
+	"modified": "2023-10-16T00:12:41.025420Z",
+	"published": "2018-03-15T00:00:00Z",
+	"related": [
+		"CVE-2017-18187",
+		"CVE-2018-0487",
+		"CVE-2018-0488"
+	],
+	"summary": "mbedtls - security update",
+	"details": "\nSeveral vulnerabilities were discovered in mbed TLS, a lightweight\ncrypto and SSL/TLS library, that allowed a remote attacker to either\ncause a denial-of-service by application crash, or execute arbitrary\ncode.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.4.2-1+deb9u2.\n\n\nWe recommend that you upgrade your mbedtls packages.\n\n\nFor the detailed security status of mbedtls please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mbedtls](https://security-tracker.debian.org/tracker/mbedtls)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mbedtls",
+				"purl": "pkg:deb/debian/mbedtls?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.2-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.2-1",
+				"2.4.2-1+deb9u1",
+				"2.4.2-1+deb9u1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4138-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4138"
+		}
+	]
+}

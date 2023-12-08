@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4663-1",
+	"modified": "2023-10-16T00:19:47.511870Z",
+	"published": "2020-04-25T00:00:00Z",
+	"related": [
+		"CVE-2019-17626"
+	],
+	"summary": "python-reportlab - security update",
+	"details": "\nIt was discovered that python-reportlab, a Python library to create PDF\ndocuments, is prone to a code injection vulnerability while parsing a\ncolor attribute. An attacker can take advantage of this flaw to execute\narbitrary code if a specially crafted document is processed.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 3.3.0-2+deb9u1.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 3.5.13-1+deb10u1.\n\n\nWe recommend that you upgrade your python-reportlab packages.\n\n\nFor the detailed security status of python-reportlab please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/python-reportlab>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-reportlab",
+				"purl": "pkg:deb/debian/python-reportlab?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.0-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4663-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python-reportlab",
+				"purl": "pkg:deb/debian/python-reportlab?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.13-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.13-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4663-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4663"
+		}
+	]
+}

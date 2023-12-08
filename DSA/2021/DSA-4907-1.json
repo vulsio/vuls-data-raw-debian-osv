@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4907-1",
+	"modified": "2023-10-16T00:15:16.242625Z",
+	"published": "2021-04-29T00:00:00Z",
+	"related": [
+		"CVE-2021-29472"
+	],
+	"summary": "composer - security update",
+	"details": "\nIt was discovered that composer, a dependency manager for PHP, did not\nproperly sanitize Mercurial URLs, which could lead to arbitrary code\nexecution.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.8.4-1+deb10u1.\n\n\nWe recommend that you upgrade your composer packages.\n\n\nFor the detailed security status of composer please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/composer](https://security-tracker.debian.org/tracker/composer)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "composer",
+				"purl": "pkg:deb/debian/composer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.4-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4907-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4907"
+		}
+	]
+}

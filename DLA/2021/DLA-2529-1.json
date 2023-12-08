@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2529-1",
+	"modified": "2023-06-28T06:18:36.075458Z",
+	"published": "2021-01-21T00:00:00Z",
+	"related": [
+		"CVE-2021-3181"
+	],
+	"summary": "mutt - security update",
+	"details": "\nrfc822.c in Mutt through 2.0.4 allows remote attackers to\ncause a denial of service (mailbox unavailability) by sending\nemail messages with sequences of semicolon characters in\nRFC822 address fields (aka terminators of empty groups).\n\n\nA small email message from the attacker can cause large\nmemory consumption, and the victim may then be unable to\nsee email messages from other persons.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.7.2-1+deb9u5.\n\n\nWe recommend that you upgrade your mutt packages.\n\n\nFor the detailed security status of mutt please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mutt>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mutt",
+				"purl": "pkg:deb/debian/mutt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.2-1+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.2-1",
+				"1.7.2-1+deb9u1",
+				"1.7.2-1+deb9u2",
+				"1.7.2-1+deb9u3",
+				"1.7.2-1+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2529-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2529"
+		}
+	]
+}

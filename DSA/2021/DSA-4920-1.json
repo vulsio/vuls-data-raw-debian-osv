@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4920-1",
+	"modified": "2023-10-16T00:20:27.121579Z",
+	"published": "2021-05-24T00:00:00Z",
+	"related": [
+		"CVE-2021-31535"
+	],
+	"summary": "libx11 - security update",
+	"details": "\nRoman Fiedler reported that missing length validation in various\nfunctions provided by libx11, the X11 client-side library, allow\nto inject X11 protocol commands on X clients, leading to\nauthentication bypass, denial of service or potentially the\nexecution of arbitrary code.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2:1.6.7-1+deb10u2.\n\n\nWe recommend that you upgrade your libx11 packages.\n\n\nFor the detailed security status of libx11 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/libx11>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libx11",
+				"purl": "pkg:deb/debian/libx11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.6.7-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.6.7-1",
+				"2:1.6.7-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4920-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4920"
+		}
+	]
+}

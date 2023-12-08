@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-265",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-03-21T00:00:00Z",
+	"related": [
+		"CVE-2003-0152",
+		"CVE-2003-0153",
+		"CVE-2003-0154",
+		"CVE-2003-0155"
+	],
+	"summary": "bonsai - several vulnerabilities",
+	"details": "\nRĂŠmi Perrot fixed several security related bugs in the bonsai, the\nMozilla CVS query tool by web interface. Vulnerabilities include\narbitrary code execution, cross-site scripting and access to\nconfiguration parameters. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* CAN-2003-0152 - Remote execution of arbitrary commands as www-data\n* CAN-2003-0153 - Absolute path disclosure\n* CAN-2003-0154 - Cross site scripting attacks\n* CAN-2003-0155 - Unauthenticated access to parameters page\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.3+cvs20020224-1woody1.\n\n\nThe old stable distribution (potato) is not affected since it doesn't\ncontain bonsai.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.3+cvs20030317-1.\n\n\nWe recommend that you upgrade your bonsai package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "bonsai",
+				"purl": "pkg:deb/debian/bonsai?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3+cvs20020224-1woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-265.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-265"
+		}
+	]
+}

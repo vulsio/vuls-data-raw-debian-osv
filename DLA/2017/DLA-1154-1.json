@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1154-1",
+	"modified": "2023-06-28T06:20:24.985602Z",
+	"published": "2017-10-31T00:00:00Z",
+	"related": [
+		"CVE-2017-15930"
+	],
+	"summary": "graphicsmagick - security update",
+	"details": "\nMultiple vulnerabilities were found in graphicsmagick.\n\n\n* [CVE-2017-14103](https://security-tracker.debian.org/tracker/CVE-2017-14103)\nThe ReadJNGImage and ReadOneJNGImage functions in coders/png.c in\n GraphicsMagick 1.3.26 do not properly manage image pointers after\n certain error conditions, which allows remote attackers to conduct\n use-after-free attacks via a crafted file, related to a\n ReadMNGImage out-of-order CloseBlob call. NOTE: this vulnerability\n exists because of an incomplete fix for [CVE-2017-11403](https://security-tracker.debian.org/tracker/CVE-2017-11403).\n* [CVE-2017-14314](https://security-tracker.debian.org/tracker/CVE-2017-14314)\nOff-by-one error in the DrawImage function in magick/render.c in\n GraphicsMagick 1.3.26 allows remote attackers to cause a denial of\n service (DrawDashPolygon heap-based buffer over-read and\n application crash) via a crafted file.\n* [CVE-2017-14504](https://security-tracker.debian.org/tracker/CVE-2017-14504)\nReadPNMImage in coders/pnm.c in GraphicsMagick 1.3.26 does not\n ensure the correct number of colors for the XV 332 format, leading\n to a NULL Pointer Dereference.\n* [CVE-2017-14733](https://security-tracker.debian.org/tracker/CVE-2017-14733)\nReadRLEImage in coders/rle.c in GraphicsMagick 1.3.26 mishandles\n RLE headers that specify too few colors, which allows remote\n attackers to cause a denial of service (heap-based buffer\n over-read and application crash) via a crafted file.\n* [CVE-2017-14994](https://security-tracker.debian.org/tracker/CVE-2017-14994)\nReadDCMImage in coders/dcm.c in GraphicsMagick 1.3.26 allows\n remote attackers to cause a denial of service (NULL pointer\n dereference) via a crafted DICOM image, related to the ability of\n DCM\\_ReadNonNativeImages to yield an image list with zero frames.\n* [CVE-2017-14997](https://security-tracker.debian.org/tracker/CVE-2017-14997)\nGraphicsMagick 1.3.26 allows remote attackers to cause a denial of\n service (excessive memory allocation) because of an integer\n underflow in ReadPICTImage in coders/pict.c.\n* [CVE-2017-15930](https://security-tracker.debian.org/tracker/CVE-2017-15930)\nIn ReadOneJNGImage in coders/png.c in GraphicsMagick 1.3.26, a\n Null Pointer Dereference occurs while transferring JPEG scanlines,\n related to a PixelPacket pointer.\n\n\nFor Debian 7 Wheezy, [CVE-2017-15930](https://security-tracker.debian.org/tracker/CVE-2017-15930) has been fixed in version\n1.3.16-1.1+deb7u12. The other security issues were fixed in\n1.3.16-1.1+deb7u10 on 10 Oct 2017 in DLA-1130-1 but that announcement\nwas never sent out so this advisory also contains the notice about\nthose vulnerabilities.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "graphicsmagick",
+				"purl": "pkg:deb/debian/graphicsmagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.16-1.1+deb7u12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.16-1.1",
+				"1.3.16-1.1+deb7u1",
+				"1.3.16-1.1+deb7u10",
+				"1.3.16-1.1+deb7u11",
+				"1.3.16-1.1+deb7u2",
+				"1.3.16-1.1+deb7u3",
+				"1.3.16-1.1+deb7u4",
+				"1.3.16-1.1+deb7u5",
+				"1.3.16-1.1+deb7u6",
+				"1.3.16-1.1+deb7u7",
+				"1.3.16-1.1+deb7u8",
+				"1.3.16-1.1+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1154-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1154"
+		}
+	]
+}

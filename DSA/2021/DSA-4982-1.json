@@ -1,0 +1,93 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4982-1",
+	"modified": "2023-10-16T00:15:17.318062Z",
+	"published": "2021-10-08T00:00:00Z",
+	"related": [
+		"CVE-2021-34798",
+		"CVE-2021-36160",
+		"CVE-2021-39275",
+		"CVE-2021-40438"
+	],
+	"summary": "apache2 - security update",
+	"details": "\nSeveral vulnerabilities have been found in the Apache HTTP server, which\ncould result in denial of service. In addition a vulnerability was\ndiscovered in mod\\_proxy with which an attacker could trick the server\nto forward requests to arbitrary origin servers.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 2.4.38-3+deb10u6.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2.4.51-1~deb11u1.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFor the detailed security status of apache2 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/apache2](https://security-tracker.debian.org/tracker/apache2)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.38-3+deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.38-3",
+				"2.4.38-3+deb10u1",
+				"2.4.38-3+deb10u2",
+				"2.4.38-3+deb10u3",
+				"2.4.38-3+deb10u4",
+				"2.4.38-3+deb10u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4982-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.51-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.48-3.1",
+				"2.4.48-3.1+deb11u1",
+				"2.4.48-4",
+				"2.4.49-1",
+				"2.4.49-1~bpo10+1",
+				"2.4.49-1~deb11u1",
+				"2.4.49-1~deb11u2",
+				"2.4.49-1~deb11u3",
+				"2.4.49-2",
+				"2.4.49-3",
+				"2.4.49-4",
+				"2.4.50-1",
+				"2.4.50-1~deb11u1",
+				"2.4.51-1~bpo10+1",
+				"2.4.51-1~bpo10+2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4982-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4982"
+		}
+	]
+}

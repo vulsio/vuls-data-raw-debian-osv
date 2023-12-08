@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-638-1",
+	"modified": "2023-10-16T00:26:05.497307Z",
+	"published": "2005-01-13T00:00:00Z",
+	"related": [
+		"CVE-2004-0560",
+		"CVE-2004-0561"
+	],
+	"summary": "gopher - several",
+	"details": "\n\"jaguar\" has discovered two security relevant problems in gopherd, the\nGopher server in Debian which is part of the gopher package. The\nCommon Vulnerabilities and Exposures project identifies the following\nvulnerabilities:\n\n\n* [CAN-2004-0560](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0560)\nAn integer overflow can happen when posting content of a specially\n calculated size.\n\n* [CAN-2004-0561](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0561)\nA format string vulnerability has been found in the log routine.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.0.3woody2.\n\n\nThe unstable distribution (sid) does not contain a gopherd package.\nIt has been replaced by Pygopherd.\n\n\nWe recommend that you upgrade your gopherd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gopher",
+				"purl": "pkg:deb/debian/gopher?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.3woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.3woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-638-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-638"
+		}
+	]
+}

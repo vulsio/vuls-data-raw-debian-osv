@@ -1,0 +1,97 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-749-1",
+	"modified": "2023-06-28T06:27:07.593712Z",
+	"published": "2016-12-16T00:00:00Z",
+	"related": [
+		"CVE-2016-5385",
+		"CVE-2016-7124",
+		"CVE-2016-7128",
+		"CVE-2016-7129",
+		"CVE-2016-7130",
+		"CVE-2016-7131",
+		"CVE-2016-7132",
+		"CVE-2016-7411",
+		"CVE-2016-7412",
+		"CVE-2016-7413",
+		"CVE-2016-7414",
+		"CVE-2016-7416",
+		"CVE-2016-7417",
+		"CVE-2016-7418"
+	],
+	"summary": "php5 - security update",
+	"details": "\n* [CVE-2016-5385](https://security-tracker.debian.org/tracker/CVE-2016-5385)\nPHP through 7.0.8 does not attempt to address RFC 3875 section 4.1.18\n namespace conflicts and therefore does not protect applications from\n the presence of untrusted client data in the HTTP\\_PROXY environment\n variable, which might allow remote attackers to redirect an application's\n outbound HTTP traffic to an arbitrary proxy server via a crafted Proxy\n header in an HTTP request, as demonstrated by (1) an application that\n makes a getenv('HTTP\\_PROXY') call or (2) a CGI configuration of PHP,\n aka an httpoxy issue.\n* [CVE-2016-7124](https://security-tracker.debian.org/tracker/CVE-2016-7124)\next/standard/var\\_unserializer.c in PHP before 5.6.25 and 7.x before 7.0.10\n mishandles certain invalid objects, which allows remote attackers to cause\n a denial of service or possibly have unspecified other impact via crafted\n serialized data that leads to a (1) \\_\\_destruct call or (2) magic method\n call.\n* [CVE-2016-7128](https://security-tracker.debian.org/tracker/CVE-2016-7128)\nThe exif\\_process\\_IFD\\_in\\_TIFF function in ext/exif/exif.c in PHP before\n 5.6.25 and 7.x before 7.0.10 mishandles the case of a thumbnail offset\n that exceeds the file size, which allows remote attackers to obtain\n sensitive information from process memory via a crafted TIFF image.\n* [CVE-2016-7129](https://security-tracker.debian.org/tracker/CVE-2016-7129)\nThe php\\_wddx\\_process\\_data function in ext/wddx/wddx.c in PHP before\n 5.6.25 and 7.x before 7.0.10 allows remote attackers to cause a denial\n of service (segmentation fault) or possibly have unspecified other\n impact via an invalid ISO 8601 time value, as demonstrated by\n a wddx\\_deserialize call that mishandles a dateTime element in\n a wddxPacket XML document.\n* [CVE-2016-7130](https://security-tracker.debian.org/tracker/CVE-2016-7130)\nThe php\\_wddx\\_pop\\_element function in ext/wddx/wddx.c in PHP before\n 5.6.25 and 7.x before 7.0.10 allows remote attackers to cause a\n denial of service (NULL pointer dereference and application crash)\n or possibly have unspecified other impact via an invalid base64\n binary value, as demonstrated by a wddx\\_deserialize call that\n mishandles a binary element in a wddxPacket XML document.\n* [CVE-2016-7131](https://security-tracker.debian.org/tracker/CVE-2016-7131)\next/wddx/wddx.c in PHP before 5.6.25 and 7.x before 7.0.10 allows\n remote attackers to cause a denial of service (NULL pointer\n dereference and application crash) or possibly have unspecified\n other impact via a malformed wddxPacket XML document that is\n mishandled in a wddx\\_deserialize call, as demonstrated by a tag\n that lacks a < (less than) character.\n* [CVE-2016-7132](https://security-tracker.debian.org/tracker/CVE-2016-7132)\next/wddx/wddx.c in PHP before 5.6.25 and 7.x before 7.0.10 allows\n remote attackers to cause a denial of service (NULL pointer\n dereference and application crash) or possibly have unspecified\n other impact via an invalid wddxPacket XML document that is\n mishandled in a wddx\\_deserialize call, as demonstrated by\n a stray element inside a boolean element, leading to incorrect\n pop processing.\n* [CVE-2016-7411](https://security-tracker.debian.org/tracker/CVE-2016-7411)\next/standard/var\\_unserializer.re in PHP before 5.6.26 mishandles\n object-deserialization failures, which allows remote attackers\n to cause a denial of service (memory corruption) or possibly\n have unspecified other impact via an unserialize call that\n references a partially constructed object.\n* [CVE-2016-7412](https://security-tracker.debian.org/tracker/CVE-2016-7412)\next/mysqlnd/mysqlnd\\_wireprotocol.c in PHP before 5.6.26 and 7.x\n before 7.0.11 does not verify that a BIT field has the\n UNSIGNED\\_FLAG flag, which allows remote MySQL servers to cause\n a denial of service (heap-based buffer overflow) or possibly\n have unspecified other impact via crafted field metadata.\n* [CVE-2016-7413](https://security-tracker.debian.org/tracker/CVE-2016-7413)\nUse-after-free vulnerability in the wddx\\_stack\\_destroy function in\n ext/wddx/wddx.c in PHP before 5.6.26 and 7.x before 7.0.11 allows\n remote attackers to cause a denial of service or possibly have\n unspecified other impact via a wddxPacket XML document that lacks\n an end-tag for a recordset field element, leading to mishandling\n in a wddx\\_deserialize call.\n* [CVE-2016-7414](https://security-tracker.debian.org/tracker/CVE-2016-7414)\nThe ZIP signature-verification feature in PHP before 5.6.26 and 7.x\n before 7.0.11 does not ensure that the uncompressed\\_filesize field\n is large enough, which allows remote attackers to cause a denial of\n service (out-of-bounds memory access) or possibly have unspecified\n other impact via a crafted PHAR archive, related to ext/phar/util.c\n and ext/phar/zip.c.\n* [CVE-2016-7416](https://security-tracker.debian.org/tracker/CVE-2016-7416)\next/intl/msgformat/msgformat\\_format.c in PHP before 5.6.26 and 7.x\n before 7.0.11 does not properly restrict the locale length provided\n to the Locale class in the ICU library, which allows remote attackers\n to cause a denial of service (application crash) or possibly have\n unspecified other impact via a MessageFormatter::formatMessage call\n with a long first argument.\n* [CVE-2016-7417](https://security-tracker.debian.org/tracker/CVE-2016-7417)\next/spl/spl\\_array.c in PHP before 5.6.26 and 7.x before 7.0.11\n proceeds with SplArray unserialization without validating a\n return value and data type, which allows remote attackers to\n cause a denial of service or possibly have unspecified other\n impact via crafted serialized data.\n* [CVE-2016-7418](https://security-tracker.debian.org/tracker/CVE-2016-7418)\nThe php\\_wddx\\_push\\_element function in ext/wddx/wddx.c in PHP before\n 5.6.26 and 7.x before 7.0.11 allows remote attackers to cause a\n denial of service (invalid pointer access and out-of-bounds read)\n or possibly have unspecified other impact via an incorrect boolean\n element in a wddxPacket XML document, leading to mishandling in\n a wddx\\_deserialize call.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.4.45-0+deb7u6.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.45-0+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.36-0+deb7u3",
+				"5.4.38-0+deb7u1",
+				"5.4.39-0+deb7u1",
+				"5.4.39-0+deb7u2",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.41-0+deb7u1",
+				"5.4.44-0+deb7u1",
+				"5.4.45-0+deb7u1",
+				"5.4.45-0+deb7u2",
+				"5.4.45-0+deb7u3",
+				"5.4.45-0+deb7u4",
+				"5.4.45-0+deb7u5",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-749-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-749"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2737-1",
+	"modified": "2023-10-16T00:06:04.586825Z",
+	"published": "2013-08-12T00:00:00Z",
+	"related": [
+		"CVE-2013-2161",
+		"CVE-2013-4155"
+	],
+	"summary": "swift - several",
+	"details": "\nSeveral vulnerabilities have been discovered in Swift, the Openstack\nobject storage. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2013-2161](https://security-tracker.debian.org/tracker/CVE-2013-2161)\nAlex Gaynor from Rackspace reported a vulnerability in XML\n handling within Swift account servers. Account strings were\n unescaped in xml listings, and an attacker could potentially\n generate unparsable or arbitrary XML responses which may be\n used to leverage other vulnerabilities in the calling software.\n* [CVE-2013-4155](https://security-tracker.debian.org/tracker/CVE-2013-4155)\nPeter Portante from Red Hat reported a vulnerability in Swift.\n By issuing requests with an old X-Timestamp value, an\n authenticated attacker can fill an object server with superfluous\n object tombstones, which may significantly slow down subsequent\n requests to that object server, facilitating a Denial of Service\n attack against Swift clusters.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.4.8-2+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.8.0-6.\n\n\nWe recommend that you upgrade your swift packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "swift",
+				"purl": "pkg:deb/debian/swift?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.8-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.8-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2737-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2737"
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-97-1",
+	"modified": "2023-06-28T06:25:41.184643Z",
+	"published": "2014-11-29T00:00:00Z",
+	"related": [
+		"CVE-2012-6656",
+		"CVE-2014-6040",
+		"CVE-2014-7817"
+	],
+	"summary": "eglibc - security update",
+	"details": "\n* [CVE-2012-6656](https://security-tracker.debian.org/tracker/CVE-2012-6656)\nFix validation check when converting from ibm930 to utf.\n When converting IBM930 code with iconv(), if IBM930 code which\n includes invalid multibyte character 0xffff is specified, then\n iconv() segfaults.\n* [CVE-2014-6040](https://security-tracker.debian.org/tracker/CVE-2014-6040)\nCrashes on invalid input in IBM gconv modules [BZ #17325]\n These changes are based on the fix for BZ #14134 in commit\n 6e230d11837f3ae7b375ea69d7905f0d18eb79e5.\n* [CVE-2014-7817](https://security-tracker.debian.org/tracker/CVE-2014-7817)\nThe function wordexp() fails to properly handle the WRDE\\_NOCMD\n flag when processing arithmetic inputs in the form of \"$((... ``))\"\n where \"...\" can be anything valid. The backticks in the arithmetic\n epxression are evaluated by in a shell even if WRDE\\_NOCMD forbade\n command substitution. This allows an attacker to attempt to pass\n dangerous commands via constructs of the above form, and bypass\n the WRDE\\_NOCMD flag. This patch fixes this by checking for WRDE\\_NOCMD\n in exec\\_comm(), the only place that can execute a shell. All other\n checks for WRDE\\_NOCMD are superfluous and removed.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in eglibc version 2.11.3-4+deb6u2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "eglibc",
+				"purl": "pkg:deb/debian/eglibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11.3-4+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11.2-10",
+				"2.11.2-10+m68k.1",
+				"2.11.2-11",
+				"2.11.2-11+m68k.1",
+				"2.11.2-12",
+				"2.11.2-13",
+				"2.11.3-1",
+				"2.11.3-2",
+				"2.11.3-3",
+				"2.11.3-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-97-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-97"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3680-1",
+	"modified": "2023-12-03T09:18:55.966077Z",
+	"published": "2023-12-03T00:00:00Z",
+	"related": [
+		"CVE-2022-48521"
+	],
+	"summary": "opendkim - security update",
+	"details": "\nAn issue ([CVE-2022-48521](https://security-tracker.debian.org/tracker/CVE-2022-48521)) was discovered in OpenDKIM through 2.10.3, and\n2.11.x through 2.11.0-Beta2. It fails to keep track of ordinal numbers\nwhen removing fake Authentication-Results header fields, which allows a\nremote attacker to craft an e-mail message with a fake sender address\nsuch that programs that rely on Authentication-Results from OpenDKIM\nwill treat the message as having a valid DKIM signature when in fact it\nhas none.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.11.0~alpha-12+deb10u1.\n\n\nWe recommend that you upgrade your opendkim packages.\n\n\nFor the detailed security status of opendkim please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/opendkim>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "opendkim",
+				"purl": "pkg:deb/debian/opendkim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11.0~alpha-12+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11.0~alpha-12"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3680-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3680"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-535",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-08-02T00:00:00Z",
+	"related": [
+		"CVE-2004-0519",
+		"CVE-2004-0520",
+		"CVE-2004-0521",
+		"CVE-2004-0639"
+	],
+	"summary": "squirrelmail - several vulnerabilities",
+	"details": "\nFour vulnerabilities were discovered in squirrelmail:\n\n\n* [CAN-2004-0519](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0519)\nMultiple cross-site scripting (XSS) vulnerabilities\n in SquirrelMail 1.4.2 allow remote attackers to execute arbitrary\n script as other users and possibly steal authentication information\n via multiple attack vectors, including the mailbox parameter in\n compose.php.\n\n* [CAN-2004-0520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0520)\nCross-site scripting (XSS) vulnerability in mime.php\n for SquirrelMail before 1.4.3 allows remote attackers to insert\n arbitrary HTML and script via the content-type mail header, as\n demonstrated using read\\_body.php.\n\n* [CAN-2004-0521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0521)\nSQL injection vulnerability in SquirrelMail before\n 1.4.3 RC1 allows remote attackers to execute unauthorized SQL\n statements, with unknown impact, probably via abook\\_database.php.\n\n* [CAN-2004-0639](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0639)\nMultiple cross-site scripting (XSS) vulnerabilities\n in Squirrelmail 1.2.10 and earlier allow remote attackers to inject\n arbitrary HTML or script via (1) the $mailer variable in\n read\\_body.php, (2) the $senderNames\\_part variable in\n mailbox\\_display.php, and possibly other vectors including (3) the\n $event\\_title variable or (4) the $event\\_text variable.\n\n\nFor the current stable distribution (woody), these problems have been\nfixed in version 1:1.2.6-1.4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\n2:1.4.3a-0.1 and earlier versions.\n\n\nWe recommend that you update your squirrelmail package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "squirrelmail",
+				"purl": "pkg:deb/debian/squirrelmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.2.6-1.4"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-535.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-535"
+		}
+	]
+}

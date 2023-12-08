@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2954-1",
+	"modified": "2023-06-28T06:26:44.701095Z",
+	"published": "2022-03-18T00:00:00Z",
+	"related": [
+		"CVE-2022-23607"
+	],
+	"summary": "python-treq - security update",
+	"details": "\nIt was discovered that there was an information disclosure issue in\npython-treq, a high-level library/API for making HTTP requests using the\nTwisted network programming library. HTTP cookies were not bound to a single\ndomain and were instead sent to every domain.\n\n\n* [CVE-2022-23607](https://security-tracker.debian.org/tracker/CVE-2022-23607)\ntreq is an HTTP library inspired by requests but written on top of\n Twisted's Agents. Treq's request methods (`treq.get`, `treq.post`, etc.)\n and `treq.client.HTTPClient` constructor accept cookies as a dictionary.\n Such cookies are not bound to a single domain, and are therefore sent to\n \\*every\\* domain (\"supercookies\"). This can potentially cause sensitive\n information to leak upon an HTTP redirect to a different domain., e.g.\n should `https://example.com` redirect to `http://cloudstorageprovider.com`\n the latter will receive the cookie `session`. Treq 2021.1.0 and later bind\n cookies given to request methods (`treq.request`, `treq.get`,\n `HTTPClient.request`, `HTTPClient.get`, etc.) to the origin of the \\*url\\*\n parameter. Users are advised to upgrade. For users unable to upgrade\n Instead of passing a dictionary as the \\*cookies\\* argument, pass a\n `http.cookiejar.CookieJar` instance with properly domain- and scheme-scoped\n cookies in it.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n15.1.0-1+deb9u1.\n\n\nWe recommend that you upgrade your python-treq packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-treq",
+				"purl": "pkg:deb/debian/python-treq?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "15.1.0-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"15.1.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2954-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2954"
+		}
+	]
+}

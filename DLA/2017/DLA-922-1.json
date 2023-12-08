@@ -1,0 +1,122 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-922-1",
+	"modified": "2023-06-28T06:32:46.989063Z",
+	"published": "2017-04-28T00:00:00Z",
+	"related": [
+		"CVE-2016-10200",
+		"CVE-2016-2188",
+		"CVE-2016-9604",
+		"CVE-2017-2647",
+		"CVE-2017-2671",
+		"CVE-2017-5970",
+		"CVE-2017-6951",
+		"CVE-2017-7184",
+		"CVE-2017-7261",
+		"CVE-2017-7273",
+		"CVE-2017-7294",
+		"CVE-2017-7308",
+		"CVE-2017-7472",
+		"CVE-2017-7616",
+		"CVE-2017-7618"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or have other\nimpacts.\n\n\n* [CVE-2016-2188](https://security-tracker.debian.org/tracker/CVE-2016-2188)\nRalf Spenneberg of OpenSource Security reported that the iowarrior\n device driver did not sufficiently validate USB descriptors. This\n allowed a physically present user with a specially designed USB\n device to cause a denial of service (crash).\n* [CVE-2016-9604](https://security-tracker.debian.org/tracker/CVE-2016-9604)\nIt was discovered that the keyring subsystem allowed a process to\n set a special internal keyring as its session keyring. The\n security impact in this version of the kernel is unknown.\n* [CVE-2016-10200](https://security-tracker.debian.org/tracker/CVE-2016-10200)\nBaozeng Ding and Andrey Konovalov reported a race condition in the\n L2TP implementation which could corrupt its table of bound\n sockets. A local user could use this to cause a denial of service\n (crash) or possibly for privilege escalation.\n* [CVE-2017-2647](https://security-tracker.debian.org/tracker/CVE-2017-2647) /\n [CVE-2017-6951](https://security-tracker.debian.org/tracker/CVE-2017-6951)\nidl3r reported that the keyring subsystem would allow a process\n to search for dead keys, causing a null pointer dereference.\n A local user could use this to cause a denial of service (crash).\n* [CVE-2017-2671](https://security-tracker.debian.org/tracker/CVE-2017-2671)\nDaniel Jiang discovered a race condition in the ping socket\n implementation. A local user with access to ping sockets could\n use this to cause a denial of service (crash) or possibly for\n privilege escalation. This feature is not accessible to any\n users by default.\n* [CVE-2017-5967](https://security-tracker.debian.org/tracker/CVE-2017-5967)\nXing Gao reported that the /proc/timer\\_list file showed\n information about all processes, not considering PID namespaces.\n If timer debugging was enabled by a privileged user, this leaked\n information to processes contained in PID namespaces.\n* [CVE-2017-5970](https://security-tracker.debian.org/tracker/CVE-2017-5970)\nAndrey Konovalov discovered a denial-of-service flaw in the IPv4\n networking code. This can be triggered by a local or remote\n attacker if a local UDP or raw socket has the IP\\_RETOPTS option\n enabled.\n* [CVE-2017-7184](https://security-tracker.debian.org/tracker/CVE-2017-7184)\nChaitin Security Research Lab discovered that the net xfrm\n subsystem did not sufficiently validate replay state parameters,\n allowing a heap buffer overflow. This can be used by a local user\n with the CAP\\_NET\\_ADMIN capability for privilege escalation.\n* [CVE-2017-7261](https://security-tracker.debian.org/tracker/CVE-2017-7261)\nVladis Dronov and Murray McAllister reported that the vmwgfx\n driver did not sufficiently validate rendering surface parameters.\n In a VMware guest, this can be used by a local user to cause a\n denial of service (crash).\n* [CVE-2017-7273](https://security-tracker.debian.org/tracker/CVE-2017-7273)\nBenoit Camredon reported that the hid-cypress driver did not\n sufficiently validate HID reports. This possibly allowed a\n physically present user with a specially designed USB device to\n cause a denial of service (crash).\n* [CVE-2017-7294](https://security-tracker.debian.org/tracker/CVE-2017-7294)\nLi Qiang reported that the vmwgfx driver did not sufficiently\n validate rendering surface parameters. In a VMware guest, this\n can be used by a local user to cause a denial of service (crash)\n or possibly for privilege escalation.\n* [CVE-2017-7308](https://security-tracker.debian.org/tracker/CVE-2017-7308)\nAndrey Konovalov reported that the packet socket (AF\\_PACKET)\n implementation did not sufficiently validate buffer parameters.\n This can be used by a local user with the CAP\\_NET\\_RAW capability\n for privilege escalation.\n* [CVE-2017-7472](https://security-tracker.debian.org/tracker/CVE-2017-7472)\nEric Biggers reported that the keyring subsystem allowed a thread\n to create new thread keyrings repeatedly, causing a memory leak.\n This can be used by a local user to cause a denial of service\n (memory exhaustion).\n* [CVE-2017-7616](https://security-tracker.debian.org/tracker/CVE-2017-7616)\nChris Salls reported an information leak in the 32-bit big-endian\n compatibility implementations of set\\_mempolicy() and mbind().\n This does not affect any architecture supported in Debian 7 LTS.\n* [CVE-2017-7618](https://security-tracker.debian.org/tracker/CVE-2017-7618)\nSabrina Dubroca reported that the cryptographic hash subsystem\n does not correctly handle submission of unaligned data to a\n device that is already busy, resulting in infinite recursion.\n On some systems this can be used by local users to cause a\n denial of service (crash).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.88-1. This version also includes bug fixes from upstream version\n3.2.88, and fixes some older security issues in the keyring, packet\nsocket and cryptographic hash subsystems that do not have CVE IDs.\n\n\nFor Debian 8 Jessie, most of these problems have been fixed in\nversion 3.16.43-1 which will be part of the next point release.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.88-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1",
+				"3.2.63-2+deb7u1~bpo60+1",
+				"3.2.63-2+deb7u2",
+				"3.2.63-2+deb7u2~bpo60+1",
+				"3.2.65-1",
+				"3.2.65-1+deb7u1",
+				"3.2.65-1+deb7u1~bpo60+1",
+				"3.2.65-1+deb7u2",
+				"3.2.65-1+deb7u2~bpo60+1",
+				"3.2.68-1",
+				"3.2.68-1+deb7u1",
+				"3.2.68-1+deb7u1~bpo60+1",
+				"3.2.68-1+deb7u2",
+				"3.2.68-1+deb7u2~bpo60+1",
+				"3.2.68-1+deb7u3",
+				"3.2.68-1+deb7u3~bpo60+1",
+				"3.2.68-1+deb7u4",
+				"3.2.68-1+deb7u4~bpo60+1",
+				"3.2.68-1+deb7u5",
+				"3.2.68-1+deb7u6",
+				"3.2.68-1+deb7u6~bpo60+1",
+				"3.2.71-1",
+				"3.2.71-2",
+				"3.2.73-1",
+				"3.2.73-2",
+				"3.2.73-2+deb7u1",
+				"3.2.73-2+deb7u2",
+				"3.2.73-2+deb7u2~bpo60+1",
+				"3.2.73-2+deb7u3",
+				"3.2.78-1",
+				"3.2.81-1",
+				"3.2.81-2",
+				"3.2.82-1",
+				"3.2.84-1",
+				"3.2.84-2",
+				"3.2.86-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-922-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-922"
+		}
+	]
+}

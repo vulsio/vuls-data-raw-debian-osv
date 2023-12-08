@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-904-1",
+	"modified": "2023-10-16T00:29:46.189704Z",
+	"published": "2005-11-21T00:00:00Z",
+	"related": [
+		"CVE-2005-3632",
+		"CVE-2005-3662"
+	],
+	"summary": "netpbm-free - buffer overflows",
+	"details": "\nGreg Roelofs discovered and fixed several buffer overflows in pnmtopng\nwhich is also included in netpbm, a collection of graphic conversion\nutilities, that can lead to the execution of arbitrary code via a\nspecially crafted PNM file.\n\n\nFor the oldstable distribution (woody) these problems have been fixed in\nversion 9.20-8.5.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 10.0-8sarge2.\n\n\nFor the unstable distribution (sid) these problems will be fixed in\nversion 10.0-11.\n\n\nWe recommend that you upgrade your netpbm package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "netpbm-free",
+				"purl": "pkg:deb/debian/netpbm-free?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:9.20-8.5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:9.20-8.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-904-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "netpbm-free",
+				"purl": "pkg:deb/debian/netpbm-free?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:10.0-8sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:10.0-8",
+				"2:10.0-8sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-904-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-904"
+		}
+	]
+}

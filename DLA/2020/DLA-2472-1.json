@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2472-1",
+	"modified": "2023-06-28T06:29:01.532826Z",
+	"published": "2020-11-30T00:00:00Z",
+	"related": [
+		"CVE-2020-28896"
+	],
+	"summary": "mutt - security update",
+	"details": "\nIn Mutt, a text-based Mail User Agent, invalid IMAP server responses\nwere not properly handled, potentially resulting in authentication\ncredentials being exposed or man-in-the-middle attacks.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.7.2-1+deb9u4.\n\n\nWe recommend that you upgrade your mutt packages.\n\n\nFor the detailed security status of mutt please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mutt>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mutt",
+				"purl": "pkg:deb/debian/mutt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.2-1+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.2-1",
+				"1.7.2-1+deb9u1",
+				"1.7.2-1+deb9u2",
+				"1.7.2-1+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2472-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2472"
+		}
+	]
+}

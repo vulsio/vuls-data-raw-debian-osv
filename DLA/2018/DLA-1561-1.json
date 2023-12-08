@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1561-1",
+	"modified": "2023-06-28T06:26:23.508296Z",
+	"published": "2018-10-31T00:00:00Z",
+	"related": [
+		"CVE-2017-11107"
+	],
+	"summary": "phpldapadmin - security update",
+	"details": "\nIt was discovered that there was a cross-site scripting (XSS) vulnerability \nin phpldapadmin, a web-based interface for administering LDAP servers.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.2.2-5.2+deb8u1.\n**Note**: the package changelog mistakenly refers to the non-existent\n[CVE-2016-11107](https://security-tracker.debian.org/tracker/CVE-2016-11107) \nidentifier. The proper identifier to refer to this issue\nis [CVE-2017-11107](https://security-tracker.debian.org/tracker/CVE-2017-11107).\n\n\nWe recommend that you upgrade your phpldapadmin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "phpldapadmin",
+				"purl": "pkg:deb/debian/phpldapadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.2-5.2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.2-5.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1561-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1561"
+		}
+	]
+}

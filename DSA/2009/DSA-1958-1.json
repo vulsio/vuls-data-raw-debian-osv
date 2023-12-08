@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1958-1",
+	"modified": "2023-10-16T00:10:49.835177Z",
+	"published": "2009-12-29T00:00:00Z",
+	"related": [
+		"CVE-2009-3736"
+	],
+	"summary": "libtool - privilege escalation",
+	"details": "\nIt was discovered that ltdl, a system-independent dlopen wrapper for\nGNU libtool, can be tricked to load and run modules from an arbitrary\ndirectory, which might be used to execute arbitrary code with the\nprivileges of the user running an application that uses libltdl.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 1.5.22-4+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.5.26-4+lenny1.\n\n\nFor the testing distribution (squeeze) and unstable distribution (sid),\nthis problem has been fixed in 2.2.6b-1.\n\n\nWe recommend that you upgrade your libtool packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libtool",
+				"purl": "pkg:deb/debian/libtool?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.22-4+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.22-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1958-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libtool",
+				"purl": "pkg:deb/debian/libtool?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.26-4+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.26-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1958-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1958"
+		}
+	]
+}

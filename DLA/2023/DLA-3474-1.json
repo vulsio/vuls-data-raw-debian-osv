@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3474-1",
+	"modified": "2023-06-29T21:15:23.189011Z",
+	"published": "2023-06-29T00:00:00Z",
+	"related": [
+		"CVE-2022-3821"
+	],
+	"summary": "systemd - security update",
+	"details": "\nA buffer overrun in format\\_timespan() has been fixed\nin systemd, the default init system in Debian.\n\nAdditionally, fixes for getting property OnExternalPower via D-Bus\nand for a memory leak on daemon-reload are also included.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n241-7~deb10u10.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFor the detailed security status of systemd please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/systemd>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "systemd",
+				"purl": "pkg:deb/debian/systemd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "241-7~deb10u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"241-5",
+				"241-6",
+				"241-7~deb10u1",
+				"241-7~deb10u2",
+				"241-7~deb10u3",
+				"241-7~deb10u4",
+				"241-7~deb10u5",
+				"241-7~deb10u6",
+				"241-7~deb10u7",
+				"241-7~deb10u8",
+				"241-7~deb10u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3474-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3474"
+		}
+	]
+}

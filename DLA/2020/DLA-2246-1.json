@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2246-1",
+	"modified": "2023-06-28T06:28:44.995804Z",
+	"published": "2020-06-12T00:00:00Z",
+	"related": [
+		"CVE-2020-13696"
+	],
+	"summary": "xawtv - security update",
+	"details": "\nAn issue was discovered in LinuxTV xawtv before 3.107. The function\ndev\\_open() in v4l-conf.c does not perform sufficient checks to\nprevent an unprivileged caller of the program from opening unintended\nfilesystem paths. This allows a local attacker with access to the\nv4l-conf setuid-root program to test for the existence of arbitrary\nfiles and to trigger an open on arbitrary files with mode O\\_RDWR.\nTo achieve this, relative path components need to be added to the\ndevice path, as demonstrated by a\nv4l-conf -c /dev/../root/.bash\\_history command.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.103-3+deb8u1.\n\n\nWe recommend that you upgrade your xawtv packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "xawtv",
+				"purl": "pkg:deb/debian/xawtv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.103-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.103-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2246-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2246"
+		}
+	]
+}

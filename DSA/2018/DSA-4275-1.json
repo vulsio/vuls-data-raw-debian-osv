@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4275-1",
+	"modified": "2023-10-16T00:21:38.359104Z",
+	"published": "2018-08-16T00:00:00Z",
+	"related": [
+		"CVE-2018-14432"
+	],
+	"summary": "keystone - security update",
+	"details": "\nKristi Nikolla discovered an information leak in Keystone, the OpenStack\nidentity service, if running in a federated setup.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:10.0.0-9+deb9u1.\n\n\nWe recommend that you upgrade your keystone packages.\n\n\nFor the detailed security status of keystone please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/keystone>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "keystone",
+				"purl": "pkg:deb/debian/keystone?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:10.0.0-9+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:10.0.0-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4275-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4275"
+		}
+	]
+}

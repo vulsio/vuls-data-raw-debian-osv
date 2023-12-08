@@ -1,0 +1,62 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2761-1",
+	"modified": "2023-06-28T06:25:19.511254Z",
+	"published": "2021-09-18T00:00:00Z",
+	"summary": "openssl1.0 - security update",
+	"details": "\nThe legacy 1.0 version of OpenSSL, a cryptography library for secure\ncommunication, fails to validate alternate trust chains in some\nconditions. In particular this breaks connecting to servers that use\nLet's Encrypt certificates, starting 2021-10-01.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.0.2u-1~deb9u5.\n\n\nWe recommend that you upgrade your openssl1.0 packages.\n\n\nFor the detailed security status of openssl1.0 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openssl1.0>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openssl1.0",
+				"purl": "pkg:deb/debian/openssl1.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2u-1~deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2l-2",
+				"1.0.2l-2+deb9u1",
+				"1.0.2l-2+deb9u2",
+				"1.0.2l-2+deb9u3",
+				"1.0.2m-1",
+				"1.0.2m-2",
+				"1.0.2m-3",
+				"1.0.2n-1",
+				"1.0.2n-1+riscv64",
+				"1.0.2o-1",
+				"1.0.2o-1+riscv64",
+				"1.0.2q-1",
+				"1.0.2q-1~deb9u1",
+				"1.0.2q-2",
+				"1.0.2r-1~deb9u1",
+				"1.0.2s-1~deb9u1",
+				"1.0.2t-1~deb9u1",
+				"1.0.2u-1~deb9u1",
+				"1.0.2u-1~deb9u2",
+				"1.0.2u-1~deb9u3",
+				"1.0.2u-1~deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2761-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2761"
+		}
+	]
+}

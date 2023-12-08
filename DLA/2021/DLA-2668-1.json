@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2668-1",
+	"modified": "2023-06-28T06:30:12.699496Z",
+	"published": "2021-05-31T00:00:00Z",
+	"related": [
+		"CVE-2019-10218",
+		"CVE-2019-14833",
+		"CVE-2019-14847",
+		"CVE-2019-14861",
+		"CVE-2019-14870",
+		"CVE-2019-14902",
+		"CVE-2019-14907",
+		"CVE-2021-20254"
+	],
+	"summary": "samba - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Samba, SMB/CIFS file,\nprint, and login server for Unix\n\n\n\n* [CVE-2019-10218](https://security-tracker.debian.org/tracker/CVE-2019-10218)\nA flaw was found in the samba client, where a malicious server can\n supply a pathname to the client with separators. This could allow\n the client to access files and folders outside of the SMB network\n pathnames. An attacker could use this vulnerability to create\n files outside of the current working directory using the\n privileges of the client user.\n* [CVE-2019-14833](https://security-tracker.debian.org/tracker/CVE-2019-14833)\nA flaw was found in Samba, in the way it handles a user password\n change or a new password for a samba user. The Samba Active\n Directory Domain Controller can be configured to use a custom\n script to check for password complexity. This configuration can\n fail to verify password complexity when non-ASCII characters are\n used in the password, which could lead to weak passwords being set\n for samba users, making it vulnerable to dictionary attacks.\n* [CVE-2019-14847](https://security-tracker.debian.org/tracker/CVE-2019-14847)\nA flaw was found in samba where an attacker can crash AD DC LDAP\n server via dirsync resulting in denial of service. Privilege\n escalation is not possible with this issue.\n* [CVE-2019-14861](https://security-tracker.debian.org/tracker/CVE-2019-14861)\nSamba have an issue, where the (poorly named) dnsserver RPC pipe\n provides administrative facilities to modify DNS records and\n zones. Samba, when acting as an AD DC, stores DNS records in LDAP.\n In AD, the default permissions on the DNS partition allow creation\n of new records by authenticated users. This is used for example to\n allow machines to self-register in DNS. If a DNS record was\n created that case-insensitively matched the name of the zone, the\n ldb\\_qsort() and dns\\_name\\_compare() routines could be confused into\n reading memory prior to the list of DNS entries when responding to\n DnssrvEnumRecords() or DnssrvEnumRecords2() and so following\n invalid memory as a pointer.\n* [CVE-2019-14870](https://security-tracker.debian.org/tracker/CVE-2019-14870)\nSamba have an issue, where the S4U (MS-SFU) Kerberos delegation\n model includes a feature allowing for a subset of clients to be\n opted out of constrained delegation in any way, either S4U2Self or\n regular Kerberos authentication, by forcing all tickets for these\n clients to be non-forwardable. In AD this is implemented by a user\n attribute delegation\\_not\\_allowed (aka not-delegated), which\n translates to disallow-forwardable. However the Samba AD DC does\n not do that for S4U2Self and does set the forwardable flag even if\n the impersonated client has the not-delegated flag set.\n* [CVE-2019-14902](https://security-tracker.debian.org/tracker/CVE-2019-14902)\nThere is an issue in samba, where the removal of the right to\n create or modify a subtree would not automatically be taken away\n on all domain controllers.\n* [CVE-2019-14907](https://security-tracker.debian.org/tracker/CVE-2019-14907)\nsamba have an issue where if it is set with \"log level = 3\" (or\n above) then the string obtained from the client, after a failed\n character conversion, is printed. Such strings can be provided\n during the NTLMSSP authentication exchange. In the Samba AD DC in\n particular, this may cause a long-lived process(such as the RPC\n server) to terminate. (In the file server case, the most likely\n target, smbd, operates as process-per-client and so a crash there is harmless).\n* [CVE-2021-20254](https://security-tracker.debian.org/tracker/CVE-2021-20254)\nA flaw was found in samba. The Samba smbd file server must map\n Windows group identities (SIDs) into unix group ids (gids). The\n code that performs this had a flaw that could allow it to read\n data beyond the end of the array in the case where a negative\n cache entry had been added to the mapping cache. This could cause\n the calling code to return those values into the process token\n that stores the group membership for a user. The highest threat\n from this vulnerability is to data confidentiality and integrity.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2:4.5.16+dfsg-1+deb9u4.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFor the detailed security status of samba please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/samba>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.5.16+dfsg-1+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.5.12+dfsg-1",
+				"2:4.5.12+dfsg-2",
+				"2:4.5.12+dfsg-2+deb9u1",
+				"2:4.5.12+dfsg-2+deb9u2",
+				"2:4.5.12+dfsg-2+deb9u3",
+				"2:4.5.12+dfsg-2+deb9u4",
+				"2:4.5.16+dfsg-1",
+				"2:4.5.16+dfsg-1+deb9u1",
+				"2:4.5.16+dfsg-1+deb9u2",
+				"2:4.5.16+dfsg-1+deb9u3",
+				"2:4.5.8+dfsg-2",
+				"2:4.5.8+dfsg-2+deb9u1",
+				"2:4.5.8+dfsg-2+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2668-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2668"
+		}
+	]
+}

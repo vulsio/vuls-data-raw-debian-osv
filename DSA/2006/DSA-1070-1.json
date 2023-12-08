@@ -1,0 +1,126 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1070-1",
+	"modified": "2023-10-16T00:05:06.031953Z",
+	"published": "2006-05-21T00:00:00Z",
+	"related": [
+		"CVE-2003-0984",
+		"CVE-2004-0138",
+		"CVE-2004-0394",
+		"CVE-2004-0427",
+		"CVE-2004-0447",
+		"CVE-2004-0554",
+		"CVE-2004-0565",
+		"CVE-2004-0685",
+		"CVE-2004-0883",
+		"CVE-2004-0949",
+		"CVE-2004-0997",
+		"CVE-2004-1016",
+		"CVE-2004-1017",
+		"CVE-2004-1068",
+		"CVE-2004-1070",
+		"CVE-2004-1071",
+		"CVE-2004-1072",
+		"CVE-2004-1073",
+		"CVE-2004-1074",
+		"CVE-2004-1234",
+		"CVE-2004-1235",
+		"CVE-2004-1333",
+		"CVE-2004-1335",
+		"CVE-2005-0001",
+		"CVE-2005-0003",
+		"CVE-2005-0124",
+		"CVE-2005-0135",
+		"CVE-2005-0384",
+		"CVE-2005-0489",
+		"CVE-2005-0504"
+	],
+	"summary": "kernel-source-2.4.19 - several vulnerabilities",
+	"details": "\nSeveral local and remote vulnerabilities have been discovered in the Linux\nkernel that may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2004-0427](https://security-tracker.debian.org/tracker/CVE-2004-0427)\nA local denial of service vulnerability in do\\_fork() has been found.\n* [CVE-2005-0489](https://security-tracker.debian.org/tracker/CVE-2005-0489)\nA local denial of service vulnerability in proc memory handling has\n been found.\n* [CVE-2004-0394](https://security-tracker.debian.org/tracker/CVE-2004-0394)\nA buffer overflow in the panic handling code has been found.\n* [CVE-2004-0447](https://security-tracker.debian.org/tracker/CVE-2004-0447)\nA local denial of service vulnerability through a null pointer\n dereference in the IA64 process handling code has been found.\n* [CVE-2004-0554](https://security-tracker.debian.org/tracker/CVE-2004-0554)\nA local denial of service vulnerability through an infinite loop in\n the signal handler code has been found.\n* [CVE-2004-0565](https://security-tracker.debian.org/tracker/CVE-2004-0565)\nAn information leak in the context switch code has been found on\n the IA64 architecture.\n* [CVE-2004-0685](https://security-tracker.debian.org/tracker/CVE-2004-0685)\nUnsafe use of copy\\_to\\_user in USB drivers may disclose sensitive\n information.\n* [CVE-2005-0001](https://security-tracker.debian.org/tracker/CVE-2005-0001)\nA race condition in the i386 page fault handler may allow privilege\n escalation.\n* [CVE-2004-0883](https://security-tracker.debian.org/tracker/CVE-2004-0883)\nMultiple vulnerabilities in the SMB filesystem code may allow denial\n of service or information disclosure.\n* [CVE-2004-0949](https://security-tracker.debian.org/tracker/CVE-2004-0949)\nAn information leak discovered in the SMB filesystem code.\n* [CVE-2004-1016](https://security-tracker.debian.org/tracker/CVE-2004-1016)\nA local denial of service vulnerability has been found in the SCM layer.\n* [CVE-2004-1333](https://security-tracker.debian.org/tracker/CVE-2004-1333)\nAn integer overflow in the terminal code may allow a local denial of\n service vulnerability.\n* [CVE-2004-0997](https://security-tracker.debian.org/tracker/CVE-2004-0997)\nA local privilege escalation in the MIPS assembly code has been found.\n* [CVE-2004-1335](https://security-tracker.debian.org/tracker/CVE-2004-1335)\nA memory leak in the ip\\_options\\_get() function may lead to denial of\n service.\n* [CVE-2004-1017](https://security-tracker.debian.org/tracker/CVE-2004-1017)\nMultiple overflows exist in the io\\_edgeport driver which might be usable\n as a denial of service attack vector.\n* [CVE-2005-0124](https://security-tracker.debian.org/tracker/CVE-2005-0124)\nBryan Fulton reported a bounds checking bug in the coda\\_pioctl function\n which may allow local users to execute arbitrary code or trigger a denial\n of service attack.\n* [CVE-2003-0984](https://security-tracker.debian.org/tracker/CVE-2003-0984)\nInproper initialization of the RTC may disclose information.\n* [CVE-2004-1070](https://security-tracker.debian.org/tracker/CVE-2004-1070)\nInsufficient input sanitising in the load\\_elf\\_binary() function may\n lead to privilege escalation.\n* [CVE-2004-1071](https://security-tracker.debian.org/tracker/CVE-2004-1071)\nIncorrect error handling in the binfmt\\_elf loader may lead to privilege\n escalation.\n* [CVE-2004-1072](https://security-tracker.debian.org/tracker/CVE-2004-1072)\nA buffer overflow in the binfmt\\_elf loader may lead to privilege\n escalation or denial of service.\n* [CVE-2004-1073](https://security-tracker.debian.org/tracker/CVE-2004-1073)\nThe open\\_exec function may disclose information.\n* [CVE-2004-1074](https://security-tracker.debian.org/tracker/CVE-2004-1074)\nThe binfmt code is vulnerable to denial of service through malformed\n a.out binaries.\n* [CVE-2004-0138](https://security-tracker.debian.org/tracker/CVE-2004-0138)\nA denial of service vulnerability in the ELF loader has been found.\n* [CVE-2004-1068](https://security-tracker.debian.org/tracker/CVE-2004-1068)\nA programming error in the unix\\_dgram\\_recvmsg() function may lead to\n privilege escalation.\n* [CVE-2004-1234](https://security-tracker.debian.org/tracker/CVE-2004-1234)\nThe ELF loader is vulnerable to denial of service through malformed\n binaries.\n* [CVE-2005-0003](https://security-tracker.debian.org/tracker/CVE-2005-0003)\nCrafted ELF binaries may lead to privilege escalation, due to \n insufficient checking of overlapping memory regions.\n* [CVE-2004-1235](https://security-tracker.debian.org/tracker/CVE-2004-1235)\nA race condition in the load\\_elf\\_library() and binfmt\\_aout() functions\n may allow privilege escalation.\n* [CVE-2005-0504](https://security-tracker.debian.org/tracker/CVE-2005-0504)\nAn integer overflow in the Moxa driver may lead to privilege escalation.\n* [CVE-2005-0384](https://security-tracker.debian.org/tracker/CVE-2005-0384)\nA remote denial of service vulnerability has been found in the PPP\n driver.\n* [CVE-2005-0135](https://security-tracker.debian.org/tracker/CVE-2005-0135)\nAn IA64 specific local denial of service vulnerability has been found\n in the unw\\_unwind\\_to\\_user() function.\n\n\nThe following matrix explains which kernel version for which architecture\nfixes the problems mentioned above:\n\n\n\n\n|  | Debian 3.0 (woody) |\n| --- | --- |\n| Source  | 2.4.19-4 |\n| Sun Sparc architecture  | 26woody1 |\n| Little endian MIPS architecture | 0.020911.1.woody5 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-sparc-2.4",
+				"purl": "pkg:deb/debian/kernel-image-sparc-2.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "26woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"26"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1070-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-patch-2.4.19-mips",
+				"purl": "pkg:deb/debian/kernel-patch-2.4.19-mips?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.19-0.020911.1.woody5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.19-0.020911.1.woody4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1070-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-source-2.4.19",
+				"purl": "pkg:deb/debian/kernel-source-2.4.19?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.19-4.woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.19-4.woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1070-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1070"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2603-1",
+	"modified": "2023-06-28T06:25:28.063872Z",
+	"published": "2021-03-23T00:00:00Z",
+	"related": [
+		"CVE-2019-11372",
+		"CVE-2019-11373",
+		"CVE-2020-15395",
+		"CVE-2020-26797"
+	],
+	"summary": "libmediainfo - security update",
+	"details": "\nIt was discovered that there were a number of vulnerabilities in\nlibmediainfo, a library reading metadata such as track names, lengths,\netc. from media files.\n\n\n* [CVE-2019-11372](https://security-tracker.debian.org/tracker/CVE-2019-11372)\nAn out-of-bounds read in MediaInfoLib::File\\_\\_Tags\\_Helper::Synched\\_Test\n in Tag/File\\_\\_Tags.cpp in MediaInfoLib in MediaArea MediaInfo 18.12 leads to\n a crash.\n* [CVE-2019-11373](https://security-tracker.debian.org/tracker/CVE-2019-11373)\nAn out-of-bounds read in File\\_\\_Analyze::Get\\_L8 in\n File\\_\\_Analyze\\_Buffer.cpp in MediaInfoLib in MediaArea MediaInfo 18.12 leads\n to a crash.\n* [CVE-2020-15395](https://security-tracker.debian.org/tracker/CVE-2020-15395)\nIn MediaInfoLib in MediaArea MediaInfo 20.03, there is a stack-based\n buffer over-read in Streams\\_Fill\\_PerStream in Multiple/File\\_MpegPs.cpp (aka\n an off-by-one during MpegPs parsing).\n* [CVE-2020-26797](https://security-tracker.debian.org/tracker/CVE-2020-26797)\nMediainfo before version 20.08 has a heap buffer overflow vulnerability\n via MediaInfoLib::File\\_Gxf::ChooseParser\\_ChannelGrouping.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n0.7.91-1+deb9u1.\n\n\nWe recommend that you upgrade your libmediainfo packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libmediainfo",
+				"purl": "pkg:deb/debian/libmediainfo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.91-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.91-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2603-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2603"
+		}
+	]
+}

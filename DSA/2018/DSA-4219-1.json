@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4219-1",
+	"modified": "2023-10-16T00:05:17.411132Z",
+	"published": "2018-06-08T00:00:00Z",
+	"related": [
+		"CVE-2018-1000073",
+		"CVE-2018-1000074",
+		"CVE-2018-1000075",
+		"CVE-2018-1000076",
+		"CVE-2018-1000077",
+		"CVE-2018-1000078",
+		"CVE-2018-1000079"
+	],
+	"summary": "jruby - security update",
+	"details": "\nSeveral vulnerabilities were discovered in jruby, a Java\nimplementation of the Ruby programming language. They would allow an\nattacker to use specially crafted gem files to mount cross-site\nscripting attacks, cause denial of service through an infinite loop,\nwrite arbitrary files, or run malicious code.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.7.26-1+deb9u1.\n\n\nWe recommend that you upgrade your jruby packages.\n\n\nIn addition, this message serves as an announcement that security\nsupport for jruby in the Debian 8 oldstable release (jessie) is now\ndiscontinued.\n\n\nUsers of jruby in Debian 8 that want security updates are strongly\nencouraged to upgrade now to the current Debian 9 stable release\n(stretch).\n\n\nFor the detailed security status of jruby please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/jruby](https://security-tracker.debian.org/tracker/jruby)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "jruby",
+				"purl": "pkg:deb/debian/jruby?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.26-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.26-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4219-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4219"
+		}
+	]
+}

@@ -1,0 +1,113 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-833-1",
+	"modified": "2023-06-28T06:31:04.958002Z",
+	"published": "2017-02-22T00:00:00Z",
+	"related": [
+		"CVE-2014-9888",
+		"CVE-2014-9895",
+		"CVE-2016-6786",
+		"CVE-2016-6787",
+		"CVE-2016-8405",
+		"CVE-2017-5549",
+		"CVE-2017-6001",
+		"CVE-2017-6074"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or have other\nimpacts.\n\n\n* [CVE-2014-9888](https://security-tracker.debian.org/tracker/CVE-2014-9888)\nRussell King found that on ARM systems, memory allocated for DMA\n buffers was mapped with executable permission. This made it\n easier to exploit other vulnerabilities in the kernel.\n* [CVE-2014-9895](https://security-tracker.debian.org/tracker/CVE-2014-9895)\nDan Carpenter found that the MEDIA\\_IOC\\_ENUM\\_LINKS ioctl on media\n devices resulted in an information leak.\n* [CVE-2016-6786](https://security-tracker.debian.org/tracker/CVE-2016-6786) /\n [CVE-2016-6787](https://security-tracker.debian.org/tracker/CVE-2016-6787)\nIt was discovered that the performance events subsystem does not\n properly manage locks during certain migrations, allowing a local\n attacker to escalate privileges. This can be mitigated by\n disabling unprivileged use of performance events:\n sysctl kernel.perf\\_event\\_paranoid=3\n* [CVE-2016-8405](https://security-tracker.debian.org/tracker/CVE-2016-8405)\nPeter Pi of Trend Micro discovered that the frame buffer video\n subsystem does not properly check bounds while copying color maps to\n userspace, causing a heap buffer out-of-bounds read, leading to\n information disclosure.\n* [CVE-2017-5549](https://security-tracker.debian.org/tracker/CVE-2017-5549)\nIt was discovered that the KLSI KL5KUSB105 serial USB device\n driver could log the contents of uninitialised kernel memory,\n resulting in an information leak.\n* [CVE-2017-6001](https://security-tracker.debian.org/tracker/CVE-2017-6001)\nDi Shen discovered a race condition between concurrent calls to\n the performance events subsystem, allowing a local attacker to\n escalate privileges. This flaw exists because of an incomplete fix\n of [CVE-2016-6786](https://security-tracker.debian.org/tracker/CVE-2016-6786). \n This can be mitigated by disabling unprivileged\n use of performance events: sysctl kernel.perf\\_event\\_paranoid=3\n* [CVE-2017-6074](https://security-tracker.debian.org/tracker/CVE-2017-6074)\nAndrey Konovalov discovered a use-after-free vulnerability in the\n DCCP networking code, which could result in denial of service or\n local privilege escalation. On systems that do not already have\n the dccp module loaded, this can be mitigated by disabling it:\n echo >> /etc/modprobe.d/disable-dccp.conf install dccp false\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.84-2.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.16.39-1+deb8u1 or earlier.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.84-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1",
+				"3.2.63-2+deb7u1~bpo60+1",
+				"3.2.63-2+deb7u2",
+				"3.2.63-2+deb7u2~bpo60+1",
+				"3.2.65-1",
+				"3.2.65-1+deb7u1",
+				"3.2.65-1+deb7u1~bpo60+1",
+				"3.2.65-1+deb7u2",
+				"3.2.65-1+deb7u2~bpo60+1",
+				"3.2.68-1",
+				"3.2.68-1+deb7u1",
+				"3.2.68-1+deb7u1~bpo60+1",
+				"3.2.68-1+deb7u2",
+				"3.2.68-1+deb7u2~bpo60+1",
+				"3.2.68-1+deb7u3",
+				"3.2.68-1+deb7u3~bpo60+1",
+				"3.2.68-1+deb7u4",
+				"3.2.68-1+deb7u4~bpo60+1",
+				"3.2.68-1+deb7u5",
+				"3.2.68-1+deb7u6",
+				"3.2.68-1+deb7u6~bpo60+1",
+				"3.2.71-1",
+				"3.2.71-2",
+				"3.2.73-1",
+				"3.2.73-2",
+				"3.2.73-2+deb7u1",
+				"3.2.73-2+deb7u2",
+				"3.2.73-2+deb7u2~bpo60+1",
+				"3.2.73-2+deb7u3",
+				"3.2.78-1",
+				"3.2.81-1",
+				"3.2.81-2",
+				"3.2.82-1",
+				"3.2.84-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-833-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-833"
+		}
+	]
+}

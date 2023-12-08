@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2571-1",
+	"modified": "2023-06-28T06:29:20.056711Z",
+	"published": "2021-02-19T00:00:00Z",
+	"related": [
+		"CVE-2015-8011",
+		"CVE-2017-9214",
+		"CVE-2018-17204",
+		"CVE-2018-17206",
+		"CVE-2020-27827",
+		"CVE-2020-35498"
+	],
+	"summary": "openvswitch - security update",
+	"details": "\nSeveral issues have been found in openvswitch, a production quality,\nmultilayer, software-based, Ethernet virtual switch.\n\n\n* [CVE-2020-35498](https://security-tracker.debian.org/tracker/CVE-2020-35498)\nDenial of service attacks, in which crafted network packets\n could cause the packet lookup to ignore network header fields\n from layers 3 and 4. The crafted network packet is an ordinary\n IPv4 or IPv6 packet with Ethernet padding length above 255 bytes.\n This causes the packet sanity check to abort parsing header\n fields after layer 2.\n* [CVE-2020-27827](https://security-tracker.debian.org/tracker/CVE-2020-27827)\nDenial of service attacks using crafted LLDP packets.\n* [CVE-2018-17206](https://security-tracker.debian.org/tracker/CVE-2018-17206)\nBuffer over-read issue during BUNDLE action decoding.\n* [CVE-2018-17204](https://security-tracker.debian.org/tracker/CVE-2018-17204)\nAssertion failure due to not validating information (group type\n and command) in OF1.5 decoder.\n* [CVE-2017-9214](https://security-tracker.debian.org/tracker/CVE-2017-9214)\nBuffer over-read that is caused by an unsigned integer underflow.\n* [CVE-2015-8011](https://security-tracker.debian.org/tracker/CVE-2015-8011)\nBuffer overflow in the lldp\\_decode function in\n daemon/protocols/lldp.c in lldpd before 0.8.0 allows remote\n attackers to cause a denial of service (daemon crash) and\n possibly execute arbitrary code via vectors involving large\n management addresses and TLV boundaries.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.6.10-0+deb9u1. This version is a new upstream point release.\n\n\nWe recommend that you upgrade your openvswitch packages.\n\n\nFor the detailed security status of openvswitch please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openvswitch>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openvswitch",
+				"purl": "pkg:deb/debian/openvswitch?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.10-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.2~pre+git20161223-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2571-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2571"
+		}
+	]
+}

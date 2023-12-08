@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3170-1",
+	"modified": "2023-10-16T00:11:48.791602Z",
+	"published": "2015-02-23T00:00:00Z",
+	"related": [
+		"CVE-2013-7421",
+		"CVE-2014-7822",
+		"CVE-2014-8160",
+		"CVE-2014-8559",
+		"CVE-2014-9585",
+		"CVE-2014-9644",
+		"CVE-2014-9683",
+		"CVE-2015-0239",
+		"CVE-2015-1420",
+		"CVE-2015-1421",
+		"CVE-2015-1593"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, information leaks or privilege\nescalation.\n\n\n* [CVE-2013-7421](https://security-tracker.debian.org/tracker/CVE-2013-7421) /\n [CVE-2014-9644](https://security-tracker.debian.org/tracker/CVE-2014-9644)\nIt was discovered that the Crypto API allowed unprivileged users\n to load arbitrary kernel modules. A local user can use this flaw\n to exploit vulnerabilities in modules that would not normally be\n loaded.\n* [CVE-2014-7822](https://security-tracker.debian.org/tracker/CVE-2014-7822)\nAkira Fujita found that the splice() system call did not validate\n the given file offset and length. A local unprivileged user can use\n this flaw to cause filesystem corruption on ext4 filesystems, or\n possibly other effects.\n* [CVE-2014-8160](https://security-tracker.debian.org/tracker/CVE-2014-8160)\nFlorian Westphal discovered that a netfilter (iptables/ip6tables) rule\n accepting packets to a specific SCTP, DCCP, GRE or UDPlite\n port/endpoint could result in incorrect connection tracking state.\n If only the generic connection tracking module (nf\\_conntrack) was\n loaded, and not the protocol-specific connection tracking module,\n this would allow access to any port/endpoint of the specified\n protocol.\n* [CVE-2014-8559](https://security-tracker.debian.org/tracker/CVE-2014-8559)\nIt was found that kernel functions that iterate over a directory\n tree can dead-lock or live-lock in case some of the directory\n entries were recently deleted or dropped from the cache. A local\n unprivileged user can use this flaw for denial of service.\n* [CVE-2014-9585](https://security-tracker.debian.org/tracker/CVE-2014-9585)\nAndy Lutomirski discovered that address randomisation for the vDSO\n in 64-bit processes is extremely biased. A local unprivileged user\n could potentially use this flaw to bypass the ASLR protection\n mechanism.\n* [CVE-2014-9683](https://security-tracker.debian.org/tracker/CVE-2014-9683)\nDmitry Chernenkov discovered that eCryptfs writes past the end of\n the allocated buffer during encrypted filename decoding, resulting\n in local denial of service.\n* [CVE-2015-0239](https://security-tracker.debian.org/tracker/CVE-2015-0239)\nIt was found that KVM did not correctly emulate the x86 SYSENTER\n instruction. An unprivileged user within a guest system that has\n not enabled SYSENTER, for example because the emulated CPU vendor\n is AMD, could potentially use this flaw to cause a denial of\n service or privilege escalation in that guest.\n* [CVE-2015-1420](https://security-tracker.debian.org/tracker/CVE-2015-1420)\nIt was discovered that the open\\_by\\_handle\\_at() system call reads\n the handle size from user memory a second time after validating\n it. A local user with the CAP\\_DAC\\_READ\\_SEARCH capability could use\n this flaw for privilege escalation.\n* [CVE-2015-1421](https://security-tracker.debian.org/tracker/CVE-2015-1421)\nIt was found that the SCTP implementation could free an\n authentication state while it was still in use, resulting in heap\n corruption. This could allow remote users to cause a denial of\n service or privilege escalation.\n* [CVE-2015-1593](https://security-tracker.debian.org/tracker/CVE-2015-1593)\nIt was found that address randomisation for the initial stack in\n 64-bit processes was limited to 20 rather than 22 bits of entropy.\n A local unprivileged user could potentially use this flaw to\n bypass the ASLR protection mechanism.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.2.65-1+deb7u2. Additionally this update fixes regressions\nintroduced in versions 3.2.65-1 and 3.2.65-1+deb7u1.\n\n\nFor the upcoming stable distribution (jessie), these problems will be fixed\nsoon (a subset is fixed already).\n\n\nFor the unstable distribution (sid), these problems will be fixed soon\n(a subset is fixed already).\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.65-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1",
+				"3.2.63-2+deb7u1~bpo60+1",
+				"3.2.63-2+deb7u2",
+				"3.2.63-2+deb7u2~bpo60+1",
+				"3.2.65-1",
+				"3.2.65-1+deb7u1",
+				"3.2.65-1+deb7u1~bpo60+1",
+				"3.2.65-1+deb7u2~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3170-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3170"
+		}
+	]
+}

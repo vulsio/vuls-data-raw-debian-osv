@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2965-1",
+	"modified": "2023-06-28T06:26:45.148687Z",
+	"published": "2022-03-29T00:00:00Z",
+	"related": [
+		"CVE-2018-10060",
+		"CVE-2018-10061",
+		"CVE-2019-11025",
+		"CVE-2020-13230",
+		"CVE-2020-23226",
+		"CVE-2020-7106",
+		"CVE-2021-23225",
+		"CVE-2022-0730"
+	],
+	"summary": "cacti - security update",
+	"details": "\nMultiple vulnerabilities were discovered in Cacti, a web interface for\ngraphing of monitoring systems, leading to authentication bypass and\ncross-site scripting (XSS). An attacker may get access to unauthorized\nareas and impersonate other users, under certain conditions.\n\n\n* [CVE-2018-10060](https://security-tracker.debian.org/tracker/CVE-2018-10060)\nCacti has XSS because it does not properly reject unintended\n characters, related to use of the sanitize\\_uri function in\n lib/functions.php.\n* [CVE-2018-10061](https://security-tracker.debian.org/tracker/CVE-2018-10061)\nCacti has XSS because it makes certain htmlspecialchars calls\n without the ENT\\_QUOTES flag (these calls occur when the\n html\\_escape function in lib/html.php is not used).\n* [CVE-2019-11025](https://security-tracker.debian.org/tracker/CVE-2019-11025)\nNo escaping occurs before printing out the value of the SNMP\n community string (SNMP Options) in the View poller cache, leading\n to XSS.\n* [CVE-2020-7106](https://security-tracker.debian.org/tracker/CVE-2020-7106)\nCacti has stored XSS in multiple files as demonstrated by the\n description parameter in data\\_sources.php (a raw string from the\n database that is displayed by $header to trigger the XSS).\n* [CVE-2020-13230](https://security-tracker.debian.org/tracker/CVE-2020-13230)\nDisabling a user account does not immediately invalidate any\n permissions granted to that account (e.g., permission to view\n logs).\n* [CVE-2020-23226](https://security-tracker.debian.org/tracker/CVE-2020-23226)\nMultiple Cross Site Scripting (XSS) vulnerabilities exist in\n multiple files.\n* [CVE-2021-23225](https://security-tracker.debian.org/tracker/CVE-2021-23225)\nCacti allows authenticated users with User Management permissions\n to inject arbitrary web script or HTML in the new\\_username field\n during creation of a new user via Copy method at user\\_admin.php.\n* [CVE-2022-0730](https://security-tracker.debian.org/tracker/CVE-2022-0730)\nUnder certain ldap conditions, Cacti authentication can be\n bypassed with certain credential types.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.8.8h+ds1-10+deb9u2.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\nFor the detailed security status of cacti please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cacti>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "cacti",
+				"purl": "pkg:deb/debian/cacti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.8h+ds1-10+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.8h+ds1-10",
+				"0.8.8h+ds1-10+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2965-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2965"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-375-1",
+	"modified": "2023-06-28T06:26:59.880606Z",
+	"published": "2015-12-27T00:00:00Z",
+	"related": [
+		"CVE-2012-3425",
+		"CVE-2015-8472",
+		"CVE-2015-8540"
+	],
+	"summary": "libpng - security update",
+	"details": "\n* [CVE-2015-8472](https://security-tracker.debian.org/tracker/CVE-2015-8472)\nupdate incomplete patch for [CVE-2015-8126](https://security-tracker.debian.org/tracker/CVE-2015-8126)\n* [CVE-2015-8540](https://security-tracker.debian.org/tracker/CVE-2015-8540)\nunderflow read in png\\_check\\_keyword in pngwutil.c\n* [CVE-2012-3425](https://security-tracker.debian.org/tracker/CVE-2012-3425)\nThe png\\_push\\_read\\_zTXt function in pngpread.c in libpng 1.0.x\n before 1.0.58, 1.2.x before 1.2.48, 1.4.x before 1.4.10, and\n 1.5.x before 1.5.10 allows remote attackers to cause a denial\n of service (out-of-bounds read) via a large avail\\_in field value\n in a PNG image.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.44-1+squeeze6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.44-1",
+				"1.2.44-1+squeeze1",
+				"1.2.44-1+squeeze2",
+				"1.2.44-1+squeeze3",
+				"1.2.44-1+squeeze4",
+				"1.2.44-1+squeeze5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-375-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-375"
+		}
+	]
+}

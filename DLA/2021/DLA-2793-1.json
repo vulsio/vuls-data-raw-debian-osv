@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2793-1",
+	"modified": "2023-06-28T06:21:23.534281Z",
+	"published": "2021-10-27T00:00:00Z",
+	"related": [
+		"CVE-2017-7655"
+	],
+	"summary": "mosquitto - security update",
+	"details": "\nOne security issue has been discovered in mosquitto: MQTT message broker.\nA null dereference vulnerability was found which could lead to crashes for\napplications using the library.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.4.10-3+deb9u5.\n\n\nWe recommend that you upgrade your mosquitto packages.\n\n\nFor the detailed security status of mosquitto please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mosquitto>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mosquitto",
+				"purl": "pkg:deb/debian/mosquitto?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.10-3+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.10-3",
+				"1.4.10-3+deb9u1",
+				"1.4.10-3+deb9u2",
+				"1.4.10-3+deb9u3",
+				"1.4.10-3+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2793-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2793"
+		}
+	]
+}

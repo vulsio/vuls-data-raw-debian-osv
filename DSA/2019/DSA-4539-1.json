@@ -1,0 +1,85 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4539-1",
+	"modified": "2023-10-16T00:18:52.051123Z",
+	"published": "2019-10-01T00:00:00Z",
+	"related": [
+		"CVE-2019-1547",
+		"CVE-2019-1563"
+	],
+	"summary": "openssl - security update",
+	"details": "\nThree security issues were discovered in OpenSSL: A timing attack against\nECDSA, a padding oracle in PKCS7\\_dataDecode() and CMS\\_decrypt\\_set1\\_pkey()\nand it was discovered that a feature of the random number generator (RNG)\nintended to protect against shared RNG state between parent and child\nprocesses in the event of a fork() syscall was not used by default.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 1.1.0l-1~deb9u1.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1.1.1d-0+deb10u1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssl](https://security-tracker.debian.org/tracker/openssl)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0l-1~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0f-3",
+				"1.1.0f-3+deb9u1",
+				"1.1.0f-3+deb9u2",
+				"1.1.0f-4",
+				"1.1.0f-5",
+				"1.1.0g-1",
+				"1.1.0g-2",
+				"1.1.0g-2+riscv64",
+				"1.1.0h-1",
+				"1.1.0h-2",
+				"1.1.0h-3",
+				"1.1.0h-4",
+				"1.1.0j-1~deb9u1",
+				"1.1.0k-1~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4539-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1d-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1c-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4539-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4539"
+		}
+	]
+}

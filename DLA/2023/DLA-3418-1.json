@@ -1,0 +1,105 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3418-1",
+	"modified": "2023-06-28T06:59:20.432155Z",
+	"published": "2023-05-11T00:00:00Z",
+	"related": [
+		"CVE-2022-34670",
+		"CVE-2022-34674",
+		"CVE-2022-34675",
+		"CVE-2022-34677",
+		"CVE-2022-34680",
+		"CVE-2022-42257",
+		"CVE-2022-42258",
+		"CVE-2022-42259"
+	],
+	"summary": "nvidia-graphics-drivers-legacy-390xx - security update",
+	"details": "\nNVIDIA has released a software security update for the NVIDIA GPU Display\nDriver R390 linux driver branch. This update addresses issues that may lead to\ndenial of service, escalation of privileges, information disclosure, data\ntampering or undefined behavior.\n\n\n\n* [CVE-2022-34670](https://security-tracker.debian.org/tracker/CVE-2022-34670)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where an unprivileged regular user can\n cause truncation errors when casting a primitive to a primitive of\n smaller size causes data to be lost in the conversion, which may\n lead to denial of service or information disclosure.\n* [CVE-2022-34674](https://security-tracker.debian.org/tracker/CVE-2022-34674)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where a helper function maps more\n physical pages than were requested, which may lead to undefined\n behavior or an information leak.\n* [CVE-2022-34675](https://security-tracker.debian.org/tracker/CVE-2022-34675)\nNVIDIA Display Driver for Linux contains a vulnerability in the\n Virtual GPU Manager, where it does not check the return value from a\n null-pointer dereference, which may lead to denial of service.\n* [CVE-2022-34677](https://security-tracker.debian.org/tracker/CVE-2022-34677)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where an unprivileged regular user can\n cause an integer to be truncated, which may lead to denial of\n service or data tampering.\n* [CVE-2022-34680](https://security-tracker.debian.org/tracker/CVE-2022-34680)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where an integer truncation can lead to\n an out-of-bounds read, which may lead to denial of service.\n* [CVE-2022-42257](https://security-tracker.debian.org/tracker/CVE-2022-42257)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer (nvidia.ko), where an integer overflow may lead to\n information disclosure, data tampering or denial of service.\n* [CVE-2022-42258](https://security-tracker.debian.org/tracker/CVE-2022-42258)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer (nvidia.ko), where an integer overflow may lead to\n denial of service, data tampering, or information disclosure.\n* [CVE-2022-42259](https://security-tracker.debian.org/tracker/CVE-2022-42259)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer (nvidia.ko), where an integer overflow may lead to\n denial of service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n390.157-1~deb10u1.\n\n\nWe recommend that you upgrade your nvidia-graphics-drivers-legacy-390xx packages.\n\n\nFor the detailed security status of\nnvidia-graphics-drivers-legacy-390xx please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/nvidia-graphics-drivers-legacy-390xx>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "nvidia-graphics-drivers-legacy-390xx",
+				"purl": "pkg:deb/debian/nvidia-graphics-drivers-legacy-390xx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "390.157-1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"390.116-1",
+				"390.116-1~bpo9+1",
+				"390.116-2",
+				"390.129-1",
+				"390.129-2",
+				"390.132-1",
+				"390.132-2",
+				"390.132-3",
+				"390.132-3~deb10u1",
+				"390.132-4",
+				"390.132-5",
+				"390.138-1",
+				"390.138-1~deb10u1",
+				"390.138-1~deb10u1~bpo9+1",
+				"390.138-2",
+				"390.138-3",
+				"390.138-4",
+				"390.138-5",
+				"390.138-6",
+				"390.138-6~bpo10+1",
+				"390.141-1",
+				"390.141-2",
+				"390.141-2~bpo10+1",
+				"390.141-2~deb10u1",
+				"390.141-3",
+				"390.143-1",
+				"390.143-1~bpo10+1",
+				"390.143-1~deb10u1",
+				"390.144-1",
+				"390.144-1~bpo10+1",
+				"390.144-1~deb10u1",
+				"390.144-2",
+				"390.147-1",
+				"390.147-1~bpo11+1",
+				"390.147-2",
+				"390.147-3",
+				"390.147-4",
+				"390.151-1",
+				"390.151-1~deb10u1",
+				"390.151-1~deb11u1",
+				"390.151-2",
+				"390.154-1",
+				"390.154-1~deb10u1",
+				"390.154-1~deb11u1",
+				"390.154-2",
+				"390.48-4",
+				"390.87-1",
+				"390.87-2",
+				"390.87-3",
+				"390.87-3~bpo9+1",
+				"390.87-4",
+				"390.87-5",
+				"390.87-6",
+				"390.87-6~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3418-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3418"
+		}
+	]
+}

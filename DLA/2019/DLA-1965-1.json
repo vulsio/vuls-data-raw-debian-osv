@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1965-1",
+	"modified": "2023-06-28T06:29:58.792578Z",
+	"published": "2019-10-19T00:00:00Z",
+	"related": [
+		"CVE-2019-3689"
+	],
+	"summary": "nfs-utils - security update",
+	"details": "\nIn the nfs-utils package, providing support files for Network File\nSystem (NFS) including the rpc.statd daemon, the directory\n/var/lib/nfs is owned by statd:nogroup. This directory contains files\nowned and managed by root. If statd is compromised, it can therefore\ntrick processes running with root privileges into creating/overwriting\nfiles anywhere on the system.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.2.8-9+deb8u1.\n\n\nWe recommend that you upgrade your nfs-utils packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "nfs-utils",
+				"purl": "pkg:deb/debian/nfs-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.2.8-9+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.2.8-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1965-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1965"
+		}
+	]
+}

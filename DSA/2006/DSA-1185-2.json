@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1185-2",
+	"modified": "2023-10-16T00:10:10.176863Z",
+	"published": "2006-09-28T00:00:00Z",
+	"related": [
+		"CVE-2006-2937",
+		"CVE-2006-2940",
+		"CVE-2006-3738",
+		"CVE-2006-4343"
+	],
+	"summary": "openssl",
+	"details": "\nThe fix used to correct CVE-2006-2940 introduced code that could lead to\nthe use of uninitialized memory. Such use is likely to cause the\napplication using the openssl library to crash, and has the potential to\nallow an attacker to cause the execution of arbitrary code.\nFor reference please find below the original advisory text:\n\n\n\n> \n> Multiple vulnerabilities have been discovered in the OpenSSL\n> cryptographic software package that could allow an attacker to launch\n> a denial of service attack by exhausting system resources or crashing\n> processes on a victim's computer.\n> \n> \n> * [CVE-2006-2937](https://security-tracker.debian.org/tracker/CVE-2006-2937)\n> Dr S N Henson of the OpenSSL core team and Open Network\n>  Security recently developed an ASN1 test suite for NISCC\n>  (www.niscc.gov.uk). When the test suite was run against\n>  OpenSSL two denial of service vulnerabilities were discovered.\n> \n> \n> During the parsing of certain invalid ASN1 structures an error\n>  condition is mishandled. This can result in an infinite loop\n>  which consumes system memory.\n> \n> \n> Any code which uses OpenSSL to parse ASN1 data from untrusted\n>  sources is affected. This includes SSL servers which enable\n>  client authentication and S/MIME applications.\n> * [CVE-2006-3738](https://security-tracker.debian.org/tracker/CVE-2006-3738)\n> Tavis Ormandy and Will Drewry of the Google Security Team\n>  discovered a buffer overflow in SSL\\_get\\_shared\\_ciphers utility\n>  function, used by some applications such as exim and mysql. An\n>  attacker could send a list of ciphers that would overrun a\n>  buffer.\n> * [CVE-2006-4343](https://security-tracker.debian.org/tracker/CVE-2006-4343)\n> Tavis Ormandy and Will Drewry of the Google Security Team\n>  discovered a possible DoS in the sslv2 client code. Where a\n>  client application uses OpenSSL to make a SSLv2 connection to\n>  a malicious server that server could cause the client to\n>  crash.\n> * [CVE-2006-2940](https://security-tracker.debian.org/tracker/CVE-2006-2940)\n> Dr S N Henson of the OpenSSL core team and Open Network\n>  Security recently developed an ASN1 test suite for NISCC\n>  (www.niscc.gov.uk). When the test suite was run against\n>  OpenSSL a DoS was discovered.\n> \n> \n> Certain types of public key can take disproportionate amounts\n>  of time to process. This could be used by an attacker in a\n>  denial of service attack.\n> \n> \n> \n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.9.7e-3sarge4.\n\n\nFor the unstable and testing distributions (sid and etch,\nrespectively), these problems will be fixed in version 0.9.7k-3 of the\nopenssl097 compatibility libraries, and version 0.9.8c-3 of the\nopenssl package.\n\n\nWe recommend that you upgrade your openssl package. Note that\nservices linking against the openssl shared libraries will need to be\nrestarted. Common examples of such services include most Mail\nTransport Agents, SSH servers, and web servers.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.7e-3sarge4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.7e-3",
+				"0.9.7e-3sarge1",
+				"0.9.7e-3sarge2",
+				"0.9.7e-3sarge3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1185-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1185"
+		}
+	]
+}

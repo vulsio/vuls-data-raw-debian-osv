@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2015-1",
+	"modified": "2023-10-16T00:10:54.122407Z",
+	"published": "2010-03-15T00:00:00Z",
+	"related": [
+		"CVE-2010-0747"
+	],
+	"summary": "drbd8 linux-modules-extra-2.6 - privilege escalation",
+	"details": "\nA local vulnerability has been discovered in drbd8.\n\n\nPhilipp Reisner fixed an issue in the drbd kernel module that allows\nlocal users to send netlink packets to perform actions that should be\nrestricted to users with CAP\\_SYS\\_ADMIN privileges. This is a similar\nissue to those described by [CVE-2009-3725](https://security-tracker.debian.org/tracker/CVE-2009-3725).\n\n\nThis update also fixes an ABI compatibility issue which was introduced\nby linux-2.6 (2.6.26-21lenny3). The prebuilt drbd module packages listed\nin this advisory require a linux-image package version 2.6.26-21lenny3\nor greater.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\ndrbd8 (2:8.0.14-2+lenny1).\n\n\nWe recommend that you upgrade your drbd8 packages.\n\n\nThe linux-modules-extra-2.6 package has been rebuilt against the updated\ndrbd8 package to provide fixed prebuilt drbd8-modules packages. If,\ninstead of using the prebuilt drbd8-modules packages, you have built and\ninstalled a local copy of the drbd module from the drbd8-source package\n(e.g., using module-assistant), you will need to follow the same steps\nyou originally used to rebuild your module after upgrading the\ndrbd8-source package.\n\n\nNote: After upgrading a kernel module you must reload the module\nfor the changes to take effect:\n\n\n1. Shutdown all services that make use of the drbd module\n2. Unload the previous drbd module (modprobe -r drbd)\n3. Load the updated drbd module (modprobe drbd)\n4. Restart any services that make use of the drbd module\n\n\nA system reboot will also cause the updated module to be used.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "drbd8",
+				"purl": "pkg:deb/debian/drbd8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:8.0.14-2+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:8.0.14-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2015-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "linux-modules-extra-2.6",
+				"purl": "pkg:deb/debian/linux-modules-extra-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-6+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-6",
+				"2.6.26-6+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2015-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2015"
+		}
+	]
+}

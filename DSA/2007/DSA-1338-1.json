@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1338-1",
+	"modified": "2023-10-16T00:10:21.278822Z",
+	"published": "2007-07-23T00:00:00Z",
+	"related": [
+		"CVE-2007-3089",
+		"CVE-2007-3656",
+		"CVE-2007-3734",
+		"CVE-2007-3735",
+		"CVE-2007-3736",
+		"CVE-2007-3737",
+		"CVE-2007-3738",
+		"CVE-2007-4038"
+	],
+	"summary": "iceweasel",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Iceweasel web\nbrowser, an unbranded version of the Firefox browser. The Common \nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-3089](https://security-tracker.debian.org/tracker/CVE-2007-3089)\nRonen Zilberman and Michal Zalewski discovered that a timing race\n allows the injection of content into about:blank frames.\n* [CVE-2007-3656](https://security-tracker.debian.org/tracker/CVE-2007-3656)\nMichal Zalewski discovered that same-origin policies for wyciwyg://\n documents are insufficiently enforced.\n* [CVE-2007-3734](https://security-tracker.debian.org/tracker/CVE-2007-3734)\nBernd Mielke, Boris Zbarsky, David Baron, Daniel Veditz, Jesse Ruderman,\n Lukas Loehrer, Martijn Wargers, Mats Palmgren, Olli Pettay, Paul\n Nickerson and Vladimir Sukhoy discovered crashes in the layout engine,\n which might allow the execution of arbitrary code.\n* [CVE-2007-3735](https://security-tracker.debian.org/tracker/CVE-2007-3735)\nAsaf Romano, Jesse Ruderman and Igor Bukanov discovered crashes in the\n javascript engine, which might allow the execution of arbitrary code.\n* [CVE-2007-3736](https://security-tracker.debian.org/tracker/CVE-2007-3736)\nmoz\\_bug\\_r\\_a4 discovered that the addEventListener() and setTimeout()\n functions allow cross-site scripting.\n* [CVE-2007-3737](https://security-tracker.debian.org/tracker/CVE-2007-3737)\nmoz\\_bug\\_r\\_a4 discovered that a programming error in event handling\n allows privilege escalation.\n* [CVE-2007-3738](https://security-tracker.debian.org/tracker/CVE-2007-3738)\nshutdown and moz\\_bug\\_r\\_a4 discovered that the XPCNativeWrapper allows\n the execution of arbitrary code.\n\n\nThe Mozilla products in the oldstable distribution (sarge) are no longer\nsupported with security updates. You're strongly encouraged to upgrade to\nstable as soon as possible.\n\n\nFor the stable distribution (etch) these problems have been fixed in version\n2.0.0.5-0etch1. Builds for alpha and mips are not yet available, they will\nbe provided later.\n\n\nFor the unstable distribution (sid) these problems have been fixed in version\n2.0.0.5-1.\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "iceweasel",
+				"purl": "pkg:deb/debian/iceweasel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0.5-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0.3-1",
+				"2.0.0.3-2",
+				"2.0.0.4-0etch1",
+				"2.0.0.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1338-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1338"
+		}
+	]
+}

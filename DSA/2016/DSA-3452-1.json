@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3452-1",
+	"modified": "2023-10-16T00:12:02.404471Z",
+	"published": "2016-01-23T00:00:00Z",
+	"related": [
+		"CVE-2015-8614"
+	],
+	"summary": "claws-mail - security update",
+	"details": "\nDrWhax of the Tails project reported that Claws Mail is missing\nrange checks in some text conversion functions. A remote attacker\ncould exploit this to run arbitrary code under the account of a user\nthat receives a message from them using Claws Mail.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 3.8.1-2+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 3.11.1-3+deb8u1.\n\n\nWe recommend that you upgrade your claws-mail packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "claws-mail",
+				"purl": "pkg:deb/debian/claws-mail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.8.1-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.8.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3452-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "claws-mail",
+				"purl": "pkg:deb/debian/claws-mail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.11.1-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.11.1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3452-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3452"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2020-1",
+	"modified": "2023-10-16T00:10:53.544042Z",
+	"published": "2010-03-20T00:00:00Z",
+	"related": [
+		"CVE-2010-1195"
+	],
+	"summary": "ikiwiki - cross-site scripting",
+	"details": "\nIvan Shmakov discovered that the htmlscrubber component of ikiwiki, a wiki\ncompiler, performs insufficient input sanitization on data:image/svg+xml\nURIs. As these can contain script code this can be used by an attacker\nto conduct cross-site scripting attacks.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.53.5.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 3.20100312.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.20100312.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "ikiwiki",
+				"purl": "pkg:deb/debian/ikiwiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.53.5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.53.3",
+				"2.53.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2020-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2020"
+		}
+	]
+}

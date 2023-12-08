@@ -1,0 +1,87 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2161-2",
+	"modified": "2023-10-16T00:11:00.606561Z",
+	"published": "2011-02-13T00:00:00Z",
+	"related": [
+		"CVE-2010-4476"
+	],
+	"summary": "openjdk-6 - several",
+	"details": "\nIt was discovered that the floating point parser in OpenJDK, an\nimplementation of the Java platform, can enter an infinite loop when\nprocessing certain input strings. Such input strings represent valid\nnumbers and can be contained in data supplied by an attacker over the\nnetwork, leading to a denial-of-service attack.\n\n\nFor the oldstable distribution (lenny), this problem will be fixed in\nversion 6b18-1.8.3-2~lenny1. For technical reasons, this update will\nbe released separately.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 6b18-1.8.3-2+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your openjdk-6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "openjdk-6",
+				"purl": "pkg:deb/debian/openjdk-6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6b18-1.8.3-2~lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6b11-9.1",
+				"6b11-9.1+lenny2",
+				"6b12-0",
+				"6b12-1~exp1",
+				"6b12~pre1-0",
+				"6b12~pre2-1",
+				"6b14-1.5~pre1-1",
+				"6b14-1.5~pre1-2",
+				"6b14-1.5~pre1-3",
+				"6b14-1.5~pre1-4",
+				"6b14-1.5~pre1-5",
+				"6b14-1~exp1",
+				"6b16-1",
+				"6b16-1.6-1",
+				"6b16-1.6.1-1",
+				"6b16-1.6.1-2",
+				"6b16-1.6~pre2-1",
+				"6b16-2",
+				"6b16-3",
+				"6b16-4",
+				"6b17-1.7-1",
+				"6b17-1.7-1+sh4.1",
+				"6b17~pre3-1",
+				"6b17~pre3-1+sh4",
+				"6b17~pre3-1+sh4.1",
+				"6b18-1.8-1",
+				"6b18-1.8-2",
+				"6b18-1.8-3",
+				"6b18-1.8-4",
+				"6b18-1.8.1-1",
+				"6b18-1.8.1-2",
+				"6b18-1.8.2-1",
+				"6b18-1.8.2-2",
+				"6b18-1.8.2-3",
+				"6b18-1.8.2-4",
+				"6b18-1.8.3-1",
+				"6b18~pre1-1",
+				"6b18~pre1-2",
+				"6b18~pre1-3",
+				"6b18~pre1-4",
+				"6b18~pre2-1",
+				"6b18~pre3-1",
+				"6b18~pre4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2161-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2161"
+		}
+	]
+}

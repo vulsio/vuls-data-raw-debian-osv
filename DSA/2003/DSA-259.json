@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-259",
+	"modified": "2023-10-16T00:11:20.893864Z",
+	"published": "2003-03-12T00:00:00Z",
+	"related": [
+		"CVE-2003-0143"
+	],
+	"summary": "qpopper - mail user privilege escalation",
+	"details": "\nFlorian Heinz  posted to the Bugtraq mailing list an\nexploit for qpopper based on a bug in the included vsnprintf implementation.\nThe sample exploit requires a valid user account and password, and overflows a\nstring in the pop\\_msg() function to give the user \"mail\" group privileges and a\nshell on the system. Since the Qvsnprintf function is used elsewhere in\nqpopper, additional exploits may be possible.\n\n\nThe qpopper package in Debian 2.2 (potato) does not include the vulnerable\nsnprintf implementation. For Debian 3.0 (woody) an updated package is available\nin version 4.0.4-2.woody.3. Users running an unreleased version of Debian\nshould upgrade to 4.0.4-9 or newer. We recommend you upgrade your qpopper\npackage immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "qpopper",
+				"purl": "pkg:deb/debian/qpopper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.4-2.woody.3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.4-2.woody.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-259.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-259"
+		}
+	]
+}

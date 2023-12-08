@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3403-1",
+	"modified": "2023-10-16T00:12:09.728445Z",
+	"published": "2015-11-24T00:00:00Z",
+	"summary": "libcommons-collections3-java - security update",
+	"details": "\nThis update backports changes from the commons-collections 3.2.2 release\nwhich disable the deserialisation of the functors classes unless the\nsystem property org.apache.commons.collections.enableUnsafeSerialization\nis set to true. This fixes a vulnerability in unsafe applications\ndeserialising objects from untrusted sources without sanitising the\ninput data. Classes considered unsafe are: CloneTransformer, ForClosure,\nInstantiateFactory, InstantiateTransformer, InvokerTransformer,\nPrototypeCloneFactory, PrototypeSerializationFactory and WhileClosure.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 3.2.1-5+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 3.2.1-7+deb8u1.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 3.2.2-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.2.2-1.\n\n\nWe recommend that you upgrade your libcommons-collections3-java packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libcommons-collections3-java",
+				"purl": "pkg:deb/debian/libcommons-collections3-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.1-5+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3403-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libcommons-collections3-java",
+				"purl": "pkg:deb/debian/libcommons-collections3-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.1-7+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.1-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3403-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3403"
+		}
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3838-1",
+	"modified": "2023-10-16T00:12:22.084821Z",
+	"published": "2017-04-28T00:00:00Z",
+	"related": [
+		"CVE-2016-10219",
+		"CVE-2016-10220",
+		"CVE-2017-5951",
+		"CVE-2017-7207",
+		"CVE-2017-8291"
+	],
+	"summary": "ghostscript - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Ghostscript, the GPL\nPostScript/PDF interpreter, which may lead to the execution of arbitrary\ncode or denial of service if a specially crafted Postscript file is\nprocessed.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 9.06~dfsg-2+deb8u5.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 9.20~dfsg-3.1 or earlier versions.\n\n\nWe recommend that you upgrade your ghostscript packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ghostscript",
+				"purl": "pkg:deb/debian/ghostscript?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.06~dfsg-2+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.06~dfsg-2",
+				"9.06~dfsg-2+deb8u1",
+				"9.06~dfsg-2+deb8u2",
+				"9.06~dfsg-2+deb8u3",
+				"9.06~dfsg-2+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3838-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3838"
+		}
+	]
+}

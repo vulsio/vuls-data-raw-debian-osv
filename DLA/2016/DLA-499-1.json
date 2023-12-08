@@ -1,0 +1,96 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-499-1",
+	"modified": "2023-06-28T06:27:03.025999Z",
+	"published": "2016-05-31T00:00:00Z",
+	"related": [
+		"CVE-2015-8865",
+		"CVE-2015-8866",
+		"CVE-2015-8878",
+		"CVE-2015-8879",
+		"CVE-2016-4070",
+		"CVE-2016-4071",
+		"CVE-2016-4072",
+		"CVE-2016-4073",
+		"CVE-2016-4343",
+		"CVE-2016-4537",
+		"CVE-2016-4539",
+		"CVE-2016-4540",
+		"CVE-2016-4541",
+		"CVE-2016-4542",
+		"CVE-2016-4543",
+		"CVE-2016-4544"
+	],
+	"summary": "php5 - security update",
+	"details": "\n* [CVE-2015-8865](https://security-tracker.debian.org/tracker/CVE-2015-8865)\nThe file\\_check\\_mem function in funcs.c in file before 5.23, as used\n in the Fileinfo component in PHP before 5.5.34, 5.6.x before 5.6.20,\n and 7.x before 7.0.5, mishandles continuation-level jumps, which\n allows context-dependent attackers to cause a denial of service\n (buffer overflow and application crash) or possibly execute arbitrary\n code via a crafted magic file.\n* [CVE-2015-8866](https://security-tracker.debian.org/tracker/CVE-2015-8866)\nlibxml\\_disable\\_entity\\_loader setting is shared between threads\n ext/libxml/libxml.c in PHP before 5.5.22 and 5.6.x before 5.6.6, when\n PHP-FPM is used, does not isolate each thread from\n libxml\\_disable\\_entity\\_loader changes in other threads, which allows\n remote attackers to conduct XML External Entity (XXE) and XML Entity\n Expansion (XEE) attacks via a crafted XML document, a related issue\n to [CVE-2015-5161](https://security-tracker.debian.org/tracker/CVE-2015-5161).\n* [CVE-2015-8878](https://security-tracker.debian.org/tracker/CVE-2015-8878)\nmain/php\\_open\\_temporary\\_file.c in PHP before 5.5.28 and 5.6.x before\n 5.6.12 does not ensure thread safety, which allows remote attackers to\n cause a denial of service (race condition and heap memory corruption)\n by leveraging an application that performs many temporary-file accesses.\n* [CVE-2015-8879](https://security-tracker.debian.org/tracker/CVE-2015-8879)\nThe odbc\\_bindcols function in ext/odbc/php\\_odbc.c in PHP before 5.6.12\n mishandles driver behavior for SQL\\_WVARCHAR columns, which allows\n remote attackers to cause a denial of service (application crash) in\n opportunistic circumstances by leveraging use of the odbc\\_fetch\\_array\n function to access a certain type of Microsoft SQL Server table.\n* [CVE-2016-4070](https://security-tracker.debian.org/tracker/CVE-2016-4070)\nInteger overflow in the php\\_raw\\_url\\_encode function in ext/standard/url.c\n in PHP before 5.5.34, 5.6.x before 5.6.20, and 7.x before 7.0.5 allows\n remote attackers to cause a denial of service (application crash) via a\n long string to the rawurlencode function.\n* [CVE-2016-4071](https://security-tracker.debian.org/tracker/CVE-2016-4071)\nFormat string vulnerability in the php\\_snmp\\_error function in\n ext/snmp/snmp.c in PHP before 5.5.34, 5.6.x before 5.6.20, and 7.x\n before 7.0.5 allows remote attackers to execute arbitrary code via\n format string specifiers in an SNMP::get call.\n* [CVE-2016-4072](https://security-tracker.debian.org/tracker/CVE-2016-4072)\nThe Phar extension in PHP before 5.5.34, 5.6.x before 5.6.20, and 7.x\n before 7.0.5 allows remote attackers to execute arbitrary code via a\n crafted filename, as demonstrated by mishandling of \\0 characters by\n the phar\\_analyze\\_path function in ext/phar/phar.c.\n* [CVE-2016-4073](https://security-tracker.debian.org/tracker/CVE-2016-4073)\nMultiple integer overflows in the mbfl\\_strcut function in\n ext/mbstring/libmbfl/mbfl/mbfilter.c in PHP before 5.5.34, 5.6.x before\n 5.6.20, and 7.x before 7.0.5 allow remote attackers to cause a denial\n of service (application crash) or possibly execute arbitrary code via\n a crafted mb\\_strcut call.\n* [CVE-2016-4343](https://security-tracker.debian.org/tracker/CVE-2016-4343)\nThe phar\\_make\\_dirstream function in ext/phar/dirstream.c in PHP before\n 5.6.18 and 7.x before 7.0.3 mishandles zero-size ././@LongLink files,\n which allows remote attackers to cause a denial of service\n (uninitialized pointer dereference) or possibly have unspecified other\n impact via a crafted TAR archive.\n* [CVE-2016-4537](https://security-tracker.debian.org/tracker/CVE-2016-4537)\nThe bcpowmod function in ext/bcmath/bcmath.c in PHP before 5.5.35,\n 5.6.x before 5.6.21, and 7.x before 7.0.6 accepts a negative integer\n for the scale argument, which allows remote attackers to cause a\n denial of service or possibly have unspecified other impact via a\n crafted call.\n* [CVE-2016-4539](https://security-tracker.debian.org/tracker/CVE-2016-4539)\nThe xml\\_parse\\_into\\_struct function in ext/xml/xml.c in PHP before\n 5.5.35, 5.6.x before 5.6.21, and 7.x before 7.0.6 allows remote\n attackers to cause a denial of service (buffer under-read and\n segmentation fault) or possibly have unspecified other impact via\n crafted XML data in the second argument, leading to a parser level\n of zero.\n* [CVE-2016-4540](https://security-tracker.debian.org/tracker/CVE-2016-4540) /\n [CVE-2016-4541](https://security-tracker.debian.org/tracker/CVE-2016-4541)\nThe grapheme\\_strpos function in ext/intl/grapheme/grapheme\\_string.c\n in before 5.5.35, 5.6.x before 5.6.21, and 7.x before 7.0.6 allows\n remote attackers to cause a denial of service (out-of-bounds read)\n or possibly have unspecified other impact via a negative offset.\n* [CVE-2016-4542](https://security-tracker.debian.org/tracker/CVE-2016-4542) /\n [CVE-2016-4543](https://security-tracker.debian.org/tracker/CVE-2016-4543) /\n [CVE-2016-4544](https://security-tracker.debian.org/tracker/CVE-2016-4544)\nThe exif\\_process\\_\\* function in ext/exif/exif.c in PHP before 5.5.35,\n 5.6.x before 5.6.21, and 7.x before 7.0.6 does not validate IFD sizes,\n which allows remote attackers to cause a denial of service\n (out-of-bounds read) or possibly have unspecified other impact via\n crafted header data.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in php5 version 5.4.45-0+deb7u3\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.45-0+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.36-0+deb7u3",
+				"5.4.38-0+deb7u1",
+				"5.4.39-0+deb7u1",
+				"5.4.39-0+deb7u2",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.41-0+deb7u1",
+				"5.4.44-0+deb7u1",
+				"5.4.45-0+deb7u1",
+				"5.4.45-0+deb7u2",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-499-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-499"
+		}
+	]
+}

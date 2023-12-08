@@ -1,0 +1,108 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2668-1",
+	"modified": "2023-10-16T00:06:03.117627Z",
+	"published": "2013-05-14T00:00:00Z",
+	"related": [
+		"CVE-2012-2121",
+		"CVE-2012-3552",
+		"CVE-2012-4461",
+		"CVE-2012-4508",
+		"CVE-2012-6537",
+		"CVE-2012-6539",
+		"CVE-2012-6540",
+		"CVE-2012-6542",
+		"CVE-2012-6544",
+		"CVE-2012-6545",
+		"CVE-2012-6546",
+		"CVE-2012-6548",
+		"CVE-2012-6549",
+		"CVE-2013-0349",
+		"CVE-2013-0914",
+		"CVE-2013-1767",
+		"CVE-2013-1773",
+		"CVE-2013-1774",
+		"CVE-2013-1792",
+		"CVE-2013-1796",
+		"CVE-2013-1798",
+		"CVE-2013-1826",
+		"CVE-2013-1860",
+		"CVE-2013-1928",
+		"CVE-2013-1929",
+		"CVE-2013-2015",
+		"CVE-2013-2634",
+		"CVE-2013-3222",
+		"CVE-2013-3223",
+		"CVE-2013-3224",
+		"CVE-2013-3225",
+		"CVE-2013-3228",
+		"CVE-2013-3229",
+		"CVE-2013-3231",
+		"CVE-2013-3234",
+		"CVE-2013-3235"
+	],
+	"summary": "linux-2.6 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service, information leak or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2012-2121](https://security-tracker.debian.org/tracker/CVE-2012-2121)\nBenjamin Herrenschmidt and Jason Baron discovered issues with the IOMMU\n mapping of memory slots used in KVM device assignment. Local users with\n the ability to assign devices could cause a denial of service due to a\n memory page leak.\n* [CVE-2012-3552](https://security-tracker.debian.org/tracker/CVE-2012-3552)\nHafid Lin reported an issue in the IP networking subsystem. A remote user\n can cause a denial of service (system crash) on servers running\n applications that set options on sockets which are actively being\n processed.\n* [CVE-2012-4461](https://security-tracker.debian.org/tracker/CVE-2012-4461)\nJon Howell reported a denial of service issue in the KVM subsystem.\n On systems that do not support the XSAVE feature, local users with\n access to the /dev/kvm interface can cause a system crash.\n* [CVE-2012-4508](https://security-tracker.debian.org/tracker/CVE-2012-4508)\nDmitry Monakhov and Theodore Ts'o reported a race condition in the ext4\n filesystem. Local users could gain access to sensitive kernel memory.\n* [CVE-2012-6537](https://security-tracker.debian.org/tracker/CVE-2012-6537)\nMathias Krause discovered information leak issues in the Transformation\n user configuration interface. Local users with the CAP\\_NET\\_ADMIN capability\n can gain access to sensitive kernel memory.\n* [CVE-2012-6539](https://security-tracker.debian.org/tracker/CVE-2012-6539)\nMathias Krause discovered an issue in the networking subsystem. Local\n users on 64-bit systems can gain access to sensitive kernel memory.\n* [CVE-2012-6540](https://security-tracker.debian.org/tracker/CVE-2012-6540)\nMathias Krause discovered an issue in the Linux virtual server subsystem.\n Local users can gain access to sensitive kernel memory. Note: this issue\n does not affect Debian provided kernels, but may affect custom kernels\n built from Debian's linux-source-2.6.32 package.\n* [CVE-2012-6542](https://security-tracker.debian.org/tracker/CVE-2012-6542)\nMathias Krause discovered an issue in the LLC protocol support code.\n Local users can gain access to sensitive kernel memory.\n* [CVE-2012-6544](https://security-tracker.debian.org/tracker/CVE-2012-6544)\nMathias Krause discovered issues in the Bluetooth subsystem.\n Local users can gain access to sensitive kernel memory.\n* [CVE-2012-6545](https://security-tracker.debian.org/tracker/CVE-2012-6545)\nMathias Krause discovered issues in the Bluetooth RFCOMM protocol\n support. Local users can gain access to sensitive kernel memory.\n* [CVE-2012-6546](https://security-tracker.debian.org/tracker/CVE-2012-6546)\nMathias Krause discovered issues in the ATM networking support. Local\n users can gain access to sensitive kernel memory.\n* [CVE-2012-6548](https://security-tracker.debian.org/tracker/CVE-2012-6548)\nMathias Krause discovered an issue in the UDF file system support.\n Local users can obtain access to sensitive kernel memory.\n* [CVE-2012-6549](https://security-tracker.debian.org/tracker/CVE-2012-6549)\nMathias Krause discovered an issue in the isofs file system support.\n Local users can obtain access to sensitive kernel memory.\n* [CVE-2013-0349](https://security-tracker.debian.org/tracker/CVE-2013-0349)\nAnderson Lizardo discovered an issue in the Bluetooth Human Interface\n Device Protocol (HIDP) stack. Local users can obtain access to sensitive\n kernel memory.\n* [CVE-2013-0914](https://security-tracker.debian.org/tracker/CVE-2013-0914)\nEmese Revfy discovered an issue in the signal implementation. Local\n users may be able to bypass the address space layout randomization (ASLR)\n facility due to a leaking of information to child processes.\n* [CVE-2013-1767](https://security-tracker.debian.org/tracker/CVE-2013-1767)\nGreg Thelen reported an issue in the tmpfs virtual memory filesystem.\n Local users with sufficient privilege to mount filesystems can cause\n a denial of service or possibly elevated privileges due to a use-after free defect.\n* [CVE-2013-1773](https://security-tracker.debian.org/tracker/CVE-2013-1773)\nAlan Stern provided a fix for a defect in the UTF8->UTF16 string conversion\n facility used by the VFAT filesystem. A local user could cause a buffer\n overflow condition, resulting in a denial of service or potentially\n elevated privileges.\n* [CVE-2013-1774](https://security-tracker.debian.org/tracker/CVE-2013-1774)\nWolfgang Frisch provided a fix for a NULL-pointer dereference defect\n in the driver for some serial USB devices from Inside Out Networks.\n Local users with permission to access these devices can create a denial\n of service (kernel oops) by causing the device to be removed while it is\n in use.\n* [CVE-2013-1792](https://security-tracker.debian.org/tracker/CVE-2013-1792)\nMateusz Guzik of Red Hat EMEA GSS SEG Team discovered a race condition\n in the access key retention support in the kernel. A local user could\n cause a denial of service (NULL pointer dereference).\n* [CVE-2013-1796](https://security-tracker.debian.org/tracker/CVE-2013-1796)\nAndrew Honig of Google reported an issue in the KVM subsystem. A user in\n a guest operating system could corrupt kernel memory, resulting in a\n denial of service.\n* [CVE-2013-1798](https://security-tracker.debian.org/tracker/CVE-2013-1798)\nAndrew Honig of Google reported an issue in the KVM subsystem. A user in\n a guest operating system could cause a denial of service due to a use after-free defect.\n* [CVE-2013-1826](https://security-tracker.debian.org/tracker/CVE-2013-1826)\nMathias Krause discovered an issue in the Transformation (XFRM) user\n configuration interface of the networking stack. A user with the\n CAP\\_NET\\_ADMIN capability may be able to gain elevated privileges.\n* [CVE-2013-1860](https://security-tracker.debian.org/tracker/CVE-2013-1860)\nOliver Neukum discovered an issue in the USB CDC WCM Device Management\n driver. Local users with the ability to attach devices can cause a\n denial of service (kernel crash) or potentially gain elevated privileges.\n* [CVE-2013-1928](https://security-tracker.debian.org/tracker/CVE-2013-1928)\nKees Cook provided a fix for an information leak in the\n VIDEO\\_SET\\_SPU\\_PALETTE ioctl for 32-bit applications running on a 64-bit\n kernel. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-1929](https://security-tracker.debian.org/tracker/CVE-2013-1929)\nOded Horovitz and Brad Spengler reported an issue in the device driver for\n Broadcom Tigon3 based gigabit Ethernet. Users with the ability to attach\n untrusted devices can create an overflow condition, resulting in a denial\n of service or elevated privileges.\n* [CVE-2013-2015](https://security-tracker.debian.org/tracker/CVE-2013-2015)\nTheodore Ts'o provided a fix for an issue in the ext4 filesystem. Local\n users with the ability to mount a specially crafted filesystem can cause\n a denial of service (infinite loop).\n* [CVE-2013-2634](https://security-tracker.debian.org/tracker/CVE-2013-2634)\nMathias Krause discovered a few issues in the Data Center Bridging (DCB)\n netlink interface. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3222](https://security-tracker.debian.org/tracker/CVE-2013-3222)\nMathias Krause discovered an issue in the Asynchronous Transfer Mode (ATM)\n protocol support. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3223](https://security-tracker.debian.org/tracker/CVE-2013-3223)\nMathias Krause discovered an issue in the Amateur Radio AX.25 protocol\n support. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3224](https://security-tracker.debian.org/tracker/CVE-2013-3224)\nMathias Krause discovered an issue in the Bluetooth subsystem. Local users\n can gain access to sensitive kernel memory.\n* [CVE-2013-3225](https://security-tracker.debian.org/tracker/CVE-2013-3225)\nMathias Krause discovered an issue in the Bluetooth RFCOMM protocol\n support. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3228](https://security-tracker.debian.org/tracker/CVE-2013-3228)\nMathias Krause discovered an issue in the IrDA (infrared) subsystem\n support. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3229](https://security-tracker.debian.org/tracker/CVE-2013-3229)\nMathias Krause discovered an issue in the IUCV support on s390 systems.\n Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3231](https://security-tracker.debian.org/tracker/CVE-2013-3231)\nMathias Krause discovered an issue in the ANSI/IEEE 802.2 LLC type 2\n protocol support. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3234](https://security-tracker.debian.org/tracker/CVE-2013-3234)\nMathias Krause discovered an issue in the Amateur Radio X.25 PLP (Rose)\n protocol support. Local users can gain access to sensitive kernel memory.\n* [CVE-2013-3235](https://security-tracker.debian.org/tracker/CVE-2013-3235)\nMathias Krause discovered an issue in the Transparent Inter Process\n Communication (TIPC) protocol support. Local users can gain access to\n sensitive kernel memory.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.6.32-48squeeze3.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+48squeeze3 |\n\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n**Note**: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-48squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35squeeze1",
+				"2.6.32-35squeeze2",
+				"2.6.32-35~bpo50+1",
+				"2.6.32-36",
+				"2.6.32-37",
+				"2.6.32-38",
+				"2.6.32-39",
+				"2.6.32-39squeeze1",
+				"2.6.32-40",
+				"2.6.32-41",
+				"2.6.32-41squeeze2",
+				"2.6.32-42",
+				"2.6.32-43",
+				"2.6.32-44",
+				"2.6.32-45",
+				"2.6.32-46",
+				"2.6.32-46squeeze1",
+				"2.6.32-47",
+				"2.6.32-48",
+				"2.6.32-48squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2668-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2668"
+		}
+	]
+}

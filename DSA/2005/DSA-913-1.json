@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-913-1",
+	"modified": "2023-10-16T00:29:44.250738Z",
+	"published": "2005-12-01T00:00:00Z",
+	"related": [
+		"CVE-2005-2975",
+		"CVE-2005-2976",
+		"CVE-2005-3186"
+	],
+	"summary": "gdk-pixbuf - several",
+	"details": "\nSeveral vulnerabilities have been found in gdk-pixbuf, the Gtk+\nGdkPixBuf XPM image rendering library. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2005-2975](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2975)\nLudwig Nussel discovered an infinite loop when processing XPM\n images that allows an attacker to cause a denial of service via a\n specially crafted XPM file.\n* [CVE-2005-2976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2976)\nLudwig Nussel discovered an integer overflow in the way XPM images\n are processed that could lead to the execution of arbitrary code\n or crash the application via a specially crafted XPM file.\n* [CVE-2005-3186](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3186)\n\"infamous41md\" discovered an integer in the XPM processing routine\n that can be used to execute arbitrary code via a traditional heap\n overflow.\n\n\nThe following matrix explains which versions fix these problems:\n\n\n\n\n\n|  | old stable (woody) | stable (sarge) | unstable (sid) |\n| --- | --- | --- | --- |\n| gdk-pixbuf | 0.17.0-2woody3 | 0.22.0-8.1 | 0.22.0-11 |\n| gtk+2.0 | 2.0.2-5woody3 | 2.6.4-3.1 | 2.6.10-2 |\n\n\n\nWe recommend that you upgrade your gdk-pixbuf packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gdk-pixbuf",
+				"purl": "pkg:deb/debian/gdk-pixbuf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.17.0-2woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.17.0-2woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-913-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gdk-pixbuf",
+				"purl": "pkg:deb/debian/gdk-pixbuf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.22.0-8.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.22.0-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-913-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-913"
+		}
+	]
+}

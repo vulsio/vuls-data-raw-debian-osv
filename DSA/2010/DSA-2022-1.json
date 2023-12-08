@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2022-1",
+	"modified": "2023-10-16T00:10:53.812695Z",
+	"published": "2010-03-23T00:00:00Z",
+	"related": [
+		"CVE-2010-1189",
+		"CVE-2010-1190"
+	],
+	"summary": "mediawiki - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in mediawiki, a web-based wiki\nengine. The following issues have been identified:\n\n\n* Insufficient input sanitization in the CSS validation code allows editors\nto display external images in wiki pages. This can be a privacy concern\non public wikis as it allows attackers to gather IP addresses and other\ninformation by linking these images to a web server under their control.\n* Insufficient permission checks have been found in thump.php which can lead\nto disclosure of image files that are restricted to certain users\n(e.g. with img\\_auth.php).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.12.0-2lenny4.\n\n\nFor the testing distribution (squeeze), these problems have been fixed in\nversion 1:1.15.2-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:1.15.2-1.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.12.0-2lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.12.0-2lenny2",
+				"1:1.12.0-2lenny3",
+				"1:1.12.0-2lenny3~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2022-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2022"
+		}
+	]
+}

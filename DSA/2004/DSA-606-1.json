@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-606-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-12-08T00:00:00Z",
+	"related": [
+		"CVE-2004-1014"
+	],
+	"summary": "nfs-utils - wrong signal handler",
+	"details": "\nSGI has discovered that rpc.statd from the nfs-utils package, the\nNetwork Status Monitor, did not ignore the \"SIGPIPE\". Hence, a client\nprematurely terminating the TCP connection could also terminate the\nserver process.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0-2woody2.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your nfs-utils package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "nfs-utils",
+				"purl": "pkg:deb/debian/nfs-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0-2woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-606-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-606"
+		}
+	]
+}

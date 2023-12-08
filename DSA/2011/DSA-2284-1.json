@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2284-1",
+	"modified": "2023-10-16T00:11:05.411078Z",
+	"published": "2011-07-25T00:00:00Z",
+	"related": [
+		"CVE-2011-1411"
+	],
+	"summary": "opensaml2 - implementation error",
+	"details": "\nJuraj Somorovsky, Andreas Mayer, Meiko Jensen, Florian Kohlar, Marco \nKampmann and Joerg Schwenk discovered that Shibboleth, a federated web \nsingle sign-on system is vulnerable to XML signature wrapping attacks. \nMore details can be found in the \n[Shibboleth \nadvisory](http://shibboleth.internet2.edu/security-advisories.html).\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.0-2+lenny3.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.3-2+squeeze1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "opensaml2",
+				"purl": "pkg:deb/debian/opensaml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3-2",
+				"2.3-2+squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2284-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "opensaml2",
+				"purl": "pkg:deb/debian/opensaml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0-2+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0-2",
+				"2.0-2+lenny1",
+				"2.0-2+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2284-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2284"
+		}
+	]
+}

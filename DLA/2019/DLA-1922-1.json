@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1922-1",
+	"modified": "2023-06-28T06:21:04.153225Z",
+	"published": "2019-09-16T00:00:00Z",
+	"related": [
+		"CVE-2019-16275"
+	],
+	"summary": "wpa - security update",
+	"details": "\nhostapd (and wpa\\_supplicant when controlling AP mode) did not perform\nsufficient source address validation for some received Management frames\nand this could result in ending up sending a frame that caused\nassociated stations to incorrectly believe they were disconnected from\nthe network even if management frame protection (also known as PMF) was\nnegotiated for the association. This could be considered to be a denial\nof service vulnerability since PMF is supposed to protect from this\ntype of issues.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.3-1+deb8u9.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wpa",
+				"purl": "pkg:deb/debian/wpa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3-1+deb8u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3-1",
+				"2.3-1+deb8u1",
+				"2.3-1+deb8u2",
+				"2.3-1+deb8u3",
+				"2.3-1+deb8u4",
+				"2.3-1+deb8u5",
+				"2.3-1+deb8u6",
+				"2.3-1+deb8u7",
+				"2.3-1+deb8u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1922-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1922"
+		}
+	]
+}

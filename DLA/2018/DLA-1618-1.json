@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1618-1",
+	"modified": "2023-06-28T06:26:24.425409Z",
+	"published": "2018-12-26T00:00:00Z",
+	"related": [
+		"CVE-2017-14245",
+		"CVE-2017-14246",
+		"CVE-2017-14634",
+		"CVE-2017-8361",
+		"CVE-2017-8362",
+		"CVE-2017-8363",
+		"CVE-2017-8365",
+		"CVE-2018-13139",
+		"CVE-2018-19432",
+		"CVE-2018-19661",
+		"CVE-2018-19662"
+	],
+	"summary": "libsndfile - security update",
+	"details": "\nMultiple vulnerabilities have been found in libsndfile, the library for\nreading and writing files containing sampled sound.\n\n\n* [CVE-2017-8361](https://security-tracker.debian.org/tracker/CVE-2017-8361)\nThe flac\\_buffer\\_copy function (flac.c) is affected by a buffer\n overflow. This vulnerability might be leveraged by remote attackers to\n cause a denial of service, or possibly have unspecified other impact\n via a crafted audio file.\n* [CVE-2017-8362](https://security-tracker.debian.org/tracker/CVE-2017-8362)\nThe flac\\_buffer\\_copy function (flac.c) is affected by an out-of-bounds\n read vulnerability. This flaw might be leveraged by remote attackers to\n cause a denial of service via a crafted audio file.\n* [CVE-2017-8363](https://security-tracker.debian.org/tracker/CVE-2017-8363)\nThe flac\\_buffer\\_copy function (flac.c) is affected by a heap based OOB\n read vulnerability. This flaw might be leveraged by remote attackers to\n cause a denial of service via a crafted audio file.\n* [CVE-2017-8365](https://security-tracker.debian.org/tracker/CVE-2017-8365)\nThe i2les\\_array function (pcm.c) is affected by a global buffer\n overflow. This vulnerability might be leveraged by remote attackers to\n cause a denial of service, or possibly have unspecified other impact\n via a crafted audio file.\n* [CVE-2017-14245](https://security-tracker.debian.org/tracker/CVE-2017-14245) /\n [CVE-2017-14246](https://security-tracker.debian.org/tracker/CVE-2017-14246) /\n [CVE-2017-17456](https://security-tracker.debian.org/tracker/CVE-2017-17456) /\n [CVE-2017-17457](https://security-tracker.debian.org/tracker/CVE-2017-17457)\nThe d2alaw\\_array() and d2ulaw\\_array() functions (src/ulaw.c and\n src/alaw.c) are affected by an out-of-bounds read vulnerability. This\n flaw might be leveraged by remote attackers to cause denial of service\n or information disclosure via a crafted audio file.\n* [CVE-2017-14634](https://security-tracker.debian.org/tracker/CVE-2017-14634)\nThe double64\\_init() function (double64.c) is affected by a\n divide-by-zero error. This vulnerability might be leveraged by remote\n attackers to cause denial of service via a crafted audio file.\n* [CVE-2018-13139](https://security-tracker.debian.org/tracker/CVE-2018-13139)\nThe psf\\_memset function (common.c) is affected by a stack-based buffer\n overflow. This vulnerability might be leveraged by remote attackers to\n cause a denial of service, or possibly have unspecified other impact\n via a crafted audio file. The vulnerability can be triggered by the\n executable sndfile-deinterleave.\n* [CVE-2018-19432](https://security-tracker.debian.org/tracker/CVE-2018-19432)\nThe sf\\_write\\_int function (src/sndfile.c) is affected by an\n out-of-bounds read vulnerability. This flaw might be leveraged by\n remote attackers to cause a denial of service via a crafted audio file.\n* [CVE-2018-19661](https://security-tracker.debian.org/tracker/CVE-2018-19661) /\n [CVE-2018-19662](https://security-tracker.debian.org/tracker/CVE-2018-19662)\nThe i2alaw\\_array() and i2ulaw\\_array() functions (src/ulaw.c and\n src/alaw.c) are affected by an out-of-bounds read vulnerability. This\n flaw might be leveraged by remote attackers to cause denial of service\n or information disclosure via a crafted audio file.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.0.25-9.1+deb8u2.\n\n\nWe recommend that you upgrade your libsndfile packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libsndfile",
+				"purl": "pkg:deb/debian/libsndfile?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.25-9.1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.25-9.1",
+				"1.0.25-9.1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1618-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1618"
+		}
+	]
+}

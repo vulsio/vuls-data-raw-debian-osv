@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1447-1",
+	"modified": "2023-06-28T06:24:17.149128Z",
+	"published": "2018-07-27T00:00:00Z",
+	"related": [
+		"CVE-2017-14062"
+	],
+	"summary": "libidn - security update",
+	"details": "\nAn integer overflow vulnerability was discovered in libidn, the GNU library for\nInternationalized Domain Names (IDNs), in its Punycode handling (a Unicode\ncharacters to ASCII encoding) allowing a remote attacker to cause a denial of\nservice against applications using the library.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.29-1+deb8u3.\n\n\nWe recommend that you upgrade your libidn packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libidn",
+				"purl": "pkg:deb/debian/libidn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.29-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.29-1",
+				"1.29-1+deb8u1",
+				"1.29-1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1447-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1447"
+		}
+	]
+}

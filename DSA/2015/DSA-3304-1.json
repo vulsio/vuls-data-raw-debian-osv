@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3304-1",
+	"modified": "2023-10-16T00:06:17.856578Z",
+	"published": "2015-07-07T00:00:00Z",
+	"related": [
+		"CVE-2015-4620"
+	],
+	"summary": "bind9 - security update",
+	"details": "\nBreno Silveira Soares of Servico Federal de Processamento de Dados\n(SERPRO) discovered that the BIND DNS server is prone to a denial of\nservice vulnerability. A remote attacker who can cause a validating\nresolver to query a zone containing specifically constructed contents\ncan cause the resolver to terminate with an assertion failure, resulting\nin a denial of service to clients relying on the resolver.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1:9.8.4.dfsg.P1-6+nmu2+deb7u5.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:9.9.5.dfsg-9+deb8u1.\n\n\nFor the testing distribution (stretch) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.8.4.dfsg.P1-6+nmu2+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.8.4.dfsg.P1-6+nmu2",
+				"1:9.8.4.dfsg.P1-6+nmu2+deb7u1",
+				"1:9.8.4.dfsg.P1-6+nmu2+deb7u1~bpo60+1",
+				"1:9.8.4.dfsg.P1-6+nmu2+deb7u2",
+				"1:9.8.4.dfsg.P1-6+nmu2+deb7u2~bpo60+1",
+				"1:9.8.4.dfsg.P1-6+nmu2+deb7u3",
+				"1:9.8.4.dfsg.P1-6+nmu2+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3304-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.9.5.dfsg-9+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.9.5.dfsg-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3304-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3304"
+		}
+	]
+}

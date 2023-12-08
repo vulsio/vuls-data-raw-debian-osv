@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2332-1",
+	"modified": "2023-10-16T00:11:08.910181Z",
+	"published": "2011-10-29T00:00:00Z",
+	"related": [
+		"CVE-2011-4136",
+		"CVE-2011-4137",
+		"CVE-2011-4138",
+		"CVE-2011-4139",
+		"CVE-2011-4140"
+	],
+	"summary": "python-django - several issues",
+	"details": "\nPaul McMillan, Mozilla and the Django core team discovered several\nvulnerabilities in Django, a Python web framework:\n\n\n* [CVE-2011-4136](https://security-tracker.debian.org/tracker/CVE-2011-4136)\nWhen using memory-based sessions and caching, Django sessions are\n stored directly in the root namespace of the cache. When user data is\n stored in the same cache, a remote user may take over a session.\n* [CVE-2011-4137](https://security-tracker.debian.org/tracker/CVE-2011-4137), [CVE-2011-4138](https://security-tracker.debian.org/tracker/CVE-2011-4138)\nDjango's field type URLfield by default checks supplied URL's by\n issuing a request to it, which doesn't time out. A Denial of Service\n is possible by supplying specially prepared URL's that keep the\n connection open indefinately or fill the Django's server memory.\n* [CVE-2011-4139](https://security-tracker.debian.org/tracker/CVE-2011-4139)\nDjango used X-Forwarded-Host headers to construct full URL's. This\n header may not contain trusted input and could be used to poison the\n cache.\n* [CVE-2011-4140](https://security-tracker.debian.org/tracker/CVE-2011-4140)\nThe CSRF protection mechanism in Django does not properly handle\n web-server configurations supporting arbitrary HTTP Host headers,\n which allows remote attackers to trigger unauthenticated forged\n requests.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.0.2-1+lenny3.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.2.3-3+squeeze2.\n\n\nFor the testing (wheezy) and unstable distribution (sid), this problem\nhas been fixed in version 1.3.1-1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3-3+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3-3",
+				"1.2.3-3+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2332-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-1+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-1",
+				"1.0.2-1+lenny1",
+				"1.0.2-1+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2332-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2332"
+		}
+	]
+}

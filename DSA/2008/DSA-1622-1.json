@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1622-1",
+	"modified": "2023-10-16T00:05:33.278039Z",
+	"published": "2008-07-31T00:00:00Z",
+	"related": [
+		"CVE-2008-3252"
+	],
+	"summary": "newsx - arbitrary code execution",
+	"details": "\nIt was discovered that newsx, an NNTP news exchange utility, was affected\nby a buffer overflow allowing remote attackers to execute arbitrary code\nvia a news article containing a large number of lines starting with a period.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1.6-2etch1.\n\n\nFor the testing (lenny) and unstable distribution (sid), this problem has\nbeen fixed in version 1.6-3.\n\n\nWe recommend that you upgrade your newsx package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "newsx",
+				"purl": "pkg:deb/debian/newsx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1622-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1622"
+		}
+	]
+}

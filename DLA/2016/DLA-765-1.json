@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-765-1",
+	"modified": "2023-06-28T06:43:09.271241Z",
+	"published": "2016-12-26T00:00:00Z",
+	"related": [
+		"CVE-2016-9911",
+		"CVE-2016-9921",
+		"CVE-2016-9922"
+	],
+	"summary": "qemu-kvm - security update",
+	"details": "\nMultiple vulnerabilities have been found in qemu-kvm:\n\n\n* [CVE-2016-9911](https://security-tracker.debian.org/tracker/CVE-2016-9911)\nqemu-kvm built with the USB EHCI Emulation support is vulnerable\n to a memory leakage issue. It could occur while processing packet\n data in ehci\\_init\\_transfer. A guest user/process could use this\n issue to leak host memory, resulting in DoS for a host.\n* [CVE-2016-9921](https://security-tracker.debian.org/tracker/CVE-2016-9921) /\n [CVE-2016-9922](https://security-tracker.debian.org/tracker/CVE-2016-9922)\nqemu-kvm built with the Cirrus CLGD 54xx VGA Emulator support is\n vulnerable to a divide by zero issue. It could occur while copying\n VGA data when cirrus graphics mode was set to be VGA. A privileged\n user inside guest could use this flaw to crash the Qemu process\n instance on the host, resulting in DoS.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u19.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u19"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6",
+				"1.1.2+dfsg-6+deb7u1",
+				"1.1.2+dfsg-6+deb7u10",
+				"1.1.2+dfsg-6+deb7u11",
+				"1.1.2+dfsg-6+deb7u12",
+				"1.1.2+dfsg-6+deb7u13",
+				"1.1.2+dfsg-6+deb7u14",
+				"1.1.2+dfsg-6+deb7u15",
+				"1.1.2+dfsg-6+deb7u16",
+				"1.1.2+dfsg-6+deb7u17",
+				"1.1.2+dfsg-6+deb7u18",
+				"1.1.2+dfsg-6+deb7u2",
+				"1.1.2+dfsg-6+deb7u3",
+				"1.1.2+dfsg-6+deb7u4",
+				"1.1.2+dfsg-6+deb7u5",
+				"1.1.2+dfsg-6+deb7u6",
+				"1.1.2+dfsg-6+deb7u7",
+				"1.1.2+dfsg-6+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6+deb7u8",
+				"1.1.2+dfsg-6+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-765-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-765"
+		}
+	]
+}

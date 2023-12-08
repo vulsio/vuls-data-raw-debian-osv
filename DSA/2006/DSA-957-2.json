@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-957-2",
+	"modified": "2023-10-16T00:28:37.399442Z",
+	"published": "2006-01-26T00:00:00Z",
+	"related": [
+		"CVE-2005-4601"
+	],
+	"summary": "imagemagick - missing shell meta sanitising",
+	"details": "\nFlorian Weimer discovered that delegate code in ImageMagick is\nvulnerable to shell command injection using specially crafted file\nnames. This allows attackers to encode commands inside of graphic\ncommands. With some user interaction, this is exploitable through\nGnus and Thunderbird. This update filters out the '$' character as\nwell, which was forgotten in the former update.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 5.4.4.5-1woody8.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 6.0.6.2-2.6.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 6.2.4.5-0.6.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:5.4.4.5-1woody8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:5.4.4.5-1woody4",
+				"4:5.4.4.5-1woody5",
+				"4:5.4.4.5-1woody6",
+				"4:5.4.4.5-1woody7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-957-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:6.0.6.2-2.6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:6.0.6.2-2.4",
+				"6:6.0.6.2-2.5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-957-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-957"
+		}
+	]
+}

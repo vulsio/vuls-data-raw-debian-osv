@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3098-1",
+	"modified": "2023-10-16T00:11:46.960401Z",
+	"published": "2014-12-11T00:00:00Z",
+	"related": [
+		"CVE-2014-9157"
+	],
+	"summary": "graphviz - security update",
+	"details": "\nJoshua Rogers discovered a format string vulnerability in the yyerror\nfunction in lib/cgraph/scan.l in Graphviz, a rich set of graph drawing\ntools. An attacker could use this flaw to cause graphviz to crash or\npossibly execute arbitrary code.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.26.3-14+deb7u2.\n\n\nFor the upcoming stable distribution (jessie), this problem will be\nfixed soon in version 2.38.0-7.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.38.0-7.\n\n\nWe recommend that you upgrade your graphviz packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "graphviz",
+				"purl": "pkg:deb/debian/graphviz?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.26.3-14+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.26.3-14",
+				"2.26.3-14+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3098-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3098"
+		}
+	]
+}

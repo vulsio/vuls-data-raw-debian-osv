@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-880-1",
+	"modified": "2023-06-28T06:27:10.629552Z",
+	"published": "2017-03-30T00:00:00Z",
+	"related": [
+		"CVE-2015-8781",
+		"CVE-2015-8782",
+		"CVE-2015-8783",
+		"CVE-2015-8784",
+		"CVE-2016-9533",
+		"CVE-2016-9534",
+		"CVE-2016-9535"
+	],
+	"summary": "tiff3 - security update",
+	"details": "\ntiff3 is affected by multiple issues that can result at least in denial of\nservices of applications using libtiff4. Crafted TIFF files can be\nprovided to trigger: abort() calls via failing assertions, buffer overruns\n(both in read and write mode).\n\n\n* [CVE-2015-8781](https://security-tracker.debian.org/tracker/CVE-2015-8781)\ntif\\_luv.c in libtiff allows attackers to cause a denial of service\n (out-of-bounds write) via an invalid number of samples per pixel in a\n LogL compressed TIFF image.\n* [CVE-2015-8782](https://security-tracker.debian.org/tracker/CVE-2015-8782)\ntif\\_luv.c in libtiff allows attackers to cause a denial of service\n (out-of-bounds writes) via a crafted TIFF image.\n* [CVE-2015-8783](https://security-tracker.debian.org/tracker/CVE-2015-8783)\ntif\\_luv.c in libtiff allows attackers to cause a denial of service\n (out-of-bounds reads) via a crafted TIFF image.\n* [CVE-2015-8784](https://security-tracker.debian.org/tracker/CVE-2015-8784)\nThe NeXTDecode function in tif\\_next.c in LibTIFF allows remote\n attackers to cause a denial of service (out-of-bounds write) via a\n crafted TIFF image.\n* [CVE-2016-9533](https://security-tracker.debian.org/tracker/CVE-2016-9533)\ntif\\_pixarlog.c in libtiff 4.0.6 has out-of-bounds write\n vulnerabilities in heap allocated buffers.\n* [CVE-2016-9534](https://security-tracker.debian.org/tracker/CVE-2016-9534)\ntif\\_write.c in libtiff 4.0.6 has an issue in the error code path of\n TIFFFlushData1() that didn't reset the tif\\_rawcc and tif\\_rawcp\n members.\n* [CVE-2016-9535](https://security-tracker.debian.org/tracker/CVE-2016-9535)\ntif\\_predict.h and tif\\_predict.c in libtiff 4.0.6 have assertions\n that can lead to assertion failures in debug mode, or buffer\n overflows in release mode, when dealing with unusual tile size\n like YCbCr with subsampling.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.9.6-11+deb7u4.\n\n\nWe recommend that you upgrade your tiff3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tiff3",
+				"purl": "pkg:deb/debian/tiff3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.9.6-11+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.9.6-11",
+				"3.9.6-11+deb7u1",
+				"3.9.6-11+deb7u2",
+				"3.9.6-11+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-880-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-880"
+		}
+	]
+}

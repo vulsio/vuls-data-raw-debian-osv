@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3099-1",
+	"modified": "2023-10-16T00:11:46.871365Z",
+	"published": "2014-12-11T00:00:00Z",
+	"related": [
+		"CVE-2014-7824"
+	],
+	"summary": "dbus - security update",
+	"details": "\nSimon McVittie discovered that the fix for \n[\\\nCVE-2014-3636](https://security-tracker.debian.org/tracker/CVE-2014-3636) was incorrect, as it did not fully address the underlying\ndenial-of-service vector. This update starts the D-Bus daemon as root\ninitially, so that it can properly raise its file descriptor count.\n\n\nIn addition, this update reverts the auth\\_timeout change in the\nprevious security update to its old value because the new value causes\nboot failures on some systems. See the README.Debian file for details\nhow to harden the D-Bus daemon against malicious local users.\n\n\nFor the stable distribution (wheezy), these problem have been fixed in\nversion 1.6.8-1+deb7u5.\n\n\nFor the upcoming stable distribution (jessie) and the unstable\ndistribution (sid), these problem have been fixed in version 1.8.10-1.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "dbus",
+				"purl": "pkg:deb/debian/dbus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.8-1+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.8-1",
+				"1.6.8-1+deb7u1",
+				"1.6.8-1+deb7u2",
+				"1.6.8-1+deb7u3",
+				"1.6.8-1+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3099-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3099"
+		}
+	]
+}

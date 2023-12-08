@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2085-1",
+	"modified": "2023-10-16T00:05:45.690425Z",
+	"published": "2010-08-03T00:00:00Z",
+	"related": [
+		"CVE-2010-2251"
+	],
+	"summary": "lftp - file overwrite vulnerability",
+	"details": "\nIt was discovered that in lftp, a command-line HTTP/FTP client, there is\nno proper validation of the filename provided by the server through the\nContent-Disposition header; attackers can use this flaw by suggesting a\nfilename they wish to overwrite on the client machine, and then possibly\nexecute arbitrary code (for instance if the attacker elects to write a\ndotfile in a home directory).\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 3.7.3-1+lenny1.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 4.0.6-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.0.6-1.\n\n\nWe recommend that you upgrade your lftp packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "lftp",
+				"purl": "pkg:deb/debian/lftp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.7.3-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.7.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2085-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2085"
+		}
+	]
+}

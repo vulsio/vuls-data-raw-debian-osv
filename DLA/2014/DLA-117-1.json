@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-117-1",
+	"modified": "2023-06-28T06:20:26.575183Z",
+	"published": "2014-12-21T00:00:00Z",
+	"related": [
+		"CVE-2011-3193",
+		"CVE-2011-3194"
+	],
+	"summary": "qt4-x11 - security update",
+	"details": "\n* [CVE-2011-3193](https://security-tracker.debian.org/tracker/CVE-2011-3193)\nCheck for buffer overflow in Lookup\\_MarkMarkPos that may cause crash\n in this function with certain fonts.\n* [CVE-2011-3194](https://security-tracker.debian.org/tracker/CVE-2011-3194)\nFix tiff reader to handle TIFFTAG\\_SAMPLESPERPIXEL for grayscale\n images. The reader uses QImage::Format\\_Indexed8, but since the samples\n per pixel value this should be (non-existent) QImage::Format\\_Indexed16,\n causing memory corruption. The fix falls back to the normal way of\n reading tiff images.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in qt4-x11 version 4:4.6.3-4+squeeze2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "qt4-x11",
+				"purl": "pkg:deb/debian/qt4-x11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:4.6.3-4+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:4.6.3-4",
+				"4:4.6.3-4+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-117-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-117"
+		}
+	]
+}

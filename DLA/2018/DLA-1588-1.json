@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1588-1",
+	"modified": "2023-06-28T06:20:51.434668Z",
+	"published": "2018-11-26T00:00:00Z",
+	"related": [
+		"CVE-2018-18820"
+	],
+	"summary": "icecast2 - security update",
+	"details": "\nA buffer overflow was discovered in the URL-authentication backend of\nthe icecast2, the popular open source streaming media server. If the\nbackend is enabled, then any malicious HTTP client can send a request\nfor specific resource including a crafted header which can overwrite\nthe server's stack contents, leading to denial of service and\npotentially remote code execution.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.4.0-1.1+deb8u2.\n\n\nWe recommend that you upgrade your icecast2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "icecast2",
+				"purl": "pkg:deb/debian/icecast2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.0-1.1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.0-1.1",
+				"2.4.0-1.1+deb8u1",
+				"2.4.0-1.1+deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1588-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1588"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2992-1",
+	"modified": "2023-10-16T00:06:09.673663Z",
+	"published": "2014-07-29T00:00:00Z",
+	"related": [
+		"CVE-2014-3534",
+		"CVE-2014-4667",
+		"CVE-2014-4943"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation:\n\n\n* [CVE-2014-3534](https://security-tracker.debian.org/tracker/CVE-2014-3534)\nMartin Schwidefsky of IBM discovered that the ptrace subsystem does\n not properly sanitize the psw mask value. On s390 systems, an\n unprivileged local user could use this flaw to set address space\n control bits to kernel space combination and thus gain read/write\n access to kernel memory.\n* [CVE-2014-4667](https://security-tracker.debian.org/tracker/CVE-2014-4667)\nGopal Reddy Kodudula of Nokia Siemens Networks discovered that the\n sctp\\_association\\_free function does not properly manage a certain\n backlog value, which allows remote attackers to cause a denial of\n service (socket outage) via a crafted SCTP packet.\n* [CVE-2014-4943](https://security-tracker.debian.org/tracker/CVE-2014-4943)\nSasha Levin discovered a flaw in the Linux kernel's point-to-point\n protocol (PPP) when used with the Layer Two Tunneling Protocol\n (L2TP). An unprivileged local user could use this flaw for privilege\n escalation.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.2.60-1+deb7u3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.14.13-2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.60-1+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2992-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2992"
+		}
+	]
+}

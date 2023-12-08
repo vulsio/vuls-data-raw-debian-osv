@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-276-1",
+	"modified": "2023-06-28T06:25:19.272771Z",
+	"published": "2015-07-18T00:00:00Z",
+	"related": [
+		"CVE-2012-6696",
+		"CVE-2012-6697",
+		"CVE-2015-6674"
+	],
+	"summary": "inspircd - security update",
+	"details": "\nAdam, upstream author of inspircd found the Debian\npatch that fixed [CVE-2012-1836](https://security-tracker.debian.org/tracker/CVE-2012-1836) was incomplete. Furthermore, it\nintroduced an issue, since invalid dns packets caused an infinite loop.\nThis upload corrects these problems.\n\n\nAs of today, no CVEs has been assigned to these Debian-specific flaws.\n\n\nFor the Squeeze distribution, these issues have been fixed in version\n1.1.22+dfsg-4+squeeze2 of inspircd.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "inspircd",
+				"purl": "pkg:deb/debian/inspircd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.22+dfsg-4+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.22+dfsg-4",
+				"1.1.22+dfsg-4+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-276-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-276"
+		}
+	]
+}

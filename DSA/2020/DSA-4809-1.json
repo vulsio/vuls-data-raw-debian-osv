@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4809-1",
+	"modified": "2023-10-16T00:22:00.794891Z",
+	"published": "2020-12-09T00:00:00Z",
+	"related": [
+		"CVE-2020-27351"
+	],
+	"summary": "python-apt - security update",
+	"details": "\nVarious memory and file descriptor leaks were discovered in the Python\ninterface to the APT package management runtime library, which could\nresult in denial of service.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.8.4.2.\n\n\nWe recommend that you upgrade your python-apt packages.\n\n\nFor the detailed security status of python-apt please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/python-apt](https://security-tracker.debian.org/tracker/python-apt)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python-apt",
+				"purl": "pkg:deb/debian/python-apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.4.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.4",
+				"1.8.4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4809-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4809"
+		}
+	]
+}

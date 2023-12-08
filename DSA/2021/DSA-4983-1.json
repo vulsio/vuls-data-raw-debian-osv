@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4983-1",
+	"modified": "2023-10-16T00:15:18.274059Z",
+	"published": "2021-10-10T00:00:00Z",
+	"related": [
+		"CVE-2021-40085"
+	],
+	"summary": "neutron - security update",
+	"details": "\nPavel Toporkov discovered a vulnerability in Neutron, the OpenStack\nvirtual network service, which allowed a reconfiguration of dnsmasq\nvia crafted dhcp\\_extra\\_opts parameters.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2:13.0.7+git.2021.09.27.bace3d1890-0+deb10u1. This update\nalso fixes [\\\nCVE-2021-20267](https://security-tracker.debian.org/tracker/CVE-2021-20267).\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2:17.2.1-0+deb11u1. This update also fixes\n[\\\nCVE-2021-38598](https://security-tracker.debian.org/tracker/CVE-2021-38598).\n\n\nWe recommend that you upgrade your neutron packages.\n\n\nFor the detailed security status of neutron please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/neutron](https://security-tracker.debian.org/tracker/neutron)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "neutron",
+				"purl": "pkg:deb/debian/neutron?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:13.0.7+git.2021.09.27.bace3d1890-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:13.0.2-15"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4983-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "neutron",
+				"purl": "pkg:deb/debian/neutron?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:17.2.1-0+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:17.1.1-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4983-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4983"
+		}
+	]
+}

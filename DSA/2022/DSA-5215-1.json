@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5215-1",
+	"modified": "2023-10-16T00:20:20.498843Z",
+	"published": "2022-08-24T00:00:00Z",
+	"related": [
+		"CVE-2022-31676"
+	],
+	"summary": "open-vm-tools - security update",
+	"details": "\nA vulnerability was discovered in open-vm-tools, an open source\nimplementation of VMware Tools, allowing an unprivileged local guest\nuser to escalate their privileges as root user in the virtual machine.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2:11.2.5-2+deb11u1.\n\n\nWe recommend that you upgrade your open-vm-tools packages.\n\n\nFor the detailed security status of open-vm-tools please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/open-vm-tools](https://security-tracker.debian.org/tracker/open-vm-tools)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "open-vm-tools",
+				"purl": "pkg:deb/debian/open-vm-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:11.2.5-2+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:11.2.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5215-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5215"
+		}
+	]
+}

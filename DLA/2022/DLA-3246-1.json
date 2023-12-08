@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3246-1",
+	"modified": "2023-06-28T06:25:30.000703Z",
+	"published": "2022-12-23T00:00:00Z",
+	"related": [
+		"CVE-2022-29167"
+	],
+	"summary": "node-hawk - security update",
+	"details": "\nIt was discovered that there was an issue in Hawk, an HTTP authentication\nscheme. Hawk used a regular expression to parse `Host` HTTP headers which was\nsubject to regular expression DoS attack. Each added character in the\nattacker's input increased the computation time exponentially.\n\n\n* [CVE-2022-29167](https://security-tracker.debian.org/tracker/CVE-2022-29167)\nHawk is an HTTP authentication scheme providing mechanisms for making\n authenticated HTTP requests with partial cryptographic verification of the\n request and response, covering the HTTP method, request URI, host, and\n optionally the request payload. Hawk used a regular expression to parse\n `Host` HTTP header (`Hawk.utils.parseHost()`), which was subject to regular\n expression DoS attack - meaning each added character in the attacker's\n input increases the computation time exponentially. `parseHost()` was\n patched in `9.0.1` to use built-in `URL` class to parse hostname instead.\n `Hawk.authenticate()` accepts `options` argument. If that contains `host`\n and `port`, those would be used instead of a call to\n `utils.parseHost()`.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n6.0.1+dfsg-1+deb10u1.\n\n\nWe recommend that you upgrade your node-hawk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "node-hawk",
+				"purl": "pkg:deb/debian/node-hawk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.1+dfsg-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.1+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3246-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3246"
+		}
+	]
+}

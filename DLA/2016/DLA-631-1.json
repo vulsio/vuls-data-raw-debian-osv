@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-631-1",
+	"modified": "2023-06-28T06:25:36.945159Z",
+	"published": "2016-09-21T00:00:00Z",
+	"related": [
+		"CVE-2016-1243",
+		"CVE-2016-1244"
+	],
+	"summary": "unadf - security update",
+	"details": "\nIt was discovered that there were two vulnerabilities in unadf, a tool to\nextract files from an Amiga Disk File dump (.adf):\n\n\n* [CVE-2016-1243](https://security-tracker.debian.org/tracker/CVE-2016-1243)\nstack buffer overflow caused by blindly trusting on\n pathname lengths of archived files.\n\n\nStack allocated buffer sysbuf was filled with sprintf() without any\n bounds checking in extracTree() function.\n* [CVE-2016-1244](https://security-tracker.debian.org/tracker/CVE-2016-1244)\nexecution of unsanitized input\n\n\nShell command used for creating directory paths was constructed by\n concatenating names of archived files to the end of the command\n string.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in unadf version\n0.7.11a-3+deb7u1.\n\n\nWe recommend that you upgrade your unadf packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "unadf",
+				"purl": "pkg:deb/debian/unadf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.11a-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.11a-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-631-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-631"
+		}
+	]
+}

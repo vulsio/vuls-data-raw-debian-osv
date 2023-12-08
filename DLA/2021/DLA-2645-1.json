@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2645-1",
+	"modified": "2023-06-28T06:26:39.245854Z",
+	"published": "2021-04-29T00:00:00Z",
+	"related": [
+		"CVE-2019-0161",
+		"CVE-2019-14558",
+		"CVE-2019-14559",
+		"CVE-2019-14562",
+		"CVE-2019-14563",
+		"CVE-2019-14575",
+		"CVE-2019-14584",
+		"CVE-2019-14586",
+		"CVE-2019-14587",
+		"CVE-2021-28210",
+		"CVE-2021-28211"
+	],
+	"summary": "edk2 - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in edk2, firmware for\nvirtual machines. Integer and stack overflows and uncontrolled resource\nconsumption may lead to a denial-of-service or in a worst case scenario,\nallow an authenticated local user to potentially enable escalation of\nprivilege.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0~20161202.7bbe0b3e-1+deb9u2.\n\n\nWe recommend that you upgrade your edk2 packages.\n\n\nFor the detailed security status of edk2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/edk2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "edk2",
+				"purl": "pkg:deb/debian/edk2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0~20161202.7bbe0b3e-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0~20161202.7bbe0b3e-1",
+				"0~20161202.7bbe0b3e-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2645-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2645"
+		}
+	]
+}

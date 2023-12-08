@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1574-1",
+	"modified": "2023-10-16T00:05:29.523615Z",
+	"published": "2008-05-12T00:00:00Z",
+	"related": [
+		"CVE-2008-1233",
+		"CVE-2008-1234",
+		"CVE-2008-1235",
+		"CVE-2008-1236",
+		"CVE-2008-1237"
+	],
+	"summary": "icedove - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Icedove mail\nclient, an unbranded version of the Thunderbird client. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-1233](https://security-tracker.debian.org/tracker/CVE-2008-1233)\nmoz\\_bug\\_r\\_a4 discovered that variants of [CVE-2007-3738](https://security-tracker.debian.org/tracker/CVE-2007-3738) and\n [CVE-2007-5338](https://security-tracker.debian.org/tracker/CVE-2007-5338) allow the execution of arbitrary code through\n XPCNativeWrapper.\n* [CVE-2008-1234](https://security-tracker.debian.org/tracker/CVE-2008-1234)\nmoz\\_bug\\_r\\_a4 discovered that insecure handling of event\n handlers could lead to cross-site scripting.\n* [CVE-2008-1235](https://security-tracker.debian.org/tracker/CVE-2008-1235)\nBoris Zbarsky, Johnny Stenback and moz\\_bug\\_r\\_a4 discovered\n that incorrect principal handling could lead to cross-site\n scripting and the execution of arbitrary code.\n* [CVE-2008-1236](https://security-tracker.debian.org/tracker/CVE-2008-1236)\nTom Ferris, Seth Spitzer, Martin Wargers, John Daggett and Mats\n Palmgren discovered crashes in the layout engine, which might\n allow the execution of arbitrary code.\n* [CVE-2008-1237](https://security-tracker.debian.org/tracker/CVE-2008-1237)\ngeorgi, tgirmann and Igor Bukanov discovered crashes in the\n Javascript engine, which might allow the execution of arbitrary\n code.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.5.0.13+1.5.0.15b.dfsg1+prepatch080417a-0etch1.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "icedove",
+				"purl": "pkg:deb/debian/icedove?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.0.13+1.5.0.15b.dfsg1+prepatch080417a-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.0.10.dfsg1-3",
+				"1.5.0.12.dfsg1-0etch1",
+				"1.5.0.12.dfsg1-0etch1+lenny1",
+				"1.5.0.13+1.5.0.14b.dfsg1-0etch1",
+				"1.5.0.13+1.5.0.14b.dfsg1-0lenny1",
+				"1.5.0.13+1.5.0.15a.dfsg1-0etch1",
+				"1.5.0.13+1.5.0.15b.dfsg1-0etch1",
+				"1.5.0.13+1.5.0.15b.dfsg1-0etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1574-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1574"
+		}
+	]
+}

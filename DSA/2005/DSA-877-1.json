@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-877-1",
+	"modified": "2023-10-16T00:29:47.388857Z",
+	"published": "2005-10-28T00:00:00Z",
+	"related": [
+		"CVE-2005-3123",
+		"CVE-2005-3424",
+		"CVE-2005-3425"
+	],
+	"summary": "gnump3d - cross-site-scripting, directory traversal",
+	"details": "\nSteve Kemp discovered two vulnerabilities in gnump3d, a streaming\nserver for MP3 and OGG files. The Common Vulnerabilities and\nExposures Project identifies the following problems:\n\n\n* [CVE-2005-3122](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3122)\nThe 404 error page does not strip malicious javascript content\n from the resulting page, which would be executed in the victims\n browser.\n* [CVE-2005-3123](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3123)\nBy using specially crafting URLs it is possible to read arbitrary\n files to which the user of the streaming server has access to.\n\n\nThe old stable distribution (woody) does not contain a gnump3d package.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.9.3-1sarge2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.9.6-1.\n\n\nWe recommend that you upgrade your gnump3d package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gnump3d",
+				"purl": "pkg:deb/debian/gnump3d?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.3-1sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.3-1sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-877-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-877"
+		}
+	]
+}

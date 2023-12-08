@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3662-1",
+	"modified": "2023-10-16T00:12:13.187423Z",
+	"published": "2016-09-08T00:00:00Z",
+	"related": [
+		"CVE-2016-7142"
+	],
+	"summary": "inspircd - security update",
+	"details": "\nIt was discovered that incorrect SASL authentication in the Inspircd\nIRC server may lead to users impersonating other users.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.0.17-1+deb8u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.0.23-1.\n\n\nWe recommend that you upgrade your inspircd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "inspircd",
+				"purl": "pkg:deb/debian/inspircd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.17-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.17-1",
+				"2.0.17-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3662-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3662"
+		}
+	]
+}

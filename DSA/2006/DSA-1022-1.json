@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1022-1",
+	"modified": "2023-10-16T00:06:30.077081Z",
+	"published": "2006-04-04T00:00:00Z",
+	"related": [
+		"CVE-2005-3146",
+		"CVE-2005-3147",
+		"CVE-2005-3148"
+	],
+	"summary": "storebackup - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the backup utility \nstorebackup. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2005-3146](https://security-tracker.debian.org/tracker/CVE-2005-3146)\nStorebackup creates a temporary file predictably, which can be\n exploited to overwrite arbitrary files on the system with a symlink\n attack.\n* [CVE-2005-3147](https://security-tracker.debian.org/tracker/CVE-2005-3147)\nThe backup root directory wasn't created with fixed permissions, which may lead to\n inproper permissions if the umask is too lax.\n* [CVE-2005-3148](https://security-tracker.debian.org/tracker/CVE-2005-3148)\nThe user and group rights of symlinks are set incorrectly when making\n or restoring a backup, which may leak sensitive data.\n\n\nThe old stable distribution (woody) doesn't contain storebackup packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.18.4-2sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.19-2.\n\n\nWe recommend that you upgrade your storebackup package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "storebackup",
+				"purl": "pkg:deb/debian/storebackup?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.18.4-2sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.18.4-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1022-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1022"
+		}
+	]
+}

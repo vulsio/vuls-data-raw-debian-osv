@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1661-1",
+	"modified": "2023-06-28T06:19:59.942257Z",
+	"published": "2019-02-06T00:00:00Z",
+	"related": [
+		"CVE-2018-20743"
+	],
+	"summary": "mumble - security update",
+	"details": "\nIt has been found that the mumble-server mishandles multiple\nconcurrent requests that are persisted in the database, which allows\nremote attackers to cause a denial of service (daemon hang or crash)\nvia a message flood. With the new security update a rate limiter is\nadded with Leaky-Bucket algorithm.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.2.8-2+deb8u1.\n\n\nWe recommend that you upgrade your mumble packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mumble",
+				"purl": "pkg:deb/debian/mumble?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.8-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.8-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1661-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1661"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-933-1",
+	"modified": "2023-06-28T06:32:48.505745Z",
+	"published": "2017-05-07T00:00:00Z",
+	"related": [
+		"CVE-2017-8114"
+	],
+	"summary": "roundcube - security update",
+	"details": "\nRoundcube Webmail allows arbitrary password resets by authenticated users.\nThe issue is caused by an improperly restricted exec call in the virtualmin\nand sasl drivers of the password plugin.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.7.2-9+deb7u7.\n\n\nWe recommend that you upgrade your roundcube packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "roundcube",
+				"purl": "pkg:deb/debian/roundcube?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.2-9+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.2-9",
+				"0.7.2-9+deb7u1",
+				"0.7.2-9+deb7u2",
+				"0.7.2-9+deb7u3",
+				"0.7.2-9+deb7u4",
+				"0.7.2-9+deb7u5",
+				"0.7.2-9+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-933-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-933"
+		}
+	]
+}

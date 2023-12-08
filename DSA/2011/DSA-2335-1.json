@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2335-1",
+	"modified": "2023-10-16T00:11:09.395922Z",
+	"published": "2011-11-05T00:00:00Z",
+	"related": [
+		"CVE-2011-2770"
+	],
+	"summary": "man2html - missing input sanitization",
+	"details": "\nTim Starling discovered that the Debian-native CGI wrapper for man2html,\na program to convert UNIX man pages to HTML, is not properly escaping\nuser-supplied input when displaying various error messages. A remote\nattacker can exploit this flaw to conduct cross-site scripting (XSS)\nattacks.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.6f-3+lenny1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.6f+repack-1+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1.6g-6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6g-6.\n\n\nWe recommend that you upgrade your man2html packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "man2html",
+				"purl": "pkg:deb/debian/man2html?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6f-3+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6f-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2335-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "man2html",
+				"purl": "pkg:deb/debian/man2html?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6f+repack-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6f+repack-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2335-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2335"
+		}
+	]
+}

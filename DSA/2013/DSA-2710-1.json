@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2710-1",
+	"modified": "2023-10-16T00:11:27.179250Z",
+	"published": "2013-06-18T00:00:00Z",
+	"related": [
+		"CVE-2013-2153",
+		"CVE-2013-2154",
+		"CVE-2013-2155",
+		"CVE-2013-2156"
+	],
+	"summary": "xml-security-c - several",
+	"details": "\nJames Forshaw from Context Information Security discovered several\nvulnerabilities in xml-security-c, an implementation of the XML Digital\nSecurity specification. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2013-2153](https://security-tracker.debian.org/tracker/CVE-2013-2153)\nThe implementation of XML digital signatures in the Santuario-C++\n library is vulnerable to a spoofing issue allowing an attacker to\n reuse existing signatures with arbitrary content.\n* [CVE-2013-2154](https://security-tracker.debian.org/tracker/CVE-2013-2154)\nA stack overflow, possibly leading to arbitrary code execution,\n exists in the processing of malformed XPointer expressions in the\n XML Signature Reference processing code.\n* [CVE-2013-2155](https://security-tracker.debian.org/tracker/CVE-2013-2155)\nA bug in the processing of the output length of an HMAC-based XML\n Signature would cause a denial of service when processing specially\n chosen input.\n* [CVE-2013-2156](https://security-tracker.debian.org/tracker/CVE-2013-2156)\nA heap overflow exists in the processing of the PrefixList attribute\n optionally used in conjunction with Exclusive Canonicalization,\n potentially allowing arbitrary code execution.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1.5.1-3+squeeze2.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.6.1-5+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.6.1-6.\n\n\nWe recommend that you upgrade your xml-security-c packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "xml-security-c",
+				"purl": "pkg:deb/debian/xml-security-c?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.1-3+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.1-3",
+				"1.5.1-3+squeeze1",
+				"1.5.1-3+squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2710-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xml-security-c",
+				"purl": "pkg:deb/debian/xml-security-c?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.1-5+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.1-5",
+				"1.6.1-5+deb7u1~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2710-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2710"
+		}
+	]
+}

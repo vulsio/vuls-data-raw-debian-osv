@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-375",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-08-29T00:00:00Z",
+	"related": [
+		"CVE-2003-0707",
+		"CVE-2003-0708"
+	],
+	"summary": "node - buffer overflow, format string",
+	"details": "\nMorgan alias SM6TKY discovered and fixed several security related\nproblems in LinuxNode, an Amateur Packet Radio Node program. The\nbuffer overflow he discovered can be used to gain unauthorised root\naccess and can be remotely triggered.\n\n\nFor the stable distribution (woody) this problem has been\nfixed in version 0.3.0a-2woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.3.2-1.\n\n\nWe recommend that you upgrade your node packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "node",
+				"purl": "pkg:deb/debian/node?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.3.0a-2woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-375.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-375"
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1918-1",
+	"modified": "2023-10-16T00:10:46.441532Z",
+	"published": "2009-10-25T00:00:00Z",
+	"related": [
+		"CVE-2009-3696",
+		"CVE-2009-3697"
+	],
+	"summary": "phpmyadmin - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in phpMyAdmin, a tool\nto administer MySQL over the web. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2009-3696](https://security-tracker.debian.org/tracker/CVE-2009-3696)\nCross-site scripting (XSS) vulnerability allows remote attackers to\n inject arbitrary web script or HTML via a crafted MySQL table name.\n* [CVE-2009-3697](https://security-tracker.debian.org/tracker/CVE-2009-3697)\nSQL injection vulnerability in the PDF schema generator functionality \n allows remote attackers to execute arbitrary SQL commands. This issue\n does not apply to the version in Debian 4.0 Etch.\n\n\nAdditionally, extra fortification has been added for the web based setup.php\nscript. Although the shipped web server configuration should ensure that\nthis script is protected, in practice this turned out not always to be the\ncase. The config.inc.php file is not writable anymore by the webserver user.\nSee README.Debian for details on how to enable the setup.php\nscript if and when you need it.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 2.9.1.1-13.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.11.8.1-5+lenny3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.2.2.1-1.\n\n\nWe recommend that you upgrade your phpmyadmin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.9.1.1-13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.9.1.1-10",
+				"4:2.9.1.1-11",
+				"4:2.9.1.1-3",
+				"4:2.9.1.1-4",
+				"4:2.9.1.1-5",
+				"4:2.9.1.1-6",
+				"4:2.9.1.1-7",
+				"4:2.9.1.1-8",
+				"4:2.9.1.1-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1918-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.11.8.1-5+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.11.8.1-5",
+				"4:2.11.8.1-5+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1918-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1918"
+		}
+	]
+}

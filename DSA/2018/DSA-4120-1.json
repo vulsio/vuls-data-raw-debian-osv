@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4120-1",
+	"modified": "2023-10-16T00:16:49.605052Z",
+	"published": "2018-02-22T00:00:00Z",
+	"related": [
+		"CVE-2017-13166",
+		"CVE-2017-5754",
+		"CVE-2018-5750"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may\nlead to a privilege escalation, denial of service or information leaks.\n\n\n* [CVE-2017-5715](https://security-tracker.debian.org/tracker/CVE-2017-5715)\nMultiple researchers have discovered a vulnerability in various\n processors supporting speculative execution, enabling an attacker\n controlling an unprivileged process to read memory from arbitrary\n addresses, including from the kernel and all other processes running on\n the system.\n\n\nThis specific attack has been named Spectre variant 2 (branch target\n injection) and is mitigated in the Linux kernel for the Intel x86-64\n architecture by using the retpoline compiler feature which allows\n indirect branches to be isolated from speculative execution.\n* [CVE-2017-5754](https://security-tracker.debian.org/tracker/CVE-2017-5754)\nMultiple researchers have discovered a vulnerability in Intel\n processors, enabling an attacker controlling an unprivileged process to\n read memory from arbitrary addresses, including from the kernel and all\n other processes running on the system.\n\n\nThis specific attack has been named Meltdown and is addressed in the\n Linux kernel on the powerpc/ppc64el architectures by flushing the L1\n data cache on exit from kernel mode to user mode (or from hypervisor to\n kernel).\n\n\nThis works on Power7, Power8 and Power9 processors.\n* [CVE-2017-13166](https://security-tracker.debian.org/tracker/CVE-2017-13166)\nA bug in the 32-bit compatibility layer of the v4l2 IOCTL handling code\n has been found. Memory protections ensuring user-provided buffers always\n point to userland memory were disabled, allowing destination address to\n be in kernel space. This bug could be exploited by an attacker to\n overwrite kernel memory from an unprivileged userland process, leading\n to privilege escalation.\n* [CVE-2018-5750](https://security-tracker.debian.org/tracker/CVE-2018-5750)\nAn information leak has been found in the Linux kernel. The\n acpi\\_smbus\\_hc\\_add() prints a kernel address in the kernel log at every\n boot, which could be used by an attacker on the system to defeat kernel\n ASLR.\n\n\nAdditionnaly to those vulnerability, some mitigations for [CVE-2017-5753](https://security-tracker.debian.org/tracker/CVE-2017-5753) are\nincluded in this release.\n\n\n* [CVE-2017-5753](https://security-tracker.debian.org/tracker/CVE-2017-5753)\nMultiple researchers have discovered a vulnerability in various\n processors supporting speculative execution, enabling an attacker\n controlling an unprivileged process to read memory from arbitrary\n addresses, including from the kernel and all other processes running on\n the system.\n\n\nThis specific attack has been named Spectre variant 1 (bounds-check\n bypass) and is mitigated in the Linux kernel architecture by identifying\n vulnerable code sections (array bounds checking followed by array\n access) and replacing the array access with the speculation-safe\n array\\_index\\_nospec() function.\n\n\nMore use sites will be added over time.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.82-1+deb9u2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.82-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1",
+				"4.9.30-2+deb9u3",
+				"4.9.30-2+deb9u4",
+				"4.9.30-2+deb9u5",
+				"4.9.30-2+deb9u5~bpo8+1",
+				"4.9.47-1",
+				"4.9.51-1",
+				"4.9.51-1~bpo8+1",
+				"4.9.65-1",
+				"4.9.65-2",
+				"4.9.65-3",
+				"4.9.65-3+deb9u1",
+				"4.9.65-3+deb9u1~bpo8+1",
+				"4.9.65-3+deb9u2",
+				"4.9.65-3+deb9u2~bpo8+1",
+				"4.9.65-3~bpo8+1",
+				"4.9.80-1",
+				"4.9.80-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4120-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4120"
+		}
+	]
+}

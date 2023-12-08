@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-102-1",
+	"modified": "2023-06-28T06:20:08.577439Z",
+	"published": "2014-12-08T00:00:00Z",
+	"related": [
+		"CVE-2014-8767",
+		"CVE-2014-8769",
+		"CVE-2014-9140"
+	],
+	"summary": "tcpdump - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in tcpdump, a command-line\nnetwork traffic analyzer. These vulnerabilities might result in denial\nof service, leaking sensitive information from memory or, potentially,\nexecution of arbitrary code.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in tcpdump version 4.1.1-1+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tcpdump",
+				"purl": "pkg:deb/debian/tcpdump?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.1-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-102-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-102"
+		}
+	]
+}

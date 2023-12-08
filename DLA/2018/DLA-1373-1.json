@@ -1,0 +1,94 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1373-1",
+	"modified": "2023-06-28T06:20:36.117130Z",
+	"published": "2018-05-09T00:00:00Z",
+	"related": [
+		"CVE-2018-10545",
+		"CVE-2018-10547",
+		"CVE-2018-10548"
+	],
+	"summary": "php5 - security update",
+	"details": "\nSeveral issues have been discovered in PHP (recursive acronym for PHP:\nHypertext Preprocessor), a widely-used open source general-purpose\nscripting language that is especially suited for web development and can\nbe embedded into HTML.\n\n\n* [CVE-2018-10545](https://security-tracker.debian.org/tracker/CVE-2018-10545)\nDumpable FPM child processes allow bypassing opcache access\n controls because fpm\\_unix.c makes a PR\\_SET\\_DUMPABLE prctl call,\n allowing one user (in a multiuser environment) to obtain sensitive\n information from the process memory of a second user's PHP\n applications by running gcore on the PID of the PHP-FPM worker\n process.\n* [CVE-2018-10547](https://security-tracker.debian.org/tracker/CVE-2018-10547)\nThere is a reflected XSS on the PHAR 403 and 404 error pages via\n request data of a request for a .phar file. NOTE: this vulnerability\n exists because of an incomplete fix for [CVE-2018-5712](https://security-tracker.debian.org/tracker/CVE-2018-5712).\n* [CVE-2018-10548](https://security-tracker.debian.org/tracker/CVE-2018-10548)\next/ldap/ldap.c allows remote LDAP servers to cause a denial of\n service (NULL pointer dereference and application crash) because of\n mishandling of the ldap\\_get\\_dn return value.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.4.45-0+deb7u14.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.45-0+deb7u14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.36-0+deb7u3",
+				"5.4.38-0+deb7u1",
+				"5.4.39-0+deb7u1",
+				"5.4.39-0+deb7u2",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.41-0+deb7u1",
+				"5.4.44-0+deb7u1",
+				"5.4.45-0+deb7u1",
+				"5.4.45-0+deb7u10",
+				"5.4.45-0+deb7u11",
+				"5.4.45-0+deb7u12",
+				"5.4.45-0+deb7u13",
+				"5.4.45-0+deb7u2",
+				"5.4.45-0+deb7u3",
+				"5.4.45-0+deb7u4",
+				"5.4.45-0+deb7u5",
+				"5.4.45-0+deb7u6",
+				"5.4.45-0+deb7u7",
+				"5.4.45-0+deb7u8",
+				"5.4.45-0+deb7u9",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1373-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1373"
+		}
+	]
+}

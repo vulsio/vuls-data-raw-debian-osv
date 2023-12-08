@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2582-1",
+	"modified": "2023-06-28T06:21:19.540601Z",
+	"published": "2021-03-08T00:00:00Z",
+	"related": [
+		"CVE-2019-0222"
+	],
+	"summary": "mqtt-client - security update",
+	"details": "\nA vulnerability was discovered in mqtt-client wher unmarshalling\ncorrupt MQTT frame can lead to broker Out of Memory exception making\nit unresponsive.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.14-1+deb9u1.\n\n\nWe recommend that you upgrade your mqtt-client packages.\n\n\nFor the detailed security status of mqtt-client please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mqtt-client>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mqtt-client",
+				"purl": "pkg:deb/debian/mqtt-client?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.14-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2582-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2582"
+		}
+	]
+}

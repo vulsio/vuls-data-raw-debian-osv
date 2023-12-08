@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2377-1",
+	"modified": "2023-06-28T06:21:16.296637Z",
+	"published": "2020-09-28T00:00:00Z",
+	"related": [
+		"CVE-2018-15518",
+		"CVE-2018-19869",
+		"CVE-2018-19870",
+		"CVE-2018-19871",
+		"CVE-2018-19872",
+		"CVE-2018-19873",
+		"CVE-2020-17507"
+	],
+	"summary": "qt4-x11 - security update",
+	"details": "\nSeveral vulnerabilities were fixed in qt4-x11, the legacy version\nof the Qt toolkit.\n\n\n* [CVE-2018-15518](https://security-tracker.debian.org/tracker/CVE-2018-15518)\nDouble-free or corruption in QXmlStreamReader\n during parsing of a specially crafted illegal XML document.\n* [CVE-2018-19869](https://security-tracker.debian.org/tracker/CVE-2018-19869)\nA malformed SVG image causes a segmentation fault.\n* [CVE-2018-19870](https://security-tracker.debian.org/tracker/CVE-2018-19870)\nA malformed GIF image causes a NULL pointer\n dereference in QGifHandler resulting in a segmentation fault.\n* [CVE-2018-19871](https://security-tracker.debian.org/tracker/CVE-2018-19871)\nUncontrolled Resource Consumption in QTgaFile.\n* [CVE-2018-19872](https://security-tracker.debian.org/tracker/CVE-2018-19872)\nA malformed PPM image causes a crash.\n* [CVE-2018-19873](https://security-tracker.debian.org/tracker/CVE-2018-19873)\nQBmpHandler segfault on malformed BMP file.\n* [CVE-2020-17507](https://security-tracker.debian.org/tracker/CVE-2020-17507)\nBuffer over-read in the XBM parser.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4:4.8.7+dfsg-11+deb9u1.\n\n\nWe recommend that you upgrade your qt4-x11 packages.\n\n\nFor the detailed security status of qt4-x11 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qt4-x11>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "qt4-x11",
+				"purl": "pkg:deb/debian/qt4-x11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:4.8.7+dfsg-11+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:4.8.7+dfsg-11"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2377-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2377"
+		}
+	]
+}

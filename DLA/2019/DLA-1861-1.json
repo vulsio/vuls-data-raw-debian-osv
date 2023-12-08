@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1861-1",
+	"modified": "2023-06-28T06:21:01.654205Z",
+	"published": "2019-07-22T00:00:00Z",
+	"related": [
+		"CVE-2018-3977",
+		"CVE-2019-12216",
+		"CVE-2019-12217",
+		"CVE-2019-12218",
+		"CVE-2019-12219",
+		"CVE-2019-12220",
+		"CVE-2019-12221",
+		"CVE-2019-12222",
+		"CVE-2019-5051",
+		"CVE-2019-5052",
+		"CVE-2019-7635"
+	],
+	"summary": "libsdl2-image - security update",
+	"details": "\nThe following issues have been found in libsdl2-image, the image file loading\nlibrary.\n\n\n* [CVE-2018-3977](https://security-tracker.debian.org/tracker/CVE-2018-3977)\nHeap buffer overflow in IMG\\_xcf.c. This vulnerability might be leveraged by\n remote attackers to cause remote code execution or denial of service via a\n crafted XCF file.\n* [CVE-2019-5052](https://security-tracker.debian.org/tracker/CVE-2019-5052)\nInteger overflow and subsequent buffer overflow in IMG\\_pcx.c. This\n vulnerability might be leveraged by remote attackers to cause remote code\n execution or denial of service via a crafted PCX file.\n* [CVE-2019-7635](https://security-tracker.debian.org/tracker/CVE-2019-7635)\nHeap buffer overflow affecting Blit1to4, in IMG\\_bmp.c. This vulnerability\n might be leveraged by remote attackers to cause denial of service or any\n other unspecified impact via a crafted BMP file.\n* [CVE-2019-12216](https://security-tracker.debian.org/tracker/CVE-2019-12216)\n[CVE-2019-12217](https://security-tracker.debian.org/tracker/CVE-2019-12217),\n[CVE-2019-12218](https://security-tracker.debian.org/tracker/CVE-2019-12218),\n[CVE-2019-12219](https://security-tracker.debian.org/tracker/CVE-2019-12219),\n[CVE-2019-12220](https://security-tracker.debian.org/tracker/CVE-2019-12220),\n[CVE-2019-12221](https://security-tracker.debian.org/tracker/CVE-2019-12221),\n[CVE-2019-12222](https://security-tracker.debian.org/tracker/CVE-2019-12222)\nMultiple out-of-bound read and write accesses affecting IMG\\_LoadPCX\\_RW, in\n IMG\\_pcx.c. These vulnerabilities might be leveraged by remote attackers to\n cause denial of service or any other unspecified impact via a crafted PCX\n file.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.0.0+dfsg-3+deb8u2.\n\n\nWe recommend that you upgrade your libsdl2-image packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libsdl2-image",
+				"purl": "pkg:deb/debian/libsdl2-image?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0+dfsg-3+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0+dfsg-3",
+				"2.0.0+dfsg-3+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1861-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1861"
+		}
+	]
+}

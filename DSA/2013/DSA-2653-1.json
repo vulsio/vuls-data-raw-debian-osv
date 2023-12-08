@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2653-1",
+	"modified": "2023-10-16T00:11:23.822567Z",
+	"published": "2013-03-26T00:00:00Z",
+	"related": [
+		"CVE-2012-6096"
+	],
+	"summary": "icinga - buffer overflow",
+	"details": "\nIt was discovered that Icinga, a host and network monitoring system,\ncontains several buffer overflows in the history.cgi CGI program.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.0.2-2+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1.7.1-5.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.7.1-5.\n\n\nWe recommend that you upgrade your icinga packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "icinga",
+				"purl": "pkg:deb/debian/icinga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2653-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2653"
+		}
+	]
+}

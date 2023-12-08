@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-613-1",
+	"modified": "2023-06-28T06:34:13.907909Z",
+	"published": "2016-09-08T00:00:00Z",
+	"related": [
+		"CVE-2014-9587",
+		"CVE-2015-1433",
+		"CVE-2016-4069"
+	],
+	"summary": "roundcube - security update",
+	"details": "\nMultiple CSRF and XSS issues allow remote attackers to hijack the\nauthentication and execute roundcube operations without the consent of the\nuser. In some cases, this could result in data loss or data theft.\n\n\n* [CVE-2014-9587](https://security-tracker.debian.org/tracker/CVE-2014-9587)\nMultiple cross-site request forgery (CSRF) vulnerabilities in\n allow remote attackers to hijack the authentication of unspecified\n victims via unknown vectors, related to (1) address book operations or\n the (2) ACL or (3) Managesieve plugins.\n* [CVE-2015-1433](https://security-tracker.debian.org/tracker/CVE-2015-1433)\nIncorrect quotation logic during sanitization of style HTML\n attribute allows remote attackers to execute arbitrary\n javascript code on the user's browser.\n* [CVE-2016-4069](https://security-tracker.debian.org/tracker/CVE-2016-4069)\nCross-site request forgery (CSRF) vulnerability allows remote\n attackers to hijack the authentication of users for requests that\n download attachments and cause a denial of service (disk consumption)\n via unspecified vectors.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.7.2-9+deb7u4.\n\n\nWe recommend that you upgrade your roundcube packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "roundcube",
+				"purl": "pkg:deb/debian/roundcube?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.2-9+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.2-9",
+				"0.7.2-9+deb7u1",
+				"0.7.2-9+deb7u2",
+				"0.7.2-9+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-613-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-613"
+		}
+	]
+}

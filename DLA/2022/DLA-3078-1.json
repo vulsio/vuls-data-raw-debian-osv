@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3078-1",
+	"modified": "2023-06-28T06:21:27.282227Z",
+	"published": "2022-08-20T00:00:00Z",
+	"related": [
+		"CVE-2022-23803",
+		"CVE-2022-23804",
+		"CVE-2022-23946",
+		"CVE-2022-23947"
+	],
+	"summary": "kicad - security update",
+	"details": "\nKiCad is a suite of programs for the creation of printed circuit boards.\nIt includes a schematic editor, a PCB layout tool, support tools and a 3D\nviewer to display a finished & fully populated PCB.\n\n\nSeveral buffer-overflows were discovered in the Gerber Viewer and excellon\nfile parser, that could lead to code execution when opening a\nmaliciously-crafted file.\n\n\n* [CVE-2022-23803](https://security-tracker.debian.org/tracker/CVE-2022-23803)\nA stack-based buffer overflow vulnerability exists in the Gerber Viewer\n gerber and excellon ReadXYCoord coordinate parsing functionality of KiCad\n EDA.\n* [CVE-2022-23804](https://security-tracker.debian.org/tracker/CVE-2022-23804)\nA stack-based buffer overflow vulnerability exists in the Gerber Viewer\n gerber and excellon ReadIJCoord coordinate parsing functionality of KiCad\n EDA.\n* [CVE-2022-23946](https://security-tracker.debian.org/tracker/CVE-2022-23946)\nA stack-based buffer overflow vulnerability exists in the Gerber Viewer\n gerber and excellon GCodeNumber parsing functionality of KiCad EDA.\n* [CVE-2022-23947](https://security-tracker.debian.org/tracker/CVE-2022-23947)\nA stack-based buffer overflow vulnerability exists in the Gerber Viewer\n gerber and excellon DCodeNumber parsing functionality of KiCad EDA.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n5.0.2+dfsg1-1+deb10u1.\nThese problems were previously dealt with in DLA-2998-1 for Debian 9 stretch,\nbut the buster update wasn't applied, at the time.\n\n\nWe recommend that you upgrade your kicad packages.\n\n\nFor the detailed security status of kicad please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/kicad>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "kicad",
+				"purl": "pkg:deb/debian/kicad?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.2+dfsg1-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.2+dfsg1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3078-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3078"
+		}
+	]
+}

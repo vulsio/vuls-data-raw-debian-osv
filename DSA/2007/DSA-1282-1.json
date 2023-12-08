@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1282-1",
+	"modified": "2023-10-16T00:10:19.101380Z",
+	"published": "2007-04-26T00:00:00Z",
+	"related": [
+		"CVE-2007-1286",
+		"CVE-2007-1380",
+		"CVE-2007-1521",
+		"CVE-2007-1583",
+		"CVE-2007-1711",
+		"CVE-2007-1718",
+		"CVE-2007-1777"
+	],
+	"summary": "php4",
+	"details": "\nSeveral remote vulnerabilities have been discovered in PHP, a\nserver-side, HTML-embedded scripting language, which may lead to the\nexecution of arbitrary code. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2007-1286](https://security-tracker.debian.org/tracker/CVE-2007-1286)\nStefan Esser discovered an overflow in the object reference handling\n code of the unserialize() function, which allows the execution of\n arbitrary code if malformed input is passed from an application.\n* [CVE-2007-1380](https://security-tracker.debian.org/tracker/CVE-2007-1380)\nStefan Esser discovered that the session handler performs\n insufficient validation of variable name length values, which allows\n information disclosure through a heap information leak.\n* [CVE-2007-1521](https://security-tracker.debian.org/tracker/CVE-2007-1521)\nStefan Esser discovered a double free vulnerability in the\n session\\_regenerate\\_id() function, which allows the execution of\n arbitrary code.\n* [CVE-2007-1711](https://security-tracker.debian.org/tracker/CVE-2007-1711)\nStefan Esser discovered a double free vulnerability in the session\n management code, which allows the execution of arbitrary code.\n* [CVE-2007-1718](https://security-tracker.debian.org/tracker/CVE-2007-1718)\nStefan Esser discovered that the mail() function performs\n insufficient validation of folded mail headers, which allows mail\n header injection.\n* [CVE-2007-1777](https://security-tracker.debian.org/tracker/CVE-2007-1777)\nStefan Esser discovered that the extension to handle ZIP archives\n performs insufficient length checks, which allows the execution of\n arbitrary code.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 4.3.10-20.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 4.4.4-8+etch2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.4.6-1. php4 will be removed from sid; thus you are strongly\nadvised to migrate to php5 if you prefer to follow the unstable\ndistribution.\n\n\nWe recommend that you upgrade your PHP packages. Packages for the arm,\nm68k, mips and mipsel architectures are not yet available. They will be\nprovided later.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "php4",
+				"purl": "pkg:deb/debian/php4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:4.3.10-20"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:4.3.10-15",
+				"4:4.3.10-16",
+				"4:4.3.10-17",
+				"4:4.3.10-18",
+				"4:4.3.10-19"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1282-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "php4",
+				"purl": "pkg:deb/debian/php4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:4.4.4-8+etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:4.4.4-8+etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1282-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1282"
+		}
+	]
+}

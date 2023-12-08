@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4028-1",
+	"modified": "2023-10-16T00:12:35.014436Z",
+	"published": "2017-11-09T00:00:00Z",
+	"related": [
+		"CVE-2017-15098",
+		"CVE-2017-15099"
+	],
+	"summary": "postgresql-9.6 - security update",
+	"details": "\nSeveral vulnerabilities have been found in the PostgreSQL database system:\n\n\n* [CVE-2017-15098](https://security-tracker.debian.org/tracker/CVE-2017-15098)\nDenial of service and potential memory disclosure in the\n json\\_populate\\_recordset() and jsonb\\_populate\\_recordset() functions\n* [CVE-2017-15099](https://security-tracker.debian.org/tracker/CVE-2017-15099)\nInsufficient permissions checks in INSERT ... ON CONFLICT DO UPDATE\n statements.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 9.6.6-0+deb9u1.\n\n\nWe recommend that you upgrade your postgresql-9.6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "postgresql-9.6",
+				"purl": "pkg:deb/debian/postgresql-9.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.6.6-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.6.3-3",
+				"9.6.3-4",
+				"9.6.4-0+deb9u1",
+				"9.6.4-1",
+				"9.6.5-0+deb9u1",
+				"9.6.5-0+deb9u1~bpo8+1",
+				"9.6.5-1",
+				"9.6.6-0+deb9u1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4028-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4028"
+		}
+	]
+}

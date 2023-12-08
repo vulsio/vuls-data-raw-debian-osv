@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2614-1",
+	"modified": "2023-06-28T06:25:17.278969Z",
+	"published": "2021-04-01T00:00:00Z",
+	"related": [
+		"CVE-2021-28831"
+	],
+	"summary": "busybox - security update",
+	"details": "\nThe gunzip decompressor of Busybox, tiny utilities for small and embedded\nsystems, mishandled the error bit on the huft\\_build result pointer, with a\nresultant invalid free or segmentation fault, via malformed gzip data.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1:1.22.0-19+deb9u2.\n\n\nWe recommend that you upgrade your busybox packages.\n\n\nFor the detailed security status of busybox please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/busybox>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "busybox",
+				"purl": "pkg:deb/debian/busybox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.22.0-19+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.22.0-19",
+				"1:1.22.0-19+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2614-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2614"
+		}
+	]
+}

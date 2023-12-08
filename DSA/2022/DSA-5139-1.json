@@ -1,0 +1,99 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5139-1",
+	"modified": "2023-10-16T00:20:37.786135Z",
+	"published": "2022-05-17T00:00:00Z",
+	"related": [
+		"CVE-2022-1292"
+	],
+	"summary": "openssl - security update",
+	"details": "\nElison Niven discovered that the c\\_rehash script included in OpenSSL did\nnot sanitise shell meta characters which could result in the execution\nof arbitrary commands.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 1.1.1n-0+deb10u2.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.1.1n-0+deb11u2.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssl](https://security-tracker.debian.org/tracker/openssl)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1n-0+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1c-1",
+				"1.1.1d-0+deb10u1",
+				"1.1.1d-0+deb10u2",
+				"1.1.1d-0+deb10u3",
+				"1.1.1d-0+deb10u4",
+				"1.1.1d-0+deb10u5",
+				"1.1.1d-0+deb10u6",
+				"1.1.1d-0+deb10u7",
+				"1.1.1d-0+deb10u8",
+				"1.1.1d-1",
+				"1.1.1d-2",
+				"1.1.1e-1",
+				"1.1.1f-1",
+				"1.1.1g-1",
+				"1.1.1h-1",
+				"1.1.1i-1",
+				"1.1.1i-2",
+				"1.1.1i-3",
+				"1.1.1j-1",
+				"1.1.1k-1",
+				"1.1.1l-1",
+				"1.1.1m-1",
+				"1.1.1n-0+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5139-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1n-0+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1k-1",
+				"1.1.1k-1+deb11u1",
+				"1.1.1k-1+deb11u2",
+				"1.1.1l-1",
+				"1.1.1m-0+deb11u1",
+				"1.1.1m-1",
+				"1.1.1n-0+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5139-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5139"
+		}
+	]
+}

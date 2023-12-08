@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3142-1",
+	"modified": "2023-10-16T00:06:13.995508Z",
+	"published": "2015-01-27T00:00:00Z",
+	"related": [
+		"CVE-2012-6656",
+		"CVE-2014-6040",
+		"CVE-2014-7817",
+		"CVE-2015-0235"
+	],
+	"summary": "eglibc - security update",
+	"details": "\nSeveral vulnerabilities have been fixed in eglibc, Debian's version of\nthe GNU C library:\n\n\n* [CVE-2015-0235](https://security-tracker.debian.org/tracker/CVE-2015-0235)\nQualys discovered that the gethostbyname and gethostbyname2\n functions were subject to a buffer overflow if provided with a\n crafted IP address argument. This could be used by an attacker to\n execute arbitrary code in processes which called the affected\n functions.\n\n\nThe original glibc bug was reported by Peter Klotz.\n* [CVE-2014-7817](https://security-tracker.debian.org/tracker/CVE-2014-7817)\nTim Waugh of Red Hat discovered that the WRDE\\_NOCMD option of the\n wordexp function did not suppress command execution in all cases.\n This allows a context-dependent attacker to execute shell\n commands.\n* [CVE-2012-6656](https://security-tracker.debian.org/tracker/CVE-2012-6656)\n[CVE-2014-6040](https://security-tracker.debian.org/tracker/CVE-2014-6040)\nThe charset conversion code for certain IBM multi-byte code pages\n could perform an out-of-bounds array access, causing the process\n to crash. In some scenarios, this allows a remote attacker to\n cause a persistent denial of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.13-38+deb7u7.\n\n\nFor the upcoming stable distribution (jessie) and the unstable\ndistribution (sid), the \n[CVE-2015-0235](https://security-tracker.debian.org/tracker/CVE-2015-0235) \nissue has been fixed in version 2.18-1 of the glibc package.\n\n\nWe recommend that you upgrade your eglibc packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "eglibc",
+				"purl": "pkg:deb/debian/eglibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.13-38+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13-38",
+				"2.13-38+deb7u1",
+				"2.13-38+deb7u2",
+				"2.13-38+deb7u3",
+				"2.13-38+deb7u4",
+				"2.13-38+deb7u5",
+				"2.13-38+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3142-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3142"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1717-1",
+	"modified": "2023-06-28T06:29:44.280696Z",
+	"published": "2019-03-20T00:00:00Z",
+	"related": [
+		"CVE-2019-7653"
+	],
+	"summary": "rdflib - security update",
+	"details": "\nThe CLI tools in python-rdflib-tools can load python modules\nfound in the current directory. This happens because \"python -m\"\nappends the current directory in the python path.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n4.1.2-3+deb8u1.\n\n\nWe recommend that you upgrade your rdflib packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "rdflib",
+				"purl": "pkg:deb/debian/rdflib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.2-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.2-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1717-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1717"
+		}
+	]
+}

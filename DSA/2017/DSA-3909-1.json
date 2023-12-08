@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3909-1",
+	"modified": "2023-10-16T00:12:26.825790Z",
+	"published": "2017-07-14T00:00:00Z",
+	"related": [
+		"CVE-2017-11103"
+	],
+	"summary": "samba - security update",
+	"details": "\nJeffrey Altman, Viktor Duchovni and Nico Williams identified a mutual\nauthentication bypass vulnerability in samba, the SMB/CIFS file, print, and\nlogin server. Also known as Orpheus' Lyre, this vulnerability is located in\nSamba Kerberos Key Distribution Center (KDC-REP) component and could be used by\nan attacker on the network path to impersonate a server.\n\n\nMore details can be found on the vulnerability website\n(<https://orpheus-lyre.info/>)\nand on the Samba project website (<https://www.samba.org/samba/security/CVE-2017-11103.html>)\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2:4.2.14+dfsg-0+deb8u7.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:4.5.8+dfsg-2+deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 2:4.6.5+dfsg-4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:4.6.5+dfsg-4.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.2.14+dfsg-0+deb8u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.1.17+dfsg-2",
+				"2:4.1.17+dfsg-2+deb8u1",
+				"2:4.1.17+dfsg-2+deb8u2",
+				"2:4.1.17+dfsg-3",
+				"2:4.1.17+dfsg-4",
+				"2:4.1.17+dfsg-5",
+				"2:4.1.20+dfsg-1",
+				"2:4.1.21+dfsg-1",
+				"2:4.1.21+dfsg-2",
+				"2:4.1.22+dfsg-1",
+				"2:4.2.1+dfsg-1",
+				"2:4.2.10+dfsg-0+deb8u1",
+				"2:4.2.10+dfsg-0+deb8u2",
+				"2:4.2.10+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u1",
+				"2:4.2.14+dfsg-0+deb8u2",
+				"2:4.2.14+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u4",
+				"2:4.2.14+dfsg-0+deb8u5",
+				"2:4.2.14+dfsg-0+deb8u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3909-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.5.8+dfsg-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.5.8+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3909-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3909"
+		}
+	]
+}

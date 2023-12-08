@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2839-1",
+	"modified": "2023-10-16T00:11:33.988936Z",
+	"published": "2014-01-08T00:00:00Z",
+	"related": [
+		"CVE-2013-4130",
+		"CVE-2013-4282"
+	],
+	"summary": "spice - denial of service",
+	"details": "\nMultiple vulnerabilities have been found in spice, a SPICE protocol\nclient and server library. The Common Vulnerabilities and Exposures\nproject identifies the following issues:\n\n\n* [CVE-2013-4130](https://security-tracker.debian.org/tracker/CVE-2013-4130)\nDavid Gibson of Red Hat discovered that SPICE incorrectly handled\n certain network errors. A remote user able to initiate a SPICE\n connection to an application acting as a SPICE server could use this\n flaw to crash the application.\n* [CVE-2013-4282](https://security-tracker.debian.org/tracker/CVE-2013-4282)\nTomas Jamrisko of Red Hat discovered that SPICE incorrectly handled\n long passwords in SPICE tickets. A remote user able to initiate a\n SPICE connection to an application acting as a SPICE server could use\n this flaw to crash the application.\n\n\nApplications acting as a SPICE server must be restarted for this update\nto take effect.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.11.0-1+deb7u1.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 0.12.4-0nocelt2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.12.4-0nocelt2.\n\n\nWe recommend that you upgrade your spice packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "spice",
+				"purl": "pkg:deb/debian/spice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.11.0-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.11.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2839-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2839"
+		}
+	]
+}

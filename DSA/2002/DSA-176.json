@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-176",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-10-16T00:00:00Z",
+	"related": [
+		"CVE-2002-0838"
+	],
+	"summary": "gv - buffer overflow",
+	"details": "\nZen-parse discovered a buffer overflow in gv, a PostScript and PDF\nviewer for X11. This problem is triggered by scanning the PostScript\nfile and can be exploited by an attacker sending a malformed\nPostScript or PDF file. The attacker is able to cause arbitrary code\nto be run with the privileges of the victim.\n\n\nThis problem has been fixed in version 3.5.8-26.1 for the current\nstable distribution (woody), in version 3.5.8-17.1 for the old stable\ndistribution (potato) and version 3.5.8-27 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your gv package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gv",
+				"purl": "pkg:deb/debian/gv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.8-26.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-176.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-176"
+		}
+	]
+}

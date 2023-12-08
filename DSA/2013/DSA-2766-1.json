@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2766-1",
+	"modified": "2023-10-16T00:11:30.338761Z",
+	"published": "2013-09-27T00:00:00Z",
+	"related": [
+		"CVE-2013-2141",
+		"CVE-2013-2164",
+		"CVE-2013-2206",
+		"CVE-2013-2232",
+		"CVE-2013-2234",
+		"CVE-2013-2237",
+		"CVE-2013-2239",
+		"CVE-2013-2851",
+		"CVE-2013-2852",
+		"CVE-2013-2888",
+		"CVE-2013-2892"
+	],
+	"summary": "linux-2.6 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service, information leak or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2013-2141](https://security-tracker.debian.org/tracker/CVE-2013-2141)\nEmese Revfy provided a fix for an information leak in the tkill and\n tgkill system calls. A local user on a 64-bit system may be able to\n gain access to sensitive memory contents.\n* [CVE-2013-2164](https://security-tracker.debian.org/tracker/CVE-2013-2164)\nJonathan Salwan reported an information leak in the CD-ROM driver. A\n local user on a system with a malfunctioning CD-ROM drive could gain\n access to sensitive memory.\n* [CVE-2013-2206](https://security-tracker.debian.org/tracker/CVE-2013-2206)\nKarl Heiss reported an issue in the Linux SCTP implementation. A remote\n user could cause a denial of service (system crash).\n* [CVE-2013-2232](https://security-tracker.debian.org/tracker/CVE-2013-2232)\nDave Jones and Hannes Frederic Sowa resolved an issue in the IPv6\n subsystem. Local users could cause a denial of service by using an\n AF\\_INET6 socket to connect to an IPv4 destination.\n* [CVE-2013-2234](https://security-tracker.debian.org/tracker/CVE-2013-2234)\nMathias Krause reported a memory leak in the implementation of PF\\_KEYv2\n sockets. Local users could gain access to sensitive kernel memory.\n* [CVE-2013-2237](https://security-tracker.debian.org/tracker/CVE-2013-2237)\nNicolas Dichtel reported a memory leak in the implementation of PF\\_KEYv2\n sockets. Local users could gain access to sensitive kernel memory.\n* [CVE-2013-2239](https://security-tracker.debian.org/tracker/CVE-2013-2239)\nJonathan Salwan discovered multiple memory leaks in the openvz kernel\n flavor. Local users could gain access to sensitive kernel memory.\n* [CVE-2013-2851](https://security-tracker.debian.org/tracker/CVE-2013-2851)\nKees Cook reported an issue in the block subsystem. Local users with\n uid 0 could gain elevated ring 0 privileges. This is only a security\n issue for certain specially configured systems.\n* [CVE-2013-2852](https://security-tracker.debian.org/tracker/CVE-2013-2852)\nKees Cook reported an issue in the b43 network driver for certain Broadcom\n wireless devices. Local users with uid 0 could gain elevated ring 0 \n privileges. This is only a security issue for certain specially configured\n systems.\n* [CVE-2013-2888](https://security-tracker.debian.org/tracker/CVE-2013-2888)\nKees Cook reported an issue in the HID driver subsystem. A local user,\n with the ability to attach a device, could cause a denial of service\n (system crash).\n* [CVE-2013-2892](https://security-tracker.debian.org/tracker/CVE-2013-2892)\nKees Cook reported an issue in the pantherlord HID device driver. Local\n users with the ability to attach a device could cause a denial of service\n or possibly gain elevated privileges.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.6.32-48squeeze4.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+48squeeze4 |\n\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n**Note**: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-48squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35squeeze1",
+				"2.6.32-35squeeze2",
+				"2.6.32-35~bpo50+1",
+				"2.6.32-36",
+				"2.6.32-37",
+				"2.6.32-38",
+				"2.6.32-39",
+				"2.6.32-39squeeze1",
+				"2.6.32-40",
+				"2.6.32-41",
+				"2.6.32-41squeeze2",
+				"2.6.32-42",
+				"2.6.32-43",
+				"2.6.32-44",
+				"2.6.32-45",
+				"2.6.32-46",
+				"2.6.32-46squeeze1",
+				"2.6.32-47",
+				"2.6.32-48",
+				"2.6.32-48squeeze1",
+				"2.6.32-48squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2766-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2766"
+		}
+	]
+}

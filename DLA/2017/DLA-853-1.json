@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-853-1",
+	"modified": "2023-06-28T06:27:09.433143Z",
+	"published": "2017-03-11T00:00:00Z",
+	"related": [
+		"CVE-2017-2640"
+	],
+	"summary": "pidgin - security update",
+	"details": "\nIt was discovered that an invalid XML file can trigger an out-of-bound\nmemory access in Pidgin, a multi-protocol instant messaging client,\nwhen it is sent by a malicious server. This might lead to a crash or,\nin some extreme cases, to remote code execution in the client-side.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.10.10-1~deb7u3.\n\n\nWe recommend that you upgrade your pidgin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "pidgin",
+				"purl": "pkg:deb/debian/pidgin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.10.10-1~deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.10-1~bpo60+1",
+				"2.10.10-1~deb7u1",
+				"2.10.10-1~deb7u2",
+				"2.10.6-3",
+				"2.10.7-1",
+				"2.10.7-2",
+				"2.10.7-2~bpo70+1",
+				"2.10.8-1",
+				"2.10.9-1",
+				"2.10.9-1~bpo60+1",
+				"2.10.9-1~deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-853-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-853"
+		}
+	]
+}

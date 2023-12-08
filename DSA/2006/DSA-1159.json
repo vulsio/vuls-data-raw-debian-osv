@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1159",
+	"modified": "2023-10-16T00:06:31.709292Z",
+	"published": "2006-08-28T00:00:00Z",
+	"related": [
+		"CVE-2006-2779",
+		"CVE-2006-3805",
+		"CVE-2006-3806",
+		"CVE-2006-3807",
+		"CVE-2006-3808",
+		"CVE-2006-3809",
+		"CVE-2006-3810",
+		"CVE-2006-3811"
+	],
+	"summary": "mozilla-thunderbird - several",
+	"details": "\nThe latest security updates of Mozilla Thunderbird introduced a\nregression that led to a dysfunctional attachment panel which warrants\na correction to fix this issue. For reference please find below the\noriginal advisory text:\n\n\n\n> \n> Several security related problems have been discovered in Mozilla and\n> derived products such as Mozilla Thunderbird. The Common\n> Vulnerabilities and Exposures project identifies the following\n> vulnerabilities:\n> \n> \n> * [CVE-2006-2779](https://security-tracker.debian.org/tracker/CVE-2006-2779)\n> Mozilla team members discovered several crashes during testing of\n>  the browser engine showing evidence of memory corruption which may\n>  also lead to the execution of arbitrary code. The last bit of\n>  this problem will be corrected with the next update. You can\n>  prevent any trouble by disabling Javascript. [MFSA-2006-32]\n> * [CVE-2006-3805](https://security-tracker.debian.org/tracker/CVE-2006-3805)\n> The Javascript engine might allow remote attackers to execute\n>  arbitrary code. [MFSA-2006-50]\n> * [CVE-2006-3806](https://security-tracker.debian.org/tracker/CVE-2006-3806)\n> Multiple integer overflows in the Javascript engine might allow\n>  remote attackers to execute arbitrary code. [MFSA-2006-50]\n> * [CVE-2006-3807](https://security-tracker.debian.org/tracker/CVE-2006-3807)\n> Specially crafted Javascript allows remote attackers to execute\n>  arbitrary code. [MFSA-2006-51]\n> * [CVE-2006-3808](https://security-tracker.debian.org/tracker/CVE-2006-3808)\n> Remote Proxy AutoConfig (PAC) servers could execute code with elevated\n>  privileges via a specially crafted PAC script. [MFSA-2006-52]\n> * [CVE-2006-3809](https://security-tracker.debian.org/tracker/CVE-2006-3809)\n> Scripts with the UniversalBrowserRead privilege could gain\n>  UniversalXPConnect privileges and possibly execute code or obtain\n>  sensitive data. [MFSA-2006-53]\n> * [CVE-2006-3810](https://security-tracker.debian.org/tracker/CVE-2006-3810)\n> A cross-site scripting vulnerability allows remote attackers to\n>  inject arbitrary web script or HTML. [MFSA-2006-54]\n> \n> \n> \n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.0.2-2.sarge1.0.8b.2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.5.0.5-1.\n\n\nWe recommend that you upgrade your mozilla-thunderbird package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mozilla-thunderbird",
+				"purl": "pkg:deb/debian/mozilla-thunderbird?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-2.sarge1.0.8b.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-2",
+				"1.0.2-2.sarge1.0.6",
+				"1.0.2-2.sarge1.0.7",
+				"1.0.2-2.sarge1.0.8",
+				"1.0.2-2.sarge1.0.8a"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1159.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1159"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3211-1",
+	"modified": "2023-06-28T06:25:27.481177Z",
+	"published": "2022-11-28T00:00:00Z",
+	"related": [
+		"CVE-2022-37032"
+	],
+	"summary": "frr - security update",
+	"details": "\nIt was discovered that there was a potential out-of-bounds read in the BGP\ndaemon of frr, a set of tools to route internet traffic.\n\n\n* [CVE-2022-37032](https://security-tracker.debian.org/tracker/CVE-2022-37032)\nAn out-of-bounds read in the BGP daemon of FRRouting FRR before 8.4 may\n lead to a segmentation fault and denial of service. This occurs in\n bgp\\_capability\\_msg\\_parse in bgpd/bgp\\_packet.c.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n6.0.2-2+deb10u2.\n\n\nWe recommend that you upgrade your frr packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "frr",
+				"purl": "pkg:deb/debian/frr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.2-2+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.2-2",
+				"6.0.2-2+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3211-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3211"
+		}
+	]
+}

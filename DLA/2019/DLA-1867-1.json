@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1867-1",
+	"modified": "2023-06-28T06:21:01.887047Z",
+	"published": "2019-08-01T00:00:00Z",
+	"related": [
+		"CVE-2019-11555",
+		"CVE-2019-9495",
+		"CVE-2019-9497",
+		"CVE-2019-9498",
+		"CVE-2019-9499"
+	],
+	"summary": "wpa - security update",
+	"details": "\nSeveral vulnerabilities were discovered in WPA supplicant / hostapd. Some\nof them could only partially be mitigated, please read below for details.\n\n\n* [CVE-2019-9495](https://security-tracker.debian.org/tracker/CVE-2019-9495)\nCache-based side-channel attack against the EAP-pwd implementation:\n an attacker able to run unprivileged code on the target machine\n (including for example javascript code in a browser on a smartphone)\n during the handshake could deduce enough information to discover the\n password in a dictionary attack.\n\n\nThis issue has only very partially been mitigated against by reducing\n measurable timing differences during private key operations. More\n work is required to fully mitigate this vulnerability.\n* [CVE-2019-9497](https://security-tracker.debian.org/tracker/CVE-2019-9497)\nReflection attack against EAP-pwd server implementation: a lack of\n validation of received scalar and elements value in the\n EAP-pwd-Commit messages could have resulted in attacks that would\n have been able to complete EAP-pwd authentication exchange without\n the attacker having to know the password. This did not result in the\n attacker being able to derive the session key, complete the following\n key exchange and access the network.\n* [CVE-2019-9498](https://security-tracker.debian.org/tracker/CVE-2019-9498)\nEAP-pwd server missing commit validation for scalar/element: hostapd\n didn't validate values received in the EAP-pwd-Commit message, so an\n attacker could have used a specially crafted commit message to\n manipulate the exchange in order for hostapd to derive a session key\n from a limited set of possible values. This could have resulted in an\n attacker being able to complete authentication and gain access to the\n network.\n\n\nThis issue could only partially be mitigated.\n* [CVE-2019-9499](https://security-tracker.debian.org/tracker/CVE-2019-9499)\nEAP-pwd peer missing commit validation for scalar/element:\n wpa\\_supplicant didn't validate values received in the EAP-pwd-Commit\n message, so an attacker could have used a specially crafted commit\n message to manipulate the exchange in order for wpa\\_supplicant to\n derive a session key from a limited set of possible values. This\n could have resulted in an attacker being able to complete\n authentication and operate as a rogue AP.\n\n\nThis issue could only partially be mitigated.\n* [CVE-2019-11555](https://security-tracker.debian.org/tracker/CVE-2019-11555)\nThe EAP-pwd implementation did't properly validate fragmentation\n reassembly state when receiving an unexpected fragment. This could\n have lead to a process crash due to a NULL pointer derefrence.\n\n\nAn attacker in radio range of a station or access point with EAP-pwd\n support could cause a crash of the relevant process (wpa\\_supplicant\n or hostapd), ensuring a denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.3-1+deb8u8.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wpa",
+				"purl": "pkg:deb/debian/wpa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3-1+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3-1",
+				"2.3-1+deb8u1",
+				"2.3-1+deb8u2",
+				"2.3-1+deb8u3",
+				"2.3-1+deb8u4",
+				"2.3-1+deb8u5",
+				"2.3-1+deb8u6",
+				"2.3-1+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1867-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1867"
+		}
+	]
+}

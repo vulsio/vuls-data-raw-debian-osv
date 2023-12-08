@@ -1,0 +1,100 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1422-2",
+	"modified": "2023-06-28T06:20:40.848398Z",
+	"published": "2018-07-14T00:00:00Z",
+	"summary": "linux - regression update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\nThis update is not yet available for the armhf (ARM EABI hard-float)\narchitecture.\n\n\n* [CVE-2017-5715](https://security-tracker.debian.org/tracker/CVE-2017-5715)\nMultiple researchers have discovered a vulnerability in various\n processors supporting speculative execution, enabling an attacker\n controlling an unprivileged process to read memory from arbitrary\n addresses, including from the kernel and all other processes\n running on the system.\n\n\nThis specific attack has been named Spectre variant 2 (branch\n target injection) and is mitigated for the x86 architecture (amd64\n and i386) by using new microcoded features.\n\n\nThis mitigation requires an update to the processor's microcode,\n which is non-free. For recent Intel processors, this is included\n in the intel-microcode package from version 3.20180425.1~deb8u1.\n For other processors, it may be included in an update to the\n system BIOS or UEFI firmware, or in a later update to the\n amd64-microcode package.\n\n\nThis vulnerability was already mitigated for the x86 architecture\n by the retpoline feature.\n* [CVE-2017-5753](https://security-tracker.debian.org/tracker/CVE-2017-5753)\nFurther instances of code that was vulnerable to Spectre variant 1\n (bounds-check bypass) have been mitigated.\n* [CVE-2018-1066](https://security-tracker.debian.org/tracker/CVE-2018-1066)\nDan Aloni reported to Red Hat that the CIFS client implementation\n would dereference a null pointer if the server sent an invalid\n response during NTLMSSP setup negotiation. This could be used by a\n malicious server for denial of service.\n\n\nThe previously applied mitigation for this issue was not\n appropriate for Linux 3.16 and has been replaced by an alternate\n fix.\n* [CVE-2018-1093](https://security-tracker.debian.org/tracker/CVE-2018-1093)\nWen Xu reported that a crafted ext4 filesystem image could trigger\n an out-of-bounds read in the ext4\\_valid\\_block\\_bitmap() function. A\n local user able to mount arbitrary filesystems could use this for\n denial of service.\n* [CVE-2018-1130](https://security-tracker.debian.org/tracker/CVE-2018-1130)\nThe syzbot software found that the DCCP implementation of\n sendmsg() does not check the socket state, potentially leading\n to a null pointer dereference. A local user could use this to\n cause a denial of service (crash).\n* [CVE-2018-3665](https://security-tracker.debian.org/tracker/CVE-2018-3665)\nMultiple researchers have discovered that some Intel x86\n processors can speculatively read floating-point and vector\n registers even when access to those registers is disabled. The\n Linux kernel's lazy FPU feature relies on that access control to\n avoid saving and restoring those registers for tasks that do not\n use them, and was enabled by default on x86 processors that do\n not support the XSAVEOPT instruction.\n\n\nIf lazy FPU is enabled on one of the affected processors, an\n attacker controlling an unprivileged process may be able to read\n sensitive information from other users' processes or the kernel.\n This specifically affects processors based on the Nehalem and\n Westemere core designs.\n \n This issue has been mitigated by disabling lazy FPU by default\n on all x86 processors that support the FXSAVE and FXRSTOR\n instructions, which includes all processors known to be affected\n and most processors that perform speculative execution. It can\n also be mitigated by adding the kernel parameter: eagerfpu=on\n* [CVE-2018-5814](https://security-tracker.debian.org/tracker/CVE-2018-5814)\nJakub Jirasek reported race conditions in the USB/IP host driver.\n A malicious client could use this to cause a denial of service\n (crash or memory corruption), and possibly to execute code, on a\n USB/IP server.\n* [CVE-2018-9422](https://security-tracker.debian.org/tracker/CVE-2018-9422)\nIt was reported that the futex() system call could be used by an\n unprivileged user for privilege escalation.\n* [CVE-2018-10853](https://security-tracker.debian.org/tracker/CVE-2018-10853)\nAndy Lutomirski and Mika PenttilĂ¤ reported that KVM for x86\n processors did not perform a necessary privilege check when\n emulating certain instructions. This could be used by an\n unprivileged user in a guest VM to escalate their privileges\n within the guest.\n* [CVE-2018-10940](https://security-tracker.debian.org/tracker/CVE-2018-10940)\nDan Carpenter reported that the optical disc driver (cdrom) does\n not correctly validate the parameter to the CDROM\\_MEDIA\\_CHANGED\n ioctl. A user with access to a cdrom device could use this to\n cause a denial of service (crash).\n* [CVE-2018-11506](https://security-tracker.debian.org/tracker/CVE-2018-11506)\nPiotr Gabriel Kosinski and Daniel Shapira reported that the\n SCSI optical disc driver (sr) did not allocate a sufficiently\n large buffer for sense data. A user with access to a SCSI\n optical disc device that can produce more than 64 bytes of\n sense data could use this to cause a denial of service (crash\n or memory corruption), and possibly for privilege escalation.\n* [CVE-2018-12233](https://security-tracker.debian.org/tracker/CVE-2018-12233)\nShankara Pailoor reported that a crafted JFS filesystem image\n could trigger a denial of service (memory corruption). This\n could possibly also be used for privilege escalation.\n* [CVE-2018-1000204](https://security-tracker.debian.org/tracker/CVE-2018-1000204)\nThe syzbot software found that the SCSI generic driver (sg) would\n in some circumstances allow reading data from uninitialised\n buffers, which could include sensitive information from the kernel\n or other tasks. However, only privileged users with the\n CAP\\_SYS\\_ADMIN or CAP\\_SYS\\_RAWIO capability were allowed to do this,\n so this has little or no security impact.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.16.57-1. This update additionally fixes Debian bug #898165, and\nincludes many more bug fixes from stable update 3.16.57.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.57-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.36-1",
+				"3.16.36-1+deb8u1",
+				"3.16.36-1+deb8u1~bpo70+1",
+				"3.16.36-1+deb8u2",
+				"3.16.36-1+deb8u2~bpo70+1",
+				"3.16.39-1",
+				"3.16.39-1+deb8u1",
+				"3.16.39-1+deb8u1~bpo70+1",
+				"3.16.39-1+deb8u1~bpo70+1+gcc4.4",
+				"3.16.39-1+deb8u2",
+				"3.16.39-1~bpo70+1",
+				"3.16.43-1",
+				"3.16.43-2",
+				"3.16.43-2+deb8u1",
+				"3.16.43-2+deb8u2",
+				"3.16.43-2+deb8u3",
+				"3.16.43-2+deb8u4",
+				"3.16.43-2+deb8u5",
+				"3.16.48-1",
+				"3.16.51-1",
+				"3.16.51-2",
+				"3.16.51-3",
+				"3.16.51-3+deb8u1",
+				"3.16.56-1",
+				"3.16.56-1+deb8u1",
+				"3.16.57-1",
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1422-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1422"
+		}
+	]
+}

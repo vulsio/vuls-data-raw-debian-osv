@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3646-1",
+	"modified": "2023-11-06T20:18:57.789350Z",
+	"published": "2023-11-05T00:00:00Z",
+	"related": [
+		"CVE-2023-34058",
+		"CVE-2023-34059"
+	],
+	"summary": "open-vm-tools - security update",
+	"details": "\nBrief introduction\n\n\n* [CVE-2023-34058](https://security-tracker.debian.org/tracker/CVE-2023-34058)\nA file descriptor hijack vulnerability was found in\n the vmware-user-suid-wrapper command.\n A malicious actor with non-root privileges might have been able\n to hijack the /dev/uinput file descriptor allowing\n them to simulate user inputs.\n* [CVE-2023-34059](https://security-tracker.debian.org/tracker/CVE-2023-34059)\nA SAML Token Signature Bypass vulnerability was found.\n A malicious actor that has been granted Guest Operation Privileges\n in a target virtual machine might have been able to\n elevate their privileges if that target\n virtual machine has been assigned a more privileged Guest Alias.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2:10.3.10-1+deb10u6.\n\n\nWe recommend that you upgrade your open-vm-tools packages.\n\n\nFor the detailed security status of open-vm-tools please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/open-vm-tools>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "open-vm-tools",
+				"purl": "pkg:deb/debian/open-vm-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:10.3.10-1+deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:10.3.10-1",
+				"2:10.3.10-1+deb10u1",
+				"2:10.3.10-1+deb10u2",
+				"2:10.3.10-1+deb10u2~bpo9+1",
+				"2:10.3.10-1+deb10u3",
+				"2:10.3.10-1+deb10u4",
+				"2:10.3.10-1+deb10u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3646-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3646"
+		}
+	]
+}

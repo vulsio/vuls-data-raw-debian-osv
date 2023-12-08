@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2239-1",
+	"modified": "2023-10-16T00:05:51.272116Z",
+	"published": "2011-05-24T00:00:00Z",
+	"related": [
+		"CVE-2010-4802",
+		"CVE-2010-4803",
+		"CVE-2011-1841"
+	],
+	"summary": "libmojolicious-perl - several",
+	"details": "\nSeveral vulnerabilities have been discovered in Mojolicious, a Perl Web \nApplication Framework. The link\\_to helper was affected by cross-site \nscripting and implementation errors in the MD5 HMAC and CGI environment \nhandling have been corrected.\n\n\nThe oldstable distribution (lenny) doesn't include libmojolicious-perl.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.999926-1+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.12-1.\n\n\nWe recommend that you upgrade your libmojolicious-perl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libmojolicious-perl",
+				"purl": "pkg:deb/debian/libmojolicious-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.999926-1+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.999926-1",
+				"0.999926-1+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2239-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2239"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2913-1",
+	"modified": "2023-10-16T00:11:37.511562Z",
+	"published": "2014-04-25T00:00:00Z",
+	"related": [
+		"CVE-2014-2983"
+	],
+	"summary": "drupal7 - security update",
+	"details": "\nAn information disclosure vulnerability was discovered in Drupal, a\nfully-featured content management framework. When pages are cached for\nanonymous users, form state may leak between anonymous users. Sensitive\nor private information recorded for one anonymous user could thus be\ndisclosed to other users interacting with the same form at the same\ntime.\n\n\nThis security update introduces small API changes, see the upstream\nadvisory at [\\\ndrupal.org/SA-CORE-2014-002](https://drupal.org/SA-CORE-2014-002) for further information.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 7.14-2+deb7u4.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 7.27-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 7.27-1.\n\n\nWe recommend that you upgrade your drupal7 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "drupal7",
+				"purl": "pkg:deb/debian/drupal7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.14-2+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.14-2",
+				"7.14-2+deb7u1",
+				"7.14-2+deb7u1~bpo60+1",
+				"7.14-2+deb7u2",
+				"7.14-2+deb7u2~bpo60+1",
+				"7.14-2+deb7u3",
+				"7.14-2+deb7u4~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2913-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2913"
+		}
+	]
+}

@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3990-1",
+	"modified": "2023-10-16T00:12:32.627727Z",
+	"published": "2017-10-03T00:00:00Z",
+	"related": [
+		"CVE-2017-14603"
+	],
+	"summary": "asterisk - security update",
+	"details": "\nKlaus-Peter Junghann discovered that insufficient validation of RTCP\npackets in Asterisk may result in an information leak. Please see the\nupstream advisory at\n<http://downloads.asterisk.org/pub/security/AST-2017-008.html> for\nadditional details.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1:11.13.1~dfsg-2+deb8u4.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1:13.14.1~dfsg-2+deb9u2.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:11.13.1~dfsg-2+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:11.13.1~dfsg-2",
+				"1:11.13.1~dfsg-2+deb8u1",
+				"1:11.13.1~dfsg-2+deb8u2",
+				"1:11.13.1~dfsg-2+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3990-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:13.14.1~dfsg-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:13.14.1~dfsg-2",
+				"1:13.14.1~dfsg-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3990-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3990"
+		}
+	]
+}

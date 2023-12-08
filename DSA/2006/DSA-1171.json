@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1171",
+	"modified": "2023-10-16T00:10:07.454599Z",
+	"published": "2006-09-07T00:00:00Z",
+	"related": [
+		"CVE-2005-3241",
+		"CVE-2005-3242",
+		"CVE-2005-3243",
+		"CVE-2005-3244",
+		"CVE-2005-3246",
+		"CVE-2005-3248",
+		"CVE-2005-3249",
+		"CVE-2006-4333"
+	],
+	"summary": "ethereal - several",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Ethereal network\nscanner, which may lead to the execution of arbitrary code. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2006-4333](https://security-tracker.debian.org/tracker/CVE-2006-4333)\nIt was discovered that the Q.2391 dissector is vulnerable to denial\n of service caused by memory exhaustion.\n* [CVE-2005-3241](https://security-tracker.debian.org/tracker/CVE-2005-3241)\nIt was discovered that the FC-FCS, RSVP and ISIS-LSP dissectors are\n vulnerable to denial of service caused by memory exhaustion.\n* [CVE-2005-3242](https://security-tracker.debian.org/tracker/CVE-2005-3242)\nIt was discovered that the IrDA and SMB dissectors are vulnerable to\n denial of service caused by memory corruption.\n* [CVE-2005-3243](https://security-tracker.debian.org/tracker/CVE-2005-3243)\nIt was discovered that the SLIMP3 and AgentX dissectors are vulnerable\n to code injection caused by buffer overflows.\n* [CVE-2005-3244](https://security-tracker.debian.org/tracker/CVE-2005-3244)\nIt was discovered that the BER dissector is vulnerable to denial of\n service caused by an infinite loop.\n* [CVE-2005-3246](https://security-tracker.debian.org/tracker/CVE-2005-3246)\nIt was discovered that the NCP and RTnet dissectors are vulnerable to\n denial of service caused by a null pointer dereference.\n* [CVE-2005-3248](https://security-tracker.debian.org/tracker/CVE-2005-3248)\nIt was discovered that the X11 dissector is vulnerable to denial of service\n caused by a division through zero.\n\n\nThis update also fixes a 64 bit-specific regression in the ASN.1 decoder, which\nwas introduced in a previous DSA.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.10.10-2sarge8.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.99.2-5.1 of wireshark, the network sniffer formerly known as\nethereal.\n\n\nWe recommend that you upgrade your ethereal packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "ethereal",
+				"purl": "pkg:deb/debian/ethereal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.10.10-2sarge8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.10.10-2sarge2",
+				"0.10.10-2sarge3",
+				"0.10.10-2sarge4",
+				"0.10.10-2sarge5",
+				"0.10.10-2sarge6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1171.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1171"
+		}
+	]
+}

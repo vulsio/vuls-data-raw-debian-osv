@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1928-1",
+	"modified": "2023-10-16T00:10:47.116523Z",
+	"published": "2009-11-05T00:00:00Z",
+	"related": [
+		"CVE-2009-2846",
+		"CVE-2009-2847",
+		"CVE-2009-2848",
+		"CVE-2009-2849",
+		"CVE-2009-2903",
+		"CVE-2009-2908",
+		"CVE-2009-2909",
+		"CVE-2009-2910",
+		"CVE-2009-3001",
+		"CVE-2009-3002",
+		"CVE-2009-3228",
+		"CVE-2009-3238",
+		"CVE-2009-3286",
+		"CVE-2009-3547",
+		"CVE-2009-3612",
+		"CVE-2009-3613",
+		"CVE-2009-3620",
+		"CVE-2009-3621"
+	],
+	"summary": "linux-2.6.24 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, sensitive memory leak or privilege\nescalation. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-2846](https://security-tracker.debian.org/tracker/CVE-2009-2846)\nMichael Buesch noticed a typing issue in the eisa-eeprom driver\n for the hppa architecture. Local users could exploit this issue to\n gain access to restricted memory.\n* [CVE-2009-2847](https://security-tracker.debian.org/tracker/CVE-2009-2847)\nUlrich Drepper noticed an issue in the do\\_sigalstack routine on\n 64-bit systems. This issue allows local users to gain access to\n potentially sensitive memory on the kernel stack.\n* [CVE-2009-2848](https://security-tracker.debian.org/tracker/CVE-2009-2848)\nEric Dumazet discovered an issue in the execve path, where the\n clear\\_child\\_tid variable was not being properly cleared. Local\n users could exploit this issue to cause a denial of service\n (memory corruption).\n* [CVE-2009-2849](https://security-tracker.debian.org/tracker/CVE-2009-2849)\nNeil Brown discovered an issue in the sysfs interface to md\n devices. When md arrays are not active, local users can exploit\n this vulnerability to cause a denial of service (oops).\n* [CVE-2009-2903](https://security-tracker.debian.org/tracker/CVE-2009-2903)\nMark Smith discovered a memory leak in the appletalk\n implementation. When the appletalk and ipddp modules are loaded,\n but no ipddp\"N\" device is found, remote attackers can cause a\n denial of service by consuming large amounts of system memory.\n* [CVE-2009-2908](https://security-tracker.debian.org/tracker/CVE-2009-2908)\nLoic Minier discovered an issue in the eCryptfs filesystem. A\n local user can cause a denial of service (kernel oops) by causing\n a dentry value to go negative.\n* [CVE-2009-2909](https://security-tracker.debian.org/tracker/CVE-2009-2909)\nArjan van de Ven discovered an issue in the AX.25 protocol\n implementation. A specially crafted call to setsockopt() can\n result in a denial of service (kernel oops).\n* [CVE-2009-2910](https://security-tracker.debian.org/tracker/CVE-2009-2910)\nJan Beulich discovered the existence of a sensitive kernel memory\n leak. Systems running the 'amd64' kernel do not properly sanitize\n registers for 32-bit processes.\n* [CVE-2009-3001](https://security-tracker.debian.org/tracker/CVE-2009-3001)\nJiri Slaby fixed a sensitive memory leak issue in the ANSI/IEEE\n 802.2 LLC implementation. This is not exploitable in the Debian\n lenny kernel as root privileges are required to exploit this\n issue.\n* [CVE-2009-3002](https://security-tracker.debian.org/tracker/CVE-2009-3002)\nEric Dumazet fixed several sensitive memory leaks in the IrDA,\n X.25 PLP (Rose), NET/ROM, Acorn Econet/AUN, and Controller Area\n Network (CAN) implementations. Local users can exploit these\n issues to gain access to kernel memory.\n* [CVE-2009-3228](https://security-tracker.debian.org/tracker/CVE-2009-3228)\nEric Dumazet reported an instance of uninitialized kernel memory\n in the network packet scheduler. Local users may be able to\n exploit this issue to read the contents of sensitive kernel\n memory.\n \n* [CVE-2009-3238](https://security-tracker.debian.org/tracker/CVE-2009-3238)\nLinus Torvalds provided a change to the get\\_random\\_int() function\n to increase its randomness.\n\n* [CVE-2009-3286](https://security-tracker.debian.org/tracker/CVE-2009-3286)\nEric Paris discovered an issue with the NFSv4 server\n implementation. When an O\\_EXCL create fails, files may be left\n with corrupted permissions, possibly granting unintentional\n privileges to other local users.\n\n* [CVE-2009-3547](https://security-tracker.debian.org/tracker/CVE-2009-3547)\nEarl Chew discovered a NULL pointer dereference issue in the\n pipe\\_rdwr\\_open function which can be used by local users to gain\n elevated privileges.\n\n* [CVE-2009-3612](https://security-tracker.debian.org/tracker/CVE-2009-3612)\nJiri Pirko discovered a typo in the initialization of a structure\n in the netlink subsystem that may allow local users to gain access\n to sensitive kernel memory.\n\n* [CVE-2009-3613](https://security-tracker.debian.org/tracker/CVE-2009-3613)\nAlistair Strachan reported an issue in the r8169 driver. Remote\n users can cause a denial of service (IOMMU space exhaustion and\n system crash) by transmitting a large amount of jumbo frames.\n\n* [CVE-2009-3620](https://security-tracker.debian.org/tracker/CVE-2009-3620)\nBen Hutchings discovered an issue in the DRM manager for ATI Rage\n 128 graphics adapters. Local users may be able to exploit this\n vulnerability to cause a denial of service (NULL pointer\n dereference).\n\n* [CVE-2009-3621](https://security-tracker.debian.org/tracker/CVE-2009-3621)\nTomoki Sekiyama discovered a deadlock condition in the UNIX domain\n socket implementation. Local users can exploit this vulnerability\n to cause a denial of service (system hang).\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.6.24-6~etchnhalf.9etch1.\n\n\nWe recommend that you upgrade your linux-2.6.24 packages.\n\n\nNote: Debian 'etch' includes linux kernel packages based upon both the\n2.6.18 and 2.6.24 linux releases. All known security issues are\ncarefully tracked against both packages and both packages will receive\nsecurity updates until security support for Debian 'etch'\nconcludes. However, given the high frequency at which low-severity\nsecurity issues are discovered in the kernel and the resource\nrequirements of doing an update, lower severity 2.6.18 and 2.6.24\nupdates will typically release in a staggered or \"leap-frog\" fashion.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6.24",
+				"purl": "pkg:deb/debian/linux-2.6.24?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.24-6~etchnhalf.9etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.24-5~etchnhalf.1",
+				"2.6.24-6~etchnhalf.1",
+				"2.6.24-6~etchnhalf.2",
+				"2.6.24-6~etchnhalf.3",
+				"2.6.24-6~etchnhalf.4",
+				"2.6.24-6~etchnhalf.5",
+				"2.6.24-6~etchnhalf.6",
+				"2.6.24-6~etchnhalf.7",
+				"2.6.24-6~etchnhalf.8",
+				"2.6.24-6~etchnhalf.8etch1",
+				"2.6.24-6~etchnhalf.8etch2",
+				"2.6.24-6~etchnhalf.8etch3",
+				"2.6.24-6~etchnhalf.9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1928-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1928"
+		}
+	]
+}

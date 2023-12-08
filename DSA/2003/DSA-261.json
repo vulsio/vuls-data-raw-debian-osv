@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-261",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-03-14T00:00:00Z",
+	"related": [
+		"CVE-2003-0093",
+		"CVE-2003-0145"
+	],
+	"summary": "tcpdump - infinite loop",
+	"details": "\nA problem has been discovered in tcpdump, a powerful tool for network\nmonitoring and data acquisition. An attacker is able to send a\nspecially crafted RADIUS network packet which causes tcpdump to enter\nan infinite loop.\n\n\nFor the stable distribution (woody) this problem has been\nfixed in version 3.6.2-2.4.\n\n\nThe old stable distribution (potato) does not seem to be affected\nby this problem.\n\n\nThe unstable distribution (sid) is not affected by this problem anymore.\n\n\nWe recommend that you upgrade your tcpdump package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tcpdump",
+				"purl": "pkg:deb/debian/tcpdump?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.2-2.4"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-261.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-261"
+		}
+	]
+}

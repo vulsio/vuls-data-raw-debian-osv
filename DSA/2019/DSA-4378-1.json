@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4378-1",
+	"modified": "2023-10-16T00:20:45.891820Z",
+	"published": "2019-01-30T00:00:00Z",
+	"related": [
+		"CVE-2018-1000888"
+	],
+	"summary": "php-pear - security update",
+	"details": "\nFariskhi Vidyan discovered that the PEAR Archive\\_Tar package for\nhandling tar files in PHP is prone to a PHP object injection\nvulnerability, potentially allowing a remote attacker to execute\narbitrary code.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1:1.10.1+submodules+notgz-9+deb9u1.\n\n\nWe recommend that you upgrade your php-pear packages.\n\n\nFor the detailed security status of php-pear please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/php-pear>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "php-pear",
+				"purl": "pkg:deb/debian/php-pear?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.10.1+submodules+notgz-9+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.10.1+submodules+notgz-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4378-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4378"
+		}
+	]
+}

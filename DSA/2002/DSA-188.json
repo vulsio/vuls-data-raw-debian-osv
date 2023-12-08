@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-188",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-11-05T00:00:00Z",
+	"related": [
+		"CVE-2001-0131",
+		"CVE-2002-0839",
+		"CVE-2002-0840",
+		"CVE-2002-0843",
+		"CVE-2002-1233"
+	],
+	"summary": "apache-ssl - several vulnerabilities",
+	"details": "\nAccording to David Wagner, iDEFENSE and the Apache HTTP Server\nProject, several vulnerabilities have been found in the Apache\npackage, a commonly used webserver. Most of the code is shared\nbetween the Apache and Apache-SSL packages, so vulnerabilities are\nshared as well. These vulnerabilities could allow an attacker to\nenact a denial of service against a server or execute a cross\nscripting attack, or steal cookies from other web site users.\nVulnerabilities in the included legacy programs htdigest, htpasswd and\nApacheBench can be exploited when called via CGI. Additionally the\ninsecure temporary file creation in htdigest and htpasswd can also be\nexploited locally. The Common Vulnerabilities and Exposures (CVE)\nproject identified the following vulnerabilities:\n\n\n1. CAN-2002-0839: A vulnerability exists on platforms using System V\n shared memory based scoreboards. This vulnerability allows an\n attacker to execute code under the Apache UID to exploit the Apache\n shared memory scoreboard format and send a signal to any process as\n root or cause a local denial of service attack.\n2. CAN-2002-0840: Apache is susceptible to a cross site scripting\n vulnerability in the default 404 page of any web server hosted on a\n domain that allows wildcard DNS lookups.\n3. CAN-2002-0843: There were some possible overflows in the utility\n ApacheBench (ab) which could be exploited by a malicious server.\n4. CAN-2002-1233: A race condition in the htpasswd and htdigest\n program enables a malicious local user to read or even modify the\n contents of a password file or easily create and overwrite files as\n the user running the htpasswd (or htdigest respectively) program.\n (binaries not included in apache-ssl package though)\n5. CAN-2001-0131: htpasswd and htdigest in Apache 2.0a9, 1.3.14, and\n others allows local users to overwrite arbitrary files via a\n symlink attack.\n\n This is the same vulnerability as CAN-2002-1233, which was fixed in\n potato already but got lost later and was never applied upstream.\n (binaries not included in apache-ssl package though)\n6. NO-CAN: Several buffer overflows have been found in the ApacheBench\n (ab) utility that could be exploited by a remote server returning\n very long strings.\n (binary not included in apache-ssl package though)\n\n\nThese problems have been fixed in version 1.3.26.1+1.48-0woody3 for\nthe current stable distribution (woody) and in 1.3.9.13-4.2 for the\nold stable distribution (potato). Corrected packages for the unstable\ndistribution (sid) are expected soon.\n\n\nWe recommend that you upgrade your Apache-SSL package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "apache-ssl",
+				"purl": "pkg:deb/debian/apache-ssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.26.1+1.48-0woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-188.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-188"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4782-1",
+	"modified": "2023-10-16T00:20:25.602259Z",
+	"published": "2020-10-30T00:00:00Z",
+	"related": [
+		"CVE-2020-25692"
+	],
+	"summary": "openldap - security update",
+	"details": "\nA vulnerability in the handling of normalization with modrdn was\ndiscovered in OpenLDAP, a free implementation of the Lightweight\nDirectory Access Protocol. An unauthenticated remote attacker can use\nthis flaw to cause a denial of service (slapd daemon crash) via a\nspecially crafted packet.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2.4.47+dfsg-3+deb10u3.\n\n\nWe recommend that you upgrade your openldap packages.\n\n\nFor the detailed security status of openldap please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openldap](https://security-tracker.debian.org/tracker/openldap)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openldap",
+				"purl": "pkg:deb/debian/openldap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.47+dfsg-3+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.47+dfsg-3",
+				"2.4.47+dfsg-3+deb10u1",
+				"2.4.47+dfsg-3+deb10u1~bpo9+1",
+				"2.4.47+dfsg-3+deb10u2",
+				"2.4.47+dfsg-3+deb10u2~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4782-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4782"
+		}
+	]
+}

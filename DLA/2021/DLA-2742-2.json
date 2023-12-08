@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2742-2",
+	"modified": "2023-06-28T06:21:21.895428Z",
+	"published": "2021-08-14T00:00:00Z",
+	"summary": "ffmpeg - regression update",
+	"details": "\nMultiple issues have been discovered in ffmpeg.\n\n\n* [CVE-2020-21041](https://security-tracker.debian.org/tracker/CVE-2020-21041)\nBuffer Overflow vulnerability exists via apng\\_do\\_inverse\\_blend in\n libavcodec/pngenc.c, which could let a remote malicious user cause a\n Denial of Service.\n* [CVE-2020-22015](https://security-tracker.debian.org/tracker/CVE-2020-22015)\nBuffer Overflow vulnerability in mov\\_write\\_video\\_tag due to the out of\n bounds in libavformat/movenc.c, which could let a remote malicious user\n obtain sensitive information, cause a Denial of Service, or execute\n arbitrary code.\n* [CVE-2020-22016](https://security-tracker.debian.org/tracker/CVE-2020-22016)\nA heap-based Buffer Overflow vulnerability at libavcodec/get\\_bits.h when\n writing .mov files, which might lead to memory corruption and other\n potential consequences.\n* [CVE-2020-22020](https://security-tracker.debian.org/tracker/CVE-2020-22020)\nBuffer Overflow vulnerability in the build\\_diff\\_map function in\n libavfilter/vf\\_fieldmatch.c, which could let a remote malicious user cause\n a Denial of Service.\n* [CVE-2020-22021](https://security-tracker.debian.org/tracker/CVE-2020-22021)\nBuffer Overflow vulnerability at filter\\_edges function in\n libavfilter/vf\\_yadif.c, which could let a remote malicious user cause a\n Denial of Service.\n* [CVE-2020-22022](https://security-tracker.debian.org/tracker/CVE-2020-22022)\nA heap-based Buffer Overflow vulnerability exists in filter\\_frame at\n libavfilter/vf\\_fieldorder.c, which might lead to memory corruption and other\n potential consequences.\n* [CVE-2020-22023](https://security-tracker.debian.org/tracker/CVE-2020-22023)\nA heap-based Buffer Overflow vulnerabililty exists in filter\\_frame at\n libavfilter/vf\\_bitplanenoise.c, which might lead to memory corruption and\n other potential consequences.\n* [CVE-2020-22025](https://security-tracker.debian.org/tracker/CVE-2020-22025)\nA heap-based Buffer Overflow vulnerability exists in gaussian\\_blur at\n libavfilter/vf\\_edgedetect.c, which might lead to memory corruption and other\n potential consequences.\n* [CVE-2020-22026](https://security-tracker.debian.org/tracker/CVE-2020-22026)\nBuffer Overflow vulnerability exists in the config\\_input function at\n libavfilter/af\\_tremolo.c, which could let a remote malicious user cause a\n Denial of Service.\n* [CVE-2020-22028](https://security-tracker.debian.org/tracker/CVE-2020-22028)\nBuffer Overflow vulnerability in filter\\_vertically\\_8 at\n libavfilter/vf\\_avgblur.c, which could cause a remote Denial of Service.\n* [CVE-2020-22031](https://security-tracker.debian.org/tracker/CVE-2020-22031)\nA Heap-based Buffer Overflow vulnerability in filter16\\_complex\\_low, which\n might lead to memory corruption and other potential consequences.\n* [CVE-2020-22032](https://security-tracker.debian.org/tracker/CVE-2020-22032)\nA heap-based Buffer Overflow vulnerability in gaussian\\_blur, which might\n lead to memory corruption and other potential consequences.\n* [CVE-2020-22036](https://security-tracker.debian.org/tracker/CVE-2020-22036)\nA heap-based Buffer Overflow vulnerability in filter\\_intra at\n libavfilter/vf\\_bwdif.c, which might lead to memory corruption and other\n potential consequences.\n* [CVE-2021-3566](https://security-tracker.debian.org/tracker/CVE-2021-3566)\nThe tty demuxer did not have a read\\_probe function assigned to it. By\n crafting a legitimate ffconcat file that references an image, followed by\n a file the triggers the tty demuxer, the contents of the second file will be\n copied into the output file verbatim (as long as the `-vcodec copy` option\n is passed to ffmpeg).\n* [CVE-2021-38114](https://security-tracker.debian.org/tracker/CVE-2021-38114)\nlibavcodec/dnxhddec.c does not check the return value of the init\\_vlc\n function. Crafted DNxHD data can cause unspecified impact.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n7:3.2.15-0+deb9u3.\n\n\nWe recommend that you upgrade your ffmpeg packages.\n\n\nFor the detailed security status of ffmpeg please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ffmpeg>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ffmpeg",
+				"purl": "pkg:deb/debian/ffmpeg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7:3.2.15-0+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7:3.2.10-1~deb9u1",
+				"7:3.2.10-1~deb9u1~bpo8+1",
+				"7:3.2.11-1~deb9u1",
+				"7:3.2.12-1~deb9u1",
+				"7:3.2.14-1~deb9u1",
+				"7:3.2.15-0+deb9u1",
+				"7:3.2.15-0+deb9u2",
+				"7:3.2.15-0+deb9u3",
+				"7:3.2.5-1",
+				"7:3.2.6-1",
+				"7:3.2.7-1~deb9u1",
+				"7:3.2.8-1~deb9u1",
+				"7:3.2.9-1~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2742-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2742"
+		}
+	]
+}

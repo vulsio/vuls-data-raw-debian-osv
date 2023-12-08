@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-191-1",
+	"modified": "2023-06-28T06:21:03.564041Z",
+	"published": "2015-04-09T00:00:00Z",
+	"related": [
+		"CVE-2015-0885"
+	],
+	"summary": "checkpw - security update",
+	"details": "\nHiroya Ito of GMO Pepabo, Inc. reported that checkpw, a password\nauthentication program, has a flaw in processing account names which\ncontain double dashes. A remote attacker can use this flaw to cause a\ndenial of service (infinite loop).\n\n\nThanks to Markus Koschany who prepared the Debian package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "checkpw",
+				"purl": "pkg:deb/debian/checkpw?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.02-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.02-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-191-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-191"
+		}
+	]
+}

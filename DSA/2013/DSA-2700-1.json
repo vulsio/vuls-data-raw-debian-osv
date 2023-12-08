@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2700-1",
+	"modified": "2023-10-16T00:11:26.184086Z",
+	"published": "2013-06-02T00:00:00Z",
+	"related": [
+		"CVE-2013-3555",
+		"CVE-2013-3557",
+		"CVE-2013-3558",
+		"CVE-2013-3559",
+		"CVE-2013-3560",
+		"CVE-2013-3562"
+	],
+	"summary": "wireshark - several",
+	"details": "\nMultiple vulnerabilities were discovered in the dissectors for GTPv2,\nASN.1 BER, PPP CCP, DCP ETSI, MPEG DSM-CC and Websocket, which could \nresult in denial of service or the execution of arbitrary code.\n\n\nThe oldstable distribution (squeeze) is not affected.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.8.2-5wheezy3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.8.7-1.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2-5wheezy3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2-5wheezy2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2700-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2700"
+		}
+	]
+}

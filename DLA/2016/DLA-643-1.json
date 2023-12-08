@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-643-1",
+	"modified": "2023-06-28T06:34:15.517794Z",
+	"published": "2016-09-30T00:00:00Z",
+	"related": [
+		"CVE-2016-6830",
+		"CVE-2016-6831"
+	],
+	"summary": "chicken - security update",
+	"details": "\nMultiple vulnerabilities have been found in the CHICKEN Scheme compiler:\n\n\n* [CVE-2016-6830](https://security-tracker.debian.org/tracker/CVE-2016-6830)\nBuffer overrun in CHICKEN Scheme's \"process-execute\" and\n \"process-spawn\" procedures from the posix unit\n* [CVE-2016-6831](https://security-tracker.debian.org/tracker/CVE-2016-6831)\nMemory leak in CHICKEN Scheme's process-execute and process-spawn\n procedures\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.7.0-1+deb7u1.\n\n\nWe recommend that you upgrade your chicken packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "chicken",
+				"purl": "pkg:deb/debian/chicken?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.7.0-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.7.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-643-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-643"
+		}
+	]
+}

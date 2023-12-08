@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4507-1",
+	"modified": "2023-10-16T00:24:56.066945Z",
+	"published": "2019-08-24T00:00:00Z",
+	"related": [
+		"CVE-2019-12525",
+		"CVE-2019-12527",
+		"CVE-2019-12529",
+		"CVE-2019-12854",
+		"CVE-2019-13345"
+	],
+	"summary": "squid - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Squid, a fully featured web\nproxy cache. The flaws in the HTTP Digest Authentication processing, the\nHTTP Basic Authentication processing and in the cachemgr.cgi allowed\nremote attackers to perform denial of service and cross-site scripting\nattacks, and potentially the execution of arbitrary code.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.6-1+deb10u1.\n\n\nWe recommend that you upgrade your squid packages.\n\n\nFor the detailed security status of squid please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/squid>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "squid",
+				"purl": "pkg:deb/debian/squid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.6-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4507-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4507"
+		}
+	]
+}

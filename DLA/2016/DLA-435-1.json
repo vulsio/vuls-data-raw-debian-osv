@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-435-1",
+	"modified": "2023-06-28T06:27:00.951754Z",
+	"published": "2016-02-27T00:00:00Z",
+	"related": [
+		"CVE-2015-5174",
+		"CVE-2015-5345",
+		"CVE-2015-5351",
+		"CVE-2016-0706",
+		"CVE-2016-0714",
+		"CVE-2016-0763"
+	],
+	"summary": "tomcat6 - security update",
+	"details": "\nTomcat 6, an implementation of the Java Servlet and the JavaServer\nPages (JSP) specifications and a pure Java web server environment, was\naffected by multiple security issues prior version 6.0.45.\n\n\n* [CVE-2015-5174](https://security-tracker.debian.org/tracker/CVE-2015-5174)\nDirectory traversal vulnerability in RequestUtil.java in Apache\n Tomcat 6.x before 6.0.45, 7.x before 7.0.65, and 8.x before 8.0.27\n allows remote authenticated users to bypass intended SecurityManager\n restrictions and list a parent directory via a /.. (slash dot dot)\n in a pathname used by a web application in a getResource,\n getResourceAsStream, or getResourcePaths call, as demonstrated by\n the $CATALINA\\_BASE/webapps directory.\n* [CVE-2015-5345](https://security-tracker.debian.org/tracker/CVE-2015-5345)\nThe Mapper component in Apache Tomcat 6.x before 6.0.45, 7.x before\n 7.0.67, 8.x before 8.0.30, and 9.x before 9.0.0.M2 processes\n redirects before considering security constraints and Filters, which\n allows remote attackers to determine the existence of a directory\n via a URL that lacks a trailing / (slash) character.\n* [CVE-2015-5351](https://security-tracker.debian.org/tracker/CVE-2015-5351)\nThe Manager and Host Manager applications in Apache Tomcat\n establish sessions and send CSRF tokens for arbitrary new requests,\n which allows remote attackers to bypass a CSRF protection mechanism\n by using a token.\n* [CVE-2016-0706](https://security-tracker.debian.org/tracker/CVE-2016-0706)\nApache Tomcat 6.x before 6.0.45, 7.x before 7.0.68, 8.x before\n 8.0.31, and 9.x before 9.0.0.M2 does not place\n org.apache.catalina.manager.StatusManagerServlet on the org/apache\n /catalina/core/RestrictedServlets.properties list, which allows\n remote authenticated users to bypass intended SecurityManager\n restrictions and read arbitrary HTTP requests, and consequently\n discover session ID values, via a crafted web application.\n* [CVE-2016-0714](https://security-tracker.debian.org/tracker/CVE-2016-0714)\nThe session-persistence implementation in Apache Tomcat 6.x before\n 6.0.45, 7.x before 7.0.68, 8.x before 8.0.31, and 9.x before\n 9.0.0.M2 mishandles session attributes, which allows remote\n authenticated users to bypass intended SecurityManager restrictions\n and execute arbitrary code in a privileged context via a web\n application that places a crafted object in a session.\n* [CVE-2016-0763](https://security-tracker.debian.org/tracker/CVE-2016-0763)\nThe setGlobalContext method in org/apache/naming/factory\n /ResourceLinkFactory.java in Apache Tomcat does not consider whether\n ResourceLinkFactory.setGlobalContext callers are authorized, which\n allows remote authenticated users to bypass intended SecurityManager\n restrictions and read or write to arbitrary application data, or\n cause a denial of service (application disruption), via a web\n application that sets a crafted global context.\n\n\nFor Debian 6 Squeeze, these problems have been fixed in version\n6.0.45-1~deb6u1.\n\n\nWe recommend that you upgrade your tomcat6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tomcat6",
+				"purl": "pkg:deb/debian/tomcat6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.45-1~deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.28-10",
+				"6.0.28-9",
+				"6.0.28-9+squeeze1",
+				"6.0.32-1",
+				"6.0.32-2",
+				"6.0.32-3",
+				"6.0.32-4",
+				"6.0.32-5",
+				"6.0.32-6",
+				"6.0.32-7",
+				"6.0.33-1",
+				"6.0.35-1",
+				"6.0.35-1+squeeze2",
+				"6.0.35-1+squeeze3",
+				"6.0.35-1+squeeze4",
+				"6.0.35-2",
+				"6.0.35-3",
+				"6.0.35-4",
+				"6.0.35-5",
+				"6.0.35-5+nmu1",
+				"6.0.35-6",
+				"6.0.35-7",
+				"6.0.37-1",
+				"6.0.39-1",
+				"6.0.41-1",
+				"6.0.41-2",
+				"6.0.41-2+squeeze5",
+				"6.0.41-2+squeeze6",
+				"6.0.41-2+squeeze7",
+				"6.0.41-3",
+				"6.0.41-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-435-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-435"
+		}
+	]
+}

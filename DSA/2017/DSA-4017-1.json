@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4017-1",
+	"modified": "2023-10-16T00:12:34.619623Z",
+	"published": "2017-11-03T00:00:00Z",
+	"related": [
+		"CVE-2017-3735",
+		"CVE-2017-3736"
+	],
+	"summary": "openssl1.0 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit. The Common Vulnerabilities and Exposures project\nidentifies the following issues:\n\n\n* [CVE-2017-3735](https://security-tracker.debian.org/tracker/CVE-2017-3735)\nIt was discovered that OpenSSL is prone to a one-byte buffer\n overread while parsing a malformed IPAddressFamily extension in an\n X.509 certificate.\n\n\nDetails can be found in the upstream advisory:\n [\\\n https://www.openssl.org/news/secadv/20170828.txt](https://www.openssl.org/news/secadv/20170828.txt)\n* [CVE-2017-3736](https://security-tracker.debian.org/tracker/CVE-2017-3736)\nIt was discovered that OpenSSL contains a carry propagation bug in\n the x86\\_64 Montgomery squaring procedure.\n\n\nDetails can be found in the upstream advisory:\n [\\\n https://www.openssl.org/news/secadv/20171102.txt](https://www.openssl.org/news/secadv/20171102.txt)\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.0.2l-2+deb9u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.2m-1.\n\n\nWe recommend that you upgrade your openssl1.0 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openssl1.0",
+				"purl": "pkg:deb/debian/openssl1.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2l-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2l-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4017-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4017"
+		}
+	]
+}

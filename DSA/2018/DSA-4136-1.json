@@ -1,0 +1,86 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4136-1",
+	"modified": "2023-10-16T00:12:40.880552Z",
+	"published": "2018-03-14T00:00:00Z",
+	"related": [
+		"CVE-2018-1000120",
+		"CVE-2018-1000121",
+		"CVE-2018-1000122"
+	],
+	"summary": "curl - security update",
+	"details": "\nMultiple vulnerabilities were discovered in cURL, an URL transfer library.\n\n\n* [CVE-2018-1000120](https://security-tracker.debian.org/tracker/CVE-2018-1000120)\nDuy Phan Thanh discovered that curl could be fooled into writing a\n zero byte out of bounds when curl is told to work on an FTP URL with\n the setting to only issue a single CWD command, if the directory part\n of the URL contains a “%00” sequence.\n* [CVE-2018-1000121](https://security-tracker.debian.org/tracker/CVE-2018-1000121)\nDario Weisser discovered that curl might dereference a near-NULL\n address when getting an LDAP URL due to the ldap\\_get\\_attribute\\_ber()\n function returning LDAP\\_SUCCESS and a NULL pointer. A malicious server\n might cause libcurl-using applications that allow LDAP URLs, or that\n allow redirects to LDAP URLs to crash.\n* [CVE-2018-1000122](https://security-tracker.debian.org/tracker/CVE-2018-1000122)\nOSS-fuzz, assisted by Max Dymond, discovered that curl could be\n tricked into copying data beyond the end of its heap based buffer\n when asked to transfer an RTSP URL.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 7.38.0-4+deb8u10.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 7.52.1-5+deb9u5.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFor the detailed security status of curl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/curl>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.38.0-4+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.38.0-4",
+				"7.38.0-4+deb8u1",
+				"7.38.0-4+deb8u2",
+				"7.38.0-4+deb8u3",
+				"7.38.0-4+deb8u4",
+				"7.38.0-4+deb8u5",
+				"7.38.0-4+deb8u6",
+				"7.38.0-4+deb8u7",
+				"7.38.0-4+deb8u8",
+				"7.38.0-4+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4136-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.52.1-5+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.52.1-5",
+				"7.52.1-5+deb9u1",
+				"7.52.1-5+deb9u2",
+				"7.52.1-5+deb9u3",
+				"7.52.1-5+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4136-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4136"
+		}
+	]
+}

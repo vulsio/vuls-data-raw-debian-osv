@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1349-1",
+	"modified": "2023-06-28T06:20:35.593399Z",
+	"published": "2018-04-16T00:00:00Z",
+	"summary": "linux-tools - security update",
+	"details": "\nThis update doesn't fix a vulnerability in linux-tools, but provides\nsupport for building Linux kernel modules with the retpoline\nmitigation for [CVE-2017-5715](https://security-tracker.debian.org/tracker/CVE-2017-5715) (Spectre variant 2).\n\n\nThis update also includes bug fixes from the upstream Linux 3.2 stable\nbranch up to and including 3.2.101.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.101-1.\n\n\nWe recommend that you upgrade your linux-tools packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux-tools",
+				"purl": "pkg:deb/debian/linux-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.101-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.17-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1349-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1349"
+		}
+	]
+}

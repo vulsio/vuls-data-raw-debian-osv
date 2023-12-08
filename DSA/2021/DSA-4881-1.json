@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4881-1",
+	"modified": "2023-10-16T00:22:25.086842Z",
+	"published": "2021-03-30T00:00:00Z",
+	"related": [
+		"CVE-2020-8169",
+		"CVE-2020-8177",
+		"CVE-2020-8231",
+		"CVE-2020-8284",
+		"CVE-2020-8285",
+		"CVE-2020-8286",
+		"CVE-2021-22876",
+		"CVE-2021-22890"
+	],
+	"summary": "curl - security update",
+	"details": "\nMultiple vulnerabilities were discovered in cURL, an URL transfer library:\n\n\n* [CVE-2020-8169](https://security-tracker.debian.org/tracker/CVE-2020-8169)\nMarek Szlagor reported that libcurl could be tricked into prepending\n a part of the password to the host name before it resolves it,\n potentially leaking the partial password over the network and to the\n DNS server(s).\n* [CVE-2020-8177](https://security-tracker.debian.org/tracker/CVE-2020-8177)\nsn reported that curl could be tricked by a malicious server into\n overwriting a local file when using the -J (--remote-header-name) and\n -i (--include) options in the same command line.\n* [CVE-2020-8231](https://security-tracker.debian.org/tracker/CVE-2020-8231)\nMarc Aldorasi reported that libcurl might use the wrong connection\n when an application using libcurl's multi API sets the option\n CURLOPT\\_CONNECT\\_ONLY, which could lead to information leaks.\n* [CVE-2020-8284](https://security-tracker.debian.org/tracker/CVE-2020-8284)\nVarnavas Papaioannou reported that a malicious server could use the\n PASV response to trick curl into connecting back to an arbitrary IP\n address and port, potentially making curl extract information about\n services that are otherwise private and not disclosed.\n* [CVE-2020-8285](https://security-tracker.debian.org/tracker/CVE-2020-8285)\nxnynx reported that libcurl could run out of stack space when using\n the FTP wildcard matching functionality (CURLOPT\\_CHUNK\\_BGN\\_FUNCTION).\n* [CVE-2020-8286](https://security-tracker.debian.org/tracker/CVE-2020-8286)\nIt was reported that libcurl didn't verify that an OCSP response\n actually matches the certificate it is intended to.\n* [CVE-2021-22876](https://security-tracker.debian.org/tracker/CVE-2021-22876)\nViktor Szakats reported that libcurl does not strip off user\n credentials from the URL when automatically populating the Referer\n HTTP request header field in outgoing HTTP requests.\n* [CVE-2021-22890](https://security-tracker.debian.org/tracker/CVE-2021-22890)\nMingtao Yang reported that, when using an HTTPS proxy and TLS 1.3,\n libcurl could confuse session tickets arriving from the HTTPS proxy\n as if they arrived from the remote server instead. This could allow\n an HTTPS proxy to trick libcurl into using the wrong session ticket\n for the host and thereby circumvent the server TLS certificate check.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 7.64.0-4+deb10u2.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFor the detailed security status of curl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/curl](https://security-tracker.debian.org/tracker/curl)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.64.0-4+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.64.0-4",
+				"7.64.0-4+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4881-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4881"
+		}
+	]
+}

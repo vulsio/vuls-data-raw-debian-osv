@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1661-1",
+	"modified": "2023-10-16T00:10:33.246750Z",
+	"published": "2008-10-29T00:00:00Z",
+	"related": [
+		"CVE-2008-2237",
+		"CVE-2008-2238"
+	],
+	"summary": "openoffice.org - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the OpenOffice.org\noffice suite:\n\n\n* [CVE-2008-2237](https://security-tracker.debian.org/tracker/CVE-2008-2237)\nThe SureRun Security team discovered a bug in the WMF file parser\n that can be triggered by manipulated WMF files and can lead to\n heap overflows and arbitrary code execution.\n* [CVE-2008-2238](https://security-tracker.debian.org/tracker/CVE-2008-2238)\nAn anonymous researcher working with the iDefense discovered a bug\n in the EMF file parser that can be triggered by manipulated EMF\n files and can lead to heap overflows and arbitrary code execution.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 2.0.4.dfsg.2-7etch6.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.4.1-12.\n\n\nFor the experimental distribution these problems have been fixed in\nversion 3.0.0~rc3-1.\n\n\nWe recommend that you upgrade your OpenOffice.org package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "openoffice.org",
+				"purl": "pkg:deb/debian/openoffice.org?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.4.dfsg.2-7etch6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.4.dfsg.2-5etch1",
+				"2.0.4.dfsg.2-5etch2",
+				"2.0.4.dfsg.2-6",
+				"2.0.4.dfsg.2-7",
+				"2.0.4.dfsg.2-7etch1",
+				"2.0.4.dfsg.2-7etch2",
+				"2.0.4.dfsg.2-7etch4",
+				"2.0.4.dfsg.2-7etch5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1661-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1661"
+		}
+	]
+}

@@ -1,0 +1,116 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1378-2",
+	"modified": "2023-10-16T00:06:34.760098Z",
+	"published": "2007-09-28T00:00:00Z",
+	"related": [
+		"CVE-2007-3731",
+		"CVE-2007-3739",
+		"CVE-2007-3740",
+		"CVE-2007-4573",
+		"CVE-2007-4849"
+	],
+	"summary": "fai-kernels linux-2.6 user-mode-linux - several vulnerabilities",
+	"details": "\nSeveral local and remote vulnerabilities have been discovered in the Linux\nkernel that may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-3731](https://security-tracker.debian.org/tracker/CVE-2007-3731)\nEvan Teran discovered a potential local denial of service (oops) in\n the handling of PTRACE\\_SETREGS and PTRACE\\_SINGLESTEP requests.\n* [CVE-2007-3739](https://security-tracker.debian.org/tracker/CVE-2007-3739)\nAdam Litke reported a potential local denial of service (oops) on\n powerpc platforms resulting from unchecked VMA expansion into address\n space reserved for hugetlb pages.\n* [CVE-2007-3740](https://security-tracker.debian.org/tracker/CVE-2007-3740)\nMatt Keenan reported that CIFS filesystems with CAP\\_UNIX enabled \n were not honoring a process' umask which may lead to unintentionally\n relaxed permissions.\n* [CVE-2007-4573](https://security-tracker.debian.org/tracker/CVE-2007-4573)\nWojciech Purczynski discovered a vulnerability that can be exploited\n by a local user to obtain superuser privileges on x86\\_64 systems.\n This resulted from improper clearing of the high bits of registers\n during ia32 system call emulation. This vulnerability is relevant\n to the Debian amd64 port as well as users of the i386 port who run\n the amd64 linux-image flavour.\n* [CVE-2007-4849](https://security-tracker.debian.org/tracker/CVE-2007-4849)\nMichael Stone reported an issue with the JFFS2 filesystem. Legacy\n modes for inodes that were created with POSIX ACL support enabled\n were not being written out to the medium, resulting in incorrect\n permissions upon remount.\n\n\nThese problems have been fixed in the stable distribution in version \n2.6.18.dfsg.1-13etch3.\n\n\nThis advisory has been updated to include a build for the arm\narchitecture, which was not yet available at the time of DSA-1378-1.\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17+etch.13etch3 |\n| user-mode-linux | 2.6.18-1um-2etch.13etch3 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-13etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12",
+				"2.6.18.dfsg.1-12etch1",
+				"2.6.18.dfsg.1-12etch2",
+				"2.6.18.dfsg.1-13",
+				"2.6.18.dfsg.1-13etch1",
+				"2.6.18.dfsg.1-13etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1378-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "fai-kernels",
+				"purl": "pkg:deb/debian/fai-kernels?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17+etch.13etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17",
+				"1.17+etch1",
+				"1.17+etch2",
+				"1.17+etch3",
+				"1.17+etch4",
+				"1.17+etch5",
+				"1.17etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1378-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "user-mode-linux",
+				"purl": "pkg:deb/debian/user-mode-linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18-1um-2etch.13etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18-1um-2",
+				"2.6.18-1um-2etch1",
+				"2.6.18-1um-2etch2",
+				"2.6.18-1um-2etch3",
+				"2.6.18-1um-2etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1378-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1378"
+		}
+	]
+}

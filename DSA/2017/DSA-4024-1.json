@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4024-1",
+	"modified": "2023-10-16T00:12:34.909597Z",
+	"published": "2017-11-08T00:00:00Z",
+	"related": [
+		"CVE-2017-15398",
+		"CVE-2017-15399"
+	],
+	"summary": "chromium-browser - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the chromium browser.\n\n\n* [CVE-2017-15398](https://security-tracker.debian.org/tracker/CVE-2017-15398)\nNed Williamson discovered a stack overflow issue.\n* [CVE-2017-15399](https://security-tracker.debian.org/tracker/CVE-2017-15399)\nZhao Qixun discovered a use-after-free issue in the v8 javascript\n library.\n\n\nFor the oldstable distribution (jessie), security support for chromium has\nbeen discontinued.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 62.0.3202.89-1~deb9u1.\n\n\nFor the testing distribution (buster), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 62.0.3202.89-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "62.0.3202.89-1~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"59.0.3071.104-1",
+				"59.0.3071.86-1",
+				"60.0.3112.72-1",
+				"60.0.3112.78-1",
+				"60.0.3112.78-1~deb9u1",
+				"61.0.3163.100-1",
+				"61.0.3163.100-1~deb9u1",
+				"61.0.3163.100-2",
+				"62.0.3202.75-1",
+				"62.0.3202.75-1~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4024-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4024"
+		}
+	]
+}

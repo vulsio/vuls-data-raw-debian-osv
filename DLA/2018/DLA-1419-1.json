@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1419-1",
+	"modified": "2023-06-28T06:20:40.880061Z",
+	"published": "2018-07-12T00:00:00Z",
+	"related": [
+		"CVE-2018-3760"
+	],
+	"summary": "ruby-sprockets - security update",
+	"details": "\nIt was discovered that there was a discovered a path traversal flaw\nin ruby-sprockets, a Rack-based asset packaging system. A remote\nattacker could take advantage of this flaw to read arbitrary files\noutside an application's root directory via \"file://\" requests.\n\n\nFor Debian 8 Jessie, this issue has been fixed in ruby-sprockets version\n2.12.3-1+deb8u1.\n\n\nWe recommend that you upgrade your ruby-sprockets packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ruby-sprockets",
+				"purl": "pkg:deb/debian/ruby-sprockets?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.12.3-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.12.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1419-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1419"
+		}
+	]
+}

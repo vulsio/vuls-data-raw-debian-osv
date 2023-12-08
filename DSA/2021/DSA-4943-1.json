@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4943-1",
+	"modified": "2023-10-16T00:15:14.574496Z",
+	"published": "2021-07-23T00:00:00Z",
+	"related": [
+		"CVE-2021-35472"
+	],
+	"summary": "lemonldap-ng - security update",
+	"details": "\nSeveral vulnerabilities were discovered in lemonldap-ng, a Web-SSO\nsystem. The flaws could result in information disclosure, authentication\nbypass, or could allow an attacker to increase its authentication level\nor impersonate another user, especially when lemonldap-ng is configured\nto increase authentication level for users authenticated via a second\nfactor.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2.0.2+ds-7+deb10u6.\n\n\nWe recommend that you upgrade your lemonldap-ng packages.\n\n\nFor the detailed security status of lemonldap-ng please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/lemonldap-ng](https://security-tracker.debian.org/tracker/lemonldap-ng)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "lemonldap-ng",
+				"purl": "pkg:deb/debian/lemonldap-ng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.2+ds-7+deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.2+ds-7+deb10u1",
+				"2.0.2+ds-7+deb10u2",
+				"2.0.2+ds-7+deb10u3",
+				"2.0.2+ds-7+deb10u4",
+				"2.0.2+ds-7+deb10u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4943-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4943"
+		}
+	]
+}

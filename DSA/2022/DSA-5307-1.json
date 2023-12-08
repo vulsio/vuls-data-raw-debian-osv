@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5307-1",
+	"modified": "2023-10-16T00:22:57.779818Z",
+	"published": "2022-12-29T00:00:00Z",
+	"related": [
+		"CVE-2021-37533"
+	],
+	"summary": "libcommons-net-java - security update",
+	"details": "\nZeddYu Lu discovered that the FTP client of Apache Commons Net, a Java\nclient API for basic Internet protocols, trusts the host from PASV response\nby default. A malicious server can redirect the Commons Net code to use a\ndifferent host, but the user has to connect to the malicious server in the\nfirst place. This may lead to leakage of information about services running\non the private network of the client.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 3.6-1+deb11u1.\n\n\nWe recommend that you upgrade your libcommons-net-java packages.\n\n\nFor the detailed security status of libcommons-net-java please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libcommons-net-java](https://security-tracker.debian.org/tracker/libcommons-net-java)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libcommons-net-java",
+				"purl": "pkg:deb/debian/libcommons-net-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5307-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5307"
+		}
+	]
+}

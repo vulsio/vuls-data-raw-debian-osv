@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3376-1",
+	"modified": "2023-06-28T06:26:57.652984Z",
+	"published": "2023-04-02T00:00:00Z",
+	"related": [
+		"CVE-2019-6245",
+		"CVE-2019-6247",
+		"CVE-2021-44960"
+	],
+	"summary": "svgpp - security update",
+	"details": "\nMultiple security issues were discovered in svgpp: a C++ library for parsing and\nrendering Scalable Vector Graphics (SVG) files.\n\n\n* [CVE-2021-44960](https://security-tracker.debian.org/tracker/CVE-2021-44960)\nThe XMLDocument::getRoot function in the renderDocument function handled the\n XMLDocument object improperly. Specifically, it returned a null pointer\n prematurely at the second if statement, resulting in a null pointer\n reference behind the renderDocument function.\n* [CVE-2019-6245](https://security-tracker.debian.org/tracker/CVE-2019-6245)\nand [CVE-2019-6247](https://security-tracker.debian.org/tracker/CVE-2019-6247):\n issues were discovered in Anti-Grain Geometry (AGG) within the function\n agg::cell\\_aa::not\\_equal. Since svgpp is a header-only library, the issue is\n only transitive in theory. As a result, only a dependency version hardening\n has been added to the control file.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.2.3+dfsg1-6+deb10u1.\n\n\nWe recommend that you upgrade your svgpp packages.\n\n\nFor the detailed security status of svgpp please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/svgpp>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "svgpp",
+				"purl": "pkg:deb/debian/svgpp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3+dfsg1-6+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3+dfsg1-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3376-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3376"
+		}
+	]
+}

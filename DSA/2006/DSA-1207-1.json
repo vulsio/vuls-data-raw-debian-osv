@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1207-1",
+	"modified": "2023-10-16T00:10:14.224283Z",
+	"published": "2006-11-09T00:00:00Z",
+	"related": [
+		"CVE-2005-3621",
+		"CVE-2005-3665",
+		"CVE-2006-1678",
+		"CVE-2006-2418",
+		"CVE-2006-5116"
+	],
+	"summary": "phpmyadmin",
+	"details": "\nThe phpmyadmin update in DSA 1207 introduced a regression. This update\ncorrects this flaw. For completeness, please find below the original\nadvisory text:\n\n\n\n> \n> Several remote vulnerabilities have been discovered in phpMyAdmin, a\n> program to administrate MySQL over the web. The Common Vulnerabilities\n> and Exposures project identifies the following problems:\n> \n> \n> * [CVE-2005-3621](https://security-tracker.debian.org/tracker/CVE-2005-3621)\n> CRLF injection vulnerability allows remote attackers to conduct\n>  HTTP response splitting attacks.\n> * [CVE-2005-3665](https://security-tracker.debian.org/tracker/CVE-2005-3665)\n> Multiple cross-site scripting (XSS) vulnerabilities allow remote\n>  attackers to inject arbitrary web script or HTML via the (1) HTTP\\_HOST\n>  variable and (2) various scripts in the libraries directory that\n>  handle header generation.\n> * [CVE-2006-1678](https://security-tracker.debian.org/tracker/CVE-2006-1678)\n> Multiple cross-site scripting (XSS) vulnerabilities allow remote\n>  attackers to inject arbitrary web script or HTML via scripts in the\n>  themes directory.\n> * [CVE-2006-2418](https://security-tracker.debian.org/tracker/CVE-2006-2418)\n> A cross-site scripting (XSS) vulnerability allows remote attackers\n>  to inject arbitrary web script or HTML via the db parameter of\n>  footer.inc.php.\n> * [CVE-2006-5116](https://security-tracker.debian.org/tracker/CVE-2006-5116)\n> A remote attacker could overwrite internal variables through the\n>  \\_FILES global variable.\n> \n> \n> \n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.6.2-3sarge3.\n\n\nFor the upcoming stable release (etch) and unstable distribution (sid)\nthese problems have been fixed in version 2.9.0.3-1.\n\n\nWe recommend that you upgrade your phpmyadmin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.6.2-3sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.6.2-3",
+				"4:2.6.2-3sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1207-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1207"
+		}
+	]
+}

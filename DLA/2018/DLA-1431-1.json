@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1431-1",
+	"modified": "2023-06-28T06:20:41.771743Z",
+	"published": "2018-07-19T00:00:00Z",
+	"related": [
+		"CVE-2018-10886"
+	],
+	"summary": "ant - security update",
+	"details": "\nunzip and untar target tasks in ant allows the extraction of files\noutside the target directory. A crafted zip or tar file submitted to\nan Ant build could create or overwrite arbitrary files with the\nprivileges of the user running Ant.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.9.4-3+deb8u1.\n\n\nWe recommend that you upgrade your ant packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ant",
+				"purl": "pkg:deb/debian/ant?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.4-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.4-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1431-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1431"
+		}
+	]
+}

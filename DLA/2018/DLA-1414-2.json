@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1414-2",
+	"modified": "2023-06-28T06:20:39.580738Z",
+	"published": "2018-07-05T00:00:00Z",
+	"related": [
+		"CVE-2017-17458"
+	],
+	"summary": "mercurial - regression update",
+	"details": "\nSome security vulnerabilities were found in Mercurial which allow\nauthenticated users to trigger arbitrary code execution and\nunauthorized data access in certain server configuration. Malformed\npatches and repositories can also lead to crashes and arbitrary code\nexecution on clients.\n\n\n* [CVE-2017-9462](https://security-tracker.debian.org/tracker/CVE-2017-9462)\nIn Mercurial before 4.1.3, \"hg serve --stdio\" allows remote\n authenticated users to launch the Python debugger, and\n consequently execute arbitrary code, by using --debugger as a\n repository name.\n* [CVE-2017-17458](https://security-tracker.debian.org/tracker/CVE-2017-17458)\nIn Mercurial before 4.4.1, it is possible that a specially\n malformed repository can cause Git subrepositories to run\n arbitrary code in the form of a .git/hooks/post-update script\n checked into the repository. Typical use of Mercurial prevents\n construction of such repositories, but they can be created\n programmatically.\n* [CVE-2018-1000132](https://security-tracker.debian.org/tracker/CVE-2018-1000132)\nMercurial version 4.5 and earlier contains a Incorrect Access\n Control (CWE-285) vulnerability in Protocol server that can result\n in Unauthorized data access. This attack appear to be exploitable\n via network connectivity. This vulnerability appears to have been\n fixed in 4.5.1.\n\n* OVE-20180430-0001\n\n mpatch: be more careful about parsing binary patch data\n* OVE-20180430-0002\n\n mpatch: protect against underflow in mpatch\\_apply\n* OVE-20180430-0004\n\n mpatch: ensure fragment start isn't past the end of orig\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.1.2-2+deb8u5.\n\n\nWe recommend that you upgrade your mercurial packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mercurial",
+				"purl": "pkg:deb/debian/mercurial?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.2-2+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.2-2",
+				"3.1.2-2+deb8u1",
+				"3.1.2-2+deb8u2",
+				"3.1.2-2+deb8u3",
+				"3.1.2-2+deb8u4",
+				"3.1.2-2+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1414-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1414"
+		}
+	]
+}

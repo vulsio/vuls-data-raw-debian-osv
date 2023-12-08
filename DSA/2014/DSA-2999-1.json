@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2999-1",
+	"modified": "2023-10-16T00:06:10.113606Z",
+	"published": "2014-08-09T00:00:00Z",
+	"related": [
+		"CVE-2014-5265",
+		"CVE-2014-5266",
+		"CVE-2014-5267"
+	],
+	"summary": "drupal7 - security update",
+	"details": "\nA denial of service vulnerability was discovered in Drupal, a\nfully-featured content management framework. A remote attacker could\nexploit this flaw to cause CPU and memory exhaustion and the site's\ndatabase to reach the maximum number of open connections, leading to the\nsite becoming unavailable or unresponsive. More information can be found\nat [\\\nhttps://www.drupal.org/SA-CORE-2014-004](https://www.drupal.org/SA-CORE-2014-004).\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 7.14-2+deb7u6.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 7.31-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 7.31-1.\n\n\nWe recommend that you upgrade your drupal7 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "drupal7",
+				"purl": "pkg:deb/debian/drupal7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.14-2+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.14-2",
+				"7.14-2+deb7u1",
+				"7.14-2+deb7u1~bpo60+1",
+				"7.14-2+deb7u2",
+				"7.14-2+deb7u2~bpo60+1",
+				"7.14-2+deb7u3",
+				"7.14-2+deb7u4",
+				"7.14-2+deb7u4~bpo60+1",
+				"7.14-2+deb7u5",
+				"7.14-2+deb7u6~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2999-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2999"
+		}
+	]
+}

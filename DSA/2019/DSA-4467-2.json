@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4467-2",
+	"modified": "2023-10-16T00:20:19.842794Z",
+	"published": "2019-06-18T00:00:00Z",
+	"summary": "vim - regression update",
+	"details": "\nUser Arminius discovered a vulnerability in Vim, an enhanced version of the\nstandard UNIX editor Vi (Vi IMproved). The Common vulnerabilities and\nexposures project identifies the following problem:\n\n\nEditors typically provide a way to embed editor configuration commands (aka\nmodelines) which are executed once a file is opened, while harmful commands\nare filtered by a sandbox mechanism. It was discovered that the source\ncommand (used to include and execute another file) was not filtered, allowing\nshell command execution with a carefully crafted file opened in Vim.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:8.0.0197-4+deb9u2.\n\n\nWe recommend that you upgrade your vim packages.\n\n\nFor the detailed security status of vim please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/vim](https://security-tracker.debian.org/tracker/vim)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "vim",
+				"purl": "pkg:deb/debian/vim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:8.0.0197-4+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:8.0.0197-4",
+				"2:8.0.0197-4+deb9u1",
+				"2:8.0.0197-4+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4467-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4467"
+		}
+	]
+}

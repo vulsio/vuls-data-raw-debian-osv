@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2816-1",
+	"modified": "2023-06-28T06:45:50.384731Z",
+	"published": "2021-11-10T00:00:00Z",
+	"related": [
+		"CVE-2021-32739",
+		"CVE-2021-32743",
+		"CVE-2021-37698"
+	],
+	"summary": "icinga2 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Icinga 2, a general-purpose\nmonitoring application. An attacker could retrieve sensitive\ninformation such as service passwords and ticket salt by querying the\nweb API, or by intercepting unsufficiently checked encrypted\nconnections.\n\n\n* [CVE-2021-32739](https://security-tracker.debian.org/tracker/CVE-2021-32739)\nA vulnerability exists that may allow privilege escalation for\n authenticated API users. With a read-only user's credentials, an\n attacker can view most attributes of all config objects including\n `ticket\\_salt` of `ApiListener`. This salt is enough to compute a\n ticket for every possible common name (CN). A ticket, the master\n node's certificate, and a self-signed certificate are enough to\n successfully request the desired certificate from Icinga. That\n certificate may in turn be used to steal an endpoint or API user's\n identity. See also complementary manual procedures:\n <https://icinga.com/blog/2021/07/15/releasing-icinga-2-12-5-and-2-11-10/#change-ticket-salt>\n<https://icinga.com/blog/2021/07/15/releasing-icinga-2-12-5-and-2-11-10/#replace-icinga-ca>\n* [CVE-2021-32743](https://security-tracker.debian.org/tracker/CVE-2021-32743)\nSome of the Icinga 2 features that require credentials for\n external services expose those credentials through the API to\n authenticated API users with read permissions for the\n corresponding object types. IdoMysqlConnection and\n IdoPgsqlConnection exposes the password of the user used to\n connect to the database. An attacker who obtains these credentials\n can impersonate Icinga to these services and add, modify and\n delete information there. If credentials with more permissions are\n in use, this increases the impact accordingly.\n* [CVE-2021-37698](https://security-tracker.debian.org/tracker/CVE-2021-37698)\nInfluxdbWriter and Influxdb2Writer do not verify the server's\n certificate despite a certificate authority being\n specified. Icinga 2 instances which connect to any of the\n mentioned time series databases (TSDBs) using TLS over a spoofable\n infrastructure should immediately upgrade. Such instances should\n also change the credentials (if any) used by the TSDB writer\n feature to authenticate against the TSDB.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.6.0-2+deb9u2.\n\n\nWe recommend that you upgrade your icinga2 packages.\n\n\nFor the detailed security status of icinga2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/icinga2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "icinga2",
+				"purl": "pkg:deb/debian/icinga2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.0-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.0-2",
+				"2.6.0-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2816-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2816"
+		}
+	]
+}

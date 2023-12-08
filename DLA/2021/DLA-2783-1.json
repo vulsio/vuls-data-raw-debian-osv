@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2783-1",
+	"modified": "2021-10-12T10:22:44Z",
+	"published": "2021-10-12T00:00:00Z",
+	"related": [
+		"CVE-2021-32765"
+	],
+	"summary": "hiredis - security update",
+	"details": "\nIt was discovered that there was an integer-overflow vulnerability in\nhiredis, a C client library for communicating with Redis databases. This\noccurred within the handling and parsing of 'multi-bulk' replies.\n\n\n* [CVE-2021-32765](https://security-tracker.debian.org/tracker/CVE-2021-32765)\nHiredis is a minimalistic C client library for the Redis database. In\n affected versions Hiredis is vulnurable to integer overflow if provided\n maliciously crafted or corrupted `RESP` `mult-bulk` protocol data. When\n parsing `multi-bulk` (array-like) replies, hiredis fails to check if `count\n \\* sizeof(redisReply\\*)` can be represented in `SIZE\\_MAX`. If it can not, and\n the `calloc()` call doesn't itself make this check, it would result in a\n short allocation and subsequent buffer overflow. Users of hiredis who are\n unable to update may set the\n [maxelements](https://github.com/redis/hiredis#reader-max-array-elements)\n context option to a value small enough that no overflow is\n possible.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n0.13.3-1+deb9u1.\n\n\nWe recommend that you upgrade your hiredis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "hiredis",
+				"purl": "pkg:deb/debian/hiredis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.13.3-1+deb9u1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2783-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2783"
+		}
+	]
+}

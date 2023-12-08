@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-851-1",
+	"modified": "2023-06-28T06:27:09.266631Z",
+	"published": "2017-03-09T00:00:00Z",
+	"related": [
+		"CVE-2017-6508"
+	],
+	"summary": "wget - security update",
+	"details": "\nIt was discovered that there was a header injection vulnerability in wget (a tool\nto retrieve files from the web) which allowed remote attackers to inject\narbitrary HTTP headers via CRLF sequences in the host subcomponent of a URL.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in wget version\n1.13.4-3+deb7u4.\n\n\nWe recommend that you upgrade your wget packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wget",
+				"purl": "pkg:deb/debian/wget?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.13.4-3+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.13.4-3",
+				"1.13.4-3+deb7u1",
+				"1.13.4-3+deb7u2",
+				"1.13.4-3+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-851-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-851"
+		}
+	]
+}

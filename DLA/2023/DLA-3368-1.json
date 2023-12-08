@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3368-1",
+	"modified": "2023-06-28T06:37:30.846856Z",
+	"published": "2023-03-26T00:00:00Z",
+	"related": [
+		"CVE-2021-25636",
+		"CVE-2022-26305",
+		"CVE-2022-26306",
+		"CVE-2022-26307",
+		"CVE-2022-3140"
+	],
+	"summary": "libreoffice - security update",
+	"details": "\nMultiple vulnerabilities were found in LibreOffice an\noffice productivity software suite, leading to arbitrary script\nexecution, improper certificate validation, and weak encryption\nof password storage in the userâs configuration database.\n\n\n* [CVE-2021-25636](https://security-tracker.debian.org/tracker/CVE-2021-25636)\nOnly use X509Data\n LibreOffice supports digital signatures of ODF documents and macros\n within documents, presenting visual aids that no alteration of the\n document occurred since the last signing and that the signature is\n valid. An Improper Certificate Validation vulnerability in LibreOffice\n allowed an attacker to create a digitally signed ODF document, by\n manipulating the documentsignatures.xml or macrosignatures.xml stream\n within the document to contain both X509Data and KeyValue children\n of the KeyInfo tag, which when opened caused LibreOffice to verify\n using the KeyValue but to report verification with the unrelated\n X509Data value.\n* [CVE-2022-3140](https://security-tracker.debian.org/tracker/CVE-2022-3140)\nInsufficient validation of vnd.libreoffice.command\n URI schemes. LibreOffice supports Office URI Schemes to enable browser\n integration of LibreOffice with MS SharePoint server. An additional\n scheme vnd.libreoffice.command specific to LibreOffice was added. In\n the affected versions of LibreOffice links using that scheme could be\n constructed to call internal macros with arbitrary arguments. Which\n when clicked on, or activated by document events, could result in\n arbitrary script execution without warning.\n* [CVE-2022-26305](https://security-tracker.debian.org/tracker/CVE-2022-26305)\nCompare authors using Thumbprint\n An Improper Certificate Validation vulnerability in LibreOffice\n existed where determining if a macro was signed by a trusted author\n was done by only matching the serial number and issuer string of the\n used certificate with that of a trusted certificate. This is not\n sufficient to verify that the macro was actually signed with the\n certificate. An adversary could therefore create an arbitrary\n certificate with a serial number and an issuer string identical to a\n trusted certificate which LibreOffice would present as belonging to\n the trusted author, potentially leading to the user to execute\n arbitrary code contained in macros improperly trusted.\n* [CVE-2022-26306](https://security-tracker.debian.org/tracker/CVE-2022-26306)\nLibreOffice supports the storage of passwords for\n web connections in the userâs configuration database. The stored\n passwords are encrypted with a single master key provided by the\n user. A flaw in LibreOffice existed where the required initialization\n vector for encryption was always the same which weakens the security\n of the encryption making them vulnerable if an attacker has access to\n the user's configuration data\n* [CVE-2022-26307](https://security-tracker.debian.org/tracker/CVE-2022-26307)\nAdd Initialization Vectors to password storage.\n LibreOffice supports the storage of passwords for web connections in\n the userâs configuration database. The stored passwords are encrypted\n with a single master key provided by the user. A flaw in LibreOffice\n existed where master key was poorly encoded resulting in weakening its\n entropy from 128 to 43 bits making the stored passwords vulerable to a\n brute force attack if an attacker has access to the users stored\n config.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:6.1.5-3+deb10u8.\n\n\nWe recommend that you upgrade your libreoffice packages.\n\n\nFor the detailed security status of libreoffice please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libreoffice>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libreoffice",
+				"purl": "pkg:deb/debian/libreoffice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:6.1.5-3+deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:6.1.5-3",
+				"1:6.1.5-3+deb10u1",
+				"1:6.1.5-3+deb10u2",
+				"1:6.1.5-3+deb10u2~bpo9+1",
+				"1:6.1.5-3+deb10u3",
+				"1:6.1.5-3+deb10u4",
+				"1:6.1.5-3+deb10u4~bpo9+1",
+				"1:6.1.5-3+deb10u5",
+				"1:6.1.5-3+deb10u6",
+				"1:6.1.5-3+deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3368-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3368"
+		}
+	]
+}

@@ -1,0 +1,140 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4564-1",
+	"modified": "2023-10-16T00:14:06.637672Z",
+	"published": "2019-11-12T00:00:00Z",
+	"related": [
+		"CVE-2018-12207",
+		"CVE-2019-0154",
+		"CVE-2019-0155",
+		"CVE-2019-11135"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service, or information\nleak.\n\n\n* [CVE-2018-12207](https://security-tracker.debian.org/tracker/CVE-2018-12207)\nIt was discovered that on Intel CPUs supporting hardware\n virtualisation with Extended Page Tables (EPT), a guest VM may\n manipulate the memory management hardware to cause a Machine Check\n Error (MCE) and denial of service (hang or crash).\n\n\nThe guest triggers this error by changing page tables without a\n TLB flush, so that both 4 KB and 2 MB entries for the same virtual\n address are loaded into the instruction TLB (iTLB). This update\n implements a mitigation in KVM that prevents guest VMs from\n loading 2 MB entries into the iTLB. This will reduce performance\n of guest VMs.\n\n\nFurther information on the mitigation can be found at\n \n or in the linux-doc-4.9 or linux-doc-4.19 package.\n\n\nA qemu update adding support for the PSCHANGE\\_MC\\_NO feature, which\n allows to disable iTLB Multihit mitigations in nested hypervisors\n will be provided via DSA 4566-1.\n\n\nIntel's explanation of the issue can be found at\n .\n* [CVE-2019-0154](https://security-tracker.debian.org/tracker/CVE-2019-0154)\nIntel discovered that on their 8th and 9th generation GPUs,\n reading certain registers while the GPU is in a low-power state\n can cause a system hang. A local user permitted to use the GPU\n can use this for denial of service.\n\n\nThis update mitigates the issue through changes to the i915\n driver.\n\n\nThe affected chips (gen8 and gen9) are listed at\n .\n* [CVE-2019-0155](https://security-tracker.debian.org/tracker/CVE-2019-0155)\nIntel discovered that their 9th generation and newer GPUs are\n missing a security check in the Blitter Command Streamer (BCS). A\n local user permitted to use the GPU could use this to access any\n memory that the GPU has access to, which could result in a denial\n of service (memory corruption or crash), a leak of sensitive\n information, or privilege escalation.\n\n\nThis update mitigates the issue by adding the security check to\n the i915 driver.\n\n\nThe affected chips (gen9 onward) are listed at\n .\n* [CVE-2019-11135](https://security-tracker.debian.org/tracker/CVE-2019-11135)\nIt was discovered that on Intel CPUs supporting transactional\n memory (TSX), a transaction that is going to be aborted may\n continue to execute speculatively, reading sensitive data from\n internal buffers and leaking it through dependent operations.\n Intel calls this TSX Asynchronous Abort (TAA).\n\n\nFor CPUs affected by the previously published Microarchitectural\n Data Sampling (MDS) issues\n ([CVE-2018-12126](https://security-tracker.debian.org/tracker/CVE-2018-12126),\n [CVE-2018-12127](https://security-tracker.debian.org/tracker/CVE-2018-12127),\n [CVE-2018-12130](https://security-tracker.debian.org/tracker/CVE-2018-12130),\n [CVE-2019-11091](https://security-tracker.debian.org/tracker/CVE-2019-11091)),\n the existing mitigation also mitigates this issue.\n\n\nFor processors that are vulnerable to TAA but not MDS, this update\n disables TSX by default. This mitigation requires updated CPU\n microcode. An updated intel-microcode package (only available in\n Debian non-free) will be provided via DSA 4565-1. The updated CPU\n microcode may also be available as part of a system firmware\n (\"BIOS\") update.\n\n\nFurther information on the mitigation can be found at\n \n or in the linux-doc-4.9 or linux-doc-4.19 package.\n\n\nIntel's explanation of the issue can be found at\n .\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 4.9.189-3+deb9u2.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.19.67-2+deb10u2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.189-3+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.107-1",
+				"4.9.110-1",
+				"4.9.110-2",
+				"4.9.110-3",
+				"4.9.110-3+deb9u1",
+				"4.9.110-3+deb9u2",
+				"4.9.110-3+deb9u3",
+				"4.9.110-3+deb9u4",
+				"4.9.110-3+deb9u5",
+				"4.9.110-3+deb9u6",
+				"4.9.130-1",
+				"4.9.130-2",
+				"4.9.135-1",
+				"4.9.144-1",
+				"4.9.144-2",
+				"4.9.144-3",
+				"4.9.144-3.1",
+				"4.9.161-1",
+				"4.9.168-1",
+				"4.9.168-1+deb9u2",
+				"4.9.168-1+deb9u3",
+				"4.9.168-1+deb9u4",
+				"4.9.168-1+deb9u5",
+				"4.9.184-1",
+				"4.9.185-1",
+				"4.9.189-1",
+				"4.9.189-2",
+				"4.9.189-3",
+				"4.9.189-3+deb9u1",
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1",
+				"4.9.30-2+deb9u3",
+				"4.9.30-2+deb9u4",
+				"4.9.30-2+deb9u5",
+				"4.9.30-2+deb9u5~bpo8+1",
+				"4.9.47-1",
+				"4.9.51-1",
+				"4.9.51-1~bpo8+1",
+				"4.9.65-1",
+				"4.9.65-2",
+				"4.9.65-3",
+				"4.9.65-3+deb9u1",
+				"4.9.65-3+deb9u1~bpo8+1",
+				"4.9.65-3+deb9u2",
+				"4.9.65-3+deb9u2~bpo8+1",
+				"4.9.65-3~bpo8+1",
+				"4.9.80-1",
+				"4.9.80-2",
+				"4.9.82-1+deb9u2",
+				"4.9.82-1+deb9u3",
+				"4.9.82-1+deb9u3~bpo8+1",
+				"4.9.88-1",
+				"4.9.88-1+deb9u1",
+				"4.9.88-1+deb9u1~bpo8+1",
+				"4.9.88-1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4564-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.19.67-2+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.19.37-5",
+				"4.19.37-5+deb10u1",
+				"4.19.37-5+deb10u2",
+				"4.19.37-5+deb10u2~bpo9+1",
+				"4.19.37-6",
+				"4.19.67-1",
+				"4.19.67-2",
+				"4.19.67-2+deb10u1",
+				"4.19.67-2+deb10u1~bpo9+1",
+				"4.19.67-2+deb10u2~bpo9+1",
+				"4.19.67-2~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4564-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4564"
+		}
+	]
+}

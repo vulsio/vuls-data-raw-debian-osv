@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3277-1",
+	"modified": "2023-10-16T00:06:17.243031Z",
+	"published": "2015-06-02T00:00:00Z",
+	"related": [
+		"CVE-2015-3808",
+		"CVE-2015-3809",
+		"CVE-2015-3810",
+		"CVE-2015-3811",
+		"CVE-2015-3812",
+		"CVE-2015-3813",
+		"CVE-2015-3814",
+		"CVE-2015-3815",
+		"CVE-2015-3906"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the dissectors/parsers for\nLBMR, web sockets, WCP, X11, IEEE 802.11 and Android Logcat, which could\nresult in denial of service.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.8.2-5wheezy16.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.12.1+g01b65bf-4+deb8u1.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 1.12.5+g5819e5b-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.12.5+g5819e5b-1.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.1+g01b65bf-4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.1+g01b65bf-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3277-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3277"
+		}
+	]
+}

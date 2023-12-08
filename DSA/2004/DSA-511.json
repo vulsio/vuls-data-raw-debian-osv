@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-511",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-05-30T00:00:00Z",
+	"related": [
+		"CVE-2004-0176"
+	],
+	"summary": "ethereal - buffer overflows",
+	"details": "\nSeveral buffer overflow vulnerabilities were discovered in ethereal, a\nnetwork traffic analyzer. These vulnerabilities are described in the\nethereal advisory \"enpa-sa-00013\". Of these, only some parts of\n[CAN-2004-0176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0176) affect the version of ethereal in Debian woody.\n[CAN-2004-0367](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0367) and [CAN-2004-0365](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0365) are not applicable to this version.\n\n\nFor the current stable distribution (woody), these problems have been\nfixed in version 0.9.4-1woody7.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.10.3-1.\n\n\nWe recommend that you update your ethereal package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "ethereal",
+				"purl": "pkg:deb/debian/ethereal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.4-1woody7"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-511.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-511"
+		}
+	]
+}

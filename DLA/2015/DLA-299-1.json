@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-299-1",
+	"modified": "2023-06-28T06:26:45.612426Z",
+	"published": "2015-08-26T00:00:00Z",
+	"related": [
+		"CVE-2009-5147"
+	],
+	"summary": "ruby1.8 - security update",
+	"details": "\n\"sheepman\" fixed a vulnerability in Ruby 1.8: DL::dlopen could open a library\nwith tainted name even if $SAFE > 0.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in ruby1.8\n1.8.7.302-2squeeze5.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ruby1.8",
+				"purl": "pkg:deb/debian/ruby1.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.7.302-2squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.7.302-2",
+				"1.8.7.302-2squeeze1",
+				"1.8.7.302-2squeeze2",
+				"1.8.7.302-2squeeze3",
+				"1.8.7.302-2squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-299-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-299"
+		}
+	]
+}

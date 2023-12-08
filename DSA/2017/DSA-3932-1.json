@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3932-1",
+	"modified": "2023-10-16T00:12:28.743354Z",
+	"published": "2017-08-10T00:00:00Z",
+	"related": [
+		"CVE-2017-9800"
+	],
+	"summary": "subversion - security update",
+	"details": "\nSeveral problems were discovered in Subversion, a centralised version\ncontrol system.\n\n\n* [CVE-2016-8734](https://security-tracker.debian.org/tracker/CVE-2016-8734)\n(jessie only)\n\n\nSubversion's mod\\_dontdothat server module and Subversion clients\n using http(s):// were vulnerable to a denial-of-service attack\n caused by exponential XML entity expansion.\n* [CVE-2017-9800](https://security-tracker.debian.org/tracker/CVE-2017-9800)\nJoern Schneeweisz discovered that Subversion did not correctly\n handle maliciously constructed svn+ssh:// URLs. This allowed an\n attacker to run an arbitrary shell command, for instance via\n svn:externals properties or when using svnsync sync.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.8.10-6+deb8u5.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.9.5-1+deb9u1.\n\n\nWe recommend that you upgrade your subversion packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "subversion",
+				"purl": "pkg:deb/debian/subversion?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.10-6+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.10-6",
+				"1.8.10-6+deb8u1",
+				"1.8.10-6+deb8u1~bpo70+1",
+				"1.8.10-6+deb8u2",
+				"1.8.10-6+deb8u2~bpo70+1",
+				"1.8.10-6+deb8u3",
+				"1.8.10-6+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3932-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "subversion",
+				"purl": "pkg:deb/debian/subversion?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.5-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3932-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3932"
+		}
+	]
+}

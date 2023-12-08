@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3498-1",
+	"modified": "2023-07-19T11:15:20.703588Z",
+	"published": "2023-07-19T00:00:00Z",
+	"related": [
+		"CVE-2023-2828"
+	],
+	"summary": "bind9 - security update",
+	"details": "\nIt was discovered that there was a potential denial of service (DoS)\nin bind9, the popular Domain Name Server (DNS) server. Shoham Danino, Anat\nBremler-Barr, Yehuda Afek and Yuval Shavitt discovered that a flaw in the\ncache-cleaning algorithm used in named can cause that named's configured cache\nsize limit can be significantly exceeded, potentially resulting in a denial of\nservice attack.\n\n\n* [CVE-2023-2828](https://security-tracker.debian.org/tracker/CVE-2023-2828)\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1:9.11.5.P4+dfsg-5.1+deb10u9.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.11.5.P4+dfsg-5.1+deb10u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.11.5.P4+dfsg-5.1",
+				"1:9.11.5.P4+dfsg-5.1+deb10u1",
+				"1:9.11.5.P4+dfsg-5.1+deb10u2",
+				"1:9.11.5.P4+dfsg-5.1+deb10u3",
+				"1:9.11.5.P4+dfsg-5.1+deb10u4",
+				"1:9.11.5.P4+dfsg-5.1+deb10u5",
+				"1:9.11.5.P4+dfsg-5.1+deb10u6",
+				"1:9.11.5.P4+dfsg-5.1+deb10u7",
+				"1:9.11.5.P4+dfsg-5.1+deb10u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3498-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3498"
+		}
+	]
+}

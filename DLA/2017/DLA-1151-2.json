@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1151-2",
+	"modified": "2023-06-28T06:20:24.637252Z",
+	"published": "2017-10-31T00:00:00Z",
+	"summary": "wordpress - regression update",
+	"details": "\nSeveral vulnerabilities were discovered in wordpress, a web blogging\ntool. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues.\n\n\n* [CVE-2016-9263](https://security-tracker.debian.org/tracker/CVE-2016-9263)\nWhen domain-based flashmediaelement.swf sandboxing is not used,\n allows remote attackers to conduct cross-domain Flash injection\n (XSF) attacks by leveraging code contained within the\n wp-includes/js/mediaelement/flashmediaelement.swf file.\n\n\nThis issue was resolved by completely removing\n flashmediaelement.swf.\n* [CVE-2017-14718](https://security-tracker.debian.org/tracker/CVE-2017-14718)\nWordPress was susceptible to a Cross-Site Scripting attack in the\n link modal via a javascript: or data: URL.\n* [CVE-2017-14719](https://security-tracker.debian.org/tracker/CVE-2017-14719)\nWordPress was vulnerable to a directory traversal attack during\n unzip operations in the ZipArchive and PclZip components.\n* [CVE-2017-14720](https://security-tracker.debian.org/tracker/CVE-2017-14720)\nWordPress allowed a Cross-Site scripting attack in the template list\n view via a crafted template name.\n* [CVE-2017-14721](https://security-tracker.debian.org/tracker/CVE-2017-14721)\nWordPress allowed Cross-Site scripting in the plugin editor via a\n crafted plugin name.\n* [CVE-2017-14722](https://security-tracker.debian.org/tracker/CVE-2017-14722)\nWordPress allowed a Directory Traversal attack in the Customizer\n component via a crafted theme filename.\n* [CVE-2017-14723](https://security-tracker.debian.org/tracker/CVE-2017-14723)\nWordPress mishandled % characters and additional placeholder values\n in $wpdb->prepare, and thus did not properly address the possibility\n of plugins and themes enabling SQL injection attacks.\n* [CVE-2017-14725](https://security-tracker.debian.org/tracker/CVE-2017-14725)\nWordPress was susceptible to an open redirect attack in\n wp-admin/user-edit.php.\n* [CVE-2017-14990](https://security-tracker.debian.org/tracker/CVE-2017-14990)\nWordPress stores cleartext wp\\_signups.activation\\_key values (but\n stores the analogous wp\\_users.user\\_activation\\_key values as hashes),\n which might make it easier for remote attackers to hijack\n unactivated user accounts by leveraging database read access\n (such as access gained through an unspecified SQL injection\n vulnerability).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.6.1+dfsg-1~deb7u17.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.1+dfsg-1~deb7u19"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.1+dfsg-2",
+				"3.5.2+dfsg-1",
+				"3.5.2+dfsg-1~deb6u1",
+				"3.5.2+dfsg-1~deb7u1",
+				"3.6+dfsg-1",
+				"3.6.1+dfsg-1~deb6u1",
+				"3.6.1+dfsg-1~deb6u2",
+				"3.6.1+dfsg-1~deb6u3",
+				"3.6.1+dfsg-1~deb6u4",
+				"3.6.1+dfsg-1~deb6u5",
+				"3.6.1+dfsg-1~deb6u6",
+				"3.6.1+dfsg-1~deb6u7",
+				"3.6.1+dfsg-1~deb6u8",
+				"3.6.1+dfsg-1~deb6u9",
+				"3.6.1+dfsg-1~deb7u1",
+				"3.6.1+dfsg-1~deb7u10",
+				"3.6.1+dfsg-1~deb7u11",
+				"3.6.1+dfsg-1~deb7u12",
+				"3.6.1+dfsg-1~deb7u13",
+				"3.6.1+dfsg-1~deb7u14",
+				"3.6.1+dfsg-1~deb7u15",
+				"3.6.1+dfsg-1~deb7u16",
+				"3.6.1+dfsg-1~deb7u17",
+				"3.6.1+dfsg-1~deb7u18",
+				"3.6.1+dfsg-1~deb7u2",
+				"3.6.1+dfsg-1~deb7u3",
+				"3.6.1+dfsg-1~deb7u4",
+				"3.6.1+dfsg-1~deb7u5",
+				"3.6.1+dfsg-1~deb7u6",
+				"3.6.1+dfsg-1~deb7u8",
+				"3.6.1+dfsg-1~deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1151-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1151"
+		}
+	]
+}

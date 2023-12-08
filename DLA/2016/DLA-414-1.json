@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-414-1",
+	"modified": "2023-06-28T06:27:00.432911Z",
+	"published": "2016-02-12T00:00:00Z",
+	"related": [
+		"CVE-2016-1567"
+	],
+	"summary": "chrony - security update",
+	"details": "\nchrony before 1.31.2 and 2.x before 2.2.1 do not verify peer\nassociations of symmetric keys when authenticating packets, which might\nallow remote attackers to conduct impersonation attacks via an arbitrary\ntrusted key, aka a \"skeleton key.\"\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "chrony",
+				"purl": "pkg:deb/debian/chrony?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.24-3+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.24-3",
+				"1.24-3+squeeze1",
+				"1.24-3+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-414-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-414"
+		}
+	]
+}

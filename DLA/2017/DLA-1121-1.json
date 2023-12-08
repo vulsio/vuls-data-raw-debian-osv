@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1121-1",
+	"modified": "2023-06-28T06:19:28.017969Z",
+	"published": "2017-10-05T00:00:00Z",
+	"related": [
+		"CVE-2017-1000254"
+	],
+	"summary": "curl - security update",
+	"details": "\nIt was discovered that there was a out-of-bounds read vulnerability in\ncurl, a command-line and library for transferring data over HTTP/FTP,\netc. A malicious FTP server could abuse this to prevent curl-based\nclients from interacting with it.\n\n\nSee  for more details.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in curl version\n7.26.0-1+wheezy21.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.26.0-1+wheezy21"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.26.0-1+wheezy10",
+				"7.26.0-1+wheezy11",
+				"7.26.0-1+wheezy12",
+				"7.26.0-1+wheezy13",
+				"7.26.0-1+wheezy14",
+				"7.26.0-1+wheezy15",
+				"7.26.0-1+wheezy16",
+				"7.26.0-1+wheezy17",
+				"7.26.0-1+wheezy18",
+				"7.26.0-1+wheezy19",
+				"7.26.0-1+wheezy2",
+				"7.26.0-1+wheezy20",
+				"7.26.0-1+wheezy3",
+				"7.26.0-1+wheezy4",
+				"7.26.0-1+wheezy5",
+				"7.26.0-1+wheezy6",
+				"7.26.0-1+wheezy7",
+				"7.26.0-1+wheezy8",
+				"7.26.0-1+wheezy9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1121-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1121"
+		}
+	]
+}

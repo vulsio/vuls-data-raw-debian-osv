@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-402",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-11-17T00:00:00Z",
+	"related": [
+		"CVE-2003-0902"
+	],
+	"summary": "minimalist - unsanitised input",
+	"details": "\nA security-related problem has been discovered in minimalist, a\nmailing list manager, which allows a remote attacker to execute\narbitrary commands.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.2-4.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.4-1.\n\n\nWe recommend that you upgrade your minimalist package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "minimalist",
+				"purl": "pkg:deb/debian/minimalist?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2-4"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-402.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-402"
+		}
+	]
+}

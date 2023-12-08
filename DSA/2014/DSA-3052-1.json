@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3052-1",
+	"modified": "2023-10-16T00:11:44.346856Z",
+	"published": "2014-10-15T00:00:00Z",
+	"related": [
+		"CVE-2014-3686"
+	],
+	"summary": "wpa - security update",
+	"details": "\nJouni Malinen discovered an input sanitization issue in the wpa\\_cli and\nhostapd\\_cli tools included in the wpa package. A remote wifi system\nwithin range could provide a crafted string triggering arbitrary code\nexecution running with privileges of the affected wpa\\_cli or hostapd\\_cli\nprocess.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.0-3+deb7u1.\n\n\nFor the testing distribution (jessie), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.3-1.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wpa",
+				"purl": "pkg:deb/debian/wpa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3052-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3052"
+		}
+	]
+}

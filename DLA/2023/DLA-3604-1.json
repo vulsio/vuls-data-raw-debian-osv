@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3604-1",
+	"modified": "2023-10-05T17:18:57.465963Z",
+	"published": "2023-10-05T00:00:00Z",
+	"related": [
+		"CVE-2020-24165",
+		"CVE-2023-0330",
+		"CVE-2023-3180"
+	],
+	"summary": "qemu - security update",
+	"details": "\nMultiple issues were discovered in qemu, a fast processor emulator.\n\n\n* [CVE-2020-24165](https://security-tracker.debian.org/tracker/CVE-2020-24165)\nA use-after-free race in the code generator could lead to the\n execution of arbitrary code.\n* [CVE-2023-0330](https://security-tracker.debian.org/tracker/CVE-2023-0330)\nA DMA-MMIO reentrancy problem in the lsi53c895a device may lead to\n memory orruption bugs, such as stack overflow or use-after-free.\n* [CVE-2023-3180](https://security-tracker.debian.org/tracker/CVE-2023-3180)\nThe function virtio\\_crypto\\_sym\\_op\\_helper, part of the implementation\n of qemu's virtual crypto device, did not check that the values of\n src\\_len and dst\\_len are the same. This could lead to a heap\n buffer overflow.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:3.1+dfsg-8+deb10u11.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFor the detailed security status of qemu please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qemu>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:3.1+dfsg-8+deb10u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:3.1+dfsg-8",
+				"1:3.1+dfsg-8+deb10u10",
+				"1:3.1+dfsg-8+deb10u2",
+				"1:3.1+dfsg-8+deb10u3",
+				"1:3.1+dfsg-8+deb10u4",
+				"1:3.1+dfsg-8+deb10u5",
+				"1:3.1+dfsg-8+deb10u6",
+				"1:3.1+dfsg-8+deb10u7",
+				"1:3.1+dfsg-8+deb10u8",
+				"1:3.1+dfsg-8+deb10u9",
+				"1:3.1+dfsg-8~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3604-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3604"
+		}
+	]
+}

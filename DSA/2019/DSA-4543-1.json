@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4543-1",
+	"modified": "2023-10-16T00:20:21.075711Z",
+	"published": "2019-10-14T00:00:00Z",
+	"related": [
+		"CVE-2019-14287"
+	],
+	"summary": "sudo - security update",
+	"details": "\nJoe Vennix discovered that sudo, a program designed to provide limited\nsuper user privileges to specific users, when configured to allow a user\nto run commands as an arbitrary user via the ALL keyword in a Runas\nspecification, allows to run commands as root by specifying the user ID\n-1 or 4294967295. This could allow a user with sufficient sudo\nprivileges to run commands as root even if the Runas specification\nexplicitly disallows root access.\n\n\nDetails can be found in the upstream advisory at\n<https://www.sudo.ws/alerts/minus_1_uid.html> .\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1.8.19p1-2.1+deb9u1.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.8.27-1+deb10u1.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\nFor the detailed security status of sudo please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/sudo>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.19p1-2.1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.19p1-2.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4543-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.27-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.27-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4543-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4543"
+		}
+	]
+}

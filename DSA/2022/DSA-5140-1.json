@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5140-1",
+	"modified": "2023-10-16T00:20:38.837633Z",
+	"published": "2022-05-19T00:00:00Z",
+	"related": [
+		"CVE-2022-29155"
+	],
+	"summary": "openldap - security update",
+	"details": "\nJacek Konieczny discovered a SQL injection vulnerability in the back-sql\nbackend to slapd in OpenLDAP, a free implementation of the Lightweight\nDirectory Access Protocol, allowing an attacker to alter the database\nduring an LDAP search operation when a specially crafted search filter\nis processed.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2.4.47+dfsg-3+deb10u7.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.4.57+dfsg-3+deb11u1.\n\n\nWe recommend that you upgrade your openldap packages.\n\n\nFor the detailed security status of openldap please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openldap](https://security-tracker.debian.org/tracker/openldap)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openldap",
+				"purl": "pkg:deb/debian/openldap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.47+dfsg-3+deb10u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.47+dfsg-3",
+				"2.4.47+dfsg-3+deb10u1",
+				"2.4.47+dfsg-3+deb10u1~bpo9+1",
+				"2.4.47+dfsg-3+deb10u2",
+				"2.4.47+dfsg-3+deb10u2~bpo9+1",
+				"2.4.47+dfsg-3+deb10u3",
+				"2.4.47+dfsg-3+deb10u4",
+				"2.4.47+dfsg-3+deb10u5",
+				"2.4.47+dfsg-3+deb10u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5140-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "openldap",
+				"purl": "pkg:deb/debian/openldap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.57+dfsg-3+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.57+dfsg-3",
+				"2.4.57+dfsg-3+deb11u1~bpo10+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5140-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5140"
+		}
+	]
+}

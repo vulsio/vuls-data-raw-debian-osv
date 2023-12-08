@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-283-1",
+	"modified": "2023-06-28T06:21:24.732433Z",
+	"published": "2015-07-28T00:00:00Z",
+	"related": [
+		"CVE-2015-4760"
+	],
+	"summary": "icu - security update",
+	"details": "\nA vulnerability has been found in the International Components\nfor Unicode (ICU) library:\n\n\n* [CVE-2015-4760](https://security-tracker.debian.org/tracker/CVE-2015-4760)\nIt was discovered that ICU Layout Engine was missing multiple\n boundary checks. These could lead to buffer overflows and memory\n corruption. A specially crafted file could cause an application\n using ICU to parse untrusted font files to crash and, possibly,\n execute arbitrary code.\n\n\nFor the squeeze distribution, these issues have been fixed in version\n4.4.1-8+squeeze4 of icu.\n\n\nWe recommend to upgrade your icu packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "icu",
+				"purl": "pkg:deb/debian/icu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.1-8+squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.1-7",
+				"4.4.1-8",
+				"4.4.1-8+squeeze1",
+				"4.4.1-8+squeeze2",
+				"4.4.1-8+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-283-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-283"
+		}
+	]
+}

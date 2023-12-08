@@ -1,0 +1,70 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1103",
+	"modified": "2023-10-16T00:06:30.102473Z",
+	"published": "2006-06-27T00:00:00Z",
+	"related": [
+		"CVE-2005-3359",
+		"CVE-2006-0038",
+		"CVE-2006-0039",
+		"CVE-2006-0456",
+		"CVE-2006-0554",
+		"CVE-2006-0555",
+		"CVE-2006-0557",
+		"CVE-2006-0558",
+		"CVE-2006-0741",
+		"CVE-2006-0742",
+		"CVE-2006-0744",
+		"CVE-2006-1056",
+		"CVE-2006-1242",
+		"CVE-2006-1368",
+		"CVE-2006-1523",
+		"CVE-2006-1524",
+		"CVE-2006-1525",
+		"CVE-2006-1857",
+		"CVE-2006-1858",
+		"CVE-2006-1863",
+		"CVE-2006-1864",
+		"CVE-2006-2271",
+		"CVE-2006-2272",
+		"CVE-2006-2274"
+	],
+	"summary": "kernel-source-2.6.8 - several vulnerabilities",
+	"details": "\nSeveral local and remote vulnerabilities have been discovered in the Linux\nkernel that may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2005-3359](https://security-tracker.debian.org/tracker/CVE-2005-3359)\nFranz Filz discovered that some socket calls permit causing inconsistent\n reference counts on loadable modules, which allows local users to cause\n a denial of service.\n* [CVE-2006-0038](https://security-tracker.debian.org/tracker/CVE-2006-0038)\n\"Solar Designer\" discovered that arithmetic computations in netfilter's\n do\\_replace() function can lead to a buffer overflow and the execution of\n arbitrary code. However, the operation requires CAP\\_NET\\_ADMIN privileges,\n which is only an issue in virtualization systems or fine grained access\n control systems.\n* [CVE-2006-0039](https://security-tracker.debian.org/tracker/CVE-2006-0039)\n\"Solar Designer\" discovered a race condition in netfilter's\n do\\_add\\_counters() function, which allows information disclosure of kernel\n memory by exploiting a race condition. Likewise, it requires CAP\\_NET\\_ADMIN\n privileges.\n* [CVE-2006-0456](https://security-tracker.debian.org/tracker/CVE-2006-0456)\nDavid Howells discovered that the s390 assembly version of the\n strnlen\\_user() function incorrectly returns some string size values.\n* [CVE-2006-0554](https://security-tracker.debian.org/tracker/CVE-2006-0554)\nIt was discovered that the ftruncate() function of XFS can expose\n unallocated blocks, which allows information disclosure of previously deleted\n files.\n* [CVE-2006-0555](https://security-tracker.debian.org/tracker/CVE-2006-0555)\nIt was discovered that some NFS file operations on handles mounted with\n O\\_DIRECT can force the kernel into a crash.\n* [CVE-2006-0557](https://security-tracker.debian.org/tracker/CVE-2006-0557)\nIt was discovered that the code to configure memory policies allows\n tricking the kernel into a crash, thus allowing denial of service.\n* [CVE-2006-0558](https://security-tracker.debian.org/tracker/CVE-2006-0558)\nIt was discovered by Cliff Wickman that perfmon for the IA64\n architecture allows users to trigger a BUG() assert, which allows\n denial of service.\n* [CVE-2006-0741](https://security-tracker.debian.org/tracker/CVE-2006-0741)\nIntel EM64T systems were discovered to be susceptible to a local\n DoS due to an endless recursive fault related to a bad ELF entry\n address.\n* [CVE-2006-0742](https://security-tracker.debian.org/tracker/CVE-2006-0742)\nAlan and Gareth discovered that the ia64 platform had an\n incorrectly declared die\\_if\\_kernel() function as \"does never\n return\" which could be exploited by a local attacker resulting in\n a kernel crash.\n* [CVE-2006-0744](https://security-tracker.debian.org/tracker/CVE-2006-0744)\nThe Linux kernel did not properly handle uncanonical return\n addresses on Intel EM64T CPUs, reporting exceptions in the SYSRET\n instead of the next instruction, causing the kernel exception\n handler to run on the user stack with the wrong GS. This may result\n in a DoS due to a local user changing the frames.\n* [CVE-2006-1056](https://security-tracker.debian.org/tracker/CVE-2006-1056)\nAMD64 machines (and other 7th and 8th generation AuthenticAMD\n processors) were found to be vulnerable to sensitive information\n leakage, due to how they handle saving and restoring the FOP, FIP,\n and FDP x87 registers in FXSAVE/FXRSTOR when an exception is\n pending. This allows a process to determine portions of the state\n of floating point instructions of other processes.\n* [CVE-2006-1242](https://security-tracker.debian.org/tracker/CVE-2006-1242)\nMarco Ivaldi discovered that there was an unintended information\n disclosure allowing remote attackers to bypass protections against\n Idle Scans (nmap -sI) by abusing the ID field of IP packets and\n bypassing the zero IP ID in DF packet countermeasure. This was a\n result of the ip\\_push\\_pending\\_frames function improperly\n incremented the IP ID field when sending a RST after receiving\n unsolicited TCP SYN-ACK packets.\n* [CVE-2006-1368](https://security-tracker.debian.org/tracker/CVE-2006-1368)\nShaun Tancheff discovered a buffer overflow (boundary condition\n error) in the USB Gadget RNDIS implementation allowing remote\n attackers to cause a DoS. While creating a reply message, the\n driver allocated memory for the reply data, but not for the reply\n structure. The kernel fails to properly bounds-check user-supplied\n data before copying it to an insufficiently sized memory\n buffer. Attackers could crash the system, or possibly execute\n arbitrary machine code.\n* [CVE-2006-1523](https://security-tracker.debian.org/tracker/CVE-2006-1523)\nOleg Nesterov reported an unsafe BUG\\_ON call in signal.c which was\n introduced by RCU signal handling. The BUG\\_ON code is protected by\n siglock while the code in switch\\_exit\\_pids() uses tasklist\\_lock. It\n may be possible for local users to exploit this to initiate a denial\n of service attack (DoS).\n* [CVE-2006-1524](https://security-tracker.debian.org/tracker/CVE-2006-1524)\nHugh Dickins discovered an issue in the madvise\\_remove() function wherein\n file and mmap restrictions are not followed, allowing local users to\n bypass IPC permissions and replace portions of readonly tmpfs files with\n zeroes.\n* [CVE-2006-1525](https://security-tracker.debian.org/tracker/CVE-2006-1525)\nAlexandra Kossovsky reported a NULL pointer dereference condition in\n ip\\_route\\_input() that can be triggered by a local user by requesting\n a route for a multicast IP address, resulting in a denial of service\n (panic).\n* [CVE-2006-1857](https://security-tracker.debian.org/tracker/CVE-2006-1857)\nVlad Yasevich reported a data validation issue in the SCTP subsystem\n that may allow a remote user to overflow a buffer using a badly formatted\n HB-ACK chunk, resulting in a denial of service.\n* [CVE-2006-1858](https://security-tracker.debian.org/tracker/CVE-2006-1858)\nVlad Yasevich reported a bug in the bounds checking code in the SCTP\n subsystem that may allow a remote attacker to trigger a denial of service\n attack when rounded parameter lengths are used to calculate parameter\n lengths instead of the actual values.\n* [CVE-2006-1863](https://security-tracker.debian.org/tracker/CVE-2006-1863)\nMark Mosely discovered that chroots residing on an CIFS share can be\n escaped with specially crafted \"cd\" sequences.\n* [CVE-2006-1864](https://security-tracker.debian.org/tracker/CVE-2006-1864)\nMark Mosely discovered that chroots residing on an SMB share can be\n escaped with specially crafted \"cd\" sequences.\n* [CVE-2006-2271](https://security-tracker.debian.org/tracker/CVE-2006-2271)\nThe \"Mu security team\" discovered that carefully crafted ECNE chunks can\n cause a kernel crash by accessing incorrect state stable entries in the\n SCTP networking subsystem, which allows denial of service.\n* [CVE-2006-2272](https://security-tracker.debian.org/tracker/CVE-2006-2272)\nThe \"Mu security team\" discovered that fragmented SCTP control\n chunks can trigger kernel panics, which allows for denial of\n service attacks.\n* [CVE-2006-2274](https://security-tracker.debian.org/tracker/CVE-2006-2274)\nIt was discovered that SCTP packets with two initial bundled data\n packets can lead to infinite recursion, which allows for denial of\n service attacks.\n\n\nThe following matrix explains which kernel version for which architecture\nfix the problems mentioned above:\n\n\n\n\n|  | Debian 3.1 (sarge) |\n| --- | --- |\n| Source | 2.6.8-16sarge3 |\n| Alpha architecture | 2.6.8-16sarge3 |\n| HP Precision architecture | 2.6.8-6sarge3 |\n| Intel IA-32 architecture | 2.6.8-16sarge3 |\n| Intel IA-64 architecture | 2.6.8-14sarge3 |\n| Motorola 680x0 architecture | 2.6.8-4sarge3 |\n| PowerPC architecture | 2.6.8-12sarge3 |\n| IBM S/390 architecture | 2.6.8-5sarge3 |\n| Sun Sparc architecture | 2.6.8-15sarge3 |\n\n\nDue to technical problems the built amd64 packages couldn't be processed\nby the archive script. Once this problem is resolved, an updated DSA 1103-2\nwill be sent out with the checksums for amd64.\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 3.1 (sarge) |\n| --- | --- |\n| fai-kernels | 1.9.1sarge2 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-source-2.6.8",
+				"purl": "pkg:deb/debian/kernel-source-2.6.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-16sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-16",
+				"2.6.8-16sarge1",
+				"2.6.8-16sarge2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1103.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1103"
+		}
+	]
+}

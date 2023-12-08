@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-196",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-11-14T00:00:00Z",
+	"related": [
+		"CVE-2002-0029",
+		"CVE-2002-1219",
+		"CVE-2002-1220",
+		"CVE-2002-1221"
+	],
+	"summary": "bind - several vulnerabilities",
+	"details": "\n[Bind version 9, the bind9 package, is not affected by these problems.]\n\n\nISS X-Force has discovered several serious vulnerabilities in the Berkeley\nInternet Name Domain Server (BIND). BIND is the most common implementation\nof the DNS (Domain Name Service) protocol, which is used on the vast\nmajority of DNS servers on the Internet. DNS is a vital Internet protocol\nthat maintains a database of easy-to-remember domain names (host names) and\ntheir corresponding numerical IP addresses.\n\n\nCircumstantial evidence suggests that the Internet Software Consortium\n(ISC), maintainers of BIND, was made aware of these issues in mid-October.\nDistributors of Open Source operating systems, including Debian, were\nnotified of these vulnerabilities via CERT about 12 hours before the release\nof the advisories on November 12th. This notification did not include any\ndetails that allowed us to identify the vulnerable code, much less prepare\ntimely fixes.\n\n\nUnfortunately ISS and the ISC released their security advisories with only\ndescriptions of the vulnerabilities, without any patches. Even though there\nwere no signs that these exploits are known to the black-hat community, and\nthere were no reports of active attacks, such attacks could have been\ndeveloped in the meantime - with no fixes available.\n\n\nWe can all express our regret at the inability of the ironically named\nInternet Software Consortium to work with the Internet community in handling\nthis problem. Hopefully this will not become a model for dealing with\nsecurity issues in the future.\n\n\nThe Common Vulnerabilities and Exposures (CVE) project identified the\nfollowing vulnerabilities:\n\n\n1. CAN-2002-1219: A buffer overflow in BIND 8 versions 8.3.3 and earlier\n allows a remote attacker to execute arbitrary code via a certain DNS\n server response containing SIG resource records (RR). This buffer\n overflow can be exploited to obtain access to the victim host under the\n account the named process is running with, usually root.\n2. CAN-2002-1220: BIND 8 versions 8.3.x through 8.3.3 allows a remote\n attacker to cause a denial of service (termination due to assertion\n failure) via a request for a subdomain that does not exist, with an OPT\n resource record with a large UDP payload size.\n3. CAN-2002-1221: BIND 8 versions 8.x through 8.3.3 allows a remote attacker\n to cause a denial of service (crash) via SIG RR elements with invalid\n expiry times, which are removed from the internal BIND database and later\n cause a null dereference.\n\n\nThese problems have been fixed in version 8.3.3-2.0woody1 for the current\nstable distribution (woody), in version 8.2.3-0.potato.3 for the previous stable\ndistribution (potato) and in version 8.3.3-3 for the unstable distribution\n(sid). The fixed packages for unstable will enter the archive today.\n\n\nWe recommend that you upgrade your bind package immediately, update to\nbind9, or switch to another DNS server implementation.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "bind",
+				"purl": "pkg:deb/debian/bind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.3.3-2.0woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-196.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-196"
+		}
+	]
+}

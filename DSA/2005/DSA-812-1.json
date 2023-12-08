@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-812-1",
+	"modified": "2023-10-16T00:29:26.070665Z",
+	"published": "2005-09-15T00:00:00Z",
+	"related": [
+		"CVE-2005-2658"
+	],
+	"summary": "turqstat - buffer overflow",
+	"details": "\nPeter Karlsson discovered a buffer overflow in Turquoise SuperStat, a\nprogram for gathering statistics from Fidonet and Usenet, that can be\nexploited by a specially crafted NNTP server.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 2.2.1woody1.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.2.2sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.2.4-1.\n\n\nWe recommend that you upgrade your turqstat package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "turqstat",
+				"purl": "pkg:deb/debian/turqstat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.1woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-812-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "turqstat",
+				"purl": "pkg:deb/debian/turqstat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.2sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-812-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-812"
+		}
+	]
+}

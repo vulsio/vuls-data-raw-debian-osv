@@ -1,0 +1,100 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2310-1",
+	"modified": "2023-10-16T00:11:07.438233Z",
+	"published": "2011-09-22T00:00:00Z",
+	"related": [
+		"CVE-2009-4067",
+		"CVE-2011-0712",
+		"CVE-2011-1020",
+		"CVE-2011-2208",
+		"CVE-2011-2209",
+		"CVE-2011-2211",
+		"CVE-2011-2213",
+		"CVE-2011-2484",
+		"CVE-2011-2491",
+		"CVE-2011-2492",
+		"CVE-2011-2495",
+		"CVE-2011-2496",
+		"CVE-2011-2497",
+		"CVE-2011-2525",
+		"CVE-2011-2928",
+		"CVE-2011-3188",
+		"CVE-2011-3191"
+	],
+	"summary": "linux-2.6 - several issues",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a privilege escalation, denial of service or information leak. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2009-4067](https://security-tracker.debian.org/tracker/CVE-2009-4067)\nRafael Dominguez Vega of MWR InfoSecurity reported an issue in the auerswald\n module, a driver for Auerswald PBX/System Telephone USB devices. Attackers\n with physical access to a system's USB ports could obtain elevated\n privileges using a specially crafted USB device.\n* [CVE-2011-0712](https://security-tracker.debian.org/tracker/CVE-2011-0712)\nRafael Dominguez Vega of MWR InfoSecurity reported an issue in the caiaq\n module, a USB driver for Native Instruments USB audio devices. Attackers\n with physical access to a system's USB ports could obtain elevated\n privileges using a specially crafted USB device.\n* [CVE-2011-1020](https://security-tracker.debian.org/tracker/CVE-2011-1020)\nKees Cook discovered an issue in the /proc filesystem that allows local\n users to gain access to sensitive process information after execution of a\n setuid binary.\n* [CVE-2011-2209](https://security-tracker.debian.org/tracker/CVE-2011-2209)\nDan Rosenberg discovered an issue in the osf\\_sysinfo() system call on the\n alpha architecture. Local users could obtain access to sensitive kernel\n memory.\n* [CVE-2011-2211](https://security-tracker.debian.org/tracker/CVE-2011-2211)\nDan Rosenberg discovered an issue in the osf\\_wait4() system call on the\n alpha architecture permitting local users to gain elevated privileges.\n* [CVE-2011-2213](https://security-tracker.debian.org/tracker/CVE-2011-2213)\nDan Rosenberg discovered an issue in the INET socket monitoring interface.\n Local users could cause a denial of service by injecting code and causing\n the kernel to execute an infinite loop.\n* [CVE-2011-2484](https://security-tracker.debian.org/tracker/CVE-2011-2484)\nVasiliy Kulikov of Openwall discovered that the number of exit handlers that\n a process can register is not capped, resulting in local denial of service\n through resource exhaustion (CPU time and memory).\n* [CVE-2011-2491](https://security-tracker.debian.org/tracker/CVE-2011-2491)\nVasily Averin discovered an issue with the NFS locking implementation. A\n malicious NFS server can cause a client to hang indefinitely in an unlock\n call.\n* [CVE-2011-2492](https://security-tracker.debian.org/tracker/CVE-2011-2492)\nMarek Kroemeke and Filip Palian discovered that uninitialized struct\n elements in the Bluetooth subsystem could lead to a leak of sensitive kernel\n memory through leaked stack memory.\n* [CVE-2011-2495](https://security-tracker.debian.org/tracker/CVE-2011-2495)\nVasiliy Kulikov of Openwall discovered that the io file of a process' proc\n directory was world-readable, resulting in local information disclosure of\n information such as password lengths.\n* [CVE-2011-2496](https://security-tracker.debian.org/tracker/CVE-2011-2496)\nRobert Swiecki discovered that mremap() could be abused for local denial of\n service by triggering a BUG\\_ON assert.\n* [CVE-2011-2497](https://security-tracker.debian.org/tracker/CVE-2011-2497)\nDan Rosenberg discovered an integer underflow in the Bluetooth subsystem,\n which could lead to denial of service or privilege escalation.\n* [CVE-2011-2525](https://security-tracker.debian.org/tracker/CVE-2011-2525)\nBen Pfaff reported an issue in the network scheduling code. A local user\n could cause a denial of service (NULL pointer dereference) by sending a\n specially crafted netlink message.\n* [CVE-2011-2928](https://security-tracker.debian.org/tracker/CVE-2011-2928)\nTimo Warns discovered that insufficient validation of Be filesystem images\n could lead to local denial of service if a malformed filesystem image is\n mounted.\n* [CVE-2011-3188](https://security-tracker.debian.org/tracker/CVE-2011-3188)\nDan Kaminsky reported a weakness of the sequence number generation in the\n TCP protocol implementation. This can be used by remote attackers to inject\n packets into an active session.\n* [CVE-2011-3191](https://security-tracker.debian.org/tracker/CVE-2011-3191)\nDarren Lavender reported an issue in the Common Internet File System (CIFS).\n A malicious file server could cause memory corruption leading to a denial of\n service.\n\n\nThis update also includes a fix for a regression introduced with the previous\nsecurity fix for [CVE-2011-1768](https://security-tracker.debian.org/tracker/CVE-2011-1768)\n([\\\nDebian bug #633738](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=633738)).\n\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in version\n2.6.26-26lenny4. Updates for arm and alpha are not yet available, but will be\nreleased as soon as possible. Updates for the hppa and ia64 architectures will\nbe included in the upcoming 5.0.9 point release.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 5.0 (lenny) |\n| --- | --- |\n| user-mode-linux | 2.6.26-1um-2+26lenny4 |\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\nThese updates will not become active until after your system is rebooted.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-26lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-13",
+				"2.6.26-13lenny2",
+				"2.6.26-13lenny2~bpo40+1",
+				"2.6.26-14",
+				"2.6.26-15",
+				"2.6.26-15lenny1",
+				"2.6.26-15lenny2",
+				"2.6.26-15lenny3",
+				"2.6.26-15~bpo40+1",
+				"2.6.26-15~bpo40+2",
+				"2.6.26-16",
+				"2.6.26-17",
+				"2.6.26-17lenny1",
+				"2.6.26-17lenny2",
+				"2.6.26-17lenny2~bpo40+1",
+				"2.6.26-17~bpo40+1",
+				"2.6.26-18",
+				"2.6.26-19",
+				"2.6.26-19lenny1",
+				"2.6.26-19lenny2",
+				"2.6.26-19~bpo40+1",
+				"2.6.26-20",
+				"2.6.26-20~bpo40+1",
+				"2.6.26-21",
+				"2.6.26-21lenny1",
+				"2.6.26-21lenny2",
+				"2.6.26-21lenny3",
+				"2.6.26-21lenny4",
+				"2.6.26-21~bpo40+1",
+				"2.6.26-22",
+				"2.6.26-22lenny1",
+				"2.6.26-23",
+				"2.6.26-24",
+				"2.6.26-24lenny1",
+				"2.6.26-25",
+				"2.6.26-25lenny1",
+				"2.6.26-26",
+				"2.6.26-26lenny1",
+				"2.6.26-26lenny2",
+				"2.6.26-26lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2310-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2310"
+		}
+	]
+}

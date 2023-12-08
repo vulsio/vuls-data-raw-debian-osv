@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4084-1",
+	"modified": "2023-10-16T00:12:39.426082Z",
+	"published": "2018-01-12T00:00:00Z",
+	"related": [
+		"CVE-2017-1000421"
+	],
+	"summary": "gifsicle - security update",
+	"details": "\nIt was discovered that gifsicle, a tool for manipulating GIF image\nfiles, contained a flaw that could lead to arbitrary code execution.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.86-1+deb8u1.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.88-3+deb9u1.\n\n\nWe recommend that you upgrade your gifsicle packages.\n\n\nFor the detailed security status of gifsicle please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/gifsicle](https://security-tracker.debian.org/tracker/gifsicle)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gifsicle",
+				"purl": "pkg:deb/debian/gifsicle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.86-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.86-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4084-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gifsicle",
+				"purl": "pkg:deb/debian/gifsicle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.88-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.88-3",
+				"1.88-3+deb9u1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4084-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4084"
+		}
+	]
+}

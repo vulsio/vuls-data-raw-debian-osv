@@ -1,0 +1,70 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3278-1",
+	"modified": "2023-06-28T06:26:53.744903Z",
+	"published": "2023-01-20T00:00:00Z",
+	"related": [
+		"CVE-2022-1354",
+		"CVE-2022-1355",
+		"CVE-2022-2056",
+		"CVE-2022-2057",
+		"CVE-2022-2058",
+		"CVE-2022-2867",
+		"CVE-2022-2868",
+		"CVE-2022-2869",
+		"CVE-2022-34526",
+		"CVE-2022-3570",
+		"CVE-2022-3597",
+		"CVE-2022-3598",
+		"CVE-2022-3599",
+		"CVE-2022-3626",
+		"CVE-2022-3627",
+		"CVE-2022-3970"
+	],
+	"summary": "tiff - security update",
+	"details": "\nMultiple vulnerabilities were found in tiff, a library and tools\nproviding support for the Tag Image File Format (TIFF), leading to\ndenial of service (DoS) and possibly local code execution.\n\n\n* [CVE-2022-1354](https://security-tracker.debian.org/tracker/CVE-2022-1354)\nA heap buffer overflow flaw was found in Libtiffs' tiffinfo.c in\n TIFFReadRawDataStriped() function. This flaw allows an attacker to\n pass a crafted TIFF file to the tiffinfo tool, triggering a heap\n buffer overflow issue and causing a crash that leads to a denial\n of service.\n* [CVE-2022-1355](https://security-tracker.debian.org/tracker/CVE-2022-1355)\nA stack buffer overflow flaw was found in Libtiffs' tiffcp.c in\n main() function. This flaw allows an attacker to pass a crafted\n TIFF file to the tiffcp tool, triggering a stack buffer overflow\n issue, possibly corrupting the memory, and causing a crash that\n leads to a denial of service.\n* [CVE-2022-2056](https://security-tracker.debian.org/tracker/CVE-2022-2056), [CVE-2022-2057](https://security-tracker.debian.org/tracker/CVE-2022-2057), [CVE-2022-2058](https://security-tracker.debian.org/tracker/CVE-2022-2058)\nDivide By Zero error in tiffcrop allows attackers to cause a\n denial-of-service via a crafted tiff file.\n* [CVE-2022-2867](https://security-tracker.debian.org/tracker/CVE-2022-2867), [CVE-2022-2868](https://security-tracker.debian.org/tracker/CVE-2022-2868), [CVE-2022-2869](https://security-tracker.debian.org/tracker/CVE-2022-2869)\nlibtiff's tiffcrop utility has underflow and input validation flaw\n that can lead to out of bounds read and write. An attacker who\n supplies a crafted file to tiffcrop (likely via tricking a user to\n run tiffcrop on it with certain parameters) could cause a crash or\n in some cases, further exploitation.\n* [CVE-2022-3570](https://security-tracker.debian.org/tracker/CVE-2022-3570), [CVE-2022-3598](https://security-tracker.debian.org/tracker/CVE-2022-3598)\nMultiple heap buffer overflows in tiffcrop.c utility in libtiff\n allows attacker to trigger unsafe or out of bounds memory access\n via crafted TIFF image file which could result into application\n crash, potential information disclosure or any other\n context-dependent impact.\n* [CVE-2022-3597](https://security-tracker.debian.org/tracker/CVE-2022-3597), [CVE-2022-3626](https://security-tracker.debian.org/tracker/CVE-2022-3626), [CVE-2022-3627](https://security-tracker.debian.org/tracker/CVE-2022-3627)\nOut-of-bounds write, allowing attackers to cause a\n denial-of-service via a crafted tiff file.\n* [CVE-2022-3599](https://security-tracker.debian.org/tracker/CVE-2022-3599)\nOut-of-bounds read in writeSingleSection in tools/tiffcrop.c,\n allowing attackers to cause a denial-of-service via a crafted tiff\n file.\n* [CVE-2022-3970](https://security-tracker.debian.org/tracker/CVE-2022-3970)\nAffects the function TIFFReadRGBATileExt of the file\n libtiff/tif\\_getimage.c. The manipulation leads to integer\n overflow.\n* [CVE-2022-34526](https://security-tracker.debian.org/tracker/CVE-2022-34526)\nA stack overflow was discovered in the \\_TIFFVGetField function of\n Tiffsplit. This vulnerability allows attackers to cause a Denial\n of Service (DoS) via a crafted TIFF file parsed by the tiffsplit\n or tiffcrop utilities.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n4.1.0+git191117-2~deb10u5.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFor the detailed security status of tiff please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tiff>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.0+git191117-2~deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.10+git190814-1",
+				"4.0.10+git190818-1",
+				"4.0.10+git190903-1",
+				"4.0.10+git191003-1",
+				"4.0.10-4",
+				"4.1.0+git191117-1",
+				"4.1.0+git191117-2~deb10u1",
+				"4.1.0+git191117-2~deb10u2",
+				"4.1.0+git191117-2~deb10u3",
+				"4.1.0+git191117-2~deb10u4",
+				"4.1.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3278-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3278"
+		}
+	]
+}

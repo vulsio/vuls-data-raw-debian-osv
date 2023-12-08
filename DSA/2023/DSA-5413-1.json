@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5413-1",
+	"modified": "2023-10-16T00:26:18.613376Z",
+	"published": "2023-05-26T00:00:00Z",
+	"related": [
+		"CVE-2023-25076"
+	],
+	"summary": "sniproxy - security update",
+	"details": "\nAn issue has been found in sniproxy, a transparent TLS and HTTP layer 4\nproxy with SNI support. Due to bad handling of wildcard backend hosts,\na crafted HTTP or TLS packet might lead to remote arbitrary code\nexecution.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 0.6.0-2+deb11u1.\n\n\nWe recommend that you upgrade your sniproxy packages.\n\n\nFor the detailed security status of sniproxy please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/sniproxy](https://security-tracker.debian.org/tracker/sniproxy)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "sniproxy",
+				"purl": "pkg:deb/debian/sniproxy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.0-2+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5413-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5413"
+		}
+	]
+}

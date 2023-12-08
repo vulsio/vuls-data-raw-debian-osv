@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1270-1",
+	"modified": "2023-06-28T06:23:38.633255Z",
+	"published": "2018-02-06T00:00:00Z",
+	"related": [
+		"CVE-2016-9603",
+		"CVE-2016-9637",
+		"CVE-2017-2620"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor, which\ncould result in privilege escalation.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-12.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nPlease note that [CVE-2017-15590](https://security-tracker.debian.org/tracker/CVE-2017-15590) (XSA-237) will \\*not\\* be fixed in wheezy as\nthe patches are too intrusive to backport.\nThe vulnerability can be mitigated by not passing through physical devices\nto untrusted guests.\nMore information can be found on <https://xenbits.xen.org/xsa/advisory-237.html>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.6.lts1-12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2",
+				"4.1.4-3+deb7u3",
+				"4.1.4-3+deb7u4",
+				"4.1.4-3+deb7u5",
+				"4.1.4-3+deb7u6",
+				"4.1.4-3+deb7u7",
+				"4.1.4-3+deb7u8",
+				"4.1.4-3+deb7u9",
+				"4.1.4-4",
+				"4.1.6.1-1+deb7u1",
+				"4.1.6.lts1-1",
+				"4.1.6.lts1-10",
+				"4.1.6.lts1-11",
+				"4.1.6.lts1-2",
+				"4.1.6.lts1-3",
+				"4.1.6.lts1-4",
+				"4.1.6.lts1-5",
+				"4.1.6.lts1-6",
+				"4.1.6.lts1-7",
+				"4.1.6.lts1-8",
+				"4.1.6.lts1-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1270-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1270"
+		}
+	]
+}

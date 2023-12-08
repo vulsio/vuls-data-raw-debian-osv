@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3960-1",
+	"modified": "2023-10-16T00:12:30.494906Z",
+	"published": "2017-09-01T00:00:00Z",
+	"related": [
+		"CVE-2017-7526"
+	],
+	"summary": "gnupg - security update",
+	"details": "\nDaniel J. Bernstein, Joachim Breitner, Daniel Genkin, Leon Groot\nBruinderink, Nadia Heninger, Tanja Lange, Christine van Vredendaal and\nYuval Yarom discovered that GnuPG is prone to a local side-channel\nattack allowing full key recovery for RSA-1024.\n\n\nSee <https://eprint.iacr.org/2017/627> for details.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.4.18-7+deb8u4.\n\n\nWe recommend that you upgrade your gnupg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.18-7+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.18-7",
+				"1.4.18-7+deb8u1",
+				"1.4.18-7+deb8u2",
+				"1.4.18-7+deb8u3",
+				"1.4.18-7+deb8u3~kbsd8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3960-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3960"
+		}
+	]
+}

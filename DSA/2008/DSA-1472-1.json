@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1472-1",
+	"modified": "2023-10-16T00:06:35.404973Z",
+	"published": "2008-01-21T00:00:00Z",
+	"related": [
+		"CVE-2008-0225"
+	],
+	"summary": "xine-lib - buffer overflow",
+	"details": "\nLuigi Auriemma discovered that the Xine media player library performed\ninsufficient input sanitising during the handling of RTSP streams,\nwhich could lead to the execution of arbitrary code.\n\n\nFor the old stable distribution (sarge), this problem has been fixed\nin version 1.0.1-1sarge6.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 1.1.2+dfsg-5.\n\n\nFor the testing distribution (lenny), this problem has been fixed in\nversion 1.1.8-3+lenny1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your xine-lib packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "xine-lib",
+				"purl": "pkg:deb/debian/xine-lib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1472-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "xine-lib",
+				"purl": "pkg:deb/debian/xine-lib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1-1sarge6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1-1",
+				"1.0.1-1sarge1",
+				"1.0.1-1sarge2",
+				"1.0.1-1sarge3",
+				"1.0.1-1sarge4",
+				"1.0.1-1sarge5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1472-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1472"
+		}
+	]
+}

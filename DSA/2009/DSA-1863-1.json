@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1863-1",
+	"modified": "2023-10-16T00:10:43.550740Z",
+	"published": "2009-08-15T00:00:00Z",
+	"related": [
+		"CVE-2009-0668",
+		"CVE-2009-0669"
+	],
+	"summary": "zope2.10 zope2.9 - arbitrary code execution",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the zope,\na feature-rich web application server written in python, that could\nlead to arbitrary code execution in the worst case. The Common\nVulnerabilities and Exposures project identified the following problems:\n\n\n* [CVE-2009-0668](https://security-tracker.debian.org/tracker/CVE-2009-0668)\nDue to a programming error an authorization method in the StorageServer\ncomponent of ZEO was not used as an internal method. This allows a\nmalicious client to bypass authentication when connecting to a ZEO server\nby simply calling this authorization method.\n* [CVE-2009-0668](https://security-tracker.debian.org/tracker/CVE-2009-0668)\nThe ZEO server doesn't restrict the callables when unpickling data received\nfrom a malicious client which can be used by an attacker to execute\narbitrary python code on the server by sending certain exception pickles.\nThis also allows an attacker to import any importable module as ZEO is\nimporting the module containing a callable specified in a pickle to test\nfor a certain flag.\n* The update also limits the number of new object ids a client can request\nto 100 as it would be possible to consume huge amounts of resources by\nrequesting a big batch of new object ids. No CVE id has been assigned to\nthis.\n\n\nThe oldstable distribution (etch), this problem has been fixed in\nversion 2.9.6-4etch2 of zope2.9.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.10.6-1+lenny1 of zope2.10.\n\n\nFor the testing distribution (squeeze), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.10.9-1 of zope2.10.\n\n\nWe recommend that you upgrade your zope2.10/zope2.9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "zope2.10",
+				"purl": "pkg:deb/debian/zope2.10?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.10.6-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1863-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "zope2.9",
+				"purl": "pkg:deb/debian/zope2.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.6-4etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.6-4etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1863-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1863"
+		}
+	]
+}

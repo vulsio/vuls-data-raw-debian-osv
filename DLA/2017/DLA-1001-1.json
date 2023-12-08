@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1001-1",
+	"modified": "2023-06-28T06:20:07.645629Z",
+	"published": "2017-06-25T00:00:00Z",
+	"related": [
+		"CVE-2017-1000369"
+	],
+	"summary": "exim4 - security update",
+	"details": "\nExim supports the use of multiple \"-p\" command line arguments which are\nmalloc()'ed and never free()'ed, used in conjunction with other issues allows\nattackers to cause arbitrary code execution.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.80-7+deb7u5.\n\n\nWe recommend that you upgrade your exim4 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "exim4",
+				"purl": "pkg:deb/debian/exim4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.80-7+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.80-7",
+				"4.80-7+deb7u1",
+				"4.80-7+deb7u2",
+				"4.80-7+deb7u3",
+				"4.80-7+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1001-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1001"
+		}
+	]
+}

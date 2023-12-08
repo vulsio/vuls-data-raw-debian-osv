@@ -1,0 +1,62 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-626-1",
+	"modified": "2023-06-28T06:25:36.044382Z",
+	"published": "2016-09-17T00:00:00Z",
+	"related": [
+		"CVE-2016-6606",
+		"CVE-2016-6607",
+		"CVE-2016-6609",
+		"CVE-2016-6611",
+		"CVE-2016-6612",
+		"CVE-2016-6613",
+		"CVE-2016-6614",
+		"CVE-2016-6620",
+		"CVE-2016-6622",
+		"CVE-2016-6623",
+		"CVE-2016-6624",
+		"CVE-2016-6630",
+		"CVE-2016-6631"
+	],
+	"summary": "phpmyadmin - security update",
+	"details": "\nPhpmyadmin, a web administration tool for MySQL, had several\nvulnerabilities reported.\n\n\n* [CVE-2016-6606](https://security-tracker.debian.org/tracker/CVE-2016-6606)\nA pair of vulnerabilities were found affecting the way cookies are\n stored.\n\n\nThe decryption of the username/password is vulnerable to a padding\n oracle attack. The can allow an attacker who has access to a user's\n browser cookie file to decrypt the username and password.\n\n\nA vulnerability was found where the same initialization vector\n is used to hash the username and password stored in the phpMyAdmin\n cookie. If a user has the same password as their username, an\n attacker who examines the browser cookie can see that they are the\n same â but the attacker can not directly decode these values from\n the cookie as it is still hashed.\n* [CVE-2016-6607](https://security-tracker.debian.org/tracker/CVE-2016-6607)\nCross site scripting vulnerability in the replication feature\n* [CVE-2016-6609](https://security-tracker.debian.org/tracker/CVE-2016-6609)\nA specially crafted database name could be used to run arbitrary PHP\n commands through the array export feature.\n* [CVE-2016-6611](https://security-tracker.debian.org/tracker/CVE-2016-6611)\nA specially crafted database and/or table name can be used to trigger\n an SQL injection attack through the SQL export functionality.\n* [CVE-2016-6612](https://security-tracker.debian.org/tracker/CVE-2016-6612)\nA user can exploit the LOAD LOCAL INFILE functionality to expose\n files on the server to the database system.\n* [CVE-2016-6613](https://security-tracker.debian.org/tracker/CVE-2016-6613)\nA user can specially craft a symlink on disk, to a file which\n phpMyAdmin is permitted to read but the user is not, which\n phpMyAdmin will then expose to the user.\n* [CVE-2016-6614](https://security-tracker.debian.org/tracker/CVE-2016-6614)\nA vulnerability was reported with the %u username replacement\n functionality of the SaveDir and UploadDir features. When the\n username substitution is configured, a specially-crafted user name\n can be used to circumvent restrictions to traverse the file system.\n* [CVE-2016-6620](https://security-tracker.debian.org/tracker/CVE-2016-6620)\nA vulnerability was reported where some data is passed to the PHP\n unserialize() function without verification that it's valid\n serialized data. Due to how the PHP function operates,\n unserialization can result in code being loaded and executed due to\n object instantiation and autoloading, and a malicious user may be\n able to exploit this.\n Therefore, a malicious user may be able to manipulate the stored\n data in a way to exploit this weakness.\n* [CVE-2016-6622](https://security-tracker.debian.org/tracker/CVE-2016-6622)\nAn unauthenticated user is able to execute a denial-of-service\n attack by forcing persistent connections when phpMyAdmin is running\n with $cfg['AllowArbitraryServer']=true;.\n* [CVE-2016-6623](https://security-tracker.debian.org/tracker/CVE-2016-6623)\nA malicious authorized user can cause a denial-of-service attack\n on a server by passing large values to a loop.\n* [CVE-2016-6624](https://security-tracker.debian.org/tracker/CVE-2016-6624)\nA vulnerability was discovered where, under certain circumstances,\n it may be possible to circumvent the phpMyAdmin IP-based\n authentication rules.\n When phpMyAdmin is used with IPv6 in a proxy server environment,\n and the proxy server is in the allowed range but the attacking\n computer is not allowed, this vulnerability can allow the attacking\n computer to connect despite the IP rules.\n* [CVE-2016-6630](https://security-tracker.debian.org/tracker/CVE-2016-6630)\nAn authenticated user can trigger a denial-of-service attack by\n entering a very long password at the change password dialog.\n* [CVE-2016-6631](https://security-tracker.debian.org/tracker/CVE-2016-6631)\nA vulnerability was discovered where a user can execute a remote\n code execution attack against a server when phpMyAdmin is being\n run as a CGI application. Under certain server configurations,\n a user can pass a query string which is executed as a\n command-line argument by shell scripts.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.4.11.1-2+deb7u6.\n\n\nWe recommend that you upgrade your phpmyadmin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.4.11.1-2+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.4.11.1-2",
+				"4:3.4.11.1-2+deb7u1",
+				"4:3.4.11.1-2+deb7u2",
+				"4:3.4.11.1-2+deb7u3",
+				"4:3.4.11.1-2+deb7u4",
+				"4:3.4.11.1-2+deb7u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-626-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-626"
+		}
+	]
+}

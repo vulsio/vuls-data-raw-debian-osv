@@ -1,0 +1,125 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3329-1",
+	"modified": "2023-10-16T00:06:19.802015Z",
+	"published": "2015-08-07T00:00:00Z",
+	"related": [
+		"CVE-2015-3212",
+		"CVE-2015-4700",
+		"CVE-2015-5697",
+		"CVE-2015-5707"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel\nthat may lead to a privilege escalation, denial of service or\ninformation leak.\n\n\n* [CVE-2015-1333](https://security-tracker.debian.org/tracker/CVE-2015-1333)\nColin Ian King discovered a flaw in the add\\_key function of the\n Linux kernel's keyring subsystem. A local user can exploit this flaw\n to cause a denial of service due to memory exhaustion.\n* [CVE-2015-3212](https://security-tracker.debian.org/tracker/CVE-2015-3212)\nJi Jianwen of Red Hat Engineering discovered a flaw in the handling\n of the SCTPs automatic handling of dynamic multi-homed connections.\n A local attacker could use this flaw to cause a crash or potentially\n for privilege escalation.\n* [CVE-2015-4692](https://security-tracker.debian.org/tracker/CVE-2015-4692)\nA NULL pointer dereference flaw was found in the\n kvm\\_apic\\_has\\_events function in the KVM subsystem. A unprivileged\n local user could exploit this flaw to crash the system kernel\n resulting in denial of service.\n* [CVE-2015-4700](https://security-tracker.debian.org/tracker/CVE-2015-4700)\nDaniel Borkmann discovered a flaw in the Linux kernel implementation\n of the Berkeley Packet Filter which can be used by a local user to\n crash the system.\n* [CVE-2015-5364](https://security-tracker.debian.org/tracker/CVE-2015-5364)\nIt was discovered that the Linux kernel does not properly handle\n invalid UDP checksums. A remote attacker could exploit this flaw to\n cause a denial of service using a flood of UDP packets with invalid\n checksums.\n* [CVE-2015-5366](https://security-tracker.debian.org/tracker/CVE-2015-5366)\nIt was discovered that the Linux kernel does not properly handle\n invalid UDP checksums. A remote attacker can cause a denial of\n service against applications that use epoll by injecting a single\n packet with an invalid checksum.\n* [CVE-2015-5697](https://security-tracker.debian.org/tracker/CVE-2015-5697)\nA flaw was discovered in the md driver in the Linux kernel leading\n to an information leak.\n* [CVE-2015-5706](https://security-tracker.debian.org/tracker/CVE-2015-5706)\nAn user triggerable use-after-free vulnerability in path lookup in\n the Linux kernel could potentially lead to privilege escalation.\n* [CVE-2015-5707](https://security-tracker.debian.org/tracker/CVE-2015-5707)\nAn integer overflow in the SCSI generic driver in the Linux kernel\n was discovered. A local user with write permission on a SCSI generic\n device could potentially exploit this flaw for privilege escalation.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 3.2.68-1+deb7u3. [CVE-2015-1333](https://security-tracker.debian.org/tracker/CVE-2015-1333), [CVE-2015-4692](https://security-tracker.debian.org/tracker/CVE-2015-4692) and\n[CVE-2015-5706](https://security-tracker.debian.org/tracker/CVE-2015-5706) do not affect the wheezy distribution.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.7-ckt11-1+deb8u3, except [CVE-2015-5364](https://security-tracker.debian.org/tracker/CVE-2015-5364) and [CVE-2015-5366](https://security-tracker.debian.org/tracker/CVE-2015-5366)\nwhich were fixed already in DSA-3313-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.1.3-1 or earlier versions.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.68-1+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1",
+				"3.2.63-2+deb7u1~bpo60+1",
+				"3.2.63-2+deb7u2",
+				"3.2.63-2+deb7u2~bpo60+1",
+				"3.2.65-1",
+				"3.2.65-1+deb7u1",
+				"3.2.65-1+deb7u1~bpo60+1",
+				"3.2.65-1+deb7u2",
+				"3.2.65-1+deb7u2~bpo60+1",
+				"3.2.68-1",
+				"3.2.68-1+deb7u1",
+				"3.2.68-1+deb7u1~bpo60+1",
+				"3.2.68-1+deb7u2",
+				"3.2.68-1+deb7u2~bpo60+1",
+				"3.2.68-1+deb7u3~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3329-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.7-ckt11-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3329-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3329"
+		}
+	]
+}

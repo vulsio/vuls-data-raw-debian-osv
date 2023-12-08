@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2116-1",
+	"modified": "2023-10-16T00:05:45.958646Z",
+	"published": "2010-10-04T00:00:00Z",
+	"related": [
+		"CVE-2010-3311"
+	],
+	"summary": "freetype - integer overflow",
+	"details": "\nMarc Schoenefeld has found an input stream position error in the\nway the FreeType font rendering engine processed input file streams.\nIf a user loaded a specially-crafted font file with an application\nlinked against FreeType and relevant font glyphs were subsequently\nrendered with the X FreeType library (libXft), it could cause the\napplication to crash or, possibly execute arbitrary code.\n\n\nAfter the upgrade, all running applications and services that use\nlibfreetype6 should be restarted. In most cases, logging out and\nin again should be enough. The script checkrestart from the\ndebian-goodies package or lsof may help to find out which\nprocesses are still using the old version of libfreetype6.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.3.7-2+lenny4.\n\n\nThe testing distribution (squeeze) and the unstable distribution (sid)\nare not affected by this problem.\n\n\nWe recommend that you upgrade your freetype packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "freetype",
+				"purl": "pkg:deb/debian/freetype?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.7-2+lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.7-2",
+				"2.3.7-2+lenny1",
+				"2.3.7-2+lenny2",
+				"2.3.7-2+lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2116-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2116"
+		}
+	]
+}

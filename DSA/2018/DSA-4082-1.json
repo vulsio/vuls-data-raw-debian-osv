@@ -1,0 +1,113 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4082-1",
+	"modified": "2023-10-16T00:12:38.405840Z",
+	"published": "2018-01-09T00:00:00Z",
+	"related": [
+		"CVE-2017-1000407",
+		"CVE-2017-1000410",
+		"CVE-2017-15868",
+		"CVE-2017-16538",
+		"CVE-2017-16939",
+		"CVE-2017-17448",
+		"CVE-2017-17449",
+		"CVE-2017-17450",
+		"CVE-2017-17558",
+		"CVE-2017-17741",
+		"CVE-2017-17805",
+		"CVE-2017-17806",
+		"CVE-2017-17807",
+		"CVE-2017-5754",
+		"CVE-2017-8824"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2017-5754](https://security-tracker.debian.org/tracker/CVE-2017-5754)\nMultiple researchers have discovered a vulnerability in Intel\n processors, enabling an attacker controlling an unprivileged\n process to read memory from arbitrary addresses, including from\n the kernel and all other processes running on the system.\n\n\nThis specific attack has been named Meltdown and is addressed in\n the Linux kernel for the Intel x86-64 architecture by a patch set\n named Kernel Page Table Isolation, enforcing a near complete\n separation of the kernel and userspace address maps and preventing\n the attack. This solution might have a performance impact, and can\n be disabled at boot time by passing `pti=off` to the kernel\n command line.\n* [CVE-2017-8824](https://security-tracker.debian.org/tracker/CVE-2017-8824)\nMohamed Ghannam discovered that the DCCP implementation did not\n correctly manage resources when a socket is disconnected and\n reconnected, potentially leading to a use-after-free. A local\n user could use this for denial of service (crash or data\n corruption) or possibly for privilege escalation. On systems that\n do not already have the dccp module loaded, this can be mitigated\n by disabling it:\n `echo >> /etc/modprobe.d/disable-dccp.conf install dccp false`\n* [CVE-2017-15868](https://security-tracker.debian.org/tracker/CVE-2017-15868)\nAl Viro found that the Bluebooth Network Encapsulation Protocol\n (BNEP) implementation did not validate the type of the second\n socket passed to the BNEPCONNADD ioctl(), which could lead to\n memory corruption. A local user with the CAP\\_NET\\_ADMIN capability\n can use this for denial of service (crash or data corruption) or\n possibly for privilege escalation.\n* [CVE-2017-16538](https://security-tracker.debian.org/tracker/CVE-2017-16538)\nAndrey Konovalov reported that the dvb-usb-lmedm04 media driver\n did not correctly handle some error conditions during\n initialisation. A physically present user with a specially\n designed USB device can use this to cause a denial of service\n (crash).\n* [CVE-2017-16939](https://security-tracker.debian.org/tracker/CVE-2017-16939)\nMohamed Ghannam reported (through Beyond Security's SecuriTeam\n Secure Disclosure program) that the IPsec (xfrm) implementation\n did not correctly handle some failure cases when dumping policy\n information through netlink. A local user with the CAP\\_NET\\_ADMIN\n capability can use this for denial of service (crash or data\n corruption) or possibly for privilege escalation.\n* [CVE-2017-17448](https://security-tracker.debian.org/tracker/CVE-2017-17448)\nKevin Cernekee discovered that the netfilter subsystem allowed\n users with the CAP\\_NET\\_ADMIN capability in any user namespace, not\n just the root namespace, to enable and disable connection tracking\n helpers. This could lead to denial of service, violation of\n network security policy, or have other impact.\n* [CVE-2017-17449](https://security-tracker.debian.org/tracker/CVE-2017-17449)\nKevin Cernekee discovered that the netlink subsystem allowed\n users with the CAP\\_NET\\_ADMIN capability in any user namespace\n to monitor netlink traffic in all net namespaces, not just\n those owned by that user namespace. This could lead to\n exposure of sensitive information.\n* [CVE-2017-17450](https://security-tracker.debian.org/tracker/CVE-2017-17450)\nKevin Cernekee discovered that the xt\\_osf module allowed users\n with the CAP\\_NET\\_ADMIN capability in any user namespace to modify\n the global OS fingerprint list.\n* [CVE-2017-17558](https://security-tracker.debian.org/tracker/CVE-2017-17558)\nAndrey Konovalov reported that that USB core did not correctly\n handle some error conditions during initialisation. A physically\n present user with a specially designed USB device can use this to\n cause a denial of service (crash or memory corruption), or\n possibly for privilege escalation.\n* [CVE-2017-17741](https://security-tracker.debian.org/tracker/CVE-2017-17741)\nDmitry Vyukov reported that the KVM implementation for x86 would\n over-read data from memory when emulating an MMIO write if the\n kvm\\_mmio tracepoint was enabled. A guest virtual machine might be\n able to use this to cause a denial of service (crash).\n* [CVE-2017-17805](https://security-tracker.debian.org/tracker/CVE-2017-17805)\nIt was discovered that some implementations of the Salsa20 block\n cipher did not correctly handle zero-length input. A local user\n could use this to cause a denial of service (crash) or possibly\n have other security impact.\n* [CVE-2017-17806](https://security-tracker.debian.org/tracker/CVE-2017-17806)\nIt was discovered that the HMAC implementation could be used with\n an underlying hash algorithm that requires a key, which was not\n intended. A local user could use this to cause a denial of\n service (crash or memory corruption), or possibly for privilege\n escalation.\n* [CVE-2017-17807](https://security-tracker.debian.org/tracker/CVE-2017-17807)\nEric Biggers discovered that the KEYS subsystem lacked a check for\n write permission when adding keys to a process's default keyring.\n A local user could use this to cause a denial of service or to\n obtain sensitive information.\n* [CVE-2017-1000407](https://security-tracker.debian.org/tracker/CVE-2017-1000407)\nAndrew Honig reported that the KVM implementation for Intel\n processors allowed direct access to host I/O port 0x80, which\n is not generally safe. On some systems this allows a guest\n VM to cause a denial of service (crash) of the host.\n* [CVE-2017-1000410](https://security-tracker.debian.org/tracker/CVE-2017-1000410)\nBen Seri reported that the Bluetooth subsystem did not correctly\n handle short EFS information elements in L2CAP messages. An\n attacker able to communicate over Bluetooth could use this to\n obtain sensitive information from the kernel.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 3.16.51-3+deb8u1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.51-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.36-1",
+				"3.16.36-1+deb8u1",
+				"3.16.36-1+deb8u1~bpo70+1",
+				"3.16.36-1+deb8u2",
+				"3.16.36-1+deb8u2~bpo70+1",
+				"3.16.39-1",
+				"3.16.39-1+deb8u1",
+				"3.16.39-1+deb8u1~bpo70+1",
+				"3.16.39-1+deb8u1~bpo70+1+gcc4.4",
+				"3.16.39-1+deb8u2",
+				"3.16.39-1~bpo70+1",
+				"3.16.43-1",
+				"3.16.43-2",
+				"3.16.43-2+deb8u1",
+				"3.16.43-2+deb8u2",
+				"3.16.43-2+deb8u3",
+				"3.16.43-2+deb8u4",
+				"3.16.43-2+deb8u5",
+				"3.16.48-1",
+				"3.16.51-1",
+				"3.16.51-2",
+				"3.16.51-3",
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4082-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4082"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3138-1",
+	"modified": "2023-06-28T06:26:52.486535Z",
+	"published": "2022-10-05T00:00:00Z",
+	"related": [
+		"CVE-2022-2795",
+		"CVE-2022-38177",
+		"CVE-2022-38178"
+	],
+	"summary": "bind9 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in BIND, a DNS server\nimplementation.\n\n\n* [CVE-2022-2795](https://security-tracker.debian.org/tracker/CVE-2022-2795)\nYehuda Afek, Anat Bremler-Barr and Shani Stajnrod discovered that a\n flaw in the resolver code can cause named to spend excessive amounts\n of time on processing large delegations, significantly degrade\n resolver performance and result in denial of service.\n* [CVE-2022-38177](https://security-tracker.debian.org/tracker/CVE-2022-38177)\nIt was discovered that the DNSSEC verification code for the ECDSA\n algorithm is susceptible to a memory leak flaw. A remote attacker\n can take advantage of this flaw to cause BIND to consume resources,\n resulting in a denial of service.\n* [CVE-2022-38178](https://security-tracker.debian.org/tracker/CVE-2022-38178)\nIt was discovered that the DNSSEC verification code for the EdDSA\n algorithm is susceptible to a memory leak flaw. A remote attacker\n can take advantage of this flaw to cause BIND to consume resources,\n resulting in a denial of service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:9.11.5.P4+dfsg-5.1+deb10u8.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\nFor the detailed security status of bind9 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/bind9>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.11.5.P4+dfsg-5.1+deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.11.5.P4+dfsg-5.1",
+				"1:9.11.5.P4+dfsg-5.1+deb10u1",
+				"1:9.11.5.P4+dfsg-5.1+deb10u2",
+				"1:9.11.5.P4+dfsg-5.1+deb10u3",
+				"1:9.11.5.P4+dfsg-5.1+deb10u4",
+				"1:9.11.5.P4+dfsg-5.1+deb10u5",
+				"1:9.11.5.P4+dfsg-5.1+deb10u6",
+				"1:9.11.5.P4+dfsg-5.1+deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3138-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3138"
+		}
+	]
+}

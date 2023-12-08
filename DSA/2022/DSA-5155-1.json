@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5155-1",
+	"modified": "2023-10-16T00:25:48.635827Z",
+	"published": "2022-06-01T00:00:00Z",
+	"related": [
+		"CVE-2022-26700",
+		"CVE-2022-26709",
+		"CVE-2022-26716",
+		"CVE-2022-26717",
+		"CVE-2022-26719",
+		"CVE-2022-30293"
+	],
+	"summary": "wpewebkit - security update",
+	"details": "\nThe following vulnerabilities have been discovered in the WPE WebKit\nweb engine:\n\n\n* [CVE-2022-26700](https://security-tracker.debian.org/tracker/CVE-2022-26700)\nryuzaki discovered that processing maliciously crafted web content\n may lead to code execution.\n* [CVE-2022-26709](https://security-tracker.debian.org/tracker/CVE-2022-26709)\nChijin Zhou discovered that processing maliciously crafted web\n content may lead to arbitrary code execution.\n* [CVE-2022-26716](https://security-tracker.debian.org/tracker/CVE-2022-26716)\nSorryMybad discovered that Processing maliciously crafted web\n content may lead to arbitrary code execution.\n* [CVE-2022-26717](https://security-tracker.debian.org/tracker/CVE-2022-26717)\nJeonghoon Shin discovered that Processing maliciously crafted web\n content may lead to arbitrary code execution.\n* [CVE-2022-26719](https://security-tracker.debian.org/tracker/CVE-2022-26719)\nDongzhuo Zhao discovered that Processing maliciously crafted web\n content may lead to arbitrary code execution.\n* [CVE-2022-30293](https://security-tracker.debian.org/tracker/CVE-2022-30293)\nChijin Zhou discovered that processing maliciously crafted web\n content may lead to arbitrary code execution or to a denial of\n service (application crash).\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2.36.3-1~deb11u1.\n\n\nWe recommend that you upgrade your wpewebkit packages.\n\n\nFor the detailed security status of wpewebkit please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/wpewebkit](https://security-tracker.debian.org/tracker/wpewebkit)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "wpewebkit",
+				"purl": "pkg:deb/debian/wpewebkit?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.36.3-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.32.3-2",
+				"2.32.4-1",
+				"2.32.4-1~deb11u1",
+				"2.34.1-1",
+				"2.34.1-1~deb11u1",
+				"2.34.2-1",
+				"2.34.3-1",
+				"2.34.3-1~deb11u1",
+				"2.34.4-1",
+				"2.34.4-1~deb11u1",
+				"2.34.5-1",
+				"2.34.6-1",
+				"2.34.6-1~deb11u1",
+				"2.36.0-1",
+				"2.36.0-2",
+				"2.36.0-2~deb11u1",
+				"2.36.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5155-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5155"
+		}
+	]
+}

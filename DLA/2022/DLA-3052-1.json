@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3052-1",
+	"modified": "2023-06-28T06:26:49.530497Z",
+	"published": "2022-06-20T00:00:00Z",
+	"related": [
+		"CVE-2019-18928",
+		"CVE-2021-33582"
+	],
+	"summary": "cyrus-imapd - security update",
+	"details": "\nIt was discovered that the Cyrus IMAP server was prone to a denial of service\nattack via input that is mishandled during hash-table interaction. Furthermore\nit allowed privilege escalation because an HTTP request may be interpreted in\nthe authentication context of an unrelated previous request that arrived over\nthe same connection.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.5.10-3+deb9u3.\n\n\nWe recommend that you upgrade your cyrus-imapd packages.\n\n\nFor the detailed security status of cyrus-imapd please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cyrus-imapd>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "cyrus-imapd",
+				"purl": "pkg:deb/debian/cyrus-imapd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.10-3+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.10-3",
+				"2.5.10-3+deb9u1",
+				"2.5.10-3+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3052-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3052"
+		}
+	]
+}

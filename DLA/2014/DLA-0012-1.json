@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-0012-1",
+	"modified": "2023-06-28T06:19:38.088750Z",
+	"published": "2014-06-30T00:00:00Z",
+	"related": [
+		"CVE-2014-4617"
+	],
+	"summary": "gnupg - security update",
+	"details": "\nJean-Rene Reinhard, Olivier Levillain and Florian Maury reported that\nGnuPG, the GNU Privacy Guard, did not properly parse certain garbled\ncompressed data packets. A remote attacker could use this flaw to mount\na denial of service against GnuPG by triggering an infinite loop.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in gnupg version 1.4.10-4+squeeze5\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.10-4+squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.10-4",
+				"1.4.10-4+squeeze1",
+				"1.4.10-4+squeeze2",
+				"1.4.10-4+squeeze3",
+				"1.4.10-4+squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-0012-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-0012"
+		}
+	]
+}

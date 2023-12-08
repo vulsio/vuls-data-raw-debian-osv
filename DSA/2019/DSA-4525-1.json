@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4525-1",
+	"modified": "2023-10-16T00:25:37.156290Z",
+	"published": "2019-09-18T00:00:00Z",
+	"related": [
+		"CVE-2019-14822"
+	],
+	"summary": "ibus - security update",
+	"details": "\nSimon McVittie reported a flaw in ibus, the Intelligent Input Bus. Due\nto a misconfiguration during the setup of the DBus, any unprivileged\nuser could monitor and send method calls to the ibus bus of another\nuser, if able to discover the UNIX socket used by another user connected\non a graphical environment. The attacker can take advantage of this flaw\nto intercept keystrokes of the victim user or modify input related\nconfigurations through DBus method calls.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1.5.14-3+deb9u2.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.5.19-4+deb10u1.\n\n\nWe recommend that you upgrade your ibus packages.\n\n\nFor the detailed security status of ibus please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/ibus>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ibus",
+				"purl": "pkg:deb/debian/ibus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.14-3+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.14-3",
+				"1.5.14-3+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4525-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ibus",
+				"purl": "pkg:deb/debian/ibus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.19-4+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.19-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4525-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4525"
+		}
+	]
+}

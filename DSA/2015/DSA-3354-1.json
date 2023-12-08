@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3354-1",
+	"modified": "2023-10-16T00:11:56.292569Z",
+	"published": "2015-09-08T00:00:00Z",
+	"related": [
+		"CVE-2015-3247"
+	],
+	"summary": "spice - security update",
+	"details": "\nFrediano Ziglio of Red Hat discovered a race condition flaw in spice's\nworker\\_update\\_monitors\\_config() function, leading to a heap-based memory\ncorruption. A malicious user in a guest can take advantage of this flaw\nto cause a denial of service (QEMU process crash) or, potentially\nexecute arbitrary code on the host with the privileges of the hosting\nQEMU process.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 0.12.5-1+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.12.5-1.2.\n\n\nWe recommend that you upgrade your spice packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "spice",
+				"purl": "pkg:deb/debian/spice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.12.5-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.12.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3354-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3354"
+		}
+	]
+}

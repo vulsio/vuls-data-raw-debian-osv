@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2007-1",
+	"modified": "2023-06-28T06:26:26.073669Z",
+	"published": "2019-11-25T00:00:00Z",
+	"related": [
+		"CVE-2019-15845",
+		"CVE-2019-16201",
+		"CVE-2019-16254",
+		"CVE-2019-16255"
+	],
+	"summary": "ruby2.1 - security update",
+	"details": "\nSeveral flaws have been found in ruby2.1, an interpreter of an\nobject-oriented scripting language.\n\n\n* [CVE-2019-15845](https://security-tracker.debian.org/tracker/CVE-2019-15845)\nPath matching might pass in File.fnmatch and File.fnmatch? due\n to a NUL character injection.\n* [CVE-2019-16201](https://security-tracker.debian.org/tracker/CVE-2019-16201)\nA loop caused by a wrong regular expression could lead to a denial\n of service of a WEBrick service.\n* [CVE-2019-16254](https://security-tracker.debian.org/tracker/CVE-2019-16254)\nThis is the same issue as [CVE-2017-17742](https://security-tracker.debian.org/tracker/CVE-2017-17742), whose fix was not complete.\n* [CVE-2019-16255](https://security-tracker.debian.org/tracker/CVE-2019-16255)\nGiving untrusted data to the first argument of Shell#[] and\n Shell#test might lead to a code injection vulnerability.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.1.5-2+deb8u8.\n\n\nWe recommend that you upgrade your ruby2.1 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ruby2.1",
+				"purl": "pkg:deb/debian/ruby2.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.5-2+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.5-2",
+				"2.1.5-2+deb8u1",
+				"2.1.5-2+deb8u2",
+				"2.1.5-2+deb8u3",
+				"2.1.5-2+deb8u4",
+				"2.1.5-2+deb8u5",
+				"2.1.5-2+deb8u6",
+				"2.1.5-2+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2007-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-2007"
+		}
+	]
+}

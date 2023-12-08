@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-330",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-06-23T00:00:00Z",
+	"related": [
+		"CVE-2003-0489"
+	],
+	"summary": "tcptraceroute - failure to drop root privileges",
+	"details": "\ntcptraceroute is a setuid-root program which drops root privileges\nafter obtaining a file descriptor used for raw packet capture.\nHowever, it did not fully relinquish all privileges, and in the event\nof an exploitable vulnerability, root privileges could be regained.\n\n\nNo current exploit is known, but this safeguard is being repaired in\norder to provide a measure of containment in the event that an\nexploitable flaw should be discovered.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.2-2.\n\n\nThe old stable distribution (potato) does not contain a tcptraceroute\npackage.\n\n\nFor the unstable distribution (sid) this problem is fixed in version\n1.4-4.\n\n\nWe recommend that you update your tcptraceroute package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tcptraceroute",
+				"purl": "pkg:deb/debian/tcptraceroute?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2-2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-330.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-330"
+		}
+	]
+}

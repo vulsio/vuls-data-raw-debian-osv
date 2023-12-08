@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3171-1",
+	"modified": "2023-10-16T00:11:48.822117Z",
+	"published": "2015-02-23T00:00:00Z",
+	"related": [
+		"CVE-2015-0240"
+	],
+	"summary": "samba - security update",
+	"details": "\nRichard van Eeden of Microsoft Vulnerability Research discovered that\nSamba, a SMB/CIFS file, print, and login server for Unix, contains a\nflaw in the netlogon server code which allows remote code execution with\nroot privileges from an unauthenticated connection.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2:3.6.6-6+deb7u5.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.6.6-6+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.6.6-6",
+				"2:3.6.6-6+deb7u1",
+				"2:3.6.6-6+deb7u1~bpo60+1",
+				"2:3.6.6-6+deb7u2",
+				"2:3.6.6-6+deb7u2~bpo60+1",
+				"2:3.6.6-6+deb7u3",
+				"2:3.6.6-6+deb7u4",
+				"2:3.6.6-6+deb7u4~bpo60+1",
+				"2:3.6.6-6+deb7u5~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3171-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3171"
+		}
+	]
+}

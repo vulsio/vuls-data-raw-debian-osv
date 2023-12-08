@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2323-1",
+	"modified": "2023-06-28T06:25:12.346982Z",
+	"published": "2020-08-12T00:00:00Z",
+	"related": [
+		"CVE-2019-18814",
+		"CVE-2019-18885",
+		"CVE-2019-20810",
+		"CVE-2020-10766",
+		"CVE-2020-10767",
+		"CVE-2020-10768",
+		"CVE-2020-12655",
+		"CVE-2020-12771",
+		"CVE-2020-13974",
+		"CVE-2020-15393"
+	],
+	"summary": "linux-4.19 - new package",
+	"details": "\nLinux 4.19 has been packaged for Debian 9 as linux-4.19. This\nprovides a supported upgrade path for systems that currently use\nkernel packages from the \"stretch-backports\" suite.\n\n\nThere is no need to upgrade systems using Linux 4.9, as that kernel\nversion will also continue to be supported in the LTS period.\n\n\nThis backport does not include the following binary packages:\n\n\n\n> hyperv-daemons libbpf-dev libbpf4.19 libcpupower-dev libcpupower1\n> liblockdep-dev liblockdep4.19 linux-compiler-gcc-6-arm\n> linux-compiler-gcc-6-x86 linux-cpupower linux-libc-dev lockdep\n> usbip\n\n\nOlder versions of most of those are built from the linux source\npackage in Debian 9.\n\n\nThe kernel images and modules will not be signed for use on systems\nwith Secure Boot enabled, as there is no support for this in Debian 9.\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or information leak.\n\n\n* [CVE-2019-18814](https://security-tracker.debian.org/tracker/CVE-2019-18814)\nNavid Emamdoost reported a potential use-after-free in the\n AppArmor security module, in the case that audit rule\n initialisation fails. The security impact of this is unclear.\n* [CVE-2019-18885](https://security-tracker.debian.org/tracker/CVE-2019-18885)\nThe bobfuzzer team discovered that crafted Btrfs volumes could\n trigger a crash (oops). An attacker able to mount such a volume\n could use this to cause a denial of service.\n* [CVE-2019-20810](https://security-tracker.debian.org/tracker/CVE-2019-20810)\nA potential memory leak was discovered in the go7007 media driver.\n The security impact of this is unclear.\n* [CVE-2020-10766](https://security-tracker.debian.org/tracker/CVE-2020-10766)\nAnthony Steinhauser reported a flaw in the mitigation for\n Speculative Store Bypass ([CVE-2018-3639](https://security-tracker.debian.org/tracker/CVE-2018-3639)) on x86 CPUs. A local\n user could use this to temporarily disable SSB mitigation in other\n users' tasks. If those other tasks run sandboxed code, this would\n allow that code to read sensitive information in the same process\n but outside the sandbox.\n* [CVE-2020-10767](https://security-tracker.debian.org/tracker/CVE-2020-10767)\nAnthony Steinhauser reported a flaw in the mitigation for Spectre\n variant 2 ([CVE-2017-5715](https://security-tracker.debian.org/tracker/CVE-2017-5715)) on x86 CPUs. Depending on which other\n mitigations the CPU supports, the kernel might not use IBPB to\n mitigate Spectre variant 2 in user-space. A local user could use\n this to read sensitive information from other users' processes.\n* [CVE-2020-10768](https://security-tracker.debian.org/tracker/CVE-2020-10768)\nAnthony Steinhauser reported a flaw in the mitigation for Spectre\n variant 2 ([CVE-2017-5715](https://security-tracker.debian.org/tracker/CVE-2017-5715)) on x86 CPUs. After a task force disabled indirect branch speculation through prctl(), it could\n still re-enable it later, so it was not possible to override a\n program that explicitly enabled it.\n* [CVE-2020-12655](https://security-tracker.debian.org/tracker/CVE-2020-12655)\nZheng Bin reported that crafted XFS volumes could trigger a system\n hang. An attacker able to mount such a volume could use this to\n cause a denial of service.\n* [CVE-2020-12771](https://security-tracker.debian.org/tracker/CVE-2020-12771)\nZhiqiang Liu reported a bug in the bcache block driver that could\n lead to a system hang. The security impact of this is unclear.\n* [CVE-2020-13974](https://security-tracker.debian.org/tracker/CVE-2020-13974)\nKyungtae Kim reported a potential integer overflow in the vt\n (virtual terminal) driver. The security impact of this is\n unclear.\n* [CVE-2020-15393](https://security-tracker.debian.org/tracker/CVE-2020-15393)\nKyungtae Kim reported a memory leak in the usbtest driver. The\n security impact of this is unclear.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n4.19.132-1~deb9u1. This update additionally fixes Debian bugs\n[#958300](https://bugs.debian.org/958300), [#960493](https://bugs.debian.org/960493), [#962254](https://bugs.debian.org/962254), [#963493](https://bugs.debian.org/963493), [#964153](https://bugs.debian.org/964153), [#964480](https://bugs.debian.org/964480), and [#965365](https://bugs.debian.org/965365); and\nincludes many more bug fixes from stable updates 4.19.119-4.19.132\ninclusive.\n\n\nWe recommend that you upgrade your linux-4.19 packages.\n\n\nFor the detailed security status of linux-4.19 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-4.19>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux-4.19",
+				"purl": "pkg:deb/debian/linux-4.19?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.19.132-1~deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.19.132-1~deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2323-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2323"
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-293-1",
+	"modified": "2023-06-28T06:30:22.201283Z",
+	"published": "2015-08-16T00:00:00Z",
+	"related": [
+		"CVE-2015-3187"
+	],
+	"summary": "subversion - security update",
+	"details": "\nC. Michael Pilato, from CollabNet, reported an issue in the version\ncontrol system Subversion.\n\n\n* [CVE-2015-3187](https://security-tracker.debian.org/tracker/CVE-2015-3187)\nSubversion servers revealed some sensible paths hidden by path-based\n authorization. Remote authenticated users were allowed to obtain\n path information by reading the history of a node that has been\n moved from a hidden path. The vulnerability only revealed the path,\n though it didn't reveal its content.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in subversion\n1.6.12dfsg-7+deb6u3. We recommend to upgrade your subversion packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "subversion",
+				"purl": "pkg:deb/debian/subversion?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.12dfsg-7+deb6u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.12dfsg-4",
+				"1.6.12dfsg-5",
+				"1.6.12dfsg-5~bpo50+1",
+				"1.6.12dfsg-6",
+				"1.6.12dfsg-6~bpo50+1",
+				"1.6.12dfsg-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-293-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-293"
+		}
+	]
+}

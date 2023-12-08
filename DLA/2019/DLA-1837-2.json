@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1837-2",
+	"modified": "2023-06-28T06:29:51.191237Z",
+	"published": "2019-06-25T00:00:00Z",
+	"summary": "rdesktop - regression update",
+	"details": "\nSeveral security vulnerabilities were discovered in the rdesktop RDP\nclient, which could result in buffer overflows and execution of\narbitrary code.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.8.6-0+deb8u1.\n\n\nWe recommend that you upgrade your rdesktop packages.\n\n\nFor the detailed security status of rdesktop please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/rdesktop>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "rdesktop",
+				"purl": "pkg:deb/debian/rdesktop?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.6-0+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2-3",
+				"1.8.2-3+deb8u1",
+				"1.8.3-1",
+				"1.8.3-2",
+				"1.8.4-0+deb8u1",
+				"1.8.4-1",
+				"1.8.4-1~deb9u1",
+				"1.8.6-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1837-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1837"
+		}
+	]
+}

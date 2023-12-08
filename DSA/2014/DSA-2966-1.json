@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2966-1",
+	"modified": "2023-10-16T00:11:40.876664Z",
+	"published": "2014-06-23T00:00:00Z",
+	"related": [
+		"CVE-2014-0178",
+		"CVE-2014-0244",
+		"CVE-2014-3493"
+	],
+	"summary": "samba - security update",
+	"details": "\nMultiple vulnerabilities were discovered and fixed in Samba, a SMB/CIFS\nfile, print, and login server:\n\n\n* [CVE-2014-0178](https://security-tracker.debian.org/tracker/CVE-2014-0178)\nInformation leak vulnerability in the VFS code, allowing an\n authenticated user to retrieve eight bytes of uninitialized memory\n when shadow copy is enabled.\n* [CVE-2014-0244](https://security-tracker.debian.org/tracker/CVE-2014-0244)\nDenial of service (infinite CPU loop) in the nmbd Netbios name\n service daemon. A malformed packet can cause the nmbd server to\n enter an infinite loop, preventing it to process later requests to\n the Netbios name service.\n* [CVE-2014-3493](https://security-tracker.debian.org/tracker/CVE-2014-3493)\nDenial of service (daemon crash) in the smbd file server daemon. An\n authenticated user attempting to read a Unicode path using a\n non-Unicode request can force the daemon to overwrite memory at an\n invalid address.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2:3.6.6-6+deb7u4.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 2:4.1.9+dfsg-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2:4.1.9+dfsg-1.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.6.6-6+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.6.6-6",
+				"2:3.6.6-6+deb7u1",
+				"2:3.6.6-6+deb7u1~bpo60+1",
+				"2:3.6.6-6+deb7u2",
+				"2:3.6.6-6+deb7u2~bpo60+1",
+				"2:3.6.6-6+deb7u3",
+				"2:3.6.6-6+deb7u4~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2966-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2966"
+		}
+	]
+}

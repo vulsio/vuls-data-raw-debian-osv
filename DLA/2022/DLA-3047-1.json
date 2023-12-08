@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3047-1",
+	"modified": "2023-06-28T06:26:48.747875Z",
+	"published": "2022-06-07T00:00:00Z",
+	"related": [
+		"CVE-2021-26720",
+		"CVE-2021-3468"
+	],
+	"summary": "avahi - security update",
+	"details": "\nIt was discovered that the Debian package of Avahi, a framework for Multicast\nDNS Service Discovery, executed the script avahi-daemon-check-dns.sh with root\nprivileges which would allow a local attacker to cause a denial of service or\ncreate arbitrary empty files via a symlink attack on files under\n/var/run/avahi-daemon. This script is now executed with the privileges of user\nand group avahi and requires sudo in order to achieve that.\n\n\nThe aforementioned script has been removed from Debian 10 Buster onwards. The\nworkaround could not be implemented for Debian 9 Stretch because libnss-mdns\n0.10 does not provide the required functionality to replace it.\n\n\nFurthermore it was found ([CVE-2021-3468](https://security-tracker.debian.org/tracker/CVE-2021-3468)) that the event used to signal the\ntermination of the client connection on the avahi Unix socket is not correctly\nhandled in the client\\_work function, allowing a local attacker to trigger an\ninfinite loop.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.6.32-2+deb9u1.\n\n\nWe recommend that you upgrade your avahi packages.\n\n\nFor the detailed security status of avahi please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/avahi>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "avahi",
+				"purl": "pkg:deb/debian/avahi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.32-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.32-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3047-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3047"
+		}
+	]
+}

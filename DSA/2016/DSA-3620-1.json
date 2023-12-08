@@ -1,0 +1,62 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3620-1",
+	"modified": "2023-10-16T00:12:10.782037Z",
+	"published": "2016-07-15T00:00:00Z",
+	"related": [
+		"CVE-2016-2365",
+		"CVE-2016-2366",
+		"CVE-2016-2367",
+		"CVE-2016-2368",
+		"CVE-2016-2369",
+		"CVE-2016-2370",
+		"CVE-2016-2371",
+		"CVE-2016-2372",
+		"CVE-2016-2373",
+		"CVE-2016-2374",
+		"CVE-2016-2375",
+		"CVE-2016-2376",
+		"CVE-2016-2377",
+		"CVE-2016-2378",
+		"CVE-2016-2380",
+		"CVE-2016-4323"
+	],
+	"summary": "pidgin - security update",
+	"details": "\nYves Younan of Cisco Talos discovered several vulnerabilities in the\nMXit protocol support in pidgin, a multi-protocol instant messaging\nclient. A remote attacker can take advantage of these flaws to cause a\ndenial of service (application crash), overwrite files, information\ndisclosure, or potentially to execute arbitrary code.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.11.0-0+deb8u1.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 2.11.0-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.11.0-1.\n\n\nWe recommend that you upgrade your pidgin packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "pidgin",
+				"purl": "pkg:deb/debian/pidgin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11.0-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.11-1",
+				"2.10.11-1.1",
+				"2.10.12-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3620-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3620"
+		}
+	]
+}

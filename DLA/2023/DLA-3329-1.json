@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3329-1",
+	"modified": "2023-06-28T06:26:56.001611Z",
+	"published": "2023-02-20T00:00:00Z",
+	"related": [
+		"CVE-2023-24580"
+	],
+	"summary": "python-django - security update",
+	"details": "\nIt was discovered that there was a denial-of-service vulnerability in\nDjango, a Python-based web development framework.\n\n\nPassing certain inputs to multipart forms could have resulted in too\nmany open files or memory exhaustion, and provided a potential vector for a\ndenial-of-service attack.\n\n\nThe number of files parts parsed is now limited via a new\nDATA\\_UPLOAD\\_MAX\\_NUMBER\\_FILES setting.\n\n\n* [CVE-2023-24580](https://security-tracker.debian.org/tracker/CVE-2023-24580)\nAn issue was discovered in the Multipart Request Parser in Django 3.2 before 3.2.18, 4.0 before 4.0.10, and 4.1 before 4.1.7. Passing certain inputs (e.g., an excessive number of parts) to multipart forms could result in too many open files or memory exhaustion, and provided a potential vector for a denial-of-service attack.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1:1.11.29-1+deb10u7.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.11.29-1+deb10u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.11.21-1",
+				"1:1.11.22-1",
+				"1:1.11.22-1~deb10u1",
+				"1:1.11.23-1~deb10u1",
+				"1:1.11.27-1~deb10u1",
+				"1:1.11.28-1~deb10u1",
+				"1:1.11.29-1+deb10u2",
+				"1:1.11.29-1+deb10u3",
+				"1:1.11.29-1+deb10u4",
+				"1:1.11.29-1+deb10u5",
+				"1:1.11.29-1+deb10u6",
+				"1:1.11.29-1~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3329-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3329"
+		}
+	]
+}

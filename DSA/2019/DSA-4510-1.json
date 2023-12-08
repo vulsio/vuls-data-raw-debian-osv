@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4510-1",
+	"modified": "2023-10-16T00:24:57.674143Z",
+	"published": "2019-08-28T00:00:00Z",
+	"related": [
+		"CVE-2019-11500"
+	],
+	"summary": "dovecot - security update",
+	"details": "\nNick Roessler and Rafi Rubin discovered that the IMAP and ManageSieve\nprotocol parsers in the Dovecot email server do not properly validate\ninput (both pre- and post-login). A remote attacker can take advantage\nof this flaw to trigger out of bounds heap memory writes, leading to\ninformation leaks or potentially the execution of arbitrary code.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1:2.2.27-3+deb9u5.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1:2.3.4.1-5+deb10u1.\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\nFor the detailed security status of dovecot please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/dovecot](https://security-tracker.debian.org/tracker/dovecot)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "dovecot",
+				"purl": "pkg:deb/debian/dovecot?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.2.27-3+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.2.27-3",
+				"1:2.2.27-3+deb9u1",
+				"1:2.2.27-3+deb9u2",
+				"1:2.2.27-3+deb9u2~bpo8+1",
+				"1:2.2.27-3+deb9u3",
+				"1:2.2.27-3+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4510-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "dovecot",
+				"purl": "pkg:deb/debian/dovecot?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.4.1-5+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.3.4.1-5",
+				"1:2.3.4.1-5+deb10u1~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4510-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4510"
+		}
+	]
+}

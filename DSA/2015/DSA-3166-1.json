@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3166-1",
+	"modified": "2023-10-16T00:11:48.554776Z",
+	"published": "2015-02-22T00:00:00Z",
+	"related": [
+		"CVE-2015-0247",
+		"CVE-2015-1572"
+	],
+	"summary": "e2fsprogs - security update",
+	"details": "\nJose Duart of the Google Security Team discovered a buffer overflow\nin e2fsprogs, a set of utilities for the ext2, ext3, and ext4 file\nsystems. This issue can possibly lead to arbitrary code execution if\na malicious device is plugged in, the system is configured to\nautomatically mount it, and the mounting process chooses to run fsck\non the device's malicious filesystem.\n\n\n* [CVE-2015-0247](https://security-tracker.debian.org/tracker/CVE-2015-0247)\nBuffer overflow in the ext2/ext3/ext4 file system open/close \n routines.\n* [CVE-2015-1572](https://security-tracker.debian.org/tracker/CVE-2015-1572)\nIncomplete fix for \n [\\\n CVE-2015-0247](https://security-tracker.debian.org/tracker/CVE-2015-0247).\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.42.5-1.1+deb7u1.\n\n\nFor the upcoming stable (jessie) and unstable (sid) distributions,\nthese problems will be fixed soon.\n\n\nWe recommend that you upgrade your e2fsprogs packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "e2fsprogs",
+				"purl": "pkg:deb/debian/e2fsprogs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.42.5-1.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.42.5-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3166-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3166"
+		}
+	]
+}

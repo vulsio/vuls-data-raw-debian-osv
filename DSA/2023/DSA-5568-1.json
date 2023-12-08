@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5568-1",
+	"modified": "2023-11-27T23:15:35.819830Z",
+	"published": "2023-11-27T00:00:00Z",
+	"related": [
+		"CVE-2023-42459"
+	],
+	"summary": "fastdds - security update",
+	"details": "\nIt was discovered that incorrect memory management in Fast DDS, a C++\nimplementation of the DDS (Data Distribution Service) might result in\ndenial of service.\n\n\nThe oldstable distribution (bullseye) is not affected.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 2.9.1+ds-1+deb12u2.\n\n\nWe recommend that you upgrade your fastdds packages.\n\n\nFor the detailed security status of fastdds please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/fastdds](https://security-tracker.debian.org/tracker/fastdds)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "fastdds",
+				"purl": "pkg:deb/debian/fastdds?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.1+ds-1+deb12u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.1+ds-1",
+				"2.9.1+ds-1+deb12u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5568-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5568"
+		}
+	]
+}

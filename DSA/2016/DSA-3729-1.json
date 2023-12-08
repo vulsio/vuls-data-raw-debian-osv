@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3729-1",
+	"modified": "2023-10-16T00:12:16.900925Z",
+	"published": "2016-12-07T00:00:00Z",
+	"related": [
+		"CVE-2016-7777",
+		"CVE-2016-9379",
+		"CVE-2016-9380",
+		"CVE-2016-9382",
+		"CVE-2016-9383",
+		"CVE-2016-9385",
+		"CVE-2016-9386"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2016-7777](https://security-tracker.debian.org/tracker/CVE-2016-7777)\n (XSA-190)\n\n Jan Beulich from SUSE discovered that Xen does not properly honor\n CR0.TS and CR0.EM for x86 HVM guests, potentially allowing guest\n users to read or modify FPU, MMX, or XMM register state information\n belonging to arbitrary tasks on the guest by modifying an\n instruction while the hypervisor is preparing to emulate it.\n* [CVE-2016-9379](https://security-tracker.debian.org/tracker/CVE-2016-9379),\n [CVE-2016-9380](https://security-tracker.debian.org/tracker/CVE-2016-9380) (XSA-198)\n\n Daniel Richman and Gabor Szarka of the Cambridge University\n Student-Run Computing Facility discovered that pygrub, the boot\n loader emulator, fails to quote (or sanity check) its results when\n reporting them to its caller. A malicious guest administrator can\n take advantage of this flaw to cause an information leak or denial\n of service.\n* [CVE-2016-9382](https://security-tracker.debian.org/tracker/CVE-2016-9382)\n (XSA-192)\n\n Jan Beulich of SUSE discovered that Xen does not properly handle x86\n task switches to VM86 mode. A unprivileged guest process can take\n advantage of this flaw to crash the guest or, escalate its\n privileges to that of the guest operating system.\n* [CVE-2016-9383](https://security-tracker.debian.org/tracker/CVE-2016-9383)\n (XSA-195)\n\n George Dunlap of Citrix discovered that the Xen x86 64-bit bit test\n instruction emulation is broken. A malicious guest can take\n advantage of this flaw to modify arbitrary memory, allowing for\n arbitrary code execution, denial of service (host crash), or\n information leaks.\n* [CVE-2016-9385](https://security-tracker.debian.org/tracker/CVE-2016-9385)\n (XSA-193)\n\n Andrew Cooper of Citrix discovered that Xen's x86 segment base write\n emulation lacks canonical address checks. A malicious guest\n administrator can take advantage of this flaw to crash the host,\n leading to a denial of service.\n* [CVE-2016-9386](https://security-tracker.debian.org/tracker/CVE-2016-9386)\n (XSA-191)\n\n Andrew Cooper of Citrix discovered that x86 null segments are not\n always treated as unusable. An unprivileged guest user program\n may be able to elevate its privilege to that of the guest\n operating system.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 4.4.1-9+deb8u8.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.1-9+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.1-9",
+				"4.4.1-9+deb8u1",
+				"4.4.1-9+deb8u2",
+				"4.4.1-9+deb8u3",
+				"4.4.1-9+deb8u4",
+				"4.4.1-9+deb8u5",
+				"4.4.1-9+deb8u6",
+				"4.4.1-9+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3729-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3729"
+		}
+	]
+}

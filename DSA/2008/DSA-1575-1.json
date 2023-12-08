@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1575-1",
+	"modified": "2023-10-16T00:05:29.500158Z",
+	"published": "2008-05-12T00:00:00Z",
+	"related": [
+		"CVE-2008-1669"
+	],
+	"summary": "linux-2.6 - denial of service",
+	"details": "\nA vulnerability has been discovered in the Linux kernel that may lead\nto a denial of service. The Common Vulnerabilities and Exposures\nproject identifies the following problem:\n\n\n* [CVE-2008-1669](https://security-tracker.debian.org/tracker/CVE-2008-1669)\nAlexander Viro discovered a race condition in the fcntl code that\n may permit local users on multi-processor systems to execute parallel\n code paths that are otherwise prohibited and gain re-ordered access\n to the descriptor table.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n2.6.18.dfsg.1-18etch4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in version\n2.6.25-2.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-18etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12",
+				"2.6.18.dfsg.1-12etch1",
+				"2.6.18.dfsg.1-12etch2",
+				"2.6.18.dfsg.1-13",
+				"2.6.18.dfsg.1-13etch1",
+				"2.6.18.dfsg.1-13etch2",
+				"2.6.18.dfsg.1-13etch3",
+				"2.6.18.dfsg.1-13etch4",
+				"2.6.18.dfsg.1-13etch5",
+				"2.6.18.dfsg.1-13etch6",
+				"2.6.18.dfsg.1-13lenny1",
+				"2.6.18.dfsg.1-14",
+				"2.6.18.dfsg.1-15",
+				"2.6.18.dfsg.1-16",
+				"2.6.18.dfsg.1-17",
+				"2.6.18.dfsg.1-17etch1",
+				"2.6.18.dfsg.1-18",
+				"2.6.18.dfsg.1-18etch1",
+				"2.6.18.dfsg.1-18etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1575-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1575"
+		}
+	]
+}

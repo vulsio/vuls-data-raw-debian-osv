@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-446",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-02-21T00:00:00Z",
+	"related": [
+		"CVE-2004-0160"
+	],
+	"summary": "synaesthesia - insecure file creation",
+	"details": "\nUlf HĂ¤rnhammar from the Debian Security Audit Project\ndiscovered a vulnerability in\nsynaesthesia, a program which represents sounds visually.\nsynaesthesia created its configuration file while holding root\nprivileges, allowing a local user to create files owned by root and\nwritable by the user's primary group. This type of vulnerability can\nusually be easily exploited to execute arbitrary code with root\nprivileges by various means.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 2.1-2.1woody1.\n\n\nThe unstable distribution (sid) is not affected by this problem, because\nsynaesthesia is no longer setuid.\n\n\nWe recommend that you update your synaesthesia package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "synaesthesia",
+				"purl": "pkg:deb/debian/synaesthesia?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1-2.1woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-446.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-446"
+		}
+	]
+}

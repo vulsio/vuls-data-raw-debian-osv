@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4528-1",
+	"modified": "2023-10-16T00:25:09.843969Z",
+	"published": "2019-09-19T00:00:00Z",
+	"summary": "bird - security update",
+	"details": "\nDaniel McCarney discovered that the BIRD internet routing daemon\nincorrectly validated RFC 8203 messages in it's BGP daemon, resulting\nin a stack buffer overflow.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.6.6-1+deb10u1. In addition this update fixes an incomplete\nrevocation of privileges and a crash triggerable via the CLI (the latter\ntwo bugs are also fixed in the oldstable distribution (stretch) which is\nnot affected by\n[\\\nCVE-2019-16159](https://security-tracker.debian.org/tracker/CVE-2019-16159)).\n\n\nWe recommend that you upgrade your bird packages.\n\n\nFor the detailed security status of bird please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/bird](https://security-tracker.debian.org/tracker/bird)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "bird",
+				"purl": "pkg:deb/debian/bird?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.3-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.3-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4528-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "bird",
+				"purl": "pkg:deb/debian/bird?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.6-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4528-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4528"
+		}
+	]
+}

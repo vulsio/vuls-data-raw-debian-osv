@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5066-1",
+	"modified": "2023-10-16T00:15:27.080650Z",
+	"published": "2022-02-03T00:00:00Z",
+	"related": [
+		"CVE-2021-28965",
+		"CVE-2021-31799",
+		"CVE-2021-31810",
+		"CVE-2021-32066",
+		"CVE-2021-41817",
+		"CVE-2021-41819"
+	],
+	"summary": "ruby2.5 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for the\nRuby language and the Rubygems included, which may result in\nXML roundtrip attacks, the execution of arbitrary code, information\ndisclosure, StartTLS stripping in IMAP or denial of service.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 2.5.5-3+deb10u4.\n\n\nWe recommend that you upgrade your ruby2.5 packages.\n\n\nFor the detailed security status of ruby2.5 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ruby2.5](https://security-tracker.debian.org/tracker/ruby2.5)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ruby2.5",
+				"purl": "pkg:deb/debian/ruby2.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.5-3+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.5-3",
+				"2.5.5-3+deb10u1",
+				"2.5.5-3+deb10u2",
+				"2.5.5-3+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5066-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5066"
+		}
+	]
+}

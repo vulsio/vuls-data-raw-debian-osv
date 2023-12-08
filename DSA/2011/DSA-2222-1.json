@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2222-1",
+	"modified": "2023-10-16T00:05:50.072564Z",
+	"published": "2011-04-20T00:00:00Z",
+	"related": [
+		"CVE-2011-1499"
+	],
+	"summary": "tinyproxy - incorrect ACL processing",
+	"details": "\nChristoph Martin discovered that incorrect ACL processing in TinyProxy,\na lightweight, non-caching, optionally anonymizing HTTP proxy, could\nlead to unintended network access rights.\n\n\nThe oldstable distribution (lenny) is not affected.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.8.2-1squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.2-2.\n\n\nWe recommend that you upgrade your tinyproxy packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tinyproxy",
+				"purl": "pkg:deb/debian/tinyproxy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2-1squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2222-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2222"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5329-1",
+	"modified": "2023-10-16T00:21:10.251156Z",
+	"published": "2023-01-26T00:00:00Z",
+	"related": [
+		"CVE-2022-3094",
+		"CVE-2022-3736",
+		"CVE-2022-3924"
+	],
+	"summary": "bind9 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in BIND, a DNS server\nimplementation, which may result in denial of service against named.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1:9.16.37-1~deb11u1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\nFor the detailed security status of bind9 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/bind9](https://security-tracker.debian.org/tracker/bind9)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.16.37-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.16.15-1",
+				"1:9.16.21-1",
+				"1:9.16.21-1+hurd.1",
+				"1:9.16.22-1~deb11u1",
+				"1:9.16.22-1~deb11u1~bpo10+1",
+				"1:9.16.27-1~deb11u1",
+				"1:9.16.27-1~deb11u1~bpo10+1",
+				"1:9.16.33-1~deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5329-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5329"
+		}
+	]
+}

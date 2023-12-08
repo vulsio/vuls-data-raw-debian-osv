@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-381-1",
+	"modified": "2023-06-28T06:21:30.720635Z",
+	"published": "2016-01-11T00:00:00Z",
+	"related": [
+		"CVE-2015-2632"
+	],
+	"summary": "icu - security update",
+	"details": "\nA vulnerability was found in ICU, a set of libraries that provides Unicode and\ninternationalization support. Integer overflows in the ICU layout engine made\nit possible to disclose information.\n\n\nFor Debian 6 Squeeze, this problem has been fixed in icu version\n4.4.1-8+squeeze5. We recommend you to upgrade your icu packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "icu",
+				"purl": "pkg:deb/debian/icu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.1-8+squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.1-7",
+				"4.4.1-8",
+				"4.4.1-8+squeeze1",
+				"4.4.1-8+squeeze2",
+				"4.4.1-8+squeeze3",
+				"4.4.1-8+squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-381-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-381"
+		}
+	]
+}

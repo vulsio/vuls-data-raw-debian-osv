@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1901-1",
+	"modified": "2023-10-16T00:10:46.148511Z",
+	"published": "2009-10-05T00:00:00Z",
+	"related": [
+		"CVE-2008-5249",
+		"CVE-2008-5250",
+		"CVE-2008-5252",
+		"CVE-2009-0737"
+	],
+	"summary": "mediawiki1.7 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in mediawiki1.7, a website engine\nfor collaborative work. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2008-5249](https://security-tracker.debian.org/tracker/CVE-2008-5249)\nDavid Remahl discovered that mediawiki1.7 is prone to a cross-site scripting attack.\n* [CVE-2008-5250](https://security-tracker.debian.org/tracker/CVE-2008-5250)\nDavid Remahl discovered that mediawiki1.7, when Internet Explorer is used and\nuploads are enabled, or an SVG scripting browser is used and SVG uploads are\nenabled, allows remote authenticated users to inject arbitrary web script or\nHTML by editing a wiki page.\n* [CVE-2008-5252](https://security-tracker.debian.org/tracker/CVE-2008-5252)\nDavid Remahl discovered that mediawiki1.7 is prone to a cross-site request\nforgery vulnerability in the Special:Import feature.\n* [CVE-2009-0737](https://security-tracker.debian.org/tracker/CVE-2009-0737)\nIt was discovered that mediawiki1.7 is prone to a cross-site scripting attack in\nthe web-based installer.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in version\n1.7.1-9etch1 for mediawiki1.7, and mediawiki is not affected (it is a\nmetapackage for mediawiki1.7).\n\n\nThe stable (lenny) distribution does not include mediawiki1.7, and these\nproblems have been fixed in version 1:1.12.0-2lenny3 for mediawiki which was\nalready included in the lenny release.\n\n\nThe unstable (sid) and testing (squeeze) distributions do not\ninclude mediawiki1.7, and these problems have been fixed in version 1:1.14.0-1\nfor mediawiki.\n\n\nWe recommend that you upgrade your mediawiki1.7 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "mediawiki1.7",
+				"purl": "pkg:deb/debian/mediawiki1.7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.1-9etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.1-9etch0"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1901-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1901"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2078-1",
+	"modified": "2023-10-16T00:10:57.123429Z",
+	"published": "2010-07-31T00:00:00Z",
+	"related": [
+		"CVE-2010-2785"
+	],
+	"summary": "kvirc - arbitrary IRC command execution",
+	"details": "\nIt was discovered that incorrect parsing of CTCP commands in kvirc, a \nKDE-based IRC client, could lead to the execution of arbitrary IRC \ncommands against other users.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2:3.4.0-6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4:4.0.0-3.\n\n\nWe recommend that you upgrade your kvirc package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "kvirc",
+				"purl": "pkg:deb/debian/kvirc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.4.0-6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.4.0-3",
+				"2:3.4.0-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2078-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2078"
+		}
+	]
+}

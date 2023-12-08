@@ -1,0 +1,89 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-432-1",
+	"modified": "2023-06-28T06:27:00.911066Z",
+	"published": "2016-02-25T00:00:00Z",
+	"related": [
+		"CVE-2016-0773"
+	],
+	"summary": "postgresql-8.4 - security update",
+	"details": "\nSeveral bugs were discovered in PostgreSQL, a relational database server\nsystem. The 8.4 branch is EOLed upstream, but still present in Debian squeeze.\nThis new LTS minor version contains fixes that were applied upstream to the\n9.1.20 version, backported to 8.4.22 which was the last version officially\nreleased by the PostgreSQL developers. This LTS effort for squeeze-lts is a\ncommunity project sponsored by credativ GmbH.\n\n\nThis release is the last LTS update for PostgreSQL 8.4. Users should\nmigrate to a newer PostgreSQL at the earliest opportunity.\n\n\n### Migration to Version 8.4.22lts6\n\n\nA dump/restore is not required for those running 8.4.X. However, if you are\nupgrading from a version earlier than 8.4.22, see the relevant release notes.\n\n\n### Fixes\n\n\n* Fix infinite loops and buffer-overrun problems in regular expressions\n(Tom Lane)\n\n Very large character ranges in bracket expressions could cause\n infinite loops in some cases, and memory overwrites in other cases.\n ([CVE-2016-0773](https://security-tracker.debian.org/tracker/CVE-2016-0773))\n* Perform an immediate shutdown if the postmaster.pid file is removed\n(Tom Lane)\n\n The postmaster now checks every minute or so that postmaster.pid is\n still there and still contains its own PID. If not, it performs an\n immediate shutdown, as though it had received SIGQUIT. The main\n motivation for this change is to ensure that failed buildfarm runs\n will get cleaned up without manual intervention; but it also serves\n to limit the bad effects if a DBA forcibly removes postmaster.pid\n and then starts a new postmaster.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "postgresql-8.4",
+				"purl": "pkg:deb/debian/postgresql-8.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.4.22lts6-0+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.4.10-0squeeze1",
+				"8.4.10-0squeeze1~bpo50+1",
+				"8.4.10-1",
+				"8.4.11-0squeeze1",
+				"8.4.11-1",
+				"8.4.12-0squeeze1",
+				"8.4.12-1",
+				"8.4.12-2",
+				"8.4.12-3",
+				"8.4.13-0squeeze1",
+				"8.4.13-1",
+				"8.4.14-1",
+				"8.4.15-0squeeze1",
+				"8.4.15-1",
+				"8.4.16-0squeeze1",
+				"8.4.16-1",
+				"8.4.17-0squeeze1",
+				"8.4.17-1",
+				"8.4.18-0squeeze1",
+				"8.4.18-0wheezy1",
+				"8.4.19-0squeeze1",
+				"8.4.19-0wheezy1",
+				"8.4.20-0squeeze1",
+				"8.4.20-0wheezy1",
+				"8.4.21-0squeeze1",
+				"8.4.21-0wheezy1",
+				"8.4.22-0wheezy1",
+				"8.4.5-0squeeze2",
+				"8.4.5-1",
+				"8.4.5-1~bpo50+1",
+				"8.4.5-2",
+				"8.4.5-2~bpo50+1",
+				"8.4.6-1",
+				"8.4.7-0squeeze1~bpo50+1",
+				"8.4.7-0squeeze2",
+				"8.4.7-1",
+				"8.4.8-0squeeze1",
+				"8.4.8-0squeeze1~bpo50+1",
+				"8.4.8-0squeeze2",
+				"8.4.8-0squeeze2~bpo50+1",
+				"8.4.8-1",
+				"8.4.8-2",
+				"8.4.9-0squeeze1",
+				"8.4.9-0squeeze1~bpo50+1",
+				"8.4.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-432-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-432"
+		}
+	]
+}

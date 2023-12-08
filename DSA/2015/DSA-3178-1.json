@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3178-1",
+	"modified": "2023-10-16T00:11:49.578075Z",
+	"published": "2015-03-02T00:00:00Z",
+	"related": [
+		"CVE-2015-2063"
+	],
+	"summary": "unace - security update",
+	"details": "\nJakub Wilk discovered that unace, an utility to extract, test and view\n.ace archives, contained an integer overflow leading to a buffer\noverflow. If a user or automated system were tricked into processing a\nspecially crafted ace archive, an attacker could cause a denial of\nservice (application crash) or, possibly, execute arbitrary code.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.2b-10+deb7u1.\n\n\nFor the upcoming stable distribution (jessie), this problem has been\nfixed in version 1.2b-12.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.2b-12.\n\n\nWe recommend that you upgrade your unace packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "unace",
+				"purl": "pkg:deb/debian/unace?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2b-10+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2b-10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3178-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3178"
+		}
+	]
+}

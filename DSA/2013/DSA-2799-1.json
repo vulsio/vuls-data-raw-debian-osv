@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2799-1",
+	"modified": "2023-10-16T00:11:31.019324Z",
+	"published": "2013-11-16T00:00:00Z",
+	"related": [
+		"CVE-2013-2931",
+		"CVE-2013-6621",
+		"CVE-2013-6622",
+		"CVE-2013-6623",
+		"CVE-2013-6624",
+		"CVE-2013-6625",
+		"CVE-2013-6626",
+		"CVE-2013-6627",
+		"CVE-2013-6628",
+		"CVE-2013-6629",
+		"CVE-2013-6630",
+		"CVE-2013-6631",
+		"CVE-2013-6632",
+		"CVE-2013-6802"
+	],
+	"summary": "chromium-browser - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the chromium web browser.\n\n\n* [CVE-2013-2931](https://security-tracker.debian.org/tracker/CVE-2013-2931)\nThe chrome 31 development team found various issues from internal\n fuzzing, audits, and other studies.\n* [CVE-2013-6621](https://security-tracker.debian.org/tracker/CVE-2013-6621)\nKhalil Zhani discovered a use-after-free issue in speech input\n handling.\n* [CVE-2013-6622](https://security-tracker.debian.org/tracker/CVE-2013-6622)\ncloudfuzzer discovered a use-after-free issue in \n HTMLMediaElement.\n* [CVE-2013-6623](https://security-tracker.debian.org/tracker/CVE-2013-6623)\nmiaubiz discovered an out-of-bounds read in the Blink/Webkit SVG\n implementation.\n* [CVE-2013-6624](https://security-tracker.debian.org/tracker/CVE-2013-6624)\nJon Butler discovered a use-after-free issue in id attribute \n strings.\n* [CVE-2013-6625](https://security-tracker.debian.org/tracker/CVE-2013-6625)\ncloudfuzzer discovered a use-after-free issue in the Blink/Webkit\n DOM implementation.\n* [CVE-2013-6626](https://security-tracker.debian.org/tracker/CVE-2013-6626)\nChamal de Silva discovered an address bar spoofing issue.\n* [CVE-2013-6627](https://security-tracker.debian.org/tracker/CVE-2013-6627)\nskylined discovered an out-of-bounds read in the HTTP stream \n parser.\n* [CVE-2013-6628](https://security-tracker.debian.org/tracker/CVE-2013-6628)\nAntoine Delignat-Lavaud and Karthikeyan Bhargavan of INRIA Paris\n discovered that a different (unverified) certificate could be used\n after successful TLS renegotiation with a valid certificate.\n* [CVE-2013-6629](https://security-tracker.debian.org/tracker/CVE-2013-6629)\nMichal Zalewski discovered an uninitialized memory read in the\n libjpeg and libjpeg-turbo libraries.\n* [CVE-2013-6630](https://security-tracker.debian.org/tracker/CVE-2013-6630)\nMichal Zalewski discovered another uninitialized memory read in\n the libjpeg and libjpeg-turbo libraries.\n* [CVE-2013-6631](https://security-tracker.debian.org/tracker/CVE-2013-6631)\nPatrik HĂśglund discovered a use-free issue in the libjingle \n library.\n* [CVE-2013-6632](https://security-tracker.debian.org/tracker/CVE-2013-6632)\nPinkie Pie discovered multiple memory corruption issues.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 31.0.1650.57-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 31.0.1650.57-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "31.0.1650.57-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"26.0.1410.43-1",
+				"27.0.1453.110-1",
+				"27.0.1453.110-1~deb7u1",
+				"27.0.1453.110-2",
+				"27.0.1453.93-1",
+				"27.0.1453.93-1~deb7u1",
+				"28.0.1500.71-1",
+				"28.0.1500.71-1~deb7u1",
+				"28.0.1500.71-2",
+				"28.0.1500.95-1",
+				"28.0.1500.95-1~deb7u1",
+				"28.0.1500.95-2",
+				"28.0.1500.95-3",
+				"29.0.1547.57-1",
+				"29.0.1547.57-1~deb7u1",
+				"29.0.1547.57-2",
+				"29.0.1547.57-3",
+				"29.0.1547.57-3+exp1",
+				"30.0.1599.101-1",
+				"30.0.1599.101-1~deb7u1",
+				"30.0.1599.101-2",
+				"30.0.1599.101-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2799-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2799"
+		}
+	]
+}

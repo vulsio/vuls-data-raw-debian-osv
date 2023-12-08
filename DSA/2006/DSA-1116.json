@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1116",
+	"modified": "2023-10-16T00:05:13.086086Z",
+	"published": "2006-07-21T00:00:00Z",
+	"related": [
+		"CVE-2006-3404"
+	],
+	"summary": "gimp - buffer overflow",
+	"details": "\nHenning Makholm discovered a buffer overflow in the XCF loading code\nof Gimp, an image editing program. Opening a specially crafted XCF\nimage might cause the application to execute arbitrary code.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.2.6-1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.2.11-3.1.\n\n\nWe recommend that you upgrade your gimp package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gimp",
+				"purl": "pkg:deb/debian/gimp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.6-1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1116.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1116"
+		}
+	]
+}

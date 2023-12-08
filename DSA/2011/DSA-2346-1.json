@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2346-1",
+	"modified": "2023-10-16T00:11:09.761981Z",
+	"published": "2011-11-16T00:00:00Z",
+	"related": [
+		"CVE-2011-4130"
+	],
+	"summary": "proftpd-dfsg - several",
+	"details": "\nSeveral vulnerabilities were discovered in ProFTPD, an FTP server:\n\n\n* (No CVE id)\n\n ProFTPD incorrectly uses data from an unencrypted input buffer\n after encryption has been enabled with STARTTLS, an issue\n similar to \n [\\\n CVE-2011-0411](https://security-tracker.debian.org/tracker/CVE-2011-0411).\n* [CVE-2011-4130](https://security-tracker.debian.org/tracker/CVE-2011-4130)\nProFTPD uses a response pool after freeing it under\n exceptional conditions, possibly leading to remote code\n execution. (The version in lenny is not affected by this\n problem.)\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.3.1-17lenny9.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.3.3a-6squeeze4.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 1.3.4~rc3-2.\n\n\nWe recommend that you upgrade your proftpd-dfsg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "proftpd-dfsg",
+				"purl": "pkg:deb/debian/proftpd-dfsg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.1-17lenny8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.1-16",
+				"1.3.1-17",
+				"1.3.1-17lenny1",
+				"1.3.1-17lenny2",
+				"1.3.1-17lenny2~bpo40+1",
+				"1.3.1-17lenny3",
+				"1.3.1-17lenny4",
+				"1.3.1-17lenny4~bpo40+1",
+				"1.3.1-17lenny6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2346-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "proftpd-dfsg",
+				"purl": "pkg:deb/debian/proftpd-dfsg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.3a-6squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.3a-6",
+				"1.3.3a-6squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2346-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2346"
+		}
+	]
+}

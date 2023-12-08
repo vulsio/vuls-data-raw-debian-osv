@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3355-1",
+	"modified": "2023-06-28T06:21:29.793835Z",
+	"published": "2023-03-18T00:00:00Z",
+	"summary": "xapian-core - security update",
+	"details": "\nTwo important bugs were discovered in xapian-core, a search engine\nlibrary, that led to potential database corruption on disk full, and\nincorrectly reporting corruption for a database with replication\nchangesets.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.4.11-1+deb10u1.\n\n\nWe recommend that you upgrade your xapian-core packages.\n\n\nFor the detailed security status of xapian-core please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/xapian-core>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "xapian-core",
+				"purl": "pkg:deb/debian/xapian-core?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.11-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.11-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3355-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3355"
+		}
+	]
+}

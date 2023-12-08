@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3111-1",
+	"modified": "2023-10-16T00:06:13.709767Z",
+	"published": "2014-12-22T00:00:00Z",
+	"related": [
+		"CVE-2014-9112"
+	],
+	"summary": "cpio - security update",
+	"details": "\nMichal Zalewski discovered an out of bounds write issue in cpio, a tool\nfor creating and extracting cpio archive files. In the process of\nfixing that issue, the cpio developers found and fixed additional\nrange checking and null pointer dereference issues.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.11+dfsg-0.1+deb7u1.\n\n\nFor the upcoming stable distribution (jessie), this problem will be\nfixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.11+dfsg-4.\n\n\nWe recommend that you upgrade your cpio packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "cpio",
+				"purl": "pkg:deb/debian/cpio?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11+dfsg-0.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11+dfsg-0.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3111-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3111"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2242-1",
+	"modified": "2023-10-16T00:11:03.166142Z",
+	"published": "2011-05-25T00:00:00Z",
+	"related": [
+		"CVE-2011-1926"
+	],
+	"summary": "cyrus-imapd-2.2 - implementation error",
+	"details": "\nIt was discovered that the STARTTLS implementation of the Cyrus IMAP\nserver does not properly restrict I/O buffering, which allows\nman-in-the-middle attackers to insert commands into encrypted IMAP,\nLMTP, NNTP and POP3 sessions by sending a cleartext command that is\nprocessed after TLS is in place.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.2.13-14+lenny4.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.2.13-19+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.2.13p1-11 for cyrus-imapd-2.2 and in version 2.4.7-1\nfor cyrus-imapd-2.4.\n\n\nWe recommend that you upgrade your cyrus-imapd-2.2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "cyrus-imapd-2.2",
+				"purl": "pkg:deb/debian/cyrus-imapd-2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-14+lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-14",
+				"2.2.13-14+lenny1",
+				"2.2.13-14+lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2242-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "cyrus-imapd-2.2",
+				"purl": "pkg:deb/debian/cyrus-imapd-2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-19+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-19"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2242-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2242"
+		}
+	]
+}

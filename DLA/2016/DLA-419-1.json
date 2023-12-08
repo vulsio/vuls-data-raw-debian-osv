@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-419-1",
+	"modified": "2023-06-28T06:34:00.972962Z",
+	"published": "2016-02-17T00:00:00Z",
+	"related": [
+		"CVE-2013-7447"
+	],
+	"summary": "gtk+2.0 - security update",
+	"details": "\nGtk+2.0, a graphical user interface library, was susceptible to an integer\noverflow in its gdk\\_cairo\\_set\\_source\\_pixbuf function when allocating a\nlarge block of memory.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in gtk+2.0 version\n2.20.1-2+deb6u1. We recommend you to upgrade your gtk+2.0 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gtk+2.0",
+				"purl": "pkg:deb/debian/gtk%2B2.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.20.1-2+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.20.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-419-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-419"
+		}
+	]
+}

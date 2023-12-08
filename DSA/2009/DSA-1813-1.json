@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1813-1",
+	"modified": "2023-10-16T00:10:38.818762Z",
+	"published": "2009-06-08T00:00:00Z",
+	"related": [
+		"CVE-2009-0547",
+		"CVE-2009-0582",
+		"CVE-2009-0587"
+	],
+	"summary": "evolution-data-server - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been found in evolution-data-server, the\ndatabase backend server for the evolution groupware suite. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2009-0587](https://security-tracker.debian.org/tracker/CVE-2009-0587)\nIt was discovered that evolution-data-server is prone to integer\noverflows triggered by large base64 strings.\n* [CVE-2009-0547](https://security-tracker.debian.org/tracker/CVE-2009-0547)\nJoachim Breitner discovered that S/MIME signatures are not verified\nproperly, which can lead to spoofing attacks.\n* [CVE-2009-0582](https://security-tracker.debian.org/tracker/CVE-2009-0582)\nIt was discovered that NTLM authentication challenge packets are not\nvalidated properly when using the NTLM authentication method, which\ncould lead to an information disclosure or a denial of service.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 1.6.3-5etch2.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.22.3-1.1+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 2.26.1.1-1.\n\n\nWe recommend that you upgrade your evolution-data-server packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "evolution-data-server",
+				"purl": "pkg:deb/debian/evolution-data-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.3-5etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.3-5",
+				"1.6.3-5etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1813-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "evolution-data-server",
+				"purl": "pkg:deb/debian/evolution-data-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.22.3-1.1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.22.3-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1813-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1813"
+		}
+	]
+}

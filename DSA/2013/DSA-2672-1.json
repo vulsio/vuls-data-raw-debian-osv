@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2672-1",
+	"modified": "2023-10-16T00:11:24.131754Z",
+	"published": "2013-05-22T00:00:00Z",
+	"related": [
+		"CVE-2013-3266"
+	],
+	"summary": "kfreebsd-9 - interpretation conflict",
+	"details": "\nAdam Nowacki discovered that the new FreeBSD NFS implementation\nprocesses a crafted READDIR request which instructs to operate a file\nsystem on a file node as if it were a directory node, leading to a\nkernel crash or potentially arbitrary code execution.\n\n\nThe kfreebsd-8 kernel in the oldstable distribution (squeeze) does not\nenable the new NFS implementation. The Linux kernel is not affected\nby this vulnerability.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 9.0-10+deb70.1.\n\n\nFor the testing distribution (jessie) and the unstable distribution\n(sid), this problem has been fixed in version 9.0-11.\n\n\nWe recommend that you upgrade your kfreebsd-9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "kfreebsd-9",
+				"purl": "pkg:deb/debian/kfreebsd-9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.0-10+deb70.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.0-10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2672-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2672"
+		}
+	]
+}

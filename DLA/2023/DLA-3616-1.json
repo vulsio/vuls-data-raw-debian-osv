@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3616-1",
+	"modified": "2023-10-12T09:20:57.784733Z",
+	"published": "2023-10-12T00:00:00Z",
+	"related": [
+		"CVE-2023-28617"
+	],
+	"summary": "org-mode - security update",
+	"details": "\nIt was discovered that there was a potential code injection vulnerability in\n`org-mode`, a popular add-on for the Emacs text editor.\n\n\nAttackers could have executed arbitrary shell commands via a filename (or\ndirectory name) that contained shell metacharacters.\n\n\n* [CVE-2023-28617](https://security-tracker.debian.org/tracker/CVE-2023-28617)\norg-babel-execute:latex in ob-latex.el in Org Mode through 9.6.1 for GNU\n Emacs allows attackers to execute arbitrary commands via a file name or\n directory name that contains shell metacharacters.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n9.1.14+dfsg-3+deb10u1.\n\n\nWe recommend that you upgrade your org-mode packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "org-mode",
+				"purl": "pkg:deb/debian/org-mode?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.1.14+dfsg-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.1.14+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3616-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3616"
+		}
+	]
+}

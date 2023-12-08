@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2150-1",
+	"modified": "2023-10-16T00:10:59.659495Z",
+	"published": "2011-01-22T00:00:00Z",
+	"related": [
+		"CVE-2011-0009"
+	],
+	"summary": "request-tracker3.6 - salt password hashing",
+	"details": "\nIt was discovered that Request Tracker, an issue tracking system,\nstored passwords in its database by using an insufficiently strong\nhashing method. If an attacker would have access to the password\ndatabase, he could decode the passwords stored in it.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 3.6.7-5+lenny5.\n\n\nThe testing distribution (squeeze) will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.8.8-7 of the request-tracker3.8 package.\n\n\nWe recommend that you upgrade your Request Tracker packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "request-tracker3.6",
+				"purl": "pkg:deb/debian/request-tracker3.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.7-5+lenny5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.7-5",
+				"3.6.7-5+lenny1",
+				"3.6.7-5+lenny2",
+				"3.6.7-5+lenny3",
+				"3.6.7-5+lenny4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2150-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2150"
+		}
+	]
+}

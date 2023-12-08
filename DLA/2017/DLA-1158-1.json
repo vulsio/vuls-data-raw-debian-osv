@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1158-1",
+	"modified": "2023-06-28T06:20:25.811164Z",
+	"published": "2017-11-02T00:00:00Z",
+	"related": [
+		"CVE-2017-15953",
+		"CVE-2017-15954",
+		"CVE-2017-15955"
+	],
+	"summary": "bchunk - security update",
+	"details": "\nSeveral vulnerabilities were discovered in bchunk, a tool to convert a\nCD image in .bin/.cue format into a set of .iso and .cdr/.wav tracks.\nIt was possible to trigger a heap-based buffer overflow with an\nresultant invalid free when processing a malformed CUE (.cue) file\nthat may lead to the execution of arbitrary code or a application crash.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.2.0-12+deb7u1.\n\n\nWe recommend that you upgrade your bchunk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "bchunk",
+				"purl": "pkg:deb/debian/bchunk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.0-12+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.0-12"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1158-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1158"
+		}
+	]
+}

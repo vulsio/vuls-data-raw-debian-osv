@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-373-1",
+	"modified": "2023-06-28T06:26:59.735459Z",
+	"published": "2015-12-26T00:00:00Z",
+	"related": [
+		"CVE-2015-5312",
+		"CVE-2015-7497",
+		"CVE-2015-7498",
+		"CVE-2015-7499",
+		"CVE-2015-7500"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in libxml2, a library providing\nsupport to read, modify and write XML and HTML files. A remote attacker\ncould provide a specially crafted XML or HTML file that, when processed\nby an application using libxml2, would cause that application to use an\nexcessive amount of CPU, leak potentially sensitive information, or\ncrash the application.\n\n\n* [CVE-2015-5312](https://security-tracker.debian.org/tracker/CVE-2015-5312)\nCPU exhaustion when processing specially crafted XML input.\n* [CVE-2015-7497](https://security-tracker.debian.org/tracker/CVE-2015-7497)\nHeap-based buffer overflow in xmlDictComputeFastQKey.\n* [CVE-2015-7498](https://security-tracker.debian.org/tracker/CVE-2015-7498)\nHeap-based buffer overflow in xmlParseXmlDecl.\n* [CVE-2015-7499](https://security-tracker.debian.org/tracker/CVE-2015-7499)\nHeap-based buffer overflow in xmlGROW.\n* [CVE-2015-7500](https://security-tracker.debian.org/tracker/CVE-2015-7500)\nHeap buffer overflow in xmlParseMisc.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.8.dfsg-2+squeeze16"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.8.dfsg-2",
+				"2.7.8.dfsg-2+squeeze1",
+				"2.7.8.dfsg-2+squeeze10",
+				"2.7.8.dfsg-2+squeeze11",
+				"2.7.8.dfsg-2+squeeze12",
+				"2.7.8.dfsg-2+squeeze13",
+				"2.7.8.dfsg-2+squeeze14",
+				"2.7.8.dfsg-2+squeeze15",
+				"2.7.8.dfsg-2+squeeze2",
+				"2.7.8.dfsg-2+squeeze3",
+				"2.7.8.dfsg-2+squeeze4",
+				"2.7.8.dfsg-2+squeeze5",
+				"2.7.8.dfsg-2+squeeze6",
+				"2.7.8.dfsg-2+squeeze7",
+				"2.7.8.dfsg-2+squeeze8",
+				"2.7.8.dfsg-2+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-373-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-373"
+		}
+	]
+}

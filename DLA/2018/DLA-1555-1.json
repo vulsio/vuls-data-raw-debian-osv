@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1555-1",
+	"modified": "2023-06-28T06:24:48.868890Z",
+	"published": "2018-10-26T00:00:00Z",
+	"related": [
+		"CVE-2018-18584",
+		"CVE-2018-18585"
+	],
+	"summary": "libmspack - security update",
+	"details": "\n* [CVE-2018-18584](https://security-tracker.debian.org/tracker/CVE-2018-18584)\nFixing the size of the CAB block input buffer, which is too small\n for the maximal Quantum block, prevents an out-of-bounds write.\n* [CVE-2018-18585](https://security-tracker.debian.org/tracker/CVE-2018-18585)\nBlank filenames (having length zero or their 1st or 2nd byte is\n null) should be rejected.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.5-1+deb8u3.\n\n\nWe recommend that you upgrade your libmspack packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libmspack",
+				"purl": "pkg:deb/debian/libmspack?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.5-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.5-1",
+				"0.5-1+deb8u1",
+				"0.5-1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1555-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1555"
+		}
+	]
+}

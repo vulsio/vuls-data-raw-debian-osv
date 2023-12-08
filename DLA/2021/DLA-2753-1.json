@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2753-1",
+	"modified": "2023-06-28T06:25:18.717006Z",
+	"published": "2021-09-02T00:00:00Z",
+	"related": [
+		"CVE-2021-3527",
+		"CVE-2021-3594",
+		"CVE-2021-3595",
+		"CVE-2021-3682",
+		"CVE-2021-3713"
+	],
+	"summary": "qemu - security update",
+	"details": "\nSeveral security vulnerabilities have been found in Qemu, a fast processor\nemulator.\n\n\n* [CVE-2021-3713](https://security-tracker.debian.org/tracker/CVE-2021-3713)\nAn out-of-bounds write flaw was found in the UAS (USB Attached SCSI) device\n emulation of QEMU. The device uses the guest supplied stream number\n unchecked, which can lead to out-of-bounds access to the UASDevice->data3\n and UASDevice->status3 fields. A malicious guest user could use this flaw\n to crash QEMU or potentially achieve code execution with the privileges of\n the QEMU process on the host.\n* [CVE-2021-3682](https://security-tracker.debian.org/tracker/CVE-2021-3682)\nA flaw was found in the USB redirector device emulation of QEMU. It occurs\n when dropping packets during a bulk transfer from a SPICE client due to the\n packet queue being full. A malicious SPICE client could use this flaw to\n make QEMU call free() with faked heap chunk metadata, resulting in a crash\n of QEMU or potential code execution with the privileges of the QEMU process\n on the host.\n* [CVE-2021-3527](https://security-tracker.debian.org/tracker/CVE-2021-3527)\nA flaw was found in the USB redirector device (usb-redir) of QEMU. Small\n USB packets are combined into a single, large transfer request, to reduce\n the overhead and improve performance. The combined size of the bulk\n transfer is used to dynamically allocate a variable length array (VLA) on\n the stack without proper validation. Since the total size is not bounded, a\n malicious guest could use this flaw to influence the array length and cause\n the QEMU process to perform an excessive allocation on the stack, resulting\n in a denial of service.\n* [CVE-2021-3594](https://security-tracker.debian.org/tracker/CVE-2021-3594)\nAn invalid pointer initialization issue was found in the SLiRP networking\n implementation of QEMU. The flaw exists in the udp\\_input() function and\n could occur while processing a udp packet that is smaller than the size of\n the udphdr structure. This issue may lead to out-of-bounds read access or\n indirect host memory disclosure to the guest. The highest threat from this\n vulnerability is to data confidentiality.\n* [CVE-2021-3592](https://security-tracker.debian.org/tracker/CVE-2021-3592)\nAn invalid pointer initialization issue was found in the SLiRP networking\n implementation of QEMU. The flaw exists in the bootp\\_input() function and\n could occur while processing a udp packet that is smaller than the size of\n the bootp\\_t structure. A malicious guest could use this flaw to leak 10\n bytes of uninitialized heap memory from the host. The highest threat from\n this vulnerability is to data confidentiality.\n* [CVE-2021-3595](https://security-tracker.debian.org/tracker/CVE-2021-3595)\nAn invalid pointer initialization issue was found in the SLiRP networking\n implementation of QEMU. The flaw exists in the tftp\\_input() function and\n could occur while processing a udp packet that is smaller than the size of\n the tftp\\_t structure. This issue may lead to out-of-bounds read access or\n indirect host memory disclosure to the guest. The highest threat from this\n vulnerability is to data confidentiality.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:2.8+dfsg-6+deb9u15.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFor the detailed security status of qemu please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qemu>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.8+dfsg-6+deb9u15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.8+dfsg-6",
+				"1:2.8+dfsg-6+deb9u1",
+				"1:2.8+dfsg-6+deb9u10",
+				"1:2.8+dfsg-6+deb9u11",
+				"1:2.8+dfsg-6+deb9u12",
+				"1:2.8+dfsg-6+deb9u13",
+				"1:2.8+dfsg-6+deb9u14",
+				"1:2.8+dfsg-6+deb9u2",
+				"1:2.8+dfsg-6+deb9u3",
+				"1:2.8+dfsg-6+deb9u4",
+				"1:2.8+dfsg-6+deb9u5",
+				"1:2.8+dfsg-6+deb9u6",
+				"1:2.8+dfsg-6+deb9u7",
+				"1:2.8+dfsg-6+deb9u8",
+				"1:2.8+dfsg-6+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2753-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2753"
+		}
+	]
+}

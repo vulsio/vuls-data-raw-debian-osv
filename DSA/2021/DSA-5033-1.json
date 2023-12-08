@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5033-1",
+	"modified": "2023-10-16T00:21:26.014219Z",
+	"published": "2021-12-30T00:00:00Z",
+	"related": [
+		"CVE-2021-3907",
+		"CVE-2021-3909",
+		"CVE-2021-43114",
+		"CVE-2021-43173"
+	],
+	"summary": "fort-validator - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the FORT RPKI validator, which\ncould result in denial of service or path traversal.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.5.3-1~deb11u1.\n\n\nWe recommend that you upgrade your fort-validator packages.\n\n\nFor the detailed security status of fort-validator please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/fort-validator](https://security-tracker.debian.org/tracker/fort-validator)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "fort-validator",
+				"purl": "pkg:deb/debian/fort-validator?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.3-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.0-1",
+				"1.5.1-1",
+				"1.5.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5033-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-5033"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1564-1",
+	"modified": "2023-06-28T06:26:24.014026Z",
+	"published": "2018-11-01T00:00:00Z",
+	"related": [
+		"CVE-2009-0689"
+	],
+	"summary": "mono - security update",
+	"details": "\nIt was found that Monoâs string-to-double parser may crash, on\nspecially crafted input. This could lead to arbitrary code execution.\n\n\n* [CVE-2018-1002208](https://security-tracker.debian.org/tracker/CVE-2018-1002208)\nMono embeds the sharplibzip library which is\nvulnerable to directory traversal, allowing attackers to write to\narbitrary files via a ../ (dot dot slash) in a Zip archive entry that\nis mishandled during extraction. This vulnerability is also known as\n'Zip-Slip'.\n\n\nThe Mono developers intend to entirely remove sharplibzip from the\nsources and do not plan to fix this issue. It is therefore recommended\nto fetch the latest sharplibzip version by using the nuget package\nmanager instead. The embedded version should not be used with\nuntrusted zip files.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.2.8+dfsg-10+deb8u1.\n\n\nWe recommend that you upgrade your mono packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mono",
+				"purl": "pkg:deb/debian/mono?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.8+dfsg-10+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.8+dfsg-10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1564-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1564"
+		}
+	]
+}

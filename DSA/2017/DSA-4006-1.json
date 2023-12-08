@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4006-1",
+	"modified": "2023-10-16T00:12:33.562116Z",
+	"published": "2017-10-24T00:00:00Z",
+	"related": [
+		"CVE-2017-14685",
+		"CVE-2017-14686",
+		"CVE-2017-14687",
+		"CVE-2017-15587"
+	],
+	"summary": "mupdf - security update",
+	"details": "\nMultiple vulnerabilities have been found in MuPDF, a PDF file viewer, which\nmay result in denial of service or the execution of arbitrary code.\n\n\n* [CVE-2017-14685](https://security-tracker.debian.org/tracker/CVE-2017-14685), \n[CVE-2017-14686](https://security-tracker.debian.org/tracker/CVE-2017-14686), \nand [CVE-2017-14687](https://security-tracker.debian.org/tracker/CVE-2017-14687)\nWangLin discovered that a crafted .xps file can crash MuPDF and\n potentially execute arbitrary code in several ways, since the\n application makes unchecked assumptions on the entry format.\n* [CVE-2017-15587](https://security-tracker.debian.org/tracker/CVE-2017-15587)\nTerry Chia and Jeremy Heng discovered an integer overflow that can\n cause arbitrary code execution via a crafted .pdf file.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.9a+ds1-4+deb9u1.\n\n\nWe recommend that you upgrade your mupdf packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mupdf",
+				"purl": "pkg:deb/debian/mupdf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9a+ds1-4+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9a+ds1-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4006-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4006"
+		}
+	]
+}

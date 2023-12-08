@@ -1,0 +1,85 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1934-1",
+	"modified": "2023-10-16T00:10:47.552022Z",
+	"published": "2009-11-16T00:00:00Z",
+	"related": [
+		"CVE-2009-3094",
+		"CVE-2009-3095",
+		"CVE-2009-3555"
+	],
+	"summary": "apache2 - several issues",
+	"details": "\nA design flaw has been found in the TLS and SSL protocol that allows\nan attacker to inject arbitrary content at the beginning of a TLS/SSL\nconnection. The attack is related to the way how TLS and SSL handle\nsession renegotiations. [CVE-2009-3555](https://security-tracker.debian.org/tracker/CVE-2009-3555) has been assigned to this\nvulnerability.\n\n\nAs a partial mitigation against this attack, this apache2 update\ndisables client-initiated renegotiations. This should fix the\nvulnerability for the majority of Apache configurations in use.\n\n\nNOTE: This is not a complete fix for the problem. The attack is\nstill possible in configurations where the server initiates the\nrenegotiation. This is the case for the following configurations\n(the information in the changelog of the updated packages is\nslightly inaccurate):\n\n\n* The \"SSLVerifyClient\" directive is used in a Directory or Location context.\n* The \"SSLCipherSuite\" directive is used in a Directory or Location context.\n\n\nAs a workaround, you may rearrange your configuration in a way that\nSSLVerifyClient and SSLCipherSuite are only used on the server or\nvirtual host level.\n\n\nA complete fix for the problem will require a protocol change. Further\ninformation will be included in a separate announcement about this\nissue.\n\n\nIn addition, this update fixes the following issues in Apache's\nmod\\_proxy\\_ftp:\n\n\n* [CVE-2009-3094](https://security-tracker.debian.org/tracker/CVE-2009-3094)\nInsufficient input validation in the mod\\_proxy\\_ftp module allowed remote FTP\nservers to cause a denial of service (NULL pointer dereference and child\nprocess crash) via a malformed reply to an EPSV command.\n* [CVE-2009-3095](https://security-tracker.debian.org/tracker/CVE-2009-3095)\nInsufficient input validation in the mod\\_proxy\\_ftp module allowed remote\nauthenticated attackers to bypass intended access restrictions and send\narbitrary FTP commands to an FTP server.\n\n\nThe oldstable distribution (etch), these problems have been fixed in\nversion 2.2.3-4+etch11.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.2.9-10+lenny6. This version also includes some non-security\nbug fixes that were scheduled for inclusion in the next stable point\nrelease (Debian 5.0.4).\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems will be fixed in version 2.2.14-2.\n\n\nThis advisory also provides updated apache2-mpm-itk packages which\nhave been recompiled against the new apache2 packages.\n\n\nUpdated apache2-mpm-itk packages for the armel architecture are not\nincluded yet. They will be released as soon as they become available.\n\n\nWe recommend that you upgrade your apache2 and apache2-mpm-itk packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.3-4+etch11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.3-4",
+				"2.2.3-4+etch1",
+				"2.2.3-4+etch10",
+				"2.2.3-4+etch2",
+				"2.2.3-4+etch3",
+				"2.2.3-4+etch4",
+				"2.2.3-4+etch5",
+				"2.2.3-4+etch6",
+				"2.2.3-4+etch8",
+				"2.2.3-4+etch9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1934-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.9-10+lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.9-10+lenny2",
+				"2.2.9-10+lenny3",
+				"2.2.9-10+lenny4",
+				"2.2.9-10+lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1934-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1934"
+		}
+	]
+}

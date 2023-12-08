@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-521-1",
+	"modified": "2023-06-28T06:21:35.134309Z",
+	"published": "2016-06-19T00:00:00Z",
+	"related": [
+		"CVE-2016-2818",
+		"CVE-2016-2819",
+		"CVE-2016-2821",
+		"CVE-2016-2822",
+		"CVE-2016-2828",
+		"CVE-2016-2831"
+	],
+	"summary": "firefox-esr - security update",
+	"details": "\nMultiple security issues have been found in the Mozilla Firefox web\nbrowser: Multiple memory safety errors, buffer overflows and other\nimplementation errors may lead to the execution of arbitrary code or\nspoofing.\n\n\nWait, Firefox? No more references to Iceweasel? That's right, Debian no\nlonger applies a custom branding. Please see these links for further\ninformation:\n\n\n* <https://glandium.org/blog/?p622>\n* <https://en.wikipedia.org/wiki/Mozilla_software_rebranded_by_Debian>\n\n\nDebian follows the extended support releases (ESR) of Firefox. Support\nfor the 38.x series has ended, so starting with this update we're now\nfollowing the 45.x releases and this update to the next ESR is also the\npoint where we reapply the original branding.\n\n\nTransition packages for the iceweasel packages are provided which\nautomatically upgrade to the new version. Since new binary packages need\nto be installed, make sure to allow that in your upgrade procedure (e.g.\nby using \"apt-get dist-upgrade\" instead of \"apt-get upgrade\").\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n45.2.0esr-1~deb7u1.\n\n\nWe recommend that you upgrade your firefox-esr packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "firefox-esr",
+				"purl": "pkg:deb/debian/firefox-esr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "45.2.0esr-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"45.0.1esr-1",
+				"45.0.2esr-1",
+				"45.0esr-1",
+				"45.0esr-2",
+				"45.1.0esr-1",
+				"45.1.1esr-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-521-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-521"
+		}
+	]
+}

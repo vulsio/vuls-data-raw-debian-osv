@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1455-1",
+	"modified": "2023-10-16T00:10:26.653803Z",
+	"published": "2008-01-08T00:00:00Z",
+	"related": [
+		"CVE-2007-3641",
+		"CVE-2007-3644",
+		"CVE-2007-3645"
+	],
+	"summary": "libarchive",
+	"details": "\nSeveral local/remote vulnerabilities have been discovered in libarchive1,\na single library to read/write tar, cpio, pax, zip, iso9660 archives.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2007-3641](https://security-tracker.debian.org/tracker/CVE-2007-3641)\nIt was discovered that libarchive1 would miscompute the length of a buffer\n resulting in a buffer overflow if yet another type of corruption occurred\n in a pax extension header.\n* [CVE-2007-3644](https://security-tracker.debian.org/tracker/CVE-2007-3644)\nIt was discovered that if an archive prematurely ended within a pax\n extension header the libarchive1 library could enter an infinite loop.\n* [CVE-2007-3645](https://security-tracker.debian.org/tracker/CVE-2007-3645)\nIf an archive prematurely ended within a tar header, immediately following\n a pax extension header, libarchive1 could dereference a NULL pointer.\n\n\nThe old stable distribution (sarge), does not contain this package.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.2.53-2etch1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.2.4-1.\n\n\nWe recommend that you upgrade your libarchive package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.53-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.53-2",
+				"1.2.53-2etch1~bpo31+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1455-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1455"
+		}
+	]
+}

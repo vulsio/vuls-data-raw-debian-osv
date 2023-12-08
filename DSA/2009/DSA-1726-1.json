@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1726-1",
+	"modified": "2023-10-16T00:05:38.349374Z",
+	"published": "2009-02-25T00:00:00Z",
+	"related": [
+		"CVE-2009-0544"
+	],
+	"summary": "python-crypto - denial of service",
+	"details": "\nMike Wiacek discovered that a buffer overflow in the ARC2 implementation\nof Python Crypto, a collection of cryptographic algorithms and protocols\nfor Python allows denial of service and potentially the execution of\narbitrary code.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.0.1+dfsg1-2.3+lenny0.\n\n\nDue to a technical limitation in the Debian archive management scripts\nthe update for the old stable distribution (etch) cannot be released\nsynchronously. It will be fixed in version 2.0.1+dfsg1-1.2+etch0 soon.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your python-crypto package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "python-crypto",
+				"purl": "pkg:deb/debian/python-crypto?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.1+dfsg1-2.3+lenny0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.1+dfsg1-2.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1726-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "python-crypto",
+				"purl": "pkg:deb/debian/python-crypto?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.1+dfsg1-1.2+etch0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.1+dfsg1-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1726-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1726"
+		}
+	]
+}

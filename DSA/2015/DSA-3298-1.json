@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3298-1",
+	"modified": "2023-10-16T00:11:55.190875Z",
+	"published": "2015-07-01T00:00:00Z",
+	"related": [
+		"CVE-2015-1833"
+	],
+	"summary": "jackrabbit - security update",
+	"details": "\nIt was discovered that the Jackrabbit WebDAV bundle was susceptible to a\nXXE/XEE attack. When processing a WebDAV request body containing XML,\nthe XML parser could be instructed to read content from network\nresources accessible to the host, identified by URI schemes such as\nhttp(s) or file. Depending on the WebDAV request, this could not\nonly be used to trigger internal network requests, but might also be\nused to insert said content into the request, potentially exposing it to\nthe attacker and others.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 2.3.6-1+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.3.6-1+deb8u1.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 2.10.1-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.10.1-1.\n\n\nWe recommend that you upgrade your jackrabbit packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "jackrabbit",
+				"purl": "pkg:deb/debian/jackrabbit?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.6-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3298-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jackrabbit",
+				"purl": "pkg:deb/debian/jackrabbit?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.6-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3298-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3298"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1602-1",
+	"modified": "2023-06-28T06:20:51.473067Z",
+	"published": "2018-11-30T00:00:00Z",
+	"related": [
+		"CVE-2015-9267",
+		"CVE-2015-9268"
+	],
+	"summary": "nsis - security update",
+	"details": "\nAmong others, Andre Heinicke from gpg4win.org found several issues of\nnsis, a tool for creating quick and user friendly installers for\nMicrosoft Windows operating systems.\n\n\nThe issues are fixed by:\n\n\n* using SetDefaultDllDirectories() to restrict implicitly loaded and\n dynamically loaded modules to trusted directories\n* creating temporary directories in a way that only elevated users can\n write into it\n* not implicitly linking against Version.dll but using wrapper\n functions\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.46-10+deb8u1.\n\n\nWe recommend that you upgrade your nsis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "nsis",
+				"purl": "pkg:deb/debian/nsis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.46-10+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.46-10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1602-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1602"
+		}
+	]
+}

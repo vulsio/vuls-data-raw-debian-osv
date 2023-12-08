@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4676-1",
+	"modified": "2023-10-16T00:15:03.533822Z",
+	"published": "2020-05-06T00:00:00Z",
+	"related": [
+		"CVE-2019-17361",
+		"CVE-2020-11651",
+		"CVE-2020-11652"
+	],
+	"summary": "salt - security update",
+	"details": "\nSeveral vulnerabilities were discovered in salt, a powerful remote\nexecution manager, which could result in retrieve of user tokens from\nthe salt master, execution of arbitrary commands on salt minions,\narbitrary directory access to authenticated users or arbitrary code\nexecution on salt-api hosts.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 2016.11.2+ds-1+deb9u3.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2018.3.4+dfsg1-6+deb10u1.\n\n\nWe recommend that you upgrade your salt packages.\n\n\nFor the detailed security status of salt please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/salt](https://security-tracker.debian.org/tracker/salt)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "salt",
+				"purl": "pkg:deb/debian/salt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2016.11.2+ds-1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2016.11.2+ds-1",
+				"2016.11.2+ds-1+deb9u1",
+				"2016.11.2+ds-1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4676-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "salt",
+				"purl": "pkg:deb/debian/salt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2018.3.4+dfsg1-6+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2018.3.4+dfsg1-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4676-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4676"
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3373-1",
+	"modified": "2023-10-16T00:06:20.794754Z",
+	"published": "2015-10-18T00:00:00Z",
+	"related": [
+		"CVE-2015-4716",
+		"CVE-2015-4717",
+		"CVE-2015-4718",
+		"CVE-2015-5953",
+		"CVE-2015-5954",
+		"CVE-2015-6500",
+		"CVE-2015-6670",
+		"CVE-2015-7699"
+	],
+	"summary": "owncloud - security update",
+	"details": "\nMultiple vulnerabilities were discovered in ownCloud, a cloud storage\nweb service for files, music, contacts, calendars and many more. These\nflaws may lead to the execution of arbitrary code, authorization bypass,\ninformation disclosure, cross-site scripting or denial of service.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 7.0.4+dfsg-4~deb8u3.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 7.0.10~dfsg-2 or earlier versions.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 7.0.10~dfsg-2 or earlier versions.\n\n\nWe recommend that you upgrade your owncloud packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "owncloud",
+				"purl": "pkg:deb/debian/owncloud?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.0.4+dfsg-4~deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.0.4+dfsg-2",
+				"7.0.4+dfsg-3",
+				"7.0.4+dfsg-4~deb8u1",
+				"7.0.4+dfsg-4~deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3373-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3373"
+		}
+	]
+}

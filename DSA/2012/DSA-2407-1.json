@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2407-1",
+	"modified": "2023-10-16T00:05:52.931908Z",
+	"published": "2012-02-09T00:00:00Z",
+	"related": [
+		"CVE-2012-0804"
+	],
+	"summary": "cvs - heap overflow",
+	"details": "\nIt was discovered that a malicious CVS server could cause a heap\noverflow in the CVS client, potentially allowing the server to execute\narbitrary code on the client.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:1.12.13-12+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:1.12.13+real-7.\n\n\nWe recommend that you upgrade your cvs packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "cvs",
+				"purl": "pkg:deb/debian/cvs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.12.13-12+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.12.13-12"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2407-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2407"
+		}
+	]
+}

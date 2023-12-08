@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-245",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-01-28T00:00:00Z",
+	"related": [
+		"CVE-2003-0039"
+	],
+	"summary": "dhcp3 - ignored counter boundary",
+	"details": "\nFlorian Lohoff discovered a bug in the dhcrelay causing it to send a\ncontinuing packet storm towards the configured DHCP server(s) in case\nof a malicious BOOTP packet, such as sent from buggy Cisco switches.\n\n\nWhen the dhcp-relay receives a BOOTP request it forwards the request\nto the DHCP server using the broadcast MAC address ff:ff:ff:ff:ff:ff\nwhich causes the network interface to reflect the packet back into the\nsocket. To prevent loops the dhcrelay checks whether the\nrelay-address is its own, in which case the packet would be dropped.\nIn combination with a missing upper boundary for the hop counter an\nattacker can force the dhcp-relay to send a continuing packet storm\ntowards the configured dhcp server(s).\n\n\nThis patch introduces a new command line switch `-c maxcount` and\npeople are advised to start the dhcp-relay with `dhcrelay -c 10`\nor a smaller number, which will only create that many packets.\n\n\nThe dhcrelay program from the \"dhcp\" package does not seem to be\naffected since DHCP packets are dropped if they were apparently\nrelayed already.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 3.0+3.0.1rc9-2.2.\n\n\nThe old stable distribution (potato) does not contain dhcp3 packages.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.1.2-1.\n\n\nWe recommend that you upgrade your dhcp3 package when you are using\nthe dhcrelay server.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "dhcp3",
+				"purl": "pkg:deb/debian/dhcp3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0+3.0.1rc9-2.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-245.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-245"
+		}
+	]
+}

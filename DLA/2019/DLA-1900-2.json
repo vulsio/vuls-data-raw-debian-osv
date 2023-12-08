@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1900-2",
+	"modified": "2023-06-28T06:29:57.141442Z",
+	"published": "2019-08-29T00:00:00Z",
+	"summary": "apache2 - regression update",
+	"details": "\nTwo security vulnerabilities were found in the Apache HTTP server.\n\n\n* [CVE-2019-10092](https://security-tracker.debian.org/tracker/CVE-2019-10092)\nMatei Mal Badanoiu reported a limited cross-site scripting\n vulnerability in the mod\\_proxy error page.\n* [CVE-2019-10098](https://security-tracker.debian.org/tracker/CVE-2019-10098)\nYukitsugu Sasaki reported a potential open redirect vulnerability in\n the mod\\_rewrite module.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.4.10-10+deb8u15.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.10-10+deb8u16"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.10-10",
+				"2.4.10-10+deb8u1",
+				"2.4.10-10+deb8u10",
+				"2.4.10-10+deb8u11",
+				"2.4.10-10+deb8u12",
+				"2.4.10-10+deb8u13",
+				"2.4.10-10+deb8u14",
+				"2.4.10-10+deb8u15",
+				"2.4.10-10+deb8u2",
+				"2.4.10-10+deb8u3",
+				"2.4.10-10+deb8u4",
+				"2.4.10-10+deb8u5",
+				"2.4.10-10+deb8u6",
+				"2.4.10-10+deb8u7",
+				"2.4.10-10+deb8u8",
+				"2.4.10-10+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1900-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1900"
+		}
+	]
+}

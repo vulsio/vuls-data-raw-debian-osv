@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1772-1",
+	"modified": "2023-10-16T00:05:40.958724Z",
+	"published": "2009-04-16T00:00:00Z",
+	"related": [
+		"CVE-2009-1185",
+		"CVE-2009-1186"
+	],
+	"summary": "udev - privilege escalation",
+	"details": "\nSebastian Kramer discovered two vulnerabilities in udev, the /dev and\nhotplug management daemon.\n\n\n* [CVE-2009-1185](https://security-tracker.debian.org/tracker/CVE-2009-1185)\nudev does not check the origin of NETLINK messages, allowing local\n users to gain root privileges.\n* [CVE-2009-1186](https://security-tracker.debian.org/tracker/CVE-2009-1186)\nudev suffers from a buffer overflow condition in path encoding,\n potentially allowing arbitrary code execution.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 0.105-4etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.125-7+lenny1.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your udev package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "udev",
+				"purl": "pkg:deb/debian/udev?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.105-4etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.105-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1772-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "udev",
+				"purl": "pkg:deb/debian/udev?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.125-7+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.125-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1772-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1772"
+		}
+	]
+}

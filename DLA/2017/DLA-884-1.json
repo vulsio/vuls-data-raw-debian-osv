@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-884-1",
+	"modified": "2023-06-28T06:27:11.020062Z",
+	"published": "2017-04-04T00:00:00Z",
+	"related": [
+		"CVE-2017-7401"
+	],
+	"summary": "collectd - security update",
+	"details": "\nIt was discovered that there was an infinite loop vulnerability in collectd, a\nstatistics collection and monitoring daemon.\n\n\nWhen a correct Signature part is received by an instance configured without\nthe AuthFile option, an endless loop occurs in the parse\\_packet routine due to\na missing pointer increment to the next unprocessed part.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in collectd version\n5.1.0-3+deb7u3.\n\n\nWe recommend that you upgrade your collectd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "collectd",
+				"purl": "pkg:deb/debian/collectd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.1.0-3+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.1.0-3",
+				"5.1.0-3+deb7u1",
+				"5.1.0-3+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-884-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-884"
+		}
+	]
+}

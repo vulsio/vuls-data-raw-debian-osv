@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-641-1",
+	"modified": "2023-10-16T00:26:38.122703Z",
+	"published": "2005-01-17T00:00:00Z",
+	"related": [
+		"CVE-2005-0020"
+	],
+	"summary": "playmidi - buffer overflow",
+	"details": "\nErik SjĂślund discovered that playmidi, a MIDI player, contains a\nsetuid root program with a buffer overflow that can be exploited by a\nlocal attacker.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.4-4woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.4debian-3.\n\n\nWe recommend that you upgrade your playmidi package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "playmidi",
+				"purl": "pkg:deb/debian/playmidi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4-4woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-641-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-641"
+		}
+	]
+}

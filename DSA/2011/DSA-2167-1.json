@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2167-1",
+	"modified": "2023-10-16T00:11:00.820676Z",
+	"published": "2011-02-16T00:00:00Z",
+	"related": [
+		"CVE-2011-0987"
+	],
+	"summary": "phpmyadmin - sql injection",
+	"details": "\nIt was discovered that phpMyAdmin, a tool to administer MySQL over\nthe web, when the bookmarks feature is enabled, allowed to create a\nbookmarked query which would be executed unintentionally by other users.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 4:2.11.8.1-5+lenny8.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4:3.3.7-5.\n\n\nFor the testing distribution (wheezy) and unstable distribution (sid),\nthis problem has been fixed in version 4:3.3.9.2-1.\n\n\nWe recommend that you upgrade your phpmyadmin packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.3.7-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.3.7-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2167-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.11.8.1-5+lenny8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.11.8.1-5",
+				"4:2.11.8.1-5+lenny1",
+				"4:2.11.8.1-5+lenny3",
+				"4:2.11.8.1-5+lenny4",
+				"4:2.11.8.1-5+lenny5",
+				"4:2.11.8.1-5+lenny6",
+				"4:2.11.8.1-5+lenny7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2167-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2167"
+		}
+	]
+}

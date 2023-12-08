@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-625-1",
+	"modified": "2023-10-16T00:31:18.414649Z",
+	"published": "2005-01-05T00:00:00Z",
+	"related": [
+		"CVE-2004-1289"
+	],
+	"summary": "pcal - buffer overflows",
+	"details": "\nDanny Lungstrom discovered two buffer overflows in pcal, a program to\ngenerate Postscript calendars, that could lead to the execution of\narbitrary code when compiling a calendar.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 4.7-8woody1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.8.0-1.\n\n\nWe recommend that you upgrade your pcal package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "pcal",
+				"purl": "pkg:deb/debian/pcal?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.7-8woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.7-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-625-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-625"
+		}
+	]
+}

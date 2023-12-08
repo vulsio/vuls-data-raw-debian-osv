@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4509-1",
+	"modified": "2023-10-16T00:24:56.654400Z",
+	"published": "2019-08-26T00:00:00Z",
+	"related": [
+		"CVE-2019-10081",
+		"CVE-2019-10082",
+		"CVE-2019-10092",
+		"CVE-2019-10098",
+		"CVE-2019-9517"
+	],
+	"summary": "apache2 - security update",
+	"details": "\nSeveral vulnerabilities have been found in the Apache HTTPD server.\n\n\n* [CVE-2019-9517](https://security-tracker.debian.org/tracker/CVE-2019-9517)\nJonathan Looney reported that a malicious client could perform a\n denial of service attack (exhausting h2 workers) by flooding a\n connection with requests and basically never reading responses on\n the TCP connection.\n* [CVE-2019-10081](https://security-tracker.debian.org/tracker/CVE-2019-10081)\nCraig Young reported that HTTP/2 PUSHes could lead to an overwrite\n of memory in the pushing request's pool, leading to crashes.\n* [CVE-2019-10082](https://security-tracker.debian.org/tracker/CVE-2019-10082)\nCraig Young reported that the HTTP/2 session handling could be made\n to read memory after being freed, during connection shutdown.\n* [CVE-2019-10092](https://security-tracker.debian.org/tracker/CVE-2019-10092)\nMatei Mal Badanoiu reported a limited cross-site scripting\n vulnerability in the mod\\_proxy error page.\n* [CVE-2019-10097](https://security-tracker.debian.org/tracker/CVE-2019-10097)\nDaniel McCarney reported that when mod\\_remoteip was configured to\n use a trusted intermediary proxy server using the PROXY protocol,\n a specially crafted PROXY header could trigger a stack buffer\n overflow or NULL pointer deference. This vulnerability could only be\n triggered by a trusted proxy and not by untrusted HTTP clients. The\n issue does not affect the stretch release.\n* [CVE-2019-10098](https://security-tracker.debian.org/tracker/CVE-2019-10098)\nYukitsugu Sasaki reported a potential open redirect vulnerability in\n the mod\\_rewrite module.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 2.4.25-3+deb9u8.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2.4.38-3+deb10u1.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFor the detailed security status of apache2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/apache2>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.25-3+deb9u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.25-3",
+				"2.4.25-3+deb9u1",
+				"2.4.25-3+deb9u2",
+				"2.4.25-3+deb9u3",
+				"2.4.25-3+deb9u4",
+				"2.4.25-3+deb9u5",
+				"2.4.25-3+deb9u6",
+				"2.4.25-3+deb9u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4509-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.38-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.38-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4509-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4509"
+		}
+	]
+}

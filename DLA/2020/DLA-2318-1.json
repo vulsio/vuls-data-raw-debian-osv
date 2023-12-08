@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2318-1",
+	"modified": "2023-06-28T06:25:11.948067Z",
+	"published": "2020-08-09T00:00:00Z",
+	"related": [
+		"CVE-2019-10064",
+		"CVE-2020-12695"
+	],
+	"summary": "wpa - security update",
+	"details": "\nThe following CVE(s) have been reported against src:wpa.\n\n\n* [CVE-2019-10064](https://security-tracker.debian.org/tracker/CVE-2019-10064)\nhostapd before 2.6, in EAP mode, makes calls to the rand()\n and random() standard library functions without any preceding\n srand() or srandom() call, which results in inappropriate\n use of deterministic values. This was fixed in conjunction\n with [CVE-2016-10743](https://security-tracker.debian.org/tracker/CVE-2016-10743).\n* [CVE-2020-12695](https://security-tracker.debian.org/tracker/CVE-2020-12695)\nThe Open Connectivity Foundation UPnP specification before\n 2020-04-17 does not forbid the acceptance of a subscription\n request with a delivery URL on a different network segment\n than the fully qualified event-subscription URL, aka the\n CallStranger issue.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2:2.4-1+deb9u7.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\nFor the detailed security status of wpa please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/wpa>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "wpa",
+				"purl": "pkg:deb/debian/wpa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.4-1+deb9u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:2.4-1",
+				"2:2.4-1+deb9u1",
+				"2:2.4-1+deb9u2",
+				"2:2.4-1+deb9u3",
+				"2:2.4-1+deb9u4",
+				"2:2.4-1+deb9u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2318-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2318"
+		}
+	]
+}

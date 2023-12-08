@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3656-1",
+	"modified": "2023-11-19T22:15:32.106461Z",
+	"published": "2023-11-19T00:00:00Z",
+	"related": [
+		"CVE-2023-44487"
+	],
+	"summary": "netty - security update",
+	"details": "\nA flaw was discovered in Netty, a Java NIO client/server socket framework. The\nHTTP/2 protocol implementation allowed a denial of service (server resource\nconsumption) because request cancellation can reset many streams quickly.\nThis problem is also known as Rapid Reset Attack.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1:4.1.33-1+deb10u4.\n\n\nWe recommend that you upgrade your netty packages.\n\n\nFor the detailed security status of netty please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/netty>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "netty",
+				"purl": "pkg:deb/debian/netty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.1.33-1+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.1.33-1",
+				"1:4.1.33-1+deb10u1",
+				"1:4.1.33-1+deb10u2",
+				"1:4.1.33-1+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3656-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3656"
+		}
+	]
+}

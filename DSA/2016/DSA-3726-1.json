@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3726-1",
+	"modified": "2023-10-16T00:12:16.665032Z",
+	"published": "2016-11-26T00:00:00Z",
+	"related": [
+		"CVE-2016-10059",
+		"CVE-2016-10061",
+		"CVE-2016-10063",
+		"CVE-2016-10064",
+		"CVE-2016-10065",
+		"CVE-2016-10066",
+		"CVE-2016-10067",
+		"CVE-2016-10068",
+		"CVE-2016-10069",
+		"CVE-2016-10070",
+		"CVE-2016-10071",
+		"CVE-2016-7799",
+		"CVE-2016-7906",
+		"CVE-2016-8677",
+		"CVE-2016-8862",
+		"CVE-2016-9556",
+		"CVE-2016-9559"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nSeveral issues have been discovered in ImageMagick, a popular set of\nprograms and libraries for image manipulation. These issues include\nseveral problems in memory handling that can result in a denial of\nservice attack or in execution of arbitrary code by an attacker with\ncontrol on the image input.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 8:6.8.9.9-5+deb8u6.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 8:6.9.6.5+dfsg-1.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.8.9.9-5+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.8.9.9-5",
+				"8:6.8.9.9-5+deb8u1",
+				"8:6.8.9.9-5+deb8u2",
+				"8:6.8.9.9-5+deb8u3",
+				"8:6.8.9.9-5+deb8u4",
+				"8:6.8.9.9-5+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3726-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3726"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1779-1",
+	"modified": "2023-10-16T00:05:42.119511Z",
+	"published": "2009-04-26T00:00:00Z",
+	"related": [
+		"CVE-2009-1300",
+		"CVE-2009-1358"
+	],
+	"summary": "apt - several vulnerabilities",
+	"details": "\nTwo vulnerabilities have been discovered in APT, the well-known dpkg\nfrontend. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2009-1300](https://security-tracker.debian.org/tracker/CVE-2009-1300)\nIn time zones where daylight savings time occurs at midnight,\n the apt cron.daily script fails, stopping new security updates\n from being applied automatically.\n* [CVE-2009-1358](https://security-tracker.debian.org/tracker/CVE-2009-1358)\nA repository that has been signed with an expired or revoked\n OpenPGP key would still be considered valid by APT.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 0.6.46.4-0.1+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.7.20.2+lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.7.21.\n\n\nWe recommend that you upgrade your apt package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.46.4-0.1+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.46.4-0.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1779-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.20.2+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.20.1",
+				"0.7.20.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1779-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1779"
+		}
+	]
+}

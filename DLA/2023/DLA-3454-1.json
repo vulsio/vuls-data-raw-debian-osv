@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3454-1",
+	"modified": "2023-06-28T06:21:30.377027Z",
+	"published": "2023-06-13T00:00:00Z",
+	"related": [
+		"CVE-2022-3109",
+		"CVE-2022-3341"
+	],
+	"summary": "ffmpeg - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the FFmpeg multimedia\nframework, which could result in denial of service or potentially the\nexecution of arbitrary code if malformed files/streams are processed.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n7:4.1.11-0+deb10u1.\n\n\nWe recommend that you upgrade your ffmpeg packages.\n\n\nFor the detailed security status of ffmpeg please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ffmpeg>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ffmpeg",
+				"purl": "pkg:deb/debian/ffmpeg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7:4.1.11-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7:4.1.10-0+deb10u1",
+				"7:4.1.3-1",
+				"7:4.1.4-1",
+				"7:4.1.4-1~deb10u1",
+				"7:4.1.6-1~deb10u1",
+				"7:4.1.8-0+deb10u1",
+				"7:4.1.9-0+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3454-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3454"
+		}
+	]
+}

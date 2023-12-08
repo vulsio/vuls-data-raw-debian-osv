@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2072-1",
+	"modified": "2023-06-28T06:26:26.090300Z",
+	"published": "2020-01-20T00:00:00Z",
+	"related": [
+		"CVE-2018-21015",
+		"CVE-2018-21016",
+		"CVE-2019-13618",
+		"CVE-2019-20161",
+		"CVE-2019-20162",
+		"CVE-2019-20163",
+		"CVE-2019-20165",
+		"CVE-2019-20170",
+		"CVE-2019-20171",
+		"CVE-2019-20208"
+	],
+	"summary": "gpac - security update",
+	"details": "\nMultiple issues were found in gpac, a multimedia framework featuring\nthe MP4Box muxer.\n\n\n* [CVE-2018-21015](https://security-tracker.debian.org/tracker/CVE-2018-21015)\nAVC\\_DuplicateConfig() at isomedia/avc\\_ext.c allows remote\n attackers to cause a denial of service (NULL pointer dereference\n and application crash) via a crafted file.\n* [CVE-2018-21016](https://security-tracker.debian.org/tracker/CVE-2018-21016)\naudio\\_sample\\_entry\\_AddBox() at isomedia/box\\_code\\_base.c allows\n remote attackers to cause a denial of service (heap-based buffer\n over-read and application crash) via a crafted file.\n* [CVE-2019-13618](https://security-tracker.debian.org/tracker/CVE-2019-13618)\nisomedia/isom\\_read.c in libgpac.a has a heap-based buffer\n over-read, as demonstrated by a crash in gf\\_m2ts\\_sync in\n media\\_tools/mpegts.c.\n* [CVE-2019-20161](https://security-tracker.debian.org/tracker/CVE-2019-20161)\nheap-based buffer overflow in the function\n ReadGF\\_IPMPX\\_WatermarkingInit() in odf/ipmpx\\_code.c.\n* [CVE-2019-20162](https://security-tracker.debian.org/tracker/CVE-2019-20162)\nheap-based buffer overflow in the function gf\\_isom\\_box\\_parse\\_ex()\n in isomedia/box\\_funcs.c.\n* [CVE-2019-20163](https://security-tracker.debian.org/tracker/CVE-2019-20163)\nNULL pointer dereference in the function gf\\_odf\\_avc\\_cfg\\_write\\_bs()\n in odf/descriptors.c.\n* [CVE-2019-20165](https://security-tracker.debian.org/tracker/CVE-2019-20165)\nNULL pointer dereference in the function ilst\\_item\\_Read() in\n isomedia/box\\_code\\_apple.c.\n* [CVE-2019-20170](https://security-tracker.debian.org/tracker/CVE-2019-20170)\ninvalid pointer dereference in the function GF\\_IPMPX\\_AUTH\\_Delete()\n in odf/ipmpx\\_code.c.\n* [CVE-2019-20171](https://security-tracker.debian.org/tracker/CVE-2019-20171)\nmemory leaks in metx\\_New in isomedia/box\\_code\\_base.c and abst\\_Read\n in isomedia/box\\_code\\_adobe.c.\n* [CVE-2019-20208](https://security-tracker.debian.org/tracker/CVE-2019-20208)\ndimC\\_Read in isomedia/box\\_code\\_3gpp.c in GPAC 0.8.0 has a\n stack-based buffer overflow.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.5.0+svn5324~dfsg1-1+deb8u5.\n\n\nWe recommend that you upgrade your gpac packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gpac",
+				"purl": "pkg:deb/debian/gpac?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.5.0+svn5324~dfsg1-1+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.5.0+svn5324~dfsg1-1",
+				"0.5.0+svn5324~dfsg1-1+deb8u1",
+				"0.5.0+svn5324~dfsg1-1+deb8u2",
+				"0.5.0+svn5324~dfsg1-1+deb8u3",
+				"0.5.0+svn5324~dfsg1-1+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2072-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2072"
+		}
+	]
+}

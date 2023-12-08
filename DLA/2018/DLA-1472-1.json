@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1472-1",
+	"modified": "2023-06-28T06:20:43.550145Z",
+	"published": "2018-08-20T00:00:00Z",
+	"related": [
+		"CVE-2018-14348"
+	],
+	"summary": "libcgroup - security update",
+	"details": "\nThe cgrulesengd daemon in libcgroup creates log files with world\nreadable and writable permissions due to a reset of the file mode\ncreation mask (umask(0)).\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n0.41-6+deb8u1.\n\n\nWe recommend that you upgrade your libcgroup packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libcgroup",
+				"purl": "pkg:deb/debian/libcgroup?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.41-6+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.41-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1472-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1472"
+		}
+	]
+}

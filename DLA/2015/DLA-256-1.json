@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-256-1",
+	"modified": "2023-06-28T06:29:14.814929Z",
+	"published": "2015-06-29T00:00:00Z",
+	"related": [
+		"CVE-2015-3905"
+	],
+	"summary": "t1utils - security update",
+	"details": "\nJakub Wilk found a vulnerability in the Type 1 font manipulation\nprograms, t1utils:\n\n\n* [CVE-2015-3905](https://security-tracker.debian.org/tracker/CVE-2015-3905)\nBuffer overflow in the set\\_cs\\_start function in t1disasm.c in t1utils\n before 1.39 allows remote attackers to cause a denial of service (crash)\n and possibly execute arbitrary code via a crafted font file.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in t1utils version\n1.36-1+deb6u1.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "t1utils",
+				"purl": "pkg:deb/debian/t1utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.36-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.36-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-256-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-256"
+		}
+	]
+}

@@ -1,0 +1,119 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5173-1",
+	"modified": "2023-10-16T00:25:49.740378Z",
+	"published": "2022-07-03T00:00:00Z",
+	"related": [
+		"CVE-2021-4197",
+		"CVE-2022-0494",
+		"CVE-2022-0812",
+		"CVE-2022-0854",
+		"CVE-2022-1011",
+		"CVE-2022-1012",
+		"CVE-2022-1016",
+		"CVE-2022-1048",
+		"CVE-2022-1195",
+		"CVE-2022-1198",
+		"CVE-2022-1199",
+		"CVE-2022-1204",
+		"CVE-2022-1205",
+		"CVE-2022-1353",
+		"CVE-2022-1419",
+		"CVE-2022-1516",
+		"CVE-2022-1652",
+		"CVE-2022-1729",
+		"CVE-2022-1734",
+		"CVE-2022-1974",
+		"CVE-2022-1975",
+		"CVE-2022-21123",
+		"CVE-2022-21125",
+		"CVE-2022-21166",
+		"CVE-2022-2153",
+		"CVE-2022-23960",
+		"CVE-2022-26490",
+		"CVE-2022-27666",
+		"CVE-2022-28356",
+		"CVE-2022-28388",
+		"CVE-2022-28389",
+		"CVE-2022-28390",
+		"CVE-2022-29581",
+		"CVE-2022-30594",
+		"CVE-2022-32250",
+		"CVE-2022-32296",
+		"CVE-2022-33981"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2021-4197](https://security-tracker.debian.org/tracker/CVE-2021-4197)\nEric Biederman reported that incorrect permission checks in the\n cgroup process migration implementation can allow a local attacker\n to escalate privileges.\n* [CVE-2022-0494](https://security-tracker.debian.org/tracker/CVE-2022-0494)\nThe scsi\\_ioctl() was susceptible to an information leak only\n exploitable by users with CAP\\_SYS\\_ADMIN or CAP\\_SYS\\_RAWIO\n capabilities.\n* [CVE-2022-0812](https://security-tracker.debian.org/tracker/CVE-2022-0812)\nIt was discovered that the RDMA transport for NFS (xprtrdma)\n miscalculated the size of message headers, which could lead to a\n leak of sensitive information between NFS servers and clients.\n* [CVE-2022-0854](https://security-tracker.debian.org/tracker/CVE-2022-0854)\nAli Haider discovered a potential information leak in the DMA\n subsystem. On systems where the swiotlb feature is needed, this\n might allow a local user to read sensitive information.\n* [CVE-2022-1011](https://security-tracker.debian.org/tracker/CVE-2022-1011)\nJann Horn discovered a flaw in the FUSE (Filesystem in User-Space)\n implementation. A local user permitted to mount FUSE filesystems\n could exploit this to cause a use-after-free and read sensitive\n information.\n* [CVE-2022-1012](https://security-tracker.debian.org/tracker/CVE-2022-1012),\n [CVE-2022-32296](https://security-tracker.debian.org/tracker/CVE-2022-32296)\nMoshe Kol, Amit Klein, and Yossi Gilad discovered a weakness\n in randomisation of TCP source port selection.\n* [CVE-2022-1016](https://security-tracker.debian.org/tracker/CVE-2022-1016)\nDavid Bouman discovered a flaw in the netfilter subsystem where\n the nft\\_do\\_chain function did not initialize register data that\n nf\\_tables expressions can read from and write to. A local attacker\n can take advantage of this to read sensitive information.\n* [CVE-2022-1048](https://security-tracker.debian.org/tracker/CVE-2022-1048)\nHu Jiahui discovered a race condition in the sound subsystem that\n can result in a use-after-free. A local user permitted to access a\n PCM sound device can take advantage of this flaw to crash the\n system or potentially for privilege escalation.\n* [CVE-2022-1195](https://security-tracker.debian.org/tracker/CVE-2022-1195)\nLin Ma discovered race conditions in the 6pack and mkiss hamradio\n drivers, which could lead to a use-after-free. A local user could\n exploit these to cause a denial of service (memory corruption or\n crash) or possibly for privilege escalation.\n* [CVE-2022-1198](https://security-tracker.debian.org/tracker/CVE-2022-1198)\nDuoming Zhou discovered a race condition in the 6pack hamradio\n driver, which could lead to a use-after-free. A local user could\n exploit this to cause a denial of service (memory corruption or\n crash) or possibly for privilege escalation.\n* [CVE-2022-1199](https://security-tracker.debian.org/tracker/CVE-2022-1199),\n [CVE-2022-1204](https://security-tracker.debian.org/tracker/CVE-2022-1204),\n [CVE-2022-1205](https://security-tracker.debian.org/tracker/CVE-2022-1205)\nDuoming Zhou discovered race conditions in the AX.25 hamradio\n protocol, which could lead to a use-after-free or null pointer\n dereference. A local user could exploit this to cause a denial of\n service (memory corruption or crash) or possibly for privilege\n escalation.\n* [CVE-2022-1353](https://security-tracker.debian.org/tracker/CVE-2022-1353)\nThe TCS Robot tool found an information leak in the PF\\_KEY\n subsystem. A local user can receive a netlink message when an\n IPsec daemon registers with the kernel, and this could include\n sensitive information.\n* [CVE-2022-1419](https://security-tracker.debian.org/tracker/CVE-2022-1419)\nMinh Yuan discovered a race condition in the vgem virtual GPU\n driver that can lead to a use-after-free. A local user permitted\n to access the GPU device can exploit this to cause a denial of\n service (crash or memory corruption) or possibly for privilege\n escalation.\n* [CVE-2022-1516](https://security-tracker.debian.org/tracker/CVE-2022-1516)\nA NULL pointer dereference flaw in the implementation of the X.25\n set of standardized network protocols, which can result in denial\n of service.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-1652](https://security-tracker.debian.org/tracker/CVE-2022-1652)\nMinh Yuan discovered a race condition in the floppy driver that\n can lead to a use-after-free. A local user permitted to access a\n floppy drive device can exploit this to cause a denial of service\n (crash or memory corruption) or possibly for privilege escalation.\n* [CVE-2022-1729](https://security-tracker.debian.org/tracker/CVE-2022-1729)\nNorbert Slusarek discovered a race condition in the perf subsystem\n which could result in local privilege escalation to root. The\n default settings in Debian prevent exploitation unless more\n permissive settings have been applied in the\n kernel.perf\\_event\\_paranoid sysctl.\n* [CVE-2022-1734](https://security-tracker.debian.org/tracker/CVE-2022-1734)\nDuoming Zhou discovered race conditions in the nfcmrvl NFC driver\n that could lead to a use-after-free, double-free or null pointer\n dereference. A local user might be able to exploit these for\n denial of service (crash or memory corruption) or possibly for\n privilege escalation.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-1974](https://security-tracker.debian.org/tracker/CVE-2022-1974),\n [CVE-2022-1975](https://security-tracker.debian.org/tracker/CVE-2022-1975)\nDuoming Zhou discovered that the NFC netlink interface was\n suspectible to denial of service.\n* [CVE-2022-2153](https://security-tracker.debian.org/tracker/CVE-2022-2153)\nkangel reported a flaw in the KVM implementation for x86\n processors which could lead to a null pointer dereference. A local\n user permitted to access /dev/kvm could exploit this to cause a\n denial of service (crash).\n* [CVE-2022-21123](https://security-tracker.debian.org/tracker/CVE-2022-21123),\n [CVE-2022-21125](https://security-tracker.debian.org/tracker/CVE-2022-21125),\n [CVE-2022-21166](https://security-tracker.debian.org/tracker/CVE-2022-21166)\nVarious researchers discovered flaws in Intel x86 processors,\n collectively referred to as MMIO Stale Data vulnerabilities.\n These are similar to the previously published Microarchitectural\n Data Sampling (MDS) issues and could be exploited by local users\n to leak sensitive information.\n\n\nFor some CPUs, the mitigations for these issues require updated\n microcode. An updated intel-microcode package may be provided at\n a later date. The updated CPU microcode may also be available as\n part of a system firmware (\"BIOS\") update.\n\n\nFurther information on the mitigation can be found at\n \n or in the linux-doc-4.19 package.\n* [CVE-2022-23960](https://security-tracker.debian.org/tracker/CVE-2022-23960)\nResearchers at VUSec discovered that the Branch History Buffer in\n Arm processors can be exploited to create information side\n channels with speculative execution. This issue is similar to\n Spectre variant 2, but requires additional mitigations on some\n processors.\n\n\nThis was previously mitigated for 32-bit Arm (armel and armhf)\n architectures and is now also mitigated for 64-bit Arm (arm64).\n\n\nThis can be exploited to obtain sensitive information from a\n different security context, such as from user-space to the kernel,\n or from a KVM guest to the kernel.\n* [CVE-2022-26490](https://security-tracker.debian.org/tracker/CVE-2022-26490)\nBuffer overflows in the STMicroelectronics ST21NFCA core driver\n can result in denial of service or privilege escalation.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-27666](https://security-tracker.debian.org/tracker/CVE-2022-27666)\nvalis reported a possible buffer overflow in the IPsec ESP\n transformation code. A local user can take advantage of this flaw\n to cause a denial of service or for privilege escalation.\n* [CVE-2022-28356](https://security-tracker.debian.org/tracker/CVE-2022-28356)\nBeraphin discovered that the ANSI/IEEE 802.2 LLC type 2 driver did\n not properly perform reference counting on some error paths. A\n local attacker can take advantage of this flaw to cause a denial\n of service.\n* [CVE-2022-28388](https://security-tracker.debian.org/tracker/CVE-2022-28388)\nA double free vulnerability was discovered in the 8 devices\n USB2CAN interface driver.\n* [CVE-2022-28389](https://security-tracker.debian.org/tracker/CVE-2022-28389)\nA double free vulnerability was discovered in the Microchip CAN\n BUS Analyzer interface driver.\n* [CVE-2022-28390](https://security-tracker.debian.org/tracker/CVE-2022-28390)\nA double free vulnerability was discovered in the EMS CPC-USB/ARM7\n CAN/USB interface driver.\n* [CVE-2022-29581](https://security-tracker.debian.org/tracker/CVE-2022-29581)\nKyle Zeng discovered a reference-counting bug in the cls\\_u32\n network classifier which can lead to a use-after-free. A local\n user can exploit this to cause a denial of service (crash or\n memory corruption) or possibly for privilege escalation.\n* [CVE-2022-30594](https://security-tracker.debian.org/tracker/CVE-2022-30594)\nJann Horn discovered a flaw in the interaction between ptrace and\n seccomp subsystems. A process sandboxed using seccomp() but still\n permitted to use ptrace() could exploit this to remove the seccomp\n restrictions.\n* [CVE-2022-32250](https://security-tracker.debian.org/tracker/CVE-2022-32250)\nAaron Adams discovered a use-after-free in Netfilter which may\n result in local privilege escalation to root.\n* [CVE-2022-33981](https://security-tracker.debian.org/tracker/CVE-2022-33981)\nYuan Ming from Tsinghua University reported a race condition in\n the floppy driver involving use of the FDRAWCMD ioctl, which could\n lead to a use-after-free. A local user with access to a floppy\n drive device could exploit this to cause a denial of service\n (crash or memory corruption) or possibly for privilege escalation.\n This ioctl is now disabled by default.\n\n\nFor the oldstable distribution (buster), these problems have been\nfixed in version 4.19.249-2.\n\n\nDue to an issue in the signing service (Cf. Debian bug #1012741), the\nvport-vxlan module cannot be loaded for the signed kernel for amd64 in\nthis update.\n\n\nThis update also corrects a regression in the network scheduler\nsubsystem (bug #1013299).\n\n\nFor the 32-bit Arm (armel and armhf) architectures, this update\nenables optimised implementations of several cryptographic and CRC\nalgorithms. For at least AES, this should remove a timing sidechannel \nthat could lead to a leak of sensitive information.\n\n\nThis update includes many more bug fixes from stable updates\n4.19.236-4.19.249 inclusive, including for bug #1006346. The random\ndriver has been backported from Linux 5.19, fixing numerous\nperformance and correctness issues. Some changes will be visible:\n\n\n* The entropy pool size is now 256 bits instead of 4096. You may need\n to adjust the configuration of system monitoring or user-space\n entropy gathering services to allow for this.\n* On systems without a hardware RNG, the kernel may log more uses of\n /dev/urandom before it is fully initialised. These uses were\n previously under-counted and this is not a regression.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.19.249-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.19.118-1",
+				"4.19.118-2",
+				"4.19.118-2+deb10u1",
+				"4.19.118-2+deb10u1~bpo9+1",
+				"4.19.118-2~bpo9+1",
+				"4.19.131-1",
+				"4.19.131-2",
+				"4.19.132-1",
+				"4.19.146-1",
+				"4.19.152-1",
+				"4.19.160-1",
+				"4.19.160-2",
+				"4.19.171-1",
+				"4.19.171-2",
+				"4.19.177-1",
+				"4.19.181-1",
+				"4.19.194-1",
+				"4.19.194-2",
+				"4.19.194-3",
+				"4.19.208-1",
+				"4.19.232-1",
+				"4.19.235-1",
+				"4.19.249-1",
+				"4.19.37-5",
+				"4.19.37-5+deb10u1",
+				"4.19.37-5+deb10u2",
+				"4.19.37-5+deb10u2~bpo9+1",
+				"4.19.37-6",
+				"4.19.67-1",
+				"4.19.67-2",
+				"4.19.67-2+deb10u1",
+				"4.19.67-2+deb10u1~bpo9+1",
+				"4.19.67-2+deb10u2",
+				"4.19.67-2+deb10u2~bpo9+1",
+				"4.19.67-2~bpo9+1",
+				"4.19.87-1",
+				"4.19.98-1",
+				"4.19.98-1+deb10u1",
+				"4.19.98-1~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5173-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5173"
+		}
+	]
+}

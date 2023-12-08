@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-268-1",
+	"modified": "2023-06-28T06:26:40.343090Z",
+	"published": "2015-07-06T00:00:00Z",
+	"related": [
+		"CVE-2015-0377",
+		"CVE-2015-0418",
+		"CVE-2015-3456"
+	],
+	"summary": "virtualbox-ose - security update",
+	"details": "\nThree vulnerabilities have been fixed in the Debian squeeze-lts version of\nVirtualBox (package name: virtualbox-ose), a x86 virtualisation solution.\n\n\n* [CVE-2015-0377](https://security-tracker.debian.org/tracker/CVE-2015-0377)\nAvoid VirtualBox allowing local users to affect availability via\n unknown vectors related to Core, which might result in denial of\n service. (Other issue than [CVE-2015-0418](https://security-tracker.debian.org/tracker/CVE-2015-0418)).\n* [CVE-2015-0418](https://security-tracker.debian.org/tracker/CVE-2015-0418)\nAvoid VirtualBox allowing local users to affect availability via\n unknown vectors related to Core, which might result in denial of\n service. (Other issue than [CVE-2015-0377](https://security-tracker.debian.org/tracker/CVE-2015-0377)).\n* [CVE-2015-3456](https://security-tracker.debian.org/tracker/CVE-2015-3456)\nThe Floppy Disk Controller (FDC) in QEMU, also used in VirtualBox and\n other virtualization products, allowed local guest users to cause a\n denial of service (out-of-bounds write and guest crash) or possibly\n execute arbitrary code via the (1) FD\\_CMD\\_READ\\_ID, (2)\n FD\\_CMD\\_DRIVE\\_SPECIFICATION\\_COMMAND, or other unspecified commands,\n aka VENOM.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "virtualbox-ose",
+				"purl": "pkg:deb/debian/virtualbox-ose?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.10-dfsg-1+squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.10-dfsg-1",
+				"3.2.10-dfsg-1+squeeze1",
+				"3.2.10-dfsg-1+squeeze2",
+				"3.2.10-dfsg-1+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-268-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-268"
+		}
+	]
+}

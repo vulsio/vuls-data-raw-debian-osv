@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3163-1",
+	"modified": "2023-06-28T06:33:33.717480Z",
+	"published": "2022-10-26T00:00:00Z",
+	"summary": "wordpress - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in Wordpress, a\npopular content management framework. Possible SQL injection and cross-site\nscripting (XSS) flaws may allow a remote attacker to execute arbitrary code\nor facilitate the injection of client-side scripts.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n5.0.18+dfsg1-0+deb10u1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFor the detailed security status of wordpress please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/wordpress>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.18+dfsg1-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.10+dfsg1-0+deb10u1",
+				"5.0.11+dfsg1-0+deb10u1",
+				"5.0.12+dfsg1-0+deb10u1",
+				"5.0.14+dfsg1-0+deb10u1",
+				"5.0.15+dfsg1-0+deb10u1",
+				"5.0.17+dfsg1-0+deb10u1",
+				"5.0.4+dfsg1-1",
+				"5.0.4+dfsg1-1+deb10u1",
+				"5.0.4+dfsg1-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3163-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3163"
+		}
+	]
+}

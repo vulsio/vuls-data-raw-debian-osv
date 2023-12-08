@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1397-1",
+	"modified": "2023-06-28T06:20:38.112154Z",
+	"published": "2018-06-26T00:00:00Z",
+	"related": [
+		"CVE-2018-10545",
+		"CVE-2018-10546",
+		"CVE-2018-10547",
+		"CVE-2018-10548",
+		"CVE-2018-10549",
+		"CVE-2018-7584"
+	],
+	"summary": "php5 - security update",
+	"details": "\nSeveral vulnerabilities were found in PHP, a widely-used open source\ngeneral purpose scripting language:\n\n\n* [CVE-2018-7584](https://security-tracker.debian.org/tracker/CVE-2018-7584)\nA stack-buffer-overflow while parsing HTTP response results in copying a\nlarge string and possible memory corruption and/or denial of service\n* [CVE-2018-10545](https://security-tracker.debian.org/tracker/CVE-2018-10545)\nDumpable FPM child processes allow bypassing opcache access controls\nresulting in potential information disclosure where one user can obtain\ninformation about another user's running PHP applications\n* [CVE-2018-10546](https://security-tracker.debian.org/tracker/CVE-2018-10546)\nAn invalid sequence of bytes can trigger an infinite loop in the stream\nfilter convert.iconv\n* [CVE-2018-10547](https://security-tracker.debian.org/tracker/CVE-2018-10547)\nA previous fix for [CVE-2018-5712](https://security-tracker.debian.org/tracker/CVE-2018-5712) may not be complete, resulting in an\nadditional vulnerability in the form of a reflected XSS in the PHAR 403\nand 404 error pages\n* [CVE-2018-10548](https://security-tracker.debian.org/tracker/CVE-2018-10548)\nA malicious remote LDAP server can send a crafted response that will\ncause a denial of service (NULL pointer dereference resulting in an\napplication crash)\n* [CVE-2018-10549](https://security-tracker.debian.org/tracker/CVE-2018-10549)\nA crafted JPEG file can case an out-of-bounds read and heap buffer\noverflow\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.6.36+dfsg-0+deb8u1.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.6.36+dfsg-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.6.11+dfsg-1",
+				"5.6.12+dfsg-0+deb8u1",
+				"5.6.12+dfsg-1",
+				"5.6.13+dfsg-0+deb8u1",
+				"5.6.13+dfsg-1",
+				"5.6.13+dfsg-2",
+				"5.6.14+dfsg-0+deb8u1",
+				"5.6.14+dfsg-1",
+				"5.6.15+dfsg-1",
+				"5.6.16+dfsg-1",
+				"5.6.16+dfsg-2",
+				"5.6.16+dfsg-3",
+				"5.6.16+dfsg-4",
+				"5.6.17+dfsg-0+deb8u1",
+				"5.6.17+dfsg-1",
+				"5.6.17+dfsg-3",
+				"5.6.18+dfsg-1",
+				"5.6.19+dfsg-0+deb8u1",
+				"5.6.19+dfsg-1",
+				"5.6.19+dfsg-2",
+				"5.6.20+dfsg-0+deb8u1",
+				"5.6.20+dfsg-1",
+				"5.6.21+dfsg-1",
+				"5.6.21+dfsg-2",
+				"5.6.22+dfsg-0+deb8u1",
+				"5.6.22+dfsg-1",
+				"5.6.22+dfsg-2",
+				"5.6.23+dfsg-0+deb8u1",
+				"5.6.23+dfsg-1",
+				"5.6.24+dfsg-0+deb8u1",
+				"5.6.24+dfsg-1",
+				"5.6.26+dfsg-0+deb8u1",
+				"5.6.26+dfsg-1",
+				"5.6.27+dfsg-0+deb8u1",
+				"5.6.28+dfsg-0+deb8u1",
+				"5.6.29+dfsg-0+deb8u1",
+				"5.6.30+dfsg-0+deb8u1",
+				"5.6.33+dfsg-0+deb8u1",
+				"5.6.7+dfsg-1",
+				"5.6.9+dfsg-0+deb8u1",
+				"5.6.9+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1397-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1397"
+		}
+	]
+}

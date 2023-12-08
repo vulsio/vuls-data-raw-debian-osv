@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4270-1",
+	"modified": "2023-10-16T00:18:00.798213Z",
+	"published": "2018-08-13T00:00:00Z",
+	"related": [
+		"CVE-2018-14424"
+	],
+	"summary": "gdm3 - security update",
+	"details": "\nChris Coulson discovered a use-after-free flaw in the GNOME Display\nManager, triggerable by an unprivileged user via a specially crafted\nsequence of D-Bus method calls, leading to denial of service or\npotentially the execution of arbitrary code.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3.22.3-3+deb9u2.\n\n\nWe recommend that you upgrade your gdm3 packages.\n\n\nFor the detailed security status of gdm3 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/gdm3>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gdm3",
+				"purl": "pkg:deb/debian/gdm3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.22.3-3+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.22.3-3",
+				"3.22.3-3+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4270-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4270"
+		}
+	]
+}

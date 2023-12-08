@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5306-1",
+	"modified": "2023-10-16T00:22:46.622440Z",
+	"published": "2022-12-27T00:00:00Z",
+	"related": [
+		"CVE-2021-40393",
+		"CVE-2021-40394",
+		"CVE-2021-40401",
+		"CVE-2021-40403"
+	],
+	"summary": "gerbv - security update",
+	"details": "\nSeveral vulnerabilities were discovered in gerbv, a Gerber file viewer,\nwhich could result in the execution of arbitrary code, denial of service\nor information disclosure if a specially crafted file is processed.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2.7.0-2+deb11u2.\n\n\nWe recommend that you upgrade your gerbv packages.\n\n\nFor the detailed security status of gerbv please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/gerbv](https://security-tracker.debian.org/tracker/gerbv).\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "gerbv",
+				"purl": "pkg:deb/debian/gerbv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.0-2+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.0-2",
+				"2.7.0-2+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5306-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5306"
+		}
+	]
+}

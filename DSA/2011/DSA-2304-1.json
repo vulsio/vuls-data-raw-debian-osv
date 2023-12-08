@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2304-1",
+	"modified": "2023-10-16T00:11:07.201885Z",
+	"published": "2011-09-11T00:00:00Z",
+	"related": [
+		"CVE-2011-3205"
+	],
+	"summary": "squid3 - buffer overflow",
+	"details": "\nBen Hawkes discovered that SquidÂ 3, a full featured Web Proxy cache\n(HTTP proxy), is vulnerable to a buffer overflow when processing Gopher\nserver replies. An attacker can exploit this flaw by connecting to a\nGopher server that returns lines longer than 4096 bytes. This may result\nin denial of service conditions (daemon crash) or the possibly the\nexecution of arbitrary code with rights of the squid daemon.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 3.0.STABLE8-3+lenny5.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.1.6-1.2+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 3.1.15-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.1.15-1.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.6-1.2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.6-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2304-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.STABLE8-3+lenny5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.STABLE8-2",
+				"3.0.STABLE8-3",
+				"3.0.STABLE8-3+lenny1",
+				"3.0.STABLE8-3+lenny2",
+				"3.0.STABLE8-3+lenny3",
+				"3.0.STABLE8-3+lenny4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2304-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2304"
+		}
+	]
+}

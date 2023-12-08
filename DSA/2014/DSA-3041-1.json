@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3041-1",
+	"modified": "2023-10-16T00:06:10.691904Z",
+	"published": "2014-10-01T00:00:00Z",
+	"related": [
+		"CVE-2013-2072",
+		"CVE-2014-7154",
+		"CVE-2014-7155",
+		"CVE-2014-7156",
+		"CVE-2014-7188"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple security issues have been discovered in the Xen virtualisation\nsolution which may result in denial of service, information disclosure\nor privilege escalation.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.1.4-3+deb7u3.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.4-3+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3041-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3041"
+		}
+	]
+}

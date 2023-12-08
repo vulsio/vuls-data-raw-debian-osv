@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2348-1",
+	"modified": "2023-10-16T00:11:09.962680Z",
+	"published": "2011-11-17T00:00:00Z",
+	"related": [
+		"CVE-2010-4170",
+		"CVE-2010-4171",
+		"CVE-2011-2503"
+	],
+	"summary": "systemtap - several",
+	"details": "\nSeveral vulnerabilities were discovered in SystemTap, an instrumentation \nsystem for Linux:\n\n\n* [CVE-2011-2503](https://security-tracker.debian.org/tracker/CVE-2011-2503)\nIt was discovered that a race condition in staprun could lead to\n privilege escalation.\n* [CVE-2010-4170](https://security-tracker.debian.org/tracker/CVE-2010-4170)\nIt was discovered that insufficient validation of environment\n variables in staprun could lead to privilege escalation.\n* [CVE-2010-4171](https://security-tracker.debian.org/tracker/CVE-2010-4171)\nIt was discovered that insufficient validation of module unloading\n could lead to denial of service.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.2-5+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6-1.\n\n\nWe recommend that you upgrade your systemtap packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "systemtap",
+				"purl": "pkg:deb/debian/systemtap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2-5+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2348-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2348"
+		}
+	]
+}

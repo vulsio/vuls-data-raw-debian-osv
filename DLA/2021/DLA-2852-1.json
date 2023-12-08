@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2852-1",
+	"modified": "2023-06-28T06:37:00.379909Z",
+	"published": "2021-12-26T00:00:00Z",
+	"related": [
+		"CVE-2020-9488",
+		"CVE-2021-45105"
+	],
+	"summary": "apache-log4j2 - security update",
+	"details": "\nSeveral security vulnerabilities were found in Apache Log4j2, a Logging\nFramework for Java, which could lead to a denial of service or information\ndisclosure.\n\n\n* [CVE-2020-9488](https://security-tracker.debian.org/tracker/CVE-2020-9488)\nImproper validation of certificate with host mismatch in Apache Log4j SMTP\n appender. This could allow an SMTPS connection to be intercepted by a\n man-in-the-middle attack which could leak any log messages sent through\n that appender.\n* [CVE-2021-45105](https://security-tracker.debian.org/tracker/CVE-2021-45105)\nApache Log4j2 did not protect from uncontrolled recursion from\n self-referential lookups. This allows an attacker with control over Thread\n Context Map data to cause a denial of service when a crafted string is\n interpreted.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.12.3-0+deb9u1.\n\n\nWe recommend that you upgrade your apache-log4j2 packages.\n\n\nFor the detailed security status of apache-log4j2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/apache-log4j2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "apache-log4j2",
+				"purl": "pkg:deb/debian/apache-log4j2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.12.3-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.0-1",
+				"2.10.0-2",
+				"2.11.1-1",
+				"2.11.1-2",
+				"2.11.2-1",
+				"2.7-2",
+				"2.7-2+deb9u1",
+				"2.8.2-1",
+				"2.8.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2852-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2852"
+		}
+	]
+}

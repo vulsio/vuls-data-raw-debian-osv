@@ -1,0 +1,92 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2405-1",
+	"modified": "2023-10-16T00:05:52.935003Z",
+	"published": "2012-02-06T00:00:00Z",
+	"related": [
+		"CVE-2011-3368",
+		"CVE-2011-3607",
+		"CVE-2011-3639",
+		"CVE-2011-4317",
+		"CVE-2012-0031",
+		"CVE-2012-0053"
+	],
+	"summary": "apache2 - multiple issues",
+	"details": "\nSeveral vulnerabilities have been found in the Apache HTTPD Server:\n\n\n* [CVE-2011-3607](https://security-tracker.debian.org/tracker/CVE-2011-3607):\n\n An integer overflow in ap\\_pregsub() could allow local attackers to\n execute arbitrary code at elevated privileges via crafted .htaccess\n files.\n* [CVE-2011-3368](https://security-tracker.debian.org/tracker/CVE-2011-3368) [CVE-2011-3639](https://security-tracker.debian.org/tracker/CVE-2011-3639) [CVE-2011-4317](https://security-tracker.debian.org/tracker/CVE-2011-4317):\n\n The Apache HTTP Server did not properly validate the request URI for\n proxied requests. In certain reverse proxy configurations using the\n ProxyPassMatch directive or using the RewriteRule directive with the\n [P] flag, a remote attacker could make the proxy connect to an\n arbitrary server. This could allow the attacker to access internal\n servers that are not otherwise accessible from the outside.\n\n\nThe three CVE ids denote slightly different variants of the same\n issue.\n\n\nNote that, even with this issue fixed, it is the responsibility of\n the administrator to ensure that the regular expression replacement\n pattern for the target URI does not allow a client to append arbitrary\n strings to the host or port parts of the target URI. For example, the\n configuration\n\n\n\n```\n\n  ProxyPassMatch ^/mail(.*)  http://internal-host$1\n\n```\n\nis still insecure and should be replaced by one of the following\n configurations:\n\n\n\n```\n\n  ProxyPassMatch ^/mail(/.*)  http://internal-host$1\n  ProxyPassMatch ^/mail/(.*)  http://internal-host/$1\n\n```\n* [CVE-2012-0031](https://security-tracker.debian.org/tracker/CVE-2012-0031):\n\n An apache2 child process could cause the parent process to crash\n during shutdown. This is a violation of the privilege separation\n between the apache2 processes and could potentially be used to worsen\n the impact of other vulnerabilities.\n* [CVE-2012-0053](https://security-tracker.debian.org/tracker/CVE-2012-0053):\n\n The response message for error code 400 (bad request) could be used to\n expose httpOnly cookies. This could allow a remote attacker using\n cross site scripting to steal authentication cookies.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion apache2 2.2.9-10+lenny12.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion apache2 2.2.16-6+squeeze6\n\n\nFor the testing distribution (wheezy), these problems will be fixed in\nversion 2.2.22-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.2.22-1.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nThis update also contains updated apache2-mpm-itk packages which have\nbeen recompiled against the updated apache2 packages. The new version\nnumber for the oldstable distribution is 2.2.6-02-1+lenny7. In the\nstable distribution, apache2-mpm-itk has the same version number as\napache2.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.16-6+squeeze6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.16-6",
+				"2.2.16-6+squeeze1",
+				"2.2.16-6+squeeze1~bpo50+1",
+				"2.2.16-6+squeeze2",
+				"2.2.16-6+squeeze2~bpo50+1",
+				"2.2.16-6+squeeze3",
+				"2.2.16-6+squeeze4",
+				"2.2.16-6+squeeze4~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2405-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.9-10+lenny12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.9-10+lenny10",
+				"2.2.9-10+lenny11",
+				"2.2.9-10+lenny2",
+				"2.2.9-10+lenny3",
+				"2.2.9-10+lenny4",
+				"2.2.9-10+lenny5",
+				"2.2.9-10+lenny6",
+				"2.2.9-10+lenny7",
+				"2.2.9-10+lenny8",
+				"2.2.9-10+lenny9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2405-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2405"
+		}
+	]
+}

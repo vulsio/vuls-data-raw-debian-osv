@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2677-1",
+	"modified": "2023-10-16T00:11:25.360983Z",
+	"published": "2013-05-23T00:00:00Z",
+	"related": [
+		"CVE-2013-1987"
+	],
+	"summary": "libxrender - several",
+	"details": "\nIlja van Sprundel of IOActive discovered several security issues in\nmultiple components of the X.org graphics stack and the related\nlibraries: Various integer overflows, sign handling errors in integer\nconversions, buffer overflows, memory corruption and missing input\nsanitising may lead to privilege escalation or denial of service.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1:0.9.6-1+squeeze1.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1:0.9.7-1+deb7u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:0.9.7-1+deb7u1.\n\n\nWe recommend that you upgrade your libxrender packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libxrender",
+				"purl": "pkg:deb/debian/libxrender?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.9.6-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.9.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2677-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libxrender",
+				"purl": "pkg:deb/debian/libxrender?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.9.7-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.9.7-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2677-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2677"
+		}
+	]
+}

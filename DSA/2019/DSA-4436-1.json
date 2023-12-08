@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4436-1",
+	"modified": "2023-10-16T00:18:12.719781Z",
+	"published": "2019-04-28T00:00:00Z",
+	"related": [
+		"CVE-2019-10650",
+		"CVE-2019-9956"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nThis update fixes two vulnerabilities in Imagemagick: Memory handling\nproblems and missing or incomplete input sanitising may result in denial\nof service, memory disclosure or the execution of arbitrary code if\nmalformed TIFF or Postscript files are processed.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 8:6.9.7.4+dfsg-11+deb9u7.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\nFor the detailed security status of imagemagick please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/imagemagick>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.9.7.4+dfsg-11+deb9u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.9.7.4+dfsg-11",
+				"8:6.9.7.4+dfsg-11+deb9u1",
+				"8:6.9.7.4+dfsg-11+deb9u2",
+				"8:6.9.7.4+dfsg-11+deb9u3",
+				"8:6.9.7.4+dfsg-11+deb9u4",
+				"8:6.9.7.4+dfsg-11+deb9u5",
+				"8:6.9.7.4+dfsg-11+deb9u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4436-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4436"
+		}
+	]
+}

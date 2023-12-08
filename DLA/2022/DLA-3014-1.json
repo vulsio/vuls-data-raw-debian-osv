@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3014-1",
+	"modified": "2023-06-28T06:26:47.233988Z",
+	"published": "2022-05-18T00:00:00Z",
+	"related": [
+		"CVE-2020-8859"
+	],
+	"summary": "elog - security update",
+	"details": "\nA vulnerability was reported in src:elog, a logbook system to manage\nnotes through a Web interface. This vulnerability allows remote\nattackers to create a denial-of-service condition on affected\ninstallations of ELOG Electronic Logbook. Authentication is not\nrequired to exploit this vulnerability. The specific flaw exists\nwithin the processing of HTTP parameters. A crafted request can\ntrigger the dereference of a null pointer. An attacker can leverage\nthis vulnerability to create a denial-of-service condition.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n3.1.2-1-1+deb9u1.\n\n\nWe recommend that you upgrade your elog packages.\n\n\nFor the detailed security status of elog please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/elog>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "elog",
+				"purl": "pkg:deb/debian/elog?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.2-1-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.2-1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3014-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3014"
+		}
+	]
+}

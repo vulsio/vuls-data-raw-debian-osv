@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2233-1",
+	"modified": "2023-10-16T00:05:51.032657Z",
+	"published": "2011-05-10T00:00:00Z",
+	"related": [
+		"CVE-2011-0411",
+		"CVE-2011-1720"
+	],
+	"summary": "postfix - several",
+	"details": "\nSeveral vulnerabilities were discovered in Postfix, a mail transfer\nagent. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2009-2939](https://security-tracker.debian.org/tracker/CVE-2009-2939)\nThe postinst script grants the postfix user write access to\n /var/spool/postfix/pid, which might allow local users to\n conduct symlink attacks that overwrite arbitrary files.\n* [CVE-2011-0411](https://security-tracker.debian.org/tracker/CVE-2011-0411)\nThe STARTTLS implementation does not properly restrict I/O\n buffering, which allows man-in-the-middle attackers to insert\n commands into encrypted SMTP sessions by sending a cleartext\n command that is processed after TLS is in place.\n* [CVE-2011-1720](https://security-tracker.debian.org/tracker/CVE-2011-1720)\nA heap-based read-only buffer overflow allows malicious\n clients to crash the smtpd server process using a crafted SASL\n authentication request.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.5.5-1.1+lenny1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.7.1-1+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.8.0-1.\n\n\nWe recommend that you upgrade your postfix packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "postfix",
+				"purl": "pkg:deb/debian/postfix?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.5-1.1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.5-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2233-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "postfix",
+				"purl": "pkg:deb/debian/postfix?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.1-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2233-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2233"
+		}
+	]
+}

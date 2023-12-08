@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-706-1",
+	"modified": "2023-10-16T00:26:17.473148Z",
+	"published": "2005-04-13T00:00:00Z",
+	"related": [
+		"CVE-2005-0390"
+	],
+	"summary": "axel - buffer overflow",
+	"details": "\nUlf HĂ¤rnhammar from the Debian Security Audit Project discovered a\nbuffer overflow in axel, a light download accelerator. When reading\nremote input the program did not check if a part of the input can\noverflow a buffer and maybe trigger the execution of arbitrary code.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0a-1woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0b-1.\n\n\nWe recommend that you upgrade your axel package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "axel",
+				"purl": "pkg:deb/debian/axel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0a-1woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0a-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-706-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-706"
+		}
+	]
+}

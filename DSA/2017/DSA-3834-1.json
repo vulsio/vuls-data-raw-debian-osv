@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3834-1",
+	"modified": "2023-10-16T00:12:21.803311Z",
+	"published": "2017-04-25T00:00:00Z",
+	"related": [
+		"CVE-2017-3302",
+		"CVE-2017-3305",
+		"CVE-2017-3308",
+		"CVE-2017-3309",
+		"CVE-2017-3329",
+		"CVE-2017-3453",
+		"CVE-2017-3456",
+		"CVE-2017-3461",
+		"CVE-2017-3462",
+		"CVE-2017-3463",
+		"CVE-2017-3464",
+		"CVE-2017-3600"
+	],
+	"summary": "mysql-5.5 - security update",
+	"details": "\nSeveral issues have been discovered in the MySQL database server. The\nvulnerabilities are addressed by upgrading MySQL to the new upstream\nversion 5.5.55, which includes additional changes, such as performance\nimprovements, bug fixes, new features, and possibly incompatible\nchanges. Please see the MySQL 5.5 Release Notes and Oracle's Critical\nPatch Update advisory for further details:\n\n\n* [\\\nhttps://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-55.html](https://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-55.html)\n* [\\\nhttp://www.oracle.com/technetwork/security-advisory/cpuapr2017-3236618.html](http://www.oracle.com/technetwork/security-advisory/cpuapr2017-3236618.html)\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 5.5.55-0+deb8u1.\n\n\nWe recommend that you upgrade your mysql-5.5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mysql-5.5",
+				"purl": "pkg:deb/debian/mysql-5.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.5.55-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.5.42-1",
+				"5.5.43-0+deb8u1",
+				"5.5.44-0+deb8u1",
+				"5.5.46-0+deb8u1",
+				"5.5.47-0+deb8u1",
+				"5.5.49-0+deb8u1",
+				"5.5.50-0+deb8u1",
+				"5.5.52-0+deb8u1",
+				"5.5.53-0+deb8u1",
+				"5.5.54-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3834-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3834"
+		}
+	]
+}

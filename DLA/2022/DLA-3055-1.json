@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3055-1",
+	"modified": "2023-06-28T06:26:49.461138Z",
+	"published": "2022-06-21T00:00:00Z",
+	"related": [
+		"CVE-2021-46790",
+		"CVE-2022-30783",
+		"CVE-2022-30784",
+		"CVE-2022-30785",
+		"CVE-2022-30786",
+		"CVE-2022-30787",
+		"CVE-2022-30788",
+		"CVE-2022-30789"
+	],
+	"summary": "ntfs-3g - security update",
+	"details": "\nSeveral vulnerabilities were discovered in NTFS-3G, a read-write NTFS\ndriver for FUSE. A local user can take advantage of these flaws for\nlocal root privilege escalation.\n\n\n* [CVE-2022-30783](https://security-tracker.debian.org/tracker/CVE-2022-30783)\nAn invalid return code in fuse\\_kern\\_mount enables intercepting of\n libfuse-lite protocol traffic between NTFS-3G and the kernel when\n using libfuse-lite.\n* [CVE-2022-30784](https://security-tracker.debian.org/tracker/CVE-2022-30784)\nA crafted NTFS image can cause heap exhaustion in\n ntfs\\_get\\_attribute\\_value.\n* [CVE-2022-30785](https://security-tracker.debian.org/tracker/CVE-2022-30785)\nA file handle created in fuse\\_lib\\_opendir, and later used in\n fuse\\_lib\\_readdir, enables arbitrary memory read and write\n operations when using libfuse-lite.\n* [CVE-2022-30786](https://security-tracker.debian.org/tracker/CVE-2022-30786)\nA crafted NTFS image can cause a heap-based buffer overflow in\n ntfs\\_names\\_full\\_collate.\n* [CVE-2022-30787](https://security-tracker.debian.org/tracker/CVE-2022-30787)\nAn integer underflow in fuse\\_lib\\_readdir enables arbitrary memory\n read operations when using libfuse-lite.\n* [CVE-2022-30788](https://security-tracker.debian.org/tracker/CVE-2022-30788)\nA crafted NTFS image can cause a heap-based buffer overflow in\n ntfs\\_mft\\_rec\\_alloc.\n* [CVE-2022-30789](https://security-tracker.debian.org/tracker/CVE-2022-30789)\nA crafted NTFS image can cause a heap-based buffer overflow in\n ntfs\\_check\\_log\\_client\\_array.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:2016.2.22AR.1+dfsg-1+deb9u3.\n\n\nWe recommend that you upgrade your ntfs-3g packages.\n\n\nFor the detailed security status of ntfs-3g please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ntfs-3g>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ntfs-3g",
+				"purl": "pkg:deb/debian/ntfs-3g?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2016.2.22AR.1+dfsg-1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2016.2.22AR.1+dfsg-1",
+				"1:2016.2.22AR.1+dfsg-1+deb9u1",
+				"1:2016.2.22AR.1+dfsg-1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3055-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3055"
+		}
+	]
+}

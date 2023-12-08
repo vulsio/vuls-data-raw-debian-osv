@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-656-1",
+	"modified": "2023-10-16T00:28:57.183308Z",
+	"published": "2005-01-25T00:00:00Z",
+	"related": [
+		"CVE-2005-0071"
+	],
+	"summary": "vdr - insecure file access",
+	"details": "\nJavier FernĂĄndez-Sanguino PeĂąa from the Debian Security Audit Team has\ndiscovered that the vdr daemon which is used for video disk recorders\nfor DVB cards can overwrite arbitrary files.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0.0-1woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.2.6-6.\n\n\nWe recommend that you upgrade your vdr package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "vdr",
+				"purl": "pkg:deb/debian/vdr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.0-1woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-656-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-656"
+		}
+	]
+}

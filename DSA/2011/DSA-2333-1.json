@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2333-1",
+	"modified": "2023-10-16T00:11:08.868752Z",
+	"published": "2011-10-31T00:00:00Z",
+	"related": [
+		"CVE-2011-4074",
+		"CVE-2011-4075"
+	],
+	"summary": "phpldapadmin - several issues",
+	"details": "\nTwo vulnerabilities have been discovered in phpLDAPadmin, a web based\ninterface for administering LDAP servers. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2011-4074](https://security-tracker.debian.org/tracker/CVE-2011-4074)\nInput appended to the URL in cmd.php (when cmd is set to \\_debug) is\n not properly sanitised before being returned to the user. This can be\n exploited to execute arbitrary HTML and script code in a user's browser\n session in context of an affected site.\n* [CVE-2011-4075](https://security-tracker.debian.org/tracker/CVE-2011-4075)\nInput passed to the orderby parameter in cmd.php (when cmd is set to\n query\\_engine, query is set to none, and search is set to e.g.\n 1) is not properly sanitised in lib/functions.php before being used in a\n create\\_function() function call. This can be exploited to inject and\n execute arbitrary PHP code.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 1.1.0.5-6+lenny2.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1.2.0.5-2+squeeze1.\n\n\nFor the testing distribution (wheezy), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.2.0.5-2.1.\n\n\nWe recommend that you upgrade your phpldapadmin packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "phpldapadmin",
+				"purl": "pkg:deb/debian/phpldapadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.0.5-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.0.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2333-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "phpldapadmin",
+				"purl": "pkg:deb/debian/phpldapadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0.5-6+lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0.5-6",
+				"1.1.0.5-6+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2333-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2333"
+		}
+	]
+}

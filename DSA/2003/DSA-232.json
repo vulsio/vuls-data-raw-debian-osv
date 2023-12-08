@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-232",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2003-01-20T00:00:00Z",
+	"related": [
+		"CVE-2002-1366",
+		"CVE-2002-1367",
+		"CVE-2002-1368",
+		"CVE-2002-1369",
+		"CVE-2002-1371",
+		"CVE-2002-1372",
+		"CVE-2002-1383",
+		"CVE-2002-1384"
+	],
+	"summary": "cupsys - several vulnerabilities",
+	"details": "\nMultiple [\\\nvulnerabilities](http://www.idefense.com/advisory/12.19.02.txt) were discovered in the Common Unix Printing\nSystem (CUPS). Several of these issues represent the potential for a\nremote compromise or denial of service. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [\\\n CAN-2002-1383](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1383): Multiple integer overflows allow a remote attacker\n to execute arbitrary code via the CUPSd HTTP interface and the\n image handling code in CUPS filters.\n* [\\\n CAN-2002-1366](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1366): Race conditions in connection with `/etc/cups/certs/`\n allow local users with lp privileges to create or overwrite\n arbitrary files. This is not present in the potato version.\n* [\\\n CAN-2002-1367](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1367): This vulnerability allows a remote attacker to add\n printers without authentication via a certain UDP packet, which can\n then be used to perform unauthorized activities such as stealing\n the local root certificate for the administration server via a\n \"need authorization\" page.\n* [\\\n CAN-2002-1368](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1368): Negative lengths fed into memcpy() can cause a\n denial of service and possibly execute arbitrary code.\n* [\\\n CAN-2002-1369](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1369): An unsafe strncat() function call processing the\n options string allows a remote attacker to execute arbitrary code\n via a buffer overflow.\n* [\\\n CAN-2002-1371](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1371): Zero width images allows a remote attacker to\n execute arbitrary code via modified chunk headers.\n* [\\\n CAN-2002-1372](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1372): CUPS does not properly check the return values of\n various file and socket operations, which could allow a remote\n attacker to cause a denial of service.\n* [\\\n CAN-2002-1384](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1384): The cupsys package contains some code from the xpdf\n package, used to convert PDF files for printing, which contains an\n exploitable integer overflow bug. This is not present in the\n potato version.\n\n\nEven though we tried very hard to fix all problems in the packages for\npotato as well, the packages may still contain other security related\nproblems. Hence, we advise users of potato systems using CUPS to\nupgrade to woody soon.\n\n\nFor the current stable distribution (woody), these problems have been fixed\nin version 1.1.14-4.3.\n\n\nFor the old stable distribution (potato), these problems have been fixed\nin version 1.0.4-12.1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.1.18-1.\n\n\nWe recommend that you upgrade your CUPS packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "cupsys",
+				"purl": "pkg:deb/debian/cupsys?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.14-4.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-232.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-232"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3941-1",
+	"modified": "2023-10-16T00:12:29.620555Z",
+	"published": "2017-08-13T00:00:00Z",
+	"related": [
+		"CVE-2017-11721"
+	],
+	"summary": "iortcw - security update",
+	"details": "\nA read buffer overflow was discovered in the idtech3 (Quake III Arena)\nfamily of game engines. This allows remote attackers to cause a denial\nof service (application crash) or possibly have unspecified other impact\nvia a crafted packet.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.50a+dfsg1-3+deb9u1.\n\n\nWe recommend that you upgrade your iortcw packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "iortcw",
+				"purl": "pkg:deb/debian/iortcw?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.50a+dfsg1-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.42b+20150930+dfsg1-1",
+				"1.42b+20151119+dfsg1-1",
+				"1.42d+dfsg1-1",
+				"1.42d+dfsg1-2",
+				"1.42d+dfsg1-3",
+				"1.42d+dfsg1-4",
+				"1.42d+dfsg1-5",
+				"1.50a+dfsg1-1",
+				"1.50a+dfsg1-2",
+				"1.50a+dfsg1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3941-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3941"
+		}
+	]
+}

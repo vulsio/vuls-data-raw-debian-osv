@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2720-1",
+	"modified": "2023-10-16T00:11:28.013339Z",
+	"published": "2013-07-06T00:00:00Z",
+	"related": [
+		"CVE-2013-0795",
+		"CVE-2013-0801",
+		"CVE-2013-1670",
+		"CVE-2013-1674",
+		"CVE-2013-1675",
+		"CVE-2013-1676",
+		"CVE-2013-1677",
+		"CVE-2013-1678",
+		"CVE-2013-1679",
+		"CVE-2013-1680",
+		"CVE-2013-1681",
+		"CVE-2013-1682",
+		"CVE-2013-1684",
+		"CVE-2013-1685",
+		"CVE-2013-1686",
+		"CVE-2013-1687",
+		"CVE-2013-1690",
+		"CVE-2013-1692",
+		"CVE-2013-1693",
+		"CVE-2013-1694",
+		"CVE-2013-1697"
+	],
+	"summary": "icedove - several",
+	"details": "\nMultiple security issues have been found in Icedove, Debian's version\nof the Mozilla Thunderbird mail and news client. Multiple memory safety\nerrors, use-after-free vulnerabilities, missing permission checks, incorrect\nmemory handling and other implementation errors may lead to the execution\nof arbitrary code, privilege escalation, information disclosure or\ncross-site request forgery.\n\n\nAs already announced for Iceweasel: we're changing the approach for\nsecurity updates for Icedove in stable-security: instead of\nbackporting security fixes, we now provide releases based on the\nExtended Support Release branch. As such, this update introduces\npackages based on Thunderbird 17 and at some point in the future we\nwill switch to the next ESR branch once ESR 17 has reached it's end\nof life.\n\n\nSome Icedove extensions currently packaged in the Debian archive are\nnot compatible with the new browser engine. Up-to-date and compatible\nversions can be retrieved from <http://addons.mozilla.org> as a short\nterm solution.\n\n\nAn updated and compatible version of Enigmail is included with this\nupdate.\n\n\nThe Icedove version in the oldstable distribution (squeeze) is no\nlonger supported with full security updates. However, it should be\nnoted that almost all security issues in Icedove stem from the\nincluded browser engine. These security problems only affect Icedove\nif scripting and HTML mails are enabled. If there are security issues\nspecific to Icedove (e.g. a hypothetical buffer overflow in the IMAP\nimplementation) we'll make an effort to backport such fixes to oldstable.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 17.0.7-1~deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 17.0.7-1.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "icedove",
+				"purl": "pkg:deb/debian/icedove?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "17.0.7-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"10.0.12-1",
+				"11.0-1",
+				"16.0.2-1",
+				"17.0-1",
+				"17.0.2-1",
+				"17.0.4-1",
+				"17.0.5-1",
+				"17.0.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2720-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2720"
+		}
+	]
+}

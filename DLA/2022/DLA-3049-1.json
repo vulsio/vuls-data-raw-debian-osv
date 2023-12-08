@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3049-1",
+	"modified": "2023-06-28T06:26:48.829360Z",
+	"published": "2022-06-09T00:00:00Z",
+	"related": [
+		"CVE-2021-43331",
+		"CVE-2021-43332",
+		"CVE-2021-44227"
+	],
+	"summary": "mailman - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Mailman, a web-based\nmailing list manager. An attacker could impersonate more privileged\naccounts through different vectors.\n\n\n* [CVE-2021-43331](https://security-tracker.debian.org/tracker/CVE-2021-43331)\nA crafted URL to the Cgi/options.py user options page can execute\n arbitrary JavaScript for XSS.\n* [CVE-2021-43332](https://security-tracker.debian.org/tracker/CVE-2021-43332)\nThe CSRF token for the Cgi/admindb.py admindb page contains an\n encrypted version of the list admin password. This could\n potentially be cracked by a moderator via an offline brute-force\n attack.\n* [CVE-2021-44227](https://security-tracker.debian.org/tracker/CVE-2021-44227)\nA list member or moderator can get a CSRF token and craft an admin\n request (using that token) to set a new admin password or make\n other changes.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:2.1.23-1+deb9u8.\n\n\nWe recommend that you upgrade your mailman packages.\n\n\nFor the detailed security status of mailman please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mailman>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mailman",
+				"purl": "pkg:deb/debian/mailman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.23-1+deb9u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.23-1",
+				"1:2.1.23-1+deb9u1",
+				"1:2.1.23-1+deb9u2",
+				"1:2.1.23-1+deb9u3",
+				"1:2.1.23-1+deb9u4",
+				"1:2.1.23-1+deb9u5",
+				"1:2.1.23-1+deb9u6",
+				"1:2.1.23-1+deb9u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3049-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3049"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2089-1",
+	"modified": "2023-10-16T00:10:57.191464Z",
+	"published": "2010-08-06T00:00:00Z",
+	"related": [
+		"CVE-2010-1917",
+		"CVE-2010-2225",
+		"CVE-2010-3065"
+	],
+	"summary": "php5 - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in PHP 5, an hypertext\npreprocessor.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2010-1917](https://security-tracker.debian.org/tracker/CVE-2010-1917)\nThe fnmatch function can be abused to conduct denial of service attacks\n (by crashing the interpreter) by the means of a stack overflow.\n* [CVE-2010-2225](https://security-tracker.debian.org/tracker/CVE-2010-2225)\nThe SplObjectStorage unserializer allows attackers to execute arbitrary\n code via serialized data by the means of a use-after-free\n vulnerability.\n* [CVE-2010-3065](https://security-tracker.debian.org/tracker/CVE-2010-3065)\nThe default sessions serializer does not correctly handle a special\n marker, which allows an attacker to inject arbitrary variables into the\n session and possibly exploit vulnerabilities in the unserializer.\n* [CVE-2010-1128](https://security-tracker.debian.org/tracker/CVE-2010-1128)\nFor this vulnerability (predictable entropy for the Linear Congruential\n Generator used to generate session ids) we do not consider upstream's\n solution to be sufficient. It is recommended to uncomment the\n session.entropy\\_file and session.entropy\\_length settings in the php.ini\n files. Further improvements can be achieved by setting\n session.hash\\_function to 1 (one) and incrementing the value of\n session.entropy\\_length.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 5.2.6.dfsg.1-1+lenny9.\n\n\nFor the testing distribution (squeeze) and the unstable distribution (sid),\nthese problems will be fixed soon.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.2.6.dfsg.1-1+lenny9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.2.6.dfsg.1-1+lenny2",
+				"5.2.6.dfsg.1-1+lenny3",
+				"5.2.6.dfsg.1-1+lenny4",
+				"5.2.6.dfsg.1-1+lenny6",
+				"5.2.6.dfsg.1-1+lenny8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2089-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2089"
+		}
+	]
+}

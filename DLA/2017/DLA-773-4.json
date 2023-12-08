@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-773-4",
+	"modified": "2023-06-28T06:43:13.997764Z",
+	"published": "2017-01-01T00:00:00Z",
+	"summary": "python-crypto - update",
+	"details": "\nIt was discovered that there was a vulnerability in python-crypto, a library of\ncryptographic algorithms and protocols for Python. Calling AES.new with an\ninvalid parameter could crash the Python interpreter:\n\n\n\nFor Debian 7 Wheezy, this issue has been fixed in python-crypto version\n2.6-4+deb7u4.\n\n\nWe recommend that you upgrade your python-crypto packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "python-crypto",
+				"purl": "pkg:deb/debian/python-crypto?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6-4+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6-4",
+				"2.6-4+deb7u2",
+				"2.6-4+deb7u3",
+				"2.6-4+deb7u4",
+				"2.6-4+deb7u5",
+				"2.6-4+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-773-4.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-773"
+		}
+	]
+}

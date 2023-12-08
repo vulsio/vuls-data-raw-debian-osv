@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3879-1",
+	"modified": "2023-10-16T00:12:25.267531Z",
+	"published": "2017-06-13T00:00:00Z",
+	"related": [
+		"CVE-2016-10324",
+		"CVE-2016-10325",
+		"CVE-2016-10326",
+		"CVE-2017-7853"
+	],
+	"summary": "libosip2 - security update",
+	"details": "\nMultiple security vulnerabilities have been found in oSIP, a library\nimplementing the Session Initiation Protocol, which might result in\ndenial of service through malformed SIP messages.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 4.1.0-2+deb8u1.\n\n\nFor the upcoming stable distribution (stretch), these problems have been\nfixed in version 4.1.0-2.1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.1.0-2.1.\n\n\nWe recommend that you upgrade your libosip2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libosip2",
+				"purl": "pkg:deb/debian/libosip2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.0-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3879-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3879"
+		}
+	]
+}

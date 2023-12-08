@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2302-1",
+	"modified": "2023-06-28T06:28:40.210082Z",
+	"published": "2020-07-31T00:00:00Z",
+	"related": [
+		"CVE-2018-1152",
+		"CVE-2018-14498",
+		"CVE-2020-13790",
+		"CVE-2020-14152"
+	],
+	"summary": "libjpeg-turbo - security update",
+	"details": "\nBrief introduction\n\n\n* [CVE-2018-1152](https://security-tracker.debian.org/tracker/CVE-2018-1152)\nDenial of service vulnerability caused by a\n divide by zero when processing a crafted BMP image in TJBench.\n* [CVE-2018-14498](https://security-tracker.debian.org/tracker/CVE-2018-14498)\nDenial of service (heap-based buffer over-read and application\n crash) via a crafted 8-bit BMP in which one or more of the color\n indices is out of range for the number of palette entries.\n* [CVE-2020-13790](https://security-tracker.debian.org/tracker/CVE-2020-13790)\nHeap-based buffer over-read via a malformed PPM input file.\n* [CVE-2020-14152](https://security-tracker.debian.org/tracker/CVE-2020-14152)\njpeg\\_mem\\_available() did not honor the max\\_memory\\_to\\_use setting,\n possibly causing excessive memory consumption.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:1.5.1-2+deb9u1.\n\n\nWe recommend that you upgrade your libjpeg-turbo packages.\n\n\nFor the detailed security status of libjpeg-turbo please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libjpeg-turbo>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libjpeg-turbo",
+				"purl": "pkg:deb/debian/libjpeg-turbo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.5.1-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.5.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2302-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2302"
+		}
+	]
+}

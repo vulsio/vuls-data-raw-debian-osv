@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2067-1",
+	"modified": "2023-10-16T00:10:56.083750Z",
+	"published": "2010-07-02T00:00:00Z",
+	"related": [
+		"CVE-2010-1667",
+		"CVE-2010-1668",
+		"CVE-2010-1670",
+		"CVE-2010-2479"
+	],
+	"summary": "mahara - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities were discovered in mahara, an electronic portfolio,\nweblog, and resume builder. The following Common Vulnerabilities and\nExposures project ids identify them:\n\n\n* [CVE-2010-1667](https://security-tracker.debian.org/tracker/CVE-2010-1667)\nMultiple pages performed insufficient input sanitising, making them\n vulnerable to cross-site scripting attacks.\n* [CVE-2010-1668](https://security-tracker.debian.org/tracker/CVE-2010-1668)\nMultiple forms lacked protection against cross-site request forgery\n attacks, therefore making them vulnerable.\n* [CVE-2010-1670](https://security-tracker.debian.org/tracker/CVE-2010-1670)\nGregor Anzelj discovered that it was possible to accidentally\n configure an installation of mahara that allows access to another\n user's account without a password.\n* [CVE-2010-2479](https://security-tracker.debian.org/tracker/CVE-2010-2479)\nCertain Internet Explorer-specific cross-site scripting\n vulnerabilities were discovered in HTML Purifier, of which a copy\n is included in the mahara package.\n\n\nFor the stable distribution (lenny), the problems have been fixed in\nversion 1.0.4-4+lenny6.\n\n\nFor the testing distribution (squeeze), the problems will be fixed soon.\n\n\nFor the unstable distribution (sid), the problems have been fixed in\nversion 1.2.5.\n\n\nWe recommend that you upgrade your mahara packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mahara",
+				"purl": "pkg:deb/debian/mahara?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.4-4+lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.4-4",
+				"1.0.4-4+lenny1",
+				"1.0.4-4+lenny2",
+				"1.0.4-4+lenny3",
+				"1.0.4-4+lenny4",
+				"1.0.4-4+lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2067-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2067"
+		}
+	]
+}

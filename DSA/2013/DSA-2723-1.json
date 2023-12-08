@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2723-1",
+	"modified": "2023-10-16T00:11:28.212107Z",
+	"published": "2013-07-17T00:00:00Z",
+	"related": [
+		"CVE-2013-4113"
+	],
+	"summary": "php5 - heap corruption",
+	"details": "\nIt was discovered that PHP could perform an invalid free request when\nprocessing crafted XML documents, corrupting the heap and potentially\nleading to arbitrary code execution. Depending on the PHP\napplication, this vulnerability could be exploited remotely.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 5.3.3-7+squeeze16.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 5.4.4-14+deb7u3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.5.0+dfsg-15.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3-7+squeeze16"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze13",
+				"5.3.3-7+squeeze14",
+				"5.3.3-7+squeeze15",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze3",
+				"5.3.3-7+squeeze5",
+				"5.3.3-7+squeeze6",
+				"5.3.3-7+squeeze7",
+				"5.3.3-7+squeeze8",
+				"5.3.3-7+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2723-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.4-14+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2723-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2723"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1325-1",
+	"modified": "2023-10-16T00:10:19.999523Z",
+	"published": "2007-06-29T00:00:00Z",
+	"related": [
+		"CVE-2007-1002",
+		"CVE-2007-3257"
+	],
+	"summary": "evolution",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Evolution, a\ngroupware suite with mail client and organizer. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2007-1002](https://security-tracker.debian.org/tracker/CVE-2007-1002)\nUlf HĂ¤rnhammar discovered that a format string vulnerability in\n the handling of shared calendars may allow the execution of arbitrary\n code.\n* [CVE-2007-3257](https://security-tracker.debian.org/tracker/CVE-2007-3257)\nIt was discovered that the IMAP code in the Evolution Data Server\n performs insufficient sanitising of a value later used an array index,\n which can lead to the execution of arbitrary code.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 2.0.4-2sarge2. Packages for hppa, mips and powerpc are not yet\navailable. They will be provided later.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 2.6.3-6etch1. Packages for mips are not yet available. They\nwill be provided later.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your evolution packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "evolution",
+				"purl": "pkg:deb/debian/evolution?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.4-2sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.4-2",
+				"2.0.4-2sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1325-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "evolution",
+				"purl": "pkg:deb/debian/evolution?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.3-6etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.3-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1325-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1325"
+		}
+	]
+}

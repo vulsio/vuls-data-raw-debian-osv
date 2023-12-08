@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3352-1",
+	"modified": "2023-10-16T00:11:56.289579Z",
+	"published": "2015-09-04T00:00:00Z",
+	"related": [
+		"CVE-2015-6806"
+	],
+	"summary": "screen - security update",
+	"details": "\nA vulnerability was found in screen causing a stack overflow which\nresults in crashing the screen server process, resulting in denial\nof service.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 4.1.0~20120320gitdb59704-7+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 4.2.1-3+deb8u1.\n\n\nFor the testing (stretch) and unstable (sid) distributions, this problem\nhas been fixed in version 4.3.1-2.\n\n\nWe recommend that you upgrade your screen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "screen",
+				"purl": "pkg:deb/debian/screen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.0~20120320gitdb59704-7+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.0~20120320gitdb59704-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3352-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "screen",
+				"purl": "pkg:deb/debian/screen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.1-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3352-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3352"
+		}
+	]
+}

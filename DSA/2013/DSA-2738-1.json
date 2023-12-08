@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2738-1",
+	"modified": "2023-10-16T00:06:04.565798Z",
+	"published": "2013-08-18T00:00:00Z",
+	"related": [
+		"CVE-2013-1821",
+		"CVE-2013-4073"
+	],
+	"summary": "ruby1.9.1 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for\nthe Ruby language, which may lead to denial of service and other\nsecurity problems. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2013-1821](https://security-tracker.debian.org/tracker/CVE-2013-1821)\nBen Murphy discovered that unrestricted entity expansion in REXML\n can lead to a Denial of Service by consuming all host memory.\n* [CVE-2013-4073](https://security-tracker.debian.org/tracker/CVE-2013-4073)\nWilliam (B.J.) Snow Orvis discovered a vulnerability in the hostname\n checking in Ruby's SSL client that could allow man-in-the-middle\n attackers to spoof SSL servers via valid certificate issued by a\n trusted certification authority.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1.9.2.0-2+deb6u1.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.9.3.194-8.1+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.3.194-8.2.\n\n\nWe recommend that you upgrade your ruby1.9.1 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ruby1.9.1",
+				"purl": "pkg:deb/debian/ruby1.9.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.2.0-2+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.2.0-2",
+				"1.9.2.0-2+armhf"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2738-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ruby1.9.1",
+				"purl": "pkg:deb/debian/ruby1.9.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.3.194-8.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.3.194-8.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2738-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2738"
+		}
+	]
+}

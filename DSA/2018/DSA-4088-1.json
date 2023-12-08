@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4088-1",
+	"modified": "2023-10-16T00:12:38.565488Z",
+	"published": "2018-01-15T00:00:00Z",
+	"related": [
+		"CVE-2017-1000422"
+	],
+	"summary": "gdk-pixbuf - security update",
+	"details": "\nIt was discovered that multiple integer overflows in the GIF image loader\nin the GDK Pixbuf library may result in denial of service and potentially\nthe execution of arbitrary code if a malformed image file is opened.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2.31.1-2+deb8u7.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.36.5-2+deb9u2. In addition this update provides fixes for\n[\\\nCVE-2017-6312](https://security-tracker.debian.org/tracker/CVE-2017-6312), [\\\nCVE-2017-6313](https://security-tracker.debian.org/tracker/CVE-2017-6313) and [\\\nCVE-2017-6314](https://security-tracker.debian.org/tracker/CVE-2017-6314).\n\n\nWe recommend that you upgrade your gdk-pixbuf packages.\n\n\nFor the detailed security status of gdk-pixbuf please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/gdk-pixbuf](https://security-tracker.debian.org/tracker/gdk-pixbuf)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gdk-pixbuf",
+				"purl": "pkg:deb/debian/gdk-pixbuf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.31.1-2+deb8u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.31.1-2",
+				"2.31.1-2+deb8u1",
+				"2.31.1-2+deb8u2",
+				"2.31.1-2+deb8u3",
+				"2.31.1-2+deb8u4",
+				"2.31.1-2+deb8u4+kbsd8u1",
+				"2.31.1-2+deb8u5",
+				"2.31.1-2+deb8u5+kbsd8u1",
+				"2.31.1-2+deb8u5+kbsd8u2",
+				"2.31.1-2+deb8u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4088-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gdk-pixbuf",
+				"purl": "pkg:deb/debian/gdk-pixbuf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.36.5-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.36.5-2",
+				"2.36.5-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4088-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4088"
+		}
+	]
+}

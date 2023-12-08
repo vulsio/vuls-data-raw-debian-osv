@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3268-2",
+	"modified": "2023-10-16T00:11:53.538570Z",
+	"published": "2015-05-22T00:00:00Z",
+	"related": [
+		"CVE-2015-3202"
+	],
+	"summary": "ntfs-3g - security update",
+	"details": "\nTavis Ormandy discovered that NTFS-3G, a read-write NTFS driver for\nFUSE, does not scrub the environment before executing mount or umount\nwith elevated privileges. A local user can take advantage of this flaw\nto overwrite arbitrary files and gain elevated privileges by accessing\ndebugging features via the environment that would not normally be safe\nfor unprivileged users.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed in\nversion 1:2012.1.15AR.5-2.1+deb7u1. Note that this issue does not affect\nthe binary packages distributed in Debian in wheezy as ntfs-3g does not\nuse the embedded fuse-lite library.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:2014.2.15AR.2-1+deb8u1.\n\n\nFor the testing distribution (stretch) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your ntfs-3g packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ntfs-3g",
+				"purl": "pkg:deb/debian/ntfs-3g?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2012.1.15AR.5-2.1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2012.1.15AR.5-2.1",
+				"1:2012.1.15AR.5-2.1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3268-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ntfs-3g",
+				"purl": "pkg:deb/debian/ntfs-3g?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2014.2.15AR.2-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2014.2.15AR.2-1",
+				"1:2014.2.15AR.2-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3268-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3268"
+		}
+	]
+}

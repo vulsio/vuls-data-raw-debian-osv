@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2567-1",
+	"modified": "2023-06-28T06:29:17.811124Z",
+	"published": "2021-02-18T00:00:00Z",
+	"related": [
+		"CVE-2017-14120",
+		"CVE-2017-14121",
+		"CVE-2017-14122"
+	],
+	"summary": "unrar-free - security update",
+	"details": "\nSeveral issues have been found in unrar-free, an unarchiver for .rar files.\n\n\n* [CVE-2017-14120](https://security-tracker.debian.org/tracker/CVE-2017-14120)\nThis CVE is related to a directory traversal vulnerability for\n RAR v2 archives.\n* [CVE-2017-14121](https://security-tracker.debian.org/tracker/CVE-2017-14121)\nThis CVE is related to NULL pointer dereference flaw triggered\n by a specially crafted RAR archive.\n* [CVE-2017-14122](https://security-tracker.debian.org/tracker/CVE-2017-14122)\nThis CVE is related to stack-based buffer over-read.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:0.0.1+cvs20140707-1+deb9u1.\n\n\nWe recommend that you upgrade your unrar-free packages.\n\n\nFor the detailed security status of unrar-free please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/unrar-free>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "unrar-free",
+				"purl": "pkg:deb/debian/unrar-free?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.0.1+cvs20140707-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.0.1+cvs20140707-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2567-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2567"
+		}
+	]
+}

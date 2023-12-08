@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4206-1",
+	"modified": "2023-10-16T00:13:23.052564Z",
+	"published": "2018-05-21T00:00:00Z",
+	"related": [
+		"CVE-2017-0920",
+		"CVE-2018-8971"
+	],
+	"summary": "gitlab - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Gitlab, a software\nplatform to collaborate on code:\n\n\n* [CVE-2017-0920](https://security-tracker.debian.org/tracker/CVE-2017-0920)\nIt was discovered that missing validation of merge requests allowed\n users to see names to private projects, resulting in information\n disclosure.\n* [CVE-2018-8971](https://security-tracker.debian.org/tracker/CVE-2018-8971)\nIt was discovered that the Auth0 integration was implemented\n incorrectly.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 8.13.11+dfsg1-8+deb9u2. The fix for [\\\nCVE-2018-8971](https://security-tracker.debian.org/tracker/CVE-2018-8971) also requires ruby-omniauth-auth0 to be upgraded\nto version 2.0.0-0+deb9u1.\n\n\nWe recommend that you upgrade your gitlab packages.\n\n\nFor the detailed security status of gitlab please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/gitlab](https://security-tracker.debian.org/tracker/gitlab)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gitlab",
+				"purl": "pkg:deb/debian/gitlab?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.13.11+dfsg1-8+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.13.11+dfsg1-8",
+				"8.13.11+dfsg1-8+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4206-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4206"
+		}
+	]
+}

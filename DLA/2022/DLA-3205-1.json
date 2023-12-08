@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3205-1",
+	"modified": "2023-06-28T06:21:27.635906Z",
+	"published": "2022-11-25T00:00:00Z",
+	"related": [
+		"CVE-2019-0053",
+		"CVE-2021-40491",
+		"CVE-2022-39028"
+	],
+	"summary": "inetutils - security update",
+	"details": "\nSeveral security vulnerabilities were discovered in inetutils, a\ncollection of common network programs.\n\n\n* [CVE-2019-0053](https://security-tracker.debian.org/tracker/CVE-2019-0053)\ninetutils' telnet client doesn't sufficiently validate environment\n variables, which can lead to stack-based buffer overflows. This\n issue is limited to local exploitation from restricted shells.\n* [CVE-2021-40491](https://security-tracker.debian.org/tracker/CVE-2021-40491)\ninetutils' ftp client before 2.2 does not validate addresses\n returned by PASV/LSPV responses to make sure they match the server\n address. A malicious server can exploit this flaw to reach services\n in the client's private network. (This is similar to curl's\n [CVE-2020-8284](https://security-tracker.debian.org/tracker/CVE-2020-8284).)\n* [CVE-2022-39028](https://security-tracker.debian.org/tracker/CVE-2022-39028)\ninetutils's telnet server through 2.3 has a NULL pointer dereference\n which a client can trigger by sending 0xff 0xf7 or 0xff 0xf8. In a\n typical installation, the telnetd application would crash but the\n telnet service would remain available through inetd. However, if the\n telnetd application has many crashes within a short time interval,\n the telnet service would become unavailable after inetd logs a\n \"telnet/tcp server failing (looping), service terminated\" error.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2:1.9.4-7+deb10u2.\n\n\nWe recommend that you upgrade your inetutils packages.\n\n\nFor the detailed security status of inetutils please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/inetutils>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "inetutils",
+				"purl": "pkg:deb/debian/inetutils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.9.4-7+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.9.4-7",
+				"2:1.9.4-7+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3205-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3205"
+		}
+	]
+}

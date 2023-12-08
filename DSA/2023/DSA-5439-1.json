@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5439-1",
+	"modified": "2023-10-16T00:23:12.217376Z",
+	"published": "2023-06-25T00:00:00Z",
+	"related": [
+		"CVE-2023-2828",
+		"CVE-2023-2911"
+	],
+	"summary": "bind9 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in BIND, a DNS server\nimplementation.\n\n\n* [CVE-2023-2828](https://security-tracker.debian.org/tracker/CVE-2023-2828)\nShoham Danino, Anat Bremler-Barr, Yehuda Afek and Yuval Shavitt\n discovered that a flaw in the cache-cleaning algorithm used in named\n can cause that named's configured cache size limit can be\n significantly exceeded, potentially resulting in denial of service.\n* [CVE-2023-2911](https://security-tracker.debian.org/tracker/CVE-2023-2911)\nIt was discovered that a flaw in the handling of recursive-clients\n quota may result in denial of service (named daemon crash).\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 1:9.16.42-1~deb11u1.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 1:9.18.16-1~deb12u1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\nFor the detailed security status of bind9 please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/bind9](https://security-tracker.debian.org/tracker/bind9)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.16.42-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.16.15-1",
+				"1:9.16.21-1",
+				"1:9.16.21-1+hurd.1",
+				"1:9.16.22-1~deb11u1",
+				"1:9.16.22-1~deb11u1~bpo10+1",
+				"1:9.16.27-1~deb11u1",
+				"1:9.16.27-1~deb11u1~bpo10+1",
+				"1:9.16.33-1~deb11u1",
+				"1:9.16.37-1~deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5439-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.18.16-1~deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.18.12-1",
+				"1:9.18.13-1",
+				"1:9.18.16-1~deb12u1~bpo11+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5439-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5439"
+		}
+	]
+}

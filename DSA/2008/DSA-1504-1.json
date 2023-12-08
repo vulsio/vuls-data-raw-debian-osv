@@ -1,0 +1,411 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1504-1",
+	"modified": "2023-10-16T00:10:31.157908Z",
+	"published": "2008-02-22T00:00:00Z",
+	"related": [
+		"CVE-2006-5823",
+		"CVE-2006-6054",
+		"CVE-2006-6058",
+		"CVE-2006-7203",
+		"CVE-2007-1353",
+		"CVE-2007-2172",
+		"CVE-2007-2525",
+		"CVE-2007-3105",
+		"CVE-2007-3739",
+		"CVE-2007-3740",
+		"CVE-2007-3848",
+		"CVE-2007-4133",
+		"CVE-2007-4308",
+		"CVE-2007-4573",
+		"CVE-2007-5093",
+		"CVE-2007-6063",
+		"CVE-2007-6151",
+		"CVE-2007-6206",
+		"CVE-2007-6694",
+		"CVE-2008-0007"
+	],
+	"summary": "kernel-image-2.6.8 - several issues",
+	"details": "\nSeveral local and remote vulnerabilities have been discovered in the Linux\nkernel that may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2006-5823](https://security-tracker.debian.org/tracker/CVE-2006-5823)\nLMH reported a potential local DoS which could be exploited by a malicious\n user with the privileges to mount and read a corrupted cramfs filesystem.\n* [CVE-2006-6054](https://security-tracker.debian.org/tracker/CVE-2006-6054)\nLMH reported a potential local DoS which could be exploited by a malicious\n user with the privileges to mount and read a corrupted ext2 filesystem.\n* [CVE-2006-6058](https://security-tracker.debian.org/tracker/CVE-2006-6058)\nLMH reported an issue in the minix filesystem that allows local users\n with mount privileges to create a DoS (printk flood) by mounting a\n specially crafted corrupt filesystem.\n* [CVE-2006-7203](https://security-tracker.debian.org/tracker/CVE-2006-7203)\nOpenVZ Linux kernel team reported an issue in the smbfs filesystem which\n can be exploited by local users to cause a DoS (oops) during mount.\n* [CVE-2007-1353](https://security-tracker.debian.org/tracker/CVE-2007-1353)\nIlja van Sprundel discovered that kernel memory could be leaked via the\n Bluetooth setsockopt call due to an uninitialized stack buffer. This\n could be used by local attackers to read the contents of sensitive kernel\n memory.\n* [CVE-2007-2172](https://security-tracker.debian.org/tracker/CVE-2007-2172)\nThomas Graf reported a typo in the DECnet protocol handler that could\n be used by a local attacker to overrun an array via crafted packets,\n potentially resulting in a Denial of Service (system crash).\n A similar issue exists in the IPV4 protocol handler and will be fixed\n in a subsequent update.\n* [CVE-2007-2525](https://security-tracker.debian.org/tracker/CVE-2007-2525)\nFlorian Zumbiehl discovered a memory leak in the PPPOE subsystem caused\n by releasing a socket before PPPIOCGCHAN is called upon it. This could\n be used by a local user to DoS a system by consuming all available memory.\n* [CVE-2007-3105](https://security-tracker.debian.org/tracker/CVE-2007-3105)\nThe PaX Team discovered a potential buffer overflow in the random number\n generator which may permit local users to cause a denial of service or\n gain additional privileges. This issue is not believed to effect default\n Debian installations where only root has sufficient privileges to exploit\n it.\n* [CVE-2007-3739](https://security-tracker.debian.org/tracker/CVE-2007-3739)\nAdam Litke reported a potential local denial of service (oops) on\n powerpc platforms resulting from unchecked VMA expansion into address\n space reserved for hugetlb pages.\n* [CVE-2007-3740](https://security-tracker.debian.org/tracker/CVE-2007-3740)\nSteve French reported that CIFS filesystems with CAP\\_UNIX enabled \n were not honoring a process' umask which may lead to unintentionally\n relaxed permissions.\n* [CVE-2007-3848](https://security-tracker.debian.org/tracker/CVE-2007-3848)\nWojciech Purczynski discovered that pdeath\\_signal was not being reset\n properly under certain conditions which may allow local users to gain\n privileges by sending arbitrary signals to suid binaries.\n* [CVE-2007-4133](https://security-tracker.debian.org/tracker/CVE-2007-4133)\nHugh Dickins discovered a potential local DoS (panic) in hugetlbfs.\n A misconversion of hugetlb\\_vmtruncate\\_list to prio\\_tree may allow\n local users to trigger a BUG\\_ON() call in exit\\_mmap.\n* [CVE-2007-4308](https://security-tracker.debian.org/tracker/CVE-2007-4308)\nAlan Cox reported an issue in the aacraid driver that allows unprivileged\n local users to make ioctl calls which should be restricted to admin\n privileges.\n* [CVE-2007-4573](https://security-tracker.debian.org/tracker/CVE-2007-4573)\nWojciech Purczynski discovered a vulnerability that can be exploited\n by a local user to obtain superuser privileges on x86\\_64 systems.\n This resulted from improper clearing of the high bits of registers\n during ia32 system call emulation. This vulnerability is relevant\n to the Debian amd64 port as well as users of the i386 port who run\n the amd64 linux-image flavour.\n* [CVE-2007-5093](https://security-tracker.debian.org/tracker/CVE-2007-5093)\nAlex Smith discovered an issue with the pwc driver for certain webcam\n devices. If the device is removed while a userspace application has it\n open, the driver will wait for userspace to close the device, resulting\n in a blocked USB subsystem. This issue is of low security impact as\n it requires the attacker to either have physical access to the system\n or to convince a user with local access to remove the device on their\n behalf.\n* [CVE-2007-6063](https://security-tracker.debian.org/tracker/CVE-2007-6063)\nVenustech AD-LAB discovered a a buffer overflow in the isdn ioctl\n handling, exploitable by a local user.\n* [CVE-2007-6151](https://security-tracker.debian.org/tracker/CVE-2007-6151)\nADLAB discovered a possible memory overrun in the ISDN subsystem that\n may permit a local user to overwrite kernel memory by issuing\n ioctls with unterminated data.\n* [CVE-2007-6206](https://security-tracker.debian.org/tracker/CVE-2007-6206)\nBlake Frantz discovered that when a core file owned by a non-root user\n exists, and a root-owned process dumps core over it, the core file\n retains its original ownership. This could be used by a local user to\n gain access to sensitive information.\n* [CVE-2007-6694](https://security-tracker.debian.org/tracker/CVE-2007-6694)\nCyrill Gorcunov reported a NULL pointer dereference in code specific\n to the CHRP PowerPC platforms. Local users could exploit this issue\n to achieve a Denial of Service (DoS).\n* [CVE-2008-0007](https://security-tracker.debian.org/tracker/CVE-2008-0007)\nNick Piggin of SuSE discovered a number of issues in subsystems which\n register a fault handler for memory mapped areas. This issue can be\n exploited by local users to achieve a Denial of Service (DoS) and possibly\n execute arbitrary code.\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 3.1 (sarge) |\n| --- | --- |\n| kernel-image-2.6.8-alpha | 2.6.8-17sarge1 |\n| kernel-image-2.6.8-amd64 | 2.6.8-17sarge1 |\n| kernel-image-2.6.8-hppa | 2.6.8-7sarge1 |\n| kernel-image-2.6.8-i386 | 2.6.8-17sarge1 |\n| kernel-image-2.6.8-ia64 | 2.6.8-15sarge1 |\n| kernel-image-2.6.8-m68k | 2.6.8-5sarge1 |\n| kernel-image-2.6.8-s390 | 2.6.8-6sarge1 |\n| kernel-image-2.6.8-sparc | 2.6.8-16sarge1 |\n| kernel-patch-powerpc-2.6.8 | 2.6.8-13sarge1 |\n| fai-kernels | 1.9.1sarge8 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-s390",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-s390?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-6sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-5",
+				"2.6.8-5sarge1",
+				"2.6.8-5sarge2",
+				"2.6.8-5sarge3",
+				"2.6.8-5sarge4",
+				"2.6.8-5sarge5",
+				"2.6.8-5sarge6",
+				"2.6.8-5sarge7",
+				"2.6.8-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-ia64",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-ia64?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-15sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-14",
+				"2.6.8-14sarge1",
+				"2.6.8-14sarge2",
+				"2.6.8-14sarge3",
+				"2.6.8-14sarge4",
+				"2.6.8-14sarge5",
+				"2.6.8-14sarge6",
+				"2.6.8-14sarge7",
+				"2.6.8-15"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "fai-kernels",
+				"purl": "pkg:deb/debian/fai-kernels?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.1sarge8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.1",
+				"1.9.1sarge1",
+				"1.9.1sarge2",
+				"1.9.1sarge3",
+				"1.9.1sarge4",
+				"1.9.1sarge5",
+				"1.9.1sarge6",
+				"1.9.1sarge7",
+				"1.9.1sarge7.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-amd64",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-amd64?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-17sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-14",
+				"2.6.8-16sarge1",
+				"2.6.8-16sarge2",
+				"2.6.8-16sarge4",
+				"2.6.8-16sarge5",
+				"2.6.8-16sarge6",
+				"2.6.8-16sarge7",
+				"2.6.8-17"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-hppa",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-hppa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-7sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-6",
+				"2.6.8-6sarge1",
+				"2.6.8-6sarge2",
+				"2.6.8-6sarge3",
+				"2.6.8-6sarge4",
+				"2.6.8-6sarge5",
+				"2.6.8-6sarge6",
+				"2.6.8-6sarge7",
+				"2.6.8-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-sparc",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-sparc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-16sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-15",
+				"2.6.8-15sarge1",
+				"2.6.8-15sarge2",
+				"2.6.8-15sarge3",
+				"2.6.8-15sarge4",
+				"2.6.8-15sarge5",
+				"2.6.8-15sarge6",
+				"2.6.8-15sarge7",
+				"2.6.8-16"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-alpha",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-alpha?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-17sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-16",
+				"2.6.8-16sarge1",
+				"2.6.8-16sarge2",
+				"2.6.8-16sarge3",
+				"2.6.8-16sarge4",
+				"2.6.8-16sarge5",
+				"2.6.8-16sarge6",
+				"2.6.8-16sarge7",
+				"2.6.8-17"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-i386",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-i386?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-17sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-16",
+				"2.6.8-16sarge1",
+				"2.6.8-16sarge2",
+				"2.6.8-16sarge3",
+				"2.6.8-16sarge4",
+				"2.6.8-16sarge5",
+				"2.6.8-16sarge6",
+				"2.6.8-16sarge7",
+				"2.6.8-17"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-source-2.6.8",
+				"purl": "pkg:deb/debian/kernel-source-2.6.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-17sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-16",
+				"2.6.8-16sarge1",
+				"2.6.8-16sarge2",
+				"2.6.8-16sarge3",
+				"2.6.8-16sarge4",
+				"2.6.8-16sarge5",
+				"2.6.8-16sarge6",
+				"2.6.8-16sarge7",
+				"2.6.8-17"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-patch-powerpc-2.6.8",
+				"purl": "pkg:deb/debian/kernel-patch-powerpc-2.6.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-13sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-12",
+				"2.6.8-12sarge1",
+				"2.6.8-12sarge2",
+				"2.6.8-12sarge3",
+				"2.6.8-12sarge4",
+				"2.6.8-12sarge5",
+				"2.6.8-12sarge6",
+				"2.6.8-12sarge7",
+				"2.6.8-13"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-image-2.6.8-m68k",
+				"purl": "pkg:deb/debian/kernel-image-2.6.8-m68k?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-5sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-4",
+				"2.6.8-4sarge1",
+				"2.6.8-4sarge2",
+				"2.6.8-4sarge3",
+				"2.6.8-4sarge4",
+				"2.6.8-4sarge5",
+				"2.6.8-4sarge6",
+				"2.6.8-4sarge7",
+				"2.6.8-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1504-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1504"
+		}
+	]
+}

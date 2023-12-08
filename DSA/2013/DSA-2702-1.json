@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2702-1",
+	"modified": "2023-10-16T00:11:26.631091Z",
+	"published": "2013-06-03T00:00:00Z",
+	"related": [
+		"CVE-2013-1431"
+	],
+	"summary": "telepathy-gabble - TLS verification bypass",
+	"details": "\nMaksim Otstavnov discovered that the Wocky submodule used by\ntelepathy-gabble, the Jabber/XMPP connection manager for the Telepathy\nframework, does not respect the tls-required flag on legacy Jabber\nservers. A network intermediary could use this vulnerability to bypass\nTLS verification and perform a man-in-the-middle attack.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 0.9.15-1+squeeze2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.16.5-1+deb7u1.\n\n\nFor the testing distribution (jessie) and the unstable distribution\n(sid), this problem has been fixed in version 0.16.6-1.\n\n\nWe recommend that you upgrade your telepathy-gabble packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "telepathy-gabble",
+				"purl": "pkg:deb/debian/telepathy-gabble?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.15-1+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.15-1",
+				"0.9.15-1+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2702-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "telepathy-gabble",
+				"purl": "pkg:deb/debian/telepathy-gabble?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.16.5-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.16.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2702-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2702"
+		}
+	]
+}

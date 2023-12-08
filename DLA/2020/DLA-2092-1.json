@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2092-1",
+	"modified": "2023-06-28T06:21:11.863856Z",
+	"published": "2020-02-01T00:00:00Z",
+	"related": [
+		"CVE-2020-0569"
+	],
+	"summary": "qtbase-opensource-src - security update",
+	"details": "\nIn Qt5's plugin loader code as found in qtbase-opensource-src, it was\npossible to (side-)load plugins from the local folder in addition to a\nsystem-widely defined library path.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n5.3.2+dfsg-4+deb8u4.\n\n\nWe recommend that you upgrade your qtbase-opensource-src packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "qtbase-opensource-src",
+				"purl": "pkg:deb/debian/qtbase-opensource-src?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.2+dfsg-4+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.2+dfsg-4",
+				"5.3.2+dfsg-4+deb8u1",
+				"5.3.2+dfsg-4+deb8u1~bpo70+1",
+				"5.3.2+dfsg-4+deb8u2",
+				"5.3.2+dfsg-4+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2092-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2092"
+		}
+	]
+}

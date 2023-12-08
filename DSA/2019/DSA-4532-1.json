@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4532-1",
+	"modified": "2023-10-16T00:18:48.684795Z",
+	"published": "2019-09-25T00:00:00Z",
+	"related": [
+		"CVE-2019-16391",
+		"CVE-2019-16392",
+		"CVE-2019-16393",
+		"CVE-2019-16394"
+	],
+	"summary": "spip - security update",
+	"details": "\nIt was discovered that SPIP, a website engine for publishing, would\nallow unauthenticated users to modify published content and write to\nthe database, perform cross-site request forgeries, and enumerate\nregistered users.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 3.1.4-4~deb9u3.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 3.2.4-1+deb10u1.\n\n\nWe recommend that you upgrade your spip packages.\n\n\nFor the detailed security status of spip please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/spip](https://security-tracker.debian.org/tracker/spip)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "spip",
+				"purl": "pkg:deb/debian/spip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.4-4~deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.4-2",
+				"3.1.4-3",
+				"3.1.4-3~deb9u1",
+				"3.1.4-4~deb9u1",
+				"3.1.4-4~deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4532-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "spip",
+				"purl": "pkg:deb/debian/spip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.4-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4532-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4532"
+		}
+	]
+}

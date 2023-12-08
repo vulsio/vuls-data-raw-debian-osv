@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2370-1",
+	"modified": "2023-06-28T06:26:31.961821Z",
+	"published": "2020-09-11T00:00:00Z",
+	"related": [
+		"CVE-2019-20916"
+	],
+	"summary": "python-pip - security update",
+	"details": "\nIt was discovered that there was a directory traversal attack in pip, the\nPython package installer.\n\n\nWhen an URL was given in an install command, as a\nContent-Disposition header was permitted to have ../\ncomponents in their filename, arbitrary local files (eg.\n/root/.ssh/authorized\\_keys) could be overidden.\n\n\n* [CVE-2019-20916](https://security-tracker.debian.org/tracker/CVE-2019-20916)\nThe pip package before 19.2 for Python allows Directory Traversal when a\n URL is given in an install command, because a Content-Disposition header\n can have ../ in a filename, as demonstrated by overwriting the\n /root/.ssh/authorized\\_keys file. This occurs in \\_download\\_http\\_url in\n \\_internal/download.py.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n9.0.1-2+deb9u2.\n\n\nWe recommend that you upgrade your python-pip packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-pip",
+				"purl": "pkg:deb/debian/python-pip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.0.1-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.0.1-2",
+				"9.0.1-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2370-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2370"
+		}
+	]
+}

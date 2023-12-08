@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1527-2",
+	"modified": "2023-06-28T06:26:23.020024Z",
+	"published": "2018-09-30T00:00:00Z",
+	"summary": "ghostscript - regression update",
+	"details": "\nTavis Ormandy discovered multiple vulnerabilities in Ghostscript, an\ninterpreter for the PostScript language, which could result in denial of\nservice, the creation of files or the execution of arbitrary code if a\nmalformed Postscript file is processed (despite the dSAFER sandbox being\nenabled).\n\n\nIn addition this update changes the device to txtwrite for the\nps2ascii tool to prevent an error due to the fix for [CVE-2018-17183](https://security-tracker.debian.org/tracker/CVE-2018-17183).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n9.06~dfsg-2+deb8u9.\n\n\nWe recommend that you upgrade your ghostscript packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ghostscript",
+				"purl": "pkg:deb/debian/ghostscript?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.06~dfsg-2+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.06~dfsg-2",
+				"9.06~dfsg-2+deb8u1",
+				"9.06~dfsg-2+deb8u2",
+				"9.06~dfsg-2+deb8u3",
+				"9.06~dfsg-2+deb8u4",
+				"9.06~dfsg-2+deb8u5",
+				"9.06~dfsg-2+deb8u6",
+				"9.06~dfsg-2+deb8u7",
+				"9.06~dfsg-2+deb8u8",
+				"9.06~dfsg-2+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1527-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1527"
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2298-1",
+	"modified": "2023-10-16T00:11:06.302579Z",
+	"published": "2011-09-05T00:00:00Z",
+	"related": [
+		"CVE-2011-3192"
+	],
+	"summary": "apache2 - denial of service",
+	"details": "\nTwo issues have been found in the Apache HTTPD web server:\n\n\n* [CVE-2011-3192](https://security-tracker.debian.org/tracker/CVE-2011-3192)\nA vulnerability has been found in the way the multiple overlapping\nranges are handled by the Apache HTTPD server. This vulnerability\nallows an attacker to cause Apache HTTPD to use an excessive amount of\nmemory, causing a denial of service.\n* [CVE-2010-1452](https://security-tracker.debian.org/tracker/CVE-2010-1452)\nA vulnerability has been found in mod\\_dav that allows an attacker to\ncause a daemon crash, causing a denial of service. This issue only\naffects the Debian 5.0 oldstable/lenny distribution.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed\nin version 2.2.9-10+lenny11.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.2.16-6+squeeze3.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2.2.19-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.2.19-3.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nThis update also contains updated apache2-mpm-itk packages which have\nbeen recompiled against the updated apache2 packages. The new version\nnumber for the oldstable distribution is 2.2.6-02-1+lenny6. In the\nstable distribution, apache2-mpm-itk has the same version number as\napache2.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.9-10+lenny10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.9-10+lenny2",
+				"2.2.9-10+lenny3",
+				"2.2.9-10+lenny4",
+				"2.2.9-10+lenny5",
+				"2.2.9-10+lenny6",
+				"2.2.9-10+lenny7",
+				"2.2.9-10+lenny8",
+				"2.2.9-10+lenny9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2298-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.16-6+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.16-6",
+				"2.2.16-6+squeeze1",
+				"2.2.16-6+squeeze1~bpo50+1",
+				"2.2.16-6+squeeze2~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2298-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2298"
+		}
+	]
+}

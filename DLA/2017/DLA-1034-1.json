@@ -1,0 +1,91 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1034-1",
+	"modified": "2023-06-28T06:20:14.484808Z",
+	"published": "2017-07-21T00:00:00Z",
+	"related": [
+		"CVE-2016-10397",
+		"CVE-2017-11143",
+		"CVE-2017-11144",
+		"CVE-2017-11145",
+		"CVE-2017-11147"
+	],
+	"summary": "php5 - security update",
+	"details": "\nSeveral issues have been discovered in PHP (recursive acronym for PHP:\nHypertext Preprocessor), a widely-used open source general-purpose\nscripting language that is especially suited for web development and can\nbe embedded into HTML.\n\n\n* [CVE-2016-10397](https://security-tracker.debian.org/tracker/CVE-2016-10397)\nIncorrect handling of various URI components in the URL parser could\n be used by attackers to bypass hostname-specific URL checks.\n* [CVE-2017-11143](https://security-tracker.debian.org/tracker/CVE-2017-11143)\nAn invalid free in the WDDX deserialization of boolean parameters\n could be used by attackers able to inject XML for deserialization to\n crash the PHP interpreter.\n* [CVE-2017-11144](https://security-tracker.debian.org/tracker/CVE-2017-11144)\nThe openssl extension PEM sealing code did not check the return value\n of the OpenSSL sealing function, which could lead to a crash of the\n PHP interpreter.\n* [CVE-2017-11145](https://security-tracker.debian.org/tracker/CVE-2017-11145)\nLack of a bounds check in the date extension's timelib\\_meridian\n parsing code could be used by attackers able to supply date strings to\n leak information from the interpreter.\n* [CVE-2017-11147](https://security-tracker.debian.org/tracker/CVE-2017-11147)\nThe PHAR archive handler could be used by attackers supplying\n malicious archive files to crash the PHP interpreter or potentially\n disclose information due to a buffer over-read in the\n phar\\_parse\\_pharfile function in ext/phar/phar.c.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.4.45-0+deb7u9.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.45-0+deb7u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.36-0+deb7u3",
+				"5.4.38-0+deb7u1",
+				"5.4.39-0+deb7u1",
+				"5.4.39-0+deb7u2",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.41-0+deb7u1",
+				"5.4.44-0+deb7u1",
+				"5.4.45-0+deb7u1",
+				"5.4.45-0+deb7u2",
+				"5.4.45-0+deb7u3",
+				"5.4.45-0+deb7u4",
+				"5.4.45-0+deb7u5",
+				"5.4.45-0+deb7u6",
+				"5.4.45-0+deb7u7",
+				"5.4.45-0+deb7u8",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1034-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1034"
+		}
+	]
+}

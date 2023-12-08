@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1883-1",
+	"modified": "2023-06-28T06:21:03.083482Z",
+	"published": "2019-08-13T00:00:00Z",
+	"related": [
+		"CVE-2016-5388",
+		"CVE-2018-8014",
+		"CVE-2019-0221"
+	],
+	"summary": "tomcat8 - security update",
+	"details": "\nSeveral minor issues have been fixed in tomcat8, a Java Servlet and\nJSP engine.\n\n\n* [CVE-2016-5388](https://security-tracker.debian.org/tracker/CVE-2016-5388)\nApache Tomcat, when the CGI Servlet is enabled, follows RFC 3875\n section 4.1.18 and therefore does not protect applications from\n the presence of untrusted client data in the HTTP\\_PROXY\n environment variable, which might allow remote attackers to\n redirect an application's outbound HTTP traffic to an arbitrary\n proxy server via a crafted Proxy header in an HTTP request, aka an\n httpoxy issue. The cgi servlet now has a envHttpHeaders\n parameter to filter environment variables.\n* [CVE-2018-8014](https://security-tracker.debian.org/tracker/CVE-2018-8014)\nThe defaults settings for the CORS filter provided in Apache\n Tomcat are insecure and enable supportsCredentials for all\n origins. It is expected that users of the CORS filter will have\n configured it appropriately for their environment rather than\n using it in the default configuration. Therefore, it is expected\n that most users will not be impacted by this issue.\n* [CVE-2019-0221](https://security-tracker.debian.org/tracker/CVE-2019-0221)\nThe SSI printenv command in Apache Tomcat echoes user provided\n data without escaping and is, therefore, vulnerable to XSS. SSI is\n disabled by default. The printenv command is intended for\n debugging and is unlikely to be present in a production website.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n8.0.14-1+deb8u15.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.14-1+deb8u15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.14-1",
+				"8.0.14-1+deb8u1",
+				"8.0.14-1+deb8u10",
+				"8.0.14-1+deb8u11",
+				"8.0.14-1+deb8u12",
+				"8.0.14-1+deb8u13",
+				"8.0.14-1+deb8u14",
+				"8.0.14-1+deb8u2",
+				"8.0.14-1+deb8u3",
+				"8.0.14-1+deb8u4",
+				"8.0.14-1+deb8u5",
+				"8.0.14-1+deb8u6",
+				"8.0.14-1+deb8u7",
+				"8.0.14-1+deb8u8",
+				"8.0.14-1+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1883-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1883"
+		}
+	]
+}

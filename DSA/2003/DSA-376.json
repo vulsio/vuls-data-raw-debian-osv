@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-376",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-09-04T00:00:00Z",
+	"related": [
+		"CVE-2003-0743"
+	],
+	"summary": "exim - buffer overflow",
+	"details": "\nA buffer overflow exists in exim, which is the standard mail transport\nagent in Debian. By supplying a specially crafted HELO or EHLO\ncommand, an attacker could cause a constant string to be written past\nthe end of a buffer allocated on the heap. This vulnerability is not\nbelieved at this time to be exploitable to execute arbitrary code.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nexim version 3.35-1woody2 and exim-tls version 3.35-3woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nexim version 3.36-8. The unstable distribution does not contain an\nexim-tls package.\n\n\nWe recommend that you update your exim or exim-tls package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "exim",
+				"purl": "pkg:deb/debian/exim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.35-1woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-376.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "exim-tls",
+				"purl": "pkg:deb/debian/exim-tls?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.35-3woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-376.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-376"
+		}
+	]
+}

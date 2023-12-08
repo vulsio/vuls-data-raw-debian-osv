@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2402-1",
+	"modified": "2023-06-28T06:26:32.974638Z",
+	"published": "2020-10-09T00:00:00Z",
+	"related": [
+		"CVE-2019-11840",
+		"CVE-2019-11841",
+		"CVE-2020-9283"
+	],
+	"summary": "golang-go.crypto - security update",
+	"details": "\n* [CVE-2019-11840](https://security-tracker.debian.org/tracker/CVE-2019-11840)\nAn issue was discovered in supplementary Go cryptography libraries, aka\n golang-googlecode-go-crypto. If more than 256 GiB of keystream is\n generated, or if the counter otherwise grows greater than 32 bits, the amd64\n implementation will first generate incorrect output, and then cycle back to\n previously generated keystream. Repeated keystream bytes can lead to loss of\n confidentiality in encryption applications, or to predictability in CSPRNG\n applications.\n* [CVE-2019-11841](https://security-tracker.debian.org/tracker/CVE-2019-11841)\nA message-forgery issue was discovered in\n crypto/openpgp/clearsign/clearsign.go in supplementary Go cryptography\n libraries. The Hash Armor Header specifies the message digest\n algorithm(s) used for the signature. Since the library skips Armor Header\n parsing in general, an attacker can not only embed arbitrary Armor Headers,\n but also prepend arbitrary text to cleartext messages without invalidating\n the signatures.\n* [CVE-2020-9283](https://security-tracker.debian.org/tracker/CVE-2020-9283)\ngolang.org/x/crypto allows a panic during signature verification in the\n golang.org/x/crypto/ssh package. A client can attack an SSH server that accepts\n public keys. Also, a server can attack any SSH client.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:0.0~git20170407.0.55a552f+REALLY.0.0~git20161012.0.5f31782-1+deb8u1.\n\n\nWe recommend that you upgrade your golang-go.crypto packages.\n\n\nFor the detailed security status of golang-go.crypto please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/golang-go.crypto>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "golang-go.crypto",
+				"purl": "pkg:deb/debian/golang-go.crypto?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.0~git20170407.0.55a552f+REALLY.0.0~git20161012.0.5f31782-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.0~git20170407.0.55a552f+REALLY.0.0~git20161012.0.5f31782-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2402-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2402"
+		}
+	]
+}

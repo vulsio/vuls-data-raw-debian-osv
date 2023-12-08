@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2332-1",
+	"modified": "2023-06-28T06:28:54.214708Z",
+	"published": "2020-08-17T00:00:00Z",
+	"related": [
+		"CVE-2020-12862",
+		"CVE-2020-12863",
+		"CVE-2020-12865",
+		"CVE-2020-12867"
+	],
+	"summary": "sane-backends - security update",
+	"details": "\nKevin Backhouse discovered multiple vulnerabilies in the epson2 and\nepsonds backends of SANE, a library for scanners. A malicious remote\ndevice could exploit these to trigger information disclosure, denial\nof service and possibly remote code execution.\n\n\n* [CVE-2020-12862](https://security-tracker.debian.org/tracker/CVE-2020-12862)\nAn out-of-bounds read in SANE Backends before 1.0.30 may allow a\n malicious device connected to the same local network as the victim\n to read important information, such as the ASLR offsets of the\n program, aka GHSL-2020-082.\n* [CVE-2020-12863](https://security-tracker.debian.org/tracker/CVE-2020-12863)\nAn out-of-bounds read in SANE Backends before 1.0.30 may allow a\n malicious device connected to the same local network as the victim\n to read important information, such as the ASLR offsets of the\n program, aka GHSL-2020-083.\n* [CVE-2020-12865](https://security-tracker.debian.org/tracker/CVE-2020-12865)\nA heap buffer overflow in SANE Backends before 1.0.30 may allow a\n malicious device connected to the same local network as the victim\n to execute arbitrary code, aka GHSL-2020-084.\n* [CVE-2020-12867](https://security-tracker.debian.org/tracker/CVE-2020-12867)\nA NULL pointer dereference in sanei\\_epson\\_net\\_read in SANE\n Backends before 1.0.30 allows a malicious device connected to the\n same local network as the victim to cause a denial of service, aka\n GHSL-2020-075.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.0.25-4.1+deb9u1.\n\n\nWe recommend that you upgrade your sane-backends packages.\n\n\nFor the detailed security status of sane-backends please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/sane-backends>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sane-backends",
+				"purl": "pkg:deb/debian/sane-backends?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.25-4.1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.25-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2332-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2332"
+		}
+	]
+}

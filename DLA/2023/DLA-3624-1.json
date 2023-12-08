@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3624-1",
+	"modified": "2023-10-20T16:17:51.238843Z",
+	"published": "2023-10-20T00:00:00Z",
+	"related": [
+		"CVE-2023-44981"
+	],
+	"summary": "zookeeper - security update",
+	"details": "\nA potential authorisation bypass vulnerability was discovered in Apache\nZookeeper, a co-ordination service for reliable distributed applications.\n\n\nSpecifically, if SASL Quorum Peer authentication was enabled via\n`quorum.auth.enableSasl`, authorisation was performed by verifying\nthat the instance part in the SASL authentication ID was listed in the\n`zoo.cfg` server list. However, this value is optional, and, if\nmissing (such as in `eve@EXAMPLE.COM`), the authorisation check will\nbe skipped. As a result, an arbitrary endpoint could join the cluster and begin\npropagating counterfeit changes to the leader, essentially giving it complete\nread-write access to the data tree.\n\n\n* [CVE-2023-44981](https://security-tracker.debian.org/tracker/CVE-2023-44981)\nAuthorization Bypass Through User-Controlled Key vulnerability in Apache ZooKeeper. If SASL Quorum Peer authentication is enabled in ZooKeeper (quorum.auth.enableSasl=true), the authorization is done by verifying that the instance part in SASL authentication ID is listed in zoo.cfg server list. The instance part in SASL auth ID is optional and if it's missing, like 'eve@EXAMPLE.COM', the authorization check will be skipped. As a result an arbitrary endpoint could join the cluster and begin propagating counterfeit changes to the leader, essentially giving it complete read-write access to the data tree. Quorum Peer authentication is not enabled by default. Users are recommended to upgrade to version 3.9.1, 3.8.3, 3.7.2, which fixes the issue. Alternately ensure the ensemble election/quorum communication is protected by a firewall as this will mitigate the issue. See the documentation for more details on correct cluster administration.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n3.4.13-2+deb10u1.\n\n\nWe recommend that you upgrade your zookeeper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "zookeeper",
+				"purl": "pkg:deb/debian/zookeeper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.13-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.4.13-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3624-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3624"
+		}
+	]
+}

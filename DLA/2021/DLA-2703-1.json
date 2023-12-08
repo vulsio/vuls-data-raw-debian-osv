@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2703-1",
+	"modified": "2023-06-28T06:26:40.924294Z",
+	"published": "2021-07-04T00:00:00Z",
+	"summary": "ieee-data - crash fix",
+	"details": "\nThe ieee-data package, which provides the OUI and IAB listings of\nidentifiers assigned by IEEE Standards Association, ships a script\n(update-ieee-data) which queries ieee.org to download the most recent\ndataset and save it to /var/lib/ieee-data/.\n\n\nThis script broke for stretch at the end of 2018 when the URL changed.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n20160613.1+deb9u1.\n\n\nWe recommend that you upgrade your ieee-data packages.\n\n\nFor the detailed security status of ieee-data please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ieee-data>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ieee-data",
+				"purl": "pkg:deb/debian/ieee-data?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20160613.1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20160613.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2703-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2703"
+		}
+	]
+}

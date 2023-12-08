@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2322-1",
+	"modified": "2023-10-16T00:11:08.319774Z",
+	"published": "2011-10-10T00:00:00Z",
+	"related": [
+		"CVE-2010-4567",
+		"CVE-2010-4568",
+		"CVE-2010-4572",
+		"CVE-2011-0046",
+		"CVE-2011-0048",
+		"CVE-2011-2379",
+		"CVE-2011-2380",
+		"CVE-2011-2381",
+		"CVE-2011-2978",
+		"CVE-2011-2979"
+	],
+	"summary": "bugzilla - several",
+	"details": "\nSeveral vulnerabilities were discovered in Bugzilla, a web-based bug\ntracking system.\n\n\n* [CVE-2010-4572](https://security-tracker.debian.org/tracker/CVE-2010-4572)\nBy inserting particular strings into certain URLs, it was\n possible to inject both headers and content to any\n browser.\n* [CVE-2010-4567](https://security-tracker.debian.org/tracker/CVE-2010-4567), [CVE-2011-0048](https://security-tracker.debian.org/tracker/CVE-2011-0048)\nBugzilla has a URL field that can contain several types\n of URL, including javascript: and data: URLs. However,\n it does not make javascript: and data: URLs into\n clickable links, to protect against cross-site scripting\n attacks or other attacks. It was possible to bypass this\n protection by adding spaces into the URL in places that\n Bugzilla did not expect them. Also, javascript: and\n data: links were **always** shown as clickable to\n logged-out users.\n* [CVE-2010-4568](https://security-tracker.debian.org/tracker/CVE-2010-4568)\nIt was possible for a user to gain unauthorized access to\n any Bugzilla account in a very short amount of time (short\n enough that the attack is highly effective).\n* [CVE-2011-0046](https://security-tracker.debian.org/tracker/CVE-2011-0046)\nVarious pages were vulnerable to Cross-Site Request\n Forgery attacks. Most of these issues are not as serious\n as previous CSRF vulnerabilities.\n* [CVE-2011-2978](https://security-tracker.debian.org/tracker/CVE-2011-2978)\nWhen a user changes his email address, Bugzilla trusts\n a user-modifiable field for obtaining the current e-mail\n address to send a confirmation message to. If an attacker\n has access to the session of another user (for example,\n if that user left their browser window open in a public\n place), the attacker could alter this field to cause\n the email-change notification to go to their own address.\n This means that the user would not be notified that his\n account had its email address changed by the attacker.\n* [CVE-2011-2381](https://security-tracker.debian.org/tracker/CVE-2011-2381)\nFor flagmails only, attachment descriptions with a newline\n in them could lead to the injection of crafted headers in\n email notifications when an attachment flag is edited.\n* [CVE-2011-2379](https://security-tracker.debian.org/tracker/CVE-2011-2379)\nBugzilla uses an alternate host for attachments when\n viewing them in raw format to prevent cross-site scripting\n attacks. This alternate host is now also used when viewing\n patches in Raw Unified mode because Internet Explorer 8\n and older, and Safari before 5.0.6 do content sniffing,\n which could lead to the execution of malicious code.\n* [CVE-2011-2380](https://security-tracker.debian.org/tracker/CVE-2011-2380), [CVE-2011-2979](https://security-tracker.debian.org/tracker/CVE-2011-2979)\nNormally, a group name is confidential and is only visible\n to members of the group, and to non-members if the group\n is used in bugs. By crafting the URL when creating or\n editing a bug, it was possible to guess if a group existed\n or not, even for groups which weren't used in bugs and so\n which were supposed to remain confidential.\n\n\nFor the oldstable distribution (lenny), it has not been practical to\nbackport patches to fix these bugs. Users of bugzilla on lenny are\nstrongly advised to upgrade to the version in the squeeze distribution.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 3.6.2.0-4.4.\n\n\nFor the testing distribution (wheezy) and the unstable distribution (sid),\nthe bugzilla packages have been removed.\n\n\nWe recommend that you upgrade your bugzilla packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "bugzilla",
+				"purl": "pkg:deb/debian/bugzilla?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.2.0-4.4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.2.0-4.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2322-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2322"
+		}
+	]
+}

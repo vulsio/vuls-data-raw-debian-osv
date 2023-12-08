@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2635-1",
+	"modified": "2023-06-28T06:26:38.104243Z",
+	"published": "2021-04-23T00:00:00Z",
+	"related": [
+		"CVE-2018-11039",
+		"CVE-2018-11040",
+		"CVE-2018-1270",
+		"CVE-2018-15756"
+	],
+	"summary": "libspring-java - security update",
+	"details": "\nMultiple vulnerabilities were discovered in libspring-java, a modular\nJava/J2EE application framework. An attacker may execute code, perform\nXST attack, issue unauthorized cross-domain requests or cause a DoS\n(Denial-of-Service) in specific configurations.\n\n\n* [CVE-2018-1270](https://security-tracker.debian.org/tracker/CVE-2018-1270)\nSpring Framework allows applications to expose STOMP over\n WebSocket endpoints with a simple, in-memory STOMP broker through\n the spring-messaging module. A malicious user (or attacker) can\n craft a message to the broker that can lead to a remote code\n execution attack.\n* [CVE-2018-11039](https://security-tracker.debian.org/tracker/CVE-2018-11039)\nSpring Framework allows web applications to change the HTTP\n request method to any HTTP method (including TRACE) using the\n HiddenHttpMethodFilter in Spring MVC. If an application has a\n pre-existing XSS vulnerability, a malicious user (or attacker) can\n use this filter to escalate to an XST (Cross Site Tracing) attack.\n* [CVE-2018-11040](https://security-tracker.debian.org/tracker/CVE-2018-11040)\nSpring Framework allows web applications to enable cross-domain\n requests via JSONP (JSON with Padding) through\n AbstractJsonpResponseBodyAdvice for REST controllers and\n MappingJackson2JsonView for browser requests. Both are not enabled\n by default in Spring Framework nor Spring Boot, however, when\n MappingJackson2JsonView is configured in an application, JSONP\n support is automatically ready to use through the jsonp and\n callback JSONP parameters, enabling cross-domain requests.\n* [CVE-2018-15756](https://security-tracker.debian.org/tracker/CVE-2018-15756)\nSpring Framework provides support for range requests when serving\n static resources through the ResourceHttpRequestHandler, or\n starting in 5.0 when an annotated controller returns an\n org.springframework.core.io.Resource. A malicious user (or\n attacker) can add a range header with a high number of ranges, or\n with wide ranges that overlap, or both, for a denial of service\n attack.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.3.5-1+deb9u1.\n\n\nWe recommend that you upgrade your libspring-java packages.\n\n\nFor the detailed security status of libspring-java please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libspring-java>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libspring-java",
+				"purl": "pkg:deb/debian/libspring-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.3.5-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.3.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2635-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2635"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2759-1",
+	"modified": "2023-06-28T06:25:19.583253Z",
+	"published": "2021-09-18T00:00:00Z",
+	"summary": "gnutls28 - security update",
+	"details": "\nGnuTLS, a portable cryptography library, fails to validate alternate\ntrust chains in some conditions. In particular this breaks connecting\nto servers that use Let's Encrypt certificates, starting 2021-10-01.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n3.5.8-5+deb9u6.\n\n\nWe recommend that you upgrade your gnutls28 packages.\n\n\nFor the detailed security status of gnutls28 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/gnutls28>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gnutls28",
+				"purl": "pkg:deb/debian/gnutls28?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.8-5+deb9u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.8-5",
+				"3.5.8-5+deb9u1",
+				"3.5.8-5+deb9u2",
+				"3.5.8-5+deb9u3",
+				"3.5.8-5+deb9u4",
+				"3.5.8-5+deb9u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2759-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2759"
+		}
+	]
+}

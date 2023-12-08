@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1695-1",
+	"modified": "2023-06-28T06:24:52.276035Z",
+	"published": "2019-02-28T00:00:00Z",
+	"related": [
+		"CVE-2017-15370",
+		"CVE-2017-15372",
+		"CVE-2017-15642",
+		"CVE-2017-18189",
+		"CVE-2019-1010004"
+	],
+	"summary": "sox - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in SoX (Sound eXchange),\na sound processing program:\n\n\n* [CVE-2017-15370](https://security-tracker.debian.org/tracker/CVE-2017-15370)\nThe ImaAdpcmReadBlock function (src/wav.c) is affected by a heap buffer\n overflow. This vulnerability might be leveraged by remote attackers\n using a crafted WAV file to cause denial of service (application crash).\n* [CVE-2017-15372](https://security-tracker.debian.org/tracker/CVE-2017-15372)\nThe lsx\\_ms\\_adpcm\\_block\\_expand\\_i function (adpcm.c) is affected by a\n stack based buffer overflow. This vulnerability might be leveraged by\n remote attackers using a crafted audio file to cause denial of service\n (application crash).\n* [CVE-2017-15642](https://security-tracker.debian.org/tracker/CVE-2017-15642)\nThe lsx\\_aiffstartread function (aiff.c) is affected by a use-after-free\n vulnerability. This flaw might be leveraged by remote attackers using a\n crafted AIFF file to cause denial of service (application crash).\n* [CVE-2017-18189](https://security-tracker.debian.org/tracker/CVE-2017-18189)\nThe startread function (xa.c) is affected by a null pointer dereference\n vulnerability. This flaw might be leveraged by remote attackers using a\n crafted Maxis XA audio file to cause denial of service (application\n crash).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n14.4.1-5+deb8u2.\n\n\nWe recommend that you upgrade your sox packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sox",
+				"purl": "pkg:deb/debian/sox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "14.4.1-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"14.4.1-5",
+				"14.4.1-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1695-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1695"
+		}
+	]
+}

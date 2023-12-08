@@ -1,0 +1,144 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2153-1",
+	"modified": "2023-10-16T00:10:59.845976Z",
+	"published": "2011-01-30T00:00:00Z",
+	"related": [
+		"CVE-2010-0435",
+		"CVE-2010-3699",
+		"CVE-2010-4158",
+		"CVE-2010-4162",
+		"CVE-2010-4163",
+		"CVE-2010-4242",
+		"CVE-2010-4243",
+		"CVE-2010-4248",
+		"CVE-2010-4249",
+		"CVE-2010-4258",
+		"CVE-2010-4342",
+		"CVE-2010-4346",
+		"CVE-2010-4526",
+		"CVE-2010-4527",
+		"CVE-2010-4529",
+		"CVE-2010-4565",
+		"CVE-2010-4649",
+		"CVE-2010-4656",
+		"CVE-2010-4668",
+		"CVE-2011-0521"
+	],
+	"summary": "linux-2.6 - several issues",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a privilege escalation, denial of service or information leak. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2010-0435](https://security-tracker.debian.org/tracker/CVE-2010-0435)\nGleb Napatov reported an issue in the KVM subsystem that allows virtual\n machines to cause a denial of service of the host machine by executing mov\n to/from DR instructions.\n* [CVE-2010-3699](https://security-tracker.debian.org/tracker/CVE-2010-3699)\nKeir Fraser provided a fix for an issue in the Xen subsystem. A guest can\n cause a denial of service on the host by retaining a leaked reference to a\n device. This can result in a zombie domain, xenwatch process hangs, and xm\n command failures.\n* [CVE-2010-4158](https://security-tracker.debian.org/tracker/CVE-2010-4158)\nDan Rosenberg discovered an issue in the socket filters subsystem, allowing\n local unprivileged users to obtain the contents of sensitive kernel memory.\n* [CVE-2010-4162](https://security-tracker.debian.org/tracker/CVE-2010-4162)\nDan Rosenberg discovered an overflow issue in the block I/O subsystem that\n allows local users to map large numbers of pages, resulting in a denial of\n service due to invocation of the out of memory killer.\n* [CVE-2010-4163](https://security-tracker.debian.org/tracker/CVE-2010-4163)\nDan Rosenberg discovered an issue in the block I/O subsystem. Due to\n improper validation of iov segments, local users can trigger a kernel panic\n resulting in a denial of service.\n* [CVE-2010-4242](https://security-tracker.debian.org/tracker/CVE-2010-4242)\nAlan Cox reported an issue in the Bluetooth subsystem. Local users with\n sufficient permission to access HCI UART devices can cause a denial of\n service (NULL pointer dereference) due to a missing check for an existing\n tty write operation.\n* [CVE-2010-4243](https://security-tracker.debian.org/tracker/CVE-2010-4243)\nBrad Spengler reported a denial-of-service issue in the kernel memory\n accounting system. By passing large argv/envp values to exec, local users\n can cause the out of memory killer to kill processes owned by other users.\n* [CVE-2010-4248](https://security-tracker.debian.org/tracker/CVE-2010-4248)\nOleg Nesterov reported an issue in the POSIX CPU timers subsystem. Local\n users can cause a denial of service (Oops) due to incorrect assumptions\n about thread group leader behavior.\n* [CVE-2010-4249](https://security-tracker.debian.org/tracker/CVE-2010-4249)\nVegard Nossum reported an issue with the UNIX socket garbage collector.\n Local users can consume all of LOWMEM and decrease system performance by\n overloading the system with inflight sockets.\n* [CVE-2010-4258](https://security-tracker.debian.org/tracker/CVE-2010-4258)\nNelson Elhage reported an issue in Linux oops handling. Local users may be\n able to obtain elevated privileges if they are able to trigger an oops with\n a process' fs set to KERNEL\\_DS.\n* [CVE-2010-4342](https://security-tracker.debian.org/tracker/CVE-2010-4342)\nNelson Elhage reported an issue in the Econet protocol. Remote attackers can\n cause a denial of service by sending an Acorn Universal Networking packet\n over UDP.\n* [CVE-2010-4346](https://security-tracker.debian.org/tracker/CVE-2010-4346)\nTavis Ormandy discovered an issue in the install\\_special\\_mapping routine\n which allows local users to bypass the mmap\\_min\\_addr security restriction.\n Combined with an otherwise low severity local denial of service\n vulnerability (NULL pointer dereference), a local user could obtain elevated\n privileges.\n* [CVE-2010-4526](https://security-tracker.debian.org/tracker/CVE-2010-4526)\nEugene Teo reported a race condition in the Linux SCTP implementation.\n Remote users can cause a denial of service (kernel memory corruption) by\n transmitting an ICMP unreachable message to a locked socket.\n* [CVE-2010-4527](https://security-tracker.debian.org/tracker/CVE-2010-4527)\nDan Rosenberg reported two issues in the OSS soundcard driver. Local users\n with access to the device (members of group 'audio' on default Debian\n installations) may access to sensitive kernel memory or cause a\n buffer overflow, potentially leading to an escalation of privileges.\n* [CVE-2010-4529](https://security-tracker.debian.org/tracker/CVE-2010-4529)\nDan Rosenberg reported an issue in the Linux kernel IrDA socket\n implementation on non-x86 architectures. Local users may be able to gain\n access to sensitive kernel memory via a specially crafted IRLMP\\_ENUMDEVICES\n getsockopt call.\n* [CVE-2010-4565](https://security-tracker.debian.org/tracker/CVE-2010-4565)\nDan Rosenberg reported an issue in the Linux CAN protocol implementation.\n Local users can obtain the address of a kernel heap object which might help\n facilitate system exploitation.\n* [CVE-2010-4649](https://security-tracker.debian.org/tracker/CVE-2010-4649)\nDan Carpenter reported an issue in the uverb handling of the InfiniBand\n subsystem. A potential buffer overflow may allow local users to cause a\n denial of service (memory corruption) by passing in a large cmd.ne value.\n* [CVE-2010-4656](https://security-tracker.debian.org/tracker/CVE-2010-4656)\nKees Cook reported an issue in the driver for I/O-Warrior USB devices.\n Local users with access to these devices may be able to overrun kernel\n buffers, resulting in a denial of service or privilege escalation.\n* [CVE-2010-4668](https://security-tracker.debian.org/tracker/CVE-2010-4668)\nDan Rosenberg reported an issue in the block subsystem. A local user can\n cause a denial of service (kernel panic) by submitting certain 0-length I/O\n requests.\n* [CVE-2011-0521](https://security-tracker.debian.org/tracker/CVE-2011-0521)\nDan Carpenter reported an issue in the DVB driver for AV7110 cards. Local\n users can pass a negative info->num value, corrupting kernel memory and\n causing a denial of service.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.26-26lenny2.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 5.0 (lenny) |\n| --- | --- |\n| user-mode-linux | 2.6.26-1um-2+26lenny2 |\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\nNote that these updates will not become active until after your system is\nrebooted.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-26lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-13",
+				"2.6.26-13lenny2",
+				"2.6.26-13lenny2~bpo40+1",
+				"2.6.26-14",
+				"2.6.26-15",
+				"2.6.26-15lenny1",
+				"2.6.26-15lenny2",
+				"2.6.26-15lenny3",
+				"2.6.26-15~bpo40+1",
+				"2.6.26-15~bpo40+2",
+				"2.6.26-16",
+				"2.6.26-17",
+				"2.6.26-17lenny1",
+				"2.6.26-17lenny2",
+				"2.6.26-17lenny2~bpo40+1",
+				"2.6.26-17~bpo40+1",
+				"2.6.26-18",
+				"2.6.26-19",
+				"2.6.26-19lenny1",
+				"2.6.26-19lenny2",
+				"2.6.26-19~bpo40+1",
+				"2.6.26-20",
+				"2.6.26-20~bpo40+1",
+				"2.6.26-21",
+				"2.6.26-21lenny1",
+				"2.6.26-21lenny2",
+				"2.6.26-21lenny3",
+				"2.6.26-21lenny4",
+				"2.6.26-21~bpo40+1",
+				"2.6.26-22",
+				"2.6.26-22lenny1",
+				"2.6.26-23",
+				"2.6.26-24",
+				"2.6.26-24lenny1",
+				"2.6.26-25",
+				"2.6.26-25lenny1",
+				"2.6.26-26",
+				"2.6.26-26lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2153-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "user-mode-linux",
+				"purl": "pkg:deb/debian/user-mode-linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-1um-2+26lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-1um-2",
+				"2.6.26-1um-2+15",
+				"2.6.26-1um-2+15lenny2",
+				"2.6.26-1um-2+15lenny3",
+				"2.6.26-1um-2+16",
+				"2.6.26-1um-2+17lenny1",
+				"2.6.26-1um-2+17lenny2",
+				"2.6.26-1um-2+19",
+				"2.6.26-1um-2+19lenny1",
+				"2.6.26-1um-2+21",
+				"2.6.26-1um-2+21lenny3",
+				"2.6.26-1um-2+21lenny4",
+				"2.6.26-1um-2+22lenny1",
+				"2.6.26-1um-2+24",
+				"2.6.26-1um-2+24lenny1",
+				"2.6.26-1um-2+25lenny1",
+				"2.6.26-1um-2+26",
+				"2.6.26-1um-2+26lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2153-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2153"
+		}
+	]
+}

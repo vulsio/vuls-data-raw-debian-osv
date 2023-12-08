@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-941-1",
+	"modified": "2023-10-16T00:30:48.382228Z",
+	"published": "2006-01-16T00:00:00Z",
+	"related": [
+		"CVE-2005-3340"
+	],
+	"summary": "tuxpaint - insecure temporary file",
+	"details": "\nJavier FernĂĄndez-Sanguino PeĂąa from the Debian Security Audit project\ndiscovered that a script in tuxpaint, a paint program for young\nchildren, creates a temporary file in an insecure fashion.\n\n\nThe old stable distribution (woody) does not contain tuxpaint packages.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 0.9.14-2sarge0.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.9.15b-1.\n\n\nWe recommend that you upgrade your tuxpaint package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "tuxpaint",
+				"purl": "pkg:deb/debian/tuxpaint?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.9.14-2sarge0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.9.14-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-941-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-941"
+		}
+	]
+}

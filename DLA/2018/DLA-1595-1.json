@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1595-1",
+	"modified": "2023-06-28T06:20:51.432917Z",
+	"published": "2018-11-25T00:00:00Z",
+	"related": [
+		"CVE-2018-19490",
+		"CVE-2018-19491",
+		"CVE-2018-19492"
+	],
+	"summary": "gnuplot5 - security update",
+	"details": "\ngnuplot5, a command-line driven interactive plotting program, has been\nexamined with fuzzing by Tim Blazytko, Cornelius Aschermann, Sergej\nSchumilo and Nils Bars.\nThey found various overflow cases which might lead to the execution of\narbitrary code.\n\n\nDue to special toolchain hardening in Debian, [CVE-2018-19492](https://security-tracker.debian.org/tracker/CVE-2018-19492) is not\nsecurity relevant, but it is a bug and the patch was applied for the sake\nof completeness. Probably some downstream project does not have the same\ntoolchain settings.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.0.0~rc+dfsg2-1+deb8u1.\n\n\nWe recommend that you upgrade your gnuplot5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "gnuplot5",
+				"purl": "pkg:deb/debian/gnuplot5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.0~rc+dfsg2-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.0~rc+dfsg2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1595-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1595"
+		}
+	]
+}

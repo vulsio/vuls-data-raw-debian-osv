@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3762-1",
+	"modified": "2023-10-16T00:12:18.398237Z",
+	"published": "2017-01-13T00:00:00Z",
+	"related": [
+		"CVE-2016-10092",
+		"CVE-2016-10093",
+		"CVE-2016-10094",
+		"CVE-2016-10271",
+		"CVE-2016-10272",
+		"CVE-2016-3622",
+		"CVE-2016-3623",
+		"CVE-2016-3624",
+		"CVE-2016-3945",
+		"CVE-2016-3990",
+		"CVE-2016-3991",
+		"CVE-2016-5314",
+		"CVE-2016-5315",
+		"CVE-2016-5316",
+		"CVE-2016-5317",
+		"CVE-2016-5321",
+		"CVE-2016-5322",
+		"CVE-2016-5323",
+		"CVE-2016-5652",
+		"CVE-2016-6223",
+		"CVE-2016-9273",
+		"CVE-2016-9297",
+		"CVE-2016-9453",
+		"CVE-2016-9532",
+		"CVE-2016-9533",
+		"CVE-2016-9534",
+		"CVE-2016-9536",
+		"CVE-2016-9537",
+		"CVE-2016-9538",
+		"CVE-2016-9540"
+	],
+	"summary": "tiff - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the libtiff library\nand the included tools tiff2rgba, rgb2ycbcr, tiffcp, tiffcrop, tiff2pdf\nand tiffsplit, which may result in denial of service, memory disclosure\nor the execution of arbitrary code.\n\n\nThere were additional vulnerabilities in the tools bmp2tiff, gif2tiff,\nthumbnail and ras2tiff, but since these were addressed by the libtiff\ndevelopers by removing the tools altogether, no patches are available\nand those tools were also removed from the tiff package in Debian\nstable. The change had already been made in Debian stretch before and\nno applications included in Debian are known to rely on these scripts.\nIf you use those tools in custom setups, consider using a different\nconversion/thumbnailing tool.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 4.0.3-12.3+deb8u2.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 4.0.7-4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.0.7-4.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.3-12.3+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.3-12.3",
+				"4.0.3-12.3+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3762-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3762"
+		}
+	]
+}

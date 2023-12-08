@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4893-1",
+	"modified": "2023-10-16T00:22:31.513382Z",
+	"published": "2021-04-19T00:00:00Z",
+	"related": [
+		"CVE-2021-3472"
+	],
+	"summary": "xorg-server - security update",
+	"details": "\nJan-Niklas Sohn discovered that missing input sanitising in the XInput\nextension of the X.org X server may result in privilege escalation if\nthe X server is running privileged.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2:1.20.4-1+deb10u3.\n\n\nWe recommend that you upgrade your xorg-server packages.\n\n\nFor the detailed security status of xorg-server please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/xorg-server>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "xorg-server",
+				"purl": "pkg:deb/debian/xorg-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.20.4-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.20.4-1",
+				"2:1.20.4-1+deb10u1",
+				"2:1.20.4-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4893-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4893"
+		}
+	]
+}

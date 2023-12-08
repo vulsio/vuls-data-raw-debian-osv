@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3210-1",
+	"modified": "2023-06-28T06:25:27.087155Z",
+	"published": "2022-11-28T00:00:00Z",
+	"related": [
+		"CVE-2021-40401",
+		"CVE-2021-40403"
+	],
+	"summary": "gerbv - security update",
+	"details": "\nTwo vulnerabilities were discovered in gerbv, a Gerber file viewer. Most\nPrinted Circuit Board (PCB) design programs can export data to a Gerber\nfile.\n\n\n* [CVE-2021-40401](https://security-tracker.debian.org/tracker/CVE-2021-40401):\n A use-after-free vulnerability existed in the RS-274X aperture definition\n tokenization functionality. A specially-crafted gerber file could have led to\n code execution.\n* [CVE-2021-40403](https://security-tracker.debian.org/tracker/CVE-2021-40403):\n An information disclosure vulnerability existed in the pick-and-place\n rotation parsing functionality. A specially-crafted pick-and-place file could\n have exploited the missing initialization of a structure in order to leak\n memory contents.\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n2.7.0-1+deb10u2.\n\n\nWe recommend that you upgrade your gerbv packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "gerbv",
+				"purl": "pkg:deb/debian/gerbv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.0-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.0-1",
+				"2.7.0-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3210-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3210"
+		}
+	]
+}

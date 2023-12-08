@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1691-1",
+	"modified": "2023-06-28T06:24:50.811674Z",
+	"published": "2019-02-26T00:00:00Z",
+	"related": [
+		"CVE-2018-17581",
+		"CVE-2018-19107",
+		"CVE-2018-19108",
+		"CVE-2018-19535",
+		"CVE-2018-20097"
+	],
+	"summary": "exiv2 - security update",
+	"details": "\nSeveral issues have been found in exiv2, a EXIF/IPTC/XMP metadata\nmanipulation tool.\n\n\n* [CVE-2018-17581](https://security-tracker.debian.org/tracker/CVE-2018-17581)\nA stack overflow due to a recursive function call causing excessive\n stack consumption which leads to denial of service.\n* [CVE-2018-19107](https://security-tracker.debian.org/tracker/CVE-2018-19107)\nA heap based buffer over-read caused by an integer overflow could\n result in a denial of service via a crafted file.\n* [CVE-2018-19108](https://security-tracker.debian.org/tracker/CVE-2018-19108)\nThere seems to be an infinite loop inside a function that can be\n activated by a crafted image.\n* [CVE-2018-19535](https://security-tracker.debian.org/tracker/CVE-2018-19535)\nA heap based buffer over-read caused could result in a denial of\n service via a crafted file.\n* [CVE-2018-20097](https://security-tracker.debian.org/tracker/CVE-2018-20097)\nA crafted image could result in a denial of service.\n\n\nFor Debian 8 \"Jessie\", these problems have been fixed in version\n0.24-4.1+deb8u3.\n\n\nWe recommend that you upgrade your exiv2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "exiv2",
+				"purl": "pkg:deb/debian/exiv2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.24-4.1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.24-4.1",
+				"0.24-4.1+deb8u1",
+				"0.24-4.1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1691-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1691"
+		}
+	]
+}

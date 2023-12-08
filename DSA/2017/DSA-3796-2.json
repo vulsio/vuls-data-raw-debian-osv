@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3796-2",
+	"modified": "2023-10-16T00:12:20.134212Z",
+	"published": "2017-02-26T00:00:00Z",
+	"summary": "sitesummary - regression update",
+	"details": "\nSeveral vulnerabilities were discovered in the Apache2 HTTP server.\n\n\n* [CVE-2016-0736](https://security-tracker.debian.org/tracker/CVE-2016-0736)\nRedTeam Pentesting GmbH discovered that mod\\_session\\_crypto was\n vulnerable to padding oracle attacks, which could allow an attacker\n to guess the session cookie.\n* [CVE-2016-2161](https://security-tracker.debian.org/tracker/CVE-2016-2161)\nMaksim Malyutin discovered that malicious input to mod\\_auth\\_digest\n could cause the server to crash, causing a denial of service.\n* [CVE-2016-8743](https://security-tracker.debian.org/tracker/CVE-2016-8743)\nDavid Dennerline, of IBM Security's X-Force Researchers, and RĂŠgis\n Leroy discovered problems in the way Apache handled a broad pattern\n of unusual whitespace patterns in HTTP requests. In some\n configurations, this could lead to response splitting or cache\n pollution vulnerabilities. To fix these issues, this update makes\n Apache httpd be more strict in what HTTP requests it accepts.\n\n\nIf this causes problems with non-conforming clients, some checks can\n be relaxed by adding the new directive HttpProtocolOptions unsafe\n to the configuration.\n\n\nThis update also fixes the issue where mod\\_reqtimeout was not enabled\nby default on new installations.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.4.10-10+deb8u8.\n\n\nFor the testing (stretch) and unstable (sid) distributions, these\nproblems have been fixed in version 2.4.25-1.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sitesummary",
+				"purl": "pkg:deb/debian/sitesummary?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.17+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1.17",
+				"0.1.17+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3796-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3796"
+		}
+	]
+}

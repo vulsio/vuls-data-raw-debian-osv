@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1108",
+	"modified": "2023-10-16T00:05:11.527462Z",
+	"published": "2006-07-11T00:00:00Z",
+	"related": [
+		"CVE-2006-3242"
+	],
+	"summary": "mutt - buffer overflow",
+	"details": "\nIt was discovered that the mutt mail reader performs insufficient\nvalidation of values returned from an IMAP server, which might overflow\na buffer and potentially lead to the injection of arbitrary code.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.5.9-2sarge2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.5.11+cvs20060403-2.\n\n\nWe recommend that you upgrade your mutt package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mutt",
+				"purl": "pkg:deb/debian/mutt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.9-2sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.9-2",
+				"1.5.9-2sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1108.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1108"
+		}
+	]
+}

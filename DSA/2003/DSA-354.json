@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-354",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-07-29T00:00:00Z",
+	"related": [
+		"CVE-2003-0607"
+	],
+	"summary": "xconq - buffer overflows",
+	"details": "\nSteve Kemp discovered a buffer overflow in xconq, in processing the\nUSER environment variable. In the process of fixing this bug, a\nsimilar problem was discovered with the DISPLAY environment\nvariable. This vulnerability could be exploited by a local attacker\nto gain gid 'games'.\n\n\nFor the current stable distribution (woody) this problem has been fixed\nin version 7.4.1-2woody2.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\nRefer to Debian [bug #202963](https://bugs.debian.org/202963).\n\n\nWe recommend that you update your xconq package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "xconq",
+				"purl": "pkg:deb/debian/xconq?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.4.1-2woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-354.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-354"
+		}
+	]
+}

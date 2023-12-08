@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-820-1",
+	"modified": "2023-06-28T06:30:59.542431Z",
+	"published": "2017-02-09T00:00:00Z",
+	"related": [
+		"CVE-2017-5938"
+	],
+	"summary": "viewvc - security update",
+	"details": "\nThomas Gerbet discovered that viewvc, a web interface for CVS and\nSubversion repositories, did not properly sanitize user input. This\nissue resulted in a potential Cross-Site Scripting vulnerability.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.5-1.4+deb7u1.\n\n\nWe recommend that you upgrade your viewvc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "viewvc",
+				"purl": "pkg:deb/debian/viewvc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.5-1.4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.5-1.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-820-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-820"
+		}
+	]
+}

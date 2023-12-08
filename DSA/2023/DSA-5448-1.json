@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5448-1",
+	"modified": "2023-10-16T00:23:14.455074Z",
+	"published": "2023-07-05T00:00:00Z",
+	"related": [
+		"CVE-2023-2124",
+		"CVE-2023-2156",
+		"CVE-2023-2269",
+		"CVE-2023-3090",
+		"CVE-2023-31084",
+		"CVE-2023-3212",
+		"CVE-2023-32250",
+		"CVE-2023-32254",
+		"CVE-2023-3268",
+		"CVE-2023-3269",
+		"CVE-2023-3390",
+		"CVE-2023-35788"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2023-2124](https://security-tracker.debian.org/tracker/CVE-2023-2124)\nKyle Zeng, Akshay Ajayan and Fish Wang discovered that missing\n metadata validation may result in denial of service or potential\n privilege escalation if a corrupted XFS disk image is mounted.\n* [CVE-2023-2156](https://security-tracker.debian.org/tracker/CVE-2023-2156)\nIt was discovered that the IPv6 RPL protocol implementation in the\n Linux kernel did not properly handled user-supplied data, resulting\n in a triggerable assertion. An unauthenticated remote attacker can\n take advantage of this flaw for denial of service.\n* [CVE-2023-2269](https://security-tracker.debian.org/tracker/CVE-2023-2269)\nZheng Zhang reported that improper handling of locking in the device\n mapper implementation may result in denial of service.\n* [CVE-2023-3090](https://security-tracker.debian.org/tracker/CVE-2023-3090)\nIt was discovered that missing initialization in ipvlan networking\n may lead to an out-of-bounds write vulnerability, resulting in\n denial of service or potentially the execution of arbitrary code.\n* [CVE-2023-3212](https://security-tracker.debian.org/tracker/CVE-2023-3212)\nYang Lan that missing validation in the GFS2 filesystem could result\n in denial of service via a NULL pointer dereference when mounting a\n malformed GFS2 filesystem.\n* [CVE-2023-3268](https://security-tracker.debian.org/tracker/CVE-2023-3268)\nIt was discovered that an out-of-bounds memory access in relayfs\n could result in denial of service or an information leak.\n* [CVE-2023-3269](https://security-tracker.debian.org/tracker/CVE-2023-3269)\nRuihan Li discovered that incorrect lock handling for accessing and\n updating virtual memory areas (VMAs) may result in privilege\n escalation.\n* [CVE-2023-3390](https://security-tracker.debian.org/tracker/CVE-2023-3390)\nA use-after-free flaw in the netfilter subsystem caused by incorrect\n error path handling may result in denial of service or privilege\n escalation.\n* [CVE-2023-31084](https://security-tracker.debian.org/tracker/CVE-2023-31084)\nIt was discovered that the DVB Core driver does not properly handle\n locking of certain events, allowing a local user to cause a denial\n of service.\n* [CVE-2023-32250](https://security-tracker.debian.org/tracker/CVE-2023-32250)\n/ [CVE-2023-32254](https://security-tracker.debian.org/tracker/CVE-2023-32254)\n\n\nQuentin Minster discovered two race conditions in KSMBD, a kernel\n server which implements the SMB3 protocol, which could result in\n denial of service or potentially the execution of arbitrary code.\n* [CVE-2023-35788](https://security-tracker.debian.org/tracker/CVE-2023-35788)\nHangyu Hua discovered an out-of-bounds write vulnerability in the\n Flower classifier which may result in denial of service or the\n execution of arbitrary code.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 6.1.37-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.37-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1.27-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5448-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5448"
+		}
+	]
+}

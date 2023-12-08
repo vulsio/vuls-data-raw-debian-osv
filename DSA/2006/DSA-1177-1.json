@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1177-1",
+	"modified": "2023-10-16T00:10:09.172775Z",
+	"published": "2006-09-15T00:00:00Z",
+	"related": [
+		"CVE-2006-4246"
+	],
+	"summary": "usermin",
+	"details": "\nHendrik Weimer discovered that it is possible for a normal user to\ndisable the login shell of the root account via usermin, a web-based\nadministration tool.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.110-3.1.\n\n\nIn the upstream distribution this problem is fixed in version 1.220.\n\n\nWe recommend that you upgrade your usermin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "usermin",
+				"purl": "pkg:deb/debian/usermin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.110-3.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.110-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1177-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1177"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3774-1",
+	"modified": "2023-10-16T00:06:26.663526Z",
+	"published": "2017-01-29T00:00:00Z",
+	"related": [
+		"CVE-2016-10165"
+	],
+	"summary": "lcms2 - security update",
+	"details": "\nIbrahim M. El-Sayed discovered an out-of-bounds heap read vulnerability\nin the function Type\\_MLU\\_Read in lcms2, the Little CMS 2 color\nmanagement library, which can be triggered by an image with a specially\ncrafted ICC profile and leading to a heap memory leak or\ndenial-of-service for applications using the lcms2 library.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.6-3+deb8u1.\n\n\nFor the testing distribution (stretch) and the unstable distribution\n(sid), this problem has been fixed in version 2.8-4.\n\n\nWe recommend that you upgrade your lcms2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "lcms2",
+				"purl": "pkg:deb/debian/lcms2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3774-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3774"
+		}
+	]
+}

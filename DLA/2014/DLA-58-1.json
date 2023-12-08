@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-58-1",
+	"modified": "2023-06-28T06:19:17.164350Z",
+	"published": "2014-09-23T00:00:00Z",
+	"related": [
+		"CVE-2014-6273"
+	],
+	"summary": "apt - security update",
+	"details": "\nThis update fixes a regression introduced in 0.8.10.3+squeeze5 where\napt would send invalid HTTP requests when sending If-Range queries.\n\n\nFor reference, the original advisory text follows.\n\n\nThe Google Security Team discovered a buffer overflow vulnerability in\nthe HTTP transport code in apt-get. An attacker able to\nman-in-the-middle a HTTP request to an apt repository can trigger the\nbuffer overflow, leading to a crash of the http apt method binary, or\npotentially to arbitrary code execution.\n\n\nThe following regression fixes were included in this update:\n\n\n* Fix regression from the previous update in [DLA-53-1](dla-53)\n when the custom apt configuration option for Dir::state::lists is set to a\n relative path (#762160).\n* Fix regression in the reverificaiton handling of cdrom: sources that\n may lead to incorrect hashsum warnings. Affected users need to run\n \"apt-cdrom add\" again after the update was applied.\n* Fix regression from the previous update in [DLA-53-1](dla-53)\n when file:/// sources are used and those are on a different partition than\n the apt state directory.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in apt version 0.8.10.3+squeeze6\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.10.3+squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.10.3",
+				"0.8.10.3+squeeze1",
+				"0.8.10.3+squeeze2",
+				"0.8.10.3+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-58-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-58"
+		}
+	]
+}

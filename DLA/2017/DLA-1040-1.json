@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1040-1",
+	"modified": "2023-06-28T06:20:16.004740Z",
+	"published": "2017-07-26T00:00:00Z",
+	"related": [
+		"CVE-2017-11521"
+	],
+	"summary": "resiprocate - security update",
+	"details": "\n* [CVE-2017-11521](https://security-tracker.debian.org/tracker/CVE-2017-11521)\nThe SdpContents::Session::Medium::parse function in\n resip/stack/SdpContents.cxx in reSIProcate 1.10.2 allows remote\n attackers to cause a denial of service (memory consumption) by\n triggering many media connections.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8.5-4+deb7u1.\n\n\nWe recommend that you upgrade your resiprocate packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "resiprocate",
+				"purl": "pkg:deb/debian/resiprocate?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.5-4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.5-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1040-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1040"
+		}
+	]
+}

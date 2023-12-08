@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-692-1",
+	"modified": "2023-10-16T00:26:07.217739Z",
+	"published": "2005-03-08T00:00:00Z",
+	"related": [
+		"CVE-2005-0205"
+	],
+	"summary": "kppp - design flaw",
+	"details": "\nThe KDE team fixed a bug in kppp in 2002 which was now discovered to be\nexploitable by iDEFENSE. By opening a sufficiently large number of\nfile descriptors before executing kppp which is installed setuid root a\nlocal attacker is able to take over privileged file descriptors.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.2.2-14.7.\n\n\nThe testing (sarge) and unstable (sid) distributions are not affected\nsince KDE 3.2 already contained the correction.\n\n\nWe recommend that you upgrade your kppp package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kdenetwork",
+				"purl": "pkg:deb/debian/kdenetwork?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.2.2-14.7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.2.2-14.6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-692-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-692"
+		}
+	]
+}

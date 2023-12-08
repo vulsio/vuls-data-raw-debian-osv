@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1764-1",
+	"modified": "2023-06-28T06:20:57.812418Z",
+	"published": "2019-04-25T00:00:00Z",
+	"related": [
+		"CVE-2019-3902"
+	],
+	"summary": "mercurial - security update",
+	"details": "\nIt was discovered that there was a path traversal vulnerability in the\nmercurial distributed revision version control system.\n\n\n* [CVE-2019-3902](https://security-tracker.debian.org/tracker/CVE-2019-3902)\nA flaw was found in Mercurial before 4.9. It was possible to use\n symlinks and subrepositories to defeat Mercurial's path-checking logic and\n write files outside a repository.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.1.2-2+deb8u7.\n\n\nWe recommend that you upgrade your mercurial packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mercurial",
+				"purl": "pkg:deb/debian/mercurial?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.2-2+deb8u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.2-2",
+				"3.1.2-2+deb8u1",
+				"3.1.2-2+deb8u2",
+				"3.1.2-2+deb8u3",
+				"3.1.2-2+deb8u4",
+				"3.1.2-2+deb8u5",
+				"3.1.2-2+deb8u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1764-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1764"
+		}
+	]
+}

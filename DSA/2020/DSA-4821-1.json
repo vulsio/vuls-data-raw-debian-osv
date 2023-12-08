@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4821-1",
+	"modified": "2023-10-16T00:22:07.179418Z",
+	"published": "2020-12-28T00:00:00Z",
+	"related": [
+		"CVE-2020-35730"
+	],
+	"summary": "roundcube - security update",
+	"details": "\nAlex Birnberg discovered that roundcube, a skinnable AJAX based webmail\nsolution for IMAP servers, is prone to a cross-site scripting\nvulnerability in handling HTML or Plain text messages with malicious\ncontent.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.3.16+dfsg.1-1~deb10u1.\n\n\nWe recommend that you upgrade your roundcube packages.\n\n\nFor the detailed security status of roundcube please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/roundcube>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "roundcube",
+				"purl": "pkg:deb/debian/roundcube?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.16+dfsg.1-1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.10+dfsg.1-1",
+				"1.3.10+dfsg.1-1~deb10u1",
+				"1.3.11+dfsg.1-1~deb10u1",
+				"1.3.13+dfsg.1-1~deb10u1",
+				"1.3.14+dfsg.1-1~deb10u1",
+				"1.3.15+dfsg.1-1~deb10u1",
+				"1.3.8+dfsg.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4821-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4821"
+		}
+	]
+}

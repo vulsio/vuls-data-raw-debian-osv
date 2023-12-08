@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3095-1",
+	"modified": "2023-06-28T06:37:08.132641Z",
+	"published": "2022-09-04T00:00:00Z",
+	"related": [
+		"CVE-2022-30122",
+		"CVE-2022-30123"
+	],
+	"summary": "ruby-rack - security update",
+	"details": "\nTwo vulnerabilities were discovered in `ruby-rack`, a popular Ruby\nwebserver:\n\n\n* [CVE-2022-30122](https://security-tracker.debian.org/tracker/CVE-2022-30122):\n\n Prevent a Denial of Service (DoS) vulnerability in the HTTP\n multipart parsing.\n* [CVE-2022-30123](https://security-tracker.debian.org/tracker/CVE-2022-30123):\n\n Prevent a potential shell escape sequence injection\n vulnerability that could be triggered through the logging system.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.0.6-3+deb10u1.\n\n\nWe recommend that you upgrade your ruby-rack packages.\n\n\nFor the detailed security status of ruby-rack please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ruby-rack>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ruby-rack",
+				"purl": "pkg:deb/debian/ruby-rack?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.6-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.6-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3095-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3095"
+		}
+	]
+}

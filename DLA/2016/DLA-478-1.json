@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-478-1",
+	"modified": "2023-06-28T06:27:02.273504Z",
+	"published": "2016-05-16T00:00:00Z",
+	"related": [
+		"CVE-2016-4051",
+		"CVE-2016-4052",
+		"CVE-2016-4053",
+		"CVE-2016-4054",
+		"CVE-2016-4554",
+		"CVE-2016-4555",
+		"CVE-2016-4556"
+	],
+	"summary": "squid3 - security update",
+	"details": "\nSeveral security issues have been discovered in the Squid caching proxy.\n\n\n* [CVE-2016-4051](https://security-tracker.debian.org/tracker/CVE-2016-4051)\nCESG and Yuriy M. Kaminskiy discovered that Squid cachemgr.cgi\n was vulnerable to a buffer overflow when processing remotely supplied\n inputs relayed through Squid.\n* [CVE-2016-4052](https://security-tracker.debian.org/tracker/CVE-2016-4052)\nCESG discovered that a buffer overflow made Squid vulnerable to a\n Denial of Service (DoS) attack when processing ESI responses.\n* [CVE-2016-4053](https://security-tracker.debian.org/tracker/CVE-2016-4053)\nCESG found that Squid was vulnerable to public information disclosure\n of the server stack layout when processing ESI responses.\n* [CVE-2016-4054](https://security-tracker.debian.org/tracker/CVE-2016-4054)\nCESG discovered that Squid was vulnerable to remote code execution\n when processing ESI responses.\n* [CVE-2016-4554](https://security-tracker.debian.org/tracker/CVE-2016-4554)\nJianjun Chen found that Squid was vulnerable to a header smuggling\n attack that could lead to cache poisoning and to bypass of same-origin\n security policy in Squid and some client browsers.\n* [CVE-2016-4555](https://security-tracker.debian.org/tracker/CVE-2016-4555)\nand [CVE-2016-4556](https://security-tracker.debian.org/tracker/CVE-2016-4556)\n\n\n\"bfek-18\" and \"@vftable\" found that Squid was vulnerable to a Denial\n of Service (DoS) attack when processing ESI responses, due to\n incorrect pointer handling and reference counting.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in squid3 version\n3.1.20-2.2+deb7u5. We recommend you to upgrade your squid3 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.20-2.2+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.20-2.2",
+				"3.1.20-2.2+deb7u1",
+				"3.1.20-2.2+deb7u2",
+				"3.1.20-2.2+deb7u3",
+				"3.1.20-2.2+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-478-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-478"
+		}
+	]
+}

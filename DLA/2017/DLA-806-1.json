@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-806-1",
+	"modified": "2023-06-28T06:32:41.569541Z",
+	"published": "2017-01-29T00:00:00Z",
+	"related": [
+		"CVE-2016-10140"
+	],
+	"summary": "zoneminder - security update",
+	"details": "\nInformation disclosure and authentication bypass vulnerability exists in\nthe Apache HTTP Server configuration bundled with ZoneMinder v1.30.0,\nwhich allows a remote unauthenticated attacker to browse all directories\nin the web root, e.g., a remote unauthenticated attacker can view all\nCCTV images on the server.\n\n\nFor new installations, the new config file will be automatically\ninstalled. For existing installations, please follow the instructions in\nNEWS, which will be viewed during upgrade.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.25.0-4+deb7u1.\n\n\nWe recommend that you upgrade your zoneminder packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "zoneminder",
+				"purl": "pkg:deb/debian/zoneminder?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.25.0-4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.25.0-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-806-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-806"
+		}
+	]
+}

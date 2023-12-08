@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-148-1",
+	"modified": "2023-06-28T06:20:44.223411Z",
+	"published": "2015-02-07T00:00:00Z",
+	"related": [
+		"CVE-2015-1306"
+	],
+	"summary": "sympa - security update",
+	"details": "\nA vulnerability has been discovered in the web interface of sympa, a\nmailing list manager. An attacker could take advantage of this flaw in\nthe newsletter posting area, which allows sending to a list, or to\noneself, any file located on the server filesystem and readable by the\nsympa user.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in sympa version 6.0.1+dfsg-4+squeeze3\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "sympa",
+				"purl": "pkg:deb/debian/sympa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.1+dfsg-4+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.1+dfsg-4",
+				"6.0.1+dfsg-4+squeeze1",
+				"6.0.1+dfsg-4+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-148-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-148"
+		}
+	]
+}

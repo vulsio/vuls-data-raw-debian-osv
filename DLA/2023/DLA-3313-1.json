@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3313-1",
+	"modified": "2023-06-28T06:37:27.717576Z",
+	"published": "2023-02-13T00:00:00Z",
+	"related": [
+		"CVE-2022-4345",
+		"CVE-2023-0411",
+		"CVE-2023-0412",
+		"CVE-2023-0413",
+		"CVE-2023-0415",
+		"CVE-2023-0417"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nMultiple security vulnerabilities have been discovered in Wireshark, a\nnetwork traffic analyzer. An attacker could cause a denial of service\n(infinite loop or application crash) via packet injection or a crafted\ncapture file.\n\n\n* [CVE-2022-4345](https://security-tracker.debian.org/tracker/CVE-2022-4345)\nInfinite loops in the BPv6, OpenFlow, and Kafka protocol dissectors in\n Wireshark 4.0.0 to 4.0.1 and 3.6.0 to 3.6.9 allows denial of service via\n packet injection or crafted capture file\n* [CVE-2023-0411](https://security-tracker.debian.org/tracker/CVE-2023-0411)\nExcessive loops in multiple dissectors in Wireshark 4.0.0 to 4.0.2 and\n 3.6.0 to 3.6.10 and allows denial of service via packet injection or\n crafted capture file\n* [CVE-2023-0412](https://security-tracker.debian.org/tracker/CVE-2023-0412)\nTIPC dissector crash in Wireshark 4.0.0 to 4.0.2 and 3.6.0 to 3.6.10 and\n allows denial of service via packet injection or crafted capture file\n* [CVE-2023-0413](https://security-tracker.debian.org/tracker/CVE-2023-0413)\nDissection engine bug in Wireshark 4.0.0 to 4.0.2 and 3.6.0 to 3.6.10\n and allows denial of service via packet injection or crafted capture\n file\n* [CVE-2023-0415](https://security-tracker.debian.org/tracker/CVE-2023-0415)\niSCSI dissector crash in Wireshark 4.0.0 to 4.0.2 and 3.6.0 to 3.6.10\n and allows denial of service via packet injection or crafted capture\n file\n* [CVE-2023-0417](https://security-tracker.debian.org/tracker/CVE-2023-0417)\nMemory leak in the NFS dissector in Wireshark 4.0.0 to 4.0.2 and 3.6.0\n to 3.6.10 and allows denial of service via packet injection or crafted\n capture file\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.6.20-0+deb10u5.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\nFor the detailed security status of wireshark please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/wireshark>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.20-0+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.10-1",
+				"2.6.20-0+deb10u1",
+				"2.6.20-0+deb10u2",
+				"2.6.20-0+deb10u3",
+				"2.6.20-0+deb10u4",
+				"2.6.8-1.1",
+				"2.6.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3313-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3313"
+		}
+	]
+}

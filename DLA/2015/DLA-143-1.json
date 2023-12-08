@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-143-1",
+	"modified": "2023-06-28T06:20:41.269327Z",
+	"published": "2015-01-29T00:00:00Z",
+	"related": [
+		"CVE-2015-0219",
+		"CVE-2015-0220",
+		"CVE-2015-0221"
+	],
+	"summary": "python-django - security update",
+	"details": "\nMultiple security issues have been found in Django:\n<https://www.djangoproject.com/weblog/2015/jan/13/security/>\n\n\nFor Debian 6 Squeeeze, they have been fixed in version 1.2.3-3+squeeze12\nof python-django. Here is what the upstream developers have to say about\nthose issues:\n\n\n* [CVE-2015-0219](https://security-tracker.debian.org/tracker/CVE-2015-0219)\n- WSGI header spoofing via underscore/dash conflation\n\n\nWhen HTTP headers are placed into the WSGI environ, they are\n normalized by converting to uppercase, converting all dashes to\n underscores, and prepending HTTP\\_. For instance, a header X-Auth-User\n would become HTTP\\_X\\_AUTH\\_USER in the WSGI environ (and thus also in\n Django's request.META dictionary).\n\n\nUnfortunately, this means that the WSGI environ cannot distinguish\n between headers containing dashes and headers containing underscores:\n X-Auth-User and X-Auth\\_User both become HTTP\\_X\\_AUTH\\_USER. This means\n that if a header is used in a security-sensitive way (for instance,\n passing authentication information along from a front-end proxy), even\n if the proxy carefully strips any incoming value for X-Auth-User, an\n attacker may be able to provide an X-Auth\\_User header (with\n underscore) and bypass this protection.\n\n\nIn order to prevent such attacks, both Nginx and Apache 2.4+ strip\n all headers containing underscores from incoming requests by\n default. Django's built-in development server now does the same.\n Django's development server is not recommended for production use,\n but matching the behavior of common production servers reduces the\n surface area for behavior changes during deployment.\n* [CVE-2015-0220](https://security-tracker.debian.org/tracker/CVE-2015-0220)\n- Possible XSS attack via user-supplied redirect URLs\n\n\nDjango relies on user input in some cases (e.g.\n django.contrib.auth.views.login() and i18n) to redirect the user to an\n on success URL. The security checks for these redirects (namely\n django.util.http.is\\_safe\\_url()) didn't strip leading whitespace on the\n tested URL and as such considered URLs like \"\\njavascript:...\" safe. If\n a developer relied on is\\_safe\\_url() to provide safe redirect targets\n and put such a URL into a link, they could suffer from a XSS attack.\n This bug doesn't affect Django currently, since we only put this URL\n into the Location response header and browsers seem to ignore\n JavaScript there.\n* [CVE-2015-0221](https://security-tracker.debian.org/tracker/CVE-2015-0221)\n- Denial-of-service attack against django.views.static.serve\n\n\nIn older versions of Django, the django.views.static.serve() view read\n the files it served one line at a time. Therefore, a big file with no\n newlines would result in memory usage equal to the size of that file.\n An attacker could exploit this and launch a denial-of-service attack\n by simultaneously requesting many large files. This view now reads the\n file in chunks to prevent large memory usage.\n\n\nNote, however, that this view has always carried a warning that it is\n not hardened for production use and should be used only as a\n development aid. Now may be a good time to audit your project and\n serve your files in production using a real front-end web server if\n you are not doing so.\n\n\nNote that the version of Django in use in Debian 6 Squeeze was not\naffected by [CVE-2015-0222](https://security-tracker.debian.org/tracker/CVE-2015-0222) (Database denial-of-service with\nModelMultipleChoiceField) since that feature does not exist\nin this version.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in python-django version 1.2.3-3+squeeze12\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3-3+squeeze12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3-3",
+				"1.2.3-3+squeeze1",
+				"1.2.3-3+squeeze10",
+				"1.2.3-3+squeeze11",
+				"1.2.3-3+squeeze2",
+				"1.2.3-3+squeeze3",
+				"1.2.3-3+squeeze5",
+				"1.2.3-3+squeeze6",
+				"1.2.3-3+squeeze7",
+				"1.2.3-3+squeeze8",
+				"1.2.3-3+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-143-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-143"
+		}
+	]
+}

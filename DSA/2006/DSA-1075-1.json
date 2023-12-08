@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1075-1",
+	"modified": "2023-10-16T00:05:07.151246Z",
+	"published": "2006-05-26T00:00:00Z",
+	"related": [
+		"CVE-2006-1945",
+		"CVE-2006-2644"
+	],
+	"summary": "awstats - programming error",
+	"details": "\nHendrik Weimer discovered that awstats can execute arbitrary commands\nunder the user id the web-server runs when users are allowed to supply\narbitrary configuration files. Even though, this bug was referenced\nin DSA 1058 accidentally, it was not fixed yet.\n\n\nThe new default behaviour is not to accept arbitrary configuration\ndirectories from the user. This can be overwritten by the\nAWSTATS\\_ENABLE\\_CONFIG\\_DIR environment variable when users are to be\ntrusted.\n\n\nThe old stable distribution (woody) does not seem to be affected by\nthis problem.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 6.4-1sarge3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 6.5-2.\n\n\nWe recommend that you upgrade your awstats package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "awstats",
+				"purl": "pkg:deb/debian/awstats?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.4-1sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.4-1",
+				"6.4-1sarge1",
+				"6.4-1sarge2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1075-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1075"
+		}
+	]
+}

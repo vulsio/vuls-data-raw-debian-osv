@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-312",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-06-09T00:00:00Z",
+	"related": [
+		"CVE-2002-0429",
+		"CVE-2003-0001",
+		"CVE-2003-0127",
+		"CVE-2003-0244",
+		"CVE-2003-0246",
+		"CVE-2003-0247",
+		"CVE-2003-0248"
+	],
+	"summary": "kernel-patch-2.4.18-powerpc - several vulnerabilities",
+	"details": "\nA number of vulnerabilities have been discovered in the Linux kernel.\n\n\nCVE-2002-0429: The iBCS routines in arch/i386/kernel/traps.c for\n Linux kernels 2.4.18 and earlier on x86 systems allow local users to\n kill arbitrary processes via a binary compatibility interface\n (lcall).\n\n\nCAN-2003-0001: Multiple ethernet Network Interface Card (NIC) device\n drivers do not pad frames with null bytes, which allows remote\n attackers to obtain information from previous packets or kernel\n memory by using malformed packets.\n\n\nCAN-2003-0127: The kernel module loader allows local users to gain\n root privileges by using ptrace to attach to a child process that is\n spawned by the kernel.\n\n\nCAN-2003-0244: The route cache implementation in Linux 2.4, and the\n Netfilter IP conntrack module, allows remote attackers to cause a\n denial of service (CPU consumption) via packets with forged source\n addresses that cause a large number of hash table collisions related\n to the PREROUTING chain.\n\n\nCAN-2003-0246: The ioperm system call in Linux kernel 2.4.20 and\n earlier does not properly restrict privileges, which allows local\n users to gain read or write access to certain I/O ports.\n\n\nCAN-2003-0247: Vulnerability in the TTY layer of the Linux kernel\n 2.4 allows attackers to cause a denial of service (\"kernel oops\").\n\n\nCAN-2003-0248: The mxcsr code in Linux kernel 2.4 allows attackers\n to modify CPU state registers via a malformed address.\n\n\nCAN-2003-0364: The TCP/IP fragment reassembly handling in the Linux\n kernel 2.4 allows remote attackers to cause a denial of service (CPU\n consumption) via certain packets that cause a large number of hash\n table collisions.\n\n\nThis advisory covers only the powerpc architecture. Other\narchitectures will be covered by separate advisories.\n\n\nFor the stable distribution (woody) on the powerpc architecture, these\nproblems have been fixed in version 2.4.18-1woody1.\n\n\nFor the unstable distribution (sid) these problems are fixed in\nversion 2.4.20-2.\n\n\nWe recommend that you update your kernel packages.\n\n\nNOTE: A system reboot will be required immediately after the upgrade\nin order to replace the running kernel. Remember to read carefully\nand follow the instructions given during the kernel upgrade process.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-patch-2.4.18-powerpc",
+				"purl": "pkg:deb/debian/kernel-patch-2.4.18-powerpc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.18-1woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-312.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-312"
+		}
+	]
+}

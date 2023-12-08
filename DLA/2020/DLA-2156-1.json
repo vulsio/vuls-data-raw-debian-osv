@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2156-1",
+	"modified": "2023-06-28T06:30:04.908402Z",
+	"published": "2020-03-24T00:00:00Z",
+	"related": [
+		"CVE-2019-5188"
+	],
+	"summary": "e2fsprogs - security update",
+	"details": "\nAn issue has been found in e2fsprogs, a package that contains\next2/ext3/ext4 file system utilities.\nA specially crafted ext4 directory can cause an out-of-bounds write on the\nstack, resulting in code execution. An attacker can corrupt a partition to\ntrigger this vulnerability.\n\n\nFor Debian 8 Jessie, this problem has been\nfixed in version 1.42.12-2+deb8u2.\n\n\nWe recommend that you upgrade your e2fsprogs packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "e2fsprogs",
+				"purl": "pkg:deb/debian/e2fsprogs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.42.12-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.42.12-1.1",
+				"1.42.12-2",
+				"1.42.12-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2156-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2156"
+		}
+	]
+}

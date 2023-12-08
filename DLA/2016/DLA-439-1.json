@@ -1,0 +1,91 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-439-1",
+	"modified": "2023-06-28T06:27:01.342125Z",
+	"published": "2016-02-29T00:00:00Z",
+	"related": [
+		"CVE-2015-8812",
+		"CVE-2016-0774",
+		"CVE-2016-2384"
+	],
+	"summary": "linux-2.6 - security update",
+	"details": "\nThis update fixes the CVEs described below.\n\n\n* [CVE-2015-8812](https://security-tracker.debian.org/tracker/CVE-2015-8812)\nA flaw was found in the iw\\_cxgb3 Infiniband driver. Whenever it\n could not send a packet because the network was congested, it\n would free the packet buffer but later attempt to send the packet\n again. This use-after-free could result in a denial of service\n (crash or hang), data loss or privilege escalation.\n* [CVE-2016-0774](https://security-tracker.debian.org/tracker/CVE-2016-0774)\nIt was found that the fix for [CVE-2015-1805](https://security-tracker.debian.org/tracker/CVE-2015-1805) in kernel versions\n older than Linux 3.16 did not correctly handle the case of a\n partially failed atomic read. A local, unprivileged user could\n use this flaw to crash the system or leak kernel memory to user\n space.\n* [CVE-2016-2384](https://security-tracker.debian.org/tracker/CVE-2016-2384)\nAndrey Konovalov found that a USB MIDI device with an invalid USB\n descriptor could trigger a double-free. This may be used by a\n physically present user for privilege escalation.\n\n\nAdditionally, it fixes some old security issues with no CVE ID:\n\n\nSeveral kernel APIs permitted reading or writing 2 GiB of data or\n more in a single chunk, which could lead to an integer overflow\n when applied to certain filesystems, socket or device types. The\n full security impact has not been evaluated.\n\n\nFinally, it fixes a regression in 2.6.32-48squeeze17 that would cause\nSamba to hang in some situations.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 2.6.32-48squeeze20. This is \\*really\\* the final\nupdate to the linux-2.6 package for squeeze.\n\n\nFor the oldstable distribution (wheezy), the kernel was not affected\nby the integer overflow issues and the remaining problems will be\nfixed in version 3.2.73-2+deb7u3.\n\n\nFor the stable distribution (jessie), the kernel was not affected by\nthe integer overflow issues or [CVE-2016-0774](https://security-tracker.debian.org/tracker/CVE-2016-0774), and the remaining\nproblems will be fixed in version 3.16.7-ckt20-1+deb8u4.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-48squeeze20"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35squeeze1",
+				"2.6.32-35squeeze2",
+				"2.6.32-35~bpo50+1",
+				"2.6.32-36",
+				"2.6.32-37",
+				"2.6.32-38",
+				"2.6.32-39",
+				"2.6.32-39squeeze1",
+				"2.6.32-40",
+				"2.6.32-41",
+				"2.6.32-41squeeze2",
+				"2.6.32-42",
+				"2.6.32-43",
+				"2.6.32-44",
+				"2.6.32-45",
+				"2.6.32-46",
+				"2.6.32-46squeeze1",
+				"2.6.32-47",
+				"2.6.32-48",
+				"2.6.32-48squeeze1",
+				"2.6.32-48squeeze10",
+				"2.6.32-48squeeze11",
+				"2.6.32-48squeeze12",
+				"2.6.32-48squeeze13",
+				"2.6.32-48squeeze14",
+				"2.6.32-48squeeze16",
+				"2.6.32-48squeeze17",
+				"2.6.32-48squeeze18",
+				"2.6.32-48squeeze19",
+				"2.6.32-48squeeze3",
+				"2.6.32-48squeeze4",
+				"2.6.32-48squeeze5",
+				"2.6.32-48squeeze6",
+				"2.6.32-48squeeze7",
+				"2.6.32-48squeeze8",
+				"2.6.32-48squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-439-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-439"
+		}
+	]
+}

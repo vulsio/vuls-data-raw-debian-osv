@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3361-1",
+	"modified": "2023-06-28T06:25:32.262801Z",
+	"published": "2023-03-13T00:00:00Z",
+	"related": [
+		"CVE-2022-36021"
+	],
+	"summary": "redis - security update",
+	"details": "\nIt was discovered that there was a potential remote denial of service\nvulnerability in Redis, a popular key-value database.\n\n\nAuthenticated users could have used string matching commands (like\n`SCAN` or `KEYS`) with a specially crafted pattern to\ntrigger a denial-of-service attack, causing it to hang and consume 100% CPU\ntime.\n\n\n* [CVE-2022-36021](https://security-tracker.debian.org/tracker/CVE-2022-36021)\nRedis is an in-memory database that persists on disk. Authenticated users can use string matching commands (like `SCAN` or `KEYS`) with a specially crafted pattern to trigger a denial-of-service attack on Redis, causing it to hang and consume 100% CPU time. The problem is fixed in Redis versions 6.0.18, 6.2.11, 7.0.9.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n5:5.0.14-1+deb10u3.\n\n\nWe recommend that you upgrade your redis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "redis",
+				"purl": "pkg:deb/debian/redis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5:5.0.14-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5:5.0.14-1+deb10u1",
+				"5:5.0.14-1+deb10u2",
+				"5:5.0.3-4",
+				"5:5.0.3-4+deb10u1",
+				"5:5.0.3-4+deb10u2",
+				"5:5.0.3-4+deb10u3",
+				"5:5.0.4-1",
+				"5:5.0.5-1",
+				"5:5.0.5-2",
+				"5:5.0.5-2~bpo10+1",
+				"5:5.0.6-1",
+				"5:5.0.6-1~bpo10+1",
+				"5:5.0.7-1",
+				"5:5.0.7-1~bpo10+1",
+				"5:5.0.7-2",
+				"5:5.0.7-3",
+				"5:5.0.7-4",
+				"5:5.0.7-5",
+				"5:5.0.7-6",
+				"5:5.0.7-7",
+				"5:5.0.7-7~bpo10+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3361-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3361"
+		}
+	]
+}

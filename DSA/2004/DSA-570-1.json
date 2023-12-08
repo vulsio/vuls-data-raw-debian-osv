@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-570-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-10-20T00:00:00Z",
+	"related": [
+		"CVE-2004-0599"
+	],
+	"summary": "libpng - integer overflow",
+	"details": "\nSeveral integer overflows have been discovered by its upstream\ndevelopers in libpng, a commonly used library to display PNG graphics.\nThey could be exploited to cause arbitrary code to be executed when a\nspecially crafted PNG image is processed.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0.12-3.woody.9.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0.15-8.\n\n\nWe recommend that you upgrade your libpng packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.12-3.woody.9"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-570-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-570"
+		}
+	]
+}

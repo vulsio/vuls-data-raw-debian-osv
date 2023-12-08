@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-610-1",
+	"modified": "2023-06-28T06:22:04.078138Z",
+	"published": "2016-09-04T00:00:00Z",
+	"related": [
+		"CVE-2010-2596",
+		"CVE-2013-1961",
+		"CVE-2014-8128",
+		"CVE-2014-8129",
+		"CVE-2014-9655",
+		"CVE-2015-1547",
+		"CVE-2015-8665",
+		"CVE-2015-8683",
+		"CVE-2016-3186",
+		"CVE-2016-3623",
+		"CVE-2016-3945",
+		"CVE-2016-3990",
+		"CVE-2016-3991",
+		"CVE-2016-5314",
+		"CVE-2016-5315",
+		"CVE-2016-5316",
+		"CVE-2016-5317",
+		"CVE-2016-5321",
+		"CVE-2016-5322",
+		"CVE-2016-5323",
+		"CVE-2016-6223"
+	],
+	"summary": "tiff3 - security update",
+	"details": "\nSeveral security vulnerabilities were discovered in tiff3, a library\nproviding support for the Tag Image File Format (TIFF). An attacker\ncould take advantage of these flaws to cause a denial-of-service\nagainst an application using the libtiff4 or libtiffxx0c2 library\n(application crash), or potentially execute arbitrary code with the\nprivileges of the user running the application.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.9.6-11+deb7u1.\n\n\nWe recommend that you upgrade your tiff3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tiff3",
+				"purl": "pkg:deb/debian/tiff3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.9.6-11+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.9.6-11"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-610-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-610"
+		}
+	]
+}

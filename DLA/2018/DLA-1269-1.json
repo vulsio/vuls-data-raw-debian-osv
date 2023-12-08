@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1269-1",
+	"modified": "2023-06-28T06:23:35.483069Z",
+	"published": "2018-02-04T00:00:00Z",
+	"related": [
+		"CVE-2017-18123"
+	],
+	"summary": "dokuwiki - security update",
+	"details": "\nIt was discovered that an XHR/AJAX call did not properly encode user\ninput in the dokuwiki wiki platform. This resulted in a reflected file\ndownload vulnerability.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in dokuwiki version\n0.0.20120125b-2+deb7u2.\n\n\nWe recommend that you upgrade your dokuwiki packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "dokuwiki",
+				"purl": "pkg:deb/debian/dokuwiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.0.20120125b-2+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.0.20120125b-2",
+				"0.0.20120125b-2+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1269-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1269"
+		}
+	]
+}

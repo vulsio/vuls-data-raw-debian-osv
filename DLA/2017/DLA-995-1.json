@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-995-1",
+	"modified": "2023-06-28T06:39:04.084594Z",
+	"published": "2017-06-20T00:00:00Z",
+	"related": [
+		"CVE-2017-8400",
+		"CVE-2017-8401"
+	],
+	"summary": "swftools - security update",
+	"details": "\n* [CVE-2017-8400](https://security-tracker.debian.org/tracker/CVE-2017-8400)\nIn SWFTools 0.9.2, an out-of-bounds write of heap data can occur in\n the function png\\_load() in lib/png.c:755. This issue can be triggered\n by a malformed PNG file that is mishandled by png2swf.\n Attackers could exploit this issue for DoS; it might cause arbitrary\n code execution.\n* [CVE-2017-8401](https://security-tracker.debian.org/tracker/CVE-2017-8401)\nIn SWFTools 0.9.2, an out-of-bounds read of heap data can occur in\n the function png\\_load() in lib/png.c:724. This issue can be triggered\n by a malformed PNG file that is mishandled by png2swf.\n Attackers could exploit this issue for DoS.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.9.2+ds1-3+deb7u1.\n\n\nWe recommend that you upgrade your swftools packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "swftools",
+				"purl": "pkg:deb/debian/swftools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.2+ds1-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.2+ds1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-995-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-995"
+		}
+	]
+}

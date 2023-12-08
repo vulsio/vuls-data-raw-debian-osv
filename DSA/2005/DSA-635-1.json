@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-635-1",
+	"modified": "2023-10-16T00:26:04.430084Z",
+	"published": "2005-01-12T00:00:00Z",
+	"related": [
+		"CVE-2005-0021"
+	],
+	"summary": "exim - buffer overflow",
+	"details": "\nPhilip Hazel announced a buffer overflow in the host\\_aton function in\nexim, the default mail-transport-agent in Debian, which can lead to the\nexecution of arbitrary code via an illegal IPv6 address.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 3.35-1woody4.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 3.36-13 of exim and 4.34-10 of exim4.\n\n\nWe recommend that you upgrade your exim and exim4 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "exim",
+				"purl": "pkg:deb/debian/exim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.35-1woody4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.35-1woody3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-635-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-635"
+		}
+	]
+}

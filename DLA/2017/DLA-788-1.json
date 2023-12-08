@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-788-1",
+	"modified": "2023-06-28T06:43:18.179025Z",
+	"published": "2017-01-16T00:00:00Z",
+	"related": [
+		"CVE-2016-7068"
+	],
+	"summary": "pdns-recursor - security update",
+	"details": "\nFlorian Heinz and Martin Kluge reported that pdns-recursor, a recursive\nDNS server, parses all records present in a query regardless of whether\nthey are needed or even legitimate, allowing a remote, unauthenticated\nattacker to cause an abnormal CPU usage load on the pdns server,\nresulting in a partial denial of service if the system becomes\noverloaded.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.3-3+deb7u2.\n\n\nWe recommend that you upgrade your pdns-recursor packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "pdns-recursor",
+				"purl": "pkg:deb/debian/pdns-recursor?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3-3+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3-3",
+				"3.3-3+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-788-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-788"
+		}
+	]
+}

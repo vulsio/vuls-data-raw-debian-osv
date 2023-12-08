@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2248-1",
+	"modified": "2023-10-16T00:11:03.477009Z",
+	"published": "2011-03-31T00:00:00Z",
+	"related": [
+		"CVE-2011-1753"
+	],
+	"summary": "ejabberd - denial of service",
+	"details": "\nWouter Coekaerts discovered that ejabberd, a distributed XMPP/Jabber server\nwritten in Erlang, is vulnerable to the so-called billion laughs attack\nbecause it does not prevent entity expansion on received data.\nThis allows an attacker to perform denial of service attacks against the\nservice by sending specially crafted XML data to it.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.0.1-6+lenny3.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.1.5-3+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.1.6-2.1.\n\n\nWe recommend that you upgrade your ejabberd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ejabberd",
+				"purl": "pkg:deb/debian/ejabberd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.5-3+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.5-3",
+				"2.1.5-3+squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2248-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "ejabberd",
+				"purl": "pkg:deb/debian/ejabberd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.1-6+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.1-5",
+				"2.0.1-6",
+				"2.0.1-6+lenny1",
+				"2.0.1-6+lenny1~bpo40+1",
+				"2.0.1-6+lenny2",
+				"2.0.1-6~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2248-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2248"
+		}
+	]
+}

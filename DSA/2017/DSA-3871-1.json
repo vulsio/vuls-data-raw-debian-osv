@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3871-1",
+	"modified": "2023-10-16T00:12:24.937805Z",
+	"published": "2017-06-01T00:00:00Z",
+	"related": [
+		"CVE-2017-5637"
+	],
+	"summary": "zookeeper - security update",
+	"details": "\nIt was discovered that Zookeeper, a service for maintaining\nconfiguration information, didn't restrict access to the computationally\nexpensive wchp/wchc commands which could result in denial of service by\nelevated CPU consumption.\n\n\nThis update disables those two commands by default. The new\nconfiguration option 4lw.commands.whitelist can be used to whitelist\ncommands selectively (and the full set of commands can be restored\nwith '\\*')\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 3.4.5+dfsg-2+deb8u2.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your zookeeper packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "zookeeper",
+				"purl": "pkg:deb/debian/zookeeper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.5+dfsg-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.4.5+dfsg-2",
+				"3.4.5+dfsg-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3871-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3871"
+		}
+	]
+}

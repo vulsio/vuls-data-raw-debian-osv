@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2129-1",
+	"modified": "2023-06-28T06:21:12.897153Z",
+	"published": "2020-02-29T00:00:00Z",
+	"related": [
+		"CVE-2017-11509"
+	],
+	"summary": "firebird2.5 - security update",
+	"details": "\nAn issues has been found in firebird2.5, an RDBMS based on InterBase 6.0.\nAs UDFs can be used for a remote authenticated code execution (as user\nfirebird), UDFs have been disabled in the default configuration\nwhich will be used for new installations (there is no change for existing\nconfigurations, which must be done manually).\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.5.3.26778.ds4-5+deb8u2.\n\n\nWe recommend that you upgrade your firebird2.5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "firebird2.5",
+				"purl": "pkg:deb/debian/firebird2.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.3.26778.ds4-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.3.26778.ds4-5",
+				"2.5.3.26778.ds4-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2129-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2129"
+		}
+	]
+}

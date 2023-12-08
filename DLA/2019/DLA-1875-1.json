@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1875-1",
+	"modified": "2023-06-28T06:21:02.789971Z",
+	"published": "2019-08-11T00:00:00Z",
+	"related": [
+		"CVE-2019-11187"
+	],
+	"summary": "fusiondirectory - security update",
+	"details": "\nIn FusionDirectory, an LDAP web-frontend written in PHP (originally\nderived GOsaÂ˛ 2.6.x), a vulnerability was found that could theoretically\nlead to unauthorized access to the LDAP database managed with\nFusionDirectory. LDAP queries' result status (\"Success\") checks had not\nbeen strict enough. The resulting output containing the word Success\nanywhere in the returned data during login connection attempts would have\nreturned LDAP success to FusionDirectory and possibly grant unwanted\naccess.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.0.8.2-5+deb8u2.\n\n\nWe recommend that you upgrade your fusiondirectory packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "fusiondirectory",
+				"purl": "pkg:deb/debian/fusiondirectory?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.8.2-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.8.2-5",
+				"1.0.8.2-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1875-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1875"
+		}
+	]
+}

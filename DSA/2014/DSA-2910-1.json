@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2910-1",
+	"modified": "2023-10-16T00:11:37.100213Z",
+	"published": "2014-04-18T00:00:00Z",
+	"related": [
+		"CVE-2014-0150"
+	],
+	"summary": "qemu-kvm - security update",
+	"details": "\nMichael S. Tsirkin of Red Hat discovered a buffer overflow flaw in the\nway qemu processed MAC addresses table update requests from the guest.\n\n\nA privileged guest user could use this flaw to corrupt qemu process\nmemory on the host, which could potentially result in arbitrary code\nexecution on the host with the privileges of the qemu process.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 0.12.5+dfsg-5+squeeze11.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.1.2+dfsg-6+deb7u1.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.12.5+dfsg-5+squeeze11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.12.5+dfsg-5",
+				"0.12.5+dfsg-5+squeeze1",
+				"0.12.5+dfsg-5+squeeze10",
+				"0.12.5+dfsg-5+squeeze2",
+				"0.12.5+dfsg-5+squeeze3",
+				"0.12.5+dfsg-5+squeeze4",
+				"0.12.5+dfsg-5+squeeze4~bpo50+1",
+				"0.12.5+dfsg-5+squeeze5",
+				"0.12.5+dfsg-5+squeeze6",
+				"0.12.5+dfsg-5+squeeze7",
+				"0.12.5+dfsg-5+squeeze8",
+				"0.12.5+dfsg-5+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2910-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2910-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2910"
+		}
+	]
+}

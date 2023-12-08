@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1006-1",
+	"modified": "2023-06-28T06:18:52.637019Z",
+	"published": "2017-06-30T00:00:00Z",
+	"related": [
+		"CVE-2016-10209",
+		"CVE-2016-10349",
+		"CVE-2016-10350"
+	],
+	"summary": "libarchive - security update",
+	"details": "\nMultiple denial of services vulnerabilities have been identified in \nlibarchive when manipulating specially crafted archives.\n\n\n* [CVE-2016-10209](https://security-tracker.debian.org/tracker/CVE-2016-10209)\nNULL pointer dereference and application crash in the\n archive\\_wstring\\_append\\_from\\_mbs() function.\n* [CVE-2016-10349](https://security-tracker.debian.org/tracker/CVE-2016-10349)\nHeap-based buffer over-read and application crash in the\n archive\\_le32dec() function.\n* [CVE-2016-10350](https://security-tracker.debian.org/tracker/CVE-2016-10350)\nHeap-based buffer over-read and application crash in the\n archive\\_read\\_format\\_cab\\_read\\_header() function.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.0.4-3+wheezy6.\n\n\nWe recommend that you upgrade your libarchive packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.4-3+wheezy6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.4-3+nmu1",
+				"3.0.4-3+wheezy1",
+				"3.0.4-3+wheezy2",
+				"3.0.4-3+wheezy3",
+				"3.0.4-3+wheezy4",
+				"3.0.4-3+wheezy5",
+				"3.0.4-3+wheezy5+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1006-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1006"
+		}
+	]
+}

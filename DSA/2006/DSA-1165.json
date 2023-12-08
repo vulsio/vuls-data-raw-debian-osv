@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1165",
+	"modified": "2023-10-16T00:10:06.423518Z",
+	"published": "2006-09-01T00:00:00Z",
+	"related": [
+		"CVE-2006-3126"
+	],
+	"summary": "capi4hylafax - missing input sanitising",
+	"details": "\nLionel Elie Mamane discovered a security vulnerability in\ncapi4hylafax, tools for faxing over a CAPI 2.0 device, that allows\nremote attackers to execute arbitrary commands on the fax receiving\nsystem.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 01.02.03-10sarge2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 01.03.00.99.svn.300-3.\n\n\nWe recommend that you upgrade your capi4hylafax package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "capi4hylafax",
+				"purl": "pkg:deb/debian/capi4hylafax?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:01.02.03-10sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:01.02.03-10",
+				"1:01.02.03-10sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1165.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1165"
+		}
+	]
+}

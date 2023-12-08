@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2071-1",
+	"modified": "2023-10-16T00:10:56.680752Z",
+	"published": "2010-07-14T00:00:00Z",
+	"related": [
+		"CVE-2009-3995",
+		"CVE-2009-3996"
+	],
+	"summary": "libmikmod - several vulnerabilities",
+	"details": "\nDyon Balding discovered buffer overflows in the MikMod sound library, \nwhich could lead to the execution of arbitrary code if a user is \ntricked into opening malformed Impulse Tracker or Ultratracker sound \nfiles.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 3.1.11-6+lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.1.11-6.2.\n\n\nWe recommend that you upgrade your libmikmod packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libmikmod",
+				"purl": "pkg:deb/debian/libmikmod?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.11-6+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.11-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2071-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2071"
+		}
+	]
+}

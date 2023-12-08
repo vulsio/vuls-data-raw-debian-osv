@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3000-1",
+	"modified": "2023-06-28T06:26:46.382246Z",
+	"published": "2022-05-12T00:00:00Z",
+	"related": [
+		"CVE-2019-16785",
+		"CVE-2019-16786",
+		"CVE-2019-16789",
+		"CVE-2019-16792",
+		"CVE-2022-24761"
+	],
+	"summary": "waitress - security update",
+	"details": "\nWaitress is a Python WSGI server, an application server for Python web apps.\n\n\nSecurity updates to fix request smuggling bugs, when combined with another http\nproxy that interprets requests differently. This can lead to a potential for\nHTTP request smuggling/splitting whereby Waitress may see two requests while\nthe front-end server only sees a single HTTP message. This can result in cache\npoisoning or unexpected information disclosure.\n\n\n* [CVE-2019-16785](https://security-tracker.debian.org/tracker/CVE-2019-16785)\nOnly recognise CRLF as a line-terminator, not a plain LF. Before this\n change waitress could see two requests where the front-end proxy only saw\n one.\n* [CVE-2019-16786](https://security-tracker.debian.org/tracker/CVE-2019-16786)\nWaitress would parse the Transfer-Encoding header and only look for a\n single string value, if that value was not chunked it would fall through\n and use the Content-Length header instead. This could allow for Waitress\n to treat a single request as multiple requests in the case of HTTP\n pipelining.\n* [CVE-2019-16789](https://security-tracker.debian.org/tracker/CVE-2019-16789)\nSpecially crafted requests containing special whitespace characters in the\n Transfer-Encoding header would get parsed by Waitress as being a chunked\n request, but a front-end server would use the Content-Length instead as the\n Transfer-Encoding header is considered invalid due to containing invalid\n characters. If a front-end server does HTTP pipelining to a backend\n Waitress server this could lead to HTTP request splitting which may lead to\n potential cache poisoning or unexpected information disclosure.\n* [CVE-2019-16792](https://security-tracker.debian.org/tracker/CVE-2019-16792)\nIf two Content-Length headers are sent in a single request, Waitress would\n treat the request as having no body, thereby treating the body of the\n request as a new request in HTTP pipelining.\n* [CVE-2022-24761](https://security-tracker.debian.org/tracker/CVE-2022-24761)\nThere are two classes of vulnerability that may lead to request smuggling\n that are addressed by this advisory:\n\n\n\t1. The use of Python's int() to parse strings into integers, leading\n\t to +10 to be parsed as 10, or 0x01 to be parsed as 1, where as the\n\t standard specifies that the string should contain only digits or hex\n\t digits.\n\t2. Waitress does not support chunk extensions, however it was\n\t discarding them without validating that they did not contain illegal\n\t characters.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.0.1-1+deb9u1.\n\n\nWe recommend that you upgrade your waitress packages.\n\n\nFor the detailed security status of waitress please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/waitress>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "waitress",
+				"purl": "pkg:deb/debian/waitress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3000-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3000"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3272-1",
+	"modified": "2023-10-16T00:06:16.846132Z",
+	"published": "2015-05-23T00:00:00Z",
+	"related": [
+		"CVE-2015-4047"
+	],
+	"summary": "ipsec-tools - security update",
+	"details": "\nJavantea discovered a NULL pointer dereference flaw in racoon, the\nInternet Key Exchange daemon of ipsec-tools. A remote attacker can use\nthis flaw to cause the IKE daemon to crash via specially crafted UDP\npackets, resulting in a denial of service.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1:0.8.0-14+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:0.8.2+20140711-2+deb8u1.\n\n\nFor the testing distribution (stretch) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your ipsec-tools packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ipsec-tools",
+				"purl": "pkg:deb/debian/ipsec-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.8.0-14+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.8.0-14"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3272-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ipsec-tools",
+				"purl": "pkg:deb/debian/ipsec-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.8.2+20140711-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.8.2+20140711-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3272-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3272"
+		}
+	]
+}

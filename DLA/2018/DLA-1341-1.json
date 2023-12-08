@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1341-1",
+	"modified": "2023-06-28T06:20:34.275680Z",
+	"published": "2018-04-06T00:00:00Z",
+	"related": [
+		"CVE-2017-12122",
+		"CVE-2017-14440",
+		"CVE-2017-14441",
+		"CVE-2017-14442",
+		"CVE-2017-14448",
+		"CVE-2017-14450",
+		"CVE-2018-3837",
+		"CVE-2018-3838",
+		"CVE-2018-3839"
+	],
+	"summary": "sdl-image1.2 - security update",
+	"details": "\nLilith of Cisco Talos discovered several buffer overflow\nvulnerabilities in the SDL Image library which can be leveraged by\nattackers to execute arbitrary code via specially crafted image files.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.2.12-2+deb7u2.\n\n\nWe recommend that you upgrade your sdl-image1.2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "sdl-image1.2",
+				"purl": "pkg:deb/debian/sdl-image1.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.12-2+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.12-2",
+				"1.2.12-2+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1341-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1341"
+		}
+	]
+}

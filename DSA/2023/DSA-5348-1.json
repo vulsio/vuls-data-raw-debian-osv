@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5348-1",
+	"modified": "2023-10-16T00:28:03.935187Z",
+	"published": "2023-02-14T00:00:00Z",
+	"related": [
+		"CVE-2023-0056",
+		"CVE-2023-25725"
+	],
+	"summary": "haproxy - security update",
+	"details": "\nTwo vulnerabilities were discovered in HAProxy, a fast and reliable load\nbalancing reverse proxy, which may result in denial of service, or\nbypass of access controls and routing rules via specially crafted\nrequests.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2.2.9-2+deb11u4.\n\n\nWe recommend that you upgrade your haproxy packages.\n\n\nFor the detailed security status of haproxy please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/haproxy](https://security-tracker.debian.org/tracker/haproxy)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "haproxy",
+				"purl": "pkg:deb/debian/haproxy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.9-2+deb11u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.9-2",
+				"2.2.9-2+deb11u1",
+				"2.2.9-2+deb11u1~bpo10+1",
+				"2.2.9-2+deb11u2",
+				"2.2.9-2+deb11u2~bpo10+1",
+				"2.2.9-2+deb11u3",
+				"2.2.9-2+deb11u3~bpo10+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5348-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5348"
+		}
+	]
+}

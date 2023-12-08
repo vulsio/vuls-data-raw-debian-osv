@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1301-1",
+	"modified": "2023-06-28T06:19:48.598824Z",
+	"published": "2018-03-06T00:00:00Z",
+	"related": [
+		"CVE-2018-1304",
+		"CVE-2018-1305"
+	],
+	"summary": "tomcat7 - security update",
+	"details": "\nTwo security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2018-1304](https://security-tracker.debian.org/tracker/CVE-2018-1304)\nThe URL pattern of \"\" (the empty string) which exactly maps to the\n context root was not correctly handled in Apache Tomcat when used\n as part of a security constraint definition. This caused the\n constraint to be ignored. It was, therefore, possible for\n unauthorized users to gain access to web application resources that\n should have been protected. Only security constraints with a URL\n pattern of the empty string were affected.\n* [CVE-2018-1305](https://security-tracker.debian.org/tracker/CVE-2018-1305)\nSecurity constraints defined by annotations of Servlets in Apache\n Tomcat were only applied once a Servlet had been loaded. Because\n security constraints defined in this way apply to the URL pattern\n and any URLs below that point, it was possible - depending on the\n order Servlets were loaded - for some security constraints not to be\n applied. This could have exposed resources to users who were not\n authorized to access them.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n7.0.28-4+deb7u18.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tomcat7",
+				"purl": "pkg:deb/debian/tomcat7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.0.28-4+deb7u18"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.0.28-4",
+				"7.0.28-4+deb7u1",
+				"7.0.28-4+deb7u10",
+				"7.0.28-4+deb7u11",
+				"7.0.28-4+deb7u12",
+				"7.0.28-4+deb7u13",
+				"7.0.28-4+deb7u14",
+				"7.0.28-4+deb7u15",
+				"7.0.28-4+deb7u16",
+				"7.0.28-4+deb7u17",
+				"7.0.28-4+deb7u2",
+				"7.0.28-4+deb7u3",
+				"7.0.28-4+deb7u4",
+				"7.0.28-4+deb7u5",
+				"7.0.28-4+deb7u6",
+				"7.0.28-4+deb7u7",
+				"7.0.28-4+deb7u8",
+				"7.0.28-4+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1301-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1301"
+		}
+	]
+}

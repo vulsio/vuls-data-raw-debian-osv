@@ -1,0 +1,82 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3974-1",
+	"modified": "2023-10-16T00:12:31.543562Z",
+	"published": "2017-09-15T00:00:00Z",
+	"related": [
+		"CVE-2017-7674"
+	],
+	"summary": "tomcat8 - security update",
+	"details": "\nTwo issues were discovered in the Tomcat servlet and JSP engine.\n\n\n* [CVE-2017-7674](https://security-tracker.debian.org/tracker/CVE-2017-7674)\nRick Riemer discovered that the Cross-Origin Resource Sharing\n filter did not add a Vary header indicating possible different\n responses, which could lead to cache poisoning.\n* [CVE-2017-7675](https://security-tracker.debian.org/tracker/CVE-2017-7675) (stretch only)\n\n Markus DĂśrschmidt found that the HTTP/2 implementation bypassed\n some security checks, thus allowing an attacker to conduct\n directory traversal attacks by using specially crafted URLs.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 8.0.14-1+deb8u11.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 8.5.14-1+deb9u2.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.14-1+deb8u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.14-1",
+				"8.0.14-1+deb8u1",
+				"8.0.14-1+deb8u10",
+				"8.0.14-1+deb8u2",
+				"8.0.14-1+deb8u3",
+				"8.0.14-1+deb8u4",
+				"8.0.14-1+deb8u5",
+				"8.0.14-1+deb8u6",
+				"8.0.14-1+deb8u7",
+				"8.0.14-1+deb8u8",
+				"8.0.14-1+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3974-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.5.14-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.5.14-1",
+				"8.5.14-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3974-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3974"
+		}
+	]
+}

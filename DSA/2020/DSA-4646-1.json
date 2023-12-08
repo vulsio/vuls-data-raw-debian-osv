@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4646-1",
+	"modified": "2023-10-16T00:14:30.402472Z",
+	"published": "2020-03-25T00:00:00Z",
+	"related": [
+		"CVE-2020-10531"
+	],
+	"summary": "icu - security update",
+	"details": "\nAndre Bargull discovered an integer overflow in the International\nComponents for Unicode (ICU) library which could result in denial of\nservice and potentially the execution of arbitrary code.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 57.1-6+deb9u4.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 63.1-6+deb10u1.\n\n\nWe recommend that you upgrade your icu packages.\n\n\nFor the detailed security status of icu please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/icu>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "icu",
+				"purl": "pkg:deb/debian/icu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "57.1-6+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"57.1-6",
+				"57.1-6+deb9u1",
+				"57.1-6+deb9u2",
+				"57.1-6+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4646-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "icu",
+				"purl": "pkg:deb/debian/icu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "63.1-6+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"63.1-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4646-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4646"
+		}
+	]
+}

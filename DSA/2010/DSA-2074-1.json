@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2074-1",
+	"modified": "2023-10-16T00:10:56.857236Z",
+	"published": "2010-07-21T00:00:00Z",
+	"related": [
+		"CVE-2010-0001"
+	],
+	"summary": "ncompress - execution of arbitrary code",
+	"details": "\nAki Helin discovered an integer underflow in ncompress, the original\nLempel-Ziv compress/uncompress programs.\nThis could lead to the execution of arbitrary code when trying to decompress\na crafted LZW compressed gzip archive.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 4.2.4.2-1+lenny1.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, this\nproblem has been fixed in version 4.2.4.3-1.\n\n\nWe recommend that you upgrade your ncompress package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "ncompress",
+				"purl": "pkg:deb/debian/ncompress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.4.2-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.4.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2074-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2074"
+		}
+	]
+}

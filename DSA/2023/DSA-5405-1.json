@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5405-1",
+	"modified": "2023-10-16T00:31:50.393732Z",
+	"published": "2023-05-18T00:00:00Z",
+	"related": [
+		"CVE-2023-28625"
+	],
+	"summary": "libapache2-mod-auth-openidc - security update",
+	"details": "\nIt was discovered that missing input sanitising in the implementation\nof the OIDCStripCookie option in mod\\_auth\\_openidc could result in\ndenial of service.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.4.9.4-0+deb11u3.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-openidc packages.\n\n\nFor the detailed security status of libapache2-mod-auth-openidc please refer\nto its security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libapache2-mod-auth-openidc](https://security-tracker.debian.org/tracker/libapache2-mod-auth-openidc)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libapache2-mod-auth-openidc",
+				"purl": "pkg:deb/debian/libapache2-mod-auth-openidc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.9.4-0+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.9-1",
+				"2.4.9.4-0+deb11u1",
+				"2.4.9.4-0+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5405-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5405"
+		}
+	]
+}

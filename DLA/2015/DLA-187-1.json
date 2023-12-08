@@ -1,0 +1,151 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-187-1",
+	"modified": "2023-06-28T06:21:02.512803Z",
+	"published": "2015-04-07T00:00:00Z",
+	"related": [
+		"CVE-2015-2928",
+		"CVE-2015-2929"
+	],
+	"summary": "tor - security update",
+	"details": "\nSeveral hidden service related denial-of-service issues have been\ndiscovered in Tor, a connection-based low-latency anonymous\ncommunication system.\n\n\ndisgleirio discovered that a malicious client could trigger an\n assertion failure in a Tor instance providing a hidden service, thus\n rendering the service inaccessible.\n [[CVE-2015-2928](https://security-tracker.debian.org/tracker/CVE-2015-2928)]\n\n\nDonnchaC discovered that Tor clients would crash with an assertion\n failure upon parsing specially crafted hidden service descriptors.\n [[CVE-2015-2929](https://security-tracker.debian.org/tracker/CVE-2015-2929)]\n\n\nIntroduction points would accept multiple INTRODUCE1 cells on one\n circuit, making it inexpensive for an attacker to overload a hidden\n service with introductions. Introduction points no longer allow\n multiple such cells on the same circuit.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tor",
+				"purl": "pkg:deb/debian/tor?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.2.4.27-1~deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.2.1.29-1",
+				"0.2.1.30-1",
+				"0.2.1.31-1",
+				"0.2.1.31-1~lenny+1",
+				"0.2.1.32-1",
+				"0.2.2.1-alpha-1",
+				"0.2.2.10-alpha-1",
+				"0.2.2.10-alpha-2",
+				"0.2.2.11-alpha-1",
+				"0.2.2.12-alpha-1",
+				"0.2.2.13-alpha-1",
+				"0.2.2.14-alpha-1",
+				"0.2.2.15-alpha-1",
+				"0.2.2.16-alpha-1",
+				"0.2.2.17-alpha-1",
+				"0.2.2.18-alpha-1",
+				"0.2.2.18-alpha-2",
+				"0.2.2.19-alpha-1",
+				"0.2.2.2-alpha-1",
+				"0.2.2.20-alpha-1",
+				"0.2.2.21-alpha-1",
+				"0.2.2.22-alpha-1",
+				"0.2.2.23-alpha-1",
+				"0.2.2.27-beta-1",
+				"0.2.2.28-beta-1",
+				"0.2.2.29-beta-1",
+				"0.2.2.3-alpha-1",
+				"0.2.2.30-rc-1",
+				"0.2.2.31-rc-1",
+				"0.2.2.32-1",
+				"0.2.2.32-1~bpo60+1",
+				"0.2.2.33-1",
+				"0.2.2.33-1~bpo60+1",
+				"0.2.2.34-1",
+				"0.2.2.34-1~bpo60+1",
+				"0.2.2.35-1",
+				"0.2.2.35-1~squeeze+1",
+				"0.2.2.36-1",
+				"0.2.2.37-1",
+				"0.2.2.37-1~bpo60+1",
+				"0.2.2.37-1~squeeze+1",
+				"0.2.2.38-1",
+				"0.2.2.39-1",
+				"0.2.2.4-alpha-1",
+				"0.2.2.5-alpha-1",
+				"0.2.2.6-alpha-1",
+				"0.2.2.7-alpha-1",
+				"0.2.2.7-alpha-2",
+				"0.2.2.8-alpha-1",
+				"0.2.2.9-alpha-1",
+				"0.2.3.10-alpha-1",
+				"0.2.3.11-alpha-1",
+				"0.2.3.11-alpha-2",
+				"0.2.3.12-alpha-1",
+				"0.2.3.13-alpha-1",
+				"0.2.3.14-alpha-1",
+				"0.2.3.15-alpha-1",
+				"0.2.3.16-alpha-1",
+				"0.2.3.17-beta-1",
+				"0.2.3.17-beta-2",
+				"0.2.3.17-beta-3",
+				"0.2.3.18-rc-1",
+				"0.2.3.19-rc-1",
+				"0.2.3.20-rc-1",
+				"0.2.3.21-rc-1",
+				"0.2.3.22-rc-1",
+				"0.2.3.23-rc-1",
+				"0.2.3.24-rc-1",
+				"0.2.3.25-1",
+				"0.2.3.3-alpha-1",
+				"0.2.3.4-alpha-1",
+				"0.2.3.5-alpha-1",
+				"0.2.3.6-alpha-1",
+				"0.2.3.7-alpha-1",
+				"0.2.3.8-alpha-1",
+				"0.2.3.9-alpha-1",
+				"0.2.4.1-alpha-1",
+				"0.2.4.10-alpha-1",
+				"0.2.4.11-alpha-1",
+				"0.2.4.12-alpha-1",
+				"0.2.4.12-alpha-2",
+				"0.2.4.13-alpha-1",
+				"0.2.4.14-alpha-1",
+				"0.2.4.15-rc-1",
+				"0.2.4.16-rc-1",
+				"0.2.4.17-rc-1",
+				"0.2.4.18-rc-1",
+				"0.2.4.19-1",
+				"0.2.4.2-alpha-1",
+				"0.2.4.20-1",
+				"0.2.4.21-1",
+				"0.2.4.22-1",
+				"0.2.4.22-1~bpo70+1",
+				"0.2.4.22-1~deb7u1",
+				"0.2.4.23-1",
+				"0.2.4.23-1~deb6u1",
+				"0.2.4.23-1~deb7u1",
+				"0.2.4.24-1",
+				"0.2.4.26-1",
+				"0.2.4.26-1~deb6u1",
+				"0.2.4.3-alpha-1",
+				"0.2.4.4-alpha-1",
+				"0.2.4.5-alpha-1",
+				"0.2.4.6-alpha-1",
+				"0.2.4.7-alpha-1",
+				"0.2.4.9-alpha-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-187-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-187"
+		}
+	]
+}

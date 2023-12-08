@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4483-1",
+	"modified": "2023-10-16T00:18:24.982035Z",
+	"published": "2019-07-16T00:00:00Z",
+	"related": [
+		"CVE-2019-9848",
+		"CVE-2019-9849"
+	],
+	"summary": "libreoffice - security update",
+	"details": "\nTwo security issues have been discovered in LibreOffice:\n\n\n* [CVE-2019-9848](https://security-tracker.debian.org/tracker/CVE-2019-9848)\nNils Emmerich discovered that malicious documents could execute\n arbitrary Python code via LibreLogo.\n* [CVE-2019-9849](https://security-tracker.debian.org/tracker/CVE-2019-9849)\nMatei Badanoiu discovered that the stealth mode did not apply to\n bullet graphics.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 1:5.2.7-1+deb9u9.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1:6.1.5-3+deb10u2.\n\n\nWe recommend that you upgrade your libreoffice packages.\n\n\nFor the detailed security status of libreoffice please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libreoffice](https://security-tracker.debian.org/tracker/libreoffice)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libreoffice",
+				"purl": "pkg:deb/debian/libreoffice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:5.2.7-1+deb9u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:5.2.7-1",
+				"1:5.2.7-1+deb9u1",
+				"1:5.2.7-1+deb9u2",
+				"1:5.2.7-1+deb9u2~bpo8+1",
+				"1:5.2.7-1+deb9u3",
+				"1:5.2.7-1+deb9u4",
+				"1:5.2.7-1+deb9u4~bpo8+1",
+				"1:5.2.7-1+deb9u5",
+				"1:5.2.7-1+deb9u6",
+				"1:5.2.7-1+deb9u7",
+				"1:5.2.7-1+deb9u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4483-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libreoffice",
+				"purl": "pkg:deb/debian/libreoffice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:6.1.5-3+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:6.1.5-3",
+				"1:6.1.5-3+deb10u1",
+				"1:6.1.5-3+deb10u2~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4483-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4483"
+		}
+	]
+}

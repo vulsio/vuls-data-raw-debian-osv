@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-501",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-05-07T00:00:00Z",
+	"related": [
+		"CVE-2004-0399",
+		"CVE-2004-0400"
+	],
+	"summary": "exim - buffer overflow",
+	"details": "\nGeorgi Guninski discovered two stack-based buffer overflows. They can\nnot be exploited with the default configuration from the Debian\nsystem, though. The Common Vulnerabilities and Exposures project\nidentifies the following problems that are fixed with this update:\n\n\n* [CAN-2004-0399](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0399)\nWhen \"sender\\_verify = true\" is configured in exim.conf a buffer\n overflow can happen during verification of the sender. This\n problem is fixed in exim 4.\n\n* [CAN-2004-0400](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0400)\nWhen headers\\_check\\_syntax is configured in exim.conf a buffer\n overflow can happen during the header check. This problem does\n also exist in exim 4.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.35-1woody3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.36-11 for exim 3 and in version 4.33-1 for exim 4.\n\n\nWe recommend that you upgrade your exim package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "exim",
+				"purl": "pkg:deb/debian/exim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.35-1woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-501.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-501"
+		}
+	]
+}

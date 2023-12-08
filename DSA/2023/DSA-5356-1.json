@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5356-1",
+	"modified": "2023-10-16T00:16:35.329644Z",
+	"published": "2023-02-20T00:00:00Z",
+	"related": [
+		"CVE-2021-23159",
+		"CVE-2021-23172",
+		"CVE-2021-23210",
+		"CVE-2021-33844",
+		"CVE-2021-3643",
+		"CVE-2021-40426",
+		"CVE-2022-31650",
+		"CVE-2022-31651"
+	],
+	"summary": "sox - security update",
+	"details": "\nMultiple security issues were discovered in Sox, the Swiss Army knife of\nsound processing programs, which could result in denial of service or\npotentially the execution of arbitrary code if a malformed audio file\nis processed.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 14.4.2+git20190427-2+deb11u1.\n\n\nWe recommend that you upgrade your sox packages.\n\n\nFor the detailed security status of sox please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/sox](https://security-tracker.debian.org/tracker/sox)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "sox",
+				"purl": "pkg:deb/debian/sox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "14.4.2+git20190427-2+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"14.4.2+git20190427-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5356-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5356"
+		}
+	]
+}

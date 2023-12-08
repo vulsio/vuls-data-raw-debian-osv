@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-598-1",
+	"modified": "2023-06-28T06:22:44.762726Z",
+	"published": "2016-08-20T00:00:00Z",
+	"related": [
+		"CVE-2016-6866"
+	],
+	"summary": "suckless-tools - security update",
+	"details": "\nIt was discovered that the slock screen locking tool would segfault when the\nuser's account had been disabled.\n\n\nslock called crypt(3) and used the return value for strcmp(3) without checking\nto see if the return value of crypt(3) was a NULL pointer. If the hash returned\nby (getspnam()->sp\\_pwdp) was invalid, crypt(3) would return NULL and set errno\nto EINVAL. This would cause slock to segfault which leaves the machine\nunprotected.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in suckless-tools version\n38-2+deb7u1.\n\n\nWe recommend that you upgrade your suckless-tools packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "suckless-tools",
+				"purl": "pkg:deb/debian/suckless-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "38-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"38-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-598-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-598"
+		}
+	]
+}

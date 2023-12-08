@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-935-1",
+	"modified": "2023-10-16T00:30:16.022897Z",
+	"published": "2006-01-10T00:00:00Z",
+	"related": [
+		"CVE-2005-3656"
+	],
+	"summary": "libapache2-mod-auth-pgsql - format string vulnerability",
+	"details": "\niDEFENSE reports that a format string vulnerability in mod\\_auth\\_pgsql, a\nlibrary used to authenticate web users against a PostgreSQL database,\ncould be used to execute arbitrary code with the privileges of the httpd\nuser.\n\n\nThe old stable distribution (woody) does not contain\nlibapache2-mod-auth-pgsql.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.0.2b1-5sarge0.\n\n\nFor the unstable distribution (sid) this problem will be fixed shortly.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-pgsql package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "libapache2-mod-auth-pgsql",
+				"purl": "pkg:deb/debian/libapache2-mod-auth-pgsql?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.2b1-5sarge0"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.2b1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-935-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-935"
+		}
+	]
+}

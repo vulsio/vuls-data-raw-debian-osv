@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-500",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-05-01T00:00:00Z",
+	"related": [
+		"CVE-2004-0422"
+	],
+	"summary": "flim - insecure temporary file",
+	"details": "\nTatsuya Kinoshita discovered a vulnerability in flim, an emacs library\nfor working with internet messages, where temporary files were created\nwithout taking appropriate precautions. This vulnerability could\npotentially be exploited by a local user to overwrite files with the\nprivileges of the user running emacs.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.14.3-9woody1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you update your flim package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "flim",
+				"purl": "pkg:deb/debian/flim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.3-9woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-500.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-500"
+		}
+	]
+}

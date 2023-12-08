@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3336-1",
+	"modified": "2023-10-16T00:11:55.218470Z",
+	"published": "2015-08-17T00:00:00Z",
+	"related": [
+		"CVE-2015-2721",
+		"CVE-2015-2730"
+	],
+	"summary": "nss - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in nss, the Mozilla Network\nSecurity Service library. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2015-2721](https://security-tracker.debian.org/tracker/CVE-2015-2721)\nKarthikeyan Bhargavan discovered that NSS incorrectly handles state\n transitions for the TLS state machine. A man-in-the-middle attacker\n could exploit this flaw to skip the ServerKeyExchange message and\n remove the forward-secrecy property.\n* [CVE-2015-2730](https://security-tracker.debian.org/tracker/CVE-2015-2730)\nWatson Ladd discovered that NSS does not properly perform Elliptical\n Curve Cryptography (ECC) multiplication, allowing a remote attacker\n to potentially spoof ECDSA signatures.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 2:3.14.5-1+deb7u5.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2:3.17.2-1.1+deb8u1.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 2:3.19.1-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2:3.19.1-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.14.5-1+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.14.3-1",
+				"2:3.14.4-1",
+				"2:3.14.5-1",
+				"2:3.14.5-1+deb7u1",
+				"2:3.14.5-1+deb7u2",
+				"2:3.14.5-1+deb7u3",
+				"2:3.14.5-1+deb7u4",
+				"2:3.14.5-1~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3336-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.17.2-1.1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.17.2-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3336-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3336"
+		}
+	]
+}

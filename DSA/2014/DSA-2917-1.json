@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2917-1",
+	"modified": "2023-10-16T00:11:37.881543Z",
+	"published": "2014-04-28T00:00:00Z",
+	"related": [
+		"CVE-2014-0470"
+	],
+	"summary": "super - security update",
+	"details": "\nJohn Lightsey of the Debian Security Audit project discovered that the\nsuper package did not check for setuid failures, allowing local users\nto increase the privileges on kernel versions which do not guard\nagainst RLIMIT\\_NPROC attacks.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 3.30.0-3+squeeze2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 3.30.0-6+deb7u1.\n\n\nWe recommend that you upgrade your super packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "super",
+				"purl": "pkg:deb/debian/super?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.30.0-3+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.30.0-3",
+				"3.30.0-3+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2917-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "super",
+				"purl": "pkg:deb/debian/super?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.30.0-6+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.30.0-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2917-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2917"
+		}
+	]
+}

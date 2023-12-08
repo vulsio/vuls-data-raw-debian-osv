@@ -1,0 +1,85 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3062-1",
+	"modified": "2023-06-28T06:21:26.194121Z",
+	"published": "2022-06-29T00:00:00Z",
+	"related": [
+		"CVE-2021-36773",
+		"CVE-2022-32308"
+	],
+	"summary": "ublock-origin - security update",
+	"details": "\nuBlock, a Firefox add-on and efficient ads, malware and trackers blocker,\nsupported an arbitrary depth of parameter nesting for strict blocking, which\nallows crafted web sites to cause a denial of service (unbounded recursion that\ncan trigger memory consumption and a loss of all blocking functionality).\n\n\nPlease note that webext-ublock-origin was replaced by webext-ublock-originfirefox.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.42.0+dfsg-1~deb9u1.\n\n\nWe recommend that you upgrade your ublock-origin packages.\n\n\nFor the detailed security status of ublock-origin please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ublock-origin>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ublock-origin",
+				"purl": "pkg:deb/debian/ublock-origin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.42.0+dfsg-1~deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.10.4+dfsg-1",
+				"1.11.4+dfsg-1",
+				"1.11.4+dfsg-2",
+				"1.12.4+dfsg-1",
+				"1.13.6+dfsg-1",
+				"1.13.8+dfsg-1",
+				"1.16.14+dfsg-1",
+				"1.16.14+dfsg-1~deb9u1",
+				"1.16.14+dfsg-2",
+				"1.16.14+dfsg-2~deb9u1",
+				"1.16.6+dfsg-1",
+				"1.16.6+dfsg-1.1",
+				"1.17.0+dfsg-1",
+				"1.17.0+dfsg-2",
+				"1.17.0+dfsg-3",
+				"1.18.10+dfsg-1",
+				"1.18.2+dfsg-1",
+				"1.18.2+dfsg-2",
+				"1.18.4+dfsg-1",
+				"1.18.4+dfsg-2",
+				"1.19.0+dfsg-1",
+				"1.19.0+dfsg-2",
+				"1.22.2+dfsg-1",
+				"1.22.2+dfsg-1~deb10u1",
+				"1.22.2+dfsg-1~deb9u1",
+				"1.22.2+dfsg-2",
+				"1.25.0+dfsg-1",
+				"1.28.0+dfsg-1",
+				"1.29.0+dfsg-1",
+				"1.29.0+dfsg-2",
+				"1.30.0+dfsg-1",
+				"1.30.0+dfsg-1~deb10u1",
+				"1.32.0+dfsg-1",
+				"1.33.0+dfsg-1",
+				"1.37.0+dfsg-1",
+				"1.37.0+dfsg-1~deb10u1",
+				"1.37.0+dfsg-1~deb11u1",
+				"1.39.0+dfsg-1",
+				"1.39.0+dfsg-2",
+				"1.40.2+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3062-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3062"
+		}
+	]
+}

@@ -1,0 +1,116 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3886-2",
+	"modified": "2023-10-16T00:12:25.255634Z",
+	"published": "2017-06-19T00:00:00Z",
+	"summary": "linux - regression update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2017-7487](https://security-tracker.debian.org/tracker/CVE-2017-7487)\nLi Qiang reported a reference counter leak in the ipxitf\\_ioctl\n function which may result into a use-after-free vulnerability,\n triggerable when a IPX interface is configured.\n* [CVE-2017-7645](https://security-tracker.debian.org/tracker/CVE-2017-7645)\nTuomas Haanpaa and Matti Kamunen from Synopsys Ltd discovered that\n the NFSv2 and NFSv3 server implementations are vulnerable to an\n out-of-bounds memory access issue while processing arbitrarily long\n arguments sent by NFSv2/NFSv3 PRC clients, leading to a denial of\n service.\n* [CVE-2017-7895](https://security-tracker.debian.org/tracker/CVE-2017-7895)\nAri Kauppi from Synopsys Ltd discovered that the NFSv2 and NFSv3\n server implementations do not properly handle payload bounds\n checking of WRITE requests. A remote attacker with write access to a\n NFS mount can take advantage of this flaw to read chunks of\n arbitrary memory from both kernel-space and user-space.\n* [CVE-2017-8064](https://security-tracker.debian.org/tracker/CVE-2017-8064)\nArnd Bergmann found that the DVB-USB core misused the device\n logging system, resulting in a use-after-free vulnerability, with\n unknown security impact.\n* [CVE-2017-8890](https://security-tracker.debian.org/tracker/CVE-2017-8890)\nIt was discovered that the net\\_csk\\_clone\\_lock() function allows a\n remote attacker to cause a double free leading to a denial of\n service or potentially have other impact.\n* [CVE-2017-8924](https://security-tracker.debian.org/tracker/CVE-2017-8924)\nJohan Hovold found that the io\\_ti USB serial driver could leak\n sensitive information if a malicious USB device was connected.\n* [CVE-2017-8925](https://security-tracker.debian.org/tracker/CVE-2017-8925)\nJohan Hovold found a reference counter leak in the omninet USB\n serial driver, resulting in a use-after-free vulnerability. This\n can be triggered by a local user permitted to open tty devices.\n* [CVE-2017-9074](https://security-tracker.debian.org/tracker/CVE-2017-9074)\nAndrey Konovalov reported that the IPv6 fragmentation\n implementation could read beyond the end of a packet buffer. A\n local user or guest VM might be able to use this to leak sensitive\n information or to cause a denial of service (crash).\n* [CVE-2017-9075](https://security-tracker.debian.org/tracker/CVE-2017-9075)\nAndrey Konovalov reported that the SCTP/IPv6 implementation\n wrongly initialised address lists on connected sockets, resulting\n in a use-after-free vulnerability, a similar issue to\n [CVE-2017-8890](https://security-tracker.debian.org/tracker/CVE-2017-8890). This can be triggered by any local user.\n* [CVE-2017-9076](https://security-tracker.debian.org/tracker/CVE-2017-9076)\n\n / [CVE-2017-9077](https://security-tracker.debian.org/tracker/CVE-2017-9077)\nCong Wang found that the TCP/IPv6 and DCCP/IPv6 implementations\n wrongly initialised address lists on connected sockets, a similar\n issue to [CVE-2017-9075](https://security-tracker.debian.org/tracker/CVE-2017-9075).\n* [CVE-2017-9242](https://security-tracker.debian.org/tracker/CVE-2017-9242)\nAndrey Konovalov reported a packet buffer overrun in the IPv6\n implementation. A local user could use this for denial of service\n (memory corruption; crash) and possibly for privilege escalation.\n* [CVE-2017-1000364](https://security-tracker.debian.org/tracker/CVE-2017-1000364)\nThe Qualys Research Labs discovered that the size of the stack guard\n page is not sufficiently large. The stack-pointer can jump over the\n guard-page and moving from the stack into another memory region\n without accessing the guard-page. In this case no page-fault\n exception is raised and the stack extends into the other memory\n region. An attacker can exploit this flaw for privilege escalation.\n\n\nThe default stack gap protection is set to 256 pages and can be\n configured via the stack\\_guard\\_gap kernel parameter on the kernel\n command line.\n\n\nFurther details can be found at\n <https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt>\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 3.16.43-2+deb8u1.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.30-2+deb9u1 or earlier versions before the stretch release.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.43-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.36-1",
+				"3.16.36-1+deb8u1",
+				"3.16.36-1+deb8u1~bpo70+1",
+				"3.16.36-1+deb8u2",
+				"3.16.36-1+deb8u2~bpo70+1",
+				"3.16.39-1",
+				"3.16.39-1+deb8u1",
+				"3.16.39-1+deb8u1~bpo70+1",
+				"3.16.39-1+deb8u1~bpo70+1+gcc4.4",
+				"3.16.39-1+deb8u2",
+				"3.16.39-1~bpo70+1",
+				"3.16.43-1",
+				"3.16.43-2",
+				"3.16.43-2+deb8u1",
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3886-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.30-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3886-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3886"
+		}
+	]
+}

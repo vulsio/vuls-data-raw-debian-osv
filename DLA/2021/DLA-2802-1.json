@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2802-1",
+	"modified": "2023-06-28T06:25:20.105017Z",
+	"published": "2021-10-31T00:00:00Z",
+	"related": [
+		"CVE-2018-16062",
+		"CVE-2018-16402",
+		"CVE-2018-18310",
+		"CVE-2018-18520",
+		"CVE-2018-18521",
+		"CVE-2019-7150",
+		"CVE-2019-7665"
+	],
+	"summary": "elfutils - security update",
+	"details": "\nSeveral vulnerabilities were fixed in elfutils, a collection of\nutilities and libraries to handle ELF objects.\n\n\n* [CVE-2018-16062](https://security-tracker.debian.org/tracker/CVE-2018-16062)\ndwarf\\_getaranges in dwarf\\_getaranges.c in libdw allowed a denial of\n service (heap-based buffer over-read) via a crafted file.\n* [CVE-2018-16402](https://security-tracker.debian.org/tracker/CVE-2018-16402)\nlibelf/elf\\_end.c in allowed to cause a denial of service (double\n free and application crash) because it tried to decompress twice.\n* [CVE-2018-18310](https://security-tracker.debian.org/tracker/CVE-2018-18310)\nAn invalid memory address dereference libdwfl allowed a denial of\n service (application crash) via a crafted file.\n* [CVE-2018-18520](https://security-tracker.debian.org/tracker/CVE-2018-18520)\nA use-after-free in recursive ELF ar files allowed a denial of\n service (application crash) via a crafted file.\n* [CVE-2018-18521](https://security-tracker.debian.org/tracker/CVE-2018-18521)\nA divide-by-zero in arlib\\_add\\_symbols() allowed a denial of service\n (application crash) via a crafted file.\n* [CVE-2019-7150](https://security-tracker.debian.org/tracker/CVE-2019-7150)\nA segmentation fault could occur due to dwfl\\_segment\\_report\\_module()\n not checking whether the dyn data read from a core file is truncated.\n* [CVE-2019-7665](https://security-tracker.debian.org/tracker/CVE-2019-7665)\nNT\\_PLATFORM core notes contain a zero terminated string allowed a\n denial of service (application crash) via a crafted file.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.168-1+deb9u1.\n\n\nWe recommend that you upgrade your elfutils packages.\n\n\nFor the detailed security status of elfutils please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/elfutils>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "elfutils",
+				"purl": "pkg:deb/debian/elfutils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.168-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.168-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2802-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2802"
+		}
+	]
+}

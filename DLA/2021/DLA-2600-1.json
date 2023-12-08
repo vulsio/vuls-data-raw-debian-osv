@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2600-1",
+	"modified": "2023-06-28T06:26:36.935689Z",
+	"published": "2021-03-19T00:00:00Z",
+	"related": [
+		"CVE-2021-27291"
+	],
+	"summary": "pygments - security update",
+	"details": "\nIt was discovered that there was a series of denial of service\nvulnerabilities in Pygments, a popular syntax highlighting library for Python.\n\n\nA number of regular expressions had exponential or cubic worst-case\ncomplexity which could cause a remote denial of service (DoS) when provided\nwith malicious input.\n\n\n* [CVE-2021-27291](https://security-tracker.debian.org/tracker/CVE-2021-27291)\nIn pygments 1.1+, fixed in 2.7.4, the lexers used to parse programming\n languages rely heavily on regular expressions. Some of the regular\n expressions have exponential or cubic worst-case complexity and are\n vulnerable to ReDoS. By crafting malicious input, an attacker can cause a\n denial of service.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n2.2.0+dfsg-1+deb9u2.\n\n\nWe recommend that you upgrade your pygments packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "pygments",
+				"purl": "pkg:deb/debian/pygments?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.0+dfsg-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.0+dfsg-1",
+				"2.2.0+dfsg-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2600-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2600"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-447",
+	"modified": "2023-10-16T00:22:05.946236Z",
+	"published": "2004-02-22T00:00:00Z",
+	"related": [
+		"CVE-2004-0159"
+	],
+	"summary": "hsftp - format string",
+	"details": "\nUlf HĂ¤rnhammar from the Debian Security Audit Project\ndiscovered a format string\nvulnerability in hsftp. This vulnerability could be exploited by an\nattacker able to create files on a remote server with carefully\ncrafted names, to which a user would connect using hsftp. When the\nuser requests a directory listing, particular bytes in memory could be\noverwritten, potentially allowing arbitrary code to be executed with\nthe privileges of the user invoking hsftp.\n\n\nNote that while hsftp is installed setuid root, it only uses these\nprivileges to acquire locked memory, and then relinquishes them.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.11-1woody1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you update your hsftp package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "hsftp",
+				"purl": "pkg:deb/debian/hsftp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.11-1woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.11-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-447.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-447"
+		}
+	]
+}

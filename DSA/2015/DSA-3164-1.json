@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3164-1",
+	"modified": "2023-10-16T00:11:48.460801Z",
+	"published": "2015-02-21T00:00:00Z",
+	"related": [
+		"CVE-2015-2047"
+	],
+	"summary": "typo3-src - security update",
+	"details": "\nPierrick Caillon discovered that the authentication could be bypassed in\nthe Typo 3 content management system. Please refer to the upstream\nadvisory for additional information:\n\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 4.5.19+dfsg1-5+wheezy4.\n\n\nThe upcoming stable distribution (jessie) no longer includes Typo 3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.5.40+dfsg1-1.\n\n\nWe recommend that you upgrade your typo3-src packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "typo3-src",
+				"purl": "pkg:deb/debian/typo3-src?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.5.19+dfsg1-5+wheezy4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.5.19+dfsg1-5",
+				"4.5.19+dfsg1-5+wheezy1",
+				"4.5.19+dfsg1-5+wheezy2",
+				"4.5.19+dfsg1-5+wheezy3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3164-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3164"
+		}
+	]
+}

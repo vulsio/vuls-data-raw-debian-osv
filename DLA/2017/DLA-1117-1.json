@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1117-1",
+	"modified": "2023-06-28T06:20:23.604848Z",
+	"published": "2017-09-29T00:00:00Z",
+	"related": [
+		"CVE-2016-1516",
+		"CVE-2017-12597",
+		"CVE-2017-12598",
+		"CVE-2017-12599",
+		"CVE-2017-12601",
+		"CVE-2017-12603",
+		"CVE-2017-12604",
+		"CVE-2017-12605",
+		"CVE-2017-12606",
+		"CVE-2017-12862",
+		"CVE-2017-12863",
+		"CVE-2017-12864"
+	],
+	"summary": "opencv - security update",
+	"details": "\nOpenCV through version 3.3 has out-of-bounds read/write errors, buffer\noverflows and double free issues in different functions.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.3.1-11+deb7u2.\n\n\nWe recommend that you upgrade your opencv packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "opencv",
+				"purl": "pkg:deb/debian/opencv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.1-11+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.1-11",
+				"2.3.1-11+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1117-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1117"
+		}
+	]
+}

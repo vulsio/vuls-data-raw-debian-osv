@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2931-1",
+	"modified": "2023-10-16T00:11:38.522357Z",
+	"published": "2014-05-18T00:00:00Z",
+	"related": [
+		"CVE-2014-0198"
+	],
+	"summary": "openssl - security update",
+	"details": "\nIt was discovered that incorrect memory handling in OpenSSL's \ndo\\_ssl3\\_write() function could result in denial of service.\n\n\nThe oldstable distribution (squeeze) is not affected.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.0.1e-2+deb7u9.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 1.0.1g-4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.0.1g-4.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1e-2+deb7u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1e-2",
+				"1.0.1e-2+deb7u1",
+				"1.0.1e-2+deb7u2",
+				"1.0.1e-2+deb7u3",
+				"1.0.1e-2+deb7u4",
+				"1.0.1e-2+deb7u5",
+				"1.0.1e-2+deb7u6",
+				"1.0.1e-2+deb7u7",
+				"1.0.1e-2+deb7u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2931-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2931"
+		}
+	]
+}

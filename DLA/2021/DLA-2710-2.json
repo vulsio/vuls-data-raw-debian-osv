@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2710-2",
+	"modified": "2023-06-28T06:21:20.566385Z",
+	"published": "2021-07-26T00:00:00Z",
+	"summary": "rabbitmq-server - regression update",
+	"details": "\nSeveral vulnerabilities were discovered in rabbitmq-server, a\nmessage-broker software.\n\n\n* [CVE-2017-4965](https://security-tracker.debian.org/tracker/CVE-2017-4965)\nSeveral forms in the RabbitMQ management UI are vulnerable to XSS\n attacks.\n* [CVE-2017-4966](https://security-tracker.debian.org/tracker/CVE-2017-4966)\nRabbitMQ management UI stores signed-in user credentials in a\n browser's local storage without expiration, making it possible to\n retrieve them using a chained attack\n* [CVE-2017-4967](https://security-tracker.debian.org/tracker/CVE-2017-4967)\nSeveral forms in the RabbitMQ management UI are vulnerable to XSS\n attacks.\n* [CVE-2019-11281](https://security-tracker.debian.org/tracker/CVE-2019-11281)\nThe virtual host limits page, and the federation management UI,\n which do not properly sanitize user input. A remote authenticated\n malicious user with administrative access could craft a cross site\n scripting attack that would gain access to virtual hosts and\n policy management information\n* [CVE-2019-11287](https://security-tracker.debian.org/tracker/CVE-2019-11287)\nThe \"X-Reason\" HTTP Header can be leveraged to insert a malicious\n Erlang format string that will expand and consume the heap,\n resulting in the server crashing.\n* [CVE-2021-22116](https://security-tracker.debian.org/tracker/CVE-2021-22116)\nA malicious user can exploit the vulnerability by sending\n malicious AMQP messages to the target RabbitMQ instance.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.6.6-1+deb9u1.\n\n\nWe recommend that you upgrade your rabbitmq-server packages.\n\n\nFor the detailed security status of rabbitmq-server please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/rabbitmq-server>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "rabbitmq-server",
+				"purl": "pkg:deb/debian/rabbitmq-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.6-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.6-1",
+				"3.6.6-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2710-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2710"
+		}
+	]
+}

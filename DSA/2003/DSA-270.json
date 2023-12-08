@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-270",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-03-27T00:00:00Z",
+	"related": [
+		"CVE-2003-0127"
+	],
+	"summary": "linux-kernel-mips - local privilege escalation",
+	"details": "\nThe kernel module loader in Linux 2.2 and Linux 2.4 kernels has a flaw\nin ptrace. This hole allows local users to obtain root privileges by\nusing ptrace to attach to a child process that is spawned by the\nkernel. Remote exploitation of this hole is not possible.\n\n\nThis advisory only covers kernel packages for the big and little endian MIPS\narchitectures. Other architectures will be covered by separate advisories.\n\n\nFor the stable distribution (woody) this problem has been fixed in version\n2.4.17-0.020226.2.woody1 of kernel-patch-2.4.17-mips (mips+mipsel) and in\nversion 2.4.19-0.020911.1.woody1 of kernel-patch-2.4.19-mips (mips only).\n\n\nThe old stable distribution (potato) is not affected by this problem\nfor these architectures since mips and mipsel were first released with\nDebian GNU/Linux 3.0 (woody).\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.4.19-0.020911.6 of kernel-patch-2.4.19-mips (mips+mipsel).\n\n\nWe recommend that you upgrade your kernel-images packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-patch-2.4.17-mips",
+				"purl": "pkg:deb/debian/kernel-patch-2.4.17-mips?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.17-0.020226.2.woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-270.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-patch-2.4.19-mips",
+				"purl": "pkg:deb/debian/kernel-patch-2.4.19-mips?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.19-0.020911.1.woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-270.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-270"
+		}
+	]
+}

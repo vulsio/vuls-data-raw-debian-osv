@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3580-1",
+	"modified": "2023-10-16T00:12:08.495842Z",
+	"published": "2016-05-16T00:00:00Z",
+	"related": [
+		"CVE-2016-3714",
+		"CVE-2016-3715",
+		"CVE-2016-3716",
+		"CVE-2016-3717",
+		"CVE-2016-3718",
+		"CVE-2016-5239"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nNikolay Ermishkin from the Mail.Ru Security Team and Stewie discovered\nseveral vulnerabilities in ImageMagick, a program suite for image\nmanipulation. These vulnerabilities, collectively known as ImageTragick,\nare the consequence of lack of sanitization of untrusted input. An\nattacker with control on the image input could, with the privileges of\nthe user running the application, execute code\n([CVE-2016-3714](https://security-tracker.debian.org/tracker/CVE-2016-3714)), make HTTP\nGET or FTP requests ([CVE-2016-3718](https://security-tracker.debian.org/tracker/CVE-2016-3718)),\nor delete ([CVE-2016-3715](https://security-tracker.debian.org/tracker/CVE-2016-3715)), move\n([CVE-2016-3716](https://security-tracker.debian.org/tracker/CVE-2016-3716)), or read\n([CVE-2016-3717](https://security-tracker.debian.org/tracker/CVE-2016-3717)) local files.\n\n\nThese vulnerabilities are particularly critical if Imagemagick processes\nimages coming from remote parties, such as part of a web service.\n\n\nThe update disables the vulnerable coders (EPHEMERAL, URL, MVG, MSL, and\nPLT) and indirect reads via /etc/ImageMagick-6/policy.xml file. In\naddition, we introduce extra preventions, including some sanitization for\ninput filenames in http/https delegates, the full remotion of PLT/Gnuplot\ndecoder, and the need of explicit reference in the filename for the\ninsecure coders.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 8:6.8.9.9-5+deb8u2.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.8.9.9-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.8.9.9-5",
+				"8:6.8.9.9-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3580-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3580"
+		}
+	]
+}

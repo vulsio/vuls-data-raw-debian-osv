@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-689-1",
+	"modified": "2023-06-28T06:26:21.993300Z",
+	"published": "2016-10-30T00:00:00Z",
+	"related": [
+		"CVE-2016-7909",
+		"CVE-2016-8909",
+		"CVE-2016-8910",
+		"CVE-2016-9101",
+		"CVE-2016-9102",
+		"CVE-2016-9103",
+		"CVE-2016-9104",
+		"CVE-2016-9105",
+		"CVE-2016-9106"
+	],
+	"summary": "qemu-kvm - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in qemu-kvm, a full\nvirtualization solution on x86 hardware based on Quick\nEmulator(Qemu). The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2016-7909](https://security-tracker.debian.org/tracker/CVE-2016-7909)\nQuick Emulator(Qemu) built with the AMD PC-Net II emulator support is\n vulnerable to an infinite loop issue. It could occur while receiving\n packets via pcnet\\_receive().\n\n\nA privileged user/process inside guest could use this issue to crash\n the Qemu process on the host leading to DoS.\n* [CVE-2016-8909](https://security-tracker.debian.org/tracker/CVE-2016-8909)\nQuick Emulator(Qemu) built with the Intel HDA controller emulation support\n is vulnerable to an infinite loop issue. It could occur while processing the\n DMA buffer stream while doing data transfer in intel\\_hda\\_xfer.\n\n\nA privileged user inside guest could use this flaw to consume excessive CPU\n cycles on the host, resulting in DoS.\n* [CVE-2016-8910](https://security-tracker.debian.org/tracker/CVE-2016-8910)\nQuick Emulator(Qemu) built with the RTL8139 ethernet controller emulation\n support is vulnerable to an infinite loop issue. It could occur while\n transmitting packets in C+ mode of operation.\n\n\nA privileged user inside guest could use this flaw to consume\n excessive CPU cycles on the host, resulting in DoS situation.\n\n\nFurther issues fixed where the CVE requests are pending:\n\n\n* Quick Emulator(Qemu) built with the i8255x (PRO100) NIC emulation\n support is vulnerable to a memory leakage issue. It could occur while\n unplugging the device, and doing so repeatedly would result in leaking\n host memory affecting, other services on the host.\n\n A privileged user inside guest could use this flaw to cause a DoS on the host\n and/or potentially crash the Qemu process on the host.\n* Quick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to a several memory\n leakage issues.\n\n A privileged user inside guest could use this flaw to leak the host\n memory bytes resulting in DoS for other services.\n* Quick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to an integer overflow\n issue. It could occur by accessing xattributes values.\n\n A privileged user inside guest could use this flaw to crash the Qemu\n process instance resulting in DoS.\n* Quick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to memory leakage\n issue. It could occur while creating extended attribute via\n Txattrcreate message.\n\n A privileged user inside guest could use this flaw to leak host\n memory, thus affecting other services on the host and/or potentially\n crash the Qemu process on the host.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u18.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u18"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6",
+				"1.1.2+dfsg-6+deb7u1",
+				"1.1.2+dfsg-6+deb7u10",
+				"1.1.2+dfsg-6+deb7u11",
+				"1.1.2+dfsg-6+deb7u12",
+				"1.1.2+dfsg-6+deb7u13",
+				"1.1.2+dfsg-6+deb7u14",
+				"1.1.2+dfsg-6+deb7u15",
+				"1.1.2+dfsg-6+deb7u16",
+				"1.1.2+dfsg-6+deb7u17",
+				"1.1.2+dfsg-6+deb7u2",
+				"1.1.2+dfsg-6+deb7u3",
+				"1.1.2+dfsg-6+deb7u4",
+				"1.1.2+dfsg-6+deb7u5",
+				"1.1.2+dfsg-6+deb7u6",
+				"1.1.2+dfsg-6+deb7u7",
+				"1.1.2+dfsg-6+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6+deb7u8",
+				"1.1.2+dfsg-6+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-689-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-689"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1917-1",
+	"modified": "2023-10-16T00:10:46.762505Z",
+	"published": "2009-10-24T00:00:00Z",
+	"related": [
+		"CVE-2009-1382",
+		"CVE-2009-2459"
+	],
+	"summary": "mimetex - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in mimetex, a lightweight\nalternative to MathML. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-1382](https://security-tracker.debian.org/tracker/CVE-2009-1382)\nChris Evans and Damien Miller, discovered multiple stack-based buffer overflow.\nAn attacker could execute arbitrary code via a TeX file with long picture,\ncircle, input tags.\n* [CVE-2009-2459](https://security-tracker.debian.org/tracker/CVE-2009-2459)\nChris Evans discovered that mimeTeX contained certain directives that may be\nunsuitable for handling untrusted user input. A remote attacker can obtain\nsensitive information.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 1.50-1+etch1.\n\n\nDue to a bug in the archive system, the fix for the stable distribution\n(lenny) will be released as version 1.50-1+lenny1 once it is available.\n\n\nFor the testing distribution (squeeze), and the unstable distribution (sid),\nthese problems have been fixed in version 1.50-1.1.\n\n\nWe recommend that you upgrade your mimetex packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "mimetex",
+				"purl": "pkg:deb/debian/mimetex?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.50-1+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.50-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1917-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mimetex",
+				"purl": "pkg:deb/debian/mimetex?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.50-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.50-1",
+				"1.50-1+etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1917-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1917"
+		}
+	]
+}

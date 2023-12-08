@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1632-1",
+	"modified": "2023-10-16T00:05:34.134273Z",
+	"published": "2008-08-26T00:00:00Z",
+	"related": [
+		"CVE-2008-2327"
+	],
+	"summary": "tiff - arbitrary code execution",
+	"details": "\nDrew Yao discovered that libTIFF, a library for handling the Tagged Image\nFile Format, is vulnerable to a programming error allowing malformed\ntiff files to lead to a crash or execution of arbitrary code.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 3.8.2-7+etch1.\n\n\nFor the testing distribution (lenny), this problem has been fixed in\nversion 3.8.2-10+lenny1.\n\n\nThe unstable distribution (sid) will be fixed soon.\n\n\nWe recommend that you upgrade your tiff package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.8.2-7+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.8.2-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1632-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1632"
+		}
+	]
+}

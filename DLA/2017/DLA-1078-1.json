@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1078-1",
+	"modified": "2023-06-28T06:20:20.093878Z",
+	"published": "2017-08-30T00:00:00Z",
+	"related": [
+		"CVE-2017-12865"
+	],
+	"summary": "connman - security update",
+	"details": "\nIn connman, stack-based buffer overflow in dnsproxy.c allows remote attackers\nto cause a denial of service (crash) or execute arbitrary code via a crafted\nresponse query string passed to the name variable.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.0-1.1+wheezy2.\n\n\nWe recommend that you upgrade your connman packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "connman",
+				"purl": "pkg:deb/debian/connman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0-1.1+wheezy2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0-1.1+wheezy1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1078-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1078"
+		}
+	]
+}

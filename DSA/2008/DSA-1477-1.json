@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1477-1",
+	"modified": "2023-10-16T00:05:24.471820Z",
+	"published": "2008-01-27T00:00:00Z",
+	"related": [
+		"CVE-2007-5837"
+	],
+	"summary": "yarssr - missing input sanitising",
+	"details": "\nDuncan Gilmore discovered that yarssr, an RSS aggregator and reader,\nperforms insufficient input sanitising, which could result in the\nexecution of arbitrary shell commands if a malformed feed is read.\n\n\nDue to a technical limitation of the archive management scripts, the\nfix for the old stable distribution (sarge) needs to be postponed\nby a few days.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 0.2.2-1etch1.\n\n\nWe recommend that you upgrade your yarssr packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "yarssr",
+				"purl": "pkg:deb/debian/yarssr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.2.2-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.2.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1477-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1477"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1887-1",
+	"modified": "2023-10-16T00:10:44.588933Z",
+	"published": "2009-09-15T00:00:00Z",
+	"related": [
+		"CVE-2009-3009"
+	],
+	"summary": "rails - cross-site scripting",
+	"details": "\nBrian Mastenbrook discovered that rails, the MVC ruby based framework\ngeared for web application development, is prone to cross-site scripting\nattacks via malformed strings in the form helper.\n\n\nFor the oldstable distribution (etch) security support has been\ndiscontinued. It has been reported that rails in oldstable is unusable\nand several features that are affected by security issues are broken due\nto programming issues. It is highly recommended to upgrade to the\nversion in stable (lenny).\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.1.0-7.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), this problem has been fixed in version 2.2.3-1.\n\n\nWe recommend that you upgrade your rails packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "rails",
+				"purl": "pkg:deb/debian/rails?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.0-7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.0-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1887-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1887"
+		}
+	]
+}

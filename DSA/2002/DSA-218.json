@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-218",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2002-12-30T00:00:00Z",
+	"related": [
+		"CVE-2002-2260"
+	],
+	"summary": "bugzilla - cross site scripting",
+	"details": "\nA cross site scripting vulnerability has been reported for Bugzilla, a\nweb-based bug tracking system. Bugzilla does not properly sanitize\nany input submitted by users for use in quips. As a result, it is possible for a\nremote attacker to create a malicious link containing script code\nwhich will be executed in the browser of a legitimate user, in the\ncontext of the website running Bugzilla. This issue may be exploited\nto steal cookie-based authentication credentials from legitimate users\nof the website running the vulnerable software.\n\n\nThis vulnerability only affects users who have the 'quips' feature\nenabled and who upgraded from version 2.10 which did not exist inside\nof Debian. The Debian package history of Bugzilla starts with 1.13\nand jumped to 2.13. However, users could have installed version 2.10\nprior to the Debian package.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 2.14.2-0woody3.\n\n\nThe old stable distribution (potato) does not contain a Bugzilla\npackage.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your bugzilla packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "bugzilla",
+				"purl": "pkg:deb/debian/bugzilla?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.14.2-0woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-218.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-218"
+		}
+	]
+}

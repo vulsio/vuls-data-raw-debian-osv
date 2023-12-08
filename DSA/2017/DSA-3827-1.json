@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3827-1",
+	"modified": "2023-10-16T00:12:21.468801Z",
+	"published": "2017-04-07T00:00:00Z",
+	"related": [
+		"CVE-2016-10249",
+		"CVE-2016-10251",
+		"CVE-2016-9591"
+	],
+	"summary": "jasper - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the JasPer library for\nprocessing JPEG-2000 images, which may result in denial of service or\nthe execution of arbitrary code if a malformed image is processed.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.900.1-debian1-2.4+deb8u3.\n\n\nWe recommend that you upgrade your jasper packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jasper",
+				"purl": "pkg:deb/debian/jasper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.900.1-debian1-2.4+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.900.1-debian1-2.4",
+				"1.900.1-debian1-2.4+deb8u1",
+				"1.900.1-debian1-2.4+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3827-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3827"
+		}
+	]
+}

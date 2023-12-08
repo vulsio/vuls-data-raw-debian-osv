@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2025-1",
+	"modified": "2023-10-16T00:10:54.014387Z",
+	"published": "2010-03-31T00:00:00Z",
+	"related": [
+		"CVE-2009-2404",
+		"CVE-2009-2408",
+		"CVE-2009-2463",
+		"CVE-2009-3072",
+		"CVE-2009-3075",
+		"CVE-2010-0163"
+	],
+	"summary": "icedove - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Icedove\nmail client, an unbranded version of the Thunderbird mail client. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2009-2408](https://security-tracker.debian.org/tracker/CVE-2009-2408)\nDan Kaminsky and Moxie Marlinspike discovered that icedove does not\nproperly handle a '\\0' character in a domain name in the subject's\nCommon Name (CN) field of an X.509 certificate (MFSA 2009-42).\n* [CVE-2009-2404](https://security-tracker.debian.org/tracker/CVE-2009-2404)\nMoxie Marlinspike reported a heap overflow vulnerability in the code\nthat handles regular expressions in certificate names (MFSA 2009-43).\n* [CVE-2009-2463](https://security-tracker.debian.org/tracker/CVE-2009-2463)\nmonarch2020 discovered an integer overflow in a base64 decoding function\n(MFSA 2010-07).\n* [CVE-2009-3072](https://security-tracker.debian.org/tracker/CVE-2009-3072)\nJosh Soref discovered a crash in the BinHex decoder (MFSA 2010-07).\n* [CVE-2009-3075](https://security-tracker.debian.org/tracker/CVE-2009-3075)\nCarsten Book reported a crash in the JavaScript engine (MFSA 2010-07).\n* [CVE-2010-0163](https://security-tracker.debian.org/tracker/CVE-2010-0163)\nLudovic Hirlimann reported a crash indexing some messages with\nattachments, which could lead to the execution of arbitrary code\n(MFSA 2010-07).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.0.0.24-0lenny1.\n\n\nDue to a problem with the archive system it is not possible to release\nall architectures. The missing architectures will be installed into the\narchive once they become available.\n\n\nFor the testing distribution (squeeze) and the unstable distribution (sid),\nthese problems will be fixed soon.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "icedove",
+				"purl": "pkg:deb/debian/icedove?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0.24-0lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0.19-1",
+				"2.0.0.19-1+kbsd",
+				"2.0.0.22-0lenny1",
+				"2.0.0.22-1",
+				"2.0.0.22-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2025-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2025"
+		}
+	]
+}

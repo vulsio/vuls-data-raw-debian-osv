@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2813-1",
+	"modified": "2023-06-28T06:54:06.539003Z",
+	"published": "2021-11-09T00:00:00Z",
+	"related": [
+		"CVE-2021-33829",
+		"CVE-2021-37695"
+	],
+	"summary": "ckeditor - security update",
+	"details": "\nCKEditor, an open source WYSIWYG HTML editor with rich content\nsupport, which can be embedded into web pages, had two\nvulnerabilites as follows:\n\n\n* [CVE-2021-33829](https://security-tracker.debian.org/tracker/CVE-2021-33829)\nA cross-site scripting (XSS) vulnerability in the HTML Data\n Processor in CKEditor 4 allows remote attackers to inject\n executable JavaScript code through a crafted comment because\n --!> is mishandled.\n* [CVE-2021-37695](https://security-tracker.debian.org/tracker/CVE-2021-37695)\nA potential vulnerability has been discovered in CKEditor 4\n Fake Objects package. The vulnerability allowed to inject\n malformed Fake Objects HTML, which could result in executing\n JavaScript code.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.5.7+dfsg-2+deb9u1.\n\n\nWe recommend that you upgrade your ckeditor packages.\n\n\nFor the detailed security status of ckeditor please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ckeditor>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ckeditor",
+				"purl": "pkg:deb/debian/ckeditor?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.5.7+dfsg-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.5.7+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2813-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2813"
+		}
+	]
+}

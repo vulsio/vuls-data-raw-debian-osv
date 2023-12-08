@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3151-1",
+	"modified": "2023-06-28T06:26:53.132419Z",
+	"published": "2022-10-13T00:00:00Z",
+	"related": [
+		"CVE-2022-41317",
+		"CVE-2022-41318"
+	],
+	"summary": "squid - security update",
+	"details": "\nMultiple vulnerabilities were discovered in squid, a Web Proxy cache\n\n\n* [CVE-2022-41317](https://security-tracker.debian.org/tracker/CVE-2022-41317)\nDue to inconsistent handling of internal URIs Squid is\n vulnerable to Exposure of Sensitive Information about clients\n using the proxy.\n* [CVE-2022-41318](https://security-tracker.debian.org/tracker/CVE-2022-41318)\nDue to an incorrect integer overflow protection Squid SSPI and\n SMB authentication helpers are vulnerable to a Buffer Overflow\n attack.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n4.6-1+deb10u8.\n\n\nWe recommend that you upgrade your squid packages.\n\n\nFor the detailed security status of squid please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/squid>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "squid",
+				"purl": "pkg:deb/debian/squid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.6-1+deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.6-1",
+				"4.6-1+deb10u1",
+				"4.6-1+deb10u2",
+				"4.6-1+deb10u3",
+				"4.6-1+deb10u4",
+				"4.6-1+deb10u5",
+				"4.6-1+deb10u6",
+				"4.6-1+deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3151-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3151"
+		}
+	]
+}

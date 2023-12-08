@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-516",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-06-07T00:00:00Z",
+	"related": [
+		"CVE-2004-0547"
+	],
+	"summary": "postgresql - buffer overflow",
+	"details": "\nA buffer overflow has been discovered in the ODBC driver of PostgreSQL,\nan object-relational SQL database, descended from POSTGRES. It is possible\nto exploit this problem and crash the surrounding application. Hence, a\nPHP script using php4-odbc can be utilised to crash the surrounding\nApache webserver. Other parts of postgresql are not affected.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 7.2.1-2woody5.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 07.03.0200-3.\n\n\nWe recommend that you upgrade your postgresql and related package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "postgresql",
+				"purl": "pkg:deb/debian/postgresql?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.2.1-2woody5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-516.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-516"
+		}
+	]
+}

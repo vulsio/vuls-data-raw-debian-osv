@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4282-1",
+	"modified": "2023-10-16T00:20:10.931583Z",
+	"published": "2018-08-31T00:00:00Z",
+	"related": [
+		"CVE-2018-1318",
+		"CVE-2018-8004",
+		"CVE-2018-8005",
+		"CVE-2018-8040"
+	],
+	"summary": "trafficserver - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Apache Traffic Server, a\nreverse and forward proxy server, which could result in denial of\nservice, cache poisoning or information disclosure.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 7.0.0-6+deb9u2.\n\n\nWe recommend that you upgrade your trafficserver packages.\n\n\nFor the detailed security status of trafficserver please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/trafficserver>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "trafficserver",
+				"purl": "pkg:deb/debian/trafficserver?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.0.0-6+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.0.0-5",
+				"7.0.0-6+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4282-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4282"
+		}
+	]
+}

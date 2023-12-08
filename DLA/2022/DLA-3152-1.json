@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3152-1",
+	"modified": "2023-06-28T06:26:53.136821Z",
+	"published": "2022-10-20T00:00:00Z",
+	"related": [
+		"CVE-2016-10228",
+		"CVE-2019-19126",
+		"CVE-2019-25013",
+		"CVE-2020-10029",
+		"CVE-2020-1752",
+		"CVE-2020-27618",
+		"CVE-2020-6096",
+		"CVE-2021-27645",
+		"CVE-2021-3326",
+		"CVE-2021-33574",
+		"CVE-2021-35942",
+		"CVE-2021-3999",
+		"CVE-2022-23218",
+		"CVE-2022-23219"
+	],
+	"summary": "glibc - security update",
+	"details": "\nThis update fixes a wide range of vulnerabilities. A significant portion\naffects character set conversion.\n\n\n* [CVE-2016-10228](https://security-tracker.debian.org/tracker/CVE-2016-10228)\nThe iconv program in the GNU C Library when invoked with multiple\n suffixes in the destination encoding (TRANSLATE or IGNORE) along with\n the -c option, enters an infinite loop when processing invalid\n multi-byte input sequences, leading to a denial of service.\n* [CVE-2019-19126](https://security-tracker.debian.org/tracker/CVE-2019-19126)\nOn the x86-64 architecture, the GNU C Library fails to ignore the\n LD\\_PREFER\\_MAP\\_32BIT\\_EXEC environment variable during program\n execution after a security transition, allowing local attackers to\n restrict the possible mapping addresses for loaded libraries and\n thus bypass ASLR for a setuid program.\n* [CVE-2019-25013](https://security-tracker.debian.org/tracker/CVE-2019-25013)\nThe iconv feature in the GNU C Library, when processing invalid\n multi-byte input sequences in the EUC-KR encoding, may have a buffer\n over-read.\n* [CVE-2020-10029](https://security-tracker.debian.org/tracker/CVE-2020-10029)\nThe GNU C Library could overflow an on-stack buffer during range\n reduction if an input to an 80-bit long double function contains a\n non-canonical bit pattern, a seen when passing a\n 0x5d414141414141410000 value to sinl on x86 targets. This is related\n to sysdeps/ieee754/ldbl-96/e\\_rem\\_pio2l.c.\n* [CVE-2020-1752](https://security-tracker.debian.org/tracker/CVE-2020-1752)\nA use-after-free vulnerability introduced in glibc was found in the\n way the tilde expansion was carried out. Directory paths containing\n an initial tilde followed by a valid username were affected by this\n issue. A local attacker could exploit this flaw by creating a\n specially crafted path that, when processed by the glob function,\n would potentially lead to arbitrary code execution.\n* [CVE-2020-27618](https://security-tracker.debian.org/tracker/CVE-2020-27618)\nThe iconv function in the GNU C Library, when processing invalid\n multi-byte input sequences in IBM1364, IBM1371, IBM1388, IBM1390,\n and IBM1399 encodings, fails to advance the input state, which could\n lead to an infinite loop in applications, resulting in a denial of\n service, a different vulnerability from [CVE-2016-10228](https://security-tracker.debian.org/tracker/CVE-2016-10228).\n* [CVE-2020-6096](https://security-tracker.debian.org/tracker/CVE-2020-6096)\nAn exploitable signed comparison vulnerability exists in the ARMv7\n memcpy() implementation of GNU glibc. Calling memcpy() (on ARMv7\n targets that utilize the GNU glibc implementation) with a negative\n value for the num parameter results in a signed comparison\n vulnerability. If an attacker underflows the num parameter to\n memcpy(), this vulnerability could lead to undefined behavior such as\n writing to out-of-bounds memory and potentially remote code\n execution. Furthermore, this memcpy() implementation allows for\n program execution to continue in scenarios where a segmentation fault\n or crash should have occurred. The dangers occur in that subsequent\n execution and iterations of this code will be executed with this\n corrupted data.\n* [CVE-2021-27645](https://security-tracker.debian.org/tracker/CVE-2021-27645)\nThe nameserver caching daemon (nscd) in the GNU C Library, when\n processing a request for netgroup lookup, may crash due to a\n double-free, potentially resulting in degraded service or Denial of\n Service on the local system. This is related to netgroupcache.c.\n* [CVE-2021-3326](https://security-tracker.debian.org/tracker/CVE-2021-3326)\nThe iconv function in the GNU C Library, when processing invalid\n input sequences in the ISO-2022-JP-3 encoding, fails an assertion in\n the code path and aborts the program, potentially resulting in a\n denial of service.\n* [CVE-2021-33574](https://security-tracker.debian.org/tracker/CVE-2021-33574)\nThe mq\\_notify function in the GNU C Library has a use-after-free. It\n may use the notification thread attributes object (passed through\n its struct sigevent parameter) after it has been freed by the caller,\n leading to a denial of service (application crash) or possibly\n unspecified other impact.\n* [CVE-2021-35942](https://security-tracker.debian.org/tracker/CVE-2021-35942)\nThe wordexp function in the GNU C Library may crash or read arbitrary\n memory in parse\\_param (in posix/wordexp.c) when called with an\n untrusted, crafted pattern, potentially resulting in a denial of\n service or disclosure of information. This occurs because atoi was\n used but strtoul should have been used to ensure correct calculations.\n* [CVE-2021-3999](https://security-tracker.debian.org/tracker/CVE-2021-3999)\nAn off-by-one buffer overflow and underflow in getcwd() may lead to\n memory corruption when the size of the buffer is exactly 1. A local\n attacker who can control the input buffer and size passed to getcwd()\n in a setuid program could use this flaw to potentially execute\n arbitrary code and escalate their privileges on the system.\n* [CVE-2022-23218](https://security-tracker.debian.org/tracker/CVE-2022-23218)\nThe deprecated compatibility function svcunix\\_create in the sunrpc\n module of the GNU C Library copies its path argument on the stack\n without validating its length, which may result in a buffer overflow,\n potentially resulting in a denial of service or (if an application\n is not built with a stack protector enabled) arbitrary code execution.\n* [CVE-2022-23219](https://security-tracker.debian.org/tracker/CVE-2022-23219)\nThe deprecated compatibility function clnt\\_create in the sunrpc module\n of the GNU C Library copies its hostname argument on the stack without\n validating its length, which may result in a buffer overflow,\n potentially resulting in a denial of service or (if an application is\n not built with a stack protector enabled) arbitrary code execution.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.28-10+deb10u2.\n\n\nWe recommend that you upgrade your glibc packages.\n\n\nFor the detailed security status of glibc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/glibc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "glibc",
+				"purl": "pkg:deb/debian/glibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.28-10+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.28-10",
+				"2.28-10+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3152-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3152"
+		}
+	]
+}

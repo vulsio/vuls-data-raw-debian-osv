@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1289-1",
+	"modified": "2023-06-28T06:20:32.439330Z",
+	"published": "2018-02-22T00:00:00Z",
+	"related": [
+		"CVE-2018-7050",
+		"CVE-2018-7052"
+	],
+	"summary": "irssi - security update",
+	"details": "\nIt was discovered that there where a number of vulnerabilities in irssi,\nthe terminal based IRC client:\n\n\n* [CVE-2018-7050](https://security-tracker.debian.org/tracker/CVE-2018-7050)\nNull pointer dereference for an empty nick.\n* [CVE-2018-7051](https://security-tracker.debian.org/tracker/CVE-2018-7051)\nCertain nick names could result in out-of-bounds\n access when printing theme strings.\n* [CVE-2018-7052](https://security-tracker.debian.org/tracker/CVE-2018-7052)\nWhen the number of windows exceeds the available space, a\n crash could occur due to another NULL pointer dereference.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in irssi version\n0.8.15-5+deb7u5.\n\n\nWe recommend that you upgrade your irssi packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "irssi",
+				"purl": "pkg:deb/debian/irssi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.15-5+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.15-5",
+				"0.8.15-5+deb7u1",
+				"0.8.15-5+deb7u2",
+				"0.8.15-5+deb7u3",
+				"0.8.15-5+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1289-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1289"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1465-2",
+	"modified": "2023-10-16T00:10:27.478255Z",
+	"published": "2008-01-17T00:00:00Z",
+	"related": [
+		"CVE-2008-0302"
+	],
+	"summary": "apt-listchanges - arbitrary code execution",
+	"details": "\nFelipe Sateler discovered that apt-listchanges, a package change history\nnotification tool, used unsafe paths when importing its python libraries.\nThis could allow the execution of arbitrary shell commands if the root user\nexecuted the command in a directory which other local users may write\nto.\n\n\nFor the old stable distribution (sarge), this problem was not present.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n2.72.5etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in version\n2.82.\n\n\nWe recommend that you upgrade your apt-listchanges package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "apt-listchanges",
+				"purl": "pkg:deb/debian/apt-listchanges?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.72.5etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.72.5",
+				"2.72.5etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1465-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1465"
+		}
+	]
+}

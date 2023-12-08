@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2837-1",
+	"modified": "2023-10-16T00:11:33.880637Z",
+	"published": "2014-01-07T00:00:00Z",
+	"related": [
+		"CVE-2013-4353"
+	],
+	"summary": "openssl - programming error",
+	"details": "\nAnton Johansson discovered that an invalid TLS handshake package could\ncrash OpenSSL with a NULL pointer dereference.\n\n\nThe oldstable distribution (squeeze) is not affected.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.0.1e-2+deb7u3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.0.1f-1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1e-2+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1e-2",
+				"1.0.1e-2+deb7u1",
+				"1.0.1e-2+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2837-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2837"
+		}
+	]
+}

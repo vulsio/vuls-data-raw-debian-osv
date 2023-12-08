@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1388-3",
+	"modified": "2023-10-16T00:06:34.705626Z",
+	"published": "2007-10-29T00:00:00Z",
+	"related": [
+		"CVE-2007-5365"
+	],
+	"summary": "dhcp - buffer overflow",
+	"details": "\nThe patch used to correct the DHCP server buffer overflow in DSA-1388-1\nwas incomplete and did not adequately resolve the problem. This update\nto the previous advisory makes updated packages based on a\nnewer version of the patch available.\n\n\nFor completeness, please find below the original advisory:\n\n\nIt was discovered that dhcp, a DHCP server for automatic IP address assignment,\ndidn't correctly allocate space for network replies. This could potentially\nallow a malicious DHCP client to execute arbitrary code upon the DHCP server.\n\n\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 2.0pl5-19.5etch2.\n\n\n\n\nFor the unstable distribution (sid), this problem will be fixed shortly.\n\n\n\n\nUpdates to the old stable version (sarge) are pending.\n\n\n\n\nWe recommend that you upgrade your dhcp packages.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "dhcp",
+				"purl": "pkg:deb/debian/dhcp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0pl5-19.5etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0pl5-19.5",
+				"2.0pl5-19.5etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1388-3.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1388"
+		}
+	]
+}

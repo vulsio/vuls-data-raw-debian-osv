@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1439-1",
+	"modified": "2023-06-28T06:23:52.161705Z",
+	"published": "2018-07-24T00:00:00Z",
+	"related": [
+		"CVE-2017-11521",
+		"CVE-2018-12584"
+	],
+	"summary": "resiprocate - security update",
+	"details": "\n* [CVE-2018-12584](https://security-tracker.debian.org/tracker/CVE-2018-12584)\nA flaw in function ConnectionBase::preparseNewBytes of\n resip/stack/ConnectionBase.cxx has been detected, that\n allows remote attackers to cause a denial of service\n (buffer overflow) or possibly execute arbitrary code\n when TLS communication is enabled.\n* [CVE-2017-11521](https://security-tracker.debian.org/tracker/CVE-2017-11521)\nA flaw in function SdpContents::Session::Medium::parse of\n resip/stack/SdpContents.cxx has been detected, that allows\n remote attackers to cause a denial of service (memory\n consumption) by triggering many media connections.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:1.9.7-5+deb8u1.\n\n\nWe recommend that you upgrade your resiprocate packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "resiprocate",
+				"purl": "pkg:deb/debian/resiprocate?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.9.7-5+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.9.7-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1439-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1439"
+		}
+	]
+}

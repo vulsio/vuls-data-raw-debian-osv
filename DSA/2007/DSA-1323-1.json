@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1323-1",
+	"modified": "2023-10-16T00:10:19.833301Z",
+	"published": "2007-06-28T00:00:00Z",
+	"related": [
+		"CVE-2007-2442",
+		"CVE-2007-2443",
+		"CVE-2007-2798"
+	],
+	"summary": "krb5",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the MIT reference\nimplementation of the Kerberos network authentication protocol suite,\nwhich may lead to the execution of arbitrary code. The Common \nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-2442](https://security-tracker.debian.org/tracker/CVE-2007-2442)\nWei Wang discovered that the free of an uninitialised pointer in the\n Kerberos RPC library may lead to the execution of arbitrary code.\n* [CVE-2007-2443](https://security-tracker.debian.org/tracker/CVE-2007-2443)\nWei Wang discovered that insufficient input sanitising in the\n Kerberos RPC library may lead to the execution of arbitrary code.\n* [CVE-2007-2798](https://security-tracker.debian.org/tracker/CVE-2007-2798)\nIt was discovered that a buffer overflow in the Kerberos\n administration daemon may lead to the execution of arbitrary code.\n\n\nFor the old stable distribution (sarge) these problems have been fixed in\nversion 1.3.6-2sarge5. Packages for hppa, mips and powerpc are not yet\navailable. They will be provided later.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 1.4.4-7etch2. Packages for hppa and mips are not yet available.\nThey will be provided later.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.6.dfsg.1-5.\n\n\nWe recommend that you upgrade your Kerberos packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "krb5",
+				"purl": "pkg:deb/debian/krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.6-2sarge5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.6-2",
+				"1.3.6-2sarge1",
+				"1.3.6-2sarge2",
+				"1.3.6-2sarge3",
+				"1.3.6-2sarge4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1323-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "krb5",
+				"purl": "pkg:deb/debian/krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.4-7etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.4-7etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1323-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1323"
+		}
+	]
+}

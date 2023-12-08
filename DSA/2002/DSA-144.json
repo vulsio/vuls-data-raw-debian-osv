@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-144",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-08-06T00:00:00Z",
+	"related": [
+		"CVE-2002-0818"
+	],
+	"summary": "wwwoffle - improper input handling",
+	"details": "\nA problem with wwwoffle has been discovered. The web proxy didn't\nhandle input data with negative Content-Length settings properly which\ncauses the processing child to crash. It is at this time not obvious\nhow this can lead to an exploitable vulnerability; however, it's better\nto be safe than sorry, so here's an update.\n\n\nAdditionally, in the woody version empty passwords will be treated as\nwrong when trying to authenticate. In the woody version we also\nreplaced CanonicaliseHost() with the latest routine from 2.7d, offered\nby upstream. This stops bad IPv6 format IP addresses in URLs from\ncausing problems (memory overwriting, potential exploits).\n\n\nThis problem has been fixed in version 2.5c-10.4 for the old stable\ndistribution (potato), in version 2.7a-1.2 for the current stable\ndistribution (woody) and in version 2.7d-1 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your wwwoffle packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "wwwoffle",
+				"purl": "pkg:deb/debian/wwwoffle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7a-1.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-144.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-144"
+		}
+	]
+}

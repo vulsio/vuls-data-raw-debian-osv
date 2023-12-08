@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-780-1",
+	"modified": "2023-10-16T00:28:30.484754Z",
+	"published": "2005-08-22T00:00:00Z",
+	"related": [
+		"CVE-2005-2097"
+	],
+	"summary": "kdegraphics - wrong input sanitising",
+	"details": "\nA bug has been discovered in the font handling code in xpdf, which is\nalso present in kpdf, the PDF viewer for KDE. A specially crafted PDF\nfile could cause infinite resource consumption, in terms of both CPU\nand disk space.\n\n\nThe oldstable distribution (woody) is not affected by this problem.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 3.3.2-2sarge1.\n\n\nFor the unstable distribution (sid) this problem will be fixed as soon\nas the necessary libraries have made their C++ ABI transition.\n\n\nWe recommend that you upgrade your kpdf package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kdegraphics",
+				"purl": "pkg:deb/debian/kdegraphics?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.3.2-2sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.3.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-780-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-780"
+		}
+	]
+}

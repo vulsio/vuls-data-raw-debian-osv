@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-642-1",
+	"modified": "2023-06-28T06:34:15.268577Z",
+	"published": "2016-09-30T00:00:00Z",
+	"related": [
+		"CVE-2016-0753"
+	],
+	"summary": "ruby-activerecord-3.2 - security update",
+	"details": "\nActive Record in Ruby on Rails 4.1.x before 4.1.14.1, 4.2.x before\n4.2.5.1, and 5.x before 5.0.0.beta1.1 supports the use of instance-level\nwriters for class accessors, which allows remote attackers to bypass\nintended validation steps via crafted parameters.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.6-5+deb7u3.\n\n\nWe recommend that you upgrade your ruby-activerecord-3.2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ruby-activerecord-3.2",
+				"purl": "pkg:deb/debian/ruby-activerecord-3.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.6-5+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.6-5",
+				"3.2.6-5+deb7u1",
+				"3.2.6-5+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-642-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-642"
+		}
+	]
+}

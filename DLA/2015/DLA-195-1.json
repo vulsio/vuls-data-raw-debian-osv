@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-195-1",
+	"modified": "2023-06-28T06:25:01.120993Z",
+	"published": "2015-04-12T00:00:00Z",
+	"related": [
+		"CVE-2015-2806"
+	],
+	"summary": "libtasn1-3 - security update",
+	"details": "\nHanno Boeck discovered a stack-based buffer overflow in the\nasn1\\_der\\_decoding function in Libtasn1, a library to manage ASN.1\nstructures. A remote attacker could take advantage of this flaw to cause\nan application using the Libtasn1 library to crash, or potentially to\nexecute arbitrary code.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libtasn1-3",
+				"purl": "pkg:deb/debian/libtasn1-3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7-1+squeeze+3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7-1",
+				"2.7-1+squeeze+1",
+				"2.7-1+squeeze+2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-195-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-195"
+		}
+	]
+}

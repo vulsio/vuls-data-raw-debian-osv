@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2191-1",
+	"modified": "2023-06-28T06:25:09.319751Z",
+	"published": "2020-05-01T00:00:00Z",
+	"related": [
+		"CVE-2020-10683"
+	],
+	"summary": "dom4j - security update",
+	"details": "\nA flaw was found in dom4j library. By using the default\nSaxReader() provided by Dom4J, external DTDs and External\nEntities are allowed, resulting in a possible XXE.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.6.1+dfsg.3-2+deb8u2.\n\n\nWe recommend that you upgrade your dom4j packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "dom4j",
+				"purl": "pkg:deb/debian/dom4j?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.1+dfsg.3-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.1+dfsg.3-2",
+				"1.6.1+dfsg.3-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2191-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2191"
+		}
+	]
+}

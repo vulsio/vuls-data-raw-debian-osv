@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-596-2",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-11-24T00:00:00Z",
+	"related": [
+		"CVE-2004-1051"
+	],
+	"summary": "sudo - missing input sanitising",
+	"details": "\nLiam Helmer noticed that sudo, a program that provides limited super\nuser privileges to specific users, does not clean the environment\nsufficiently. Bash functions and the CDPATH variable are still passed\nthrough to the program running as privileged user, leaving\npossibilities to overload system routines. These vulnerabilities can\nonly be exploited by users who have been granted limited super user\nprivileges.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.6.6-1.3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.6.8p3.\n\n\nWe recommend that you upgrade your sudo package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.6-1.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-596-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-596"
+		}
+	]
+}

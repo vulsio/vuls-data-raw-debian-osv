@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3496-1",
+	"modified": "2023-07-14T11:15:20.467651Z",
+	"published": "2023-07-14T00:00:00Z",
+	"related": [
+		"CVE-2023-28862"
+	],
+	"summary": "lemonldap-ng - security update",
+	"details": "\nIssues were discovered in Lemonldap::NG, an OpenID-Connect, CAS and SAML\ncompatible Web-SSO system, which could lead to impersonation of users\nwith a second factor authentication.\n\n\nWeak session ID generation in the AuthBasic handler and incorrect\nfailure handling during a password check allow attackers to bypass 2FA\nverification. Any plugin that tries to deny session creation after the\nstore step does not deny an AuthBasic session.\n\n\nUsing the AuthBasic handler is now refused for users with a second\nfactor. Admins who are \\*absolutely sure\\* that such accounts should be\nable to use AuthBasic handlers (which are password only) can append\n`and not $ENV{AuthBasic}` to the 2FA activation rules.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.0.2+ds-7+deb10u9.\n\n\nWe recommend that you upgrade your lemonldap-ng packages.\n\n\nFor the detailed security status of lemonldap-ng please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/lemonldap-ng>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "lemonldap-ng",
+				"purl": "pkg:deb/debian/lemonldap-ng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.2+ds-7+deb10u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.2+ds-7+deb10u1",
+				"2.0.2+ds-7+deb10u2",
+				"2.0.2+ds-7+deb10u3",
+				"2.0.2+ds-7+deb10u4",
+				"2.0.2+ds-7+deb10u5",
+				"2.0.2+ds-7+deb10u6",
+				"2.0.2+ds-7+deb10u7",
+				"2.0.2+ds-7+deb10u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3496-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3496"
+		}
+	]
+}

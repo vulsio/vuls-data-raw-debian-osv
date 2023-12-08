@@ -1,0 +1,96 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1741-1",
+	"modified": "2023-06-28T06:20:56.023809Z",
+	"published": "2019-03-31T00:00:00Z",
+	"related": [
+		"CVE-2019-9022",
+		"CVE-2019-9637",
+		"CVE-2019-9638",
+		"CVE-2019-9639",
+		"CVE-2019-9640",
+		"CVE-2019-9641"
+	],
+	"summary": "php5 - security update",
+	"details": "\nSeveral vulnerabilities have been found in php5, a server-side,\nHTML-embedded scripting language.\n\n\n* [CVE-2019-9637](https://security-tracker.debian.org/tracker/CVE-2019-9637)\nrename() across the device may allow unwanted access during\n processing.\n* [CVE-2019-9638](https://security-tracker.debian.org/tracker/CVE-2019-9638)\n[CVE-2019-9639](https://security-tracker.debian.org/tracker/CVE-2019-9639)\nUninitialized read in exif\\_process\\_IFD\\_in\\_MAKERNOTE.\n* [CVE-2019-9640](https://security-tracker.debian.org/tracker/CVE-2019-9640)\nInvalid Read on exif\\_process\\_SOFn.\n* [CVE-2019-9641](https://security-tracker.debian.org/tracker/CVE-2019-9641)\nUninitialized read in exif\\_process\\_IFD\\_in\\_TIFF.\n* [CVE-2019-9022](https://security-tracker.debian.org/tracker/CVE-2019-9022)\nAn issue during parsing of DNS responses allows a hostile DNS server\n to misuse memcpy, which leads to a read operation past an allocated\n buffer.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.6.40+dfsg-0+deb8u2.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.6.40+dfsg-0+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.6.11+dfsg-1",
+				"5.6.12+dfsg-0+deb8u1",
+				"5.6.12+dfsg-1",
+				"5.6.13+dfsg-0+deb8u1",
+				"5.6.13+dfsg-1",
+				"5.6.13+dfsg-2",
+				"5.6.14+dfsg-0+deb8u1",
+				"5.6.14+dfsg-1",
+				"5.6.15+dfsg-1",
+				"5.6.16+dfsg-1",
+				"5.6.16+dfsg-2",
+				"5.6.16+dfsg-3",
+				"5.6.16+dfsg-4",
+				"5.6.17+dfsg-0+deb8u1",
+				"5.6.17+dfsg-1",
+				"5.6.17+dfsg-3",
+				"5.6.18+dfsg-1",
+				"5.6.19+dfsg-0+deb8u1",
+				"5.6.19+dfsg-1",
+				"5.6.19+dfsg-2",
+				"5.6.20+dfsg-0+deb8u1",
+				"5.6.20+dfsg-1",
+				"5.6.21+dfsg-1",
+				"5.6.21+dfsg-2",
+				"5.6.22+dfsg-0+deb8u1",
+				"5.6.22+dfsg-1",
+				"5.6.22+dfsg-2",
+				"5.6.23+dfsg-0+deb8u1",
+				"5.6.23+dfsg-1",
+				"5.6.24+dfsg-0+deb8u1",
+				"5.6.24+dfsg-1",
+				"5.6.26+dfsg-0+deb8u1",
+				"5.6.26+dfsg-1",
+				"5.6.27+dfsg-0+deb8u1",
+				"5.6.28+dfsg-0+deb8u1",
+				"5.6.29+dfsg-0+deb8u1",
+				"5.6.30+dfsg-0+deb8u1",
+				"5.6.33+dfsg-0+deb8u1",
+				"5.6.36+dfsg-0+deb8u1",
+				"5.6.37+dfsg-0+deb8u1",
+				"5.6.38+dfsg-0+deb8u1",
+				"5.6.39+dfsg-0+deb8u1",
+				"5.6.39+dfsg-0+deb8u2",
+				"5.6.40+dfsg-0+deb8u1",
+				"5.6.7+dfsg-1",
+				"5.6.9+dfsg-0+deb8u1",
+				"5.6.9+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1741-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1741"
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-204",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-05T00:00:00Z",
+	"related": [
+		"CVE-2002-1281",
+		"CVE-2002-1282"
+	],
+	"summary": "kdelibs - arbitrary program execution",
+	"details": "\nThe KDE team has [\\\ndiscovered](http://www.kde.org/info/security/advisory-20021111-1.txt) a vulnerability in the support for various\nnetwork protocols via the KIO. The implementation of the rlogin and telnet\nprotocols allows a carefully crafted URL in an HTML page, HTML email or\nother KIO-enabled application to execute arbitrary commands on the\nsystem using the victim's account on the vulnerable machine.\n\n\nThis problem has been fixed by disabling rlogin and telnet in version\n2.2.2-13.woody.5 for the current stable distribution (woody). The old\nstable distribution (potato) is not affected since it doesn't contain\nKDE. A correction for the package in the unstable distribution (sid)\nis not yet available.\n\n\nWe recommend that you upgrade your kdelibs3 package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kdelibs",
+				"purl": "pkg:deb/debian/kdelibs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.2-13.woody.5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-204.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-204"
+		}
+	]
+}

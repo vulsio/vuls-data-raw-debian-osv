@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1600-1",
+	"modified": "2023-06-28T06:20:51.136384Z",
+	"published": "2018-11-29T00:00:00Z",
+	"related": [
+		"CVE-2015-8915",
+		"CVE-2016-10209",
+		"CVE-2016-10349",
+		"CVE-2016-10350",
+		"CVE-2016-8687",
+		"CVE-2016-8688",
+		"CVE-2016-8689",
+		"CVE-2017-14166",
+		"CVE-2017-14501",
+		"CVE-2017-14502",
+		"CVE-2017-14503",
+		"CVE-2017-5601"
+	],
+	"summary": "libarchive - security update",
+	"details": "\nMultiple security vulnerabilities were found in libarchive, a\nmulti-format archive and compression library. Heap-based buffer\nover-reads, NULL pointer dereferences and out-of-bounds reads allow\nremote attackers to cause a denial-of-service (application crash) via\nspecially crafted archive files.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.1.2-11+deb8u4.\n\n\nWe recommend that you upgrade your libarchive packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.2-11+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.2-11",
+				"3.1.2-11+deb8u1",
+				"3.1.2-11+deb8u2",
+				"3.1.2-11+deb8u3",
+				"3.1.2-11+deb8u3~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1600-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1600"
+		}
+	]
+}

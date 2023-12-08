@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2506-1",
+	"modified": "2023-10-16T00:05:59.814807Z",
+	"published": "2012-07-02T00:00:00Z",
+	"related": [
+		"CVE-2012-2751"
+	],
+	"summary": "libapache-mod-security - modsecurity bypass",
+	"details": "\nQualys Vulnerability & Malware Research Labs discovered a vulnerability in\nModSecurity, a security module for the Apache webserver. In situations where\nboth Content:Disposition: attachment and Content-Type: multipart were\npresent in HTTP headers, the vulnerability could allow an attacker to bypass\npolicy and execute cross-site script (XSS) attacks through properly crafted\nHTML documents.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.5.12-1+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2.6.6-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.6.6-1.\n\n\nIn testing and unstable distribution, the source package has been renamed to\nmodsecurity-apache.\n\n\nWe recommend that you upgrade your libapache-mod-security packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libapache-mod-security",
+				"purl": "pkg:deb/debian/libapache-mod-security?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.12-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.12-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2506-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2506"
+		}
+	]
+}

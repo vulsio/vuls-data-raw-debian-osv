@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1133-1",
+	"modified": "2023-10-16T00:06:30.941641Z",
+	"published": "2006-08-01T00:00:00Z",
+	"related": [
+		"CVE-2006-0664",
+		"CVE-2006-0665",
+		"CVE-2006-0841",
+		"CVE-2006-1577"
+	],
+	"summary": "mantis - cross site scripting",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Mantis bug\ntracking system, which may lead to the execution of arbitrary web script.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2006-0664](https://security-tracker.debian.org/tracker/CVE-2006-0664)\nA cross-site scripting vulnerability was discovered in\n config\\_defaults\\_inc.php.\n* [CVE-2006-0665](https://security-tracker.debian.org/tracker/CVE-2006-0665)\nCross-site scripting vulnerabilities were discovered in query\\_store.php\n and manage\\_proj\\_create.php.\n* [CVE-2006-0841](https://security-tracker.debian.org/tracker/CVE-2006-0841)\nMultiple cross-site scripting vulnerabilities were discovered in\n view\\_all\\_set.php, manage\\_user\\_page.php, view\\_filters\\_page.php and\n proj\\_doc\\_delete.php.\n* [CVE-2006-1577](https://security-tracker.debian.org/tracker/CVE-2006-1577)\nMultiple cross-site scripting vulnerabilities were discovered in\n view\\_all\\_set.php.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.19.2-5sarge4.1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.19.4-3.1.\n\n\nWe recommend that you upgrade your mantis package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mantis",
+				"purl": "pkg:deb/debian/mantis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.19.2-5sarge4.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.19.2-3",
+				"0.19.2-4",
+				"0.19.2-4.1",
+				"0.19.2-5sarge1",
+				"0.19.2-5sarge2",
+				"0.19.2-5sarge4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1133-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1133"
+		}
+	]
+}

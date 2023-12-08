@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1609-1",
+	"modified": "2023-06-28T06:29:39.692084Z",
+	"published": "2018-12-17T00:00:00Z",
+	"related": [
+		"CVE-2018-11759"
+	],
+	"summary": "libapache-mod-jk - security update",
+	"details": "\nA vulnerability has been discovered in libapache-mod-jk, the Apache 2\nconnector for the Tomcat Java servlet engine.\n\n\nThe libapache-mod-jk connector is susceptible to information disclosure\nand privilege escalation because of a mishandling of URL normalization.\n\n\nThe nature of the fix required that libapache-mod-jk in Debian 8\nJessie be updated to the latest upstream release. For reference, the\nupstream changes associated with each release version are documented\nhere:\n\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.2.46-0+deb8u1.\n\n\nWe recommend that you upgrade your libapache-mod-jk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libapache-mod-jk",
+				"purl": "pkg:deb/debian/libapache-mod-jk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.2.46-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.2.37-4",
+				"1:1.2.37-4+deb8u1",
+				"1:1.2.40+svn150520-1",
+				"1:1.2.41-1",
+				"1:1.2.42-1",
+				"1:1.2.43-1",
+				"1:1.2.44-1",
+				"1:1.2.44-2",
+				"1:1.2.44-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1609-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1609"
+		}
+	]
+}

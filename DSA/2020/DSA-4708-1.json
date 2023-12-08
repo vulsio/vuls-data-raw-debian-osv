@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4708-1",
+	"modified": "2023-10-16T00:33:23.493795Z",
+	"published": "2020-06-21T00:00:00Z",
+	"related": [
+		"CVE-2020-14093",
+		"CVE-2020-14954"
+	],
+	"summary": "neomutt - security update",
+	"details": "\nDamian Poddebniak and Fabian Ising discovered two security issues in the\nSTARTTLS handling of the Neomutt mail client, which could enable MITM\nattacks.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 20180716+dfsg.1-1+deb10u1.\n\n\nWe recommend that you upgrade your neomutt packages.\n\n\nFor the detailed security status of neomutt please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/neomutt](https://security-tracker.debian.org/tracker/neomutt)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "neomutt",
+				"purl": "pkg:deb/debian/neomutt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20180716+dfsg.1-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20180716+dfsg.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4708-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4708"
+		}
+	]
+}

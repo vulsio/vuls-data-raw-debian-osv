@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-932-1",
+	"modified": "2023-10-16T00:13:41.578757Z",
+	"published": "2006-01-09T00:00:00Z",
+	"related": [
+		"CVE-2005-3191",
+		"CVE-2005-3192",
+		"CVE-2005-3193",
+		"CVE-2005-3624",
+		"CVE-2005-3625",
+		"CVE-2005-3626",
+		"CVE-2005-3627",
+		"CVE-2005-3628"
+	],
+	"summary": "kdegraphics - buffer overflows",
+	"details": "\n\"infamous41md\" and Chris Evans discovered several heap based buffer\noverflows in xpdf, the Portable Document Format (PDF) suite, that can\nlead to a denial of service by crashing the application or possibly to\nthe execution of arbitrary code. The same code is present in kpdf\nwhich is part of the kdegraphics package.\n\n\nThe old stable distribution (woody) does not contain kpdf packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 3.3.2-2sarge3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.5.0-3.\n\n\nWe recommend that you upgrade your kpdf package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kdegraphics",
+				"purl": "pkg:deb/debian/kdegraphics?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.3.2-2sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.3.2-2",
+				"4:3.3.2-2sarge1",
+				"4:3.3.2-2sarge2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-932-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-932"
+		}
+	]
+}

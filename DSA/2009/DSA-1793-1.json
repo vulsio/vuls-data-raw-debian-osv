@@ -1,0 +1,83 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1793-1",
+	"modified": "2023-10-16T00:10:38.475297Z",
+	"published": "2009-05-06T00:00:00Z",
+	"related": [
+		"CVE-2009-0146",
+		"CVE-2009-0147",
+		"CVE-2009-0165",
+		"CVE-2009-0166",
+		"CVE-2009-0799",
+		"CVE-2009-0800",
+		"CVE-2009-1179",
+		"CVE-2009-1180",
+		"CVE-2009-1181",
+		"CVE-2009-1182",
+		"CVE-2009-1183"
+	],
+	"summary": "kdegraphics - multiple vulnerabilities",
+	"details": "\nkpdf, a Portable Document Format (PDF) viewer for KDE, is based on the\nxpdf program and thus suffers from similar flaws to those described in\nDSA-1790.\n\n\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2009-0146](https://security-tracker.debian.org/tracker/CVE-2009-0146)\nMultiple buffer overflows in the JBIG2 decoder in kpdf allow\n remote attackers to cause a denial of service (crash) via a\n crafted PDF file, related to (1) JBIG2SymbolDict::setBitmap and\n (2) JBIG2Stream::readSymbolDictSeg.\n* [CVE-2009-0147](https://security-tracker.debian.org/tracker/CVE-2009-0147)\nMultiple integer overflows in the JBIG2 decoder in kpdf allow\n remote attackers to cause a denial of service (crash) via a\n crafted PDF file, related to (1) JBIG2Stream::readSymbolDictSeg,\n (2) JBIG2Stream::readSymbolDictSeg, and (3)\n JBIG2Stream::readGenericBitmap.\n* [CVE-2009-0165](https://security-tracker.debian.org/tracker/CVE-2009-0165)\nInteger overflow in the JBIG2 decoder in kpdf has unspecified\n impact related to \"g\\*allocn.\"\n* [CVE-2009-0166](https://security-tracker.debian.org/tracker/CVE-2009-0166)\nThe JBIG2 decoder in kpdf allows remote attackers to cause a\n denial of service (crash) via a crafted PDF file that triggers a\n free of uninitialized memory.\n* [CVE-2009-0799](https://security-tracker.debian.org/tracker/CVE-2009-0799)\nThe JBIG2 decoder in kpdf allows remote attackers to cause a\n denial of service (crash) via a crafted PDF file that triggers an\n out-of-bounds read.\n* [CVE-2009-0800](https://security-tracker.debian.org/tracker/CVE-2009-0800)\nMultiple \"input validation flaws\" in the JBIG2 decoder in kpdf\n allow remote attackers to execute arbitrary code via a crafted PDF\n file.\n* [CVE-2009-1179](https://security-tracker.debian.org/tracker/CVE-2009-1179)\nInteger overflow in the JBIG2 decoder in kpdf allows remote\n attackers to execute arbitrary code via a crafted PDF file.\n* [CVE-2009-1180](https://security-tracker.debian.org/tracker/CVE-2009-1180)\nThe JBIG2 decoder in kpdf allows remote attackers to execute\n arbitrary code via a crafted PDF file that triggers a free of\n invalid data.\n* [CVE-2009-1181](https://security-tracker.debian.org/tracker/CVE-2009-1181)\nThe JBIG2 decoder in kpdf allows remote attackers to cause a\n denial of service (crash) via a crafted PDF file that triggers a\n NULL pointer dereference.\n* [CVE-2009-1182](https://security-tracker.debian.org/tracker/CVE-2009-1182)\nMultiple buffer overflows in the JBIG2 MMR decoder in kpdf allow\n remote attackers to execute arbitrary code via a crafted PDF file.\n* [CVE-2009-1183](https://security-tracker.debian.org/tracker/CVE-2009-1183)\nThe JBIG2 MMR decoder in kpdf allows remote attackers to cause a\n denial of service (infinite loop and hang) via a crafted PDF file.\n\n\nThe old stable distribution (etch), these problems have been fixed in version\n3.5.5-3etch3.\n\n\nFor the stable distribution (lenny), these problems have been fixed in version\n3.5.9-3+lenny1.\n\n\nFor the unstable distribution (sid), these problems will be fixed\nsoon.\n\n\nWe recommend that you upgrade your kdegraphics packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "kdegraphics",
+				"purl": "pkg:deb/debian/kdegraphics?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.5.5-3etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.5.5-3",
+				"4:3.5.5-3etch1",
+				"4:3.5.5-3etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1793-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "kdegraphics",
+				"purl": "pkg:deb/debian/kdegraphics?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.5.9-3+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.5.9-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1793-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1793"
+		}
+	]
+}

@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-540-1",
+	"modified": "2023-06-28T06:34:09.018307Z",
+	"published": "2016-07-01T00:00:00Z",
+	"related": [
+		"CVE-2016-3710",
+		"CVE-2016-3712"
+	],
+	"summary": "qemu - security update",
+	"details": "\nSeveral vulnerabilities were discovered in qemu, a fast processor\nemulator.\n\n\n* [CVE-2016-3710](https://security-tracker.debian.org/tracker/CVE-2016-3710)\nWei Xiao and Qinghao Tang of 360.cn Inc discovered an out-of-bounds\n read and write flaw in the QEMU VGA module. A privileged guest user\n could use this flaw to execute arbitrary code on the host with the\n privileges of the hosting QEMU process.\n* [CVE-2016-3712](https://security-tracker.debian.org/tracker/CVE-2016-3712)\nZuozhi Fzz of Alibaba Inc discovered potential integer overflow\n or out-of-bounds read access issues in the QEMU VGA module. A\n privileged guest user could use this flaw to mount a denial of\n service (QEMU process crash).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6a+deb7u13.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6a+deb7u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6a",
+				"1.1.2+dfsg-6a+deb7u1",
+				"1.1.2+dfsg-6a+deb7u10",
+				"1.1.2+dfsg-6a+deb7u11",
+				"1.1.2+dfsg-6a+deb7u12",
+				"1.1.2+dfsg-6a+deb7u2",
+				"1.1.2+dfsg-6a+deb7u3",
+				"1.1.2+dfsg-6a+deb7u4",
+				"1.1.2+dfsg-6a+deb7u5",
+				"1.1.2+dfsg-6a+deb7u6",
+				"1.1.2+dfsg-6a+deb7u7",
+				"1.1.2+dfsg-6a+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6a+deb7u8",
+				"1.1.2+dfsg-6a+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-540-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-540"
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3857-1",
+	"modified": "2023-10-16T00:12:23.486804Z",
+	"published": "2017-05-18T00:00:00Z",
+	"related": [
+		"CVE-2017-3586",
+		"CVE-2017-3589"
+	],
+	"summary": "mysql-connector-java - security update",
+	"details": "\nTwo vulnerabilities have been found in the MySQL Connector/J JDBC driver.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 5.1.42-1~deb8u1.\n\n\nFor the upcoming stable distribution (stretch), these problems have been\nfixed in version 5.1.42-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 5.1.42-1.\n\n\nWe recommend that you upgrade your mysql-connector-java packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mysql-connector-java",
+				"purl": "pkg:deb/debian/mysql-connector-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.1.42-1~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.1.32-1",
+				"5.1.37-1",
+				"5.1.38-1",
+				"5.1.39-1",
+				"5.1.39-1~deb7u1",
+				"5.1.39-1~deb8u1",
+				"5.1.40-1",
+				"5.1.41-1",
+				"5.1.41-1~deb8u1",
+				"5.1.42-1~deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3857-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3857"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4298-1",
+	"modified": "2023-10-16T00:17:04.738057Z",
+	"published": "2018-09-20T00:00:00Z",
+	"related": [
+		"CVE-2018-17141"
+	],
+	"summary": "hylafax - security update",
+	"details": "\nLuis Merino, Markus Vervier and Eric Sesterhenn discovered that missing\ninput sanitising in the Hylafax fax software could potentially result in\nthe execution of arbitrary code via a malformed fax message.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3:6.0.6-7+deb9u1.\n\n\nWe recommend that you upgrade your hylafax packages.\n\n\nFor the detailed security status of hylafax please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/hylafax>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "hylafax",
+				"purl": "pkg:deb/debian/hylafax?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3:6.0.6-7+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3:6.0.6-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4298-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4298"
+		}
+	]
+}

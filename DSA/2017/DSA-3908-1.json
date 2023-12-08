@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3908-1",
+	"modified": "2023-10-16T00:12:26.762831Z",
+	"published": "2017-07-12T00:00:00Z",
+	"related": [
+		"CVE-2017-7529"
+	],
+	"summary": "nginx - security update",
+	"details": "\nAn integer overflow has been found in the HTTP range module of Nginx, a\nhigh-performance web and reverse proxy server, which may result in\ninformation disclosure.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.6.2-5+deb8u5.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.10.3-1+deb9u1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your nginx packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.2-5+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.2-5",
+				"1.6.2-5+a.exp1",
+				"1.6.2-5+deb8u1",
+				"1.6.2-5+deb8u1~bpo70+1",
+				"1.6.2-5+deb8u2",
+				"1.6.2-5+deb8u2~bpo70+1",
+				"1.6.2-5+deb8u3",
+				"1.6.2-5+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3908-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.10.3-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.10.3-1",
+				"1.10.3-1+deb9u1~bpo8+1",
+				"1.10.3-1+deb9u1~bpo8+2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3908-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3908"
+		}
+	]
+}

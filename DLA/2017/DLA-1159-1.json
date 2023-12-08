@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1159-1",
+	"modified": "2023-06-28T06:20:25.529166Z",
+	"published": "2017-11-03T00:00:00Z",
+	"related": [
+		"CVE-2017-16352",
+		"CVE-2017-16353"
+	],
+	"summary": "graphicsmagick - security update",
+	"details": "\nMaor Shwartz, Jeremy Heng and Terry Chia discovered two security\nvulnerabilities in Graphicsmagick, a collection of image processing tool\ns.\n\n\n* [CVE-2017-16352](https://security-tracker.debian.org/tracker/CVE-2017-16352)\nGraphicsmagick was vulnerable to a heap-based buffer\n overflow vulnerability found in the Display visual image directory\n feature of the DescribeImage() function of the magick/describe.c\n file. One possible way to trigger the vulnerability is to run the\n identify command on a specially crafted MIFF format file with the\n verbose flag.\n* [CVE-2017-16353](https://security-tracker.debian.org/tracker/CVE-2017-16353)\nGraphicsmagick was vulnerable to a memory information disclosure\n vulnerability found in the DescribeImage function of the\n magick/describe.c file, because of a heap-based buffer over-read. The\n portion of the code containing the vulnerability is responsible for\n printing the IPTC Profile information contained in the image. This\n vulnerability can be triggered with a specially crafted MIFF file.\n There is an out-of-bounds buffer dereference because certain\n increments are never checked.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.16-1.1+deb7u13.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "graphicsmagick",
+				"purl": "pkg:deb/debian/graphicsmagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.16-1.1+deb7u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.16-1.1",
+				"1.3.16-1.1+deb7u1",
+				"1.3.16-1.1+deb7u10",
+				"1.3.16-1.1+deb7u11",
+				"1.3.16-1.1+deb7u12",
+				"1.3.16-1.1+deb7u2",
+				"1.3.16-1.1+deb7u3",
+				"1.3.16-1.1+deb7u4",
+				"1.3.16-1.1+deb7u5",
+				"1.3.16-1.1+deb7u6",
+				"1.3.16-1.1+deb7u7",
+				"1.3.16-1.1+deb7u8",
+				"1.3.16-1.1+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1159-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1159"
+		}
+	]
+}

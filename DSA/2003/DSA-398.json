@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-398",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-11-10T00:00:00Z",
+	"related": [
+		"CVE-2003-0933"
+	],
+	"summary": "conquest - buffer overflow",
+	"details": "\nSteve Kemp discovered a buffer overflow in the environment variable\nhandling of conquest, a curses based, real-time, multi-player space\nwarfare game, which could lead a local attacker to gain unauthorised\naccess to the group conquest.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 7.1.1-6woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 7.2-5.\n\n\nWe recommend that you upgrade your conquest package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "conquest",
+				"purl": "pkg:deb/debian/conquest?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.1.1-6woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-398.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-398"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3836-1",
+	"modified": "2023-10-16T00:12:21.906098Z",
+	"published": "2017-04-27T00:00:00Z",
+	"related": [
+		"CVE-2017-8073"
+	],
+	"summary": "weechat - security update",
+	"details": "\nIt was discovered that weechat, a fast and light chat client, is prone\nto a buffer overflow vulnerability in the IRC plugin, allowing a remote\nattacker to cause a denial-of-service by sending a specially crafted\nfilename via DCC.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.0.1-1+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.7-3.\n\n\nWe recommend that you upgrade your weechat packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "weechat",
+				"purl": "pkg:deb/debian/weechat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1-1",
+				"1.0.1-1+deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3836-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3836"
+		}
+	]
+}

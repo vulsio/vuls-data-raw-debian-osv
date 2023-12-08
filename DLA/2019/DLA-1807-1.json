@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1807-1",
+	"modified": "2023-06-28T06:20:02.021014Z",
+	"published": "2019-05-27T00:00:00Z",
+	"related": [
+		"CVE-2018-11099",
+		"CVE-2018-11129",
+		"CVE-2018-11130"
+	],
+	"summary": "vcftools - security update",
+	"details": "\nWebin security lab - dbapp security Ltd found three issues in vcftools, a\ncollection of tools to work with VCF files. Different functions in\nheader.cpp are vulnerable to denial of services due to use-after-free\nissues or information disclosure due to heap-based buffer over-read.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.1.12+dfsg-1+deb8u1.\n\n\nWe recommend that you upgrade your vcftools packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "vcftools",
+				"purl": "pkg:deb/debian/vcftools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.12+dfsg-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1.12+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1807-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1807"
+		}
+	]
+}

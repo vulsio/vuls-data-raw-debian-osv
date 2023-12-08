@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1799-1",
+	"modified": "2023-10-16T00:07:55.577623Z",
+	"published": "2009-05-11T00:00:00Z",
+	"related": [
+		"CVE-2008-0928",
+		"CVE-2008-1945",
+		"CVE-2008-4539"
+	],
+	"summary": "qemu - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the QEMU processor\nemulator. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2008-0928](https://security-tracker.debian.org/tracker/CVE-2008-0928)\nIan Jackson discovered that range checks of file operations on \n emulated disk devices were insufficiently enforced.\n* [CVE-2008-1945](https://security-tracker.debian.org/tracker/CVE-2008-1945)\nIt was discovered that an error in the format auto detection of\n removable media could lead to the disclosure of files in the\n host system.\n* [CVE-2008-4539](https://security-tracker.debian.org/tracker/CVE-2008-4539)\nA buffer overflow has been found in the emulation of the Cirrus\n graphics adaptor.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 0.8.2-4etch3.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.9.1-10lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.9.1+svn20081101-1.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.2-4etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.2-4",
+				"0.8.2-4etch1",
+				"0.8.2-4etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1799-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.1-10lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.1-10",
+				"0.9.1-10lenny1~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1799-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1799"
+		}
+	]
+}

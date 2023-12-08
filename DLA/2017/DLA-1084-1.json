@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1084-1",
+	"modified": "2023-06-28T06:20:20.116347Z",
+	"published": "2017-09-02T00:00:00Z",
+	"related": [
+		"CVE-2017-14062"
+	],
+	"summary": "libidn - security update",
+	"details": "\nIt was discovered that there was an integer overflow vulnerability in\nlibidn's Punycode handling (an encoding used to convert Unicode characters\nto ASCII) which would have allowed remote attackers to cause a denial of\nservice.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libidn version\n1.25-2+deb7u3.\n\n\nWe recommend that you upgrade your libidn packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libidn",
+				"purl": "pkg:deb/debian/libidn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.25-2+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.25-2",
+				"1.25-2+deb7u1",
+				"1.25-2+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1084-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1084"
+		}
+	]
+}

@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2831-1",
+	"modified": "2023-10-16T00:11:33.435419Z",
+	"published": "2013-12-31T00:00:00Z",
+	"related": [
+		"CVE-2013-4969"
+	],
+	"summary": "puppet - insecure temporary files",
+	"details": "\nAn unsafe use of temporary files was discovered in Puppet, a tool for\ncentralized configuration management. An attacker can exploit this \nvulnerability and overwrite an arbitrary file in the system.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.6.2-5+squeeze9.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.7.23-1~deb7u2.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 3.4.1-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.4.1-1.\n\n\nWe recommend that you upgrade your puppet packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "puppet",
+				"purl": "pkg:deb/debian/puppet?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.2-5+squeeze9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.2-4",
+				"2.6.2-5",
+				"2.6.2-5+squeeze1",
+				"2.6.2-5+squeeze3",
+				"2.6.2-5+squeeze4",
+				"2.6.2-5+squeeze5",
+				"2.6.2-5+squeeze6",
+				"2.6.2-5+squeeze7",
+				"2.6.2-5+squeeze8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2831-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "puppet",
+				"purl": "pkg:deb/debian/puppet?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.23-1~deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.18-4",
+				"2.7.18-5",
+				"2.7.23-1~deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2831-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2831"
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2179-1",
+	"modified": "2023-06-28T06:26:27.085225Z",
+	"published": "2020-04-18T00:00:00Z",
+	"related": [
+		"CVE-2020-10968",
+		"CVE-2020-10969",
+		"CVE-2020-11111",
+		"CVE-2020-11112",
+		"CVE-2020-11113",
+		"CVE-2020-11619",
+		"CVE-2020-11620"
+	],
+	"summary": "jackson-databind - security update",
+	"details": "\nFollowing CVEs were reported against the jackson-databind source package:\n\n\n* [CVE-2020-10968](https://security-tracker.debian.org/tracker/CVE-2020-10968)\nFasterXML jackson-databind 2.x before 2.9.10.4 mishandles the\n interaction between serialization gadgets and typing, related to\n org.aoju.bus.proxy.provider.remoting.RmiProvider (aka bus-proxy).\n* [CVE-2020-10969](https://security-tracker.debian.org/tracker/CVE-2020-10969)\nFasterXML jackson-databind 2.x before 2.9.10.4 mishandles the\n interaction between serialization gadgets and typing, related to\n javax.swing.JEditorPane.\n* [CVE-2020-11111](https://security-tracker.debian.org/tracker/CVE-2020-11111)\nFasterXML jackson-databind 2.x before 2.9.10.4 mishandles the\n interaction between serialization gadgets and typing, related to\n org.apache.activemq.\\* (aka activemq-jms, activemq-core,\n activemq-pool, and activemq-pool-jms).\n* [CVE-2020-11112](https://security-tracker.debian.org/tracker/CVE-2020-11112)\nFasterXML jackson-databind 2.x before 2.9.10.4 mishandles the\n interaction between serialization gadgets and typing, related to\n org.apache.commons.proxy.provider.remoting.RmiProvider\n (aka apache/commons-proxy).\n* [CVE-2020-11113](https://security-tracker.debian.org/tracker/CVE-2020-11113)\nFasterXML jackson-databind 2.x before 2.9.10.4 mishandles the\n interaction between serialization gadgets and typing, related to\n org.apache.openjpa.ee.WASRegistryManagedRuntime (aka openjpa).\n* [CVE-2020-11619](https://security-tracker.debian.org/tracker/CVE-2020-11619)\nFasterXML jackson-databind 2.x before 2.9.10.4 mishandles the\n interaction between serialization gadgets and typing, related to\n org.springframework.aop.config.MethodLocatingFactoryBean\n (aka spring-aop).\n* [CVE-2020-11620](https://security-tracker.debian.org/tracker/CVE-2020-11620)\nFasterXML jackson-databind 2.x before 2.9.10.4 mishandles the\n interaction between serialization gadgets and typing, related to\n org.apache.commons.jelly.impl.Embedded (aka commons-jelly).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.4.2-2+deb8u14.\n\n\nWe recommend that you upgrade your jackson-databind packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jackson-databind",
+				"purl": "pkg:deb/debian/jackson-databind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.2-2+deb8u14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.2-2",
+				"2.4.2-2+deb8u1",
+				"2.4.2-2+deb8u10",
+				"2.4.2-2+deb8u11",
+				"2.4.2-2+deb8u12",
+				"2.4.2-2+deb8u13",
+				"2.4.2-2+deb8u2",
+				"2.4.2-2+deb8u3",
+				"2.4.2-2+deb8u4",
+				"2.4.2-2+deb8u5",
+				"2.4.2-2+deb8u6",
+				"2.4.2-2+deb8u7",
+				"2.4.2-2+deb8u8",
+				"2.4.2-2+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2179-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2179"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-988-1",
+	"modified": "2023-10-16T00:28:41.603795Z",
+	"published": "2006-03-08T00:00:00Z",
+	"related": [
+		"CVE-2006-0188",
+		"CVE-2006-0195",
+		"CVE-2006-0377"
+	],
+	"summary": "squirrelmail - several",
+	"details": "\nSeveral vulnerabilities have been discovered in Squirrelmail, a\ncommonly used webmail system. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2006-0188](https://security-tracker.debian.org/tracker/CVE-2006-0188)\nMartijn Brinkers and Ben Maurer found a flaw in webmail.php that\n allows remote attackers to inject arbitrary web pages into the right\n frame via a URL in the right\\_frame parameter.\n* [CVE-2006-0195](https://security-tracker.debian.org/tracker/CVE-2006-0195)\nMartijn Brinkers and Scott Hughes discovered an interpretation\n conflict in the MagicHTML filter that allows remote attackers to\n conduct cross-site scripting (XSS) attacks via style sheet\n specifiers with invalid (1) \"/\\*\" and \"\\*/\" comments, or (2) slashes\n inside the \"url\" keyword, which is processed by some web browsers\n including Internet Explorer.\n* [CVE-2006-0377](https://security-tracker.debian.org/tracker/CVE-2006-0377)\nVicente Aguilera of Internet Security Auditors, S.L. discovered a\n CRLF injection vulnerability, which allows remote attackers to\n inject arbitrary IMAP commands via newline characters in the mailbox\n parameter of the sqimap\\_mailbox\\_select command, aka \"IMAP\n injection.\" There's no known way to exploit this yet.\n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 1.2.6-5.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2:1.4.4-8.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2:1.4.6-1.\n\n\nWe recommend that you upgrade your squirrelmail package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "squirrelmail",
+				"purl": "pkg:deb/debian/squirrelmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.6-5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-988-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "squirrelmail",
+				"purl": "pkg:deb/debian/squirrelmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.4.4-8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.4.4-5",
+				"2:1.4.4-6",
+				"2:1.4.4-6sarge1",
+				"2:1.4.4-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-988-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-988"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1037-1",
+	"modified": "2023-10-16T00:04:57.113027Z",
+	"published": "2006-04-21T00:00:00Z",
+	"related": [
+		"CVE-2006-1060"
+	],
+	"summary": "zgv - programming error",
+	"details": "\nAndrea Barisani discovered that zgv, an svgalib graphics viewer,\nattempts to decode JPEG images within the CMYK/YCCK colour space\nincorrectly, which could lead to the execution of arbitrary code.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 5.5-3woody3.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 5.7-1.4.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your zgv package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "zgv",
+				"purl": "pkg:deb/debian/zgv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.5-3woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.5-3woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1037-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "zgv",
+				"purl": "pkg:deb/debian/zgv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7-1.4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7-1.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1037-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1037"
+		}
+	]
+}

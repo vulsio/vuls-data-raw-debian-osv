@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1113",
+	"modified": "2023-10-16T00:05:12.291704Z",
+	"published": "2006-07-18T00:00:00Z",
+	"related": [
+		"CVE-2006-3458"
+	],
+	"summary": "zope2.7 - programming error",
+	"details": "\nIt was discovered that the Zope web application server allows read access\nto arbitrary pages on the server, if a user has the privilege to edit\n\"restructured text\" pages.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.7.5-2sarge2.\n\n\nThe unstable distribution (sid) does no longer contain Zope 2.7 packages.\n\n\nWe recommend that you upgrade your zope2.7 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "zope2.7",
+				"purl": "pkg:deb/debian/zope2.7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.5-2sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.5-2",
+				"2.7.5-2sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1113.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1113"
+		}
+	]
+}

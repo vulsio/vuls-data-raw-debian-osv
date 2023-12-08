@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1804-1",
+	"modified": "2023-06-28T06:20:01.252098Z",
+	"published": "2019-05-26T00:00:00Z",
+	"related": [
+		"CVE-2019-5436"
+	],
+	"summary": "curl - security update",
+	"details": "\ncURL, an URL transfer library, contains a heap buffer overflow in the\nfunction tftp\\_receive\\_packet() that receives data from a TFTP server.\nIt calls recvfrom() with the default size for the buffer rather than\nwith the size that was used to allocate it. Thus, the content that\nmight overwrite the heap memory is entirely controlled by the server.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n7.38.0-4+deb8u15.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.38.0-4+deb8u15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.38.0-4",
+				"7.38.0-4+deb8u1",
+				"7.38.0-4+deb8u10",
+				"7.38.0-4+deb8u11",
+				"7.38.0-4+deb8u12",
+				"7.38.0-4+deb8u13",
+				"7.38.0-4+deb8u14",
+				"7.38.0-4+deb8u2",
+				"7.38.0-4+deb8u3",
+				"7.38.0-4+deb8u4",
+				"7.38.0-4+deb8u5",
+				"7.38.0-4+deb8u6",
+				"7.38.0-4+deb8u7",
+				"7.38.0-4+deb8u8",
+				"7.38.0-4+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1804-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1804"
+		}
+	]
+}

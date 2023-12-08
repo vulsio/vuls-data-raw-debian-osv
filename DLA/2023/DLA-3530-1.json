@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3530-1",
+	"modified": "2023-08-16T06:17:47.620537Z",
+	"published": "2023-08-16T00:00:00Z",
+	"related": [
+		"CVE-2023-3446",
+		"CVE-2023-3817"
+	],
+	"summary": "openssl - security update",
+	"details": "\nTwo vunerabilities were discovered in openssl, a Secure Sockets Layer toolkit:\n\n\n* [CVE-2023-3446](https://security-tracker.debian.org/tracker/CVE-2023-3446)\n, [CVE-2023-3817](https://security-tracker.debian.org/tracker/CVE-2023-3817)\n\n\nExcessively long DH key or parameter checks can cause significant delays\n in applications using DH\\_check(), DH\\_check\\_ex(), or EVP\\_PKEY\\_param\\_check()\n functions, potentially leading to Denial of Service attacks when keys or\n parameters are obtained from untrusted sources.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.1.1n-0+deb10u6.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openssl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1n-0+deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1c-1",
+				"1.1.1d-0+deb10u1",
+				"1.1.1d-0+deb10u2",
+				"1.1.1d-0+deb10u3",
+				"1.1.1d-0+deb10u4",
+				"1.1.1d-0+deb10u5",
+				"1.1.1d-0+deb10u6",
+				"1.1.1d-0+deb10u7",
+				"1.1.1d-0+deb10u8",
+				"1.1.1d-1",
+				"1.1.1d-2",
+				"1.1.1e-1",
+				"1.1.1f-1",
+				"1.1.1g-1",
+				"1.1.1h-1",
+				"1.1.1i-1",
+				"1.1.1i-2",
+				"1.1.1i-3",
+				"1.1.1j-1",
+				"1.1.1k-1",
+				"1.1.1l-1",
+				"1.1.1m-1",
+				"1.1.1n-0+deb10u1",
+				"1.1.1n-0+deb10u2",
+				"1.1.1n-0+deb10u3",
+				"1.1.1n-0+deb10u4",
+				"1.1.1n-0+deb10u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3530-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3530"
+		}
+	]
+}

@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3585-1",
+	"modified": "2023-09-25T23:15:22.062248Z",
+	"published": "2023-09-25T00:00:00Z",
+	"related": [
+		"CVE-2020-18651",
+		"CVE-2020-18652",
+		"CVE-2021-36045",
+		"CVE-2021-36046",
+		"CVE-2021-36047",
+		"CVE-2021-36048",
+		"CVE-2021-36050",
+		"CVE-2021-36051",
+		"CVE-2021-36052",
+		"CVE-2021-36053",
+		"CVE-2021-36054",
+		"CVE-2021-36055",
+		"CVE-2021-36056",
+		"CVE-2021-36057",
+		"CVE-2021-36058",
+		"CVE-2021-36064",
+		"CVE-2021-39847",
+		"CVE-2021-40716",
+		"CVE-2021-40732",
+		"CVE-2021-42528",
+		"CVE-2021-42529",
+		"CVE-2021-42530",
+		"CVE-2021-42531",
+		"CVE-2021-42532"
+	],
+	"summary": "exempi - security update",
+	"details": "\nMultiple vulneratibilities were found in exempi, an implementation of XMP\n(Extensible Metadata Platform).\n\n\n* [CVE-2020-18651](https://security-tracker.debian.org/tracker/CVE-2020-18651)\nA Buffer Overflow vulnerability was found\n in function ID3\\_Support::ID3v2Frame::getFrameValue\n allows remote attackers to cause a denial of service.\n* [CVE-2020-18652](https://security-tracker.debian.org/tracker/CVE-2020-18652)\nA Buffer Overflow vulnerability was found in\n WEBP\\_Support.cpp allows remote attackers to cause a\n denial of service.\n* [CVE-2021-36045](https://security-tracker.debian.org/tracker/CVE-2021-36045)\nAn out-of-bounds read vulnerability was found\n that could lead to disclosure of arbitrary memory.\n* [CVE-2021-36046](https://security-tracker.debian.org/tracker/CVE-2021-36046)\nA memory corruption vulnerability was found,\n potentially resulting in arbitrary code execution\n in the context of the current use\n* [CVE-2021-36047](https://security-tracker.debian.org/tracker/CVE-2021-36047)\nAn Improper Input Validation vulnerability was found,\n potentially resulting in arbitrary\n code execution in the context of the current use.\n* [CVE-2021-36048](https://security-tracker.debian.org/tracker/CVE-2021-36048)\nAn Improper Input Validation was found,\n potentially resulting in arbitrary\n code execution in the context of the current user.\n* [CVE-2021-36050](https://security-tracker.debian.org/tracker/CVE-2021-36050)\nA buffer overflow vulnerability was found,\n potentially resulting in arbitrary code execution\n in the context of the current user.\n* [CVE-2021-36051](https://security-tracker.debian.org/tracker/CVE-2021-36051)\nA buffer overflow vulnerability was found,\n potentially resulting in arbitrary code execution\n in the context of the current user.\n* [CVE-2021-36052](https://security-tracker.debian.org/tracker/CVE-2021-36052)\nA memory corruption vulnerability was found,\n potentially resulting in arbitrary code execution\n in the context of the current user.\n* [CVE-2021-36053](https://security-tracker.debian.org/tracker/CVE-2021-36053)\nAn out-of-bounds read vulnerability was found,\n that could lead to disclosure of arbitrary memory.\n* [CVE-2021-36054](https://security-tracker.debian.org/tracker/CVE-2021-36054)\nA buffer overflow vulnerability was found potentially\n resulting in local application denial of service.\n* [CVE-2021-36055](https://security-tracker.debian.org/tracker/CVE-2021-36055)\nA use-after-free vulnerability was found that could\n result in arbitrary code execution.\n* [CVE-2021-36056](https://security-tracker.debian.org/tracker/CVE-2021-36056)\nA buffer overflow vulnerability was found, potentially\n resulting in arbitrary code execution in the context of\n the current user.\n* [CVE-2021-36057](https://security-tracker.debian.org/tracker/CVE-2021-36057)\nA write-what-where condition vulnerability was found,\n caused during the application's memory allocation process.\n This may cause the memory management functions to become\n mismatched resulting in local application denial of service\n in the context of the current user.\n* [CVE-2021-36058](https://security-tracker.debian.org/tracker/CVE-2021-36058)\nAn Integer Overflow vulnerability was found, potentially\n resulting in application-level denial of service in the\n context of the current user.\n* [CVE-2021-36064](https://security-tracker.debian.org/tracker/CVE-2021-36064)\nA Buffer Underflow vulnerability was found which\n could result in arbitrary code execution in the context\n of the current user\n* [CVE-2021-39847](https://security-tracker.debian.org/tracker/CVE-2021-39847)\nA stack-based buffer overflow vulnerability\n potentially resulting in arbitrary code execution in the\n context of the current user.\n* [CVE-2021-40716](https://security-tracker.debian.org/tracker/CVE-2021-40716)\nAn out-of-bounds read vulnerability was found that\n could lead to disclosure of sensitive memory\n* [CVE-2021-40732](https://security-tracker.debian.org/tracker/CVE-2021-40732)\nA null pointer dereference vulnerability was found,\n that could result in leaking data from certain memory\n locations and causing a local denial of service\n* [CVE-2021-42528](https://security-tracker.debian.org/tracker/CVE-2021-42528)\nA Null pointer dereference vulnerability was found\n when parsing a specially crafted file. An unauthenticated attacker\n could leverage this vulnerability to achieve an application\n denial-of-service in the context of the current user.\n* [CVE-2021-42529](https://security-tracker.debian.org/tracker/CVE-2021-42529)\nA stack-based buffer overflow vulnerability was found\n potentially resulting in arbitrary code execution\n in the context of the current user.\n* [CVE-2021-42530](https://security-tracker.debian.org/tracker/CVE-2021-42530)\nA stack-based buffer overflow vulnerability was found\n potentially resulting in arbitrary code execution in the\n context of the current user.\n* [CVE-2021-42531](https://security-tracker.debian.org/tracker/CVE-2021-42531)\nA stack-based buffer overflow vulnerability\n potentially resulting in arbitrary code execution in\n the context of the current user\n* [CVE-2021-42532](https://security-tracker.debian.org/tracker/CVE-2021-42532)\nA stack-based buffer overflow vulnerability\n potentially resulting in arbitrary code execution in the\n context of the current user.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.5.0-2+deb10u1.\n\n\nWe recommend that you upgrade your exempi packages.\n\n\nFor the detailed security status of exempi please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/exempi>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "exempi",
+				"purl": "pkg:deb/debian/exempi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.0-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3585-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3585"
+		}
+	]
+}

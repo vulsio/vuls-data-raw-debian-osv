@@ -1,0 +1,86 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3641-1",
+	"modified": "2023-10-31T01:15:27.948914Z",
+	"published": "2023-10-30T00:00:00Z",
+	"related": [
+		"CVE-2020-27218",
+		"CVE-2023-36478",
+		"CVE-2023-44487"
+	],
+	"summary": "jetty9 - security update",
+	"details": "\nTwo remotely exploitable security vulnerabilities were discovered in Jetty 9,\na Java based web server and servlet engine.\n\n\nThe HTTP/2 protocol implementation did not sufficiently verify if HPACK header\nvalues exceed their size limit. Furthermore the HTTP/2 protocol allowed a\ndenial of service (server resource consumption) because request cancellation\ncan reset many streams quickly. This problem is also known as Rapid Reset\nAttack.\n\n\nIn addition this version also addresses [CVE-2020-27218](https://security-tracker.debian.org/tracker/CVE-2020-27218).\n\n\nIf GZIP request body inflation is enabled and requests from different clients\nare multiplexed onto a single connection, and if an attacker can send a request\nwith a body that is received entirely but not consumed by the application, then\na subsequent request on the same connection will see that body prepended to its\nbody. The attacker will not see any data but may inject data into the body of\nthe subsequent request.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n9.4.50-4+deb10u1.\n\n\nWe recommend that you upgrade your jetty9 packages.\n\n\nFor the detailed security status of jetty9 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/jetty9>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "jetty9",
+				"purl": "pkg:deb/debian/jetty9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.4.50-4+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.4.15-1",
+				"9.4.16-0+deb10u1",
+				"9.4.16-0+deb10u2",
+				"9.4.16-0+deb10u3",
+				"9.4.18-1",
+				"9.4.18-2",
+				"9.4.26-1",
+				"9.4.26-1~bpo10+1",
+				"9.4.27-1",
+				"9.4.28-1",
+				"9.4.28-1~bpo10+1",
+				"9.4.29-1",
+				"9.4.31-1",
+				"9.4.31-1~bpo10+1",
+				"9.4.33-1",
+				"9.4.33-1~bpo10+1",
+				"9.4.35-1",
+				"9.4.35-1~bpo10+1",
+				"9.4.36-1",
+				"9.4.36-1~bpo10+1",
+				"9.4.38-1",
+				"9.4.38-1~bpo10+1",
+				"9.4.39-1",
+				"9.4.39-1~bpo10+1",
+				"9.4.39-2",
+				"9.4.39-3",
+				"9.4.44-1",
+				"9.4.44-2",
+				"9.4.44-3",
+				"9.4.44-4",
+				"9.4.45-1",
+				"9.4.46-1",
+				"9.4.48-1",
+				"9.4.49-1",
+				"9.4.49-1.1",
+				"9.4.50-1",
+				"9.4.50-1~bpo11+1",
+				"9.4.50-2",
+				"9.4.50-3",
+				"9.4.50-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3641-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3641"
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2057-1",
+	"modified": "2023-10-16T00:05:43.658755Z",
+	"published": "2010-06-07T00:00:00Z",
+	"related": [
+		"CVE-2010-1626",
+		"CVE-2010-1848",
+		"CVE-2010-1849",
+		"CVE-2010-1850"
+	],
+	"summary": "mysql-dfsg-5.0 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the MySQL\ndatabase server.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2010-1626](https://security-tracker.debian.org/tracker/CVE-2010-1626)\nMySQL allows local users to delete the data and index files of another\nuser's MyISAM table via a symlink attack in conjunction with the DROP\nTABLE command.\n* [CVE-2010-1848](https://security-tracker.debian.org/tracker/CVE-2010-1848)\nMySQL failed to check the table name argument of a COM\\_FIELD\\_LIST\ncommand packet for validity and compliance to acceptable table name\nstandards. This allows an authenticated user with SELECT privileges on\none table to obtain the field definitions of any table in all other\ndatabases and potentially of other MySQL instances accessible from the\nserver's file system.\n* [CVE-2010-1849](https://security-tracker.debian.org/tracker/CVE-2010-1849)\nMySQL could be tricked to read packets indefinitely if it received a\npacket larger than the maximum size of one packet.\nThis results in high CPU usage and thus denial of service conditions.\n* [CVE-2010-1850](https://security-tracker.debian.org/tracker/CVE-2010-1850)\nMySQL was susceptible to a buffer-overflow attack due to a\nfailure to perform bounds checking on the table name argument of a\nCOM\\_FIELD\\_LIST command packet. By sending long data for the table\nname, a buffer is overflown, which could be exploited by an\nauthenticated user to inject malicious code.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 5.0.51a-24+lenny4\n\n\nThe testing (squeeze) and unstable (sid) distribution do not contain\nmysql-dfsg-5.0 anymore.\n\n\nWe recommend that you upgrade your mysql-dfsg-5.0 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mysql-dfsg-5.0",
+				"purl": "pkg:deb/debian/mysql-dfsg-5.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.51a-24+lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.51a-23",
+				"5.0.51a-24",
+				"5.0.51a-24+lenny1",
+				"5.0.51a-24+lenny1~bpo40+1",
+				"5.0.51a-24+lenny2",
+				"5.0.51a-24+lenny2+spu1",
+				"5.0.51a-24+lenny2~bpo40+1",
+				"5.0.51a-24+lenny3",
+				"5.0.51a-24~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2057-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2057"
+		}
+	]
+}

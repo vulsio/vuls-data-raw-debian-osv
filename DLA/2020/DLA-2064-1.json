@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2064-1",
+	"modified": "2023-06-28T06:25:06.700244Z",
+	"published": "2020-01-10T00:00:00Z",
+	"related": [
+		"CVE-2019-20373"
+	],
+	"summary": "ldm - security update",
+	"details": "\nIt was discovered that a hook script of ldm, the display manager for the\nLinux Terminal Server Project incorrectly parsed responses from an SSH server\nwhich could result in local root privilege escalation.\n\n\n* [CVE-2019-20373](https://security-tracker.debian.org/tracker/CVE-2019-20373)\nLTSP LDM through 2.18.06 allows fat-client root access because the\n LDM\\_USERNAME variable may have an empty value if the user's shell\n lacks support for Bourne shell syntax. This is related to a\n run-x-session script.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2:2.2.15-2+deb8u1.\n\n\nWe recommend that you upgrade your ldm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ldm",
+				"purl": "pkg:deb/debian/ldm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.2.15-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:2.2.15-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2064-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2064"
+		}
+	]
+}

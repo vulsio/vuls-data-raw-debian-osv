@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3172-1",
+	"modified": "2023-06-28T06:33:39.741465Z",
+	"published": "2022-10-30T00:00:00Z",
+	"related": [
+		"CVE-2022-40303",
+		"CVE-2022-40304"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\nIt was discovered that libxml2, the GNOME XML library, was vulnerable to\ninteger overflows and memory corruption.\n\n\n* [CVE-2022-40303](https://security-tracker.debian.org/tracker/CVE-2022-40303)\nParsing a XML document with the XML\\_PARSE\\_HUGE option enabled can result\n in an integer overflow because safety checks were missing in some\n functions. Also, the xmlParseEntityValue function did not have any length\n limitation.\n* [CVE-2022-40304](https://security-tracker.debian.org/tracker/CVE-2022-40304)\nWhen a reference cycle is detected in the XML entity cleanup function the\n XML entity data can be stored in a dictionary. In this case, the\n dictionary becomes corrupted resulting in logic errors, including memory\n errors like double free.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.9.4+dfsg1-7+deb10u5.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFor the detailed security status of libxml2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxml2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.4+dfsg1-7+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.4+dfsg1-7",
+				"2.9.4+dfsg1-7+deb10u1",
+				"2.9.4+dfsg1-7+deb10u2",
+				"2.9.4+dfsg1-7+deb10u3",
+				"2.9.4+dfsg1-7+deb10u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3172-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3172"
+		}
+	]
+}

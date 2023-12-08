@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-145",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-08-07T00:00:00Z",
+	"related": [
+		"CVE-2002-0847"
+	],
+	"summary": "tinyproxy - doubly freed memory",
+	"details": "\nThe authors of tinyproxy, a lightweight HTTP proxy, discovered a bug\nin the handling of some invalid proxy requests. Under some\ncircumstances, an invalid request may result in allocated memory\nbeing freed twice. This can potentially result in the execution of\narbitrary code.\n\n\nThis problem has been fixed in version 1.4.3-2woody2 for the current\nstable distribution (woody) and in version 1.4.3-3 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected by this problem.\n\n\nWe recommend that you upgrade your tinyproxy package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tinyproxy",
+				"purl": "pkg:deb/debian/tinyproxy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.3-2woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-145.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-145"
+		}
+	]
+}

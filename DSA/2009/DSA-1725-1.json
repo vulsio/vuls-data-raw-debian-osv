@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1725-1",
+	"modified": "2023-10-16T00:05:38.188600Z",
+	"published": "2009-02-15T00:00:00Z",
+	"related": [
+		"CVE-2009-0240"
+	],
+	"summary": "websvn - information leak",
+	"details": "\nBas van Schaik discovered that WebSVN, a tool to view Subversion\nrepositories over the web, did not properly restrict access to private\nrepositories, allowing a remote attacker to read significant parts of\ntheir content.\n\n\nThe old stable distribution (etch) is not affected by this problem.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.0-4+lenny1.\n\n\nFor the unstable distribution (sid), this problem has also been fixed in\nversion 2.0-4+lenny1.\n\n\nWe recommend that you upgrade your websvn package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "websvn",
+				"purl": "pkg:deb/debian/websvn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0-4+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1725-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1725"
+		}
+	]
+}

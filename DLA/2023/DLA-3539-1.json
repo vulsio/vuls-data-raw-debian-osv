@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3539-1",
+	"modified": "2023-08-22T23:19:01.429983Z",
+	"published": "2023-08-22T00:00:00Z",
+	"related": [
+		"CVE-2021-3481",
+		"CVE-2021-45930",
+		"CVE-2023-32573",
+		"CVE-2023-32763",
+		"CVE-2023-34410",
+		"CVE-2023-37369",
+		"CVE-2023-38197"
+	],
+	"summary": "qt4-x11 - security update",
+	"details": "\nSeveral vulnerabilities have been found in qt4-x11, a graphical\nwindowing toolkit.\n\n\n* [CVE-2021-3481](https://security-tracker.debian.org/tracker/CVE-2021-3481)\nWhile rendering and displaying a crafted Scalable Vector Graphics\n (SVG) file this flaw may lead to an unauthorized memory access. The\n highest threat from this vulnerability is to data confidentiality\n and the application availability.\n* [CVE-2021-45930](https://security-tracker.debian.org/tracker/CVE-2021-45930)\nAn out-of-bounds write in\n QtPrivate::QCommonArrayOps::growAppend\n (called from QPainterPath::addPath and QPathClipper::intersect).\n* [CVE-2023-32573](https://security-tracker.debian.org/tracker/CVE-2023-32573)\nUninitialized variable usage in m\\_unitsPerEm.\n* [CVE-2023-32763](https://security-tracker.debian.org/tracker/CVE-2023-32763)\nAn application crash in QXmlStreamReader via a crafted XML string\n that triggers a situation in which a prefix is greater than a\n length.\n* [CVE-2023-34410](https://security-tracker.debian.org/tracker/CVE-2023-34410)\nCertificate validation for TLS does not always consider whether the\n root of a chain is a configured CA certificate.\n* [CVE-2023-37369](https://security-tracker.debian.org/tracker/CVE-2023-37369)\nThere can be an application crash in QXmlStreamReader via a crafted\n XML string that triggers a situation in which a prefix is greater\n than a length.\n* [CVE-2023-38197](https://security-tracker.debian.org/tracker/CVE-2023-38197)\nThere are infinite loops in recursive entity expansion.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n4:4.8.7+dfsg-18+deb10u2.\n\n\nWe recommend that you upgrade your qt4-x11 packages.\n\n\nFor the detailed security status of qt4-x11 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qt4-x11>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "qt4-x11",
+				"purl": "pkg:deb/debian/qt4-x11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:4.8.7+dfsg-18+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:4.8.7+dfsg-18",
+				"4:4.8.7+dfsg-18+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3539-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3539"
+		}
+	]
+}

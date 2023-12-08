@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1856-1",
+	"modified": "2023-10-16T00:10:41.914566Z",
+	"published": "2009-08-08T00:00:00Z",
+	"summary": "mantis - information leak",
+	"details": "\nIt was discovered that the Debian Mantis package, a web based bug\ntracking system, installed the database credentials in a file with\nworld-readable permissions onto the local filesystem. This allows\nlocal users to acquire the credentials used to control the Mantis\ndatabase.\n\n\nThis updated package corrects this problem for new installations and\nwill carefully try to update existing ones. Administrators can check\nthe permissions of the file /etc/mantis/config\\_db.php to see if they\nare safe for their environment.\n\n\nThe old stable distribution (etch) does not contain a mantis package.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.1.6+dfsg-2lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.8+dfsg-2.\n\n\nWe recommend that you upgrade your mantis package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mantis",
+				"purl": "pkg:deb/debian/mantis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.6+dfsg-2lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.6+dfsg-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1856-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1856"
+		}
+	]
+}

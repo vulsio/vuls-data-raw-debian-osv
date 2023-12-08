@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4614-1",
+	"modified": "2023-10-16T00:19:17.127666Z",
+	"published": "2020-02-01T00:00:00Z",
+	"related": [
+		"CVE-2019-18634"
+	],
+	"summary": "sudo - security update",
+	"details": "\nJoe Vennix discovered a stack-based buffer overflow vulnerability in\nsudo, a program designed to provide limited super user privileges to\nspecific users, triggerable when configured with the pwfeedback option\nenabled. An unprivileged user can take advantage of this flaw to obtain\nfull root privileges.\n\n\nDetails can be found in the upstream advisory at\n<https://www.sudo.ws/alerts/pwfeedback.html> .\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1.8.19p1-2.1+deb9u2.\n\n\nFor the stable distribution (buster), exploitation of the bug is\nprevented due to a change in EOF handling introduced in 1.8.26.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\nFor the detailed security status of sudo please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/sudo>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.19p1-2.1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.19p1-2.1",
+				"1.8.19p1-2.1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4614-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4614"
+		}
+	]
+}

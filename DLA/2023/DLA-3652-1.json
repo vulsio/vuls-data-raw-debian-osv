@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3652-1",
+	"modified": "2023-11-14T11:17:49.076420Z",
+	"published": "2023-11-14T00:00:00Z",
+	"related": [
+		"CVE-2023-36823"
+	],
+	"summary": "ruby-sanitize - security update",
+	"details": "\nIt was discovered that there was a potential cross-site scripting (XSS) in\nruby-sanitize, a whitelist-based HTML sanitizer.\n\n\nUsing carefully crafted input, an attacker may have be able to sneak\narbitrary HTML and CSS through Sanitize when configured to use the built-in\n`relaxed` config or when using a custom config that allowed\n`style` elements and one or more CSS \"at\"-rules. This could have\nresulted in cross-site scripting (XSS) or other undesired behavior if the\nmalicious HTML and CSS were then rendered in a browser.\n\n\n* [CVE-2023-36823](https://security-tracker.debian.org/tracker/CVE-2023-36823)\nSanitize is an allowlist-based HTML and CSS sanitizer. Using carefully\n crafted input, an attacker may be able to sneak arbitrary HTML and CSS\n through Sanitize starting with version 3.0.0 and prior to version 6.0.2\n when Sanitize is configured to use the built-in \"relaxed\" config or when\n using a custom config that allows `style` elements and one or more CSS\n at-rules. This could result in cross-site scripting or other undesired\n behavior when the malicious HTML and CSS are rendered in a browser.\n Sanitize 6.0.2 performs additional escaping of CSS in `style` element\n content, which fixes this issue.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n4.6.6-2.1~deb10u2.\n\n\nWe recommend that you upgrade your ruby-sanitize packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ruby-sanitize",
+				"purl": "pkg:deb/debian/ruby-sanitize?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.6.6-2.1~deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.6.6-2",
+				"4.6.6-2.1~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3652-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3652"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2074-1",
+	"modified": "2023-06-28T06:26:26.682469Z",
+	"published": "2020-01-23T00:00:00Z",
+	"related": [
+		"CVE-2019-15795",
+		"CVE-2019-15796"
+	],
+	"summary": "python-apt - security update",
+	"details": "\nSeveral issues have been found in python-apt, a python interface to libapt-pkg.\n\n\n* [CVE-2019-15795](https://security-tracker.debian.org/tracker/CVE-2019-15795)\nIt was discovered that python-apt would still use MD5 hashes to validate\n certain downloaded packages. If a remote attacker were able to perform a\n man-in-the-middle attack, this flaw could potentially be used to install\n altered packages.\n* [CVE-2019-15796](https://security-tracker.debian.org/tracker/CVE-2019-15796)\nIt was discovered that python-apt could install packages from untrusted\n repositories, contrary to expectations.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.9.3.13.\n\n\nWe recommend that you upgrade your python-apt packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "python-apt",
+				"purl": "pkg:deb/debian/python-apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.3.13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.3.11",
+				"0.9.3.12"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2074-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2074"
+		}
+	]
+}

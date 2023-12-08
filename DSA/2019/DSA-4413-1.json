@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4413-1",
+	"modified": "2023-10-16T00:17:34.102115Z",
+	"published": "2019-03-21T00:00:00Z",
+	"related": [
+		"CVE-2019-9755"
+	],
+	"summary": "ntfs-3g - security update",
+	"details": "\nA heap-based buffer overflow was discovered in NTFS-3G, a read-write\nNTFS driver for FUSE. A local user can take advantage of this flaw for\nlocal root privilege escalation.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1:2016.2.22AR.1+dfsg-1+deb9u1.\n\n\nWe recommend that you upgrade your ntfs-3g packages.\n\n\nFor the detailed security status of ntfs-3g please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/ntfs-3g>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ntfs-3g",
+				"purl": "pkg:deb/debian/ntfs-3g?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2016.2.22AR.1+dfsg-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2016.2.22AR.1+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4413-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4413"
+		}
+	]
+}

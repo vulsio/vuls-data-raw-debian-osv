@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-155-1",
+	"modified": "2023-06-28T06:20:48.085590Z",
+	"published": "2015-02-18T00:00:00Z",
+	"related": [
+		"CVE-2013-6885",
+		"CVE-2014-7822",
+		"CVE-2014-8133",
+		"CVE-2014-8134",
+		"CVE-2014-8160",
+		"CVE-2014-9420",
+		"CVE-2014-9584",
+		"CVE-2014-9585",
+		"CVE-2015-1421",
+		"CVE-2015-1593"
+	],
+	"summary": "linux-2.6 - security update",
+	"details": "\nThis update fixes the CVEs described below.\n\n\nA further issue, [CVE-2014-9419](https://security-tracker.debian.org/tracker/CVE-2014-9419), was considered, but appears to require\nextensive changes with a consequent high risk of regression. It is\nnow unlikely to be fixed in squeeze-lts.\n\n\n* [CVE-2013-6885](https://security-tracker.debian.org/tracker/CVE-2013-6885)\nIt was discovered that under specific circumstances, a combination\n of write operations to write-combined memory and locked CPU\n instructions may cause a core hang on AMD 16h 00h through 0Fh\n processors. A local user can use this flaw to mount a denial of\n service (system hang) via a crafted application.\n\n\nFor more information please refer to the AMD CPU erratum 793 in\n <http://support.amd.com/TechDocs/51810_16h_00h-0Fh_Rev_Guide.pdf>\n* [CVE-2014-7822](https://security-tracker.debian.org/tracker/CVE-2014-7822)\nIt was found that the splice() system call did not validate the\n given file offset and length. A local unprivileged user can use\n this flaw to cause filesystem corruption on ext4 filesystems, or\n possibly other effects.\n* [CVE-2014-8133](https://security-tracker.debian.org/tracker/CVE-2014-8133)\nIt was found that the espfix functionality can be bypassed by\n installing a 16-bit RW data segment into GDT instead of LDT (which\n espfix checks for) and using it for stack. A local unprivileged user\n could potentially use this flaw to leak kernel stack addresses.\n* [CVE-2014-8134](https://security-tracker.debian.org/tracker/CVE-2014-8134)\nIt was found that the espfix functionality is wrongly disabled in\n a 32-bit KVM guest. A local unprivileged user could potentially\n use this flaw to leak kernel stack addresses.\n* [CVE-2014-8160](https://security-tracker.debian.org/tracker/CVE-2014-8160)\nIt was found that a netfilter (iptables or ip6tables) rule\n accepting packets to a specific SCTP, DCCP, GRE or UDPlite\n port/endpoint could result in incorrect connection tracking state.\n If only the generic connection tracking module (nf\\_conntrack) was\n loaded, and not the protocol-specific connection tracking module,\n this would allow access to any port/endpoint of the specified\n protocol.\n* [CVE-2014-9420](https://security-tracker.debian.org/tracker/CVE-2014-9420)\nIt was found that the ISO-9660 filesystem implementation (isofs)\n follows arbitrarily long chains, including loops, of Continuation\n Entries (CEs). This allows local users to mount a denial of\n service via a crafted disc image.\n* [CVE-2014-9584](https://security-tracker.debian.org/tracker/CVE-2014-9584)\nIt was found that the ISO-9660 filesystem implementation (isofs)\n does not validate a length value in the Extensions Reference (ER)\n System Use Field, which allows local users to obtain sensitive\n information from kernel memory via a crafted disc image.\n* [CVE-2014-9585](https://security-tracker.debian.org/tracker/CVE-2014-9585)\nIt was discovered that address randomisation for the vDSO in\n 64-bit processes is extremely biassed. A local unprivileged user\n could potentially use this flaw to bypass the ASLR protection\n mechanism.\n* [CVE-2015-1421](https://security-tracker.debian.org/tracker/CVE-2015-1421)\nIt was found that the SCTP implementation could free\n authentication state while it was still in use, resulting in heap\n corruption. This could allow remote users to cause a denial of\n service or privilege escalation.\n* [CVE-2015-1593](https://security-tracker.debian.org/tracker/CVE-2015-1593)\nIt was found that address randomisation for the initial stack in\n 64-bit processes was limited to 20 rather than 22 bits of entropy.\n A local unprivileged user could potentially use this flaw to\n bypass the ASLR protection mechanism.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in linux-2.6 version 2.6.32-48squeeze11\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-48squeeze11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35squeeze1",
+				"2.6.32-35squeeze2",
+				"2.6.32-35~bpo50+1",
+				"2.6.32-36",
+				"2.6.32-37",
+				"2.6.32-38",
+				"2.6.32-39",
+				"2.6.32-39squeeze1",
+				"2.6.32-40",
+				"2.6.32-41",
+				"2.6.32-41squeeze2",
+				"2.6.32-42",
+				"2.6.32-43",
+				"2.6.32-44",
+				"2.6.32-45",
+				"2.6.32-46",
+				"2.6.32-46squeeze1",
+				"2.6.32-47",
+				"2.6.32-48",
+				"2.6.32-48squeeze1",
+				"2.6.32-48squeeze10",
+				"2.6.32-48squeeze3",
+				"2.6.32-48squeeze4",
+				"2.6.32-48squeeze5",
+				"2.6.32-48squeeze6",
+				"2.6.32-48squeeze7",
+				"2.6.32-48squeeze8",
+				"2.6.32-48squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-155-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-155"
+		}
+	]
+}

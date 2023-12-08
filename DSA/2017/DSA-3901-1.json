@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3901-1",
+	"modified": "2023-10-16T00:12:26.210290Z",
+	"published": "2017-07-02T00:00:00Z",
+	"related": [
+		"CVE-2017-7526"
+	],
+	"summary": "libgcrypt20 - security update",
+	"details": "\nDaniel J. Bernstein, Joachim Breitner, Daniel Genkin, Leon Groot\nBruinderink, Nadia Heninger, Tanja Lange, Christine van Vredendaal and\nYuval Yarom discovered that Libgcrypt is prone to a local side-channel\nattack allowing full key recovery for RSA-1024.\n\n\nSee <https://eprint.iacr.org/2017/627> for details.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.6.3-2+deb8u4.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.7.6-2+deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 1.7.8-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.7.8-1.\n\n\nWe recommend that you upgrade your libgcrypt20 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libgcrypt20",
+				"purl": "pkg:deb/debian/libgcrypt20?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.3-2+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.3-2",
+				"1.6.3-2+deb8u1",
+				"1.6.3-2+deb8u2",
+				"1.6.3-2+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3901-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libgcrypt20",
+				"purl": "pkg:deb/debian/libgcrypt20?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.6-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.6-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3901-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3901"
+		}
+	]
+}

@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1480-1",
+	"modified": "2023-06-28T06:20:44.103317Z",
+	"published": "2018-08-27T00:00:00Z",
+	"related": [
+		"CVE-2016-2337",
+		"CVE-2018-1000073",
+		"CVE-2018-1000074"
+	],
+	"summary": "ruby2.1 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Ruby 2.1.\n\n\n* [CVE-2016-2337](https://security-tracker.debian.org/tracker/CVE-2016-2337)\nType confusion exists in \\_cancel\\_eval Ruby's TclTkIp class\n method. Attacker passing different type of object than String as\n retval argument can cause arbitrary code execution.\n* [CVE-2018-1000073](https://security-tracker.debian.org/tracker/CVE-2018-1000073)\nRubyGems contains a Directory Traversal vulnerability in\n install\\_location function of package.rb that can result in path\n traversal when writing to a symlinked basedir outside of the root.\n* [CVE-2018-1000074](https://security-tracker.debian.org/tracker/CVE-2018-1000074)\nRubyGems contains a Deserialization of Untrusted Data\n vulnerability in owner command that can result in code\n execution. This attack appear to be exploitable via victim must\n run the gem owner command on a gem with a specially crafted YAML\n file.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.1.5-2+deb8u5.\n\n\nWe recommend that you upgrade your ruby2.1 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ruby2.1",
+				"purl": "pkg:deb/debian/ruby2.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.5-2+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.5-2",
+				"2.1.5-2+deb8u1",
+				"2.1.5-2+deb8u2",
+				"2.1.5-2+deb8u3",
+				"2.1.5-2+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1480-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1480"
+		}
+	]
+}

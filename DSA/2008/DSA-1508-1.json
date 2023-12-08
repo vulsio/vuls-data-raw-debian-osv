@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1508-1",
+	"modified": "2023-10-16T00:05:25.968108Z",
+	"published": "2008-02-25T00:00:00Z",
+	"related": [
+		"CVE-2008-0932"
+	],
+	"summary": "sword - arbirary shell command execution",
+	"details": "\nDan Dennison discovered that Diatheke, a CGI program to make a bible\nwebsite, performs insufficient sanitising of a parameter, allowing a\nremote attacker to execute arbitrary shell commands as the web server\nuser.\n\n\nFor the old stable distribution (sarge), this problem has been fixed in\nversion 1.5.7-7sarge1.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1.5.9-2etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in version\n1.5.9-8.\n\n\nWe recommend that you upgrade your diatheke package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "sword",
+				"purl": "pkg:deb/debian/sword?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.7-7sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.7-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1508-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "sword",
+				"purl": "pkg:deb/debian/sword?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.9-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.9-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1508-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1508"
+		}
+	]
+}

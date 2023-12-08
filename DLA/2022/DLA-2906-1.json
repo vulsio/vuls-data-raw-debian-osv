@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2906-1",
+	"modified": "2023-06-28T06:26:42.375897Z",
+	"published": "2022-02-01T00:00:00Z",
+	"related": [
+		"CVE-2022-22818",
+		"CVE-2022-23833"
+	],
+	"summary": "python-django - security update",
+	"details": "\nIt was discovered that there were two vulnerabilities in Django, a popular\nPython-based web development framework:\n\n\n* [CVE-2022-22818](https://security-tracker.debian.org/tracker/CVE-2022-22818)\nPossible XSS via {% debug %} template tag.\n\n\nThe {% debug %} template tag didn't properly encode the current context,\n posing an XSS attack vector.\n\n\nIn order to avoid this vulnerability, {% debug %} no longer outputs\n information when the DEBUG setting is False, and it ensures all context\n variables are correctly escaped when the DEBUG setting is True.\n* [CVE-2022-23833](https://security-tracker.debian.org/tracker/CVE-2022-23833)\nDenial-of-service possibility in file uploads\n\n\nPassing certain inputs to multipart forms could result in an infinite\n loop when parsing files.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1:1.10.7-2+deb9u15.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.10.7-2+deb9u15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.10.7-2",
+				"1:1.10.7-2+deb9u1",
+				"1:1.10.7-2+deb9u10",
+				"1:1.10.7-2+deb9u11",
+				"1:1.10.7-2+deb9u12",
+				"1:1.10.7-2+deb9u13",
+				"1:1.10.7-2+deb9u14",
+				"1:1.10.7-2+deb9u2",
+				"1:1.10.7-2+deb9u3",
+				"1:1.10.7-2+deb9u4",
+				"1:1.10.7-2+deb9u5",
+				"1:1.10.7-2+deb9u6",
+				"1:1.10.7-2+deb9u7",
+				"1:1.10.7-2+deb9u8",
+				"1:1.10.7-2+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2906-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2906"
+		}
+	]
+}

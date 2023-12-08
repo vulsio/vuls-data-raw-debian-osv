@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-661-2",
+	"modified": "2023-10-16T00:24:08.400751Z",
+	"published": "2005-04-20T00:00:00Z",
+	"related": [
+		"CVE-2005-0017",
+		"CVE-2005-0018"
+	],
+	"summary": "f2c - insecure temporary files",
+	"details": "\nDan McMahill noticed that our advisory DSA 661-1 did not correct\nthe multiple insecure files problem, hence, this update. For\ncompleteness below is the original advisory text:\n\n\n\n> \n> Javier FernĂĄndez-Sanguino PeĂąa from the Debian Security Audit project\n> discovered that f2c and fc, which are both part of the f2c package, a\n> fortran 77 to C/C++ translator, open temporary files insecurely and\n> are hence vulnerable to a symlink attack. The Common\n> Vulnerabilities and Exposures project identifies the following\n> vulnerabilities:\n> \n> \n> * [CAN-2005-0017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0017)\n> Multiple insecure temporary files in the f2c translator.\n> \n> * [CAN-2005-0018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0018)\n> Two insecure temporary files in the f2 shell script.\n> \n> \n> \n\n\nFor the stable distribution (woody) and all others including testing\nthis problem has been fixed in version 20010821-3.2.\n\n\nWe recommend that you upgrade your f2c package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "f2c",
+				"purl": "pkg:deb/debian/f2c?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20010821-3.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20010821-3",
+				"20010821-3.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-661-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-661"
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2978-1",
+	"modified": "2023-10-16T00:11:40.434450Z",
+	"published": "2014-07-11T00:00:00Z",
+	"summary": "libxml2 - security update",
+	"details": "\nDaniel P. Berrange discovered a denial of service vulnerability in \nlibxml2 entity substitution.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.8.0+dfsg1-7+wheezy1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.9.1+dfsg1-4.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.0+dfsg1-7+wheezy1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.0+dfsg1-7+nmu1",
+				"2.8.0+dfsg1-7+nmu2",
+				"2.8.0+dfsg1-7+nmu3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2978-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2978"
+		}
+	]
+}

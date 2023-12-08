@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2870-1",
+	"modified": "2023-06-28T06:30:21.098846Z",
+	"published": "2021-12-29T00:00:00Z",
+	"related": [
+		"CVE-2021-44832"
+	],
+	"summary": "apache-log4j2 - security update",
+	"details": "\nApache Log4j2, a Java Logging Framework, is vulnerable to a remote code\nexecution (RCE) attack where an attacker with permission to modify the logging\nconfiguration file can construct a malicious configuration using a JDBC\nAppender with a data source referencing a JNDI URI which can execute remote\ncode. This issue is fixed by limiting JNDI data source names to the java\nprotocol.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.12.4-0+deb9u1.\n\n\nWe recommend that you upgrade your apache-log4j2 packages.\n\n\nFor the detailed security status of apache-log4j2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/apache-log4j2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "apache-log4j2",
+				"purl": "pkg:deb/debian/apache-log4j2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.12.4-0+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.0-1",
+				"2.10.0-2",
+				"2.11.1-1",
+				"2.11.1-2",
+				"2.11.2-1",
+				"2.12.3-0+deb9u1",
+				"2.7-2",
+				"2.7-2+deb9u1",
+				"2.8.2-1",
+				"2.8.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2870-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2870"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-530",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-07-17T00:00:00Z",
+	"related": [
+		"CVE-2004-0649"
+	],
+	"summary": "l2tpd - buffer overflow",
+	"details": "\nThomas Walpuski reported a buffer overflow in l2tpd, an implementation\nof the layer 2 tunneling protocol, whereby a remote attacker could\npotentially cause arbitrary code to be executed by transmitting a\nspecially crafted packet. The exploitability of this vulnerability\nhas not been verified.\n\n\nFor the current stable distribution (woody), this problem has been\nfixed in version 0.67-1.2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.70-pre20031121-2.\n\n\nWe recommend that you update your l2tpd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "l2tpd",
+				"purl": "pkg:deb/debian/l2tpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.67-1.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-530.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-530"
+		}
+	]
+}

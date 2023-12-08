@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3934-1",
+	"modified": "2023-10-16T00:12:28.770336Z",
+	"published": "2017-08-10T00:00:00Z",
+	"related": [
+		"CVE-2017-1000117"
+	],
+	"summary": "git - security update",
+	"details": "\nJoern Schneeweisz discovered that git, a distributed revision control\nsystem, did not correctly handle maliciously constructed ssh://\nURLs. This allowed an attacker to run an arbitrary shell command, for\ninstance via git submodules.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1:2.1.4-2.1+deb8u4.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1:2.11.0-3+deb9u1.\n\n\nWe recommend that you upgrade your git packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1.4-2.1+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1.4-2.1",
+				"1:2.1.4-2.1+deb8u1",
+				"1:2.1.4-2.1+deb8u2",
+				"1:2.1.4-2.1+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3934-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.11.0-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.11.0-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3934-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3934"
+		}
+	]
+}

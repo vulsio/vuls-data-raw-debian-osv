@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-314-1",
+	"modified": "2023-06-28T06:33:31.439400Z",
+	"published": "2015-09-24T00:00:00Z",
+	"related": [
+		"CVE-2015-3258",
+		"CVE-2015-3279"
+	],
+	"summary": "cups - security update",
+	"details": "\nPetr Sklenar of Red Hat discovered that the texttopdf tool, part of cups\nfilters, was susceptible to multiple heap-based buffer and integer overflows\ndue to improper handling of print jobs. This could allow remote attackers to\ncrash texttopdf or possibly execute arbitrary code.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in cups version\n1.4.4-7+squeeze10. For Wheezy and Jessie, this has been fixed in the\ncups-filter package. We recommend you to upgrade your cups packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.4-7+squeeze10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.4-7",
+				"1.4.4-7+squeeze1",
+				"1.4.4-7+squeeze2",
+				"1.4.4-7+squeeze3",
+				"1.4.4-7+squeeze4",
+				"1.4.4-7+squeeze5",
+				"1.4.4-7+squeeze6",
+				"1.4.4-7+squeeze7",
+				"1.4.4-7+squeeze8",
+				"1.4.4-7+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-314-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-314"
+		}
+	]
+}

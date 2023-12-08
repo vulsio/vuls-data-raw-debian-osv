@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2142-1",
+	"modified": "2023-06-28T06:30:02.154549Z",
+	"published": "2020-03-13T00:00:00Z",
+	"related": [
+		"CVE-2020-8608"
+	],
+	"summary": "slirp - security update",
+	"details": "\nIt was discovered that there was a buffer overflow vulnerability in\n[slirp](http://slirp.sourceforge.net/), a SLIP/PPP emulator for\nusing a dial up shell account. This was caused by the incorrect usage of return\nvalues from snprintf(3).\n\n\n* [CVE-2020-8608](https://security-tracker.debian.org/tracker/CVE-2020-8608)\nIn libslirp 4.1.0, as used in QEMU 4.2.0, tcp\\_subr.c misuses snprintf\n return values, leading to a buffer overflow in later code.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:1.0.17-7+deb8u2.\n\n\nWe recommend that you upgrade your slirp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "slirp",
+				"purl": "pkg:deb/debian/slirp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.0.17-7+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.0.17-7",
+				"1:1.0.17-7+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2142-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2142"
+		}
+	]
+}

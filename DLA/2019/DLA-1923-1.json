@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1923-1",
+	"modified": "2023-06-28T06:21:04.109309Z",
+	"published": "2019-09-16T00:00:00Z",
+	"related": [
+		"CVE-2015-3908",
+		"CVE-2015-6240",
+		"CVE-2018-10875",
+		"CVE-2019-10156"
+	],
+	"summary": "ansible - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Ansible, a configuration\nmanagement, deployment, and task execution system.\n\n\n* [CVE-2015-3908](https://security-tracker.debian.org/tracker/CVE-2015-3908)\nA potential man-in-the-middle attack associated with insusfficient\n X.509 certificate verification. Ansible did not verify that the\n server hostname matches a domain name in the subject's Common Name\n (CN) or subjectAltName field of the X.509 certificate, which allows\n man-in-the-middle attackers to spoof SSL servers via an arbitrary\n valid certificate.\n* [CVE-2015-6240](https://security-tracker.debian.org/tracker/CVE-2015-6240)\nA symlink attack that allows local users to escape a restricted\n environment (chroot or jail) via a symlink attack.\n* [CVE-2018-10875](https://security-tracker.debian.org/tracker/CVE-2018-10875)\nA fix potential arbitrary code execution resulting from reading\n ansible.cfg from a world-writable current working directory. This\n condition now causes ansible to emit a warning and ignore the\n ansible.cfg in the world-writable current working directory.\n* [CVE-2019-10156](https://security-tracker.debian.org/tracker/CVE-2019-10156)\nInformation disclosure through unexpected variable substitution.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.7.2+dfsg-2+deb8u2.\n\n\nWe recommend that you upgrade your ansible packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ansible",
+				"purl": "pkg:deb/debian/ansible?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.2+dfsg-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.2+dfsg-2",
+				"1.7.2+dfsg-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1923-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1923"
+		}
+	]
+}

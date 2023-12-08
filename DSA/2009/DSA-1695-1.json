@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1695-1",
+	"modified": "2023-10-16T00:10:35.399325Z",
+	"published": "2009-01-02T00:00:00Z",
+	"related": [
+		"CVE-2008-3443"
+	],
+	"summary": "ruby1.8 ruby1.9 - denial of service",
+	"details": "\nThe regular expression engine of Ruby, a scripting language, contains a\nmemory leak which can be triggered remotely under certain circumstances,\nleading to a denial of service condition ([CVE-2008-3443](https://security-tracker.debian.org/tracker/CVE-2008-3443)).\n\n\nIn addition, this security update addresses a regression in the REXML\nXML parser of the ruby1.8 package; the regression was introduced in\nDSA-1651-1.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1.8.5-4etch4 of the ruby1.8 package, and version 1.9.0+20060609-1etch4\nof the ruby1.9 package.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.7.72-1 of the ruby1.8 package. The ruby1.9 package will be\nfixed soon.\n\n\nWe recommend that you upgrade your Ruby packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ruby1.9",
+				"purl": "pkg:deb/debian/ruby1.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.0+20060609-1etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.0+20060609-1",
+				"1.9.0+20060609-1etch1",
+				"1.9.0+20060609-1etch2",
+				"1.9.0+20060609-1etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1695-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ruby1.8",
+				"purl": "pkg:deb/debian/ruby1.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.5-4etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.5-4",
+				"1.8.5-4etch1",
+				"1.8.5-4etch2",
+				"1.8.5-4etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1695-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1695"
+		}
+	]
+}

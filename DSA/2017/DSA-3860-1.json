@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3860-1",
+	"modified": "2023-10-16T00:12:23.824433Z",
+	"published": "2017-05-24T00:00:00Z",
+	"related": [
+		"CVE-2017-7494"
+	],
+	"summary": "samba - security update",
+	"details": "\nsteelo discovered a remote code execution vulnerability in Samba, a\nSMB/CIFS file, print, and login server for Unix. A malicious client with\naccess to a writable share, can take advantage of this flaw by uploading\na shared library and then cause the server to load and execute it.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2:4.2.14+dfsg-0+deb8u6.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.2.14+dfsg-0+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.1.17+dfsg-2",
+				"2:4.1.17+dfsg-2+deb8u1",
+				"2:4.1.17+dfsg-2+deb8u2",
+				"2:4.1.17+dfsg-3",
+				"2:4.1.17+dfsg-4",
+				"2:4.1.17+dfsg-5",
+				"2:4.1.20+dfsg-1",
+				"2:4.1.21+dfsg-1",
+				"2:4.1.21+dfsg-2",
+				"2:4.1.22+dfsg-1",
+				"2:4.2.1+dfsg-1",
+				"2:4.2.10+dfsg-0+deb8u1",
+				"2:4.2.10+dfsg-0+deb8u2",
+				"2:4.2.10+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u1",
+				"2:4.2.14+dfsg-0+deb8u2",
+				"2:4.2.14+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u4",
+				"2:4.2.14+dfsg-0+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3860-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3860"
+		}
+	]
+}

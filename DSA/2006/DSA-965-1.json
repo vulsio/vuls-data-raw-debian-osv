@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-965-1",
+	"modified": "2023-10-16T00:30:19.328274Z",
+	"published": "2006-02-06T00:00:00Z",
+	"related": [
+		"CVE-2005-3732"
+	],
+	"summary": "ipsec-tools - null dereference",
+	"details": "\nThe Internet Key Exchange version 1 (IKEv1) implementation in racoon\nfrom ipsec-tools, IPsec tools for Linux, try to dereference a NULL\npointer under certain conditions which allows a remote attacker to\ncause a denial of service.\n\n\nThe old stable distribution (woody) does not contain ipsec-tools.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 0.5.2-1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.6.3-1.\n\n\nWe recommend that you upgrade your racoon package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "ipsec-tools",
+				"purl": "pkg:deb/debian/ipsec-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.5.2-1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.5.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-965-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-965"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4849-1",
+	"modified": "2023-10-16T00:26:58.377678Z",
+	"published": "2021-02-09T00:00:00Z",
+	"related": [
+		"CVE-2021-26910"
+	],
+	"summary": "firejail - security update",
+	"details": "\nRoman Fiedler discovered a vulnerability in the OverlayFS code in\nfirejail, a sandbox program to restrict the running environment of\nuntrusted applications, which could result in root privilege escalation.\nThis update disables OverlayFS support in firejail.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 0.9.58.2-2+deb10u2.\n\n\nWe recommend that you upgrade your firejail packages.\n\n\nFor the detailed security status of firejail please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/firejail>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "firejail",
+				"purl": "pkg:deb/debian/firejail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.58.2-2+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.58.2-2",
+				"0.9.58.2-2+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4849-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4849"
+		}
+	]
+}

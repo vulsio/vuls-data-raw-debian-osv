@@ -1,0 +1,94 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3983-1",
+	"modified": "2023-10-16T00:12:32.138342Z",
+	"published": "2017-09-22T00:00:00Z",
+	"related": [
+		"CVE-2017-12150",
+		"CVE-2017-12151",
+		"CVE-2017-12163"
+	],
+	"summary": "samba - security update",
+	"details": "\nMultiple security issues have been discoverd in Samba, a SMB/CIFS file,\nprint, and login server for Unix:\n\n\n* [CVE-2017-12150](https://security-tracker.debian.org/tracker/CVE-2017-12150)\nStefan Metzmacher discovered multiple code paths where SMB signing\n was not enforced.\n* [CVE-2017-12151](https://security-tracker.debian.org/tracker/CVE-2017-12151)\nStefan Metzmacher discovered that tools using libsmbclient did not\n enforce encryption when following DFS redirects, which could allow a\n man-in-the-middle attacker to read or modify connections which were\n meant to be encrypted.\n* [CVE-2017-12163](https://security-tracker.debian.org/tracker/CVE-2017-12163)\nYihan Lian and Zhibin Hu discovered that insufficient range checks\n in the processing of SMB1 write requests could result in disclosure\n of server memory.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 2:4.2.14+dfsg-0+deb8u8.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2:4.5.8+dfsg-2+deb9u2.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.2.14+dfsg-0+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.1.17+dfsg-2",
+				"2:4.1.17+dfsg-2+deb8u1",
+				"2:4.1.17+dfsg-2+deb8u2",
+				"2:4.1.17+dfsg-3",
+				"2:4.1.17+dfsg-4",
+				"2:4.1.17+dfsg-5",
+				"2:4.1.20+dfsg-1",
+				"2:4.1.21+dfsg-1",
+				"2:4.1.21+dfsg-2",
+				"2:4.1.22+dfsg-1",
+				"2:4.2.1+dfsg-1",
+				"2:4.2.10+dfsg-0+deb8u1",
+				"2:4.2.10+dfsg-0+deb8u2",
+				"2:4.2.10+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u1",
+				"2:4.2.14+dfsg-0+deb8u2",
+				"2:4.2.14+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u4",
+				"2:4.2.14+dfsg-0+deb8u5",
+				"2:4.2.14+dfsg-0+deb8u6",
+				"2:4.2.14+dfsg-0+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3983-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.5.8+dfsg-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.5.8+dfsg-2",
+				"2:4.5.8+dfsg-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3983-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3983"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4868-1",
+	"modified": "2023-10-16T00:14:58.031487Z",
+	"published": "2021-03-12T00:00:00Z",
+	"related": [
+		"CVE-2021-21381"
+	],
+	"summary": "flatpak - security update",
+	"details": "\nAnton Lydike discovered that sandbox restrictions in Flatpak, an\napplication deployment framework for desktop apps, could be bypassed\nvia a malicious .desktop file.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.2.5-0+deb10u4.\n\n\nWe recommend that you upgrade your flatpak packages.\n\n\nFor the detailed security status of flatpak please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/flatpak](https://security-tracker.debian.org/tracker/flatpak)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "flatpak",
+				"purl": "pkg:deb/debian/flatpak?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.5-0+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.4-1",
+				"1.2.5-0+deb10u1",
+				"1.2.5-0+deb10u1~bpo9+1",
+				"1.2.5-0+deb10u2",
+				"1.2.5-0+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4868-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4868"
+		}
+	]
+}

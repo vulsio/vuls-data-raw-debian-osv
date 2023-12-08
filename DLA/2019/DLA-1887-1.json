@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1887-1",
+	"modified": "2023-06-28T06:29:54.357279Z",
+	"published": "2019-08-15T00:00:00Z",
+	"related": [
+		"CVE-2015-9290"
+	],
+	"summary": "freetype - security update",
+	"details": "\nA buffer over-read in the t1-parser of freetype, a font engine, has been\nfound and fixed by checking limits more sensible.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.5.2-3+deb8u3.\n\n\nWe recommend that you upgrade your freetype packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "freetype",
+				"purl": "pkg:deb/debian/freetype?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.2-3+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.2-3",
+				"2.5.2-3+deb8u1",
+				"2.5.2-3+deb8u1~kbsd8u1",
+				"2.5.2-3+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1887-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1887"
+		}
+	]
+}

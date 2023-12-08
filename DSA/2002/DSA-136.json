@@ -1,0 +1,95 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-136",
+	"modified": "2023-10-16T00:10:22.548496Z",
+	"published": "2002-07-30T00:00:00Z",
+	"related": [
+		"CVE-2002-0655",
+		"CVE-2002-0656",
+		"CVE-2002-0657",
+		"CVE-2002-0659"
+	],
+	"summary": "openssl - multiple remote exploits",
+	"details": "\nThe OpenSSL development team has announced that a security audit by A.L.\nDigital Ltd and The Bunker, under the DARPA CHATS program, has revealed\nremotely exploitable buffer overflow conditions in the OpenSSL code.\nAdditionally, the ASN1 parser in OpenSSL has a potential DoS attack\nindependently discovered by Adi Stav and James Yonan.\n\n\nCAN-2002-0655 references overflows in buffers used to hold ASCII\nrepresentations of integers on 64 bit platforms. CAN-2002-0656\nreferences buffer overflows in the SSL2 server implementation (by\nsending an invalid key to the server) and the SSL3 client implementation\n(by sending a large session id to the client). The SSL2 issue was also\nnoticed by Neohapsis, who have privately demonstrated exploit code for\nthis issue. CAN-2002-0659 references the ASN1 parser DoS issue.\n\n\nThese vulnerabilities have been addressed for Debian 3.0 (woody) in\nopenssl094\\_0.9.4-6.woody.2, openssl095\\_0.9.5a-6.woody.1 and\nopenssl\\_0.9.6c-2.woody.1.\n\n\nThese vulnerabilities are also present in Debian 2.2 (potato). Fixed\npackages are available in openssl094\\_0.9.4-6.potato.2 and\nopenssl\\_0.9.6c-0.potato.4.\n\n\nA worm is actively exploiting this issue on internet-attached hosts;\nwe recommend you upgrade your OpenSSL as soon as possible. Note that you\nmust restart any daemons using SSL. (E.g., ssh or ssl-enabled apache.)\nIf you are uncertain which programs are using SSL you may choose to\nreboot to ensure that all running daemons are using the new libraries.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "openssl094",
+				"purl": "pkg:deb/debian/openssl094?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.4-6.woody.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.4-6",
+				"0.9.4-6.potato.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-136.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "openssl095",
+				"purl": "pkg:deb/debian/openssl095?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.5a-6.woody.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-136.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.6c-2.woody.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-136.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-136"
+		}
+	]
+}

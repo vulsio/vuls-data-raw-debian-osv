@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-722-1",
+	"modified": "2023-06-28T06:25:36.976388Z",
+	"published": "2016-11-25T00:00:00Z",
+	"related": [
+		"CVE-2016-7553"
+	],
+	"summary": "irssi - security update",
+	"details": "\nAn information disclosure vulnerability was found in irssi.\n\n\n* [CVE-2016-7553](https://security-tracker.debian.org/tracker/CVE-2016-7553)\nOther users on the same machine as the user running irssi with\n buf.pl loaded may be able to retrieve the whole window contents\n after /UPGRADE.\n Furthermore, this dump of the windows contents is never removed\n afterwards.\n\n\nFor Debian 7 Wheezy, this problems have been fixed in version\n0.8.15-5+deb7u1.\n\n\nWe recommend that you upgrade your irssi packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "irssi",
+				"purl": "pkg:deb/debian/irssi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.15-5+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.15-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-722-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-722"
+		}
+	]
+}

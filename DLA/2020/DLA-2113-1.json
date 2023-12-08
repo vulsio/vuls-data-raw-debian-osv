@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2113-1",
+	"modified": "2023-06-28T06:25:07.634515Z",
+	"published": "2020-02-21T00:00:00Z",
+	"related": [
+		"CVE-2020-8631",
+		"CVE-2020-8632"
+	],
+	"summary": "cloud-init - security update",
+	"details": "\n[CVE-2020-8631](https://security-tracker.debian.org/tracker/CVE-2020-8631)\n\n\nIn cloud-init, relies on Mersenne Twister for a random password, which\n makes it easier for attackers to predict passwords, because rand\\_str in\n cloudinit/util.py calls the random.choice function.\n\n\n* [CVE-2020-8632](https://security-tracker.debian.org/tracker/CVE-2020-8632)\nIn cloud-init, rand\\_user\\_password in cloudinit/config/cc\\_set\\_passwords.py\n has a small default pwlen value, which makes it easier for attackers to\n guess passwords.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.7.6~bzr976-2+deb8u1.\n\n\nWe recommend that you upgrade your cloud-init packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "cloud-init",
+				"purl": "pkg:deb/debian/cloud-init?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.6~bzr976-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.6~bzr976-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2113-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2113"
+		}
+	]
+}

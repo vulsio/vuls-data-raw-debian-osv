@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1526-1",
+	"modified": "2023-10-16T00:10:29.094094Z",
+	"published": "2008-03-20T00:00:00Z",
+	"related": [
+		"CVE-2008-0930",
+		"CVE-2008-0931"
+	],
+	"summary": "xwine",
+	"details": "\nSteve Kemp from the Debian Security Audit project discovered several local\nvulnerabilities in xwine, a graphical user interface for the WINE emulator.\n\n\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2008-0930](https://security-tracker.debian.org/tracker/CVE-2008-0930)\nThe xwine command makes unsafe use of local temporary files when\n printing. This could allow the removal of arbitrary files belonging\n to users who invoke the program.\n* [CVE-2008-0931](https://security-tracker.debian.org/tracker/CVE-2008-0931)\nThe xwine command changes the permissions of the global WINE configuration\n file such that it is world-writable. This could allow local users to edit\n it such that arbitrary commands could be executed whenever any local user\n executed a program under WINE.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n1.0.1-1etch1.\n\n\nWe recommend that you upgrade your xwine package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "xwine",
+				"purl": "pkg:deb/debian/xwine?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1526-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1526"
+		}
+	]
+}

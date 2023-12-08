@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-597-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-11-25T00:00:00Z",
+	"related": [
+		"CVE-2004-1012",
+		"CVE-2004-1013"
+	],
+	"summary": "cyrus-imapd - buffer overflow",
+	"details": "\nStefan Esser discovered several security related problems in the Cyrus\nIMAP daemon. Due to a bug in the command parser it is possible to\naccess memory beyond the allocated buffer in two places which could\nlead to the execution of arbitrary code.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.5.19-9.2\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.1.17-1.\n\n\nWe recommend that you upgrade your cyrus-imapd package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "cyrus21-imapd",
+				"purl": "pkg:deb/debian/cyrus21-imapd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.19-9.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-597-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-597"
+		}
+	]
+}

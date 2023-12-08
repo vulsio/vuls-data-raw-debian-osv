@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1797-1",
+	"modified": "2023-06-28T06:20:59.982135Z",
+	"published": "2019-05-20T00:00:00Z",
+	"related": [
+		"CVE-2019-11358",
+		"CVE-2019-11831"
+	],
+	"summary": "drupal7 - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in drupal7, a\nPHP web site platform. The vulnerabilities affect the embedded versions\nof the jQuery JavaScript library and the Typo3 Phar Stream Wrapper\nlibrary.\n\n\n* [CVE-2019-11358](https://security-tracker.debian.org/tracker/CVE-2019-11358)\nIt was discovered that the jQuery version embedded in Drupal was\n prone to a cross site scripting vulnerability in jQuery.extend().\n\n\nFor additional information, please refer to the upstream advisory\n at <https://www.drupal.org/sa-core-2019-006.>\n* [CVE-2019-11831](https://security-tracker.debian.org/tracker/CVE-2019-11831)\nIt was discovered that incomplete validation in a Phar processing\n library embedded in Drupal, a fully-featured content management\n framework, could result in information disclosure.\n\n\nFor additional information, please refer to the upstream advisory\n at <https://www.drupal.org/sa-core-2019-007.>\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n7.32-1+deb8u17.\n\n\nWe recommend that you upgrade your drupal7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "drupal7",
+				"purl": "pkg:deb/debian/drupal7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.32-1+deb8u17"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.32-1+deb8u10",
+				"7.32-1+deb8u11",
+				"7.32-1+deb8u12",
+				"7.32-1+deb8u13",
+				"7.32-1+deb8u14",
+				"7.32-1+deb8u15",
+				"7.32-1+deb8u16",
+				"7.32-1+deb8u3",
+				"7.32-1+deb8u4",
+				"7.32-1+deb8u4~bpo70+1",
+				"7.32-1+deb8u5",
+				"7.32-1+deb8u5~bpo70+1",
+				"7.32-1+deb8u6",
+				"7.32-1+deb8u7",
+				"7.32-1+deb8u8",
+				"7.32-1+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1797-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1797"
+		}
+	]
+}

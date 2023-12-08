@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2952-1",
+	"modified": "2023-10-16T00:11:39.346552Z",
+	"published": "2014-06-05T00:00:00Z",
+	"related": [
+		"CVE-2014-1453",
+		"CVE-2014-3000",
+		"CVE-2014-3880"
+	],
+	"summary": "kfreebsd-9 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the FreeBSD kernel that may\nlead to a denial of service or possibly disclosure of kernel memory. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2014-1453](https://security-tracker.debian.org/tracker/CVE-2014-1453)\nA remote, authenticated attacker could cause the NFS server become\n deadlocked, resulting in a denial of service.\n* [CVE-2014-3000](https://security-tracker.debian.org/tracker/CVE-2014-3000):\n\n An attacker who can send a series of specifically crafted packets with a\n connection could cause a denial of service situation by causing the kernel\n to crash.\n\n\nAdditionally, because the undefined on stack memory may be overwritten by\n other kernel threads, while difficult, it may be possible for an attacker\n to construct a carefully crafted attack to obtain portion of kernel memory\n via a connected socket. This may result in the disclosure of sensitive\n information such as login credentials, etc. before or even without\n crashing the system.\n* [CVE-2014-3880](https://security-tracker.debian.org/tracker/CVE-2014-3880)\nA local attacker can trigger a kernel crash (triple fault) with potential\n data loss, related to the execve/fexecve system calls.\n Reported by Ivo De Decker.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 9.0-10+deb70.7.\n\n\nFor the unstable (sid) and testing (jessie) distributions, these problems are fixed\nin kfreebsd-10 version 10.0-6.\n\n\nWe recommend that you upgrade your kfreebsd-9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "kfreebsd-9",
+				"purl": "pkg:deb/debian/kfreebsd-9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.0-10+deb70.7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.0-10",
+				"9.0-10+deb70.1",
+				"9.0-10+deb70.2",
+				"9.0-10+deb70.3",
+				"9.0-10+deb70.4",
+				"9.0-10+deb70.5",
+				"9.0-10+deb70.6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2952-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2952"
+		}
+	]
+}

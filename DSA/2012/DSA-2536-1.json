@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2536-1",
+	"modified": "2023-10-16T00:11:17.473461Z",
+	"published": "2012-08-30T00:00:00Z",
+	"related": [
+		"CVE-2012-2582",
+		"CVE-2012-4600"
+	],
+	"summary": "otrs2 - cross-site scripting",
+	"details": "\nIt was discovered that Open Ticket Request System (OTRS),\na ticket request system, contains a\ncross-site scripting vulnerability when email messages are viewed\nusing Internet Explorer. This update also improves the HTML security\nfilter to detect tag nesting.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.4.9+dfsg1-3+squeeze3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.1.7+dfsg1-5.\n\n\nWe recommend that you upgrade your otrs2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "otrs2",
+				"purl": "pkg:deb/debian/otrs2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.9+dfsg1-3+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.9+dfsg1-3",
+				"2.4.9+dfsg1-3+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2536-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2536"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2465-1",
+	"modified": "2023-06-28T06:28:59.394950Z",
+	"published": "2020-11-23T00:00:00Z",
+	"related": [
+		"CVE-2020-28948",
+		"CVE-2020-28949"
+	],
+	"summary": "php-pear - security update",
+	"details": "\nIt was discovered that there was a filename sanitisation issue in\nphp-pear, a distribution system for reusable PHP components.\n\n\n* [CVE-2020-28948](https://security-tracker.debian.org/tracker/CVE-2020-28948)\nArchive\\_Tar through 1.4.10 allows an unserialization attack because\n phar: is blocked but PHAR: is not blocked.\n* [CVE-2020-28949](https://security-tracker.debian.org/tracker/CVE-2020-28949)\nArchive\\_Tar through 1.4.10 has :// filename sanitization only to address\n phar attacks, and thus any other stream-wrapper attack (such as file:// to\n overwrite files) can still succeed.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1:1.10.1+submodules+notgz-9+deb9u2.\n\n\nWe recommend that you upgrade your php-pear packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "php-pear",
+				"purl": "pkg:deb/debian/php-pear?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.10.1+submodules+notgz-9+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.10.1+submodules+notgz-9",
+				"1:1.10.1+submodules+notgz-9+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2465-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2465"
+		}
+	]
+}

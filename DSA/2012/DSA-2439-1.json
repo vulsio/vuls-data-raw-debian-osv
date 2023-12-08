@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2439-1",
+	"modified": "2023-10-16T00:11:14.492266Z",
+	"published": "2012-03-22T00:00:00Z",
+	"related": [
+		"CVE-2011-3045"
+	],
+	"summary": "libpng - buffer overflow",
+	"details": "\nGlenn-Randers Pehrson discovered an buffer overflow in the libpng PNG \nlibrary, which could lead to the execution of arbitrary code if a \nmalformed image is processed.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.2.44-1+squeeze3. Packages for i386 are not yet available,\nbut will be provided shortly.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your libpng packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.44-1+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.44-1",
+				"1.2.44-1+squeeze1",
+				"1.2.44-1+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2439-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2439"
+		}
+	]
+}

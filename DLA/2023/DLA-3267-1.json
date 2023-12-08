@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3267-1",
+	"modified": "2023-06-28T06:33:41.668237Z",
+	"published": "2023-01-11T00:00:00Z",
+	"related": [
+		"CVE-2022-41966"
+	],
+	"summary": "libxstream-java - security update",
+	"details": "\nXStream serializes Java objects to XML and back again. Versions prior to\n1.4.11.1-1+deb10u4 may allow a remote attacker to terminate the application\nwith a stack overflow error, resulting in a denial of service only via\nmanipulation of the processed input stream. The attack uses the hash code\nimplementation for collections and maps to force recursive hash calculation\ncausing a stack overflow. This update handles the stack overflow and raises an\nInputManipulationException instead.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.4.11.1-1+deb10u4.\n\n\nWe recommend that you upgrade your libxstream-java packages.\n\n\nFor the detailed security status of libxstream-java please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxstream-java>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libxstream-java",
+				"purl": "pkg:deb/debian/libxstream-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.11.1-1+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.11.1-1",
+				"1.4.11.1-1+deb10u1",
+				"1.4.11.1-1+deb10u2",
+				"1.4.11.1-1+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3267-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3267"
+		}
+	]
+}

@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4110-1",
+	"modified": "2023-10-16T00:12:40.393973Z",
+	"published": "2018-02-10T00:00:00Z",
+	"related": [
+		"CVE-2018-6789"
+	],
+	"summary": "exim4 - security update",
+	"details": "\nMeh Chang discovered a buffer overflow flaw in a utility function used\nin the SMTP listener of Exim, a mail transport agent. A remote attacker\ncan take advantage of this flaw to cause a denial of service, or\npotentially the execution of arbitrary code via a specially crafted\nmessage.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 4.84.2-2+deb8u5.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 4.89-2+deb9u3.\n\n\nWe recommend that you upgrade your exim4 packages.\n\n\nFor the detailed security status of exim4 please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/exim4](https://security-tracker.debian.org/tracker/exim4)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "exim4",
+				"purl": "pkg:deb/debian/exim4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.84.2-2+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.84-8",
+				"4.84-8+deb8u1",
+				"4.84-8+deb8u2",
+				"4.84.2-1",
+				"4.84.2-1+deb8u1",
+				"4.84.2-2",
+				"4.84.2-2+deb8u1",
+				"4.84.2-2+deb8u2",
+				"4.84.2-2+deb8u3",
+				"4.84.2-2+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4110-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "exim4",
+				"purl": "pkg:deb/debian/exim4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.89-2+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.89-2",
+				"4.89-2+deb9u1",
+				"4.89-2+deb9u1~bpo8+1",
+				"4.89-2+deb9u2",
+				"4.89-2+deb9u3~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4110-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4110"
+		}
+	]
+}

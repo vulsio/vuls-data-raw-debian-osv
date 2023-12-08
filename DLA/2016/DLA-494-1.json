@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-494-1",
+	"modified": "2023-06-28T06:34:06.612462Z",
+	"published": "2016-05-30T00:00:00Z",
+	"related": [
+		"CVE-2016-1234",
+		"CVE-2016-3075",
+		"CVE-2016-3706"
+	],
+	"summary": "eglibc - security update",
+	"details": "\nSeveral vulnerabilities have been fixed in the Debian GNU C Library,\neglibc:\n\n\n* [CVE-2016-1234](https://security-tracker.debian.org/tracker/CVE-2016-1234)\nAlexander Cherepanov discovered that the glibc's glob implementation\n suffered from a stack-based buffer overflow when it was called with the\n GLOB\\_ALTDIRFUNC flag and encountered a long file name.\n* [CVE-2016-3075](https://security-tracker.debian.org/tracker/CVE-2016-3075)\nThe getnetbyname implementation in nss\\_dns was susceptible to a stack\n overflow and a crash if it was invoked on a very long name.\n* [CVE-2016-3706](https://security-tracker.debian.org/tracker/CVE-2016-3706)\nMichael Petlan reported that getaddrinfo copied large amounts of address\n data to the stack, possibly leading to a stack overflow. This complements\n the fix for [CVE-2013-4458](https://security-tracker.debian.org/tracker/CVE-2013-4458).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.13-38+deb7u11.\n\n\nWe recommend you to upgrade your eglibc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system, and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "eglibc",
+				"purl": "pkg:deb/debian/eglibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.13-38+deb7u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13-38",
+				"2.13-38+deb7u1",
+				"2.13-38+deb7u10",
+				"2.13-38+deb7u2",
+				"2.13-38+deb7u3",
+				"2.13-38+deb7u4",
+				"2.13-38+deb7u5",
+				"2.13-38+deb7u6",
+				"2.13-38+deb7u7",
+				"2.13-38+deb7u8",
+				"2.13-38+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-494-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-494"
+		}
+	]
+}

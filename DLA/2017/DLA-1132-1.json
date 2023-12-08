@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1132-1",
+	"modified": "2023-06-28T06:20:23.922921Z",
+	"published": "2017-10-11T00:00:00Z",
+	"related": [
+		"CVE-2017-10912",
+		"CVE-2017-10913",
+		"CVE-2017-10914",
+		"CVE-2017-10915",
+		"CVE-2017-10918",
+		"CVE-2017-10920",
+		"CVE-2017-10921",
+		"CVE-2017-10922",
+		"CVE-2017-12135",
+		"CVE-2017-12137",
+		"CVE-2017-12855",
+		"CVE-2017-14316",
+		"CVE-2017-14317",
+		"CVE-2017-14318",
+		"CVE-2017-14319"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor:\n\n\n* [CVE-2017-10912](https://security-tracker.debian.org/tracker/CVE-2017-10912)\nJann Horn discovered that incorrectly handling of page transfers might\n result in privilege escalation.\n* [CVE-2017-10913](https://security-tracker.debian.org/tracker/CVE-2017-10913) /\n [CVE-2017-10914](https://security-tracker.debian.org/tracker/CVE-2017-10914)\nJann Horn discovered that race conditions in grant handling might\n result in information leaks or privilege escalation.\n* [CVE-2017-10915](https://security-tracker.debian.org/tracker/CVE-2017-10915)\nAndrew Cooper discovered that incorrect reference counting with\n shadow paging might result in privilege escalation.\n* [CVE-2017-10918](https://security-tracker.debian.org/tracker/CVE-2017-10918)\nJulien Grall discovered that incorrect error handling in\n physical-to-machine memory mappings may result in privilege\n escalation, denial of service or an information leak.\n* [CVE-2017-10920](https://security-tracker.debian.org/tracker/CVE-2017-10920) /\n [CVE-2017-10921](https://security-tracker.debian.org/tracker/CVE-2017-10921) /\n [CVE-2017-10922](https://security-tracker.debian.org/tracker/CVE-2017-10922)\nJan Beulich discovered multiple places where reference\n counting on grant table operations was incorrect, resulting\n in potential privilege escalation\n* [CVE-2017-12135](https://security-tracker.debian.org/tracker/CVE-2017-12135)\nJan Beulich found multiple problems in the handling of\n transitive grants which could result in denial of service\n and potentially privilege escalation.\n* [CVE-2017-12137](https://security-tracker.debian.org/tracker/CVE-2017-12137)\nAndrew Cooper discovered that incorrect validation of\n grants may result in privilege escalation.\n* [CVE-2017-12855](https://security-tracker.debian.org/tracker/CVE-2017-12855)\nJan Beulich discovered that incorrect grant status handling, thus\n incorrectly informing the guest that the grant is no longer in use.\n* [CVE-2017-14316](https://security-tracker.debian.org/tracker/CVE-2017-14316)\nMatthew Daley discovered that the NUMA node parameter wasn't\n verified which which may result in privilege escalation.\n* [CVE-2017-14317](https://security-tracker.debian.org/tracker/CVE-2017-14317)\nEric Chanudet discovered that a race conditions in cxenstored might\n result in information leaks or privilege escalation.\n* [CVE-2017-14318](https://security-tracker.debian.org/tracker/CVE-2017-14318)\nMatthew Daley discovered that incorrect validation of\n grants may result in a denial of service.\n* [CVE-2017-14319](https://security-tracker.debian.org/tracker/CVE-2017-14319)\nAndrew Cooper discovered that insufficient grant unmapping\n checks may result in denial of service and privilege escalation.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-9.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.6.lts1-9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2",
+				"4.1.4-3+deb7u3",
+				"4.1.4-3+deb7u4",
+				"4.1.4-3+deb7u5",
+				"4.1.4-3+deb7u6",
+				"4.1.4-3+deb7u7",
+				"4.1.4-3+deb7u8",
+				"4.1.4-3+deb7u9",
+				"4.1.4-4",
+				"4.1.6.1-1+deb7u1",
+				"4.1.6.lts1-1",
+				"4.1.6.lts1-2",
+				"4.1.6.lts1-3",
+				"4.1.6.lts1-4",
+				"4.1.6.lts1-5",
+				"4.1.6.lts1-6",
+				"4.1.6.lts1-7",
+				"4.1.6.lts1-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1132-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1132"
+		}
+	]
+}

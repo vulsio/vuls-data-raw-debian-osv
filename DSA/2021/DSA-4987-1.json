@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4987-1",
+	"modified": "2023-10-16T00:16:29.617501Z",
+	"published": "2021-10-15T00:00:00Z",
+	"related": [
+		"CVE-2021-41072"
+	],
+	"summary": "squashfs-tools - security update",
+	"details": "\nRichard Weinberger reported that unsquashfs in squashfs-tools, the tools\nto create and extract Squashfs filesystems, does not check for duplicate\nfilenames within a directory. An attacker can take advantage of this\nflaw for writing to arbitrary files to the filesystem if a malformed\nSquashfs image is processed.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 1:4.3-12+deb10u2.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1:4.4-2+deb11u2.\n\n\nWe recommend that you upgrade your squashfs-tools packages.\n\n\nFor the detailed security status of squashfs-tools please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/squashfs-tools>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "squashfs-tools",
+				"purl": "pkg:deb/debian/squashfs-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.3-12+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.3-12",
+				"1:4.3-12+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4987-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "squashfs-tools",
+				"purl": "pkg:deb/debian/squashfs-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.4-2+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.4-2",
+				"1:4.4-2+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4987-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4987"
+		}
+	]
+}

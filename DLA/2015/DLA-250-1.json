@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-250-1",
+	"modified": "2023-06-28T06:25:15.788571Z",
+	"published": "2015-06-19T00:00:00Z",
+	"summary": "libclamunrar - security update",
+	"details": "\nUpstream published version 0.98.5. This update updates sqeeze-lts to the\nlatest upstream release in line with the approach used for other Debian\nreleases.\n\n\nThis update corrects a double-free error that existed within the\n\"unrar\\_extract\\_next\\_prepare()\" function (libclamunrar\\_iface/unrar\\_iface.c)\nwhen parsing a RAR file. While no CVE was assigned, this issue does have\npotential security implications.\n\n\nIf you use libclamunrar, we strongly recommend that you upgrade to this\nversion.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libclamunrar",
+				"purl": "pkg:deb/debian/libclamunrar?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.98.5-0+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.95.1-1",
+				"0.95.2-1",
+				"0.95.3-1",
+				"0.95.3-1~volatile1",
+				"0.96-1",
+				"0.96-2",
+				"0.96-2~volatile1",
+				"0.96.4-1",
+				"0.96.4-1~volatile1",
+				"0.98.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-250-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-250"
+		}
+	]
+}

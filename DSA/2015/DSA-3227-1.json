@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3227-1",
+	"modified": "2023-10-16T00:06:16.610896Z",
+	"published": "2015-04-15T00:00:00Z",
+	"related": [
+		"CVE-2015-0845"
+	],
+	"summary": "movabletype-opensource - security update",
+	"details": "\nJohn Lightsey discovered a format string injection vulnerability in the\nlocalisation of templates in Movable Type, a blogging system. An\nunauthenticated remote attacker could take advantage of this flaw to\nexecute arbitrary code as the web server user.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 5.1.4+dfsg-4+deb7u3.\n\n\nWe recommend that you upgrade your movabletype-opensource packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "movabletype-opensource",
+				"purl": "pkg:deb/debian/movabletype-opensource?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.1.4+dfsg-4+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.1.4+dfsg-4",
+				"5.1.4+dfsg-4+deb7u1",
+				"5.1.4+dfsg-4+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3227-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3227"
+		}
+	]
+}

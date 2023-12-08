@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-729-1",
+	"modified": "2023-10-16T00:24:11.271083Z",
+	"published": "2005-05-26T00:00:00Z",
+	"related": [
+		"CVE-2005-0525"
+	],
+	"summary": "php4 - missing input sanitising",
+	"details": "\nAn iDEFENSE researcher discovered two problems in the image processing\nfunctions of PHP, a server-side, HTML-embedded scripting language, of\nwhich one is present in woody as well. When reading a JPEG image, PHP\ncan be tricked into an endless loop due to insufficient input\nvalidation.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 4.1.2-7.woody4.\n\n\nFor the testing distribution (sarge) these problems have been fixed in\nversion 4.3.10-10.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.3.10-10.\n\n\nWe recommend that you upgrade your php4 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "php4",
+				"purl": "pkg:deb/debian/php4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:4.1.2-7.woody4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:4.1.2-7",
+				"4:4.1.2-7.0.1",
+				"4:4.1.2-7.woody3",
+				"4:4.1.2-7woody1",
+				"4:4.1.2-7woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-729-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-729"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-429",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-01-26T00:00:00Z",
+	"related": [
+		"CVE-2003-0971"
+	],
+	"summary": "gnupg - cryptographic weakness",
+	"details": "\nPhong Nguyen identified a severe bug in the way GnuPG creates and uses\nElGamal keys for signing. This is a significant security failure\nwhich can lead to a compromise of almost all ElGamal keys used for\nsigning.\n\n\nThis update disables the use of this type of key.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.0.6-4woody1.\n\n\nFor the unstable distribution, this problem has been fixed in version\n1.2.4-1.\n\n\nWe recommend that you update your gnupg package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.6-4woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-429.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-429"
+		}
+	]
+}

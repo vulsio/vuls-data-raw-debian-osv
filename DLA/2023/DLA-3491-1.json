@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3491-1",
+	"modified": "2023-07-11T15:15:19.276295Z",
+	"published": "2023-07-11T00:00:00Z",
+	"related": [
+		"CVE-2022-37026"
+	],
+	"summary": "erlang - security update",
+	"details": "\nA Client Authentication Bypass vulnerability has been discovered in the\nconcurrent, real-time, distributed functional language Erlang. Impacted are\nthose who are running an ssl/tls/dtls server using the ssl application\neither directly or indirectly via other applications. Note that the\nvulnerability only affects servers that request client certification, that\nis sets the option {verify, verify\\_peer}.\n\n\nAdditionally the source package elixir-lang has been rebuilt against the new\nerlang version. The rabbitmq-server package was upgraded to version 3.8.2 to\nfix an incompatibility with Erlang 22.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1:22.2.7+dfsg-1+deb10u1.\n\n\nWe recommend that you upgrade your erlang packages.\n\n\nFor the detailed security status of erlang please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/erlang>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "erlang",
+				"purl": "pkg:deb/debian/erlang?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:22.2.7+dfsg-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:21.2.6+dfsg-1",
+				"1:21.2.6+dfsg-1+hurd.1",
+				"1:22.0+dfsg-1",
+				"1:22.0.1+dfsg-1",
+				"1:22.0.3+dfsg-1",
+				"1:22.0.4+dfsg-1",
+				"1:22.0.5+dfsg-1",
+				"1:22.0.5+dfsg-2",
+				"1:22.0.7+dfsg-1",
+				"1:22.0.7+dfsg-2",
+				"1:22.0.7+dfsg-3",
+				"1:22.0~rc1+dfsg-1",
+				"1:22.0~rc2+dfsg-1",
+				"1:22.0~rc3+dfsg-1",
+				"1:22.1+dfsg-1",
+				"1:22.1.1+dfsg-1",
+				"1:22.1.1+dfsg-2",
+				"1:22.1.1+dfsg-3",
+				"1:22.1.5+dfsg-1",
+				"1:22.1.6+dfsg-1",
+				"1:22.1.7+dfsg-1",
+				"1:22.1.8+dfsg-1",
+				"1:22.2+dfsg-1",
+				"1:22.2.1+dfsg-1",
+				"1:22.2.2+dfsg-1",
+				"1:22.2.3+dfsg-1",
+				"1:22.2.3+dfsg-2",
+				"1:22.2.4+dfsg-1",
+				"1:22.2.7+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3491-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3491"
+		}
+	]
+}

@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1781-1",
+	"modified": "2023-10-16T00:05:42.720483Z",
+	"published": "2009-04-29T00:00:00Z",
+	"related": [
+		"CVE-2008-3162",
+		"CVE-2009-0385"
+	],
+	"summary": "ffmpeg ffmpeg-debian - arbitrary code execution",
+	"details": "\nSeveral vulnerabilities have been discovered in ffmpeg, a multimedia\nplayer, server and encoder. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2009-0385](https://security-tracker.debian.org/tracker/CVE-2009-0385)\nIt was discovered that watching a malformed 4X movie file could lead to\nthe execution of arbitrary code.\n* [CVE-2008-3162](https://security-tracker.debian.org/tracker/CVE-2008-3162)\nIt was discovered that using a crafted STR file can lead to the\nexecution of arbitrary code.\n\n\nFor the oldstable distribution (etch), these problems have been fixed\nin version 0.cvs20060823-8+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.svn20080206-17+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 0.svn20080206-16.\n\n\nWe recommend that you upgrade your ffmpeg-debian packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ffmpeg",
+				"purl": "pkg:deb/debian/ffmpeg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.cvs20060823-8+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.cvs20060823-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1781-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "ffmpeg-debian",
+				"purl": "pkg:deb/debian/ffmpeg-debian?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.svn20080206-17+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.svn20080206-16",
+				"0.svn20080206-17"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1781-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1781"
+		}
+	]
+}

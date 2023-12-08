@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-83-1",
+	"modified": "2023-06-28T06:31:03.410576Z",
+	"published": "2014-11-07T00:00:00Z",
+	"summary": "ffmpeg - update",
+	"details": "\nThis update to ffmpeg disables support for over 100 codecs, decoders,\nand formats that are rarely used nowadays, for which the support\navailable in squeeze is most likely insufficient, etc.\n\n\nThis update is only meant to reduce the attack surface.\n\n\nffmpeg is otherwise unsupported in squeeze-lts, and any use of it with\nuntrusted data is highly discouraged.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in ffmpeg version 4:0.5.10-1+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ffmpeg",
+				"purl": "pkg:deb/debian/ffmpeg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:0.5.10-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:0.5.10-1",
+				"4:0.5.2-6",
+				"4:0.5.4-1",
+				"4:0.5.5-1",
+				"4:0.5.6-3",
+				"4:0.5.8-1",
+				"4:0.5.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-83-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-83"
+		}
+	]
+}

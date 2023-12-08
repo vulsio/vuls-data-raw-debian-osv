@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1979-1",
+	"modified": "2023-06-28T06:25:03.491722Z",
+	"published": "2019-10-30T00:00:00Z",
+	"related": [
+		"CVE-2014-6051",
+		"CVE-2014-6052",
+		"CVE-2014-6053",
+		"CVE-2014-6054",
+		"CVE-2014-6055",
+		"CVE-2016-9941",
+		"CVE-2016-9942",
+		"CVE-2018-15126",
+		"CVE-2018-15127",
+		"CVE-2018-20019",
+		"CVE-2018-20020",
+		"CVE-2018-20021",
+		"CVE-2018-20022",
+		"CVE-2018-20023",
+		"CVE-2018-20024",
+		"CVE-2018-20748",
+		"CVE-2018-20749",
+		"CVE-2018-20750",
+		"CVE-2018-6307",
+		"CVE-2018-7225",
+		"CVE-2019-15681"
+	],
+	"summary": "italc - security update",
+	"details": "\nSeveral vulnerabilities have been identified in the VNC code of iTALC, a\nclassroom management software. All vulnerabilities referenced below are\nissues that have originally been reported against Debian source package\nlibvncserver. The italc source package in Debian ships a custom-patched\nversion of libvncserver, thus libvncserver's security fixes required\nporting over.\n\n\n* [CVE-2014-6051](https://security-tracker.debian.org/tracker/CVE-2014-6051)\nInteger overflow in the MallocFrameBuffer function in vncviewer.c in\n LibVNCServer allowed remote VNC servers to cause a denial of service\n (crash) and possibly executed arbitrary code via an advertisement for\n a large screen size, which triggered a heap-based buffer overflow.\n* [CVE-2014-6052](https://security-tracker.debian.org/tracker/CVE-2014-6052)\nThe HandleRFBServerMessage function in libvncclient/rfbproto.c in\n LibVNCServer did not check certain malloc return values, which\n allowed remote VNC servers to cause a denial of service (application\n crash) or possibly execute arbitrary code by specifying a large\n screen size in a (1) FramebufferUpdate, (2) ResizeFrameBuffer, or (3)\n PalmVNCReSizeFrameBuffer message.\n* [CVE-2014-6053](https://security-tracker.debian.org/tracker/CVE-2014-6053)\nThe rfbProcessClientNormalMessage function in\n libvncserver/rfbserver.c in LibVNCServer did not properly handle\n attempts to send a large amount of ClientCutText data, which allowed\n remote attackers to cause a denial of service (memory consumption or\n daemon crash) via a crafted message that was processed by using a\n single unchecked malloc.\n* [CVE-2014-6054](https://security-tracker.debian.org/tracker/CVE-2014-6054)\nThe rfbProcessClientNormalMessage function in\n libvncserver/rfbserver.c in LibVNCServer allowed remote attackers to\n cause a denial of service (divide-by-zero error and server crash) via\n a zero value in the scaling factor in a (1) PalmVNCSetScaleFactor or\n (2) SetScale message.\n* [CVE-2014-6055](https://security-tracker.debian.org/tracker/CVE-2014-6055)\nMultiple stack-based buffer overflows in the File Transfer feature in\n rfbserver.c in LibVNCServer allowed remote authenticated users to\n cause a denial of service (crash) and possibly execute arbitrary code\n via a (1) long file or (2) directory name or the (3) FileTime\n attribute in a rfbFileTransferOffer message.\n* [CVE-2016-9941](https://security-tracker.debian.org/tracker/CVE-2016-9941)\nHeap-based buffer overflow in rfbproto.c in LibVNCClient in\n LibVNCServer allowed remote servers to cause a denial of service\n (application crash) or possibly execute arbitrary code via a crafted\n FramebufferUpdate message containing a subrectangle outside of the\n client drawing area.\n* [CVE-2016-9942](https://security-tracker.debian.org/tracker/CVE-2016-9942)\nHeap-based buffer overflow in ultra.c in LibVNCClient in LibVNCServer\n allowed remote servers to cause a denial of service (application\n crash) or possibly execute arbitrary code via a crafted\n FramebufferUpdate message with the Ultra type tile, such that the LZO\n payload decompressed length exceeded what is specified by the tile\n dimensions.\n* [CVE-2018-6307](https://security-tracker.debian.org/tracker/CVE-2018-6307)\nLibVNC contained heap use-after-free vulnerability in server code of\n file transfer extension that can result remote code execution.\n* [CVE-2018-7225](https://security-tracker.debian.org/tracker/CVE-2018-7225)\nAn issue was discovered in LibVNCServer.\n rfbProcessClientNormalMessage() in rfbserver.c did not sanitize\n msg.cct.length, leading to access to uninitialized and potentially\n sensitive data or possibly unspecified other impact (e.g., an integer\n overflow) via specially crafted VNC packets.\n* [CVE-2018-15126](https://security-tracker.debian.org/tracker/CVE-2018-15126)\nLibVNC contained heap use-after-free vulnerability in server code of\n file transfer extension that can result remote code execution.\n* [CVE-2018-15127](https://security-tracker.debian.org/tracker/CVE-2018-15127)\nLibVNC contained heap out-of-bound write vulnerability in server code\n of file transfer extension that can result remote code execution\n* [CVE-2018-20749](https://security-tracker.debian.org/tracker/CVE-2018-20749)\nLibVNC contained a heap out-of-bounds write vulnerability in\n libvncserver/rfbserver.c. The fix for [CVE-2018-15127](https://security-tracker.debian.org/tracker/CVE-2018-15127) was incomplete.\n* [CVE-2018-20750](https://security-tracker.debian.org/tracker/CVE-2018-20750)\nLibVNC contained a heap out-of-bounds write vulnerability in\n libvncserver/rfbserver.c. The fix for [CVE-2018-15127](https://security-tracker.debian.org/tracker/CVE-2018-15127) was incomplete.\n* [CVE-2018-20019](https://security-tracker.debian.org/tracker/CVE-2018-20019)\nLibVNC contained multiple heap out-of-bound write vulnerabilities in\n VNC client code that can result remote code execution\n* [CVE-2018-20748](https://security-tracker.debian.org/tracker/CVE-2018-20748)\nLibVNC contained multiple heap out-of-bounds write vulnerabilities in\n libvncclient/rfbproto.c. The fix for [CVE-2018-20019](https://security-tracker.debian.org/tracker/CVE-2018-20019) was incomplete.\n* [CVE-2018-20020](https://security-tracker.debian.org/tracker/CVE-2018-20020)\nLibVNC contained heap out-of-bound write vulnerability inside\n structure in VNC client code that can result remote code execution\n* [CVE-2018-20021](https://security-tracker.debian.org/tracker/CVE-2018-20021)\nLibVNC contained a CWE-835: Infinite loop vulnerability in VNC client\n code. Vulnerability allows attacker to consume excessive amount of\n resources like CPU and RAM\n* [CVE-2018-20022](https://security-tracker.debian.org/tracker/CVE-2018-20022)\nLibVNC contained multiple weaknesses CWE-665: Improper Initialization\n vulnerability in VNC client code that allowed attackers to read stack\n memory and could be abused for information disclosure. Combined with\n another vulnerability, it could be used to leak stack memory layout\n and in bypassing ASLR.\n* [CVE-2018-20023](https://security-tracker.debian.org/tracker/CVE-2018-20023)\nLibVNC contained CWE-665: Improper Initialization vulnerability in\n VNC Repeater client code that allowed attacker to read stack memory\n and could be abused for information disclosure. Combined with another\n vulnerability, it could be used to leak stack memory layout and in\n bypassing ASLR.\n* [CVE-2018-20024](https://security-tracker.debian.org/tracker/CVE-2018-20024)\nLibVNC contained null pointer dereference in VNC client code that\n could result DoS.\n* [CVE-2019-15681](https://security-tracker.debian.org/tracker/CVE-2019-15681)\nLibVNC contained a memory leak (CWE-655) in VNC server code, which\n allowed an attacker to read stack memory and could be abused for\n information disclosure. Combined with another vulnerability, it could\n be used to leak stack memory and bypass ASLR. This attack appeared to\n be exploitable via network connectivity.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:2.0.2+dfsg1-2+deb8u1.\n\n\nWe recommend that you upgrade your italc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "italc",
+				"purl": "pkg:deb/debian/italc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.0.2+dfsg1-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.0.2+dfsg1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1979-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1979"
+		}
+	]
+}

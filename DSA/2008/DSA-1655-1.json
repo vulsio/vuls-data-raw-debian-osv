@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1655-1",
+	"modified": "2023-10-16T00:10:32.600563Z",
+	"published": "2008-10-16T00:00:00Z",
+	"related": [
+		"CVE-2008-1514",
+		"CVE-2008-3525",
+		"CVE-2008-3831",
+		"CVE-2008-4113",
+		"CVE-2008-4445"
+	],
+	"summary": "linux-2.6.24 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, privilege escalation or a leak of\nsensitive data. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2008-1514](https://security-tracker.debian.org/tracker/CVE-2008-1514)\nJan Kratochvil reported a local denial of service vulnerability in\n the ptrace interface for the s390 architecture. Local users can\n trigger an invalid pointer dereference, leading to a system panic.\n* [CVE-2008-3525](https://security-tracker.debian.org/tracker/CVE-2008-3525)\nEugene Teo reported a lack of capability checks in the kernel\n driver for Granch SBNI12 leased line adapters (sbni), allowing\n local users to perform privileged operations.\n* [CVE-2008-3831](https://security-tracker.debian.org/tracker/CVE-2008-3831)\nOlaf Kirch discovered an issue with the i915 driver that may allow\n local users to cause memory corruption by use of an ioctl with\n insufficient privilege restrictions.\n* [CVE-2008-4113](https://security-tracker.debian.org/tracker/CVE-2008-4113)/[CVE-2008-4445](https://security-tracker.debian.org/tracker/CVE-2008-4445)\nEugene Teo discovered two issues in the SCTP subsystem which allow\n local users to obtain access to sensitive memory when the\n SCTP-AUTH extension is enabled.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.6.24-6~etchnhalf.6.\n\n\nWe recommend that you upgrade your linux-2.6.24 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6.24",
+				"purl": "pkg:deb/debian/linux-2.6.24?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.24-6~etchnhalf.6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.24-5~etchnhalf.1",
+				"2.6.24-6~etchnhalf.1",
+				"2.6.24-6~etchnhalf.2",
+				"2.6.24-6~etchnhalf.3",
+				"2.6.24-6~etchnhalf.4",
+				"2.6.24-6~etchnhalf.5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1655-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1655"
+		}
+	]
+}

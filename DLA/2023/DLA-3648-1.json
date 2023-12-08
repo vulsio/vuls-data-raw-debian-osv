@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3648-1",
+	"modified": "2023-11-07T13:15:31.679315Z",
+	"published": "2023-11-07T00:00:00Z",
+	"related": [
+		"CVE-2023-1672"
+	],
+	"summary": "tang - security update",
+	"details": "\nIt was discovered that there was a race condition in Tang, a network-based\ncryptographic binding server. This flaw resulted in a small time window whereby\nnewly-generated private keys were readable by other processes on the same\nmachine.\n\n\n* [CVE-2023-1672](https://security-tracker.debian.org/tracker/CVE-2023-1672)\nA race condition exists in the Tang server functionality for key\n generation and key rotation. This flaw results in a small time window where\n Tang private keys become readable by other processes on the same\n host.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n7-1+deb10u2.\n\n\nWe recommend that you upgrade your tang packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "tang",
+				"purl": "pkg:deb/debian/tang?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7-1",
+				"7-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3648-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3648"
+		}
+	]
+}

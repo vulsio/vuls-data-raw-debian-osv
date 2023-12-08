@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-746-1",
+	"modified": "2023-06-28T06:25:38.696198Z",
+	"published": "2016-12-16T00:00:00Z",
+	"related": [
+		"CVE-2016-9774"
+	],
+	"summary": "tomcat6 - security update",
+	"details": "\nPaul Szabo discovered a potential privilege escalation that could be\nexploited in the situation envisaged in DLA-622-1. This update also\naddresses two regressions which were introduced by the fixes for\n[CVE-2016-5018](https://security-tracker.debian.org/tracker/CVE-2016-5018) (when running Jasper with SecurityManager enabled) and\n[CVE-2016-6797](https://security-tracker.debian.org/tracker/CVE-2016-6797).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n6.0.45+dfsg-1~deb7u4.\n\n\nWe recommend that you upgrade your tomcat6 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tomcat6",
+				"purl": "pkg:deb/debian/tomcat6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.45+dfsg-1~deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.35-6",
+				"6.0.35-6+deb7u1",
+				"6.0.35-7",
+				"6.0.37-1",
+				"6.0.39-1",
+				"6.0.41-1",
+				"6.0.41-2",
+				"6.0.41-2+squeeze5",
+				"6.0.41-2+squeeze6",
+				"6.0.41-2+squeeze7",
+				"6.0.41-3",
+				"6.0.41-4",
+				"6.0.45+dfsg-1~deb7u1",
+				"6.0.45+dfsg-1~deb7u2",
+				"6.0.45+dfsg-1~deb7u3",
+				"6.0.45-1~deb6u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-746-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-746"
+		}
+	]
+}

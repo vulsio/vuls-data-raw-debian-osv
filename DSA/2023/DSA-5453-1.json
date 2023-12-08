@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5453-1",
+	"modified": "2023-10-16T00:23:15.692236Z",
+	"published": "2023-07-16T00:00:00Z",
+	"related": [
+		"CVE-2023-2156",
+		"CVE-2023-31248",
+		"CVE-2023-35001"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2023-2156](https://security-tracker.debian.org/tracker/CVE-2023-2156)\nIt was discovered that a flaw in the handling of the RPL protocol\n may allow an unauthenticated remote attacker to cause a denial of\n service if RPL is enabled (not by default in Debian).\n* [CVE-2023-31248](https://security-tracker.debian.org/tracker/CVE-2023-31248)\nMingi Cho discovered a use-after-free flaw in the Netfilter\n nf\\_tables implementation when using nft\\_chain\\_lookup\\_byid, which may\n result in local privilege escalation for a user with the\n CAP\\_NET\\_ADMIN capability in any user or network namespace.\n* [CVE-2023-35001](https://security-tracker.debian.org/tracker/CVE-2023-35001)\nTanguy DUBROCA discovered an out-of-bounds reads and write flaw in\n the Netfilter nf\\_tables implementation when processing an\n nft\\_byteorder expression, which may result in local privilege\n escalation for a user with the CAP\\_NET\\_ADMIN capability in any user\n or network namespace.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 5.10.179-2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.179-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.103-1",
+				"5.10.103-1~bpo10+1",
+				"5.10.106-1",
+				"5.10.113-1",
+				"5.10.120-1",
+				"5.10.120-1~bpo10+1",
+				"5.10.127-1",
+				"5.10.127-2",
+				"5.10.127-2~bpo10+1",
+				"5.10.136-1",
+				"5.10.140-1",
+				"5.10.148-1",
+				"5.10.149-1",
+				"5.10.149-2",
+				"5.10.158-1",
+				"5.10.158-2",
+				"5.10.162-1",
+				"5.10.178-1",
+				"5.10.178-2",
+				"5.10.178-3",
+				"5.10.179-1",
+				"5.10.46-4",
+				"5.10.46-5",
+				"5.10.70-1",
+				"5.10.70-1~bpo10+1",
+				"5.10.84-1",
+				"5.10.92-1",
+				"5.10.92-1~bpo10+1",
+				"5.10.92-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5453-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5453"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4977-1",
+	"modified": "2023-10-16T00:25:38.883236Z",
+	"published": "2021-09-20T00:00:00Z",
+	"related": [
+		"CVE-2021-28694",
+		"CVE-2021-28695",
+		"CVE-2021-28696",
+		"CVE-2021-28697",
+		"CVE-2021-28698",
+		"CVE-2021-28699",
+		"CVE-2021-28700",
+		"CVE-2021-28701"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor,\nwhich could result in privilege escalation, denial of service or\ninformation leaks.\n\n\nWith the end of upstream support for the 4.11 branch, the version of xen\nin the oldstable distribution (buster) is no longer supported. If you\nrely on security support for your Xen installation an update to the\nstable distribution (bullseye) is recommended.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 4.14.3-1~deb11u1.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFor the detailed security status of xen please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/xen](https://security-tracker.debian.org/tracker/xen)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.14.3-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.14.2+25-gb6a8c4f72d-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4977-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4977"
+		}
+	]
+}

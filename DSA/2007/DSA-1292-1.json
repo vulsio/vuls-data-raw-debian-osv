@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1292-1",
+	"modified": "2023-10-16T00:05:15.287822Z",
+	"published": "2007-05-15T00:00:00Z",
+	"related": [
+		"CVE-2007-0242"
+	],
+	"summary": "qt4-x11",
+	"details": "\nAndreas Nolden discovered a bug in the UTF8 decoding routines in\nqt4-x11, a C++ GUI library framework, that could allow remote\nattackers to conduct cross-site scripting (XSS) and directory\ntraversal attacks via long sequences that decode to dangerous\nmetacharacters.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n4.2.1-2etch1.\n\n\nFor the testing and unstable distribution (lenny and sid, respectively),\nthis problem has been fixed in version 4.2.2-2.\n\n\nWe recommend that you upgrade your qt4-x11 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "qt4-x11",
+				"purl": "pkg:deb/debian/qt4-x11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.1-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1292-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1292"
+		}
+	]
+}

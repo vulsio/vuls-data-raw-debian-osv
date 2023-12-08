@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-900-1",
+	"modified": "2023-06-28T06:27:11.485689Z",
+	"published": "2017-04-17T00:00:00Z",
+	"summary": "freetype - security update",
+	"details": "\nThe Freetype 2 font engine was vulnerable to an out-of-bounds write\ncaused by a heap-based buffer overflow in the cff\\_parser\\_run function\nin cff/cffparse.c.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.4.9-1.1+deb7u5.\n\n\nWe recommend that you upgrade your freetype packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "freetype",
+				"purl": "pkg:deb/debian/freetype?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.9-1.1+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.9-1.1",
+				"2.4.9-1.1+deb7u1",
+				"2.4.9-1.1+deb7u2",
+				"2.4.9-1.1+deb7u3",
+				"2.4.9-1.1+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-900-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-900"
+		}
+	]
+}

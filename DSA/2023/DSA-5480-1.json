@@ -1,0 +1,107 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5480-1",
+	"modified": "2023-11-15T21:15:36.531037Z",
+	"published": "2023-08-18T00:00:00Z",
+	"related": [
+		"CVE-2022-39189",
+		"CVE-2022-4269",
+		"CVE-2023-1206",
+		"CVE-2023-1380",
+		"CVE-2023-2002",
+		"CVE-2023-2007",
+		"CVE-2023-20588",
+		"CVE-2023-2124",
+		"CVE-2023-21255",
+		"CVE-2023-21400",
+		"CVE-2023-2269",
+		"CVE-2023-2898",
+		"CVE-2023-3090",
+		"CVE-2023-31084",
+		"CVE-2023-3111",
+		"CVE-2023-3212",
+		"CVE-2023-3268",
+		"CVE-2023-3338",
+		"CVE-2023-3389",
+		"CVE-2023-34319",
+		"CVE-2023-35788",
+		"CVE-2023-3609",
+		"CVE-2023-3611",
+		"CVE-2023-3776",
+		"CVE-2023-3863",
+		"CVE-2023-4004",
+		"CVE-2023-40283",
+		"CVE-2023-4132",
+		"CVE-2023-4147",
+		"CVE-2023-4194",
+		"CVE-2023-4273"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2022-4269](https://security-tracker.debian.org/tracker/CVE-2022-4269)\nWilliam Zhao discovered that a flaw in the Traffic Control (TC)\n subsystem when using a specific networking configuration\n (redirecting egress packets to ingress using TC action mirred),\n may allow a local unprivileged user to cause a denial of service\n (triggering a CPU soft lockup).\n* [CVE-2022-39189](https://security-tracker.debian.org/tracker/CVE-2022-39189)\nJann Horn discovered that TLB flush operations are mishandled in the\n KVM subsystem in certain KVM\\_VCPU\\_PREEMPTED situations, which may\n allow an unprivileged guest user to compromise the guest kernel.\n* [CVE-2023-1206](https://security-tracker.debian.org/tracker/CVE-2023-1206)\nIt was discovered that the networking stack permits attackers to\n force hash collisions in the IPv6 connection lookup table, which may\n result in denial of service (significant increase in the cost of\n lookups, increased CPU utilization).\n* [CVE-2023-1380](https://security-tracker.debian.org/tracker/CVE-2023-1380)\nJisoo Jang reported a heap out-of-bounds read in the brcmfmac Wi-Fi\n driver. On systems using this driver, a local user could exploit\n this to read sensitive information or to cause a denial of service.\n* [CVE-2023-2002](https://security-tracker.debian.org/tracker/CVE-2023-2002)\nRuiahn Li reported an incorrect permissions check in the Bluetooth\n subsystem. A local user could exploit this to reconfigure local\n Bluetooth interfaces, resulting in information leaks, spoofing, or\n denial of service (loss of connection).\n* [CVE-2023-2007](https://security-tracker.debian.org/tracker/CVE-2023-2007)\nLucas Leong and Reno Robert discovered a time-of-check-to-time-of-use\n flaw in the dpt\\_i2o SCSI controller driver. A local user with\n access to a SCSI device using this driver could exploit this for\n privilege escalation.\n\n\nThis flaw has been mitigated by removing support for the I2OUSRCMD\n operation.\n* [CVE-2023-2124](https://security-tracker.debian.org/tracker/CVE-2023-2124)\nKyle Zeng, Akshay Ajayan and Fish Wang discovered that missing\n metadata validation may result in denial of service or potential\n privilege escalation if a corrupted XFS disk image is mounted.\n* [CVE-2023-2269](https://security-tracker.debian.org/tracker/CVE-2023-2269)\nZheng Zhang reported that improper handling of locking in the device\n mapper implementation may result in denial of service.\n* [CVE-2023-2898](https://security-tracker.debian.org/tracker/CVE-2023-2898)\nIt was discovered that missing sanitising in the f2fs file\n system may result in denial of service if a malformed file\n system is accessed.\n* [CVE-2023-3090](https://security-tracker.debian.org/tracker/CVE-2023-3090)\nIt was discovered that missing initialization in ipvlan networking\n may lead to an out-of-bounds write vulnerability, resulting in\n denial of service or potentially the execution of arbitrary code.\n* [CVE-2023-3111](https://security-tracker.debian.org/tracker/CVE-2023-3111)\nThe TOTE Robot tool found a flaw in the Btrfs filesystem driver that\n can lead to a use-after-free. It's unclear whether an unprivileged\n user can exploit this.\n* [CVE-2023-3212](https://security-tracker.debian.org/tracker/CVE-2023-3212)\nYang Lan discovered that missing validation in the GFS2 filesystem \n could result in denial of service via a NULL pointer dereference when\n mounting a malformed GFS2 filesystem.\n* [CVE-2023-3268](https://security-tracker.debian.org/tracker/CVE-2023-3268)\nIt was discovered that an out-of-bounds memory access in relayfs\n could result in denial of service or an information leak.\n* [CVE-2023-3338](https://security-tracker.debian.org/tracker/CVE-2023-3338)\nDavide Ornaghi discovered a flaw in the DECnet protocol implementation\n which could lead to a null pointer dereference or use-after-free. A\n local user can exploit this to cause a denial of service (crash or\n memory corruption) and probably for privilege escalation.\n\n\nThis flaw has been mitigated by removing the DECnet protocol\n implementation.\n* [CVE-2023-3389](https://security-tracker.debian.org/tracker/CVE-2023-3389)\nQuerijn Voet discovered a use-after-free in the io\\_uring subsystem,\n which may result in denial of service or privilege escalation.\n* [CVE-2023-3611](https://security-tracker.debian.org/tracker/CVE-2023-3611)\nIt was discovered that an out-of-bounds write in the traffic control\n subsystem for the Quick Fair Queueing scheduler (QFQ) may result in\n denial of service or privilege escalation.\n* [CVE-2023-3609](https://security-tracker.debian.org/tracker/CVE-2023-3609),\n [CVE-2023-3776](https://security-tracker.debian.org/tracker/CVE-2023-3776)\nIt was discovered that a use-after-free in the cls\\_fw, cls\\_u32,\n cls\\_route and network classifiers may result in denial of service or\n potential local privilege escalation.\n* [CVE-2023-3863](https://security-tracker.debian.org/tracker/CVE-2023-3863)\nIt was discovered that a use-after-free in the NFC implementation\n may result in denial of service, an information leak or potential\n local privilege escalation.\n* [CVE-2023-4004](https://security-tracker.debian.org/tracker/CVE-2023-4004)\nIt was discovered that a use-after-free in Netfilter's\n implementation of PIPAPO (PIle PAcket POlicies) may result in denial\n of service or potential local privilege escalation for a user with\n the CAP\\_NET\\_ADMIN capability in any user or network namespace.\n* [CVE-2023-4132](https://security-tracker.debian.org/tracker/CVE-2023-4132)\nA use-after-free in the driver for Siano SMS1xxx based MDTV\n receivers may result in local denial of service.\n* [CVE-2023-4147](https://security-tracker.debian.org/tracker/CVE-2023-4147)\nKevin Rich discovered a use-after-free in Netfilter when adding a\n rule with NFTA\\_RULE\\_CHAIN\\_ID, which may result in local privilege\n escalation for a user with the CAP\\_NET\\_ADMIN capability in any user\n or network namespace.\n* [CVE-2023-4194](https://security-tracker.debian.org/tracker/CVE-2023-4194)\nA type confusion in the implementation of TUN/TAP network devices\n may allow a local user to bypass network filters.\n* [CVE-2023-4273](https://security-tracker.debian.org/tracker/CVE-2023-4273)\nMaxim Suhanov discovered a stack overflow in the exFAT driver, which\n may result in local denial of service via a malformed file system.\n* [CVE-2023-20588](https://security-tracker.debian.org/tracker/CVE-2023-20588)\nJana Hofmann, Emanuele Vannacci, Cedric Fournet, Boris Koepf and\n Oleksii Oleksenko discovered that on some AMD CPUs with the Zen1\n micro architecture an integer division by zero may leave stale\n quotient data from a previous division, resulting in a potential\n leak of sensitive data.\n* [CVE-2023-21255](https://security-tracker.debian.org/tracker/CVE-2023-21255)\nA use-after-free was discovered in the Android binder driver, which\n may result in local privilege escalation on systems where the binder\n driver is loaded.\n* [CVE-2023-21400](https://security-tracker.debian.org/tracker/CVE-2023-21400)\nYe Zhang and Nicolas Wu discovered a double-free in the io\\_uring\n subsystem, which may result in denial of service or privilege\n escalation.\n* [CVE-2023-31084](https://security-tracker.debian.org/tracker/CVE-2023-31084)\nIt was discovered that the DVB Core driver does not properly handle\n locking of certain events, allowing a local user to cause a denial\n of service.\n* [CVE-2023-34319](https://security-tracker.debian.org/tracker/CVE-2023-34319)\nRoss Lagerwall discovered a buffer overrun in Xen's netback driver\n which may allow a Xen guest to cause denial of service to the\n virtualisation host by sending malformed packets.\n* [CVE-2023-35788](https://security-tracker.debian.org/tracker/CVE-2023-35788)\nHangyu Hua discovered that an off-by-one in the Flower traffic\n classifier may result in local denial of service or the execution of\n privilege escalation.\n* [CVE-2023-40283](https://security-tracker.debian.org/tracker/CVE-2023-40283)\nA use-after-free was discovered in Bluetooth L2CAP socket handling.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 5.10.191-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.191-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.103-1",
+				"5.10.103-1~bpo10+1",
+				"5.10.106-1",
+				"5.10.113-1",
+				"5.10.120-1",
+				"5.10.120-1~bpo10+1",
+				"5.10.127-1",
+				"5.10.127-2",
+				"5.10.127-2~bpo10+1",
+				"5.10.136-1",
+				"5.10.140-1",
+				"5.10.148-1",
+				"5.10.149-1",
+				"5.10.149-2",
+				"5.10.158-1",
+				"5.10.158-2",
+				"5.10.162-1",
+				"5.10.178-1",
+				"5.10.178-2",
+				"5.10.178-3",
+				"5.10.179-1",
+				"5.10.179-2",
+				"5.10.179-3",
+				"5.10.179-4",
+				"5.10.179-5",
+				"5.10.46-4",
+				"5.10.46-5",
+				"5.10.70-1",
+				"5.10.70-1~bpo10+1",
+				"5.10.84-1",
+				"5.10.92-1",
+				"5.10.92-1~bpo10+1",
+				"5.10.92-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5480-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5480"
+		}
+	]
+}

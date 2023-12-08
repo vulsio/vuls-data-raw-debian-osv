@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-600-1",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-10-07T00:00:00Z",
+	"related": [
+		"CVE-2004-0815"
+	],
+	"summary": "samba - arbitrary file access",
+	"details": "\nA vulnerability has been discovered in samba, a commonly used\nLanManager-like file and printer server for Unix. A remote attacker\nmay be able to gain access to files which exist outside of the share's\ndefined path. Such files must still be readable by the account used\nfor the connection, though.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.2.3a-14.1.\n\n\nIn the unstable (sid) and testing (sarge) distributions this problem\nwas not present.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.3a-14.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-600-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-600"
+		}
+	]
+}

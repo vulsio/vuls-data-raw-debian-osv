@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3622-1",
+	"modified": "2023-10-16T00:12:10.647756Z",
+	"published": "2016-07-18T00:00:00Z",
+	"related": [
+		"CVE-2016-6186"
+	],
+	"summary": "python-django - security update",
+	"details": "\nIt was discovered that Django, a high-level Python web development\nframework, is prone to a cross-site scripting vulnerability in the\nadmin's add/change related popup.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.7.7-1+deb8u5.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.7-1+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.7-1",
+				"1.7.7-1+deb8u1",
+				"1.7.7-1+deb8u2",
+				"1.7.7-1+deb8u3",
+				"1.7.7-1+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3622-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3622"
+		}
+	]
+}

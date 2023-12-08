@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3900-1",
+	"modified": "2023-10-16T00:12:26.325820Z",
+	"published": "2017-06-27T00:00:00Z",
+	"related": [
+		"CVE-2017-7508",
+		"CVE-2017-7520",
+		"CVE-2017-7521"
+	],
+	"summary": "openvpn - security update",
+	"details": "\nSeveral issues were discovered in openvpn, a virtual private network\napplication.\n\n\n* [CVE-2017-7479](https://security-tracker.debian.org/tracker/CVE-2017-7479)\nIt was discovered that openvpn did not properly handle the\n rollover of packet identifiers. This would allow an authenticated\n remote attacker to cause a denial-of-service via application\n crash.\n* [CVE-2017-7508](https://security-tracker.debian.org/tracker/CVE-2017-7508)\nGuido Vranken discovered that openvpn did not properly handle\n specific malformed IPv6 packets. This would allow a remote\n attacker to cause a denial-of-service via application crash.\n* [CVE-2017-7520](https://security-tracker.debian.org/tracker/CVE-2017-7520)\nGuido Vranken discovered that openvpn did not properly handle\n clients connecting to an HTTP proxy with NTLMv2\n authentication. This would allow a remote attacker to cause a\n denial-of-service via application crash, or potentially leak\n sensitive information like the user's proxy password.\n* [CVE-2017-7521](https://security-tracker.debian.org/tracker/CVE-2017-7521)\nGuido Vranken discovered that openvpn did not properly handle\n some x509 extensions. This would allow a remote attacker to cause\n a denial-of-service via application crash.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 2.3.4-5+deb8u2.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.4.0-6+deb9u1.\n\n\nFor the testing distribution (buster), these problems have been fixed\nin version 2.4.3-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.4.3-1.\n\n\nWe recommend that you upgrade your openvpn packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "openvpn",
+				"purl": "pkg:deb/debian/openvpn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.4-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.4-5",
+				"2.3.4-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3900-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "openvpn",
+				"purl": "pkg:deb/debian/openvpn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.0-6+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.0-6",
+				"2.4.0-6+deb9u1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3900-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3900"
+		}
+	]
+}

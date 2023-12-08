@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-348",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-07-11T00:00:00Z",
+	"related": [
+		"CVE-2003-0453"
+	],
+	"summary": "traceroute-nanog - integer overflow, buffer overflow",
+	"details": "\ntraceroute-nanog, an enhanced version of the common traceroute\nprogram, contains an integer overflow bug which could be exploited to\nexecute arbitrary code. traceroute-nanog is setuid root, but drops\nroot privileges immediately after obtaining raw ICMP and raw IP\nsockets. Thus, exploitation of this bug provides only access to these\nsockets, and not root privileges.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 6.1.1-1.3.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\nSee Debian [bug #200875](https://bugs.debian.org/200875).\n\n\nWe recommend that you update your traceroute-nanog package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "traceroute-nanog",
+				"purl": "pkg:deb/debian/traceroute-nanog?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.1-1.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-348.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-348"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1523-1",
+	"modified": "2023-10-16T00:10:28.596130Z",
+	"published": "2008-03-17T00:00:00Z",
+	"related": [
+		"CVE-2008-0808",
+		"CVE-2008-0809"
+	],
+	"summary": "ikiwiki - cross-site scripting",
+	"details": "\nJosh Triplett discovered that ikiwiki did not block Javascript in\nURLs, leading to cross-site scripting vulnerabilities ([CVE-2008-0808](https://security-tracker.debian.org/tracker/CVE-2008-0808),\n[CVE-2008-0809](https://security-tracker.debian.org/tracker/CVE-2008-0809)).\n\n\nThe old stable distribution (sarge) did not contain an ikiwiki package.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 1.33.4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.31.1.\n\n\nWe recommend that you upgrade your ikiwiki package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ikiwiki",
+				"purl": "pkg:deb/debian/ikiwiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.33.4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.33.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1523-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1523"
+		}
+	]
+}

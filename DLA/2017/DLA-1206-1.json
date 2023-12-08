@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1206-1",
+	"modified": "2023-06-28T06:20:29.513349Z",
+	"published": "2017-12-13T00:00:00Z",
+	"related": [
+		"CVE-2017-9935"
+	],
+	"summary": "tiff - security update",
+	"details": "\nIn LibTIFF 4.0.8, there is a heap-based buffer overflow in the t2p\\_write\\_pdf\nfunction in tools/tiff2pdf.c. This heap overflow could lead to different\ndamages. For example, a crafted TIFF document can lead to an out-of-bounds read\nin TIFFCleanup, an invalid free in TIFFClose or t2p\\_free, memory corruption in\nt2p\\_readwrite\\_pdf\\_image, or a double free in t2p\\_free. Given these\npossibilities, it probably could cause arbitrary code execution.\n\n\nThis overflow is linked to an underlying assumption that all pages in a tiff\ndocument will have the same transfer function. There is nothing in the tiff\nstandard that says this needs to be the case.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.0.2-6+deb7u17.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.2-6+deb7u17"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.2-6",
+				"4.0.2-6+deb7u1",
+				"4.0.2-6+deb7u10",
+				"4.0.2-6+deb7u11",
+				"4.0.2-6+deb7u12",
+				"4.0.2-6+deb7u13",
+				"4.0.2-6+deb7u14",
+				"4.0.2-6+deb7u15",
+				"4.0.2-6+deb7u16",
+				"4.0.2-6+deb7u2",
+				"4.0.2-6+deb7u3",
+				"4.0.2-6+deb7u4",
+				"4.0.2-6+deb7u5",
+				"4.0.2-6+deb7u6",
+				"4.0.2-6+deb7u7",
+				"4.0.2-6+deb7u8",
+				"4.0.2-6+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1206-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1206"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1593-1",
+	"modified": "2023-10-16T00:05:31.806395Z",
+	"published": "2008-06-09T00:00:00Z",
+	"related": [
+		"CVE-2008-1947"
+	],
+	"summary": "tomcat5.5",
+	"details": "\nIt was discovered that the Host Manager web application performed\ninsufficient input sanitising, which could lead to cross-site scripting.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 5.5.20-2etch3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.5.26-3.\n\n\nWe recommend that you upgrade your tomcat5.5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "tomcat5.5",
+				"purl": "pkg:deb/debian/tomcat5.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.5.20-2etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.5.20-2",
+				"5.5.20-2etch1",
+				"5.5.20-2etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1593-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1593"
+		}
+	]
+}

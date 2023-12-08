@@ -1,0 +1,182 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1687-1",
+	"modified": "2023-10-16T00:10:34.380156Z",
+	"published": "2008-12-15T00:00:00Z",
+	"related": [
+		"CVE-2008-3527",
+		"CVE-2008-3528",
+		"CVE-2008-4554",
+		"CVE-2008-4576",
+		"CVE-2008-4933",
+		"CVE-2008-4934",
+		"CVE-2008-5025",
+		"CVE-2008-5029",
+		"CVE-2008-5079",
+		"CVE-2008-5182",
+		"CVE-2008-5300"
+	],
+	"summary": "fai-kernels linux-2.6 user-mode-linux - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2008-3527](https://security-tracker.debian.org/tracker/CVE-2008-3527)\nTavis Ormandy reported a local DoS and potential privilege\n escalation in the Virtual Dynamic Shared Objects (vDSO)\n implementation.\n* [CVE-2008-3528](https://security-tracker.debian.org/tracker/CVE-2008-3528)\nEugene Teo reported a local DoS issue in the ext2 and ext3\n filesystems. Local users who have been granted the privileges\n necessary to mount a filesystem would be able to craft a corrupted\n filesystem that causes the kernel to output error messages in an\n infinite loop.\n* [CVE-2008-4554](https://security-tracker.debian.org/tracker/CVE-2008-4554)\nMilos Szeredi reported that the usage of splice() on files opened\n with O\\_APPEND allows users to write to the file at arbitrary\n offsets, enabling a bypass of possible assumed semantics of the\n O\\_APPEND flag.\n* [CVE-2008-4576](https://security-tracker.debian.org/tracker/CVE-2008-4576)\nVlad Yasevich reported an issue in the SCTP subsystem that may\n allow remote users to cause a local DoS by triggering a kernel\n oops.\n* [CVE-2008-4933](https://security-tracker.debian.org/tracker/CVE-2008-4933)\nEric Sesterhenn reported a local DoS issue in the hfsplus\n filesystem. Local users who have been granted the privileges\n necessary to mount a filesystem would be able to craft a corrupted\n filesystem that causes the kernel to overrun a buffer, resulting\n in a system oops or memory corruption.\n* [CVE-2008-4934](https://security-tracker.debian.org/tracker/CVE-2008-4934)\nEric Sesterhenn reported a local DoS issue in the hfsplus\n filesystem. Local users who have been granted the privileges\n necessary to mount a filesystem would be able to craft a corrupted\n filesystem that results in a kernel oops due to an unchecked\n return value.\n* [CVE-2008-5025](https://security-tracker.debian.org/tracker/CVE-2008-5025)\nEric Sesterhenn reported a local DoS issue in the hfs filesystem.\n Local users who have been granted the privileges necessary to\n mount a filesystem would be able to craft a filesystem with a\n corrupted catalog name length, resulting in a system oops or\n memory corruption.\n* [CVE-2008-5029](https://security-tracker.debian.org/tracker/CVE-2008-5029)\nAndrea Bittau reported a DoS issue in the unix socket subsystem\n that allows a local user to cause memory corruption, resulting in\n a kernel panic.\n* [CVE-2008-5079](https://security-tracker.debian.org/tracker/CVE-2008-5079)\nHugo Dias reported a DoS condition in the ATM subsystem that can\n be triggered by a local user by calling the svc\\_listen function\n twice on the same socket and reading /proc/net/atm/\\*vc.\n* [CVE-2008-5182](https://security-tracker.debian.org/tracker/CVE-2008-5182)\nAl Viro reported race conditions in the inotify subsystem that may\n allow local users to acquire elevated privileges.\n* [CVE-2008-5300](https://security-tracker.debian.org/tracker/CVE-2008-5300)\nDann Frazier reported a DoS condition that allows local users to\n cause the out of memory handler to kill off privileged processes\n or trigger soft lockups due to a starvation issue in the unix\n socket subsystem.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 2.6.18.dfsg.1-23etch1.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\nNote: Debian 'etch' includes linux kernel packages based upon both the\n2.6.18 and 2.6.24 linux releases. All known security issues are\ncarefully tracked against both packages and both packages will receive\nsecurity updates until security support for Debian 'etch'\nconcludes. However, given the high frequency at which low-severity\nsecurity issues are discovered in the kernel and the resource\nrequirements of doing an update, lower severity 2.6.18 and 2.6.24\nupdates will typically release in a staggered or \"leap-frog\" fashion.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "fai-kernels",
+				"purl": "pkg:deb/debian/fai-kernels?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17+etch.23etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17",
+				"1.17+etch.13etch3",
+				"1.17+etch.13etch4",
+				"1.17+etch.13etch5",
+				"1.17+etch.13etch6",
+				"1.17+etch.16",
+				"1.17+etch.17",
+				"1.17+etch.17etch1",
+				"1.17+etch.18etch1",
+				"1.17+etch.18etch2",
+				"1.17+etch.18etch3",
+				"1.17+etch.18etch4",
+				"1.17+etch.18etch5",
+				"1.17+etch.18etch6",
+				"1.17+etch.21",
+				"1.17+etch.22etch1",
+				"1.17+etch.22etch2",
+				"1.17+etch.22etch3",
+				"1.17+etch.23",
+				"1.17+etch1",
+				"1.17+etch2",
+				"1.17+etch3",
+				"1.17+etch4",
+				"1.17+etch5",
+				"1.17etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1687-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-23etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12",
+				"2.6.18.dfsg.1-12etch1",
+				"2.6.18.dfsg.1-12etch2",
+				"2.6.18.dfsg.1-13",
+				"2.6.18.dfsg.1-13etch1",
+				"2.6.18.dfsg.1-13etch2",
+				"2.6.18.dfsg.1-13etch3",
+				"2.6.18.dfsg.1-13etch4",
+				"2.6.18.dfsg.1-13etch5",
+				"2.6.18.dfsg.1-13etch6",
+				"2.6.18.dfsg.1-13lenny1",
+				"2.6.18.dfsg.1-14",
+				"2.6.18.dfsg.1-15",
+				"2.6.18.dfsg.1-16",
+				"2.6.18.dfsg.1-17",
+				"2.6.18.dfsg.1-17etch1",
+				"2.6.18.dfsg.1-18",
+				"2.6.18.dfsg.1-18etch1",
+				"2.6.18.dfsg.1-18etch3",
+				"2.6.18.dfsg.1-18etch4",
+				"2.6.18.dfsg.1-18etch5",
+				"2.6.18.dfsg.1-18etch6",
+				"2.6.18.dfsg.1-19",
+				"2.6.18.dfsg.1-20",
+				"2.6.18.dfsg.1-21",
+				"2.6.18.dfsg.1-22",
+				"2.6.18.dfsg.1-22etch1",
+				"2.6.18.dfsg.1-22etch2",
+				"2.6.18.dfsg.1-22etch3",
+				"2.6.18.dfsg.1-23"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1687-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "user-mode-linux",
+				"purl": "pkg:deb/debian/user-mode-linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18-1um-2etch.23etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18-1um-2",
+				"2.6.18-1um-2etch.13etch3",
+				"2.6.18-1um-2etch.13etch4",
+				"2.6.18-1um-2etch.13etch5",
+				"2.6.18-1um-2etch.13etch6",
+				"2.6.18-1um-2etch.16",
+				"2.6.18-1um-2etch.17",
+				"2.6.18-1um-2etch.17etch1",
+				"2.6.18-1um-2etch.18etch1",
+				"2.6.18-1um-2etch.18etch2",
+				"2.6.18-1um-2etch.18etch3",
+				"2.6.18-1um-2etch.18etch4",
+				"2.6.18-1um-2etch.18etch5",
+				"2.6.18-1um-2etch.18etch6",
+				"2.6.18-1um-2etch.21",
+				"2.6.18-1um-2etch.22etch1",
+				"2.6.18-1um-2etch.22etch2",
+				"2.6.18-1um-2etch.22etch3",
+				"2.6.18-1um-2etch.23",
+				"2.6.18-1um-2etch1",
+				"2.6.18-1um-2etch2",
+				"2.6.18-1um-2etch3",
+				"2.6.18-1um-2etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1687-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1687"
+		}
+	]
+}

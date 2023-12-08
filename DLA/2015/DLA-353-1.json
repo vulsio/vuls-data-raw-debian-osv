@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-353-1",
+	"modified": "2023-06-28T06:30:53.865359Z",
+	"published": "2015-11-27T00:00:00Z",
+	"related": [
+		"CVE-2015-8895",
+		"CVE-2015-8896"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nSubmitting specially crafted icons (.ico) or .pict images to ImageMagick\ncan trigger integer overflows that can lead to buffer overflows and\nmemory allocations issues. Depending on the case, this can lead to a\ndenial of service or possibly worse.\n\n\nFor Debian 6 Squeeze, those issues have been fixed in imagemagick\n8:6.6.0.4-3+squeeze7. We recommend that you upgrade your packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.6.0.4-3+squeeze7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.6.0.4-3",
+				"8:6.6.0.4-3+squeeze1",
+				"8:6.6.0.4-3+squeeze2",
+				"8:6.6.0.4-3+squeeze3",
+				"8:6.6.0.4-3+squeeze4",
+				"8:6.6.0.4-3+squeeze5",
+				"8:6.6.0.4-3+squeeze6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-353-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-353"
+		}
+	]
+}

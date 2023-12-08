@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4004-1",
+	"modified": "2023-10-16T00:12:33.917708Z",
+	"published": "2017-10-20T00:00:00Z",
+	"related": [
+		"CVE-2017-7525"
+	],
+	"summary": "jackson-databind - security update",
+	"details": "\nLiao Xinxi discovered that jackson-databind, a Java library used to\nparse JSON and other data formats, did not properly validate user\ninput before attemtping deserialization. This allowed an attacker to\nperform code execution by providing maliciously crafted input.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2.4.2-2+deb8u1.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.8.6-1+deb9u1.\n\n\nWe recommend that you upgrade your jackson-databind packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jackson-databind",
+				"purl": "pkg:deb/debian/jackson-databind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.2-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4004-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "jackson-databind",
+				"purl": "pkg:deb/debian/jackson-databind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.6-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4004-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-4004"
+		}
+	]
+}

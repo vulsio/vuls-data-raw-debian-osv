@@ -1,0 +1,89 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2290-1",
+	"modified": "2023-10-16T00:11:05.906555Z",
+	"published": "2011-08-07T00:00:00Z",
+	"related": [
+		"CVE-2011-2522",
+		"CVE-2011-2694"
+	],
+	"summary": "samba - cross-side scripting",
+	"details": "\nThe Samba Web Administration Tool (SWAT) contains several cross-site request \nforgery (CSRF) vulnerabilities \n([\\\nCVE-2011-2522](https://security-tracker.debian.org/tracker/CVE-2011-2522)) and a cross-site scripting vulnerability \n([\\\nCVE-2011-2694](https://security-tracker.debian.org/tracker/CVE-2011-2694)).\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 2:3.2.5-4lenny15.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 2:3.5.6~dfsg-3squeeze5.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 2:3.5.10~dfsg-1.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.2.5-4lenny15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.2.5-4",
+				"2:3.2.5-4lenny1",
+				"2:3.2.5-4lenny10",
+				"2:3.2.5-4lenny11",
+				"2:3.2.5-4lenny12",
+				"2:3.2.5-4lenny13",
+				"2:3.2.5-4lenny14",
+				"2:3.2.5-4lenny2",
+				"2:3.2.5-4lenny3",
+				"2:3.2.5-4lenny4",
+				"2:3.2.5-4lenny6",
+				"2:3.2.5-4lenny7",
+				"2:3.2.5-4lenny8",
+				"2:3.2.5-4lenny9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2290-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.5.6~dfsg-3squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.5.6~dfsg-3",
+				"2:3.5.6~dfsg-3squeeze1",
+				"2:3.5.6~dfsg-3squeeze2",
+				"2:3.5.6~dfsg-3squeeze3",
+				"2:3.5.6~dfsg-3squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2290-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2290"
+		}
+	]
+}

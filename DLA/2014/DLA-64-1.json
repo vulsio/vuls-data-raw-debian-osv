@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-64-1",
+	"modified": "2023-06-28T06:43:05.747477Z",
+	"published": "2014-09-26T00:00:00Z",
+	"related": [
+		"CVE-2014-3613"
+	],
+	"summary": "curl - security update",
+	"details": "\n[CVE-2014-3613](https://security-tracker.debian.org/tracker/CVE-2014-3613)\n\n\nBy not detecting and rejecting domain names for partial literal IP\n addresses properly when parsing received HTTP cookies, libcurl can\n be fooled to both sending cookies to wrong sites and into allowing\n arbitrary sites to set cookies for others.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in curl version 7.21.0-2.1+squeeze9\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.21.0-2.1+squeeze9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.21.0-1",
+				"7.21.0-2",
+				"7.21.0-2.1+squeeze1",
+				"7.21.0-2.1+squeeze2",
+				"7.21.0-2.1+squeeze3",
+				"7.21.0-2.1+squeeze4",
+				"7.21.0-2.1+squeeze5",
+				"7.21.0-2.1+squeeze6",
+				"7.21.0-2.1+squeeze7",
+				"7.21.0-2.1+squeeze8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-64-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-64"
+		}
+	]
+}

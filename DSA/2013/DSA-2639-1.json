@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2639-1",
+	"modified": "2023-10-16T00:11:22.708401Z",
+	"published": "2013-03-05T00:00:00Z",
+	"related": [
+		"CVE-2013-1635",
+		"CVE-2013-1643",
+		"CVE-2013-1824"
+	],
+	"summary": "php5 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in PHP, the web scripting\nlanguage. The Common Vulnerabilities and Exposures project identifies\nthe following issues:\n\n\n* [CVE-2013-1635](https://security-tracker.debian.org/tracker/CVE-2013-1635)\nIf a PHP application accepted untrusted SOAP object input remotely\n from clients, an attacker could read system files readable for the\n webserver.\n* [CVE-2013-1643](https://security-tracker.debian.org/tracker/CVE-2013-1643)\nThe soap.wsdl\\_cache\\_dir function did not take PHP open\\_basedir\n restrictions into account. Note that Debian advises against relying\n on open\\_basedir restrictions for security.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 5.3.3-7+squeeze15.\n\n\nFor the testing distribution (wheezy), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 5.4.4-14.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3-7+squeeze15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze13",
+				"5.3.3-7+squeeze14",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze3",
+				"5.3.3-7+squeeze5",
+				"5.3.3-7+squeeze6",
+				"5.3.3-7+squeeze7",
+				"5.3.3-7+squeeze8",
+				"5.3.3-7+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2639-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2639"
+		}
+	]
+}

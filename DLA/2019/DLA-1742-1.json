@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1742-1",
+	"modified": "2023-06-28T06:20:56.128383Z",
+	"published": "2019-04-01T00:00:00Z",
+	"related": [
+		"CVE-2019-8942",
+		"CVE-2019-9787"
+	],
+	"summary": "wordpress - security update",
+	"details": "\nSimon Scannell of Ripstech Technologies discovered multiple\nvulnerabilities in wordpress, a web blogging manager.\n\n\n* [CVE-2019-8942](https://security-tracker.debian.org/tracker/CVE-2019-8942)\nremote code execution in wordpress because an \\_wp\\_attached\\_file Post\n Meta entry can be changed to an arbitrary string, such as one ending\n with a .jpg?file.php substring. An attacker with author privileges\n can execute arbitrary code by uploading a crafted image containing\n PHP code in the Exif metadata.\n* [CVE-2019-9787](https://security-tracker.debian.org/tracker/CVE-2019-9787)\nwordpress does not properly filter comment content, leading to\n Remote Code Execution by unauthenticated users in a default\n configuration. This occurs because CSRF protection is mishandled,\n and because Search Engine Optimization of A elements is performed\n incorrectly, leading to XSS. The XSS results in administrative\n access.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.1.26+dfsg-1+deb8u1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.26+dfsg-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1+dfsg-1",
+				"4.1+dfsg-1+deb8u1",
+				"4.1+dfsg-1+deb8u10",
+				"4.1+dfsg-1+deb8u11",
+				"4.1+dfsg-1+deb8u12",
+				"4.1+dfsg-1+deb8u13",
+				"4.1+dfsg-1+deb8u14",
+				"4.1+dfsg-1+deb8u15",
+				"4.1+dfsg-1+deb8u16",
+				"4.1+dfsg-1+deb8u17",
+				"4.1+dfsg-1+deb8u18",
+				"4.1+dfsg-1+deb8u2",
+				"4.1+dfsg-1+deb8u3",
+				"4.1+dfsg-1+deb8u4",
+				"4.1+dfsg-1+deb8u5",
+				"4.1+dfsg-1+deb8u6",
+				"4.1+dfsg-1+deb8u7",
+				"4.1+dfsg-1+deb8u8",
+				"4.1+dfsg-1+deb8u9",
+				"4.1.1+dfsg-1",
+				"4.1.25+dfsg-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1742-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1742"
+		}
+	]
+}

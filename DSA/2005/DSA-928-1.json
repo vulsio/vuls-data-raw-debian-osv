@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-928-1",
+	"modified": "2023-10-16T00:30:36.624793Z",
+	"published": "2005-12-27T00:00:00Z",
+	"related": [
+		"CVE-2005-3341"
+	],
+	"summary": "dhis-tools-dns - insecure temporary file",
+	"details": "\nJavier FernĂĄndez-Sanguino PeĂąa from the Debian Security Audit project\ndiscovered that two scripts in the dhis-tools-dns package, DNS\nconfiguration utilities for a dynamic host information System, which\nare usually executed by root, create temporary files in an insecure\nfashion.\n\n\nThe old stable distribution (woody) does not contain a dhis-tools-dns\npackage.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 5.0-3sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 5.0-5.\n\n\nWe recommend that you upgrade your dhis-tools-dns package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "dhis-tools-dns",
+				"purl": "pkg:deb/debian/dhis-tools-dns?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0-3sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-928-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-928"
+		}
+	]
+}

@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4787-1",
+	"modified": "2020-11-09T20:50:12Z",
+	"published": "2020-11-09T00:00:00Z",
+	"related": [
+		"CVE-2020-15275",
+		"CVE-2020-25074"
+	],
+	"summary": "moin - security update",
+	"details": "\nTwo vulnerabilities were discovered in moin, a Python clone of WikiWiki.\n\n\n* [CVE-2020-15275](https://security-tracker.debian.org/tracker/CVE-2020-15275)\nCatarina Leite discovered that moin is prone to a stored XSS\n vulnerability via SVG attachments.\n* [CVE-2020-25074](https://security-tracker.debian.org/tracker/CVE-2020-25074)\nMichael Chapman discovered that moin is prone to a remote code\n execution vulnerability via the cache action.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1.9.9-1+deb10u1.\n\n\nWe recommend that you upgrade your moin packages.\n\n\nFor the detailed security status of moin please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/moin>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "moin",
+				"purl": "pkg:deb/debian/moin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.9-1+deb10u1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4787-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4787"
+		}
+	]
+}

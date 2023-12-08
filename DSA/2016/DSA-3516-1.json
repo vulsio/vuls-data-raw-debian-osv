@@ -1,0 +1,99 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3516-1",
+	"modified": "2023-10-16T00:12:04.530198Z",
+	"published": "2016-03-13T00:00:00Z",
+	"related": [
+		"CVE-2015-8731",
+		"CVE-2016-2523",
+		"CVE-2016-2530",
+		"CVE-2016-2531",
+		"CVE-2016-2532",
+		"CVE-2016-4417",
+		"CVE-2016-4418",
+		"CVE-2016-4421"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the dissectors/parsers for\nDNP, RSL, LLRP, GSM A-bis OML, ASN 1 BER which could result in denial\nof service.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.8.2-5wheezy18.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.12.1+g01b65bf-4+deb8u5.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 2.0.2+ga16e22e-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.0.2+ga16e22e-1.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2-5wheezy18"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2-5wheezy10",
+				"1.8.2-5wheezy11",
+				"1.8.2-5wheezy12",
+				"1.8.2-5wheezy13",
+				"1.8.2-5wheezy14",
+				"1.8.2-5wheezy15",
+				"1.8.2-5wheezy15~deb6u1",
+				"1.8.2-5wheezy16",
+				"1.8.2-5wheezy16~deb6u1",
+				"1.8.2-5wheezy17",
+				"1.8.2-5wheezy2",
+				"1.8.2-5wheezy3",
+				"1.8.2-5wheezy4",
+				"1.8.2-5wheezy5",
+				"1.8.2-5wheezy6",
+				"1.8.2-5wheezy7",
+				"1.8.2-5wheezy8",
+				"1.8.2-5wheezy9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3516-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.1+g01b65bf-4+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.1+g01b65bf-4",
+				"1.12.1+g01b65bf-4+deb8u1",
+				"1.12.1+g01b65bf-4+deb8u2",
+				"1.12.1+g01b65bf-4+deb8u3",
+				"1.12.1+g01b65bf-4+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3516-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3516"
+		}
+	]
+}

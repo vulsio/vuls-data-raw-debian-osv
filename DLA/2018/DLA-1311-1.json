@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1311-1",
+	"modified": "2023-06-28T06:20:33.536799Z",
+	"published": "2018-03-22T00:00:00Z",
+	"related": [
+		"CVE-2018-7667"
+	],
+	"summary": "adminer - security update",
+	"details": "\nIt was discovered that there was a server-side request forgery exploit in\nadminer, a web-based database administration tool.\n\n\nAdminer allowed unauthenticated connections to be initiated to arbitrary\nsystems and ports which could bypass external firewalls to identify\ninternal hosts or perform port scanning of other servers.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in adminer version\n3.3.3-1+deb7u1.\n\n\nWe recommend that you upgrade your adminer packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "adminer",
+				"purl": "pkg:deb/debian/adminer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.3-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1311-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1311"
+		}
+	]
+}

@@ -1,0 +1,70 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2826-2",
+	"modified": "2023-10-16T00:11:33.418462Z",
+	"published": "2013-12-22T00:00:00Z",
+	"summary": "denyhosts - denyhosts regression update",
+	"details": "\nHelmut Grohne discovered that denyhosts, a tool preventing SSH\nbrute-force attacks, could be used to perform remote denial of service\nagainst the SSH daemon. Incorrectly specified regular expressions used\nto detect brute force attacks in authentication logs could be exploited\nby a malicious user to forge crafted login names in order to make\ndenyhosts ban arbitrary IP addresses.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.6-7+deb6u2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.6-10+deb7u2.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 2.6-10.1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.6-10.1.\n\n\nWe recommend that you upgrade your denyhosts packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "denyhosts",
+				"purl": "pkg:deb/debian/denyhosts?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6-7+deb6u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2826-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "denyhosts",
+				"purl": "pkg:deb/debian/denyhosts?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6-10+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6-10",
+				"2.6-10+deb7u1",
+				"2.6-10+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2826-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2826"
+		}
+	]
+}

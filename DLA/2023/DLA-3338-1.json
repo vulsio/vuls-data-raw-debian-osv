@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3338-1",
+	"modified": "2023-06-28T06:25:31.718311Z",
+	"published": "2023-02-23T00:00:00Z",
+	"related": [
+		"CVE-2023-22490",
+		"CVE-2023-23946"
+	],
+	"summary": "git - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in git, a fast, scalable\nand distributed revision control system.\n\n\n* [CVE-2023-22490](https://security-tracker.debian.org/tracker/CVE-2023-22490)\nyvvdwf found a data exfiltration vulnerability while performing a local\n clone from a malicious repository even using a non-local transport.\n* [CVE-2023-23946](https://security-tracker.debian.org/tracker/CVE-2023-23946)\nJoern Schneeweisz found a path traversal vulnerbility in git-apply\n that a path outside the working tree can be overwritten as the acting\n user.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:2.20.1-2+deb10u8.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFor the detailed security status of git please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/git>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.20.1-2+deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.20.1-2",
+				"1:2.20.1-2+deb10u1",
+				"1:2.20.1-2+deb10u2",
+				"1:2.20.1-2+deb10u3",
+				"1:2.20.1-2+deb10u4",
+				"1:2.20.1-2+deb10u5",
+				"1:2.20.1-2+deb10u6",
+				"1:2.20.1-2+deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3338-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3338"
+		}
+	]
+}

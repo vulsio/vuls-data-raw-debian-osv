@@ -1,0 +1,87 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2274-1",
+	"modified": "2023-10-16T00:11:05.193390Z",
+	"published": "2011-07-07T00:00:00Z",
+	"related": [
+		"CVE-2011-1590",
+		"CVE-2011-1957",
+		"CVE-2011-1958",
+		"CVE-2011-1959",
+		"CVE-2011-2174",
+		"CVE-2011-2175"
+	],
+	"summary": "wireshark - multiple",
+	"details": "\nHuzaifa Sidhpurwala, David Maciejak and others discovered several\nvulnerabilities in the X.509if and DICOM dissectors and in the code to\nprocess various capture and dictionary files, which could lead to denial\nof service or the execution of arbitrary code.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.0.2-3+lenny14.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.2.11-6+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.2.17-1\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.11-6+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.11-6",
+				"1.2.11-6+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2274-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-3+lenny14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-3+lenny10",
+				"1.0.2-3+lenny11",
+				"1.0.2-3+lenny12",
+				"1.0.2-3+lenny13",
+				"1.0.2-3+lenny3",
+				"1.0.2-3+lenny4",
+				"1.0.2-3+lenny5",
+				"1.0.2-3+lenny6",
+				"1.0.2-3+lenny7",
+				"1.0.2-3+lenny8",
+				"1.0.2-3+lenny9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2274-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2274"
+		}
+	]
+}

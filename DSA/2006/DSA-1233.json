@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1233",
+	"modified": "2023-10-16T00:08:33.868916Z",
+	"published": "2006-12-10T00:00:00Z",
+	"related": [
+		"CVE-2006-3741",
+		"CVE-2006-4538",
+		"CVE-2006-4813",
+		"CVE-2006-4997",
+		"CVE-2006-5174",
+		"CVE-2006-5619",
+		"CVE-2006-5649",
+		"CVE-2006-5751",
+		"CVE-2006-5871"
+	],
+	"summary": "kernel-source-2.6.8 - several",
+	"details": "\nSeveral local and remote vulnerabilities have been discovered in the Linux\nkernel that may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2006-3741](https://security-tracker.debian.org/tracker/CVE-2006-3741)\nStephane Eranian discovered a local DoS (Denial of Service) vulnerability\n on the ia64 architecture. A local user could exhaust the available file\n descriptors by exploiting a counting error in the permonctl() system call.\n* [CVE-2006-4538](https://security-tracker.debian.org/tracker/CVE-2006-4538)\nKirill Korotaev reported a local DoS (Denial of Service) vulnerability\n on the ia64 and sparc architectures. A user could cause the system to\n crash by executing a malformed ELF binary due to insufficient verification\n of the memory layout.\n* [CVE-2006-4813](https://security-tracker.debian.org/tracker/CVE-2006-4813)\nDmitriy Monakhov reported a potential memory leak in the\n \\_\\_block\\_prepare\\_write function. \\_\\_block\\_prepare\\_write does not properly\n sanitize kernel buffers during error recovery, which could be exploited\n by local users to gain access to sensitive kernel memory.\n* [CVE-2006-4997](https://security-tracker.debian.org/tracker/CVE-2006-4997)\nADLab Venustech Info Ltd reported a potential remote DoS (Denial of\n Service) vulnerability in the IP over ATM subsystem. A remote system\n could cause the system to crash by sending specially crafted packets\n that would trigger an attempt to free an already-freed pointer\n resulting in a system crash.\n* [CVE-2006-5174](https://security-tracker.debian.org/tracker/CVE-2006-5174)\nMartin Schwidefsky reported a potential leak of sensitive information\n on s390 systems. The copy\\_from\\_user function did not clear the remaining\n bytes of the kernel buffer after receiving a fault on the userspace\n address, resulting in a leak of uninitialized kernel memory. A local user\n could exploit this by appending to a file from a bad address.\n* [CVE-2006-5619](https://security-tracker.debian.org/tracker/CVE-2006-5619)\nJames Morris reported a potential local DoS (Denial of Service)\n vulnerability that could be used to hang or oops a system. The seqfile\n handling for /proc/net/ip6\\_flowlabel has a flaw that can be exploited to\n cause an infinite loop by reading this file after creating a flowlabel.\n* [CVE-2006-5649](https://security-tracker.debian.org/tracker/CVE-2006-5649)\nFabio Massimo Di Nitto reported a potential remote DoS (Denial of Service)\n vulnerability on powerpc systems. The alignment exception only\n checked the exception table for -EFAULT, not for other errors. This can\n be exploited by a local user to cause a system crash (panic).\n* [CVE-2006-5751](https://security-tracker.debian.org/tracker/CVE-2006-5751)\nEugene Teo reported a vulnerability in the get\\_fdb\\_entries function that\n could potentially be exploited to allow arbitrary code execution with\n escalated privileges.\n* [CVE-2006-5871](https://security-tracker.debian.org/tracker/CVE-2006-5871)\nBill Allombert reported that various mount options are ignored by smbfs\n when UNIX extensions are enabled. This includes the uid, gid and mode\n options. Client systems would silently use the server-provided settings\n instead of honoring these options, changing the security model. This\n update includes a fix from Haroldo Gamal that forces the kernel to honor\n these mount options. Note that, since the current versions of smbmount\n always pass values for these options to the kernel, it is not currently\n possible to activate unix extensions by omitting mount options. However,\n this behavior is currently consistent with the current behavior of the\n next Debian release, 'etch'.\n\n\nThe following matrix explains which kernel version for which architecture\nfix the problems mentioned above:\n\n\n\n\n|  | Debian 3.1 (sarge) |\n| --- | --- |\n| Source | 2.6.8-16sarge6 |\n| Alpha architecture | 2.6.8-16sarge6 |\n| AMD64 architecture | 2.6.8-16sarge6 |\n| HP Precision architecture | 2.6.8-6sarge6 |\n| Intel IA-32 architecture | 2.6.8-16sarge6 |\n| Intel IA-64 architecture | 2.6.8-14sarge6 |\n| Motorola 680x0 architecture | 2.6.8-4sarge6 |\n| PowerPC architecture | 2.6.8-12sarge6 |\n| IBM S/390 architecture | 2.6.8-5sarge6 |\n| Sun Sparc architecture | 2.6.8-15sarge6 |\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 3.1 (sarge) |\n| --- | --- |\n| fai-kernels | 1.9.1sarge5 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-source-2.6.8",
+				"purl": "pkg:deb/debian/kernel-source-2.6.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-16sarge6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-16",
+				"2.6.8-16sarge1",
+				"2.6.8-16sarge2",
+				"2.6.8-16sarge3",
+				"2.6.8-16sarge4",
+				"2.6.8-16sarge5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1233.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1233"
+		}
+	]
+}

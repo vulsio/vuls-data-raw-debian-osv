@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-817-1",
+	"modified": "2023-06-28T06:43:19.502287Z",
+	"published": "2017-02-06T00:00:00Z",
+	"related": [
+		"CVE-2017-5223"
+	],
+	"summary": "libphp-phpmailer - security update",
+	"details": "\nIt was discovered that there was a local file disclosure vulnerability in\nlibphp-phpmailer, a email transfer class for PHP, where insufficient parsing of\nHTML messages could potentially be used by attacker to read a local file.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libphp-phpmailer version\n5.1-1.3+deb7u1.\n\n\nWe recommend that you upgrade your libphp-phpmailer packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libphp-phpmailer",
+				"purl": "pkg:deb/debian/libphp-phpmailer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.1-1.3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.1-1",
+				"5.1-1.1",
+				"5.1-1.2",
+				"5.1-1.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-817-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-817"
+		}
+	]
+}

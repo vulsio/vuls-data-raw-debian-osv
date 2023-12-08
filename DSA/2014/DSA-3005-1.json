@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3005-1",
+	"modified": "2023-10-16T00:11:42.077567Z",
+	"published": "2014-08-14T00:00:00Z",
+	"related": [
+		"CVE-2014-3564"
+	],
+	"summary": "gpgme1.0 - security update",
+	"details": "\nTomĂĄĹĄ Trnka discovered a heap-based buffer overflow within the gpgsm\nstatus handler of GPGME, a library designed to make access to GnuPG\neasier for applications. An attacker could use this issue to cause an\napplication using GPGME to crash (denial of service) or possibly to\nexecute arbitrary code.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.2.0-1.4+deb7u1.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 1.5.1-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.5.1-1.\n\n\nWe recommend that you upgrade your gpgme1.0 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "gpgme1.0",
+				"purl": "pkg:deb/debian/gpgme1.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.0-1.4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.0-1.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3005-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3005"
+		}
+	]
+}

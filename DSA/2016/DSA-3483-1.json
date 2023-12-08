@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3483-1",
+	"modified": "2023-10-16T00:06:22.716016Z",
+	"published": "2016-02-19T00:00:00Z",
+	"related": [
+		"CVE-2016-2037"
+	],
+	"summary": "cpio - security update",
+	"details": "\nGustavo Grieco discovered an out-of-bounds write vulnerability in cpio,\na tool for creating and extracting cpio archive files, leading to a\ndenial of service (application crash).\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 2.11+dfsg-0.1+deb7u2.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.11+dfsg-4.1+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.11+dfsg-5.\n\n\nWe recommend that you upgrade your cpio packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "cpio",
+				"purl": "pkg:deb/debian/cpio?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11+dfsg-0.1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11+dfsg-0.1",
+				"2.11+dfsg-0.1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3483-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "cpio",
+				"purl": "pkg:deb/debian/cpio?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11+dfsg-4.1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11+dfsg-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3483-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3483"
+		}
+	]
+}

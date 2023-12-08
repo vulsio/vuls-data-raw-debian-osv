@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5294-1",
+	"modified": "2023-10-16T00:25:56.238532Z",
+	"published": "2022-12-04T00:00:00Z",
+	"related": [
+		"CVE-2021-34055",
+		"CVE-2022-41751"
+	],
+	"summary": "jhead - security update",
+	"details": "\nJhead, a tool for manipulating EXIF data embedded in JPEG images, allowed\nattackers to execute arbitrary OS commands by placing them in a JPEG filename\nand then using the regeneration -rgt50, -autorot or -ce option. In addition a\nbuffer overflow error in exif.c has been addressed which could lead to a denial\nof service (application crash).\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1:3.04-6+deb11u1.\n\n\nWe recommend that you upgrade your jhead packages.\n\n\nFor the detailed security status of jhead please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/jhead](https://security-tracker.debian.org/tracker/jhead)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "jhead",
+				"purl": "pkg:deb/debian/jhead?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:3.04-6+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:3.04-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5294-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5294"
+		}
+	]
+}

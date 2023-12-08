@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2635-1",
+	"modified": "2023-10-16T00:11:22.917177Z",
+	"published": "2013-03-01T00:00:00Z",
+	"related": [
+		"CVE-2013-1049"
+	],
+	"summary": "cfingerd - buffer overflow",
+	"details": "\nMalcolm Scott discovered a remote-exploitable buffer overflow in the\nRFC1413 (ident) client of cfingerd, a configurable finger daemon. This\nvulnerability was introduced in a previously applied patch to the\ncfingerd package in 1.4.3-3.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.4.3-3+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1.4.3-3.1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.4.3-3.1.\n\n\nWe recommend that you upgrade your cfingerd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "cfingerd",
+				"purl": "pkg:deb/debian/cfingerd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.3-3+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.3-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2635-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2635"
+		}
+	]
+}

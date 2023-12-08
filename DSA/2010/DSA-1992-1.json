@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1992-1",
+	"modified": "2023-10-16T00:10:51.658155Z",
+	"published": "2010-02-04T00:00:00Z",
+	"related": [
+		"CVE-2010-0292",
+		"CVE-2010-0293",
+		"CVE-2010-0294"
+	],
+	"summary": "chrony - denial of service",
+	"details": "\nSeveral vulnerabilities have been discovered in chrony, a pair of programs\nwhich are used to maintain the accuracy of the system clock on a computer.\nThis issues are similar to the NTP security flaw [CVE-2009-3563](https://security-tracker.debian.org/tracker/CVE-2009-3563). The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2010-0292](https://security-tracker.debian.org/tracker/CVE-2010-0292)\nchronyd replies to all cmdmon packets with NOHOSTACCESS messages even for\n unauthorized hosts. An attacker can abuse this behaviour to force two\n chronyd instances to play packet ping-pong by sending such a packet with\n spoofed source address and port. This results in high CPU and network\n usage and thus denial of service conditions.\n* [CVE-2010-0293](https://security-tracker.debian.org/tracker/CVE-2010-0293)\nThe client logging facility of chronyd doesn't limit memory that is used\n to store client information. An attacker can cause chronyd to allocate\n large amounts of memory by sending NTP or cmdmon packets with spoofed\n source addresses resulting in memory exhaustion.\n* [CVE-2010-0294](https://security-tracker.debian.org/tracker/CVE-2010-0294)\nchronyd lacks of a rate limit control to the syslog facility when logging\n received packets from unauthorized hosts. This allows an attacker to\n cause denial of service conditions via filling up the logs and thus disk\n space by repeatedly sending invalid cmdmon packets.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 1.21z-5+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.23-6+lenny1.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your chrony packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "chrony",
+				"purl": "pkg:deb/debian/chrony?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.21z-5+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.21z-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1992-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "chrony",
+				"purl": "pkg:deb/debian/chrony?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.23-6+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.23-6",
+				"1.23-6rt",
+				"1.23-6rt1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1992-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-1992"
+		}
+	]
+}

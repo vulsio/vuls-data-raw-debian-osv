@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3480-1",
+	"modified": "2023-10-16T00:06:22.626704Z",
+	"published": "2016-02-16T00:00:00Z",
+	"related": [
+		"CVE-2014-8121",
+		"CVE-2015-1781",
+		"CVE-2015-7547",
+		"CVE-2015-8776",
+		"CVE-2015-8777",
+		"CVE-2015-8778",
+		"CVE-2015-8779"
+	],
+	"summary": "eglibc - security update",
+	"details": "\nSeveral vulnerabilities have been fixed in the GNU C Library, eglibc.\n\n\nThe [CVE-2015-7547](https://security-tracker.debian.org/tracker/CVE-2015-7547) vulnerability listed below is considered to have\ncritical impact.\n\n\n* [CVE-2014-8121](https://security-tracker.debian.org/tracker/CVE-2014-8121)\nRobin Hack discovered that the nss\\_files database did not\n correctly implement enumeration interleaved with name-based or\n ID-based lookups. This could cause the enumeration enter an\n endless loop, leading to a denial of service.\n* [CVE-2015-1781](https://security-tracker.debian.org/tracker/CVE-2015-1781)\nArjun Shankar discovered that the \\_r variants of host name\n resolution functions (like gethostbyname\\_r), when performing DNS\n name resolution, suffered from a buffer overflow if a misaligned\n buffer was supplied by the applications, leading to a crash or,\n potentially, arbitrary code execution. Most applications are not\n affected by this vulnerability because they use aligned buffers.\n* [CVE-2015-7547](https://security-tracker.debian.org/tracker/CVE-2015-7547)\nThe Google Security Team and Red Hat discovered that the eglibc\n host name resolver function, getaddrinfo, when processing\n AF\\_UNSPEC queries (for dual A/AAAA lookups), could mismanage its\n internal buffers, leading to a stack-based buffer overflow and\n arbitrary code execution. This vulnerability affects most\n applications which perform host name resolution using getaddrinfo,\n including system services.\n* [CVE-2015-8776](https://security-tracker.debian.org/tracker/CVE-2015-8776)\nAdam Nielsen discovered that if an invalid separated time value\n is passed to strftime, the strftime function could crash or leak\n information. Applications normally pass only valid time\n information to strftime; no affected applications are known.\n* [CVE-2015-8777](https://security-tracker.debian.org/tracker/CVE-2015-8777)\nHector Marco-Gisbert reported that LD\\_POINTER\\_GUARD was not\n ignored for SUID programs, enabling an unintended bypass of a\n security feature. This update causes eglibc to always ignore the\n LD\\_POINTER\\_GUARD environment variable.\n* [CVE-2015-8778](https://security-tracker.debian.org/tracker/CVE-2015-8778)\nSzabolcs Nagy reported that the rarely-used hcreate and hcreate\\_r\n functions did not check the size argument properly, leading to a\n crash (denial of service) for certain arguments. No impacted\n applications are known at this time.\n* [CVE-2015-8779](https://security-tracker.debian.org/tracker/CVE-2015-8779)\nThe catopen function contains several unbound stack allocations\n (stack overflows), causing it the crash the process (denial of\n service). No applications where this issue has a security impact\n are currently known.\n\n\nThe following fixed vulnerabilities currently lack CVE assignment:\n\n\n* Joseph Myers reported that an integer overflow in the\n strxfrm can lead to heap-based buffer overflow, possibly allowing\n arbitrary code execution. In addition, a fallback path in strxfrm\n uses an unbounded stack allocation (stack overflow), leading to a\n crash or erroneous application behavior.\n* Kostya Serebryany reported that the fnmatch function could skip\n over the terminating NUL character of a malformed pattern, causing\n an application calling fnmatch to crash (denial of service).\n* Joseph Myers reported that the IO\\_wstr\\_overflow function,\n internally used by wide-oriented character streams, suffered from\n an integer overflow, leading to a heap-based buffer overflow. On\n GNU/Linux systems, wide-oriented character streams are rarely\n used, and no affected applications are known.\n* Andreas Schwab reported a memory leak (memory allocation without a\n matching deallocation) while processing certain DNS answers in\n getaddrinfo, related to the \\_nss\\_dns\\_gethostbyname4\\_r function.\n This vulnerability could lead to a denial of service.\n\n\nWhile it is only necessary to ensure that all processes are not using\nthe old eglibc anymore, it is recommended to reboot the machines after\napplying the security upgrade.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 2.13-38+deb7u10.\n\n\nWe recommend that you upgrade your eglibc packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "eglibc",
+				"purl": "pkg:deb/debian/eglibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.13-38+deb7u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.13-38",
+				"2.13-38+deb7u1",
+				"2.13-38+deb7u2",
+				"2.13-38+deb7u3",
+				"2.13-38+deb7u4",
+				"2.13-38+deb7u5",
+				"2.13-38+deb7u6",
+				"2.13-38+deb7u7",
+				"2.13-38+deb7u8",
+				"2.13-38+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3480-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3480"
+		}
+	]
+}

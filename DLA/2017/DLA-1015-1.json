@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1015-1",
+	"modified": "2023-06-28T06:20:08.155872Z",
+	"published": "2017-07-06T00:00:00Z",
+	"related": [
+		"CVE-2017-7526"
+	],
+	"summary": "libgcrypt11 - security update",
+	"details": "\nIt was discovered that there was a key disclosure vulnerability in libgcrypt11\na library of cryptographic routines:\n\n\nIt is well known that constant-time implementations of modular exponentiation\n cannot use sliding windows. However, software libraries such as Libgcrypt,\n used by GnuPG, continue to use sliding windows. It is widely believed that,\n even if the complete pattern of squarings and multiplications is observed\n through a side-channel attack, the number of exponent bits leaked is not\n sufficient to carry out a full key-recovery attack against RSA.\n Specifically, 4-bit sliding windows leak only 40% of the bits, and 5-bit\n sliding windows leak only 33% of the bits.\n\n\n-- Sliding right into disaster: Left-to-right sliding windows leak  \n\n\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libgcrypt11 version\n1.5.0-5+deb7u6.\n\n\nWe recommend that you upgrade your libgcrypt11 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libgcrypt11",
+				"purl": "pkg:deb/debian/libgcrypt11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.0-5+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.0-5",
+				"1.5.0-5+deb7u1",
+				"1.5.0-5+deb7u2",
+				"1.5.0-5+deb7u3",
+				"1.5.0-5+deb7u4",
+				"1.5.0-5+deb7u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1015-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1015"
+		}
+	]
+}

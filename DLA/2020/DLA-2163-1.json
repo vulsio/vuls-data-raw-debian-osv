@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2163-1",
+	"modified": "2023-06-28T06:21:14.202758Z",
+	"published": "2020-03-31T00:00:00Z",
+	"related": [
+		"CVE-2017-11747"
+	],
+	"summary": "tinyproxy - security update",
+	"details": "\nA minor security issue and a severe packaging bug have been fixed in\ntinyproxy, a lightweight http proxy daemon.\n\n\n* [CVE-2017-11747](https://security-tracker.debian.org/tracker/CVE-2017-11747)\nmain.c in Tinyproxy created a /var/run/tinyproxy/tinyproxy.pid file\n after dropping privileges to a non-root account, which might have allowed\n local users to kill arbitrary processes by leveraging access to this\n non-root account for tinyproxy.pid modification before a root script\n executed a \"kill `cat /run/tinyproxy/tinyproxy.pid`\" command.\n\n\nOTHER\n\n\nFurthermore, a severe flaw had been discovered by Tim Duesterhus in\n Debian's init script for tinyproxy. With the tiny.conf configuration\n file having the PidFile option removed, the next run of logrotate (if\n installed) would have changed the owner of the system's base directory\n (\"/\") to tinyproxy:tinyproxy.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.8.3-3+deb8u1.\n\n\nWe recommend that you upgrade your tinyproxy packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tinyproxy",
+				"purl": "pkg:deb/debian/tinyproxy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.3-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.3-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2163-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2163"
+		}
+	]
+}

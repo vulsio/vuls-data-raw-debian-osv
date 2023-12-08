@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1629-2",
+	"modified": "2023-10-16T00:05:34.252150Z",
+	"published": "2008-08-19T00:00:00Z",
+	"related": [
+		"CVE-2008-2936"
+	],
+	"summary": "postfix - privilege escalation",
+	"details": "\nSebastian Krahmer discovered that Postfix, a mail transfer agent,\nincorrectly checks the ownership of a mailbox. In some configurations,\nthis allows for appending data to arbitrary files as root.\n\n\nNote that only specific configurations are vulnerable; the default\nDebian installation is not affected. Only a configuration meeting\nthe following requirements is vulnerable:\n\n\n* The mail delivery style is mailbox, with the Postfix built-in\n local(8) or virtual(8) delivery agents.\n* The mail spool directory (/var/spool/mail) is user-writeable.\n* The user can create hardlinks pointing to root-owned symlinks\n located in other directories.\n\n\nFor a detailed treating of the issue, please refer to the upstream\n[author's announcement](http://article.gmane.org/gmane.mail.postfix.announce/110).\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 2.3.8-2+etch1.\n\n\nFor the testing distribution (lenny), this problem has been fixed in\nversion 2.5.2-2lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed\nin version 2.5.4-1.\n\n\nWe recommend that you upgrade your postfix package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "postfix",
+				"purl": "pkg:deb/debian/postfix?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.8-2+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.8-2",
+				"2.3.8-2etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1629-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1629"
+		}
+	]
+}

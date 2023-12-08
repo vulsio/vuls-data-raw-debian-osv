@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2109-1",
+	"modified": "2023-10-16T00:05:45.111046Z",
+	"published": "2010-09-16T00:00:00Z",
+	"related": [
+		"CVE-2010-3069"
+	],
+	"summary": "samba - buffer overflow",
+	"details": "\nA vulnerability has been discovered in samba, a SMB/CIFS file, print,\nand login server for Unix.\n\n\nThe sid\\_parse() function does not correctly check its input lengths\nwhen reading a binary representation of a Windows SID (Security ID).\nThis allows a malicious client to send a sid that can overflow the\nstack variable that is being used to store the SID in the Samba smbd\nserver. ([CVE-2010-3069](https://security-tracker.debian.org/tracker/CVE-2010-3069))\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 3.2.5-4lenny13.\n\n\nFor the testing distribution (squeeze) and the unstable distribution (sid),\nthis problem will be fixed in version 3.5.5~dfsg-1.\n\n\nWe recommend that you upgrade your samba packages. The packages for the\nmips architecture are not included in this upgrade. They will be released\nas soon as they become available.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.2.5-4lenny13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.2.5-4",
+				"2:3.2.5-4lenny1",
+				"2:3.2.5-4lenny10",
+				"2:3.2.5-4lenny11",
+				"2:3.2.5-4lenny12",
+				"2:3.2.5-4lenny2",
+				"2:3.2.5-4lenny3",
+				"2:3.2.5-4lenny4",
+				"2:3.2.5-4lenny6",
+				"2:3.2.5-4lenny7",
+				"2:3.2.5-4lenny8",
+				"2:3.2.5-4lenny9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2109-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2109"
+		}
+	]
+}

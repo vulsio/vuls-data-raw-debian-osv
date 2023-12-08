@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2044-1",
+	"modified": "2023-06-28T06:21:09.999103Z",
+	"published": "2019-12-20T00:00:00Z",
+	"related": [
+		"CVE-2019-19906"
+	],
+	"summary": "cyrus-sasl2 - security update",
+	"details": "\nThere has been an out-of-bounds write in Cyrus SASL leading to\nunauthenticated remote denial-of-service in OpenLDAP via a malformed LDAP\npacket. The OpenLDAP crash was ultimately caused by an off-by-one error\nin \\_sasl\\_add\\_string in common.c in cyrus-sasl.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.1.26.dfsg1-13+deb8u2.\n\n\nWe recommend that you upgrade your cyrus-sasl2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "cyrus-sasl2",
+				"purl": "pkg:deb/debian/cyrus-sasl2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.26.dfsg1-13+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.26.dfsg1-13",
+				"2.1.26.dfsg1-13+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2044-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-2044"
+		}
+	]
+}

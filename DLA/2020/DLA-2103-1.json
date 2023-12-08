@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2103-1",
+	"modified": "2023-06-28T06:21:12.173594Z",
+	"published": "2020-02-13T00:00:00Z",
+	"summary": "debian-security-support - security update",
+	"details": "\ndebian-security-support, the Debian security support coverage checker,\nhas been updated in jessie-security.\n\n\nThis marks the end of life of the libqb package in jessie. A recently\nreported vulnerability against libqb which allows users to overwrite\narbitrary files via a symlink attack cannot be adequately addressed in\nlibqb in jessie. Upstream no longer supports this version and no\npackages in jessie depend upon libqb.\n\n\nWe recommend that if your systems or applications depend upon the libqb\npackage provided from the Debian archive that you upgrade your systems\nto a more recent Debian release or find an alternate and up to date\nsource of libqb packages.\n\n\nAdditionally, MySQL 5.5 is no longer supported. Upstream has ended its\nsupport and we are unable to backport fixes from newer versions due to\nthe lack of patch details. Options are to switch to MariaDB 10.0 in\njessie or to a newer version of MySQL in more recent Debian releases.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at:\n<https://wiki.debian.org/LTS>https://wiki.debian.org/LTS\n\n\nFor Debian 8 Lenny, these issues have been fixed in\ndebian-security-support version 2019.12.12~deb8u2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "debian-security-support",
+				"purl": "pkg:deb/debian/debian-security-support?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2019.12.12~deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2015.04.04",
+				"2015.07.11",
+				"2016.01.07",
+				"2016.01.07~deb6u1",
+				"2016.03.30+nmu1",
+				"2016.05.04+nmu1",
+				"2016.05.09+nmu1",
+				"2016.05.09+nmu1~deb7u1",
+				"2016.05.24",
+				"2016.05.24~deb7u1",
+				"2016.05.24~deb8u1",
+				"2017.01.03",
+				"2017.06.02",
+				"2017.06.02~deb8u1",
+				"2018.01.29",
+				"2018.01.29~deb7u1",
+				"2018.01.29~deb8u1",
+				"2018.01.29~deb9u1",
+				"2018.05.17",
+				"2018.05.20",
+				"2018.06.08",
+				"2018.11.25",
+				"2018.11.25~deb8u2",
+				"2018.11.25~deb9u1",
+				"2019.01.19",
+				"2019.02.01",
+				"2019.02.01~deb8u1",
+				"2019.02.01~deb9u1",
+				"2019.02.02",
+				"2019.02.02~deb8u1",
+				"2019.02.02~deb9u1",
+				"2019.04.25",
+				"2019.05.14",
+				"2019.05.22",
+				"2019.06.01",
+				"2019.06.13",
+				"2019.10.31",
+				"2019.11.01",
+				"2019.11.15",
+				"2019.11.16"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2103-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2103"
+		}
+	]
+}

@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2904-1",
+	"modified": "2023-06-28T06:37:02.663149Z",
+	"published": "2022-01-30T00:00:00Z",
+	"related": [
+		"CVE-2021-45960",
+		"CVE-2021-46143",
+		"CVE-2022-22822",
+		"CVE-2022-22823",
+		"CVE-2022-22824",
+		"CVE-2022-22825",
+		"CVE-2022-22826",
+		"CVE-2022-22827",
+		"CVE-2022-23852",
+		"CVE-2022-23990"
+	],
+	"summary": "expat - security update",
+	"details": "\nMultiple security vulnerabilities have been discovered in Expat, the XML\nparsing C library. Integer overflows or invalid shifts may lead to a denial\nof service or other unspecified impact.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.2.0-2+deb9u4.\n\n\nWe recommend that you upgrade your expat packages.\n\n\nFor the detailed security status of expat please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/expat>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "expat",
+				"purl": "pkg:deb/debian/expat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.0-2+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.0-2",
+				"2.2.0-2+deb9u1",
+				"2.2.0-2+deb9u2",
+				"2.2.0-2+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2904-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2904"
+		}
+	]
+}

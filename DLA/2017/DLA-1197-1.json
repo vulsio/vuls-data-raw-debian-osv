@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1197-1",
+	"modified": "2023-06-28T06:22:46.121170Z",
+	"published": "2017-11-30T00:00:00Z",
+	"related": [
+		"CVE-2017-11332",
+		"CVE-2017-11358",
+		"CVE-2017-11359",
+		"CVE-2017-15370",
+		"CVE-2017-15371",
+		"CVE-2017-15372",
+		"CVE-2017-15642",
+		"CVE-2017-18189",
+		"CVE-2019-1010004"
+	],
+	"summary": "sox - security update",
+	"details": "\nVarious security vulnerabilities were discovered in sox, a command\nline utility to convert audio formats, that may lead to a\ndenial-of-service (application crash / infinite loop) or memory\ncorruptions by processing a malformed input file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n14.4.0-3+deb7u2.\n\n\nWe recommend that you upgrade your sox packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "sox",
+				"purl": "pkg:deb/debian/sox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "14.4.0-3+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"14.4.0-3",
+				"14.4.0-3+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1197-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1197"
+		}
+	]
+}

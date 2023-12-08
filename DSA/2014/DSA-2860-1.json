@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2860-1",
+	"modified": "2023-10-16T00:11:36.095525Z",
+	"published": "2014-02-11T00:00:00Z",
+	"related": [
+		"CVE-2014-1921"
+	],
+	"summary": "parcimonie - information disclosure",
+	"details": "\nHolger Levsen discovered that parcimonie, a privacy-friendly helper to\nrefresh a GnuPG keyring, is affected by a design problem that undermines\nthe usefulness of this piece of software in the intended threat model.\n\n\nWhen using parcimonie with a large keyring (1000 public keys or more),\nit would always sleep exactly ten minutes between two key fetches. This\ncan probably be used by an adversary who can watch enough key fetches to\ncorrelate multiple key fetches with each other, which is what parcimonie\naims at protecting against. Smaller keyrings are affected to a smaller\ndegree. This problem is slightly mitigated when using a HKP(s) pool as\nthe configured GnuPG keyserver.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.7.1-1+deb7u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.8.1-1.\n\n\nWe recommend that you upgrade your parcimonie packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "parcimonie",
+				"purl": "pkg:deb/debian/parcimonie?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.1-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2860-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2860"
+		}
+	]
+}

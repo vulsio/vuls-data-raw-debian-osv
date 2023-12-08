@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1805-1",
+	"modified": "2023-10-16T00:08:05.889129Z",
+	"published": "2009-05-22T00:00:00Z",
+	"related": [
+		"CVE-2008-2927",
+		"CVE-2009-1373",
+		"CVE-2009-1375",
+		"CVE-2009-1376"
+	],
+	"summary": "pidgin - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in Pidgin, a graphical\nmulti-protocol instant messaging client. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-1373](https://security-tracker.debian.org/tracker/CVE-2009-1373)\nA buffer overflow in the Jabber file transfer code may lead to\n denial of service or the execution of arbitrary code.\n* [CVE-2009-1375](https://security-tracker.debian.org/tracker/CVE-2009-1375)\nMemory corruption in an internal library may lead to denial of\n service.\n* [CVE-2009-1376](https://security-tracker.debian.org/tracker/CVE-2009-1376)\nThe patch provided for the security issue tracked as [CVE-2008-2927](https://security-tracker.debian.org/tracker/CVE-2008-2927)\n - integer overflows in the MSN protocol handler - was found to be\n incomplete.\n\n\nThe old stable distribution (etch) is affected under the source package\nname gaim. However, due to build problems the updated packages couldn't\nbe released along with the stable version. It will be released once the\nbuild problem is resolved.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.4.3-4lenny2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.5.6-1.\n\n\nWe recommend that you upgrade your pidgin packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "pidgin",
+				"purl": "pkg:deb/debian/pidgin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.3-4lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.3-4",
+				"2.4.3-4lenny1",
+				"2.4.3-4lenny1~bpo40+1",
+				"2.4.3-4lenny1~volatile0",
+				"2.4.3-4lenny2~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1805-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1805"
+		}
+	]
+}

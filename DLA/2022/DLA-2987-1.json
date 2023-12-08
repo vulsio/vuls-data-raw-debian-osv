@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2987-1",
+	"modified": "2023-06-28T06:21:25.282598Z",
+	"published": "2022-04-30T00:00:00Z",
+	"related": [
+		"CVE-2019-19221",
+		"CVE-2021-23177",
+		"CVE-2021-31566"
+	],
+	"summary": "libarchive - security update",
+	"details": "\nThree issues have been found in libarchive, a multi-format archive and\ncompression library.\n\n\n* [CVE-2021-31566](https://security-tracker.debian.org/tracker/CVE-2021-31566)\nsymbolic links incorrectly followed when changing modes, times, ACL\n and flags of a file while extracting an archive\n* [CVE-2021-23177](https://security-tracker.debian.org/tracker/CVE-2021-23177)\nextracting a symlink with ACLs modifies ACLs of target\n* [CVE-2019-19221](https://security-tracker.debian.org/tracker/CVE-2019-19221)\nout-of-bounds read because of an incorrect mbrtowc or mbtowc call\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.2.2-2+deb9u3.\n\n\nWe recommend that you upgrade your libarchive packages.\n\n\nFor the detailed security status of libarchive please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libarchive>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.2-2+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.2-2",
+				"3.2.2-2+deb9u1",
+				"3.2.2-2+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2987-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2987"
+		}
+	]
+}

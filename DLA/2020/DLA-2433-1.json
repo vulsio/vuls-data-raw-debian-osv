@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2433-1",
+	"modified": "2023-06-28T06:25:15.525121Z",
+	"published": "2020-11-05T00:00:00Z",
+	"related": [
+		"CVE-2020-26939"
+	],
+	"summary": "bouncycastle - security update",
+	"details": "\nIt was discovered that there was an issue in the\nbouncycastle crypto library where attackers could\nobtain sensitive information due to observable\ndifferences in its response to invalid input.\n\n\n* [CVE-2020-26939](https://security-tracker.debian.org/tracker/CVE-2020-26939)\nIn Legion of the Bouncy Castle BC before 1.55 and\n BC-FJA before 1.0.1.2, attackers can obtain sensitive\n information about a private exponent because of\n Observable Differences in Behavior to Error Inputs. This\n occurs in\n org.bouncycastle.crypto.encodings.OAEPEncoding. Sending\n invalid ciphertext that decrypts to a short payload in\n the OAEP Decoder could result in the throwing of an\n early exception, potentially leaking some information\n about the private exponent of the RSA private key\n performing the encryption.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.56-1+deb9u3.\n\n\nWe recommend that you upgrade your bouncycastle packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "bouncycastle",
+				"purl": "pkg:deb/debian/bouncycastle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.56-1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.56-1",
+				"1.56-1+deb9u1",
+				"1.56-1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2433-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2433"
+		}
+	]
+}

@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3585-1",
+	"modified": "2023-10-16T00:12:08.929951Z",
+	"published": "2016-05-22T00:00:00Z",
+	"related": [
+		"CVE-2016-4006",
+		"CVE-2016-4079",
+		"CVE-2016-4080",
+		"CVE-2016-4081",
+		"CVE-2016-4082",
+		"CVE-2016-4085"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the dissectors/parsers for\nPKTC, IAX2, GSM CBCH and NCP which could result in denial of service.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.12.1+g01b65bf-4+deb8u6.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 2.0.3+geed34f0-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.0.3+geed34f0-1.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.1+g01b65bf-4+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.1+g01b65bf-4",
+				"1.12.1+g01b65bf-4+deb8u1",
+				"1.12.1+g01b65bf-4+deb8u2",
+				"1.12.1+g01b65bf-4+deb8u3",
+				"1.12.1+g01b65bf-4+deb8u4",
+				"1.12.1+g01b65bf-4+deb8u5",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u1",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u10",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u11",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u2",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u3",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u4",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u5",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u6",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u7",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u8",
+				"1.12.1+g01b65bf-4+deb8u6~deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3585-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3585"
+		}
+	]
+}

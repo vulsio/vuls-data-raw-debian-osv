@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-366",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-08-05T00:00:00Z",
+	"related": [
+		"CVE-2003-0656"
+	],
+	"summary": "eroaster - insecure temporary file",
+	"details": "\neroaster, a frontend for burning CD-R media using cdrecord, does not\ntake appropriate security precautions when creating a temporary file\nfor use as a lockfile. This bug could potentially be exploited to\noverwrite arbitrary files with the privileges of the user running\neroaster.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.1.0.0.3-2woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.2.0-0.5-1.\n\n\nWe recommend that you update your eroaster package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "eroaster",
+				"purl": "pkg:deb/debian/eroaster?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.0.0.3-2woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-366.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-366"
+		}
+	]
+}

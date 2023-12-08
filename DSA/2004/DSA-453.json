@@ -1,0 +1,255 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-453",
+	"modified": "2023-10-16T00:22:27.886577Z",
+	"published": "2004-03-02T00:00:00Z",
+	"related": [
+		"CVE-2004-0077"
+	],
+	"summary": "linux-kernel-2.2.20-i386+m68k+powerpc - failing function and TLB flush",
+	"details": "\nPaul Starzetz and Wojciech Purczynski of isec.pl [discovered](http://isec.pl/vulnerabilities/isec-0014-mremap-unmap.txt) a critical\nsecurity vulnerability in the memory management code of Linux inside\nthe mremap(2) system call. Due to flushing the TLB (Translation\nLookaside Buffer, an address cache) too early it is possible for an\nattacker to trigger a local root exploit.\n\n\nThe attack vectors for 2.4.x and 2.2.x kernels are exclusive for the\nrespective kernel series, though. We formerly believed that the\nexploitable vulnerability in 2.4.x does not exist in 2.2.x which is\nstill true. However, it turned out that a second (sort of)\nvulnerability is indeed exploitable in 2.2.x, but not in 2.4.x, with a\ndifferent exploit, of course.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nthe following versions and architectures:\n\n\n\n\n| package | arch | version |\n| --- | --- | --- |\n| kernel-source-2.2.20 | source | 2.2.20-5woody3 |\n| kernel-image-2.2.20-i386 | i386 | 2.2.20-5woody5 |\n| kernel-image-2.2.20-reiserfs-i386 | i386 | 2.2.20-4woody1 |\n| kernel-image-2.2.20-amiga | m68k | 2.20-4 |\n| kernel-image-2.2.20-atari | m68k | 2.2.20-3 |\n| kernel-image-2.2.20-bvme6000 | m68k | 2.2.20-3 |\n| kernel-image-2.2.20-mac | m68k | 2.2.20-3 |\n| kernel-image-2.2.20-mvme147 | m68k | 2.2.20-3 |\n| kernel-image-2.2.20-mvme16x | m68k | 2.2.20-3 |\n| kernel-patch-2.2.20-powerpc | powerpc | 2.2.20-3woody1 |\n\n\nFor the unstable distribution (sid) this problem will be fixed soon\nfor the architectures that still ship a 2.2.x kernel package.\n\n\nWe recommend that you upgrade your Linux kernel package.\n\n\n[Vulnerability matrix](CAN-2004-0077) for CAN-2004-0077\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-source-2.2.20",
+				"purl": "pkg:deb/debian/kernel-source-2.2.20?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-5woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-i386",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-i386?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-5woody5"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-reiserfs-i386",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-reiserfs-i386?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-4woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.20-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-amiga",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-amiga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.20-4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.20-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-atari",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-atari?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-bvme6000",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-bvme6000?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-mac",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-mac?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-mvme147",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-mvme147?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.2.20-mvme16x",
+				"purl": "pkg:deb/debian/kernel-image-2.2.20-mvme16x?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-patch-2.2.20-powerpc",
+				"purl": "pkg:deb/debian/kernel-patch-2.2.20-powerpc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-3woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-453.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-453"
+		}
+	]
+}

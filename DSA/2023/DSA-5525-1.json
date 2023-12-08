@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5525-1",
+	"modified": "2023-10-16T00:23:24.313962Z",
+	"published": "2023-10-11T00:00:00Z",
+	"related": [
+		"CVE-2023-3961",
+		"CVE-2023-4091",
+		"CVE-2023-4154",
+		"CVE-2023-42669",
+		"CVE-2023-42670"
+	],
+	"summary": "samba - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix, which might result in denial of\nservice, information disclosure or privilege escalation.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 2:4.17.12+dfsg-0+deb12u1.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFor the detailed security status of samba please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/samba](https://security-tracker.debian.org/tracker/samba)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.17.12+dfsg-0+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.17.10+dfsg-0+deb12u1",
+				"2:4.17.10+dfsg-0+deb12u1~bpo11+1",
+				"2:4.17.11+dfsg-0+deb12u1",
+				"2:4.17.8+dfsg-2",
+				"2:4.17.9+dfsg-0+deb12u1",
+				"2:4.17.9+dfsg-0+deb12u2",
+				"2:4.17.9+dfsg-0+deb12u3",
+				"2:4.17.9+dfsg-0+deb12u3~bpo11+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5525-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5525"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3342-1",
+	"modified": "2023-06-28T06:26:56.442953Z",
+	"published": "2023-02-24T00:00:00Z",
+	"related": [
+		"CVE-2022-41859",
+		"CVE-2022-41860",
+		"CVE-2022-41861"
+	],
+	"summary": "freeradius - security update",
+	"details": "\nSeveral flaws were found in freeradius, a high-performance and highly\nconfigurable RADIUS server.\n\n\n* [CVE-2022-41859](https://security-tracker.debian.org/tracker/CVE-2022-41859)\nIn freeradius, the EAP-PWD function compute\\_password\\_element() leaks\n information about the password which allows an attacker to substantially\n reduce the size of an offline dictionary attack.\n* [CVE-2022-41860](https://security-tracker.debian.org/tracker/CVE-2022-41860)\nIn freeradius, when an EAP-SIM supplicant sends an unknown SIM option, the\n server will try to look that option up in the internal dictionaries. This\n lookup will fail, but the SIM code will not check for that failure.\n Instead, it will dereference a NULL pointer, and cause the server to crash.\n* [CVE-2022-41861](https://security-tracker.debian.org/tracker/CVE-2022-41861)\nA malicious RADIUS client or home server can send a malformed attribute\n which can cause the server to crash.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.0.17+dfsg-1.1+deb10u2.\n\n\nWe recommend that you upgrade your freeradius packages.\n\n\nFor the detailed security status of freeradius please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/freeradius>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "freeradius",
+				"purl": "pkg:deb/debian/freeradius?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.17+dfsg-1.1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.17+dfsg-1.1",
+				"3.0.17+dfsg-1.1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3342-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3342"
+		}
+	]
+}

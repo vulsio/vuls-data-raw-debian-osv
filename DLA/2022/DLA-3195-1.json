@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3195-1",
+	"modified": "2023-06-28T06:37:16.918519Z",
+	"published": "2022-11-17T00:00:00Z",
+	"related": [
+		"CVE-2022-39286"
+	],
+	"summary": "jupyter-core - security update",
+	"details": "\nIt was discovered that jupyter-core, the base framework for Jupyter projects\nlike Jupyter Notebooks, could execute arbitrary code when loading\nconfiguration files.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n4.4.0-2+deb10u1.\n\n\nWe recommend that you upgrade your jupyter-core packages.\n\n\nFor the detailed security status of jupyter-core please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/jupyter-core>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "jupyter-core",
+				"purl": "pkg:deb/debian/jupyter-core?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.0-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3195-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3195"
+		}
+	]
+}

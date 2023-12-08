@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1418-1",
+	"modified": "2023-06-28T06:20:40.616138Z",
+	"published": "2018-07-07T00:00:00Z",
+	"related": [
+		"CVE-2016-1000338",
+		"CVE-2016-1000339",
+		"CVE-2016-1000341",
+		"CVE-2016-1000342",
+		"CVE-2016-1000343",
+		"CVE-2016-1000345",
+		"CVE-2016-1000346"
+	],
+	"summary": "bouncycastle - security update",
+	"details": "\nSeveral security vulnerabilities were found in Bouncy\nCastle, a Java implementation of cryptographic algorithms.\n\n\n* [CVE-2016-1000338](https://security-tracker.debian.org/tracker/CVE-2016-1000338)\nDSA does not fully validate ASN.1 encoding of signature on\n verification. It is possible to inject extra elements in the\n sequence making up the signature and still have it validate, which\n in some cases may allow the introduction of invisible data into a\n signed structure.\n* [CVE-2016-1000339](https://security-tracker.debian.org/tracker/CVE-2016-1000339)\nPreviously the primary engine class used for AES was AESFastEngine.\n Due to the highly table driven approach used in the algorithm it\n turns out that if the data channel on the CPU can be monitored the\n lookup table accesses are sufficient to leak information on the AES\n key being used. There was also a leak in AESEngine although it was\n substantially less. AESEngine has been modified to remove any signs\n of leakage and is now the primary AES class for the BC JCE provider.\n Use of AESFastEngine is now only recommended where otherwise deemed\n appropriate.\n* [CVE-2016-1000341](https://security-tracker.debian.org/tracker/CVE-2016-1000341)\nDSA signature generation is vulnerable to timing attack. Where\n timings can be closely observed for the generation of signatures,\n the lack of blinding may allow an attacker to gain information about\n the signature's k value and ultimately the private value as well.\n* [CVE-2016-1000342](https://security-tracker.debian.org/tracker/CVE-2016-1000342)\nECDSA does not fully validate ASN.1 encoding of signature on\n verification. It is possible to inject extra elements in the\n sequence making up the signature and still have it validate, which\n in some cases may allow the introduction of invisible data into a\n signed structure.\n* [CVE-2016-1000343](https://security-tracker.debian.org/tracker/CVE-2016-1000343)\nThe DSA key pair generator generates a weak private key if used with\n default values. If the JCA key pair generator is not explicitly\n initialised with DSA parameters, 1.55 and earlier generates a\n private value assuming a 1024 bit key size. In earlier releases this\n can be dealt with by explicitly passing parameters to the key pair\n generator.\n* [CVE-2016-1000345](https://security-tracker.debian.org/tracker/CVE-2016-1000345)\nThe DHIES/ECIES CBC mode is vulnerable to padding oracle attack. In\n an environment where timings can be easily observed, it is possible\n with enough observations to identify when the decryption is failing\n due to padding.\n* [CVE-2016-1000346](https://security-tracker.debian.org/tracker/CVE-2016-1000346)\nIn the Bouncy Castle JCE Provider the other party DH public key is\n not fully validated. This can cause issues as invalid keys can be\n used to reveal details about the other party's private key where\n static Diffie-Hellman is in use. As of this release the key\n parameters are checked on agreement calculation.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.49+dfsg-3+deb8u3.\n\n\nWe recommend that you upgrade your bouncycastle packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "bouncycastle",
+				"purl": "pkg:deb/debian/bouncycastle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.49+dfsg-3+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.49+dfsg-3",
+				"1.49+dfsg-3+deb8u1",
+				"1.49+dfsg-3+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1418-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1418"
+		}
+	]
+}

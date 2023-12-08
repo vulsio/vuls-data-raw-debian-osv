@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1137-1",
+	"modified": "2023-10-16T00:06:31.247097Z",
+	"published": "2006-08-02T00:00:00Z",
+	"related": [
+		"CVE-2006-3459",
+		"CVE-2006-3460",
+		"CVE-2006-3461",
+		"CVE-2006-3462",
+		"CVE-2006-3463",
+		"CVE-2006-3464",
+		"CVE-2006-3465"
+	],
+	"summary": "tiff - several vulnerabilities",
+	"details": "\nTavis Ormandy of the Google Security Team discovered several problems\nin the TIFF library. The Common Vulnerabilities and Exposures project\nidentifies the following issues:\n\n\n* [CVE-2006-3459](https://security-tracker.debian.org/tracker/CVE-2006-3459)\nSeveral stack-buffer overflows have been discovered.\n* [CVE-2006-3460](https://security-tracker.debian.org/tracker/CVE-2006-3460)\nA heap overflow vulnerability in the JPEG decoder may overrun a\n buffer with more data than expected.\n* [CVE-2006-3461](https://security-tracker.debian.org/tracker/CVE-2006-3461)\nA heap overflow vulnerability in the PixarLog decoder may allow an\n attacker to execute arbitrary code.\n* [CVE-2006-3462](https://security-tracker.debian.org/tracker/CVE-2006-3462)\nA heap overflow vulnerability has been discovered in the NeXT RLE\n decoder.\n* [CVE-2006-3463](https://security-tracker.debian.org/tracker/CVE-2006-3463)\nAn loop was discovered where a 16bit unsigned short was used to\n iterate over a 32bit unsigned value so that the loop would never\n terminate and continue forever.\n* [CVE-2006-3464](https://security-tracker.debian.org/tracker/CVE-2006-3464)\nMultiple unchecked arithmetic operations were uncovered, including\n a number of the range checking operations designed to ensure the\n offsets specified in TIFF directories are legitimate.\n* [CVE-2006-3465](https://security-tracker.debian.org/tracker/CVE-2006-3465)\nA flaw was also uncovered in libtiffs custom tag support which may\n result in abnormal behaviour, crashes, or potentially arbitrary\n code execution.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 3.7.2-7.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.8.2-6.\n\n\nWe recommend that you upgrade your libtiff packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.7.2-7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.7.2-3",
+				"3.7.2-3sarge1",
+				"3.7.2-4",
+				"3.7.2-5",
+				"3.7.2-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1137-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1137"
+		}
+	]
+}

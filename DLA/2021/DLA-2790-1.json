@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2790-1",
+	"modified": "2023-06-28T06:21:23.730143Z",
+	"published": "2021-10-21T00:00:00Z",
+	"related": [
+		"CVE-2021-42771"
+	],
+	"summary": "python-babel - security update",
+	"details": "\nTenable discovered that in Babel, a set of tools for\ninternationalizing Python applications, Babel.Locale allows attackers\nto load arbitrary locale .dat files (containing serialized Python\nobjects) via directory traversal, leading to code execution. This\nvulnerability was also previously addressed under [CVE-2021-20095](https://security-tracker.debian.org/tracker/CVE-2021-20095) in\nother distributions and suites.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.3.4+dfsg.1-2+deb9u1.\n\n\nWe recommend that you upgrade your python-babel packages.\n\n\nFor the detailed security status of python-babel please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-babel>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-babel",
+				"purl": "pkg:deb/debian/python-babel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.4+dfsg.1-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.4+dfsg.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2790-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2790"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2240-1",
+	"modified": "2023-06-28T06:26:28.319250Z",
+	"published": "2020-06-09T00:00:00Z",
+	"related": [
+		"CVE-2020-0556"
+	],
+	"summary": "bluez - security update",
+	"details": "\nIt was reported that the BlueZ's HID and HOGP profile implementations\ndon't specifically require bonding between the device and the host.\nMalicious devices can take advantage of this flaw to connect to a target\nhost and impersonate an existing HID device without security or to cause\nan SDP or GATT service discovery to take place which would allow HID\nreports to be injected to the input subsystem from a non-bonded source.\n\n\nFor the HID profile an new configuration option (ClassicBondedOnly) is\nintroduced to make sure that input connections only come from bonded\ndevice connections. The options defaults to false to maximize device\ncompatibility.\n\n\nNote that as a result of the significant changes between the previous\nversion in Jessie (based on upstream release 5.23) and the available\npatches to address this vulnerability, it was decided that a backport of\nthe bluez package from Debian 9 Stretch was the only viable way to\naddress the referenced vulnerability.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n5.43-2+deb9u2~deb8u1.\n\n\nWe recommend that you upgrade your bluez packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "bluez",
+				"purl": "pkg:deb/debian/bluez?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.43-2+deb9u2~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.23-2",
+				"5.23-2+deb8u1",
+				"5.33-1",
+				"5.36-1",
+				"5.40-1~exp0",
+				"5.41-1",
+				"5.43-1",
+				"5.43-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2240-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2240"
+		}
+	]
+}

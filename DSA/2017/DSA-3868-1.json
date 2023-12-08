@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3868-1",
+	"modified": "2023-10-16T00:12:24.180321Z",
+	"published": "2017-05-30T00:00:00Z",
+	"related": [
+		"CVE-2017-9287"
+	],
+	"summary": "openldap - security update",
+	"details": "\nKarsten Heymann discovered that the OpenLDAP directory server can be\ncrashed by performing a paged search with a page size of 0, resulting in\ndenial of service. This vulnerability is limited to the MDB storage\nbackend.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.4.40+dfsg-1+deb8u3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.4.44+dfsg-5.\n\n\nWe recommend that you upgrade your openldap packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "openldap",
+				"purl": "pkg:deb/debian/openldap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.40+dfsg-1+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.40+dfsg-1",
+				"2.4.40+dfsg-1+deb8u1",
+				"2.4.40+dfsg-1+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3868-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3868"
+		}
+	]
+}

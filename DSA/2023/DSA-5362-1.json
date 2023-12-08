@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5362-1",
+	"modified": "2023-10-16T00:32:38.351294Z",
+	"published": "2023-02-24T00:00:00Z",
+	"related": [
+		"CVE-2022-37032"
+	],
+	"summary": "frr - security update",
+	"details": "\nAn out-of-bounds read in the BGP daemon of FRRouting FRR before 8.4 may lead\nto a segmentation fault and denial of service. This occurs in\nbgp\\_capability\\_msg\\_parse in bgpd/bgp\\_packet.c.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 7.5.1-1.1+deb11u1.\n\n\nWe recommend that you upgrade your frr packages.\n\n\nFor the detailed security status of frr please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/frr](https://security-tracker.debian.org/tracker/frr)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "frr",
+				"purl": "pkg:deb/debian/frr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.5.1-1.1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.5.1-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5362-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5362"
+		}
+	]
+}

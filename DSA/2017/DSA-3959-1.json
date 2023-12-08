@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3959-1",
+	"modified": "2023-10-16T00:12:30.472997Z",
+	"published": "2017-08-29T00:00:00Z",
+	"related": [
+		"CVE-2017-0379"
+	],
+	"summary": "libgcrypt20 - security update",
+	"details": "\nDaniel Genkin, Luke Valenta and Yuval Yarom discovered that Libgcrypt\nis prone to a local side-channel attack against the ECDH encryption with\nCurve25519, allowing recovery of the private key.\n\n\nSee <https://eprint.iacr.org/2017/806> for details.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.7.6-2+deb9u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.7.9-1.\n\n\nWe recommend that you upgrade your libgcrypt20 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libgcrypt20",
+				"purl": "pkg:deb/debian/libgcrypt20?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.6-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.6-2",
+				"1.7.6-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3959-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3959"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-770-1",
+	"modified": "2023-06-28T06:43:11.803167Z",
+	"published": "2016-12-31T00:00:00Z",
+	"related": [
+		"CVE-2016-10033"
+	],
+	"summary": "libphp-phpmailer - security update",
+	"details": "\nDawid Golunski discovered that PHPMailer, a popular library to send\nemail from PHP applications, allowed a remote attacker to execute\ncode if they were able to provide a crafted Sender address.\n\n\nNote that for this issue also [CVE-2016-10045](https://security-tracker.debian.org/tracker/CVE-2016-10045) was assigned, which is a\nregression in the original patch proposed for [CVE-2016-10033](https://security-tracker.debian.org/tracker/CVE-2016-10033). Because\nthe origial patch was not applied in Debian, Debian was not vulnerable\nto [CVE-2016-10045](https://security-tracker.debian.org/tracker/CVE-2016-10045).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.1-1.2.\n\n\nWe recommend that you upgrade your libphp-phpmailer packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libphp-phpmailer",
+				"purl": "pkg:deb/debian/libphp-phpmailer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.1-1.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.1-1",
+				"5.1-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-770-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-770"
+		}
+	]
+}

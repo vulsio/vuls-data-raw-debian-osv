@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-638-1",
+	"modified": "2023-06-28T06:43:15.669790Z",
+	"published": "2016-09-25T00:00:00Z",
+	"related": [
+		"CVE-2016-7545"
+	],
+	"summary": "policycoreutils - security update",
+	"details": "\nIt was discovered that there was a sandbox escape via the TIOCSTI ioctl in\npolicycoreutils, a set of programs required for the basic operation of an\nSELinux-based system.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in policycoreutils version\n2.1.10-9+deb7u1.\n\n\nWe recommend that you upgrade your policycoreutils packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "policycoreutils",
+				"purl": "pkg:deb/debian/policycoreutils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.10-9+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.10-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-638-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-638"
+		}
+	]
+}

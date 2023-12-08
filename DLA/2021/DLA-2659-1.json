@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2659-1",
+	"modified": "2023-06-28T06:30:11.519417Z",
+	"published": "2021-05-13T00:00:00Z",
+	"related": [
+		"CVE-2018-10196",
+		"CVE-2020-18032"
+	],
+	"summary": "graphviz - security update",
+	"details": "\n* [CVE-2018-10196](https://security-tracker.debian.org/tracker/CVE-2018-10196)\nNULL pointer dereference vulnerability in the rebuild\\_vlists\n function in lib/dotgen/conc.c in the dotgen library allows\n remote attackers to cause a denial of service (application\n crash) via a crafted file.\n* [CVE-2020-18032](https://security-tracker.debian.org/tracker/CVE-2020-18032)\nA buffer overflow was discovered in Graphviz, which could\n potentially result in the execution of arbitrary code when\n processing a malformed file.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.38.0-17+deb9u1.\n\n\nWe recommend that you upgrade your graphviz packages.\n\n\nFor the detailed security status of graphviz please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/graphviz>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "graphviz",
+				"purl": "pkg:deb/debian/graphviz?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.38.0-17+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.38.0-17"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2659-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2659"
+		}
+	]
+}

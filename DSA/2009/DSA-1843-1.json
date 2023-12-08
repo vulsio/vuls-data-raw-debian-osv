@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1843-1",
+	"modified": "2023-10-16T00:10:41.697203Z",
+	"published": "2009-07-28T00:00:00Z",
+	"related": [
+		"CVE-2009-2621",
+		"CVE-2009-2622"
+	],
+	"summary": "squid3 - denial of service",
+	"details": "\nIt was discovered that squid3, a high-performance proxy caching server for\nweb clients, is prone to several denial of service attacks. Due to incorrect\nbounds checking and insufficient validation while processing response and\nrequest data an attacker is able to crash the squid daemon via crafted\nrequests or responses.\n\n\nThe squid package in the oldstable distribution (etch) is not affected\nby this problem.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 3.0.STABLE8-3+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution (sid),\nthis problem will be fixed soon.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.STABLE8-3+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.STABLE8-2",
+				"3.0.STABLE8-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1843-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1843"
+		}
+	]
+}

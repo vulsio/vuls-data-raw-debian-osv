@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3859-1",
+	"modified": "2023-10-16T00:12:23.570813Z",
+	"published": "2017-05-19T00:00:00Z",
+	"related": [
+		"CVE-2017-9078",
+		"CVE-2017-9079"
+	],
+	"summary": "dropbear - security update",
+	"details": "\nTwo vulnerabilities were found in Dropbear, a lightweight SSH2 server\nand client:\n\n\n* [CVE-2017-9078](https://security-tracker.debian.org/tracker/CVE-2017-9078)\nMark Shepard discovered a double free in the TCP listener cleanup\n which could result in denial of service by an authenticated user if\n Dropbear is running with the \"-a\" option.\n* [CVE-2017-9079](https://security-tracker.debian.org/tracker/CVE-2017-9079)\nJann Horn discovered a local information leak in parsing the\n .authorized\\_keys file.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2014.65-1+deb8u2.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your dropbear packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "dropbear",
+				"purl": "pkg:deb/debian/dropbear?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2014.65-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2014.65-1",
+				"2014.65-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3859-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3859"
+		}
+	]
+}

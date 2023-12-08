@@ -1,0 +1,92 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-152-1",
+	"modified": "2023-06-28T06:26:22.291622Z",
+	"published": "2015-02-12T00:00:00Z",
+	"related": [
+		"CVE-2014-8161",
+		"CVE-2015-0241",
+		"CVE-2015-0243",
+		"CVE-2015-0244"
+	],
+	"summary": "postgresql-8.4 - new minor release",
+	"details": "\nSeveral vulnerabilities were discovered in PostgreSQL, a relational\ndatabase server system. The 8.4 branch is EOLed upstream, but still\npresent in Debian squeeze. This new LTS minor version contains the\nfixes that were applied upstream to the 9.0.19 version, backported to\n8.4.22 which was the last version officially released by the PostgreSQL\ndevelopers. This LTS effort for squeeze-lts is a community project\nsponsored by credativ GmbH.\n\n\n* [CVE-2014-8161](https://security-tracker.debian.org/tracker/CVE-2014-8161)\nInformation leak\nA user with limited clearance on a table might have access to information\nin columns without SELECT rights on through server error messages.\n* [CVE-2015-0241](https://security-tracker.debian.org/tracker/CVE-2015-0241)\nOut of boundaries read/write\nThe function to\\_char() might read/write past the end of a buffer. This\nmight crash the server when a formatting template is processed.\n* [CVE-2015-0243](https://security-tracker.debian.org/tracker/CVE-2015-0243)\nBuffer overruns in contrib/pgcrypto\nThe pgcrypto module is vulnerable to stack buffer overrun that might\ncrash the server.\n* [CVE-2015-0244](https://security-tracker.debian.org/tracker/CVE-2015-0244)\nSQL command injection\nEmil Lenngren reported that an attacker can inject SQL commands when the\nsynchronization between client and server is lost.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in postgresql-8.4 version 8.4.22lts1-0+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "postgresql-8.4",
+				"purl": "pkg:deb/debian/postgresql-8.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.4.22lts1-0+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.4.10-0squeeze1",
+				"8.4.10-0squeeze1~bpo50+1",
+				"8.4.10-1",
+				"8.4.11-0squeeze1",
+				"8.4.11-1",
+				"8.4.12-0squeeze1",
+				"8.4.12-1",
+				"8.4.12-2",
+				"8.4.12-3",
+				"8.4.13-0squeeze1",
+				"8.4.13-1",
+				"8.4.14-1",
+				"8.4.15-0squeeze1",
+				"8.4.15-1",
+				"8.4.16-0squeeze1",
+				"8.4.16-1",
+				"8.4.17-0squeeze1",
+				"8.4.17-1",
+				"8.4.18-0squeeze1",
+				"8.4.18-0wheezy1",
+				"8.4.19-0squeeze1",
+				"8.4.19-0wheezy1",
+				"8.4.20-0squeeze1",
+				"8.4.20-0wheezy1",
+				"8.4.21-0squeeze1",
+				"8.4.21-0wheezy1",
+				"8.4.22-0wheezy1",
+				"8.4.5-0squeeze2",
+				"8.4.5-1",
+				"8.4.5-1~bpo50+1",
+				"8.4.5-2",
+				"8.4.5-2~bpo50+1",
+				"8.4.6-1",
+				"8.4.7-0squeeze1~bpo50+1",
+				"8.4.7-0squeeze2",
+				"8.4.7-1",
+				"8.4.8-0squeeze1",
+				"8.4.8-0squeeze1~bpo50+1",
+				"8.4.8-0squeeze2",
+				"8.4.8-0squeeze2~bpo50+1",
+				"8.4.8-1",
+				"8.4.8-2",
+				"8.4.9-0squeeze1",
+				"8.4.9-0squeeze1~bpo50+1",
+				"8.4.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-152-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-152"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-285",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-04-14T00:00:00Z",
+	"related": [
+		"CVE-2003-0136"
+	],
+	"summary": "lprng - insecure temporary file",
+	"details": "\nKarol Lewandowski discovered that psbanner, a printer filter that\ncreates a PostScript format banner and is part of LPRng, insecurely\ncreates a temporary file for debugging purpose when it is configured\nas filter. The program does not check whether this file already\nexists or is linked to another place, psbanner writes its current environment\nand called arguments to the file unconditionally with the user id\ndaemon.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 3.8.10-1.2.\n\n\nThe old stable distribution (potato) is not affected by this problem.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 3.8.20-4.\n\n\nWe recommend that you upgrade your lprng package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "lprng",
+				"purl": "pkg:deb/debian/lprng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.8.10-1.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-285.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-285"
+		}
+	]
+}

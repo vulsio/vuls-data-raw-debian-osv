@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1899-1",
+	"modified": "2023-06-28T06:29:56.854358Z",
+	"published": "2019-08-28T00:00:00Z",
+	"related": [
+		"CVE-2018-19502",
+		"CVE-2018-20196",
+		"CVE-2018-20199",
+		"CVE-2018-20360",
+		"CVE-2019-15296",
+		"CVE-2019-6956"
+	],
+	"summary": "faad2 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in faad2, the Freeware Advanced\nAudio Coder:\n\n\n* [CVE-2018-19502](https://security-tracker.debian.org/tracker/CVE-2018-19502)\nHeap buffer overflow in the function excluded\\_channels (libfaad/syntax.c).\n This vulnerability might allow remote attackers to cause denial of service\n via crafted MPEG AAC data.\n* [CVE-2018-20196](https://security-tracker.debian.org/tracker/CVE-2018-20196)\nStack buffer overflow in the function calculate\\_gain (libfaad/br\\_hfadj.c).\n This vulnerability might allow remote attackers to cause denial of service\n or any unspecified impact via crafted MPEG AAC data.\n* [CVE-2018-20199](https://security-tracker.debian.org/tracker/CVE-2018-20199),\n[CVE-2018-20360](https://security-tracker.debian.org/tracker/CVE-2018-20360)\nNULL pointer dereference in the function ifilter\\_bank (libfaad/filtbank.c).\n This vulnerability might allow remote attackers to cause denial of service\n via crafted MPEG AAC data.\n* [CVE-2019-6956](https://security-tracker.debian.org/tracker/CVE-2019-6956)\nGlobal buffer overflow in the function ps\\_mix\\_phase (libfaad/ps\\_dec.c).\n This vulnerability might allow remote attackers to cause denial of service\n or any other unspecified impact via crafted MPEG AAC data.\n* [CVE-2019-15296](https://security-tracker.debian.org/tracker/CVE-2019-15296)\nBuffer overflow in the function faad\\_resetbits (libfaad/bits.c). This\n vulnerability might allow remote attackers to cause denial of service via\n crafted MPEG AAC data.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.7-8+deb8u3.\n\n\nWe recommend that you upgrade your faad2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "faad2",
+				"purl": "pkg:deb/debian/faad2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7-8+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7-8",
+				"2.7-8+deb8u1",
+				"2.7-8+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1899-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1899"
+		}
+	]
+}

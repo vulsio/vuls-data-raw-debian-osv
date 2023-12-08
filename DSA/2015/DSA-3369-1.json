@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3369-1",
+	"modified": "2023-10-16T00:11:57.321173Z",
+	"published": "2015-10-06T00:00:00Z",
+	"related": [
+		"CVE-2015-5723",
+		"CVE-2015-7695"
+	],
+	"summary": "zendframework - security update",
+	"details": "\nMultiple vulnerabilities were discovered in Zend Framework, a PHP\nframework:\n\n\n* [CVE-2015-5723](https://security-tracker.debian.org/tracker/CVE-2015-5723)\nIt was discovered that due to incorrect permissions masks when\n creating directories, local attackers could potentially execute\n arbitrary code or escalate privileges.\n* ZF2015-08 (no CVE assigned)\n\n Chris Kings-Lynne discovered an SQL injection vector caused by\n missing null byte filtering in the MS SQL PDO backend, and a similar\n issue was also found in the SQLite backend.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.11.13-1.1+deb7u4.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.12.9+dfsg-2+deb8u4.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 1.12.16+dfsg-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.12.16+dfsg-1.\n\n\nWe recommend that you upgrade your zendframework packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "zendframework",
+				"purl": "pkg:deb/debian/zendframework?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.11.13-1.1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.11.13-1.1",
+				"1.11.13-1.1+deb7u1",
+				"1.11.13-1.1+deb7u2",
+				"1.11.13-1.1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3369-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "zendframework",
+				"purl": "pkg:deb/debian/zendframework?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.9+dfsg-2+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.9+dfsg-2",
+				"1.12.9+dfsg-2+deb8u1",
+				"1.12.9+dfsg-2+deb8u2",
+				"1.12.9+dfsg-2+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3369-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3369"
+		}
+	]
+}

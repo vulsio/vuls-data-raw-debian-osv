@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1438-1",
+	"modified": "2023-06-28T06:23:51.371135Z",
+	"published": "2018-07-22T00:00:00Z",
+	"related": [
+		"CVE-2016-1516",
+		"CVE-2017-1000450",
+		"CVE-2017-12597",
+		"CVE-2017-12598",
+		"CVE-2017-12599",
+		"CVE-2017-12601",
+		"CVE-2017-12603",
+		"CVE-2017-12604",
+		"CVE-2017-12605",
+		"CVE-2017-12606",
+		"CVE-2017-12862",
+		"CVE-2017-12863",
+		"CVE-2017-12864",
+		"CVE-2017-17760",
+		"CVE-2018-5268",
+		"CVE-2018-5269"
+	],
+	"summary": "opencv - security update",
+	"details": "\nEarly versions of opencv have problems while reading data, which might\nresult in either buffer overflows, out-of bounds errors or integer\noverflows.\nFurther assertion errors might happen due to incorrect integer cast.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.4.9.1+dfsg-1+deb8u2.\n\n\nWe recommend that you upgrade your opencv packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "opencv",
+				"purl": "pkg:deb/debian/opencv?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.9.1+dfsg-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.9.1+dfsg-1",
+				"2.4.9.1+dfsg-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1438-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1438"
+		}
+	]
+}

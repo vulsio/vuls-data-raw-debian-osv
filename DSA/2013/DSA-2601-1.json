@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2601-1",
+	"modified": "2023-10-16T00:11:22.256486Z",
+	"published": "2013-01-06T00:00:00Z",
+	"related": [
+		"CVE-2012-6085"
+	],
+	"summary": "gnupg - missing input sanitation",
+	"details": "\nKB Sriram discovered that GnuPG, the GNU Privacy Guard did not\nsufficiently sanitise public keys on import, which could lead to\nmemory and keyring corruption.\n\n\nThe problem affects both version 1, in the gnupg package, and\nversion two, in the gnupg2 package.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.4.10-4+squeeze1 of gnupg and version 2.0.14-2+squeeze1 of\ngnupg2.\n\n\nFor the testing distribution (wheezy) and unstable distribution (sid),\nthis problem has been fixed in version 1.4.12-7 of gnupg and\nversion 2.0.19-2 of gnupg2.\n\n\nWe recommend that you upgrade your gnupg and/or gnupg2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.10-4+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.10-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2601-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gnupg2",
+				"purl": "pkg:deb/debian/gnupg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.14-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.14-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2601-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2601"
+		}
+	]
+}

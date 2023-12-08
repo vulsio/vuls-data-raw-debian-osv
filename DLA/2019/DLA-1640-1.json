@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1640-1",
+	"modified": "2023-06-28T06:19:57.762965Z",
+	"published": "2019-01-24T00:00:00Z",
+	"related": [
+		"CVE-2019-3461"
+	],
+	"summary": "tmpreaper - security update",
+	"details": "\nIt was discovered that tmpreaper, a program that cleans up files in\ndirectories based on their age, is vulnerable to a race condition. This\nvulnerability might be exploited by local attackers to perform privilege\nescalation.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.6.13+nmu1+deb8u1.\n\n\nWe recommend that you upgrade your tmpreaper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tmpreaper",
+				"purl": "pkg:deb/debian/tmpreaper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.13+nmu1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.13+nmu1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1640-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1640"
+		}
+	]
+}

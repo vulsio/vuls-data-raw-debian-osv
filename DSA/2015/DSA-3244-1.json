@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3244-1",
+	"modified": "2023-10-16T00:11:51.245935Z",
+	"published": "2015-05-02T00:00:00Z",
+	"related": [
+		"CVE-2015-3011",
+		"CVE-2015-3012",
+		"CVE-2015-3013"
+	],
+	"summary": "owncloud - security update",
+	"details": "\nMultiple vulnerabilities were discovered in ownCloud, a cloud storage\nweb service for files, music, contacts, calendars and many more.\n\n\n* [CVE-2015-3011](https://security-tracker.debian.org/tracker/CVE-2015-3011)\nHugh Davenport discovered that the contacts application shipped\n with ownCloud is vulnerable to multiple stored cross-site\n scripting attacks. This vulnerability is effectively exploitable\n in any browser.\n* [CVE-2015-3012](https://security-tracker.debian.org/tracker/CVE-2015-3012)\nRoy Jansen discovered that the documents application shipped with\n ownCloud is vulnerable to multiple stored cross-site scripting\n attacks. This vulnerability is not exploitable in browsers that\n support the current CSP standard.\n* [CVE-2015-3013](https://security-tracker.debian.org/tracker/CVE-2015-3013)\nLukas Reschke discovered a blacklist bypass vulnerability, allowing\n authenticated remote attackers to bypass the file blacklist and\n upload files such as the .htaccess files. An attacker could leverage\n this bypass by uploading a .htaccess and execute arbitrary PHP code\n if the /data/ directory is stored inside the web root and a web\n server that interprets .htaccess files is used. On default Debian\n installations the data directory is outside of the web root and thus\n this vulnerability is not exploitable by default.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 7.0.4+dfsg-4~deb8u1.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 7.0.4+dfsg-3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 7.0.4+dfsg-3.\n\n\nWe recommend that you upgrade your owncloud packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "owncloud",
+				"purl": "pkg:deb/debian/owncloud?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.0.4+dfsg-4~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.0.4+dfsg-2",
+				"7.0.4+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3244-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3244"
+		}
+	]
+}

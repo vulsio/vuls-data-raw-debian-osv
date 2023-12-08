@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-383",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-09-17T00:00:00Z",
+	"related": [
+		"CVE-2003-0682",
+		"CVE-2003-0693",
+		"CVE-2003-0695"
+	],
+	"summary": "ssh-krb5 - possible remote vulnerability",
+	"details": "\nSeveral bugs have been found in OpenSSH's buffer handling. It is not\nknown if these bugs are exploitable, but as a precaution an upgrade is\nadvised.\n\n\n*DSA-383-2*:\nThis advisory is an addition to the earlier DSA-383-1 advisory: Solar\nDesigner found four more bugs in OpenSSH that may be exploitable.\n\n\nFor the Debian stable distribution these bugs have been fixed in version\n1:3.4p1-0woody4.\n\n\nWe recommend that you update your ssh-krb5 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "openssh-krb5",
+				"purl": "pkg:deb/debian/openssh-krb5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4p1-0woody4"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-383.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-383"
+		}
+	]
+}

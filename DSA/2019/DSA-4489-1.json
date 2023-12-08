@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4489-1",
+	"modified": "2023-10-16T00:18:29.942771Z",
+	"published": "2019-07-27T00:00:00Z",
+	"related": [
+		"CVE-2018-20969",
+		"CVE-2019-13636",
+		"CVE-2019-13638"
+	],
+	"summary": "patch - security update",
+	"details": "\nImre Rad discovered several vulnerabilities in GNU patch, leading to\nshell command injection or escape from the working directory and access\nand overwrite files, if specially crafted patch files are processed.\n\n\nThis update includes a bugfix for a regression introduced by the patch\nto address [CVE-2018-1000156](https://security-tracker.debian.org/tracker/CVE-2018-1000156) when applying an ed-style patch (#933140).\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 2.7.5-1+deb9u2.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2.7.6-3+deb10u1.\n\n\nWe recommend that you upgrade your patch packages.\n\n\nFor the detailed security status of patch please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/patch>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "patch",
+				"purl": "pkg:deb/debian/patch?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.5-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.5-1",
+				"2.7.5-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4489-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "patch",
+				"purl": "pkg:deb/debian/patch?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.6-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.6-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4489-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4489"
+		}
+	]
+}

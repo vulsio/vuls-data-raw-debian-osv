@@ -1,0 +1,127 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1896-1",
+	"modified": "2023-10-16T00:10:46.169618Z",
+	"published": "2009-09-28T00:00:00Z",
+	"related": [
+		"CVE-2009-3474",
+		"CVE-2009-3475",
+		"CVE-2009-3476"
+	],
+	"summary": "opensaml shibboleth-sp - potential code execution",
+	"details": "\nSeveral vulnerabilities have been discovered in the opensaml and\nshibboleth-sp packages, as used by Shibboleth 1.x:\n\n\n* Chris Ries discovered that decoding a crafted URL leads to a crash\n(and potentially, arbitrary code execution).\n* Ian Young discovered that embedded NUL characters in certificate names\nwere not correctly handled, exposing configurations using PKIX trust\nvalidation to impersonation attacks.\n* Incorrect processing of SAML metadata ignored key usage constraints.\n\n\nFor the old stable distribution (etch), these problems have been fixed\nin version 1.3f.dfsg1-2+etch1 of the shibboleth-sp packages, and\nversion 1.1a-2+etch1 of the opensaml packages.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.3.1.dfsg1-3+lenny1 of the shibboleth-sp packages, and\nversion 1.1.1-2+lenny1 of the opensaml packages.\n\n\nThe unstable distribution (sid) does not contain Shibboleth 1.x\npackages.\n\n\nThis update requires restarting the affected services (mainly Apache)\nto become effective.\n\n\nWe recommend that you upgrade your Shibboleth 1.x packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "opensaml",
+				"purl": "pkg:deb/debian/opensaml?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1a-2+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1a-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1896-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "shibboleth-sp",
+				"purl": "pkg:deb/debian/shibboleth-sp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3f.dfsg1-2+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3f.dfsg1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1896-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "opensaml",
+				"purl": "pkg:deb/debian/opensaml?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1-2+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1-2",
+				"1.1.1-2+lenny1~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1896-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "shibboleth-sp",
+				"purl": "pkg:deb/debian/shibboleth-sp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.1.dfsg1-3+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.1.dfsg1-3",
+				"1.3.1.dfsg1-3+lenny1~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1896-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1896"
+		}
+	]
+}

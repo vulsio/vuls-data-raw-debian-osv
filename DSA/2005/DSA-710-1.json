@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-710-1",
+	"modified": "2023-10-16T00:26:30.569631Z",
+	"published": "2005-04-18T00:00:00Z",
+	"related": [
+		"CVE-2003-0541"
+	],
+	"summary": "gtkhtml - null pointer dereference",
+	"details": "\nAlan Cox discovered a problem in gtkhtml, an HTML rendering widget\nused by the Evolution mail reader. Certain malformed messages could\ncause a crash due to a null pointer dereference.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0.2-1.woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0.4-6.2.\n\n\nWe recommend that you upgrade your gtkhtml package and restart\nEvolution.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gtkhtml",
+				"purl": "pkg:deb/debian/gtkhtml?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-1.woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-1",
+				"1.0.2-1.0.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-710-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-710"
+		}
+	]
+}

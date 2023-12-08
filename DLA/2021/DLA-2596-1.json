@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2596-1",
+	"modified": "2023-06-28T06:36:42.415123Z",
+	"published": "2021-03-17T00:00:00Z",
+	"related": [
+		"CVE-2017-12424",
+		"CVE-2017-20002"
+	],
+	"summary": "shadow - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the shadow suite of login\ntools. An attacker may escalate privileges in specific configurations.\n\n\n* [CVE-2017-20002](https://security-tracker.debian.org/tracker/CVE-2017-20002)\nShadow incorrectly lists pts/0 and pts/1 as physical terminals in\n /etc/securetty. This allows local users to login as password-less\n users even if they are connected by non-physical means such as SSH\n (hence bypassing PAM's nullok\\_secure configuration). This notably\n affects environments such as virtual machines automatically\n generated with a default blank root password, allowing all local\n users to escalate privileges. It should be noted however that\n /etc/securetty will be dropped in Debian 11/bullseye.\n* [CVE-2017-12424](https://security-tracker.debian.org/tracker/CVE-2017-12424)\nThe newusers tool could be made to manipulate internal data\n structures in ways unintended by the authors. Malformed input may\n lead to crashes (with a buffer overflow or other memory\n corruption) or other unspecified behaviors. This crosses a\n privilege boundary in, for example, certain web-hosting\n environments in which a Control Panel allows an unprivileged user\n account to create subaccounts.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:4.4-4.1+deb9u1.\n\n\nWe recommend that you upgrade your shadow packages.\n\n\nFor the detailed security status of shadow please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/shadow>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "shadow",
+				"purl": "pkg:deb/debian/shadow?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.4-4.1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.4-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2596-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2596"
+		}
+	]
+}

@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2337-1",
+	"modified": "2023-06-28T06:26:30.650247Z",
+	"published": "2020-08-22T00:00:00Z",
+	"related": [
+		"CVE-2018-20852",
+		"CVE-2019-16056",
+		"CVE-2019-20907",
+		"CVE-2019-5010",
+		"CVE-2019-9636",
+		"CVE-2019-9740",
+		"CVE-2019-9947",
+		"CVE-2019-9948"
+	],
+	"summary": "python2.7 - security update",
+	"details": "\nMultiple vulnerabilities were discovered in Python2.7, an interactive\nhigh-level object-oriented language.\n\n\n* [CVE-2018-20852](https://security-tracker.debian.org/tracker/CVE-2018-20852)\nBy using a malicious server an attacker might steal cookies that are\n meant for other domains.\n* [CVE-2019-5010](https://security-tracker.debian.org/tracker/CVE-2019-5010)\nNULL pointer dereference using a specially crafted X509 certificate.\n* [CVE-2019-9636](https://security-tracker.debian.org/tracker/CVE-2019-9636)\nImproper Handling of Unicode Encoding (with an incorrect netloc)\n during NFKC normalization resulting in information disclosure\n (credentials, cookies, etc. that are cached against a given\n hostname). A specially crafted URL could be incorrectly parsed to\n locate cookies or authentication data and send that information to\n a different host than when parsed correctly.\n* [CVE-2019-9740](https://security-tracker.debian.org/tracker/CVE-2019-9740)\nAn issue was discovered in urllib2 where CRLF injection is possible\n if the attacker controls a url parameter, as demonstrated by the\n first argument to urllib.request.urlopen with \\r\\n (specifically in\n the query string after a ? character) followed by an HTTP header or\n a Redis command.\n* [CVE-2019-9947](https://security-tracker.debian.org/tracker/CVE-2019-9947)\nAn issue was discovered in urllib2 where CRLF injection is possible\n if the attacker controls a url parameter, as demonstrated by the\n first argument to urllib.request.urlopen with \\r\\n (specifically in\n the path component of a URL that lacks a ? character) followed by an\n HTTP header or a Redis command. This is similar to the [CVE-2019-9740](https://security-tracker.debian.org/tracker/CVE-2019-9740)\n query string issue.\n* [CVE-2019-9948](https://security-tracker.debian.org/tracker/CVE-2019-9948)\nurllib supports the local\\_file: scheme, which makes it easier for\n remote attackers to bypass protection mechanisms that blacklist\n file: URIs, as demonstrated by triggering a\n urllib.urlopen('local\\_file:///etc/passwd') call.\n* [CVE-2019-10160](https://security-tracker.debian.org/tracker/CVE-2019-10160)\nA security regression of [CVE-2019-9636](https://security-tracker.debian.org/tracker/CVE-2019-9636) was discovered which still\n allows an attacker to exploit [CVE-2019-9636](https://security-tracker.debian.org/tracker/CVE-2019-9636) by abusing the user and\n password parts of a URL. When an application parses user-supplied\n URLs to store cookies, authentication credentials, or other kind of\n information, it is possible for an attacker to provide specially\n crafted URLs to make the application locate host-related information\n (e.g. cookies, authentication data) and send them to a different\n host than where it should, unlike if the URLs had been correctly\n parsed. The result of an attack may vary based on the application.\n* [CVE-2019-16056](https://security-tracker.debian.org/tracker/CVE-2019-16056)\nThe email module wrongly parses email addresses that contain\n multiple @ characters. An application that uses the email module and\n implements some kind of checks on the From/To headers of a message\n could be tricked into accepting an email address that should be\n denied.\n* [CVE-2019-20907](https://security-tracker.debian.org/tracker/CVE-2019-20907)\nOpening a crafted tar file could result in an infinite loop due to\n missing header validation.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.7.13-2+deb9u4.\n\n\nWe recommend that you upgrade your python2.7 packages.\n\n\nFor the detailed security status of python2.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python2.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python2.7",
+				"purl": "pkg:deb/debian/python2.7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.13-2+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7.13-2",
+				"2.7.13-2+deb9u1",
+				"2.7.13-2+deb9u2",
+				"2.7.13-2+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2337-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2337"
+		}
+	]
+}

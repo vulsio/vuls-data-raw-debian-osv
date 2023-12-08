@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-60-1",
+	"modified": "2023-06-28T06:22:02.951419Z",
+	"published": "2014-09-24T00:00:00Z",
+	"related": [
+		"CVE-2013-7108",
+		"CVE-2014-1878"
+	],
+	"summary": "icinga - security update",
+	"details": "\nTwo fixes for the Classic UI:\n\n\n* fix off-by-one memory access in process\\_cgivars() ([CVE-2013-7108](https://security-tracker.debian.org/tracker/CVE-2013-7108))\n* prevent possible buffer overflows in cmd.cgi ([CVE-2014-1878](https://security-tracker.debian.org/tracker/CVE-2014-1878))\n\n\nFor Debian 6 Squeeze, these issues have been fixed in icinga version 1.0.2-2+squeeze2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "icinga",
+				"purl": "pkg:deb/debian/icinga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-2+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-2",
+				"1.0.2-2+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-60-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-60"
+		}
+	]
+}

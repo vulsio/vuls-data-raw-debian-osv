@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3676-1",
+	"modified": "2023-11-30T18:18:51.010308Z",
+	"published": "2023-11-30T00:00:00Z",
+	"related": [
+		"CVE-2023-27102",
+		"CVE-2023-27103",
+		"CVE-2023-43887",
+		"CVE-2023-47471"
+	],
+	"summary": "libde265 - security update",
+	"details": "\nMultiple issues were found in libde265, an open source implementation of the h.265 video codec.\n\n\n* [CVE-2023-27102](https://security-tracker.debian.org/tracker/CVE-2023-27102)\nNULL pointer dereference in function decoder\\_context::process\\_slice\\_segment\\_header\n at decctx.cc.\n* [CVE-2023-27103](https://security-tracker.debian.org/tracker/CVE-2023-27103)\nHeap buffer overflow via the function derive\\_collocated\\_motion\\_vectors at motion.cc.\n* [CVE-2023-43887](https://security-tracker.debian.org/tracker/CVE-2023-43887)\nMultiple buffer overflows via the num\\_tile\\_columns and num\\_tile\\_row parameters in\n the function pic\\_parameter\\_set::dump.\n* [CVE-2023-47471](https://security-tracker.debian.org/tracker/CVE-2023-47471)\nBuffer overflow vulnerability in strukturag may cause a denial of service via\n the slice\\_segment\\_header function in the slice.cc component.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.0.11-0+deb10u5.\n\n\nWe recommend that you upgrade your libde265 packages.\n\n\nFor the detailed security status of libde265 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libde265>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libde265",
+				"purl": "pkg:deb/debian/libde265?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.11-0+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.11-0+deb10u4",
+				"1.0.3-1",
+				"1.0.3-1+deb10u1",
+				"1.0.3-1+deb10u2",
+				"1.0.3-1+deb10u3",
+				"1.0.4-1",
+				"1.0.7-1",
+				"1.0.8-1",
+				"1.0.8-1.1",
+				"1.0.9-1",
+				"1.0.9-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3676-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3676"
+		}
+	]
+}

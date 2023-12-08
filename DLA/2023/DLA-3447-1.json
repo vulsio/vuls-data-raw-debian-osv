@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3447-1",
+	"modified": "2023-06-28T06:30:37.068921Z",
+	"published": "2023-06-06T00:00:00Z",
+	"related": [
+		"CVE-2023-28755",
+		"CVE-2023-28756"
+	],
+	"summary": "ruby2.5 - security update",
+	"details": "\nTwo regular expression Denial of Service (ReDoS) issues were discovered in\nRuby: the first in the URI component, and the second in the Time module. Each\nof these issues could have resulted in a dramatic increase in execution time\ngiven malicious input.\n\n\n* [CVE-2023-28755](https://security-tracker.debian.org/tracker/CVE-2023-28755)\nA ReDoS issue was discovered in the URI component through 0.12.0 in Ruby\n through 3.2.1. The URI parser mishandles invalid URLs that have specific\n characters. It causes an increase in execution time for parsing strings to\n URI objects. The fixed versions are 0.12.1, 0.11.1, 0.10.2 and\n 0.10.0.1.\n* [CVE-2023-28756](https://security-tracker.debian.org/tracker/CVE-2023-28756)\nA ReDoS issue was discovered in the Time component through 0.2.1 in Ruby\n through 3.2.1. The Time parser mishandles invalid URLs that have specific\n characters. It causes an increase in execution time for parsing strings to\n Time objects. The fixed versions are 0.1.1 and 0.2.2.\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n2.5.5-3+deb10u5.\n\n\nWe recommend that you upgrade your ruby2.5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ruby2.5",
+				"purl": "pkg:deb/debian/ruby2.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.5-3+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.5-3",
+				"2.5.5-3+deb10u1",
+				"2.5.5-3+deb10u2",
+				"2.5.5-3+deb10u3",
+				"2.5.5-3+deb10u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3447-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3447"
+		}
+	]
+}

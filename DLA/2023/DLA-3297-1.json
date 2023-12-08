@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3297-1",
+	"modified": "2023-06-28T06:33:44.620121Z",
+	"published": "2023-01-31T00:00:00Z",
+	"related": [
+		"CVE-2022-48281"
+	],
+	"summary": "tiff - security update",
+	"details": "\nprocessCropSelections in tools/tiffcrop.c in LibTIFF, the Tag Image\nFile Format (TIFF) library and tools, has a heap-based buffer overflow\n(e.g., WRITE of size 307203) via a crafted TIFF image.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n4.1.0+git191117-2~deb10u6.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFor the detailed security status of tiff please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tiff>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.0+git191117-2~deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.10+git190814-1",
+				"4.0.10+git190818-1",
+				"4.0.10+git190903-1",
+				"4.0.10+git191003-1",
+				"4.0.10-4",
+				"4.1.0+git191117-1",
+				"4.1.0+git191117-2~deb10u1",
+				"4.1.0+git191117-2~deb10u2",
+				"4.1.0+git191117-2~deb10u3",
+				"4.1.0+git191117-2~deb10u4",
+				"4.1.0+git191117-2~deb10u5",
+				"4.1.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3297-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3297"
+		}
+	]
+}

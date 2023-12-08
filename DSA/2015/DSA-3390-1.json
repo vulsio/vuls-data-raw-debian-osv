@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3390-1",
+	"modified": "2023-10-16T00:11:58.149272Z",
+	"published": "2015-11-02T00:00:00Z",
+	"related": [
+		"CVE-2015-7835"
+	],
+	"summary": "xen - security update",
+	"details": "\nIt was discovered that the code to validate level 2 page table entries\nis bypassed when certain conditions are satisfied. A malicious PV guest\nadministrator can take advantage of this flaw to gain privileges via a\ncrafted superpage mapping.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 4.1.4-3+deb7u9.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 4.4.1-9+deb8u2.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.4-3+deb7u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2",
+				"4.1.4-3+deb7u3",
+				"4.1.4-3+deb7u4",
+				"4.1.4-3+deb7u5",
+				"4.1.4-3+deb7u6",
+				"4.1.4-3+deb7u7",
+				"4.1.4-3+deb7u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3390-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.1-9+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.1-9",
+				"4.4.1-9+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3390-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3390"
+		}
+	]
+}

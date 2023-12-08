@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5072-1",
+	"modified": "2023-10-16T00:17:28.166475Z",
+	"published": "2022-02-11T00:00:00Z",
+	"related": [
+		"CVE-2021-20001"
+	],
+	"summary": "debian-edu-config - security update",
+	"details": "\nMarcel Neumann, Robert Altschaffel, Loris Guba and Dustin Hermann\ndiscovered that debian-edu-config, a set of configuration files used for\nthe Debian Edu blend configured insecure permissions for the user web\nshares (~/public\\_html), which could result in privilege escalation.\n\n\nIf PHP functionality is needed for the user web shares, please refer\nto /usr/share/doc/debian-edu-config/README.public\\_html\\_with\\_PHP-CGI+suExec.md\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2.10.65+deb10u8.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.11.56+deb11u3.\n\n\nWe recommend that you upgrade your debian-edu-config packages.\n\n\nFor the detailed security status of debian-edu-config please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/debian-edu-config](https://security-tracker.debian.org/tracker/debian-edu-config)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "debian-edu-config",
+				"purl": "pkg:deb/debian/debian-edu-config?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.10.65+deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.65",
+				"2.10.65+deb10u1",
+				"2.10.65+deb10u2",
+				"2.10.65+deb10u3",
+				"2.10.65+deb10u4",
+				"2.10.65+deb10u5",
+				"2.10.65+deb10u6",
+				"2.10.65+deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5072-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "debian-edu-config",
+				"purl": "pkg:deb/debian/debian-edu-config?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.11.56+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.11.56",
+				"2.11.56+deb11u1",
+				"2.11.56+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5072-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5072"
+		}
+	]
+}

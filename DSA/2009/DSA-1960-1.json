@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1960-1",
+	"modified": "2023-10-16T00:10:49.646368Z",
+	"published": "2009-12-19T00:00:00Z",
+	"related": [
+		"CVE-2009-4235"
+	],
+	"summary": "acpid - weak file permissions",
+	"details": "\nIt was discovered that acpid, the Advanced Configuration and Power\nInterface event daemon, on the oldstable distribution (etch) creates\nits log file with weak permissions, which might expose sensitive\ninformation or might be abused by a local user to consume all free disk\nspace on the same partition of the file.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 1.0.4-5etch2.\n\n\nThe stable distribution (lenny) in version 1.0.8-1lenny2 and the\nunstable distribution (sid) in version 1.0.10-5, have been updated to\nfix the weak file permissions of the log file created by older\nversions.\n\n\nWe recommend that you upgrade your acpid packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "acpid",
+				"purl": "pkg:deb/debian/acpid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.4-5etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.4-5",
+				"1.0.4-5etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1960-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "acpid",
+				"purl": "pkg:deb/debian/acpid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.8-1lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.8-1",
+				"1.0.8-1lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1960-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1960"
+		}
+	]
+}

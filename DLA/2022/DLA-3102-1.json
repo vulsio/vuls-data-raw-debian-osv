@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3102-1",
+	"modified": "2022-09-13T02:20:25Z",
+	"published": "2022-09-11T00:00:00Z",
+	"related": [
+		"CVE-2022-2585",
+		"CVE-2022-2586",
+		"CVE-2022-2588",
+		"CVE-2022-26373",
+		"CVE-2022-29900",
+		"CVE-2022-29901",
+		"CVE-2022-36879",
+		"CVE-2022-36946"
+	],
+	"summary": "linux-5.10 - new package",
+	"details": "\nLinux 5.10 has been packaged for Debian 10 as linux-5.10. This\nprovides a supported upgrade path for systems that currently use\nkernel packages from the \"buster-backports\" suite.\n\n\nThere is no need to upgrade systems using Linux 4.19, as that kernel\nversion will also continue to be supported in the LTS period.\n\n\nThe \"apt full-upgrade\" command will *not* automatically install the\nupdated kernel packages. You should explicitly install one of the\nfollowing metapackages first, as appropriate for your system:\n\n\n* linux-image-5.10-686\n* linux-image-5.10-686-pae\n* linux-image-5.10-amd64\n* linux-image-5.10-arm64\n* linux-image-5.10-armmp\n* linux-image-5.10-armmp-lpae\n* linux-image-5.10-cloud-amd64\n* linux-image-5.10-cloud-arm64\n* linux-image-5.10-rt-686-pae\n* linux-image-5.10-rt-amd64\n* linux-image-5.10-rt-arm64\n* linux-image-5.10-rt-armmp\n\n\nFor example, if the command \"uname -r\" currently shows\n\"5.10.0-0.deb10.16-amd64\", you should install linux-image-5.10-amd64.\n\n\nThis backport does not include the following binary packages:\n\n\n\n> bpftool hyperv-daemons libcpupower-dev libcpupower1\n> linux-compiler-gcc-8-arm linux-compiler-gcc-8-x86 linux-cpupower\n> linux-libc-dev usbip\n\n\nOlder versions of most of those are built from the linux source\npackage in Debian 10.\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2022-2585](https://security-tracker.debian.org/tracker/CVE-2022-2585)\nA use-after-free flaw in the implementation of POSIX CPU timers\n may result in denial of service or in local privilege escalation.\n* [CVE-2022-2586](https://security-tracker.debian.org/tracker/CVE-2022-2586)\nA use-after-free in the Netfilter subsystem may result in local\n privilege escalation for a user with the CAP\\_NET\\_ADMIN capability\n in any user or network namespace.\n* [CVE-2022-2588](https://security-tracker.debian.org/tracker/CVE-2022-2588)\nZhenpeng Lin discovered a use-after-free flaw in the cls\\_route\n filter implementation which may result in local privilege\n escalation for a user with the CAP\\_NET\\_ADMIN capability in any\n user or network namespace.\n* [CVE-2022-26373](https://security-tracker.debian.org/tracker/CVE-2022-26373)\nIt was discovered that on certain processors with Intel's Enhanced\n Indirect Branch Restricted Speculation (eIBRS) capabilities there\n are exceptions to the documented properties in some situations,\n which may result in information disclosure.\n\n\nIntel's explanation of the issue can be found at\n <https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/post-barrier-return-stack-buffer-predictions.html>\n* [CVE-2022-29900](https://security-tracker.debian.org/tracker/CVE-2022-29900)\nJohannes Wikner and Kaveh Razavi reported that for AMD/Hygon\n processors, mis-trained branch predictions for return instructions\n may allow arbitrary speculative code execution under certain\n microarchitecture-dependent conditions.\n\n\nA list of affected AMD CPU types can be found at\n <https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-1037>\n* [CVE-2022-29901](https://security-tracker.debian.org/tracker/CVE-2022-29901)\nJohannes Wikner and Kaveh Razavi reported that for Intel\n processors (Intel Core generation 6, 7 and 8), protections against\n speculative branch target injection attacks were insufficient in\n some circumstances, which may allow arbitrary speculative code\n execution under certain microarchitecture-dependent conditions.\n\n\nMore information can be found at\n <https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/advisory-guidance/return-stack-buffer-underflow.html>\n* [CVE-2022-36879](https://security-tracker.debian.org/tracker/CVE-2022-36879)\nA flaw was discovered in xfrm\\_expand\\_policies in the xfrm\n subsystem which can cause a reference count to be dropped twice.\n* [CVE-2022-36946](https://security-tracker.debian.org/tracker/CVE-2022-36946)\nDomingo Dirutigliano and Nicola Guerrera reported a memory\n corruption flaw in the Netfilter subsystem which may result in\n denial of service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n5.10.136-1~deb10u3. This update additionally includes many more bug\nfixes from stable updates 5.10.128-5.10.136 inclusive.\n\n\nWe recommend that you upgrade your linux-5.10 packages.\n\n\nFor the detailed security status of linux-5.10 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-5.10>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "linux-5.10",
+				"purl": "pkg:deb/debian/linux-5.10?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.136-1~deb10u1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3102-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3102"
+		}
+	]
+}

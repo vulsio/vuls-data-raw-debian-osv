@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4374-1",
+	"modified": "2023-10-16T00:17:27.803078Z",
+	"published": "2019-01-28T00:00:00Z",
+	"related": [
+		"CVE-2018-15518",
+		"CVE-2018-19870",
+		"CVE-2018-19873"
+	],
+	"summary": "qtbase-opensource-src - security update",
+	"details": "\nSeveral issues were discovered in qtbase-opensource-src, a\ncross-platform C++ application framework, which could lead to\ndenial-of-service via application crash. Additionally, this update\nfixes a problem affecting vlc, where it would start without a GUI.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 5.7.1+dfsg-3+deb9u1.\n\n\nWe recommend that you upgrade your qtbase-opensource-src packages.\n\n\nFor the detailed security status of qtbase-opensource-src please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/qtbase-opensource-src](https://security-tracker.debian.org/tracker/qtbase-opensource-src)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "qtbase-opensource-src",
+				"purl": "pkg:deb/debian/qtbase-opensource-src?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.1+dfsg-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.1+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4374-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4374"
+		}
+	]
+}

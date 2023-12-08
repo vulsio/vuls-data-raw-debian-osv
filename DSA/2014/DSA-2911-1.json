@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2911-1",
+	"modified": "2023-10-16T00:11:37.207117Z",
+	"published": "2014-04-22T00:00:00Z",
+	"related": [
+		"CVE-2014-1493",
+		"CVE-2014-1497",
+		"CVE-2014-1505",
+		"CVE-2014-1508",
+		"CVE-2014-1509",
+		"CVE-2014-1510",
+		"CVE-2014-1511",
+		"CVE-2014-1512",
+		"CVE-2014-1513",
+		"CVE-2014-1514"
+	],
+	"summary": "icedove - security update",
+	"details": "\nMultiple security issues have been found in Icedove, Debian's version of\nthe Mozilla Thunderbird mail and news client. Multiple memory safety \nerrors, out of bound reads, use-after-frees and other implementation \nerrors may lead to the execution of arbitrary code, information \ndisclosure or denial of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 24.4.0-1~deb7u1. This updates Icedove to the Extended Support\nRelease (ESR) branch 24. An updated and compatible version of Enigmail \nis included with this update.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 24.4.0-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 24.4.0-1.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "icedove",
+				"purl": "pkg:deb/debian/icedove?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "24.4.0-1~deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"10.0.12-1",
+				"11.0-1",
+				"16.0.2-1",
+				"17.0-1",
+				"17.0.10-1",
+				"17.0.10-1+powerpcspe1",
+				"17.0.10-1+powerpcspe2",
+				"17.0.10-1~deb7u1",
+				"17.0.2-1",
+				"17.0.4-1",
+				"17.0.5-1",
+				"17.0.5-2",
+				"17.0.7-1",
+				"17.0.7-1~deb7u1",
+				"17.0.8-1",
+				"17.0.8-1~deb7u1",
+				"17.0.9-1",
+				"17.0.9-1~deb7u1",
+				"17.0.9-2",
+				"24.0-1",
+				"24.0~b3-2",
+				"24.1.1-1",
+				"24.2.0-1",
+				"24.2.0-1+alpha",
+				"24.2.0-1+powerpcspe1",
+				"24.3.0-1",
+				"24.3.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2911-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2911"
+		}
+	]
+}

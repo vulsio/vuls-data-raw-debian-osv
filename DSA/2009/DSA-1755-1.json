@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1755-1",
+	"modified": "2023-10-16T00:05:39.563497Z",
+	"published": "2009-03-25T00:00:00Z",
+	"related": [
+		"CVE-2009-0784"
+	],
+	"summary": "systemtap - local privilege escalation",
+	"details": "\nErik Sjoelund discovered that a race condition in the stap tool shipped\nby Systemtap, an instrumentation system for Linux 2.6, allows local\nprivilege escalation for members of the stapusr group.\n\n\nThe old stable distribution (etch) isn't affected.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.0.20080705-1+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.0.20090314-2.\n\n\nWe recommend that you upgrade your systemtap package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "systemtap",
+				"purl": "pkg:deb/debian/systemtap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.0.20080705-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.0.20080705-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1755-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1755"
+		}
+	]
+}

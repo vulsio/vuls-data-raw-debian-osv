@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1277-1",
+	"modified": "2023-06-28T06:20:31.585249Z",
+	"published": "2018-02-12T00:00:00Z",
+	"related": [
+		"CVE-2016-2540"
+	],
+	"summary": "audacity - security update",
+	"details": "\nChris Navarrete from Fortinet's FortiGuard Labs discovered that Audacity,\na multi-track audio editor, contains a vulnerability such that a .wav\nfile with a crafted FORMATCHUNK structure (many channels) can result in\na denial of service (memory corruption and application crash).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.0.1-1+deb7u1.\n\n\nWe recommend that you upgrade your audacity packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "audacity",
+				"purl": "pkg:deb/debian/audacity?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.1-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1277-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1277"
+		}
+	]
+}

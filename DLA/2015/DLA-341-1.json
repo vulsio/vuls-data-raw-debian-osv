@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-341-1",
+	"modified": "2023-06-28T06:21:29.608686Z",
+	"published": "2015-11-08T00:00:00Z",
+	"related": [
+		"CVE-2015-6831",
+		"CVE-2015-6832",
+		"CVE-2015-6833",
+		"CVE-2015-6834",
+		"CVE-2015-6836",
+		"CVE-2015-6837",
+		"CVE-2015-6838",
+		"CVE-2015-7803",
+		"CVE-2015-7804"
+	],
+	"summary": "php5 - security update",
+	"details": "\n* [CVE-2015-6831](https://security-tracker.debian.org/tracker/CVE-2015-6831)\nUse after free vulnerability was found in unserialize() function.\n We can create ZVAL and free it via Serializable::unserialize.\n However the unserialize() will still allow to use R: or r: to set\n references to that already freed memory. It is possible to\n use-after-free attack and execute arbitrary code remotely.\n* [CVE-2015-6832](https://security-tracker.debian.org/tracker/CVE-2015-6832)\nDangling pointer in the unserialization of ArrayObject items.\n* [CVE-2015-6833](https://security-tracker.debian.org/tracker/CVE-2015-6833)\nFiles extracted from archive may be placed outside of destination\n directory\n* [CVE-2015-6834](https://security-tracker.debian.org/tracker/CVE-2015-6834)\nUse after free vulnerability was found in unserialize() function.\n We can create ZVAL and free it via Serializable::unserialize.\n However the unserialize() will still allow to use R: or r: to set\n references to that already freed memory. It is possible to\n use-after-free attack and execute arbitrary code remotely.\n* [CVE-2015-6836](https://security-tracker.debian.org/tracker/CVE-2015-6836)\nA type confusion occurs within SOAP serialize\\_function\\_call due\n to an insufficient validation of the headers field.\n In the SoapClient's \\_\\_call method, the verify\\_soap\\_headers\\_array\n check is applied only to headers retrieved from\n zend\\_parse\\_parameters; problem is that a few lines later,\n soap\\_headers could be updated or even replaced with values from\n the \\_\\_default\\_headers object fields.\n* [CVE-2015-6837](https://security-tracker.debian.org/tracker/CVE-2015-6837)\nThe XSLTProcessor class misses a few checks on the input from the\n libxslt library. The valuePop() function call is able to return\n NULL pointer and php does not check that.\n* [CVE-2015-6838](https://security-tracker.debian.org/tracker/CVE-2015-6838)\nThe XSLTProcessor class misses a few checks on the input from the\n libxslt library. The valuePop() function call is able to return\n NULL pointer and php does not check that.\n* [CVE-2015-7803](https://security-tracker.debian.org/tracker/CVE-2015-7803)\nA NULL pointer dereference flaw was found in the way PHP's Phar\n extension parsed Phar archives. A specially crafted archive could\n cause PHP to crash.\n* [CVE-2015-7804](https://security-tracker.debian.org/tracker/CVE-2015-7804)\nAn uninitialized pointer use flaw was found in the\n phar\\_make\\_dirstream() function of PHP's Phar extension.\n A specially crafted phar file in the ZIP format with a directory\n entry with a file name \"/ZIP\" could cause a PHP application\n function to crash.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3.1-7+squeeze28"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze13",
+				"5.3.3-7+squeeze14",
+				"5.3.3-7+squeeze15",
+				"5.3.3-7+squeeze16",
+				"5.3.3-7+squeeze17",
+				"5.3.3-7+squeeze18",
+				"5.3.3-7+squeeze19",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze20",
+				"5.3.3-7+squeeze21",
+				"5.3.3-7+squeeze22",
+				"5.3.3-7+squeeze23",
+				"5.3.3-7+squeeze24",
+				"5.3.3-7+squeeze25",
+				"5.3.3-7+squeeze3",
+				"5.3.3-7+squeeze5",
+				"5.3.3-7+squeeze6",
+				"5.3.3-7+squeeze7",
+				"5.3.3-7+squeeze8",
+				"5.3.3-7+squeeze9",
+				"5.3.3.1-7+squeeze26",
+				"5.3.3.1-7+squeeze27"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-341-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-341"
+		}
+	]
+}

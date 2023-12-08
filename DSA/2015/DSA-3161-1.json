@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3161-1",
+	"modified": "2023-10-16T00:11:48.206654Z",
+	"published": "2015-02-11T00:00:00Z",
+	"related": [
+		"CVE-2015-0245"
+	],
+	"summary": "dbus - security update",
+	"details": "\nSimon McVittie discovered a local denial of service flaw in dbus, an\nasynchronous inter-process communication system. On systems with\nsystemd-style service activation, dbus-daemon does not prevent forged\nActivationFailure messages from non-root processes. A malicious local\nuser could use this flaw to trick dbus-daemon into thinking that systemd\nfailed to activate a system service, resulting in an error reply back to\nthe requester.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.6.8-1+deb7u6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.16-1.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "dbus",
+				"purl": "pkg:deb/debian/dbus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.8-1+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.8-1",
+				"1.6.8-1+deb7u1",
+				"1.6.8-1+deb7u2",
+				"1.6.8-1+deb7u3",
+				"1.6.8-1+deb7u4",
+				"1.6.8-1+deb7u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3161-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3161"
+		}
+	]
+}

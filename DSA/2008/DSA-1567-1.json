@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1567-1",
+	"modified": "2023-10-16T00:10:30.612609Z",
+	"published": "2008-05-05T00:00:00Z",
+	"related": [
+		"CVE-2008-1102"
+	],
+	"summary": "blender - arbitrary code execution",
+	"details": "\nStefan Cornelius discovered a vulnerability in the Radiance High\nDynamic Range (HDR) image parser in Blender, a 3D modelling\napplication. The weakness could enable a stack-based buffer overflow\nand the execution of arbitrary code if a maliciously-crafted HDR file\nis opened, or if a directory containing such a file is browsed via\nBlender's image-open dialog.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.42a-7.1+etch1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.45-5.\n\n\nWe recommend that you upgrade your blender packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "blender",
+				"purl": "pkg:deb/debian/blender?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.42a-7.1+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.42a-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1567-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1567"
+		}
+	]
+}

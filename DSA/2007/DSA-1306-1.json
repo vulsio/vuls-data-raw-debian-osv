@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1306-1",
+	"modified": "2023-10-16T00:05:17.033210Z",
+	"published": "2007-06-12T00:00:00Z",
+	"related": [
+		"CVE-2007-1116",
+		"CVE-2007-1362",
+		"CVE-2007-2867",
+		"CVE-2007-2868",
+		"CVE-2007-2869",
+		"CVE-2007-2870",
+		"CVE-2007-2871"
+	],
+	"summary": "xulrunner",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Xulrunner, a\nruntime environment for XUL applications. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2007-1362](https://security-tracker.debian.org/tracker/CVE-2007-1362)\nNicolas Derouet discovered that Xulrunner performs insufficient\n validation of cookies, which could lead to denial of service.\n* [CVE-2007-2867](https://security-tracker.debian.org/tracker/CVE-2007-2867)\nBoris Zbarsky, Eli Friedman, Georgi Guninski, Jesse Ruderman, Martijn\n Wargers and Olli Pettay discovered crashes in the layout engine, which\n might allow the execution of arbitrary code.\n* [CVE-2007-2868](https://security-tracker.debian.org/tracker/CVE-2007-2868)\nBrendan Eich, Igor Bukanov, Jesse Ruderman, moz\\_bug\\_r\\_a4 and Wladimir\n Palant discovered crashes in the Javascript engine, which might allow\n the execution of arbitrary code.\n* [CVE-2007-2869](https://security-tracker.debian.org/tracker/CVE-2007-2869)\nMarcel discovered that malicious web sites can cause massive\n resource consumption through the auto completion feature, resulting\n in denial of service.\n* [CVE-2007-2870](https://security-tracker.debian.org/tracker/CVE-2007-2870)\nmoz\\_bug\\_r\\_a4 discovered that adding an event listener through the\n `addEventListener()` function allows cross-site scripting.\n* [CVE-2007-2871](https://security-tracker.debian.org/tracker/CVE-2007-2871)\nChris Thomas discovered that XUL popups can be abused for spoofing\n or phishing attacks.\n\n\nThe oldstable distribution (sarge) doesn't include xulrunner.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 1.8.0.12-0etch1.\n\n\nThe unstable distribution (sid) will be fixed soon.\n\n\nWe recommend that you upgrade your xulrunner packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "xulrunner",
+				"purl": "pkg:deb/debian/xulrunner?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.0.12-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.0.11-2",
+				"1.8.0.11-3",
+				"1.8.0.11-4",
+				"1.8.0.11-4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1306-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1306"
+		}
+	]
+}

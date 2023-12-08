@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4808-1",
+	"modified": "2023-10-16T00:25:30.226177Z",
+	"published": "2020-12-09T00:00:00Z",
+	"related": [
+		"CVE-2020-27350"
+	],
+	"summary": "apt - security update",
+	"details": "\nIt was discovered that missing input validation in the ar/tar\nimplementations of APT, the high level package manager, could cause\nout-of-bounds reads or infinite loops, resulting in denial of service\nwhen processing malformed deb files.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.8.2.2.\n\n\nWe recommend that you upgrade your apt packages.\n\n\nFor the detailed security status of apt please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/apt](https://security-tracker.debian.org/tracker/apt)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2",
+				"1.8.2.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4808-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4808"
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2313-1",
+	"modified": "2023-06-28T06:28:49.516985Z",
+	"published": "2020-08-04T00:00:00Z",
+	"related": [
+		"CVE-2020-15861"
+	],
+	"summary": "net-snmp - security update",
+	"details": "\nA privilege escalation vulnerability was discovered in [Net-SNMP](http://www.net-snmp.org/), a set of tools for collecting and\norganising information about devices on computer networks, due to incorrect\nsymlink handling (CVE-2020-15861).\n\n\nThis security update also applies an upstream fix to their previous handling\nof CVE-2020-15862 as part of DLA-2299-1.\n\n\n* [CVE-2020-15861](https://security-tracker.debian.org/tracker/CVE-2020-15861)\nElevation of Privileges due to symlink handling\n* [CVE-2020-15862](https://security-tracker.debian.org/tracker/CVE-2020-15862)\nprivilege escalation\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n5.7.3+dfsg-1.7+deb9u3.\n\n\nWe recommend that you upgrade your net-snmp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "net-snmp",
+				"purl": "pkg:deb/debian/net-snmp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.3+dfsg-1.7+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.3+dfsg-1.7",
+				"5.7.3+dfsg-1.7+deb9u1",
+				"5.7.3+dfsg-1.7+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2313-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2313"
+		}
+	]
+}

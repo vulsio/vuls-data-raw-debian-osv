@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3407-1",
+	"modified": "2023-10-16T00:11:59.246986Z",
+	"published": "2015-11-26T00:00:00Z",
+	"related": [
+		"CVE-2015-0860"
+	],
+	"summary": "dpkg - security update",
+	"details": "\nHanno Boeck discovered a stack-based buffer overflow in the dpkg-deb\ncomponent of dpkg, the Debian package management system. This flaw could\npotentially lead to arbitrary code execution if a user or an automated\nsystem were tricked into processing a specially crafted Debian binary\npackage (.deb) in the old style Debian binary package format.\n\n\nThis update also includes updated translations and additional bug fixes.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.16.17.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.17.26.\n\n\nWe recommend that you upgrade your dpkg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "dpkg",
+				"purl": "pkg:deb/debian/dpkg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.16.17"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.16.10",
+				"1.16.11",
+				"1.16.12",
+				"1.16.13",
+				"1.16.14",
+				"1.16.15",
+				"1.16.16"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3407-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "dpkg",
+				"purl": "pkg:deb/debian/dpkg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17.26"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17.25"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3407-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3407"
+		}
+	]
+}

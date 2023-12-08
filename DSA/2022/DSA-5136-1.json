@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5136-1",
+	"modified": "2023-10-16T00:20:37.142377Z",
+	"published": "2022-05-12T00:00:00Z",
+	"related": [
+		"CVE-2022-1552"
+	],
+	"summary": "postgresql-13 - security update",
+	"details": "\nAlexander Lakhin discovered that the autovacuum feature and multiple\ncommands could escape the \"security-restricted operation\" sandbox.\n\n\nFor additional information please refer to the upstream announcement\nat [\\\nhttps://www.postgresql.org/support/security/CVE-2022-1552/](https://www.postgresql.org/support/security/CVE-2022-1552/)/\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 13.7-0+deb11u1.\n\n\nWe recommend that you upgrade your postgresql-13 packages.\n\n\nFor the detailed security status of postgresql-13 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/postgresql-13](https://security-tracker.debian.org/tracker/postgresql-13)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "postgresql-13",
+				"purl": "pkg:deb/debian/postgresql-13?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "13.7-0+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"13.3-1",
+				"13.4-0+deb11u1",
+				"13.4-1",
+				"13.4-2",
+				"13.4-3",
+				"13.5-0+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5136-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5136"
+		}
+	]
+}

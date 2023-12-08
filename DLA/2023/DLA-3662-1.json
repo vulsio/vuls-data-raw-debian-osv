@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3662-1",
+	"modified": "2023-11-25T22:16:59.275868Z",
+	"published": "2023-11-25T00:00:00Z",
+	"related": [
+		"CVE-2020-21427",
+		"CVE-2020-21428",
+		"CVE-2020-22524"
+	],
+	"summary": "freeimage - security update",
+	"details": "\nMultiple vulnerabilities were discovered in freeimage, library for graphics\nimage formats.\n\n\n[CVE-2020-21427](https://security-tracker.debian.org/tracker/CVE-2020-21427)\n Buffer overflow vulnerability in function LoadPixelDataRLE8\n in PluginBMP.cpp allows remote attackers to run arbitrary code and cause\n other impacts via crafted image file.\n\n\n[CVE-2020-21428](https://security-tracker.debian.org/tracker/CVE-2020-21428)\n Buffer overflow vulnerability in function LoadRGB in\n PluginDDS.cpp allows remote attackers to run arbitrary code and cause other\n impacts via crafted image file.\n\n\n[CVE-2020-22524](https://security-tracker.debian.org/tracker/CVE-2020-22524)\n Buffer overflow vulnerability in FreeImage\\_Load function\n allows remote attackers to run arbitrary code and cause other\n impacts via crafted PFM file.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.18.0+ds2-1+deb10u2.\n\n\nWe recommend that you upgrade your freeimage packages.\n\n\nFor the detailed security status of freeimage please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/freeimage>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "freeimage",
+				"purl": "pkg:deb/debian/freeimage?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.18.0+ds2-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.18.0+ds2-1",
+				"3.18.0+ds2-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3662-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3662"
+		}
+	]
+}

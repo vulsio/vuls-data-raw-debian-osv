@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2350-1",
+	"modified": "2023-06-28T06:21:15.837885Z",
+	"published": "2020-08-29T00:00:00Z",
+	"related": [
+		"CVE-2017-16908"
+	],
+	"summary": "php-horde-kronolith - security update",
+	"details": "\nIn Horde Groupware, there has been an XSS via the Name field during\ncreation of a new Resource. This could have been leveraged for remote\ncode execution after compromising an administrator account, because the\n[CVE-2015-7984](https://security-tracker.debian.org/tracker/CVE-2015-7984) CSRF protection mechanism can then be bypassed.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n4.2.19-1+deb9u1.\n\n\nWe recommend that you upgrade your php-horde-kronolith packages.\n\n\nFor the detailed security status of php-horde-kronolith please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/php-horde-kronolith>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "php-horde-kronolith",
+				"purl": "pkg:deb/debian/php-horde-kronolith?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.19-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.19-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2350-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2350"
+		}
+	]
+}

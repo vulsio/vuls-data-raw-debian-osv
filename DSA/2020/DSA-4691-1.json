@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4691-1",
+	"modified": "2023-10-16T00:20:22.428054Z",
+	"published": "2020-05-21T00:00:00Z",
+	"related": [
+		"CVE-2020-10995",
+		"CVE-2020-12244"
+	],
+	"summary": "pdns-recursor - security update",
+	"details": "\nTwo vulnerabilities have been discovered in PDNS Recursor, a resolving\nname server; a traffic amplification attack against third party\nauthoritative name servers (NXNSAttack) and insufficient validation of\nNXDOMAIN responses lacking an SOA.\n\n\nThe version of pdns-recursor in the oldstable distribution (stretch) is\nno longer supported. If these security issues affect your setup, you\nshould upgrade to the stable distribution (buster).\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.1.11-1+deb10u1.\n\n\nWe recommend that you upgrade your pdns-recursor packages.\n\n\nFor the detailed security status of pdns-recursor please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/pdns-recursor](https://security-tracker.debian.org/tracker/pdns-recursor)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "pdns-recursor",
+				"purl": "pkg:deb/debian/pdns-recursor?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.11-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.11-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4691-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4691"
+		}
+	]
+}

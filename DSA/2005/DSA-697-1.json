@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-697-1",
+	"modified": "2023-10-16T00:34:05.954320Z",
+	"published": "2005-03-29T00:00:00Z",
+	"related": [
+		"CVE-2005-0469"
+	],
+	"summary": "netkit-telnet - buffer overflow",
+	"details": "\nGaĂŤl Delalleau discovered a buffer overflow in the handling of\nthe LINEMODE suboptions in telnet clients. This can lead to the\nexecution of arbitrary code when connected to a malicious server.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.17-18woody3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.17-28.\n\n\nWe recommend that you upgrade your telnet package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "netkit-telnet",
+				"purl": "pkg:deb/debian/netkit-telnet?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.17-18woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.17-18woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-697-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-697"
+		}
+	]
+}

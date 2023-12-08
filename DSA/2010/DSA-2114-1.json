@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2114-1",
+	"modified": "2023-10-16T00:05:45.606818Z",
+	"published": "2010-09-26T00:00:00Z",
+	"related": [
+		"CVE-2010-2542"
+	],
+	"summary": "git-core",
+	"details": "\nThe Debian stable point release 5.0.6 included updated packages of\nthe Git revision control system in order to fix a security issue.\nUnfortunately, the update introduced a regression which could make\nit impossible to clone or create Git repositories. This upgrade\nfixes this regression, which is tracked as\n[Debian bug #595728](https://bugs.debian.org/595728).\n\n\nThe original security issue allowed an attacker to execute arbitrary\ncode if he could trick a local user to execute a git command in a\ncrafted working directory ([CVE-2010-2542](https://security-tracker.debian.org/tracker/CVE-2010-2542)).\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.5.6.5-3+lenny3.2.\n\n\nThe packages for the hppa architecture are not included in this\nadvisory. However, the hppa architecture is not known to be affected\nby the regression.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), the security issue has been fixed in version 1.7.1-1.1. These\ndistributions were not affected by the regression.\n\n\nWe recommend that you upgrade your git-core packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "git-core",
+				"purl": "pkg:deb/debian/git-core?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.5.6.5-3+lenny3.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.5.6.5-2",
+				"1:1.5.6.5-3",
+				"1:1.5.6.5-3+lenny1",
+				"1:1.5.6.5-3+lenny2",
+				"1:1.5.6.5-3+lenny2~bpo40+1",
+				"1:1.5.6.5-3+lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2114-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2114"
+		}
+	]
+}

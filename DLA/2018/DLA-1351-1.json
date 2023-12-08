@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1351-1",
+	"modified": "2023-06-28T06:20:35.376799Z",
+	"published": "2018-04-17T00:00:00Z",
+	"related": [
+		"CVE-2018-7550"
+	],
+	"summary": "qemu - security update",
+	"details": "\nThe load\\_multiboot function in hw/i386/multiboot.c in Quick Emulator\n(aka QEMU) allows local guest OS users to execute arbitrary code on\nthe QEMU host via a mh\\_load\\_end\\_addr value greater than\nmh\\_bss\\_end\\_addr, which triggers an out-of-bounds read or write memory\naccess.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u25.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u25"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6+deb7u14",
+				"1.1.2+dfsg-6+deb7u15",
+				"1.1.2+dfsg-6+deb7u16",
+				"1.1.2+dfsg-6+deb7u17",
+				"1.1.2+dfsg-6+deb7u18",
+				"1.1.2+dfsg-6+deb7u19",
+				"1.1.2+dfsg-6+deb7u20",
+				"1.1.2+dfsg-6+deb7u22",
+				"1.1.2+dfsg-6+deb7u23",
+				"1.1.2+dfsg-6+deb7u24",
+				"1.1.2+dfsg-6a",
+				"1.1.2+dfsg-6a+deb7u1",
+				"1.1.2+dfsg-6a+deb7u10",
+				"1.1.2+dfsg-6a+deb7u11",
+				"1.1.2+dfsg-6a+deb7u12",
+				"1.1.2+dfsg-6a+deb7u13",
+				"1.1.2+dfsg-6a+deb7u2",
+				"1.1.2+dfsg-6a+deb7u3",
+				"1.1.2+dfsg-6a+deb7u4",
+				"1.1.2+dfsg-6a+deb7u5",
+				"1.1.2+dfsg-6a+deb7u6",
+				"1.1.2+dfsg-6a+deb7u7",
+				"1.1.2+dfsg-6a+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6a+deb7u8",
+				"1.1.2+dfsg-6a+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1351-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1351"
+		}
+	]
+}

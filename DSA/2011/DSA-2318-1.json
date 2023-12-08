@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2318-1",
+	"modified": "2023-10-16T00:11:08.132037Z",
+	"published": "2011-10-06T00:00:00Z",
+	"related": [
+		"CVE-2011-3208",
+		"CVE-2011-3372"
+	],
+	"summary": "cyrus-imapd-2.2 - several",
+	"details": "\nMultiple security issues have been discovered in cyrus-imapd, a highly scalable\nmail system designed for use in enterprise environments. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2011-3208](https://security-tracker.debian.org/tracker/CVE-2011-3208)\nCoverity discovered a stack-based buffer overflow in the NNTP server\n implementation (nttpd) of cyrus-imapd. An attacker can exploit this\n flaw via several crafted NNTP commands to execute arbitrary code.\n* [CVE-2011-3372](https://security-tracker.debian.org/tracker/CVE-2011-3372)\nStefan Cornelius of Secunia Research discovered that the command processing\n of the NNTP server implementation (nttpd) of cyrus-imapd is not properly\n implementing access restrictions for certain commands and is not checking\n for a complete, successful authentication. An attacker can use this flaw\n to bypass access restrictions for some commands and, e.g. exploit\n [CVE-2011-3208](https://security-tracker.debian.org/tracker/CVE-2011-3208) without proper authentication.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.2\\_2.2.13-14+lenny5.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.2\\_2.2.13-19+squeeze2.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\ncyrus-imapd-2.4 version 2.4.12-1.\n\n\nWe recommend that you upgrade your cyrus-imapd-2.2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "cyrus-imapd-2.2",
+				"purl": "pkg:deb/debian/cyrus-imapd-2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-19+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-19",
+				"2.2.13-19+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2318-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "cyrus-imapd-2.2",
+				"purl": "pkg:deb/debian/cyrus-imapd-2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-14+lenny5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-14",
+				"2.2.13-14+lenny1",
+				"2.2.13-14+lenny3",
+				"2.2.13-14+lenny4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2318-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2318"
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2143-1",
+	"modified": "2023-10-16T00:10:59.191203Z",
+	"published": "2011-01-14T00:00:00Z",
+	"related": [
+		"CVE-2010-3677",
+		"CVE-2010-3680",
+		"CVE-2010-3681",
+		"CVE-2010-3682",
+		"CVE-2010-3833",
+		"CVE-2010-3834",
+		"CVE-2010-3835",
+		"CVE-2010-3836",
+		"CVE-2010-3837",
+		"CVE-2010-3838",
+		"CVE-2010-3840"
+	],
+	"summary": "mysql-dfsg-5.0 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in the MySQL database server.\nThe Common Vulnerabilities and Exposures project identifies the following \nproblems:\n\n\n* [CVE-2010-3677](https://security-tracker.debian.org/tracker/CVE-2010-3677)\nIt was discovered that MySQL allows remote authenticated users to cause\n a denial of service (mysqld daemon crash) via a join query that uses a\n table with a unique SET column.\n* [CVE-2010-3680](https://security-tracker.debian.org/tracker/CVE-2010-3680)\nIt was discovered that MySQL allows remote authenticated users to cause\n a denial of service (mysqld daemon crash) by creating temporary tables\n while using InnoDB, which triggers an assertion failure.\n* [CVE-2010-3681](https://security-tracker.debian.org/tracker/CVE-2010-3681)\nIt was discovered that MySQL allows remote authenticated users to cause\n a denial of service (mysqld daemon crash) by using the HANDLER interface\n and performing \"alternate reads from two indexes on a table,\" which\n triggers an assertion failure.\n* [CVE-2010-3682](https://security-tracker.debian.org/tracker/CVE-2010-3682)\nIt was discovered that MySQL incorrectly handled use of EXPLAIN with\n certain queries. \n An authenticated user could crash the server.\n* [CVE-2010-3833](https://security-tracker.debian.org/tracker/CVE-2010-3833)\nIt was discovered that MySQL incorrectly handled propagation during\n evaluation of arguments to extreme-value functions.\n An authenticated user could crash the server.\n* [CVE-2010-3834](https://security-tracker.debian.org/tracker/CVE-2010-3834)\nIt was discovered that MySQL incorrectly handled materializing a derived\n table that required a temporary table for grouping.\n An authenticated user could crash the server.\n* [CVE-2010-3835](https://security-tracker.debian.org/tracker/CVE-2010-3835)\nIt was discovered that MySQL incorrectly handled certain user-variable\n assignment expressions that are evaluated in a logical expression context.\n An authenticated user could crash the server.\n* [CVE-2010-3836](https://security-tracker.debian.org/tracker/CVE-2010-3836)\nIt was discovered that MySQL incorrectly handled pre-evaluation of LIKE\n predicates during view preparation.\n An authenticated user could crash the server.\n* [CVE-2010-3837](https://security-tracker.debian.org/tracker/CVE-2010-3837)\nIt was discovered that MySQL incorrectly handled using GROUP\\_CONCAT()\n and WITH ROLLUP together.\n An authenticated user could crash the server.\n* [CVE-2010-3838](https://security-tracker.debian.org/tracker/CVE-2010-3838)\nIt was discovered that MySQL incorrectly handled certain queries using a\n mixed list of numeric and LONGBLOB arguments to the GREATEST() or\n LEAST() functions.\n An authenticated user could crash the server.\n* [CVE-2010-3840](https://security-tracker.debian.org/tracker/CVE-2010-3840)\nIt was discovered that MySQL incorrectly handled improper WKB data\n passed to the PolyFromWKB() function.\n An authenticated user could crash the server.\n\n\nFor the stable distribution (lenny), these problems have been fixed\nin version 5.0.51a-24+lenny5.\n\n\nThe testing (squeeze) and unstable (sid) distribution do not contain\nmysql-dfsg-5.0 anymore.\n\n\nWe recommend that you upgrade your mysql-dfsg-5.0 packages.\n\n\nFurther information about Debian Security Advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: [https://www.debian.org/security/]($(HOME)/security/)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mysql-dfsg-5.0",
+				"purl": "pkg:deb/debian/mysql-dfsg-5.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.51a-24+lenny5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.51a-23",
+				"5.0.51a-24",
+				"5.0.51a-24+lenny1",
+				"5.0.51a-24+lenny1~bpo40+1",
+				"5.0.51a-24+lenny2",
+				"5.0.51a-24+lenny2+spu1",
+				"5.0.51a-24+lenny2~bpo40+1",
+				"5.0.51a-24+lenny3",
+				"5.0.51a-24+lenny4",
+				"5.0.51a-24~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2143-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2143"
+		}
+	]
+}

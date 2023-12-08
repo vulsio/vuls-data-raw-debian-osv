@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5281-1",
+	"modified": "2023-10-16T00:16:30.841836Z",
+	"published": "2022-11-15T00:00:00Z",
+	"related": [
+		"CVE-2022-41741",
+		"CVE-2022-41742"
+	],
+	"summary": "nginx - security update",
+	"details": "\nIt was discovered that parsing errors in the mp4 module of Nginx, a\nhigh-performance web and reverse proxy server, could result in denial\nof service, memory disclosure or potentially the execution of arbitrary\ncode when processing a malformed mp4 file.\n\n\nThis module is only enabled in the nginx-extras binary package.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.18.0-6.1+deb11u3.\n\n\nWe recommend that you upgrade your nginx packages.\n\n\nFor the detailed security status of nginx please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/nginx](https://security-tracker.debian.org/tracker/nginx)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.18.0-6.1+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.18.0-6.1",
+				"1.18.0-6.1+deb11u1",
+				"1.18.0-6.1+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5281-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5281"
+		}
+	]
+}

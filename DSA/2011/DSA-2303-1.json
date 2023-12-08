@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2303-1",
+	"modified": "2023-10-16T00:11:07.283897Z",
+	"published": "2011-09-10T00:00:00Z",
+	"related": [
+		"CVE-2011-1020",
+		"CVE-2011-1576",
+		"CVE-2011-2484",
+		"CVE-2011-2491",
+		"CVE-2011-2492",
+		"CVE-2011-2495",
+		"CVE-2011-2496",
+		"CVE-2011-2497",
+		"CVE-2011-2517",
+		"CVE-2011-2525",
+		"CVE-2011-2700",
+		"CVE-2011-2723",
+		"CVE-2011-2905",
+		"CVE-2011-2909",
+		"CVE-2011-2918",
+		"CVE-2011-2928",
+		"CVE-2011-3188",
+		"CVE-2011-3191"
+	],
+	"summary": "linux-2.6 - several issues",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service or privilege escalation. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2011-1020](https://security-tracker.debian.org/tracker/CVE-2011-1020)\nKees Cook discovered an issue in the /proc filesystem that allows local\n users to gain access to sensitive process information after execution of a\n setuid binary.\n* [CVE-2011-1576](https://security-tracker.debian.org/tracker/CVE-2011-1576)\nRyan Sweat discovered an issue in the VLAN implementation. Local users may\n be able to cause a kernel memory leak, resulting in a denial of service.\n* [CVE-2011-2484](https://security-tracker.debian.org/tracker/CVE-2011-2484)\nVasiliy Kulikov of Openwall discovered that the number of exit handlers that\n a process can register is not capped, resulting in local denial of service\n through resource exhaustion (CPU time and memory).\n* [CVE-2011-2491](https://security-tracker.debian.org/tracker/CVE-2011-2491)\nVasily Averin discovered an issue with the NFS locking implementation. A\n malicious NFS server can cause a client to hang indefinitely in an unlock\n call.\n* [CVE-2011-2492](https://security-tracker.debian.org/tracker/CVE-2011-2492)\nMarek Kroemeke and Filip Palian discovered that uninitialized struct\n elements in the Bluetooth subsystem could lead to a leak of sensitive kernel\n memory through leaked stack memory.\n* [CVE-2011-2495](https://security-tracker.debian.org/tracker/CVE-2011-2495)\nVasiliy Kulikov of Openwall discovered that the io file of a process' proc\n directory was world-readable, resulting in local information disclosure of\n information such as password lengths.\n* [CVE-2011-2496](https://security-tracker.debian.org/tracker/CVE-2011-2496)\nRobert Swiecki discovered that mremap() could be abused for local denial of\n service by triggering a BUG\\_ON assert.\n* [CVE-2011-2497](https://security-tracker.debian.org/tracker/CVE-2011-2497)\nDan Rosenberg discovered an integer underflow in the Bluetooth subsystem,\n which could lead to denial of service or privilege escalation.\n* [CVE-2011-2517](https://security-tracker.debian.org/tracker/CVE-2011-2517)\nIt was discovered that the netlink-based wireless configuration interface\n performed insufficient length validation when parsing SSIDs, resulting in\n buffer overflows. Local users with the CAP\\_NET\\_ADMIN capability can cause a\n denial of service.\n* [CVE-2011-2525](https://security-tracker.debian.org/tracker/CVE-2011-2525)\nBen Pfaff reported an issue in the network scheduling code. A local user\n could cause a denial of service (NULL pointer dereference) by sending a\n specially crafted netlink message.\n* [CVE-2011-2700](https://security-tracker.debian.org/tracker/CVE-2011-2700)\nMauro Carvalho Chehab of Red Hat reported a buffer overflow issue in the\n driver for the Si4713 FM Radio Transmitter driver used by N900 devices.\n Local users could exploit this issue to cause a denial of service or\n potentially gain elevated privileges.\n* [CVE-2011-2723](https://security-tracker.debian.org/tracker/CVE-2011-2723)\nBrent Meshier reported an issue in the GRO (generic receive offload)\n implementation. This can be exploited by remote users to create a denial of\n service (system crash) in certain network device configurations.\n* [CVE-2011-2905](https://security-tracker.debian.org/tracker/CVE-2011-2905)\nChristian Ohm discovered that the perf analysis tool searches for its\n config files in the current working directory. This could lead to denial of\n service or potential privilege escalation if a user with elevated privileges\n is tricked into running perf in a directory under the control of the\n attacker.\n* [CVE-2011-2909](https://security-tracker.debian.org/tracker/CVE-2011-2909)\nVasiliy Kulikov of Openwall discovered that a programming error in\n the Comedi driver could lead to the information disclosure through \n leaked stack memory.\n* [CVE-2011-2918](https://security-tracker.debian.org/tracker/CVE-2011-2918)\nVince Weaver discovered that incorrect handling of software event overflows\n in the perf analysis tool could lead to local denial of service.\n* [CVE-2011-2928](https://security-tracker.debian.org/tracker/CVE-2011-2928)\nTimo Warns discovered that insufficient validation of Be filesystem images\n could lead to local denial of service if a malformed filesystem image is\n mounted.\n* [CVE-2011-3188](https://security-tracker.debian.org/tracker/CVE-2011-3188)\nDan Kaminsky reported a weakness of the sequence number generation in the\n TCP protocol implementation. This can be used by remote attackers to inject\n packets into an active session.\n* [CVE-2011-3191](https://security-tracker.debian.org/tracker/CVE-2011-3191)\nDarren Lavender reported an issue in the Common Internet File System (CIFS).\n A malicious file server could cause memory corruption leading to a denial of\n service.\n\n\nThis update also includes a fix for a regression introduced with the previous\nsecurity fix for [CVE-2011-1768](https://security-tracker.debian.org/tracker/CVE-2011-1768)\n([\\\nDebian bug #633738](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=633738)).\n\n\n\nFor the stable distribution (squeeze), this problem has been fixed in version\n2.6.32-35squeeze2. Updates for issues impacting the oldstable distribution\n(lenny) will be available soon.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+35squeeze2 |\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-35squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2303-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2303"
+		}
+	]
+}

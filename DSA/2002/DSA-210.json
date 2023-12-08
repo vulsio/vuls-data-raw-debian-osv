@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-210",
+	"modified": "2023-10-16T00:10:57.970004Z",
+	"published": "2002-12-13T00:00:00Z",
+	"related": [
+		"CVE-2002-1405"
+	],
+	"summary": "lynx - CRLF injection",
+	"details": "\nlynx (a text-only web browser) did not properly check for illegal\ncharacters in all places, including processing of command line options,\nwhich could be used to insert extra HTTP headers in a request.\n\n\nFor Debian GNU/Linux 2.2/potato this has been fixed in version 2.8.3-1.1\nof the lynx package and version 2.8.3.1-1.1 of the lynx-ssl package.\n\n\nFor Debian GNU/Linux 3.0/woody this has been fixed in version 2.8.4.1b-3.2\nof the lynx package and version 1:2.8.4.1b-3.1 of the lynx-ssl package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "lynx",
+				"purl": "pkg:deb/debian/lynx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.3-1.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-210.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "lynx-ssl",
+				"purl": "pkg:deb/debian/lynx-ssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.3.1-1.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.3.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-210.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-210"
+		}
+	]
+}

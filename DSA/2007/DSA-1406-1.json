@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1406-1",
+	"modified": "2023-10-16T00:05:22.266875Z",
+	"published": "2007-11-09T00:00:00Z",
+	"related": [
+		"CVE-2006-3548",
+		"CVE-2006-3549",
+		"CVE-2006-4256",
+		"CVE-2007-1473",
+		"CVE-2007-1474"
+	],
+	"summary": "horde3 - several vulnerabilities",
+	"details": "\n\nSeveral remote vulnerabilities have been discovered in the Horde web\napplication framework. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n\n* [CVE-2006-3548](https://security-tracker.debian.org/tracker/CVE-2006-3548)\n\n Moritz Naumann discovered that Horde allows remote attackers\n to inject arbitrary web script or HTML in the context of a logged\n in user (cross site scripting).\n \n\n\n\n This vulnerability applies to oldstable (sarge) only.\n* [CVE-2006-3549](https://security-tracker.debian.org/tracker/CVE-2006-3549)\n\n Moritz Naumann discovered that Horde does not properly restrict\n its image proxy, allowing remote attackers to use the server as a\n proxy.\n \n\n\n\n This vulnerability applies to oldstable (sarge) only.\n* [CVE-2006-4256](https://security-tracker.debian.org/tracker/CVE-2006-4256)\n\n Marc Ruef discovered that Horde allows remote attackers to\n include web pages from other sites, which could be useful for\n phishing attacks.\n \n\n\n\n This vulnerability applies to oldstable (sarge) only.\n* [CVE-2007-1473](https://security-tracker.debian.org/tracker/CVE-2007-1473)\n\n Moritz Naumann discovered that Horde allows remote attackers\n to inject arbitrary web script or HTML in the context of a logged\n in user (cross site scripting).\n \n\n\n\n This vulnerability applies to both stable (etch) and oldstable (sarge).\n* [CVE-2007-1474](https://security-tracker.debian.org/tracker/CVE-2007-1474)\n\n iDefense discovered that the cleanup cron script in Horde\n allows local users to delete arbitrary files.\n \n\n\n\n This vulnerability applies to oldstable (sarge) only.\n\n\n\nFor the old stable distribution (sarge) these problems have been fixed in\nversion 3.0.4-4sarge6.\n\n\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 3.1.3-4etch1.\n\n\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.1.4-1.\n\n\n\n\nWe recommend that you upgrade your horde3 package.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "horde3",
+				"purl": "pkg:deb/debian/horde3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.4-4sarge6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.4-4",
+				"3.0.4-4sarge1",
+				"3.0.4-4sarge2",
+				"3.0.4-4sarge3",
+				"3.0.4-4sarge4",
+				"3.0.4-4sarge5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1406-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "horde3",
+				"purl": "pkg:deb/debian/horde3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.3-4etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.3-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1406-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1406"
+		}
+	]
+}

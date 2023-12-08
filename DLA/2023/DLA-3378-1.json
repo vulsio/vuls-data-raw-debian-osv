@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3378-1",
+	"modified": "2023-06-28T06:50:41.096365Z",
+	"published": "2023-03-31T00:00:00Z",
+	"related": [
+		"CVE-2021-46322"
+	],
+	"summary": "duktape - security update",
+	"details": "\nAn issue has been found in duktape, an embeddable Javascript engine.\nIt was discovered that a special crafted js file could result in a SEGV\ndue to reaching some stack limits.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.3.0-1+deb10u1.\n\n\nWe recommend that you upgrade your duktape packages.\n\n\nFor the detailed security status of duktape please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/duktape>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "duktape",
+				"purl": "pkg:deb/debian/duktape?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3378-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3378"
+		}
+	]
+}

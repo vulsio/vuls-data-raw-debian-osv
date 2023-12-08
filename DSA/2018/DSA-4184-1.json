@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4184-1",
+	"modified": "2023-10-16T00:13:00.488422Z",
+	"published": "2018-04-28T00:00:00Z",
+	"related": [
+		"CVE-2017-12122",
+		"CVE-2017-14440",
+		"CVE-2017-14441",
+		"CVE-2017-14442",
+		"CVE-2017-14448",
+		"CVE-2017-14450",
+		"CVE-2017-2887",
+		"CVE-2018-3837",
+		"CVE-2018-3838",
+		"CVE-2018-3839"
+	],
+	"summary": "sdl-image1.2 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the image loading\nlibrary for Simple DirectMedia Layer 1.2, which could result in denial\nof service or the execution of arbitrary code if malformed image files\nare opened.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.2.12-5+deb8u1.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.2.12-5+deb9u1.\n\n\nWe recommend that you upgrade your sdl-image1.2 packages.\n\n\nFor the detailed security status of sdl-image1.2 please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/sdl-image1.2](https://security-tracker.debian.org/tracker/sdl-image1.2)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sdl-image1.2",
+				"purl": "pkg:deb/debian/sdl-image1.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.12-5+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.12-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4184-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sdl-image1.2",
+				"purl": "pkg:deb/debian/sdl-image1.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.12-5+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.12-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4184-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4184"
+		}
+	]
+}

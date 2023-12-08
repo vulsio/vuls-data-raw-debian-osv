@@ -1,0 +1,99 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3500-1",
+	"modified": "2023-10-16T00:12:03.937288Z",
+	"published": "2016-03-01T00:00:00Z",
+	"related": [
+		"CVE-2016-0702",
+		"CVE-2016-0705",
+		"CVE-2016-0797",
+		"CVE-2016-0798",
+		"CVE-2016-0799",
+		"CVE-2016-2842"
+	],
+	"summary": "openssl - security update",
+	"details": "\nSeveral vulnerabilities were discovered in OpenSSL, a Secure Socket Layer\ntoolkit.\n\n\n* [CVE-2016-0702](https://security-tracker.debian.org/tracker/CVE-2016-0702)\nYuval Yarom from the University of Adelaide and NICTA, Daniel Genkin\n from Technion and Tel Aviv University, and Nadia Heninger from the\n University of Pennsylvania discovered a side-channel attack which\n makes use of cache-bank conflicts on the Intel Sandy-Bridge\n microarchitecture. This could allow local attackers to recover RSA\n private keys.\n* [CVE-2016-0705](https://security-tracker.debian.org/tracker/CVE-2016-0705)\nAdam Langley from Google discovered a double free bug when parsing\n malformed DSA private keys. This could allow remote attackers to\n cause a denial of service or memory corruption in applications\n parsing DSA private keys received from untrusted sources.\n* [CVE-2016-0797](https://security-tracker.debian.org/tracker/CVE-2016-0797)\nGuido Vranken discovered an integer overflow in the BN\\_hex2bn and\n BN\\_dec2bn functions that can lead to a NULL pointer dereference and\n heap corruption. This could allow remote attackers to cause a denial\n of service or memory corruption in applications processing hex or\n dec data received from untrusted sources.\n* [CVE-2016-0798](https://security-tracker.debian.org/tracker/CVE-2016-0798)\nEmilia KĂ¤sper of the OpenSSL development team discovered a memory\n leak in the SRP database lookup code. To mitigate the memory leak,\n the seed handling in SRP\\_VBASE\\_get\\_by\\_user is now disabled even if\n the user has configured a seed. Applications are advised to migrate\n to the SRP\\_VBASE\\_get1\\_by\\_user function.\n* [CVE-2016-0799](https://security-tracker.debian.org/tracker/CVE-2016-0799),\n[CVE-2016-2842](https://security-tracker.debian.org/tracker/CVE-2016-2842)\nGuido Vranken discovered an integer overflow in the BIO\\_\\*printf\n functions that could lead to an OOB read when printing very long\n strings. Additionally the internal doapr\\_outch function can attempt\n to write to an arbitrary memory location in the event of a memory\n allocation failure. These issues will only occur on platforms where\n sizeof(size\\_t) > sizeof(int) like many 64 bit systems. This could\n allow remote attackers to cause a denial of service or memory\n corruption in applications that pass large amounts of untrusted data\n to the BIO\\_\\*printf functions.\n\n\nAdditionally the EXPORT and LOW ciphers were disabled since thay could\nbe used as part of the DROWN\n([CVE-2016-0800](https://security-tracker.debian.org/tracker/CVE-2016-0800))\nand SLOTH\n([CVE-2015-7575](https://security-tracker.debian.org/tracker/CVE-2015-7575))\nattacks, but note that the oldstable (wheezy) and stable (jessie)\ndistributions are not affected by those attacks since the SSLv2 protocol\nhas already been dropped in the openssl package version 1.0.0c-2.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.0.1e-2+deb7u20.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.0.1k-3+deb8u4.\n\n\nFor the unstable distribution (sid), these problems will be fixed shortly.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1e-2+deb7u20"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1e-2",
+				"1.0.1e-2+deb7u1",
+				"1.0.1e-2+deb7u10",
+				"1.0.1e-2+deb7u11",
+				"1.0.1e-2+deb7u12",
+				"1.0.1e-2+deb7u13",
+				"1.0.1e-2+deb7u14",
+				"1.0.1e-2+deb7u15",
+				"1.0.1e-2+deb7u16",
+				"1.0.1e-2+deb7u17",
+				"1.0.1e-2+deb7u18",
+				"1.0.1e-2+deb7u19",
+				"1.0.1e-2+deb7u2",
+				"1.0.1e-2+deb7u3",
+				"1.0.1e-2+deb7u4",
+				"1.0.1e-2+deb7u5",
+				"1.0.1e-2+deb7u6",
+				"1.0.1e-2+deb7u7",
+				"1.0.1e-2+deb7u8",
+				"1.0.1e-2+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3500-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1k-3+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1k-3",
+				"1.0.1k-3+alpha",
+				"1.0.1k-3+deb8u1",
+				"1.0.1k-3+deb8u2",
+				"1.0.1k-3+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3500-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3500"
+		}
+	]
+}

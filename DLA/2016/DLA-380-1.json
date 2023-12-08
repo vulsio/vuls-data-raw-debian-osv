@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-380-1",
+	"modified": "2023-06-28T06:21:30.721978Z",
+	"published": "2016-01-04T00:00:00Z",
+	"summary": "libvncserver - security update",
+	"details": "\nAn issue had been discovered and resolved by the libvncserver upstream\ndeveloper Karl Runge addressing thread-safety in libvncserver when\nlibvncserver is used for handling multiple VNC connections [1].\n\n\nUnfortunately, it is not trivially feasible (because of ABI breakage) to\nbackport the [related patch](https://github.com/LibVNC/libvncserver/commit/804335f9d296440bb708ca844f5d89b58b50b0c6) to libvncserver 0.9.7 as shipped in Debian\nsqueeze(-lts).\n\n\nHowever, the thread-safety patch discussed resolved a related issue of\nmemory corruption caused by freeing global variables without nullifying\nthem when reusing them in another thread, especially occurring when\nlibvncserver is used for handling multiple VNC connections\n\n\nThe described issue has been resolved with this version of libvncserver\nand users of VNC are recommended to upgrade to this version of the\npackage.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libvncserver",
+				"purl": "pkg:deb/debian/libvncserver?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.7-2+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.7-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-380-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-380"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2615-1",
+	"modified": "2023-10-16T00:06:01.176767Z",
+	"published": "2013-02-01T00:00:00Z",
+	"related": [
+		"CVE-2012-5958",
+		"CVE-2012-5959",
+		"CVE-2012-5960",
+		"CVE-2012-5961",
+		"CVE-2012-5962",
+		"CVE-2012-5963",
+		"CVE-2012-5964",
+		"CVE-2012-5965"
+	],
+	"summary": "libupnp4 - several",
+	"details": "\nMultiple stack-based buffer overflows were discovered in libupnp4, a library\nused for handling the Universal Plug and Play protocol. HD Moore from Rapid7\ndiscovered that SSDP queries where not correctly handled by the\nunique\\_service\\_name() function.\n\n\nAn attacker sending carefully crafted SSDP queries to a daemon built on\nlibupnp4 could generate a buffer overflow, overwriting the stack, leading to\nthe daemon crash and possible remote code execution.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1.8.0~svn20100507-1+squeeze1.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 1.8.0~svn20100507-1.2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.8.0~svn20100507-1.2.\n\n\nWe recommend that you upgrade your libupnp4 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libupnp4",
+				"purl": "pkg:deb/debian/libupnp4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.0~svn20100507-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.0~svn20100507-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2615-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2615"
+		}
+	]
+}

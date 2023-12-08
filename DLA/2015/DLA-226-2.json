@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-226-2",
+	"modified": "2023-06-28T06:28:37.896982Z",
+	"published": "2015-05-25T00:00:00Z",
+	"related": [
+		"CVE-2015-3202"
+	],
+	"summary": "ntfs-3g - regression update",
+	"details": "\nTavis Ormandy discovered that NTFS-3G, a read-write NTFS driver for\nFUSE, does not scrub the environment before executing mount or umount\nwith elevated privileges. A local user can take advantage of this flaw\nto overwrite arbitrary files and gain elevated privileges by accessing\ndebugging features via the environment that would not normally be safe\nfor unprivileged users.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ntfs-3g",
+				"purl": "pkg:deb/debian/ntfs-3g?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2010.3.6-1+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2010.3.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-226-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-226"
+		}
+	]
+}

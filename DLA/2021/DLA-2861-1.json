@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2861-1",
+	"modified": "2023-06-28T06:25:23.656025Z",
+	"published": "2021-12-28T00:00:00Z",
+	"related": [
+		"CVE-2019-7653"
+	],
+	"summary": "rdflib - security update",
+	"details": "\nThe python-rdflib-tools package (tools for converting to and from RDF)\nhad wrappers that could load Python modules from the current\nworking directory, allowing code injection.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n4.2.1-2+deb9u1.\n\n\nWe recommend that you upgrade your rdflib packages.\n\n\nFor the detailed security status of rdflib please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/rdflib>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "rdflib",
+				"purl": "pkg:deb/debian/rdflib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.1-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2861-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2861"
+		}
+	]
+}

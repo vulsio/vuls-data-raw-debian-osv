@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1460-1",
+	"modified": "2023-10-16T00:05:24.200118Z",
+	"published": "2008-01-13T00:00:00Z",
+	"related": [
+		"CVE-2007-3278",
+		"CVE-2007-4769",
+		"CVE-2007-4772",
+		"CVE-2007-6067",
+		"CVE-2007-6600",
+		"CVE-2007-6601"
+	],
+	"summary": "postgresql-8.1 - several",
+	"details": "\n\nSeveral local vulnerabilities have been discovered in PostgreSQL, an\nobject-relational SQL database. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n\n* [CVE-2007-3278](https://security-tracker.debian.org/tracker/CVE-2007-3278)\n\n It was discovered that the DBLink module performed insufficient\n credential validation. This issue is also tracked as [CVE-2007-6601](https://security-tracker.debian.org/tracker/CVE-2007-6601),\n since the initial upstream fix was incomplete.\n* [CVE-2007-4769](https://security-tracker.debian.org/tracker/CVE-2007-4769)\n\n Tavis Ormandy and Will Drewry discovered that a bug in the handling\n of back-references inside the regular expressions engine could lead\n to an out of bounds read, resulting in a crash. This constitutes only\n a security problem if an application using PostgreSQL processes\n regular expressions from untrusted sources.\n* [CVE-2007-4772](https://security-tracker.debian.org/tracker/CVE-2007-4772)\n\n Tavis Ormandy and Will Drewry discovered that the optimizer for regular\n expression could be tricked into an infinite loop, resulting in denial\n of service. This constitutes only a security problem if an application\n using PostgreSQL processes regular expressions from untrusted sources.\n* [CVE-2007-6067](https://security-tracker.debian.org/tracker/CVE-2007-6067)\n\n Tavis Ormandy and Will Drewry discovered that the optimizer for regular\n expression could be tricked massive resource consumption. This\n constitutes only a security problem if an application using PostgreSQL\n processes regular expressions from untrusted sources.\n* [CVE-2007-6600](https://security-tracker.debian.org/tracker/CVE-2007-6600)\n\n Functions in index expressions could lead to privilege escalation. For\n a more in depth explanation please see the upstream announce available\n at <http://www.postgresql.org/about/news.905>.\n\n\n\nThe old stable distribution (sarge), doesn't contain postgresql-8.1.\n\n\n\n\nFor the stable distribution (etch), these problems have been fixed in version\npostgresql-8.1 8.1.11-0etch1.\n\n\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 8.2.6-1 of postgresql-8.2.\n\n\n\n\nWe recommend that you upgrade your postgresql-8.1 (8.1.11-0etch1) package.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "postgresql-8.1",
+				"purl": "pkg:deb/debian/postgresql-8.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.1.11-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.1.10-0etch1",
+				"8.1.10-1",
+				"8.1.8-1",
+				"8.1.8-2",
+				"8.1.9-0etch1",
+				"8.1.9-0etch2",
+				"8.1.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1460-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1460"
+		}
+	]
+}

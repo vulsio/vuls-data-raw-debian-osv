@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-685-2",
+	"modified": "2023-06-28T06:27:07.919044Z",
+	"published": "2016-10-26T00:00:00Z",
+	"summary": "libxi - regression update",
+	"details": "\nTobias Stoeckmann from the OpenBSD project discovered the following\nvulnerability in libXi, the X11 input extension library:\n\n\nInsufficient validation of data from the X server\n can cause out of boundary memory access or\n endless loops (Denial of Service).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2:1.6.1-1+deb7u2.\n\n\nWe recommend that you upgrade your libxi packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libxi",
+				"purl": "pkg:deb/debian/libxi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.6.1-1+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.6.1-1",
+				"2:1.6.1-1+deb7u1",
+				"2:1.6.1-1+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-685-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-685"
+		}
+	]
+}

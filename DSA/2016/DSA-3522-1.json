@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3522-1",
+	"modified": "2023-10-16T00:12:05.165764Z",
+	"published": "2016-03-20T00:00:00Z",
+	"related": [
+		"CVE-2016-2571"
+	],
+	"summary": "squid3 - security update",
+	"details": "\nAlex Rousskov from The Measurement Factory discovered that Squid3, a\nfully featured web proxy cache, does not properly handle errors for\ncertain malformed HTTP responses. A remote HTTP server can exploit this\nflaw to cause a denial of service (assertion failure and daemon exit).\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 3.1.20-2.2+deb7u4.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 3.4.8-6+deb8u2.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 3.5.15-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.5.15-1.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.20-2.2+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.20-2.2",
+				"3.1.20-2.2+deb7u1",
+				"3.1.20-2.2+deb7u2",
+				"3.1.20-2.2+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3522-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.8-6+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.4.8-6",
+				"3.4.8-6+deb8u1",
+				"3.4.8-6+deb8u2~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3522-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3522"
+		}
+	]
+}

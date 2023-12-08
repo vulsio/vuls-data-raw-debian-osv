@@ -1,0 +1,92 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2868-1",
+	"modified": "2023-10-16T00:11:35.868963Z",
+	"published": "2014-03-02T00:00:00Z",
+	"related": [
+		"CVE-2014-1943",
+		"CVE-2014-8117"
+	],
+	"summary": "php5 - denial of service",
+	"details": "\nIt was discovered that file, a file type classification tool, contains a\nflaw in the handling of indirect magic rules in the libmagic library,\nwhich leads to an infinite recursion when trying to determine the file\ntype of certain files. The Common Vulnerabilities and Exposures project\nID [CVE-2014-1943](https://security-tracker.debian.org/tracker/CVE-2014-1943) has been assigned to identify this flaw. Additionally,\nother well-crafted files might result in long computation times (while\nusing 100% CPU) and overlong results.\n\n\nThis update corrects this flaw in the copy that is embedded in the\nphp5 package.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 5.3.3-7+squeeze19.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 5.4.4-14+deb7u8.\n\n\nFor the testing distribution (jessie) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3-7+squeeze19"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze13",
+				"5.3.3-7+squeeze14",
+				"5.3.3-7+squeeze15",
+				"5.3.3-7+squeeze16",
+				"5.3.3-7+squeeze17",
+				"5.3.3-7+squeeze18",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze3",
+				"5.3.3-7+squeeze5",
+				"5.3.3-7+squeeze6",
+				"5.3.3-7+squeeze7",
+				"5.3.3-7+squeeze8",
+				"5.3.3-7+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2868-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.4-14+deb7u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2868-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2868"
+		}
+	]
+}

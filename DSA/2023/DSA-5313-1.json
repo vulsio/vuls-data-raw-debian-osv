@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5313-1",
+	"modified": "2023-10-16T00:20:57.943545Z",
+	"published": "2023-01-11T00:00:00Z",
+	"related": [
+		"CVE-2022-41853"
+	],
+	"summary": "hsqldb - security update",
+	"details": "\nIt was found that those using java.sql.Statement or java.sql.PreparedStatement\nin hsqldb, a Java SQL database, to process untrusted input may be vulnerable to\na remote code execution attack. By default it is allowed to call any static\nmethod of any Java class in the classpath resulting in code execution. The\nissue can be prevented by updating to 2.5.1-1+deb11u1 or by setting the system\nproperty hsqldb.method\\_class\\_names to classes which are allowed to be called.\nFor example, System.setProperty(\"hsqldb.method\\_class\\_names\",\"abc\") or Java\nargument -Dhsqldb.method\\_class\\_names=\"abc\" can be used. From version\n2.5.1-1+deb11u1 all classes by default are not accessible except those in\njava.lang.Math and need to be manually enabled.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.5.1-1+deb11u1.\n\n\nWe recommend that you upgrade your hsqldb packages.\n\n\nFor the detailed security status of hsqldb please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/hsqldb](https://security-tracker.debian.org/tracker/hsqldb)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "hsqldb",
+				"purl": "pkg:deb/debian/hsqldb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.1-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5313-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5313"
+		}
+	]
+}

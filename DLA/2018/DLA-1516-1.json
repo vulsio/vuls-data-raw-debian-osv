@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1516-1",
+	"modified": "2023-06-28T06:29:39.238043Z",
+	"published": "2018-09-23T00:00:00Z",
+	"related": [
+		"CVE-2018-1000801"
+	],
+	"summary": "okular - security update",
+	"details": "\nJoran Herve discovered that the Okular document viewer was susceptible\nto directory traversal via malformed .okular files (annotated document\narchives), which could result in the creation of arbitrary files.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n4:4.14.2-2+deb8u1.\n\n\nWe recommend that you upgrade your okular packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "okular",
+				"purl": "pkg:deb/debian/okular?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:4.14.2-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:4.14.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1516-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1516"
+		}
+	]
+}

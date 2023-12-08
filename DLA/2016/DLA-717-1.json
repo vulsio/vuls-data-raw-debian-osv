@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-717-1",
+	"modified": "2023-06-28T06:43:06.728923Z",
+	"published": "2016-11-22T00:00:00Z",
+	"related": [
+		"CVE-2016-7146",
+		"CVE-2016-9119"
+	],
+	"summary": "moin - security update",
+	"details": "\nSeveral cross-site scripting vulnerabilities were discovered in moin, a\nPython clone of WikiWiki. A remote attacker can conduct cross-site\nscripting attacks via the GUI editor's attachment dialogue\n([CVE-2016-7146](https://security-tracker.debian.org/tracker/CVE-2016-7146)) \nand the GUI editor's link dialogue ([CVE-2016-9119](https://security-tracker.debian.org/tracker/CVE-2016-9119)).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.9.4-8+deb7u3.\n\n\nWe recommend that you upgrade your moin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "moin",
+				"purl": "pkg:deb/debian/moin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.4-8+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.4-8+deb7u1",
+				"1.9.4-8+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-717-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-717"
+		}
+	]
+}

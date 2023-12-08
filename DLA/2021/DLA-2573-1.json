@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2573-1",
+	"modified": "2023-06-28T06:29:31.935523Z",
+	"published": "2021-02-20T00:00:00Z",
+	"related": [
+		"CVE-2021-24031"
+	],
+	"summary": "libzstd - security update",
+	"details": "\nIt was discovered that zstd, a compression utility, was vulnerable\nto a race condition: it temporarily exposed, during a very short\ntimeframe, a world-readable version of its input even if the\noriginal file had restrictive permissions.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.1.2-1+deb9u1.\n\n\nWe recommend that you upgrade your libzstd packages.\n\n\nFor the detailed security status of libzstd please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libzstd>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libzstd",
+				"purl": "pkg:deb/debian/libzstd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2573-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2573"
+		}
+	]
+}

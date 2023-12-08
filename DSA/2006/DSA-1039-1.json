@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1039-1",
+	"modified": "2023-10-16T00:04:58.063995Z",
+	"published": "2006-04-24T00:00:00Z",
+	"related": [
+		"CVE-2005-3302",
+		"CVE-2005-4470"
+	],
+	"summary": "blender - several",
+	"details": "\nSeveral vulnerabilities have been discovered in blender, a very fast\nand versatile 3D modeller/renderer. The Common Vulnerabilities and\nExposures Project identifies the following problems:\n\n\n* [CVE-2005-3302](https://security-tracker.debian.org/tracker/CVE-2005-3302)\nJoxean Koret discovered that due to missing input validation a\n provided script is vulnerable to arbitrary command execution.\n* [CVE-2005-4470](https://security-tracker.debian.org/tracker/CVE-2005-4470)\nDamian Put discovered a buffer overflow that allows remote\n attackers to cause a denial of service and possibly execute\n arbitrary code.\n\n\nThe old stable distribution (woody) is not affected by this problem.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.36-1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.40-1.\n\n\nWe recommend that you upgrade your blender package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "blender",
+				"purl": "pkg:deb/debian/blender?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.36-1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.36-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1039-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1039"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1762-2",
+	"modified": "2023-06-28T06:20:57.688507Z",
+	"published": "2019-04-24T00:00:00Z",
+	"summary": "systemd - regression update",
+	"details": "\nTwo vulnerabilities have been addressed in the systemd components\nsystemd-tmpfiles and pam\\_systemd.so.\n\n\n* [CVE-2017-18078](https://security-tracker.debian.org/tracker/CVE-2017-18078)\nsystemd-tmpfiles in systemd attempted to support ownership/permission\n changes on hardlinked files even if the fs.protected\\_hardlinks sysctl\n is turned off, which allowed local users to bypass intended access\n restrictions via vectors involving a hard link to a file for which\n the user lacked write access.\n* [CVE-2019-3842](https://security-tracker.debian.org/tracker/CVE-2019-3842)\nIt was discovered that pam\\_systemd did not properly sanitize the\n environment before using the XDG\\_SEAT variable. It was possible for\n an attacker, in some particular configurations, to set a XDG\\_SEAT\n environment variable which allowed for commands to be checked against\n polkit policies using the allow\\_active element rather than\n allow\\_any.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n215-17+deb8u12.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "systemd",
+				"purl": "pkg:deb/debian/systemd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "215-17+deb8u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"215-17",
+				"215-17+deb8u1",
+				"215-17+deb8u10",
+				"215-17+deb8u11",
+				"215-17+deb8u12",
+				"215-17+deb8u2",
+				"215-17+deb8u3",
+				"215-17+deb8u4",
+				"215-17+deb8u5",
+				"215-17+deb8u6",
+				"215-17+deb8u7",
+				"215-17+deb8u8",
+				"215-17+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1762-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1762"
+		}
+	]
+}

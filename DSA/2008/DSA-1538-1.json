@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1538-1",
+	"modified": "2023-10-16T00:10:28.974983Z",
+	"published": "2008-04-04T00:00:00Z",
+	"related": [
+		"CVE-2007-5301"
+	],
+	"summary": "alsaplayer - arbitrary code execution",
+	"details": "\nErik Sjölund discovered a buffer overflow vulnerability in the Ogg\nVorbis input plugin of the alsaplayer audio playback application.\nSuccessful exploitation of this vulnerability through the opening of a\nmaliciously crafted Vorbis file could lead to the execution of\narbitrary code.\n\n\nFor the stable distribution (etch), the problem has been fixed in\nversion 0.99.76-9+etch1.\n\n\nFor the unstable distribution (sid), the problem was fixed in version\n0.99.80~rc4-1.\n\n\nWe recommend that you upgrade your alsaplayer packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "alsaplayer",
+				"purl": "pkg:deb/debian/alsaplayer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.99.76-9+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.99.76-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1538-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1538"
+		}
+	]
+}

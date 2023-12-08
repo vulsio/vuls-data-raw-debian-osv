@@ -1,0 +1,85 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2094-1",
+	"modified": "2023-10-16T00:10:57.537403Z",
+	"published": "2010-08-19T00:00:00Z",
+	"related": [
+		"CVE-2009-4895",
+		"CVE-2010-2226",
+		"CVE-2010-2240",
+		"CVE-2010-2248",
+		"CVE-2010-2521",
+		"CVE-2010-2798",
+		"CVE-2010-2803",
+		"CVE-2010-2959",
+		"CVE-2010-3015"
+	],
+	"summary": "linux-2.6 - several issues",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2009-4895](https://security-tracker.debian.org/tracker/CVE-2009-4895)\nKyle Bader reported an issue in the tty subsystem that allows local\n users to create a denial of service (NULL pointer dereference).\n* [CVE-2010-2226](https://security-tracker.debian.org/tracker/CVE-2010-2226)\nDan Rosenberg reported an issue in the xfs filesystem that allows local\n users to copy and read a file owned by another user, for which they\n only have write permissions, due to a lack of permission checking in the\n XFS\\_SWAPEXT ioctl.\n* [CVE-2010-2240](https://security-tracker.debian.org/tracker/CVE-2010-2240)\nRafal Wojtczuk reported an issue that allows users to obtain escalated\n privileges. Users must already have sufficient privileges to execute or\n connect clients to an Xorg server.\n* [CVE-2010-2248](https://security-tracker.debian.org/tracker/CVE-2010-2248)\nSuresh Jayaraman discovered an issue in the CIFS filesystem. A malicious\n file server can set an incorrect \"CountHigh\" value, resulting in a\n denial of service (BUG\\_ON() assertion).\n* [CVE-2010-2521](https://security-tracker.debian.org/tracker/CVE-2010-2521)\nNeil Brown reported an issue in the NFSv4 server code. A malicious client\n could trigger a denial of service (Oops) on a server due to a bug in\n the read\\_buf() routine.\n* [CVE-2010-2798](https://security-tracker.debian.org/tracker/CVE-2010-2798)\nBob Peterson reported an issue in the GFS2 file system. A file system\n user could cause a denial of service (Oops) via certain rename\n operations.\n* [CVE-2010-2803](https://security-tracker.debian.org/tracker/CVE-2010-2803)\nKees Cook reported an issue in the DRM (Direct Rendering Manager)\n subsystem. Local users with sufficient privileges (local X users\n or members of the 'video' group on a default Debian install) could\n acquire access to sensitive kernel memory.\n* [CVE-2010-2959](https://security-tracker.debian.org/tracker/CVE-2010-2959)\nBen Hawkes discovered an issue in the AF\\_CAN socket family. An integer\n overflow condition may allow local users to obtain elevated privileges.\n* [CVE-2010-3015](https://security-tracker.debian.org/tracker/CVE-2010-3015)\nToshiyuki Okajima reported an issue in the ext4 filesystem. Local users\n could trigger a denial of service (BUG assertion) by generating a specific\n set of filesystem operations.\n\n\nThis update also includes fixes a regression introduced by a previous\nupdate. See the referenced Debian bug page for details.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.26-24lenny1.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nThe following matrix lists additional source packages that were\nrebuilt for compatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 5.0 (lenny) |\n| --- | --- |\n| user-mode-linux | 2.6.26-1um-2+24lenny1 |\n\n\nUpdates for arm and mips will be released as they become\navailable.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-24lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-13",
+				"2.6.26-13lenny2",
+				"2.6.26-13lenny2~bpo40+1",
+				"2.6.26-14",
+				"2.6.26-15",
+				"2.6.26-15lenny1",
+				"2.6.26-15lenny2",
+				"2.6.26-15lenny3",
+				"2.6.26-15~bpo40+1",
+				"2.6.26-15~bpo40+2",
+				"2.6.26-16",
+				"2.6.26-17",
+				"2.6.26-17lenny1",
+				"2.6.26-17lenny2",
+				"2.6.26-17lenny2~bpo40+1",
+				"2.6.26-17~bpo40+1",
+				"2.6.26-18",
+				"2.6.26-19",
+				"2.6.26-19lenny1",
+				"2.6.26-19lenny2",
+				"2.6.26-19~bpo40+1",
+				"2.6.26-20",
+				"2.6.26-20~bpo40+1",
+				"2.6.26-21",
+				"2.6.26-21lenny1",
+				"2.6.26-21lenny2",
+				"2.6.26-21lenny3",
+				"2.6.26-21lenny4",
+				"2.6.26-21~bpo40+1",
+				"2.6.26-22",
+				"2.6.26-22lenny1",
+				"2.6.26-23",
+				"2.6.26-24"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2094-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2094"
+		}
+	]
+}

@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-549-1",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-09-17T00:00:00Z",
+	"related": [
+		"CVE-2004-0782",
+		"CVE-2004-0783",
+		"CVE-2004-0788"
+	],
+	"summary": "gtk+2.0 - multiple holes",
+	"details": "\nChris Evans discovered several problems in gdk-pixbuf, the GdkPixBuf\nlibrary used in Gtk. It is possible for an attacker to execute\narbitrary code on the victims machine. Gdk-pixbuf for Gtk+1.2 is an\nexternal package. For Gtk+2.0 it's part of the main gtk package.\n\n\nThe Common Vulnerabilities and Exposures Project identifies the\nfollowing vulnerabilities:\n\n\n* [CAN-2004-0782](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0782)\nHeap-based overflow in pixbuf\\_create\\_from\\_xpm.\n\n* [CAN-2004-0783](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0783)\nStack-based overflow in xpm\\_extract\\_color.\n\n* [CAN-2004-0788](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0788)\nInteger overflow in the ico loader.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.0.2-5woody2.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your Gtk packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gtk+2.0",
+				"purl": "pkg:deb/debian/gtk%2B2.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.2-5woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-549-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-549"
+		}
+	]
+}

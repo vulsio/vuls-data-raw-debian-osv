@@ -1,0 +1,88 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1649-1",
+	"modified": "2023-10-16T00:05:35.582176Z",
+	"published": "2008-10-08T00:00:00Z",
+	"related": [
+		"CVE-2008-0016",
+		"CVE-2008-3835",
+		"CVE-2008-3836",
+		"CVE-2008-3837",
+		"CVE-2008-4058",
+		"CVE-2008-4059",
+		"CVE-2008-4060",
+		"CVE-2008-4061",
+		"CVE-2008-4062",
+		"CVE-2008-4065",
+		"CVE-2008-4066",
+		"CVE-2008-4067",
+		"CVE-2008-4068",
+		"CVE-2008-4069"
+	],
+	"summary": "iceweasel - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Iceweasel web\nbrowser, an unbranded version of the Firefox browser. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-0016](https://security-tracker.debian.org/tracker/CVE-2008-0016)\nJustin Schuh, Tom Cross and Peter Williams discovered a buffer\n overflow in the parser for UTF-8 URLs, which may lead to the\n execution of arbitrary code.\n* [CVE-2008-3835](https://security-tracker.debian.org/tracker/CVE-2008-3835)\nmoz\\_bug\\_r\\_a4 discovered that the same-origin check in\n nsXMLDocument::OnChannelRedirect() could by bypassed.\n* [CVE-2008-3836](https://security-tracker.debian.org/tracker/CVE-2008-3836)\nmoz\\_bug\\_r\\_a4 discovered that several vulnerabilities in\n feedWriter could lead to Chrome privilege escalation.\n* [CVE-2008-3837](https://security-tracker.debian.org/tracker/CVE-2008-3837)\nPaul Nickerson discovered that an attacker could move windows\n during a mouse click, resulting in unwanted action triggered by\n drag-and-drop.\n* [CVE-2008-4058](https://security-tracker.debian.org/tracker/CVE-2008-4058)\nmoz\\_bug\\_r\\_a4 discovered a vulnerability which can result in\n Chrome privilege escalation through XPCNativeWrappers.\n* [CVE-2008-4059](https://security-tracker.debian.org/tracker/CVE-2008-4059)\nmoz\\_bug\\_r\\_a4 discovered a vulnerability which can result in\n Chrome privilege escalation through XPCNativeWrappers.\n* [CVE-2008-4060](https://security-tracker.debian.org/tracker/CVE-2008-4060)\nOlli Pettay and moz\\_bug\\_r\\_a4 discovered a Chrome privilege\n escalation vulnerability in XSLT handling.\n* [CVE-2008-4061](https://security-tracker.debian.org/tracker/CVE-2008-4061)\nJesse Ruderman discovered a crash in the layout engine, which might\n allow the execution of arbitrary code.\n* [CVE-2008-4062](https://security-tracker.debian.org/tracker/CVE-2008-4062)\nIgor Bukanov, Philip Taylor, Georgi Guninski and Antoine Labour\n discovered crashes in the Javascript engine, which might allow the\n execution of arbitrary code.\n* [CVE-2008-4065](https://security-tracker.debian.org/tracker/CVE-2008-4065)\nDave Reed discovered that some Unicode byte order marks are\n stripped from Javascript code before execution, which can result in\n code being executed, which were otherwise part of a quoted string.\n* [CVE-2008-4066](https://security-tracker.debian.org/tracker/CVE-2008-4066)\nGareth Heyes discovered that some Unicode surrogate characters are\n ignored by the HTML parser.\n* [CVE-2008-4067](https://security-tracker.debian.org/tracker/CVE-2008-4067)\nBoris Zbarsky discovered that resource: URLs allow directory\n traversal when using URL-encoded slashes.\n* [CVE-2008-4068](https://security-tracker.debian.org/tracker/CVE-2008-4068)\nGeorgi Guninski discovered that resource: URLs could bypass local\n access restrictions.\n* [CVE-2008-4069](https://security-tracker.debian.org/tracker/CVE-2008-4069)\nBilly Hoffman discovered that the XBM decoder could reveal\n uninitialised memory.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.0.0.17-0etch1. Packages for hppa will be provided later.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.0.3 of iceweasel and 1.9.0.3-1 of xulrunner.\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "iceweasel",
+				"purl": "pkg:deb/debian/iceweasel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0.17-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0.10-0etch1",
+				"2.0.0.10-1",
+				"2.0.0.10-2",
+				"2.0.0.11-1",
+				"2.0.0.12-0etch1",
+				"2.0.0.12-1",
+				"2.0.0.12-2",
+				"2.0.0.13-0etch1",
+				"2.0.0.13-1",
+				"2.0.0.14-0etch1",
+				"2.0.0.14-1",
+				"2.0.0.14-2",
+				"2.0.0.15-0etch1",
+				"2.0.0.16-0etch1",
+				"2.0.0.3-1",
+				"2.0.0.3-2",
+				"2.0.0.4-0etch1",
+				"2.0.0.4-1",
+				"2.0.0.5-0etch1",
+				"2.0.0.5-0etch1+lenny1",
+				"2.0.0.5-1",
+				"2.0.0.5-2",
+				"2.0.0.6+2.0.0.8-0etch1",
+				"2.0.0.6-0etch1",
+				"2.0.0.6-0etch1+lenny1",
+				"2.0.0.6-1",
+				"2.0.0.7-1",
+				"2.0.0.7-2",
+				"2.0.0.8-1",
+				"2.0.0.9-1",
+				"2.0.0.9-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1649-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1649"
+		}
+	]
+}

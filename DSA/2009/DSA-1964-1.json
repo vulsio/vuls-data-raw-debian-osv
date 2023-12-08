@@ -1,0 +1,130 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1964-1",
+	"modified": "2023-10-16T00:10:49.817111Z",
+	"published": "2009-12-31T00:00:00Z",
+	"related": [
+		"CVE-2009-4034",
+		"CVE-2009-4136"
+	],
+	"summary": "postgresql-7.4 postgresql-8.1 postgresql-8.3 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in PostgreSQL, a database\nserver. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\nIt was discovered that PostgreSQL did not properly verify the Common\nName attribute in X.509 certificates, enabling attackers to bypass the\n(optional) TLS protection on client-server connections, by relying on\na certificate from a trusted CA which contains an embedded NUL byte in\nthe Common Name ([CVE-2009-4034](https://security-tracker.debian.org/tracker/CVE-2009-4034)).\n\n\nAuthenticated database users could elevate their privileges by\ncreating specially-crafted index functions ([CVE-2009-4136](https://security-tracker.debian.org/tracker/CVE-2009-4136)).\n\n\nThe following matrix shows fixed source package versions for the\nrespective distributions.\n\n\n\n\n|  | oldstable/etch | stable/lenny | testing/unstable |\n| --- | --- | --- | --- |\n| postgresql-7.4 | 7.4.27-0etch1 |  |  |\n| postgresql-8.1 | 8.1.19-0etch1 |  |  |\n| postgresql-8.3 |  | 8.3.9-0lenny1 | 8.3.9-1 |\n| postgresql-8.4 |  |  | 8.4.2-1 |\n\n\nIn addition to these security fixes, the updates contain reliability\nimprovements and fix other defects.\n\n\nWe recommend that you upgrade your PostgreSQL packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "postgresql-8.1",
+				"purl": "pkg:deb/debian/postgresql-8.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.1.19-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.1.10-0etch1",
+				"8.1.10-1",
+				"8.1.11-0etch1",
+				"8.1.11-1",
+				"8.1.13-0etch1",
+				"8.1.15-0etch1",
+				"8.1.17-0etch1",
+				"8.1.18-0etch1",
+				"8.1.8-1",
+				"8.1.8-2",
+				"8.1.9-0etch1",
+				"8.1.9-0etch2",
+				"8.1.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1964-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "postgresql-7.4",
+				"purl": "pkg:deb/debian/postgresql-7.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:7.4.27-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:7.4.16-1",
+				"1:7.4.17-0etch1",
+				"1:7.4.17-1",
+				"1:7.4.19-0etch1",
+				"1:7.4.23-0etch1",
+				"1:7.4.26-0etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1964-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "postgresql-8.3",
+				"purl": "pkg:deb/debian/postgresql-8.3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.3.9-0lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.3.5-1",
+				"8.3.5-2",
+				"8.3.6-1",
+				"8.3.6-1~bpo40+1",
+				"8.3.7-0lenny1",
+				"8.3.7-0lenny1~bpo40+1",
+				"8.3.7-1",
+				"8.3.7-2",
+				"8.3.7-3",
+				"8.3.7-4",
+				"8.3.8-0lenny1",
+				"8.3.8-0lenny1~bpo40+1",
+				"8.3.8-0lenny1~bpo40+2",
+				"8.3.8-1",
+				"8.3.8-1+sh4",
+				"8.3.9-0lenny1~bpo40+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1964-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1964"
+		}
+	]
+}

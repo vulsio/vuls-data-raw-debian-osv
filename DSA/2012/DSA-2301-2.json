@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2301-2",
+	"modified": "2023-10-16T00:11:07.006018Z",
+	"published": "2012-01-23T00:00:00Z",
+	"summary": "rails - several",
+	"details": "\nSeveral vulnerabilities have been discovered in Rails, the Ruby web\napplication framework. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-4214](https://security-tracker.debian.org/tracker/CVE-2009-4214)\nA cross-site scripting (XSS) vulnerability had been found in the\n strip\\_tags function. An attacker may inject non-printable characters\n that certain browsers will then evaluate. This vulnerability only\n affects the oldstable distribution (lenny).\n* [CVE-2011-2930](https://security-tracker.debian.org/tracker/CVE-2011-2930)\nA SQL injection vulnerability had been found in the quote\\_table\\_name\n method that could allow malicious users to inject arbitrary SQL into a\n query.\n* [CVE-2011-2931](https://security-tracker.debian.org/tracker/CVE-2011-2931)\nA cross-site scripting (XSS) vulnerability had been found in the\n strip\\_tags helper. An parsing error can be exploited by an attacker,\n who can confuse the parser and may inject HTML tags into the output\n document.\n* [CVE-2011-3186](https://security-tracker.debian.org/tracker/CVE-2011-3186)\nA newline (CRLF) injection vulnerability had been found in\n response.rb. This vulnerability allows an attacker to inject arbitrary\n HTTP headers and conduct HTTP response splitting attacks via the\n Content-Type header.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.1.0-7+lenny2.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.3.5-1.2+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.3.14.\n\n\nWe recommend that you upgrade your rails packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "rails",
+				"purl": "pkg:deb/debian/rails?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.5-1.2+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.5-1.2",
+				"2.3.5-1.2+squeeze0.1",
+				"2.3.5-1.2+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2301-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "rails",
+				"purl": "pkg:deb/debian/rails?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.0-7+lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.0-6",
+				"2.1.0-7",
+				"2.1.0-7+lenny0.1",
+				"2.1.0-7+lenny0.2",
+				"2.1.0-7+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2301-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2301"
+		}
+	]
+}

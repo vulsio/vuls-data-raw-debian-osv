@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2724-1",
+	"modified": "2023-06-28T06:20:11.691521Z",
+	"published": "2021-08-01T00:00:00Z",
+	"related": [
+		"CVE-2019-18823"
+	],
+	"summary": "condor - security update",
+	"details": "\nHTCondor, a distributed workload management system, has Incorrect Access\nControl. It is possible to use a different authentication method to submit a\njob than the administrator has specified. If the administrator has configured\nthe READ or WRITE methods to include CLAIMTOBE, then it is possible to\nimpersonate another user to the condor\\_schedd, for example to submit or remove\njobs.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n8.4.11~dfsg.1-1+deb9u1.\n\n\nWe recommend that you upgrade your condor packages.\n\n\nFor the detailed security status of condor please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/condor>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "condor",
+				"purl": "pkg:deb/debian/condor?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.4.11~dfsg.1-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.4.11~dfsg.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2724-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2724"
+		}
+	]
+}

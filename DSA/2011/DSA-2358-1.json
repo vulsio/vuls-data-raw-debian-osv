@@ -1,0 +1,120 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2358-1",
+	"modified": "2023-10-16T00:11:10.804841Z",
+	"published": "2011-12-05T00:00:00Z",
+	"related": [
+		"CVE-2011-0862",
+		"CVE-2011-0864",
+		"CVE-2011-0865",
+		"CVE-2011-0867",
+		"CVE-2011-0868",
+		"CVE-2011-0869",
+		"CVE-2011-0871",
+		"CVE-2011-3389",
+		"CVE-2011-3521",
+		"CVE-2011-3544",
+		"CVE-2011-3547",
+		"CVE-2011-3548",
+		"CVE-2011-3551",
+		"CVE-2011-3552",
+		"CVE-2011-3553",
+		"CVE-2011-3554",
+		"CVE-2011-3556",
+		"CVE-2011-3557",
+		"CVE-2011-3560"
+	],
+	"summary": "openjdk-6 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in OpenJDK, an\nimplementation of the Java platform. This combines the two previous\nopenjdk-6 advisories, [DSA-2311-1](dsa-2311) and\n[DSA-2356-1](dsa-2356).\n\n\n* [CVE-2011-0862](https://security-tracker.debian.org/tracker/CVE-2011-0862)\nInteger overflow errors in the JPEG and font parser allow\n untrusted code (including applets) to elevate its privileges.\n* [CVE-2011-0864](https://security-tracker.debian.org/tracker/CVE-2011-0864)\nHotspot, the just-in-time compiler in OpenJDK, mishandled\n certain byte code instructions, allowing untrusted code\n (including applets) to crash the virtual machine.\n* [CVE-2011-0865](https://security-tracker.debian.org/tracker/CVE-2011-0865)\nA race condition in signed object deserialization could\n allow untrusted code to modify signed content, apparently\n leaving its signature intact.\n* [CVE-2011-0867](https://security-tracker.debian.org/tracker/CVE-2011-0867)\nUntrusted code (including applets) could access information\n about network interfaces which was not intended to be public.\n (Note that the interface MAC address is still available to\n untrusted code.)\n* [CVE-2011-0868](https://security-tracker.debian.org/tracker/CVE-2011-0868)\nA float-to-long conversion could overflow, allowing\n untrusted code (including applets) to crash the virtual\n machine.\n* [CVE-2011-0869](https://security-tracker.debian.org/tracker/CVE-2011-0869)\nUntrusted code (including applets) could intercept HTTP\n requests by reconfiguring proxy settings through a SOAP\n connection.\n* [CVE-2011-0871](https://security-tracker.debian.org/tracker/CVE-2011-0871)\nUntrusted code (including applets) could elevate its\n privileges through the Swing MediaTracker code.\n* [CVE-2011-3389](https://security-tracker.debian.org/tracker/CVE-2011-3389)\nThe TLS implementation does not guard properly against certain\n chosen-plaintext attacks when block ciphers are used in CBC\n mode.\n* [CVE-2011-3521](https://security-tracker.debian.org/tracker/CVE-2011-3521)\nThe CORBA implementation contains a deserialization\n vulnerability in the IIOP implementation, allowing untrusted\n Java code (such as applets) to elevate its privileges.\n* [CVE-2011-3544](https://security-tracker.debian.org/tracker/CVE-2011-3544)\nThe Java scripting engine lacks necessary security manager\n checks, allowing untrusted Java code (such as applets) to\n elevate its privileges.\n* [CVE-2011-3547](https://security-tracker.debian.org/tracker/CVE-2011-3547)\nThe skip() method in java.io.InputStream uses a shared buffer,\n allowing untrusted Java code (such as applets) to access data\n that is skipped by other code.\n* [CVE-2011-3548](https://security-tracker.debian.org/tracker/CVE-2011-3548)\nThe java.awt.AWTKeyStroke class contains a flaw which allows\n untrusted Java code (such as applets) to elevate its\n privileges.\n* [CVE-2011-3551](https://security-tracker.debian.org/tracker/CVE-2011-3551)\nThe Java2D C code contains an integer overflow which results\n in a heap-based buffer overflow, potentially allowing\n untrusted Java code (such as applets) to elevate its\n privileges.\n* [CVE-2011-3552](https://security-tracker.debian.org/tracker/CVE-2011-3552)\nMalicous Java code can use up an excessive amount of UDP\n ports, leading to a denial of service.\n* [CVE-2011-3553](https://security-tracker.debian.org/tracker/CVE-2011-3553)\nJAX-WS enables stack traces for certain server responses by\n default, potentially leaking sensitive information.\n* [CVE-2011-3554](https://security-tracker.debian.org/tracker/CVE-2011-3554)\nJAR files in pack200 format are not properly checked for\n errors, potentially leading to arbitrary code execution when\n unpacking crafted pack200 files.\n* [CVE-2011-3556](https://security-tracker.debian.org/tracker/CVE-2011-3556)\nThe RMI Registry server lacks access restrictions on certain\n methods, allowing a remote client to execute arbitary code.\n* [CVE-2011-3557](https://security-tracker.debian.org/tracker/CVE-2011-3557)\nThe RMI Registry server fails to properly restrict privileges\n of untrusted Java code, allowing RMI clients to elevate their\n privileges on the RMI Registry server.\n* [CVE-2011-3560](https://security-tracker.debian.org/tracker/CVE-2011-3560)\nThe com.sun.net.ssl.HttpsURLConnection class does not perform\n proper security manager checks in the setSSLSocketFactory()\n method, allowing untrusted Java code to bypass security policy\n restrictions.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed\nin version 6b18-1.8.10-0~lenny2.\n\n\nWe recommend that you upgrade your openjdk-6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "openjdk-6",
+				"purl": "pkg:deb/debian/openjdk-6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6b18-1.8.10-0~lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6b11-9.1",
+				"6b11-9.1+lenny2",
+				"6b12-0",
+				"6b12-1~exp1",
+				"6b12~pre1-0",
+				"6b12~pre2-1",
+				"6b14-1.5~pre1-1",
+				"6b14-1.5~pre1-2",
+				"6b14-1.5~pre1-3",
+				"6b14-1.5~pre1-4",
+				"6b14-1.5~pre1-5",
+				"6b14-1~exp1",
+				"6b16-1",
+				"6b16-1.6-1",
+				"6b16-1.6.1-1",
+				"6b16-1.6.1-2",
+				"6b16-1.6~pre2-1",
+				"6b16-2",
+				"6b16-3",
+				"6b16-4",
+				"6b17-1.7-1",
+				"6b17-1.7-1+sh4.1",
+				"6b17~pre3-1",
+				"6b17~pre3-1+sh4",
+				"6b17~pre3-1+sh4.1",
+				"6b18-1.8-1",
+				"6b18-1.8-2",
+				"6b18-1.8-3",
+				"6b18-1.8-4",
+				"6b18-1.8.1-1",
+				"6b18-1.8.1-2",
+				"6b18-1.8.10-0~lenny1",
+				"6b18-1.8.2-1",
+				"6b18-1.8.2-2",
+				"6b18-1.8.2-3",
+				"6b18-1.8.2-4",
+				"6b18-1.8.3-1",
+				"6b18-1.8.3-2",
+				"6b18-1.8.3-2+squeeze1",
+				"6b18-1.8.3-2~lenny1",
+				"6b18-1.8.4-1",
+				"6b18-1.8.5-1",
+				"6b18-1.8.7-1",
+				"6b18-1.8.7-2",
+				"6b18-1.8.7-2~lenny1",
+				"6b18-1.8.7-2~squeeze1",
+				"6b18-1.8.7-3",
+				"6b18-1.8.7-4",
+				"6b18-1.8.7-5",
+				"6b18-1.8.9-0.1",
+				"6b18-1.8.9-0.1~squeeze1",
+				"6b18~pre1-1",
+				"6b18~pre1-2",
+				"6b18~pre1-3",
+				"6b18~pre1-4",
+				"6b18~pre2-1",
+				"6b18~pre3-1",
+				"6b18~pre4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2358-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2358"
+		}
+	]
+}

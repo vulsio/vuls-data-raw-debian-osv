@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2183-1",
+	"modified": "2023-06-28T06:25:08.878906Z",
+	"published": "2020-04-25T00:00:00Z",
+	"related": [
+		"CVE-2016-9888"
+	],
+	"summary": "libgsf - security update",
+	"details": "\nIt was discovered that there was a null pointer deference exploit in\nlibgsf, a I/O abstraction library for GNOME.\n\n\nAn error within the \"tar\\_directory\\_for\\_file()\" function could be exploited\nto trigger a null pointer dereference and subsequently cause a crash via a\ncrafted TAR file.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.14.30-2+deb8u1.\n\n\nWe recommend that you upgrade your libgsf packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libgsf",
+				"purl": "pkg:deb/debian/libgsf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.30-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.14.30-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2183-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2183"
+		}
+	]
+}

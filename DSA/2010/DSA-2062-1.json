@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2062-1",
+	"modified": "2023-10-16T00:10:56.062525Z",
+	"published": "2010-06-17T00:00:00Z",
+	"related": [
+		"CVE-2010-1646"
+	],
+	"summary": "sudo - environment sanitization bypass",
+	"details": "\nAnders Kaseorg and Evan Broder discovered a vulnerability in sudo, a\nprogram designed to allow a sysadmin to give limited root privileges to\nusers, that allows a user with sudo permissions on certain programs to\nuse those programs with an untrusted value of PATH.\nThis could possibly lead to certain intended restrictions being bypassed,\nsuch as the secure\\_path setting.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.6.9p17-3\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.7.2p7-1, and will migrate to the testing distribution (squeeze)\nshortly.\n\n\nWe recommend that you upgrade your sudo package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.9p17-3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.9p17-2",
+				"1.6.9p17-2+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2062-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2062"
+		}
+	]
+}

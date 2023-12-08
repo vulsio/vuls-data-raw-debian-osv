@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3362-1",
+	"modified": "2023-10-16T00:11:57.280276Z",
+	"published": "2015-09-18T00:00:00Z",
+	"related": [
+		"CVE-2015-5278",
+		"CVE-2015-5279",
+		"CVE-2015-6815",
+		"CVE-2015-6855"
+	],
+	"summary": "qemu-kvm - security update",
+	"details": "\nSeveral vulnerabilities were discovered in qemu-kvm, a full\nvirtualization solution on x86 hardware.\n\n\n* [CVE-2015-5278](https://security-tracker.debian.org/tracker/CVE-2015-5278)\nQinghao Tang of QIHU 360 Inc. discovered an infinite loop issue in\n the NE2000 NIC emulation. A privileged guest user could use this\n flaw to mount a denial of service (QEMU process crash).\n* [CVE-2015-5279](https://security-tracker.debian.org/tracker/CVE-2015-5279)\nQinghao Tang of QIHU 360 Inc. discovered a heap buffer overflow flaw\n in the NE2000 NIC emulation. A privileged guest user could use this\n flaw to mount a denial of service (QEMU process crash), or\n potentially to execute arbitrary code on the host with the\n privileges of the hosting QEMU process.\n* [CVE-2015-6815](https://security-tracker.debian.org/tracker/CVE-2015-6815)\nQinghao Tang of QIHU 360 Inc. discovered an infinite loop issue in\n the e1000 NIC emulation. A privileged guest user could use this flaw\n to mount a denial of service (QEMU process crash).\n* [CVE-2015-6855](https://security-tracker.debian.org/tracker/CVE-2015-6855)\nQinghao Tang of QIHU 360 Inc. discovered a flaw in the IDE\n subsystem in QEMU occurring while executing IDE's\n WIN\\_READ\\_NATIVE\\_MAX command to determine the maximum size of a\n drive. A privileged guest user could use this flaw to mount a\n denial of service (QEMU process crash).\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.1.2+dfsg-6+deb7u11.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu-kvm",
+				"purl": "pkg:deb/debian/qemu-kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6",
+				"1.1.2+dfsg-6+deb7u1",
+				"1.1.2+dfsg-6+deb7u10",
+				"1.1.2+dfsg-6+deb7u2",
+				"1.1.2+dfsg-6+deb7u3",
+				"1.1.2+dfsg-6+deb7u4",
+				"1.1.2+dfsg-6+deb7u5",
+				"1.1.2+dfsg-6+deb7u6",
+				"1.1.2+dfsg-6+deb7u7",
+				"1.1.2+dfsg-6+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6+deb7u8",
+				"1.1.2+dfsg-6+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3362-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3362"
+		}
+	]
+}

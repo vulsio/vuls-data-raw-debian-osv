@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4345-1",
+	"modified": "2023-10-16T00:13:49.985079Z",
+	"published": "2018-11-27T00:00:00Z",
+	"related": [
+		"CVE-2018-14629",
+		"CVE-2018-16841",
+		"CVE-2018-16851"
+	],
+	"summary": "samba - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix. The Common Vulnerabilities and\nExposures project identifies the following issues:\n\n\n* [CVE-2018-14629](https://security-tracker.debian.org/tracker/CVE-2018-14629)\nFlorian Stuelpner discovered that Samba is vulnerable to\n infinite query recursion caused by CNAME loops, resulting in\n denial of service.\n\n\n[\\\n https://www.samba.org/samba/security/CVE-2018-14629.html](https://www.samba.org/samba/security/CVE-2018-14629.html)\n* [CVE-2018-16841](https://security-tracker.debian.org/tracker/CVE-2018-16841)\nAlex MacCuish discovered that a user with a valid certificate or\n smart card can crash the Samba AD DC's KDC when configured to accept\n smart-card authentication.\n\n\n[\\\n https://www.samba.org/samba/security/CVE-2018-16841.html](https://www.samba.org/samba/security/CVE-2018-16841.html)\n* [CVE-2018-16851](https://security-tracker.debian.org/tracker/CVE-2018-16851)\nGarming Sam of the Samba Team and Catalyst discovered a NULL pointer\n dereference vulnerability in the Samba AD DC LDAP server allowing a\n user able to read more than 256MB of LDAP entries to crash the Samba\n AD DC's LDAP server.\n\n\n[\\\n https://www.samba.org/samba/security/CVE-2018-16851.html](https://www.samba.org/samba/security/CVE-2018-16851.html)\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2:4.5.12+dfsg-2+deb9u4.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFor the detailed security status of samba please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/samba](https://security-tracker.debian.org/tracker/samba)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.5.12+dfsg-2+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.5.12+dfsg-1",
+				"2:4.5.12+dfsg-2",
+				"2:4.5.12+dfsg-2+deb9u1",
+				"2:4.5.12+dfsg-2+deb9u2",
+				"2:4.5.12+dfsg-2+deb9u3",
+				"2:4.5.8+dfsg-2",
+				"2:4.5.8+dfsg-2+deb9u1",
+				"2:4.5.8+dfsg-2+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4345-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4345"
+		}
+	]
+}

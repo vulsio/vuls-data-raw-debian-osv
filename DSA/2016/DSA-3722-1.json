@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3722-1",
+	"modified": "2023-10-16T00:12:16.516271Z",
+	"published": "2016-11-22T00:00:00Z",
+	"related": [
+		"CVE-2016-1248"
+	],
+	"summary": "vim - security update",
+	"details": "\nFlorian Larysch and Bram Moolenaar discovered that vim, an enhanced vi\neditor, does not properly validate values for the filetype,\nsyntax and keymap options, which may result in the execution of\narbitrary code if a file with a specially crafted modeline is opened.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2:7.4.488-7+deb8u1.\n\n\nWe recommend that you upgrade your vim packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "vim",
+				"purl": "pkg:deb/debian/vim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:7.4.488-7+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:7.4.488-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3722-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3722"
+		}
+	]
+}

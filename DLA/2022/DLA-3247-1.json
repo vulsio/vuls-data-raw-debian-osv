@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3247-1",
+	"modified": "2023-06-28T06:25:30.318558Z",
+	"published": "2022-12-23T00:00:00Z",
+	"related": [
+		"CVE-2021-33623"
+	],
+	"summary": "node-trim-newlines - security update",
+	"details": "\nIt was discovered that there was a potential remote denial of service\nvulnerability in node-trim-newlines, a Javascript module to strip newlines from\nthe start and/or end of a string.\n\n\nThis regular expression Denial of Service (ReDoS) attack exploited the fact\nthat most Regular Expression implementations can reach extreme situations that\ncause them to work very slowly in a way that is exponentially related to the\ninput size. An attacker can then cause a program using node-trim-newlines (and\nthus the offending regex) to enter one of these extreme situations and then\nhang for a very long time.\n\n\n* [CVE-2021-33623](https://security-tracker.debian.org/tracker/CVE-2021-33623)\nThe trim-newlines package before 3.0.1 and 4.x before 4.0.1 for Node.js\n has an issue related to regular expression denial-of-service (ReDoS) for\n the .end() method.\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n1.0.0-1+deb10u1.\n\n\nWe recommend that you upgrade your node-trim-newlines packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "node-trim-newlines",
+				"purl": "pkg:deb/debian/node-trim-newlines?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3247-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3247"
+		}
+	]
+}

@@ -1,0 +1,94 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4444-1",
+	"modified": "2023-10-16T00:17:41.698848Z",
+	"published": "2019-05-14T00:00:00Z",
+	"related": [
+		"CVE-2018-12126",
+		"CVE-2018-12127",
+		"CVE-2018-12130",
+		"CVE-2019-11091"
+	],
+	"summary": "linux - security update",
+	"details": "\nMultiple researchers have discovered vulnerabilities in the way the\nIntel processor designs have implemented speculative forwarding of data\nfilled into temporary microarchitectural structures (buffers). This\nflaw could allow an attacker controlling an unprivileged process to\nread sensitive information, including from the kernel and all other\nprocesses running on the system or cross guest/host boundaries to read\nhost memory.\n\n\nSee [\\\nhttps://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html](https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html)\nfor more details.\n\n\nTo fully resolve these vulnerabilities it is also necessary to install\nupdated CPU microcode. An updated intel-microcode package (only\navailable in Debian non-free) will be provided via a separate DSA. The\nupdated CPU microcode may also be available as part of a system firmware\n(\"BIOS\") update.\n\n\nIn addition, this update includes a fix for a regression causing\ndeadlocks inside the loopback driver, which was introduced by the update\nto 4.9.168 in the last Stretch point release.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.168-1+deb9u2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.168-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.107-1",
+				"4.9.110-1",
+				"4.9.110-2",
+				"4.9.110-3",
+				"4.9.110-3+deb9u1",
+				"4.9.110-3+deb9u2",
+				"4.9.110-3+deb9u3",
+				"4.9.110-3+deb9u4",
+				"4.9.110-3+deb9u5",
+				"4.9.110-3+deb9u6",
+				"4.9.130-1",
+				"4.9.130-2",
+				"4.9.135-1",
+				"4.9.144-1",
+				"4.9.144-2",
+				"4.9.144-3",
+				"4.9.144-3.1",
+				"4.9.161-1",
+				"4.9.168-1",
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1",
+				"4.9.30-2+deb9u3",
+				"4.9.30-2+deb9u4",
+				"4.9.30-2+deb9u5",
+				"4.9.30-2+deb9u5~bpo8+1",
+				"4.9.47-1",
+				"4.9.51-1",
+				"4.9.51-1~bpo8+1",
+				"4.9.65-1",
+				"4.9.65-2",
+				"4.9.65-3",
+				"4.9.65-3+deb9u1",
+				"4.9.65-3+deb9u1~bpo8+1",
+				"4.9.65-3+deb9u2",
+				"4.9.65-3+deb9u2~bpo8+1",
+				"4.9.65-3~bpo8+1",
+				"4.9.80-1",
+				"4.9.80-2",
+				"4.9.82-1+deb9u2",
+				"4.9.82-1+deb9u3",
+				"4.9.82-1+deb9u3~bpo8+1",
+				"4.9.88-1",
+				"4.9.88-1+deb9u1",
+				"4.9.88-1+deb9u1~bpo8+1",
+				"4.9.88-1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4444-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4444"
+		}
+	]
+}

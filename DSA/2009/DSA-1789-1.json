@@ -1,0 +1,94 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1789-1",
+	"modified": "2023-10-16T00:10:37.798307Z",
+	"published": "2009-05-04T00:00:00Z",
+	"related": [
+		"CVE-2008-2107",
+		"CVE-2008-2108",
+		"CVE-2008-5557",
+		"CVE-2008-5624",
+		"CVE-2008-5658",
+		"CVE-2008-5814",
+		"CVE-2009-0754",
+		"CVE-2009-1271"
+	],
+	"summary": "php5 - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the PHP 5\nhypertext preprocessor. The Common Vulnerabilities and Exposures\nproject identifies the following problems.\n\n\nThe following four vulnerabilities have already been fixed in the stable\n(lenny) version of php5 prior to the release of lenny. This update now\naddresses them for etch (oldstable) as well:\n\n\n* [CVE-2008-2107](https://security-tracker.debian.org/tracker/CVE-2008-2107) / [CVE-2008-2108](https://security-tracker.debian.org/tracker/CVE-2008-2108)\nThe GENERATE\\_SEED macro has several problems that make predicting\n generated random numbers easier, facilitating attacks against measures\n that use rand() or mt\\_rand() as part of a protection.\n* [CVE-2008-5557](https://security-tracker.debian.org/tracker/CVE-2008-5557)\nA buffer overflow in the mbstring extension allows attackers to execute\n arbitrary code via a crafted string containing an HTML entity.\n* [CVE-2008-5624](https://security-tracker.debian.org/tracker/CVE-2008-5624)\nThe page\\_uid and page\\_gid variables are not correctly set, allowing\n use of some functionality intended to be restricted to root.\n* [CVE-2008-5658](https://security-tracker.debian.org/tracker/CVE-2008-5658)\nDirectory traversal vulnerability in the ZipArchive::extractTo function\n allows attackers to write arbitrary files via a ZIP file with a file\n whose name contains .. (dot dot) sequences.\n\n\nThis update also addresses the following three vulnerabilities for both\noldstable (etch) and stable (lenny):\n\n\n* [CVE-2008-5814](https://security-tracker.debian.org/tracker/CVE-2008-5814)\nCross-site scripting (XSS) vulnerability, when display\\_errors is enabled,\n allows remote attackers to inject arbitrary web script or HTML.\n* [CVE-2009-0754](https://security-tracker.debian.org/tracker/CVE-2009-0754)\nWhen running on Apache, PHP allows local users to modify behavior of\n other sites hosted on the same web server by modifying the\n mbstring.func\\_overload setting within .htaccess, which causes this\n setting to be applied to other virtual hosts on the same server.\n* [CVE-2009-1271](https://security-tracker.debian.org/tracker/CVE-2009-1271)\nThe JSON\\_parser function allows a denial of service (segmentation fault)\n via a malformed string to the json\\_decode API function.\n\n\nFurthermore, two updates originally scheduled for the next point update for\noldstable are included in the etch package:\n\n\n* Let PHP use the system timezone database instead of the embedded\n timezone database which is out of date.\n* From the source tarball, the unused 'dbase' module has been removed\n which contained licensing problems.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 5.2.0+dfsg-8+etch15.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 5.2.6.dfsg.1-1+lenny3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 5.2.9.dfsg.1-1.\n\n\nWe recommend that you upgrade your php5 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.2.0+dfsg-8+etch15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.2.0-10",
+				"5.2.0-10+lenny1",
+				"5.2.0-11",
+				"5.2.0-8+etch1",
+				"5.2.0-8+etch10",
+				"5.2.0-8+etch11",
+				"5.2.0-8+etch11~p1",
+				"5.2.0-8+etch13",
+				"5.2.0-8+etch3",
+				"5.2.0-8+etch4",
+				"5.2.0-8+etch5~pu1",
+				"5.2.0-8+etch6",
+				"5.2.0-8+etch7",
+				"5.2.0-8+etch8",
+				"5.2.0-8+etch9",
+				"5.2.0-8+etch9~bpo31+1",
+				"5.2.0-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1789-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.2.6.dfsg.1-1+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.2.6.dfsg.1-1+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1789-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1789"
+		}
+	]
+}

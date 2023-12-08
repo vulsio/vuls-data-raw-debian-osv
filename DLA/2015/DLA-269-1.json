@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-269-1",
+	"modified": "2023-06-28T06:36:55.326409Z",
+	"published": "2015-07-07T00:00:00Z",
+	"summary": "linux-ftpd-ssl - security update",
+	"details": "\nThe issue is due to a case of missing brackets in the\npatch '500-ssl.diff', which causes the execution of\n'fclose(NULL)' and thus displays as a segmentation fault.\nThe error appears while transmogrifying 'linux-ftpd' into\n'linux-ftpd-ssl'.\n\n\nThere is no CVE assigned to this issue.\n\n\nThe patch was created by Mats Erik Andersson.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-ftpd-ssl",
+				"purl": "pkg:deb/debian/linux-ftpd-ssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.17.32+0.3-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.17.32+0.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-269-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-269"
+		}
+	]
+}

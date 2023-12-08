@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-607-1",
+	"modified": "2023-06-28T06:21:56.460080Z",
+	"published": "2016-08-31T00:00:00Z",
+	"related": [
+		"CVE-2016-1242"
+	],
+	"summary": "tryton-server - security update",
+	"details": "\nThe file\\_open syscall did not prevent the use of an up-level reference in a file\nname. A forged Report name could be used to open a file outside the root\ndirectory of trytond.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.2.4-1+deb7u3.\n\n\nWe recommend that you upgrade your ikiwiki packages. In addition it is also\nrecommended that you have liblwpx-paranoidagent-perl installed, which listed in\nthe recommends field of ikiwiki.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tryton-server",
+				"purl": "pkg:deb/debian/tryton-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.4-1+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.4-1",
+				"2.2.4-1+deb7u1",
+				"2.2.4-1+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-607-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-607"
+		}
+	]
+}

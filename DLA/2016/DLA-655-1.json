@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-655-1",
+	"modified": "2023-06-28T06:27:05.028295Z",
+	"published": "2016-10-15T00:00:00Z",
+	"related": [
+		"CVE-2014-9497",
+		"CVE-2016-1000247"
+	],
+	"summary": "mpg123 - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in mpg123, an\nMPEG layer 1/2/3 audio decoder and player. An attacker could take\nadvantage of these flaws to cause a denial of service against mpg123\nor applications using the libmpg123 library with a carefully crafted\ninput file.\n\n\n* [CVE-2014-9497](https://security-tracker.debian.org/tracker/CVE-2014-9497)\nMyautsai PAN discovered a flaw in the decoder initialization code\n of libmpg123. A specially crafted mp3 input file can be used to\n cause a buffer overflow, resulting in a denial of service.\n* [CVE-2016-1000247](https://security-tracker.debian.org/tracker/CVE-2016-1000247)\nJerold Hoong discovered a flaw in the id3 tag processing code of\n libmpg123. A specially crafted mp3 input file could be used to\n cause a buffer over-read, resulting in a denial of service.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.14.4-1+deb7u1.\n\n\nWe recommend that you upgrade your mpg123 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "mpg123",
+				"purl": "pkg:deb/debian/mpg123?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.4-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.14.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-655-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-655"
+		}
+	]
+}

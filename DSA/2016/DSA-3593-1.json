@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3593-1",
+	"modified": "2023-10-16T00:06:24.106970Z",
+	"published": "2016-06-02T00:00:00Z",
+	"related": [
+		"CVE-2015-8806",
+		"CVE-2016-1762",
+		"CVE-2016-1833",
+		"CVE-2016-1834",
+		"CVE-2016-1835",
+		"CVE-2016-1836",
+		"CVE-2016-1837",
+		"CVE-2016-1838",
+		"CVE-2016-1839",
+		"CVE-2016-1840",
+		"CVE-2016-2073",
+		"CVE-2016-3627",
+		"CVE-2016-3705",
+		"CVE-2016-4447",
+		"CVE-2016-4449",
+		"CVE-2016-4483"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in libxml2, a library providing\nsupport to read, modify and write XML and HTML files. A remote attacker\ncould provide a specially crafted XML or HTML file that, when processed\nby an application using libxml2, would cause a denial-of-service against\nthe application, or potentially the execution of arbitrary code with the\nprivileges of the user running the application.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.9.1+dfsg1-5+deb8u2.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.1+dfsg1-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.1+dfsg1-5",
+				"2.9.1+dfsg1-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3593-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3593"
+		}
+	]
+}

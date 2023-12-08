@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1824-1",
+	"modified": "2023-06-28T06:29:47.587852Z",
+	"published": "2019-06-18T00:00:00Z",
+	"related": [
+		"CVE-2019-10126",
+		"CVE-2019-11477",
+		"CVE-2019-11478",
+		"CVE-2019-11479",
+		"CVE-2019-11486",
+		"CVE-2019-11599",
+		"CVE-2019-11815",
+		"CVE-2019-11833",
+		"CVE-2019-11884",
+		"CVE-2019-3846",
+		"CVE-2019-5489",
+		"CVE-2019-9500",
+		"CVE-2019-9503"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2019-3846](https://security-tracker.debian.org/tracker/CVE-2019-3846), [CVE-2019-10126](https://security-tracker.debian.org/tracker/CVE-2019-10126)\nhuangwen reported multiple buffer overflows in the Marvell wifi\n (mwifiex) driver, which a local user could use to cause denial of\n service or the execution of arbitrary code.\n* [CVE-2019-5489](https://security-tracker.debian.org/tracker/CVE-2019-5489)\nDaniel Gruss, Erik Kraft, Trishita Tiwari, Michael Schwarz, Ari\n Trachtenberg, Jason Hennessey, Alex Ionescu, and Anders Fogh\n discovered that local users could use the mincore() system call to\n obtain sensitive information from other processes that access the\n same memory-mapped file.\n* [CVE-2019-9500](https://security-tracker.debian.org/tracker/CVE-2019-9500), [CVE-2019-9503](https://security-tracker.debian.org/tracker/CVE-2019-9503)\nHugues Anguelkov discovered a buffer overflow and missing access\n validation in the Broadcom FullMAC wifi driver (brcmfmac), which a\n attacker on the same wifi network could use to cause denial of\n service or the execution of arbitrary code.\n* [CVE-2019-11477](https://security-tracker.debian.org/tracker/CVE-2019-11477)\nJonathan Looney reported that a specially crafted sequence of TCP\n selective acknowledgements (SACKs) allows a remotely triggerable\n kernel panic.\n* [CVE-2019-11478](https://security-tracker.debian.org/tracker/CVE-2019-11478)\nJonathan Looney reported that a specially crafted sequence of TCP\n selective acknowledgements (SACKs) will fragment the TCP\n retransmission queue, allowing an attacker to cause excessive\n resource usage.\n* [CVE-2019-11479](https://security-tracker.debian.org/tracker/CVE-2019-11479)\nJonathan Looney reported that an attacker could force the Linux\n kernel to segment its responses into multiple TCP segments, each of\n which contains only 8 bytes of data, drastically increasing the\n bandwidth required to deliver the same amount of data.\n\n\nThis update introduces a new sysctl value to control the minimal MSS\n (net.ipv4.tcp\\_min\\_snd\\_mss), which by default uses the formerly hard-coded\n value of 48. We recommend raising this to 536 unless you know\n that your network requires a lower value.\n* [CVE-2019-11486](https://security-tracker.debian.org/tracker/CVE-2019-11486)\nJann Horn of Google reported numerous race conditions in the\n Siemens R3964 line discipline. A local user could use these to\n cause unspecified security impact. This module has therefore been\n disabled.\n* [CVE-2019-11599](https://security-tracker.debian.org/tracker/CVE-2019-11599)\nJann Horn of Google reported a race condition in the core dump\n implementation which could lead to a use-after-free. A local\n user could use this to read sensitive information, to cause a\n denial of service (memory corruption), or for privilege\n escalation.\n* [CVE-2019-11815](https://security-tracker.debian.org/tracker/CVE-2019-11815)\nIt was discovered that a use-after-free in the Reliable Datagram\n Sockets protocol could result in denial of service and potentially\n privilege escalation. This protocol module (rds) is not auto-loaded\n on Debian systems, so this issue only affects systems where\n it is explicitly loaded.\n* [CVE-2019-11833](https://security-tracker.debian.org/tracker/CVE-2019-11833)\nIt was discovered that the ext4 filesystem implementation writes\n uninitialised data from kernel memory to new extent blocks. A\n local user able to write to an ext4 filesystem and then read the\n filesystem image, for example using a removable drive, might be\n able to use this to obtain sensitive information.\n* [CVE-2019-11884](https://security-tracker.debian.org/tracker/CVE-2019-11884)\nIt was discovered that the Bluetooth HIDP implementation did not\n ensure that new connection names were null-terminated. A local\n user with CAP\\_NET\\_ADMIN capability might be able to use this to\n obtain sensitive information from the kernel stack.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.168-1+deb9u3~deb8u1.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.168-1+deb9u3~deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.110-1~deb8u1",
+				"4.9.144-3.1~deb8u1",
+				"4.9.168-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1824-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1824"
+		}
+	]
+}

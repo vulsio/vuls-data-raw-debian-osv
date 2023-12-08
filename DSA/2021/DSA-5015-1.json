@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5015-1",
+	"modified": "2023-10-16T00:20:30.176438Z",
+	"published": "2021-11-30T00:00:00Z",
+	"related": [
+		"CVE-2020-25717"
+	],
+	"summary": "samba - security update",
+	"details": "\nAndrew Bartlett discovered that Samba, a SMB/CIFS file, print, and login\nserver for Unix, may map domain users to local users in an undesired\nway. This could allow a user in an AD domain to potentially become root\non domain members.\n\n\nA new parameter min domain uid (default 1000) has been added to\nspecify the minimum uid allowed when mapping a local account to a domain\naccount.\n\n\nFurther details and workarounds can be found in the upstream advisory\n[\\\nhttps://www.samba.org/samba/security/CVE-2020-25717.html](https://www.samba.org/samba/security/CVE-2020-25717.html)\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2:4.9.5+dfsg-5+deb10u2. Additionally the update mitigates\n[CVE-2020-25722](https://security-tracker.debian.org/tracker/CVE-2020-25722). Unfortunately the changes required to fix additional\nCVEs affecting Samba as an AD-compatible domain controller are too\ninvasive to be backported. Thus users using Samba as an AD-compatible\ndomain controller are encouraged to migrate to Debian bullseye. From\nthis point onwards AD domain controller setups are no longer supported\nin Debian oldstable.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFor the detailed security status of samba please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/samba>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.9.5+dfsg-5+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.9.5+dfsg-5",
+				"2:4.9.5+dfsg-5+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5015-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-5015"
+		}
+	]
+}

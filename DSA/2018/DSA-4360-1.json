@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4360-1",
+	"modified": "2023-10-16T00:17:22.323749Z",
+	"published": "2018-12-27T00:00:00Z",
+	"related": [
+		"CVE-2016-10209",
+		"CVE-2016-10349",
+		"CVE-2016-10350",
+		"CVE-2017-14166",
+		"CVE-2017-14501",
+		"CVE-2017-14502",
+		"CVE-2017-14503",
+		"CVE-2018-1000877",
+		"CVE-2018-1000878",
+		"CVE-2018-1000880"
+	],
+	"summary": "libarchive - security update",
+	"details": "\nMultiple security issues were found in libarchive, a multi-format archive\nand compression library: Processing malformed RAR archives could result\nin denial of service or the execution of arbitrary code and malformed\nWARC, LHarc, ISO, Xar or CAB archives could result in denial of service.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 3.2.2-2+deb9u1.\n\n\nWe recommend that you upgrade your libarchive packages.\n\n\nFor the detailed security status of libarchive please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libarchive](https://security-tracker.debian.org/tracker/libarchive)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.2-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4360-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4360"
+		}
+	]
+}

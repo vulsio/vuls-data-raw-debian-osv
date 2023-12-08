@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-720-1",
+	"modified": "2023-06-28T06:25:36.838428Z",
+	"published": "2016-11-24T00:00:00Z",
+	"related": [
+		"CVE-2016-9379",
+		"CVE-2016-9380",
+		"CVE-2016-9381",
+		"CVE-2016-9382",
+		"CVE-2016-9383",
+		"CVE-2016-9386"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2016-9379](https://security-tracker.debian.org/tracker/CVE-2016-9379) /\n [CVE-2016-9380](https://security-tracker.debian.org/tracker/CVE-2016-9380) (XSA-198)\n\n pygrub, the boot loader emulator, fails to quote (or sanity check)\n its results when reporting them to its caller. A malicious guest\n administrator can obtain the contents of sensitive host files\n* [CVE-2016-9381](https://security-tracker.debian.org/tracker/CVE-2016-9381) (XSA-197)\n\n The compiler can emit optimizations in qemu which can lead to double\n fetch vulnerabilities. Malicious administrators can exploit this\n vulnerability to take over the qemu process, elevating its privilege\n to that of the qemu process.\n* [CVE-2016-9382](https://security-tracker.debian.org/tracker/CVE-2016-9382) (XSA-192)\n\n LDTR, just like TR, is purely a protected mode facility. Hence even\n when switching to a VM86 mode task, LDTR loading needs to follow\n protected mode semantics. A malicious unprivileged guest process\n can crash or escalate its privilege to that of the guest operating\n system.\n* [CVE-2016-9383](https://security-tracker.debian.org/tracker/CVE-2016-9383) (XSA-195)\n\n When Xen needs to emulate some instruction, to efficiently handle\n the emulation, the memory address and register operand are\n recalculated internally to Xen. In this process, the high bits of\n an intermediate expression were discarded, leading to both the\n memory location and the register operand being wrong. A malicious\n guest can modify arbitrary memory.\n* [CVE-2016-9386](https://security-tracker.debian.org/tracker/CVE-2016-9386) (XSA-191)\n\n The Xen x86 emulator erroneously failed to consider the unusability\n of segments when performing memory accesses. An unprivileged guest\n user program may be able to elevate its privilege to that of the\n guest operating system.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-4. For Debian 8 Jessie, these problems will be fixed shortly.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.6.lts1-4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2",
+				"4.1.4-3+deb7u3",
+				"4.1.4-3+deb7u4",
+				"4.1.4-3+deb7u5",
+				"4.1.4-3+deb7u6",
+				"4.1.4-3+deb7u7",
+				"4.1.4-3+deb7u8",
+				"4.1.4-3+deb7u9",
+				"4.1.4-4",
+				"4.1.6.1-1+deb7u1",
+				"4.1.6.lts1-1",
+				"4.1.6.lts1-2",
+				"4.1.6.lts1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-720-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-720"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2168-1",
+	"modified": "2023-06-28T06:21:14.518973Z",
+	"published": "2020-04-02T00:00:00Z",
+	"related": [
+		"CVE-2017-5209",
+		"CVE-2017-5545",
+		"CVE-2017-5834",
+		"CVE-2017-5835",
+		"CVE-2017-6435",
+		"CVE-2017-6436",
+		"CVE-2017-6439",
+		"CVE-2017-7982"
+	],
+	"summary": "libplist - security update",
+	"details": "\nlibplist is a library for reading and writing the Apple binary and XML\nproperty lists format. It's part of the libimobiledevice stack, providing\naccess to iDevices (iPod, iPhone, iPad ...).\n\n\n* [CVE-2017-5209](https://security-tracker.debian.org/tracker/CVE-2017-5209)\nThe base64decode function in base64.c allows attackers to obtain sensitive\n information from process memory or cause a denial of service (buffer\n over-read) via split encoded Apple Property List data.\n* [CVE-2017-5545](https://security-tracker.debian.org/tracker/CVE-2017-5545)\nThe main function in plistutil.c allows attackers to obtain sensitive\n information from process memory or cause a denial of service (buffer\n over-read) via Apple Property List data that is too short.\n* [CVE-2017-5834](https://security-tracker.debian.org/tracker/CVE-2017-5834)\nThe parse\\_dict\\_node function in bplist.c allows attackers to cause a denial\n of service (out-of-bounds heap read and crash) via a crafted file.\n* [CVE-2017-5835](https://security-tracker.debian.org/tracker/CVE-2017-5835)\nlibplist allows attackers to cause a denial of service (large memory\n allocation and crash) via vectors involving an offset size of zero.\n* [CVE-2017-6435](https://security-tracker.debian.org/tracker/CVE-2017-6435)\nThe parse\\_string\\_node function in bplist.c allows local users to cause a\n denial of service (memory corruption) via a crafted plist file.\n* [CVE-2017-6436](https://security-tracker.debian.org/tracker/CVE-2017-6436)\nThe parse\\_string\\_node function in bplist.c allows local users to cause a\n denial of service (memory allocation error) via a crafted plist file.\n* [CVE-2017-6439](https://security-tracker.debian.org/tracker/CVE-2017-6439)\nHeap-based buffer overflow in the parse\\_string\\_node function in bplist.c\n allows local users to cause a denial of service (out-of-bounds write) via\n a crafted plist file.\n* [CVE-2017-7982](https://security-tracker.debian.org/tracker/CVE-2017-7982)\nInteger overflow in the plist\\_from\\_bin function in bplist.c allows remote\n attackers to cause a denial of service (heap-based buffer over-read and\n application crash) via a crafted plist file.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.11-3+deb8u1.\n\n\nWe recommend that you upgrade your libplist packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libplist",
+				"purl": "pkg:deb/debian/libplist?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.11-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.11-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2168-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2168"
+		}
+	]
+}

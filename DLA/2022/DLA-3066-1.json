@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3066-1",
+	"modified": "2023-06-28T06:26:49.997114Z",
+	"published": "2022-07-01T00:00:00Z",
+	"related": [
+		"CVE-2021-20247",
+		"CVE-2021-3578",
+		"CVE-2021-3657"
+	],
+	"summary": "isync - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in isync, an IMAP and\nMailDir mailbox synchronizer. An malicious attacker who can control an IMAP\nserver may exploit these flaws for remote code execution.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.2.1-2+deb9u1.\n\n\nWe recommend that you upgrade your isync packages.\n\n\nFor the detailed security status of isync please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/isync>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "isync",
+				"purl": "pkg:deb/debian/isync?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.1-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3066-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3066"
+		}
+	]
+}

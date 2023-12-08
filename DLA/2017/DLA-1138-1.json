@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1138-1",
+	"modified": "2023-06-28T06:22:34.340700Z",
+	"published": "2017-10-19T00:00:00Z",
+	"related": [
+		"CVE-2017-7805"
+	],
+	"summary": "nss - security update",
+	"details": "\nMartin Thomson discovered that nss, the Mozilla Network Security Service\nlibrary, is prone to a use-after-free vulnerability in the TLS 1.2\nimplementation when handshake hashes are generated. A remote attacker\ncan take advantage of this flaw to cause an application using the nss\nlibrary to crash, resulting in a denial of service, or potentially to\nexecute arbitrary code.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2:3.26-1+debu7u5.\n\n\nWe recommend that you upgrade your nss packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "nss",
+				"purl": "pkg:deb/debian/nss?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.26-1+debu7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.14.3-1",
+				"2:3.14.4-1",
+				"2:3.14.5-1",
+				"2:3.14.5-1+deb7u1",
+				"2:3.14.5-1+deb7u2",
+				"2:3.14.5-1+deb7u3",
+				"2:3.14.5-1+deb7u4",
+				"2:3.14.5-1+deb7u5",
+				"2:3.14.5-1+deb7u6",
+				"2:3.14.5-1+deb7u7",
+				"2:3.14.5-1+deb7u8",
+				"2:3.14.5-1~bpo60+1",
+				"2:3.15-1",
+				"2:3.15.1-1",
+				"2:3.15.2-1",
+				"2:3.15.3-1",
+				"2:3.15.3.1-1",
+				"2:3.15.3.1-1.1",
+				"2:3.15.4-1",
+				"2:3.15.4-2",
+				"2:3.16-1",
+				"2:3.16.1-1",
+				"2:3.16.3-1",
+				"2:3.16.3-1.1",
+				"2:3.17-1",
+				"2:3.17-1+x32",
+				"2:3.17.1-1",
+				"2:3.17.2-1",
+				"2:3.17.2-1+x32",
+				"2:3.17.2-1.1",
+				"2:3.17.2-1.1+x32",
+				"2:3.17.4-1",
+				"2:3.18-1",
+				"2:3.19-1",
+				"2:3.19.1-1",
+				"2:3.19.1-2",
+				"2:3.19.2-1",
+				"2:3.19.2-1+x32.1",
+				"2:3.20-1",
+				"2:3.20.1-1",
+				"2:3.21-1",
+				"2:3.21-1.1",
+				"2:3.23-1",
+				"2:3.23-2",
+				"2:3.25-1",
+				"2:3.26-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1138-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1138"
+		}
+	]
+}

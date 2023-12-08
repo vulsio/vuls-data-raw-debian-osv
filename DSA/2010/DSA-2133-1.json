@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2133-1",
+	"modified": "2023-10-16T00:05:47.557267Z",
+	"published": "2010-12-13T00:00:00Z",
+	"related": [
+		"CVE-2010-4336"
+	],
+	"summary": "collectd - denial of service",
+	"details": "\nIt was discovered that collectd, a statistics collection and monitoring\ndaemon, is prone to a denial of service attack via a crafted network\npacket.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 4.4.2-3+lenny1.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 4.10.1-1+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.10.1-2.1.\n\n\nThis advisory only contains the packages for the alpha, amd64, arm,\narmel, hppa, i386, ia64, mips, powerpc, s390 and sparc architectures.\nThe packages for the mipsel architecture will be released soon.\n\n\nWe recommend that you upgrade your collectd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "collectd",
+				"purl": "pkg:deb/debian/collectd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.2-3+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.2-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2133-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2133"
+		}
+	]
+}

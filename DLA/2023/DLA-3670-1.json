@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3670-1",
+	"modified": "2023-11-28T06:15:32.139629Z",
+	"published": "2023-11-27T00:00:00Z",
+	"related": [
+		"CVE-2023-45853"
+	],
+	"summary": "minizip - security update",
+	"details": "\nAn issue has been found in minizip, a compression library.\nWhen using long filenames, an integer overflow might happen, which results\nin a heap-based buffer overflow in zipOpenNewFileInZip4\\_64().\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.1-8+deb10u1.\n\n\nWe recommend that you upgrade your minizip packages.\n\n\nFor the detailed security status of minizip please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/minizip>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "minizip",
+				"purl": "pkg:deb/debian/minizip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1-8+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3670-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3670"
+		}
+	]
+}

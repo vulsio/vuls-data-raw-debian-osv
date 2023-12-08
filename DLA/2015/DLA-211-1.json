@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-211-1",
+	"modified": "2023-06-28T06:21:12.806503Z",
+	"published": "2015-04-29T00:00:00Z",
+	"related": [
+		"CVE-2015-3143",
+		"CVE-2015-3148"
+	],
+	"summary": "curl - security update",
+	"details": "\nSeveral vulnerabilities were discovered in cURL, an URL transfer library:\n\n\n* [CVE-2015-3143](https://security-tracker.debian.org/tracker/CVE-2015-3143)\nNTLM-authenticated connections could be wrongly reused for requests\n without any credentials set, leading to HTTP requests being sent\n over the connection authenticated as a different user. This is\n similar to the issue fixed in DSA-2849-1.\n* [CVE-2015-3148](https://security-tracker.debian.org/tracker/CVE-2015-3148)\nWhen doing HTTP requests using the Negotiate authentication method\n along with NTLM, the connection used would not be marked as\n authenticated, making it possible to reuse it and send requests for\n one user over the connection authenticated as a different user.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.21.0-2.1+squeeze12"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.21.0-1",
+				"7.21.0-2",
+				"7.21.0-2.1+squeeze1",
+				"7.21.0-2.1+squeeze10",
+				"7.21.0-2.1+squeeze11",
+				"7.21.0-2.1+squeeze2",
+				"7.21.0-2.1+squeeze3",
+				"7.21.0-2.1+squeeze4",
+				"7.21.0-2.1+squeeze5",
+				"7.21.0-2.1+squeeze6",
+				"7.21.0-2.1+squeeze7",
+				"7.21.0-2.1+squeeze8",
+				"7.21.0-2.1+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-211-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-211"
+		}
+	]
+}

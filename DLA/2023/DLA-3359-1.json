@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3359-1",
+	"modified": "2023-06-28T06:25:32.393276Z",
+	"published": "2023-03-13T00:00:00Z",
+	"related": [
+		"CVE-2019-13038",
+		"CVE-2021-3639"
+	],
+	"summary": "libapache2-mod-auth-mellon - security update",
+	"details": "\nlibapache2-mod-auth-mellon, a SAML 2.0 authentication module for Apache,\nwere reported to have the following vulnerabilities.\n\n\n* [CVE-2019-13038](https://security-tracker.debian.org/tracker/CVE-2019-13038)\nmod\\_auth\\_mellon had an Open Redirect via the login?ReturnTo= substring,\n as demonstrated by omitting the // after http: in the target URL.\n* [CVE-2021-3639](https://security-tracker.debian.org/tracker/CVE-2021-3639)\nmod\\_auth\\_mellon did not sanitize logout URLs properly. This issue could\n be used by an attacker to facilitate phishing attacks by tricking users\n into visiting a trusted web application URL that redirects to an external\n and potentially malicious server.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.14.2-1+deb10u1.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-mellon packages.\n\n\nFor the detailed security status of libapache2-mod-auth-mellon please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libapache2-mod-auth-mellon>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libapache2-mod-auth-mellon",
+				"purl": "pkg:deb/debian/libapache2-mod-auth-mellon?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.14.2-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.14.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3359-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3359"
+		}
+	]
+}

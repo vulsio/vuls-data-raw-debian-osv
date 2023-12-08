@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1042-1",
+	"modified": "2023-06-28T06:20:16.342974Z",
+	"published": "2017-07-28T00:00:00Z",
+	"related": [
+		"CVE-2017-9122",
+		"CVE-2017-9123",
+		"CVE-2017-9124",
+		"CVE-2017-9125",
+		"CVE-2017-9126",
+		"CVE-2017-9127",
+		"CVE-2017-9128"
+	],
+	"summary": "libquicktime - security update",
+	"details": "\n* [CVE-2017-9122](https://security-tracker.debian.org/tracker/CVE-2017-9122)\nThe quicktime\\_read\\_moov function in moov.c in libquicktime 1.2.4 allows\n remote attackers to cause a denial of service (infinite loop and CPU\n consumption) via a crafted mp4 file.\n* [CVE-2017-9123](https://security-tracker.debian.org/tracker/CVE-2017-9123)\nThe lqt\\_frame\\_duration function in lqt\\_quicktime.c in libquicktime\n 1.2.4 allows remote attackers to cause a denial of service (invalid\n memory read and application crash) via a crafted mp4 file.\n* [CVE-2017-9124](https://security-tracker.debian.org/tracker/CVE-2017-9124)\nThe quicktime\\_match\\_32 function in util.c in libquicktime 1.2.4 allows\n remote attackers to cause a denial of service (NULL pointer dereference\n and application crash) via a crafted mp4 file.\n* [CVE-2017-9125](https://security-tracker.debian.org/tracker/CVE-2017-9125)\nThe lqt\\_frame\\_duration function in lqt\\_quicktime.c in libquicktime\n 1.2.4 allows remote attackers to cause a denial of service (heap-based\n buffer over-read) via a crafted mp4 file.\n* [CVE-2017-9126](https://security-tracker.debian.org/tracker/CVE-2017-9126)\nThe quicktime\\_read\\_dref\\_table function in dref.c in libquicktime 1.2.4\n allows remote attackers to cause a denial of service (heap-based buffer\n overflow and application crash) via a crafted mp4 file.\n* [CVE-2017-9127](https://security-tracker.debian.org/tracker/CVE-2017-9127)\nThe quicktime\\_user\\_atoms\\_read\\_atom function in useratoms.c in\n libquicktime 1.2.4 allows remote attackers to cause a denial of service\n (heap-based buffer overflow and application crash) via a crafted mp4\n file.\n* [CVE-2017-9128](https://security-tracker.debian.org/tracker/CVE-2017-9128)\nThe quicktime\\_video\\_width function in lqt\\_quicktime.c in libquicktime\n 1.2.4 allows remote attackers to cause a denial of service (heap-based\n buffer over-read and application crash) via a crafted mp4 file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2:1.2.4-3+deb7u2.\n\n\nWe recommend that you upgrade your libquicktime packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libquicktime",
+				"purl": "pkg:deb/debian/libquicktime?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.2.4-3+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.2.4-3",
+				"2:1.2.4-3+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1042-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1042"
+		}
+	]
+}

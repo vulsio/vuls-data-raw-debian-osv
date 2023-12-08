@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-855-1",
+	"modified": "2023-10-16T00:29:54.453828Z",
+	"published": "2005-10-10T00:00:00Z",
+	"related": [
+		"CVE-2005-3150"
+	],
+	"summary": "weex - format string vulnerability",
+	"details": "\nUlf HĂ¤rnhammar from the Debian Security Audit Project discovered a\nformat string vulnerability in weex, a non-interactive FTP client for\nupdating web pages, that could be exploited to execute arbitrary code\non the clients machine.\n\n\nFor the oldstable distribution (woody) this problem has been fixed in\nversion 2.6.1-4woody2.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.6.1-6sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.6.1-6sarge1.\n\n\nWe recommend that you upgrade your weex package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "weex",
+				"purl": "pkg:deb/debian/weex?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.1-6sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.1-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-855-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "weex",
+				"purl": "pkg:deb/debian/weex?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.1-4woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.1-4woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-855-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-855"
+		}
+	]
+}

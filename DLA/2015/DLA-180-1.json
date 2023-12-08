@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-180-1",
+	"modified": "2023-06-28T06:20:00.673773Z",
+	"published": "2015-03-25T00:00:00Z",
+	"related": [
+		"CVE-2014-8155",
+		"CVE-2015-0282",
+		"CVE-2015-0294"
+	],
+	"summary": "gnutls26 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in GnuTLS, a library\nimplementing the TLS and SSL protocols. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2014-8155](https://security-tracker.debian.org/tracker/CVE-2014-8155)\nMissing date/time checks on CA certificates\n* [CVE-2015-0282](https://security-tracker.debian.org/tracker/CVE-2015-0282)\nGnuTLS does not verify the RSA PKCS #1 signature algorithm to match\n the signature algorithm in the certificate, leading to a potential\n downgrade to a disallowed algorithm without detecting it.\n* [CVE-2015-0294](https://security-tracker.debian.org/tracker/CVE-2015-0294)\nGnuTLS does not check whether the two signature algorithms match on\n certificate import.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in gnutls26 version 2.8.6-1+squeeze5\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gnutls26",
+				"purl": "pkg:deb/debian/gnutls26?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.6-1+squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.6-1",
+				"2.8.6-1+squeeze1",
+				"2.8.6-1+squeeze2",
+				"2.8.6-1+squeeze3",
+				"2.8.6-1+squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-180-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-180"
+		}
+	]
+}

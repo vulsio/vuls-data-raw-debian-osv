@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4505-1",
+	"modified": "2023-10-16T00:24:55.565541Z",
+	"published": "2019-08-22T00:00:00Z",
+	"related": [
+		"CVE-2019-9511",
+		"CVE-2019-9513",
+		"CVE-2019-9516"
+	],
+	"summary": "nginx - security update",
+	"details": "\nThree vulnerabilities were discovered in the HTTP/2 code of Nginx, a\nhigh-performance web and reverse proxy server, which could result in\ndenial of service.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 1.10.3-1+deb9u3.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1.14.2-2+deb10u1.\n\n\nWe recommend that you upgrade your nginx packages.\n\n\nFor the detailed security status of nginx please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/nginx](https://security-tracker.debian.org/tracker/nginx)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.10.3-1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.10.3-1",
+				"1.10.3-1+deb9u1",
+				"1.10.3-1+deb9u1~bpo8+1",
+				"1.10.3-1+deb9u1~bpo8+2",
+				"1.10.3-1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4505-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "nginx",
+				"purl": "pkg:deb/debian/nginx?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.2-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.14.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4505-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4505"
+		}
+	]
+}

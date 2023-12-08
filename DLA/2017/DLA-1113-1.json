@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1113-1",
+	"modified": "2023-06-28T06:20:23.222602Z",
+	"published": "2017-09-26T00:00:00Z",
+	"related": [
+		"CVE-2017-0898",
+		"CVE-2017-10784"
+	],
+	"summary": "ruby1.8 - security update",
+	"details": "\nSome vulnerabilities were found in the Ruby 1.8 package that affects\nthe LTS distribution.\n\n\n* [CVE-2017-0898](https://security-tracker.debian.org/tracker/CVE-2017-0898)\nBuffer underrun vulnerability in Kernel.sprintf\n* [CVE-2017-10784](https://security-tracker.debian.org/tracker/CVE-2017-10784)\nEscape sequence injection vulnerability in the Basic\n authentication of WEBrick\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8.7.358-7.1+deb7u4.\n\n\nWe recommend that you upgrade your ruby1.8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ruby1.8",
+				"purl": "pkg:deb/debian/ruby1.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.7.358-7.1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.7.358-7",
+				"1.8.7.358-7.1",
+				"1.8.7.358-7.1+deb7u1",
+				"1.8.7.358-7.1+deb7u2",
+				"1.8.7.358-7.1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1113-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1113"
+		}
+	]
+}

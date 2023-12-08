@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4537-1",
+	"modified": "2023-10-16T00:19:02.748934Z",
+	"published": "2019-09-28T00:00:00Z",
+	"related": [
+		"CVE-2019-16680"
+	],
+	"summary": "file-roller - security update",
+	"details": "\nIt was discovered that file-roller, an archive manager for GNOME, does\nnot properly handle the extraction of archives with a single ./../ in a\nfile path. An attacker able to provide a specially crafted archive for\nprocessing can take advantage of this flaw to overwrite files if a user\nis dragging a specific file or map to a location to extract to.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 3.22.3-1+deb9u1.\n\n\nWe recommend that you upgrade your file-roller packages.\n\n\nFor the detailed security status of file-roller please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/file-roller>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "file-roller",
+				"purl": "pkg:deb/debian/file-roller?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.22.3-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.22.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4537-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4537"
+		}
+	]
+}

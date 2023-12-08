@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1054-1",
+	"modified": "2023-10-16T00:05:03.160824Z",
+	"published": "2006-05-09T00:00:00Z",
+	"related": [
+		"CVE-2006-2024",
+		"CVE-2006-2025",
+		"CVE-2006-2026"
+	],
+	"summary": "tiff - several vulnerabilities",
+	"details": "\nTavis Ormandy discovered several vulnerabilities in the TIFF library\nthat can lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2006-2024](https://security-tracker.debian.org/tracker/CVE-2006-2024)\nMultiple vulnerabilities allow attackers to cause a denial of\n service.\n* [CVE-2006-2025](https://security-tracker.debian.org/tracker/CVE-2006-2025)\nAn integer overflow allows attackers to cause a denial of service\n and possibly execute arbitrary code.\n* [CVE-2006-2026](https://security-tracker.debian.org/tracker/CVE-2006-2026)\nA double-free vulnerability allows attackers to cause a denial of\n service and possibly execute arbitrary code.\n\n\nFor the old stable distribution (woody) these problems have been fixed\nin version 3.5.5-7woody1.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 3.7.2-3sarge1.\n\n\nThe unstable distribution (sid) is not vulnerable to these problems.\n\n\nWe recommend that you upgrade your libtiff packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.5.5-7woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.5.5-6.woody3",
+				"3.5.5-6.woody5",
+				"3.5.5-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1054-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.7.2-3sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.7.2-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1054-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1054"
+		}
+	]
+}

@@ -1,0 +1,120 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-993-1",
+	"modified": "2023-06-28T06:39:05.452671Z",
+	"published": "2017-06-20T00:00:00Z",
+	"related": [
+		"CVE-2017-1000364",
+		"CVE-2017-7487",
+		"CVE-2017-7645",
+		"CVE-2017-7895",
+		"CVE-2017-8890",
+		"CVE-2017-8924",
+		"CVE-2017-8925",
+		"CVE-2017-9074",
+		"CVE-2017-9075",
+		"CVE-2017-9076",
+		"CVE-2017-9077",
+		"CVE-2017-9242"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2017-0605](https://security-tracker.debian.org/tracker/CVE-2017-0605)\nA buffer overflow flaw was discovered in the trace subsystem.\n* [CVE-2017-7487](https://security-tracker.debian.org/tracker/CVE-2017-7487)\nLi Qiang reported a reference counter leak in the ipxitf\\_ioctl\n function which may result into a use-after-free vulnerability,\n triggerable when a IPX interface is configured.\n* [CVE-2017-7645](https://security-tracker.debian.org/tracker/CVE-2017-7645)\nTuomas Haanpaa and Matti Kamunen from Synopsys Ltd discovered that\n the NFSv2 and NFSv3 server implementations are vulnerable to an\n out-of-bounds memory access issue while processing arbitrarily long\n arguments sent by NFSv2/NFSv3 PRC clients, leading to a denial of\n service.\n* [CVE-2017-7895](https://security-tracker.debian.org/tracker/CVE-2017-7895)\nAri Kauppi from Synopsys Ltd discovered that the NFSv2 and NFSv3\n server implementations do not properly handle payload bounds\n checking of WRITE requests. A remote attacker with write access to a\n NFS mount can take advantage of this flaw to read chunks of\n arbitrary memory from both kernel-space and user-space.\n* [CVE-2017-8890](https://security-tracker.debian.org/tracker/CVE-2017-8890)\nIt was discovered that the net\\_csk\\_clone\\_lock() function allows a\n remote attacker to cause a double free leading to a denial of\n service or potentially have other impact.\n* [CVE-2017-8924](https://security-tracker.debian.org/tracker/CVE-2017-8924)\nJohan Hovold found that the io\\_ti USB serial driver could leak\n sensitive information if a malicious USB device was connected.\n* [CVE-2017-8925](https://security-tracker.debian.org/tracker/CVE-2017-8925)\nJohan Hovold found a reference counter leak in the omninet USB\n serial driver, resulting in a use-after-free vulnerability. This\n can be triggered by a local user permitted to open tty devices.\n* [CVE-2017-9074](https://security-tracker.debian.org/tracker/CVE-2017-9074)\nAndrey Konovalov reported that the IPv6 fragmentation\n implementation could read beyond the end of a packet buffer. A\n local user or guest VM might be able to use this to leak sensitive\n information or to cause a denial of service (crash).\n* [CVE-2017-9075](https://security-tracker.debian.org/tracker/CVE-2017-9075)\nAndrey Konovalov reported that the SCTP/IPv6 implementation\n wrongly initialised address lists on connected sockets, resulting\n in a use-after-free vulnerability, a similar issue to\n [CVE-2017-8890](https://security-tracker.debian.org/tracker/CVE-2017-8890). \n This can be triggered by any local user.\n* [CVE-2017-9076](https://security-tracker.debian.org/tracker/CVE-2017-9076) /\n [CVE-2017-9077](https://security-tracker.debian.org/tracker/CVE-2017-9077)\nCong Wang found that the TCP/IPv6 and DCCP/IPv6 implementations\n wrongly initialised address lists on connected sockets, a similar\n issue to [CVE-2017-9075](https://security-tracker.debian.org/tracker/CVE-2017-9075).\n* [CVE-2017-9242](https://security-tracker.debian.org/tracker/CVE-2017-9242)\nAndrey Konovalov reported a packet buffer overrun in the IPv6\n implementation. A local user could use this for denial of service\n (memory corruption; crash) and possibly for privilege escalation.\n* [CVE-2017-1000364](https://security-tracker.debian.org/tracker/CVE-2017-1000364)\nThe Qualys Research Labs discovered that the size of the stack guard\n page is not sufficiently large. The stack-pointer can jump over the\n guard-page and moving from the stack into another memory region\n without accessing the guard-page. In this case no page-fault\n exception is raised and the stack extends into the other memory\n region. An attacker can exploit this flaw for privilege escalation.\n\n\nThe default stack gap protection is set to 256 pages and can be\n configured via the stack\\_guard\\_gap kernel parameter on the kernel\n command line.\n\n\nFurther details can be found at\n <https://www.qualys.com/2017/06/19/stack-clash/stack-clash.txt>\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.89-1. This version also includes bug fixes from upstream version\n3.2.89.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.16.43-2+deb8u1.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n4.9.30-2+deb9u1 or earlier versions before the stretch release.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.89-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1",
+				"3.2.63-2+deb7u1~bpo60+1",
+				"3.2.63-2+deb7u2",
+				"3.2.63-2+deb7u2~bpo60+1",
+				"3.2.65-1",
+				"3.2.65-1+deb7u1",
+				"3.2.65-1+deb7u1~bpo60+1",
+				"3.2.65-1+deb7u2",
+				"3.2.65-1+deb7u2~bpo60+1",
+				"3.2.68-1",
+				"3.2.68-1+deb7u1",
+				"3.2.68-1+deb7u1~bpo60+1",
+				"3.2.68-1+deb7u2",
+				"3.2.68-1+deb7u2~bpo60+1",
+				"3.2.68-1+deb7u3",
+				"3.2.68-1+deb7u3~bpo60+1",
+				"3.2.68-1+deb7u4",
+				"3.2.68-1+deb7u4~bpo60+1",
+				"3.2.68-1+deb7u5",
+				"3.2.68-1+deb7u6",
+				"3.2.68-1+deb7u6~bpo60+1",
+				"3.2.71-1",
+				"3.2.71-2",
+				"3.2.73-1",
+				"3.2.73-2",
+				"3.2.73-2+deb7u1",
+				"3.2.73-2+deb7u2",
+				"3.2.73-2+deb7u2~bpo60+1",
+				"3.2.73-2+deb7u3",
+				"3.2.78-1",
+				"3.2.81-1",
+				"3.2.81-2",
+				"3.2.82-1",
+				"3.2.84-1",
+				"3.2.84-2",
+				"3.2.86-1",
+				"3.2.88-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-993-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-993"
+		}
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1986-1",
+	"modified": "2023-10-16T00:10:51.282795Z",
+	"published": "2010-02-02T00:00:00Z",
+	"related": [
+		"CVE-2009-4297",
+		"CVE-2009-4298",
+		"CVE-2009-4299",
+		"CVE-2009-4301",
+		"CVE-2009-4302",
+		"CVE-2009-4303",
+		"CVE-2009-4305"
+	],
+	"summary": "moodle - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in Moodle, an online\ncourse management system. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2009-4297](https://security-tracker.debian.org/tracker/CVE-2009-4297)\nMultiple cross-site request forgery (CSRF) vulnerabilities have been\ndiscovered.\n* [CVE-2009-4298](https://security-tracker.debian.org/tracker/CVE-2009-4298)\nIt has been discovered that the LAMS module is prone to the disclosure\nof user account information.\n* [CVE-2009-4299](https://security-tracker.debian.org/tracker/CVE-2009-4299)\nThe Glossary module has an insufficient access control mechanism.\n* [CVE-2009-4301](https://security-tracker.debian.org/tracker/CVE-2009-4301)\nMoodle does not properly check permissions when the MNET service is\nenabled, which allows remote authenticated servers to execute arbitrary\nMNET functions.\n* [CVE-2009-4302](https://security-tracker.debian.org/tracker/CVE-2009-4302)\nThe login/index\\_form.html page links to an HTTP page instead of using an\nSSL secured connection.\n* [CVE-2009-4303](https://security-tracker.debian.org/tracker/CVE-2009-4303)\nMoodle stores sensitive data in backup files, which might make it\npossible for attackers to obtain them.\n* [CVE-2009-4305](https://security-tracker.debian.org/tracker/CVE-2009-4305)\nIt has been discovered that the SCORM module is prone to an SQL\ninjection.\n\n\nAdditionally, an SQL injection in the update\\_record function, a problem\nwith symbolic links and a verification problem with Glossary, database\nand forum ratings have been fixed.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.8.2.dfsg-3+lenny3.\n\n\nFor the oldstable distribution (etch), there are no fixed packages\navailable and it is too hard to backport many of the fixes. Therefore,\nwe recommend to upgrade to the lenny version.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 1.8.2.dfsg-6.\n\n\nWe recommend that you upgrade your moodle packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "moodle",
+				"purl": "pkg:deb/debian/moodle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2.dfsg-3+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2.dfsg-3",
+				"1.8.2.dfsg-3+lenny1",
+				"1.8.2.dfsg-3+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1986-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-1986"
+		}
+	]
+}

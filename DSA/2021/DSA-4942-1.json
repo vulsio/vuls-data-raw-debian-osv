@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4942-1",
+	"modified": "2023-10-16T00:15:13.573392Z",
+	"published": "2021-07-20T00:00:00Z",
+	"related": [
+		"CVE-2021-33910"
+	],
+	"summary": "systemd - security update",
+	"details": "\nThe Qualys Research Labs discovered that an attacker-controlled\nallocation using the alloca() function could result in memory\ncorruption, allowing to crash systemd and hence the entire operating\nsystem.\n\n\nDetails can be found in the Qualys advisory at\n<https://www.qualys.com/2021/07/20/cve-2021-33910/denial-of-service-systemd.txt>\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 241-7~deb10u8.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFor the detailed security status of systemd please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/systemd>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "systemd",
+				"purl": "pkg:deb/debian/systemd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "241-7~deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"241-5",
+				"241-6",
+				"241-7~deb10u1",
+				"241-7~deb10u2",
+				"241-7~deb10u3",
+				"241-7~deb10u4",
+				"241-7~deb10u5",
+				"241-7~deb10u6",
+				"241-7~deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4942-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4942"
+		}
+	]
+}

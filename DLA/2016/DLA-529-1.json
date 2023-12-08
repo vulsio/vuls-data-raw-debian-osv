@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-529-1",
+	"modified": "2023-06-28T06:25:34.751070Z",
+	"published": "2016-06-26T00:00:00Z",
+	"related": [
+		"CVE-2016-3092"
+	],
+	"summary": "tomcat7 - security update",
+	"details": "\nA denial of service vulnerability was identified in Commons FileUpload\nthat occurred when the length of the multipart boundary was just below\nthe size of the buffer (4096 bytes) used to read the uploaded file.\nThis caused the file upload process to take several orders of\nmagnitude longer than if the boundary was the typical tens of bytes long.\n\n\nApache Tomcat uses a package renamed copy of Apache Commons FileUpload\nto implement the file upload requirements of the Servlet specification\nand was therefore also vulnerable to the denial of service vulnerability.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n7.0.28-4+deb7u5.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tomcat7",
+				"purl": "pkg:deb/debian/tomcat7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.0.28-4+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.0.28-4",
+				"7.0.28-4+deb7u1",
+				"7.0.28-4+deb7u2",
+				"7.0.28-4+deb7u3",
+				"7.0.28-4+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-529-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-529"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-461",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-03-11T00:00:00Z",
+	"related": [
+		"CVE-2004-0188"
+	],
+	"summary": "calife - buffer overflow",
+	"details": "\nLeon Juranic discovered a buffer overflow related to the\ngetpass(3) library function in\ncalife, a program which provides super user privileges to specific\nusers. A local attacker could potentially\nexploit this vulnerability, given knowledge of a local user's password\nand the presence of at least one entry in /etc/calife.auth, to execute\narbitrary code with root privileges.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 2.8.4c-1woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.8.6-1.\n\n\nWe recommend that you update your calife package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "calife",
+				"purl": "pkg:deb/debian/calife?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.4c-1woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-461.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-461"
+		}
+	]
+}

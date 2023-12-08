@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-438-1",
+	"modified": "2023-06-28T06:27:01.094230Z",
+	"published": "2016-02-28T00:00:00Z",
+	"related": [
+		"CVE-2015-8790",
+		"CVE-2015-8791"
+	],
+	"summary": "libebml - security update",
+	"details": "\nTwo security-related issues were fixed in libebml, a library for accessing the\nEBML format:\n\n\n* [CVE-2015-8790](https://security-tracker.debian.org/tracker/CVE-2015-8790)\nThe EbmlUnicodeString::UpdateFromUTF8 function in libEBML before 1.3.3\n allows context-dependent attackers to obtain sensitive information from\n process heap memory via a crafted UTF-8 string, which triggers an invalid\n memory access.\n* [CVE-2015-8791](https://security-tracker.debian.org/tracker/CVE-2015-8791)\nThe EbmlElement::ReadCodedSizeValue function in libEBML before 1.3.3 allows\n context-dependent attackers to obtain sensitive information from process\n heap memory via a crafted length value in an EBML id, which triggers an\n invalid memory access.\n\n\nFor Debian 6 squeeze, these issues have been fixed in libebml version\n0.7.7-3.1+deb6u1. We recommend you to upgrade your libebml packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libebml",
+				"purl": "pkg:deb/debian/libebml?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.7-3.1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.7-3.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-438-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-438"
+		}
+	]
+}

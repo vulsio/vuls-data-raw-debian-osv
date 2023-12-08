@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1513-1",
+	"modified": "2023-06-28T06:29:38.597687Z",
+	"published": "2018-09-21T00:00:00Z",
+	"related": [
+		"CVE-2018-16947",
+		"CVE-2018-16948",
+		"CVE-2018-16949"
+	],
+	"summary": "openafs - security update",
+	"details": "\nSeveral security vulnerabilities were discovered in OpenAFS, a\ndistributed file system.\n\n\n* [CVE-2018-16947](https://security-tracker.debian.org/tracker/CVE-2018-16947)\nThe backup tape controller process accepts incoming RPCs but does\n not require (or allow for) authentication of those RPCs. Handling\n those RPCs results in operations being performed with administrator\n credentials, including dumping/restoring volume contents and\n manipulating the backup database.\n* [CVE-2018-16948](https://security-tracker.debian.org/tracker/CVE-2018-16948)\nSeveral RPC server routines did not fully initialize their output\n variables before returning, leaking memory contents from both the\n stack and the heap. Because the OpenAFS cache manager functions as\n an Rx server for the AFSCB service, clients are also susceptible to\n information leakage.\n* [CVE-2018-16949](https://security-tracker.debian.org/tracker/CVE-2018-16949)\nSeveral data types used as RPC input variables were implemented as\n unbounded array types, limited only by the inherent 32-bit length\n field to 4GB. An unauthenticated attacker could send, or claim to\n send, large input values and consume server resources waiting for\n those inputs, denying service to other valid connections.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.6.9-2+deb8u8.\n\n\nWe recommend that you upgrade your openafs packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "openafs",
+				"purl": "pkg:deb/debian/openafs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.9-2+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.9-2+deb8u2",
+				"1.6.9-2+deb8u3",
+				"1.6.9-2+deb8u4",
+				"1.6.9-2+deb8u4~bpo70+1",
+				"1.6.9-2+deb8u5",
+				"1.6.9-2+deb8u6",
+				"1.6.9-2+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1513-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1513"
+		}
+	]
+}

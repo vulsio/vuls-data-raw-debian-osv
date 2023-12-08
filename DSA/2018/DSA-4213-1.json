@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4213-1",
+	"modified": "2023-10-16T00:13:23.734777Z",
+	"published": "2018-05-29T00:00:00Z",
+	"related": [
+		"CVE-2017-15038",
+		"CVE-2017-15119",
+		"CVE-2017-15124",
+		"CVE-2017-15268",
+		"CVE-2017-15289",
+		"CVE-2017-16845",
+		"CVE-2017-17381",
+		"CVE-2017-18043",
+		"CVE-2017-5715",
+		"CVE-2018-5683",
+		"CVE-2018-7550"
+	],
+	"summary": "qemu - security update",
+	"details": "\nSeveral vulnerabilities were discovered in qemu, a fast processor\nemulator.\n\n\n* [CVE-2017-15038](https://security-tracker.debian.org/tracker/CVE-2017-15038)\nTuomas Tynkkynen discovered an information leak in 9pfs.\n* [CVE-2017-15119](https://security-tracker.debian.org/tracker/CVE-2017-15119)\nEric Blake discovered that the NBD server insufficiently restricts\n large option requests, resulting in denial of service.\n* [CVE-2017-15124](https://security-tracker.debian.org/tracker/CVE-2017-15124)\nDaniel Berrange discovered that the integrated VNC server\n insufficiently restricted memory allocation, which could result in\n denial of service.\n* [CVE-2017-15268](https://security-tracker.debian.org/tracker/CVE-2017-15268)\nA memory leak in websockets support may result in denial of service.\n* [CVE-2017-15289](https://security-tracker.debian.org/tracker/CVE-2017-15289)\nGuoxiang Niu discovered an OOB write in the emulated Cirrus graphics\n adaptor which could result in denial of service.\n* [CVE-2017-16845](https://security-tracker.debian.org/tracker/CVE-2017-16845)\nCyrille Chatras discovered an information leak in PS/2 mouse and\n keyboard emulation which could be exploited during instance\n migration.\n* [CVE-2017-17381](https://security-tracker.debian.org/tracker/CVE-2017-17381)\nDengzhan Heyuandong Bijunhua and Liweichao discovered that an\n implementation error in the virtio vring implementation could result\n in denial of service.\n* [CVE-2017-18043](https://security-tracker.debian.org/tracker/CVE-2017-18043)\nEric Blake discovered an integer overflow in an internally used\n macro which could result in denial of service.\n* [CVE-2018-5683](https://security-tracker.debian.org/tracker/CVE-2018-5683)\nJiang Xin and Lin ZheCheng discovered an OOB memory access in the\n emulated VGA adaptor which could result in denial of service.\n* [CVE-2018-7550](https://security-tracker.debian.org/tracker/CVE-2018-7550)\nCyrille Chatras discovered that an OOB memory write when using\n multiboot could result in the execution of arbitrary code.\n\n\nThis update also backports a number of mitigations against the Spectre\nv2 vulnerability affecting modern CPUs \n([\\\nCVE-2017-5715](https://security-tracker.debian.org/tracker/CVE-2017-5715)). For additional information please refer to\n[\\\nhttps://www.qemu.org/2018/01/04/spectre/](https://www.qemu.org/2018/01/04/spectre/)\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1:2.8+dfsg-6+deb9u4.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFor the detailed security status of qemu please refer to \nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/qemu](https://security-tracker.debian.org/tracker/qemu)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.8+dfsg-6+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.8+dfsg-6",
+				"1:2.8+dfsg-6+deb9u1",
+				"1:2.8+dfsg-6+deb9u2",
+				"1:2.8+dfsg-6+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4213-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4213"
+		}
+	]
+}

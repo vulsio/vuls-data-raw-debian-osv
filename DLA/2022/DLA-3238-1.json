@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3238-1",
+	"modified": "2023-06-28T06:25:29.283105Z",
+	"published": "2022-12-13T00:00:00Z",
+	"related": [
+		"CVE-2020-35511"
+	],
+	"summary": "pngcheck - security update",
+	"details": "\nMultiple security issues were discovered in pngcheck, a tool to verify the\nintegrity of PNG, JNG and MNG files, which could potentially result\nin the execution of arbitrary code.\n\n\n* [CVE-2020-35511](https://security-tracker.debian.org/tracker/CVE-2020-35511)\nA global buffer overflow was discovered in pngcheck function in\n pngcheck-2.4.0 (5 patches applied) via a crafted png file.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.0.3-1~deb10u2.\n\n\nWe recommend that you upgrade your pngcheck packages.\n\n\nFor the detailed security status of pngcheck please refer to its security\ntracker page at: <https://security-tracker.debian.org/tracker/pngcheck>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "pngcheck",
+				"purl": "pkg:deb/debian/pngcheck?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.3-1~deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.0-10",
+				"2.3.0-11",
+				"2.3.0-12",
+				"2.3.0-13",
+				"2.3.0-7",
+				"2.3.0-7+deb10u1",
+				"2.3.0-8",
+				"2.3.0-9",
+				"3.0.2-1",
+				"3.0.2-2",
+				"3.0.2-3",
+				"3.0.2-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3238-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3238"
+		}
+	]
+}

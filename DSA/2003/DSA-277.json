@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-277",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-04-03T00:00:00Z",
+	"related": [
+		"CVE-2003-0098",
+		"CVE-2003-0099"
+	],
+	"summary": "apcupsd - buffer overflows, format string",
+	"details": "\nThe controlling and management daemon apcupsd for APC's Unbreakable\nPower Supplies is vulnerable to several buffer overflows and format\nstring attacks. These bugs can be exploited remotely by an attacker to gain root\naccess to the machine apcupsd is running on.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 3.8.5-1.1.1.\n\n\nFor the old stable distribution (potato) this problem does not seem to\nexist.\n\n\nFor the unstable distribution (sid) this problem has been\nfixed in version 3.8.5-1.2.\n\n\nWe recommend that you upgrade your apcupsd packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "apcupsd",
+				"purl": "pkg:deb/debian/apcupsd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.8.5-1.1.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-277.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-277"
+		}
+	]
+}

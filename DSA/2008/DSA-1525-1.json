@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1525-1",
+	"modified": "2023-10-16T00:10:28.627144Z",
+	"published": "2008-03-20T00:00:00Z",
+	"related": [
+		"CVE-2007-6430",
+		"CVE-2008-1332",
+		"CVE-2008-1333"
+	],
+	"summary": "asterisk",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Asterisk, a free\nsoftware PBX and telephony toolkit. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2007-6430](https://security-tracker.debian.org/tracker/CVE-2007-6430)\nTilghman Lesher discovered that database-based registrations are\n insufficiently validated. This only affects setups, which are\n configured to run without a password and only host-based\n authentication.\n* [CVE-2008-1332](https://security-tracker.debian.org/tracker/CVE-2008-1332)\nJason Parker discovered that insufficient validation of From:\n headers inside the SIP channel driver may lead to authentication\n bypass and the potential external initiation of calls.\n* [CVE-2008-1333](https://security-tracker.debian.org/tracker/CVE-2008-1333)\nThis update also fixes a format string vulnerability, which can only be\n triggered through configuration files under control of the local\n administrator. In later releases of Asterisk this issue is remotely\n exploitable and tracked as [CVE-2008-1333](https://security-tracker.debian.org/tracker/CVE-2008-1333).\n\n\nThe status of the old stable distribution (sarge) is currently being\ninvestigated. If affected, an update will be released through\nsecurity.debian.org.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1:1.2.13~dfsg-2etch3.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.2.13~dfsg-2etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.2.13~dfsg-2",
+				"1:1.2.13~dfsg-2etch1",
+				"1:1.2.13~dfsg-2etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1525-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1525"
+		}
+	]
+}

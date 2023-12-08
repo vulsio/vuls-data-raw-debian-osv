@@ -1,0 +1,116 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1823-1",
+	"modified": "2023-06-28T06:29:47.477775Z",
+	"published": "2019-06-17T00:00:00Z",
+	"related": [
+		"CVE-2019-10126",
+		"CVE-2019-11477",
+		"CVE-2019-11478",
+		"CVE-2019-11479",
+		"CVE-2019-11810",
+		"CVE-2019-11833",
+		"CVE-2019-11884",
+		"CVE-2019-3846",
+		"CVE-2019-5489"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2019-3846](https://security-tracker.debian.org/tracker/CVE-2019-3846), [CVE-2019-10126](https://security-tracker.debian.org/tracker/CVE-2019-10126)\nhuangwen reported multiple buffer overflows in the Marvell wifi\n (mwifiex) driver, which a local user could use to cause denial of\n service or the execution of arbitrary code.\n* [CVE-2019-5489](https://security-tracker.debian.org/tracker/CVE-2019-5489)\nDaniel Gruss, Erik Kraft, Trishita Tiwari, Michael Schwarz, Ari\n Trachtenberg, Jason Hennessey, Alex Ionescu, and Anders Fogh\n discovered that local users could use the mincore() system call to\n obtain sensitive information from other processes that access the\n same memory-mapped file.\n* [CVE-2019-11477](https://security-tracker.debian.org/tracker/CVE-2019-11477)\nJonathan Looney reported that a specially crafted sequence of TCP\n selective acknowledgements (SACKs) allows a remotely triggerable\n kernel panic.\n* [CVE-2019-11478](https://security-tracker.debian.org/tracker/CVE-2019-11478)\nJonathan Looney reported that a specially crafted sequence of TCP\n selective acknowledgements (SACKs) will fragment the TCP\n retransmission queue, allowing an attacker to cause excessive\n resource usage.\n* [CVE-2019-11479](https://security-tracker.debian.org/tracker/CVE-2019-11479)\nJonathan Looney reported that an attacker could force the Linux\n kernel to segment its responses into multiple TCP segments, each of\n which contains only 8 bytes of data, drastically increasing the\n bandwidth required to deliver the same amount of data.\n\n\nThis update introduces a new sysctl value to control the minimal MSS\n (net.ipv4.tcp\\_min\\_snd\\_mss), which by default uses the formerly hard-coded\n value of 48. We recommend raising this to 512 unless you know\n that your network requires a lower value. (This value applies to\n Linux 3.16 only.)\n* [CVE-2019-11810](https://security-tracker.debian.org/tracker/CVE-2019-11810)\nIt was discovered that the megaraid\\_sas driver did not correctly\n handle a failed memory allocation during initialisation, which\n could lead to a double-free. This might have some security\n impact, but it cannot be triggered by an unprivileged user.\n* [CVE-2019-11833](https://security-tracker.debian.org/tracker/CVE-2019-11833)\nIt was discovered that the ext4 filesystem implementation writes\n uninitialised data from kernel memory to new extent blocks. A\n local user able to write to an ext4 filesystem and then read the\n filesystem image, for example using a removable drive, might be\n able to use this to obtain sensitive information.\n* [CVE-2019-11884](https://security-tracker.debian.org/tracker/CVE-2019-11884)\nIt was discovered that the Bluetooth HIDP implementation did not\n ensure that new connection names were null-terminated. A local\n user with CAP\\_NET\\_ADMIN capability might be able to use this to\n obtain sensitive information from the kernel stack.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.16.68-2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.68-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.36-1",
+				"3.16.36-1+deb8u1",
+				"3.16.36-1+deb8u1~bpo70+1",
+				"3.16.36-1+deb8u2",
+				"3.16.36-1+deb8u2~bpo70+1",
+				"3.16.39-1",
+				"3.16.39-1+deb8u1",
+				"3.16.39-1+deb8u1~bpo70+1",
+				"3.16.39-1+deb8u1~bpo70+1+gcc4.4",
+				"3.16.39-1+deb8u2",
+				"3.16.39-1~bpo70+1",
+				"3.16.43-1",
+				"3.16.43-2",
+				"3.16.43-2+deb8u1",
+				"3.16.43-2+deb8u2",
+				"3.16.43-2+deb8u3",
+				"3.16.43-2+deb8u4",
+				"3.16.43-2+deb8u5",
+				"3.16.48-1",
+				"3.16.51-1",
+				"3.16.51-2",
+				"3.16.51-3",
+				"3.16.51-3+deb8u1",
+				"3.16.56-1",
+				"3.16.56-1+deb8u1",
+				"3.16.57-1",
+				"3.16.57-2",
+				"3.16.59-1",
+				"3.16.64-1",
+				"3.16.64-2",
+				"3.16.68-1",
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1823-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1823"
+		}
+	]
+}

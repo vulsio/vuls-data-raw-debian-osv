@@ -1,0 +1,95 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3804-1",
+	"modified": "2023-10-16T00:12:20.526773Z",
+	"published": "2017-03-08T00:00:00Z",
+	"related": [
+		"CVE-2016-9588",
+		"CVE-2017-2636",
+		"CVE-2017-5669",
+		"CVE-2017-5986",
+		"CVE-2017-6214",
+		"CVE-2017-6345",
+		"CVE-2017-6346",
+		"CVE-2017-6348",
+		"CVE-2017-6353"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or have other\nimpacts.\n\n\n* [CVE-2016-9588](https://security-tracker.debian.org/tracker/CVE-2016-9588)\nJim Mattson discovered that the KVM implementation for Intel x86\n processors does not properly handle #BP and #OF exceptions in an\n L2 (nested) virtual machine. A local attacker in an L2 guest VM\n can take advantage of this flaw to cause a denial of service for\n the L1 guest VM.\n* [CVE-2017-2636](https://security-tracker.debian.org/tracker/CVE-2017-2636)\nAlexander Popov discovered a race condition flaw in the n\\_hdlc\n line discipline that can lead to a double free. A local\n unprivileged user can take advantage of this flaw for privilege\n escalation. On systems that do not already have the n\\_hdlc module\n loaded, this can be mitigated by disabling it:\n `echo >> /etc/modprobe.d/disable-n_hdlc.conf install n_hdlc false`\n* [CVE-2017-5669](https://security-tracker.debian.org/tracker/CVE-2017-5669)\nGareth Evans reported that privileged users can map memory at\n address 0 through the shmat() system call. This could make it\n easier to exploit other kernel security vulnerabilities via a\n set-UID program.\n* [CVE-2017-5986](https://security-tracker.debian.org/tracker/CVE-2017-5986)\nAlexander Popov reported a race condition in the SCTP\n implementation that can be used by local users to cause a\n denial-of-service (crash). The initial fix for this was incorrect\n and introduced further security issues ([CVE-2017-6353](https://security-tracker.debian.org/tracker/CVE-2017-6353)). This update includes a later fix that\n avoids those. On systems that do not already have the sctp\n module loaded, this can be mitigated by disabling it:\n `echo >> /etc/modprobe.d/disable-sctp.conf install sctp false`\n* [CVE-2017-6214](https://security-tracker.debian.org/tracker/CVE-2017-6214)\nDmitry Vyukov reported a bug in the TCP implementation's handling\n of urgent data in the splice() system call. This can be used by a\n remote attacker for denial-of-service (hang) against applications\n that read from TCP sockets with splice().\n* [CVE-2017-6345](https://security-tracker.debian.org/tracker/CVE-2017-6345)\nAndrey Konovalov reported that the LLC type 2 implementation\n incorrectly assigns socket buffer ownership. This can be used\n by a local user to cause a denial-of-service (crash). On systems\n that do not already have the llc2 module loaded, this can be\n mitigated by disabling it:\n `echo >> /etc/modprobe.d/disable-llc2.conf install llc2 false`\n* [CVE-2017-6346](https://security-tracker.debian.org/tracker/CVE-2017-6346)\nDmitry Vyukov reported a race condition in the raw packet (af\\_packet)\n fanout feature. Local users with the CAP\\_NET\\_RAW capability (in any\n user namespace) can use this for denial-of-service and possibly for\n privilege escalation.\n* [CVE-2017-6348](https://security-tracker.debian.org/tracker/CVE-2017-6348)\nDmitry Vyukov reported that the general queue implementation in\n the IrDA subsystem does not properly manage multiple locks,\n possibly allowing local users to cause a denial-of-service\n (deadlock) via crafted operations on IrDA devices.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.39-1+deb8u2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.39-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.36-1",
+				"3.16.36-1+deb8u1",
+				"3.16.36-1+deb8u1~bpo70+1",
+				"3.16.36-1+deb8u2",
+				"3.16.36-1+deb8u2~bpo70+1",
+				"3.16.39-1",
+				"3.16.39-1+deb8u1",
+				"3.16.39-1+deb8u1~bpo70+1",
+				"3.16.39-1+deb8u1~bpo70+1+gcc4.4",
+				"3.16.39-1~bpo70+1",
+				"3.16.7-ckt11-1",
+				"3.16.7-ckt11-1+deb8u1",
+				"3.16.7-ckt11-1+deb8u2",
+				"3.16.7-ckt11-1+deb8u2~bpo70+1",
+				"3.16.7-ckt11-1+deb8u3",
+				"3.16.7-ckt11-1+deb8u3~bpo70+1",
+				"3.16.7-ckt11-1+deb8u4",
+				"3.16.7-ckt11-1+deb8u4~bpo70+1",
+				"3.16.7-ckt11-1+deb8u5",
+				"3.16.7-ckt11-1+deb8u6",
+				"3.16.7-ckt11-1+deb8u6~bpo70+1",
+				"3.16.7-ckt11-1~bpo70+1",
+				"3.16.7-ckt17-1",
+				"3.16.7-ckt20-1",
+				"3.16.7-ckt20-1+deb8u1",
+				"3.16.7-ckt20-1+deb8u2",
+				"3.16.7-ckt20-1+deb8u2~bpo70+1",
+				"3.16.7-ckt20-1+deb8u3",
+				"3.16.7-ckt20-1+deb8u3~bpo70+1",
+				"3.16.7-ckt20-1+deb8u4",
+				"3.16.7-ckt20-1+deb8u4~bpo70+1",
+				"3.16.7-ckt25-1",
+				"3.16.7-ckt25-1~bpo70+1",
+				"3.16.7-ckt25-2",
+				"3.16.7-ckt25-2+deb8u1",
+				"3.16.7-ckt25-2+deb8u2",
+				"3.16.7-ckt25-2+deb8u3",
+				"3.16.7-ckt25-2+deb8u3~bpo70+1",
+				"3.16.7-ckt25-2~bpo70+1",
+				"3.16.7-ckt9-2",
+				"3.16.7-ckt9-3",
+				"3.16.7-ckt9-3~deb8u1",
+				"3.16.7-ckt9-3~deb8u1~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3804-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3804"
+		}
+	]
+}

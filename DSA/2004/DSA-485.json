@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-485",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-04-14T00:00:00Z",
+	"related": [
+		"CVE-2004-0156"
+	],
+	"summary": "ssmtp - format string",
+	"details": "\nMax Vozeler discovered two format string vulnerabilities in ssmtp, a\nsimple mail transport agent. Untrusted values in the functions die()\nand log\\_event() were passed to printf-like functions as format\nstrings. These vulnerabilities could potentially be exploited by a\nremote mail relay to gain the privileges of the ssmtp process\n(including potentially root).\n\n\nFor the current stable distribution (woody) this problem will be fixed\nin version 2.50.6.1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you update your ssmtp package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "ssmtp",
+				"purl": "pkg:deb/debian/ssmtp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.50.6.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-485.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-485"
+		}
+	]
+}

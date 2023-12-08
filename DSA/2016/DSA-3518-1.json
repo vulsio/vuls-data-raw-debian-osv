@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3518-1",
+	"modified": "2023-10-16T00:12:04.621108Z",
+	"published": "2016-03-16T00:00:00Z",
+	"related": [
+		"CVE-2016-3153",
+		"CVE-2016-3154"
+	],
+	"summary": "spip - security update",
+	"details": "\nSeveral vulnerabilities were found in SPIP, a website engine for\npublishing, resulting in code injection.\n\n\n* [CVE-2016-3153](https://security-tracker.debian.org/tracker/CVE-2016-3153)\ng0uZ et sambecks, from team root-me, discovered that arbitrary PHP\n code could be injected when adding content.\n* [CVE-2016-3154](https://security-tracker.debian.org/tracker/CVE-2016-3154)\nGilles Vincent discovered that deserializing untrusted content\n could result in arbitrary objects injection.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 2.1.17-1+deb7u5.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.0.17-2+deb8u2.\n\n\nFor the testing (stretch) and unstable (sid) distributions, these\nproblems have been fixed in version 3.0.22-1.\n\n\nWe recommend that you upgrade your spip packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "spip",
+				"purl": "pkg:deb/debian/spip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.17-1+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.17-1",
+				"2.1.17-1+deb7u1",
+				"2.1.17-1+deb7u2",
+				"2.1.17-1+deb7u3",
+				"2.1.17-1+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3518-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "spip",
+				"purl": "pkg:deb/debian/spip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.17-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.17-2",
+				"3.0.17-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3518-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3518"
+		}
+	]
+}

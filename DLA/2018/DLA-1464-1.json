@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1464-1",
+	"modified": "2023-06-28T06:24:29.653111Z",
+	"published": "2018-08-15T00:00:00Z",
+	"related": [
+		"CVE-2018-10915"
+	],
+	"summary": "postgresql-9.4 - security update",
+	"details": "\nAn unprivileged user of dblink or postgres\\_fdw could bypass the checks\nintended to prevent use of server-side credentials, such as a ~/.pgpass\nfile owned by the operating-system user running the server. Servers\nallowing peer authentication on local connections are particularly\nvulnerable. Other attacks such as SQL injection into a postgres\\_fdw\nsession are also possible. Attacking postgres\\_fdw in this way requires\nthe ability to create a foreign server object with selected connection\nparameters, but any user with access to dblink could exploit the\nproblem. In general, an attacker with the ability to select the\nconnection parameters for a libpq-using application could cause\nmischief, though other plausible attack scenarios are harder to think\nof. Our thanks to Andrew Krasichkov for reporting this issue.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n9.4.19-0+deb8u1.\n\n\nWe recommend that you upgrade your postgresql-9.4 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "postgresql-9.4",
+				"purl": "pkg:deb/debian/postgresql-9.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.4.19-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.4.1-1",
+				"9.4.10-0+deb8u1",
+				"9.4.11-0+deb8u1",
+				"9.4.11-0+deb8u1~bpo7+1",
+				"9.4.11-0+deb8u2",
+				"9.4.12-0+deb8u1",
+				"9.4.12-0+deb8u1~bpo7+1",
+				"9.4.13-0+deb8u1",
+				"9.4.14-0+deb8u1",
+				"9.4.15-0+deb8u1",
+				"9.4.16-0+deb8u1",
+				"9.4.17-0+deb8u1",
+				"9.4.18-0+deb8u1",
+				"9.4.2-0+deb8u1",
+				"9.4.2-1",
+				"9.4.3-0+deb8u1",
+				"9.4.3-1",
+				"9.4.4-0+deb8u1",
+				"9.4.4-1",
+				"9.4.4-2",
+				"9.4.5-0+deb8u1",
+				"9.4.5-0+deb8u1~bpo70+1",
+				"9.4.5-1",
+				"9.4.5-2",
+				"9.4.6-0+deb8u1",
+				"9.4.6-0+deb8u1~bpo70+1",
+				"9.4.7-0+deb8u1",
+				"9.4.7-0+deb8u1~bpo70+1",
+				"9.4.7-0+deb8u1~bpo70+2",
+				"9.4.8-0+deb8u1",
+				"9.4.9-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1464-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1464"
+		}
+	]
+}

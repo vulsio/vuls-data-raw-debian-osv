@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5402-1",
+	"modified": "2023-10-16T00:23:03.179332Z",
+	"published": "2023-05-13T00:00:00Z",
+	"related": [
+		"CVE-2023-0386",
+		"CVE-2023-31436",
+		"CVE-2023-32233"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2023-0386](https://security-tracker.debian.org/tracker/CVE-2023-0386)\nIt was discovered that under certain conditions the overlayfs\n filesystem implementation did not properly handle copy up\n operations. A local user permitted to mount overlay mounts in user\n namespaces can take advantage of this flaw for local privilege\n escalation.\n* [CVE-2023-31436](https://security-tracker.debian.org/tracker/CVE-2023-31436)\nGwangun Jung reported a a flaw causing heap out-of-bounds read/write\n errors in the traffic control subsystem for the Quick Fair Queueing\n scheduler (QFQ) which may result in information leak, denial of\n service or privilege escalation.\n* [CVE-2023-32233](https://security-tracker.debian.org/tracker/CVE-2023-32233)\nPatryk Sondej and Piotr Krysiuk discovered a use-after-free flaw in\n the Netfilter nf\\_tables implementation when processing batch\n requests, which may result in local privilege escalation for a user\n with the CAP\\_NET\\_ADMIN capability in any user or network namespace.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.179-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.179-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.103-1",
+				"5.10.103-1~bpo10+1",
+				"5.10.106-1",
+				"5.10.113-1",
+				"5.10.120-1",
+				"5.10.120-1~bpo10+1",
+				"5.10.127-1",
+				"5.10.127-2",
+				"5.10.127-2~bpo10+1",
+				"5.10.136-1",
+				"5.10.140-1",
+				"5.10.148-1",
+				"5.10.149-1",
+				"5.10.149-2",
+				"5.10.158-1",
+				"5.10.158-2",
+				"5.10.162-1",
+				"5.10.178-1",
+				"5.10.178-2",
+				"5.10.178-3",
+				"5.10.46-4",
+				"5.10.46-5",
+				"5.10.70-1",
+				"5.10.70-1~bpo10+1",
+				"5.10.84-1",
+				"5.10.92-1",
+				"5.10.92-1~bpo10+1",
+				"5.10.92-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5402-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5402"
+		}
+	]
+}

@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5185-1",
+	"modified": "2023-10-16T00:27:28.460683Z",
+	"published": "2022-07-15T00:00:00Z",
+	"related": [
+		"CVE-2022-35410"
+	],
+	"summary": "mat2 - security update",
+	"details": "\nA directory traversal vulnerability was discovered in the Metadata\nanonymisation toolkit, which could result in information disclosure via\na malformed ZIP archive.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 0.8.0-3+deb10u1.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 0.12.1-2+deb11u1.\n\n\nWe recommend that you upgrade your mat2 packages.\n\n\nFor the detailed security status of mat2 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mat2](https://security-tracker.debian.org/tracker/mat2)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "mat2",
+				"purl": "pkg:deb/debian/mat2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.0-3+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.0-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5185-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "mat2",
+				"purl": "pkg:deb/debian/mat2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.12.1-2+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.12.1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5185-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5185"
+		}
+	]
+}

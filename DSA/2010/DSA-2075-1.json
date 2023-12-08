@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2075-1",
+	"modified": "2023-10-16T00:10:56.948629Z",
+	"published": "2010-07-27T00:00:00Z",
+	"related": [
+		"CVE-2010-0182",
+		"CVE-2010-0654",
+		"CVE-2010-1205",
+		"CVE-2010-1208",
+		"CVE-2010-1211",
+		"CVE-2010-1214",
+		"CVE-2010-2751",
+		"CVE-2010-2753",
+		"CVE-2010-2754"
+	],
+	"summary": "xulrunner - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Xulrunner, a\nruntime environment for XUL applications. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2010-0182](https://security-tracker.debian.org/tracker/CVE-2010-0182)\nWladimir Palant discovered that security checks in XML processing\n were insufficiently enforced.\n* [CVE-2010-0654](https://security-tracker.debian.org/tracker/CVE-2010-0654)\nChris Evans discovered that insecure CSS handling could lead to\n reading data across domain boundaries.\n* [CVE-2010-1205](https://security-tracker.debian.org/tracker/CVE-2010-1205)\nAki Helin discovered a buffer overflow in the internal copy of\n libpng, which could lead to the execution of arbitrary code.\n* [CVE-2010-1208](https://security-tracker.debian.org/tracker/CVE-2010-1208)\n\"regenrecht\" discovered that incorrect memory handling in DOM\n parsing could lead to the execution of arbitrary code.\n* [CVE-2010-1211](https://security-tracker.debian.org/tracker/CVE-2010-1211)\nJesse Ruderman, Ehsan Akhgari, Mats Palmgren, Igor Bukanov, Gary\n Kwong, Tobias Markus and Daniel Holbert discovered crashes in the\n layout engine, which might allow the execution of arbitrary code.\n* [CVE-2010-1214](https://security-tracker.debian.org/tracker/CVE-2010-1214)\n\"JS3\" discovered an integer overflow in the plugin code, which\n could lead to the execution of arbitrary code.\n* [CVE-2010-2751](https://security-tracker.debian.org/tracker/CVE-2010-2751)\nJordi Chancel discovered that the location could be spoofed to\n appear like a secured page.\n* [CVE-2010-2753](https://security-tracker.debian.org/tracker/CVE-2010-2753)\n\"regenrecht\" discovered that incorrect memory handling in XUL\n parsing could lead to the execution of arbitrary code.\n* [CVE-2010-2754](https://security-tracker.debian.org/tracker/CVE-2010-2754)\nSoroush Dalili discovered an information leak in script\n processing.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.9.0.19-3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.1.11-1.\n\n\nFor the experimental distribution, these problems have been fixed in\nversion 1.9.2.7-1.\n\n\nWe recommend that you upgrade your xulrunner packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "xulrunner",
+				"purl": "pkg:deb/debian/xulrunner?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.0.19-3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.0.10-1",
+				"1.9.0.11-0lenny1",
+				"1.9.0.11-1",
+				"1.9.0.12-0lenny1",
+				"1.9.0.12-1",
+				"1.9.0.13-0lenny1",
+				"1.9.0.13-1",
+				"1.9.0.14-0lenny1",
+				"1.9.0.14-1",
+				"1.9.0.15-0lenny1",
+				"1.9.0.16-1",
+				"1.9.0.18-1",
+				"1.9.0.19-1",
+				"1.9.0.19-2",
+				"1.9.0.5-1",
+				"1.9.0.6-1",
+				"1.9.0.7-0lenny1",
+				"1.9.0.7-0lenny2",
+				"1.9.0.7-1",
+				"1.9.0.8-1",
+				"1.9.0.9-0lenny2",
+				"1.9.0.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2075-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2075"
+		}
+	]
+}

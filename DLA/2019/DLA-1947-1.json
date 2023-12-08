@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1947-1",
+	"modified": "2023-06-28T06:25:00.575472Z",
+	"published": "2019-10-06T00:00:00Z",
+	"related": [
+		"CVE-2019-9848",
+		"CVE-2019-9849",
+		"CVE-2019-9850",
+		"CVE-2019-9851",
+		"CVE-2019-9852",
+		"CVE-2019-9853",
+		"CVE-2019-9854"
+	],
+	"summary": "libreoffice - security update",
+	"details": "\nSeveral vulnerabilities were discovered in LibreOffice, the office\nproductivity suite.\n\n\n* [CVE-2019-9848](https://security-tracker.debian.org/tracker/CVE-2019-9848)\nNils Emmerich discovered that malicious documents could execute\n arbitrary Python code via LibreLogo.\n* [CVE-2019-9849](https://security-tracker.debian.org/tracker/CVE-2019-9849)\nMatei Badanoiu discovered that the stealth mode did not apply to\n bullet graphics.\n* [CVE-2019-9850](https://security-tracker.debian.org/tracker/CVE-2019-9850)\nIt was discovered that the protections implemented in [CVE-2019-9848](https://security-tracker.debian.org/tracker/CVE-2019-9848)\n could be bypassed because of insufficient URL validation.\n* [CVE-2019-9851](https://security-tracker.debian.org/tracker/CVE-2019-9851)\nGabriel Masei discovered that malicious documents could execute\n arbitrary pre-installed scripts.\n* [CVE-2019-9852](https://security-tracker.debian.org/tracker/CVE-2019-9852)\nNils Emmerich discovered that the protection implemented to address\n [CVE-2018-16858](https://security-tracker.debian.org/tracker/CVE-2018-16858) could be bypassed by a URL encoding attack.\n* [CVE-2019-9853](https://security-tracker.debian.org/tracker/CVE-2019-9853)\nNils Emmerich discovered that malicious documents could bypass\n document security settings to execute macros contained within the\n document.\n* [CVE-2019-9854](https://security-tracker.debian.org/tracker/CVE-2019-9854)\nIt was discovered that the protection implemented to address\n [CVE-2019-9852](https://security-tracker.debian.org/tracker/CVE-2019-9852) could be bypassed because of insufficient input\n sanitization.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:4.3.3-2+deb8u13.\n\n\nWe recommend that you upgrade your libreoffice packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libreoffice",
+				"purl": "pkg:deb/debian/libreoffice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.3.3-2+deb8u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.3.3-2",
+				"1:4.3.3-2+deb8u1",
+				"1:4.3.3-2+deb8u10",
+				"1:4.3.3-2+deb8u11",
+				"1:4.3.3-2+deb8u12",
+				"1:4.3.3-2+deb8u1~bpo70+1",
+				"1:4.3.3-2+deb8u2",
+				"1:4.3.3-2+deb8u3",
+				"1:4.3.3-2+deb8u3~bpo70+1",
+				"1:4.3.3-2+deb8u4",
+				"1:4.3.3-2+deb8u5",
+				"1:4.3.3-2+deb8u6",
+				"1:4.3.3-2+deb8u6~bpo70+1",
+				"1:4.3.3-2+deb8u7",
+				"1:4.3.3-2+deb8u7~bpo70+1",
+				"1:4.3.3-2+deb8u8",
+				"1:4.3.3-2+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1947-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1947"
+		}
+	]
+}

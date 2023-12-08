@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1288-1",
+	"modified": "2023-06-28T06:20:32.326449Z",
+	"published": "2018-02-22T00:00:00Z",
+	"related": [
+		"CVE-2017-18190"
+	],
+	"summary": "cups - security update",
+	"details": "\nIt was discovered that there was an issue in the CUPS printer\nframework where remote attackers could execute arbitrary commands by\nsending POST requests to the CUPS daemon in conjunction with DNS\nrebinding.\n\n\nThis was caused by a whitelisted localhost.localdomain entry.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in cups version\n1.5.3-5+deb7u7.\n\n\nWe recommend that you upgrade your cups packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.3-5+deb7u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.3-5",
+				"1.5.3-5+deb7u1",
+				"1.5.3-5+deb7u2",
+				"1.5.3-5+deb7u3",
+				"1.5.3-5+deb7u4",
+				"1.5.3-5+deb7u5",
+				"1.5.3-5+deb7u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1288-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1288"
+		}
+	]
+}

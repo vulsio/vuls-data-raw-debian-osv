@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2192-1",
+	"modified": "2023-06-28T06:28:23.497347Z",
+	"published": "2020-05-01T00:00:00Z",
+	"related": [
+		"CVE-2020-10663"
+	],
+	"summary": "ruby2.1 - security update",
+	"details": "\nThe JSON gem through 2.2.0 for Ruby, as used in Ruby 2.1 has an\nunsafe object creation vulnerability.\nThis is quite similar to [CVE-2013-0269](https://security-tracker.debian.org/tracker/CVE-2013-0269), but does not rely on poor\ngarbage-collection behavior within Ruby. Specifically, use of JSON\nparsing methods can lead to creation of a malicious object within\nthe interpreter, with adverse effects that are application-dependent.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.1.5-2+deb8u10.\n\n\nWe recommend that you upgrade your ruby2.1 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ruby2.1",
+				"purl": "pkg:deb/debian/ruby2.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.5-2+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.5-2",
+				"2.1.5-2+deb8u1",
+				"2.1.5-2+deb8u2",
+				"2.1.5-2+deb8u3",
+				"2.1.5-2+deb8u4",
+				"2.1.5-2+deb8u5",
+				"2.1.5-2+deb8u6",
+				"2.1.5-2+deb8u7",
+				"2.1.5-2+deb8u8",
+				"2.1.5-2+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2192-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2192"
+		}
+	]
+}

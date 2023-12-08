@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1883-1",
+	"modified": "2023-10-16T00:10:44.227229Z",
+	"published": "2009-09-10T00:00:00Z",
+	"related": [
+		"CVE-2007-5624",
+		"CVE-2007-5803",
+		"CVE-2008-1360"
+	],
+	"summary": "nagios2 - several cross-site scriptings",
+	"details": "\nSeveral vulnerabilities have been found in nagios2, a host/service/network\nmonitoring and management system. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\nSeveral cross-site scripting issues via several parameters were\ndiscovered in the CGI scripts, allowing attackers to inject arbitrary\nHTML code. In order to cover the different attack vectors, these issues\nhave been assigned [CVE-2007-5624](https://security-tracker.debian.org/tracker/CVE-2007-5624), [CVE-2007-5803](https://security-tracker.debian.org/tracker/CVE-2007-5803) and [CVE-2008-1360](https://security-tracker.debian.org/tracker/CVE-2008-1360).\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 2.6-2+etch4.\n\n\nThe stable distribution (lenny) does not include nagios2, and nagios3 is\nnot affected by these problems.\n\n\nThe testing distribution (squeeze) and the unstable distribution (sid)\ndo not contain nagios2, and nagios3 is not affected by these problems.\n\n\nWe recommend that you upgrade your nagios2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "nagios2",
+				"purl": "pkg:deb/debian/nagios2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6-2+etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6-2+etch1",
+				"2.6-2+etch2",
+				"2.6-2+etch3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1883-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1883"
+		}
+	]
+}

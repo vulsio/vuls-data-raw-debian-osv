@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1607-1",
+	"modified": "2023-06-28T06:29:39.743475Z",
+	"published": "2018-12-15T00:00:00Z",
+	"related": [
+		"CVE-2018-14629",
+		"CVE-2018-16851"
+	],
+	"summary": "samba - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix. The Common Vulnerabilities and\nExposures project identifies the following issues:\n\n\n* [CVE-2018-14629](https://security-tracker.debian.org/tracker/CVE-2018-14629)\nFlorian Stuelpner discovered that Samba is vulnerable to\n infinite query recursion caused by CNAME loops, resulting in\n denial of service.\n* [CVE-2018-16851](https://security-tracker.debian.org/tracker/CVE-2018-16851)\nGarming Sam of the Samba Team and Catalyst discovered a NULL pointer\n dereference vulnerability in the Samba AD DC LDAP server allowing a\n user able to read more than 256MB of LDAP entries to crash the Samba\n AD DC's LDAP server.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2:4.2.14+dfsg-0+deb8u11.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:4.2.14+dfsg-0+deb8u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:4.1.17+dfsg-2",
+				"2:4.1.17+dfsg-2+deb8u1",
+				"2:4.1.17+dfsg-2+deb8u2",
+				"2:4.1.17+dfsg-3",
+				"2:4.1.17+dfsg-4",
+				"2:4.1.17+dfsg-5",
+				"2:4.1.20+dfsg-1",
+				"2:4.1.21+dfsg-1",
+				"2:4.1.21+dfsg-2",
+				"2:4.1.22+dfsg-1",
+				"2:4.2.1+dfsg-1",
+				"2:4.2.10+dfsg-0+deb8u1",
+				"2:4.2.10+dfsg-0+deb8u2",
+				"2:4.2.10+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u1",
+				"2:4.2.14+dfsg-0+deb8u10",
+				"2:4.2.14+dfsg-0+deb8u2",
+				"2:4.2.14+dfsg-0+deb8u3",
+				"2:4.2.14+dfsg-0+deb8u4",
+				"2:4.2.14+dfsg-0+deb8u5",
+				"2:4.2.14+dfsg-0+deb8u6",
+				"2:4.2.14+dfsg-0+deb8u7",
+				"2:4.2.14+dfsg-0+deb8u8",
+				"2:4.2.14+dfsg-0+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1607-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1607"
+		}
+	]
+}

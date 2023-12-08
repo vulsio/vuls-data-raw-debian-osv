@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-107-1",
+	"modified": "2023-06-28T06:20:19.392978Z",
+	"published": "2014-12-12T00:00:00Z",
+	"related": [
+		"CVE-2014-8602"
+	],
+	"summary": "unbound - security update",
+	"details": "\nFlorian Maury from ANSSI discovered that unbound, a validating,\nrecursive, and caching DNS resolver, was prone to a denial of service\nvulnerability. An attacker crafting a malicious zone and able to emit\n(or make emit) queries to the server can trick the resolver into\nfollowing an endless series of delegations, leading to resource\nexhaustion and huge network usage.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in unbound version 1.4.6-1+squeeze4\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "unbound",
+				"purl": "pkg:deb/debian/unbound?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.6-1+squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.6-1",
+				"1.4.6-1+squeeze2",
+				"1.4.6-1+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-107-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-107"
+		}
+	]
+}

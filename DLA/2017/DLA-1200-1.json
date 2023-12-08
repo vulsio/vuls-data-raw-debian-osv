@@ -1,0 +1,135 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1200-1",
+	"modified": "2023-06-28T06:22:48.096078Z",
+	"published": "2017-12-10T00:00:00Z",
+	"related": [
+		"CVE-2016-10208",
+		"CVE-2017-1000407",
+		"CVE-2017-12190",
+		"CVE-2017-13080",
+		"CVE-2017-14051",
+		"CVE-2017-15115",
+		"CVE-2017-15265",
+		"CVE-2017-15299",
+		"CVE-2017-15649",
+		"CVE-2017-15868",
+		"CVE-2017-16525",
+		"CVE-2017-16527",
+		"CVE-2017-16529",
+		"CVE-2017-16531",
+		"CVE-2017-16532",
+		"CVE-2017-16533",
+		"CVE-2017-16535",
+		"CVE-2017-16536",
+		"CVE-2017-16537",
+		"CVE-2017-16643",
+		"CVE-2017-16649",
+		"CVE-2017-16939",
+		"CVE-2017-8824",
+		"CVE-2017-8831"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2016-10208](https://security-tracker.debian.org/tracker/CVE-2016-10208)\nSergej Schumilo and Ralf Spenneberg discovered that a crafted ext4\n filesystem could trigger memory corruption when it is mounted. A\n user that can provide a device or filesystem image to be mounted\n could use this for denial of service (crash or data corruption) or\n possibly for privilege escalation.\n* [CVE-2017-8824](https://security-tracker.debian.org/tracker/CVE-2017-8824)\nMohamed Ghannam discovered that the DCCP implementation did not\n correctly manage resources when a socket is disconnected and\n reconnected, potentially leading to a use-after-free. A local\n user could use this for denial of service (crash or data\n corruption) or possibly for privilege escalation. On systems that\n do not already have the dccp module loaded, this can be mitigated\n by disabling it:\n echo >> /etc/modprobe.d/disable-dccp.conf install dccp false\n* [CVE-2017-8831](https://security-tracker.debian.org/tracker/CVE-2017-8831)\nPengfei Wang discovered that the saa7164 video capture driver\n re-reads data from a PCI device after validating it. A physically\n present user able to attach a specially designed PCI device could\n use this for privilege escalation.\n* [CVE-2017-12190](https://security-tracker.debian.org/tracker/CVE-2017-12190)\nVitaly Mayatskikh discovered that the block layer did not\n correctly count page references for raw I/O from user-space. This\n can be exploited by a guest VM with access to a host SCSI device\n for denial of service (memory exhaustion) or potentially for\n privilege escalation.\n* [CVE-2017-13080](https://security-tracker.debian.org/tracker/CVE-2017-13080)\nA vulnerability was found in the WPA2 protocol that could lead to\n reinstallation of the same Group Temporal Key (GTK), which\n substantially reduces the security of wifi encryption. This is\n one of the issues collectively known as KRACK.\n\n\nUpdates to GTKs are usually handled by the wpa package, where this\n issue was already fixed (DLA-1150-1). However, some wifi devices\n can remain active and update GTKs autonomously while the system is\n suspended. The kernel must also check for and ignore key\n reinstallation.\n* [CVE-2017-14051](https://security-tracker.debian.org/tracker/CVE-2017-14051)\nshqking reported that the qla2xxx SCSI host driver did not\n correctly validate I/O to the optrom sysfs attribute of the\n devices it creates. This is unlikely to have any security\n impact.\n* [CVE-2017-15115](https://security-tracker.debian.org/tracker/CVE-2017-15115)\nVladis Dronov reported that the SCTP implementation did not\n correctly handle \"peel-off\" of an association to another net\n namespace. This leads to a use-after-free, which a local user can\n exploit for denial of service (crash or data corruption) or\n possibly for privilege escalation. On systems that do not already\n have the sctp module loaded, this can be mitigated by disabling\n it:\n echo >> /etc/modprobe.d/disable-sctp.conf install sctp false\n* [CVE-2017-15265](https://security-tracker.debian.org/tracker/CVE-2017-15265)\nMichael23 Yu reported a race condition in the ALSA sequencer\n subsystem involving creation and deletion of ports, which could\n lead to a use-after-free. A local user with access to an ALSA\n sequencer device can use this for denial of service (crash or data\n loss) or possibly for privilege escalation.\n* [CVE-2017-15299](https://security-tracker.debian.org/tracker/CVE-2017-15299)\nEric Biggers discovered that the KEYS subsystem did not correctly\n handle update of an uninstantiated key, leading to a null\n dereference. A local user can use this for denial of service\n (crash).\n* [CVE-2017-15649](https://security-tracker.debian.org/tracker/CVE-2017-15649)\nnixioaming reported a race condition in the packet socket\n (AF\\_PACKET) implementation involving rebinding to a fanout group,\n which could lead to a use-after-free. A local user with the\n CAP\\_NET\\_RAW capability can use this for denial of service (crash\n or data corruption) or possibly for privilege escalation.\n* [CVE-2017-15868](https://security-tracker.debian.org/tracker/CVE-2017-15868)\nAl Viro found that the Bluebooth Network Encapsulation Protocol\n (BNEP) implementation did not validate the type of the second\n socket passed to the BNEPCONNADD ioctl(), which could lead to\n memory corruption. A local user with the CAP\\_NET\\_ADMIN capability\n can use this for denial of service (crash or data corruption) or\n possibly for privilege escalation.\n* [CVE-2017-16525](https://security-tracker.debian.org/tracker/CVE-2017-16525)\nAndrey Konovalov reported that the USB serial console\n implementation did not correctly handle disconnection of unusual\n serial devices, leading to a use-after-free. A similar issue was\n found in the case where setup of a serial console fails. A\n physically present user with a specially designed USB device can\n use this to cause a denial of service (crash or data corruption)\n or possibly for privilege escalation.\n* [CVE-2017-16527](https://security-tracker.debian.org/tracker/CVE-2017-16527)\nAndrey Konovalov reported that the USB sound mixer driver did not\n correctly cancel I/O in case it failed to probe a device, which\n could lead to a use-after-free. A physically present user with a\n specially designed USB device can use this to cause a denial of\n service (crash or data corruption) or possibly for privilege\n escalation.\n* [CVE-2017-16529](https://security-tracker.debian.org/tracker/CVE-2017-16529)\nAndrey Konovalov reported that the USB sound driver did not fully\n validate descriptor lengths, which could lead to a buffer\n over-read. A physically present user with a specially designed\n USB device may be able to use this to cause a denial of service\n (crash).\n* [CVE-2017-16531](https://security-tracker.debian.org/tracker/CVE-2017-16531)\nAndrey Konovalov reported that the USB core did not validate IAD\n lengths, which could lead to a buffer over-read. A physically\n present user with a specially designed USB device may be able to\n use this to cause a denial of service (crash).\n* [CVE-2017-16532](https://security-tracker.debian.org/tracker/CVE-2017-16532)\nAndrey Konovalov reported that the USB test driver did not\n correctly handle devices with specific combinations of endpoints.\n A physically present user with a specially designed USB device can\n use this to cause a denial of service (crash).\n* [CVE-2017-16533](https://security-tracker.debian.org/tracker/CVE-2017-16533)\nAndrey Konovalov reported that the USB HID driver did not fully\n validate descriptor lengths, which could lead to a buffer\n over-read. A physically present user with a specially designed\n USB device may be able to use this to cause a denial of service\n (crash).\n* [CVE-2017-16535](https://security-tracker.debian.org/tracker/CVE-2017-16535)\nAndrey Konovalov reported that the USB core did not validate BOS\n descriptor lengths, which could lead to a buffer over-read. A\n physically present user with a specially designed USB device may\n be able to use this to cause a denial of service (crash).\n* [CVE-2017-16536](https://security-tracker.debian.org/tracker/CVE-2017-16536)\nAndrey Konovalov reported that the cx231xx video capture driver\n did not fully validate the device endpoint configuration, which\n could lead to a null dereference. A physically present user with\n a specially designed USB device can use this to cause a denial of\n service (crash).\n* [CVE-2017-16537](https://security-tracker.debian.org/tracker/CVE-2017-16537)\nAndrey Konovalov reported that the imon RC driver did not fully\n validate the device interface configuration, which could lead to a\n null dereference. A physically present user with a specially\n designed USB device can use this to cause a denial of service\n (crash).\n* [CVE-2017-16643](https://security-tracker.debian.org/tracker/CVE-2017-16643)\nAndrey Konovalov reported that the gtco tablet driver did not\n fully validate descriptor lengths, which could lead to a buffer\n over-read. A physically present user with a specially designed\n USB device may be able to use this to cause a denial of service\n (crash).\n* [CVE-2017-16649](https://security-tracker.debian.org/tracker/CVE-2017-16649)\nBjĂ¸rn Mork found that the cdc\\_ether network driver did not\n validate the device's maximum segment size, potentially leading to\n a division by zero. A physically present user with a specially\n designed USB device can use this to cause a denial of service\n (crash).\n* [CVE-2017-16939](https://security-tracker.debian.org/tracker/CVE-2017-16939)\nMohamed Ghannam reported (through Beyond Security's SecuriTeam\n Secure Disclosure program) that the IPsec (xfrm) implementation\n did not correctly handle some failure cases when dumping policy\n information through netlink. A local user with the CAP\\_NET\\_ADMIN\n capability can use this for denial of service (crash or data\n corruption) or possibly for privilege escalation.\n* [CVE-2017-1000407](https://security-tracker.debian.org/tracker/CVE-2017-1000407)\nAndrew Honig reported that the KVM implementation for Intel\n processors allowed direct access to host I/O port 0x80, which\n is not generally safe. On some systems this allows a guest\n VM to cause a denial of service (crash) of the host.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.96-2. This version also includes bug fixes from upstream versions\nup to and including 3.2.96. It also fixes some regressions caused by\nthe fix for [CVE-2017-1000364](https://security-tracker.debian.org/tracker/CVE-2017-1000364), \nwhich was included in DLA-993-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.96-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1",
+				"3.2.51-1",
+				"3.2.51-1~bpo60+1",
+				"3.2.53-1",
+				"3.2.53-2",
+				"3.2.54-1",
+				"3.2.54-2",
+				"3.2.54-2~bpo60+1",
+				"3.2.57-1",
+				"3.2.57-2",
+				"3.2.57-3",
+				"3.2.57-3+deb7u1",
+				"3.2.57-3+deb7u2",
+				"3.2.57-3+deb7u2~bpo60+1",
+				"3.2.60-1",
+				"3.2.60-1+deb7u1",
+				"3.2.60-1+deb7u2",
+				"3.2.60-1+deb7u3",
+				"3.2.60-1+deb7u3~bpo60+1",
+				"3.2.63-1",
+				"3.2.63-2",
+				"3.2.63-2+deb7u1",
+				"3.2.63-2+deb7u1~bpo60+1",
+				"3.2.63-2+deb7u2",
+				"3.2.63-2+deb7u2~bpo60+1",
+				"3.2.65-1",
+				"3.2.65-1+deb7u1",
+				"3.2.65-1+deb7u1~bpo60+1",
+				"3.2.65-1+deb7u2",
+				"3.2.65-1+deb7u2~bpo60+1",
+				"3.2.68-1",
+				"3.2.68-1+deb7u1",
+				"3.2.68-1+deb7u1~bpo60+1",
+				"3.2.68-1+deb7u2",
+				"3.2.68-1+deb7u2~bpo60+1",
+				"3.2.68-1+deb7u3",
+				"3.2.68-1+deb7u3~bpo60+1",
+				"3.2.68-1+deb7u4",
+				"3.2.68-1+deb7u4~bpo60+1",
+				"3.2.68-1+deb7u5",
+				"3.2.68-1+deb7u6",
+				"3.2.68-1+deb7u6~bpo60+1",
+				"3.2.71-1",
+				"3.2.71-2",
+				"3.2.73-1",
+				"3.2.73-2",
+				"3.2.73-2+deb7u1",
+				"3.2.73-2+deb7u2",
+				"3.2.73-2+deb7u2~bpo60+1",
+				"3.2.73-2+deb7u3",
+				"3.2.78-1",
+				"3.2.81-1",
+				"3.2.81-2",
+				"3.2.82-1",
+				"3.2.84-1",
+				"3.2.84-2",
+				"3.2.86-1",
+				"3.2.88-1",
+				"3.2.89-1",
+				"3.2.89-2",
+				"3.2.93-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1200-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1200"
+		}
+	]
+}

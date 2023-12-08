@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3828-2",
+	"modified": "2023-10-16T00:12:21.606024Z",
+	"published": "2017-04-10T00:00:00Z",
+	"summary": "dovecot - regression update",
+	"details": "\nIt was discovered that the Dovecot email server is vulnerable to a\ndenial of service attack. When the dict passdb and userdb are used\nfor user authentication, the username sent by the IMAP/POP3 client is\nsent through var\\_expand() to perform %variable expansion. Sending\nspecially crafted %variable fields could result in excessive memory\nusage causing the process to crash (and restart).\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:2.2.13-12~deb8u2.\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "dovecot",
+				"purl": "pkg:deb/debian/dovecot?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.2.13-12~deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.2.13-11",
+				"1:2.2.13-12~deb8u1",
+				"1:2.2.13-12~deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3828-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3828"
+		}
+	]
+}

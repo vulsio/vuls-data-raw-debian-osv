@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4211-1",
+	"modified": "2023-10-16T00:13:21.606846Z",
+	"published": "2018-05-25T00:00:00Z",
+	"related": [
+		"CVE-2017-18266"
+	],
+	"summary": "xdg-utils - security update",
+	"details": "\nGabriel Corona discovered that xdg-utils, a set of tools for desktop\nenvironment integration, is vulnerable to argument injection attacks. If\nthe environment variable BROWSER in the victim host has a \"%s\" and the\nvictim opens a link crafted by an attacker with xdg-open, the malicious\nparty could manipulate the parameters used by the browser when opened.\nThis manipulation could set, for example, a proxy to which the network\ntraffic could be intercepted for that particular execution.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.1.0~rc1+git20111210-7.4+deb8u1.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.1.1-1+deb9u1.\n\n\nWe recommend that you upgrade your xdg-utils packages.\n\n\nFor the detailed security status of xdg-utils please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/xdg-utils](https://security-tracker.debian.org/tracker/xdg-utils)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "xdg-utils",
+				"purl": "pkg:deb/debian/xdg-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0~rc1+git20111210-7.4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0~rc1+git20111210-7.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4211-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "xdg-utils",
+				"purl": "pkg:deb/debian/xdg-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4211-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4211"
+		}
+	]
+}

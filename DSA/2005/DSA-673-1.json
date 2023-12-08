@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-673-1",
+	"modified": "2023-10-16T00:27:38.684476Z",
+	"published": "2005-02-10T00:00:00Z",
+	"related": [
+		"CVE-2005-0102"
+	],
+	"summary": "evolution - integer overflow",
+	"details": "\nMax Vozeler discovered an integer overflow in a helper application\ninside of Evolution, a free groupware suite. A local attacker could\ncause the setuid root helper to execute arbitrary code with elevated\nprivileges.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0.5-1woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.0.3-1.2.\n\n\nWe recommend that you upgrade your evolution package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "evolution",
+				"purl": "pkg:deb/debian/evolution?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.5-1woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-673-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-673"
+		}
+	]
+}

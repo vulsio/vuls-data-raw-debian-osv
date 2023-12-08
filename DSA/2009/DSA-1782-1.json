@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1782-1",
+	"modified": "2023-10-16T00:05:41.889580Z",
+	"published": "2009-04-29T00:00:00Z",
+	"related": [
+		"CVE-2008-4866",
+		"CVE-2008-5616",
+		"CVE-2009-0385"
+	],
+	"summary": "mplayer - arbitrary code execution",
+	"details": "\nSeveral vulnerabilities have been discovered in mplayer, a movie player\nfor Unix-like systems. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-0385](https://security-tracker.debian.org/tracker/CVE-2009-0385)\nIt was discovered that watching a malformed 4X movie file could lead to\nthe execution of arbitrary code.\n* [CVE-2008-4866](https://security-tracker.debian.org/tracker/CVE-2008-4866)\nIt was discovered that multiple buffer overflows could lead to the\nexecution of arbitrary code.\n* [CVE-2008-5616](https://security-tracker.debian.org/tracker/CVE-2008-5616)\nIt was discovered that watching a malformed TwinVQ file could lead to\nthe execution of arbitrary code.\n\n\nFor the oldstable distribution (etch), these problems have been fixed\nin version 1.0~rc1-12etch7.\n\n\nFor the stable distribution (lenny), mplayer links against\nffmpeg-debian.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), mplayer links against ffmpeg-debian.\n\n\nWe recommend that you upgrade your mplayer packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "mplayer",
+				"purl": "pkg:deb/debian/mplayer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0~rc1-12etch7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0~rc1-12etch",
+				"1.0~rc1-12etch1",
+				"1.0~rc1-12etch2",
+				"1.0~rc1-12etch3",
+				"1.0~rc1-12etch5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1782-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1782"
+		}
+	]
+}

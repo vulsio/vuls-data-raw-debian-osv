@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2537-1",
+	"modified": "2023-10-16T00:11:17.633779Z",
+	"published": "2012-08-30T00:00:00Z",
+	"related": [
+		"CVE-2012-3527",
+		"CVE-2012-3528",
+		"CVE-2012-3529",
+		"CVE-2012-3530",
+		"CVE-2012-3531"
+	],
+	"summary": "typo3-src - several",
+	"details": "\nSeveral vulnerabilities were discovered in TYPO3, a content management\nsystem.\n\n\n* [CVE-2012-3527](https://security-tracker.debian.org/tracker/CVE-2012-3527)\nAn insecure call to unserialize in the help system enables\n arbitrary code execution by authenticated users.\n* [CVE-2012-3528](https://security-tracker.debian.org/tracker/CVE-2012-3528)\nThe TYPO3 backend contains several cross-site scripting\n vulnerabilities.\n* [CVE-2012-3529](https://security-tracker.debian.org/tracker/CVE-2012-3529)\nAuthenticated users who can access the configuration module\n can obtain the encryption key, allowing them to escalate their\n privileges.\n* [CVE-2012-3530](https://security-tracker.debian.org/tracker/CVE-2012-3530)\nThe RemoveXSS HTML sanitizer did not remove several HTML5\n JavaScript, thus failing to mitigate the impact of cross-site\n scripting vulnerabilities.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 4.3.9+dfsg1-1+squeeze5.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 4.5.19+dfsg1-1.\n\n\nWe recommend that you upgrade your typo3-src packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "typo3-src",
+				"purl": "pkg:deb/debian/typo3-src?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.3.9+dfsg1-1+squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.3.9+dfsg1-1",
+				"4.3.9+dfsg1-1+squeeze1",
+				"4.3.9+dfsg1-1+squeeze2",
+				"4.3.9+dfsg1-1+squeeze3",
+				"4.3.9+dfsg1-1+squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2537-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2537"
+		}
+	]
+}

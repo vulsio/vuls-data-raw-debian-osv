@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-349",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-07-14T00:00:00Z",
+	"related": [
+		"CVE-2003-0252"
+	],
+	"summary": "nfs-utils - buffer overflow",
+	"details": "\nThe logging code in nfs-utils contains an off-by-one buffer overrun\nwhen adding a newline to the string being logged. This vulnerability\nmay allow an attacker to execute arbitrary code or cause a denial of\nservice condition by sending certain RPC requests.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1:1.0-2woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1:1.0.3-2.\n\n\nWe recommend that you update your nfs-utils package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "nfs-utils",
+				"purl": "pkg:deb/debian/nfs-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.0-2woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-349.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-349"
+		}
+	]
+}

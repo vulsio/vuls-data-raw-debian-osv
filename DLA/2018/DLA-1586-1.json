@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1586-1",
+	"modified": "2023-06-28T06:20:49.981159Z",
+	"published": "2018-11-21T00:00:00Z",
+	"related": [
+		"CVE-2018-0735",
+		"CVE-2018-5407"
+	],
+	"summary": "openssl - security update",
+	"details": "\n* [CVE-2018-0735](https://security-tracker.debian.org/tracker/CVE-2018-0735)\nSamuel Weiser reported a timing vulnerability in the OpenSSL ECDSA\n signature generation, which might leak information to recover the\n private key.\n* [CVE-2018-5407](https://security-tracker.debian.org/tracker/CVE-2018-5407)\nAlejandro Cabrera Aldaya, Billy Brumley, Sohaib ul Hassan, Cesar\n Pereida Garcia and Nicola Tuveri reported a vulnerability to a\n timing side channel attack, which might be used to recover the\n private key.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.0.1t-1+deb8u10.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "openssl",
+				"purl": "pkg:deb/debian/openssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.1t-1+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.1k-3",
+				"1.0.1k-3+alpha",
+				"1.0.1k-3+deb8u1",
+				"1.0.1k-3+deb8u2",
+				"1.0.1k-3+deb8u3",
+				"1.0.1k-3+deb8u4",
+				"1.0.1k-3+deb8u5",
+				"1.0.1t-1+deb8u1",
+				"1.0.1t-1+deb8u2",
+				"1.0.1t-1+deb8u3",
+				"1.0.1t-1+deb8u4",
+				"1.0.1t-1+deb8u5",
+				"1.0.1t-1+deb8u6",
+				"1.0.1t-1+deb8u7",
+				"1.0.1t-1+deb8u8",
+				"1.0.1t-1+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1586-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1586"
+		}
+	]
+}

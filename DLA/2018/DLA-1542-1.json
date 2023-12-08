@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1542-1",
+	"modified": "2023-06-28T06:20:47.681424Z",
+	"published": "2018-10-11T00:00:00Z",
+	"summary": "dnsruby - update",
+	"details": "\ndnsruby is a feature-complete DNS(SEC) client for Ruby. It ships the DNS\nRoot Key Signing Key (KSK), used as trust anchor to validate the\nauthenticity of DNS records. This update includes the latest KSK\n(KSK-2017), that will be used by ICANN to sign the Root Zone today, 11\nOctober 2018.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.54-2+deb8u1.\n\n\nWe recommend that you upgrade your dnsruby packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "dnsruby",
+				"purl": "pkg:deb/debian/dnsruby?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.54-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.54-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1542-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1542"
+		}
+	]
+}

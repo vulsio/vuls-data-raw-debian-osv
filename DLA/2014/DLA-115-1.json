@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-115-1",
+	"modified": "2023-06-28T06:20:24.587580Z",
+	"published": "2014-12-18T00:00:00Z",
+	"summary": "gosa - security update",
+	"details": "\nFix XSS issue during login.\n\n\nFix authentication of GOsaÂ˛ against the underlying LDAP server(s)\n via the gosa-admin DN (See [#768509](http://bugs.debian.org/768509)).\n\n\nFor Debian 6 Squeeze, these issues have been fixed in gosa\nversion 2.6.11-3+squeeze3.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gosa",
+				"purl": "pkg:deb/debian/gosa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.11-3+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.11-3",
+				"2.6.11-3+squeeze1",
+				"2.6.11-3+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-115-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-115"
+		}
+	]
+}

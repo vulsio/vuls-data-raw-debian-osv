@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-94-1",
+	"modified": "2023-06-28T06:25:39.994847Z",
+	"published": "2014-11-25T00:00:00Z",
+	"related": [
+		"CVE-2014-3668",
+		"CVE-2014-3669",
+		"CVE-2014-3670",
+		"CVE-2014-3710"
+	],
+	"summary": "php5 - security update",
+	"details": "\n* [CVE-2014-3668](https://security-tracker.debian.org/tracker/CVE-2014-3668)\nFix bug #68027 - fix date parsing in XMLRPC lib\n* [CVE-2014-3669](https://security-tracker.debian.org/tracker/CVE-2014-3669)\nFix bug #68044: Integer overflow in unserialize() (32-bits only)\n* [CVE-2014-3670](https://security-tracker.debian.org/tracker/CVE-2014-3670)\nFix bug #68113 (Heap corruption in exif\\_thumbnail())\n* [CVE-2014-3710](https://security-tracker.debian.org/tracker/CVE-2014-3710)\nFix bug #68283: fileinfo: out-of-bounds read in elf note headers\n\n\nAdditional bugfix\n\n\nFix null byte handling in LDAP bindings in ldap-fix.patch\n\n\nFor Debian 6 Squeeze, these issues have been fixed in php5 version 5.3.3-7+squeeze23\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3-7+squeeze23"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze13",
+				"5.3.3-7+squeeze14",
+				"5.3.3-7+squeeze15",
+				"5.3.3-7+squeeze16",
+				"5.3.3-7+squeeze17",
+				"5.3.3-7+squeeze18",
+				"5.3.3-7+squeeze19",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze20",
+				"5.3.3-7+squeeze21",
+				"5.3.3-7+squeeze22",
+				"5.3.3-7+squeeze3",
+				"5.3.3-7+squeeze5",
+				"5.3.3-7+squeeze6",
+				"5.3.3-7+squeeze7",
+				"5.3.3-7+squeeze8",
+				"5.3.3-7+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-94-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-94"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-350",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-07-15T00:00:00Z",
+	"related": [
+		"CVE-2003-0358"
+	],
+	"summary": "falconseye - buffer overflow",
+	"details": "\nThe falconseye package is vulnerable to a buffer overflow exploited\nvia a long `-s` command line option. This vulnerability could be used\nby an attacker to gain gid 'games' on a system where falconseye is\ninstalled.\n\n\nNote that falconseye does not contain the file permission error\nCAN-2003-0359 which affected some other nethack packages.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.9.3-7woody3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.9.3-9.\n\n\nWe recommend that you update your falconseye package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "falconseye",
+				"purl": "pkg:deb/debian/falconseye?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.3-7woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-350.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-350"
+		}
+	]
+}

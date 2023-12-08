@@ -1,0 +1,64 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2560-1",
+	"modified": "2023-06-28T06:29:14.553328Z",
+	"published": "2021-02-18T00:00:00Z",
+	"related": [
+		"CVE-2020-15469",
+		"CVE-2020-15859",
+		"CVE-2020-25084",
+		"CVE-2020-28916",
+		"CVE-2020-29130",
+		"CVE-2020-29443",
+		"CVE-2021-20181",
+		"CVE-2021-20221"
+	],
+	"summary": "qemu - security update",
+	"details": "\nSeveral vulnerabilities were discovered in QEMU, a fast processor\nemulator (notably used in KVM and Xen HVM virtualization). An attacker\ncould trigger a denial-of-service (DoS), information leak, and\npossibly execute arbitrary code with the privileges of the QEMU\nprocess on the host.\n\n\n* [CVE-2020-15469](https://security-tracker.debian.org/tracker/CVE-2020-15469)\nA MemoryRegionOps object may lack read/write callback methods,\n leading to a NULL pointer dereference.\n* [CVE-2020-15859](https://security-tracker.debian.org/tracker/CVE-2020-15859)\nQEMU has a use-after-free in hw/net/e1000e\\_core.c because a guest\n OS user can trigger an e1000e packet with the data's address set\n to the e1000e's MMIO address.\n* [CVE-2020-25084](https://security-tracker.debian.org/tracker/CVE-2020-25084)\nQEMU has a use-after-free in hw/usb/hcd-xhci.c because the\n usb\\_packet\\_map return value is not checked.\n* [CVE-2020-28916](https://security-tracker.debian.org/tracker/CVE-2020-28916)\nhw/net/e1000e\\_core.c has an infinite loop via an RX descriptor\n with a NULL buffer address.\n* [CVE-2020-29130](https://security-tracker.debian.org/tracker/CVE-2020-29130)\nslirp.c has a buffer over-read because it tries to read a certain\n amount of header data even if that exceeds the total packet\n length.\n* [CVE-2020-29443](https://security-tracker.debian.org/tracker/CVE-2020-29443)\nide\\_atapi\\_cmd\\_reply\\_end in hw/ide/atapi.c allows out-of-bounds\n read access because a buffer index is not validated.\n* [CVE-2021-20181](https://security-tracker.debian.org/tracker/CVE-2021-20181)\n9pfs: ZDI-CAN-10904: QEMU Plan 9 file system TOCTOU privilege\n escalation vulnerability.\n* [CVE-2021-20221](https://security-tracker.debian.org/tracker/CVE-2021-20221)\naarch64: GIC: out-of-bound heap buffer access via an interrupt ID\n field.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:2.8+dfsg-6+deb9u13.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFor the detailed security status of qemu please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qemu>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.8+dfsg-6+deb9u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.8+dfsg-6",
+				"1:2.8+dfsg-6+deb9u1",
+				"1:2.8+dfsg-6+deb9u10",
+				"1:2.8+dfsg-6+deb9u11",
+				"1:2.8+dfsg-6+deb9u12",
+				"1:2.8+dfsg-6+deb9u2",
+				"1:2.8+dfsg-6+deb9u3",
+				"1:2.8+dfsg-6+deb9u4",
+				"1:2.8+dfsg-6+deb9u5",
+				"1:2.8+dfsg-6+deb9u6",
+				"1:2.8+dfsg-6+deb9u7",
+				"1:2.8+dfsg-6+deb9u8",
+				"1:2.8+dfsg-6+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2560-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2560"
+		}
+	]
+}

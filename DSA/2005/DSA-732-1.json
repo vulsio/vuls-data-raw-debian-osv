@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-732-1",
+	"modified": "2023-10-16T00:24:25.293001Z",
+	"published": "2005-06-03T00:00:00Z",
+	"related": [
+		"CVE-2005-1520",
+		"CVE-2005-1521",
+		"CVE-2005-1522",
+		"CVE-2005-1523"
+	],
+	"summary": "mailutils - several",
+	"details": "\n\"infamous41md\" discovered several vulnerabilities in the GNU mailutils\npackage which contains utilities for handling mail. These problems\ncan lead to a denial of service or the execution of arbitrary code.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing vulnerabilities.\n\n\n* [CAN-2005-1520](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1520)\nBuffer overflow mail header handling may allow a remote attacker\n to execute commands with the privileges of the targeted user.\n\n* [CAN-2005-1521](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1521)\nCombined integer and heap overflow in the fetch routine can lead\n to the execution of arbitrary code.\n\n* [CAN-2005-1522](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1522)\nDenial of service in the fetch routine.\n\n* [CAN-2005-1523](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1523)\nFormat string vulnerability can lead to the execution of arbitrary\n code.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 20020409-1woody2.\n\n\nFor the testing distribution (sarge) these problems have been fixed in\nversion 0.6.1-4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.6.1-4.\n\n\nWe recommend that you upgrade your mailutils packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mailutils",
+				"purl": "pkg:deb/debian/mailutils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20020409-1woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20020409-1",
+				"20020409-1woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-732-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-732"
+		}
+	]
+}

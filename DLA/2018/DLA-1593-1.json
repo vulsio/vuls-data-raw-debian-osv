@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1593-1",
+	"modified": "2023-06-28T06:20:50.738309Z",
+	"published": "2018-11-24T00:00:00Z",
+	"related": [
+		"CVE-2018-19274"
+	],
+	"summary": "phpbb3 - security update",
+	"details": "\nSimon Scannell and Robin Peraglie of RIPS Technologies discovered that\npassing an absolute path to a file\\_exists check in phpBB, a full\nfeatured web forum, allows remote code execution through Object\nInjection by employing Phar deserialization when an attacker has access\nto the Admin Control Panel with founder permissions.\n\n\nThe fix for this issue resulted in the removal of setting the\nImageMagick path. The GD image library can be used as a replacement\nand a new event to generate thumbnails was added, so it is possible to\nwrite an extension that uses a different image library to generate\nthumbnails.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.0.12-5+deb8u2.\n\n\nWe recommend that you upgrade your phpbb3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "phpbb3",
+				"purl": "pkg:deb/debian/phpbb3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.12-5+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.12-5",
+				"3.0.12-5+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1593-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1593"
+		}
+	]
+}

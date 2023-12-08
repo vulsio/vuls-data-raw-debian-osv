@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1565-1",
+	"modified": "2023-10-16T00:10:30.359271Z",
+	"published": "2008-05-01T00:00:00Z",
+	"related": [
+		"CVE-2007-6694",
+		"CVE-2008-0007",
+		"CVE-2008-1294",
+		"CVE-2008-1375"
+	],
+	"summary": "linux-2.6 - several vulnerabilities",
+	"details": "\nSeveral local vulnerabilities have been discovered in the Linux kernel\nthat may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-6694](https://security-tracker.debian.org/tracker/CVE-2007-6694)\nCyrill Gorcunov reported a NULL pointer dereference in code specific\n to the CHRP PowerPC platforms. Local users could exploit this issue\n to achieve a Denial of Service (DoS).\n* [CVE-2008-0007](https://security-tracker.debian.org/tracker/CVE-2008-0007)\nNick Piggin of SuSE discovered a number of issues in subsystems which\n register a fault handler for memory mapped areas. This issue can be\n exploited by local users to achieve a Denial of Service (DoS) and possibly\n execute arbitrary code.\n* [CVE-2008-1294](https://security-tracker.debian.org/tracker/CVE-2008-1294)\nDavid Peer discovered that users could escape administrator imposed cpu\n time limitations (RLIMIT\\_CPU) by setting a limit of 0.\n* [CVE-2008-1375](https://security-tracker.debian.org/tracker/CVE-2008-1375)\nAlexander Viro discovered a race condition in the directory notification\n subsystem that allows local users to cause a Denial of Service (oops)\n and possibly result in an escalation of privileges.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n2.6.18.dfsg.1-18etch3.\n\n\nThe unstable (sid) and testing distributions will be fixed soon.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-18etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12",
+				"2.6.18.dfsg.1-12etch1",
+				"2.6.18.dfsg.1-12etch2",
+				"2.6.18.dfsg.1-13",
+				"2.6.18.dfsg.1-13etch1",
+				"2.6.18.dfsg.1-13etch2",
+				"2.6.18.dfsg.1-13etch3",
+				"2.6.18.dfsg.1-13etch4",
+				"2.6.18.dfsg.1-13etch5",
+				"2.6.18.dfsg.1-13etch6",
+				"2.6.18.dfsg.1-13lenny1",
+				"2.6.18.dfsg.1-14",
+				"2.6.18.dfsg.1-15",
+				"2.6.18.dfsg.1-16",
+				"2.6.18.dfsg.1-17",
+				"2.6.18.dfsg.1-17etch1",
+				"2.6.18.dfsg.1-18",
+				"2.6.18.dfsg.1-18etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1565-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1565"
+		}
+	]
+}

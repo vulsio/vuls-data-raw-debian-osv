@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1410-1",
+	"modified": "2023-06-28T06:20:39.769731Z",
+	"published": "2018-07-01T00:00:00Z",
+	"related": [
+		"CVE-2017-1000433"
+	],
+	"summary": "python-pysaml2 - security update",
+	"details": "\nPysaml2, a Python implementation of the Security Assertion Markup\nLanguage, would accept any password when run with Python optimizations\nenabled. This allows attackers to log in as any user without knowing\ntheir password.\n\n\nFor Debian 8 Jessie, this issue has been fixed in version\n2.0.0-1+deb8u2.\n\n\nWe recommend that you upgrade your python-pysaml2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "python-pysaml2",
+				"purl": "pkg:deb/debian/python-pysaml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0-1",
+				"2.0.0-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1410-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1410"
+		}
+	]
+}

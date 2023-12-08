@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1401-1",
+	"modified": "2023-10-16T00:05:20.876692Z",
+	"published": "2007-11-05T00:00:00Z",
+	"related": [
+		"CVE-2006-2894",
+		"CVE-2007-1095",
+		"CVE-2007-2292",
+		"CVE-2007-3511",
+		"CVE-2007-5334",
+		"CVE-2007-5337",
+		"CVE-2007-5338",
+		"CVE-2007-5339",
+		"CVE-2007-5340"
+	],
+	"summary": "iceape - several vulnerabilities",
+	"details": "\n# Translators: this is nearly a copy of DSA 1392\n\nSeveral remote vulnerabilities have been discovered in the Iceape internet\nsuite, an unbranded version of the Seamonkey Internet Suite. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n\n* [CVE-2007-1095](https://security-tracker.debian.org/tracker/CVE-2007-1095)\n\n Michal Zalewski discovered that the unload event handler had access to\n the address of the next page to be loaded, which could allow information\n disclosure or spoofing.\n* [CVE-2007-2292](https://security-tracker.debian.org/tracker/CVE-2007-2292)\n\n Stefano Di Paola discovered that insufficient validation of user names\n used in Digest authentication on a web site allows HTTP response splitting\n attacks.\n* [CVE-2007-3511](https://security-tracker.debian.org/tracker/CVE-2007-3511)\n\n It was discovered that insecure focus handling of the file upload\n control can lead to information disclosure. This is a variant of\n [CVE-2006-2894](https://security-tracker.debian.org/tracker/CVE-2006-2894).\n* [CVE-2007-5334](https://security-tracker.debian.org/tracker/CVE-2007-5334)\n\n Eli Friedman discovered that web pages written in Xul markup can hide the\n titlebar of windows, which can lead to spoofing attacks.\n* [CVE-2007-5337](https://security-tracker.debian.org/tracker/CVE-2007-5337)\n\n Georgi Guninski discovered the insecure handling of smb:// and sftp:// URI\n schemes may lead to information disclosure. This vulnerability is only\n exploitable if Gnome-VFS support is present on the system.\n* [CVE-2007-5338](https://security-tracker.debian.org/tracker/CVE-2007-5338)\n\nmoz\\_bug\\_r\\_a4 discovered that the protection scheme offered by XPCNativeWrappers\n could be bypassed, which might allow privilege escalation.\n* [CVE-2007-5339](https://security-tracker.debian.org/tracker/CVE-2007-5339)\n\n L. David Baron, Boris Zbarsky, Georgi Guninski, Paul Nickerson, Olli Pettay,\n Jesse Ruderman, Vladimir Sukhoy, Daniel Veditz, and Martijn Wargers discovered\n crashes in the layout engine, which might allow the execution of arbitrary code.\n* [CVE-2007-5340](https://security-tracker.debian.org/tracker/CVE-2007-5340)\n\n Igor Bukanov, Eli Friedman, and Jesse Ruderman discovered crashes in the\n JavaScript engine, which might allow the execution of arbitrary code.\n\n\n\nThe Mozilla products in the oldstable distribution (sarge) are no longer\nsupported with security updates.\n\n\n\n\nFor the stable distribution (etch) these problems have been fixed in version\n1.0.11~pre071022-0etch1.\n\n\n\n\nFor the unstable distribution (sid) these problems have been fixed in version\n1.1.5-1.\n\n\n\n\nWe recommend that you upgrade your iceape packages.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "iceape",
+				"purl": "pkg:deb/debian/iceape?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.11~pre071022-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.10~pre070720-0etch1",
+				"1.0.10~pre070720-0etch1+lenny1",
+				"1.0.10~pre070720-0etch3",
+				"1.0.10~pre070720-0etch3+lenny1",
+				"1.0.8-4",
+				"1.0.9-0etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1401-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1401"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2841-1",
+	"modified": "2021-12-06T22:42:48Z",
+	"published": "2021-12-06T00:00:00Z",
+	"related": [
+		"CVE-2021-43784"
+	],
+	"summary": "runc - security update",
+	"details": "\nIt was discovered that there was an overflow issue in runc, the runtime for\nthe Open Container Project, often used with Docker.\n\n\nThe Netlink 'bytemsg' length field could have allowed an attacker to\noverride Netlink-based container configurations. This vulnerability required\nthe attacker to have some control over the configuration of the container, but\nwould have allowed the attacker to bypass the namespace restrictions of the\ncontainer by simply adding their own Netlink payload which disables all\nnamespaces.\n\n\n* [CVE-2021-43784](https://security-tracker.debian.org/tracker/CVE-2021-43784)\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n0.1.1+dfsg1-2+deb9u3.\n\n\nWe recommend that you upgrade your runc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "runc",
+				"purl": "pkg:deb/debian/runc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.1+dfsg1-2+deb9u3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2841-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2841"
+		}
+	]
+}

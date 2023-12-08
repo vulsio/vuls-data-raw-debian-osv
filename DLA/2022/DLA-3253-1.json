@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3253-1",
+	"modified": "2023-06-28T06:25:30.614789Z",
+	"published": "2022-12-31T00:00:00Z",
+	"related": [
+		"CVE-2022-4337",
+		"CVE-2022-4338"
+	],
+	"summary": "openvswitch - security update",
+	"details": "\nIt was discovered that there was an out-of-bounds read and integer\nunderflow vulnerability in open vSwitch, a software-based Ethernet\nvirtual switch\n\n\n* [CVE-2022-4337](https://security-tracker.debian.org/tracker/CVE-2022-4337)\nOut-of-Bounds Read in Organization Specific TLV\n* [CVE-2022-4338](https://security-tracker.debian.org/tracker/CVE-2022-4338)\nInteger Underflow in Organization Specific TLV\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n2.10.7+ds1-0+deb10u3.\n\n\nWe recommend that you upgrade your openvswitch packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openvswitch",
+				"purl": "pkg:deb/debian/openvswitch?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.10.7+ds1-0+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-12",
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-12+deb10u1",
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-12+deb10u2",
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-13",
+				"2.10.6+ds1-0+deb10u1",
+				"2.10.7+ds1-0+deb10u1",
+				"2.10.7+ds1-0+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3253-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3253"
+		}
+	]
+}

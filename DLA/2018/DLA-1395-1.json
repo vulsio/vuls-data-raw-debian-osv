@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1395-1",
+	"modified": "2023-06-28T06:20:38.255053Z",
+	"published": "2018-06-22T00:00:00Z",
+	"related": [
+		"CVE-2017-14650",
+		"CVE-2017-9774"
+	],
+	"summary": "php-horde-image - security update",
+	"details": "\nIt was discovered that there were two remote code execution\nvulnerabilities in php-horde-image, the image processing library for the\nHorde  groupware tool:\n\n\n* [CVE-2017-9774](https://security-tracker.debian.org/tracker/CVE-2017-9774)\nA remote code execution vulnerability (RCE) that was\n exploitable by a logged-in user sending a maliciously crafted HTTP GET\n request to various image backends.\n\n\nNote that the fix applied upstream has a regression in that it ignores\n the force aspect ratio option; see <https://github.com/horde/Image/pull/1>.\n* [CVE-2017-14650](https://security-tracker.debian.org/tracker/CVE-2017-14650)\nAnother RCE that was exploitable by a logged-in\n user sending a maliciously crafted GET request specifically to the im\n image backend.\n\n\nFor Debian 8 Jessie, these issues have been fixed in php-horde-image\nversion 2.1.0-4+deb8u1.\n\n\nWe recommend that you upgrade your php-horde-image packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "php-horde-image",
+				"purl": "pkg:deb/debian/php-horde-image?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.0-4+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.0-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1395-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1395"
+		}
+	]
+}

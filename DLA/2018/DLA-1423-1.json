@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1423-1",
+	"modified": "2019-02-21T07:40:35Z",
+	"published": "2018-07-18T00:00:00Z",
+	"related": [
+		"CVE-2017-18255",
+		"CVE-2017-5753",
+		"CVE-2018-1000204",
+		"CVE-2018-10021",
+		"CVE-2018-10087",
+		"CVE-2018-10124",
+		"CVE-2018-10853",
+		"CVE-2018-10876",
+		"CVE-2018-10877",
+		"CVE-2018-10878",
+		"CVE-2018-10879",
+		"CVE-2018-10880",
+		"CVE-2018-10881",
+		"CVE-2018-10882",
+		"CVE-2018-10883",
+		"CVE-2018-10940",
+		"CVE-2018-1118",
+		"CVE-2018-1120",
+		"CVE-2018-1130",
+		"CVE-2018-11506",
+		"CVE-2018-12233",
+		"CVE-2018-3639",
+		"CVE-2018-5814",
+		"CVE-2018-6412"
+	],
+	"summary": "linux-4.9 - security update",
+	"details": "\nLinux 4.9 has been packaged for Debian 8 as linux-4.9. This provides\na supported upgrade path for systems that currently use kernel\npackages from the \"jessie-backports\" suite.\n\n\nThere is no need to upgrade systems using Linux 3.16, as that kernel\nversion will also continue to be supported in the LTS period.\n\n\nThis backport does not include the following binary packages:\n\n\nhyperv-daemons libcpupower1 libcpupower-dev libusbip-dev\n linux-compiler-gcc-4.9-x86 linux-cpupower linux-libc-dev usbip\n\n\nOlder versions of most of those are built from other source packages\nin Debian 8.\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2017-5753](https://security-tracker.debian.org/tracker/CVE-2017-5753)\nFurther instances of code that was vulnerable to Spectre variant 1\n (bounds-check bypass) have been mitigated.\n* [CVE-2017-18255](https://security-tracker.debian.org/tracker/CVE-2017-18255)\nIt was discovered that the performance events subsystem did not\n properly validate the value of the\n kernel.perf\\_cpu\\_time\\_max\\_percent sysctl. Setting a large value\n could have an unspecified security impact. However, only a\n privileged user can set this sysctl.\n* [CVE-2018-1118](https://security-tracker.debian.org/tracker/CVE-2018-1118)\nThe syzbot software found that the vhost driver did not initialise\n message buffers which would later be read by user processes. A\n user with access to the /dev/vhost-net device could use this to\n read sensitive information from the kernel or other users'\n processes.\n* [CVE-2018-1120](https://security-tracker.debian.org/tracker/CVE-2018-1120)\nQualys reported that a user able to mount FUSE filesystems can\n create a process such that when another process attempting to read\n its command line will be blocked for an arbitrarily long time.\n This could be used for denial of service, or to aid in exploiting\n a race condition in the other program.\n* [CVE-2018-1130](https://security-tracker.debian.org/tracker/CVE-2018-1130)\nThe syzbot software found that the DCCP implementation of\n sendmsg() does not check the socket state, potentially leading\n to a null pointer dereference. A local user could use this to\n cause a denial of service (crash).\n* [CVE-2018-3639](https://security-tracker.debian.org/tracker/CVE-2018-3639)\nMultiple researchers have discovered that Speculative Store Bypass\n (SSB), a feature implemented in many processors, could be used to\n read sensitive information from another context. In particular,\n code in a software sandbox may be able to read sensitive\n information from outside the sandbox. This issue is also known as\n Spectre variant 4.\n\n\nThis update allows the issue to be mitigated on some x86\n processors by disabling SSB. This requires an update to the\n processor's microcode, which is non-free. It may be included in\n an update to the system BIOS or UEFI firmware, or in a future\n update to the intel-microcode or amd64-microcode packages.\n\n\nDisabling SSB can reduce performance significantly, so by default\n it is only done in tasks that use the seccomp feature.\n Applications that require this mitigation should request it\n explicitly through the prctl() system call. Users can control\n where the mitigation is enabled with the spec\\_store\\_bypass\\_disable\n kernel parameter.\n* [CVE-2018-5814](https://security-tracker.debian.org/tracker/CVE-2018-5814)\nJakub Jirasek reported race conditions in the USB/IP host driver.\n A malicious client could use this to cause a denial of service\n (crash or memory corruption), and possibly to execute code, on a\n USB/IP server.\n* [CVE-2018-10021](https://security-tracker.debian.org/tracker/CVE-2018-10021)\nA physically present attacker who unplugs a SAS cable can cause a\n denial of service (memory leak and WARN).\n* [CVE-2018-10087](https://security-tracker.debian.org/tracker/CVE-2018-10087) /\n [CVE-2018-10124](https://security-tracker.debian.org/tracker/CVE-2018-10124)\nzhongjiang found that the wait4() and kill() system call\n implementations did not check for the invalid pid value of\n INT\\_MIN. If a user passed this value, the behaviour of the code\n was formally undefined and might have had a security impact.\n* [CVE-2018-10853](https://security-tracker.debian.org/tracker/CVE-2018-10853)\nAndy Lutomirski and Mika PenttilĂ¤ reported that KVM for x86\n processors did not perform a necessary privilege check when\n emulating certain instructions. This could be used by an\n unprivileged user in a guest VM to escalate their privileges\n within the guest.\n* [CVE-2018-10876](https://security-tracker.debian.org/tracker/CVE-2018-10876)\n, [CVE-2018-10877](https://security-tracker.debian.org/tracker/CVE-2018-10877), [CVE-2018-10878](https://security-tracker.debian.org/tracker/CVE-2018-10878), [CVE-2018-10879](https://security-tracker.debian.org/tracker/CVE-2018-10879),\n[CVE-2018-10880](https://security-tracker.debian.org/tracker/CVE-2018-10880), [CVE-2018-10881](https://security-tracker.debian.org/tracker/CVE-2018-10881), [CVE-2018-10882](https://security-tracker.debian.org/tracker/CVE-2018-10882), [CVE-2018-10883](https://security-tracker.debian.org/tracker/CVE-2018-10883)\n\n\nWen Xu at SSLab, Gatech, reported that crafted ext4 filesystem\n images could trigger a crash or memory corruption. A local user\n able to mount arbitrary filesystems, or an attacker providing\n filesystems to be mounted, could use this for denial of service or\n possibly for privilege escalation.\n* [CVE-2018-10940](https://security-tracker.debian.org/tracker/CVE-2018-10940)\nDan Carpenter reported that the optical disc driver (cdrom) does\n not correctly validate the parameter to the CDROM\\_MEDIA\\_CHANGED\n ioctl. A user with access to a cdrom device could use this to\n cause a denial of service (crash).\n* [CVE-2018-11506](https://security-tracker.debian.org/tracker/CVE-2018-11506)\nPiotr Gabriel Kosinski and Daniel Shapira reported that the\n SCSI optical disc driver (sr) did not allocate a sufficiently\n large buffer for sense data. A user with access to a SCSI\n optical disc device that can produce more than 64 bytes of\n sense data could use this to cause a denial of service (crash\n or memory corruption), and possibly for privilege escalation.\n* [CVE-2018-12233](https://security-tracker.debian.org/tracker/CVE-2018-12233)\nShankara Pailoor reported that a crafted JFS filesystem image\n could trigger a denial of service (memory corruption). This\n could possibly also be used for privilege escalation.\n* [CVE-2018-1000204](https://security-tracker.debian.org/tracker/CVE-2018-1000204)\nThe syzbot software found that the SCSI generic driver (sg) would\n in some circumstances allow reading data from uninitialised\n buffers, which could include sensitive information from the kernel\n or other tasks. However, only privileged users with the\n CAP\\_SYS\\_ADMIN or CAP\\_SYS\\_RAWIO capability were allowed to do this,\n so this has little or no security impact.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.110-1~deb8u1. This update additionally fixes Debian bugs\n#860900, #872907, #892057, #896775, #897590, and #898137; and\nincludes many more bug fixes from stable updates 4.9.89-4.9.110\ninclusive.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "linux-4.9",
+				"purl": "pkg:deb/debian/linux-4.9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.110-1~deb8u1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1423-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1423"
+		}
+	]
+}

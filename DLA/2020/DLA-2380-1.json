@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2380-1",
+	"modified": "2023-06-28T06:30:07.134225Z",
+	"published": "2020-09-26T00:00:00Z",
+	"related": [
+		"CVE-2020-25739"
+	],
+	"summary": "ruby-gon - security update",
+	"details": "\nIt was discovered that there was a cross-site scripting (XSS) vulnerability\nin ruby-gon, a Ruby library to send/convert data to Javascript from a Ruby\napplication. \n\n\n* [CVE-2020-25739](https://security-tracker.debian.org/tracker/CVE-2020-25739)\nAn issue was discovered in the gon gem before gon-6.4.0 for Ruby.\n MultiJson does not honor the escape\\_mode parameter to escape fields as an\n XSS protection mechanism. To mitigate, json\\_dumper.rb in gon now does\n escaping for XSS by default without relying on MultiJson.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n6.1.0-1+deb9u1.\n\n\nWe recommend that you upgrade your ruby-gon packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby-gon",
+				"purl": "pkg:deb/debian/ruby-gon?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.0-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2380-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2380"
+		}
+	]
+}

@@ -1,0 +1,86 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2240-1",
+	"modified": "2023-10-16T00:11:03.006212Z",
+	"published": "2011-05-24T00:00:00Z",
+	"related": [
+		"CVE-2010-3875",
+		"CVE-2011-0695",
+		"CVE-2011-0711",
+		"CVE-2011-0726",
+		"CVE-2011-1016",
+		"CVE-2011-1017",
+		"CVE-2011-1078",
+		"CVE-2011-1079",
+		"CVE-2011-1080",
+		"CVE-2011-1090",
+		"CVE-2011-1160",
+		"CVE-2011-1163",
+		"CVE-2011-1170",
+		"CVE-2011-1171",
+		"CVE-2011-1172",
+		"CVE-2011-1173",
+		"CVE-2011-1180",
+		"CVE-2011-1182",
+		"CVE-2011-1476",
+		"CVE-2011-1477",
+		"CVE-2011-1478",
+		"CVE-2011-1493",
+		"CVE-2011-1494",
+		"CVE-2011-1495",
+		"CVE-2011-1585",
+		"CVE-2011-1593",
+		"CVE-2011-1598",
+		"CVE-2011-1745",
+		"CVE-2011-1746",
+		"CVE-2011-1748",
+		"CVE-2011-1759",
+		"CVE-2011-1767",
+		"CVE-2011-1770",
+		"CVE-2011-1776",
+		"CVE-2011-2022",
+		"CVE-2011-4913"
+	],
+	"summary": "linux-2.6 - several issues",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service or privilege escalation. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2010-3875](https://security-tracker.debian.org/tracker/CVE-2010-3875)\nVasiliy Kulikov discovered an issue in the Linux implementation of the\n Amateur Radio AX.25 Level 2 protocol. Local users may obtain access to\n sensitive kernel memory.\n* [CVE-2011-0695](https://security-tracker.debian.org/tracker/CVE-2011-0695)\nJens Kuehnel reported an issue in the InfiniBand stack. Remote attackers can\n exploit a race condition to cause a denial of service (kernel panic).\n* [CVE-2011-0711](https://security-tracker.debian.org/tracker/CVE-2011-0711)\nDan Rosenberg reported an issue in the XFS filesystem. Local users may\n obtain access to sensitive kernel memory.\n* [CVE-2011-0726](https://security-tracker.debian.org/tracker/CVE-2011-0726)\nKees Cook reported an issue in the /proc/pid/stat implementation. Local\n users could learn the text location of a process, defeating protections\n provided by address space layout randomization (ASLR).\n* [CVE-2011-1016](https://security-tracker.debian.org/tracker/CVE-2011-1016)\nMarek Olšák discovered an issue in the driver for ATI/AMD Radeon video\n chips. Local users could pass arbitrary values to video memory and the\n graphics translation table, resulting in denial of service or escalated\n privileges. On default Debian installations, this is exploitable only by\n members of the video group.\n* [CVE-2011-1078](https://security-tracker.debian.org/tracker/CVE-2011-1078)\nVasiliy Kulikov discovered an issue in the Bluetooth subsystem. Local users\n can obtain access to sensitive kernel memory.\n* [CVE-2011-1079](https://security-tracker.debian.org/tracker/CVE-2011-1079)\nVasiliy Kulikov discovered an issue in the Bluetooth subsystem. Local users\n with the CAP\\_NET\\_ADMIN capability can cause a denial of service (kernel\n Oops).\n* [CVE-2011-1080](https://security-tracker.debian.org/tracker/CVE-2011-1080)\nVasiliy Kulikov discovered an issue in the Netfilter subsystem. Local users\n can obtain access to sensitive kernel memory.\n* [CVE-2011-1090](https://security-tracker.debian.org/tracker/CVE-2011-1090)\nNeil Horman discovered a memory leak in the setacl() call on NFSv4\n filesystems. Local users can exploit this to cause a denial of service\n (Oops).\n* [CVE-2011-1160](https://security-tracker.debian.org/tracker/CVE-2011-1160)\nPeter Huewe reported an issue in the Linux kernel's support for TPM security\n chips. Local users with permission to open the device can gain access to\n sensitive kernel memory.\n* [CVE-2011-1163](https://security-tracker.debian.org/tracker/CVE-2011-1163)\nTimo Warns reported an issue in the kernel support for Alpha OSF format disk\n partitions. Users with physical access can gain access to sensitive kernel\n memory by adding a storage device with a specially crafted OSF partition.\n* [CVE-2011-1170](https://security-tracker.debian.org/tracker/CVE-2011-1170)\nVasiliy Kulikov reported an issue in the Netfilter ARP table\n implementation. Local users with the CAP\\_NET\\_ADMIN capability can gain\n access to sensitive kernel memory.\n* [CVE-2011-1171](https://security-tracker.debian.org/tracker/CVE-2011-1171)\nVasiliy Kulikov reported an issue in the Netfilter IP table\n implementation. Local users with the CAP\\_NET\\_ADMIN capability can gain\n access to sensitive kernel memory.\n* [CVE-2011-1172](https://security-tracker.debian.org/tracker/CVE-2011-1172)\nVasiliy Kulikov reported an issue in the Netfilter IPv6 table\n implementation. Local users with the CAP\\_NET\\_ADMIN capability can gain\n access to sensitive kernel memory.\n* [CVE-2011-1173](https://security-tracker.debian.org/tracker/CVE-2011-1173)\nVasiliy Kulikov reported an issue in the Acorn Econet protocol\n implementation. Local users can obtain access to sensitive kernel memory on\n systems that use this rare hardware.\n* [CVE-2011-1180](https://security-tracker.debian.org/tracker/CVE-2011-1180)\nDan Rosenberg reported a buffer overflow in the Information Access Service\n of the IrDA protocol, used for Infrared devices. Remote attackers within IR\n device range can cause a denial of service or possibly gain elevated\n privileges.\n* [CVE-2011-1182](https://security-tracker.debian.org/tracker/CVE-2011-1182)\nJulien Tinnes reported an issue in the rt\\_sigqueueinfo interface. Local\n users can generate signals with falsified source pid and uid information.\n* [CVE-2011-1476](https://security-tracker.debian.org/tracker/CVE-2011-1476)\nDan Rosenberg reported issues in the Open Sound System MIDI interface that\n allow local users to cause a denial of service. This issue does not affect\n official Debian Linux image packages as they no longer provide support for\n OSS. However, custom kernels built from Debian's linux-source-2.6.32 may\n have enabled this configuration and would therefore be vulnerable.\n* [CVE-2011-1477](https://security-tracker.debian.org/tracker/CVE-2011-1477)\nDan Rosenberg reported issues in the Open Sound System driver for cards that\n include a Yamaha FM synthesizer chip. Local users can cause memory\n corruption resulting in a denial of service. This issue does not affect\n official Debian Linux image packages as they no longer provide support for\n OSS. However, custom kernels built from Debian's linux-source-2.6.32 may\n have enabled this configuration and would therefore be vulnerable.\n* [CVE-2011-1478](https://security-tracker.debian.org/tracker/CVE-2011-1478)\nRyan Sweat reported an issue in the Generic Receive Offload (GRO) support in\n the Linux networking subsystem. If an interface has GRO enabled and is\n running in promiscuous mode, remote users can cause a denial of service\n (NULL pointer dereference) by sending packets on an unknown VLAN.\n* [CVE-2011-1493](https://security-tracker.debian.org/tracker/CVE-2011-1493)\nDan Rosenburg reported two issues in the Linux implementation of the Amateur\n Radio X.25 PLP (Rose) protocol. A remote user can cause a denial of service\n by providing specially crafted facilities fields.\n* [CVE-2011-1494](https://security-tracker.debian.org/tracker/CVE-2011-1494)\nDan Rosenberg reported an issue in the /dev/mpt2ctl interface provided by\n the driver for LSI MPT Fusion SAS 2.0 controllers. Local users can obtain\n elevated privileges by specially crafted ioctl calls. On default Debian\n installations this is not exploitable as this interface is only accessible\n to root.\n* [CVE-2011-1495](https://security-tracker.debian.org/tracker/CVE-2011-1495)\nDan Rosenberg reported two additional issues in the /dev/mpt2ctl interface\n provided by the driver for LSI MPT Fusion SAS 2.0 controllers. Local users\n can obtain elevated privileges and read arbitrary kernel memory by using\n specially crafted ioctl calls. On default Debian installations this is not\n exploitable as this interface is only accessible to root.\n* [CVE-2011-1585](https://security-tracker.debian.org/tracker/CVE-2011-1585)\nJeff Layton reported an issue in the Common Internet File System (CIFS).\n Local users can bypass authentication requirements for shares that are\n already mounted by another user.\n* [CVE-2011-1593](https://security-tracker.debian.org/tracker/CVE-2011-1593)\nRobert Swiecki reported a signedness issue in the next\\_pidmap() function,\n which can be exploited by local users to cause a denial of service.\n* [CVE-2011-1598](https://security-tracker.debian.org/tracker/CVE-2011-1598)\nDave Jones reported an issue in the Broadcast Manager Controller Area\n Network (CAN/BCM) protocol that may allow local users to cause a NULL\n pointer dereference, resulting in a denial of service.\n* [CVE-2011-1745](https://security-tracker.debian.org/tracker/CVE-2011-1745)\nVasiliy Kulikov reported an issue in the Linux support for AGP devices.\n Local users can obtain elevated privileges or cause a denial of service due\n to missing bounds checking in the AGPIOC\\_BIND ioctl. On default Debian\n installations, this is exploitable only by users in the video group.\n* [CVE-2011-1746](https://security-tracker.debian.org/tracker/CVE-2011-1746)\nVasiliy Kulikov reported an issue in the Linux support for AGP devices.\n Local users can obtain elevated privileges or cause a denial of service due\n to missing bounds checking in the agp\\_allocate\\_memory and\n agp\\_create\\_user\\_memory routines. On default Debian installations, this is exploitable\n only by users in the video group.\n* [CVE-2011-1748](https://security-tracker.debian.org/tracker/CVE-2011-1748)\nOliver Kartkopp reported an issue in the Controller Area Network (CAN) raw\n socket implementation which permits local users to cause a NULL pointer\n dereference, resulting in a denial of service.\n* [CVE-2011-1759](https://security-tracker.debian.org/tracker/CVE-2011-1759)\nDan Rosenberg reported an issue in the support for executing old ABI\n binaries on ARM processors. Local users can obtain elevated privileges due\n to insufficient bounds checking in the semtimedop system call.\n* [CVE-2011-1767](https://security-tracker.debian.org/tracker/CVE-2011-1767)\nAlexecy Dobriyan reported an issue in the GRE over IP implementation.\n Remote users can cause a denial of service by sending a packet during module\n initialization.\n* [CVE-2011-1770](https://security-tracker.debian.org/tracker/CVE-2011-1770)\nDan Rosenberg reported an issue in the Datagram Congestion Control Protocol\n (DCCP). Remote users can cause a denial of service or potentially obtain\n access to sensitive kernel memory.\n* [CVE-2011-1776](https://security-tracker.debian.org/tracker/CVE-2011-1776)\nTimo Warns reported an issue in the Linux implementation for GUID\n partitions. Users with physical access can gain access to sensitive kernel\n memory by adding a storage device with a specially crafted corrupted invalid\n partition table.\n* [CVE-2011-2022](https://security-tracker.debian.org/tracker/CVE-2011-2022)\nVasiliy Kulikov reported an issue in the Linux support for AGP devices.\n Local users can obtain elevated privileges or cause a denial of service due\n to missing bounds checking in the AGPIOC\\_UNBIND ioctl. On default Debian\n installations, this is exploitable only by users in the video group.\n\n\nThis update also includes changes queued for the next point release of\nDebian 6.0, which also fix various non-security issues. These additional\nchanges are described in the\n[package\nchangelog](https://packages.debian.org/changelogs/pool/main/l/linux-2.6/linux-2.6_2.6.32-34/changelog).\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 2.6.32-34squeeze1. Updates for issues impacting the oldstable\ndistribution (lenny) will be available soon.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+34squeeze1 |\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-34squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2240-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2240"
+		}
+	]
+}

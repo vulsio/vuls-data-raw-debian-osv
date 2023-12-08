@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2222-1",
+	"modified": "2023-06-28T06:26:28.096660Z",
+	"published": "2020-05-28T00:00:00Z",
+	"related": [
+		"CVE-2018-20030",
+		"CVE-2020-13112",
+		"CVE-2020-13113",
+		"CVE-2020-13114"
+	],
+	"summary": "libexif - security update",
+	"details": "\nVarious minor vulnerabilities have been addredd in libexif, a library to\nparse EXIF metadata files.\n\n\n* [CVE-2018-20030](https://security-tracker.debian.org/tracker/CVE-2018-20030)\nThis issue had already been addressed via DLA-2214-1. However, upstream\n provided an updated patch, so this has been followed up on.\n* [CVE-2020-13112](https://security-tracker.debian.org/tracker/CVE-2020-13112)\nSeveral buffer over-reads in EXIF MakerNote handling could have lead\n to information disclosure and crashes. This issue is different from\n already resolved [CVE-2020-0093](https://security-tracker.debian.org/tracker/CVE-2020-0093).\n* [CVE-2020-13113](https://security-tracker.debian.org/tracker/CVE-2020-13113)\nUse of uninitialized memory in EXIF Makernote handling could have\n lead to crashes and potential use-after-free conditions.\n* [CVE-2020-13114](https://security-tracker.debian.org/tracker/CVE-2020-13114)\nAn unrestricted size in handling Canon EXIF MakerNote data could have\n lead to consumption of large amounts of compute time for decoding\n EXIF data.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.6.21-2+deb8u3.\n\n\nWe recommend that you upgrade your libexif packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libexif",
+				"purl": "pkg:deb/debian/libexif?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.6.21-2+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.21-2",
+				"0.6.21-2+deb8u1",
+				"0.6.21-2+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2222-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2222"
+		}
+	]
+}

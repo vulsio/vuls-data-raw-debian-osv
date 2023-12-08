@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-618-1",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-12-24T00:00:00Z",
+	"related": [
+		"CVE-2004-1025",
+		"CVE-2004-1026"
+	],
+	"summary": "imlib - buffer overflows, integer overflows",
+	"details": "\nPavel Kankovsky discovered that several overflows found in the libXpm\nlibrary were also present in imlib, an imaging library for X and X11.\nAn attacker could create a carefully crafted image file in such a way\nthat it could cause an application linked with imlib to execute\narbitrary code when the file was opened by a victim. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CAN-2004-1025](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1025)\nMultiple heap-based buffer overflows.\n\n* [CAN-2004-1026](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1026)\nMultiple integer overflows.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.9.14-2woody2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.9.14-17.1 of imlib and in version 1.9.14-16.1 of imlib+png2\nwhich produces the imlib1 package.\n\n\nWe recommend that you upgrade your imlib packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "imlib",
+				"purl": "pkg:deb/debian/imlib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.14-2woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-618-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-618"
+		}
+	]
+}

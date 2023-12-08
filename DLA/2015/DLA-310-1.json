@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-310-1",
+	"modified": "2023-06-28T06:37:10.305226Z",
+	"published": "2015-09-21T00:00:00Z",
+	"related": [
+		"CVE-2015-5156",
+		"CVE-2015-5364",
+		"CVE-2015-5366",
+		"CVE-2015-5697",
+		"CVE-2015-5707",
+		"CVE-2015-6937",
+		"CVE-2015-8215"
+	],
+	"summary": "linux-2.6 - security update",
+	"details": "\nThis update fixes the CVEs described below.\n\n\n* [CVE-2015-0272](https://security-tracker.debian.org/tracker/CVE-2015-0272)\nIt was discovered that NetworkManager would set IPv6 MTUs based on\n the values received in IPv6 RAs (Router Advertisements), without\n sufficiently validating these values. A remote attacker could\n exploit this attack to disable IPv6 connectivity. This has been\n mitigated by adding validation in the kernel.\n* [CVE-2015-5156](https://security-tracker.debian.org/tracker/CVE-2015-5156)\nJason Wang discovered that when a virtio\\_net device is connected\n to a bridge in the same VM, a series of TCP packets forwarded\n through the bridge may cause a heap buffer overflow. A remote\n attacker could use this to cause a denial of service (crash) or\n possibly for privilege escalation.\n* [CVE-2015-5364](https://security-tracker.debian.org/tracker/CVE-2015-5364)\nIt was discovered that the Linux kernel does not properly handle\n invalid UDP checksums. A remote attacker could exploit this flaw to\n cause a denial of service using a flood of UDP packets with invalid\n checksums.\n* [CVE-2015-5366](https://security-tracker.debian.org/tracker/CVE-2015-5366)\nIt was discovered that the Linux kernel does not properly handle\n invalid UDP checksums. A remote attacker can cause a denial of\n service against applications that use epoll by injecting a single\n packet with an invalid checksum.\n* [CVE-2015-5697](https://security-tracker.debian.org/tracker/CVE-2015-5697)\nA flaw was discovered in the md driver in the Linux kernel leading\n to an information leak.\n* [CVE-2015-5707](https://security-tracker.debian.org/tracker/CVE-2015-5707)\nAn integer overflow in the SCSI generic driver in the Linux kernel\n was discovered. A local user with write permission on a SCSI generic\n device could potentially exploit this flaw for privilege escalation.\n* [CVE-2015-6937](https://security-tracker.debian.org/tracker/CVE-2015-6937)\nIt was found that the Reliable Datagram Sockets (RDS) protocol\n implementation did not verify that an underlying transport exists\n when creating a connection. Depending on how a local RDS\n application initialised its sockets, a remote attacker might be\n able to cause a denial of service (crash) by sending a crafted\n packet.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 2.6.32-48squeeze14.\n\n\nFor the oldstable distribution (wheezy), these problems have been\nfixed in version 3.2.68-1+deb7u4 or earlier.\n\n\nFor the stable distribution (jessie), these problems have been fixed\nin version 3.16.7-ckt11-1+deb8u4 or earlier.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-48squeeze14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35squeeze1",
+				"2.6.32-35squeeze2",
+				"2.6.32-35~bpo50+1",
+				"2.6.32-36",
+				"2.6.32-37",
+				"2.6.32-38",
+				"2.6.32-39",
+				"2.6.32-39squeeze1",
+				"2.6.32-40",
+				"2.6.32-41",
+				"2.6.32-41squeeze2",
+				"2.6.32-42",
+				"2.6.32-43",
+				"2.6.32-44",
+				"2.6.32-45",
+				"2.6.32-46",
+				"2.6.32-46squeeze1",
+				"2.6.32-47",
+				"2.6.32-48",
+				"2.6.32-48squeeze1",
+				"2.6.32-48squeeze10",
+				"2.6.32-48squeeze11",
+				"2.6.32-48squeeze12",
+				"2.6.32-48squeeze13",
+				"2.6.32-48squeeze3",
+				"2.6.32-48squeeze4",
+				"2.6.32-48squeeze5",
+				"2.6.32-48squeeze6",
+				"2.6.32-48squeeze7",
+				"2.6.32-48squeeze8",
+				"2.6.32-48squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-310-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-310"
+		}
+	]
+}

@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4137-1",
+	"modified": "2023-10-16T00:12:40.901892Z",
+	"published": "2018-03-14T00:00:00Z",
+	"related": [
+		"CVE-2018-1064"
+	],
+	"summary": "libvirt - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Libvirt, a virtualisation\nabstraction library:\n\n\n* [CVE-2018-1064](https://security-tracker.debian.org/tracker/CVE-2018-1064)\nDaniel Berrange discovered that the QEMU guest agent performed\n insufficient validation of incoming data, which allows a privileged\n user in the guest to exhaust resources on the virtualisation host,\n resulting in denial of service.\n* [CVE-2018-5748](https://security-tracker.debian.org/tracker/CVE-2018-5748)\nDaniel Berrange and Peter Krempa discovered that the QEMU monitor\n was susceptible to denial of service by memory exhaustion. This was\n already fixed in Debian stretch and only affects Debian jessie.\n* [CVE-2018-6764](https://security-tracker.debian.org/tracker/CVE-2018-6764)\nPedro Sampaio discovered that LXC containers detected the hostname\n insecurely. This only affects Debian stretch.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.2.9-9+deb8u5.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 3.0.0-4+deb9u3.\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\nFor the detailed security status of libvirt please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libvirt>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libvirt",
+				"purl": "pkg:deb/debian/libvirt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.9-9+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.9-9",
+				"1.2.9-9+deb8u1",
+				"1.2.9-9+deb8u2",
+				"1.2.9-9+deb8u2~bpo70+1",
+				"1.2.9-9+deb8u3",
+				"1.2.9-9+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4137-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libvirt",
+				"purl": "pkg:deb/debian/libvirt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.0-4+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.0-4",
+				"3.0.0-4+deb9u1",
+				"3.0.0-4+deb9u2",
+				"3.0.0-4+deb9u2~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4137-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4137"
+		}
+	]
+}

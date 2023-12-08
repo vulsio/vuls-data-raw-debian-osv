@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4928-1",
+	"modified": "2023-10-16T00:33:10.932946Z",
+	"published": "2021-06-09T00:00:00Z",
+	"related": [
+		"CVE-2021-23158",
+		"CVE-2021-23165",
+		"CVE-2021-23180",
+		"CVE-2021-23191",
+		"CVE-2021-23206",
+		"CVE-2021-26252",
+		"CVE-2021-26259",
+		"CVE-2021-26948"
+	],
+	"summary": "htmldoc - security update",
+	"details": "\nA buffer overflow was discovered in HTMLDOC, a HTML processor that\ngenerates indexed HTML, PS, and PDF, which could potentially result in\nthe execution of arbitrary code. In addition a number of crashes\nwere addressed.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1.9.3-1+deb10u2.\n\n\nWe recommend that you upgrade your htmldoc packages.\n\n\nFor the detailed security status of htmldoc please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/htmldoc](https://security-tracker.debian.org/tracker/htmldoc)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "htmldoc",
+				"purl": "pkg:deb/debian/htmldoc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.3-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.3-1",
+				"1.9.3-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4928-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4928"
+		}
+	]
+}

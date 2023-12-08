@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3348-1",
+	"modified": "2023-10-16T00:11:56.247673Z",
+	"published": "2015-09-02T00:00:00Z",
+	"related": [
+		"CVE-2015-3214",
+		"CVE-2015-5154",
+		"CVE-2015-5165",
+		"CVE-2015-5225",
+		"CVE-2015-5745"
+	],
+	"summary": "qemu - security update",
+	"details": "\nSeveral vulnerabilities were discovered in qemu, a fast processor\nemulator.\n\n\n* [CVE-2015-3214](https://security-tracker.debian.org/tracker/CVE-2015-3214)\nMatt Tait of Google's Project Zero security team discovered a flaw\n in the QEMU i8254 PIT emulation. A privileged guest user in a guest\n with QEMU PIT emulation enabled could potentially use this flaw to\n execute arbitrary code on the host with the privileges of the\n hosting QEMU process.\n* [CVE-2015-5154](https://security-tracker.debian.org/tracker/CVE-2015-5154)\nKevin Wolf of Red Hat discovered a heap buffer overflow flaw in the\n IDE subsystem in QEMU while processing certain ATAPI commands. A\n privileged guest user in a guest with the CDROM drive enabled could\n potentially use this flaw to execute arbitrary code on the host with\n the privileges of the hosting QEMU process.\n* [CVE-2015-5165](https://security-tracker.debian.org/tracker/CVE-2015-5165)\nDonghai Zhu discovered that the QEMU model of the RTL8139 network\n card did not sufficiently validate inputs in the C+ mode offload\n emulation, allowing a malicious guest to read uninitialized memory\n from the QEMU process's heap.\n* [CVE-2015-5225](https://security-tracker.debian.org/tracker/CVE-2015-5225)\nMr Qinghao Tang from QIHU 360 Inc. and Mr Zuozhi from Alibaba Inc\n discovered a buffer overflow flaw in the VNC display driver leading\n to heap memory corruption. A privileged guest user could use this\n flaw to mount a denial of service (QEMU process crash), or\n potentially to execute arbitrary code on the host with the\n privileges of the hosting QEMU process.\n* [CVE-2015-5745](https://security-tracker.debian.org/tracker/CVE-2015-5745)\nA buffer overflow vulnerability was discovered in the way QEMU\n handles the virtio-serial device. A malicious guest could use this\n flaw to mount a denial of service (QEMU process crash).\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.1.2+dfsg-6a+deb7u9. The oldstable distribution is only\naffected by [CVE-2015-5165](https://security-tracker.debian.org/tracker/CVE-2015-5165) and [CVE-2015-5745](https://security-tracker.debian.org/tracker/CVE-2015-5745).\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1:2.1+dfsg-12+deb8u2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:2.4+dfsg-1a.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1+dfsg-12+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1+dfsg-11",
+				"1:2.1+dfsg-12",
+				"1:2.1+dfsg-12+deb8u1",
+				"1:2.1+dfsg-12~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3348-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3348"
+		}
+	]
+}

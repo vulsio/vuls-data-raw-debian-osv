@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2359-1",
+	"modified": "2023-10-16T00:11:12.113547Z",
+	"published": "2011-12-06T00:00:00Z",
+	"related": [
+		"CVE-2011-4358"
+	],
+	"summary": "mojarra - EL injection",
+	"details": "\nIt was discovered that Mojarra, an implementation of JavaServer Faces,\nevaluates untrusted values as EL expressions if includeViewParameters\nis set to true.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.0.3-1+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 2.0.3-2.\n\n\nWe recommend that you upgrade your mojarra packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mojarra",
+				"purl": "pkg:deb/debian/mojarra?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.3-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2359-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2359"
+		}
+	]
+}

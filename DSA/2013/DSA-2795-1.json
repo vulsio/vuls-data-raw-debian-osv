@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2795-1",
+	"modified": "2023-10-16T00:06:05.790321Z",
+	"published": "2013-11-17T00:00:00Z",
+	"related": [
+		"CVE-2013-4508",
+		"CVE-2013-4559",
+		"CVE-2013-4560"
+	],
+	"summary": "lighttpd - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the lighttpd web server.\n\n\nIt was discovered that SSL connections with client certificates\nstopped working after the DSA-2795-1 update of lighttpd. An upstream\npatch has now been applied that provides an appropriate identifier for\nclient certificate verification.\n\n\n* [CVE-2013-4508](https://security-tracker.debian.org/tracker/CVE-2013-4508)\nIt was discovered that lighttpd uses weak ssl ciphers when SNI (Server\n Name Indication) is enabled. This issue was solved by ensuring that\n stronger ssl ciphers are used when SNI is selected.\n* [CVE-2013-4559](https://security-tracker.debian.org/tracker/CVE-2013-4559)\nThe clang static analyzer was used to discover privilege escalation\n issues due to missing checks around lighttpd's setuid, setgid, and\n setgroups calls. Those are now appropriately checked.\n* [CVE-2013-4560](https://security-tracker.debian.org/tracker/CVE-2013-4560)\nThe clang static analyzer was used to discover a use-after-free issue\n when the FAM stat cache engine is enabled, which is now fixed.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1.4.28-2+squeeze1.5.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.4.31-4+deb7u2.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion lighttpd\\_1.4.33-1+nmu1.\n\n\nFor the testing (jessie) and unstable (sid) distributions, the regression \nproblem will be fixed soon.\n\n\nWe recommend that you upgrade your lighttpd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "lighttpd",
+				"purl": "pkg:deb/debian/lighttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.28-2+squeeze1.4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.28-2",
+				"1.4.28-2+squeeze1",
+				"1.4.28-2+squeeze1.1",
+				"1.4.28-2+squeeze1.2",
+				"1.4.28-2+squeeze1.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2795-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "lighttpd",
+				"purl": "pkg:deb/debian/lighttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.31-4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.31-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2795-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2795"
+		}
+	]
+}

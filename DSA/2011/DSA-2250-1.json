@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2250-1",
+	"modified": "2023-10-16T00:05:52.170698Z",
+	"published": "2011-03-31T00:00:00Z",
+	"related": [
+		"CVE-2011-1756"
+	],
+	"summary": "citadel - denial of service",
+	"details": "\nWouter Coekaerts discovered that the Jabber server component of Citadel,\na complete and feature-rich groupware server, is vulnerable to the so-called\nbillion laughs attack because it does not prevent entity expansion on\nreceived data. This allows an attacker to perform denial of service\nattacks against the service by sending specially crafted XML data to it.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 7.37-8+lenny1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 7.83-2squeeze2.\n\n\nFor the testing (wheezy) and unstable (sid) distributions,\nthis problem will be fixed soon.\n\n\nWe recommend that you upgrade your citadel packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "citadel",
+				"purl": "pkg:deb/debian/citadel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.83-2squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.83-2squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2250-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "citadel",
+				"purl": "pkg:deb/debian/citadel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.37-8+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.37-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2250-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2250"
+		}
+	]
+}

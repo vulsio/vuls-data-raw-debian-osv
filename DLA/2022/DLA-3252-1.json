@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3252-1",
+	"modified": "2023-06-28T06:25:30.293914Z",
+	"published": "2022-12-31T00:00:00Z",
+	"related": [
+		"CVE-2020-23226",
+		"CVE-2020-25706",
+		"CVE-2020-8813",
+		"CVE-2022-0730",
+		"CVE-2022-46169"
+	],
+	"summary": "cacti - security update",
+	"details": "\nMultiple security vulnerabilities were discovered in cacti, a web\ninterface for graphing of monitoring systems, which may result in\ninformation disclosure, authentication bypass, or remote code execution.\n\n\n* [CVE-2020-8813](https://security-tracker.debian.org/tracker/CVE-2020-8813)\nAskar discovered that an authenticated guest user with the graph\n real-time privilege could execute arbitrary code on a server running\n Cacti, via shell meta-characters in a cookie.\n* [CVE-2020-23226](https://security-tracker.debian.org/tracker/CVE-2020-23226)\nJing Chen discovered multiple Cross Site Scripting (XSS)\n vulnerabilities in several pages, which can lead to information\n disclosure.\n* [CVE-2020-25706](https://security-tracker.debian.org/tracker/CVE-2020-25706)\njoelister discovered an Cross Site Scripting (XSS) vulnerability in\n templates\\_import.php, which can lead to information disclosure.\n* [CVE-2022-0730](https://security-tracker.debian.org/tracker/CVE-2022-0730)\nIt has been discovered that Cacti authentication can be bypassed\n when LDAP anonymous binding is enabled.\n* [CVE-2022-46169](https://security-tracker.debian.org/tracker/CVE-2022-46169)\nStefan Schiller discovered a command injection vulnerability,\n allowing an unauthenticated user to execute arbitrary code on a\n server running Cacti, if a specific data source was selected (which\n is likely the case on a production instance) for any monitored\n device.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.2.2+ds1-2+deb10u5.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\nFor the detailed security status of cacti please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cacti>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "cacti",
+				"purl": "pkg:deb/debian/cacti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.2+ds1-2+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.2+ds1-2",
+				"1.2.2+ds1-2+deb10u1",
+				"1.2.2+ds1-2+deb10u2",
+				"1.2.2+ds1-2+deb10u3",
+				"1.2.2+ds1-2+deb10u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3252-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3252"
+		}
+	]
+}

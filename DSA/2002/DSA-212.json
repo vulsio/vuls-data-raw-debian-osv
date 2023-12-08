@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-212",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-17T00:00:00Z",
+	"related": [
+		"CVE-2002-1373",
+		"CVE-2002-1374",
+		"CVE-2002-1375",
+		"CVE-2002-1376"
+	],
+	"summary": "mysql - multiple problems",
+	"details": "\nWhile performing an audit of MySQL e-matters found several problems:\n\n\n\nsigned/unsigned problem in COM\\_TABLE\\_DUMP\n \n Two sizes were taken as signed integers from a request and then cast\n to unsigned integers without checking for negative numbers. Since the\n resulting numbers where used for a memcpy() operation this could lead\n to memory corruption.\nPassword length handling in COM\\_CHANGE\\_USER\n \n When re-authenticating to a different user MySQL did not perform\n all checks that are performed on initial authentication. This created\n two problems:\n * it allowed for single-character password brute forcing (as was fixed in\n February 2000 for initial login) which could be used by a normal user to\n gain root privileges to the database\n* it was possible to overflow the password buffer and force the server\n to execute arbitrary code\n\nread\\_rows() overflow in libmysqlclient\n \n When processing the rows returned by a SQL server there was no check\n for overly large rows or terminating NUL characters. This can be used\n to exploit SQL clients if they connect to a compromised MySQL server.\nread\\_one\\_row() overflow in libmysqlclient\n \n When processing a row as returned by a SQL server the returned field\n sizes were not verified. This can be used to exploit SQL clients if they\n connect to a compromised MySQL server.\n\nFor Debian GNU/Linux 3.0/woody this has been fixed in version 3.23.49-8.2\nand version 3.22.32-6.3 for Debian GNU/Linux 2.2/potato.\n\n\nWe recommend that you upgrade your mysql packages as soon as possible.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mysql",
+				"purl": "pkg:deb/debian/mysql?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.23.49-8.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-212.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-212"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4154-1",
+	"modified": "2023-10-16T00:12:43.400312Z",
+	"published": "2018-03-28T00:00:00Z",
+	"related": [
+		"CVE-2015-5621",
+		"CVE-2018-1000116"
+	],
+	"summary": "net-snmp - security update",
+	"details": "\nA heap corruption vulnerability was discovered in net-snmp, a suite of\nSimple Network Management Protocol applications, triggered when parsing\nthe PDU prior to the authentication process. A remote, unauthenticated\nattacker can take advantage of this flaw to crash the snmpd process\n(causing a denial of service) or, potentially, execute arbitrary code\nwith the privileges of the user running snmpd.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 5.7.2.1+dfsg-1+deb8u1.\n\n\nFor the stable distribution (stretch), these problems have been fixed\nbefore the initial release.\n\n\nWe recommend that you upgrade your net-snmp packages.\n\n\nFor the detailed security status of net-snmp please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/net-snmp>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "net-snmp",
+				"purl": "pkg:deb/debian/net-snmp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.2.1+dfsg-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.2.1+dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4154-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4154"
+		}
+	]
+}

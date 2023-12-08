@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-194",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-11-12T00:00:00Z",
+	"related": [
+		"CVE-2002-1279"
+	],
+	"summary": "masqmail - buffer overflows",
+	"details": "\nA set of buffer overflows have been discovered in masqmail, a mail\ntransport agent for hosts without permanent internet connection. In\naddition to this privileges were dropped only after reading a user\nsupplied configuration file. Together this could be exploited to gain\nunauthorized root access to the machine on which masqmail is\ninstalled.\n\n\nThese problems have been fixed in version 0.1.16-2.1 for the current\nstable distribution (woody) and in version 0.2.15-1 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected since it doesn't contain a masqmail package.\n\n\nWe recommend that you upgrade your masqmail package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "masqmail",
+				"purl": "pkg:deb/debian/masqmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.16-2.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-194.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-194"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1225-1",
+	"modified": "2023-06-28T06:20:30.625960Z",
+	"published": "2017-12-30T00:00:00Z",
+	"related": [
+		"CVE-2017-17090"
+	],
+	"summary": "asterisk - security update",
+	"details": "\nA vulnerability has been discovered in Asterisk, an open source PBX and\ntelephony toolkit, which may result in resource exhaustion and denial of\nservice.\n\n\n* [CVE-2017-17090](https://security-tracker.debian.org/tracker/CVE-2017-17090)\nmemory leak from chan\\_skinny.\n If the chan\\_skinny (AKA SCCP protocol) channel driver is flooded with\n certain requests it can cause the asterisk process to use excessive\n amounts of virtual memory eventually causing asterisk to stop processing\n requests of any kind. The chan\\_skinny driver has been updated to release\n memory allocations in a correct manner thereby preventing any possiblity\n of exhaustion.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:1.8.13.1~dfsg1-3+deb7u8.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "asterisk",
+				"purl": "pkg:deb/debian/asterisk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.8.13.1~dfsg1-3+deb7u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.8.13.1~dfsg-3",
+				"1:1.8.13.1~dfsg-3+deb7u1",
+				"1:1.8.13.1~dfsg-3+deb7u2",
+				"1:1.8.13.1~dfsg1-3+deb7u3",
+				"1:1.8.13.1~dfsg1-3+deb7u4",
+				"1:1.8.13.1~dfsg1-3+deb7u5",
+				"1:1.8.13.1~dfsg1-3+deb7u6",
+				"1:1.8.13.1~dfsg1-3+deb7u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1225-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1225"
+		}
+	]
+}

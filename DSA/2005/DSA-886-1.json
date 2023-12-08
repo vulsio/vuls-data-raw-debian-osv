@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-886-1",
+	"modified": "2023-10-16T00:26:50.628337Z",
+	"published": "2005-11-07T00:00:00Z",
+	"related": [
+		"CVE-2005-2659",
+		"CVE-2005-2930",
+		"CVE-2005-3318"
+	],
+	"summary": "chmlib - several",
+	"details": "\nSeveral vulnerabilities have been discovered in chmlib, a library for\ndealing with CHM format files. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2005-2659](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2659)\nPalasik Sandor discovered a buffer overflow in the LZX\n decompression method.\n* [CVE-2005-2930](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2930)\nA buffer overflow has been discovered that could lead to the\n execution of arbitrary code.\n* [CVE-2005-3318](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3318)\nSven Tantau discovered a buffer overflow that could lead to the\n execution of arbitrary code.\n\n\nThe old stable distribution (woody) does not contain chmlib packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.35-6sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.37-2.\n\n\nWe recommend that you upgrade your chmlib packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "chmlib",
+				"purl": "pkg:deb/debian/chmlib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.35-6sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.35-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-886-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-886"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-208",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-12T00:00:00Z",
+	"related": [
+		"CVE-2002-1323"
+	],
+	"summary": "perl - broken safe compartment",
+	"details": "\nA security hole has been discovered in Safe.pm which is used in all\nversions of Perl. The Safe extension module allows the creation of\ncompartments in which perl code can be evaluated in a new namespace\nand the code evaluated in the compartment cannot refer to variables\noutside this namespace. However, when a Safe compartment has already\nbeen used, there's no guarantee that it is Safe any longer, because\nthere's a way for code to be executed within the Safe compartment to\nalter its operation mask. Thus, programs that use a Safe compartment\nonly once aren't affected by this bug.\n\n\nThis problem has been fixed in version 5.6.1-8.2 for the current\nstable distribution (woody), in version 5.004.05-6.2 and 5.005.03-7.2\nfor the old stable distribution (potato) and in version 5.8.0-14 for\nthe unstable distribution (sid).\n\n\nWe recommend that you upgrade your Perl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "perl",
+				"purl": "pkg:deb/debian/perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.6.1-8.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-208.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-208"
+		}
+	]
+}

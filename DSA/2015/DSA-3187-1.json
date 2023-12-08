@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3187-1",
+	"modified": "2023-10-16T00:06:15.268500Z",
+	"published": "2015-03-15T00:00:00Z",
+	"related": [
+		"CVE-2013-1569",
+		"CVE-2013-2383",
+		"CVE-2013-2384",
+		"CVE-2013-2419",
+		"CVE-2014-6585",
+		"CVE-2014-6591",
+		"CVE-2014-7923",
+		"CVE-2014-7926",
+		"CVE-2014-7940",
+		"CVE-2014-9654"
+	],
+	"summary": "icu - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the International Components\nfor Unicode (ICU) library.\n\n\n* [CVE-2013-1569](https://security-tracker.debian.org/tracker/CVE-2013-1569)\nGlyph table issue.\n* [CVE-2013-2383](https://security-tracker.debian.org/tracker/CVE-2013-2383)\nGlyph table issue.\n* [CVE-2013-2384](https://security-tracker.debian.org/tracker/CVE-2013-2384)\nFont layout issue.\n* [CVE-2013-2419](https://security-tracker.debian.org/tracker/CVE-2013-2419)\nFont processing issue.\n* [CVE-2014-6585](https://security-tracker.debian.org/tracker/CVE-2014-6585)\nOut-of-bounds read.\n* [CVE-2014-6591](https://security-tracker.debian.org/tracker/CVE-2014-6591)\nAdditional out-of-bounds reads.\n* [CVE-2014-7923](https://security-tracker.debian.org/tracker/CVE-2014-7923)\nMemory corruption in regular expression comparison.\n* [CVE-2014-7926](https://security-tracker.debian.org/tracker/CVE-2014-7926)\nMemory corruption in regular expression comparison.\n* [CVE-2014-7940](https://security-tracker.debian.org/tracker/CVE-2014-7940)\nUninitialized memory.\n* [CVE-2014-9654](https://security-tracker.debian.org/tracker/CVE-2014-9654)\nMore regular expression flaws.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.8.1.1-12+deb7u2.\n\n\nFor the upcoming stable (jessie) and unstable (sid) distributions, these\nproblems have been fixed in version 52.1-7.1.\n\n\nWe recommend that you upgrade your icu packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "icu",
+				"purl": "pkg:deb/debian/icu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.8.1.1-12+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.8.1.1-12",
+				"4.8.1.1-12+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3187-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3187"
+		}
+	]
+}

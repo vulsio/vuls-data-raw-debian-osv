@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3494-1",
+	"modified": "2023-07-12T14:15:45.071907Z",
+	"published": "2023-07-12T00:00:00Z",
+	"related": [
+		"CVE-2023-34246"
+	],
+	"summary": "ruby-doorkeeper - security update",
+	"details": "\nIt was discovered that there was an issue in ruby-doorkeeper, an OAuth2\nprovider for Ruby on Rails applications. Doorkeeper automatically processed\nauthorization requests without user consent for public clients that have been\npreviously approved, but public clients are inherently vulnerable to\nimpersonation as their identity cannot be assured.\n\n\n* [CVE-2023-34246](https://security-tracker.debian.org/tracker/CVE-2023-34246)\nDoorkeeper is an OAuth 2 provider for Ruby on Rails / Grape. Prior to\n version 5.6.6, Doorkeeper automatically processes authorization requests\n without user consent for public clients that have been previous approved.\n Public clients are inherently vulnerable to impersonation, their identity\n cannot be assured. This issue is fixed in version 5.6.6.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n4.4.2-1+deb10u1.\n\n\nWe recommend that you upgrade your ruby-doorkeeper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ruby-doorkeeper",
+				"purl": "pkg:deb/debian/ruby-doorkeeper?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.4.2-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.4.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3494-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3494"
+		}
+	]
+}

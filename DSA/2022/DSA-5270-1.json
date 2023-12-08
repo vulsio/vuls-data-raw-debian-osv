@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5270-1",
+	"modified": "2023-10-16T00:16:25.442112Z",
+	"published": "2022-11-04T00:00:00Z",
+	"related": [
+		"CVE-2022-40284"
+	],
+	"summary": "ntfs-3g - security update",
+	"details": "\nYuchen Zeng and Eduardo Vela discovered a buffer overflow in NTFS-3G, a\nread-write NTFS driver for FUSE, due to incorrect validation of some of\nthe NTFS metadata. A local user can take advantage of this flaw for\nlocal root privilege escalation.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1:2017.3.23AR.3-4+deb11u3.\n\n\nWe recommend that you upgrade your ntfs-3g packages.\n\n\nFor the detailed security status of ntfs-3g please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ntfs-3g](https://security-tracker.debian.org/tracker/ntfs-3g)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "ntfs-3g",
+				"purl": "pkg:deb/debian/ntfs-3g?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2017.3.23AR.3-4+deb11u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2017.3.23AR.3-4",
+				"1:2017.3.23AR.3-4+deb11u1",
+				"1:2017.3.23AR.3-4+deb11u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5270-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5270"
+		}
+	]
+}

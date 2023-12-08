@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2338-1",
+	"modified": "2023-10-16T00:11:09.309426Z",
+	"published": "2011-11-07T00:00:00Z",
+	"related": [
+		"CVE-2011-4294",
+		"CVE-2011-4301",
+		"CVE-2011-4302",
+		"CVE-2011-4305",
+		"CVE-2011-4306"
+	],
+	"summary": "moodle - several",
+	"details": "\nSeveral cross-site scripting and information disclosure issues have\nbeen fixed in Moodle, a course management system for online learning:\n\n\n* [MSA-11-0020](http://moodle.org/mod/forum/discuss.php?d=182737)\n\nContinue links in error messages can lead offsite\n* [MSA-11-0024](moodle.org/mod/forum/discuss.php?d=182741)\n\nreCAPTCHA images were being authenticated from an older\nserver\n* [MSA-11-0025](moodle.org/mod/forum/discuss.php?d=182742)\n\nGroup names in user upload CSV not escaped\n* [MSA-11-0026](moodle.org/mod/forum/discuss.php?d=182743)\n\nFields in user upload CSV not escaped\n* [MSA-11-0031](http://moodle.org/mod/forum/discuss.php?d=188313)\n\nForms API constant issue\n* [MSA-11-0032](http://moodle.org/mod/forum/discuss.php?d=188314)\n\nMNET SSL validation issue\n* [MSA-11-0036](http://moodle.org/mod/forum/discuss.php?d=188318)\n\nMessaging refresh vulnerability\n* [MSA-11-0037](http://moodle.org/mod/forum/discuss.php?d=188319)\n\nCourse section editing injection vulnerability\n* [MSA-11-0038](http://moodle.org/mod/forum/discuss.php?d=188320)\n\nDatabase injection protection strengthened\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.9.9.dfsg2-2.1+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.9.9.dfsg2-4.\n\n\nWe recommend that you upgrade your moodle packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "moodle",
+				"purl": "pkg:deb/debian/moodle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.9.dfsg2-2.1+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.9.dfsg2-2.1",
+				"1.9.9.dfsg2-2.1+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2338-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2338"
+		}
+	]
+}

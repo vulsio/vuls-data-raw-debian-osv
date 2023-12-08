@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5174-1",
+	"modified": "2023-10-16T00:25:49.766188Z",
+	"published": "2022-07-03T00:00:00Z",
+	"related": [
+		"CVE-2022-34903"
+	],
+	"summary": "gnupg2 - security update",
+	"details": "\nDemi Marie Obenour discovered a flaw in GnuPG, allowing for signature\nspoofing via arbitrary injection into the status line. An attacker who\ncontrols the secret part of any signing-capable key or subkey in the\nvictim's keyring, can take advantage of this flaw to provide a\ncorrectly-formed signature that some software, including gpgme, will\naccept to have validity and signer fingerprint chosen from the attacker.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2.2.12-1+deb10u2.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.2.27-2+deb11u2.\n\n\nWe recommend that you upgrade your gnupg2 packages.\n\n\nFor the detailed security status of gnupg2 please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/gnupg2](https://security-tracker.debian.org/tracker/gnupg2)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "gnupg2",
+				"purl": "pkg:deb/debian/gnupg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.12-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.12-1",
+				"2.2.12-1+deb10u1",
+				"2.2.12-1+deb10u1~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5174-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "gnupg2",
+				"purl": "pkg:deb/debian/gnupg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.27-2+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.27-2",
+				"2.2.27-2+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5174-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5174"
+		}
+	]
+}

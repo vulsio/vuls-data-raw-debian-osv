@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-751-1",
+	"modified": "2023-10-16T00:26:40.771109Z",
+	"published": "2005-07-11T00:00:00Z",
+	"related": [
+		"CVE-2005-1519"
+	],
+	"summary": "squid - IP spoofing",
+	"details": "\nThe upstream developers have discovered a bug in the DNS lookup code\nof Squid, the popular WWW proxy cache. When the DNS client UDP port\n(assigned by the operating system at startup) is unfiltered and the\nnetwork is not protected from IP spoofing, malicious users can spoof\nDNS lookups which could result in users being redirected to arbitrary\nweb sites.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 2.4.6-2woody9.\n\n\nFor the stable distribution (sarge) this problem has already been\nfixed in version 2.5.9-9.\n\n\nFor the unstable distribution (sid) this problem has already been\nfixed in version 2.5.9-9.\n\n\nWe recommend that you upgrade your squid package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "squid",
+				"purl": "pkg:deb/debian/squid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.6-2woody9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.6-2woody4",
+				"2.4.6-2woody7",
+				"2.4.6-2woody8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-751-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-751"
+		}
+	]
+}

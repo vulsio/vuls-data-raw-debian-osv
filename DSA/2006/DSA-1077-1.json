@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1077-1",
+	"modified": "2023-10-16T00:10:03.620165Z",
+	"published": "2006-05-26T00:00:00Z",
+	"related": [
+		"CVE-2004-1617"
+	],
+	"summary": "lynx-ssl - programming error",
+	"details": "\nMichal Zalewski discovered that lynx, the popular text-mode WWW\nBrowser, is not able to grok invalid HTML including a TEXTAREA tag\nwith a large COLS value and a large tag name in an element that is not\nterminated, and loops forever trying to render the broken HTML. The\nsame code is present in lynx-ssl.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 2.8.4.1b-3.3.\n\n\nThe stable distribution (sarge) does not contain lynx-ssl packages\nanymore.\n\n\nThe unstable distribution (sid) does not contain lynx-ssl packages\nanymore.\n\n\nWe recommend that you upgrade your lynx-ssl package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "lynx-ssl",
+				"purl": "pkg:deb/debian/lynx-ssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.8.4.1b-3.3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.8.4.1b-3",
+				"1:2.8.4.1b-3.1",
+				"1:2.8.4.1b-3.2",
+				"2.8.3.1-1",
+				"2.8.3.1-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1077-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1077"
+		}
+	]
+}

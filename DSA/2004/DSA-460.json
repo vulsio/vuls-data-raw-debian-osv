@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-460",
+	"modified": "2023-10-16T00:27:37.619455Z",
+	"published": "2004-03-10T00:00:00Z",
+	"related": [
+		"CVE-2004-0108"
+	],
+	"summary": "sysstat - insecure temporary file",
+	"details": "\nAlan Cox discovered that the isag utility (which graphically displays\ndata collected by the sysstat tools), creates a temporary file without\ntaking proper precautions. This vulnerability could allow a local\nattacker to overwrite files with the privileges of the user invoking\nisag.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 5.0.1-1.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you update your sysstat package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "sysstat",
+				"purl": "pkg:deb/debian/sysstat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.1-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.4-1woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-460.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-460"
+		}
+	]
+}

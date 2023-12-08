@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2340-1",
+	"modified": "2023-06-28T06:26:31.064927Z",
+	"published": "2020-08-22T00:00:00Z",
+	"related": [
+		"CVE-2018-20346",
+		"CVE-2018-20506",
+		"CVE-2018-8740",
+		"CVE-2019-16168",
+		"CVE-2019-5827",
+		"CVE-2019-9936",
+		"CVE-2019-9937",
+		"CVE-2020-11655",
+		"CVE-2020-13434",
+		"CVE-2020-13630",
+		"CVE-2020-13632",
+		"CVE-2020-13871"
+	],
+	"summary": "sqlite3 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in sqlite3, a C library that\nimplements an SQL database engine.\n\n\n* [CVE-2018-8740](https://security-tracker.debian.org/tracker/CVE-2018-8740)\nDatabases whose schema is corrupted using a CREATE TABLE AS statement\n could cause a NULL pointer dereference.\n* [CVE-2018-20346](https://security-tracker.debian.org/tracker/CVE-2018-20346)\nWhen the FTS3 extension is enabled, sqlite3 encounters an integer\n overflow (and resultant buffer overflow) for FTS3 queries that occur\n after crafted changes to FTS3 shadow tables, allowing remote\n attackers to execute arbitrary code by leveraging the ability to run\n arbitrary SQL statements.\n* [CVE-2018-20506](https://security-tracker.debian.org/tracker/CVE-2018-20506)\nWhen the FTS3 extension is enabled, sqlite3 encounters an integer\n overflow (and resultant buffer overflow) for FTS3 queries in a\n merge operation that occurs after crafted changes to FTS3 shadow\n tables, allowing remote attackers to execute arbitrary code by\n leveraging the ability to run arbitrary SQL statements\n* [CVE-2019-5827](https://security-tracker.debian.org/tracker/CVE-2019-5827)\nInteger overflow allowed a remote attacker to potentially exploit\n heap corruption via a crafted HTML page, primarily impacting\n chromium.\n* [CVE-2019-9936](https://security-tracker.debian.org/tracker/CVE-2019-9936)\nRunning fts5 prefix queries inside a transaction could trigger a\n heap-based buffer over-read, which may lead to an information leak.\n* [CVE-2019-9937](https://security-tracker.debian.org/tracker/CVE-2019-9937)\nInterleaving reads and writes in a single transaction with an fts5\n virtual table will lead to a NULL Pointer Dereference.\n* [CVE-2019-16168](https://security-tracker.debian.org/tracker/CVE-2019-16168)\nA browser or other application can be triggered to crash because of\n inadequate parameter validation which could lead to a divide-by-zero\n error.\n* [CVE-2019-20218](https://security-tracker.debian.org/tracker/CVE-2019-20218)\nWITH stack unwinding proceeds even after a parsing error, resulting\n in a possible application crash.\n* [CVE-2020-13630](https://security-tracker.debian.org/tracker/CVE-2020-13630)\nThe code related to the snippet feature exhibits a use-after-free\n defect.\n* [CVE-2020-13632](https://security-tracker.debian.org/tracker/CVE-2020-13632)\nA crafted matchinfo() query can lead to a NULL pointer dereference.\n* [CVE-2020-13871](https://security-tracker.debian.org/tracker/CVE-2020-13871)\nThe parse tree rewrite for window functions is too late, leading to\n a use-after-free defect.\n* [CVE-2020-11655](https://security-tracker.debian.org/tracker/CVE-2020-11655)\nAn improper initialization of AggInfo objects allows attackers to\n cause a denial of service (segmentation fault) via a malformed\n window-function query.\n* [CVE-2020-13434](https://security-tracker.debian.org/tracker/CVE-2020-13434)\nThe code in sqlite3\\_str\\_vappendf in printf.c contains an integer\n overflow defect.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.16.2-5+deb9u2.\n\n\nWe recommend that you upgrade your sqlite3 packages.\n\n\nFor the detailed security status of sqlite3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/sqlite3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sqlite3",
+				"purl": "pkg:deb/debian/sqlite3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.16.2-5+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.16.2-5",
+				"3.16.2-5+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2340-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2340"
+		}
+	]
+}

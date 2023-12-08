@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2765-1",
+	"modified": "2023-06-28T06:21:21.919880Z",
+	"published": "2021-09-23T00:00:00Z",
+	"related": [
+		"CVE-2016-10246",
+		"CVE-2016-10247",
+		"CVE-2017-6060",
+		"CVE-2018-1000036",
+		"CVE-2018-10289",
+		"CVE-2020-19609"
+	],
+	"summary": "mupdf - security update",
+	"details": "\nMultiple issues have been discovered in mupdf.\n\n\n* [CVE-2016-10246](https://security-tracker.debian.org/tracker/CVE-2016-10246)\nBuffer overflow in the main function in jstest\\_main.c allows remote attackers\n to cause a denial of service (out-of-bounds write) via a crafted file.\n* [CVE-2016-10247](https://security-tracker.debian.org/tracker/CVE-2016-10247)\nBuffer overflow in the my\\_getline function in jstest\\_main.c allows remote attackers\n to cause a denial of service (out-of-bounds write) via a crafted file.\n* [CVE-2017-6060](https://security-tracker.debian.org/tracker/CVE-2017-6060)\nStack-based buffer overflow in jstest\\_main.c allows remote attackers\n to have unspecified impact via a crafted image.\n* [CVE-2018-10289](https://security-tracker.debian.org/tracker/CVE-2018-10289)\nAn infinite loop in the fz\\_skip\\_space function of the pdf/pdf-xref.c file.\n A remote adversary could leverage this vulnerability to cause a denial of\n service via a crafted pdf file.\n* [CVE-2018-1000036](https://security-tracker.debian.org/tracker/CVE-2018-1000036)\nMultiple memory leaks in the PDF parser allow an attacker to cause a denial\n of service (memory leak) via a crafted file.\n* [CVE-2020-19609](https://security-tracker.debian.org/tracker/CVE-2020-19609)\nA heap based buffer over-write in tiff\\_expand\\_colormap() function when parsing TIFF\n files allowing attackers to cause a denial of service.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.14.0+ds1-4+deb9u1.\n\n\nWe recommend that you upgrade your mupdf packages.\n\n\nFor the detailed security status of mupdf please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mupdf>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mupdf",
+				"purl": "pkg:deb/debian/mupdf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.0+ds1-4+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.11+ds1-1",
+				"1.11+ds1-1.1",
+				"1.11+ds1-2",
+				"1.12.0+ds1-1",
+				"1.13.0+ds1-1",
+				"1.13.0+ds1-2",
+				"1.13.0+ds1-3",
+				"1.14.0+ds1-1",
+				"1.14.0+ds1-2",
+				"1.14.0+ds1-3",
+				"1.14.0+ds1-4",
+				"1.9a+ds1-4",
+				"1.9a+ds1-4+deb9u1",
+				"1.9a+ds1-4+deb9u2",
+				"1.9a+ds1-4+deb9u3",
+				"1.9a+ds1-4+deb9u4",
+				"1.9a+ds1-4+deb9u5",
+				"1.9a+ds1-4+deb9u6",
+				"1.9a+ds1-4+deb9u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2765-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2765"
+		}
+	]
+}

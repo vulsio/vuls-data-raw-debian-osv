@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-301-1",
+	"modified": "2023-06-28T06:26:46.686440Z",
+	"published": "2015-08-26T00:00:00Z",
+	"related": [
+		"CVE-2015-5963",
+		"CVE-2015-5964"
+	],
+	"summary": "python-django - security update",
+	"details": "\nDenial-of-service possibility in logout() view by filling session store\n\n\nPreviously, a session could be created when anonymously accessing the\ndjango.contrib.auth.views.logout view (provided it wasn't decorated with\ndjango.contrib.auth.decorators.login\\_required as done in the admin). This\ncould allow an attacker to easily create many new session records by\nsending repeated requests, potentially filling up the session store or\ncausing other users' session records to be evicted.\n\n\nThe django.contrib.sessions.middleware.SessionMiddleware has been modified\nto no longer create empty session records.\n\n\nThis portion of the fix has been assigned [CVE-2015-5963](https://security-tracker.debian.org/tracker/CVE-2015-5963).\n\n\nAdditionally, the contrib.sessions.backends.base.SessionBase.flush() and\ncache\\_db.SessionStore.flush() methods have been modified to avoid creating\na new empty session. Maintainers of third-party session backends should\ncheck if the same vulnerability is present in their backend and correct it\nif so.\n\n\nThis portion of the fix has been assigned [CVE-2015-5964](https://security-tracker.debian.org/tracker/CVE-2015-5964).\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3-3+squeeze14"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3-3",
+				"1.2.3-3+squeeze1",
+				"1.2.3-3+squeeze10",
+				"1.2.3-3+squeeze11",
+				"1.2.3-3+squeeze12",
+				"1.2.3-3+squeeze13",
+				"1.2.3-3+squeeze2",
+				"1.2.3-3+squeeze3",
+				"1.2.3-3+squeeze5",
+				"1.2.3-3+squeeze6",
+				"1.2.3-3+squeeze7",
+				"1.2.3-3+squeeze8",
+				"1.2.3-3+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-301-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-301"
+		}
+	]
+}

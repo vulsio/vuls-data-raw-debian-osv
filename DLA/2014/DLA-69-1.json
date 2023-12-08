@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-69-1",
+	"modified": "2023-06-28T06:27:06.834054Z",
+	"published": "2014-10-03T00:00:00Z",
+	"related": [
+		"CVE-2014-7204"
+	],
+	"summary": "exuberant-ctags - security update",
+	"details": "\nStefano Zacchiroli discovered that certain JavaScript input files cause\nctags to enter an infinite loop until it runs out of disk space. This\nupdate fixes the JavaScript parser.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in exuberant-ctags version 1:5.8-3squeeze2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "exuberant-ctags",
+				"purl": "pkg:deb/debian/exuberant-ctags?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:5.8-3squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:5.8-3",
+				"1:5.8-3squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-69-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-69"
+		}
+	]
+}

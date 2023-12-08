@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-181",
+	"modified": "2023-10-16T00:10:38.727525Z",
+	"published": "2002-10-22T00:00:00Z",
+	"related": [
+		"CVE-2002-1157"
+	],
+	"summary": "libapache-mod-ssl - cross site scripting",
+	"details": "\nJoe Orton discovered a cross site scripting problem in mod\\_ssl, an\nApache module that adds Strong cryptography (i.e. HTTPS support) to\nthe webserver. The module will return the server name unescaped in\nthe response to an HTTP request on an SSL port.\n\n\nLike the other recent Apache XSS bugs, this only affects servers using\na combination of \"UseCanonicalName off\" (default in the Debian package\nof Apache) and wildcard DNS. This is very unlikely to happen, though.\nApache 2.0/mod\\_ssl is not vulnerable since it already escapes this\nHTML.\n\n\nWith this setting turned on, whenever Apache needs to construct a\nself-referencing URL (a URL that refers back to the server the\nresponse is coming from) it will use ServerName and Port to form a\n\"canonical\" name. With this setting off, Apache will use the\nhostname:port that the client supplied, when possible. This also\naffects SERVER\\_NAME and SERVER\\_PORT in CGI scripts.\n\n\nThis problem has been fixed in version 2.8.9-2.1 for the current\nstable distribution (woody), in version 2.4.10-1.3.9-1potato4 for the\nold stable distribution (potato) and version 2.8.9-2.3 for the\nunstable distribution (sid).\n\n\nWe recommend that you upgrade your libapache-mod-ssl package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "libapache-mod-ssl",
+				"purl": "pkg:deb/debian/libapache-mod-ssl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.9-2.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.10-1.3.9-1potato2",
+				"2.4.10-1.3.9-1potato4",
+				"2.8.7-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-181.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-181"
+		}
+	]
+}

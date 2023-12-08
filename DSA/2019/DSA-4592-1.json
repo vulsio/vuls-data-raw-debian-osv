@@ -1,0 +1,85 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4592-1",
+	"modified": "2023-10-16T00:19:01.723592Z",
+	"published": "2019-12-26T00:00:00Z",
+	"related": [
+		"CVE-2019-19709"
+	],
+	"summary": "mediawiki - security update",
+	"details": "\nIt was discovered that the Title blacklist functionality in MediaWiki,\na website engine for collaborative work, could by bypassed.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1:1.27.7-1~deb9u3.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1:1.31.6-1~deb10u1.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\nFor the detailed security status of mediawiki please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mediawiki](https://security-tracker.debian.org/tracker/mediawiki)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.27.7-1~deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.27.3-1",
+				"1:1.27.4-1",
+				"1:1.27.4-1~bpo8+1",
+				"1:1.27.4-1~deb9u1",
+				"1:1.27.4-2",
+				"1:1.27.4-3",
+				"1:1.27.5-1~deb9u1",
+				"1:1.27.6-1~deb9u1",
+				"1:1.27.7-1~deb9u1",
+				"1:1.27.7-1~deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4592-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.31.6-1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.31.2-1",
+				"1:1.31.4-1",
+				"1:1.31.4-1~deb10u1",
+				"1:1.31.5-1",
+				"1:1.31.5-2",
+				"1:1.31.5-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4592-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4592"
+		}
+	]
+}

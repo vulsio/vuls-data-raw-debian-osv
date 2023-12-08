@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2044-1",
+	"modified": "2023-10-16T00:10:55.046513Z",
+	"published": "2010-05-11T00:00:00Z",
+	"related": [
+		"CVE-2010-2062"
+	],
+	"summary": "mplayer - arbitrary code execution",
+	"details": "\ntixxDZ (DZCORE labs) discovered a vulnerability in the mplayer movie\nplayer. Missing data validation in mplayer's real data transport (RDT)\nimplementation enable an integer underflow and consequently an unbounded\nbuffer operation. A maliciously crafted stream could thus enable an\nattacker to execute arbitrary code.\n\n\nNo Common Vulnerabilities and Exposures project identifier is available for\nthis issue.\n\n\nFor the stable distribution (lenny), this problem has been fixed in version\n1.0~rc2-17+lenny3.2.\n\n\nWe recommend that you upgrade your mplayer packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mplayer",
+				"purl": "pkg:deb/debian/mplayer?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0~rc2-17+lenny3.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0~rc2-17+lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2044-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2044"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2485-1",
+	"modified": "2023-06-28T06:26:34.994887Z",
+	"published": "2020-12-09T00:00:00Z",
+	"related": [
+		"CVE-2019-9512",
+		"CVE-2019-9514"
+	],
+	"summary": "golang-golang-x-net-dev - security update",
+	"details": "\nThe http2 server support in this package was vulnerable to\ncertain types of DOS attacks.\n\n\n* [CVE-2019-9512](https://security-tracker.debian.org/tracker/CVE-2019-9512)\nThis code was vulnerable to ping floods, potentially leading to a denial of\n service. The attacker sends continual pings to an HTTP/2 peer, causing the peer\n to build an internal queue of responses. Depending on how efficiently this data\n is queued, this can consume excess CPU, memory, or both.\n* [CVE-2019-9514](https://security-tracker.debian.org/tracker/CVE-2019-9514)\nThis code was vulnerable to a reset flood, potentially leading to a denial\n of service. The attacker opens a number of streams and sends an invalid request\n over each stream that should solicit a stream of RST\\_STREAM frames from the\n peer. Depending on how the peer queues the RST\\_STREAM frames, this can consume\n excess memory, CPU, or both.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:0.0+git20161013.8b4af36+dfsg-3+deb9u1.\n\n\nWe recommend that you upgrade your golang-golang-x-net-dev packages.\n\n\nFor the detailed security status of golang-golang-x-net-dev please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/golang-golang-x-net-dev>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "golang-golang-x-net-dev",
+				"purl": "pkg:deb/debian/golang-golang-x-net-dev?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.0+git20161013.8b4af36+dfsg-3+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.0+git20161013.8b4af36+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2485-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2485"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3658-1",
+	"modified": "2023-10-16T00:12:12.979383Z",
+	"published": "2016-09-01T00:00:00Z",
+	"related": [
+		"CVE-2015-8948",
+		"CVE-2016-6261",
+		"CVE-2016-6263"
+	],
+	"summary": "libidn - security update",
+	"details": "\nHanno Boeck discovered multiple vulnerabilities in libidn, the GNU\nlibrary for Internationalized Domain Names (IDNs), allowing a remote\nattacker to cause a denial of service against an application using the\nlibidn library (application crash).\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.29-1+deb8u2.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 1.33-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.33-1.\n\n\nWe recommend that you upgrade your libidn packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libidn",
+				"purl": "pkg:deb/debian/libidn?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.29-1+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.29-1",
+				"1.29-1+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3658-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3658"
+		}
+	]
+}

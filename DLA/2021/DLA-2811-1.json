@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2811-1",
+	"modified": "2023-06-28T06:36:57.879635Z",
+	"published": "2021-11-06T00:00:00Z",
+	"related": [
+		"CVE-2019-7164",
+		"CVE-2019-7548"
+	],
+	"summary": "sqlalchemy - security update",
+	"details": "\nTwo SQL injection vulnerabilities were discovered in SQLAlchemy, a SQL\ntoolkit and Object Relational Mapper for Python, when the order\\_by or\ngroup\\_by parameters can be controlled by an attacker.\n\n\nWarning: The text coercion feature of SQLAlchemy is rarely used but the\nwarning that has been previously emitted is now an ArgumentError or in case\nof the order\\_by() and group\\_by() parameters a CompileError.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.0.15+ds1-1+deb9u1.\n\n\nWe recommend that you upgrade your sqlalchemy packages.\n\n\nFor the detailed security status of sqlalchemy please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/sqlalchemy>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sqlalchemy",
+				"purl": "pkg:deb/debian/sqlalchemy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.15+ds1-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.15+ds1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2811-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2811"
+		}
+	]
+}

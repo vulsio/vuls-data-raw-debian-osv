@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2745-1",
+	"modified": "2023-10-16T00:11:29.146850Z",
+	"published": "2013-08-28T00:00:00Z",
+	"related": [
+		"CVE-2013-1059",
+		"CVE-2013-2148",
+		"CVE-2013-2164",
+		"CVE-2013-2232",
+		"CVE-2013-2234",
+		"CVE-2013-2237",
+		"CVE-2013-2851",
+		"CVE-2013-2852",
+		"CVE-2013-4162",
+		"CVE-2013-4163"
+	],
+	"summary": "linux - several",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service, information leak or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2013-1059](https://security-tracker.debian.org/tracker/CVE-2013-1059)\nChanam Park reported an issue in the Ceph distributed storage system.\n Remote users can cause a denial of service by sending a specially crafted\n auth\\_reply message.\n* [CVE-2013-2148](https://security-tracker.debian.org/tracker/CVE-2013-2148)\nDan Carpenter reported an information leak in the filesystem wide access\n notification subsystem (fanotify). Local users could gain access to\n sensitive kernel memory.\n* [CVE-2013-2164](https://security-tracker.debian.org/tracker/CVE-2013-2164)\nJonathan Salwan reported an information leak in the CD-ROM driver. A\n local user on a system with a malfunctioning CD-ROM drive could gain\n access to sensitive memory.\n* [CVE-2013-2232](https://security-tracker.debian.org/tracker/CVE-2013-2232)\nDave Jones and Hannes Frederic Sowa resolved an issue in the IPv6\n subsystem. Local users could cause a denial of service by using an\n AF\\_INET6 socket to connect to an IPv4 destination.\n* [CVE-2013-2234](https://security-tracker.debian.org/tracker/CVE-2013-2234)\nMathias Krause reported a memory leak in the implementation of PF\\_KEYv2\n sockets. Local users could gain access to sensitive kernel memory.\n* [CVE-2013-2237](https://security-tracker.debian.org/tracker/CVE-2013-2237)\nNicolas Dichtel reported a memory leak in the implementation of PF\\_KEYv2\n sockets. Local users could gain access to sensitive kernel memory.\n* [CVE-2013-2851](https://security-tracker.debian.org/tracker/CVE-2013-2851)\nKees Cook reported an issue in the block subsystem. Local users with\n uid 0 could gain elevated ring 0 privileges. This is only a security\n issue for certain specially configured systems.\n* [CVE-2013-2852](https://security-tracker.debian.org/tracker/CVE-2013-2852)\nKees Cook reported an issue in the b43 network driver for certain Broadcom\n wireless devices. Local users with uid 0 could gain elevated ring 0\n privileges. This is only a security issue for certain specially configured\n systems.\n* [CVE-2013-4162](https://security-tracker.debian.org/tracker/CVE-2013-4162)\nHannes Frederic Sowa reported an issue in the IPv6 networking subsystem.\n Local users can cause a denial of service (system crash).\n* [CVE-2013-4163](https://security-tracker.debian.org/tracker/CVE-2013-4163)\nDave Jones reported an issue in the IPv6 networking subsystem. Local\n users can cause a denial of service (system crash).\n\n\nThis update also includes a fix for a regression in the Xen subsystem.\n\n\nFor the stable distribution (wheezy), these problems has been fixed in version\n3.2.46-1+deb7u1.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 7.0 (wheezy) |\n| --- | --- |\n| user-mode-linux | 3.2-2um-1+deb7u2 |\n\n\n\nWe recommend that you upgrade your linux and user-mode-linux packages.\n\n\n**Note**: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.46-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.41-2",
+				"3.2.41-2+deb7u1",
+				"3.2.41-2+deb7u2",
+				"3.2.41-2+deb7u2~bpo60+1",
+				"3.2.46-1",
+				"3.2.46-1+deb7u1~bpo60+1",
+				"3.2.46-1~bpo60+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2745-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2745"
+		}
+	]
+}

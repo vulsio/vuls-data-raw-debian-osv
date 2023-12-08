@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-437",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-02-11T00:00:00Z",
+	"related": [
+		"CVE-2002-1575"
+	],
+	"summary": "cgiemail - open mail relay",
+	"details": "\nA vulnerability was discovered in cgiemail, a CGI program used to\nemail the contents of an HTML form, whereby it could be used to send\nemail to arbitrary addresses. This type of vulnerability is commonly\nexploited to send unsolicited commercial email (spam).\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.6-14woody1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6-20.\n\n\nWe recommend that you update your cgiemail package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "cgiemail",
+				"purl": "pkg:deb/debian/cgiemail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6-14woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-437.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-437"
+		}
+	]
+}

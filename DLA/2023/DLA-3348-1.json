@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3348-1",
+	"modified": "2023-06-28T06:26:57.442503Z",
+	"published": "2023-03-01T00:00:00Z",
+	"related": [
+		"CVE-2022-38725"
+	],
+	"summary": "syslog-ng - security update",
+	"details": "\nIt was discovered that syslog-ng, a system logging daemon, had integer\noverflow and buffer out-of-bounds issues, which could allow a remote\nattacker to cause Denial of Service via crafted syslog input.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n3.19.1-5+deb10u1.\n\n\nWe recommend that you upgrade your syslog-ng packages.\n\n\nFor the detailed security status of syslog-ng please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/syslog-ng>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "syslog-ng",
+				"purl": "pkg:deb/debian/syslog-ng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.19.1-5+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.19.1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3348-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3348"
+		}
+	]
+}

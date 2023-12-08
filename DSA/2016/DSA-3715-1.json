@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3715-1",
+	"modified": "2023-10-16T00:12:16.016732Z",
+	"published": "2016-11-15T00:00:00Z",
+	"related": [
+		"CVE-2016-7146",
+		"CVE-2016-7148",
+		"CVE-2016-9119"
+	],
+	"summary": "moin - security update",
+	"details": "\nSeveral cross-site scripting vulnerabilities were discovered in moin, a\nPython clone of WikiWiki. A remote attacker can conduct cross-site\nscripting attacks via the GUI editor's attachment dialogue\n([CVE-2016-7146](https://security-tracker.debian.org/tracker/CVE-2016-7146)),\nthe AttachFile view ([CVE-2016-7148](https://security-tracker.debian.org/tracker/CVE-2016-7148))\nand the GUI editor's link dialogue ([CVE-2016-9119](https://security-tracker.debian.org/tracker/CVE-2016-9119)).\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.9.8-1+deb8u1.\n\n\nWe recommend that you upgrade your moin packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "moin",
+				"purl": "pkg:deb/debian/moin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.8-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.8-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3715-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3715"
+		}
+	]
+}

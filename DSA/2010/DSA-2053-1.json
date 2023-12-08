@@ -1,0 +1,86 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2053-1",
+	"modified": "2023-10-16T00:10:55.806490Z",
+	"published": "2010-05-25T00:00:00Z",
+	"related": [
+		"CVE-2009-4537",
+		"CVE-2010-0727",
+		"CVE-2010-1083",
+		"CVE-2010-1084",
+		"CVE-2010-1086",
+		"CVE-2010-1087",
+		"CVE-2010-1088",
+		"CVE-2010-1162",
+		"CVE-2010-1173",
+		"CVE-2010-1187",
+		"CVE-2010-1437",
+		"CVE-2010-1446",
+		"CVE-2010-1451"
+	],
+	"summary": "linux-2.6 - several issues",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2009-4537](https://security-tracker.debian.org/tracker/CVE-2009-4537)\nFabian Yamaguchi reported a missing check for Ethernet frames larger\n than the MTU in the r8169 driver. This may allow users on the local\n network to crash a system, resulting in a denial of service.\n* [CVE-2010-0727](https://security-tracker.debian.org/tracker/CVE-2010-0727)\nSachin Prabhu reported an issue in the GFS2 filesystem. Local users\n can trigger a BUG() altering the permissions on a locked file,\n resulting in a denial of service.\n* [CVE-2010-1083](https://security-tracker.debian.org/tracker/CVE-2010-1083)\nLinus Torvalds reported an issue in the USB subsystem, which may allow\n local users to obtain portions of sensitive kernel memory.\n* [CVE-2010-1084](https://security-tracker.debian.org/tracker/CVE-2010-1084)\nNeil Brown reported an issue in the Bluetooth subsystem that may\n permit remote attackers to overwrite memory through the creation\n of large numbers of sockets, resulting in a denial of service.\n* [CVE-2010-1086](https://security-tracker.debian.org/tracker/CVE-2010-1086)\nAng Way Chuang reported an issue in the DVB subsystem for Digital\n TV adapters. By creating a specially-encoded MPEG2-TS frame, a remote\n attacker could cause the receiver to enter an endless loop, resulting\n in a denial of service.\n* [CVE-2010-1087](https://security-tracker.debian.org/tracker/CVE-2010-1087)\nTrond Myklebust reported an issue in the NFS filesystem. A local\n user may cause an oops by sending a fatal signal during a file\n truncation operation, resulting in a denial of service.\n* [CVE-2010-1088](https://security-tracker.debian.org/tracker/CVE-2010-1088)\nAl Viro reported an issue where automount symlinks may not\n be followed when LOOKUP\\_FOLLOW is not set. This has an unknown\n security impact.\n* [CVE-2010-1162](https://security-tracker.debian.org/tracker/CVE-2010-1162)\nCatalin Marinas reported an issue in the tty subsystem that allows\n local attackers to cause a kernel memory leak, possibly resulting\n in a denial of service.\n* [CVE-2010-1173](https://security-tracker.debian.org/tracker/CVE-2010-1173)\nChris Guo from Nokia China and Jukka Taimisto and Olli Jarva from\n Codenomicon Ltd reported an issue in the SCTP subsystem that allows\n a remote attacker to cause a denial of service using a malformed init\n package.\n* [CVE-2010-1187](https://security-tracker.debian.org/tracker/CVE-2010-1187)\nNeil Hormon reported an issue in the TIPC subsystem. Local users can\n cause a denial of service by way of a NULL pointer dereference by\n sending datagrams through AF\\_TIPC before entering network mode.\n* [CVE-2010-1437](https://security-tracker.debian.org/tracker/CVE-2010-1437)\nToshiyuki Okajima reported a race condition in the keyring subsystem.\n Local users can cause memory corruption via keyctl commands that\n access a keyring in the process of being deleted, resulting in a\n denial of service.\n* [CVE-2010-1446](https://security-tracker.debian.org/tracker/CVE-2010-1446)\nWufei reported an issue with kgdb on the PowerPC architecture,\n allowing local users to write to kernel memory. Note: this issue\n does not affect binary kernels provided by Debian. The fix is\n provided for the benefit of users who build their own kernels\n from Debian source.\n* [CVE-2010-1451](https://security-tracker.debian.org/tracker/CVE-2010-1451)\nBrad Spengler reported an issue on the SPARC architecture that allows\n local users to execute non-executable pages.\n\n\nThis update also includes fixes a regression introduced by a previous\nupdate. See the referenced Debian bug page for details.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.6.26-22lenny1.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nThe user-mode-linux source package was additional rebuilt for\ncompatibility to take advantage of this update. The updated version of\nthe package is 2.6.26-1um-2+22lenny1.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.26-22lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.26-13",
+				"2.6.26-13lenny2",
+				"2.6.26-13lenny2~bpo40+1",
+				"2.6.26-14",
+				"2.6.26-15",
+				"2.6.26-15lenny1",
+				"2.6.26-15lenny2",
+				"2.6.26-15lenny3",
+				"2.6.26-15~bpo40+1",
+				"2.6.26-15~bpo40+2",
+				"2.6.26-16",
+				"2.6.26-17",
+				"2.6.26-17lenny1",
+				"2.6.26-17lenny2",
+				"2.6.26-17lenny2~bpo40+1",
+				"2.6.26-17~bpo40+1",
+				"2.6.26-18",
+				"2.6.26-19",
+				"2.6.26-19lenny1",
+				"2.6.26-19lenny2",
+				"2.6.26-19~bpo40+1",
+				"2.6.26-20",
+				"2.6.26-20~bpo40+1",
+				"2.6.26-21",
+				"2.6.26-21lenny1",
+				"2.6.26-21lenny2",
+				"2.6.26-21lenny3",
+				"2.6.26-21lenny4",
+				"2.6.26-21~bpo40+1",
+				"2.6.26-22"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2053-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2053"
+		}
+	]
+}

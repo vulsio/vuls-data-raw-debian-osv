@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4792-1",
+	"modified": "2023-10-16T00:25:26.529892Z",
+	"published": "2020-11-17T00:00:00Z",
+	"related": [
+		"CVE-2020-25709",
+		"CVE-2020-25710"
+	],
+	"summary": "openldap - security update",
+	"details": "\nTwo vulnerabilities in the certificate list syntax verification and\nin the handling of CSN normalization were discovered in OpenLDAP, a\nfree implementation of the Lightweight Directory Access Protocol.\nAn unauthenticated remote attacker can take advantage of these\nflaws to cause a denial of service (slapd daemon crash) via\nspecially crafted packets.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2.4.47+dfsg-3+deb10u4.\n\n\nWe recommend that you upgrade your openldap packages.\n\n\nFor the detailed security status of openldap please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openldap](https://security-tracker.debian.org/tracker/openldap)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openldap",
+				"purl": "pkg:deb/debian/openldap?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.47+dfsg-3+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.47+dfsg-3",
+				"2.4.47+dfsg-3+deb10u1",
+				"2.4.47+dfsg-3+deb10u1~bpo9+1",
+				"2.4.47+dfsg-3+deb10u2",
+				"2.4.47+dfsg-3+deb10u2~bpo9+1",
+				"2.4.47+dfsg-3+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4792-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4792"
+		}
+	]
+}

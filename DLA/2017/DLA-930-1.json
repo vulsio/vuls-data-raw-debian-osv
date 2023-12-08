@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-930-1",
+	"modified": "2023-06-28T06:34:20.248477Z",
+	"published": "2017-05-01T00:00:00Z",
+	"related": [
+		"CVE-2017-7957"
+	],
+	"summary": "libxstream-java - security update",
+	"details": "\nIt was discovered that there was a remote application crash vulnerability in\nlibxstream-java, a Java library to serialize objects to XML and back again.\nThis was due to mishandled attempts to create an instance of the primitive type\nvoid during unmarshalling.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libxstream-java version\n1.4.2-1+deb7u2.\n\n\nWe recommend that you upgrade your libxstream-java packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libxstream-java",
+				"purl": "pkg:deb/debian/libxstream-java?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.2-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.2-1",
+				"1.4.2-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-930-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-930"
+		}
+	]
+}

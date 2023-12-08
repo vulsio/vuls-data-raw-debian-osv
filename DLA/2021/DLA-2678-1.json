@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2678-1",
+	"modified": "2023-06-28T06:26:39.866171Z",
+	"published": "2021-06-06T00:00:00Z",
+	"related": [
+		"CVE-2020-26247"
+	],
+	"summary": "ruby-nokogiri - security update",
+	"details": "\nAn XXE vulnerability was found in Nokogiri, a Rubygem providing HTML, XML, SAX,\nand Reader parsers with XPath and CSS selector support.\n\n\nXML Schemas parsed by Nokogiri::XML::Schema were trusted by default, allowing\nexternal resources to be accessed over the network, potentially enabling XXE or\nSSRF attacks. The new default behavior is to treat all input as untrusted.\nThe upstream advisory provides further information how to mitigate the problem\nor restore the old behavior again.\n\n\n<https://github.com/sparklemotion/nokogiri/security/advisories/GHSA-vr8q-g5c7-m54m>\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.6.8.1-1+deb9u1.\n\n\nWe recommend that you upgrade your ruby-nokogiri packages.\n\n\nFor the detailed security status of ruby-nokogiri please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ruby-nokogiri>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby-nokogiri",
+				"purl": "pkg:deb/debian/ruby-nokogiri?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.8.1-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.8.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2678-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2678"
+		}
+	]
+}

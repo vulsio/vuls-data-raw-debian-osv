@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3608-1",
+	"modified": "2023-10-16T00:12:10.049252Z",
+	"published": "2016-06-29T00:00:00Z",
+	"related": [
+		"CVE-2016-4324"
+	],
+	"summary": "libreoffice - security update",
+	"details": "\nAleksandar Nikolic discovered that missing input sanitising in the RTF\nparser in Libreoffice may result in the execution of arbitrary code if\na malformed documented is opened.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:4.3.3-2+deb8u5.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 1:5.1.4~rc1-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:5.1.4~rc1-1.\n\n\nWe recommend that you upgrade your libreoffice packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libreoffice",
+				"purl": "pkg:deb/debian/libreoffice?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.3.3-2+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.3.3-2",
+				"1:4.3.3-2+deb8u1",
+				"1:4.3.3-2+deb8u1~bpo70+1",
+				"1:4.3.3-2+deb8u2",
+				"1:4.3.3-2+deb8u3",
+				"1:4.3.3-2+deb8u3~bpo70+1",
+				"1:4.3.3-2+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3608-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3608"
+		}
+	]
+}

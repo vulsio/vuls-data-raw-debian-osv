@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2392-1",
+	"modified": "2023-06-28T06:30:08.212519Z",
+	"published": "2020-10-01T00:00:00Z",
+	"related": [
+		"CVE-2020-25613"
+	],
+	"summary": "jruby - security update",
+	"details": "\nA potential HTTP request smuggling vulnerability in WEBrick\nwas reported.\n\n\nWEBrick (bundled along with jruby) was too tolerant against\nan invalid Transfer-Encoding header. This may lead to\ninconsistent interpretation between WEBrick and some HTTP proxy\nservers, which may allow the attacker to âsmuggleâ a request.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.7.26-1+deb9u3.\n\n\nWe recommend that you upgrade your jruby packages.\n\n\nFor the detailed security status of jruby please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/jruby>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "jruby",
+				"purl": "pkg:deb/debian/jruby?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.26-1+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.26-1",
+				"1.7.26-1+deb9u1",
+				"1.7.26-1+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2392-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2392"
+		}
+	]
+}

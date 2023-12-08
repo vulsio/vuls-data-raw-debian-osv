@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2768-1",
+	"modified": "2023-06-28T06:21:22.719592Z",
+	"published": "2021-10-02T00:00:00Z",
+	"related": [
+		"CVE-2021-36160"
+	],
+	"summary": "uwsgi - security update",
+	"details": "\nIt was discovered that the uwsgi proxy module for Apache2\n(mod\\_proxy\\_uwsgi) can read above the allocated memory when processing\na request with a carefully crafted uri-path. An attacker may cause the\nserver to crash (DoS).\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.0.14+20161117-3+deb9u4.\n\n\nWe recommend that you upgrade your uwsgi packages.\n\n\nFor the detailed security status of uwsgi please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/uwsgi>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "uwsgi",
+				"purl": "pkg:deb/debian/uwsgi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.14+20161117-3+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.14+20161117-3",
+				"2.0.14+20161117-3+deb9u1",
+				"2.0.14+20161117-3+deb9u2",
+				"2.0.14+20161117-3+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2768-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2768"
+		}
+	]
+}

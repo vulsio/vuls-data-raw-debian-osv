@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1948-1",
+	"modified": "2023-06-28T06:25:01.362521Z",
+	"published": "2019-10-07T00:00:00Z",
+	"related": [
+		"CVE-2019-13574"
+	],
+	"summary": "ruby-mini-magick - security update",
+	"details": "\nIn lib/mini\\_magick/image.rb in ruby-mini-magick, a fetched remote\nimage filename could cause remote command execution because Image.open input\nis directly passed to Kernel#open, which accepts a '|' character followed by\na command.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.8.1-1+deb8u1.\n\n\nWe recommend that you upgrade your ruby-mini-magick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ruby-mini-magick",
+				"purl": "pkg:deb/debian/ruby-mini-magick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.8.1-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.8.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1948-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1948"
+		}
+	]
+}

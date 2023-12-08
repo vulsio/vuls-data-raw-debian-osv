@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-376-1",
+	"modified": "2023-06-28T06:26:59.920216Z",
+	"published": "2015-12-30T00:00:00Z",
+	"related": [
+		"CVE-2009-0689"
+	],
+	"summary": "mono - security update",
+	"details": "\nMono's string-to-double parser may crash, on specially crafted input. This\ncould theoretically lead to arbitrary code execution.\n\n\nThis issue has been fixed in Debian 6 Squeeze with the version\n2.6.7-5.1+deb6u2 of mono. We recommend that you upgrade your\nmono packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mono",
+				"purl": "pkg:deb/debian/mono?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.7-5.1+deb6u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.7-5",
+				"2.6.7-5+s390x",
+				"2.6.7-5.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-376-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-376"
+		}
+	]
+}

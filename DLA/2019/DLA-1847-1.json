@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1847-1",
+	"modified": "2023-06-28T06:21:00.391535Z",
+	"published": "2019-07-07T00:00:00Z",
+	"related": [
+		"CVE-2019-13345"
+	],
+	"summary": "squid3 - security update",
+	"details": "\nIt was discovered that there were multiple cross-site scripting (XSS) vulnerabilities in the squid3 caching proxy server\n\n\n* [CVE-2019-13345](https://security-tracker.debian.org/tracker/CVE-2019-13345)\nThe cachemgr.cgi web module of Squid through 4.7 has XSS via the user\\_name or auth parameter.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.4.8-6+deb8u7.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.8-6+deb8u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.4.8-6",
+				"3.4.8-6+deb8u1",
+				"3.4.8-6+deb8u2",
+				"3.4.8-6+deb8u2~bpo70+1",
+				"3.4.8-6+deb8u3",
+				"3.4.8-6+deb8u4",
+				"3.4.8-6+deb8u5",
+				"3.4.8-6+deb8u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1847-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1847"
+		}
+	]
+}

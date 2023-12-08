@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2208-1",
+	"modified": "2023-06-28T06:19:58.952794Z",
+	"published": "2020-05-11T00:00:00Z",
+	"related": [
+		"CVE-2020-11026",
+		"CVE-2020-11027",
+		"CVE-2020-11028",
+		"CVE-2020-11029"
+	],
+	"summary": "wordpress - security update",
+	"details": "\nMultiple CVE(s) were discovered in the src:wordpress package.\n\n\n* [CVE-2020-11026](https://security-tracker.debian.org/tracker/CVE-2020-11026)\nFiles with a specially crafted name when uploaded to the\n Media section can lead to script execution upon accessing\n the file. This requires an authenticated user with privileges\n to upload files.\n* [CVE-2020-11027](https://security-tracker.debian.org/tracker/CVE-2020-11027)\nA password reset link emailed to a user does not expire upon\n changing the user password. Access would be needed to the email\n account of the user by a malicious party for successful execution.\n* [CVE-2020-11028](https://security-tracker.debian.org/tracker/CVE-2020-11028)\nSome private posts, which were previously public, can result in\n unauthenticated disclosure under a specific set of conditions.\n* [CVE-2020-11029](https://security-tracker.debian.org/tracker/CVE-2020-11029)\nA vulnerability in the stats() method of class-wp-object-cache.php\n can be exploited to execute cross-site scripting (XSS) attacks.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.1.30+dfsg-0+deb8u1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.30+dfsg-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1+dfsg-1",
+				"4.1+dfsg-1+deb8u1",
+				"4.1+dfsg-1+deb8u10",
+				"4.1+dfsg-1+deb8u11",
+				"4.1+dfsg-1+deb8u12",
+				"4.1+dfsg-1+deb8u13",
+				"4.1+dfsg-1+deb8u14",
+				"4.1+dfsg-1+deb8u15",
+				"4.1+dfsg-1+deb8u16",
+				"4.1+dfsg-1+deb8u17",
+				"4.1+dfsg-1+deb8u18",
+				"4.1+dfsg-1+deb8u2",
+				"4.1+dfsg-1+deb8u3",
+				"4.1+dfsg-1+deb8u4",
+				"4.1+dfsg-1+deb8u5",
+				"4.1+dfsg-1+deb8u6",
+				"4.1+dfsg-1+deb8u7",
+				"4.1+dfsg-1+deb8u8",
+				"4.1+dfsg-1+deb8u9",
+				"4.1.1+dfsg-1",
+				"4.1.25+dfsg-1+deb8u1",
+				"4.1.26+dfsg-1+deb8u1",
+				"4.1.27+dfsg-0+deb8u1",
+				"4.1.28+dfsg-0+deb8u1",
+				"4.1.29+dfsg-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2208-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2208"
+		}
+	]
+}

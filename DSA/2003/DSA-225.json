@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-225",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2003-01-09T00:00:00Z",
+	"related": [
+		"CVE-2002-1394"
+	],
+	"summary": "tomcat4 - source disclosure",
+	"details": "\nA security vulnerability has been confirmed to exist in Apache Tomcat\n4.0.x releases, which allows to use a specially crafted URL to return\nthe unprocessed source of a JSP page, or, under special circumstances,\na static resource which would otherwise have been protected by a\nsecurity constraint, without the need for being properly\nauthenticated. This is based on a variant of the exploit that was\nidentified as [CAN-2002-1148](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1148).\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 4.0.3-3woody2.\n\n\nThe old stable distribution (potato) does not contain tomcat packages.\n\n\nFor the unstable distribution (sid) this problem does not exist in the\ncurrent version 4.1.16-1.\n\n\nWe recommend that you upgrade your tomcat packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tomcat4",
+				"purl": "pkg:deb/debian/tomcat4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.3-3woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-225.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-225"
+		}
+	]
+}

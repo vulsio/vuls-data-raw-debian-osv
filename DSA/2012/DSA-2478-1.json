@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2478-1",
+	"modified": "2023-10-16T00:05:57.357542Z",
+	"published": "2012-05-23T00:00:00Z",
+	"related": [
+		"CVE-2012-2337"
+	],
+	"summary": "sudo - parsing error",
+	"details": "\nIt was discovered that sudo misparsed network masks used in Host and\nHost\\_List stanzas. This allowed the execution of commands on hosts,\nwhere the user would not be allowed to run the specified command.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.7.4p4-2.squeeze.3.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "sudo",
+				"purl": "pkg:deb/debian/sudo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.4p4-2.squeeze.3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.4p4-2.squeeze.1",
+				"1.7.4p4-2.squeeze.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2478-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2478"
+		}
+	]
+}

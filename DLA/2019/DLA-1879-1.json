@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1879-1",
+	"modified": "2023-06-28T06:21:02.819614Z",
+	"published": "2019-08-12T00:00:00Z",
+	"related": [
+		"CVE-2019-14379",
+		"CVE-2019-14439"
+	],
+	"summary": "jackson-databind - security update",
+	"details": "\nDeserialization flaws were discovered in jackson-databind relating to\nEHCache and logback/jndi, which could allow an unauthenticated user to\nperform remote code execution. The issue was resolved by extending the\nblacklist and blocking more classes from polymorphic deserialization.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.4.2-2+deb8u8.\n\n\nWe recommend that you upgrade your jackson-databind packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "jackson-databind",
+				"purl": "pkg:deb/debian/jackson-databind?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.2-2+deb8u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.2-2",
+				"2.4.2-2+deb8u1",
+				"2.4.2-2+deb8u2",
+				"2.4.2-2+deb8u3",
+				"2.4.2-2+deb8u4",
+				"2.4.2-2+deb8u5",
+				"2.4.2-2+deb8u6",
+				"2.4.2-2+deb8u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1879-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1879"
+		}
+	]
+}

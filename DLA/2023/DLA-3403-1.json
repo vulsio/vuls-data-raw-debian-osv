@@ -1,0 +1,123 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3403-1",
+	"modified": "2023-08-02T13:18:51.588238Z",
+	"published": "2023-05-03T00:00:00Z",
+	"related": [
+		"CVE-2022-2873",
+		"CVE-2022-3424",
+		"CVE-2022-3545",
+		"CVE-2022-36280",
+		"CVE-2022-3707",
+		"CVE-2022-41218",
+		"CVE-2022-45934",
+		"CVE-2022-4744",
+		"CVE-2022-47929",
+		"CVE-2023-0045",
+		"CVE-2023-0266",
+		"CVE-2023-0394",
+		"CVE-2023-0458",
+		"CVE-2023-0459",
+		"CVE-2023-0461",
+		"CVE-2023-1073",
+		"CVE-2023-1074",
+		"CVE-2023-1078",
+		"CVE-2023-1079",
+		"CVE-2023-1118",
+		"CVE-2023-1281",
+		"CVE-2023-1513",
+		"CVE-2023-1670",
+		"CVE-2023-1829",
+		"CVE-2023-1855",
+		"CVE-2023-1859",
+		"CVE-2023-1989",
+		"CVE-2023-1990",
+		"CVE-2023-1998",
+		"CVE-2023-2162",
+		"CVE-2023-2194",
+		"CVE-2023-23454",
+		"CVE-2023-23455",
+		"CVE-2023-23559",
+		"CVE-2023-26545",
+		"CVE-2023-28328",
+		"CVE-2023-30456",
+		"CVE-2023-30772"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service, or information\nleak.\n\n\n* [CVE-2022-2873](https://security-tracker.debian.org/tracker/CVE-2022-2873)\nZheyu Ma discovered that an out-of-bounds memory access flaw in\n the Intel iSMT SMBus 2.0 host controller driver may result in\n denial of service (system crash).\n* [CVE-2022-3424](https://security-tracker.debian.org/tracker/CVE-2022-3424)\nZheng Wang and Zhuorao Yang reported a flaw in the SGI GRU driver\n which could lead to a use-after-free. On systems where this driver\n is used, a local user can explit this for denial of service (crash\n or memory corruption) or possibly for privilege escalation.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-3545](https://security-tracker.debian.org/tracker/CVE-2022-3545)\nIt was discovered that the Netronome Flow Processor (NFP) driver\n contained a use-after-free flaw in area\\_cache\\_get(), which may\n result in denial of service or the execution of arbitrary code.\n* [CVE-2022-3707](https://security-tracker.debian.org/tracker/CVE-2022-3707)\nZheng Wang reported a flaw in the i915 graphics driver's\n virtualisation (GVT-g) support that could lead to a double-free.\n On systems where this feature is used, a guest can exploit this\n for denial of service (crash or memory corruption) or possibly for\n privilege escalation.\n* [CVE-2022-4744](https://security-tracker.debian.org/tracker/CVE-2022-4744)\nThe syzkaller tool found a flaw in the TUN/TAP network driver,\n which can lead to a double-free. A local user can exploit this\n for denial of service (crash or memory corruption) or possibly for\n privilege escalation.\n* [CVE-2022-36280](https://security-tracker.debian.org/tracker/CVE-2022-36280)\nAn out-of-bounds memory write vulnerability was discovered in the\n vmwgfx driver, which may allow a local unprivileged user to cause\n a denial of service (system crash).\n* [CVE-2022-41218](https://security-tracker.debian.org/tracker/CVE-2022-41218)\nHyunwoo Kim reported a use-after-free flaw in the Media DVB core\n subsystem caused by refcount races, which may allow a local user\n to cause a denial of service or escalate privileges.\n* [CVE-2022-45934](https://security-tracker.debian.org/tracker/CVE-2022-45934)\nAn integer overflow in l2cap\\_config\\_req() in the Bluetooth\n subsystem was discovered, which may allow a physically proximate\n attacker to cause a denial of service (system crash).\n* [CVE-2022-47929](https://security-tracker.debian.org/tracker/CVE-2022-47929)\nFrederick Lawler reported a NULL pointer dereference in the\n traffic control subsystem allowing an unprivileged user to cause a\n denial of service by setting up a specially crafted traffic\n control configuration.\n* [CVE-2023-0045](https://security-tracker.debian.org/tracker/CVE-2023-0045)\nRodrigo Branco and Rafael Correa De Ysasi reported that when a\n user-space task told the kernel to enable Spectre v2 mitigation\n for it, the mitigation was not enabled until the task was next\n rescheduled. This might be exploitable by a local or remote\n attacker to leak sensitive information from such an application.\n* [CVE-2023-0266](https://security-tracker.debian.org/tracker/CVE-2023-0266)\nA use-after-free flaw in the sound subsystem due to missing\n locking may result in denial of service or privilege escalation.\n* [CVE-2023-0394](https://security-tracker.debian.org/tracker/CVE-2023-0394)\nKyle Zeng discovered a NULL pointer dereference flaw in\n rawv6\\_push\\_pending\\_frames() in the network subsystem allowing a\n local user to cause a denial of service (system crash).\n* [CVE-2023-0458](https://security-tracker.debian.org/tracker/CVE-2023-0458)\nJordy Zimmer and Alexandra Sandulescu found that getrlimit() and\n related system calls were vulnerable to speculative execution\n attacks such as Spectre v1. A local user could explot this to\n leak sensitive information from the kernel.\n* [CVE-2023-0459](https://security-tracker.debian.org/tracker/CVE-2023-0459)\nJordy Zimmer and Alexandra Sandulescu found a regression in\n Spectre v1 mitigation in the user-copy functions for the amd64\n (64-bit PC) architecture. Where the CPUs do not implement SMAP or\n it is disabled, a local user could exploit this to leak sensitive\n information from the kernel. Other architectures may also be\n affected.\n* [CVE-2023-0461](https://security-tracker.debian.org/tracker/CVE-2023-0461)\nslipper reported a flaw in the kernel's support for ULPs (Upper\n Layer Protocols) on top of TCP that can lead to a double-free when\n using kernel TLS sockets. A local user can exploit this for\n denial of service (crash or memory corruption) or possibly for\n privilege escalation.\n\n\nKernel TLS is not enabled in Debian's official kernel\n configurations.\n* [CVE-2023-1073](https://security-tracker.debian.org/tracker/CVE-2023-1073)\nPietro Borrello reported a type confusion flaw in the HID (Human\n Interface Device) subsystem. An attacker able to insert and\n remove USB devices might be able to use this to cause a denial of\n service (crash or memory corruption) or possibly to run arbitrary\n code in the kernel.\n* [CVE-2023-1074](https://security-tracker.debian.org/tracker/CVE-2023-1074)\nPietro Borrello reported a type confusion flaw in the SCTP\n protocol implementation which can lead to a memory leak. A local\n user could exploit this to cause a denial of service (resource\n exhaustion).\n* [CVE-2023-1078](https://security-tracker.debian.org/tracker/CVE-2023-1078)\nPietro Borrello reported a type confusion flaw in the RDS protocol\n implementation. A local user could exploit this to cause a denial\n of service (crash or memory corruption) or possibly for privilege\n escalation.\n* [CVE-2023-1079](https://security-tracker.debian.org/tracker/CVE-2023-1079)\nPietro Borrello reported a race condition in the hid-asus HID\n driver which could lead to a use-after-free. An attacker able to\n insert and remove USB devices can use this to cause a denial of\n service (crash or memory corruption) or possibly to run arbitrary\n code in the kernel.\n* [CVE-2023-1118](https://security-tracker.debian.org/tracker/CVE-2023-1118)\nDuoming Zhou reported a race condition in the ene\\_ir remote\n control driver that can lead to a use-after-free if the driver\n is unbound. It is not clear what the security impact of this is.\n* [CVE-2023-1281](https://security-tracker.debian.org/tracker/CVE-2023-1281), [CVE-2023-1829](https://security-tracker.debian.org/tracker/CVE-2023-1829)\nvalis reported two flaws in the cls\\_tcindex network traffic\n classifier which could lead to a use-after-free. A local user can\n exploit these for privilege escalation. This update removes\n cls\\_tcindex entirely.\n* [CVE-2023-1513](https://security-tracker.debian.org/tracker/CVE-2023-1513)\nXingyuan Mo reported an information leak in the KVM implementation\n for the i386 (32-bit PC) architecture. A local user could exploit\n this to leak sensitive information from the kernel.\n* [CVE-2023-1670](https://security-tracker.debian.org/tracker/CVE-2023-1670)\nZheng Wang reported a race condition in the xirc2ps\\_cs network\n driver which can lead to a use-after-free. An attacker able to\n insert and remove PCMCIA devices can use this to cause a denial of\n service (crash or memory corruption) or possibly to run arbitrary\n code in the kernel.\n* [CVE-2023-1855](https://security-tracker.debian.org/tracker/CVE-2023-1855)\nZheng Wang reported a race condition in the xgene-hwmon hardware\n monitoring driver that may lead to a use-after-free. It is not\n clear what the security impact of this is.\n* [CVE-2023-1859](https://security-tracker.debian.org/tracker/CVE-2023-1859)\nZheng Wang reported a race condition in the 9pnet\\_xen transport\n for the 9P filesystem on Xen, which can lead to a use-after-free.\n On systems where this feature is used, a backend driver in another\n domain can use this to cause a denial of service (crash or memory\n corruption) or possibly to run arbitrary code in the vulnerable\n domain.\n* [CVE-2023-1989](https://security-tracker.debian.org/tracker/CVE-2023-1989)\nZheng Wang reported a race condition in the btsdio Bluetooth\n adapter driver that can lead to a use-after-free. An attacker\n able to insert and remove SDIO devices can use this to cause a\n denial of service (crash or memory corruption) or possibly to run\n arbitrary code in the kernel.\n* [CVE-2023-1990](https://security-tracker.debian.org/tracker/CVE-2023-1990)\nZheng Wang reported a race condition in the st-nci NFC adapter\n driver that can lead to a use-after-free. It is not clear what\n the security impact of this is.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2023-1998](https://security-tracker.debian.org/tracker/CVE-2023-1998)\nJosĂŠ Oliveira and Rodrigo Branco reported a regression in Spectre\n v2 mitigation for user-space on x86 CPUs supporting IBRS but not\n eIBRS. This might be exploitable by a local or remote attacker to\n leak sensitive information from a user-space application.\n* [CVE-2023-2162](https://security-tracker.debian.org/tracker/CVE-2023-2162)\nMike Christie reported a race condition in the iSCSI TCP transport\n that can lead to a use-after-free. On systems where this feature\n is used, a local user might be able to use this to cause a denial\n of service (crash or memory corruption) or possibly for privilege\n escalation.\n* [CVE-2023-2194](https://security-tracker.debian.org/tracker/CVE-2023-2194)\nWei Chen reported a potential heap buffer overflow in the\n i2c-xgene-slimpro IÂ˛C adapter driver. A local user with\n permission to access such a device can use this to cause a denial\n of service (crash or memory corruption) and probably for privilege\n escalation.\n* [CVE-2023-23454](https://security-tracker.debian.org/tracker/CVE-2023-23454)\nKyle Zeng reported that the Class Based Queueing (CBQ) network\n scheduler was prone to denial of service due to interpreting\n classification results before checking the classification return\n code.\n* [CVE-2023-23455](https://security-tracker.debian.org/tracker/CVE-2023-23455)\nKyle Zeng reported that the ATM Virtual Circuits (ATM) network\n scheduler was prone to a denial of service due to interpreting\n classification results before checking the classification return\n code.\n* [CVE-2023-23559](https://security-tracker.debian.org/tracker/CVE-2023-23559)\nSzymon Heidrich reported incorrect bounds checks in the rndis\\_wlan\n Wi-Fi driver which may lead to a heap buffer overflow or overread.\n An attacker able to insert and remove USB devices can use this to\n cause a denial of service (crash or memory corruption) or\n information leak, or possibly to run arbitrary code in the kernel.\n* [CVE-2023-26545](https://security-tracker.debian.org/tracker/CVE-2023-26545)\nLianhui Tang reported a flaw in the MPLS protocol implementation\n that could lead to a double-free. A local user might be able to\n exploit this to cause a denial of service (crash or memory\n corruption) or possibl for privilege escalation.\n* [CVE-2023-28328](https://security-tracker.debian.org/tracker/CVE-2023-28328)\nWei Chen reported a flaw in the az6927 DVB driver that can lead to\n a null pointer dereference. A local user permitted to access an\n IÂ˛C adapter device that this driver creates can use this to cause\n a denial of service (crash).\n* [CVE-2023-30456](https://security-tracker.debian.org/tracker/CVE-2023-30456)\nReima ISHII reported a flaw in the KVM implementation for Intel\n CPUs affecting nested virtualisation. When KVM was used as the L0\n hypervisor, and EPT and/or unrestricted guest mode was disabled,\n it did not prevent an L2 guest from being configured with an\n architecturally invalid protection/paging mode. A malicious guest\n could exploit this to cause a denial of service (crash).\n* [CVE-2023-30772](https://security-tracker.debian.org/tracker/CVE-2023-30772)\nZheng Wang reported a race condition in the da9150 charger driver\n which could lead to a use-after-free. It is not clear what the\n security impact of this is.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n4.19.282-1. This update additionally fixes Debian bug\n[#825141](https://bugs.debian.org/825141), and\nincludes many more bug fixes from stable updates 4.19.270-4.19.282\ninclusive.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.19.282-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.19.118-1",
+				"4.19.118-2",
+				"4.19.118-2+deb10u1",
+				"4.19.118-2+deb10u1~bpo9+1",
+				"4.19.118-2~bpo9+1",
+				"4.19.131-1",
+				"4.19.131-2",
+				"4.19.132-1",
+				"4.19.146-1",
+				"4.19.152-1",
+				"4.19.160-1",
+				"4.19.160-2",
+				"4.19.171-1",
+				"4.19.171-2",
+				"4.19.177-1",
+				"4.19.181-1",
+				"4.19.194-1",
+				"4.19.194-2",
+				"4.19.194-3",
+				"4.19.208-1",
+				"4.19.232-1",
+				"4.19.235-1",
+				"4.19.249-1",
+				"4.19.249-2",
+				"4.19.260-1",
+				"4.19.269-1",
+				"4.19.37-5",
+				"4.19.37-5+deb10u1",
+				"4.19.37-5+deb10u2",
+				"4.19.37-5+deb10u2~bpo9+1",
+				"4.19.37-6",
+				"4.19.67-1",
+				"4.19.67-2",
+				"4.19.67-2+deb10u1",
+				"4.19.67-2+deb10u1~bpo9+1",
+				"4.19.67-2+deb10u2",
+				"4.19.67-2+deb10u2~bpo9+1",
+				"4.19.67-2~bpo9+1",
+				"4.19.87-1",
+				"4.19.98-1",
+				"4.19.98-1+deb10u1",
+				"4.19.98-1~bpo9+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3403-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3403"
+		}
+	]
+}

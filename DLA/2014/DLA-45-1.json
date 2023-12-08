@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-45-1",
+	"modified": "2023-06-28T06:34:05.505384Z",
+	"published": "2014-09-04T00:00:00Z",
+	"related": [
+		"CVE-2014-3609"
+	],
+	"summary": "squid3 - security update",
+	"details": "\n[CVE-2014-3609](https://security-tracker.debian.org/tracker/CVE-2014-3609): Denial of Service in Range header processing.\n\n\nIgnore Range headers with unidentifiable byte-range values. If squid is\nunable to determine the byte value for ranges, treat the header as\ninvalid.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in squid3 version 3.1.6-1.2+squeeze4\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "squid3",
+				"purl": "pkg:deb/debian/squid3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.1.6-1.2+squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.1.6-1.2",
+				"3.1.6-1.2+squeeze1",
+				"3.1.6-1.2+squeeze2",
+				"3.1.6-1.2+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-45-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-45"
+		}
+	]
+}

@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3680-1",
+	"modified": "2023-10-16T00:12:14.396744Z",
+	"published": "2016-09-27T00:00:00Z",
+	"related": [
+		"CVE-2016-2775",
+		"CVE-2016-2776"
+	],
+	"summary": "bind9 - security update",
+	"details": "\nTwo vulnerabilities were reported in BIND, a DNS server.\n\n\n* [CVE-2016-2775](https://security-tracker.debian.org/tracker/CVE-2016-2775)\nThe lwresd component in BIND (which is not enabled by default)\n could crash while processing an overlong request name. This could\n lead to a denial of service.\n* [CVE-2016-2776](https://security-tracker.debian.org/tracker/CVE-2016-2776)\nA crafted query could crash the BIND name server daemon, leading\n to a denial of service. All server roles (authoritative,\n recursive and forwarding) in default configurations are \n affected.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1:9.9.5.dfsg-9+deb8u7.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.9.5.dfsg-9+deb8u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.9.5.dfsg-9",
+				"1:9.9.5.dfsg-9+deb8u1",
+				"1:9.9.5.dfsg-9+deb8u2",
+				"1:9.9.5.dfsg-9+deb8u3",
+				"1:9.9.5.dfsg-9+deb8u4",
+				"1:9.9.5.dfsg-9+deb8u5",
+				"1:9.9.5.dfsg-9+deb8u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3680-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3680"
+		}
+	]
+}

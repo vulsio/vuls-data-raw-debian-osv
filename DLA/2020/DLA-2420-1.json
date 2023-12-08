@@ -1,0 +1,130 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2420-1",
+	"modified": "2023-06-28T06:25:14.019585Z",
+	"published": "2020-10-30T00:00:00Z",
+	"related": [
+		"CVE-2019-19073",
+		"CVE-2019-19074",
+		"CVE-2019-19448",
+		"CVE-2019-9445",
+		"CVE-2020-12351",
+		"CVE-2020-12352",
+		"CVE-2020-12655",
+		"CVE-2020-12771",
+		"CVE-2020-12888",
+		"CVE-2020-14305",
+		"CVE-2020-14314",
+		"CVE-2020-14331",
+		"CVE-2020-14356",
+		"CVE-2020-14386",
+		"CVE-2020-14390",
+		"CVE-2020-15393",
+		"CVE-2020-16166",
+		"CVE-2020-24490",
+		"CVE-2020-25211",
+		"CVE-2020-25212",
+		"CVE-2020-25220",
+		"CVE-2020-25284",
+		"CVE-2020-25285",
+		"CVE-2020-25641",
+		"CVE-2020-25643",
+		"CVE-2020-26088"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to the execution of arbitrary code, privilege escalation,\ndenial of service or information leaks.\n\n\n* [CVE-2019-9445](https://security-tracker.debian.org/tracker/CVE-2019-9445)\nA potential out-of-bounds read was discovered in the F2FS\n implementation. A user permitted to mount and access arbitrary\n filesystems could potentially use this to cause a denial of\n service (crash) or to read sensitive information.\n* [CVE-2019-19073](https://security-tracker.debian.org/tracker/CVE-2019-19073), [CVE-2019-19074](https://security-tracker.debian.org/tracker/CVE-2019-19074)\nNavid Emamdoost discovered potential memory leaks in the ath9k and\n ath9k\\_htc drivers. The security impact of these is unclear.\n* [CVE-2019-19448](https://security-tracker.debian.org/tracker/CVE-2019-19448)\nTeam bobfuzzer reported a bug in Btrfs that could lead to a\n use-after-free, and could be triggered by crafted filesystem\n images. A user permitted to mount and access arbitrary\n filesystems could use this to cause a denial of service (crash or\n memory corruption) or possibly for privilege escalation.\n* [CVE-2020-12351](https://security-tracker.debian.org/tracker/CVE-2020-12351)\nAndy Nguyen discovered a flaw in the Bluetooth implementation in\n the way L2CAP packets with A2MP CID are handled. A remote attacker\n within a short distance, knowing the victim's Bluetooth device\n address, can send a malicious l2cap packet and cause a denial of\n service or possibly arbitrary code execution with kernel\n privileges.\n* [CVE-2020-12352](https://security-tracker.debian.org/tracker/CVE-2020-12352)\nAndy Nguyen discovered a flaw in the Bluetooth implementation.\n Stack memory is not properly initialised when handling certain AMP\n packets. A remote attacker within a short distance, knowing the\n victim's Bluetooth device address address, can retrieve kernel\n stack information.\n* [CVE-2020-12655](https://security-tracker.debian.org/tracker/CVE-2020-12655)\nZheng Bin reported that crafted XFS volumes could trigger a system\n hang. An attacker able to mount such a volume could use this to\n cause a denial of service.\n* [CVE-2020-12771](https://security-tracker.debian.org/tracker/CVE-2020-12771)\nZhiqiang Liu reported a bug in the bcache block driver that could\n lead to a system hang. The security impact of this is unclear.\n* [CVE-2020-12888](https://security-tracker.debian.org/tracker/CVE-2020-12888)\nIt was discovered that the PCIe Virtual Function I/O (vfio-pci)\n driver allowed users to disable a device's memory space while it\n was still mapped into a process. On some hardware platforms,\n local users or guest virtual machines permitted to access PCIe\n Virtual Functions could use this to cause a denial of service\n (hardware error and crash).\n* [CVE-2020-14305](https://security-tracker.debian.org/tracker/CVE-2020-14305)\nVasily Averin of Virtuozzo discovered a potential heap buffer\n overflow in the netfilter nf\\_contrack\\_h323 module. When this\n module is used to perform connection tracking for TCP/IPv6, a\n remote attacker could use this to cause a denial of service (crash\n or memory corruption) or possibly for remote code execution with\n kernel privilege.\n* [CVE-2020-14314](https://security-tracker.debian.org/tracker/CVE-2020-14314)\nA bug was discovered in the ext4 filesystem that could lead to an\n out-of-bound read. A local user permitted to mount and access\n arbitrary filesystem images could use this to cause a denial of\n service (crash).\n* [CVE-2020-14331](https://security-tracker.debian.org/tracker/CVE-2020-14331)\nA bug was discovered in the VGA console driver's soft-scrollback\n feature that could lead to a heap buffer overflow. On a system\n with a custom kernel that has CONFIG\\_VGACON\\_SOFT\\_SCROLLBACK\n enabled, a local user with access to a console could use this to\n cause a denial of service (crash or memory corruption) or possibly\n for privilege escalation.\n* [CVE-2020-14356](https://security-tracker.debian.org/tracker/CVE-2020-14356), [CVE-2020-25220](https://security-tracker.debian.org/tracker/CVE-2020-25220)\nA bug was discovered in the cgroup subsystem's handling of socket\n references to cgroups. In some cgroup configurations, this could\n lead to a use-after-free. A local user might be able to use this\n to cause a denial of service (crash or memory corruption) or\n possibly for privilege escalation.\n\n\nThe original fix for this bug introudced a new security issue,\n which is also addressed in this update.\n* [CVE-2020-14386](https://security-tracker.debian.org/tracker/CVE-2020-14386)\nOr Cohen discovered a bug in the packet socket (AF\\_PACKET)\n implementation which could lead to a heap buffer overflow. A\n local user with the CAP\\_NET\\_RAW capability (in any user namespace)\n could use this to cause a denial of service (crash or memory\n corruption) or possibly for privilege escalation.\n* [CVE-2020-14390](https://security-tracker.debian.org/tracker/CVE-2020-14390)\nMinh Yuan discovered a bug in the framebuffer console driver's\n scrollback feature that could lead to a heap buffer overflow. On\n a system using framebuffer consoles, a local user with access to a\n console could use this to cause a denial of service (crash or\n memory corruption) or possibly for privilege escalation.\n\n\nThe scrollback feature has been disabled for now, as no other fix\n was available for this issue.\n* [CVE-2020-15393](https://security-tracker.debian.org/tracker/CVE-2020-15393)\nKyungtae Kim reported a memory leak in the usbtest driver. The\n security impact of this is unclear.\n* [CVE-2020-16166](https://security-tracker.debian.org/tracker/CVE-2020-16166)\nAmit Klein reported that the random number generator used by the\n network stack might not be re-seeded for long periods of time,\n making e.g. client port number allocations more predictable. This\n made it easier for remote attackers to carry out some network based attacks such as DNS cache poisoning or device tracking.\n* [CVE-2020-24490](https://security-tracker.debian.org/tracker/CVE-2020-24490)\nAndy Nguyen discovered a flaw in the Bluetooth implementation that\n can lead to a heap buffer overflow. On systems with a Bluetooth 5\n hardware interface, a remote attacker within a short distance can\n use this to cause a denial of service (crash or memory corruption)\n or possibly for remote code execution with kernel privilege.\n* [CVE-2020-25211](https://security-tracker.debian.org/tracker/CVE-2020-25211)\nA flaw was discovered in netfilter subsystem. A local attacker\n able to inject conntrack Netlink configuration can cause a denial\n of service.\n* [CVE-2020-25212](https://security-tracker.debian.org/tracker/CVE-2020-25212)\nA bug was discovered in the NFSv4 client implementation that could\n lead to a heap buffer overflow. A malicious NFS server could use\n this to cause a denial of service (crash or memory corruption) or\n possibly to execute arbitrary code on the client.\n* [CVE-2020-25284](https://security-tracker.debian.org/tracker/CVE-2020-25284)\nIt was discovered that the Rados block device (rbd) driver allowed\n tasks running as uid 0 to add and remove rbd devices, even if they\n dropped capabilities. On a system with the rbd driver loaded,\n this might allow privilege escalation from a container with a task\n running as root.\n* [CVE-2020-25285](https://security-tracker.debian.org/tracker/CVE-2020-25285)\nA race condition was discovered in the hugetlb filesystem's sysctl\n handlers, that could lead to stack corruption. A local user\n permitted to write to hugepages sysctls could use this to cause a\n denial of service (crash or memory corruption) or possibly for\n privilege escalation. By default only the root user can do this.\n* [CVE-2020-25641](https://security-tracker.debian.org/tracker/CVE-2020-25641)\nThe syzbot tool found a bug in the block layer that could lead to\n an infinite loop. A local user with access to a raw block device\n could use this to cause a denial of service (unbounded CPU use and\n possible system hang).\n* [CVE-2020-25643](https://security-tracker.debian.org/tracker/CVE-2020-25643)\nChenNan Of Chaitin Security Research Lab discovered a flaw in the\n hdlc\\_ppp module. Improper input validation in the ppp\\_cp\\_parse\\_cr()\n function may lead to memory corruption and information disclosure.\n* [CVE-2020-26088](https://security-tracker.debian.org/tracker/CVE-2020-26088)\nIt was discovered that the NFC (Near Field Communication) socket\n implementation allowed any user to create raw sockets. On a\n system with an NFC interface, this allowed local users to evade\n local network security policy.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.9.240-1. This update additionally includes many more bug fixes from\nstable updates 4.9.229-4.9.240 inclusive.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.240-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.107-1",
+				"4.9.110-1",
+				"4.9.110-2",
+				"4.9.110-3",
+				"4.9.110-3+deb9u1",
+				"4.9.110-3+deb9u2",
+				"4.9.110-3+deb9u3",
+				"4.9.110-3+deb9u4",
+				"4.9.110-3+deb9u5",
+				"4.9.110-3+deb9u6",
+				"4.9.130-1",
+				"4.9.130-2",
+				"4.9.135-1",
+				"4.9.144-1",
+				"4.9.144-2",
+				"4.9.144-3",
+				"4.9.144-3.1",
+				"4.9.161-1",
+				"4.9.168-1",
+				"4.9.168-1+deb9u2",
+				"4.9.168-1+deb9u3",
+				"4.9.168-1+deb9u4",
+				"4.9.168-1+deb9u5",
+				"4.9.184-1",
+				"4.9.185-1",
+				"4.9.189-1",
+				"4.9.189-2",
+				"4.9.189-3",
+				"4.9.189-3+deb9u1",
+				"4.9.189-3+deb9u2",
+				"4.9.210-1",
+				"4.9.210-1+deb9u1",
+				"4.9.228-1",
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1",
+				"4.9.30-2+deb9u3",
+				"4.9.30-2+deb9u4",
+				"4.9.30-2+deb9u5",
+				"4.9.30-2+deb9u5~bpo8+1",
+				"4.9.47-1",
+				"4.9.51-1",
+				"4.9.51-1~bpo8+1",
+				"4.9.65-1",
+				"4.9.65-2",
+				"4.9.65-3",
+				"4.9.65-3+deb9u1",
+				"4.9.65-3+deb9u1~bpo8+1",
+				"4.9.65-3+deb9u2",
+				"4.9.65-3+deb9u2~bpo8+1",
+				"4.9.65-3~bpo8+1",
+				"4.9.80-1",
+				"4.9.80-2",
+				"4.9.82-1+deb9u2",
+				"4.9.82-1+deb9u3",
+				"4.9.82-1+deb9u3~bpo8+1",
+				"4.9.88-1",
+				"4.9.88-1+deb9u1",
+				"4.9.88-1+deb9u1~bpo8+1",
+				"4.9.88-1~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2420-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2420"
+		}
+	]
+}

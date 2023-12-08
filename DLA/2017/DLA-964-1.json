@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-964-1",
+	"modified": "2023-06-28T06:25:41.091465Z",
+	"published": "2017-06-01T00:00:00Z",
+	"related": [
+		"CVE-2016-9932",
+		"CVE-2017-7995",
+		"CVE-2017-8903",
+		"CVE-2017-8904",
+		"CVE-2017-8905"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2016-9932](https://security-tracker.debian.org/tracker/CVE-2016-9932) (XSA-200)\n\n CMPXCHG8B emulation allows local HVM guest OS users to obtain sensitive\n information from host stack memory.\n* [CVE-2017-7995](https://security-tracker.debian.org/tracker/CVE-2017-7995)\nDescription\n Xen checks access permissions to MMIO ranges only after accessing them,\n allowing host PCI device space memory reads.\n* [CVE-2017-8903](https://security-tracker.debian.org/tracker/CVE-2017-8903) (XSA-213)\n\n Xen mishandles page tables after an IRET hypercall which can lead to\n arbitrary code execution on the host OS. The vulnerability is only exposed\n to 64-bit PV guests.\n* [CVE-2017-8904](https://security-tracker.debian.org/tracker/CVE-2017-8904) (XSA-214)\n\n Xen mishandles the contains segment descriptors property during\n GNTTABOP\\_transfer. This might allow PV guest OS users to execute arbitrary\n code on the host OS.\n* [CVE-2017-8905](https://security-tracker.debian.org/tracker/CVE-2017-8905) (XSA-215)\n\n Xen mishandles a failsafe callback which might allow PV guest OS users to\n execute arbitrary code on the host OS.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-8.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.6.lts1-8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2",
+				"4.1.4-3+deb7u3",
+				"4.1.4-3+deb7u4",
+				"4.1.4-3+deb7u5",
+				"4.1.4-3+deb7u6",
+				"4.1.4-3+deb7u7",
+				"4.1.4-3+deb7u8",
+				"4.1.4-3+deb7u9",
+				"4.1.4-4",
+				"4.1.6.1-1+deb7u1",
+				"4.1.6.lts1-1",
+				"4.1.6.lts1-2",
+				"4.1.6.lts1-3",
+				"4.1.6.lts1-4",
+				"4.1.6.lts1-5",
+				"4.1.6.lts1-6",
+				"4.1.6.lts1-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-964-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-964"
+		}
+	]
+}

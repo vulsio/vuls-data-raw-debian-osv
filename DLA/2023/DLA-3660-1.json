@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3660-1",
+	"modified": "2023-11-22T20:15:34.106014Z",
+	"published": "2023-11-22T00:00:00Z",
+	"related": [
+		"CVE-2023-5981"
+	],
+	"summary": "gnutls28 - security update",
+	"details": "\nA vulnerability was found in GnuTLS, a secure communications library, which\nmay facilitate a timing attack to compromise a cryptographic system. The\nresponse times to malformed ciphertexts in RSA-PSK ClientKeyExchange differ\nfrom response times of ciphertexts with correct PKCS#1 v1.5 padding. Only\nTLS ciphertext processing is affected.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n3.6.7-4+deb10u11.\n\n\nWe recommend that you upgrade your gnutls28 packages.\n\n\nFor the detailed security status of gnutls28 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/gnutls28>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "gnutls28",
+				"purl": "pkg:deb/debian/gnutls28?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.7-4+deb10u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.7-4",
+				"3.6.7-4+deb10u1",
+				"3.6.7-4+deb10u10",
+				"3.6.7-4+deb10u2",
+				"3.6.7-4+deb10u3",
+				"3.6.7-4+deb10u4",
+				"3.6.7-4+deb10u5",
+				"3.6.7-4+deb10u6",
+				"3.6.7-4+deb10u7",
+				"3.6.7-4+deb10u8",
+				"3.6.7-4+deb10u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3660-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3660"
+		}
+	]
+}

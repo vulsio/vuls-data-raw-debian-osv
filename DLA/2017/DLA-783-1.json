@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-783-1",
+	"modified": "2023-06-28T06:43:16.518040Z",
+	"published": "2017-01-13T00:00:00Z",
+	"related": [
+		"CVE-2016-10013",
+		"CVE-2016-10024"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2016-10013](https://security-tracker.debian.org/tracker/CVE-2016-10013) (xsa-204)\n\n Xen mishandles SYSCALL singlestep during emulation which can lead to\n privilege escalation. The vulnerability is only exposed to 64-bit x86\n HVM guests.\n* [CVE-2016-10024](https://security-tracker.debian.org/tracker/CVE-2016-10024) (xsa-202)\n\n PV guests may be able to mask interrupts causing a Denial of Service.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-5.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.6.lts1-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2",
+				"4.1.4-3+deb7u3",
+				"4.1.4-3+deb7u4",
+				"4.1.4-3+deb7u5",
+				"4.1.4-3+deb7u6",
+				"4.1.4-3+deb7u7",
+				"4.1.4-3+deb7u8",
+				"4.1.4-3+deb7u9",
+				"4.1.4-4",
+				"4.1.6.1-1+deb7u1",
+				"4.1.6.lts1-1",
+				"4.1.6.lts1-2",
+				"4.1.6.lts1-3",
+				"4.1.6.lts1-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-783-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-783"
+		}
+	]
+}

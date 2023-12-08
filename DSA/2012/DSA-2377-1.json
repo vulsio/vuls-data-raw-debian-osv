@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2377-1",
+	"modified": "2023-10-16T00:11:11.904014Z",
+	"published": "2012-01-01T00:00:00Z",
+	"related": [
+		"CVE-2011-3481"
+	],
+	"summary": "cyrus-imapd-2.2 - denial of service",
+	"details": "\nIt was discovered that cyrus-imapd, a highly scalable mail system designed\nfor use in enterprise environments, is not properly parsing mail headers\nwhen a client makes use of the IMAP threading feature. As a result, a NULL\npointer is dereferenced which crashes the daemon. An attacker can trigger\nthis by sending a mail containing crafted reference headers and access the\nmail with a client that uses the server threading feature of IMAP.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.2.13-14+lenny6.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.2.13-19+squeeze3.\n\n\nFor the testing (wheezy) and unstable (sid) distributions, this problem has been\nfixed in cyrus-imapd-2.4 version 2.4.11-1.\n\n\nWe recommend that you upgrade your cyrus-imapd-2.2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "cyrus-imapd-2.2",
+				"purl": "pkg:deb/debian/cyrus-imapd-2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-14+lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-14",
+				"2.2.13-14+lenny1",
+				"2.2.13-14+lenny3",
+				"2.2.13-14+lenny4",
+				"2.2.13-14+lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2377-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "cyrus-imapd-2.2",
+				"purl": "pkg:deb/debian/cyrus-imapd-2.2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-19+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-19",
+				"2.2.13-19+squeeze1",
+				"2.2.13-19+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2377-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2377"
+		}
+	]
+}

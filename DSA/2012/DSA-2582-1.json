@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2582-1",
+	"modified": "2023-10-16T00:11:20.110042Z",
+	"published": "2012-12-07T00:00:00Z",
+	"related": [
+		"CVE-2011-3131",
+		"CVE-2012-4535",
+		"CVE-2012-4537",
+		"CVE-2012-4538",
+		"CVE-2012-4539",
+		"CVE-2012-5510",
+		"CVE-2012-5513",
+		"CVE-2012-5514",
+		"CVE-2012-5515"
+	],
+	"summary": "xen - denial of service",
+	"details": "\nMultiple denial of service vulnerabilities have been discovered\nin the Xen Hypervisor. One of the issue\n([CVE-2012-5513](https://security-tracker.debian.org/tracker/CVE-2012-5513))\ncould even lead to privilege escalation from guest to host.\n\n\nSome of the recently published Xen Security Advisories\n([XSA 25](http://lists.xen.org/archives/html/xen-announce/2012-11/msg00006.html)\nand [28](http://lists.xen.org/archives/html/xen-announce/2012-12/msg00003.html))\nare not fixed by this update and should be fixed in a future release.\n\n\n* [CVE-2011-3131](https://security-tracker.debian.org/tracker/CVE-2011-3131)\n ([XSA 5](http://lists.xen.org/archives/html/xen-devel/2011-08/msg00450.html)):\n DoS using I/OMMU faults from PCI-passthrough guest\n A VM that controls a PCI[E] device directly can cause it to issue DMA\n requests to invalid addresses. Although these requests are denied by the\n I/OMMU, the hypervisor needs to handle the interrupt and clear the error from\n the I/OMMU, and this can be used to live-lock a CPU and potentially hang the\n host.\n* [CVE-2012-4535](https://security-tracker.debian.org/tracker/CVE-2012-4535)\n ([XSA 20](http://lists.xen.org/archives/html/xen-announce/2012-11/msg00001.html)):\n Timer overflow DoS vulnerability\n A guest which sets a VCPU with an inappropriate deadline can cause an\n infinite loop in Xen, blocking the affected physical CPU indefinitely.\n* [CVE-2012-4537](https://security-tracker.debian.org/tracker/CVE-2012-4537)\n ([XSA 22](http://lists.xen.org/archives/html/xen-announce/2012-11/msg00005.html)):\n Memory mapping failure DoS vulnerability\n When set\\_p2m\\_entry fails, Xen's internal data structures (the p2m and m2p\n tables) can get out of sync. This failure can be triggered by unusual guest\n behaviour exhausting the memory reserved for the p2m table. If it happens,\n subsequent guest-invoked memory operations can cause Xen to fail an assertion\n and crash.\n* [CVE-2012-4538](https://security-tracker.debian.org/tracker/CVE-2012-4538)\n ([XSA 23](http://lists.xen.org/archives/html/xen-announce/2012-11/msg00004.html)):\n Unhooking empty PAE entries DoS vulnerability\n The HVMOP\\_pagetable\\_dying hypercall does not correctly check the\n caller's pagetable state, leading to a hypervisor crash.\n* [CVE-2012-4539](https://security-tracker.debian.org/tracker/CVE-2012-4539)\n ([XSA 24](http://lists.xen.org/archives/html/xen-announce/2012-11/msg00002.html)):\n Grant table hypercall infinite loop DoS vulnerability\n Due to inappropriate duplicate use of the same loop control variable,\n passing bad arguments to GNTTABOP\\_get\\_status\\_frames can cause an\n infinite loop in the compat hypercall handler.\n* [CVE-2012-5510](https://security-tracker.debian.org/tracker/CVE-2012-5510)\n ([XSA 26](http://lists.xen.org/archives/html/xen-announce/2012-12/msg00000.html)):\n Grant table version switch list corruption vulnerability\n Downgrading the grant table version of a guest involves freeing its status\n pages. This freeing was incomplete - the page(s) are freed back to the\n allocator, but not removed from the domain's tracking list. This would cause\n list corruption, eventually leading to a hypervisor crash.\n* [CVE-2012-5513](https://security-tracker.debian.org/tracker/CVE-2012-5513)\n ([XSA 29](http://lists.xen.org/archives/html/xen-announce/2012-12/msg00004.html)):\n XENMEM\\_exchange may overwrite hypervisor memory\n The handler for XENMEM\\_exchange accesses guest memory without range checking\n the guest provided addresses, thus allowing these accesses to include the\n hypervisor reserved range.\n\n\nA malicious guest administrator can cause Xen to crash. If the out of address\n space bounds access does not lead to a crash, a carefully crafted privilege\n escalation cannot be excluded, even though the guest doesn't itself control\n the values written.\n* [CVE-2012-5514](https://security-tracker.debian.org/tracker/CVE-2012-5514)\n ([XSA 30](http://lists.xen.org/archives/html/xen-announce/2012-12/msg00005.html)):\n Broken error handling in guest\\_physmap\\_mark\\_populate\\_on\\_demand()\n guest\\_physmap\\_mark\\_populate\\_on\\_demand(), before carrying out its actual\n operation, checks that the subject GFNs are not in use. If that check fails,\n the code prints a message and bypasses the gfn\\_unlock() matching the\n gfn\\_lock() carried out before entering the loop.\n A malicious guest administrator can then use it to cause Xen to hang.\n* [CVE-2012-5515](https://security-tracker.debian.org/tracker/CVE-2012-5515)\n ([XSA 31](http://lists.xen.org/archives/html/xen-announce/2012-12/msg00001.html)):\n Several memory hypercall operations allow invalid extent order values\n Allowing arbitrary extent\\_order input values for XENMEM\\_decrease\\_reservation,\n XENMEM\\_populate\\_physmap, and XENMEM\\_exchange can cause arbitrarily long time\n being spent in loops without allowing vital other code to get a chance to\n execute. This may also cause inconsistent state resulting at the completion\n of these hypercalls.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 4.0.1-5.5.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 4.1.3-6.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.1.3-6.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.1-5.5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.1-2",
+				"4.0.1-4",
+				"4.0.1-5",
+				"4.0.1-5.1",
+				"4.0.1-5.2",
+				"4.0.1-5.3",
+				"4.0.1-5.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2582-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2582"
+		}
+	]
+}

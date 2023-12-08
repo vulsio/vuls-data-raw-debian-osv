@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3970-1",
+	"modified": "2023-10-16T00:12:31.609819Z",
+	"published": "2017-09-12T00:00:00Z",
+	"related": [
+		"CVE-2017-14482"
+	],
+	"summary": "emacs24 - security update",
+	"details": "\nCharles A. Roelli discovered that Emacs is vulnerable to arbitrary code\nexecution when rendering text/enriched MIME data (e.g. when using\nEmacs-based mail clients).\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 24.4+1-5+deb8u1.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 24.5+1-11+deb9u1.\n\n\nWe recommend that you upgrade your emacs24 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "emacs24",
+				"purl": "pkg:deb/debian/emacs24?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "24.4+1-5+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"24.4+1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3970-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "emacs24",
+				"purl": "pkg:deb/debian/emacs24?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "24.5+1-11+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"24.5+1-11"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3970-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3970"
+		}
+	]
+}

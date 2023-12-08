@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4520-1",
+	"modified": "2023-10-16T00:25:01.340970Z",
+	"published": "2019-09-09T00:00:00Z",
+	"related": [
+		"CVE-2019-10079",
+		"CVE-2019-9512",
+		"CVE-2019-9514",
+		"CVE-2019-9515",
+		"CVE-2019-9518"
+	],
+	"summary": "trafficserver - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the HTTP/2 code of Apache\nTraffic Server, a reverse and forward proxy server, which could result\nin denial of service.\n\n\nThe fixes are too intrusive to backport to the version in the oldstable\ndistribution (stretch). An upgrade to Debian stable (buster) is\nrecommended instead.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 8.0.2+ds-1+deb10u1.\n\n\nWe recommend that you upgrade your trafficserver packages.\n\n\nFor the detailed security status of trafficserver please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/trafficserver](https://security-tracker.debian.org/tracker/trafficserver)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "trafficserver",
+				"purl": "pkg:deb/debian/trafficserver?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.2+ds-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.2+ds-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4520-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4520"
+		}
+	]
+}

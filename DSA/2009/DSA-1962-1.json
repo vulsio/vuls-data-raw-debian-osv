@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1962-1",
+	"modified": "2023-10-16T00:10:49.695931Z",
+	"published": "2009-12-23T00:00:00Z",
+	"related": [
+		"CVE-2009-3638",
+		"CVE-2009-3722",
+		"CVE-2009-4031"
+	],
+	"summary": "kvm - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in kvm, a full virtualization system.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2009-3638](https://security-tracker.debian.org/tracker/CVE-2009-3638)\nIt was discovered an Integer overflow in the kvm\\_dev\\_ioctl\\_get\\_supported\\_cpuid\nfunction. This allows local users to have an unspecified impact via a\nKVM\\_GET\\_SUPPORTED\\_CPUID request to the kvm\\_arch\\_dev\\_ioctl function.\n* [CVE-2009-3722](https://security-tracker.debian.org/tracker/CVE-2009-3722)\nIt was discovered that the handle\\_dr function in the KVM subsystem does not\nproperly verify the Current Privilege Level (CPL) before accessing a debug\nregister, which allows guest OS users to cause a denial of service (trap) on the\nhost OS via a crafted application.\n* [CVE-2009-4031](https://security-tracker.debian.org/tracker/CVE-2009-4031)\nIt was discovered that the do\\_insn\\_fetch function in the x86 emulator in the KVM\nsubsystem tries to interpret instructions that contain too many bytes to be\nvalid, which allows guest OS users to cause a denial of service (increased\nscheduling latency) on the host OS via unspecified manipulations related to SMP\nsupport.\n\n\nFor the stable distribution (lenny), these problems have been fixed in version\n72+dfsg-5~lenny4.\n\n\nFor the testing distribution (squeeze), and the unstable distribution (sid),\nthese problems will be fixed soon.\n\n\nWe recommend that you upgrade your kvm package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "kvm",
+				"purl": "pkg:deb/debian/kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "72+dfsg-5~lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"72+dfsg-4",
+				"72+dfsg-5~lenny1",
+				"72+dfsg-5~lenny2",
+				"72+dfsg-5~lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1962-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1962"
+		}
+	]
+}

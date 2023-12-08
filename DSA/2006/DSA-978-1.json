@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-978-1",
+	"modified": "2023-10-16T00:30:21.950034Z",
+	"published": "2006-02-17T00:00:00Z",
+	"related": [
+		"CVE-2006-0455"
+	],
+	"summary": "gnupg - invalid success return",
+	"details": "\nTavis Ormandy noticed that gnupg, the GNU privacy guard - a free PGP\nreplacement, verifies external signatures of files successfully even\nthough they don't contain a signature at all.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 1.0.6-4woody4.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.4.1-1sarge1.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your gnupg package.\n\n\nPlease note that this security advisory has been superseded by\n[DSA 993]($(HOME)/security/2006/dsa-993). Therefore, the\nupdated packages are no longer available from this page.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.6-4woody4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.6-4woody3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-978-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.1-1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-978-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-978"
+		}
+	]
+}

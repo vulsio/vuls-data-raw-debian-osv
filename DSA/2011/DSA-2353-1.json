@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2353-1",
+	"modified": "2023-10-16T00:11:10.763854Z",
+	"published": "2011-11-24T00:00:00Z",
+	"related": [
+		"CVE-2011-3581"
+	],
+	"summary": "ldns - buffer overflow",
+	"details": "\nDavid Wheeler discovered a buffer overflow in ldns's code to parse\nRR records, which could lead to the execution of arbitrary code.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.4.0-1+lenny2.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.6.6-2+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6.11-1.\n\n\nWe recommend that you upgrade your ldns packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ldns",
+				"purl": "pkg:deb/debian/ldns?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.6-2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.6-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2353-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "ldns",
+				"purl": "pkg:deb/debian/ldns?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.0-1+lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.0-1",
+				"1.4.0-1+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2353-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2353"
+		}
+	]
+}

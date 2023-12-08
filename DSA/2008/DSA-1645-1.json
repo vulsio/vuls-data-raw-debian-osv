@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1645-1",
+	"modified": "2023-10-16T00:10:32.175280Z",
+	"published": "2008-10-06T00:00:00Z",
+	"related": [
+		"CVE-2008-4298",
+		"CVE-2008-4359",
+		"CVE-2008-4360"
+	],
+	"summary": "lighttpd - various problems",
+	"details": "\nSeveral local/remote vulnerabilities have been discovered in lighttpd,\na fast webserver with minimal memory footprint. \n\n\nThe Common Vulnerabilities and Exposures project identifies the following \nproblems:\n\n\n* [CVE-2008-4298](https://security-tracker.debian.org/tracker/CVE-2008-4298)\nA memory leak in the http\\_request\\_parse function could be used by\n remote attackers to cause lighttpd to consume memory, and cause a\n denial of service attack.\n* [CVE-2008-4359](https://security-tracker.debian.org/tracker/CVE-2008-4359)\nInconsistant handling of URL patterns could lead to the disclosure\n of resources a server administrator did not anticipate when using\n rewritten URLs.\n* [CVE-2008-4360](https://security-tracker.debian.org/tracker/CVE-2008-4360)\nUpon filesystems which don't handle case-insensitive paths differently\n it might be possible that unanticipated resources could be made available\n by mod\\_userdir.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n1.4.13-4etch11.\n\n\nFor the unstable distribution (sid), these problems will be fixed shortly.\n\n\nWe recommend that you upgrade your lighttpd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "lighttpd",
+				"purl": "pkg:deb/debian/lighttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.13-4etch11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.13-4",
+				"1.4.13-4etch1",
+				"1.4.13-4etch10",
+				"1.4.13-4etch2",
+				"1.4.13-4etch3",
+				"1.4.13-4etch4",
+				"1.4.13-4etch5",
+				"1.4.13-4etch6",
+				"1.4.13-4etch7",
+				"1.4.13-4etch8",
+				"1.4.13-4etch9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1645-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1645"
+		}
+	]
+}

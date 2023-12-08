@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-990-1",
+	"modified": "2023-06-28T06:32:49.493841Z",
+	"published": "2017-06-18T00:00:00Z",
+	"related": [
+		"CVE-2017-9233"
+	],
+	"summary": "expat - security update",
+	"details": "\nIt was discovered that there was an infinite loop vulnerability in expat, a XML\nparsing C library:\n\n\n\nFor Debian 7 Wheezy, this issue has been fixed in expat version\n2.1.0-1+deb7u5.\n\n\nWe recommend that you upgrade your expat packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "expat",
+				"purl": "pkg:deb/debian/expat?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.1.0-1+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.1.0-1",
+				"2.1.0-1+deb7u1",
+				"2.1.0-1+deb7u2",
+				"2.1.0-1+deb7u3",
+				"2.1.0-1+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-990-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-990"
+		}
+	]
+}

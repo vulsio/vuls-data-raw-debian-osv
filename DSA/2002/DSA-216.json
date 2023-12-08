@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-216",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-24T00:00:00Z",
+	"related": [
+		"CVE-2002-1365"
+	],
+	"summary": "fetchmail - buffer overflow",
+	"details": "\nStefan Esser of e-matters discovered a buffer overflow in fetchmail,\nan SSL enabled POP3, APOP and IMAP mail gatherer/forwarder. When\nfetchmail retrieves a mail all headers that contain addresses are\nsearched for local addresses. If a hostname is missing, fetchmail\nappends it but doesn't reserve enough space for it. This heap\noverflow can be used by remote attackers to crash it or to execute\narbitrary code with the privileges of the user running fetchmail.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 5.9.11-6.2 of fetchmail and fetchmail-ssl.\n\n\nFor the old stable distribution (potato) this problem has been fixed\nin version 5.3.3-4.3.\n\n\nFor the unstable distribution (sid) this problem has been\nfixed in version 6.2.0-1 of fetchmail and fetchmail-ssl.\n\n\nWe recommend that you upgrade your fetchmail packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "fetchmail",
+				"purl": "pkg:deb/debian/fetchmail?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.9.11-6.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-216.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-216"
+		}
+	]
+}

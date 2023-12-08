@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2262-1",
+	"modified": "2023-10-16T00:11:04.059128Z",
+	"published": "2011-06-15T00:00:00Z",
+	"related": [
+		"CVE-2011-4133",
+		"CVE-2011-4278",
+		"CVE-2011-4283",
+		"CVE-2011-4286",
+		"CVE-2011-4288",
+		"CVE-2011-4290"
+	],
+	"summary": "moodle - several",
+	"details": "\nSeveral cross-site scripting and information disclosure issues have\nbeen fixed in Moodle, a course management system for online learning:\n\n\n* [MSA-11-0002](http://moodle.org/mod/forum/discuss.php?d=170002)\n\nCross-site request forgery vulnerability in RSS block\n* [MSA-11-0003](http://moodle.org/mod/forum/discuss.php?d=170003)\n\nCross-site scripting vulnerability in tag autocomplete\n* [MSA-11-0008](http://moodle.org/mod/forum/discuss.php?d=170009)\n\nIMS enterprise enrolment file may disclose sensitive information\n* [MSA-11-0011](http://moodle.org/mod/forum/discuss.php?d=170012)\n\nMultiple cross-site scripting problems in media filter\n* [MSA-11-0015](http://moodle.org/mod/forum/discuss.php?d=175592)\n\nCross Site Scripting through URL encoding\n* [MSA-11-0013](http://moodle.org/mod/forum/discuss.php?d=175590)\n\nGroup/Quiz permissions issue\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.9.9.dfsg2-2.1+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.9.9.dfsg2-3.\n\n\nWe recommend that you upgrade your moodle packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "moodle",
+				"purl": "pkg:deb/debian/moodle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.9.dfsg2-2.1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.9.dfsg2-2.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2262-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2262"
+		}
+	]
+}

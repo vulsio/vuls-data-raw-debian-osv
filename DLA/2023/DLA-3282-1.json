@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3282-1",
+	"modified": "2023-06-28T06:26:54.136355Z",
+	"published": "2023-01-26T00:00:00Z",
+	"related": [
+		"CVE-2022-23521",
+		"CVE-2022-41903"
+	],
+	"summary": "git - security update",
+	"details": "\nTwo vulnerabilities were discovered in Git, a distributed revision\ncontrol system. An attacker may trigger code execution in specific\nsituations.\n\n\n* [CVE-2022-23521](https://security-tracker.debian.org/tracker/CVE-2022-23521)\ngitattributes are a mechanism to allow defining attributes for\n paths. These attributes can be defined by adding a\n `.gitattributes` file to the repository, which contains a set of\n file patterns and the attributes that should be set for paths\n matching this pattern. When parsing gitattributes, multiple\n integer overflows can occur when there is a huge number of path\n patterns, a huge number of attributes for a single pattern, or\n when the declared attribute names are huge. These overflows can be\n triggered via a crafted `.gitattributes` file that may be part of\n the commit history. Git silently splits lines longer than 2KB when\n parsing gitattributes from a file, but not when parsing them from\n the index. Consequentially, the failure mode depends on whether\n the file exists in the working tree, the index or both. This\n integer overflow can result in arbitrary heap reads and writes,\n which may result in remote code execution.\n* [CVE-2022-41903](https://security-tracker.debian.org/tracker/CVE-2022-41903)\n`git log` can display commits in an arbitrary format using its\n `--format` specifiers. This functionality is also exposed to `git\n archive` via the `export-subst` gitattribute. When processing the\n padding operators, there is a integer overflow in\n `pretty.c::format\\_and\\_pad\\_commit()` where a `size\\_t` is stored\n improperly as an `int`, and then added as an offset to a\n `memcpy()`. This overflow can be triggered directly by a user\n running a command which invokes the commit formatting machinery\n (e.g., `git log --format=...`). It may also be triggered\n indirectly through git archive via the export-subst mechanism,\n which expands format specifiers inside of files within the\n repository during a git archive. This integer overflow can result\n in arbitrary heap writes, which may result in arbitrary code\n execution.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:2.20.1-2+deb10u7.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFor the detailed security status of git please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/git>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "git",
+				"purl": "pkg:deb/debian/git?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.20.1-2+deb10u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.20.1-2",
+				"1:2.20.1-2+deb10u1",
+				"1:2.20.1-2+deb10u2",
+				"1:2.20.1-2+deb10u3",
+				"1:2.20.1-2+deb10u4",
+				"1:2.20.1-2+deb10u5",
+				"1:2.20.1-2+deb10u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3282-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3282"
+		}
+	]
+}

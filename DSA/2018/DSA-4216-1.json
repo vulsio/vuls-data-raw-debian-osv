@@ -1,0 +1,75 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4216-1",
+	"modified": "2023-10-16T00:13:25.081858Z",
+	"published": "2018-06-02T00:00:00Z",
+	"related": [
+		"CVE-2018-10847"
+	],
+	"summary": "prosody - security update",
+	"details": "\nIt was discovered that Prosody, a lightweight Jabber/XMPP server, does\nnot properly validate client-provided parameters during XMPP stream\nrestarts, allowing authenticated users to override the realm associated\nwith their session, potentially bypassing security policies and allowing\nimpersonation.\n\n\nDetails can be found in the upstream advisory at\n<https://prosody.im/security/advisory_20180531/>\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 0.9.7-2+deb8u4.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 0.9.12-2+deb9u2.\n\n\nWe recommend that you upgrade your prosody packages.\n\n\nFor the detailed security status of prosody please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/prosody>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "prosody",
+				"purl": "pkg:deb/debian/prosody?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.7-2+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.7-2",
+				"0.9.7-2+deb8u1",
+				"0.9.7-2+deb8u2",
+				"0.9.7-2+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4216-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "prosody",
+				"purl": "pkg:deb/debian/prosody?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.12-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.12-2",
+				"0.9.12-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4216-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4216"
+		}
+	]
+}

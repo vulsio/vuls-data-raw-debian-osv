@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2308-1",
+	"modified": "2023-10-16T00:11:07.241079Z",
+	"published": "2011-09-12T00:00:00Z",
+	"related": [
+		"CVE-2011-3357",
+		"CVE-2011-3358"
+	],
+	"summary": "mantis - several",
+	"details": "\nSeveral vulnerabilities were found in Mantis, a web-based bug\ntracking system: Insufficient input validation could result in local\nfile inclusion and cross-site scripting.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.1.6+dfsg-2lenny6.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.1.8+dfsg-10squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.2.7-1.\n\n\nWe recommend that you upgrade your mantis packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mantis",
+				"purl": "pkg:deb/debian/mantis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.8+dfsg-10squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.8+dfsg-10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2308-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "mantis",
+				"purl": "pkg:deb/debian/mantis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.6+dfsg-2lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.6+dfsg-2",
+				"1.1.6+dfsg-2lenny1",
+				"1.1.6+dfsg-2lenny2",
+				"1.1.6+dfsg-2lenny3",
+				"1.1.6+dfsg-2lenny4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2308-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2308"
+		}
+	]
+}

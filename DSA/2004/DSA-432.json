@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-432",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-02-03T00:00:00Z",
+	"related": [
+		"CVE-2004-0103"
+	],
+	"summary": "crawl - buffer overflow",
+	"details": "\nSteve Kemp from the Debian Security Audit Project discovered a problem in\ncrawl, another console based dungeon exploration game, in the vein of\nnethack and rogue. The program uses several environment variables as\ninputs but doesn't apply a size check before copying one of them into\na fixed size buffer.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 4.0.0beta23-2woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 4.0.0beta26-4.\n\n\nWe recommend that you upgrade your crawl package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "crawl",
+				"purl": "pkg:deb/debian/crawl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.0beta23-2woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-432.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-432"
+		}
+	]
+}

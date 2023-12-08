@@ -1,0 +1,84 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5447-1",
+	"modified": "2023-10-16T00:23:14.103446Z",
+	"published": "2023-07-05T00:00:00Z",
+	"related": [
+		"CVE-2023-29141",
+		"CVE-2023-36674",
+		"CVE-2023-36675"
+	],
+	"summary": "mediawiki - security update",
+	"details": "\nMultiple security issues were discovered in MediaWiki, a website engine\nfor collaborative work, which could result in cross-site scripting, a\nbypass of vandalism protections or information disclosure.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 1:1.35.11-1~deb11u1.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 1:1.39.4-1~deb12u1.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\nFor the detailed security status of mediawiki please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mediawiki](https://security-tracker.debian.org/tracker/mediawiki)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.35.11-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.35.2-1",
+				"1:1.35.3-1",
+				"1:1.35.4-1",
+				"1:1.35.4-1+deb11u2",
+				"1:1.35.4-1~deb11u1",
+				"1:1.35.5-1",
+				"1:1.35.5-2",
+				"1:1.35.6-1",
+				"1:1.35.7-1",
+				"1:1.35.8-1",
+				"1:1.35.8-1.1",
+				"1:1.35.8-1~deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5447-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "mediawiki",
+				"purl": "pkg:deb/debian/mediawiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.39.4-1~deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.39.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5447-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5447"
+		}
+	]
+}

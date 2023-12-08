@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2588-1",
+	"modified": "2023-06-28T06:21:19.516928Z",
+	"published": "2021-03-09T00:00:00Z",
+	"related": [
+		"CVE-2021-20234",
+		"CVE-2021-20235"
+	],
+	"summary": "zeromq3 - security update",
+	"details": "\nTwo security issues have been detected in zeromq3.\n\n\n* [CVE-2021-20234](https://security-tracker.debian.org/tracker/CVE-2021-20234)\nMemory leak in client induced by malicious server(s) without CURVE/ZAP.\n\n\nFrom issue description [[1](https://github.com/zeromq/libzmq/security/advisories/GHSA-wfr2-29gj-5w87)].\n When a pipe processes a delimiter and is already not in active state but\n still has an unfinished message, the message is leaked.\n* [CVE-2021-20235](https://security-tracker.debian.org/tracker/CVE-2021-20235)\nHeap overflow when receiving malformed ZMTP v1 packets.\n\n\nFrom issue description [[2](https://github.com/zeromq/libzmq/security/advisories/GHSA-fc3w-qxf5-7hp6)].\n The static allocator was implemented to shrink its recorded size similarly\n to the shared allocator. But it does not need to, and it should not,\n because unlike the shared one the static allocator always uses a static\n buffer, with a size defined by the ZMQ\\_IN\\_BATCH\\_SIZE socket option\n (default 8192), so changing the size opens the library to heap overflows.\n The static allocator is used only with ZMTP v1 peers.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.2.1-4+deb9u4.\n\n\nWe recommend that you upgrade your zeromq3 packages.\n\n\nFor the detailed security status of zeromq3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/zeromq3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "zeromq3",
+				"purl": "pkg:deb/debian/zeromq3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.2.1-4+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.2.1-4",
+				"4.2.1-4+deb9u1",
+				"4.2.1-4+deb9u2",
+				"4.2.1-4+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2588-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2588"
+		}
+	]
+}

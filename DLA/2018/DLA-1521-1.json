@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1521-1",
+	"modified": "2023-06-28T06:26:22.354760Z",
+	"published": "2018-09-26T00:00:00Z",
+	"related": [
+		"CVE-2018-16586",
+		"CVE-2018-16587"
+	],
+	"summary": "otrs2 - security update",
+	"details": "\nFabien Arnoux discovered several security issues in email validation\nof otrs system.\n\n\n* [CVE-2018-16586](https://security-tracker.debian.org/tracker/CVE-2018-16586)\nLoad external image or CSS resources in browser when user opens a\n malicious email.\n* [CVE-2018-16587](https://security-tracker.debian.org/tracker/CVE-2018-16587)\nRemote deletions of arbitrary files that the OTRS web server user\n has write access when opening malicious email.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.3.18-1+deb8u6.\n\n\nWe recommend that you upgrade your otrs2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "otrs2",
+				"purl": "pkg:deb/debian/otrs2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.3.18-1+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.3.10-1",
+				"3.3.11-1",
+				"3.3.18-1+deb8u1",
+				"3.3.18-1+deb8u2",
+				"3.3.18-1+deb8u3",
+				"3.3.18-1+deb8u4",
+				"3.3.18-1+deb8u5",
+				"3.3.18-1~deb7u1",
+				"3.3.18-1~deb7u2",
+				"3.3.18-1~deb7u3",
+				"3.3.9-3",
+				"3.3.9-3+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1521-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1521"
+		}
+	]
+}

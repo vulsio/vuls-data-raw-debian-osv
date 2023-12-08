@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-614-1",
+	"modified": "2023-06-28T06:34:14.024794Z",
+	"published": "2016-09-09T00:00:00Z",
+	"related": [
+		"CVE-2016-7092",
+		"CVE-2016-7094"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2016-7092](https://security-tracker.debian.org/tracker/CVE-2016-7092) (XSA-185)\n\n Jeremie Boutoille of Quarkslab and Shangcong Luan of Alibaba\n discovered a flaw in the handling of L3 pagetable entries, allowing\n a malicious 32-bit PV guest administrator can escalate their\n privilege to that of the host.\n* [CVE-2016-7094](https://security-tracker.debian.org/tracker/CVE-2016-7094) (XSA-187)\n\n x86 HVM guests running with shadow paging use a subset of the x86\n emulator to handle the guest writing to its own pagetables. Andrew\n Cooper of Citrix discovered that there are situations a guest can\n provoke which result in exceeding the space allocated for internal\n state. A malicious HVM guest administrator can cause Xen to fail a\n bug check, causing a denial of service to the host.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-2. For Debian 8 Jessie, these problems have been fixed in\nversion 4.4.1-9+deb8u7.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.1.6.lts1-2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.1.4-3",
+				"4.1.4-3+deb7u1",
+				"4.1.4-3+deb7u2",
+				"4.1.4-3+deb7u3",
+				"4.1.4-3+deb7u4",
+				"4.1.4-3+deb7u5",
+				"4.1.4-3+deb7u6",
+				"4.1.4-3+deb7u7",
+				"4.1.4-3+deb7u8",
+				"4.1.4-3+deb7u9",
+				"4.1.4-4",
+				"4.1.6.1-1+deb7u1",
+				"4.1.6.lts1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-614-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-614"
+		}
+	]
+}

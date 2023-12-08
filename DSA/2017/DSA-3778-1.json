@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3778-1",
+	"modified": "2023-10-16T00:06:26.943953Z",
+	"published": "2017-01-31T00:00:00Z",
+	"related": [
+		"CVE-2016-10173"
+	],
+	"summary": "ruby-archive-tar-minitar - security update",
+	"details": "\nMichal Marek discovered that ruby-archive-tar-minitar, a Ruby library\nthat provides the ability to deal with POSIX tar archive files, is prone\nto a directory traversal vulnerability. An attacker can take advantage\nof this flaw to overwrite arbitrary files during archive extraction via\na .. (dot dot) in an extracted filename.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 0.5.2-2+deb8u1.\n\n\nWe recommend that you upgrade your ruby-archive-tar-minitar packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "ruby-archive-tar-minitar",
+				"purl": "pkg:deb/debian/ruby-archive-tar-minitar?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.5.2-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.5.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3778-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3778"
+		}
+	]
+}

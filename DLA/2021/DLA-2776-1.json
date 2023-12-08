@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2776-1",
+	"modified": "2023-06-28T06:30:16.404319Z",
+	"published": "2021-10-02T00:00:00Z",
+	"related": [
+		"CVE-2021-34798",
+		"CVE-2021-39275",
+		"CVE-2021-40438"
+	],
+	"summary": "apache2 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the Apache HTTP server.\nAn attacker could send proxied requests to arbitrary servers, corrupt\nmemory in some setups involving third-party modules, and cause the\nserver to crash.\n\n\n* [CVE-2021-34798](https://security-tracker.debian.org/tracker/CVE-2021-34798)\nMalformed requests may cause the server to dereference\n a NULL pointer.\n* [CVE-2021-39275](https://security-tracker.debian.org/tracker/CVE-2021-39275)\nap\\_escape\\_quotes() may write beyond the end of a buffer when given\n malicious input. No included modules pass untrusted data to these\n functions, but third-party / external modules may.\n* [CVE-2021-40438](https://security-tracker.debian.org/tracker/CVE-2021-40438)\nA crafted request uri-path can cause mod\\_proxy to forward the\n request to an origin server choosen by the remote user.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.4.25-3+deb9u11.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFor the detailed security status of apache2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/apache2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "apache2",
+				"purl": "pkg:deb/debian/apache2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.25-3+deb9u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.25-3",
+				"2.4.25-3+deb9u1",
+				"2.4.25-3+deb9u10",
+				"2.4.25-3+deb9u2",
+				"2.4.25-3+deb9u3",
+				"2.4.25-3+deb9u4",
+				"2.4.25-3+deb9u5",
+				"2.4.25-3+deb9u6",
+				"2.4.25-3+deb9u7",
+				"2.4.25-3+deb9u8",
+				"2.4.25-3+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2776-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2776"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-326",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-06-19T00:00:00Z",
+	"related": [
+		"CVE-2003-0441"
+	],
+	"summary": "orville-write - buffer overflows",
+	"details": "\nOrville Write, a replacement for the standard write(1) command,\ncontains a number of buffer overflows. These could be exploited to\ngain either gid tty or root privileges, depending on the configuration\nselected when the package is installed.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.53-4woody1.\n\n\nThe old stable distribution (potato) does not contain an orville-write\npackage.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\nSee Debian [bug report #170747](https://bugs.debian.org/170747).\n\n\nWe recommend that you update your orville-write package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "orville-write",
+				"purl": "pkg:deb/debian/orville-write?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.53-4woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-326.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-326"
+		}
+	]
+}

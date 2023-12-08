@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-349-1",
+	"modified": "2023-06-28T06:25:32.800545Z",
+	"published": "2015-11-25T00:00:00Z",
+	"related": [
+		"CVE-2015-8213"
+	],
+	"summary": "python-django - security update",
+	"details": "\nIt was discovered that there was a potential settings leak in date\ntemplate filter of Django, a web-development framework.\n\n\nIf an application allows users to specify an unvalidated format for\ndates and passes this format to the date filter, e.g.\n{{ last\\_updated|date:user\\_date\\_format }}, then a malicious user\ncould obtain any secret in the application's settings by specifying\na settings key instead of a date format. e.g. SECRET\\_KEY instead\nof \"j/m/Y\".\n\n\nTo remedy this, the underlying function used by the date template\nfilter, django.utils.formats.get\\_format(), now only allows accessing\nthe date/time formatting settings.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in python-django\nversion 1.2.3-3+squeeze15.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3-3+squeeze15"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3-3",
+				"1.2.3-3+squeeze1",
+				"1.2.3-3+squeeze10",
+				"1.2.3-3+squeeze11",
+				"1.2.3-3+squeeze12",
+				"1.2.3-3+squeeze13",
+				"1.2.3-3+squeeze14",
+				"1.2.3-3+squeeze2",
+				"1.2.3-3+squeeze3",
+				"1.2.3-3+squeeze5",
+				"1.2.3-3+squeeze6",
+				"1.2.3-3+squeeze7",
+				"1.2.3-3+squeeze8",
+				"1.2.3-3+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-349-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-349"
+		}
+	]
+}

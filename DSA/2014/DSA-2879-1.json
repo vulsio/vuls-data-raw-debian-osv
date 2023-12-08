@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2879-1",
+	"modified": "2023-10-16T00:11:36.763418Z",
+	"published": "2014-03-13T00:00:00Z",
+	"related": [
+		"CVE-2014-0017"
+	],
+	"summary": "libssh - security update",
+	"details": "\nIt was discovered that libssh, a tiny C SSH library, did not reset the\nstate of the PRNG after accepting a connection. A server mode\napplication that forks itself to handle incoming connections could see\nits children sharing the same PRNG state, resulting in a cryptographic\nweakness and possibly the recovery of the private key.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 0.4.5-3+squeeze2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.5.4-1+deb7u1.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 0.5.4-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.5.4-3.\n\n\nWe recommend that you upgrade your libssh packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libssh",
+				"purl": "pkg:deb/debian/libssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.4.5-3+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.4.5-3",
+				"0.4.5-3+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2879-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libssh",
+				"purl": "pkg:deb/debian/libssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.5.4-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.5.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2879-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2879"
+		}
+	]
+}

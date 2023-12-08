@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1971-1",
+	"modified": "2023-10-16T00:10:51.016095Z",
+	"published": "2010-01-15T00:00:00Z",
+	"related": [
+		"CVE-2009-4012"
+	],
+	"summary": "libthai - arbitrary code execution",
+	"details": "\nTim Starling discovered that libthai, a set of Thai language support routines,\nis vulnerable of integer/heap overflow.\nThis vulnerability could allow an attacker to run arbitrary code by sending a very\nlong string.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 0.1.6-1+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.1.9-4+lenny1.\n\n\nFor the testing distribution (squeeze), and the unstable distribution (sid),\nthis problem will be fixed soon.\n\n\nWe recommend that you upgrade your libthai package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libthai",
+				"purl": "pkg:deb/debian/libthai?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.6-1+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1971-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libthai",
+				"purl": "pkg:deb/debian/libthai?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.9-4+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1971-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-1971"
+		}
+	]
+}

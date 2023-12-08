@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1838-1",
+	"modified": "2023-06-28T06:29:51.725517Z",
+	"published": "2019-06-28T00:00:00Z",
+	"related": [
+		"CVE-2018-5686",
+		"CVE-2018-6192",
+		"CVE-2019-6130"
+	],
+	"summary": "mupdf - security update",
+	"details": "\nSeveral minor issues have been fixed in mupdf, a lightweight PDF viewer\ntailored for display of high quality anti-aliased graphics.\n\n\n* [CVE-2018-5686](https://security-tracker.debian.org/tracker/CVE-2018-5686)\nIn MuPDF, there was an infinite loop vulnerability and application\n hang in the pdf\\_parse\\_array function (pdf/pdf-parse.c) because EOF\n not having been considered. Remote attackers could leverage this\n vulnerability to cause a denial of service via a crafted PDF file.\n* [CVE-2019-6130](https://security-tracker.debian.org/tracker/CVE-2019-6130)\nMuPDF had a SEGV in the function fz\\_load\\_page of the fitz/document.c\n file, as demonstrated by mutool. This was related to page-number\n mishandling in cbz/mucbz.c, cbz/muimg.c, and svg/svg-doc.c.\n* [CVE-2018-6192](https://security-tracker.debian.org/tracker/CVE-2018-6192)\nIn MuPDF, the pdf\\_read\\_new\\_xref function in pdf/pdf-xref.c allowed\n remote attackers to cause a denial of service (segmentation violation\n and application crash) via a crafted PDF file.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.5-1+deb8u6.\n\n\nWe recommend that you upgrade your mupdf packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mupdf",
+				"purl": "pkg:deb/debian/mupdf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5-1+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5-1",
+				"1.5-1+deb8u1",
+				"1.5-1+deb8u2",
+				"1.5-1+deb8u3",
+				"1.5-1+deb8u4",
+				"1.5-1+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1838-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1838"
+		}
+	]
+}

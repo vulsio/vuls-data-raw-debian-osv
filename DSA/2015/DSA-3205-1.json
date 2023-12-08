@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3205-1",
+	"modified": "2023-10-16T00:19:59.731619Z",
+	"published": "2015-03-27T00:00:00Z",
+	"related": [
+		"CVE-2015-0250"
+	],
+	"summary": "batik - security update",
+	"details": "\nNicolas Gregoire and Kevin Schaller discovered that Batik, a toolkit\nfor processing SVG images, would load XML external entities by\ndefault. If a user or automated system were tricked into opening a\nspecially crafted SVG file, an attacker could possibly obtain access\nto arbitrary files or cause resource consumption.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.7+dfsg-3+deb7u1.\n\n\nFor the upcoming stable distribution (jessie) and unstable\ndistribution (sid), this problem has been fixed in version 1.7+dfsg-5.\n\n\nWe recommend that you upgrade your batik packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "batik",
+				"purl": "pkg:deb/debian/batik?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7+dfsg-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7+dfsg-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3205-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3205"
+		}
+	]
+}

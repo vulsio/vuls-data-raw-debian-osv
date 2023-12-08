@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3384-1",
+	"modified": "2023-06-28T06:42:54.227370Z",
+	"published": "2023-04-05T00:00:00Z",
+	"related": [
+		"CVE-2022-42252",
+		"CVE-2023-28708"
+	],
+	"summary": "tomcat9 - security update",
+	"details": "\nTwo security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2022-42252](https://security-tracker.debian.org/tracker/CVE-2022-42252)\nApache Tomcat was configured to ignore invalid HTTP headers via setting\n rejectIllegalHeader to false. Tomcat did not reject a request containing an\n invalid Content-Length header making a request smuggling attack possible if\n Tomcat was located behind a reverse proxy that also failed to reject the\n request with the invalid header.\n* [CVE-2023-28708](https://security-tracker.debian.org/tracker/CVE-2023-28708)\nWhen using the RemoteIpFilter with requests received from a reverse proxy\n via HTTP that include the X-Forwarded-Proto header set to https, session\n cookies created by Apache Tomcat did not include the secure attribute. This\n could result in the user agent transmitting the session cookie over an\n insecure channel.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n9.0.31-1~deb10u8.\n\n\nWe recommend that you upgrade your tomcat9 packages.\n\n\nFor the detailed security status of tomcat9 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tomcat9>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "tomcat9",
+				"purl": "pkg:deb/debian/tomcat9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.0.31-1~deb10u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.0.16-4",
+				"9.0.16-5",
+				"9.0.22-1",
+				"9.0.24-1",
+				"9.0.27-1",
+				"9.0.31-1~bpo10+1",
+				"9.0.31-1~deb10u1",
+				"9.0.31-1~deb10u2",
+				"9.0.31-1~deb10u3",
+				"9.0.31-1~deb10u4",
+				"9.0.31-1~deb10u5",
+				"9.0.31-1~deb10u6",
+				"9.0.31-1~deb10u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3384-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3384"
+		}
+	]
+}

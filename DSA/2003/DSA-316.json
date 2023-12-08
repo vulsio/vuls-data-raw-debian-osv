@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-316",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-06-11T00:00:00Z",
+	"related": [
+		"CVE-2003-0358",
+		"CVE-2003-0359"
+	],
+	"summary": "nethack - buffer overflow, incorrect permissions",
+	"details": "\nThe nethack and slashem packages are vulnerable to a buffer overflow exploited via a\nlong '-s' command line option. This vulnerability could be used by an\nattacker to gain gid 'games' on a system where nethack is installed.\n\n\nAdditionally, some setgid binaries in the nethack package have\nincorrect permissions, which could allow a user who gains gid 'games'\nto replace these binaries, potentially causing other users to execute\nmalicious code when they run nethack.\n\n\nNote that slashem does not contain the file permission problem\nCAN-2003-0359.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.4.0-3.0woody3.\n\n\nFor the old stable distribution (potato) these problems have been fixed in\nversion 3.3.0-7potato1.\n\n\nFor the unstable distribution (sid) these problems are fixed in\nversion 3.4.1-1.\n\n\nWe recommend that you update your nethack package.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 0.0.6E4F8-4.0woody3.\n\n\nFor the old stable distribution (potato) these problems have been fixed in\nversion 0.0.5E7-3potato1.\n\n\nFor the unstable distribution (sid) these problems are fixed in\nversion 0.0.6E4F8-6.\n\n\nWe recommend that you update your slashem package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "nethack",
+				"purl": "pkg:deb/debian/nethack?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.0-3.0woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-316.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "slashem",
+				"purl": "pkg:deb/debian/slashem?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.0.6E4F8-4.0woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-316.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-316"
+		}
+	]
+}

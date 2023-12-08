@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2415-1",
+	"modified": "2023-06-28T06:30:09.324854Z",
+	"published": "2020-10-25T00:00:00Z",
+	"related": [
+		"CVE-2020-15999"
+	],
+	"summary": "freetype - security update",
+	"details": "\nSergei Glazunov discovered a heap-based buffer overflow vulnerability in\nthe handling of embedded PNG bitmaps in FreeType. Opening malformed fonts\nmay result in denial of service or the execution of arbitrary code.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.6.3-3.2+deb9u2.\n\n\nWe recommend that you upgrade your freetype packages.\n\n\nFor the detailed security status of freetype please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/freetype>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "freetype",
+				"purl": "pkg:deb/debian/freetype?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.3-3.2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.3-3.2",
+				"2.6.3-3.2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2415-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2415"
+		}
+	]
+}

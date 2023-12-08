@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3425-1",
+	"modified": "2023-10-16T00:11:59.946339Z",
+	"published": "2015-12-17T00:00:00Z",
+	"related": [
+		"CVE-2015-0861"
+	],
+	"summary": "tryton-server - security update",
+	"details": "\nCĂŠdric Krier discovered a vulnerability in the server-side of Tryton, an\napplication framework written in Python. An authenticated malicious\nuser can write arbitrary values in record fields due missed checks of\naccess permissions when multiple records are written.\n\n\nThe oldstable distribution (wheezy) is not affected.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 3.4.0-3+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.8.1-1.\n\n\nWe recommend that you upgrade your tryton-server packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tryton-server",
+				"purl": "pkg:deb/debian/tryton-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.4.0-3+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.4.0-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3425-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3425"
+		}
+	]
+}

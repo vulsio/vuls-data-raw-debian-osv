@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-850-1",
+	"modified": "2023-10-16T00:20:47.051936Z",
+	"published": "2005-10-09T00:00:00Z",
+	"related": [
+		"CVE-2005-1279"
+	],
+	"summary": "tcpdump - denial of service",
+	"details": "\n\"Vade 79\" discovered that the BGP dissector in tcpdump, a powerful\ntool for network monitoring and data acquisition, does not properly\nhandle RT\\_ROUTING\\_INFO. A specially crafted BGP packet can cause a\ndenial of service via an infinite loop.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 3.6.2-2.9.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 3.8.3-4.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 3.8.3-4.\n\n\nWe recommend that you upgrade your tcpdump package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tcpdump",
+				"purl": "pkg:deb/debian/tcpdump?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.2-2.9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.6.2-2.8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-850-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-850"
+		}
+	]
+}

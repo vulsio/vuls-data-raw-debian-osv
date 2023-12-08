@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-214-1",
+	"modified": "2023-06-28T06:30:01.280114Z",
+	"published": "2015-04-30T00:00:00Z",
+	"related": [
+		"CVE-2015-3451"
+	],
+	"summary": "libxml-libxml-perl - security update",
+	"details": "\nIn some cases, XML::LibXML did not respect the request to disable entities\nexpansion. Applications handling untrusted XML files can then be tricked\ninto disclosing the content of local files.\n\n\nIn Debian 6 Squeeze, this issue has been fixed in libxml-libxml-perl\nversion 1.70.ds-1+deb6u1.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libxml-libxml-perl",
+				"purl": "pkg:deb/debian/libxml-libxml-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.70.ds-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.70.ds-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-214-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-214"
+		}
+	]
+}

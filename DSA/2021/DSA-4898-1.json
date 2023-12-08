@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4898-1",
+	"modified": "2023-10-16T00:22:33.662063Z",
+	"published": "2021-04-22T00:00:00Z",
+	"related": [
+		"CVE-2020-12695",
+		"CVE-2021-0326",
+		"CVE-2021-27803"
+	],
+	"summary": "wpa - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in wpa\\_supplicant and\nhostapd.\n\n\n* [CVE-2020-12695](https://security-tracker.debian.org/tracker/CVE-2020-12695)\nIt was discovered that hostapd does not properly handle UPnP\n subscribe messages under certain conditions, allowing an attacker to\n cause a denial of service.\n* [CVE-2021-0326](https://security-tracker.debian.org/tracker/CVE-2021-0326)\nIt was discovered that wpa\\_supplicant does not properly process P2P\n (Wi-Fi Direct) group information from active group owners. An\n attacker within radio range of the device running P2P could take\n advantage of this flaw to cause a denial of service or potentially\n execute arbitrary code.\n* [CVE-2021-27803](https://security-tracker.debian.org/tracker/CVE-2021-27803)\nIt was discovered that wpa\\_supplicant does not properly process\n P2P (Wi-Fi Direct) provision discovery requests. An attacker\n within radio range of the device running P2P could take advantage\n of this flaw to cause a denial of service or potentially execute\n arbitrary code.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2:2.7+git20190128+0c1e29f-6+deb10u3.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\nFor the detailed security status of wpa please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/wpa>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "wpa",
+				"purl": "pkg:deb/debian/wpa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.7+git20190128+0c1e29f-6+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:2.7+git20190128+0c1e29f-6",
+				"2:2.7+git20190128+0c1e29f-6+deb10u1",
+				"2:2.7+git20190128+0c1e29f-6+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4898-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4898"
+		}
+	]
+}

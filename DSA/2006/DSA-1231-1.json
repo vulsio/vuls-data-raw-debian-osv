@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1231-1",
+	"modified": "2023-10-16T00:10:16.871862Z",
+	"published": "2006-12-09T00:00:00Z",
+	"related": [
+		"CVE-2006-6169",
+		"CVE-2006-6235"
+	],
+	"summary": "gnupg",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the GNU privacy guard,\na free PGP replacement, which may lead to the execution of arbitrary code.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2006-6169](https://security-tracker.debian.org/tracker/CVE-2006-6169)\nWerner Koch discovered that a buffer overflow in a sanitising function\n may lead to execution of arbitrary code when running gnupg\n interactively.\n* [CVE-2006-6235](https://security-tracker.debian.org/tracker/CVE-2006-6235)\nTavis Ormandy discovered that parsing a carefully crafted OpenPGP\n packet may lead to the execution of arbitrary code, as a function\n pointer of an internal structure may be controlled through the\n decryption routines.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.4.1-1.sarge6.\n\n\nFor the upcoming stable distribution (etch) these problems have been\nfixed in version 1.4.6-1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.4.6-1.\n\n\nWe recommend that you upgrade your gnupg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.1-1.sarge6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.1-1",
+				"1.4.1-1.sarge2",
+				"1.4.1-1.sarge3",
+				"1.4.1-1.sarge4",
+				"1.4.1-1.sarge5",
+				"1.4.1-1sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1231-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1231"
+		}
+	]
+}

@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1194-1",
+	"modified": "2023-06-28T06:20:28.660111Z",
+	"published": "2017-11-30T00:00:00Z",
+	"related": [
+		"CVE-2017-16931",
+		"CVE-2017-16932"
+	],
+	"summary": "libxml2 - security update",
+	"details": "\n* [CVE-2017-16931](https://security-tracker.debian.org/tracker/CVE-2017-16931)\nparser.c in libxml2 before 2.9.5 mishandles parameter-entity\n references because the NEXTL macro calls the\n xmlParserHandlePEReference function in the case of a '%' character\n in a DTD name.\n* [CVE-2017-16932](https://security-tracker.debian.org/tracker/CVE-2017-16932)\nparser.c in libxml2 before 2.9.5 does not prevent infinite\n recursion in parameter entities.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.8.0+dfsg1-7+wheezy11.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libxml2",
+				"purl": "pkg:deb/debian/libxml2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.0+dfsg1-7+wheezy11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.0+dfsg1-7+nmu1",
+				"2.8.0+dfsg1-7+nmu2",
+				"2.8.0+dfsg1-7+nmu3",
+				"2.8.0+dfsg1-7+wheezy1",
+				"2.8.0+dfsg1-7+wheezy10",
+				"2.8.0+dfsg1-7+wheezy2",
+				"2.8.0+dfsg1-7+wheezy3",
+				"2.8.0+dfsg1-7+wheezy4",
+				"2.8.0+dfsg1-7+wheezy5",
+				"2.8.0+dfsg1-7+wheezy6",
+				"2.8.0+dfsg1-7+wheezy7",
+				"2.8.0+dfsg1-7+wheezy8",
+				"2.8.0+dfsg1-7+wheezy9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1194-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1194"
+		}
+	]
+}

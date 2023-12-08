@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1473-1",
+	"modified": "2023-10-16T00:07:40.567902Z",
+	"published": "2008-01-21T00:00:00Z",
+	"related": [
+		"CVE-2007-6350",
+		"CVE-2007-6415"
+	],
+	"summary": "scponly - arbitrary code execution",
+	"details": "\nJoachim Breitner discovered that Subversion support in scponly is\ninherently insecure, allowing execution of arbitrary commands. Further\ninvestigation showed that rsync and Unison support suffer from similar\nissues. This set of issues has been assigned [CVE-2007-6350](https://security-tracker.debian.org/tracker/CVE-2007-6350).\n\n\nIn addition, it was discovered that it was possible to invoke scp\nwith certain options that may lead to the execution of arbitrary commands\n([CVE-2007-6415](https://security-tracker.debian.org/tracker/CVE-2007-6415)).\n\n\nThis update removes Subversion, rsync and Unison support from the\nscponly package, and prevents scp from being invoked with the dangerous\noptions.\n\n\nFor the old stable distribution (sarge), these problems have been fixed\nin version 4.0-1sarge2.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 4.6-1etch1.\n\n\nThe unstable distribution (sid) will be fixed soon.\n\n\nWe recommend that you upgrade your scponly package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "scponly",
+				"purl": "pkg:deb/debian/scponly?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0-1sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0-1",
+				"4.0-1sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1473-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "scponly",
+				"purl": "pkg:deb/debian/scponly?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.6-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.6-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1473-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1473"
+		}
+	]
+}

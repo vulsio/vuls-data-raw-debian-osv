@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1568-1",
+	"modified": "2023-06-28T06:26:24.188861Z",
+	"published": "2018-11-06T00:00:00Z",
+	"related": [
+		"CVE-2016-7141",
+		"CVE-2016-7167",
+		"CVE-2016-9586",
+		"CVE-2018-16839",
+		"CVE-2018-16842"
+	],
+	"summary": "curl - security update",
+	"details": "\nSeveral vulnerabilities were discovered in cURL, an URL transfer\nlibrary.\n\n\n* [CVE-2016-7141](https://security-tracker.debian.org/tracker/CVE-2016-7141)\nWhen built with NSS and the libnsspem.so library is available at\n runtime, allows an remote attacker to hijack the authentication of a\n TLS connection by leveraging reuse of a previously loaded client\n certificate from file for a connection for which no certificate has\n been set, a different vulnerability than [CVE-2016-5420](https://security-tracker.debian.org/tracker/CVE-2016-5420).\n* [CVE-2016-7167](https://security-tracker.debian.org/tracker/CVE-2016-7167)\nMultiple integer overflows in the (1) curl\\_escape, (2)\n curl\\_easy\\_escape, (3) curl\\_unescape, and (4) curl\\_easy\\_unescape\n functions in libcurl allow attackers to have unspecified impact via\n a string of length 0xffffffff, which triggers a heap-based buffer\n overflow.\n* [CVE-2016-9586](https://security-tracker.debian.org/tracker/CVE-2016-9586)\nCurl is vulnerable to a buffer overflow when doing a large floating\n point output in libcurl's implementation of the printf() functions.\n If there are any applications that accept a format string from the\n outside without necessary input filtering, it could allow remote\n attacks.\n* [CVE-2018-16839](https://security-tracker.debian.org/tracker/CVE-2018-16839)\nCurl is vulnerable to a buffer overrun in the SASL authentication\n code that may lead to denial of service.\n* [CVE-2018-16842](https://security-tracker.debian.org/tracker/CVE-2018-16842)\nCurl is vulnerable to a heap-based buffer over-read in the\n tool\\_msgs.c:voutf() function that may result in information exposure\n and denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n7.38.0-4+deb8u13.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.38.0-4+deb8u13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.38.0-4",
+				"7.38.0-4+deb8u1",
+				"7.38.0-4+deb8u10",
+				"7.38.0-4+deb8u11",
+				"7.38.0-4+deb8u12",
+				"7.38.0-4+deb8u2",
+				"7.38.0-4+deb8u3",
+				"7.38.0-4+deb8u4",
+				"7.38.0-4+deb8u5",
+				"7.38.0-4+deb8u6",
+				"7.38.0-4+deb8u7",
+				"7.38.0-4+deb8u8",
+				"7.38.0-4+deb8u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1568-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1568"
+		}
+	]
+}

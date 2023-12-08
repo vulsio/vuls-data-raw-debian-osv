@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-542-1",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-08-30T00:00:00Z",
+	"related": [
+		"CVE-2004-0691",
+		"CVE-2004-0692",
+		"CVE-2004-0693"
+	],
+	"summary": "qt - unsanitised input",
+	"details": "\nSeveral vulnerabilities were discovered in recent versions of Qt, a\ncommonly used graphic widget set, used in KDE for example. The first\nproblem allows an attacker to execute arbitrary code, while the other\ntwo only seem to pose a denial of service danger. The Common\nVulnerabilities and Exposures project identifies the following\nvulnerabilities:\n\n\n* [CAN-2004-0691](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0691):\n\n Chris Evans has discovered a heap-based overflow when handling\n 8-bit RLE encoded BMP files.\n\n* [CAN-2004-0692](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0692):\n\n Marcus Meissner has discovered a crash condition in the XPM\n handling code, which is not yet fixed in Qt 3.3.\n\n* [CAN-2004-0693](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0693):\n\n Marcus Meissner has discovered a crash condition in the GIF\n handling code, which is not yet fixed in Qt 3.3.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.0.3-20020329-1woody2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.3.3-4 of qt-x11-free.\n\n\nWe recommend that you upgrade your qt packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "qt-copy",
+				"purl": "pkg:deb/debian/qt-copy?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.3-20020329-1woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-542-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-542"
+		}
+	]
+}

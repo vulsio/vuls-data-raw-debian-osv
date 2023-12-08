@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4369-1",
+	"modified": "2023-10-16T00:17:25.589866Z",
+	"published": "2019-01-14T00:00:00Z",
+	"related": [
+		"CVE-2018-19961",
+		"CVE-2018-19962",
+		"CVE-2018-19965",
+		"CVE-2018-19966",
+		"CVE-2018-19967"
+	],
+	"summary": "xen - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor:\n\n\n* [CVE-2018-19961](https://security-tracker.debian.org/tracker/CVE-2018-19961) /\n [CVE-2018-19962](https://security-tracker.debian.org/tracker/CVE-2018-19962)\nPaul Durrant discovered that incorrect TLB handling could result in\n denial of service, privilege escalation or information leaks.\n* [CVE-2018-19965](https://security-tracker.debian.org/tracker/CVE-2018-19965)\nMatthew Daley discovered that incorrect handling of the INVPCID\n instruction could result in denial of service by PV guests.\n* [CVE-2018-19966](https://security-tracker.debian.org/tracker/CVE-2018-19966)\nIt was discovered that a regression in the fix to address\n [CVE-2017-15595](https://security-tracker.debian.org/tracker/CVE-2017-15595)\n could result in denial of service, privilege\n escalation or information leaks by a PV guest.\n* [CVE-2018-19967](https://security-tracker.debian.org/tracker/CVE-2018-19967)\nIt was discovered that an error in some Intel CPUs could result in\n denial of service by a guest instance.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.8.5+shim4.10.2+xsa282-1+deb9u11.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFor the detailed security status of xen please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/xen](https://security-tracker.debian.org/tracker/xen)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.8.5+shim4.10.2+xsa282-1+deb9u11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.8.1-1+deb9u1",
+				"4.8.1-1+deb9u2",
+				"4.8.1-1+deb9u3",
+				"4.8.2+xsa245-0+deb9u1",
+				"4.8.3+comet2+shim4.10.0+comet3-1+deb9u4",
+				"4.8.3+comet2+shim4.10.0+comet3-1+deb9u4.1",
+				"4.8.3+comet2+shim4.10.0+comet3-1+deb9u5",
+				"4.8.3+xsa262+shim4.10.0+comet3-1+deb9u6",
+				"4.8.3+xsa262+shim4.10.0+comet3-1+deb9u7",
+				"4.8.3+xsa267+shim4.10.1+xsa267-1+deb9u8",
+				"4.8.3+xsa267+shim4.10.1+xsa267-1+deb9u9",
+				"4.8.4+xsa273+shim4.10.1+xsa273-1+deb9u10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4369-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4369"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-430",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-01-28T00:00:00Z",
+	"related": [
+		"CVE-2004-0047"
+	],
+	"summary": "trr19 - missing privilege release",
+	"details": "\nSteve Kemp discovered a problem in trr19, a type trainer application\nfor GNU Emacs, which is written as a pair of setgid() binaries and\nwrapper programs which execute commands for GNU Emacs. However, the\nbinaries don't drop privileges before executing a command, allowing an\nattacker to gain access to the local group games.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0beta5-15woody1. The mipsel binary will be added later.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your trr19 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "trr19",
+				"purl": "pkg:deb/debian/trr19?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0beta5-15woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-430.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-430"
+		}
+	]
+}

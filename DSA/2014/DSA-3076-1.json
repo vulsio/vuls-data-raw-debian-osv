@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3076-1",
+	"modified": "2023-10-16T00:06:11.760975Z",
+	"published": "2014-11-25T00:00:00Z",
+	"related": [
+		"CVE-2014-8710",
+		"CVE-2014-8711",
+		"CVE-2014-8712",
+		"CVE-2014-8713",
+		"CVE-2014-8714"
+	],
+	"summary": "wireshark - security update",
+	"details": "\nMultiple vulnerabilities were discovered in the dissectors/parsers for\nSigComp UDVM, AMQP, NCP and TN5250, which could result in denial of\nservice.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.8.2-5wheezy13.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 1.12.1+g01b65bf-2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.12.1+g01b65bf-2.\n\n\nWe recommend that you upgrade your wireshark packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wireshark",
+				"purl": "pkg:deb/debian/wireshark?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.2-5wheezy13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.2-5wheezy10",
+				"1.8.2-5wheezy11",
+				"1.8.2-5wheezy12",
+				"1.8.2-5wheezy2",
+				"1.8.2-5wheezy3",
+				"1.8.2-5wheezy4",
+				"1.8.2-5wheezy5",
+				"1.8.2-5wheezy6",
+				"1.8.2-5wheezy7",
+				"1.8.2-5wheezy8",
+				"1.8.2-5wheezy9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3076-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3076"
+		}
+	]
+}

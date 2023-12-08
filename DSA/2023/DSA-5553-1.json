@@ -1,0 +1,54 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5553-1",
+	"modified": "2023-11-14T11:17:51.823723Z",
+	"published": "2023-11-13T00:00:00Z",
+	"related": [
+		"CVE-2023-39417",
+		"CVE-2023-39418",
+		"CVE-2023-5868",
+		"CVE-2023-5869",
+		"CVE-2023-5870"
+	],
+	"summary": "postgresql-15 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the PostgreSQL\ndatabase system.\n\n\n* [CVE-2023-5868](https://security-tracker.debian.org/tracker/CVE-2023-5868)\nJingzhou Fu discovered a memory disclosure flaw in aggregate\n function calls.\n* [CVE-2023-5869](https://security-tracker.debian.org/tracker/CVE-2023-5869)\nPedro Gallegos reported integer overflow flaws resulting in buffer\n overflows in the array modification functions.\n* [CVE-2023-5870](https://security-tracker.debian.org/tracker/CVE-2023-5870)\nHemanth Sandrana and Mahendrakar Srinivasarao reported that the\n pg\\_cancel\\_backend role can signal certain superuser processes,\n potentially resulting in denial of service.\n* [CVE-2023-39417](https://security-tracker.debian.org/tracker/CVE-2023-39417)\nMicah Gate, Valerie Woolard, Tim Carey-Smith, and Christoph Berg\n reported that an extension script using @substitutions@ within\n quoting may allow to perform an SQL injection for an attacker having\n database-level CREATE privileges.\n* [CVE-2023-39418](https://security-tracker.debian.org/tracker/CVE-2023-39418)\nDean Rasheed reported that the MERGE command fails to enforce\n UPDATE or SELECT row security policies.\n\n\nFor the stable distribution (bookworm), these problems have been fixed\nin version 15.5-0+deb12u1.\n\n\nWe recommend that you upgrade your postgresql-15 packages.\n\n\nFor the detailed security status of postgresql-15 please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/postgresql-15](https://security-tracker.debian.org/tracker/postgresql-15)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "postgresql-15",
+				"purl": "pkg:deb/debian/postgresql-15?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "15.5-0+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"15.3-0+deb12u1",
+				"15.3-1",
+				"15.4-0+deb12u1",
+				"15.4-1",
+				"15.4-2",
+				"15.4-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5553-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5553"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3373-1",
+	"modified": "2023-06-28T06:26:57.326425Z",
+	"published": "2023-03-30T00:00:00Z",
+	"related": [
+		"CVE-2021-31684",
+		"CVE-2023-1370"
+	],
+	"summary": "json-smart - security update",
+	"details": "\nMultiple vulnerabilities were found in Json-smart library.\nJson-smart is a performance focused, JSON processor lib written in Java.\n\n\n* [CVE-2021-31684](https://security-tracker.debian.org/tracker/CVE-2021-31684)\nA vulnerability was discovered in the indexOf function of\n JSONParserByteArray in JSON Smart versions 1.3 and 2.4\n which causes a denial of service (DOS)\n via for instance a crafted web request.\n* [CVE-2023-1370](https://security-tracker.debian.org/tracker/CVE-2023-1370)\nA stack overflow was found due to excessive recursion.\n When reaching a â[â or â{â character in the JSON input, the code\n parses an array or an object respectively. It was discovered that the\n code does not have any limit to the nesting of such arrays or\n objects. Since the parsing of nested arrays and objects is done\n recursively, nesting too many of them can cause a stack exhaustion\n (stack overflow) and crash the software\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.2-2+deb10u1.\n\n\nWe recommend that you upgrade your json-smart packages.\n\n\nFor the detailed security status of json-smart please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/json-smart>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "json-smart",
+				"purl": "pkg:deb/debian/json-smart?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3373-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3373"
+		}
+	]
+}

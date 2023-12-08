@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2600-1",
+	"modified": "2023-10-16T00:11:21.430603Z",
+	"published": "2013-01-06T00:00:00Z",
+	"related": [
+		"CVE-2012-5519"
+	],
+	"summary": "cups - privilege escalation",
+	"details": "\nJann Horn discovered that users of the CUPS printing system who are part\nof the lpadmin group could modify several configuration parameters with\nsecurity impact. Specifically, this allows an attacker to read or write\narbitrary files as root which can be used to elevate privileges.\n\n\nThis update splits the configuration file /etc/cups/cupsd.conf into two\nfiles: cupsd.conf and cups-files.conf. While the first stays configurable\nvia the web interface, the latter can only be configured by the root user.\nPlease see the updated documentation that comes with the new package\nfor more information on these files.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.4.4-7+squeeze2.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1.5.3-2.7.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.5.3-2.7.\n\n\nWe recommend that you upgrade your cups packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.4-7+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.4-7",
+				"1.4.4-7+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2600-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2600"
+		}
+	]
+}

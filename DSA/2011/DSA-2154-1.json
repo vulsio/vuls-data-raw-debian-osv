@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2154-1",
+	"modified": "2023-10-16T00:10:59.884558Z",
+	"published": "2011-01-30T00:00:00Z",
+	"related": [
+		"CVE-2010-4345",
+		"CVE-2011-0017"
+	],
+	"summary": "exim4 - privilege escalation",
+	"details": "\nA design flaw ([CVE-2010-4345](https://security-tracker.debian.org/tracker/CVE-2010-4345))\nin exim4 allowed the local Debian-exim user to obtain root privileges by\nspecifying an alternate configuration file using the -C option or by using the\nmacro override facility (-D option). Unfortunately, fixing this vulnerability\nis not possible without some changes in exim4's behaviour. If you use the -C\nor -D options or use the system filter facility, you should evaluate\nthe changes carefully and adjust your configuration accordingly. The\nDebian default configuration is not affected by the changes.\n\n\nThe detailed list of changes is described in the NEWS.Debian file in\nthe packages. The relevant sections are also reproduced below.\n\n\nIn addition to that, missing error handling for the setuid/setgid\nsystem calls allowed the Debian-exim user to cause root to append log data to\narbitrary files ([CVE-2011-0017](https://security-tracker.debian.org/tracker/CVE-2011-0017)).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 4.69-9+lenny3.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problem have been fixed in version 4.72-4.\n\n\nExcerpt from the NEWS.Debian file from the packages exim4-daemon-light\nand exim4-daemon-heavy:\n\n\n\n> \n> ```\n> \n> Exim versions up to and including 4.72 are vulnerable to\n> CVE-2010-4345. This is a privilege escalation issue that allows the\n> exim user to gain root privileges by specifying an alternate\n> configuration file using the -C option. The macro override facility\n> (-D) might also be misused for this purpose.\n> \n> In reaction to this security vulnerability upstream has made a number\n> of user visible changes. This package includes these changes.\n> \n> If exim is invoked with the -C or -D option the daemon will not regain\n> root privileges though re-execution. This is usually necessary for\n> local delivery, though. Therefore it is generally not possible anymore\n> to run an exim daemon with -D or -C options.\n> \n> However this version of exim has been built with\n> TRUSTED_CONFIG_LIST=/etc/exim4/trusted_configs. TRUSTED_CONFIG_LIST\n> defines a list of configuration files which are trusted; if a config\n> file is owned by root and matches a pathname in the list, then it may\n> be invoked by the Exim build-time user without Exim relinquishing root\n> privileges.\n> \n> As a hotfix to not break existing installations of mailscanner we have\n> also set WHITELIST_D_MACROS=OUTGOING. i.e. it is still possible to\n> start exim with -DOUTGOING while being able to do local deliveries.\n> \n> If you previously were using -D switches you will need to change your\n> setup to use a separate configuration file. The \".include\" mechanism\n> makes this easy.\n> \n> The system filter is run as exim_user instead of root by default.  If\n> your setup requies root privileges when running the system filter you\n> will need to set the system_filter_user exim main configuration\n> option.\n> \n> ```\n> \n> \n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "exim4",
+				"purl": "pkg:deb/debian/exim4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.69-9+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.69-9",
+				"4.69-9+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2154-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2154"
+		}
+	]
+}

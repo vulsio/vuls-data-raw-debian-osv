@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2559-1",
+	"modified": "2023-06-28T06:29:13.955835Z",
+	"published": "2021-02-15T00:00:00Z",
+	"related": [
+		"CVE-2011-5325",
+		"CVE-2015-9261",
+		"CVE-2016-2147",
+		"CVE-2016-2148",
+		"CVE-2017-15873",
+		"CVE-2017-16544",
+		"CVE-2018-1000517"
+	],
+	"summary": "busybox - security update",
+	"details": "\nBusybox, utility programs for small and embedded systems, was affected\nby several security vulnerabilities. The Common Vulnerabilities and\nExposures project identifies the following issues.\n\n\n* [CVE-2011-5325](https://security-tracker.debian.org/tracker/CVE-2011-5325)\nA path traversal vulnerability was found in Busybox implementation\n of tar. tar will extract a symlink that points outside of the\n current working directory and then follow that symlink when\n extracting other files. This allows for a directory traversal\n attack when extracting untrusted tarballs.\n* [CVE-2013-1813](https://security-tracker.debian.org/tracker/CVE-2013-1813)\nWhen device node or symlink in /dev should be created inside\n 2-or-deeper subdirectory (/dev/dir1/dir2.../node), the intermediate\n directories are created with incorrect permissions.\n* [CVE-2014-4607](https://security-tracker.debian.org/tracker/CVE-2014-4607)\nAn integer overflow may occur when processing any variant of a\n literal run in the lzo1x\\_decompress\\_safe function. Each of these\n three locations is subject to an integer overflow when processing\n zero bytes. This exposes the code that copies literals to memory\n corruption.\n* [CVE-2014-9645](https://security-tracker.debian.org/tracker/CVE-2014-9645)\nThe add\\_probe function in modutils/modprobe.c in BusyBox allows\n local users to bypass intended restrictions on loading kernel\n modules via a / (slash) character in a module name, as demonstrated\n by an \"ifconfig /usbserial up\" command or a \"mount -t /snd\\_pcm none\n /\" command.\n* [CVE-2016-2147](https://security-tracker.debian.org/tracker/CVE-2016-2147)\nInteger overflow in the DHCP client (udhcpc) in BusyBox allows\n remote attackers to cause a denial of service (crash) via a\n malformed RFC1035-encoded domain name, which triggers an\n out-of-bounds heap write.\n* [CVE-2016-2148](https://security-tracker.debian.org/tracker/CVE-2016-2148)\nHeap-based buffer overflow in the DHCP client (udhcpc) in BusyBox\n allows remote attackers to have unspecified impact via vectors\n involving OPTION\\_6RD parsing.\n* [CVE-2017-15873](https://security-tracker.debian.org/tracker/CVE-2017-15873)\nThe get\\_next\\_block function in archival/libarchive\n /decompress\\_bunzip2.c in BusyBox has an Integer Overflow that may\n lead to a write access violation.\n* [CVE-2017-16544](https://security-tracker.debian.org/tracker/CVE-2017-16544)\nIn the add\\_match function in libbb/lineedit.c in BusyBox, the tab\n autocomplete feature of the shell, used to get a list of filenames\n in a directory, does not sanitize filenames and results in executing\n any escape sequence in the terminal. This could potentially result\n in code execution, arbitrary file writes, or other attacks.\n* [CVE-2018-1000517](https://security-tracker.debian.org/tracker/CVE-2018-1000517)\nBusyBox contains a Buffer Overflow vulnerability in\n Busybox wget that can result in a heap-based buffer overflow.\n This attack appears to be exploitable via network connectivity.\n* [CVE-2015-9621](https://security-tracker.debian.org/tracker/CVE-2015-9621)\nUnziping a specially crafted zip file results in a computation of an\n invalid pointer and a crash reading an invalid address.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:1.22.0-19+deb9u1.\n\n\nWe recommend that you upgrade your busybox packages.\n\n\nFor the detailed security status of busybox please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/busybox>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "busybox",
+				"purl": "pkg:deb/debian/busybox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.22.0-19+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.22.0-19"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2559-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2559"
+		}
+	]
+}

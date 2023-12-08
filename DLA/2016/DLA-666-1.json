@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-666-1",
+	"modified": "2023-06-28T06:27:05.829668Z",
+	"published": "2016-10-18T00:00:00Z",
+	"related": [
+		"CVE-2016-8605",
+		"CVE-2016-8606"
+	],
+	"summary": "guile-2.0 - security update",
+	"details": "\nSeveral vulnerabilities were discovered in GNU Guile, an\nimplementation of the Scheme programming language. The Common\nVulnerabilities and Exposures project identifies the following issues.\n\n\n* [CVE-2016-8605](https://security-tracker.debian.org/tracker/CVE-2016-8605)\nThe mkdir procedure of GNU Guile temporarily changed the process'\n umask to zero. During that time window, in a multithreaded\n application, other threads could end up creating files with\n insecure permissions.\n* [CVE-2016-8606](https://security-tracker.debian.org/tracker/CVE-2016-8606)\nGNU Guile provides a REPL server which is a command prompt that\n developers can connect to for live coding and debugging purposes.\n The REPL server is started by the '--listen' command-line option\n or equivalent API.\n\n\nIt was reported that the REPL server is vulnerable to the HTTP\n inter-protocol attack.\n\n\nThis constitutes a remote code execution vulnerability for\n developers running a REPL server that listens on a loopback device\n or private network. Applications that do not run a REPL server, as\n is usually the case, are unaffected.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.0.5+1-3+deb7u1.\n\n\nWe recommend that you upgrade your guile-2.0 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "guile-2.0",
+				"purl": "pkg:deb/debian/guile-2.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.5+1-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.5+1-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-666-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-666"
+		}
+	]
+}

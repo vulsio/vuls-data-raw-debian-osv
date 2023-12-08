@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1039-1",
+	"modified": "2023-06-28T06:20:15.888046Z",
+	"published": "2017-07-25T00:00:00Z",
+	"related": [
+		"CVE-2017-7480"
+	],
+	"summary": "rkhunter - security update",
+	"details": "\n* [CVE-2017-7480](https://security-tracker.debian.org/tracker/CVE-2017-7480)\nThe original patch introduces new regex to better check for\n allowed download URLs.\n Other versions of the package in Jessie, Stretch and Sid don't\n apply that patch but just disable the download of everything by\n default via rkhunter.conf.\n In order to make this version consistent with all the other\n distributions and don't break existing installations, this will\n be done in Wheezy as well.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.4.0-1+deb7u1.\n\n\nWe recommend that you upgrade your rkhunter packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "rkhunter",
+				"purl": "pkg:deb/debian/rkhunter?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.0-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1039-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1039"
+		}
+	]
+}

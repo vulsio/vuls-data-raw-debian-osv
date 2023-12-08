@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1691-1",
+	"modified": "2023-10-16T00:10:35.145553Z",
+	"published": "2008-12-22T00:00:00Z",
+	"related": [
+		"CVE-2007-3555",
+		"CVE-2008-1502",
+		"CVE-2008-3325",
+		"CVE-2008-3326",
+		"CVE-2008-4796",
+		"CVE-2008-4810",
+		"CVE-2008-4811",
+		"CVE-2008-5432",
+		"CVE-2008-6124"
+	],
+	"summary": "moodle - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in Moodle, an online\ncourse management system. The following issues are addressed in this\nupdate, ranging from cross site scripting to remote code execution.\n\n\nVarious cross site scripting issues in the Moodle codebase\n([CVE-2008-3326](https://security-tracker.debian.org/tracker/CVE-2008-3326), [CVE-2008-3325](https://security-tracker.debian.org/tracker/CVE-2008-3325), [CVE-2007-3555](https://security-tracker.debian.org/tracker/CVE-2007-3555), [CVE-2008-5432](https://security-tracker.debian.org/tracker/CVE-2008-5432),\nMSA-08-0021, MDL-8849, MDL-12793, MDL-11414, MDL-14806,\nMDL-10276).\n\n\nVarious cross site request forgery issues in the Moodle codebase\n([CVE-2008-3325](https://security-tracker.debian.org/tracker/CVE-2008-3325), MSA-08-0023).\n\n\nPrivilege escalation bugs in the Moodle codebase (MSA-08-0001, MDL-7755).\n\n\nSQL injection issue in the hotpot module (MSA-08-0010).\n\n\nAn embedded copy of Smarty had several vulnerabilities\n([CVE-2008-4811](https://security-tracker.debian.org/tracker/CVE-2008-4811), [CVE-2008-4810](https://security-tracker.debian.org/tracker/CVE-2008-4810)).\nAn embedded copy of Snoopy was vulnerable to cross site scripting\n([CVE-2008-4796](https://security-tracker.debian.org/tracker/CVE-2008-4796)).\nAn embedded copy of Kses was vulnerable to cross site scripting\n([CVE-2008-1502](https://security-tracker.debian.org/tracker/CVE-2008-1502)).\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.6.3-2+etch1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.8.2.dfsg-2.\n\n\nWe recommend that you upgrade your moodle (1.6.3-2+etch1) package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "moodle",
+				"purl": "pkg:deb/debian/moodle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.3-2+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.3-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1691-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1691"
+		}
+	]
+}

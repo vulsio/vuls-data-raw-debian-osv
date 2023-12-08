@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2194-1",
+	"modified": "2023-10-16T00:05:49.363642Z",
+	"published": "2011-03-18T00:00:00Z",
+	"related": [
+		"CVE-2011-1146"
+	],
+	"summary": "libvirt - privilege escalation",
+	"details": "\nIt was discovered that libvirt, a library for interfacing with different\nvirtualization systems, did not properly check for read-only connections.\nThis allowed a local attacker to perform a denial of service (crash) or\npossibly escalate privileges.\n\n\nThe oldstable distribution (lenny) is not affected by this problem.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.8.3-5+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.8.8-3.\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libvirt",
+				"purl": "pkg:deb/debian/libvirt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.3-5+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.3-5",
+				"0.8.3-5+squeeze0",
+				"0.8.3-5+squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2194-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2194"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-601-1",
+	"modified": "2023-10-16T00:23:39.794227Z",
+	"published": "2004-11-29T00:00:00Z",
+	"related": [
+		"CVE-2004-0941",
+		"CVE-2004-0990"
+	],
+	"summary": "libgd1 - integer overflow",
+	"details": "\nMore potential integer overflows have been found in the GD graphics\nlibrary which weren't covered by our security advisory \n[DSA 589](dsa-589). They\ncould be exploited by a specially crafted graphic and could lead to\nthe execution of arbitrary code on the victim's machine.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.8.4-17.woody4.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your libgd1 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "libgd",
+				"purl": "pkg:deb/debian/libgd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.4-17.woody4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.8.4-17.woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-601-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-601"
+		}
+	]
+}

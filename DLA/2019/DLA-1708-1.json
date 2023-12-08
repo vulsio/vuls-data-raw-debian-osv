@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1708-1",
+	"modified": "2023-06-28T06:24:57.286650Z",
+	"published": "2019-03-11T00:00:00Z",
+	"related": [
+		"CVE-2016-10742"
+	],
+	"summary": "zabbix - security update",
+	"details": "\nSeveral security vulnerabilities were discovered in Zabbix, a\nserver/client network monitoring solution.\n\n\n* [CVE-2016-10742](https://security-tracker.debian.org/tracker/CVE-2016-10742)\nZabbix allowed remote attackers to redirect to external links by\n misusing the request parameter.\n* [CVE-2017-2826](https://security-tracker.debian.org/tracker/CVE-2017-2826)\nAn information disclosure vulnerability exists in the iConfig proxy\n request of Zabbix server. A specially crafted iConfig proxy request\n can cause the Zabbix server to send the configuration information of\n any Zabbix proxy, resulting in information disclosure. An attacker\n can make requests from an active Zabbix proxy to trigger this\n vulnerability.\n\n\nThis update also includes several other bug fixes and improvements. For\nmore information please refer to the upstream changelog file.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:2.2.23+dfsg-0+deb8u1.\n\n\nWe recommend that you upgrade your zabbix packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "zabbix",
+				"purl": "pkg:deb/debian/zabbix?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.2.23+dfsg-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.2.7+dfsg-2",
+				"1:2.2.7+dfsg-2+deb8u1",
+				"1:2.2.7+dfsg-2+deb8u2",
+				"1:2.2.7+dfsg-2+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1708-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1708"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1610-1",
+	"modified": "2023-10-16T00:10:31.813761Z",
+	"published": "2008-07-15T00:00:00Z",
+	"related": [
+		"CVE-2008-2927"
+	],
+	"summary": "gaim - execution of arbitrary code",
+	"details": "\nIt was discovered that gaim, an multi-protocol instant messaging client,\nwas vulnerable to several integer overflows in its MSN protocol handlers.\nThese could allow a remote attacker to execute arbitrary code.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1:2.0.0+beta5-10etch1.\n\n\nFor the unstable distribution (sid), this package is not present.\n\n\nWe recommend that you upgrade your gaim package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "gaim",
+				"purl": "pkg:deb/debian/gaim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.0.0+beta5-10etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.0.0+beta5-10"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1610-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1610"
+		}
+	]
+}

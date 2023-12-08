@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4254-1",
+	"modified": "2023-10-16T00:13:41.276029Z",
+	"published": "2018-07-24T00:00:00Z",
+	"related": [
+		"CVE-2018-10995",
+		"CVE-2018-7033"
+	],
+	"summary": "slurm-llnl - security update",
+	"details": "\nSeveral vulnerabilities were discovered in the Simple Linux Utility for\nResource Management (SLURM), a cluster resource management and job\nscheduling system. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2018-7033](https://security-tracker.debian.org/tracker/CVE-2018-7033)\nIncomplete sanitization of user-provided text strings could lead to\n SQL injection attacks against slurmdbd.\n* [CVE-2018-10995](https://security-tracker.debian.org/tracker/CVE-2018-10995)\nInsecure handling of user\\_name and gid fields leading to improper\n authentication handling.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 16.05.9-1+deb9u2.\n\n\nWe recommend that you upgrade your slurm-llnl packages.\n\n\nFor the detailed security status of slurm-llnl please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/slurm-llnl>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "slurm-llnl",
+				"purl": "pkg:deb/debian/slurm-llnl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "16.05.9-1+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"16.05.9-1",
+				"16.05.9-1+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4254-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4254"
+		}
+	]
+}

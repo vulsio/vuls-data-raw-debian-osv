@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3624-1",
+	"modified": "2023-10-16T00:12:10.811530Z",
+	"published": "2016-07-21T00:00:00Z",
+	"related": [
+		"CVE-2016-3477",
+		"CVE-2016-3521",
+		"CVE-2016-3615",
+		"CVE-2016-5440"
+	],
+	"summary": "mysql-5.5 - security update",
+	"details": "\nSeveral issues have been discovered in the MySQL database server. The\nvulnerabilities are addressed by upgrading MySQL to the new upstream\nversion 5.5.50. Please see the MySQL 5.5 Release Notes and Oracle's\nCritical Patch Update advisory for further details:\n\n\n* [\\\nhttps://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-50.html](https://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-50.html)\n* [\\\nhttp://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html](http://www.oracle.com/technetwork/security-advisory/cpujul2016-2881720.html)\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 5.5.50-0+deb8u1.\n\n\nWe recommend that you upgrade your mysql-5.5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "mysql-5.5",
+				"purl": "pkg:deb/debian/mysql-5.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.5.50-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.5.42-1",
+				"5.5.43-0+deb8u1",
+				"5.5.44-0+deb8u1",
+				"5.5.46-0+deb8u1",
+				"5.5.47-0+deb8u1",
+				"5.5.49-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3624-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3624"
+		}
+	]
+}

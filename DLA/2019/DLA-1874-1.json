@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1874-1",
+	"modified": "2023-06-28T06:21:02.282873Z",
+	"published": "2019-08-08T00:00:00Z",
+	"related": [
+		"CVE-2019-10208"
+	],
+	"summary": "postgresql-9.4 - security update",
+	"details": "\n\\* [CVE-2019-10208](https://security-tracker.debian.org/tracker/CVE-2019-10208): `TYPE` in `pg\\_temp` executes arbitrary SQL during\n`SECURITY DEFINER` execution\n\n\nVersions Affected: 9.4 - 11\n\n\nGiven a suitable `SECURITY DEFINER` function, an attacker can execute\narbitrary SQL under the identity of the function owner. An attack\nrequires `EXECUTE` permission on the function, which must itself contain\na function call having inexact argument type match. For example,\n`length('foo'::varchar)` and `length('foo')` are inexact, while\n`length('foo'::text)` is exact. As part of exploiting this\nvulnerability, the attacker uses `CREATE DOMAIN` to create a type in a\n`pg\\_temp` schema. The attack pattern and fix are similar to that for\n[CVE-2007-2138](https://security-tracker.debian.org/tracker/CVE-2007-2138).\n\n\nWriting `SECURITY DEFINER` functions continues to require following the\nconsiderations noted in the documentation:\n\n\nhttps://www.postgresql.org/docs/devel/sql-createfunction.html#SQL-CREATEFUNCTION-SECURITY\n\n\nThe PostgreSQL project thanks Tom Lane for reporting this problem.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n9.4.24-0+deb8u1.\n\n\nWe recommend that you upgrade your postgresql-9.4 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "postgresql-9.4",
+				"purl": "pkg:deb/debian/postgresql-9.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.4.24-0+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.4.1-1",
+				"9.4.10-0+deb8u1",
+				"9.4.11-0+deb8u1",
+				"9.4.11-0+deb8u1~bpo7+1",
+				"9.4.11-0+deb8u2",
+				"9.4.12-0+deb8u1",
+				"9.4.12-0+deb8u1~bpo7+1",
+				"9.4.13-0+deb8u1",
+				"9.4.14-0+deb8u1",
+				"9.4.15-0+deb8u1",
+				"9.4.16-0+deb8u1",
+				"9.4.17-0+deb8u1",
+				"9.4.18-0+deb8u1",
+				"9.4.19-0+deb8u1",
+				"9.4.2-0+deb8u1",
+				"9.4.2-1",
+				"9.4.20-0+deb8u1",
+				"9.4.21-0+deb8u1",
+				"9.4.22-0+deb8u1",
+				"9.4.3-0+deb8u1",
+				"9.4.3-1",
+				"9.4.4-0+deb8u1",
+				"9.4.4-1",
+				"9.4.4-2",
+				"9.4.5-0+deb8u1",
+				"9.4.5-0+deb8u1~bpo70+1",
+				"9.4.5-1",
+				"9.4.5-2",
+				"9.4.6-0+deb8u1",
+				"9.4.6-0+deb8u1~bpo70+1",
+				"9.4.7-0+deb8u1",
+				"9.4.7-0+deb8u1~bpo70+1",
+				"9.4.7-0+deb8u1~bpo70+2",
+				"9.4.8-0+deb8u1",
+				"9.4.9-0+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1874-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1874"
+		}
+	]
+}

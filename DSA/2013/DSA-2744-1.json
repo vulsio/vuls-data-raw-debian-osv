@@ -1,0 +1,83 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2744-1",
+	"modified": "2023-10-16T00:11:29.092060Z",
+	"published": "2013-08-27T00:00:00Z",
+	"related": [
+		"CVE-2013-4231",
+		"CVE-2013-4232",
+		"CVE-2013-4244"
+	],
+	"summary": "tiff - several",
+	"details": "\nPedro Ribeiro and Huzaifa S. Sidhpurwala discovered multiple \nvulnerabilities in various tools shipped by the tiff library. Processing \na malformed file may lead to denial of service or the execution of \narbitrary code.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 3.9.4-5+squeeze10.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.0.2-6+deb7u2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.0.3-3.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.9.4-5+squeeze10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.9.4-5",
+				"3.9.4-5+squeeze1",
+				"3.9.4-5+squeeze2",
+				"3.9.4-5+squeeze3",
+				"3.9.4-5+squeeze4",
+				"3.9.4-5+squeeze5",
+				"3.9.4-5+squeeze6",
+				"3.9.4-5+squeeze7",
+				"3.9.4-5+squeeze8",
+				"3.9.4-5+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2744-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.2-6+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.2-6",
+				"4.0.2-6+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2744-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2744"
+		}
+	]
+}

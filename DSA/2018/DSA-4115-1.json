@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4115-1",
+	"modified": "2023-10-16T00:12:41.411879Z",
+	"published": "2018-02-15T00:00:00Z",
+	"related": [
+		"CVE-2018-5379",
+		"CVE-2018-5380",
+		"CVE-2018-5381"
+	],
+	"summary": "quagga - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in Quagga, a routing\ndaemon. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues:\n\n\n* [CVE-2018-5378](https://security-tracker.debian.org/tracker/CVE-2018-5378)\nIt was discovered that the Quagga BGP daemon, bgpd, does not\n properly bounds check data sent with a NOTIFY to a peer, if an\n attribute length is invalid. A configured BGP peer can take\n advantage of this bug to read memory from the bgpd process or cause\n a denial of service (daemon crash).\n\n\nhttps://www.quagga.net/security/Quagga-2018-0543.txt\n* [CVE-2018-5379](https://security-tracker.debian.org/tracker/CVE-2018-5379)\nIt was discovered that the Quagga BGP daemon, bgpd, can double-free\n memory when processing certain forms of UPDATE message, containing\n cluster-list and/or unknown attributes, resulting in a denial of\n service (bgpd daemon crash).\n\n\nhttps://www.quagga.net/security/Quagga-2018-1114.txt\n* [CVE-2018-5380](https://security-tracker.debian.org/tracker/CVE-2018-5380)\nIt was discovered that the Quagga BGP daemon, bgpd, does not\n properly handle internal BGP code-to-string conversion tables.\n\n\nhttps://www.quagga.net/security/Quagga-2018-1550.txt\n* [CVE-2018-5381](https://security-tracker.debian.org/tracker/CVE-2018-5381)\nIt was discovered that the Quagga BGP daemon, bgpd, can enter an\n infinite loop if sent an invalid OPEN message by a configured peer.\n A configured peer can take advantage of this flaw to cause a denial\n of service (bgpd daemon not responding to any other events; BGP\n sessions will drop and not be reestablished; unresponsive CLI\n interface).\n\n\nhttps://www.quagga.net/security/Quagga-2018-1975.txt\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 0.99.23.1-1+deb8u5.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.1.1-3+deb9u2.\n\n\nWe recommend that you upgrade your quagga packages.\n\n\nFor the detailed security status of quagga please refer to its security\ntracker page at: [\\\nhttps://security-tracker.debian.org/tracker/quagga](https://security-tracker.debian.org/tracker/quagga)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "quagga",
+				"purl": "pkg:deb/debian/quagga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.99.23.1-1+deb8u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.99.23.1-1",
+				"0.99.23.1-1+deb8u1",
+				"0.99.23.1-1+deb8u2",
+				"0.99.23.1-1+deb8u3",
+				"0.99.23.1-1+deb8u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4115-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "quagga",
+				"purl": "pkg:deb/debian/quagga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.1-3+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.1-3",
+				"1.1.1-3+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4115-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4115"
+		}
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5560-1",
+	"modified": "2023-11-21T01:15:33.318425Z",
+	"published": "2023-11-20T00:00:00Z",
+	"related": [
+		"CVE-2023-41913"
+	],
+	"summary": "strongswan - security update",
+	"details": "\nFlorian Picca reported a bug in the charon-tkm daemon in strongSwan an\nIKE/IPsec suite.\n\n\nThe TKM-backed version of the charon IKE daemon (charon-tkm) doesn't\ncheck the length of received Diffie-Hellman public values before copying\nthem to a fixed-size buffer on the stack, causing a buffer overflow that\ncould potentially be exploited for remote code execution by sending a\nspecially crafted and unauthenticated IKE\\_SA\\_INIT message.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 5.9.1-1+deb11u4.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 5.9.8-5+deb12u1.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\nFor the detailed security status of strongswan please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/strongswan](https://security-tracker.debian.org/tracker/strongswan)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "strongswan",
+				"purl": "pkg:deb/debian/strongswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.9.1-1+deb11u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.9.1-1",
+				"5.9.1-1+deb11u1",
+				"5.9.1-1+deb11u2",
+				"5.9.1-1+deb11u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5560-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "strongswan",
+				"purl": "pkg:deb/debian/strongswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.9.8-5+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.9.8-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5560-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5560"
+		}
+	]
+}

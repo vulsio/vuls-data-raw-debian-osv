@@ -1,0 +1,90 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-360-1",
+	"modified": "2023-06-28T06:26:58.880711Z",
+	"published": "2015-12-08T00:00:00Z",
+	"related": [
+		"CVE-2013-7446",
+		"CVE-2015-7799",
+		"CVE-2015-7833",
+		"CVE-2015-7990",
+		"CVE-2015-8324"
+	],
+	"summary": "linux-2.6 - security update",
+	"details": "\nThis update fixes the CVEs described below.\n\n\n* [CVE-2013-7446](https://security-tracker.debian.org/tracker/CVE-2013-7446)\nDmitry Vyukov discovered that a particular sequence of valid\n operations on local (AF\\_UNIX) sockets can result in a\n use-after-free. This may be used to cause a denial of service\n (crash) or possibly for privilege escalation.\n* [CVE-2015-7799](https://security-tracker.debian.org/tracker/CVE-2015-7799)\né­ć°¸ĺ discovered that a user granted access to /dev/ppp can cause\n a denial of service (crash) by passing invalid parameters to the\n PPPIOCSMAXCID ioctl. This also applies to ISDN PPP device nodes.\n* [CVE-2015-7833](https://security-tracker.debian.org/tracker/CVE-2015-7833)\nSergej Schumilo, Hendrik Schwartke and Ralf Spenneberg discovered a\n flaw in the processing of certain USB device descriptors in the\n usbvision driver. An attacker with physical access to the system can\n use this flaw to crash the system.\n* [CVE-2015-7990](https://security-tracker.debian.org/tracker/CVE-2015-7990)\nIt was discovered that the fix for [CVE-2015-6937](https://security-tracker.debian.org/tracker/CVE-2015-6937) was incomplete. A\n race condition when sending a message on unbound socket can still\n cause a NULL pointer dereference. A remote attacker might be able to\n cause a denial of service (crash) by sending a crafted packet.\n* [CVE-2015-8324](https://security-tracker.debian.org/tracker/CVE-2015-8324)\nValintinr reported that an attempt to mount a corrupted ext4\n filesystem may result in a kernel panic. A user permitted to\n mount filesystems could use this flaw to crash the system.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 2.6.32-48squeeze17. We recommend that you upgrade your\nlinux-2.6 packages.\n\n\nFor the oldstable (wheezy) and stable (jessie) distributions,\n[CVE-2015-7833](https://security-tracker.debian.org/tracker/CVE-2015-7833), [CVE-2015-7990](https://security-tracker.debian.org/tracker/CVE-2015-7990) and [CVE-2015-8324](https://security-tracker.debian.org/tracker/CVE-2015-8324) have been fixed and the\nother issues will be fixed soon.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.32-48squeeze17"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.32-30",
+				"2.6.32-30+m68k.5",
+				"2.6.32-31",
+				"2.6.32-31~bpo50+1",
+				"2.6.32-32",
+				"2.6.32-33",
+				"2.6.32-34",
+				"2.6.32-34squeeze1",
+				"2.6.32-35",
+				"2.6.32-35squeeze1",
+				"2.6.32-35squeeze2",
+				"2.6.32-35~bpo50+1",
+				"2.6.32-36",
+				"2.6.32-37",
+				"2.6.32-38",
+				"2.6.32-39",
+				"2.6.32-39squeeze1",
+				"2.6.32-40",
+				"2.6.32-41",
+				"2.6.32-41squeeze2",
+				"2.6.32-42",
+				"2.6.32-43",
+				"2.6.32-44",
+				"2.6.32-45",
+				"2.6.32-46",
+				"2.6.32-46squeeze1",
+				"2.6.32-47",
+				"2.6.32-48",
+				"2.6.32-48squeeze1",
+				"2.6.32-48squeeze10",
+				"2.6.32-48squeeze11",
+				"2.6.32-48squeeze12",
+				"2.6.32-48squeeze13",
+				"2.6.32-48squeeze14",
+				"2.6.32-48squeeze16",
+				"2.6.32-48squeeze3",
+				"2.6.32-48squeeze4",
+				"2.6.32-48squeeze5",
+				"2.6.32-48squeeze6",
+				"2.6.32-48squeeze7",
+				"2.6.32-48squeeze8",
+				"2.6.32-48squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-360-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-360"
+		}
+	]
+}

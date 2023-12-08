@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1447-1",
+	"modified": "2023-10-16T00:10:26.183251Z",
+	"published": "2008-01-03T00:00:00Z",
+	"related": [
+		"CVE-2007-3382",
+		"CVE-2007-3385",
+		"CVE-2007-3386",
+		"CVE-2007-5342",
+		"CVE-2007-5461"
+	],
+	"summary": "tomcat5.5 several vulnerabilities",
+	"details": "\n\nSeveral remote vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n\n* [CVE-2007-3382](https://security-tracker.debian.org/tracker/CVE-2007-3382)\n\n It was discovered that single quotes (') in cookies were treated\n as a delimiter, which could lead to an information leak.\n* [CVE-2007-3385](https://security-tracker.debian.org/tracker/CVE-2007-3385)\n\n It was discovered that the character sequence \\\" in cookies was\n handled incorrectly, which could lead to an information leak.\n* [CVE-2007-3386](https://security-tracker.debian.org/tracker/CVE-2007-3386)\n\n It was discovered that the host manager servlet performed\n insufficient input validation, which could lead to a cross-site\n scripting attack.\n* [CVE-2007-5342](https://security-tracker.debian.org/tracker/CVE-2007-5342)\n\n It was discovered that the JULI logging component did not restrict\n its target path, resulting in potential denial of service through\n file overwrites.\n* [CVE-2007-5461](https://security-tracker.debian.org/tracker/CVE-2007-5461)\n\n It was discovered that the WebDAV servlet is vulnerable to absolute\n path traversal.\n\n\n\nThe old stable distribution (sarge) doesn't contain tomcat5.5.\n\n\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 5.5.20-2etch1.\n\n\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\n\n\nWe recommend that you upgrade your tomcat5.5 packages.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "tomcat5.5",
+				"purl": "pkg:deb/debian/tomcat5.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.5.20-2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.5.20-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1447-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1447"
+		}
+	]
+}

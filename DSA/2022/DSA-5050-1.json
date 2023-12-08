@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5050-1",
+	"modified": "2023-10-16T00:15:24.243175Z",
+	"published": "2022-01-20T00:00:00Z",
+	"related": [
+		"CVE-2021-28711",
+		"CVE-2021-28712",
+		"CVE-2021-28713",
+		"CVE-2021-28714",
+		"CVE-2021-28715",
+		"CVE-2021-39685",
+		"CVE-2021-4155",
+		"CVE-2021-45095",
+		"CVE-2021-45469",
+		"CVE-2021-45480",
+		"CVE-2022-0185",
+		"CVE-2022-23222"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2021-4155](https://security-tracker.debian.org/tracker/CVE-2021-4155)\nKirill Tkhai discovered a data leak in the way the XFS\\_IOC\\_ALLOCSP\n IOCTL in the XFS filesystem allowed for a size increase of files\n with unaligned size. A local attacker can take advantage of this\n flaw to leak data on the XFS filesystem.\n* [CVE-2021-28711](https://security-tracker.debian.org/tracker/CVE-2021-28711), [CVE-2021-28712](https://security-tracker.debian.org/tracker/CVE-2021-28712), [CVE-2021-28713](https://security-tracker.debian.org/tracker/CVE-2021-28713) (XSA-391)\n\n Juergen Gross reported that malicious PV backends can cause a denial\n of service to guests being serviced by those backends via high\n frequency events, even if those backends are running in a less\n privileged environment.\n* [CVE-2021-28714](https://security-tracker.debian.org/tracker/CVE-2021-28714), [CVE-2021-28715](https://security-tracker.debian.org/tracker/CVE-2021-28715) (XSA-392)\n\n Juergen Gross discovered that Xen guests can force the Linux\n netback driver to hog large amounts of kernel memory, resulting in\n denial of service.\n* [CVE-2021-39685](https://security-tracker.debian.org/tracker/CVE-2021-39685)\nSzymon Heidrich discovered a buffer overflow vulnerability in the\n USB gadget subsystem, resulting in information disclosure, denial of\n service or privilege escalation.\n* [CVE-2021-45095](https://security-tracker.debian.org/tracker/CVE-2021-45095)\nIt was discovered that the Phone Network protocol (PhoNet) driver\n has a reference count leak in the pep\\_sock\\_accept() function.\n* [CVE-2021-45469](https://security-tracker.debian.org/tracker/CVE-2021-45469)\nWenqing Liu reported an out-of-bounds memory access in the f2fs\n implementation if an inode has an invalid last xattr entry. An\n attacker able to mount a specially crafted image can take advantage\n of this flaw for denial of service.\n* [CVE-2021-45480](https://security-tracker.debian.org/tracker/CVE-2021-45480)\nA memory leak flaw was discovered in the \\_\\_rds\\_conn\\_create()\n function in the RDS (Reliable Datagram Sockets) protocol subsystem.\n* [CVE-2022-0185](https://security-tracker.debian.org/tracker/CVE-2022-0185)\nWilliam Liu, Jamie Hill-Daniel, Isaac Badipe, Alec Petridis, Hrvoje\n Misetic and Philip Papurt discovered a heap-based buffer overflow\n flaw in the legacy\\_parse\\_param function in the Filesystem Context\n functionality, allowing an local user (with CAP\\_SYS\\_ADMIN capability\n in the current namespace) to escalate privileges.\n* [CVE-2022-23222](https://security-tracker.debian.org/tracker/CVE-2022-23222)\ntr3e discovered that the BPF verifier does not properly restrict\n several \\*\\_OR\\_NULL pointer types allowing these types to do pointer\n arithmetic. A local user with the ability to call bpf(), can take\n advantage of this flaw to excalate privileges. Unprivileged calls to\n bpf() are disabled by default in Debian, mitigating this flaw.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.92-1. This version includes changes which were aimed to\nland in the next Debian bullseye point release.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.92-1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.46-4",
+				"5.10.46-5",
+				"5.10.70-1",
+				"5.10.70-1~bpo10+1",
+				"5.10.84-1",
+				"5.10.92-1~bpo10+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5050-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5050"
+		}
+	]
+}

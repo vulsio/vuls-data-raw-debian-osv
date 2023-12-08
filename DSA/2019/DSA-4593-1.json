@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4593-1",
+	"modified": "2023-10-16T00:19:01.681487Z",
+	"published": "2019-12-27T00:00:00Z",
+	"related": [
+		"CVE-2019-12211",
+		"CVE-2019-12213"
+	],
+	"summary": "freeimage - security update",
+	"details": "\nIt was found that freeimage, a graphics library, was affected by the\nfollowing two security issues:\n\n\n* [CVE-2019-12211](https://security-tracker.debian.org/tracker/CVE-2019-12211)\nHeap buffer overflow caused by invalid memcpy in PluginTIFF. This\n flaw might be leveraged by remote attackers to trigger denial of\n service or any other unspecified impact via crafted TIFF data.\n* [CVE-2019-12213](https://security-tracker.debian.org/tracker/CVE-2019-12213)\nStack exhaustion caused by unwanted recursion in PluginTIFF. This\n flaw might be leveraged by remote attackers to trigger denial of\n service via crafted TIFF data.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 3.17.0+ds1-5+deb9u1.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 3.18.0+ds2-1+deb10u1.\n\n\nWe recommend that you upgrade your freeimage packages.\n\n\nFor the detailed security status of freeimage please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/freeimage](https://security-tracker.debian.org/tracker/freeimage)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "freeimage",
+				"purl": "pkg:deb/debian/freeimage?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.17.0+ds1-5+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.17.0+ds1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4593-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "freeimage",
+				"purl": "pkg:deb/debian/freeimage?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.18.0+ds2-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.18.0+ds2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4593-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4593"
+		}
+	]
+}

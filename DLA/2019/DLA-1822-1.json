@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1822-1",
+	"modified": "2023-06-28T06:29:58.266562Z",
+	"published": "2019-06-16T00:00:00Z",
+	"related": [
+		"CVE-2019-9858"
+	],
+	"summary": "php-horde-form - security update",
+	"details": "\nThe Horde Application Framework contained a remote code execution\nvulnerability. A remote attacker could use this flaw to use image\nuploads in forms to install and execute a file in an arbitrary\nwritable location on the server.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.0.8-2+deb8u1.\n\n\nWe recommend that you upgrade your php-horde-form packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "php-horde-form",
+				"purl": "pkg:deb/debian/php-horde-form?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.8-2+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.8-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1822-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1822"
+		}
+	]
+}

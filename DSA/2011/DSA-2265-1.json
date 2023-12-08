@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2265-1",
+	"modified": "2023-10-16T00:11:04.379438Z",
+	"published": "2011-06-20T00:00:00Z",
+	"related": [
+		"CVE-2011-1487"
+	],
+	"summary": "perl - missing taint check",
+	"details": "\nMark Martinec discovered that Perl incorrectly clears the tainted flag\non values returned by case conversion functions such as lc. This\nmay expose preexisting vulnerabilities in applications which use these\nfunctions while processing untrusted input. No such applications are\nknown at this stage. Such applications will cease to work when this\nsecurity update is applied because taint checks are designed to\nprevent such unsafe use of untrusted input data.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 5.10.0-19lenny4.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 5.10.1-17squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 5.10.1-20.\n\n\nWe recommend that you upgrade your perl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "perl",
+				"purl": "pkg:deb/debian/perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.0-19lenny4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.0-19",
+				"5.10.0-19lenny2",
+				"5.10.0-19lenny3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2265-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "perl",
+				"purl": "pkg:deb/debian/perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.1-17squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.1-17"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2265-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2265"
+		}
+	]
+}

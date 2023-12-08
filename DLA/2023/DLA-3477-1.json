@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3477-1",
+	"modified": "2023-06-30T21:17:51.905837Z",
+	"published": "2023-06-30T00:00:00Z",
+	"related": [
+		"CVE-2015-20107",
+		"CVE-2020-10735",
+		"CVE-2021-3426",
+		"CVE-2021-3733",
+		"CVE-2021-3737",
+		"CVE-2021-4189",
+		"CVE-2022-45061"
+	],
+	"summary": "python3.7 - security update",
+	"details": "\nSeveral vulnerabilities were fixed in the Python3 interpreter.\n\n\n* [CVE-2015-20107](https://security-tracker.debian.org/tracker/CVE-2015-20107)\nThe mailcap module did not add escape characters into commands\n discovered in the system mailcap file.\n* [CVE-2020-10735](https://security-tracker.debian.org/tracker/CVE-2020-10735)\nPrevent DoS with very large int.\n* [CVE-2021-3426](https://security-tracker.debian.org/tracker/CVE-2021-3426)\nRemove the pydoc getfile feature which could be abused to read\n arbitrary files on the disk.\n* [CVE-2021-3733](https://security-tracker.debian.org/tracker/CVE-2021-3733)\nRegular Expression Denial of Service in urllib's AbstractBasicAuthHandler class.\n* [CVE-2021-3737](https://security-tracker.debian.org/tracker/CVE-2021-3737)\nInfinite loop in the HTTP client code.\n* [CVE-2021-4189](https://security-tracker.debian.org/tracker/CVE-2021-4189)\nMake ftplib not trust the PASV response.\n* [CVE-2022-45061](https://security-tracker.debian.org/tracker/CVE-2022-45061)\nQuadratic time in the IDNA decoder.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.7.3-2+deb10u5.\n\n\nWe recommend that you upgrade your python3.7 packages.\n\n\nFor the detailed security status of python3.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python3.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python3.7",
+				"purl": "pkg:deb/debian/python3.7?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.7.3-2+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.7.3-2",
+				"3.7.3-2+deb10u1",
+				"3.7.3-2+deb10u2",
+				"3.7.3-2+deb10u3",
+				"3.7.3-2+deb10u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3477-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3477"
+		}
+	]
+}

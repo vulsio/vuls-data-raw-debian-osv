@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4634-1",
+	"modified": "2023-10-16T00:19:35.063508Z",
+	"published": "2020-02-26T00:00:00Z",
+	"related": [
+		"CVE-2020-8794"
+	],
+	"summary": "opensmtpd - security update",
+	"details": "\nQualys discovered that the OpenSMTPD SMTP server performed insufficient\nvalidation of SMTP commands, which could result in local privilege\nescalation or the execution of arbitrary code.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 6.0.2p1-2+deb9u3.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 6.0.3p1-5+deb10u4.\n\n\nWe recommend that you upgrade your opensmtpd packages.\n\n\nFor the detailed security status of opensmtpd please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/opensmtpd](https://security-tracker.debian.org/tracker/opensmtpd)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "opensmtpd",
+				"purl": "pkg:deb/debian/opensmtpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.2p1-2+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.2p1-2",
+				"6.0.2p1-2+deb9u1",
+				"6.0.2p1-2+deb9u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4634-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "opensmtpd",
+				"purl": "pkg:deb/debian/opensmtpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.3p1-5+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.3p1-5",
+				"6.0.3p1-5+deb10u1",
+				"6.0.3p1-5+deb10u2",
+				"6.0.3p1-5+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4634-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4634"
+		}
+	]
+}

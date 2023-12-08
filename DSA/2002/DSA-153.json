@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-153",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-08-14T00:00:00Z",
+	"related": [
+		"CVE-2002-1110",
+		"CVE-2002-1111",
+		"CVE-2002-1112",
+		"CVE-2002-1113",
+		"CVE-2002-1114"
+	],
+	"summary": "mantis - cross site code execution and privilege escalation",
+	"details": "\nJoao Gouveia discovered an uninitialized variable which was insecurely\nused with file inclusions in the mantis package, a php based bug\ntracking system. The Debian Security Team found even more similar\nproblems. When these occasions are exploited, a remote user is able\nto execute arbitrary code under the webserver user id on the web\nserver hosting the mantis system.\n\n\nJeroen Latour discovered that Mantis did not check all user input,\nespecially if they do not come directly from form fields. This opens\nup a wide variety of SQL poisoning vulnerabilities on systems without\nmagic\\_quotes\\_gpc enabled. Most of these vulnerabilities are only\nexploitable in a limited manner, since it is no longer possible to\nexecute multiple queries using one call to mysql\\_query(). There is\none query which can be tricked into changing an account's access\nlevel.\n\n\nJeroen Latour also reported that it is possible to instruct Mantis to\nshow reporters only the bugs that they reported, by setting the\nlimit\\_reporters option to ON. However, when formatting the output\nsuitable for printing, the program did not check the limit\\_reporters\noption and thus allowed reporters to see the summaries of bugs they\ndid not report.\n\n\nJeroen Latour discovered that the page responsible for displaying a\nlist of bugs in a particular project, did not check whether the user\nactually has access to the project, which is transmitted by a cookie\nvariable. It accidentally trusted the fact that only projects\naccessible to the user were listed in the drop-down menu. This\nprovides a malicious user with an opportunity to display the bugs of a\nprivate project selected.\n\n\nThese problems have been fixed in version 0.17.1-2.2 for the current\nstable distribution (woody) and in version 0.17.4a-2 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected, since it doesn't contain the mantis package.\n\n\nAdditional information:\n\n\n* [Mantis Advisory/2002-01](http://mantisbt.sourceforge.net/advisories/2002/2002-01.txt)* [Mantis Advisory/2002-02](http://mantisbt.sourceforge.net/advisories/2002/2002-02.txt)* [Mantis Advisory/2002-03](http://mantisbt.sourceforge.net/advisories/2002/2002-03.txt)* [Mantis Advisory/2002-04](http://mantisbt.sourceforge.net/advisories/2002/2002-04.txt)* [Mantis Advisory/2002-05](http://mantisbt.sourceforge.net/advisories/2002/2002-05.txt)\n\n\nWe recommend that you upgrade your mantis packages immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mantis",
+				"purl": "pkg:deb/debian/mantis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.17.1-2.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-153.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-153"
+		}
+	]
+}

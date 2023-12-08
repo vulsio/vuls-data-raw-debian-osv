@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2413-1",
+	"modified": "2023-10-16T00:05:53.651890Z",
+	"published": "2012-02-20T00:00:00Z",
+	"related": [
+		"CVE-2011-1777",
+		"CVE-2011-1778"
+	],
+	"summary": "libarchive - buffer overflows",
+	"details": "\nTwo buffer overflows have been discovered in libarchive, a library\nproviding a flexible interface for reading and writing archives in\nvarious formats. The possible buffer overflows while reading ISO 9660\nor tar streams allow remote attackers to execute arbitrary\ncode depending on the application that makes use of this functionality.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.8.4-1+squeeze1.\n\n\nFor the testing (wheezy) and unstable (sid) distributions,\nthis problem has been fixed in version 2.8.5-5.\n\n\nWe recommend that you upgrade your libarchive packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libarchive",
+				"purl": "pkg:deb/debian/libarchive?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.4-1+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.8.4-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2413-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2413"
+		}
+	]
+}

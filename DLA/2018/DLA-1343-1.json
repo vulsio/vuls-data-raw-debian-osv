@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1343-1",
+	"modified": "2023-06-28T06:20:34.334351Z",
+	"published": "2018-04-09T00:00:00Z",
+	"related": [
+		"CVE-2018-6358",
+		"CVE-2018-7867",
+		"CVE-2018-7868",
+		"CVE-2018-7870",
+		"CVE-2018-7871",
+		"CVE-2018-7872",
+		"CVE-2018-7875",
+		"CVE-2018-9165"
+	],
+	"summary": "ming - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in Ming:\n\n\n* [CVE-2018-6358](https://security-tracker.debian.org/tracker/CVE-2018-6358)\nHeap-based buffer overflow vulnerability in the printDefineFont2 function\n (util/listfdb.c). Remote attackers might leverage this vulnerability to\n cause a denial of service via a crafted swf file.\n* [CVE-2018-7867](https://security-tracker.debian.org/tracker/CVE-2018-7867)\nHeap-based buffer overflow vulnerability in the getString function\n (util/decompile.c) during a RegisterNumber sprintf. Remote attackers might\n leverage this vulnerability to cause a denial of service via a crafted swf\n file.\n* [CVE-2018-7868](https://security-tracker.debian.org/tracker/CVE-2018-7868)\nHeap-based buffer over-read vulnerability in the getName function\n (util/decompile.c) for CONSTANT8 data. Remote attackers might leverage this\n vulnerability to cause a denial of service via a crafted swf file.\n* [CVE-2018-7870](https://security-tracker.debian.org/tracker/CVE-2018-7870)\nInvalid memory address dereference in the getString function\n (util/decompile.c) for CONSTANT16 data. Remote attackers might leverage this\n vulnerability to cause a denial of service via a crafted swf file.\n* [CVE-2018-7871](https://security-tracker.debian.org/tracker/CVE-2018-7871)\nHeap-based buffer over-read vulnerability in the getName function\n (util/decompile.c) for CONSTANT16 data. Remote attackers might leverage this\n vulnerability to cause a denial of service via a crafted swf file.\n* [CVE-2018-7872](https://security-tracker.debian.org/tracker/CVE-2018-7872)\nInvalid memory address dereference in the getName function\n (util/decompile.c) for CONSTANT16 data. Remote attackers might leverage this\n vulnerability to cause a denial of service via a crafted swf file.\n* [CVE-2018-7875](https://security-tracker.debian.org/tracker/CVE-2018-7875)\nHeap-based buffer over-read vulnerability in the getName function\n (util/decompile.c) for CONSTANT8 data. Remote attackers might leverage this\n vulnerability to cause a denial of service via a crafted swf file.\n* [CVE-2018-9165](https://security-tracker.debian.org/tracker/CVE-2018-9165)\nThe pushdup function (util/decompile.c) performs shallow copy of String\n elements (instead of deep copy), allowing simultaneous change of multiple\n elements of the stack, which indirectly makes the library vulnerable to a\n NULL pointer dereference in getName (util/decompile.c). Remote attackers\n might leverage this vulnerability to cause dos via a crafted swf file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.4.4-1.1+deb7u8.\n\n\nWe recommend that you upgrade your ming packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ming",
+				"purl": "pkg:deb/debian/ming?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:0.4.4-1.1+deb7u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:0.4.4-1.1",
+				"1:0.4.4-1.1+deb7u1",
+				"1:0.4.4-1.1+deb7u2",
+				"1:0.4.4-1.1+deb7u3",
+				"1:0.4.4-1.1+deb7u4",
+				"1:0.4.4-1.1+deb7u5",
+				"1:0.4.4-1.1+deb7u6",
+				"1:0.4.4-1.1+deb7u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1343-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1343"
+		}
+	]
+}

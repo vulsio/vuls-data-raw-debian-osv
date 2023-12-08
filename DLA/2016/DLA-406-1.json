@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-406-1",
+	"modified": "2023-06-28T06:33:58.416550Z",
+	"published": "2016-01-30T00:00:00Z",
+	"related": [
+		"CVE-2016-2039",
+		"CVE-2016-2041"
+	],
+	"summary": "phpmyadmin - security update",
+	"details": "\nSeveral flaws were discovered in the CSRF authentication code of\nphpMyAdmin.\n\n\n* [CVE-2016-2039](https://security-tracker.debian.org/tracker/CVE-2016-2039)\nThe XSRF/CSRF token is generated with a weak algorithm using\n functions that do not return cryptographically secure values.\n* [CVE-2016-2041](https://security-tracker.debian.org/tracker/CVE-2016-2041)\nThe comparison of the XSRF/CSRF token parameter with the value saved\n in the session is vulnerable to timing attacks. Moreover, the\n comparison could be bypassed if the XSRF/CSRF token matches a\n particular pattern.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.3.7-11"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.3.7-10",
+				"4:3.3.7-3",
+				"4:3.3.7-5",
+				"4:3.3.7-6",
+				"4:3.3.7-7",
+				"4:3.3.7-8",
+				"4:3.3.7-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-406-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-406"
+		}
+	]
+}

@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1740-1",
+	"modified": "2023-06-28T06:20:56.023075Z",
+	"published": "2019-03-30T00:00:00Z",
+	"related": [
+		"CVE-2015-1872",
+		"CVE-2017-1000460",
+		"CVE-2017-14058",
+		"CVE-2018-1999012",
+		"CVE-2018-6392"
+	],
+	"summary": "libav - security update",
+	"details": "\nSeveral security issues have been corrected in multiple demuxers and\ndecoders of the libav multimedia library.\n\n\n* [CVE-2015-1872](https://security-tracker.debian.org/tracker/CVE-2015-1872)\nThe ff\\_mjpeg\\_decode\\_sof function in libavcodec/mjpegdec.c did not\n validate the number of components in a JPEG-LS Start Of Frame\n segment, which allowed remote attackers to cause a denial of service\n (out-of-bounds array access) or possibly have unspecified other\n impact via crafted Motion JPEG data.\n* [CVE-2017-14058](https://security-tracker.debian.org/tracker/CVE-2017-14058)\nThe read\\_data function in libavformat/hls.c did not restrict reload\n attempts for an insufficient list, which allowed remote attackers to\n cause a denial of service (infinite loop).\n* [CVE-2017-1000460](https://security-tracker.debian.org/tracker/CVE-2017-1000460)\nIn get\\_last\\_needed\\_nal() (libavformat/h264.c) the return value of\n init\\_get\\_bits was ignored and get\\_ue\\_golomb(&gb) was called on an\n uninitialized get\\_bits context, which caused a NULL deref exception.\n* [CVE-2018-6392](https://security-tracker.debian.org/tracker/CVE-2018-6392)\nThe filter\\_slice function in libavfilter/vf\\_transpose.c allowed\n remote attackers to cause a denial of service (out-of-array access)\n via a crafted MP4 file.\n* [CVE-2018-1999012](https://security-tracker.debian.org/tracker/CVE-2018-1999012)\nlibav contained a CWE-835: Infinite loop vulnerability in pva format\n demuxer that could result in a vulnerability that allowed attackers to\n consume excessive amount of resources like CPU and RAM. This attack\n appeared to be exploitable via specially crafted PVA file had to be\n provided as input.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n6:11.12-1~deb8u6.\n\n\nWe recommend that you upgrade your libav packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libav",
+				"purl": "pkg:deb/debian/libav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:11.12-1~deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:11.11-1~deb8u1",
+				"6:11.12-1~deb8u1",
+				"6:11.12-1~deb8u2",
+				"6:11.12-1~deb8u3",
+				"6:11.12-1~deb8u4",
+				"6:11.12-1~deb8u5",
+				"6:11.3-1",
+				"6:11.3-1+deb8u1",
+				"6:11.3-2",
+				"6:11.3-3",
+				"6:11.4-1",
+				"6:11.4-1~deb8u1",
+				"6:11.4-2",
+				"6:11.4-2+x32.1",
+				"6:11.6-1~deb8u1",
+				"6:11.7-1~deb8u1",
+				"6:11.8-1~deb8u1",
+				"6:11.9-1~deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1740-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1740"
+		}
+	]
+}

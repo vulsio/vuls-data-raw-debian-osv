@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1599-1",
+	"modified": "2023-10-16T00:05:33.061595Z",
+	"published": "2008-06-26T00:00:00Z",
+	"related": [
+		"CVE-2008-0595"
+	],
+	"summary": "dbus",
+	"details": "\nHavoc Pennington discovered that DBus, a simple interprocess messaging\nsystem, performs insufficient validation of security policies, which\nmight allow local privilege escalation.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 1.0.2-1+etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.20-1.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "dbus",
+				"purl": "pkg:deb/debian/dbus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2-1+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1599-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1599"
+		}
+	]
+}

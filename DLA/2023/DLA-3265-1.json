@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3265-1",
+	"modified": "2023-06-28T06:33:40.805818Z",
+	"published": "2023-01-11T00:00:00Z",
+	"related": [
+		"CVE-2017-11591",
+		"CVE-2017-14859",
+		"CVE-2017-14862",
+		"CVE-2017-14864",
+		"CVE-2017-17669",
+		"CVE-2017-18005",
+		"CVE-2018-17581",
+		"CVE-2018-19107",
+		"CVE-2018-19108",
+		"CVE-2018-19535",
+		"CVE-2018-20097",
+		"CVE-2018-8976",
+		"CVE-2019-13110",
+		"CVE-2019-13112",
+		"CVE-2019-13114",
+		"CVE-2019-13504",
+		"CVE-2019-14369",
+		"CVE-2019-14370",
+		"CVE-2019-17402",
+		"CVE-2020-18771",
+		"CVE-2021-29458",
+		"CVE-2021-32815",
+		"CVE-2021-34334",
+		"CVE-2021-37620",
+		"CVE-2021-37621",
+		"CVE-2021-37622"
+	],
+	"summary": "exiv2 - security update",
+	"details": "\nThis update fixes a number of memory access violations and other input\nvalidation failures that can be triggered by passing specially crafted files to\nexiv2.\n\n\n* [CVE-2017-11591](https://security-tracker.debian.org/tracker/CVE-2017-11591)\nThere is a Floating point exception in the `Exiv2::ValueType` function that\n will lead to a remote denial of service attack via crafted input.\n* [CVE-2017-14859](https://security-tracker.debian.org/tracker/CVE-2017-14859)\nAn Invalid memory address dereference was discovered in\n `Exiv2::StringValueBase::read` in `value.cpp`. The vulnerability causes a\n segmentation fault and application crash, which leads to denial of service.\n* [CVE-2017-14862](https://security-tracker.debian.org/tracker/CVE-2017-14862)\nAn Invalid memory address dereference was discovered in\n `Exiv2::DataValue::read` in `value.cpp`. The vulnerability causes a\n segmentation fault and application crash, which leads to denial of service.\n* [CVE-2017-14864](https://security-tracker.debian.org/tracker/CVE-2017-14864)\nAn Invalid memory address dereference was discovered in `Exiv2::getULong` in\n `types.cpp`. The vulnerability causes a segmentation fault and application\n crash, which leads to denial of service.\n* [CVE-2017-17669](https://security-tracker.debian.org/tracker/CVE-2017-17669)\nThere is a heap-based buffer over-read in the\n `Exiv2::Internal::PngChunk::keyTXTChunk` function of `pngchunk_int.cpp`. A\n crafted PNG file will lead to a remote denial of service attack.\n* [CVE-2017-18005](https://security-tracker.debian.org/tracker/CVE-2017-18005)\nExiv2 has a Null Pointer Dereference in the `Exiv2::DataValue::toLong`\n function in `value.cpp`, related to crafted metadata in a TIFF file.\n* [CVE-2018-8976](https://security-tracker.debian.org/tracker/CVE-2018-8976)\n`jpgimage.cpp` allows remote attackers to cause a denial of service\n (`image.cpp` `Exiv2::Internal::stringFormat` out-of-bounds read) via a crafted\n file.\n* [CVE-2018-17581](https://security-tracker.debian.org/tracker/CVE-2018-17581)\n`CiffDirectory::readDirectory()` at `crwimage_int.cpp` has excessive stack\n consumption due to a recursive function, leading to Denial of service.\n* [CVE-2018-19107](https://security-tracker.debian.org/tracker/CVE-2018-19107)\n`Exiv2::IptcParser::decode` in `iptc.cpp` (called from `psdimage.cpp` in the PSD\n image reader) may suffer from a denial of service (heap-based buffer\n over-read) caused by an integer overflow via a crafted PSD image file.\n* [CVE-2018-19108](https://security-tracker.debian.org/tracker/CVE-2018-19108)\n`Exiv2::PsdImage::readMetadata` in `psdimage.cpp` in the PSD image reader may\n suffer from a denial of service (infinite loop) caused by an integer\n overflow via a crafted PSD image file.\n* [CVE-2018-19535](https://security-tracker.debian.org/tracker/CVE-2018-19535)\n`PngChunk::readRawProfile` in `pngchunk_int.cpp` may cause a denial of service\n (application crash due to a heap-based buffer over-read) via a crafted PNG\n file.\n* [CVE-2018-20097](https://security-tracker.debian.org/tracker/CVE-2018-20097)\nThere is a SEGV in `Exiv2::Internal::TiffParserWorker::findPrimaryGroups` of\n `tiffimage_int.cpp`. A crafted input will lead to a remote denial of service\n attack.\n* [CVE-2019-13110](https://security-tracker.debian.org/tracker/CVE-2019-13110)\nA `CiffDirectory::readDirectory` integer overflow and out-of-bounds read\n allows an attacker to cause a denial of service (`SIGSEGV`) via a crafted CRW\n image file.\n* [CVE-2019-13112](https://security-tracker.debian.org/tracker/CVE-2019-13112)\nA `PngChunk::parseChunkContent` uncontrolled memory allocation allows an\n attacker to cause a denial of service (crash due to an `std::bad_alloc`\n exception) via a crafted PNG image file.\n* [CVE-2019-13114](https://security-tracker.debian.org/tracker/CVE-2019-13114)\n`http.c` allows a malicious http server to cause a denial of service (crash\n due to a `NULL` pointer dereference) by returning a crafted response that\n lacks a space character.\n* [CVE-2019-13504](https://security-tracker.debian.org/tracker/CVE-2019-13504)\nThere is an out-of-bounds read in `Exiv2::MrwImage::readMetadata` in\n `mrwimage.cpp`.\n* [CVE-2019-14369](https://security-tracker.debian.org/tracker/CVE-2019-14369)\n`Exiv2::PngImage::readMetadata()` in `pngimage.cpp` allows attackers to cause a\n denial of service (heap-based buffer over- read) via a crafted image file.\n* [CVE-2019-14370](https://security-tracker.debian.org/tracker/CVE-2019-14370)\nThere is an out-of-bounds read in `Exiv2::MrwImage::readMetadata()` in\n `mrwimage.cpp`. It could result in denial of service.\n* [CVE-2019-17402](https://security-tracker.debian.org/tracker/CVE-2019-17402)\nExiv2 allows attackers to trigger a crash in `Exiv2::getULong` in `types.cpp`\n when called from `Exiv2::Internal::CiffDirectory::readDirectory` in\n `crwimage_int.cpp`, because there is no validation of the relationship of the\n total size to the offset and size.\n* [CVE-2020-18771](https://security-tracker.debian.org/tracker/CVE-2020-18771)\nExiv2 has a global buffer over-read in\n `Exiv2::Internal::Nikon1MakerNote::print0x0088` in `nikonmn_int.cpp` which can\n result in an information leak.\n* [CVE-2021-29458](https://security-tracker.debian.org/tracker/CVE-2021-29458)\nAn out-of-bounds read was found in Exiv2. The out-of- bounds read is\n triggered when Exiv2 is used to write metadata into a crafted image file.\n An attacker could potentially exploit the vulnerability to cause a denial\n of service by crashing Exiv2, if they can trick the victim into running\n Exiv2 on a crafted image file. Note that this bug is only triggered when\n writing the metadata, which is a less frequently used Exiv2 operation than\n reading the metadata. For example, to trigger the bug in the Exiv2\n command-line application, you need to add an extra command-line argument\n such as insert.\n* [CVE-2021-32815](https://security-tracker.debian.org/tracker/CVE-2021-32815)\nThe assertion\n failure is triggered when Exiv2 is used to modify the metadata of a\n crafted image file. An attacker could potentially exploit the\n vulnerability to cause a denial of service, if they can trick the\n victim into running Exiv2 on a crafted image file. Note that this bug\n is only triggered when modifying the metadata, which is a less\n frequently used Exiv2 operation than reading the metadata. For\n example, to trigger the bug in the Exiv2 command-line application, you\n need to add an extra command-line argument such as `fi`.\n* [CVE-2021-34334](https://security-tracker.debian.org/tracker/CVE-2021-34334)\nAn infinite loop is triggered when Exiv2 is used to read the metadata of a\n crafted image file. An attacker could potentially exploit the vulnerability\n to cause a denial of service, if they can trick the victim into running\n Exiv2 on a crafted image file.\n* [CVE-2021-37620](https://security-tracker.debian.org/tracker/CVE-2021-37620)\nAn out-of-bounds read is triggered when Exiv2 is used to read the metadata\n of a crafted image file. An attacker could potentially exploit the\n vulnerability to cause a denial of service, if they can trick the victim\n into running Exiv2 on a crafted image file.\n* [CVE-2021-37621](https://security-tracker.debian.org/tracker/CVE-2021-37621)\nAn infinite loop is triggered when Exiv2 is used to print the metadata of a\n crafted image file. An attacker could potentially exploit the vulnerability\n to cause a denial of service, if they can trick the victim into running\n Exiv2 on a crafted image file. Note that this bug is only triggered when\n printing the image ICC profile, which is a less frequently used Exiv2\n operation that requires an extra command line option (`-p C`).\n* [CVE-2021-37622](https://security-tracker.debian.org/tracker/CVE-2021-37622)\nAn infinite loop is triggered when Exiv2 is used to modify the metadata of\n a crafted image file. An attacker could potentially exploit the\n vulnerability to cause a denial of service, if they can trick the victim\n into running Exiv2 on a crafted image file. Note that this bug is only\n triggered when deleting the IPTC data, which is a less frequently used\n Exiv2 operation that requires an extra command line option (`-d I rm`).\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.25-4+deb10u4.\n\n\nWe recommend that you upgrade your exiv2 packages.\n\n\nFor the detailed security status of exiv2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/exiv2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "exiv2",
+				"purl": "pkg:deb/debian/exiv2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.25-4+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.25-4",
+				"0.25-4+deb10u1",
+				"0.25-4+deb10u2",
+				"0.25-4+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3265-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3265"
+		}
+	]
+}

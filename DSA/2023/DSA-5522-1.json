@@ -1,0 +1,55 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5522-1",
+	"modified": "2023-10-16T00:21:45.176854Z",
+	"published": "2023-10-10T00:00:00Z",
+	"related": [
+		"CVE-2023-24998",
+		"CVE-2023-41080",
+		"CVE-2023-42795",
+		"CVE-2023-44487",
+		"CVE-2023-45648"
+	],
+	"summary": "tomcat9 - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2023-24998](https://security-tracker.debian.org/tracker/CVE-2023-24998)\nDenial of service. Tomcat uses a packaged renamed copy of Apache Commons\n FileUpload to provide the file upload functionality defined in the Jakarta\n Servlet specification. Apache Tomcat was, therefore, also vulnerable to the\n Commons FileUpload vulnerability\n [CVE-2023-24998](https://security-tracker.debian.org/tracker/CVE-2023-24998)\n as there was no limit to the number of request parts processed. This resulted\n in the possibility of an attacker triggering a DoS with a malicious upload\n or series of uploads.\n* [CVE-2023-41080](https://security-tracker.debian.org/tracker/CVE-2023-41080)\nOpen redirect. If the ROOT (default) web application is configured to use\n FORM authentication then it is possible that a specially crafted URL could\n be used to trigger a redirect to an URL of the attackers choice.\n* [CVE-2023-42795](https://security-tracker.debian.org/tracker/CVE-2023-42795)\nInformation Disclosure. When recycling various internal objects, including\n the request and the response, prior to re-use by the next request/response,\n an error could cause Tomcat to skip some parts of the recycling process\n leading to information leaking from the current request/response to the\n next.\n* [CVE-2023-44487](https://security-tracker.debian.org/tracker/CVE-2023-44487)\nDoS caused by HTTP/2 frame overhead (Rapid Reset Attack)\n* [CVE-2023-45648](https://security-tracker.debian.org/tracker/CVE-2023-45648)\nRequest smuggling. Tomcat did not correctly parse HTTP trailer headers. A\n specially crafted, invalid trailer header could cause Tomcat to treat a\n single request as multiple requests leading to the possibility of request\n smuggling when behind a reverse proxy.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 9.0.43-2~deb11u7.\n\n\nWe recommend that you upgrade your tomcat9 packages.\n\n\nFor the detailed security status of tomcat9 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tomcat9](https://security-tracker.debian.org/tracker/tomcat9)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "tomcat9",
+				"purl": "pkg:deb/debian/tomcat9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.0.43-2~deb11u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.0.43-1",
+				"9.0.43-2~deb11u1",
+				"9.0.43-2~deb11u2",
+				"9.0.43-2~deb11u3",
+				"9.0.43-2~deb11u4",
+				"9.0.43-2~deb11u5",
+				"9.0.43-2~deb11u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5522-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5522"
+		}
+	]
+}

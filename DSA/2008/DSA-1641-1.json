@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1641-1",
+	"modified": "2023-10-16T00:05:35.117873Z",
+	"published": "2008-09-20T00:00:00Z",
+	"related": [
+		"CVE-2008-3197",
+		"CVE-2008-3456",
+		"CVE-2008-3457",
+		"CVE-2008-4096"
+	],
+	"summary": "phpmyadmin - several issues",
+	"details": "\nSeveral remote vulnerabilities have been discovered in phpMyAdmin, a\ntool to administrate MySQL databases over the web. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-4096](https://security-tracker.debian.org/tracker/CVE-2008-4096)\nRemote authenticated users could execute arbitrary code on the\n host running phpMyAdmin through manipulation of a script parameter.\n* [CVE-2008-3457](https://security-tracker.debian.org/tracker/CVE-2008-3457)\nCross site scripting through the setup script was possible in\n rare circumstances.\n* [CVE-2008-3456](https://security-tracker.debian.org/tracker/CVE-2008-3456)\nProtection has been added against remote websites loading phpMyAdmin\n into a frameset.\n* [CVE-2008-3197](https://security-tracker.debian.org/tracker/CVE-2008-3197)\nCross site request forgery allowed remote attackers to create a new\n database, but not perform any other action on it.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 4:2.9.1.1-8.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4:2.11.8.1-2.\n\n\nWe recommend that you upgrade your phpmyadmin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.9.1.1-8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.9.1.1-3",
+				"4:2.9.1.1-4",
+				"4:2.9.1.1-5",
+				"4:2.9.1.1-6",
+				"4:2.9.1.1-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1641-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1641"
+		}
+	]
+}

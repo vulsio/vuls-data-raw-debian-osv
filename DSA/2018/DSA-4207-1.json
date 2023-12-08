@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4207-1",
+	"modified": "2023-10-16T00:14:24.449399Z",
+	"published": "2018-05-22T00:00:00Z",
+	"related": [
+		"CVE-2018-1106"
+	],
+	"summary": "packagekit - security update",
+	"details": "\nMatthias Gerstner discovered that PackageKit, a DBus abstraction layer\nfor simple software management tasks, contains an authentication bypass\nflaw allowing users without privileges to install local packages.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.1.5-2+deb9u1.\n\n\nWe recommend that you upgrade your packagekit packages.\n\n\nFor the detailed security status of packagekit please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/packagekit>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "packagekit",
+				"purl": "pkg:deb/debian/packagekit?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.5-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4207-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4207"
+		}
+	]
+}

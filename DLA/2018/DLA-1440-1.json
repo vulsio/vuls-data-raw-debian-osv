@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1440-1",
+	"modified": "2023-06-28T06:24:24.322491Z",
+	"published": "2018-07-24T00:00:00Z",
+	"related": [
+		"CVE-2018-10860"
+	],
+	"summary": "libarchive-zip-perl - security update",
+	"details": "\nThe libarchive-zip-perl package is vulnerable to a directory traversal\nattack in Archive::Zip. It was found that the Archive::Zip module did\nnot properly sanitize paths while extracting zip files. An attacker\nable to provide a specially crafted archive for processing could use\nthis flaw to write or overwrite arbitrary files in the context of the\nPerl interpreter.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.39-1+deb8u1.\n\n\nWe recommend that you upgrade your libarchive-zip-perl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "libarchive-zip-perl",
+				"purl": "pkg:deb/debian/libarchive-zip-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.39-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.39-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1440-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1440"
+		}
+	]
+}

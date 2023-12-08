@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4601-1",
+	"modified": "2023-10-16T00:25:40.411523Z",
+	"published": "2020-01-09T00:00:00Z",
+	"related": [
+		"CVE-2019-20373"
+	],
+	"summary": "ldm - security update",
+	"details": "\nIt was discovered that a hook script of ldm, the display manager for the\nLinux Terminal Server Project, incorrectly parsed responses from an SSH\nserver, which could result in local root privilege escalation.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 2:2.2.18-2+deb9u1.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2:2.18.06-1+deb10u1.\n\n\nWe recommend that you upgrade your ldm packages.\n\n\nFor the detailed security status of ldm please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ldm](https://security-tracker.debian.org/tracker/ldm)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ldm",
+				"purl": "pkg:deb/debian/ldm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.2.18-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:2.2.18-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4601-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ldm",
+				"purl": "pkg:deb/debian/ldm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:2.18.06-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:2.18.06-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4601-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4601"
+		}
+	]
+}

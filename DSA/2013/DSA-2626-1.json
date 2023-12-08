@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2626-1",
+	"modified": "2023-10-16T00:06:01.942365Z",
+	"published": "2013-02-17T00:00:00Z",
+	"related": [
+		"CVE-2009-3555",
+		"CVE-2012-4929"
+	],
+	"summary": "lighttpd - several issues",
+	"details": "\nSeveral vulnerabilities were discovered in the TLS/SSL protocol. This\nupdate addresses these protocol vulnerabilities in lighttpd.\n\n\n* [CVE-2009-3555](https://security-tracker.debian.org/tracker/CVE-2009-3555)\nMarsh Ray, Steve Dispensa, and Martin Rex discovered that the TLS\n and SSLv3 protocols do not properly associate renegotiation\n handshakes with an existing connection, which allows man-in-the-middle\n attackers to insert data into HTTPS sessions. This issue is solved\n in lighttpd by disabling client initiated renegotiation by default.\n\n\n\n \n Those users that do actually need such renegotiations, can reenable\n them via the new ssl.disable-client-renegotiation parameter.\n* [CVE-2012-4929](https://security-tracker.debian.org/tracker/CVE-2012-4929)\nJuliano Rizzo and Thai Duong discovered a weakness in the TLS/SSL\n protocol when using compression. This side channel attack, dubbed\n CRIME, allows eavesdroppers to gather information to recover the\n original plaintext in the protocol. This update disables compression.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1.4.28-2+squeeze1.2.\n\n\nFor the testing distribution (wheezy), and the unstable distribution (sid)\nthese problems have been fixed in version 1.4.30-1.\n\n\nWe recommend that you upgrade your lighttpd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "lighttpd",
+				"purl": "pkg:deb/debian/lighttpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.28-2+squeeze1.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.28-2",
+				"1.4.28-2+squeeze1",
+				"1.4.28-2+squeeze1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2626-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2626"
+		}
+	]
+}

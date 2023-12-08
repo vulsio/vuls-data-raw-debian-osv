@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3173-1",
+	"modified": "2023-06-28T06:33:39.949796Z",
+	"published": "2022-11-01T00:00:00Z",
+	"related": [
+		"CVE-2021-4037",
+		"CVE-2022-0171",
+		"CVE-2022-1184",
+		"CVE-2022-1679",
+		"CVE-2022-20421",
+		"CVE-2022-20422",
+		"CVE-2022-2153",
+		"CVE-2022-2602",
+		"CVE-2022-2663",
+		"CVE-2022-2905",
+		"CVE-2022-3028",
+		"CVE-2022-3061",
+		"CVE-2022-3176",
+		"CVE-2022-3303",
+		"CVE-2022-3586",
+		"CVE-2022-3621",
+		"CVE-2022-3625",
+		"CVE-2022-3629",
+		"CVE-2022-3633",
+		"CVE-2022-3635",
+		"CVE-2022-3646",
+		"CVE-2022-3649",
+		"CVE-2022-39188",
+		"CVE-2022-39190",
+		"CVE-2022-39842",
+		"CVE-2022-40307",
+		"CVE-2022-41222",
+		"CVE-2022-41674",
+		"CVE-2022-42719",
+		"CVE-2022-42720",
+		"CVE-2022-42721",
+		"CVE-2022-42722",
+		"CVE-2022-43750"
+	],
+	"summary": "linux-5.10 - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2021-4037](https://security-tracker.debian.org/tracker/CVE-2021-4037)\nChristian Brauner reported that the inode\\_init\\_owner function for\n the XFS filesystem in the Linux kernel allows local users to\n create files with an unintended group ownership allowing attackers\n to escalate privileges by making a plain file executable and SGID.\n* [CVE-2022-0171](https://security-tracker.debian.org/tracker/CVE-2022-0171)\nMingwei Zhang reported that a cache incoherence issue in the SEV\n API in the KVM subsystem may result in denial of service.\n* [CVE-2022-1184](https://security-tracker.debian.org/tracker/CVE-2022-1184)\nA flaw was discovered in the ext4 filesystem driver which can lead\n to a use-after-free. A local user permitted to mount arbitrary\n filesystems could exploit this to cause a denial of service (crash\n or memory corruption) or possibly for privilege escalation.\n* [CVE-2022-1679](https://security-tracker.debian.org/tracker/CVE-2022-1679)\nThe syzbot tool found a race condition in the ath9k\\_htc driver\n which can lead to a use-after-free. This might be exploitable to\n cause a denial service (crash or memory corruption) or possibly\n for privilege escalation.\n* [CVE-2022-2153](https://security-tracker.debian.org/tracker/CVE-2022-2153)\nkangel reported a flaw in the KVM implementation for x86\n processors which could lead to a null pointer dereference. A local\n user permitted to access /dev/kvm could exploit this to cause a\n denial of service (crash).\n* [CVE-2022-2602](https://security-tracker.debian.org/tracker/CVE-2022-2602)\nA race between handling an io\\_uring request and the Unix socket\n garbage collector was discovered. An attacker can take advantage\n of this flaw for local privilege escalation.\n* [CVE-2022-2663](https://security-tracker.debian.org/tracker/CVE-2022-2663)\nDavid Leadbeater reported flaws in the nf\\_conntrack\\_irc\n connection-tracking protocol module. When this module is enabled\n on a firewall, an external user on the same IRC network as an\n internal user could exploit its lax parsing to open arbitrary TCP\n ports in the firewall, to reveal their public IP address, or to\n block their IRC connection at the firewall.\n* [CVE-2022-2905](https://security-tracker.debian.org/tracker/CVE-2022-2905)\nHsin-Wei Hung reported a flaw in the eBPF verifier which can lead\n to an out-of-bounds read. If unprivileged use of eBPF is enabled,\n this could leak sensitive information. This was already disabled\n by default, which would fully mitigate the vulnerability.\n* [CVE-2022-3028](https://security-tracker.debian.org/tracker/CVE-2022-3028)\nAbhishek Shah reported a race condition in the AF\\_KEY subsystem,\n which could lead to an out-of-bounds write or read. A local user\n could exploit this to cause a denial of service (crash or memory\n corruption), to obtain sensitive information, or possibly for\n privilege escalation.\n* [CVE-2022-3061](https://security-tracker.debian.org/tracker/CVE-2022-3061)\nA flaw was discovered in the i740 driver which may result in\n denial of service.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-3176](https://security-tracker.debian.org/tracker/CVE-2022-3176)\nA use-after-free flaw was discovered in the io\\_uring subsystem\n which may result in local privilege escalation to root.\n* [CVE-2022-3303](https://security-tracker.debian.org/tracker/CVE-2022-3303)\nA race condition in the snd\\_pcm\\_oss\\_sync function in the sound\n subsystem in the Linux kernel due to improper locking may result\n in denial of service.\n* [CVE-2022-3586](https://security-tracker.debian.org/tracker/CVE-2022-3586) (ZDI-22-1452)\n\n The Zero Day Initiative reported a flaw in the sch\\_sfb network\n scheduler, which may lead to a use-after-free and leak of\n sensitive information from the kernel.\n* [CVE-2022-3621](https://security-tracker.debian.org/tracker/CVE-2022-3621), [CVE-2022-3646](https://security-tracker.debian.org/tracker/CVE-2022-3646)\nThe syzbot tool found flaws in the nilfs2 filesystem driver which\n can lead to a null pointer dereference or memory leak. A user\n permitted to mount arbitrary filesystem images could use these to\n cause a denial of service (crash or resource exhaustion).\n* [CVE-2022-3625](https://security-tracker.debian.org/tracker/CVE-2022-3625)\nA flaw was discovered in the devlink subsystem which can lead to\n a use-after-free. The security impact of this is unclear.\n* [CVE-2022-3629](https://security-tracker.debian.org/tracker/CVE-2022-3629)\nThe syzbot tool found a memory leak in the Virtual Socket Protocol\n implementation. A local user could exploit this to cause a denial\n of service (resource exhaustion).\n* [CVE-2022-3633](https://security-tracker.debian.org/tracker/CVE-2022-3633)\nThe Linux Verification Center found a memory leak in the SAE J1939\n protocol implementation. A local user could exploit this to cause\n a denial of service (resource exhaustion).\n* [CVE-2022-3635](https://security-tracker.debian.org/tracker/CVE-2022-3635)\nSeveral race conditions were discovered in the idt77252 ATM\n driver, which can lead to a use-after-free if the module is\n removed. The security impact of this is unclear.\n* [CVE-2022-3649](https://security-tracker.debian.org/tracker/CVE-2022-3649)\nThe syzbot tool found flaws in the nilfs2 filesystem driver which\n can lead to a use-after-free. A user permitted to mount arbitrary\n filesystem images could use these to cause a denial of service\n (crash or memory corruption) or possibly for privilege escalation.\n* [CVE-2022-20421](https://security-tracker.debian.org/tracker/CVE-2022-20421)\nA use-after-free vulnerability was discovered in the\n binder\\_inc\\_ref\\_for\\_node function in the Android binder driver. On\n systems where the binder driver is loaded, a local user could\n exploit this for privilege escalation.\n* [CVE-2022-20422](https://security-tracker.debian.org/tracker/CVE-2022-20422)\nA race condition was discovered in the instruction emulator for\n 64-bit Arm systems. Concurrent changes to the sysctls that\n control the emulator could result in a null pointer dereference.\n The security impact of this is unclear.\n* [CVE-2022-39188](https://security-tracker.debian.org/tracker/CVE-2022-39188)\nJann Horn reported a race condition in the kernel's handling of\n unmapping of certain memory ranges. When a driver created a memory\n mapping with the VM\\_PFNMAP flag, which many GPU drivers do, the\n memory mapping could be removed and freed before it was flushed\n from the CPU TLBs. This could result in a page use-after-free. A\n local user with access to such a device could exploit this to\n cause a denial of service (crash or memory corruption) or possibly\n for privilege escalation.\n* [CVE-2022-39190](https://security-tracker.debian.org/tracker/CVE-2022-39190)\nGwangun Jung reported a flaw in the nf\\_tables subsystem. A local\n user could exploit this to cause a denial of service (crash).\n* [CVE-2022-39842](https://security-tracker.debian.org/tracker/CVE-2022-39842)\nAn integer overflow was discovered in the pxa3xx-gcu video driver\n which could lead to a heap out-of-bounds write.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-40307](https://security-tracker.debian.org/tracker/CVE-2022-40307)\nA race condition was discovered in the EFI capsule-loader driver,\n which could lead to use-after-free. A local user permitted to\n access this device (/dev/efi\\_capsule\\_loader) could exploit this to\n cause a denial of service (crash or memory corruption) or possibly\n for privilege escalation. However, this device is normally only\n accessible by the root user.\n* [CVE-2022-41222](https://security-tracker.debian.org/tracker/CVE-2022-41222)\nA race condition was discovered in the memory management subsystem\n that can lead to stale TLB entries. A local user could exploit\n this to cause a denial of service (memory corruption or crash),\n information leak, or privilege escalation.\n* [CVE-2022-41674](https://security-tracker.debian.org/tracker/CVE-2022-41674), [CVE-2022-42719](https://security-tracker.debian.org/tracker/CVE-2022-42719), [CVE-2022-42720](https://security-tracker.debian.org/tracker/CVE-2022-42720), [CVE-2022-42721](https://security-tracker.debian.org/tracker/CVE-2022-42721), [CVE-2022-42722](https://security-tracker.debian.org/tracker/CVE-2022-42722)\nSoenke Huster discovered several vulnerabilities in the mac80211\n subsystem triggered by WLAN frames which may result in denial of\n service or the execution of arbitrary code.\n* [CVE-2022-43750](https://security-tracker.debian.org/tracker/CVE-2022-43750)\nThe syzbot tool found that the USB monitor (usbmon) driver allowed\n user-space programs to overwrite the driver's data structures. A\n local user permitted to access a USB monitor device could exploit\n this to cause a denial of service (memory corruption or crash) or\n possibly for privilege escalation. However, by default only the\n root user can access such devices.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n5.10.149-2~deb10u1. This update also fixes a regression for some\nolder 32-bit PCs (bug [#1017425](https://bugs.debian.org/1017425)), and enables the i10nm\\_edac driver\n(bug [#1019248](https://bug.debian.org/1019248)). It additionally includes many more bug fixes from\nstable updates 5.10.137-5.10.149 inclusive.\n\n\nWe recommend that you upgrade your linux-5.10 packages.\n\n\nFor the detailed security status of linux-5.10 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-5.10>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "linux-5.10",
+				"purl": "pkg:deb/debian/linux-5.10?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.10.149-2~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.10.136-1~deb10u1",
+				"5.10.136-1~deb10u2",
+				"5.10.136-1~deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3173-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3173"
+		}
+	]
+}

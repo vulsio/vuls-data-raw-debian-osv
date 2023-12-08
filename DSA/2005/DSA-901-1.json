@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-901-1",
+	"modified": "2023-10-16T00:32:45.020051Z",
+	"published": "2005-11-19T00:00:00Z",
+	"related": [
+		"CVE-2005-3349",
+		"CVE-2005-3355"
+	],
+	"summary": "gnump3d - programming error",
+	"details": "\nSeveral vulnerabilities have been discovered in gnump3d, a streaming\nserver for MP3 and OGG files. The Common Vulnerabilities and\nExposures Project identifies the following problems:\n\n\n* [CVE-2005-3349](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3349)\nLudwig Nussel discovered several temporary files that are created\n with predictable filenames in an insecure fashion and allows local\n attackers to craft symlink attacks.\n* [CVE-2005-3355](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3355)\nLudwig Nussel discovered that the theme parameter to HTTP\n requests may be used for path traversal.\n\n\nThe old stable distribution (woody) does not contain a gnump3d package.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.9.3-1sarge3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.9.8-1.\n\n\nWe recommend that you upgrade your gnump3 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "gnump3d",
+				"purl": "pkg:deb/debian/gnump3d?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.3-1sarge3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.3-1sarge1",
+				"2.9.3-1sarge2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-901-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-901"
+		}
+	]
+}

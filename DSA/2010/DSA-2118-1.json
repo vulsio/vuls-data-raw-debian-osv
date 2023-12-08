@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2118-1",
+	"modified": "2023-10-16T00:05:46.472989Z",
+	"published": "2010-10-08T00:00:00Z",
+	"related": [
+		"CVE-2010-3315"
+	],
+	"summary": "subversion - authentication bypass",
+	"details": "\nKamesh Jayachandran and C. Michael Pilat discovered that the mod\\_dav\\_svn\nmodule of Subversion, a version control system, is not properly enforcing\naccess rules which are scope-limited to named repositories. If the\nSVNPathAuthz option is set to short\\_circuit set this may enable an\nunprivileged attacker to bypass intended access restrictions and disclose\nor modify repository content.\n\n\nAs a workaround it is also possible to set SVNPathAuthz to on but be\nadvised that this can result in a performance decrease for large\nrepositories.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.5.1dfsg1-5.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 1.6.12dfsg-2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6.12dfsg-2.\n\n\nWe recommend that you upgrade your subversion packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "subversion",
+				"purl": "pkg:deb/debian/subversion?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.1dfsg1-5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.1dfsg1-2",
+				"1.5.1dfsg1-3",
+				"1.5.1dfsg1-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2118-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2118"
+		}
+	]
+}

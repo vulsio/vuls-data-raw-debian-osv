@@ -1,0 +1,44 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-436",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-02-08T00:00:00Z",
+	"related": [
+		"CVE-2003-0038",
+		"CVE-2003-0965",
+		"CVE-2003-0991"
+	],
+	"summary": "mailman - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been fixed in the mailman package:\n\n\n* [\\\n CAN-2003-0038](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0038) - potential cross-site scripting via certain CGI\n parameters (not known to be exploitable in this version)\n* [\\\n CAN-2003-0965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0965) - cross-site scripting in the administrative\n interface\n* [\\\n CAN-2003-0991](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0991) - certain malformed email commands could cause the mailman\n process to crash\n\n\nThe cross-site scripting vulnerabilities could allow an attacker to\nperform administrative operations without authorization, by stealing a\nsession cookie.\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 2.0.11-1woody7.\n\n\nFor the unstable distribution (sid),\n[\\\nCAN-2003-0965](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0965) is fixed in version 2.1.4-1, and\n[\\\nCAN-2003-0038](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0038) in version 2.1.1-1.\n[\\\nCAN-2003-0991](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0991) will be fixed soon.\n\n\nWe recommend that you update your mailman package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mailman",
+				"purl": "pkg:deb/debian/mailman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.11-1woody7"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-436.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-436"
+		}
+	]
+}

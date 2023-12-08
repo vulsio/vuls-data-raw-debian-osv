@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1312-1",
+	"modified": "2023-06-28T06:20:33.588925Z",
+	"published": "2018-03-22T00:00:00Z",
+	"related": [
+		"CVE-2018-5147"
+	],
+	"summary": "libvorbisidec - security update",
+	"details": "\nHuzaifa Sidhpurwala discovered that an out-of-bounds memory write in the\ncodebook parsing code of the Libtremor multimedia library could result\nin the execution of arbitrary code if a malformed Vorbis file is opened.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.0.2+svn18153-0.2+deb7u1.\n\n\nWe recommend that you upgrade your libvorbisidec packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libvorbisidec",
+				"purl": "pkg:deb/debian/libvorbisidec?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.2+svn18153-0.2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.2+svn18153-0.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1312-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1312"
+		}
+	]
+}

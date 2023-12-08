@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3268-1",
+	"modified": "2023-06-28T06:33:41.989559Z",
+	"published": "2023-01-11T00:00:00Z",
+	"related": [
+		"CVE-2021-37136",
+		"CVE-2021-37137",
+		"CVE-2021-43797",
+		"CVE-2022-41881",
+		"CVE-2022-41915"
+	],
+	"summary": "netty - security update",
+	"details": "\nSeveral out-of-memory, stack overflow or HTTP request smuggling vulnerabilities\nhave been discovered in Netty, a Java NIO client/server socket framework, which\nmay allow attackers to cause a denial of service or bypass restrictions when\nused as a proxy.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:4.1.33-1+deb10u3.\n\n\nWe recommend that you upgrade your netty packages.\n\n\nFor the detailed security status of netty please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/netty>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "netty",
+				"purl": "pkg:deb/debian/netty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:4.1.33-1+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:4.1.33-1",
+				"1:4.1.33-1+deb10u1",
+				"1:4.1.33-1+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3268-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3268"
+		}
+	]
+}

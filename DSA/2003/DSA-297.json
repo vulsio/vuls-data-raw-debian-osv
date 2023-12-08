@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-297",
+	"modified": "2014-09-07T09:50:46Z",
+	"published": "2003-05-01T00:00:00Z",
+	"related": [
+		"CVE-2003-0033",
+		"CVE-2003-0209"
+	],
+	"summary": "snort - integer overflow, buffer overflow",
+	"details": "\nTwo vulnerabilities have been discovered in Snort, a popular network\nintrusion detection system. Snort comes with modules and plugins that\nperform a variety of functions such as protocol analysis. The\nfollowing issues have been identified:\n\n\n\nHeap overflow in Snort \"stream4\" preprocessor  \n\n (VU#139129, CAN-2003-0209, Bugtraq Id 7178)\nResearchers at CORE Security Technologies have discovered a\n remotely exploitable integer overflow that results in overwriting\n the heap in the \"stream4\" preprocessor module. This module allows\n Snort to reassemble TCP packet fragments for further analysis. An\n attacker could insert arbitrary code that would be executed as\n the user running Snort, probably root.\nBuffer overflow in Snort RPC preprocessor  \n\n (VU#916785, CAN-2003-0033, Bugtraq Id 6963)\nResearchers at Internet Security Systems X-Force have discovered a\n remotely exploitable buffer overflow in the Snort RPC preprocessor\n module. Snort incorrectly checks the lengths of what is being\n normalized against the current packet size. An attacker could\n exploit this to execute arbitrary code under the privileges of the\n Snort process, probably root.\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.8.4beta1-3.1.\n\n\nThe old stable distribution (potato) is not affected by these problems\nsince it doesn't contain the problematic code.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.0.0-1.\n\n\nWe recommend that you upgrade your snort package immediately.\n\n\nYou are also advised to upgrade to the most recent version of Snort,\nsince Snort, as any intrusion detection system, is rather useless if\nit is based on old and out-dated data and not kept up to date. Such\ninstallations would be unable to detect intrusions using modern\nmethods. The current version of Snort is 2.0.0, while the version in\nthe stable distribution (1.8) is quite old and the one in the old\nstable distribution is beyond hope.\n\n\nSince Debian does not update arbitrary packages in stable releases,\neven Snort is not going to see updates other than to fix security\nproblems, you are advised to upgrade to the most recent version from\nthird party sources.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "snort",
+				"purl": "pkg:deb/debian/snort?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.8.4beta1-3.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-297.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-297"
+		}
+	]
+}

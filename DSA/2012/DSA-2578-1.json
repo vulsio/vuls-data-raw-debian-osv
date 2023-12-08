@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2578-1",
+	"modified": "2023-10-16T00:11:19.508941Z",
+	"published": "2012-11-28T00:00:00Z",
+	"related": [
+		"CVE-2012-2251",
+		"CVE-2012-2252"
+	],
+	"summary": "rssh - several",
+	"details": "\nJames Clawson discovered that rssh, a restricted shell for OpenSSH to be used\nwith scp, sftp, rdist and cvs, was not correctly filtering command line options.\nThis could be used to force the execution of a remote script and thus allow\narbitrary command execution. Two CVE were assigned:\n\n\n* [CVE-2012-2251](https://security-tracker.debian.org/tracker/CVE-2012-2251)\nIncorrect filtering of command line when using rsync protocol. It was\n for example possible to pass dangerous options after a -- switch. The rsync\n protocol support has been added in a Debian (and Fedora/Red Hat) specific\n patch, so this vulnerability doesn't affect upstream.\n* [CVE-2012-2252](https://security-tracker.debian.org/tracker/CVE-2012-2252)\nIncorrect filtering of the --rsh option: the filter preventing usage of the\n --rsh= option would not prevent passing --rsh. This vulnerability affects\n upstream code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.3.2-13squeeze3.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2.3.3-6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.3.3-6.\n\n\nWe recommend that you upgrade your rssh packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "rssh",
+				"purl": "pkg:deb/debian/rssh?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.2-13squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.2-13",
+				"2.3.2-13squeeze1",
+				"2.3.2-13squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2578-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2578"
+		}
+	]
+}

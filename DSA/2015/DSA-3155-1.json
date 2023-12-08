@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3155-1",
+	"modified": "2023-10-16T00:19:52.789728Z",
+	"published": "2015-02-06T00:00:00Z",
+	"related": [
+		"CVE-2014-8161",
+		"CVE-2015-0241",
+		"CVE-2015-0243",
+		"CVE-2015-0244"
+	],
+	"summary": "postgresql-9.1 - security update",
+	"details": "\nSeveral vulnerabilities have been found in PostgreSQL-9.1, a SQL database \nsystem.\n\n\n* [CVE-2014-8161](https://security-tracker.debian.org/tracker/CVE-2014-8161):\nInformation leak\n\n\nA user with limited clearance on a table might have access to information\nin columns without SELECT rights on through server error messages.\n* [CVE-2015-0241](https://security-tracker.debian.org/tracker/CVE-2015-0241):\nOut of boundaries read/write\n\n\nThe function to\\_char() might read/write past the end of a buffer. This\nmight crash the server when a formatting template is processed.\n* [CVE-2015-0243](https://security-tracker.debian.org/tracker/CVE-2015-0243):\nBuffer overruns in contrib/pgcrypto\n\n\nThe pgcrypto module is vulnerable to stack buffer overrun that might\ncrash the server.\n* [CVE-2015-0244](https://security-tracker.debian.org/tracker/CVE-2015-0244):\nSQL command injection\n\n\nEmil Lenngren reported that an attacker can inject SQL commands when the \nsynchronization between client and server is lost.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 9.1.15-0+deb7u1.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 9.1.14-0+deb8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 9.1.15-0+deb8u1.\n\n\nWe recommend that you upgrade your postgresql-9.1 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "postgresql-9.1",
+				"purl": "pkg:deb/debian/postgresql-9.1?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.1.15-0+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.1.10-0wheezy1",
+				"9.1.10-1",
+				"9.1.11-0wheezy1",
+				"9.1.11-1",
+				"9.1.11-1~bpo60+1",
+				"9.1.11-2",
+				"9.1.12-0wheezy1",
+				"9.1.12-0wheezy1~bpo60+1",
+				"9.1.12-1",
+				"9.1.13-0wheezy1",
+				"9.1.13-0wheezy1~bpo60+1",
+				"9.1.13-1",
+				"9.1.14-0+deb7u1",
+				"9.1.14-0wheezy1",
+				"9.1.15-0+deb7u1~bpo60+1",
+				"9.1.9-1",
+				"9.1.9-2",
+				"9.1.9-3",
+				"9.1.9-4",
+				"9.1.9-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3155-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3155"
+		}
+	]
+}

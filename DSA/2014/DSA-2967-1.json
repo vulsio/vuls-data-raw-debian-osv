@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2967-1",
+	"modified": "2023-10-16T00:11:40.869600Z",
+	"published": "2014-06-25T00:00:00Z",
+	"related": [
+		"CVE-2014-4617"
+	],
+	"summary": "gnupg - security update",
+	"details": "\nJean-RenĂŠ Reinhard, Olivier Levillain and Florian Maury reported that\nGnuPG, the GNU Privacy Guard, did not properly parse certain garbled\ncompressed data packets. A remote attacker could use this flaw to mount\na denial of service against GnuPG by triggering an infinite loop.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.4.12-7+deb7u4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.4.16-1.2.\n\n\nWe recommend that you upgrade your gnupg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "gnupg",
+				"purl": "pkg:deb/debian/gnupg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.12-7+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.12-7",
+				"1.4.12-7+deb7u1",
+				"1.4.12-7+deb7u2",
+				"1.4.12-7+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2967-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2967"
+		}
+	]
+}

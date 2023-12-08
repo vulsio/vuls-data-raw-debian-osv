@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1110",
+	"modified": "2023-10-16T00:05:11.910049Z",
+	"published": "2006-07-16T00:00:00Z",
+	"related": [
+		"CVE-2006-3403"
+	],
+	"summary": "samba - missing input sanitising",
+	"details": "\nGerald Carter discovered that the smbd daemon from Samba, a free\nimplementation of the SMB/CIFS protocol, imposes insufficient limits\nin the code to handle shared connections, which can be exploited to\nexhaust system memory by sending maliciously crafted requests, leading\nto denial of service.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 3.0.14a-3sarge2.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your samba package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0.14a-3sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0.14a-3",
+				"3.0.14a-3sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1110.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1110"
+		}
+	]
+}

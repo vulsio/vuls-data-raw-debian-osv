@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5279-2",
+	"modified": "2023-10-16T00:16:31.021680Z",
+	"published": "2022-11-15T00:00:00Z",
+	"summary": "wordpress - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Wordpress, a web blogging\ntool. They allowed remote attackers to perform SQL injection, create\nopen redirects, bypass authorization access, or perform Cross-Site\nRequest Forgery (CSRF) or Cross-Site Scripting (XSS) attacks.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 5.7.8+dfsg1-0+deb11u1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFor the detailed security status of wordpress please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/wordpress](https://security-tracker.debian.org/tracker/wordpress)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "wordpress",
+				"purl": "pkg:deb/debian/wordpress?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.8+dfsg1-0+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.1+dfsg1-2",
+				"5.7.3+dfsg1-0+deb11u1",
+				"5.7.5+dfsg1-0+deb11u1",
+				"5.7.8+dfsg1-0+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5279-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5279"
+		}
+	]
+}

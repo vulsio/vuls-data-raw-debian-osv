@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2245-1",
+	"modified": "2023-10-16T00:11:03.311512Z",
+	"published": "2011-05-29T00:00:00Z",
+	"related": [
+		"CVE-2011-1292",
+		"CVE-2011-1293",
+		"CVE-2011-1440",
+		"CVE-2011-1444",
+		"CVE-2011-1797",
+		"CVE-2011-1799"
+	],
+	"summary": "chromium-browser - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities were discovered in the Chromium browser.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2011-1292](https://security-tracker.debian.org/tracker/CVE-2011-1292)\nUse-after-free vulnerability in the frame-loader implementation in Google\n Chrome allows remote attackers to cause a denial of service or possibly\n have unspecified other impact via unknown vectors.\n* [CVE-2011-1293](https://security-tracker.debian.org/tracker/CVE-2011-1293)\nUse-after-free vulnerability in the HTMLCollection implementation in Google\n Chrome allows remote attackers to cause a denial of service or possibly have\n unspecified other impact via unknown vectors.\n* [CVE-2011-1440](https://security-tracker.debian.org/tracker/CVE-2011-1440)\nUse-after-free vulnerability in Google Chrome allows remote attackers to cause\n a denial of service or possibly have unspecified other impact via vectors\n related to the Ruby element and Cascading Style Sheets (CSS) token sequences.\n* [CVE-2011-1444](https://security-tracker.debian.org/tracker/CVE-2011-1444)\nRace condition in the sandbox launcher implementation in Google Chrome on\n Linux allows remote attackers to cause a denial of service or possibly have\n unspecified other impact via unknown vectors.\n* [CVE-2011-1797](https://security-tracker.debian.org/tracker/CVE-2011-1797)\nGoogle Chrome does not properly render tables, which allows remote attackers\n to cause a denial of service or possibly have unspecified other impact via\n unknown vectors that lead to a stale pointer.\n* [CVE-2011-1799](https://security-tracker.debian.org/tracker/CVE-2011-1799)\nGoogle Chrome does not properly perform casts of variables during interaction\n with the WebKit engine, which allows remote attackers to cause a denial of\n service or possibly have unspecified other impact via unknown vectors.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 6.0.472.63~r59945-5+squeeze5.\n\n\nFor the testing distribution (wheezy), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 11.0.696.68~r84545-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "chromium-browser",
+				"purl": "pkg:deb/debian/chromium-browser?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.0.472.63~r59945-5+squeeze5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.0.472.63~r59945-5",
+				"6.0.472.63~r59945-5+squeeze2",
+				"6.0.472.63~r59945-5+squeeze3",
+				"6.0.472.63~r59945-5+squeeze4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2245-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2245"
+		}
+	]
+}

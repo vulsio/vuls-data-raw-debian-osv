@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5196-1",
+	"modified": "2023-10-16T00:26:04.968424Z",
+	"published": "2022-07-31T00:00:00Z",
+	"related": [
+		"CVE-2022-21724",
+		"CVE-2022-26520"
+	],
+	"summary": "libpgjava - security update",
+	"details": "\nSeveral security vulnerabilities have been found in libpgjava, the official\nPostgreSQL JDBC Driver.\n\n\n* [CVE-2020-13692](https://security-tracker.debian.org/tracker/CVE-2020-13692)\nAn XML External Entity (XXE) weakness was found in PostgreSQL JDBC.\n* [CVE-2022-21724](https://security-tracker.debian.org/tracker/CVE-2022-21724)\nThe JDBC driver did not verify if certain classes implemented the expected\n interface before instantiating the class. This can lead to code execution\n loaded via arbitrary classes.\n* [CVE-2022-26520](https://security-tracker.debian.org/tracker/CVE-2022-26520)\nAn attacker (who controls the jdbc URL or properties) can call\n java.util.logging.FileHandler to write to arbitrary files through the\n loggerFile and loggerLevel connection properties.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 42.2.5-2+deb10u1.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 42.2.15-1+deb11u1.\n\n\nWe recommend that you upgrade your libpgjava packages.\n\n\nFor the detailed security status of libpgjava please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libpgjava](https://security-tracker.debian.org/tracker/libpgjava)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libpgjava",
+				"purl": "pkg:deb/debian/libpgjava?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "42.2.5-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"42.2.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5196-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libpgjava",
+				"purl": "pkg:deb/debian/libpgjava?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "42.2.15-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"42.2.15-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5196-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5196"
+		}
+	]
+}

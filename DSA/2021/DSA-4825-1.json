@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4825-1",
+	"modified": "2023-10-16T00:22:09.253554Z",
+	"published": "2021-01-04T00:00:00Z",
+	"related": [
+		"CVE-2020-24386",
+		"CVE-2020-25275"
+	],
+	"summary": "dovecot - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Dovecot email server.\n\n\n* [CVE-2020-24386](https://security-tracker.debian.org/tracker/CVE-2020-24386)\nWhen imap hibernation is active, an attacker (with valid credentials\n to access the mail server) can cause Dovecot to discover file system\n directory structures and access other users' emails via specially\n crafted commands.\n* [CVE-2020-25275](https://security-tracker.debian.org/tracker/CVE-2020-25275)\nInnokentii Sennovskiy reported that the mail delivery and parsing in\n Dovecot can crash when the 10000th MIME part is message/rfc822 (or\n if the parent was multipart/digest). This flaw was introduced by\n earlier changes addressing\n [\\\n CVE-2020-12100](https://security-tracker.debian.org/tracker/CVE-2020-12100).\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1:2.3.4.1-5+deb10u5.\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\nFor the detailed security status of dovecot please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/dovecot](https://security-tracker.debian.org/tracker/dovecot)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "dovecot",
+				"purl": "pkg:deb/debian/dovecot?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.4.1-5+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.3.4.1-5",
+				"1:2.3.4.1-5+deb10u1",
+				"1:2.3.4.1-5+deb10u1~bpo9+1",
+				"1:2.3.4.1-5+deb10u2",
+				"1:2.3.4.1-5+deb10u3",
+				"1:2.3.4.1-5+deb10u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4825-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2021/dsa-4825"
+		}
+	]
+}

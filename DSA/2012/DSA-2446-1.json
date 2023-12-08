@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2446-1",
+	"modified": "2023-10-16T00:11:15.181081Z",
+	"published": "2012-04-04T00:00:00Z",
+	"related": [
+		"CVE-2011-3048"
+	],
+	"summary": "libpng - incorrect memory handling",
+	"details": "\nIt was discovered that incorrect memory handling in the png\\_set\\_text2()\nfunction of the PNG library could lead to the execution of arbitrary\ncode.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion libpng\\_1.2.44-1+squeeze4.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your libpng packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libpng",
+				"purl": "pkg:deb/debian/libpng?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.44-1+squeeze4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.44-1",
+				"1.2.44-1+squeeze1",
+				"1.2.44-1+squeeze2",
+				"1.2.44-1+squeeze3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2446-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2446"
+		}
+	]
+}

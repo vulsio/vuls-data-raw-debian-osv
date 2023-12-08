@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1512-1",
+	"modified": "2023-06-28T06:29:38.592889Z",
+	"published": "2018-09-21T00:00:00Z",
+	"related": [
+		"CVE-2018-1000671"
+	],
+	"summary": "sympa - security update",
+	"details": "\nAn Open Redirect vulnerability has been discovered in sympa. The\nreferer parameter of the wwsympa.fcgi login action can result in\nOpen redirection and potential Cross Site Scripting via data URIs.\nThis attack appear to be exploitable via Victim browser opening a\ncrafted URL supplied by the attacker.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n6.1.23~dfsg-2+deb8u3.\n\n\nWe recommend that you upgrade your sympa packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "sympa",
+				"purl": "pkg:deb/debian/sympa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.1.23~dfsg-2+deb8u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.1.23~dfsg-2",
+				"6.1.23~dfsg-2+deb8u1",
+				"6.1.23~dfsg-2+deb8u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1512-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1512"
+		}
+	]
+}

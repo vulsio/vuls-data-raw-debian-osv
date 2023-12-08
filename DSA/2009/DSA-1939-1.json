@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1939-1",
+	"modified": "2023-10-16T00:10:47.889303Z",
+	"published": "2009-11-24T00:00:00Z",
+	"related": [
+		"CVE-2009-2663",
+		"CVE-2009-3379"
+	],
+	"summary": "libvorbis - several vulnerabilities",
+	"details": "\nLucas Adamski, Matthew Gregan, David Keeler, and Dan Kaminsky discovered\nthat libvorbis, a library for the Vorbis general-purpose compressed\naudio codec, did not correctly handle certain malformed ogg files. An\nattacher could cause a denial of service (memory corruption and\napplication crash) or possibly execute arbitrary code via a crafted .ogg\nfile.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 1.1.2.dfsg-1.4+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.2.0.dfsg-3.1+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 1.2.3-1\n\n\nWe recommend that you upgrade your libvorbis packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libvorbis",
+				"purl": "pkg:deb/debian/libvorbis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2.dfsg-1.4+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2.dfsg-1.2",
+				"1.1.2.dfsg-1.3",
+				"1.1.2.dfsg-1.4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1939-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "libvorbis",
+				"purl": "pkg:deb/debian/libvorbis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.0.dfsg-3.1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.0.dfsg-3.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1939-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1939"
+		}
+	]
+}

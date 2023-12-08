@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4085-1",
+	"modified": "2023-10-16T00:12:38.518922Z",
+	"published": "2018-01-12T00:00:00Z",
+	"related": [
+		"CVE-2018-0486"
+	],
+	"summary": "xmltooling - security update",
+	"details": "\nPhilip Huppert discovered the Shibboleth service provider is vulnerable\nto impersonation attacks and information disclosure due to mishandling\nof DTDs in the XMLTooling XML parsing library. For additional details\nplease refer to the upstream advisory at\n[\\\nhttps://shibboleth.net/community/advisories/secadv\\_20180112.txt](https://shibboleth.net/community/advisories/secadv_20180112.txt)\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.5.3-2+deb8u2.\n\n\nThe stable distribution (stretch) is not affected.\n\n\nWe recommend that you upgrade your xmltooling packages.\n\n\nFor the detailed security status of xmltooling please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/xmltooling](https://security-tracker.debian.org/tracker/xmltooling)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "xmltooling",
+				"purl": "pkg:deb/debian/xmltooling?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.5.3-2+deb8u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.5.3-2",
+				"1.5.3-2+deb8u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4085-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4085"
+		}
+	]
+}

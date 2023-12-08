@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-125-1",
+	"modified": "2023-06-28T06:23:52.502694Z",
+	"published": "2014-12-29T00:00:00Z",
+	"related": [
+		"CVE-2014-7209"
+	],
+	"summary": "mime-support - security update",
+	"details": "\nTimothy D. Morgan discovered that run-mailcap, an utility to execute\nprograms via entries in the mailcap file, is prone to shell command\ninjection via shell meta-characters in filenames. In specific scenarios\nthis flaw could allow an attacker to remotely execute arbitrary code.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 3.48-1+deb6u1.\n\n\nWe recommend that you upgrade your mime-support packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mime-support",
+				"purl": "pkg:deb/debian/mime-support?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.48-1+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.48-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-125-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-125"
+		}
+	]
+}

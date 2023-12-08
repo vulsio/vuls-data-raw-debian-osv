@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4575-1",
+	"modified": "2023-10-16T00:14:18.906477Z",
+	"published": "2019-11-24T00:00:00Z",
+	"related": [
+		"CVE-2019-13723",
+		"CVE-2019-13724"
+	],
+	"summary": "chromium - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the chromium web browser.\n\n\n* [CVE-2019-13723](https://security-tracker.debian.org/tracker/CVE-2019-13723)\nYuxiang Li discovered a use-after-free issue in the bluetooth service.\n* [CVE-2019-13724](https://security-tracker.debian.org/tracker/CVE-2019-13724)\nYuxiang Li discovered an out-of-bounds read issue in the bluetooth\n service.\n\n\nFor the oldstable distribution (stretch), security support for the chromium\npackage has been discontinued.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 78.0.3904.108-1~deb10u1.\n\n\nWe recommend that you upgrade your chromium packages.\n\n\nFor the detailed security status of chromium please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/chromium](https://security-tracker.debian.org/tracker/chromium)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "chromium",
+				"purl": "pkg:deb/debian/chromium?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "78.0.3904.108-1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"73.0.3683.75-1",
+				"74.0.3729.108-1",
+				"75.0.3770.10-1",
+				"75.0.3770.80-1",
+				"75.0.3770.90-1",
+				"76.0.3809.100-1",
+				"76.0.3809.100-1~deb10u1",
+				"76.0.3809.62-1",
+				"76.0.3809.71-1",
+				"76.0.3809.87-1",
+				"76.0.3809.87-2",
+				"78.0.3904.87-1",
+				"78.0.3904.97-1",
+				"78.0.3904.97-1~deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4575-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2019/dsa-4575"
+		}
+	]
+}

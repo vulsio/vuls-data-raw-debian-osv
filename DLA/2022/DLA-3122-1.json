@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3122-1",
+	"modified": "2023-06-28T06:26:51.381078Z",
+	"published": "2022-09-27T00:00:00Z",
+	"related": [
+		"CVE-2021-33515",
+		"CVE-2022-30550"
+	],
+	"summary": "dovecot - security update",
+	"details": "\nTwo security issues were discovered in dovecot: IMAP and POP3 email server.\n\n\n* [CVE-2021-33515](https://security-tracker.debian.org/tracker/CVE-2021-33515)\nThe submission service in Dovecot before 2.3.15 allows STARTTLS command\n injection in lib-smtp. Sensitive information can be redirected to an\n attacker-controlled address.\n* [CVE-2022-30550](https://security-tracker.debian.org/tracker/CVE-2022-30550)\nWhen two passdb configuration entries exist with the same driver and args\n settings, incorrectly applied settings can lead to an unintended security\n configuration and can permit privilege escalation in certain configurations.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:2.3.4.1-5+deb10u7.\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\nFor the detailed security status of dovecot please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/dovecot>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "dovecot",
+				"purl": "pkg:deb/debian/dovecot?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.4.1-5+deb10u7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.3.4.1-5",
+				"1:2.3.4.1-5+deb10u1",
+				"1:2.3.4.1-5+deb10u1~bpo9+1",
+				"1:2.3.4.1-5+deb10u2",
+				"1:2.3.4.1-5+deb10u3",
+				"1:2.3.4.1-5+deb10u4",
+				"1:2.3.4.1-5+deb10u5",
+				"1:2.3.4.1-5+deb10u6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3122-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3122"
+		}
+	]
+}

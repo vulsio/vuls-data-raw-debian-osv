@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5149-1",
+	"modified": "2023-10-16T00:20:41.686470Z",
+	"published": "2022-05-26T00:00:00Z",
+	"related": [
+		"CVE-2022-26691"
+	],
+	"summary": "cups - security update",
+	"details": "\nJoshua Mason discovered that a logic error in the validation of the\nsecret key used in the local authorisation mode of the CUPS printing\nsystem may result in privilege escalation.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2.2.10-6+deb10u6.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.3.3op2-3+deb11u2.\n\n\nWe recommend that you upgrade your cups packages.\n\n\nFor the detailed security status of cups please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/cups](https://security-tracker.debian.org/tracker/cups)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.10-6+deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.10-6",
+				"2.2.10-6+deb10u1",
+				"2.2.10-6+deb10u2",
+				"2.2.10-6+deb10u3",
+				"2.2.10-6+deb10u4",
+				"2.2.10-6+deb10u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5149-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "cups",
+				"purl": "pkg:deb/debian/cups?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.3.3op2-3+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.3.3op2-3+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5149-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5149"
+		}
+	]
+}

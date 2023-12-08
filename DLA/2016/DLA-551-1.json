@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-551-1",
+	"modified": "2023-06-28T06:34:11.849231Z",
+	"published": "2016-07-17T00:00:00Z",
+	"related": [
+		"CVE-2016-5731",
+		"CVE-2016-5733",
+		"CVE-2016-5739"
+	],
+	"summary": "phpmyadmin - security update",
+	"details": "\nPhpmyadmin, a web administration tool for MySQL, had several\nCross Site Scripting (XSS) vulnerabilities were reported.\n\n\n* [CVE-2016-5731](https://security-tracker.debian.org/tracker/CVE-2016-5731)\nWith a specially crafted request, it is possible to trigger\n an XSS attack through the example OpenID authentication script.\n* [CVE-2016-5733](https://security-tracker.debian.org/tracker/CVE-2016-5733)\nSeveral XSS vulnerabilities were found with the Transformation\n feature.\n Also a vulnerability was reported allowing a specifically\n configured MySQL server to execute an XSS attack.\n This particular attack requires configuring the MySQL server\n log\\_bin directive with the payload.\n* [CVE-2016-5739](https://security-tracker.debian.org/tracker/CVE-2016-5739)\nA vulnerability was reported where a specially crafted\n Transformation could be used to leak information including\n the authentication token. This could be used to direct a\n CSRF attack against a user.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4:3.4.11.1-2+deb7u5.\n\n\nWe recommend that you upgrade your phpmyadmin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:3.4.11.1-2+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:3.4.11.1-2",
+				"4:3.4.11.1-2+deb7u1",
+				"4:3.4.11.1-2+deb7u2",
+				"4:3.4.11.1-2+deb7u3",
+				"4:3.4.11.1-2+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-551-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-551"
+		}
+	]
+}

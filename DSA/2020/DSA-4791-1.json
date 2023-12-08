@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4791-1",
+	"modified": "2023-10-16T00:20:38.190461Z",
+	"published": "2020-11-13T00:00:00Z",
+	"related": [
+		"CVE-2020-25654"
+	],
+	"summary": "pacemaker - security update",
+	"details": "\nKen Gaillot discovered a vulnerability in the Pacemaker cluster\nresource manager: If ACLs were configured for users in the haclient\ngroup, the ACL restrictions could be bypassed via unrestricted IPC\ncommunication, resulting in cluster-wide arbitrary code execution with\nroot privileges.\n\n\nIf the enable-acl cluster option isn't enabled, members of the\nhaclient group can modify Pacemaker's Cluster Information Base without\nrestriction, which already gives them these capabilities, so there is\nno additional exposure in such a setup.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 2.0.1-5+deb10u1.\n\n\nWe recommend that you upgrade your pacemaker packages.\n\n\nFor the detailed security status of pacemaker please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/pacemaker](https://security-tracker.debian.org/tracker/pacemaker)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "pacemaker",
+				"purl": "pkg:deb/debian/pacemaker?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.1-5+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.1-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4791-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4791"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-473",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-04-03T00:00:00Z",
+	"related": [
+		"CVE-2004-0376"
+	],
+	"summary": "oftpd - denial of service",
+	"details": "\nA vulnerability was discovered in oftpd, an anonymous FTP server,\nwhereby a remote attacker could cause the oftpd process to crash by\nspecifying a large value in a PORT command.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.3.6-6.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 20040304-1.\n\n\nWe recommend that you update your oftpd package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "oftpd",
+				"purl": "pkg:deb/debian/oftpd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.3.6-6"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-473.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-473"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2704-1",
+	"modified": "2023-10-16T00:11:26.758484Z",
+	"published": "2013-06-09T00:00:00Z",
+	"related": [
+		"CVE-2013-1872"
+	],
+	"summary": "mesa - out of bounds access",
+	"details": "\nIt was discovered that applications using the mesa library, a free\nimplementation of the OpenGL API, may crash or execute arbitrary code\ndue to an out of bounds memory access in the library.\nThis vulnerability only affects systems with Intel chipsets.\n\n\nThe oldstable distribution (squeeze) is not affected by this problem.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 8.0.5-4+deb7u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8.0.5-7.\n\n\nWe recommend that you upgrade your mesa packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "mesa",
+				"purl": "pkg:deb/debian/mesa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.5-4+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.5-4",
+				"8.0.5-4+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2704-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2704"
+		}
+	]
+}

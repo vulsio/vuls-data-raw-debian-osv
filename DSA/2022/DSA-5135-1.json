@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5135-1",
+	"modified": "2023-10-16T00:20:36.745103Z",
+	"published": "2022-05-12T00:00:00Z",
+	"related": [
+		"CVE-2022-1552"
+	],
+	"summary": "postgresql-11 - security update",
+	"details": "\nAlexander Lakhin discovered that the autovacuum feature and multiple\ncommands could escape the \"security-restricted operation\" sandbox.\n\n\nFor additional information please refer to the upstream announcement\nat [\\\nhttps://www.postgresql.org/support/security/CVE-2022-1552/](https://www.postgresql.org/support/security/CVE-2022-1552/)/\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 11.16-0+deb10u1.\n\n\nWe recommend that you upgrade your postgresql-11 packages.\n\n\nFor the detailed security status of postgresql-11 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/postgresql-11](https://security-tracker.debian.org/tracker/postgresql-11)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "postgresql-11",
+				"purl": "pkg:deb/debian/postgresql-11?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "11.16-0+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"11.10-0+deb10u1",
+				"11.11-0+deb10u1",
+				"11.12-0+deb10u1",
+				"11.13-0+deb10u1",
+				"11.14-0+deb10u1",
+				"11.4-1",
+				"11.5-1",
+				"11.5-1+deb10u1",
+				"11.5-2",
+				"11.5-3sid1",
+				"11.5-3sid2",
+				"11.6-0+deb10u1",
+				"11.6-2~sid1",
+				"11.7-0+deb10u1",
+				"11.9-0+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5135-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5135"
+		}
+	]
+}

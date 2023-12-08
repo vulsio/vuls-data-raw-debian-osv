@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2627-1",
+	"modified": "2023-06-28T06:26:37.618687Z",
+	"published": "2021-04-15T00:00:00Z",
+	"related": [
+		"CVE-2021-3472"
+	],
+	"summary": "xorg-server - security update",
+	"details": "\nJan-Niklas Sohn discovered that there was an input validation failure in the\nX.Org display server.\n\n\nInsufficient checks on the lengths of the XInput extension's\nChangeFeedbackControl request could have lead to out of bounds memory accesses\nin the X server. These issues can lead to privilege escalation for authorised\nclients, particularly on systems where the X server is running as a privileged\nuser.\n\n\n* [CVE-2021-3472](https://security-tracker.debian.org/tracker/CVE-2021-3472)\nFix XChangeFeedbackControl() request underflow\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n2:1.19.2-1+deb9u8.\n\n\nWe recommend that you upgrade your xorg-server packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "xorg-server",
+				"purl": "pkg:deb/debian/xorg-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.19.2-1+deb9u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.19.2-1",
+				"2:1.19.2-1+deb9u1",
+				"2:1.19.2-1+deb9u2",
+				"2:1.19.2-1+deb9u3",
+				"2:1.19.2-1+deb9u4",
+				"2:1.19.2-1+deb9u5",
+				"2:1.19.2-1+deb9u6",
+				"2:1.19.2-1+deb9u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2627-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2627"
+		}
+	]
+}

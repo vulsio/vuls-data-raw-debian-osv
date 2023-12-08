@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5231-1",
+	"modified": "2023-10-16T00:16:04.673320Z",
+	"published": "2022-09-17T00:00:00Z",
+	"related": [
+		"CVE-2022-23096",
+		"CVE-2022-23097",
+		"CVE-2022-23098",
+		"CVE-2022-32292",
+		"CVE-2022-32293"
+	],
+	"summary": "connman - security update",
+	"details": "\nSeveral vulnerabilities were discovered in ConnMan, a network manager\nfor embedded devices, which could result in denial of service or the\nexecution of arbitrary code.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.36-2.2+deb11u1.\n\n\nWe recommend that you upgrade your connman packages.\n\n\nFor the detailed security status of connman please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/connman](https://security-tracker.debian.org/tracker/connman)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "connman",
+				"purl": "pkg:deb/debian/connman?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.36-2.2+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.36-2.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5231-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5231"
+		}
+	]
+}

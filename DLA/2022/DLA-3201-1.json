@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3201-1",
+	"modified": "2023-06-28T06:21:27.126425Z",
+	"published": "2022-11-21T00:00:00Z",
+	"related": [
+		"CVE-2022-40284"
+	],
+	"summary": "ntfs-3g - security update",
+	"details": "\nYuchen Zeng and Eduardo Vela discovered a buffer overflow in NTFS-3G, a\nread-write NTFS driver for FUSE, due to incorrect validation of some of\nthe NTFS metadata. A local user can take advantage of this flaw for local\nroot privilege escalation.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1:2017.3.23AR.3-3+deb10u3.\n\n\nWe recommend that you upgrade your ntfs-3g packages.\n\n\nFor the detailed security status of ntfs-3g please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ntfs-3g>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ntfs-3g",
+				"purl": "pkg:deb/debian/ntfs-3g?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2017.3.23AR.3-3+deb10u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2017.3.23AR.3-3",
+				"1:2017.3.23AR.3-3+deb10u1",
+				"1:2017.3.23AR.3-3+deb10u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3201-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3201"
+		}
+	]
+}

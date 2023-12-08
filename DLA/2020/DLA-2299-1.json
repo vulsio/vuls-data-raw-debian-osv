@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2299-1",
+	"modified": "2023-06-28T06:30:06.992122Z",
+	"published": "2020-07-30T00:00:00Z",
+	"related": [
+		"CVE-2020-15862"
+	],
+	"summary": "net-snmp - security update",
+	"details": "\nA privilege escalation vulnerability vulnerability was discovered in\n[Net-SNMP](http://net-snmp.sourceforge.net/), a set of tools for\ncollecting and organising information about devices on computer networks.\n\n\nUpstream notes that:\n\n\n* It is still possible to enable this MIB via the --with-mib-modules\nconfigure option.\n* Another MIB that provides similar functionality, namely\nucd-snmp/extensible, is disabled by default.\n* The security risk of ucd-snmp/pass and\nucd-snmp/pass\\_persist is lower since these modules only introduce a\nsecurity risk if the invoked scripts are exploitable.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n5.7.3+dfsg-1.7+deb9u2.\n\n\nWe recommend that you upgrade your net-snmp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "net-snmp",
+				"purl": "pkg:deb/debian/net-snmp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.7.3+dfsg-1.7+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.7.3+dfsg-1.7",
+				"5.7.3+dfsg-1.7+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2299-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2299"
+		}
+	]
+}

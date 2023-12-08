@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3441-1",
+	"modified": "2023-06-28T06:26:58.360291Z",
+	"published": "2023-06-02T00:00:00Z",
+	"related": [
+		"CVE-2023-32307"
+	],
+	"summary": "sofia-sip - security update",
+	"details": "\nIt was discovered that there was a series of heap overflow and integer\noverflow vulnerabilities in Sofia-SIP, a building block for creating VoIP/SIP\nand instant messaging applications.\n\n\n* [CVE-2023-32307](https://security-tracker.debian.org/tracker/CVE-2023-32307)\nSofia-SIP is an open-source SIP User-Agent library, compliant with the\n IETF RFC3261 specification. Referring to\n [GHSA-8599-x7rq-fr54](https://github.com/freeswitch/sofia-sip/security/advisories/GHSA-8599-x7rq-fr54)\n several other potential heap-over-flow and integer-overflow in\n `stun_parse_attr_error_code` and\n `stun_parse_attr_uint32` were found because the lack of\n attributes length check when Sofia-SIP handles STUN packets. The previous\n patch of\n [GHSA-8599-x7rq-fr54](https://github.com/freeswitch/sofia-sip/security/advisories/GHSA-8599-x7rq-fr54)\n fixed the vulnerability when attr\\_type did not match the enum value, but\n there are also vulnerabilities in the handling of other valid cases. The\n OOB read and integer-overflow made by attacker may lead to crash, high\n consumption of memory or even other more serious consequences. These issue\n have been addressed in version 1.13.15. Users are advised to upgrade.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1.12.11+20110422.1-2.1+deb10u4.\n\n\nWe recommend that you upgrade your sofia-sip packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "sofia-sip",
+				"purl": "pkg:deb/debian/sofia-sip?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.11+20110422.1-2.1+deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.11+20110422.1-2.1",
+				"1.12.11+20110422.1-2.1+deb10u1",
+				"1.12.11+20110422.1-2.1+deb10u2",
+				"1.12.11+20110422.1-2.1+deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3441-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3441"
+		}
+	]
+}

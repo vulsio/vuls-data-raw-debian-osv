@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4818-1",
+	"modified": "2023-10-16T00:22:06.003534Z",
+	"published": "2020-12-23T00:00:00Z",
+	"related": [
+		"CVE-2020-10936",
+		"CVE-2020-26932",
+		"CVE-2020-29668",
+		"CVE-2020-9369"
+	],
+	"summary": "sympa - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Sympa, a mailing list\nmanager, which could result in local privilege escalation, denial of\nservice or unauthorized access via the SOAP API.\n\n\nAdditionally to mitigate [\\\nCVE-2020-26880](https://security-tracker.debian.org/tracker/CVE-2020-26880) the sympa\\_newaliases-wrapper is no longer installed\nsetuid root by default. A new Debconf question is introduced to allow\nsetuid installations in setups where it is needed.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 6.2.40~dfsg-1+deb10u1.\n\n\nWe recommend that you upgrade your sympa packages.\n\n\nFor the detailed security status of sympa please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/sympa](https://security-tracker.debian.org/tracker/sympa)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "sympa",
+				"purl": "pkg:deb/debian/sympa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.2.40~dfsg-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.2.40~dfsg-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4818-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4818"
+		}
+	]
+}

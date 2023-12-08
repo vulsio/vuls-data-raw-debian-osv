@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2010-1",
+	"modified": "2023-10-16T00:10:53.243252Z",
+	"published": "2010-03-10T00:00:00Z",
+	"related": [
+		"CVE-2010-0298",
+		"CVE-2010-0306",
+		"CVE-2010-0309",
+		"CVE-2010-0419"
+	],
+	"summary": "kvm - several vulnerabilities",
+	"details": "\nSeveral local vulnerabilities have been discovered in kvm, a full\nvirtualization system. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2010-0298](https://security-tracker.debian.org/tracker/CVE-2010-0298)\n[CVE-2010-0306](https://security-tracker.debian.org/tracker/CVE-2010-0306)\nGleb Natapov discovered issues in the KVM subsystem where missing\n permission checks (CPL/IOPL) permit a user in a guest system to\n denial of service a guest (system crash) or gain escalated\n privileges with the guest.\n* [CVE-2010-0309](https://security-tracker.debian.org/tracker/CVE-2010-0309)\nMarcelo Tosatti fixed an issue in the PIT emulation code in the\n KVM subsystem that allows privileged users in a guest domain to\n cause a denial of service (crash) of the host system.\n* [CVE-2010-0419](https://security-tracker.debian.org/tracker/CVE-2010-0419)\nPaolo Bonzini found a bug in KVM that can be used to bypass proper\n permission checking while loading segment selectors. This\n potentially allows privileged guest users to execute privileged\n instructions on the host system.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 72+dfsg-5~lenny5.\n\n\nFor the testing distribution (squeeze), and the unstable distribution (sid),\nthese problems will be addressed within the linux-2.6 package.\n\n\nWe recommend that you upgrade your kvm package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "kvm",
+				"purl": "pkg:deb/debian/kvm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "72+dfsg-5~lenny5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"72+dfsg-4",
+				"72+dfsg-5~lenny1",
+				"72+dfsg-5~lenny2",
+				"72+dfsg-5~lenny3",
+				"72+dfsg-5~lenny4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2010-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2010"
+		}
+	]
+}

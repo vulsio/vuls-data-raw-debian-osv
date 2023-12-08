@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3931-1",
+	"modified": "2023-10-16T00:12:29.109444Z",
+	"published": "2017-08-10T00:00:00Z",
+	"related": [
+		"CVE-2017-11173"
+	],
+	"summary": "ruby-rack-cors - security update",
+	"details": "\nJens Mueller discovered that an incorrect regular expression in rack-cors\nmay lead to insufficient restriction of CORS requests.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 0.4.0-1+deb9u1.\n\n\nWe recommend that you upgrade your ruby-rack-cors packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "ruby-rack-cors",
+				"purl": "pkg:deb/debian/ruby-rack-cors?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.4.0-1+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.4.0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3931-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3931"
+		}
+	]
+}

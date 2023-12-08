@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1368-1",
+	"modified": "2023-06-28T06:20:36.320314Z",
+	"published": "2018-04-30T00:00:00Z",
+	"related": [
+		"CVE-2017-11333",
+		"CVE-2017-14632",
+		"CVE-2017-14633",
+		"CVE-2018-5146"
+	],
+	"summary": "libvorbis - security update",
+	"details": "\nSerious vulnerabilities were found in the libvorbis library, commonly\nused to encode and decode audio in OGG containers.\n\n\n* [CVE-2017-14633](https://security-tracker.debian.org/tracker/CVE-2017-14633)\nIn Xiph.Org libvorbis 1.3.5, an out-of-bounds array read\n vulnerability exists in the function mapping0\\_forward() in\n mapping0.c, which may lead to DoS when operating on a crafted\n audio file with vorbis\\_analysis().\n* [CVE-2017-14632](https://security-tracker.debian.org/tracker/CVE-2017-14632)\nXiph.Org libvorbis 1.3.5 allows Remote Code Execution upon\n freeing uninitialized memory in the function\n vorbis\\_analysis\\_headerout() in info.c when vi->channels<=0, a\n similar issue to Mozilla bug 550184.\n* [CVE-2017-11333](https://security-tracker.debian.org/tracker/CVE-2017-11333)\nThe vorbis\\_analysis\\_wrote function in lib/block.c in Xiph.Org\n libvorbis 1.3.5 allows remote attackers to cause a denial of\n service (OOM) via a crafted wav file.\n* [CVE-2018-5146](https://security-tracker.debian.org/tracker/CVE-2018-5146)\nout-of-bounds memory write in the codeboook parsing code of the\n Libvorbis multimedia library could result in the execution of\n arbitrary code.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.2-1.3+deb7u1.\n\n\nWe recommend that you upgrade your libvorbis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libvorbis",
+				"purl": "pkg:deb/debian/libvorbis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.2-1.3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.2-1.3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1368-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1368"
+		}
+	]
+}

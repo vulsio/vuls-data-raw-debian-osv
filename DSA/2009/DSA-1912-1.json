@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1912-1",
+	"modified": "2023-10-16T00:05:42.760152Z",
+	"published": "2009-10-16T00:00:00Z",
+	"related": [
+		"CVE-2009-2660",
+		"CVE-2009-3296"
+	],
+	"summary": "camlimages - arbitrary code execution",
+	"details": "\nIt was discovered that CamlImages, an open source image processing\nlibrary, suffers from several integer overflows, which may lead to a\npotentially exploitable heap overflow and result in arbitrary code\nexecution. This advisory addresses issues with the reading of TIFF\nfiles. It also expands the patch for [CVE-2009-2660](https://security-tracker.debian.org/tracker/CVE-2009-2660) to cover another\npotential overflow in the processing of JPEG images.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.20-8+etch3.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1:2.2.0-4+lenny3.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your camlimages package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "camlimages",
+				"purl": "pkg:deb/debian/camlimages?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.20-8+etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.20-8",
+				"2.20-8+etch1",
+				"2.20-8+etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1912-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "camlimages",
+				"purl": "pkg:deb/debian/camlimages?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.2.0-4+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.2.0-4",
+				"1:2.2.0-4+lenny1",
+				"1:2.2.0-4+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1912-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1912"
+		}
+	]
+}

@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3031-1",
+	"modified": "2023-10-16T00:11:43.546389Z",
+	"published": "2014-09-23T00:00:00Z",
+	"related": [
+		"CVE-2014-6273"
+	],
+	"summary": "apt - security update",
+	"details": "\nThe Google Security Team discovered a buffer overflow vulnerability in\nthe HTTP transport code in apt-get. An attacker able to\nman-in-the-middle a HTTP request to an apt repository can trigger the\nbuffer overflow, leading to a crash of the http apt method binary, or\npotentially to arbitrary code execution.\n\n\nTwo regression fixes were included in this update:\n\n\n* Fix regression from the previous update in DSA-3025-1 when the custom\n apt configuration option for Dir::state::lists is set to a relative\n path (#762160).\n* Fix regression in the reverification handling of cdrom: sources that\n may lead to incorrect hashsum warnings. Affected users need to run\n \"apt-cdrom add\" again after the update was applied.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.9.7.9+deb7u5.\n\n\nWe recommend that you upgrade your apt packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "apt",
+				"purl": "pkg:deb/debian/apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.7.9+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.7.8",
+				"0.9.7.9",
+				"0.9.7.9+deb7u1",
+				"0.9.7.9+deb7u2",
+				"0.9.7.9+deb7u3",
+				"0.9.7.9+deb7u4",
+				"0.9.7.9~exp1",
+				"0.9.7.9~exp2",
+				"0.9.7.9~exp3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3031-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3031"
+		}
+	]
+}

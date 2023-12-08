@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2805-1",
+	"modified": "2023-06-28T06:25:20.331076Z",
+	"published": "2021-10-31T00:00:00Z",
+	"related": [
+		"CVE-2019-1010305"
+	],
+	"summary": "libmspack - security update",
+	"details": "\nOpening a crafted chm file could result in a buffer overflow in libmspack,\na library for Microsoft compression formats.\n\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n0.5-1+deb9u4.\n\n\nWe recommend that you upgrade your libmspack packages.\n\n\nFor the detailed security status of libmspack please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libmspack>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "libmspack",
+				"purl": "pkg:deb/debian/libmspack?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.5-1+deb9u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.5-1",
+				"0.5-1+deb9u1",
+				"0.5-1+deb9u2",
+				"0.5-1+deb9u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2805-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2805"
+		}
+	]
+}

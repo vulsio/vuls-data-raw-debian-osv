@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-154",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-08-15T00:00:00Z",
+	"related": [
+		"CVE-2002-0875"
+	],
+	"summary": "fam - privilege escalation",
+	"details": "\nA [flaw](http://oss.sgi.com/bugzilla/show_bug.cgi?id=151)\nwas discovered in FAM's group handling. In the effect users\nare unable to read FAM directories they have group read and execute\npermissions on. However, also unprivileged users can potentially\nlearn names of files that only users in root's group should be able to\nview.\n\n\nThis problem been fixed in version 2.6.6.1-5.2 for the current stable\nstable distribution (woody) and in version 2.6.8-1 (or any later\nversion) for the unstable distribution (sid). The old stable\ndistribution (potato) is not affected, since it doesn't contain fam\npackages.\n\n\nWe recommend that you upgrade your fam packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "fam",
+				"purl": "pkg:deb/debian/fam?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.6.1-5.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-154.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-154"
+		}
+	]
+}

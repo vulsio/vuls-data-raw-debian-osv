@@ -1,0 +1,58 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-272-1",
+	"modified": "2023-06-28T06:21:20.795109Z",
+	"published": "2015-07-16T00:00:00Z",
+	"related": [
+		"CVE-2015-2317",
+		"CVE-2015-5143",
+		"CVE-2015-5144"
+	],
+	"summary": "python-django - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Django, a high-level Python web\ndevelopment framework:\n\n\n* [CVE-2015-2317](https://security-tracker.debian.org/tracker/CVE-2015-2317)\nDaniel Chatfield discovered that python-django, a high-level Python\n web development framework, incorrectly handled user-supplied redirect\n URLs. A remote attacker could use this flaw to perform a cross-site\n scripting attack.\n* [CVE-2015-5143](https://security-tracker.debian.org/tracker/CVE-2015-5143)\nEric Peterson and Lin Hua Cheng discovered that a new empty record\n used to be created in the session storage every time a session was\n accessed and an unknown session key was provided in the request\n cookie. This could allow remote attackers to saturate the session\n store or cause other users' session records to be evicted.\n* [CVE-2015-5144](https://security-tracker.debian.org/tracker/CVE-2015-5144)\nSjoerd Job Postmus discovered that some built-in validators did not\n properly reject newlines in input values. This could allow remote\n attackers to inject headers in emails and HTTP responses.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been fixed in\nversion 1.2.3-3+squeeze13.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "python-django",
+				"purl": "pkg:deb/debian/python-django?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3-3+squeeze13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3-3",
+				"1.2.3-3+squeeze1",
+				"1.2.3-3+squeeze10",
+				"1.2.3-3+squeeze11",
+				"1.2.3-3+squeeze12",
+				"1.2.3-3+squeeze2",
+				"1.2.3-3+squeeze3",
+				"1.2.3-3+squeeze5",
+				"1.2.3-3+squeeze6",
+				"1.2.3-3+squeeze7",
+				"1.2.3-3+squeeze8",
+				"1.2.3-3+squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-272-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-272"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3102-1",
+	"modified": "2023-10-16T00:11:47.178954Z",
+	"published": "2014-12-13T00:00:00Z",
+	"related": [
+		"CVE-2014-9130"
+	],
+	"summary": "libyaml - security update",
+	"details": "\nJonathan Gray and Stanislaw Pitucha found an assertion failure in the\nway wrapped strings are parsed in LibYAML, a fast YAML 1.1 parser and\nemitter library. An attacker able to load specially crafted YAML input\ninto an application using libyaml could cause the application to crash.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.1.4-2+deb7u5.\n\n\nFor the upcoming stable distribution (jessie), this problem has been\nfixed in version 0.1.6-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.1.6-3.\n\n\nWe recommend that you upgrade your libyaml packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libyaml",
+				"purl": "pkg:deb/debian/libyaml?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.1.4-2+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.1.4-2",
+				"0.1.4-2+deb7u1",
+				"0.1.4-2+deb7u2",
+				"0.1.4-2+deb7u3",
+				"0.1.4-2+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3102-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-3102"
+		}
+	]
+}

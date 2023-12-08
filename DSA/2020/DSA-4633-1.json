@@ -1,0 +1,81 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4633-1",
+	"modified": "2023-10-16T00:19:34.023196Z",
+	"published": "2020-02-22T00:00:00Z",
+	"related": [
+		"CVE-2019-5481",
+		"CVE-2019-5482"
+	],
+	"summary": "curl - security update",
+	"details": "\nMultiple vulnerabilities were discovered in cURL, an URL transfer\nlibrary.\n\n\n* [CVE-2019-5436](https://security-tracker.debian.org/tracker/CVE-2019-5436)\nA heap buffer overflow in the TFTP receiving code was discovered,\n which could allow DoS or arbitrary code execution. This only affects\n the oldstable distribution (stretch).\n* [CVE-2019-5481](https://security-tracker.debian.org/tracker/CVE-2019-5481)\nThomas Vegas discovered a double-free in the FTP-KRB code, triggered\n by a malicious server sending a very large data block.\n* [CVE-2019-5482](https://security-tracker.debian.org/tracker/CVE-2019-5482)\nThomas Vegas discovered a heap buffer overflow that could be\n triggered when a small non-default TFTP blocksize is used.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 7.52.1-5+deb9u10.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 7.64.0-4+deb10u1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFor the detailed security status of curl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/curl](https://security-tracker.debian.org/tracker/curl)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.52.1-5+deb9u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.52.1-5",
+				"7.52.1-5+deb9u1",
+				"7.52.1-5+deb9u2",
+				"7.52.1-5+deb9u3",
+				"7.52.1-5+deb9u4",
+				"7.52.1-5+deb9u5",
+				"7.52.1-5+deb9u6",
+				"7.52.1-5+deb9u7",
+				"7.52.1-5+deb9u8",
+				"7.52.1-5+deb9u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4633-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.64.0-4+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.64.0-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4633-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2020/dsa-4633"
+		}
+	]
+}

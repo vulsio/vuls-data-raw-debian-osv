@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5290-1",
+	"modified": "2023-10-16T00:23:06.006807Z",
+	"published": "2022-11-28T00:00:00Z",
+	"related": [
+		"CVE-2022-33980"
+	],
+	"summary": "commons-configuration2 - security update",
+	"details": "\nApache Commons Configuration, a Java library providing a generic configuration\ninterface, performs variable interpolation, allowing properties to be\ndynamically evaluated and expanded. Starting with version 2.4 and continuing\nthrough 2.7, the set of default Lookup instances included interpolators that\ncould result in arbitrary code execution or contact with remote servers. These\nlookups are:\n\n\n* script - execute expressions using the JVM script execution\nengine (javax.script)\n* dns - resolve dns records\n* url - load values from urls, including from remote server.\n\n\nApplications using the interpolation defaults in the affected versions may\nbe vulnerable to remote code execution or unintentional contact with remote\nservers if untrusted configuration values are used.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.8.0-1~deb11u1.\n\n\nWe recommend that you upgrade your commons-configuration2 packages.\n\n\nFor the detailed security status of commons-configuration2 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/commons-configuration2](https://security-tracker.debian.org/tracker/commons-configuration2)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "commons-configuration2",
+				"purl": "pkg:deb/debian/commons-configuration2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.8.0-1~deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.7-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5290-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5290"
+		}
+	]
+}

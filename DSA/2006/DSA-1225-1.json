@@ -1,0 +1,60 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1225-1",
+	"modified": "2023-10-16T00:10:15.903700Z",
+	"published": "2006-12-03T00:00:00Z",
+	"related": [
+		"CVE-2006-4310",
+		"CVE-2006-5462",
+		"CVE-2006-5463",
+		"CVE-2006-5464",
+		"CVE-2006-5748"
+	],
+	"summary": "mozilla-firefox",
+	"details": "\nThis update covers packages for the little endian MIPS architecture\nmissing in the original advisory. For reference please find below the\noriginal advisory text:\n\n\n\n> \n> Several security related problems have been discovered in Mozilla and\n> derived products such as Mozilla Firefox. The Common Vulnerabilities\n> and Exposures project identifies the following vulnerabilities:\n> \n> \n> * [CVE-2006-4310](https://security-tracker.debian.org/tracker/CVE-2006-4310)\n> Tomas Kempinsky discovered that malformed FTP server responses\n>  could lead to denial of service.\n> * [CVE-2006-5462](https://security-tracker.debian.org/tracker/CVE-2006-5462)\n> Ulrich KĂźhn discovered that the correction for a cryptographic\n>  flaw in the handling of PKCS-1 certificates was incomplete, which\n>  allows the forgery of certificates.\n> * [CVE-2006-5463](https://security-tracker.debian.org/tracker/CVE-2006-5463)\n> shutdown discovered that modification of JavaScript objects\n>  during execution could lead to the execution of arbitrary\n>  JavaScript bytecode.\n> * [CVE-2006-5464](https://security-tracker.debian.org/tracker/CVE-2006-5464)\n> Jesse Ruderman and Martijn Wargers discovered several crashes in\n>  the layout engine, which might also allow execution of arbitrary\n>  code.\n> * [CVE-2006-5748](https://security-tracker.debian.org/tracker/CVE-2006-5748)\n> Igor Bukanov and Jesse Ruderman discovered several crashes in the\n>  JavaScript engine, which might allow execution of arbitrary code.\n> \n> \n> This update also addresses several crashes, which could be triggered by\n> malicious websites and fixes a regression introduced in the previous\n> Mozilla update.\n> \n> \n> \n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.0.4-2sarge13.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nthe current iceweasel package 2.0+dfsg-1.\n\n\nWe recommend that you upgrade your mozilla-firefox package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mozilla-firefox",
+				"purl": "pkg:deb/debian/mozilla-firefox?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.4-2sarge13"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.4-2",
+				"1.0.4-2sarge1",
+				"1.0.4-2sarge10",
+				"1.0.4-2sarge11",
+				"1.0.4-2sarge12",
+				"1.0.4-2sarge2",
+				"1.0.4-2sarge3",
+				"1.0.4-2sarge4",
+				"1.0.4-2sarge5",
+				"1.0.4-2sarge6",
+				"1.0.4-2sarge7",
+				"1.0.4-2sarge9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1225-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1225"
+		}
+	]
+}

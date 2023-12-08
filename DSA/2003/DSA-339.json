@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-339",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2003-07-06T00:00:00Z",
+	"related": [
+		"CVE-2003-0440"
+	],
+	"summary": "semi - insecure temporary file",
+	"details": "\nNOTE: due to a combination of administrative problems, this advisory\nwas erroneously released with the identifier \"DSA-337-1\". DSA-337-1\ncorrectly refers to an earlier advisory regarding gtksee.\n\n\nsemi, a MIME library for GNU Emacs, does not take appropriate\nsecurity precautions when creating temporary files. This bug could\npotentially be exploited to overwrite arbitrary files with the\nprivileges of the user running Emacs and semi, potentially with\ncontents supplied by the attacker.\n\n\nwemi is a fork of semi, and contains the same bug.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nsemi version 1.14.3.cvs.2001.08.10-1woody2 and wemi version\n1.14.0.20010802wemiko-1.3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nsemi version 1.14.5+20030609-1. The unstable distribution does not\ncontain a wemi package.\n\n\nWe recommend that you update your semi and wemi packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "semi",
+				"purl": "pkg:deb/debian/semi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.3.cvs.2001.08.10-1woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-339.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "wemi",
+				"purl": "pkg:deb/debian/wemi?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.14.0.20010802wemiko-1.3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-339.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2003/dsa-339"
+		}
+	]
+}

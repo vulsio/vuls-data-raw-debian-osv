@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3118-1",
+	"modified": "2023-10-16T00:06:12.857743Z",
+	"published": "2015-01-05T00:00:00Z",
+	"related": [
+		"CVE-2014-9221"
+	],
+	"summary": "strongswan - security update",
+	"details": "\nMike Daskalakis reported a denial of service vulnerability in charon,\nthe IKEv2 daemon for strongSwan, an IKE/IPsec suite used to establish\nIPsec protected links.\n\n\nThe bug can be triggered by an IKEv2 Key Exchange (KE) payload that\ncontains the Diffie-Hellman (DH) group 1025. This identifier is from the\nprivate-use range and only used internally by libtls for DH groups with\ncustom generator and prime (MODP\\_CUSTOM). As such the instantiated\nmethod expects that these two values are passed to the constructor. This\nis not the case when a DH object is created based on the group in the KE\npayload. Therefore, an invalid pointer is dereferenced later, which\ncauses a segmentation fault.\n\n\nThis means that the charon daemon can be crashed with a single\nIKE\\_SA\\_INIT message containing such a KE payload. The starter process\nshould restart the daemon after that, but this might increase load on\nthe system. Remote code execution is not possible due to this issue, nor\nis IKEv1 affected in charon or pluto.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 4.5.2-1.5+deb7u6.\n\n\nFor the upcoming stable distribution (jessie), this problem has been\nfixed in version 5.2.1-5.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.2.1-5.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "strongswan",
+				"purl": "pkg:deb/debian/strongswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.5.2-1.5+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.5.2-1.5+deb7u1",
+				"4.5.2-1.5+deb7u2",
+				"4.5.2-1.5+deb7u2~bpo60+1",
+				"4.5.2-1.5+deb7u3",
+				"4.5.2-1.5+deb7u3~bpo60+1",
+				"4.5.2-1.5+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3118-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3118"
+		}
+	]
+}

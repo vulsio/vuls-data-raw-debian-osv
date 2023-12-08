@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4095-1",
+	"modified": "2023-10-16T00:13:50.694480Z",
+	"published": "2018-01-24T00:00:00Z",
+	"related": [
+		"CVE-2018-5345"
+	],
+	"summary": "gcab - security update",
+	"details": "\nIt was discovered that gcab, a Microsoft Cabinet file manipulation tool,\nis prone to a stack-based buffer overflow vulnerability when extracting\n.cab files. An attacker can take advantage of this flaw to cause a\ndenial-of-service or, potentially the execution of arbitrary code with\nthe privileges of the user running gcab, if a specially crafted .cab\nfile is processed.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 0.7-2+deb9u1.\n\n\nWe recommend that you upgrade your gcab packages.\n\n\nFor the detailed security status of gcab please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/gcab>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "gcab",
+				"purl": "pkg:deb/debian/gcab?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4095-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4095"
+		}
+	]
+}

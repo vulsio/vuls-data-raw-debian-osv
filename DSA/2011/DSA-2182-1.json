@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2182-1",
+	"modified": "2023-10-16T00:11:02.155616Z",
+	"published": "2011-03-04T00:00:00Z",
+	"related": [
+		"CVE-2011-1018"
+	],
+	"summary": "logwatch - remote code execution",
+	"details": "\nDominik George discovered that Logwatch does not guard against shell\nmeta-characters in crafted log file names (such as those produced by\nSamba). As a result, an attacker might be able to execute shell\ncommands on the system running Logwatch.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 7.3.6.cvs20080702-2lenny1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 7.3.6.cvs20090906-1squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 7.3.6.cvs20090906-2.\n\n\nWe recommend that you upgrade your logwatch packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "logwatch",
+				"purl": "pkg:deb/debian/logwatch?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.3.6.cvs20080702-2lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.3.6.cvs20080702-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2182-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "logwatch",
+				"purl": "pkg:deb/debian/logwatch?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.3.6.cvs20090906-1squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.3.6.cvs20090906-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2182-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2182"
+		}
+	]
+}

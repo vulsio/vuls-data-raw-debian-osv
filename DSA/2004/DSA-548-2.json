@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-548-2",
+	"modified": "2023-10-16T00:23:22.077351Z",
+	"published": "2004-09-16T00:00:00Z",
+	"related": [
+		"CVE-2004-0817"
+	],
+	"summary": "imlib - unsanitised input",
+	"details": "\nMarcus Meissner discovered a heap overflow error in imlib, an imaging\nlibrary for X and X11, that could be abused by an attacker to execute\narbitrary code on the victim's machine. The updated packages we have\nprovided in DSA 548-1 did not seem to be sufficient, which should be\nfixed by this update.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 1.9.14-2woody3.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.9.14-16.2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.9.14-17 of imlib and in version 1.9.14-16.2 of imlib+png2.\n\n\nWe recommend that you upgrade your imlib1 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "imlib",
+				"purl": "pkg:deb/debian/imlib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.14-2woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.14-2woody2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-548-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "imlib",
+				"purl": "pkg:deb/debian/imlib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.14-16.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-548-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-548"
+		}
+	]
+}

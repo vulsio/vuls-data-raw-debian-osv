@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3720-1",
+	"modified": "2023-10-16T00:12:16.441606Z",
+	"published": "2016-11-21T00:00:00Z",
+	"related": [
+		"CVE-2016-0762",
+		"CVE-2016-5018",
+		"CVE-2016-6794",
+		"CVE-2016-6796",
+		"CVE-2016-6797"
+	],
+	"summary": "tomcat8 - security update",
+	"details": "\nMultiple security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine, which may result in possible timing attacks to\ndetermine valid user names, bypass of the SecurityManager, disclosure of\nsystem properties, unrestricted access to global resources, arbitrary\nfile overwrites, and potentially escalation of privileges.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 8.0.14-1+deb8u4.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.0.14-1+deb8u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.0.14-1",
+				"8.0.14-1+deb8u1",
+				"8.0.14-1+deb8u2",
+				"8.0.14-1+deb8u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3720-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2016/dsa-3720"
+		}
+	]
+}

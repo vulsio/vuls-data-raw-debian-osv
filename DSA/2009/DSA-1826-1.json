@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1826-1",
+	"modified": "2023-10-16T00:17:48.133042Z",
+	"published": "2009-07-04T00:00:00Z",
+	"related": [
+		"CVE-2007-2807",
+		"CVE-2009-1789"
+	],
+	"summary": "eggdrop - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in eggdrop, an advanced IRC\nrobot. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-2807](https://security-tracker.debian.org/tracker/CVE-2007-2807)\nIt was discovered that eggdrop is vulnerable to a buffer overflow, which\ncould result in a remote user executing arbitrary code. The previous DSA\n(DSA-1448-1) did not fix the issue correctly.\n* [CVE-2009-1789](https://security-tracker.debian.org/tracker/CVE-2009-1789)\nIt was discovered that eggdrop is vulnerable to a denial of service\nattack, that allows remote attackers to cause a crash via a crafted\nPRIVMSG.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.6.19-1.1+lenny1.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 1.6.18-1etch2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.6.19-1.2\n\n\nWe recommend that you upgrade your eggdrop package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "eggdrop",
+				"purl": "pkg:deb/debian/eggdrop?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.18-1etch2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.18-1",
+				"1.6.18-1etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1826-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "eggdrop",
+				"purl": "pkg:deb/debian/eggdrop?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.19-1.1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.19-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1826-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1826"
+		}
+	]
+}

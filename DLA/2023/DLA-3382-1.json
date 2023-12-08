@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3382-1",
+	"modified": "2023-06-28T06:42:53.726904Z",
+	"published": "2023-04-05T00:00:00Z",
+	"related": [
+		"CVE-2022-36354",
+		"CVE-2022-41639",
+		"CVE-2022-41838",
+		"CVE-2022-41977",
+		"CVE-2022-41981",
+		"CVE-2022-41988",
+		"CVE-2022-41999",
+		"CVE-2022-43592",
+		"CVE-2022-43593",
+		"CVE-2022-43594",
+		"CVE-2022-43595",
+		"CVE-2022-43596",
+		"CVE-2022-43597",
+		"CVE-2022-43598",
+		"CVE-2022-43599",
+		"CVE-2022-43600",
+		"CVE-2022-43601",
+		"CVE-2022-43602",
+		"CVE-2022-43603"
+	],
+	"summary": "openimageio - security update",
+	"details": "\nMultiple security vulnerabilities have been discovered in OpenImageIO, a\nlibrary for reading and writing images. Buffer overflows and out-of-bounds\nread and write programming errors may lead to a denial of service\n(application crash) or the execution of arbitrary code if a malformed image\nfile is processed.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.0.5~dfsg0-1+deb10u1.\n\n\nWe recommend that you upgrade your openimageio packages.\n\n\nFor the detailed security status of openimageio please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openimageio>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openimageio",
+				"purl": "pkg:deb/debian/openimageio?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.5~dfsg0-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.5~dfsg0-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3382-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3382"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-199",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-11-19T00:00:00Z",
+	"related": [
+		"CVE-2002-1307"
+	],
+	"summary": "mhonarc - cross site scripting",
+	"details": "\nSteven Christey discovered a cross site scripting vulnerability in\nmhonarc, a mail to HTML converter. Carefully crafted message headers\ncan introduce cross site scripting when mhonarc is configured to\ndisplay all headers lines on the web. However, it is often useful to\nrestrict the displayed header lines to To, From and Subject, in which\ncase the vulnerability cannot be exploited.\n\n\nThis problem has been fixed in version 2.5.2-1.2 for the current\nstable distribution (woody), in version 2.4.4-1.2 for the old stable\ndistribution (potato) and in version 2.5.13-1 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your mhonarc package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "mhonarc",
+				"purl": "pkg:deb/debian/mhonarc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.2-1.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-199.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-199"
+		}
+	]
+}

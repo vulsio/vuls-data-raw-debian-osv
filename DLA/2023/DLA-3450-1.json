@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3450-1",
+	"modified": "2023-06-28T06:21:30.580018Z",
+	"published": "2023-06-19T00:00:00Z",
+	"related": [
+		"CVE-2021-33621",
+		"CVE-2022-28739"
+	],
+	"summary": "ruby2.5 - security update",
+	"details": "\nA couple of security issues were discovered in ruby2.5, the Ruby\ninterpreter, and are as follows \n\n\n* [CVE-2021-33621](https://security-tracker.debian.org/tracker/CVE-2021-33621)\nHiroshi Tokumaru discovered that Ruby did not properly handle\n certain user input for applications the generate HTTP responses\n using cgi gem. An attacker could possibly use this issue to\n maliciously modify the response a user would receive from a\n vulnerable application.\n* [CVE-2022-28739](https://security-tracker.debian.org/tracker/CVE-2022-28739)\nIt was discovered that Ruby incorrectly handled certain inputs.\n An attacker could possibly use this issue to expose sensitive\n information.\n\n\nFor Debian 10 buster, these problems have been fixed, along with the\nregressions caused by the last Ruby update, in version 2.5.5-3+deb10u6.\n\n\nWe recommend that you upgrade your ruby2.5 packages.\n\n\nFor the detailed security status of ruby2.5 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ruby2.5>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ruby2.5",
+				"purl": "pkg:deb/debian/ruby2.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.5-3+deb10u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.5-3",
+				"2.5.5-3+deb10u1",
+				"2.5.5-3+deb10u2",
+				"2.5.5-3+deb10u3",
+				"2.5.5-3+deb10u4",
+				"2.5.5-3+deb10u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3450-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3450"
+		}
+	]
+}

@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2056-1",
+	"modified": "2023-10-16T00:05:44.057563Z",
+	"published": "2010-06-06T00:00:00Z",
+	"related": [
+		"CVE-2009-4882",
+		"CVE-2010-2155"
+	],
+	"summary": "zonecheck  - cross-site scripting",
+	"details": "\nIt was discovered that in ZoneCheck, a tool to check DNS configurations,\nthe CGI does not perform sufficient sanitation of user input; an\nattacker can take advantage of this and pass script code in order to\nperform cross-site scripting attacks.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.0.4-13lenny1.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 2.1.1-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.1.1-1.\n\n\nWe recommend that you upgrade your zonecheck packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "zonecheck",
+				"purl": "pkg:deb/debian/zonecheck?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.4-13lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.4-13"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2056-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2056"
+		}
+	]
+}

@@ -1,0 +1,80 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5550-1",
+	"modified": "2023-11-09T00:15:33.813521Z",
+	"published": "2023-11-08T00:00:00Z",
+	"related": [
+		"CVE-2023-39357",
+		"CVE-2023-39359",
+		"CVE-2023-39361",
+		"CVE-2023-39362",
+		"CVE-2023-39364",
+		"CVE-2023-39365",
+		"CVE-2023-39513",
+		"CVE-2023-39515",
+		"CVE-2023-39516"
+	],
+	"summary": "cacti - security update",
+	"details": "\nMultiple security vulnerabilities have been discovered in Cacti, a web\ninterface for graphing of monitoring systems, which could result in\ncross-site scripting, SQL injection, an open redirect or command injection.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 1.2.16+ds1-2+deb11u2.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 1.2.24+ds1-1+deb12u1.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\nFor the detailed security status of cacti please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/cacti](https://security-tracker.debian.org/tracker/cacti)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "cacti",
+				"purl": "pkg:deb/debian/cacti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.16+ds1-2+deb11u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.16+ds1-2",
+				"1.2.16+ds1-2+deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5550-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "cacti",
+				"purl": "pkg:deb/debian/cacti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.24+ds1-1+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.24+ds1-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5550-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5550"
+		}
+	]
+}

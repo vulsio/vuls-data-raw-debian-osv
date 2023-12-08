@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3927-1",
+	"modified": "2023-10-16T00:12:28.374517Z",
+	"published": "2017-08-07T00:00:00Z",
+	"related": [
+		"CVE-2017-1000365",
+		"CVE-2017-10810",
+		"CVE-2017-10911",
+		"CVE-2017-11176",
+		"CVE-2017-7346",
+		"CVE-2017-7482",
+		"CVE-2017-7533",
+		"CVE-2017-7541",
+		"CVE-2017-7542",
+		"CVE-2017-9605"
+	],
+	"summary": "linux - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2017-7346](https://security-tracker.debian.org/tracker/CVE-2017-7346)\nLi Qiang discovered that the DRM driver for VMware virtual GPUs does\n not properly check user-controlled values in the\n vmw\\_surface\\_define\\_ioctl() functions for upper limits. A local user\n can take advantage of this flaw to cause a denial of service.\n* [CVE-2017-7482](https://security-tracker.debian.org/tracker/CVE-2017-7482)\nShi Lei discovered that RxRPC Kerberos 5 ticket handling code does\n not properly verify metadata, leading to information disclosure,\n denial of service or potentially execution of arbitrary code.\n* [CVE-2017-7533](https://security-tracker.debian.org/tracker/CVE-2017-7533)\nFan Wu and Shixiong Zhao discovered a race condition between inotify\n events and VFS rename operations allowing an unprivileged local\n attacker to cause a denial of service or escalate privileges.\n* [CVE-2017-7541](https://security-tracker.debian.org/tracker/CVE-2017-7541)\nA buffer overflow flaw in the Broadcom IEEE802.11n PCIe SoftMAC WLAN\n driver could allow a local user to cause kernel memory corruption,\n leading to a denial of service or potentially privilege escalation.\n* [CVE-2017-7542](https://security-tracker.debian.org/tracker/CVE-2017-7542)\nAn integer overflow vulnerability in the ip6\\_find\\_1stfragopt()\n function was found allowing a local attacker with privileges to open\n raw sockets to cause a denial of service.\n* [CVE-2017-9605](https://security-tracker.debian.org/tracker/CVE-2017-9605)\nMurray McAllister discovered that the DRM driver for VMware virtual\n GPUs does not properly initialize memory, potentially allowing a\n local attacker to obtain sensitive information from uninitialized\n kernel memory via a crafted ioctl call.\n* [CVE-2017-10810](https://security-tracker.debian.org/tracker/CVE-2017-10810)\nLi Qiang discovered a memory leak flaw within the VirtIO GPU driver\n resulting in denial of service (memory consumption).\n* [CVE-2017-10911](https://security-tracker.debian.org/tracker/CVE-2017-10911) /\n[XSA-216](https://xenbits.xen.org/xsa/advisory-216.txt)\nAnthony Perard of Citrix discovered an information leak flaw in Xen\n blkif response handling, allowing a malicious unprivileged guest to\n obtain sensitive information from the host or other guests.\n* [CVE-2017-11176](https://security-tracker.debian.org/tracker/CVE-2017-11176)\nIt was discovered that the mq\\_notify() function does not set the\n sock pointer to NULL upon entry into the retry logic. An attacker\n can take advantage of this flaw during a user-space close of a\n Netlink socket to cause a denial of service or potentially cause\n other impact.\n* [CVE-2017-1000365](https://security-tracker.debian.org/tracker/CVE-2017-1000365)\nIt was discovered that argument and environment pointers are not\n taken properly into account to the imposed size restrictions on\n arguments and environmental strings passed through\n RLIMIT\\_STACK/RLIMIT\\_INFINITY. A local attacker can take advantage of\n this flaw in conjunction with other flaws to execute arbitrary code.\n\n\nFor the oldstable distribution (jessie), these problems will be fixed in\na subsequent DSA.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.30-2+deb9u3.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "linux",
+				"purl": "pkg:deb/debian/linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.30-2+deb9u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.30-2",
+				"4.9.30-2+deb9u1",
+				"4.9.30-2+deb9u2",
+				"4.9.30-2+deb9u2~bpo8+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3927-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2017/dsa-3927"
+		}
+	]
+}

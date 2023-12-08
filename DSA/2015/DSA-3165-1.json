@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3165-1",
+	"modified": "2023-10-16T00:11:48.522672Z",
+	"published": "2015-02-21T00:00:00Z",
+	"related": [
+		"CVE-2015-1877"
+	],
+	"summary": "xdg-utils - security update",
+	"details": "\nJiri Horner discovered a way to cause xdg-open, a tool that automatically\nopens URLs in a user's preferred application, to execute arbitrary\ncommands remotely.\n\n\nThis problem only affects /bin/sh implementations that don't sanitize\nlocal variables. Dash, which is the default /bin/sh in Debian is\naffected. Bash as /bin/sh is known to be unaffected.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.1.0~rc1+git20111210-6+deb7u3.\n\n\nFor the upcoming stable (jessie) and unstable (sid) distributions,\nthis problem will be fixed soon.\n\n\nWe recommend that you upgrade your xdg-utils packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "xdg-utils",
+				"purl": "pkg:deb/debian/xdg-utils?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.0~rc1+git20111210-6+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.0~rc1+git20111210-6",
+				"1.1.0~rc1+git20111210-6+deb7u1",
+				"1.1.0~rc1+git20111210-6+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3165-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3165"
+		}
+	]
+}

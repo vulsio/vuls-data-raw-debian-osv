@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2299-1",
+	"modified": "2023-10-16T00:11:06.733499Z",
+	"published": "2011-08-31T00:00:00Z",
+	"summary": "ca-certificates - untrusted root CA",
+	"details": "\nAn unauthorized SSL certificate has been found in the wild issued\nfor the DigiNotar Certificate Authority, obtained through a security\ncompromise with said company. Debian, like other software\ndistributors, has as a precaution decided to disable the DigiNotar\nRoot CA by default in its ca-certificates bundle.\n\n\nFor other software in Debian that ships a CA bundle, like the\nMozilla suite, updates are forthcoming.\n\n\nFor the oldstable distribution (lenny), the ca-certificates package\ndoes not contain this root CA.\n\n\nFor the stable distribution (squeeze), the root CA has been\ndisabled starting ca-certificates version 20090814+nmu3.\n\n\nFor the testing distribution (wheezy) and unstable distribution\n(sid), the root CA has been disabled starting ca-certificates\nversion 20110502+nmu1.\n\n\nWe recommend that you upgrade your ca-certificates packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ca-certificates",
+				"purl": "pkg:deb/debian/ca-certificates?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20090814+nmu3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20090814+nmu2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2299-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2299"
+		}
+	]
+}

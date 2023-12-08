@@ -1,0 +1,56 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3617-2",
+	"modified": "2023-10-16T23:15:30.775670Z",
+	"published": "2023-10-13T00:00:00Z",
+	"summary": "tomcat9 - regression update",
+	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2023-24998](https://security-tracker.debian.org/tracker/CVE-2023-24998)\nDenial of service. Tomcat uses a packaged renamed copy of Apache Commons\n FileUpload to provide the file upload functionality defined in the Jakarta\n Servlet specification. Apache Tomcat was, therefore, also vulnerable to the\n Commons FileUpload vulnerability [CVE-2023-24998](https://security-tracker.debian.org/tracker/CVE-2023-24998) as there was no limit to\n the number of request parts processed. This resulted in the possibility of\n an attacker triggering a DoS with a malicious upload or series of uploads.\n* [CVE-2023-41080](https://security-tracker.debian.org/tracker/CVE-2023-41080)\nOpen redirect. If the ROOT (default) web application is configured to use\n FORM authentication then it is possible that a specially crafted URL could\n be used to trigger a redirect to an URL of the attackers choice.\n* [CVE-2023-42795](https://security-tracker.debian.org/tracker/CVE-2023-42795)\nInformation Disclosure. When recycling various internal objects, including\n the request and the response, prior to re-use by the next request/response,\n an error could cause Tomcat to skip some parts of the recycling process\n leading to information leaking from the current request/response to the\n next.\n* [CVE-2023-44487](https://security-tracker.debian.org/tracker/CVE-2023-44487)\nDoS caused by HTTP/2 frame overhead (Rapid Reset Attack)\n* [CVE-2023-45648](https://security-tracker.debian.org/tracker/CVE-2023-45648)\nRequest smuggling. Tomcat did not correctly parse HTTP trailer headers. A\n specially crafted, invalid trailer header could cause Tomcat to treat a\n single request as multiple requests leading to the possibility of request\n smuggling when behind a reverse proxy.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n9.0.31-1~deb10u9.\n\n\nWe recommend that you upgrade your tomcat9 packages.\n\n\nFor the detailed security status of tomcat9 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tomcat9>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "tomcat9",
+				"purl": "pkg:deb/debian/tomcat9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.0.31-1~deb10u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.0.16-4",
+				"9.0.16-5",
+				"9.0.22-1",
+				"9.0.24-1",
+				"9.0.27-1",
+				"9.0.31-1~bpo10+1",
+				"9.0.31-1~deb10u1",
+				"9.0.31-1~deb10u2",
+				"9.0.31-1~deb10u3",
+				"9.0.31-1~deb10u4",
+				"9.0.31-1~deb10u5",
+				"9.0.31-1~deb10u6",
+				"9.0.31-1~deb10u7",
+				"9.0.31-1~deb10u8",
+				"9.0.31-1~deb10u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3617-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3617"
+		}
+	]
+}

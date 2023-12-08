@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-994-1",
+	"modified": "2023-06-28T06:39:03.032754Z",
+	"published": "2017-06-20T00:00:00Z",
+	"related": [
+		"CVE-2017-5974",
+		"CVE-2017-5975",
+		"CVE-2017-5976",
+		"CVE-2017-5978",
+		"CVE-2017-5979",
+		"CVE-2017-5980",
+		"CVE-2017-5981"
+	],
+	"summary": "zziplib - security update",
+	"details": "\n* [CVE-2017-5974](https://security-tracker.debian.org/tracker/CVE-2017-5974)\nHeap-based buffer overflow in the \\_\\_zzip\\_get32 function in fetch.c\n in zziplib allows remote attackers to cause a denial of service\n (crash) via a crafted ZIP file.\n* [CVE-2017-5975](https://security-tracker.debian.org/tracker/CVE-2017-5975)\nHeap-based buffer overflow in the \\_\\_zzip\\_get64 function in fetch.c\n in zziplib allows remote attackers to cause a denial of service\n (crash) via a crafted ZIP file.\n* [CVE-2017-5976](https://security-tracker.debian.org/tracker/CVE-2017-5976)\nHeap-based buffer overflow in the zzip\\_mem\\_entry\\_extra\\_block\n function in memdisk.c in zziplib allows remote attackers to cause\n a denial of service (crash) via a crafted ZIP file.\n* [CVE-2017-5978](https://security-tracker.debian.org/tracker/CVE-2017-5978)\nThe zzip\\_mem\\_entry\\_new function in memdisk.c in zziplib allows\n remote attackers to cause a denial of service (out-of-bounds\n read and crash) via a crafted ZIP file.\n* [CVE-2017-5979](https://security-tracker.debian.org/tracker/CVE-2017-5979)\nThe prescan\\_entry function in fseeko.c in zziplib allows remote\n attackers to cause a denial of service (NULL pointer dereference\n and crash) via a crafted ZIP file.\n* [CVE-2017-5980](https://security-tracker.debian.org/tracker/CVE-2017-5980)\nThe zzip\\_mem\\_entry\\_new function in memdisk.c in zziplib allows\n remote attackers to cause a denial of service (NULL pointer\n dereference and crash) via a crafted ZIP file.\n* [CVE-2017-5981](https://security-tracker.debian.org/tracker/CVE-2017-5981)\nseeko.c in zziplib allows remote attackers to cause a denial of\n service (assertion failure and crash) via a crafted ZIP file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.13.56-1.1+deb7u1.\n\n\nWe recommend that you upgrade your zziplib packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "zziplib",
+				"purl": "pkg:deb/debian/zziplib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.13.56-1.1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.13.56-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-994-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-994"
+		}
+	]
+}

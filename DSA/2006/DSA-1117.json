@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1117",
+	"modified": "2023-10-16T00:05:13.623595Z",
+	"published": "2006-07-21T00:00:00Z",
+	"related": [
+		"CVE-2006-2906"
+	],
+	"summary": "libgd2 - insufficient input sanitising",
+	"details": "\nIt was discovered that the GD graphics library performs insufficient checks\nof the validity of GIF images, which might lead to denial of service by\ntricking the application into an infinite loop.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.0.33-1.1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.0.33-5.\n\n\nWe recommend that you upgrade your libgd2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "libgd2",
+				"purl": "pkg:deb/debian/libgd2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.33-1.1sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.33-1.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1117.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1117"
+		}
+	]
+}

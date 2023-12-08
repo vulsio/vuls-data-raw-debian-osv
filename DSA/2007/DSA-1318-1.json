@@ -1,0 +1,78 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1318-1",
+	"modified": "2023-10-16T00:10:19.835679Z",
+	"published": "2007-06-22T00:00:00Z",
+	"related": [
+		"CVE-2005-2370",
+		"CVE-2005-2448",
+		"CVE-2007-1663",
+		"CVE-2007-1664",
+		"CVE-2007-1665"
+	],
+	"summary": "ekg",
+	"details": "\nSeveral remote vulnerabilities have been discovered in ekg, a console\nGadu Gadu client. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2005-2370](https://security-tracker.debian.org/tracker/CVE-2005-2370)\nIt was discovered that memory alignment errors may allow remote\n attackers to cause a denial of service on certain architectures\n such as sparc. This only affects Debian Sarge.\n* [CVE-2005-2448](https://security-tracker.debian.org/tracker/CVE-2005-2448)\nIt was discovered that several endianess errors may allow remote\n attackers to cause a denial of service. This only affects \n Debian Sarge.\n* [CVE-2007-1663](https://security-tracker.debian.org/tracker/CVE-2007-1663)\nIt was discovered that a memory leak in handling image messages may\n lead to denial of service. This only affects Debian Etch.\n* [CVE-2007-1664](https://security-tracker.debian.org/tracker/CVE-2007-1664)\nIt was discovered that a null pointer deference in the token OCR code\n may lead to denial of service. This only affects Debian Etch.\n* [CVE-2007-1665](https://security-tracker.debian.org/tracker/CVE-2007-1665)\nIt was discovered that a memory leak in the token OCR code may lead\n to denial of service. This only affects Debian Etch.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 1.5+20050411-7. This updates lacks updated packages for the m68k\narchitecture. They will be provided later.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 1:1.7~rc2-1etch1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1:1.7~rc2-2.\n\n\nWe recommend that you upgrade your ekg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "ekg",
+				"purl": "pkg:deb/debian/ekg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.5+20050411-7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.5+20050411-3",
+				"1:1.5+20050411-4",
+				"1:1.5+20050411-5",
+				"1:1.5+20050411-6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1318-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "ekg",
+				"purl": "pkg:deb/debian/ekg?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.7~rc2-1etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.7~rc2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1318-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1318"
+		}
+	]
+}

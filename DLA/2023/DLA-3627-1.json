@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3627-1",
+	"modified": "2023-10-23T13:15:31.722783Z",
+	"published": "2023-10-23T00:00:00Z",
+	"related": [
+		"CVE-2023-45145"
+	],
+	"summary": "redis - security update",
+	"details": "\nIt was discovered that there was a authentication bypass vulnerability in\nRedis, a popular key-value database similar to memcached.\n\n\nOn startup, Redis began listening on a Unix socket before adjusting its\npermissions to the user-provided configuration. If a permissive\n`umask(2)` was used, this created a race condition that enabled,\nduring a short period of time, another process to establish an otherwise\nunauthorized connection.\n\n\n* [CVE-2023-45145](https://security-tracker.debian.org/tracker/CVE-2023-45145)\nRedis is an in-memory database that persists on disk. On startup, Redis\n begins listening on a Unix socket before adjusting its permissions to the\n user-provided configuration. If a permissive umask(2) is used, this creates\n a race condition that enables, during a short period of time, another\n process to establish an otherwise unauthorized connection. This problem has\n existed since Redis 2.6.0-RC1. This issue has been addressed in Redis\n versions 7.2.2, 7.0.14 and 6.2.14. Users are advised to upgrade. For users\n unable to upgrade, it is possible to work around the problem by disabling\n Unix sockets, starting Redis with a restrictive umask, or storing the Unix\n socket file in a protected directory.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n5:5.0.14-1+deb10u5.\n\n\nWe recommend that you upgrade your redis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "redis",
+				"purl": "pkg:deb/debian/redis?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5:5.0.14-1+deb10u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5:5.0.14-1+deb10u1",
+				"5:5.0.14-1+deb10u2",
+				"5:5.0.14-1+deb10u3",
+				"5:5.0.14-1+deb10u4",
+				"5:5.0.3-4",
+				"5:5.0.3-4+deb10u1",
+				"5:5.0.3-4+deb10u2",
+				"5:5.0.3-4+deb10u3",
+				"5:5.0.4-1",
+				"5:5.0.5-1",
+				"5:5.0.5-2",
+				"5:5.0.5-2~bpo10+1",
+				"5:5.0.6-1",
+				"5:5.0.6-1~bpo10+1",
+				"5:5.0.7-1",
+				"5:5.0.7-1~bpo10+1",
+				"5:5.0.7-2",
+				"5:5.0.7-3",
+				"5:5.0.7-4",
+				"5:5.0.7-5",
+				"5:5.0.7-6",
+				"5:5.0.7-7",
+				"5:5.0.7-7~bpo10+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3627-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3627"
+		}
+	]
+}

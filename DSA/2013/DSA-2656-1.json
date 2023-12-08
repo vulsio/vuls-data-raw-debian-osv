@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2656-1",
+	"modified": "2023-10-16T00:11:23.739747Z",
+	"published": "2013-03-30T00:00:00Z",
+	"related": [
+		"CVE-2013-2266"
+	],
+	"summary": "bind9 - denial of service",
+	"details": "\nMatthew Horsfall of Dyn, Inc. discovered that BIND, a DNS server, is\nprone to a denial of service vulnerability. A remote attacker could use\nthis flaw to send a specially-crafted DNS query to named that, when\nprocessed, would cause named to use an excessive amount of memory, or\npossibly crash.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:9.7.3.dfsg-1~squeeze10.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1:9.8.4.dfsg.P1-6+nmu1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:9.8.4.dfsg.P1-6+nmu1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.7.3.dfsg-1~squeeze10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.7.2.dfsg.P3-1.1",
+				"1:9.7.3.dfsg-1~squeeze1",
+				"1:9.7.3.dfsg-1~squeeze1~bpo50+1",
+				"1:9.7.3.dfsg-1~squeeze2",
+				"1:9.7.3.dfsg-1~squeeze2~bpo50+1",
+				"1:9.7.3.dfsg-1~squeeze3",
+				"1:9.7.3.dfsg-1~squeeze3~bpo50+1",
+				"1:9.7.3.dfsg-1~squeeze4",
+				"1:9.7.3.dfsg-1~squeeze5",
+				"1:9.7.3.dfsg-1~squeeze6",
+				"1:9.7.3.dfsg-1~squeeze7",
+				"1:9.7.3.dfsg-1~squeeze8",
+				"1:9.7.3.dfsg-1~squeeze9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2656-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2656"
+		}
+	]
+}

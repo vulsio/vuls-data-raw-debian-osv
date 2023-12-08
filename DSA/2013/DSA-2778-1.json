@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2778-1",
+	"modified": "2023-10-16T00:06:04.625607Z",
+	"published": "2013-10-12T00:00:00Z",
+	"related": [
+		"CVE-2013-4365"
+	],
+	"summary": "libapache2-mod-fcgid - heap-based buffer overflow",
+	"details": "\nRobert Matthews discovered that the Apache FCGID module, a FastCGI\nimplementation for Apache HTTP Server, fails to perform adequate\nboundary checks on user-supplied input. This may allow a remote attacker\nto cause a heap-based buffer overflow, resulting in a denial of service\nor potentially allowing the execution of arbitrary code.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1:2.3.6-1+squeeze2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1:2.3.6-1.2+deb7u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:2.3.9-1.\n\n\nWe recommend that you upgrade your libapache2-mod-fcgid packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libapache2-mod-fcgid",
+				"purl": "pkg:deb/debian/libapache2-mod-fcgid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.6-1+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.3.6-1",
+				"1:2.3.6-1+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2778-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libapache2-mod-fcgid",
+				"purl": "pkg:deb/debian/libapache2-mod-fcgid?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.3.6-1.2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.3.6-1.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2778-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2778"
+		}
+	]
+}

@@ -1,0 +1,67 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3229-1",
+	"modified": "2023-10-16T00:06:16.839090Z",
+	"published": "2015-04-19T00:00:00Z",
+	"related": [
+		"CVE-2015-0433",
+		"CVE-2015-0441",
+		"CVE-2015-0499",
+		"CVE-2015-0501",
+		"CVE-2015-0505",
+		"CVE-2015-2568",
+		"CVE-2015-2571",
+		"CVE-2015-2573"
+	],
+	"summary": "mysql-5.5 - security update",
+	"details": "\nSeveral issues have been discovered in the MySQL database server. The\nvulnerabilities are addressed by upgrading MySQL to the new upstream\nversion 5.5.43. Please see the MySQL 5.5 Release Notes and Oracle's\nCritical Patch Update advisory for further details:\n\n\n* [\\\nhttps://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-42.html](https://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-42.html)\n* [\\\nhttps://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-43.html](https://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-43.html)\n* [\\\nhttp://www.oracle.com/technetwork/topics/security/cpuapr2015-2365600.html](http://www.oracle.com/technetwork/topics/security/cpuapr2015-2365600.html)\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 5.5.43-0+deb7u1.\n\n\nFor the upcoming stable distribution (jessie), these problems will be\nfixed in version 5.5.43-0+deb8u1. Updated packages are already available\nthrough jessie-security.\n\n\nWe recommend that you upgrade your mysql-5.5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "mysql-5.5",
+				"purl": "pkg:deb/debian/mysql-5.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.5.43-0+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.5.30+dfsg-1.1",
+				"5.5.31+dfsg-0+wheezy1",
+				"5.5.31+dfsg-1",
+				"5.5.33+dfsg-0+wheezy1",
+				"5.5.33+dfsg-1",
+				"5.5.35+dfsg-0+wheezy1",
+				"5.5.35+dfsg-1",
+				"5.5.35+dfsg-2",
+				"5.5.37-0+wheezy1",
+				"5.5.37-1",
+				"5.5.38-0+wheezy1",
+				"5.5.39-1",
+				"5.5.40-0+wheezy1",
+				"5.5.40-1",
+				"5.5.41-0+wheezy1",
+				"5.5.42-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3229-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3229"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-459-1",
+	"modified": "2023-06-28T06:21:31.935826Z",
+	"published": "2016-05-06T00:00:00Z",
+	"related": [
+		"CVE-2016-3105"
+	],
+	"summary": "mercurial - security update",
+	"details": "\nBlake Burkhart discovered an arbitrary code execution flaw in\nMercurial, a distributed version control system, when using the convert\nextension on Git repositories with specially crafted names. This flaw in\nparticular affects automated code conversion services that allow\narbitrary repository names.\n\n\nPatches are taken from the Jessie version.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in mercurial version 2.2.2-4+deb7u3\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "mercurial",
+				"purl": "pkg:deb/debian/mercurial?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.2-4+deb7u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.2-3",
+				"2.2.2-4",
+				"2.2.2-4+deb7u1",
+				"2.2.2-4+deb7u2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-459-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-459"
+		}
+	]
+}

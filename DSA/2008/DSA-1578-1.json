@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1578-1",
+	"modified": "2023-10-16T00:05:29.865001Z",
+	"published": "2008-05-17T00:00:00Z",
+	"related": [
+		"CVE-2007-3799",
+		"CVE-2007-3806",
+		"CVE-2007-3998",
+		"CVE-2007-4657",
+		"CVE-2008-2051"
+	],
+	"summary": "php4 - several vulnerabilities",
+	"details": "\nSeveral vulnerabilities have been discovered in PHP version 4, a\nserver-side, HTML-embedded scripting language. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2007-3799](https://security-tracker.debian.org/tracker/CVE-2007-3799)\nThe session\\_start function allows remote attackers to insert\n arbitrary attributes into the session cookie via special characters\n in a cookie that is obtained from various parameters.\n* [CVE-2007-3806](https://security-tracker.debian.org/tracker/CVE-2007-3806)\nA denial of service was possible through a malicious script abusing\n the glob() function.\n* [CVE-2007-3998](https://security-tracker.debian.org/tracker/CVE-2007-3998)\nCertain maliciously constructed input to the wordwrap() function could\n lead to a denial of service attack.\n* [CVE-2007-4657](https://security-tracker.debian.org/tracker/CVE-2007-4657)\nLarge len values of the stspn() or strcspn() functions could allow an\n attacker to trigger integer overflows to expose memory or cause denial\n of service.\n* [CVE-2008-2051](https://security-tracker.debian.org/tracker/CVE-2008-2051)\nThe escapeshellcmd API function could be attacked via incomplete\n multibyte chars.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 6:4.4.4-8+etch6.\n\n\nThe php4 packages are no longer present the unstable distribution (sid).\n\n\nWe recommend that you upgrade your php4 package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "php4",
+				"purl": "pkg:deb/debian/php4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:4.4.4-8+etch6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:4.4.4-8+etch1",
+				"6:4.4.4-8+etch2",
+				"6:4.4.4-8+etch3",
+				"6:4.4.4-8+etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1578-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1578"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3545-1",
+	"modified": "2023-08-28T18:18:49.147927Z",
+	"published": "2023-08-28T00:00:00Z",
+	"related": [
+		"CVE-2021-23385"
+	],
+	"summary": "flask-security - security update",
+	"details": "\nIt was discovered that when using the get\\_post\\_logout\\_redirect and\nget\\_post\\_login\\_redirect functions in flask-security, an implementation of\nsimple security for Flask apps, it is possible to bypass URL validation and\nredirect a user to an arbitrary URL by providing multiple back slashes such as\n\\\\\\evil.com/path.\n\n\nThis vulnerability is exploitable only if an alternative WSGI server other\nthan Werkzeug is used, or the default behaviour of Werkzeug is modified using\n'autocorrect\\_location\\_headerúlse.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.7.5-2+deb10u1.\n\n\nWe recommend that you upgrade your flask-security packages.\n\n\nFor the detailed security status of flask-security please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/flask-security>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "flask-security",
+				"purl": "pkg:deb/debian/flask-security?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.7.5-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.7.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3545-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3545"
+		}
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2531-1",
+	"modified": "2023-10-16T00:11:16.975060Z",
+	"published": "2012-08-18T00:00:00Z",
+	"related": [
+		"CVE-2012-3432",
+		"CVE-2012-3433"
+	],
+	"summary": "xen - several",
+	"details": "\nSeveral denial-of-service vulnerabilities have been discovered in Xen,\nthe popular virtualization software. The Common Vulnerabilities and \nExposures project identifies the following issues:\n\n\n* [CVE-2012-3432](https://security-tracker.debian.org/tracker/CVE-2012-3432)\nGuest mode unprivileged code, which has been granted the privilege to \n access MMIO regions, may leverage that access to crash the whole guest.\n Since this can be used to crash a client from within, this vulnerability is\n considered to have low impact.\n* [CVE-2012-3433](https://security-tracker.debian.org/tracker/CVE-2012-3433)\nA guest kernel can cause the host to become unresponsive for a period\n of time, potentially leading to a DoS. Since an attacker with full\n control in the guest can impact the host, this vulnerability is\n considered to have high impact.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4.0.1-5.3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.1.3-1.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "xen",
+				"purl": "pkg:deb/debian/xen?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.1-5.3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.1-2",
+				"4.0.1-4",
+				"4.0.1-5",
+				"4.0.1-5.1",
+				"4.0.1-5.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2531-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2531"
+		}
+	]
+}

@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-206",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-10T00:00:00Z",
+	"related": [
+		"CVE-2002-1350"
+	],
+	"summary": "tcpdump - denial of service",
+	"details": "\nThe BGP decoding routines for tcpdump used incorrect bounds checking\nwhen copying data. This could be abused by introducing malicious traffic\non a sniffed network for a denial of service attack against tcpdump,\nor possibly even remote code execution.\n\n\nThis has been fixed in version 3.6.2-2.2.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tcpdump",
+				"purl": "pkg:deb/debian/tcpdump?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.6.2-2.2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-206.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-206"
+		}
+	]
+}

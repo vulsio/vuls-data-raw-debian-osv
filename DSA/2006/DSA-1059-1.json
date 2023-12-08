@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1059-1",
+	"modified": "2023-10-16T00:05:04.877892Z",
+	"published": "2006-05-19T00:00:00Z",
+	"related": [
+		"CVE-2006-2223",
+		"CVE-2006-2224",
+		"CVE-2006-2276"
+	],
+	"summary": "quagga - several",
+	"details": "\nKonstantin Gavrilenko discovered several vulnerabilities in quagga,\nthe BGP/OSPF/RIP routing daemon. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2006-2223](https://security-tracker.debian.org/tracker/CVE-2006-2223)\nRemote attackers may obtain sensitive information via RIPv1\n REQUEST packets even if the quagga has been configured to use MD5\n authentication.\n* [CVE-2006-2224](https://security-tracker.debian.org/tracker/CVE-2006-2224)\nRemote attackers could inject arbitrary routes using the RIPv1\n RESPONSE packet even if the quagga has been configured to use MD5\n authentication.\n* [CVE-2006-2276](https://security-tracker.debian.org/tracker/CVE-2006-2276)\nFredrik Widell discovered that local users can cause a denial\n of service in a certain sh ip bgp command entered in the telnet\n interface.\n\n\nThe old stable distribution (woody) does not contain quagga packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.98.3-7.2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.99.4-1.\n\n\nWe recommend that you upgrade your quagga package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "quagga",
+				"purl": "pkg:deb/debian/quagga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.98.3-7.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.98.3-7",
+				"0.98.3-7.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1059-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1059"
+		}
+	]
+}

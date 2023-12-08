@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1420-1",
+	"modified": "2023-06-28T06:20:41.037003Z",
+	"published": "2018-07-13T00:00:00Z",
+	"related": [
+		"CVE-2018-13054"
+	],
+	"summary": "cinnamon - security update",
+	"details": "\nIt was discovered that there was a symlink attack in the Cinnamon\ndesktop environment.\n\n\nAn attacker could overwrite an arbitrary file on the filesystem via\na $HOME/.face icon file (as the cinnamon-settings-users.py GUI runs\nas root).\n\n\nFor Debian 8 Jessie, this issue has been fixed in cinnamon version\n2.2.16-5+deb8u1.\n\n\nWe recommend that you upgrade your cinnamon packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "cinnamon",
+				"purl": "pkg:deb/debian/cinnamon?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.16-5+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.16-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1420-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1420"
+		}
+	]
+}

@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1252-1",
+	"modified": "2023-10-16T00:10:17.684114Z",
+	"published": "2007-01-27T00:00:00Z",
+	"related": [
+		"CVE-2007-0017"
+	],
+	"summary": "vlc",
+	"details": "\nKevin Finisterre discovered several format string problems in vlc, a\nmultimedia player and streamer, that could lead to the execution of\narbitrary code.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 0.8.1.svn20050314-1sarge2.\n\n\nFor the testing distribution (etch) this problem has been fixed in\nversion 0.8.6-svn20061012.debian-3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.8.6.a.debian-1.\n\n\nWe recommend that you upgrade your vlc packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "vlc",
+				"purl": "pkg:deb/debian/vlc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.1.svn20050314-1sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.1.svn20050314-1",
+				"0.8.1.svn20050314-1sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1252-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "vlc",
+				"purl": "pkg:deb/debian/vlc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.6-svn20061012.debian-3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1252-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1252"
+		}
+	]
+}

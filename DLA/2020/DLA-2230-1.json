@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2230-1",
+	"modified": "2023-06-28T06:28:31.086831Z",
+	"published": "2020-06-29T00:00:00Z",
+	"related": [
+		"CVE-2020-8035"
+	],
+	"summary": "php-horde - security update",
+	"details": "\nThe image view functionality in Horde Groupware Webmail Edition was\naffected by a stored Cross-Site Scripting (XSS) vulnerability via an SVG\nimage upload containing a JavaScript payload. An attacker could have\nobtained access to a victim's webmail account by making them visit a\nmalicious URL.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n5.2.1+debian0-2+deb8u6.\n\n\nWe recommend that you upgrade your php-horde packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "php-horde",
+				"purl": "pkg:deb/debian/php-horde?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.2.1+debian0-2+deb8u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.2.1+debian0-2+deb8u1",
+				"5.2.1+debian0-2+deb8u2",
+				"5.2.1+debian0-2+deb8u3",
+				"5.2.1+debian0-2+deb8u4",
+				"5.2.1+debian0-2+deb8u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2230-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2230"
+		}
+	]
+}

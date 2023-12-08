@@ -1,0 +1,70 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-444-1",
+	"modified": "2023-06-28T06:34:03.673715Z",
+	"published": "2016-02-29T00:00:00Z",
+	"related": [
+		"CVE-2015-2305",
+		"CVE-2015-2348"
+	],
+	"summary": "php5 - security update",
+	"details": "\n* [CVE-2015-2305](https://security-tracker.debian.org/tracker/CVE-2015-2305)\nInteger overflow in the regcomp implementation in the Henry\n Spencer BSD regex library (aka rxspencer) alpha3.8.g5 on\n 32-bit platforms, as used in NetBSD through 6.1.5 and other\n products, might allow context-dependent attackers to execute\n arbitrary code via a large regular expression that leads to\n a heap-based buffer overflow.\n* [CVE-2015-2348](https://security-tracker.debian.org/tracker/CVE-2015-2348)\nThe move\\_uploaded\\_file implementation in\n ext/standard/basic\\_functions.c in PHP before 5.4.39, 5.5.x\n before 5.5.23, and 5.6.x before 5.6.7 truncates a pathname upon\n encountering a \\x00 character, which allows remote attackers to\n bypass intended extension restrictions and create files with\n unexpected names via a crafted second argument.\n\n\n**Note**: this vulnerability exists because of an incomplete fix for\n [CVE-2006-7243](https://security-tracker.debian.org/tracker/CVE-2006-7243).\n* CVE-2016-tmp, Bug #71039\n exec functions ignore length but look for NULL termination\n* CVE-2016-tmp, Bug #71089\n No check to duplicate zend\\_extension\n* CVE-2016-tmp, Bug #71201\n round() segfault on 64-bit builds\n* CVE-2016-tmp, Bug #71459\n Integer overflow in iptcembed()\n* CVE-2016-tmp, Bug #71354\n Heap corruption in tar/zip/phar parser\n* CVE-2016-tmp, Bug #71391\n NULL Pointer Dereference in phar\\_tar\\_setupmetadata()\n* CVE-2016-tmp, Bug #70979\n Crash on bad SOAP request\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.3.3.1-7+squeeze29"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.3.3-7",
+				"5.3.3-7+squeeze1",
+				"5.3.3-7+squeeze13",
+				"5.3.3-7+squeeze14",
+				"5.3.3-7+squeeze15",
+				"5.3.3-7+squeeze16",
+				"5.3.3-7+squeeze17",
+				"5.3.3-7+squeeze18",
+				"5.3.3-7+squeeze19",
+				"5.3.3-7+squeeze2",
+				"5.3.3-7+squeeze20",
+				"5.3.3-7+squeeze21",
+				"5.3.3-7+squeeze22",
+				"5.3.3-7+squeeze23",
+				"5.3.3-7+squeeze24",
+				"5.3.3-7+squeeze25",
+				"5.3.3-7+squeeze3",
+				"5.3.3-7+squeeze5",
+				"5.3.3-7+squeeze6",
+				"5.3.3-7+squeeze7",
+				"5.3.3-7+squeeze8",
+				"5.3.3-7+squeeze9",
+				"5.3.3.1-7+squeeze26",
+				"5.3.3.1-7+squeeze27",
+				"5.3.3.1-7+squeeze28"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-444-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-444"
+		}
+	]
+}

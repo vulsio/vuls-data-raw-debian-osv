@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1072-1",
+	"modified": "2023-06-28T06:20:19.124962Z",
+	"published": "2017-08-31T00:00:00Z",
+	"related": [
+		"CVE-2017-1000115",
+		"CVE-2017-1000116"
+	],
+	"summary": "mercurial - security update",
+	"details": "\nTwo significant vulnerabilities were found in the Mercurial version\ncontrol system which could lead to shell injection attacks and\nout-of-tree file overwrite.\n\n\n* [CVE-2017-1000115](https://security-tracker.debian.org/tracker/CVE-2017-1000115)\nMercurial's symlink auditing was incomplete prior to 4.3, and\n could be abused to write to files outside the repository.\n* [CVE-2017-1000116](https://security-tracker.debian.org/tracker/CVE-2017-1000116)\nMercurial was not sanitizing hostnames passed to ssh, allowing\n shell injection attacks on clients by specifying a hostname\n starting with -oProxyCommand. This vulnerability is similar to\n those in Git ([CVE-2017-1000117](https://security-tracker.debian.org/tracker/CVE-2017-1000117)) and Subversion \n ([CVE-2017-9800](https://security-tracker.debian.org/tracker/CVE-2017-9800)).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.2.2-4+deb7u5.\n\n\nWe recommend that you upgrade your mercurial packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "mercurial",
+				"purl": "pkg:deb/debian/mercurial?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.2-4+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.2-3",
+				"2.2.2-4",
+				"2.2.2-4+deb7u1",
+				"2.2.2-4+deb7u2",
+				"2.2.2-4+deb7u3",
+				"2.2.2-4+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1072-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1072"
+		}
+	]
+}

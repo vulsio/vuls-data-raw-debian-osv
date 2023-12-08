@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1111",
+	"modified": "2023-10-16T00:05:12.200261Z",
+	"published": "2006-07-26T00:00:00Z",
+	"related": [
+		"CVE-2006-3626"
+	],
+	"summary": "kernel-source-2.6.8 - race condition",
+	"details": "\nIt was discovered that a race condition in the process filesystem can lead\nto privilege escalation.\n\n\nThe following matrix explains which kernel version for which architecture\nfixes the problem mentioned above:\n\n\n\n\n|  | Debian 3.1 (sarge) |\n| --- | --- |\n| Source  | 2.6.8-16sarge4 |\n| Alpha architecture  | 2.6.8-16sarge4 |\n| AMD64 architecture  | 2.6.8-16sarge4 |\n| Intel IA-32 architecture | 2.6.8-16sarge4 |\n| Intel IA-64 architecture | 2.6.8-14sarge4 |\n| PowerPC architecture  | 2.6.8-12sarge4 |\n| Sun Sparc architecture  | 2.6.8-15sarge4 |\n| IBM S/390  | 2.6.8-5sarge4 |\n| Motorola 680x0  | 2.6.8-4sarge4 |\n| HP Precision  | 2.6.8-6sarge3 |\n| FAI  | 1.9.1sarge3 |\n\n\nThe initial advisory lacked builds for the IBM S/390, Motorola 680x0 and HP\nPrecision architectures, which are now provided. Also, the kernels for the\nFAI installer have been updated.\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "kernel-source-2.6.8",
+				"purl": "pkg:deb/debian/kernel-source-2.6.8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.8-16sarge4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.8-16",
+				"2.6.8-16sarge1",
+				"2.6.8-16sarge2",
+				"2.6.8-16sarge3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1111.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-1111"
+		}
+	]
+}

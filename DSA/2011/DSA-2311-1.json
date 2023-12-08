@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2311-1",
+	"modified": "2023-10-16T00:11:07.548523Z",
+	"published": "2011-09-27T00:00:00Z",
+	"related": [
+		"CVE-2011-0862",
+		"CVE-2011-0864",
+		"CVE-2011-0865",
+		"CVE-2011-0867",
+		"CVE-2011-0868",
+		"CVE-2011-0869",
+		"CVE-2011-0871"
+	],
+	"summary": "openjdk-6 - several",
+	"details": "\nSeveral vulnerabilities have been discovered in OpenJDK, an\nimplementation of the Java SE platform. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2011-0862](https://security-tracker.debian.org/tracker/CVE-2011-0862)\nInteger overflow errors in the JPEG and font parser allow\n untrusted code (including applets) to elevate its privileges.\n* [CVE-2011-0864](https://security-tracker.debian.org/tracker/CVE-2011-0864)\nHotspot, the just-in-time compiler in OpenJDK, mishandled\n certain byte code instructions, allowing untrusted code\n (including applets) to crash the virtual machine.\n* [CVE-2011-0865](https://security-tracker.debian.org/tracker/CVE-2011-0865)\nA race condition in signed object deserialization could\n allow untrusted code to modify signed content, apparently\n leaving its signature intact.\n* [CVE-2011-0867](https://security-tracker.debian.org/tracker/CVE-2011-0867)\nUntrusted code (including applets) could access information\n about network interfaces which was not intended to be public.\n (Note that the interface MAC address is still available to\n untrusted code.)\n* [CVE-2011-0868](https://security-tracker.debian.org/tracker/CVE-2011-0868)\nA float-to-long conversion could overflow, allowing\n untrusted code (including applets) to crash the virtual\n machine.\n* [CVE-2011-0869](https://security-tracker.debian.org/tracker/CVE-2011-0869)\nUntrusted code (including applets) could intercept HTTP\n requests by reconfiguring proxy settings through a SOAP\n connection.\n* [CVE-2011-0871](https://security-tracker.debian.org/tracker/CVE-2011-0871)\nUntrusted code (including applets) could elevate its\n privileges through the Swing MediaTracker code.\n\n\nIn addition, this update removes support for the Zero/Shark and Cacao\nHotspot variants from the i386 and amd64 due to stability issues.\nThese Hotspot variants are included in the openjdk-6-jre-zero and\nicedtea-6-jre-cacao packages, and these packages must be removed\nduring this update.\n\n\nFor the oldstable distribution (lenny), these problems will be fixed\nin a separate DSA for technical reasons.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 6b18-1.8.9-0.1~squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 6b18-1.8.9-0.1.\n\n\nWe recommend that you upgrade your openjdk-6 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "openjdk-6",
+				"purl": "pkg:deb/debian/openjdk-6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6b18-1.8.9-0.1~squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6b18-1.8.3-2",
+				"6b18-1.8.3-2+squeeze1",
+				"6b18-1.8.4-1",
+				"6b18-1.8.5-1",
+				"6b18-1.8.7-1",
+				"6b18-1.8.7-2",
+				"6b18-1.8.7-2~lenny1",
+				"6b18-1.8.7-2~squeeze1",
+				"6b18-1.8.7-3",
+				"6b18-1.8.7-4",
+				"6b18-1.8.7-5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2311-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2311"
+		}
+	]
+}

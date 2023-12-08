@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-240-1",
+	"modified": "2023-06-28T06:21:16.913747Z",
+	"published": "2015-06-09T00:00:00Z",
+	"related": [
+		"CVE-2014-8111"
+	],
+	"summary": "libapache-mod-jk - security update",
+	"details": "\nAn information disclosure flaw due to incorrect JkMount/JkUnmount\ndirectives processing was found in the Apache 2 module mod\\_jk to forward\nrequests from the Apache web server to Tomcat. A JkUnmount rule for a subtree\nof a previous JkMount rule could be ignored. This could allow a remote attacker\nto potentially access a private artifact in a tree that would otherwise not be\naccessible to them.\n\n\nFor the squeeze distribution, this problem has been fixed in version\n1:1.2.30-1squeeze2.\n\n\nWe recommend that you upgrade your libapache-mod-jk packages.\n\n\nThis update has been prepared by Markus Koschany.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "libapache-mod-jk",
+				"purl": "pkg:deb/debian/libapache-mod-jk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.2.30-1squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:1.2.30-1",
+				"1:1.2.30-1squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-240-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-240"
+		}
+	]
+}

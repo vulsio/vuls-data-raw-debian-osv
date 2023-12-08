@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-687-1",
+	"modified": "2023-10-16T00:27:46.118847Z",
+	"published": "2005-02-18T00:00:00Z",
+	"related": [
+		"CVE-2005-0158"
+	],
+	"summary": "bidwatcher - format string",
+	"details": "\nUlf HĂ¤rnhammar from the Debian Security Audit Project discovered a\nformat string vulnerability in bidwatcher, a tool for watching and\nbidding on eBay auctions. This problem can be triggered remotely by a\nweb server of eBay, or someone pretending to be eBay, sending certain\ndata back. As of version 1.3.17 the program uses cURL and is not\nvulnerable anymore.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.3.3-1woody1.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your bidwatcher package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "bidwatcher",
+				"purl": "pkg:deb/debian/bidwatcher?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.3.3-1woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.3.3-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-687-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-687"
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2258-1",
+	"modified": "2023-10-16T00:11:03.764508Z",
+	"published": "2011-06-11T00:00:00Z",
+	"related": [
+		"CVE-2011-1926"
+	],
+	"summary": "kolab-cyrus-imapd - implementation error",
+	"details": "\nIt was discovered that the STARTTLS implementation of the\nKolab Cyrus IMAP server does not properly restrict I/O buffering,\nwhich allows man-in-the-middle attackers to insert commands into encrypted\nIMAP, LMTP, NNTP and POP3 sessions by sending a cleartext command that is\nprocessed after TLS is in place.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.2.13-5+lenny3.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.2.13-9.1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2.2.13p1-0.1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.2.13p1-0.1.\n\n\nWe recommend that you upgrade your kolab-cyrus-imapd packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "kolab-cyrus-imapd",
+				"purl": "pkg:deb/debian/kolab-cyrus-imapd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-9.1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2258-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "kolab-cyrus-imapd",
+				"purl": "pkg:deb/debian/kolab-cyrus-imapd?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.13-5+lenny3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2.13-5",
+				"2.2.13-5+lenny2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2258-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2258"
+		}
+	]
+}

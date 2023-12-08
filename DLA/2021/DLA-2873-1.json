@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2873-1",
+	"modified": "2023-06-28T06:26:40.867228Z",
+	"published": "2021-12-31T00:00:00Z",
+	"related": [
+		"CVE-2019-3500"
+	],
+	"summary": "aria2 - security update",
+	"details": "\nIn the download utility aria2, --log was leaking HTTP user credentials in\nlocal log file.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.30.0-2+deb9u1.\n\n\nWe recommend that you upgrade your aria2 packages.\n\n\nFor the detailed security status of aria2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/aria2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "aria2",
+				"purl": "pkg:deb/debian/aria2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.30.0-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.30.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2873-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2873"
+		}
+	]
+}

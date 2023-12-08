@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-918-1",
+	"modified": "2023-06-28T06:27:12.326122Z",
+	"published": "2017-04-26T00:00:00Z",
+	"related": [
+		"CVE-2017-8105"
+	],
+	"summary": "freetype - security update",
+	"details": "\nIt was found that an out of bounds write caused by a heap-based buffer\noverflow could be triggered in freetype via a crafted font.\n\n\nThis update also reverts the fix for [CVE-2016-10328](https://security-tracker.debian.org/tracker/CVE-2016-10328), as it was\ndetermined that freetype 2.4.9 is not affected by that issue.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.4.9-1.1+deb7u6.\n\n\nWe recommend that you upgrade your freetype packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "freetype",
+				"purl": "pkg:deb/debian/freetype?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.9-1.1+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.9-1.1",
+				"2.4.9-1.1+deb7u1",
+				"2.4.9-1.1+deb7u2",
+				"2.4.9-1.1+deb7u3",
+				"2.4.9-1.1+deb7u4",
+				"2.4.9-1.1+deb7u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-918-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-918"
+		}
+	]
+}

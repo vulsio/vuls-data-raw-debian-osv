@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-25-3",
+	"modified": "2023-06-28T06:25:15.887377Z",
+	"published": "2014-07-31T00:00:00Z",
+	"summary": "python2.6 - regression update",
+	"details": "\nA regression has been identified in the python2.6 update of DLA-25-1,\nwhich may cause python applications to abort if they were running during\nthe upgrade but they had not already imported the 'os' module, and do so\nafter the upgrade. This update fixes this upgrade scenario.\n\n\nFor reference, the original advisory text follows.\n\n\nMultiple vulnerabilities were discovered in python2.6. The more\nrelevant are:\n\n\n* [CVE-2013-4238](https://security-tracker.debian.org/tracker/CVE-2013-4238)\nIncorrect handling of NUL bytes in certificate hostnames may allow\n server spoofing via specially-crafted certificates signed by\n a trusted Certification Authority.\n* [CVE-2014-1912](https://security-tracker.debian.org/tracker/CVE-2014-1912)\nBuffer overflow in socket.recvfrom\\_into leading to application\n crash and possibly code execution.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in python2.6 version 2.6.6-8+deb6u2\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "python2.6",
+				"purl": "pkg:deb/debian/python2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.6-8+deb6u3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.6-8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-25-3.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-25"
+		}
+	]
+}

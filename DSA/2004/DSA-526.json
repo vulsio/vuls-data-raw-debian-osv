@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-526",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-07-03T00:00:00Z",
+	"related": [
+		"CVE-2004-0582",
+		"CVE-2004-0583"
+	],
+	"summary": "webmin - several vulnerabilities",
+	"details": "\nTwo vulnerabilities were discovered in webmin:\n\n\n[CAN-2004-0582](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0582): Unknown vulnerability in Webmin 1.140 allows remote\n attackers to bypass access control rules and gain read access to\n configuration information for a module.\n\n\n[CAN-2004-0583](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0583): The account lockout functionality in (1) Webmin 1.140\n and (2) Usermin 1.070 does not parse certain character strings, which\n allows remote attackers to conduct a brute force attack to guess user\n IDs and passwords.\n\n\nFor the current stable distribution (woody), these problems have been\nfixed in version 0.94-7woody2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.150-1.\n\n\nWe recommend that you update your webmin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "webmin",
+				"purl": "pkg:deb/debian/webmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.94-7woody2"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-526.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-526"
+		}
+	]
+}

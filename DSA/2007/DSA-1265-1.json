@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1265-1",
+	"modified": "2023-10-16T00:10:17.949888Z",
+	"published": "2007-03-10T00:00:00Z",
+	"related": [
+		"CVE-2006-6497",
+		"CVE-2006-6498",
+		"CVE-2006-6499",
+		"CVE-2006-6501",
+		"CVE-2006-6502",
+		"CVE-2006-6503",
+		"CVE-2006-6505"
+	],
+	"summary": "mozilla",
+	"details": "\nSeveral security related problems have been discovered in Mozilla and\nderived products. The Common Vulnerabilities and Exposures project\nidentifies the following vulnerabilities:\n\n\n* [CVE-2006-6497](https://security-tracker.debian.org/tracker/CVE-2006-6497)\nSeveral vulnerabilities in the layout engine allow remote\n attackers to cause a denial of service and possibly permit them to\n execute arbitrary code. [MFSA 2006-68]\n* [CVE-2006-6498](https://security-tracker.debian.org/tracker/CVE-2006-6498)\nSeveral vulnerabilities in the JavaScript engine allow remote\n attackers to cause a denial of service and possibly permit them to\n execute arbitrary code. [MFSA 2006-68]\n* [CVE-2006-6499](https://security-tracker.debian.org/tracker/CVE-2006-6499)\nA bug in the js\\_dtoa function allows remote attackers to cause a\n denial of service. [MFSA 2006-68]\n* [CVE-2006-6501](https://security-tracker.debian.org/tracker/CVE-2006-6501)\nshutdown discovered a vulnerability that allows remote attackers\n to gain privileges and install malicious code via the watch\n JavaScript function. [MFSA 2006-70]\n* [CVE-2006-6502](https://security-tracker.debian.org/tracker/CVE-2006-6502)\nSteven Michaud discovered a programming bug that allows remote\n attackers to cause a denial of service. [MFSA 2006-71]\n* [CVE-2006-6503](https://security-tracker.debian.org/tracker/CVE-2006-6503)\nmoz\\_bug\\_r\\_a4 reported that the src attribute of an IMG element\n could be used to inject JavaScript code. [MFSA 2006-72]\n* [CVE-2006-6505](https://security-tracker.debian.org/tracker/CVE-2006-6505)\nGeorgi Guninski discovered several heap-based buffer overflows\n that allow remote attackers to execute arbitrary code. [MFSA 2006-74]\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.7.8-1sarge10.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.0.7-1 of iceape.\n\n\nWe recommend that you upgrade your Mozilla and Iceape packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "mozilla",
+				"purl": "pkg:deb/debian/mozilla?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.7.8-1sarge10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.7.8-1",
+				"2:1.7.8-1sarge1",
+				"2:1.7.8-1sarge2",
+				"2:1.7.8-1sarge3",
+				"2:1.7.8-1sarge5",
+				"2:1.7.8-1sarge6",
+				"2:1.7.8-1sarge7",
+				"2:1.7.8-1sarge7.1",
+				"2:1.7.8-1sarge7.2.1",
+				"2:1.7.8-1sarge7.2.2",
+				"2:1.7.8-1sarge7.3.1",
+				"2:1.7.8-1sarge8",
+				"2:1.7.8-1sarge9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1265-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1265"
+		}
+	]
+}

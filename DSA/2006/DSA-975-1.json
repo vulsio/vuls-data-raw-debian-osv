@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-975-1",
+	"modified": "2023-10-16T00:33:41.120911Z",
+	"published": "2006-02-15T00:00:00Z",
+	"related": [
+		"CVE-2006-0043"
+	],
+	"summary": "nfs-user-server - buffer overflow",
+	"details": "\nMarcus Meissner discovered that attackers can trigger a buffer overflow\nin the path handling code by creating or abusing existing symlinks, which\nmay lead to the execution of arbitrary code.\n\n\nThis vulnerability isn't present in the kernel NFS server.\n\n\nThis update includes a bugfix for attribute handling of symlinks. This\nfix does not have security implications, but at the time when this DSA\nwas prepared it was already queued for the next stable point release, so\nwe decided to include it beforehand.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 2.2beta47-12woody1.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.2beta47-20sarge2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.2beta47-22.\n\n\nWe recommend that you upgrade your nfs-user-server package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "nfs-user-server",
+				"purl": "pkg:deb/debian/nfs-user-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2beta47-12woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2beta47-12"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-975-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "nfs-user-server",
+				"purl": "pkg:deb/debian/nfs-user-server?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2beta47-20sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.2beta47-20",
+				"2.2beta47-20sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-975-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-975"
+		}
+	]
+}

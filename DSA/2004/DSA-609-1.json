@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-609-1",
+	"modified": "2023-10-16T00:27:32.092361Z",
+	"published": "2004-12-14T00:00:00Z",
+	"related": [
+		"CVE-2004-1076"
+	],
+	"summary": "atari800 - buffer overflows",
+	"details": "\nAdam Zabrocki discovered multiple buffer overflows in atari800, an\nAtari emulator. In order to directly access graphics hardware, one of\nthe affected programs is installed setuid root. A local attacker\ncould exploit this vulnerability to gain root privileges.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.2.2-1woody3.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your atari800 package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "atari800",
+				"purl": "pkg:deb/debian/atari800?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.2-1woody3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.6.2-1",
+				"0.8.6-2",
+				"0.9.8a-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-609-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-609"
+		}
+	]
+}

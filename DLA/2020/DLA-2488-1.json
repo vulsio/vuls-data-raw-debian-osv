@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2488-1",
+	"modified": "2023-06-28T06:29:02.968969Z",
+	"published": "2020-12-10T00:00:00Z",
+	"related": [
+		"CVE-2020-27351"
+	],
+	"summary": "python-apt - security update",
+	"details": "\nVarious memory and file descriptor leaks were discovered in the Python\ninterface to the APT package management runtime library, which could\nresult in denial of service.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.4.2.\n\n\nWe recommend that you upgrade your python-apt packages.\n\n\nFor the detailed security status of python-apt please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-apt>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "python-apt",
+				"purl": "pkg:deb/debian/python-apt?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.4.2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.4.0~beta3",
+				"1.4.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2488-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2488"
+		}
+	]
+}

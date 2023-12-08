@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1100-1",
+	"modified": "2023-06-28T06:20:22.587106Z",
+	"published": "2017-09-19T00:00:00Z",
+	"related": [
+		"CVE-2017-2862"
+	],
+	"summary": "gdk-pixbuf - security update",
+	"details": "\nMarcin Noga discovered a buffer overflow in the JPEG loader of the GDK\nPixbuf library, which may result in the execution of arbitrary code if\na malformed file is opened.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.26.1-1+deb7u6.\n\n\nWe recommend that you upgrade your gdk-pixbuf packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "gdk-pixbuf",
+				"purl": "pkg:deb/debian/gdk-pixbuf?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.26.1-1+deb7u6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.26.1-1",
+				"2.26.1-1+deb7u1",
+				"2.26.1-1+deb7u2",
+				"2.26.1-1+deb7u3",
+				"2.26.1-1+deb7u4",
+				"2.26.1-1+deb7u5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1100-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1100"
+		}
+	]
+}

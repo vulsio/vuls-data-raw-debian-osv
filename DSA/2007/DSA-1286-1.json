@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1286-1",
+	"modified": "2023-10-16T00:10:19.277098Z",
+	"published": "2007-05-02T00:00:00Z",
+	"related": [
+		"CVE-2007-0005",
+		"CVE-2007-0958",
+		"CVE-2007-1357",
+		"CVE-2007-1592"
+	],
+	"summary": "linux-2.6",
+	"details": "\nSeveral local and remote vulnerabilities have been discovered in the Linux\nkernel that may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-0005](https://security-tracker.debian.org/tracker/CVE-2007-0005)\nDaniel Roethlisberger discovered two buffer overflows in the cm4040\n driver for the Omnikey CardMan 4040 device. A local user or malicious\n device could exploit this to execute arbitrary code in kernel space.\n* [CVE-2007-0958](https://security-tracker.debian.org/tracker/CVE-2007-0958)\nSantosh Eraniose reported a vulnerability that allows local users to read\n otherwise unreadable files by triggering a core dump while using PT\\_INTERP.\n This is related to [CVE-2004-1073](https://security-tracker.debian.org/tracker/CVE-2004-1073).\n* [CVE-2007-1357](https://security-tracker.debian.org/tracker/CVE-2007-1357)\nJean Delvare reported a vulnerability in the appletalk subsystem.\n Systems with the appletalk module loaded can be triggered to crash\n by other systems on the local network via a malformed frame.\n* [CVE-2007-1592](https://security-tracker.debian.org/tracker/CVE-2007-1592)\nMasayuki Nakagawa discovered that flow labels were inadvertently\n being shared between listening sockets and child sockets. This defect\n can be exploited by local users to cause a DoS (Oops).\n\n\nThis problem has been fixed in the stable distribution in version \n2.6.18.dfsg.1-12etch1.\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17etch1 |\n| user-mode-linux | 2.6.18-1um-2etch1 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\nUpdated packages for the mips and mipsel architectures are not yet available.\nThey will be provided later.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-12etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1286-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1286"
+		}
+	]
+}

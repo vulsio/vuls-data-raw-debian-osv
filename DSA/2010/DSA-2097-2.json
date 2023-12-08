@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2097-2",
+	"modified": "2023-10-16T00:10:57.819990Z",
+	"published": "2010-08-29T00:00:00Z",
+	"related": [
+		"CVE-2010-3055",
+		"CVE-2010-3056"
+	],
+	"summary": "phpmyadmin - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in phpMyAdmin, a tool\nto administer MySQL over the web. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2010-3055](https://security-tracker.debian.org/tracker/CVE-2010-3055)\nThe configuration setup script does not properly sanitise its output\n file, which allows remote attackers to execute arbitrary PHP code via\n a crafted POST request. In Debian, the setup tool is protected through\n Apache HTTP basic authentication by default.\n* [CVE-2010-3056](https://security-tracker.debian.org/tracker/CVE-2010-3056)\nVarious cross site scripting issues have been discovered that allow\n a remote attacker to inject arbitrary web script or HTML.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.11.8.1-5+lenny5.\n\n\nFor the testing (squeeze) and unstable distribution (sid), these problems\nhave been fixed in version 3.3.5.1-1.\n\n\nWe recommend that you upgrade your phpmyadmin package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "phpmyadmin",
+				"purl": "pkg:deb/debian/phpmyadmin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4:2.11.8.1-5+lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4:2.11.8.1-5",
+				"4:2.11.8.1-5+lenny1",
+				"4:2.11.8.1-5+lenny3",
+				"4:2.11.8.1-5+lenny4",
+				"4:2.11.8.1-5+lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2097-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2097"
+		}
+	]
+}

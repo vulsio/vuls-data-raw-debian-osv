@@ -1,0 +1,66 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2054-1",
+	"modified": "2023-10-16T00:10:55.866668Z",
+	"published": "2010-06-04T00:00:00Z",
+	"related": [
+		"CVE-2010-0097",
+		"CVE-2010-0290",
+		"CVE-2010-0382"
+	],
+	"summary": "bind9 - cache poisoning",
+	"details": "\nSeveral cache-poisoning vulnerabilities have been discovered in BIND.\nThese vulnerabilities apply only if DNSSEC validation is enabled and\ntrust anchors have been installed, which is not the default.\n\n\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2010-0097](https://security-tracker.debian.org/tracker/CVE-2010-0097)\nBIND does not properly validate DNSSEC NSEC records, which allows\n remote attackers to add the Authenticated Data (AD) flag to a forged\n NXDOMAIN response for an existing domain.\n* [CVE-2010-0290](https://security-tracker.debian.org/tracker/CVE-2010-0290)\nWhen processing crafted responses containing CNAME or DNAME records,\n BIND is subject to a DNS cache poisoning vulnerability, provided that\n DNSSEC validation is enabled and trust anchors have been installed.\n* [CVE-2010-0382](https://security-tracker.debian.org/tracker/CVE-2010-0382)\nWhen processing certain responses containing out-of-bailiwick data,\n BIND is subject to a DNS cache poisoning vulnerability, provided that\n DNSSEC validation is enabled and trust anchors have been installed.\n\n\nIn addition, this update introduce a more conservative query behavior\nin the presence of repeated DNSSEC validation failures, addressing the\n\"roll over and die\" phenomenon. The new version also supports the\ncryptographic algorithm used by the upcoming signed ICANN DNS root\n(RSASHA256 from RFC 5702), and the NSEC3 secure denial of existence\nalgorithm used by some signed top-level domains.\n\n\nThis update is based on a new upstream version of BIND 9, 9.6-ESV-R1.\nBecause of the scope of changes, extra care is recommended when\ninstalling the update. Due to ABI changes, new Debian packages are\nincluded, and the update has to be installed using \"apt-get\ndist-upgrade\" (or an equivalent aptitude command).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1:9.6.ESV.R1+dfsg-0+lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:9.7.0.dfsg-1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "bind9",
+				"purl": "pkg:deb/debian/bind9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:9.6.ESV.R1+dfsg-0+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:9.5.0.dfsg.P2-5.1",
+				"1:9.5.1.dfsg.P1-1",
+				"1:9.5.1.dfsg.P1-2",
+				"1:9.5.1.dfsg.P1-3",
+				"1:9.5.1.dfsg.P2-1",
+				"1:9.5.1.dfsg.P2-1+lenny1",
+				"1:9.5.1.dfsg.P3-1",
+				"1:9.5.1.dfsg.P3-1+lenny1",
+				"1:9.6.0.dfsg.P1-0",
+				"1:9.6.0.dfsg.P1-1",
+				"1:9.6.0.dfsg.P1-2",
+				"1:9.6.1.dfsg-1",
+				"1:9.6.1.dfsg-2",
+				"1:9.6.1.dfsg.P1-1",
+				"1:9.6.1.dfsg.P1-2",
+				"1:9.6.1.dfsg.P1-3",
+				"1:9.6.1.dfsg.P2-1",
+				"1:9.6.1.dfsg.P3-1",
+				"1:9.6.1.dfsg.P3-1~bpo50+1",
+				"1:9.6.ESV+dfsg-0+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2054-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2054"
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2534-1",
+	"modified": "2023-10-16T00:11:17.270097Z",
+	"published": "2012-08-25T00:00:00Z",
+	"related": [
+		"CVE-2012-3488",
+		"CVE-2012-3489"
+	],
+	"summary": "postgresql-8.4 - several",
+	"details": "\nTwo vulnerabilities related to XML processing were discovered in\nPostgreSQL, an SQL database.\n\n\n* [CVE-2012-3488](https://security-tracker.debian.org/tracker/CVE-2012-3488)\ncontrib/xml2's xslt\\_process() can be used to read and write\n external files and URLs.\n* [CVE-2012-3489](https://security-tracker.debian.org/tracker/CVE-2012-3489)\nxml\\_parse() fetches external files or URLs to resolve DTD and\n entity references in XML values.\n\n\nThis update removes the problematic functionality, potentially\nbreaking applications which use it in a legitimate way.\n\n\nDue to the nature of these vulnerabilities, it is possible that\nattackers who have only indirect access to the database can supply\ncrafted XML data which exploits this vulnerability.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 8.4.13-0squeeze1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 9.1.5-1 of the postgresql-9.1 package.\n\n\nWe recommend that you upgrade your postgresql-8.4 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "postgresql-8.4",
+				"purl": "pkg:deb/debian/postgresql-8.4?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.4.13-0squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.4.10-0squeeze1",
+				"8.4.10-0squeeze1~bpo50+1",
+				"8.4.10-1",
+				"8.4.11-0squeeze1",
+				"8.4.11-1",
+				"8.4.12-0squeeze1",
+				"8.4.12-1",
+				"8.4.12-2",
+				"8.4.12-3",
+				"8.4.5-0squeeze2",
+				"8.4.5-1",
+				"8.4.5-1~bpo50+1",
+				"8.4.5-2",
+				"8.4.5-2~bpo50+1",
+				"8.4.6-1",
+				"8.4.7-0squeeze1~bpo50+1",
+				"8.4.7-0squeeze2",
+				"8.4.7-1",
+				"8.4.8-0squeeze1",
+				"8.4.8-0squeeze1~bpo50+1",
+				"8.4.8-0squeeze2",
+				"8.4.8-0squeeze2~bpo50+1",
+				"8.4.8-1",
+				"8.4.8-2",
+				"8.4.9-0squeeze1",
+				"8.4.9-0squeeze1~bpo50+1",
+				"8.4.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2534-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2534"
+		}
+	]
+}

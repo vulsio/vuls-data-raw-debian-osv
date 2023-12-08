@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1363-1",
+	"modified": "2023-06-28T06:20:35.659419Z",
+	"published": "2018-04-25T00:00:00Z",
+	"related": [
+		"CVE-2018-10194"
+	],
+	"summary": "ghostscript - security update",
+	"details": "\nIt was discovered that the set\\_text\\_distance function in\nbase/gdevpdts.c in the pdfwrite component in Ghostscript does not\nprevent overflows in text-positioning calculation, which allows remote\nattackers to cause a denial of service (application crash) or possibly\nhave unspecified other impact via a crafted PDF document.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n9.05~dfsg-6.3+deb7u8.\n\n\nWe recommend that you upgrade your ghostscript packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "ghostscript",
+				"purl": "pkg:deb/debian/ghostscript?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.05~dfsg-6.3+deb7u8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.05~dfsg-6.3",
+				"9.05~dfsg-6.3+deb7u1",
+				"9.05~dfsg-6.3+deb7u2",
+				"9.05~dfsg-6.3+deb7u3",
+				"9.05~dfsg-6.3+deb7u4",
+				"9.05~dfsg-6.3+deb7u5",
+				"9.05~dfsg-6.3+deb7u6",
+				"9.05~dfsg-6.3+deb7u7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1363-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1363"
+		}
+	]
+}

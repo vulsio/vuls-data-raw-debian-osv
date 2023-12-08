@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5101-1",
+	"modified": "2023-10-16T00:15:38.080253Z",
+	"published": "2022-03-13T00:00:00Z",
+	"related": [
+		"CVE-2021-3850"
+	],
+	"summary": "libphp-adodb - security update",
+	"details": "\nEmmet Leahy reported that libphp-adodb, a PHP database abstraction layer\nlibrary, allows to inject values into a PostgreSQL connection string.\nDepending on how the library is used this flaw can result in\nauthentication bypass, reveal a server IP address or have other\nunspecified impact.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 5.20.14-1+deb10u1.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 5.20.19-1+deb11u1.\n\n\nWe recommend that you upgrade your libphp-adodb packages.\n\n\nFor the detailed security status of libphp-adodb please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libphp-adodb](https://security-tracker.debian.org/tracker/libphp-adodb)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "libphp-adodb",
+				"purl": "pkg:deb/debian/libphp-adodb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.20.14-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.20.14-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5101-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "libphp-adodb",
+				"purl": "pkg:deb/debian/libphp-adodb?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.20.19-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.20.19-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5101-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5101"
+		}
+	]
+}

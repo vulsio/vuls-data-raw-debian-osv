@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-0002-1",
+	"modified": "2023-06-28T06:17:54.891703Z",
+	"published": "2014-06-04T00:00:00Z",
+	"related": [
+		"CVE-2014-0476"
+	],
+	"summary": "chkrootkit - security update",
+	"details": "\nThomas Stangner discovered a vulnerability in chkrootkit, a rootkit\ndetector, which may allow local attackers to gain root access when /tmp\nis mounted without the noexec option.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in chkrootkit version 0.49-4+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "chkrootkit",
+				"purl": "pkg:deb/debian/chkrootkit?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.49-4+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.49-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-0002-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-0002"
+		}
+	]
+}

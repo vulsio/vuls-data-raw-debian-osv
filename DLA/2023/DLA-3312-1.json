@@ -1,0 +1,68 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3312-1",
+	"modified": "2023-06-28T06:37:58.132180Z",
+	"published": "2023-02-08T00:00:00Z",
+	"summary": "shim - security update",
+	"details": "\nThis release fixes various issues in shim bootloader and updates it to\na supported version. Older versions of the shim may eventually be blocked\nby Secure Boot, so it is strongly advised for Secure Boot enabled systems\nto upgrade to this newer version to keep the system bootable.\n\n\nAdditionally, this update blocks old, insecure versions of GRUB. Thus an\nupdate to a signed GRUB 2.06-3~deb10u3 package as released in DLA 3190-2\nmust be in place prior to updating the shim packages.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n15.7-1~deb10u1.\n\n\nWe recommend that you upgrade your shim packages.\n\n\nFor the detailed security status of shim please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/shim>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "shim",
+				"purl": "pkg:deb/debian/shim?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "15.7-1~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"15+1533136590.3beb971-10",
+				"15+1533136590.3beb971-7",
+				"15+1533136590.3beb971-7+deb10u1",
+				"15+1533136590.3beb971-8",
+				"15+1533136590.3beb971-9",
+				"15.3-1",
+				"15.3-1~deb10u1",
+				"15.3-1~deb10u2",
+				"15.3-1~deb10u3",
+				"15.3-2",
+				"15.3-3",
+				"15.4-1",
+				"15.4-1~deb10u1",
+				"15.4-2",
+				"15.4-2~deb10u1",
+				"15.4-3",
+				"15.4-3~deb10u1",
+				"15.4-4",
+				"15.4-5",
+				"15.4-5~deb10u1",
+				"15.4-6",
+				"15.4-6~deb10u1",
+				"15.4-7",
+				"15.4-7~deb10u1",
+				"15.6-1",
+				"15.6-1~deb10u1",
+				"15.6-1~deb11u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3312-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3312"
+		}
+	]
+}

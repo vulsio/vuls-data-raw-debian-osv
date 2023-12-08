@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2918-1",
+	"modified": "2023-06-28T06:26:43.132647Z",
+	"published": "2022-02-12T00:00:00Z",
+	"related": [
+		"CVE-2021-20001"
+	],
+	"summary": "debian-edu-config - security update",
+	"details": "\nMarcel Neumann, Robert Altschaffel, Loris Guba and Dustin Hermann\ndiscovered that debian-edu-config, a set of configuration files used\nfor the Debian Edu blend configured insecure permissions for the user\nweb shares (~/public\\_html), which could result in privilege escalation.\n\n\nIf PHP functionality is needed for the user web shares, please refer to\n/usr/share/doc/debian-edu-config/README.public\\_html\\_with\\_PHP-CGI+suExec.md\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.929+deb9u5.\n\n\nWe recommend that you upgrade your debian-edu-config packages.\n\n\nFor the detailed security status of debian-edu-config please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/debian-edu-config>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "debian-edu-config",
+				"purl": "pkg:deb/debian/debian-edu-config?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.929+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.929",
+				"1.929+deb9u1",
+				"1.929+deb9u2",
+				"1.929+deb9u3",
+				"1.929+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2918-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-2918"
+		}
+	]
+}

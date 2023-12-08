@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1148-1",
+	"modified": "2023-06-28T06:20:24.150112Z",
+	"published": "2017-10-27T00:00:00Z",
+	"related": [
+		"CVE-2017-15041"
+	],
+	"summary": "golang - security update",
+	"details": "\nGo before 1.8.4 and 1.9.x before 1.9.1 allows go get remote command\nexecution. Using custom domains, it is possible to arrange things so\nthat example.com/pkg1 points to a Subversion repository but\nexample.com/pkg1/pkg2 points to a Git repository. If the Subversion\nrepository includes a Git checkout in its pkg2 directory and some\nother work is done to ensure the proper ordering of operations, go\nget can be tricked into reusing this Git checkout for the fetch of\ncode from pkg2. If the Subversion repository's Git checkout has\nmalicious commands in .git/hooks/, they will execute on the system\nrunning \"go get.\"\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2:1.0.2-1.1+deb7u2.\n\n\nWe recommend that you upgrade your golang packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "golang",
+				"purl": "pkg:deb/debian/golang?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:1.0.2-1.1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:1.0.2-1.1",
+				"2:1.0.2-1.1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1148-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1148"
+		}
+	]
+}

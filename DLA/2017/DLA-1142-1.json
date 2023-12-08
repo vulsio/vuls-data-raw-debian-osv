@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1142-1",
+	"modified": "2023-06-28T06:22:41.086032Z",
+	"published": "2017-10-21T00:00:00Z",
+	"related": [
+		"CVE-2015-8365",
+		"CVE-2017-7208",
+		"CVE-2017-7862",
+		"CVE-2017-9992"
+	],
+	"summary": "libav - security update",
+	"details": "\nMultiple vulnerabilities have been found in libav:\n\n\n* [CVE-2015-8365](https://security-tracker.debian.org/tracker/CVE-2015-8365)\nThe smka\\_decode\\_frame function in libavcodec/smacker.c does not verify that\n the data size is consistent with the number of channels, which allows remote\n attackers to cause a denial of service (out-of-bounds array access) or\n possibly have unspecified other impact via crafted Smacker data.\n* [CVE-2017-7208](https://security-tracker.debian.org/tracker/CVE-2017-7208)\nThe decode\\_residual function in libavcodec allows remote attackers to cause\n a denial of service (buffer over-read) or obtain sensitive information from\n process memory via a crafted h264 video file.\n* [CVE-2017-7862](https://security-tracker.debian.org/tracker/CVE-2017-7862)\nThe decode\\_frame function in libavcodec/pictordec.c is vulnerable to an\n out-of-bounds write caused by a heap-based buffer overflow.\n* [CVE-2017-9992](https://security-tracker.debian.org/tracker/CVE-2017-9992)\nThe decode\\_dds1 function in libavcodec/dfa.c allows remote attackers to\n cause a denial of service (Heap-based buffer overflow and application crash)\n or possibly have unspecified other impact via a crafted file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n6:0.8.21-0+deb7u1.\n\n\nWe recommend that you upgrade your libav packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libav",
+				"purl": "pkg:deb/debian/libav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6:0.8.21-0+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6:0.8.10-1",
+				"6:0.8.12-1",
+				"6:0.8.13-1",
+				"6:0.8.15-1",
+				"6:0.8.16-1",
+				"6:0.8.17-1",
+				"6:0.8.17-2",
+				"6:0.8.17-2+deb7u1",
+				"6:0.8.17-2+deb7u2",
+				"6:0.8.18-0+deb7u1",
+				"6:0.8.19-0+deb7u1",
+				"6:0.8.20-0+deb7u1",
+				"6:0.8.6-1",
+				"6:0.8.7-1",
+				"6:0.8.8-1",
+				"6:0.8.9-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1142-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1142"
+		}
+	]
+}

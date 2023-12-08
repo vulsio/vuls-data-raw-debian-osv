@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2281-1",
+	"modified": "2023-10-16T00:11:05.642178Z",
+	"published": "2011-07-21T00:00:00Z",
+	"related": [
+		"CVE-2011-2489",
+		"CVE-2011-2490"
+	],
+	"summary": "opie - several",
+	"details": "\nSebastian Krahmer discovered that opie, a system that makes it simple to use \nOne-Time passwords in applications, is prone to a privilege escalation \n([CVE-2011-2490](https://security-tracker.debian.org/tracker/CVE-2011-2490)) \nand an off-by-one error, which can lead to the execution of arbitrary code \n([CVE-2011-2489](https://security-tracker.debian.org/tracker/CVE-2011-2489)). \nAdam Zabrocki and Maksymilian Arciemowicz also discovered another off-by-one \nerror \n([CVE-2010-1938](https://security-tracker.debian.org/tracker/CVE-2010-1938)), \nwhich only affects the lenny version as the fix was already included in \nsqueeze.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 2.32-10.2+lenny2.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 2.32.dfsg.1-0.2+squeeze1\n\n\nThe testing distribution (wheezy) and the unstable distribution (sid) do\nnot contain opie.\n\n\nWe recommend that you upgrade your opie packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "opie",
+				"purl": "pkg:deb/debian/opie?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.32.dfsg.1-0.2+squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.32.dfsg.1-0.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2281-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "opie",
+				"purl": "pkg:deb/debian/opie?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.32-10.2+lenny2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.32-10.2",
+				"2.32-10.2+lenny1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2281-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2281"
+		}
+	]
+}

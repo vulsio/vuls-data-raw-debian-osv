@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-156",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-08-22T00:00:00Z",
+	"related": [
+		"CVE-2002-0984"
+	],
+	"summary": "epic4-script-light - arbitrary script execution",
+	"details": "\nAll versions of the EPIC script Light prior to 2.7.30p5 (on the 2.7\nbranch) and prior to 2.8pre10 (on the 2.8 branch) running on any\nplatform are vulnerable to a remotely-exploitable bug, which can lead\nto nearly arbitrary code execution.\n\n\nThis problem has been fixed in version 2.7.30p5-1.1 for the current\nstable distribution (woody) and in version 2.7.30p5-2 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected, since it doesn't contain the Light package.\n\n\nWe recommend that you upgrade your epic4-script-light package and\nrestart your IRC client.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "epic4-script-light",
+				"purl": "pkg:deb/debian/epic4-script-light?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.7.30p5-1.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-156.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-156"
+		}
+	]
+}

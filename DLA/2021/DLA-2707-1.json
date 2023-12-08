@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2707-1",
+	"modified": "2023-06-28T06:38:45.844088Z",
+	"published": "2021-07-12T00:00:00Z",
+	"related": [
+		"CVE-2021-33054"
+	],
+	"summary": "sogo - security update",
+	"details": "\nOne security issue has been discovered in sogo.\n\n\nSOGo does not validate the signatures of any SAML assertions it receives.\nAny actor with network access to the deployment could impersonate users when\nSAML is the authentication method.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n3.2.6-2+deb9u1.\n\n\nWe recommend that you upgrade your sogo packages.\n\n\nATTENTION! If you are using SAML authentication, use sogo-tool to immediately\ndelete users sessions and force all users to visit the login page:\n\n\nsogo-tool -v expire-sessions 1\n\n\nsystemctl restart memcached\n\n\nFor the detailed security status of sogo please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/sogo>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "sogo",
+				"purl": "pkg:deb/debian/sogo?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2.6-2+deb9u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2.6-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2707-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2707"
+		}
+	]
+}

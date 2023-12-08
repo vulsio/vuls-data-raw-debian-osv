@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3427-2",
+	"modified": "2023-06-28T06:30:33.541216Z",
+	"published": "2023-05-20T00:00:00Z",
+	"related": [
+		"CVE-2019-18604"
+	],
+	"summary": "texlive-bin - regression update",
+	"details": "\nMax Chernoff discovered that improperly secured shell-escape in LuaTeX may\nresult in arbitrary shell command execution, even with shell escape disabled,\nif specially crafted tex files are processed.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2018.20181218.49446-1+deb10u1.\n\n\nWe recommend that you upgrade your texlive-bin packages.\n\n\nFor the detailed security status of texlive-bin please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/texlive-bin>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "texlive-bin",
+				"purl": "pkg:deb/debian/texlive-bin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2018.20181218.49446-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2018.20181218.49446-1",
+				"2018.20181218.49446-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3427-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3427"
+		}
+	]
+}

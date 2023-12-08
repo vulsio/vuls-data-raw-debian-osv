@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3168-1",
+	"modified": "2023-06-28T06:33:36.746497Z",
+	"published": "2022-10-29T00:00:00Z",
+	"related": [
+		"CVE-2022-32166"
+	],
+	"summary": "openvswitch - security update",
+	"details": "\nAn issue has been found in openvswitch, a software-based, Ethernet\nvirtual switch.\n\n\nThis issue is about a heap buffer over-read in flow.c, which could lead\nto access to an unmapped region of memory. This could result in crashing\nthe software, memory modification, or possible remote execution.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.10.7+ds1-0+deb10u2.\n\n\nWe recommend that you upgrade your openvswitch packages.\n\n\nFor the detailed security status of openvswitch please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openvswitch>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "openvswitch",
+				"purl": "pkg:deb/debian/openvswitch?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.10.7+ds1-0+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-12",
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-12+deb10u1",
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-12+deb10u2",
+				"2.10.0+2018.08.28+git.8ca7c82b7d+ds1-13",
+				"2.10.6+ds1-0+deb10u1",
+				"2.10.7+ds1-0+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3168-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3168"
+		}
+	]
+}

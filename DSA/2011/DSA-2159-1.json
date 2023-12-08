@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2159-1",
+	"modified": "2023-10-16T00:11:00.299082Z",
+	"published": "2011-02-10T00:00:00Z",
+	"related": [
+		"CVE-2011-0531"
+	],
+	"summary": "vlc - missing input sanitising",
+	"details": "\nDan Rosenberg discovered that insufficient input validation in VLC's \nprocessing of Matroska/WebM containers could lead to the execution of \narbitrary code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.1.3-1squeeze3.\n\n\nThe version of vlc in the oldstable distribution (lenny) is affected\nby further issues and will be addressed in a followup DSA.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.7-1.\n\n\nWe recommend that you upgrade your vlc packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "vlc",
+				"purl": "pkg:deb/debian/vlc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.3-1squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.3-1squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2159-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2159"
+		}
+	]
+}

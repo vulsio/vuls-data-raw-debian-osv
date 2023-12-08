@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-119-1",
+	"modified": "2023-06-28T06:20:28.320179Z",
+	"published": "2014-12-21T00:00:00Z",
+	"related": [
+		"CVE-2014-3580"
+	],
+	"summary": "subversion - security update",
+	"details": "\nEvgeny Kotkov discovered a NULL pointer dereference while processing\nREPORT requests in mod\\_dav\\_svn, the Subversion component which is used\nto serve repositories with the Apache web server. A remote attacker\ncould abuse this vulnerability for a denial of service.\n\n\nWe recommend that you upgrade your subversion packages.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in subversion version 1.6.12dfsg-7+deb6u1\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "subversion",
+				"purl": "pkg:deb/debian/subversion?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.6.12dfsg-7+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.6.12dfsg-4",
+				"1.6.12dfsg-5",
+				"1.6.12dfsg-5~bpo50+1",
+				"1.6.12dfsg-6",
+				"1.6.12dfsg-6~bpo50+1",
+				"1.6.12dfsg-7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-119-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2014/dla-119"
+		}
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2893-1",
+	"modified": "2023-10-16T00:11:36.893478Z",
+	"published": "2014-03-31T00:00:00Z",
+	"related": [
+		"CVE-2013-2053",
+		"CVE-2013-6466"
+	],
+	"summary": "openswan - security update",
+	"details": "\nTwo vulnerabilities were fixed in Openswan, an IKE/IPsec implementation\nfor Linux.\n\n\n* [CVE-2013-2053](https://security-tracker.debian.org/tracker/CVE-2013-2053)\nDuring an audit of Libreswan (with which Openswan shares some code),\n Florian Weimer found a remote buffer overflow in the atodn()\n function. This vulnerability can be triggered when Opportunistic\n Encryption (OE) is enabled and an attacker controls the PTR record\n of a peer IP address.\n Authentication is not needed to trigger the vulnerability.\n* [CVE-2013-6466](https://security-tracker.debian.org/tracker/CVE-2013-6466)\nIustina Melinte found a vulnerability in Libreswan which also\n applies to the Openswan code. By carefuly crafting IKEv2 packets, an\n attacker can make the pluto daemon dereference non-received IKEv2\n payload, leading to the daemon crash.\n Authentication is not needed to trigger the vulnerability.\n\n\nPatches were originally written to fix the vulnerabilities in Libreswan,\nand have been ported to Openswan by Paul Wouters from the Libreswan\nProject.\n\n\nSince the Openswan package is not maintained anymore in the Debian\ndistribution and is not available in testing and unstable suites, it is\nrecommended for IKE/IPsec users to switch to a supported implementation\nlike strongSwan.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 2.6.28+dfsg-5+squeeze2.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.6.37-3.1.\n\n\nWe recommend that you upgrade your openswan packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "openswan",
+				"purl": "pkg:deb/debian/openswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.6.28+dfsg-5+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.6.28+dfsg-5",
+				"1:2.6.28+dfsg-5+squeeze1",
+				"1:2.6.28+dfsg-5+squeeze1~bpo50+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2893-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "openswan",
+				"purl": "pkg:deb/debian/openswan?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.6.37-3+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.6.37-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2893-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2014/dsa-2893"
+		}
+	]
+}

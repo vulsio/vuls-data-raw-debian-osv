@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2558-2",
+	"modified": "2023-06-28T06:29:13.460590Z",
+	"published": "2021-02-13T00:00:00Z",
+	"summary": "xterm - regression update",
+	"details": "\nxterm through Patch #365 allows remote attackers to cause a\ndenial of service (segmentation fault) or possibly have\nunspecified other impact via a crafted UTF-8 character sequence.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n327-2+deb9u1.\n\n\nWe recommend that you upgrade your xterm packages.\n\n\nFor the detailed security status of xterm please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/xterm>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "xterm",
+				"purl": "pkg:deb/debian/xterm?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "327-2+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"327-2",
+				"327-2+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2558-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2021/dla-2558"
+		}
+	]
+}

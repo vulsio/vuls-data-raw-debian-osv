@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5265-1",
+	"modified": "2023-10-16T00:20:58.405643Z",
+	"published": "2022-10-29T00:00:00Z",
+	"related": [
+		"CVE-2021-43980",
+		"CVE-2022-23181",
+		"CVE-2022-29885"
+	],
+	"summary": "tomcat9 - security update",
+	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2021-43980](https://security-tracker.debian.org/tracker/CVE-2021-43980)\nThe simplified implementation of blocking reads and writes introduced in\n Tomcat 10 and back-ported to Tomcat 9.0.47 onwards exposed a long standing\n (but extremely hard to trigger) concurrency bug that could cause client\n connections to share an Http11Processor instance resulting in responses, or\n part responses, to be received by the wrong client.\n* [CVE-2022-23181](https://security-tracker.debian.org/tracker/CVE-2022-23181)\nThe fix for bug [CVE-2020-9484](https://security-tracker.debian.org/tracker/CVE-2020-9484) introduced a time of check, time of use\n vulnerability into Apache Tomcat that allowed a local attacker to perform\n actions with the privileges of the user that the Tomcat process is using.\n This issue is only exploitable when Tomcat is configured to persist\n sessions using the FileStore.\n* [CVE-2022-29885](https://security-tracker.debian.org/tracker/CVE-2022-29885)\nThe documentation of Apache Tomcat for the EncryptInterceptor incorrectly\n stated it enabled Tomcat clustering to run over an untrusted network. This\n was not correct. While the EncryptInterceptor does provide confidentiality\n and integrity protection, it does not protect against all risks associated\n with running over any untrusted network, particularly DoS risks.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 9.0.43-2~deb11u4.\n\n\nWe recommend that you upgrade your tomcat9 packages.\n\n\nFor the detailed security status of tomcat9 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tomcat9](https://security-tracker.debian.org/tracker/tomcat9)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "tomcat9",
+				"purl": "pkg:deb/debian/tomcat9?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "9.0.43-2~deb11u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"9.0.43-1",
+				"9.0.43-2~deb11u1",
+				"9.0.43-2~deb11u2",
+				"9.0.43-2~deb11u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5265-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5265"
+		}
+	]
+}

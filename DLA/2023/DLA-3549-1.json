@@ -1,0 +1,65 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3549-1",
+	"modified": "2023-08-30T06:15:23.487749Z",
+	"published": "2023-08-29T00:00:00Z",
+	"related": [
+		"CVE-2021-37706",
+		"CVE-2021-43299",
+		"CVE-2021-43300",
+		"CVE-2021-43301",
+		"CVE-2021-43302",
+		"CVE-2021-43303",
+		"CVE-2021-43804",
+		"CVE-2021-43845",
+		"CVE-2022-21722",
+		"CVE-2022-21723",
+		"CVE-2022-23537",
+		"CVE-2022-23547",
+		"CVE-2022-23608",
+		"CVE-2022-24754",
+		"CVE-2022-24763",
+		"CVE-2022-24764",
+		"CVE-2022-24793",
+		"CVE-2022-31031",
+		"CVE-2022-39244",
+		"CVE-2023-27585"
+	],
+	"summary": "ring - security update",
+	"details": "\nSeveral issue have been found in ring/jami, a secure and distributed\nvoice, video and chat platform.\nThe issues are about missing boundary checks, resulting in out-of-bound\nread access, buffer overflow or denial-of-service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n20190215.1.f152c98~ds1-1+deb10u2.\n\n\nWe recommend that you upgrade your ring/jami packages.\n\n\nFor the detailed security status of ring please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ring>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "ring",
+				"purl": "pkg:deb/debian/ring?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "20190215.1.f152c98~ds1-1+deb10u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"20190215.1.f152c98~ds1-1",
+				"20190215.1.f152c98~ds1-1+deb10u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3549-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3549"
+		}
+	]
+}

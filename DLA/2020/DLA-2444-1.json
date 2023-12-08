@@ -1,0 +1,59 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2444-1",
+	"modified": "2023-06-28T06:21:17.720172Z",
+	"published": "2020-11-10T00:00:00Z",
+	"related": [
+		"CVE-2020-8037"
+	],
+	"summary": "tcpdump - security update",
+	"details": "\nThe ppp de-capsulator in tcpdump 4.9.3 can be convinced to allocate\na large amount of memory.\n\n\nThe buffer should be big enough to hold the captured data, but it\ndoesnât need to be big enough to hold the entire on-the-network\npacket, if we havenât captured all of it.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n4.9.3-1~deb9u2.\n\n\nWe recommend that you upgrade your tcpdump packages.\n\n\nFor the detailed security status of tcpdump please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tcpdump>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "tcpdump",
+				"purl": "pkg:deb/debian/tcpdump?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.9.3-1~deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.9.0-2",
+				"4.9.0-3",
+				"4.9.1-1",
+				"4.9.1-2",
+				"4.9.1-3",
+				"4.9.2-1",
+				"4.9.2-1~deb7u1",
+				"4.9.2-1~deb8u1",
+				"4.9.2-1~deb9u1",
+				"4.9.2-2",
+				"4.9.2-3",
+				"4.9.3-1~deb8u1",
+				"4.9.3-1~deb9u1",
+				"4.9.3~git20190901-1",
+				"4.9.3~git20190901-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2444-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2444"
+		}
+	]
+}

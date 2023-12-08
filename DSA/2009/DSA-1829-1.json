@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1829-1",
+	"modified": "2023-10-16T00:10:40.498942Z",
+	"published": "2009-07-11T00:00:00Z",
+	"related": [
+		"CVE-2009-2360"
+	],
+	"summary": "sork-passwd-h3 - cross-site scripting",
+	"details": "\nIt was discovered that sork-passwd-h3, a Horde3 module for users to\nchange their password, is prone to a cross-site scripting attack via the\nbackend parameter.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 3.0-2+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 3.0-2+lenny1.\n\n\nFor the testing distribution (squeeze), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.1-1.1.\n\n\nWe recommend that you upgrade your sork-passwd-h3 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "sork-passwd-h3",
+				"purl": "pkg:deb/debian/sork-passwd-h3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0-2+etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1829-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "sork-passwd-h3",
+				"purl": "pkg:deb/debian/sork-passwd-h3?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.0-2+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.0-2",
+				"3.0-2+etch1",
+				"3.0-2+etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1829-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2009/dsa-1829"
+		}
+	]
+}

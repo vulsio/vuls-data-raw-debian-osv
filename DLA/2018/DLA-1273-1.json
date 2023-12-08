@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1273-1",
+	"modified": "2023-06-28T06:23:42.703724Z",
+	"published": "2018-02-09T00:00:00Z",
+	"related": [
+		"CVE-2017-18121",
+		"CVE-2017-18122",
+		"CVE-2018-6521"
+	],
+	"summary": "simplesamlphp - security update",
+	"details": "\nsimplesamlphp, an authentication and federation application has been\nfound vulnerable to Cross Site Scripting (XSS), signature validation\nbyepass and using insecure connection charset.\n\n\n* [CVE-2017-18121](https://security-tracker.debian.org/tracker/CVE-2017-18121)\nA Cross Site Scripting (XSS) issue has been found in the\n consentAdmin module of SimpleSAMLphp through 1.14.15, allowing an\n attacker to manually craft links that a victim can open, executing\n arbitrary javascript code.\n* [CVE-2017-18122](https://security-tracker.debian.org/tracker/CVE-2017-18122)\nA signature-validation bypass issue was discovered in SimpleSAMLphp\n through 1.14.16. Service Provider using SAML 1.1 will regard as\n valid any unsigned SAML response containing more than one signed\n assertion, provided that the signature of at least one of the\n assertions is valid. Attributes contained in all the assertions\n received will be merged and the entityID of the first assertion\n received will be used, allowing an attacker to impersonate any user\n of any IdP given an assertion signed by the targeted IdP.\n* [CVE-2018-6521](https://security-tracker.debian.org/tracker/CVE-2018-6521)\nThe sqlauth module in SimpleSAMLphp before 1.15.2 relies on the\n MySQL utf8 charset, which truncates queries upon encountering\n four-byte characters. There might be a scenario in which this allows\n remote attackers to bypass intended access restrictions.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.9.2-1+deb7u2.\n\n\nWe recommend that you upgrade your simplesamlphp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "simplesamlphp",
+				"purl": "pkg:deb/debian/simplesamlphp?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.2-1+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.2-1",
+				"1.9.2-1+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1273-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1273"
+		}
+	]
+}

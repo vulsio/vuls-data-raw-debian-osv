@@ -1,0 +1,104 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-359-1",
+	"modified": "2023-06-28T06:26:58.761761Z",
+	"published": "2015-12-16T00:00:00Z",
+	"related": [
+		"CVE-2015-0499",
+		"CVE-2015-0501",
+		"CVE-2015-0505",
+		"CVE-2015-2568",
+		"CVE-2015-2571",
+		"CVE-2015-2573",
+		"CVE-2015-2582",
+		"CVE-2015-2620",
+		"CVE-2015-2643",
+		"CVE-2015-2648",
+		"CVE-2015-4737",
+		"CVE-2015-4752",
+		"CVE-2015-4792",
+		"CVE-2015-4802",
+		"CVE-2015-4815",
+		"CVE-2015-4816",
+		"CVE-2015-4819",
+		"CVE-2015-4826",
+		"CVE-2015-4830",
+		"CVE-2015-4836",
+		"CVE-2015-4858",
+		"CVE-2015-4861",
+		"CVE-2015-4870",
+		"CVE-2015-4879",
+		"CVE-2015-4913"
+	],
+	"summary": "mysql-5.5 - packages as an option announcement",
+	"details": "\nOracle, the upstream maintainer of MySQL, no longer supports MySQL\nversion 5.1, which is included in Debian 6.0 squeeze. MySQL 5.1 likely\nsuffers from multiple vulnerabilities fixed in newer versions after the\nend of upstream support, but Oracle does not disclose enough information\neither to verify or to fix them.\n\n\nAs an alternative, the Debian LTS team is providing MySQL 5.5 packages\nfor use in Debian 6.0 squeeze. We recommend that Squeeze LTS users\ninstall them and migrate their MySQL databases.\n\n\nPlease note that a dist-upgrade will not consider these MySQL 5.5\npackages automatically, so users need to install them explicitly.\n\n\nIf you are running a MySQL server:\n\n\n\n```\napt-get install mysql-server-5.5\n```\n\nIf you only need the MySQL client:\n\n\n\n```\napt-get install mysql-client-5.5\n```\n\n### Compatibility updates\n\n\nSome packages were updated to solve incompatibility issues, that were\nfixed in the following versions:\n\n\n* bacula-director-mysql 5.0.2-2.2+squeeze2\n* cacti 0.8.7g-1+squeeze9\n* phpmyadmin 4:3.3.7-10\n* postfix-policyd 1.82-2+deb6u1\n* prelude-manager 1.0.0-1+deb6u1\n\n\nWe recommend that you upgrade these packages before upgrading to\nMySQL 5.5. A common dist-upgrade should be enough.\n\n\nWe have done our best to provide you with reliable MySQL 5.5 packages. We\nhave made available test packages for some time, although we did not get\nany feedback from users. In any case, don't hesitate to report any issues\nrelated to this MySQL upgrade to debian-lts@lists.debian.org.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "mysql-5.5",
+				"purl": "pkg:deb/debian/mysql-5.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.5.46-0+deb6u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.5.17-1",
+				"5.5.17-4",
+				"5.5.20-1",
+				"5.5.23+dfsg-1",
+				"5.5.23+dfsg-2",
+				"5.5.23-1",
+				"5.5.23-2",
+				"5.5.24+dfsg-1",
+				"5.5.24+dfsg-2",
+				"5.5.24+dfsg-3",
+				"5.5.24+dfsg-4",
+				"5.5.24+dfsg-5",
+				"5.5.24+dfsg-6",
+				"5.5.24+dfsg-7",
+				"5.5.24+dfsg-8",
+				"5.5.24+dfsg-9",
+				"5.5.25+dfsg-1",
+				"5.5.28+dfsg-1",
+				"5.5.29+dfsg-1",
+				"5.5.30+dfsg-1",
+				"5.5.30+dfsg-1.1",
+				"5.5.31+dfsg-0+wheezy1",
+				"5.5.31+dfsg-1",
+				"5.5.33+dfsg-0+wheezy1",
+				"5.5.33+dfsg-1",
+				"5.5.35+dfsg-0+wheezy1",
+				"5.5.35+dfsg-1",
+				"5.5.35+dfsg-2",
+				"5.5.37-0+wheezy1",
+				"5.5.37-1",
+				"5.5.38-0+wheezy1",
+				"5.5.39-1",
+				"5.5.40-0+wheezy1",
+				"5.5.40-1",
+				"5.5.41-0+wheezy1",
+				"5.5.42-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-359-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2015/dla-359"
+		}
+	]
+}

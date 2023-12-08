@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-672-1",
+	"modified": "2023-10-16T00:28:50.429087Z",
+	"published": "2005-02-09T00:00:00Z",
+	"related": [
+		"CVE-2005-0076"
+	],
+	"summary": "xview - buffer overflows",
+	"details": "\nErik SjĂślund discovered that programs linked against xview are\nvulnerable to a number of buffer overflows in the XView library. When\nthe overflow is triggered in a program which is installed setuid root\na malicious user could perhaps execute arbitrary code as privileged\nuser.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 3.2p1.4-16woody2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.2p1.4-19.\n\n\nWe recommend that you upgrade your xview packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "xview",
+				"purl": "pkg:deb/debian/xview?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.2p1.4-16woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.2p1.4-16"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-672-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-672"
+		}
+	]
+}

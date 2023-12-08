@@ -1,0 +1,76 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1614-1",
+	"modified": "2023-10-16T00:05:32.032261Z",
+	"published": "2008-07-23T00:00:00Z",
+	"related": [
+		"CVE-2008-2785",
+		"CVE-2008-2933",
+		"CVE-2008-3198"
+	],
+	"summary": "iceweasel - several vulnerabilities",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Iceweasel\nweb browser, an unbranded version of the Firefox browser. The Common \nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-2785](https://security-tracker.debian.org/tracker/CVE-2008-2785)\nIt was discovered that missing boundary checks on a reference\n counter for CSS objects can lead to the execution of arbitrary code.\n* [CVE-2008-2933](https://security-tracker.debian.org/tracker/CVE-2008-2933)\nBilly Rios discovered that passing an URL containing a pipe symbol\n to Iceweasel can lead to Chrome privilege escalation.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.0.0.16-0etch1. Updated packages for ia64, arm and mips are\nnot yet available and will be released as soon as they have been built.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nxulrunner 1.9.0.1-1 and iceweasel 3.0.1-1.\n\n\nWe recommend that you upgrade your iceweasel package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "iceweasel",
+				"purl": "pkg:deb/debian/iceweasel?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.0.16-0etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.0.10-0etch1",
+				"2.0.0.10-1",
+				"2.0.0.10-2",
+				"2.0.0.11-1",
+				"2.0.0.12-0etch1",
+				"2.0.0.12-1",
+				"2.0.0.12-2",
+				"2.0.0.13-0etch1",
+				"2.0.0.13-1",
+				"2.0.0.14-0etch1",
+				"2.0.0.14-1",
+				"2.0.0.14-2",
+				"2.0.0.15-0etch1",
+				"2.0.0.3-1",
+				"2.0.0.3-2",
+				"2.0.0.4-0etch1",
+				"2.0.0.4-1",
+				"2.0.0.5-0etch1",
+				"2.0.0.5-0etch1+lenny1",
+				"2.0.0.5-1",
+				"2.0.0.5-2",
+				"2.0.0.6+2.0.0.8-0etch1",
+				"2.0.0.6-0etch1",
+				"2.0.0.6-0etch1+lenny1",
+				"2.0.0.6-1",
+				"2.0.0.7-1",
+				"2.0.0.7-2",
+				"2.0.0.8-1",
+				"2.0.0.9-1",
+				"2.0.0.9-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1614-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1614"
+		}
+	]
+}

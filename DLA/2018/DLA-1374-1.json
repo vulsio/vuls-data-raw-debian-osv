@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1374-1",
+	"modified": "2023-06-28T06:20:36.574956Z",
+	"published": "2018-05-11T00:00:00Z",
+	"related": [
+		"CVE-2017-11509"
+	],
+	"summary": "firebird2.5 - security update",
+	"details": "\nAn authenticated remote attacker can execute arbitrary code in Firebird SQL\nServer versions 2.5.7 and 3.0.2 by executing a malformed SQL statement. The\nonly known solution is to disable external UDF libraries from being loaded. In\norder to achieve this, the default configuration has changed to UdfAccess=None.\nThis will prevent the fbudf module from being loaded, but may also break other\nfunctionality relying on modules.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.5.2.26540.ds4-1~deb7u4.\n\n\nWe recommend that you upgrade your firebird2.5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "firebird2.5",
+				"purl": "pkg:deb/debian/firebird2.5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.2.26540.ds4-1~deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.2.26540.ds4-1~deb7u1",
+				"2.5.2.26540.ds4-1~deb7u2",
+				"2.5.2.26540.ds4-1~deb7u3",
+				"2.5.2~svn+54698.ds4-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1374-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1374"
+		}
+	]
+}

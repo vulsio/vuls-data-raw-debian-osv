@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2463-1",
+	"modified": "2023-10-16T00:05:56.021389Z",
+	"published": "2012-05-02T00:00:00Z",
+	"related": [
+		"CVE-2012-2111"
+	],
+	"summary": "samba - missing permission checks",
+	"details": "\nIvano Cristofolini discovered that insufficient security checks in\nSamba's handling of LSA RPC calls could lead to privilege escalation\nby gaining the take ownership privilege.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.5.6~dfsg-3squeeze8.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.6.5-1.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "samba",
+				"purl": "pkg:deb/debian/samba?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2:3.5.6~dfsg-3squeeze8"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2:3.5.6~dfsg-3",
+				"2:3.5.6~dfsg-3squeeze1",
+				"2:3.5.6~dfsg-3squeeze2",
+				"2:3.5.6~dfsg-3squeeze3",
+				"2:3.5.6~dfsg-3squeeze4",
+				"2:3.5.6~dfsg-3squeeze5",
+				"2:3.5.6~dfsg-3squeeze6",
+				"2:3.5.6~dfsg-3squeeze7"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2463-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2463"
+		}
+	]
+}

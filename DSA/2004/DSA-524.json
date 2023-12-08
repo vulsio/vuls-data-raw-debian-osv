@@ -1,0 +1,43 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-524",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-06-19T00:00:00Z",
+	"related": [
+		"CVE-2004-0393",
+		"CVE-2004-0454"
+	],
+	"summary": "rlpr - several vulnerabilities",
+	"details": "\n discovered a format string vulnerability in\nrlpr, a utility for lpd printing without using /etc/printcap. While\ninvestigating this vulnerability, a buffer overflow was also\ndiscovered in related code. By exploiting one of these\nvulnerabilities, a local or remote user could potentially cause\narbitrary code to be executed with the privileges of 1) the rlprd\nprocess (remote), or 2) root (local).\n\n\n[\\\nCAN-2004-0393](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0393): format string vulnerability via syslog(3) in msg()\nfunction in rlpr\n\n\n[\\\nCAN-2004-0454](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0454): buffer overflow in msg() function in rlpr\n\n\nFor the current stable distribution (woody), this problem has been\nfixed in version 2.02-7woody1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you update your rlpr package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "rlpr",
+				"purl": "pkg:deb/debian/rlpr?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.02-7woody1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-524.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-524"
+		}
+	]
+}

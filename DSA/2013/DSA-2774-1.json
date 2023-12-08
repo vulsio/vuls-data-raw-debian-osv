@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2774-1",
+	"modified": "2023-10-16T00:06:04.183656Z",
+	"published": "2013-10-10T00:00:00Z",
+	"related": [
+		"CVE-2013-4351",
+		"CVE-2013-4402"
+	],
+	"summary": "gnupg2 - several",
+	"details": "\nTwo vulnerabilities were discovered in GnuPG 2, the GNU privacy guard,\na free PGP replacement. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2013-4351](https://security-tracker.debian.org/tracker/CVE-2013-4351)\nWhen a key or subkey had its key flags subpacket set to all bits\n off, GnuPG currently would treat the key as having all bits set.\n That is, where the owner wanted to indicate no use permitted,\n GnuPG would interpret it as all use permitted. Such no use\n permitted keys are rare and only used in very special circumstances.\n* [CVE-2013-4402](https://security-tracker.debian.org/tracker/CVE-2013-4402)\nInfinite recursion in the compressed packet parser was possible\n with crafted input data, which may be used to cause a denial of\n service.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 2.0.14-2+squeeze2.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.0.19-2+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.0.22-1.\n\n\nWe recommend that you upgrade your gnupg2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gnupg2",
+				"purl": "pkg:deb/debian/gnupg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.14-2+squeeze2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.14-2",
+				"2.0.14-2+squeeze1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2774-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "gnupg2",
+				"purl": "pkg:deb/debian/gnupg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.19-2+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.19-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2774-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2013/dsa-2774"
+		}
+	]
+}

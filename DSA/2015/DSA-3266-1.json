@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3266-1",
+	"modified": "2023-10-16T00:11:53.491424Z",
+	"published": "2015-05-21T00:00:00Z",
+	"related": [
+		"CVE-2015-3202"
+	],
+	"summary": "fuse - security update",
+	"details": "\nTavis Ormandy discovered that FUSE, a Filesystem in USErspace, does not\nscrub the environment before executing mount or umount with elevated\nprivileges. A local user can take advantage of this flaw to overwrite\narbitrary files and gain elevated privileges by accessing debugging\nfeatures via the environment that would not normally be safe for\nunprivileged users.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 2.9.0-2+deb7u2.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.9.3-15+deb8u1.\n\n\nFor the testing distribution (stretch) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your fuse packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "fuse",
+				"purl": "pkg:deb/debian/fuse?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.0-2+deb7u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.0-2+deb7u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3266-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "fuse",
+				"purl": "pkg:deb/debian/fuse?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.9.3-15+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.9.3-15"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3266-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3266"
+		}
+	]
+}

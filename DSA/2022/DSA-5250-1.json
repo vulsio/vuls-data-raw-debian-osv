@@ -1,0 +1,50 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5250-1",
+	"modified": "2023-10-16T00:28:00.328598Z",
+	"published": "2022-10-06T00:00:00Z",
+	"related": [
+		"CVE-2022-42010",
+		"CVE-2022-42011",
+		"CVE-2022-42012"
+	],
+	"summary": "dbus - security update",
+	"details": "\nEvgeny Vereshchagin discovered multiple vulnerabilities in D-Bus, a\nsimple interprocess messaging system, which may result in denial of\nservice by an authenticated user.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.12.24-0+deb11u1.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\nFor the detailed security status of dbus please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/dbus](https://security-tracker.debian.org/tracker/dbus)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "dbus",
+				"purl": "pkg:deb/debian/dbus?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.12.24-0+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.12.20-2",
+				"1.12.20-3",
+				"1.12.20-4",
+				"1.12.22-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5250-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5250"
+		}
+	]
+}

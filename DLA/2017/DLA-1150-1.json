@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1150-1",
+	"modified": "2023-06-28T06:20:24.918008Z",
+	"published": "2017-10-31T00:00:00Z",
+	"related": [
+		"CVE-2017-13077",
+		"CVE-2017-13078",
+		"CVE-2017-13079",
+		"CVE-2017-13080",
+		"CVE-2017-13081",
+		"CVE-2017-13082",
+		"CVE-2017-13086",
+		"CVE-2017-13087",
+		"CVE-2017-13088"
+	],
+	"summary": "wpa - security update",
+	"details": "\nA vulnerability was found in how WPA code can be triggered to\nreconfigure WPA/WPA2/RSN keys (TK, GTK, or IGTK) by replaying a specific\nframe that is used to manage the keys. Such reinstallation of the\nencryption key can result in two different types of vulnerabilities:\ndisabling replay protection and significantly reducing the security of\nencryption to the point of allowing frames to be decrypted or some parts\nof the keys to be determined by an attacker depending on which cipher is\nused.\n\n\nThose issues are commonly known under the KRACK appelation. According\nto US-CERT, \"the impact of exploiting these vulnerabilities includes\ndecryption, packet replay, TCP connection hijacking, HTTP content\ninjection, and others.\"\n\n\n* [CVE-2017-13077](https://security-tracker.debian.org/tracker/CVE-2017-13077)\nReinstallation of the pairwise encryption key (PTK-TK) in the\n 4-way handshake.\n* [CVE-2017-13078](https://security-tracker.debian.org/tracker/CVE-2017-13078)\nReinstallation of the group key (GTK) in the 4-way handshake.\n* [CVE-2017-13079](https://security-tracker.debian.org/tracker/CVE-2017-13079)\nReinstallation of the integrity group key (IGTK) in the 4-way\n handshake.\n* [CVE-2017-13080](https://security-tracker.debian.org/tracker/CVE-2017-13080)\nReinstallation of the group key (GTK) in the group key handshake.\n* [CVE-2017-13081](https://security-tracker.debian.org/tracker/CVE-2017-13081)\nReinstallation of the integrity group key (IGTK) in the group key\n handshake.\n* [CVE-2017-13082](https://security-tracker.debian.org/tracker/CVE-2017-13082)\nAccepting a retransmitted Fast BSS Transition (FT) Reassociation\n Request and reinstalling the pairwise encryption key (PTK-TK)\n while processing it.\n* [CVE-2017-13084](https://security-tracker.debian.org/tracker/CVE-2017-13084)\nReinstallation of the STK key in the PeerKey handshake.\n* [CVE-2017-13086](https://security-tracker.debian.org/tracker/CVE-2017-13086)\nreinstallation of the Tunneled Direct-Link Setup (TDLS) PeerKey\n (TPK) key in the TDLS handshake.\n* [CVE-2017-13087](https://security-tracker.debian.org/tracker/CVE-2017-13087)\nreinstallation of the group key (GTK) when processing a Wireless\n Network Management (WNM) Sleep Mode Response frame.\n* [CVE-2017-13088](https://security-tracker.debian.org/tracker/CVE-2017-13088)\nreinstallation of the integrity group key (IGTK) when processing a\n Wireless Network Management (WNM) Sleep Mode Response frame.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.0-3+deb7u5. Note that the latter two vulnerabilities ([CVE-2017-13087](https://security-tracker.debian.org/tracker/CVE-2017-13087)\nand [CVE-2017-13088](https://security-tracker.debian.org/tracker/CVE-2017-13088)) were mistakenly marked as fixed in the changelog\nwhereas they simply did not apply to the 1.0 version of the WPA source\ncode, which doesn't implement WNM sleep mode responses.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "wpa",
+				"purl": "pkg:deb/debian/wpa?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0-3+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0-3",
+				"1.0-3+deb7u1",
+				"1.0-3+deb7u2",
+				"1.0-3+deb7u3",
+				"1.0-3+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1150-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1150"
+		}
+	]
+}

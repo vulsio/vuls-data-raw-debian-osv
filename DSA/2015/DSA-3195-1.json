@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-3195-1",
+	"modified": "2023-10-16T00:06:15.849890Z",
+	"published": "2015-03-18T00:00:00Z",
+	"related": [
+		"CVE-2014-9705",
+		"CVE-2015-0231",
+		"CVE-2015-0232",
+		"CVE-2015-0273",
+		"CVE-2015-1352",
+		"CVE-2015-2305"
+	],
+	"summary": "php5 - security update",
+	"details": "\nMultiple vulnerabilities have been discovered in the PHP language:\n\n\n* [CVE-2015-2305](https://security-tracker.debian.org/tracker/CVE-2015-2305)\nGuido Vranken discovered a heap overflow in the ereg extension\n (only applicable to 32 bit systems).\n* [CVE-2014-9705](https://security-tracker.debian.org/tracker/CVE-2014-9705)\nBuffer overflow in the enchant extension.\n* [CVE-2015-0231](https://security-tracker.debian.org/tracker/CVE-2015-0231)\nStefan Esser discovered a use-after-free in the unserialisation\n of objects.\n* [CVE-2015-0232](https://security-tracker.debian.org/tracker/CVE-2015-0232)\nAlex Eubanks discovered incorrect memory management in the exif\n extension.\n* [CVE-2015-0273](https://security-tracker.debian.org/tracker/CVE-2015-0273)\nUse-after-free in the unserialisation of DateTimeZone.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 5.4.38-0+deb7u1.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 5.6.6+dfsg-2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 5.6.6+dfsg-2.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "php5",
+				"purl": "pkg:deb/debian/php5?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.4.38-0+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.4.11-1",
+				"5.4.15-1",
+				"5.4.34-0+deb7u1",
+				"5.4.35-0+deb7u1",
+				"5.4.35-0+deb7u2",
+				"5.4.36-0+deb7u1",
+				"5.4.36-0+deb7u3",
+				"5.4.4-14",
+				"5.4.4-14+deb7u1",
+				"5.4.4-14+deb7u10",
+				"5.4.4-14+deb7u11",
+				"5.4.4-14+deb7u12",
+				"5.4.4-14+deb7u13",
+				"5.4.4-14+deb7u14",
+				"5.4.4-14+deb7u2",
+				"5.4.4-14+deb7u3",
+				"5.4.4-14+deb7u4",
+				"5.4.4-14+deb7u5",
+				"5.4.4-14+deb7u7",
+				"5.4.4-14+deb7u8",
+				"5.4.4-14+deb7u9",
+				"5.4.4-15",
+				"5.4.4-15.1",
+				"5.4.6-1",
+				"5.4.6-2",
+				"5.4.8-1",
+				"5.4.9-1",
+				"5.4.9-2",
+				"5.4.9-3",
+				"5.4.9-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3195-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2015/dsa-3195"
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-861-1",
+	"modified": "2023-06-28T06:43:24.084748Z",
+	"published": "2017-03-17T00:00:00Z",
+	"related": [
+		"CVE-2016-8714"
+	],
+	"summary": "r-base - security update",
+	"details": "\nAn exploitable buffer overflow vulnerability exists in the\nLoadEncoding functionality of the R programming language. A\nspecially crafted R script can cause a buffer overflow\nresulting in a memory corruption. An attacker can send a\nmalicious R script to trigger this vulnerability.\n\n\nFor Debian 7 Wheezy, this problem has been fixed in version\n2.15.1-4+deb7u1.\n\n\nWe recommend that you upgrade your r-base packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "r-base",
+				"purl": "pkg:deb/debian/r-base?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.15.1-4+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.15.1-4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-861-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-861"
+		}
+	]
+}

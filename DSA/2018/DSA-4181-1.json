@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-4181-1",
+	"modified": "2023-10-16T00:12:58.724728Z",
+	"published": "2018-04-28T00:00:00Z",
+	"related": [
+		"CVE-2018-9846"
+	],
+	"summary": "roundcube - security update",
+	"details": "\nAndrea Basile discovered that the archive plugin in roundcube, a\nskinnable AJAX based webmail solution for IMAP servers, does not\nproperly sanitize a user-controlled parameter, allowing a remote\nattacker to inject arbitrary IMAP commands and perform malicious\nactions.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.2.3+dfsg.1-4+deb9u2.\n\n\nWe recommend that you upgrade your roundcube packages.\n\n\nFor the detailed security status of roundcube please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/roundcube>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "roundcube",
+				"purl": "pkg:deb/debian/roundcube?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.3+dfsg.1-4+deb9u2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.3+dfsg.1-4",
+				"1.2.3+dfsg.1-4+deb9u1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4181-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2018/dsa-4181"
+		}
+	]
+}

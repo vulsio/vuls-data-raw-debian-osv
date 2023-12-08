@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-514",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2004-06-04T00:00:00Z",
+	"related": [
+		"CVE-2004-0077"
+	],
+	"summary": "kernel-image-sparc-2.2 - failing function and TLB flush",
+	"details": "\nPaul Starzetz and Wojciech Purczynski of isec.pl discovered a critical\nsecurity vulnerability in the memory management code of Linux inside\nthe mremap(2) system call. Due to flushing the TLB (Translation\nLookaside Buffer, an address cache) too early it is possible for an\nattacker to trigger a local root exploit.\n\n\nThe attack vectors for 2.4.x and 2.2.x kernels are exclusive for the\nrespective kernel series, though. We formerly believed that the\nexploitable vulnerability in 2.4.x does not exist in 2.2.x which is\nstill true. However, it turned out that a second (sort of)\nvulnerability is indeed exploitable in 2.2.x, but not in 2.4.x, with a\ndifferent exploit, of course.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 9woody1 of Linux 2.2 kernel images for the sparc architecture\nand in version 2.2.20-5woody3 of Linux 2.2.20 source.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 9.1 of Linux 2.2 kernel images for the sparc architecture.\n\n\nThis problem has been fixed for other architectures already.\n\n\nWe recommend that you upgrade your Linux kernel package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-source-2.2.20",
+				"purl": "pkg:deb/debian/kernel-source-2.2.20?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.2.20-5woody3"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-514.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-514"
+		}
+	]
+}

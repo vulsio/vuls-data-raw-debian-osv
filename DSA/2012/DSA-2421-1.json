@@ -1,0 +1,57 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2421-1",
+	"modified": "2023-10-16T00:05:54.313579Z",
+	"published": "2012-02-29T00:00:00Z",
+	"related": [
+		"CVE-2011-4308",
+		"CVE-2011-4584",
+		"CVE-2011-4585",
+		"CVE-2011-4586",
+		"CVE-2011-4587",
+		"CVE-2011-4588",
+		"CVE-2012-0792",
+		"CVE-2012-0793",
+		"CVE-2012-0794",
+		"CVE-2012-0795",
+		"CVE-2012-0796"
+	],
+	"summary": "moodle - several",
+	"details": "\nSeveral security issues have been fixed in Moodle, a course management\nsystem for online learning:\n\n\n* [CVE-2011-4308](https://security-tracker.debian.org/tracker/CVE-2011-4308) / [CVE-2012-0792](https://security-tracker.debian.org/tracker/CVE-2012-0792)\nRossiani Wijaya discovered an information leak in\n mod/forum/user.php.\n* [CVE-2011-4584](https://security-tracker.debian.org/tracker/CVE-2011-4584)\nMNet authentication didn't prevent a user using Login as from\n jumping to a remove MNet SSO.\n* [CVE-2011-4585](https://security-tracker.debian.org/tracker/CVE-2011-4585)\nDarragh Enright discovered that the change password form was send in\n over plain HTTP even if httpslogin was set to true.\n* [CVE-2011-4586](https://security-tracker.debian.org/tracker/CVE-2011-4586)\nDavid Michael Evans and German Sanchez Gances discovered CRLF\n injection/HTTP response splitting vulnerabilities in the Calendar\n module.\n* [CVE-2011-4587](https://security-tracker.debian.org/tracker/CVE-2011-4587)\nStephen Mc Guiness discovered empty passwords could be entered in\n some circumstances.\n* [CVE-2011-4588](https://security-tracker.debian.org/tracker/CVE-2011-4588)\nPatrick McNeill discovered that IP address restrictions could be bypassed in\n MNet.\n* [CVE-2012-0796](https://security-tracker.debian.org/tracker/CVE-2012-0796)\nSimon Coggins discovered that additional information could be\n injected into mail headers.\n* [CVE-2012-0795](https://security-tracker.debian.org/tracker/CVE-2012-0795)\nJohn Ehringer discovered that email addresses were insufficiently\n validated.\n* [CVE-2012-0794](https://security-tracker.debian.org/tracker/CVE-2012-0794)\nRajesh Taneja discovered that cookie encryption used a fixed key.\n* [CVE-2012-0793](https://security-tracker.debian.org/tracker/CVE-2012-0793)\nEloy Lafuente discovered that profile images were insufficiently\n protected. A new configuration option forceloginforprofileimages\n was introduced for that.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.9.9.dfsg2-2.1+squeeze3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.9.9.dfsg2-5.\n\n\nWe recommend that you upgrade your moodle packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "moodle",
+				"purl": "pkg:deb/debian/moodle?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.9.9.dfsg2-2.1+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.9.9.dfsg2-2.1",
+				"1.9.9.dfsg2-2.1+squeeze1",
+				"1.9.9.dfsg2-2.1+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2421-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2421"
+		}
+	]
+}

@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1613-1",
+	"modified": "2023-10-16T00:07:04.339705Z",
+	"published": "2008-07-22T00:00:00Z",
+	"related": [
+		"CVE-2007-2445",
+		"CVE-2007-2756",
+		"CVE-2007-3476",
+		"CVE-2007-3477",
+		"CVE-2007-3996"
+	],
+	"summary": "libgd2 - multiple vulnerabilities",
+	"details": "\nMultiple vulnerabilities have been identified in libgd2, a library\nfor programmatic graphics creation and manipulation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-2445](https://security-tracker.debian.org/tracker/CVE-2007-2445)\nGrayscale PNG files containing invalid tRNS chunk CRC values\n could cause a denial of service (crash), if a maliciously\n crafted image is loaded into an application using libgd.\n* [CVE-2007-3476](https://security-tracker.debian.org/tracker/CVE-2007-3476)\nAn array indexing error in libgd's GIF handling could induce a\n denial of service (crash with heap corruption) if exceptionally\n large color index values are supplied in a maliciously crafted\n GIF image file.\n* [CVE-2007-3477](https://security-tracker.debian.org/tracker/CVE-2007-3477)\nThe imagearc() and imagefilledarc() routines in libgd allow\n an attacker in control of the parameters used to specify\n the degrees of arc for those drawing functions to perform\n a denial of service attack (excessive CPU consumption).\n* [CVE-2007-3996](https://security-tracker.debian.org/tracker/CVE-2007-3996)\nMultiple integer overflows exist in libgd's image resizing and\n creation routines; these weaknesses allow an attacker in control\n of the parameters passed to those routines to induce a crash or\n execute arbitrary code with the privileges of the user running\n an application or interpreter linked against libgd2.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.0.33-5.2etch1.\n\n\nFor the unstable distribution (sid), these\nproblems have been fixed in version 2.0.35.dfsg-1.\n\n\nWe recommend that you upgrade your libgd2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "libgd2",
+				"purl": "pkg:deb/debian/libgd2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.33-5.2etch1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.33-5.2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1613-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1613"
+		}
+	]
+}

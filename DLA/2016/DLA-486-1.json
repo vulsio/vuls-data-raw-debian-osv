@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-486-1",
+	"modified": "2023-06-28T06:21:33.110627Z",
+	"published": "2016-05-23T00:00:00Z",
+	"related": [
+		"CVE-2016-3714",
+		"CVE-2016-3715",
+		"CVE-2016-3716",
+		"CVE-2016-3717",
+		"CVE-2016-3718",
+		"CVE-2016-5239"
+	],
+	"summary": "imagemagick - security update",
+	"details": "\nNikolay Ermishkin from the Mail.Ru Security Team and Stewie discovered\nseveral vulnerabilities in ImageMagick, a program suite for image\nmanipulation. These vulnerabilities, collectively known as ImageTragick,\nare the consequence of lack of sanitization of untrusted input. An\nattacker with control on the image input could, with the privileges of\nthe user running the application, execute code ([CVE-2016-3714](https://security-tracker.debian.org/tracker/CVE-2016-3714)), make\nHTTP GET or FTP requests ([CVE-2016-3718](https://security-tracker.debian.org/tracker/CVE-2016-3718)), or delete ([CVE-2016-3715](https://security-tracker.debian.org/tracker/CVE-2016-3715)),\nmove ([CVE-2016-3716](https://security-tracker.debian.org/tracker/CVE-2016-3716)), or read ([CVE-2016-3717](https://security-tracker.debian.org/tracker/CVE-2016-3717)) local files.\n\n\nThese vulnerabilities are particularly critical if Imagemagick processes\nimages coming from remote parties, such as part of a web service.\n\n\nThe update disables the vulnerable coders (EPHEMERAL, URL, MVG, MSL, and\nPLT) and indirect reads via /etc/ImageMagick/policy.xml file. In\naddition, we introduce extra preventions, including some sanitization\nfor input filenames in http/https delegates, the full remotion of\nPLT/Gnuplot decoder, and the need of explicit reference in the filename\nfor the insecure coders.\n\n\nFor the wheezy, these problems have been fixed in version\n8:6.7.7.10-5+deb7u5.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "imagemagick",
+				"purl": "pkg:deb/debian/imagemagick?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8:6.7.7.10-5+deb7u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8:6.7.7.10-5",
+				"8:6.7.7.10-5+deb7u2",
+				"8:6.7.7.10-5+deb7u3",
+				"8:6.7.7.10-5+deb7u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-486-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-486"
+		}
+	]
+}

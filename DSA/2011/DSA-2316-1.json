@@ -1,0 +1,79 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2316-1",
+	"modified": "2023-10-16T00:11:07.805321Z",
+	"published": "2011-10-05T00:00:00Z",
+	"related": [
+		"CVE-2011-3323",
+		"CVE-2011-3324",
+		"CVE-2011-3325",
+		"CVE-2011-3326",
+		"CVE-2011-3327"
+	],
+	"summary": "quagga - several",
+	"details": "\nRiku Hietamaki, Tuomo Untinen and Jukka Taimisto discovered several\nvulnerabilities in Quagga, an Internet routing daemon:\n\n\n* [CVE-2011-3323](https://security-tracker.debian.org/tracker/CVE-2011-3323)\nA stack-based buffer overflow while decoding Link State Update\n packets with a malformed Inter Area Prefix LSA can cause the\n ospf6d process to crash or (potentially) execute arbitrary\n code.\n* [CVE-2011-3324](https://security-tracker.debian.org/tracker/CVE-2011-3324)\nThe ospf6d process can crash while processing a Database\n Description packet with a crafted Link-State-Advertisement.\n* [CVE-2011-3325](https://security-tracker.debian.org/tracker/CVE-2011-3325)\nThe ospfd process can crash while processing a crafted Hello\n packet.\n* [CVE-2011-3326](https://security-tracker.debian.org/tracker/CVE-2011-3326)\nThe ospfd process crashes while processing\n Link-State-Advertisements of a type not known to Quagga.\n* [CVE-2011-3327](https://security-tracker.debian.org/tracker/CVE-2011-3327)\nA heap-based buffer overflow while processing BGP UPDATE\n messages containing an Extended Communities path attribute\n can cause the bgpd process to crash or (potentially) execute\n arbitrary code.\n\n\nThe OSPF-related vulnerabilities require that potential attackers send\npackets to a vulnerable Quagga router; the packets are not distributed\nover OSPF. In contrast, the BGP UPDATE messages could be propagated\nby some routers.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed\nin version 0.99.10-1lenny6.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 0.99.17-2+squeeze3.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 0.99.19-1.\n\n\nWe recommend that you upgrade your quagga packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "quagga",
+				"purl": "pkg:deb/debian/quagga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.99.10-1lenny6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.99.10-1lenny1",
+				"0.99.10-1lenny2",
+				"0.99.10-1lenny3",
+				"0.99.10-1lenny5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2316-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "quagga",
+				"purl": "pkg:deb/debian/quagga?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.99.17-2+squeeze3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.99.17-2",
+				"0.99.17-2+squeeze2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2316-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2316"
+		}
+	]
+}

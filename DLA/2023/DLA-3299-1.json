@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3299-1",
+	"modified": "2023-06-28T06:33:45.443277Z",
+	"published": "2023-01-30T00:00:00Z",
+	"related": [
+		"CVE-2022-24999"
+	],
+	"summary": "node-qs - security update",
+	"details": "\nNathanael Braun and Johan Brissaud discovered a prototype poisoning\nvulnerability in node-qs, a Node.js module to parse and stringify query\nstrings. node-qs 6.5.x before 6.5.3 allows for instance the creation of\narray-like objects by setting an Array in the `__ proto__`\nproperty; the resulting Objects inherit the `Array` prototype,\nthereby exposing native Array functions.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n6.5.2-1+deb10u1.\n\n\nWe recommend that you upgrade your node-qs packages.\n\n\nFor the detailed security status of node-qs please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-qs>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "node-qs",
+				"purl": "pkg:deb/debian/node-qs?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.5.2-1+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.5.2-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3299-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3299"
+		}
+	]
+}

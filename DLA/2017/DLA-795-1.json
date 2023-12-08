@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-795-1",
+	"modified": "2023-06-28T06:25:39.318266Z",
+	"published": "2017-01-23T00:00:00Z",
+	"related": [
+		"CVE-2016-10092",
+		"CVE-2016-10093",
+		"CVE-2016-10271",
+		"CVE-2016-10272",
+		"CVE-2016-3622",
+		"CVE-2016-3623",
+		"CVE-2016-3624",
+		"CVE-2016-3945",
+		"CVE-2016-3990",
+		"CVE-2016-9533",
+		"CVE-2016-9534",
+		"CVE-2016-9535",
+		"CVE-2016-9536",
+		"CVE-2016-9537",
+		"CVE-2016-9538",
+		"CVE-2016-9540",
+		"CVE-2017-5225"
+	],
+	"summary": "tiff - security update",
+	"details": "\nNumerous security vulnerabilities have been found through fuzzing on\nvarious tiff-related binaries. Crafted TIFF images allows remote\nattacks to cause denial of service or, in certain cases arbitrary code\nexecution through divide-by-zero, out of bunds write, integer and heap\noverflow.\n\n\n* [CVE-2016-3622](https://security-tracker.debian.org/tracker/CVE-2016-3622)\nThe fpAcc function in tif\\_predict.c in the tiff2rgba tool in\n LibTIFF 4.0.6 and earlier allows remote attackers to cause a\n denial of service (divide-by-zero error) via a crafted TIFF image.\n* [CVE-2016-3623](https://security-tracker.debian.org/tracker/CVE-2016-3623)\nThe rgb2ycbcr tool in LibTIFF 4.0.6 and earlier allows remote\n attackers to cause a denial of service (divide-by-zero) by setting\n the (1) v or (2) h parameter to 0. (Fixed along with\n [CVE-2016-3624](https://security-tracker.debian.org/tracker/CVE-2016-3624).)\n* [CVE-2016-3624](https://security-tracker.debian.org/tracker/CVE-2016-3624)\nThe cvtClump function in the rgb2ycbcr tool in LibTIFF 4.0.6 and\n earlier allows remote attackers to cause a denial of service\n (out-of-bounds write) by setting the \"-v\" option to -1.\n* [CVE-2016-3945](https://security-tracker.debian.org/tracker/CVE-2016-3945)\nMultiple integer overflows in the (1) cvt\\_by\\_strip and (2)\n cvt\\_by\\_tile functions in the tiff2rgba tool in LibTIFF 4.0.6 and\n earlier, when -b mode is enabled, allow remote attackers to cause\n a denial of service (crash) or execute arbitrary code via a\n crafted TIFF image, which triggers an out-of-bounds write.\n* [CVE-2016-3990](https://security-tracker.debian.org/tracker/CVE-2016-3990)\nHeap-based buffer overflow in the horizontalDifference8 function\n in tif\\_pixarlog.c in LibTIFF 4.0.6 and earlier allows remote\n attackers to cause a denial of service (crash) or execute\n arbitrary code via a crafted TIFF image to tiffcp.\n* [CVE-2016-9533](https://security-tracker.debian.org/tracker/CVE-2016-9533)\ntif\\_pixarlog.c in libtiff 4.0.6 has out-of-bounds write\n vulnerabilities in heap allocated buffers. Reported as MSVR 35094,\n aka \"PixarLog horizontalDifference heap-buffer-overflow.\"\n* [CVE-2016-9534](https://security-tracker.debian.org/tracker/CVE-2016-9534)\ntif\\_write.c in libtiff 4.0.6 has an issue in the error code path\n of TIFFFlushData1() that didn't reset the tif\\_rawcc and tif\\_rawcp\n members. Reported as MSVR 35095, aka \"TIFFFlushData1\n heap-buffer-overflow.\"\n* [CVE-2016-9535](https://security-tracker.debian.org/tracker/CVE-2016-9535)\ntif\\_predict.h and tif\\_predict.c in libtiff 4.0.6 have assertions\n that can lead to assertion failures in debug mode, or buffer\n overflows in release mode, when dealing with unusual tile size\n like YCbCr with subsampling. Reported as MSVR 35105, aka\n \"Predictor heap-buffer-overflow.\"\n* [CVE-2016-9536](https://security-tracker.debian.org/tracker/CVE-2016-9536)\ntools/tiff2pdf.c in libtiff 4.0.6 has out-of-bounds write\n vulnerabilities in heap allocated buffers in\n t2p\\_process\\_jpeg\\_strip(). Reported as MSVR 35098, aka\n \"t2p\\_process\\_jpeg\\_strip heap-buffer-overflow.\"\n* [CVE-2016-9537](https://security-tracker.debian.org/tracker/CVE-2016-9537)\ntools/tiffcrop.c in libtiff 4.0.6 has out-of-bounds write\n vulnerabilities in buffers. Reported as MSVR 35093, MSVR 35096,\n and MSVR 35097.\n* [CVE-2016-9538](https://security-tracker.debian.org/tracker/CVE-2016-9538)\ntools/tiffcrop.c in libtiff 4.0.6 reads an undefined buffer in\n readContigStripsIntoBuffer() because of a uint16 integer\n overflow. Reported as MSVR 35100.\n* [CVE-2016-9540](https://security-tracker.debian.org/tracker/CVE-2016-9540)\ntools/tiffcp.c in libtiff 4.0.6 has an out-of-bounds write on\n tiled images with odd tile width versus image width. Reported as\n MSVR 35103, aka cpStripToTile heap-buffer-overflow.\n* [CVE-2016-10092](https://security-tracker.debian.org/tracker/CVE-2016-10092)\nheap-buffer-overflow in tiffcrop\n* [CVE-2016-10093](https://security-tracker.debian.org/tracker/CVE-2016-10093)\nuint32 underflow/overflow that can cause heap-based buffer\n overflow in tiffcp\n* [CVE-2017-5225](https://security-tracker.debian.org/tracker/CVE-2017-5225)\nLibTIFF version 4.0.7 is vulnerable to a heap buffer overflow in\n the tools/tiffcp resulting in DoS or code execution via a crafted\n BitsPerSample value.\n* Bug #846837\n\n heap-based buffer verflow in TIFFFillStrip (tif\\_read.c)\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.0.2-6+deb7u9.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "tiff",
+				"purl": "pkg:deb/debian/tiff?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.0.2-6+deb7u9"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.0.2-6",
+				"4.0.2-6+deb7u1",
+				"4.0.2-6+deb7u2",
+				"4.0.2-6+deb7u3",
+				"4.0.2-6+deb7u4",
+				"4.0.2-6+deb7u5",
+				"4.0.2-6+deb7u6",
+				"4.0.2-6+deb7u7",
+				"4.0.2-6+deb7u8"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-795-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-795"
+		}
+	]
+}

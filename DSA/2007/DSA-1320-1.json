@@ -1,0 +1,93 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1320-1",
+	"modified": "2023-10-16T00:10:20.311738Z",
+	"published": "2007-06-23T00:00:00Z",
+	"related": [
+		"CVE-2007-2650",
+		"CVE-2007-3023",
+		"CVE-2007-3024",
+		"CVE-2007-3122",
+		"CVE-2007-3123"
+	],
+	"summary": "clamav",
+	"details": "\nSeveral remote vulnerabilities have been discovered in the Clam anti-virus\ntoolkit. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-2650](https://security-tracker.debian.org/tracker/CVE-2007-2650)\nIt was discovered that the OLE2 parser can be tricked into an infinite\n loop and memory exhaustion.\n* [CVE-2007-3023](https://security-tracker.debian.org/tracker/CVE-2007-3023)\nIt was discovered that the NsPack decompression code performed\n insufficient sanitising on an internal length variable, resulting in\n a potential buffer overflow.\n* [CVE-2007-3024](https://security-tracker.debian.org/tracker/CVE-2007-3024)\nIt was discovered that temporary files were created with insecure\n permissions, resulting in information disclosure.\n* [CVE-2007-3122](https://security-tracker.debian.org/tracker/CVE-2007-3122)\nIt was discovered that the decompression code for RAR archives allows\n bypassing a scan of a RAR archive due to insufficient validity checks.\n* [CVE-2007-3123](https://security-tracker.debian.org/tracker/CVE-2007-3123)\nIt was discovered that the decompression code for RAR archives performs\n insufficient validation of header values, resulting in a buffer overflow.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 0.84-2.sarge.17. Please note that the fix for [CVE-2007-3024](https://security-tracker.debian.org/tracker/CVE-2007-3024) hasn't\nbeen backported to oldstable.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 0.90.1-3etch1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.90.2-1.\n\n\nWe recommend that you upgrade your clamav packages. An updated package\nfor oldstable/powerpc is not yet available. It will be provided later.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "clamav",
+				"purl": "pkg:deb/debian/clamav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.84-2.sarge.17"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.84-2",
+				"0.84-2.sarge.1",
+				"0.84-2.sarge.10",
+				"0.84-2.sarge.11",
+				"0.84-2.sarge.12",
+				"0.84-2.sarge.13",
+				"0.84-2.sarge.14",
+				"0.84-2.sarge.15",
+				"0.84-2.sarge.16",
+				"0.84-2.sarge.2",
+				"0.84-2.sarge.3",
+				"0.84-2.sarge.4",
+				"0.84-2.sarge.5",
+				"0.84-2.sarge.6",
+				"0.84-2.sarge.7",
+				"0.84-2.sarge.8",
+				"0.84-2.sarge.9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1320-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "clamav",
+				"purl": "pkg:deb/debian/clamav?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.90.1-3etch3"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.90.1-2",
+				"0.90.1-3etch1",
+				"0.90.1-3etch2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1320-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1320"
+		}
+	]
+}

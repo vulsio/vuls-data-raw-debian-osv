@@ -1,0 +1,63 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3198-1",
+	"modified": "2023-06-28T06:38:05.266594Z",
+	"published": "2022-11-17T00:00:00Z",
+	"related": [
+		"CVE-2021-30130"
+	],
+	"summary": "php-phpseclib - security update",
+	"details": "\nIt was discovered that php-phpseclib, a pure-PHP implementation of\nvarious cryptographic and arithmetic algorithms (v2), mishandles RSA\nPKCS#1 v1.5 signature verification. An attacker may get invalid\nsignatures accepted, bypassing authorization control in specific\nsituations.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.0.30-2~deb10u1.\n\n\nWe recommend that you upgrade your php-phpseclib packages.\n\n\nFor the detailed security status of php-phpseclib please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/php-phpseclib>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "php-phpseclib",
+				"purl": "pkg:deb/debian/php-phpseclib?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.30-2~deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.14-1",
+				"2.0.15-1",
+				"2.0.17-1",
+				"2.0.18-1",
+				"2.0.19-1",
+				"2.0.20-1",
+				"2.0.21-1",
+				"2.0.21-2",
+				"2.0.21-3",
+				"2.0.22-1",
+				"2.0.23-1",
+				"2.0.23-2",
+				"2.0.25-1",
+				"2.0.26-1",
+				"2.0.27-1",
+				"2.0.28-1",
+				"2.0.29-1",
+				"2.0.29-2",
+				"2.0.30-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3198-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3198"
+		}
+	]
+}

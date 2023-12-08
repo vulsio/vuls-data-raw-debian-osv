@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5366-1",
+	"modified": "2023-10-16T00:22:56.727039Z",
+	"published": "2023-03-01T00:00:00Z",
+	"related": [
+		"CVE-2022-41973",
+		"CVE-2022-41974"
+	],
+	"summary": "multipath-tools - security update",
+	"details": "\nThe Qualys Research Labs reported an authorization bypass\n([CVE-2022-41974](https://security-tracker.debian.org/tracker/CVE-2022-41974))\nand a symlink attack\n([CVE-2022-41973](https://security-tracker.debian.org/tracker/CVE-2022-41973))\nin multipath-tools, a set of tools to drive the Device Mapper multipathing\ndriver, which may result in local privilege escalation.\n\n\nPlease refer to /usr/share/doc/multipath-tools/NEWS.Debian.gz for\nbackwards-incompatible changes in this update.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 0.8.5-2+deb11u1.\n\n\nWe recommend that you upgrade your multipath-tools packages.\n\n\nFor the detailed security status of multipath-tools please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/multipath-tools](https://security-tracker.debian.org/tracker/multipath-tools)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "multipath-tools",
+				"purl": "pkg:deb/debian/multipath-tools?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.8.5-2+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.8.5-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5366-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5366"
+		}
+	]
+}

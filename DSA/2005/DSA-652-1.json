@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-652-1",
+	"modified": "2023-10-16T00:31:38.673636Z",
+	"published": "2005-01-21T00:00:00Z",
+	"related": [
+		"CVE-2004-0947",
+		"CVE-2004-1027"
+	],
+	"summary": "unarj",
+	"details": "\nSeveral vulnerabilities have been discovered in unarj, a non-free ARJ\nunarchive utility. The Common Vulnerabilities and Exposures Project\nidentifies the following vulnerabilities:\n\n\n* [CAN-2004-0947](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0947)\nA buffer overflow has been discovered when handling long file\n names contained in an archive. An attacker could create a\n specially crafted archive which could cause unarj to crash or\n possibly execute arbitrary code when being extracted by a victim.\n\n* [CAN-2004-1027](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1027)\nA directory traversal vulnerability has been found so that an\n attacker could create a specially crafted archive which would\n create files in the parent directory when being extracted by a\n victim. When used recursively, this vulnerability could be used\n to overwrite critical system files and programs.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.43-3woody1.\n\n\nFor the unstable distribution (sid) these problems don't apply since\nunstable/non-free does not contain the unarj package.\n\n\nWe recommend that you upgrade your unarj package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "unarj",
+				"purl": "pkg:deb/debian/unarj?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.43-3woody1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.41a-2",
+				"2.41a-5",
+				"2.41a-6",
+				"2.43-3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-652-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-652"
+		}
+	]
+}

@@ -1,0 +1,61 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1694-1",
+	"modified": "2023-06-28T06:24:51.273560Z",
+	"published": "2019-02-28T00:00:00Z",
+	"related": [
+		"CVE-2018-12617",
+		"CVE-2018-16872",
+		"CVE-2019-6778"
+	],
+	"summary": "qemu - security update",
+	"details": "\nSeveral vulnerabilities were found in QEMU, a fast processor emulator:\n\n\n* [CVE-2018-12617](https://security-tracker.debian.org/tracker/CVE-2018-12617)\nThe qmp\\_guest\\_file\\_read function (qga/commands-posix.c) is affected\n by an integer overflow and subsequent memory allocation failure. This\n weakness might be leveraged by remote attackers to cause denial of\n service (application crash).\n* [CVE-2018-16872](https://security-tracker.debian.org/tracker/CVE-2018-16872)\nThe usb\\_mtp\\_get\\_object, usb\\_mtp\\_get\\_partial\\_object and\n usb\\_mtp\\_object\\_readdir functions (hw/usb/dev-mtp.c) are affected by a\n symlink attack. Remote attackers might leverage this vulnerability to\n perform information disclosure.\n* [CVE-2019-6778](https://security-tracker.debian.org/tracker/CVE-2019-6778)\nThe tcp\\_emu function (slirp/tcp\\_subr.c) is affected by a heap buffer\n overflow caused by insufficient validation of available space in the\n sc\\_rcv->sb\\_data buffer. Remote attackers might leverage this flaw to\n cause denial of service, or any other unspecified impact.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:2.1+dfsg-12+deb8u10.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:2.1+dfsg-12+deb8u10"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1:2.1+dfsg-11",
+				"1:2.1+dfsg-12",
+				"1:2.1+dfsg-12+deb8u1",
+				"1:2.1+dfsg-12+deb8u2",
+				"1:2.1+dfsg-12+deb8u3",
+				"1:2.1+dfsg-12+deb8u4",
+				"1:2.1+dfsg-12+deb8u4~bpo70+1",
+				"1:2.1+dfsg-12+deb8u5",
+				"1:2.1+dfsg-12+deb8u5a",
+				"1:2.1+dfsg-12+deb8u5a~bpo70+1",
+				"1:2.1+dfsg-12+deb8u6",
+				"1:2.1+dfsg-12+deb8u7",
+				"1:2.1+dfsg-12+deb8u8",
+				"1:2.1+dfsg-12+deb8u9",
+				"1:2.1+dfsg-12~bpo70+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1694-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2019/dla-1694"
+		}
+	]
+}

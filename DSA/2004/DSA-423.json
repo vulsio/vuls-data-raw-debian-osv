@@ -1,0 +1,53 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-423",
+	"modified": "2019-03-31T21:35:49Z",
+	"published": "2004-01-15T00:00:00Z",
+	"related": [
+		"CVE-2003-0001",
+		"CVE-2003-0018",
+		"CVE-2003-0127",
+		"CVE-2003-0461",
+		"CVE-2003-0462",
+		"CVE-2003-0476",
+		"CVE-2003-0501",
+		"CVE-2003-0550",
+		"CVE-2003-0551",
+		"CVE-2003-0552",
+		"CVE-2003-0961",
+		"CVE-2003-0985"
+	],
+	"summary": "linux-kernel-2.4.17-ia64 - several vulnerabilities",
+	"details": "\nThe IA-64 maintainers fixed several security related bugs in the Linux\nkernel 2.4.17 used for the IA-64 architecture, mostly by backporting\nfixes from 2.4.18. The corrections are listed below with the\nidentification from the Common Vulnerabilities and Exposures (CVE)\nproject:\n\n\n* [CAN-2003-0001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0001):\n\n Multiple ethernet network interface card (NIC) device drivers do\n not pad frames with null bytes, which allows remote attackers to\n obtain information from previous packets or kernel memory by using\n malformed packets, as demonstrated by Etherleak.\n\n* [CAN-2003-0018](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0018):\n\n Linux kernel 2.4.10 through 2.4.21-pre4 does not properly handle\n the O\\_DIRECT feature, which allows local attackers with write\n privileges to read portions of previously deleted files, or cause\n file system corruption.\n\n* [CAN-2003-0127](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0127):\n\n The kernel module loader in Linux kernel 2.2.x before 2.2.25, and\n 2.4.x before 2.4.21, allows local users to gain root privileges\n by using ptrace to attach to a child process which is spawned by\n the kernel.\n\n* [CAN-2003-0461](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0461):\n\n The virtual file /proc/tty/driver/serial in Linux 2.4.x reveals\n the exact number of characters used in serial links, which could\n allow local users to obtain potentially sensitive information such\n as the length of passwords.\n\n* [CAN-2003-0462](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0462):\n\n A race condition in the way env\\_start and env\\_end pointers are\n initialized in the execve system call and used in fs/proc/base.c\n on Linux 2.4 allows local users to cause a denial of service\n (crash).\n\n* [CAN-2003-0476](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0476):\n\n The execve system call in Linux 2.4.x records the file descriptor\n of the executable process in the file table of the calling\n process, which allows local users to gain read access to\n restricted file descriptors.\n\n* [CAN-2003-0501](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0501):\n\n The /proc filesystem in Linux allows local users to obtain\n sensitive information by opening various entries in /proc/self\n before executing a setuid program, which causes the program to\n fail to change the ownership and permissions of those entries.\n\n* [CAN-2003-0550](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0550):\n\n The STP protocol, as enabled in Linux 2.4.x, does not provide\n sufficient security by design, which allows attackers to modify\n the bridge topology.\n\n* [CAN-2003-0551](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0551):\n\n The STP protocol implementation in Linux 2.4.x does not properly\n verify certain lengths, which could allow attackers to cause a\n denial of service.\n\n* [CAN-2003-0552](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0552):\n\n Linux 2.4.x allows remote attackers to spoof the bridge Forwarding\n table via forged packets whose source addresses are the same as\n the target.\n\n* [CAN-2003-0961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0961):\n\n An integer overflow in brk system call (do\\_brk function) for Linux\n kernel 2.4.22 and earlier allows local users to gain root\n privileges.\n\n* [CAN-2003-0985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0985):\n\n The mremap system call (do\\_mremap) in Linux kernel 2.4 and 2.6\n does not properly perform boundary checks, which allows local\n users to cause a denial of service and possibly gain privileges by\n causing a remapping of a virtual memory area (VMA) to create a\n zero length VMA.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion kernel-image-2.4.17-ia64 for the ia64 architecture. Other\narchitectures are already or will be fixed separately.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon\nwith newly uploaded packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "kernel-image-2.4.17-ia64",
+				"purl": "pkg:deb/debian/kernel-image-2.4.17-ia64?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "kernel-image-2.4.17-ia64"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-423.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2004/dsa-423"
+		}
+	]
+}

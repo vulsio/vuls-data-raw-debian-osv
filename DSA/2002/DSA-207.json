@@ -1,0 +1,42 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-207",
+	"modified": "2014-04-29T17:19:40Z",
+	"published": "2002-12-11T00:00:00Z",
+	"related": [
+		"CVE-2002-0836"
+	],
+	"summary": "tetex-bin - arbitrary command execution",
+	"details": "\nThe SuSE security team discovered a vulnerability in kpathsea library\n(libkpathsea) which is used by xdvi and dvips. Both programs call the\nsystem() function insecurely, which allows a remote attacker to\nexecute arbitrary commands via cleverly crafted DVI files.\n\n\nIf dvips is used in a print filter, this allows a local or remote\nattacker with print permission execute arbitrary code as the printer\nuser (usually lp).\n\n\nThis problem has been fixed in version 1.0.7+20011202-7.1 for the\ncurrent stable distribution (woody), in version 1.0.6-7.3 for the old\nstable distribution (potato) and in version 1.0.7+20021025-4 for the\nunstable distribution (sid). xdvik-ja and dvipsk-ja are vulnerable as\nwell, but link to the kpathsea library dynamically and will\nautomatically be fixed after a new libkpathsea is installed.\n\n\nWe recommend that you upgrade your tetex-lib package immediately.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "tetex-bin",
+				"purl": "pkg:deb/debian/tetex-bin?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.7+20011202-7.1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-207.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2002/dsa-207"
+		}
+	]
+}

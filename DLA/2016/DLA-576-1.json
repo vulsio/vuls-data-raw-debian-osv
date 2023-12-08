@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-576-1",
+	"modified": "2023-06-28T06:25:35.518289Z",
+	"published": "2016-07-30T00:00:00Z",
+	"related": [
+		"CVE-2014-9906",
+		"CVE-2015-8949"
+	],
+	"summary": "libdbd-mysql-perl - security update",
+	"details": "\nTwo use-after-free vulnerabilities were discovered in DBD::mysql, a Perl\nDBI driver for the MySQL database server. A remote attacker can take\nadvantage of these flaws to cause a denial-of-service against an\napplication using DBD::mysql (application crash), or potentially to\nexecute arbitrary code with the privileges of the user running the\napplication.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.021-1+deb7u1.\n\n\nWe recommend that you upgrade your libdbd-mysql-perl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "libdbd-mysql-perl",
+				"purl": "pkg:deb/debian/libdbd-mysql-perl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "4.021-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"4.021-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-576-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-576"
+		}
+	]
+}

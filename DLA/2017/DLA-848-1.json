@@ -1,0 +1,48 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-848-1",
+	"modified": "2023-06-28T06:27:09.047632Z",
+	"published": "2017-03-07T00:00:00Z",
+	"related": [
+		"CVE-2016-10244"
+	],
+	"summary": "freetype - security update",
+	"details": "\nIt was discovered that there was a denial of service vulnerability in freetype,\na font rendering library.\n\n\nThe parse\\_charstrings function did not ensure that a font contains a glyph\nname, which allowed remote attackers to cause a denial of service via a\nspecially-crafted file.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in freetype version\n2.4.9-1.1+deb7u4.\n\n\nWe recommend that you upgrade your freetype packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "freetype",
+				"purl": "pkg:deb/debian/freetype?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.4.9-1.1+deb7u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.4.9-1.1",
+				"2.4.9-1.1+deb7u1",
+				"2.4.9-1.1+deb7u2",
+				"2.4.9-1.1+deb7u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-848-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-848"
+		}
+	]
+}

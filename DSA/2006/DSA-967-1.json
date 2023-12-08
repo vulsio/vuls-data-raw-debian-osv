@@ -1,0 +1,52 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-967-1",
+	"modified": "2023-10-16T00:30:19.231944Z",
+	"published": "2006-02-10T00:00:00Z",
+	"related": [
+		"CVE-2005-4439",
+		"CVE-2006-0347",
+		"CVE-2006-0348",
+		"CVE-2006-0597",
+		"CVE-2006-0598",
+		"CVE-2006-0599",
+		"CVE-2006-0600"
+	],
+	"summary": "elog - several",
+	"details": "\nSeveral security problems have been found in elog, an electronic logbook\nto manage notes. The Common Vulnerabilities and Exposures Project\nidentifies the following problems:\n\n\n* [CVE-2005-4439](https://security-tracker.debian.org/tracker/CVE-2005-4439)\n\"GroundZero Security\" discovered that elog insufficiently checks the\n size of a buffer used for processing URL parameters, which might lead\n to the execution of arbitrary code.\n* [CVE-2006-0347](https://security-tracker.debian.org/tracker/CVE-2006-0347)\nIt was discovered that elog contains a directory traversal vulnerability\n in the processing of \"../\" sequences in URLs, which might lead to\n information disclosure.\n* [CVE-2006-0348](https://security-tracker.debian.org/tracker/CVE-2006-0348)\nThe code to write the log file contained a format string vulnerability,\n which might lead to the execution of arbitrary code.\n* [CVE-2006-0597](https://security-tracker.debian.org/tracker/CVE-2006-0597)\nOverly long revision attributes might trigger a crash due to a buffer\n overflow.\n* [CVE-2006-0598](https://security-tracker.debian.org/tracker/CVE-2006-0598)\nThe code to write the log file does not enforce bounds checks properly,\n which might lead to the execution of arbitrary code.\n* [CVE-2006-0599](https://security-tracker.debian.org/tracker/CVE-2006-0599)\nelog emitted different errors messages for invalid passwords and invalid\n users, which allows an attacker to probe for valid user names.\n* [CVE-2006-0600](https://security-tracker.debian.org/tracker/CVE-2006-0600)\nAn attacker could be driven into infinite redirection with a crafted\n \"fail\" request, which has denial of service potential.\n\n\nThe old stable distribution (woody) does not contain elog packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.5.7+r1558-4+sarge2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.6.1+r1642-1.\n\n\nWe recommend that you upgrade your elog package.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "elog",
+				"purl": "pkg:deb/debian/elog?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.5.7+r1558-4+sarge2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.5.7+r1558-3",
+				"2.5.7+r1558-4+sarge1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-967-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2006/dsa-967"
+		}
+	]
+}

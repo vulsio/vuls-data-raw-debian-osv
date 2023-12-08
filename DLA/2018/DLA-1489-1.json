@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1489-1",
+	"modified": "2023-06-28T06:20:44.903241Z",
+	"published": "2018-08-31T00:00:00Z",
+	"related": [
+		"CVE-2018-10873"
+	],
+	"summary": "spice-gtk - security update",
+	"details": "\nA vulnerability was discovered in SPICE before version 0.14.1 where the\ngenerated code used for demarshalling messages lacked sufficient bounds\nchecks. A malicious client or server, after authentication, could send\nspecially crafted messages to its peer which would result in a crash or,\npotentially, other impacts.\n\n\nThe issue has been fixed by upstream by bailing out with an error if the\npointer to the start of some message data is strictly greater than the\npointer to the end of the message data.\n\n\nThe above issue and fix have already been announced for the spice\nDebian package (as DLA-1486-1 [1]). This announcement is about the\n\"spice-gtk\" Debian package (which ships some copies of code from the\nspice package, where the fix of this issue had to be applied).\n\n\n[1] <https://lists.debian.org/debian-lts-announce/2018/08/msg00037.html>\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n0.25-1+deb8u1.\n\n\nWe recommend that you upgrade your spice-gtk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:8",
+				"name": "spice-gtk",
+				"purl": "pkg:deb/debian/spice-gtk?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.25-1+deb8u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.25-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1489-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2018/dla-1489"
+		}
+	]
+}

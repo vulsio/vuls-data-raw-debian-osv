@@ -1,0 +1,69 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1277-1",
+	"modified": "2023-10-16T00:10:19.693665Z",
+	"published": "2007-04-04T00:00:00Z",
+	"related": [
+		"CVE-2007-0653",
+		"CVE-2007-0654"
+	],
+	"summary": "xmms - several",
+	"details": "\nMultiple errors have been found in the skin handling routines in xmms,\nthe X Multimedia System. These vulnerabilities could allow an\nattacker to run arbitrary code as the user running xmms by inducing\nthe victim to load specially crafted interface skin files.\n\n\nFor the stable distribution (sarge), these problems have been fixed in\nversion 1.2.10+cvs20050209-2sarge1.\n\n\nFor the upcoming stable distribution (etch) and the unstable\ndistribution (sid), these problems have been fixed in versions\n1:1.2.10+20061101-1etch1 and 1:1.2.10+20070401-1, respectively.\n\n\nWe recommend that you upgrade your xmms packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "xmms",
+				"purl": "pkg:deb/debian/xmms?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.10+cvs20050209-2sarge1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.10+cvs20050209-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1277-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "xmms",
+				"purl": "pkg:deb/debian/xmms?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1:1.2.10+20061101-1etch1"
+						}
+					]
+				}
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1277-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1277"
+		}
+	]
+}

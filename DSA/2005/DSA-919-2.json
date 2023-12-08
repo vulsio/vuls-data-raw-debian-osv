@@ -1,0 +1,77 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-919-2",
+	"modified": "2023-10-16T00:30:01.300702Z",
+	"published": "2005-12-12T00:00:00Z",
+	"related": [
+		"CVE-2005-3185",
+		"CVE-2005-4077"
+	],
+	"summary": "curl - buffer overflow",
+	"details": "\nThe upstream developer of curl, a multi-protocol file transfer\nlibrary, informed us that the former correction to several off-by-one\nerrors are not sufficient. For completeness please find the original\nbug description below:\n\n\n\n> \n> Several problems were discovered in libcurl, a multi-protocol file\n> transfer library. The Common Vulnerabilities and Exposures project\n> identifies the following problems:\n> \n> \n> * [CVE-2005-3185](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3185)\n> A buffer overflow has been discovered in libcurl\n>  that could allow the execution of arbitrary code.\n> * [CVE-2005-4077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-4077)\n> Stefan Esser discovered several off-by-one errors that allows\n>  local users to trigger a buffer overflow and cause a denial of\n>  service or bypass PHP security restrictions via certain URLs.\n> \n> \n> \n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 7.9.5-1woody2.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 7.13.2-2sarge5. This update also includes a bugfix against\ndata corruption.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 7.15.1-1.\n\n\nWe recommend that you upgrade your libcurl packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:3.0",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.9.5-1woody2"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.9.5-1",
+				"7.9.5-1woody1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-919-2.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:3.1",
+				"name": "curl",
+				"purl": "pkg:deb/debian/curl?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "7.13.2-2sarge5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"7.13.2-2",
+				"7.13.2-2sarge1",
+				"7.13.2-2sarge2",
+				"7.13.2-2sarge3",
+				"7.13.2-2sarge4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-919-2.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2005/dsa-919"
+		}
+	]
+}

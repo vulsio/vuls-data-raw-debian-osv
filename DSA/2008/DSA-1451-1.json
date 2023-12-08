@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1451-1",
+	"modified": "2023-10-16T00:10:26.310764Z",
+	"published": "2008-01-06T00:00:00Z",
+	"related": [
+		"CVE-2007-3781",
+		"CVE-2007-5969",
+		"CVE-2007-6304"
+	],
+	"summary": "mysql-dfsg-5.0 several vulnerabilities",
+	"details": "\n\nSeveral local/remote vulnerabilities have been discovered in the MySQL\ndatabase server. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n\n* [CVE-2007-3781](https://security-tracker.debian.org/tracker/CVE-2007-3781)\n\n It was discovered that the privilege validation for the source table\n of CREATE TABLE LIKE statements was insufficiently enforced, which\n might lead to information disclosure. This is only exploitable by\n authenticated users.\n* [CVE-2007-5969](https://security-tracker.debian.org/tracker/CVE-2007-5969)\n\n It was discovered that symbolic links were handled insecurely during\n the creation of tables with DATA DIRECTORY or INDEX DIRECTORY\n statements, which might lead to denial of service by overwriting\n data. This is only exploitable by authenticated users.\n* [CVE-2007-6304](https://security-tracker.debian.org/tracker/CVE-2007-6304)\n\n It was discovered that queries to data in a FEDERATED table can\n lead to a crash of the local database server, if the remote server\n returns information with less columns than expected, resulting in\n denial of service.\n\n\n\nThe old stable distribution (sarge) doesn't contain mysql-dfsg-5.0.\n\n\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 5.0.32-7etch4.\n\n\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 5.0.51-1.\n\n\n\n\nWe recommend that you upgrade your mysql-dfsg-5.0 packages.\n\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "mysql-dfsg-5.0",
+				"purl": "pkg:deb/debian/mysql-dfsg-5.0?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.0.32-7etch4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.0.32-7etch1",
+				"5.0.32-7etch3",
+				"5.0.32-7etch3~bpo31+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1451-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2008/dsa-1451"
+		}
+	]
+}

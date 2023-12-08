@@ -1,0 +1,51 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5049-1",
+	"modified": "2023-10-16T00:15:22.744532Z",
+	"published": "2022-01-20T00:00:00Z",
+	"related": [
+		"CVE-2021-43860",
+		"CVE-2022-21682"
+	],
+	"summary": "flatpak - security update",
+	"details": "\nSeveral vulnerabilities were discovered in Flatpak, an application\ndeployment framework for desktop apps.\n\n\n* [CVE-2021-43860](https://security-tracker.debian.org/tracker/CVE-2021-43860)\nRyan Gonzalez discovered that Flatpak didn't properly validate\n that the permissions displayed to the user for an app at install\n time match the actual permissions granted to the app at\n runtime. Malicious apps could therefore grant themselves\n permissions without the consent of the user.\n* [CVE-2022-21682](https://security-tracker.debian.org/tracker/CVE-2022-21682)\nFlatpak didn't always prevent a malicious flatpak-builder user\n from writing to the local filesystem.\n\n\nFor the stable distribution (bullseye), these problems have been fixed\nin version 1.10.7-0+deb11u1.\n\n\nPlease note that flatpak-builder also needed an update for\ncompatibility, and is now at version 1.0.12-1+deb11u1 in bullseye.\n\n\nWe recommend that you upgrade your flatpak and flatpak-builder\npackages.\n\n\nFor the detailed security status of flatpak please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/flatpak>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "flatpak",
+				"purl": "pkg:deb/debian/flatpak?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.10.7-0+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.10.2-3",
+				"1.10.3-0+deb11u1",
+				"1.10.3-0+deb11u1~bpo11+1",
+				"1.10.5-0+deb11u1",
+				"1.10.5-0+deb11u1~bpo10+1",
+				"1.10.7-0+deb11u1~bpo10+1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5049-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5049"
+		}
+	]
+}

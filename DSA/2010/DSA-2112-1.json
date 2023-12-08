@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2112-1",
+	"modified": "2023-10-16T00:05:46.026051Z",
+	"published": "2010-09-20T00:00:00Z",
+	"related": [
+		"CVE-2010-0405"
+	],
+	"summary": "bzip2 - integer overflow",
+	"details": "\nMikolaj Izdebski has discovered an integer overflow flaw in the \nBZ2\\_decompress function in bzip2/libbz2. An attacker could use a \ncrafted bz2 file to cause a denial of service (application crash)\nor potentially to execute arbitrary code. ([CVE-2010-0405](https://security-tracker.debian.org/tracker/CVE-2010-0405))\n\n\nAfter the upgrade, all running services that use libbz2 need to be\nrestarted.\n\n\nThis update also provides rebuilt dpkg packages, which are statically\nlinked to the fixed version of libbz2. Updated packages for clamav,\nwhich is also affected by this issue, will be provided on debian-volatile.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.0.5-1+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution (sid),\nthis problem in bzip2 will be fixed soon. Updated dpkg packages are not\nnecessary for testing/unstable.\n\n\nWe recommend that you upgrade your bzip2 / dpkg packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "bzip2",
+				"purl": "pkg:deb/debian/bzip2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.0.5-1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.0.5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2112-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2112"
+		}
+	]
+}

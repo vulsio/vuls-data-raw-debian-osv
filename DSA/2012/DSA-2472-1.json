@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2472-1",
+	"modified": "2023-10-16T00:05:56.856347Z",
+	"published": "2012-05-15T00:00:00Z",
+	"related": [
+		"CVE-2012-0208"
+	],
+	"summary": "gridengine - privilege escalation",
+	"details": "\nDave Love discovered that users who are allowed to submit jobs to a\nGrid Engine installation can escalate their privileges to root because\nthe environment is not properly sanitized before creating processes.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 6.2u5-1squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 6.2u5-6.\n\n\nWe recommend that you upgrade your gridengine packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "gridengine",
+				"purl": "pkg:deb/debian/gridengine?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "6.2u5-1squeeze1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"6.2u5-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2472-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2012/dsa-2472"
+		}
+	]
+}

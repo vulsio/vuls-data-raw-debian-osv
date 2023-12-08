@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2214-1",
+	"modified": "2023-10-16T00:05:49.169419Z",
+	"published": "2011-04-08T00:00:00Z",
+	"related": [
+		"CVE-2011-1401"
+	],
+	"summary": "ikiwiki - missing input validation",
+	"details": "\nTango discovered that ikiwiki, a wiki compiler, is not validating\nif the htmlscrubber plugin is enabled or not on a page when adding\nalternative stylesheets to pages. This enables an attacker who is able\nto upload custom stylesheets to add malicious stylesheets as an alternate\nstylesheet, or replace the default stylesheet, and thus conduct\ncross-site scripting attacks.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.53.6.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.20100815.7.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 3.20110328.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.20110328.\n\n\nWe recommend that you upgrade your ikiwiki packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "ikiwiki",
+				"purl": "pkg:deb/debian/ikiwiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.53.6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.53.3",
+				"2.53.4",
+				"2.53.5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2214-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:6.0",
+				"name": "ikiwiki",
+				"purl": "pkg:deb/debian/ikiwiki?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "3.20100815.7"
+						}
+					]
+				}
+			],
+			"versions": [
+				"3.20100815.6"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2214-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2011/dsa-2214"
+		}
+	]
+}

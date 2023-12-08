@@ -1,0 +1,73 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-1035-1",
+	"modified": "2023-06-28T06:20:14.886897Z",
+	"published": "2017-07-21T00:00:00Z",
+	"related": [
+		"CVE-2016-9602",
+		"CVE-2016-9603",
+		"CVE-2017-7377",
+		"CVE-2017-7471",
+		"CVE-2017-7493",
+		"CVE-2017-7718",
+		"CVE-2017-7980",
+		"CVE-2017-8086"
+	],
+	"summary": "qemu - security update",
+	"details": "\nSeveral vulnerabilities were discovered in qemu, a fast processor\nemulator. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2016-9603](https://security-tracker.debian.org/tracker/CVE-2016-9603)\nqemu-kvm built with the Cirrus CLGD 54xx VGA Emulator and the VNC\n display driver support is vulnerable to a heap buffer overflow\n issue. It could occur when Vnc client attempts to update its\n display after a vga operation is performed by a guest.\n\n\nA privileged user/process inside guest could use this flaw to crash\n the Qemu process resulting in DoS OR potentially leverage it to\n execute arbitrary code on the host with privileges of the Qemu\n process.\n* [CVE-2017-7718](https://security-tracker.debian.org/tracker/CVE-2017-7718)\nqemu-kvm built with the Cirrus CLGD 54xx VGA Emulator support is\n vulnerable to an out-of-bounds access issue. It could occur while\n copying VGA data via bitblt functions cirrus\\_bitblt\\_rop\\_fwd\\_transp\\_\n and/or cirrus\\_bitblt\\_rop\\_fwd\\_.\n\n\nA privileged user inside guest could use this flaw to crash the\n Qemu process resulting in DoS.\n* [CVE-2017-7980](https://security-tracker.debian.org/tracker/CVE-2017-7980)\nqemu-kvm built with the Cirrus CLGD 54xx VGA Emulator support is\n vulnerable to an out-of-bounds r/w access issues. It could occur\n while copying VGA data via various bitblt functions.\n\n\nA privileged user inside guest could use this flaw to crash the\n Qemu process resulting in DoS OR potentially execute arbitrary code\n on a host with privileges of Qemu process on the host.\n* [CVE-2016-9602](https://security-tracker.debian.org/tracker/CVE-2016-9602)\nQuick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to an improper link\n following issue. It could occur while accessing symbolic link files\n on a shared host directory.\n\n\nA privileged user inside guest could use this flaw to access host file\n system beyond the shared folder and potentially escalating their\n privileges on a host.\n* [CVE-2017-7377](https://security-tracker.debian.org/tracker/CVE-2017-7377)\nQuick Emulator(Qemu) built with the virtio-9p back-end support is\n vulnerable to a memory leakage issue. It could occur while doing a I/O\n operation via v9fs\\_create/v9fs\\_lcreate routine.\n\n\nA privileged user/process inside guest could use this flaw to leak\n host memory resulting in Dos.\n* [CVE-2017-7471](https://security-tracker.debian.org/tracker/CVE-2017-7471)\nQuick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to an improper access\n control issue. It could occur while accessing files on a shared host\n directory.\n\n\nA privileged user inside guest could use this flaw to access host file\n system beyond the shared folder and potentially escalating their\n privileges on a host.\n* [CVE-2017-7493](https://security-tracker.debian.org/tracker/CVE-2017-7493)\nQuick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to an improper access\n control issue. It could occur while accessing virtfs metadata files\n in mapped-file security mode.\n\n\nA guest user could use this flaw to escalate their privileges inside\n guest.\n* [CVE-2017-8086](https://security-tracker.debian.org/tracker/CVE-2017-8086)\nQuick Emulator(Qemu) built with the virtio-9p back-end support is\n vulnerable to a memory leakage issue. It could occur while querying\n file system extended attributes via 9pfs\\_list\\_xattr() routine.\n\n\nA privileged user/process inside guest could use this flaw to leak\n host memory resulting in Dos.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u22.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "qemu",
+				"purl": "pkg:deb/debian/qemu?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.1.2+dfsg-6+deb7u22"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.1.2+dfsg-6+deb7u14",
+				"1.1.2+dfsg-6+deb7u15",
+				"1.1.2+dfsg-6+deb7u16",
+				"1.1.2+dfsg-6+deb7u17",
+				"1.1.2+dfsg-6+deb7u18",
+				"1.1.2+dfsg-6+deb7u19",
+				"1.1.2+dfsg-6+deb7u20",
+				"1.1.2+dfsg-6a",
+				"1.1.2+dfsg-6a+deb7u1",
+				"1.1.2+dfsg-6a+deb7u10",
+				"1.1.2+dfsg-6a+deb7u11",
+				"1.1.2+dfsg-6a+deb7u12",
+				"1.1.2+dfsg-6a+deb7u13",
+				"1.1.2+dfsg-6a+deb7u2",
+				"1.1.2+dfsg-6a+deb7u3",
+				"1.1.2+dfsg-6a+deb7u4",
+				"1.1.2+dfsg-6a+deb7u5",
+				"1.1.2+dfsg-6a+deb7u6",
+				"1.1.2+dfsg-6a+deb7u7",
+				"1.1.2+dfsg-6a+deb7u7~bpo60+1",
+				"1.1.2+dfsg-6a+deb7u8",
+				"1.1.2+dfsg-6a+deb7u9"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1035-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2017/dla-1035"
+		}
+	]
+}

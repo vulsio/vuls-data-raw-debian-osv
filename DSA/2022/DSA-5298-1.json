@@ -1,0 +1,46 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5298-1",
+	"modified": "2023-10-16T00:25:56.230069Z",
+	"published": "2022-12-09T00:00:00Z",
+	"related": [
+		"CVE-2022-0730",
+		"CVE-2022-46169"
+	],
+	"summary": "cacti - security update",
+	"details": "\nTwo security vulnerabilities have been discovered in Cacti, a web\ninterface for graphing of monitoring systems, which could result in\nunauthenticated command injection or LDAP authentication bypass.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.2.16+ds1-2+deb11u1.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\nFor the detailed security status of cacti please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/cacti](https://security-tracker.debian.org/tracker/cacti)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "cacti",
+				"purl": "pkg:deb/debian/cacti?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.2.16+ds1-2+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.2.16+ds1-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5298-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2022/dsa-5298"
+		}
+	]
+}

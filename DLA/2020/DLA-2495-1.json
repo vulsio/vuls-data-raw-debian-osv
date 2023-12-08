@@ -1,0 +1,85 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-2495-1",
+	"modified": "2023-06-28T06:26:34.730639Z",
+	"published": "2020-12-16T00:00:00Z",
+	"related": [
+		"CVE-2020-17527"
+	],
+	"summary": "tomcat8 - security update",
+	"details": "\nIt was discovered that Apache Tomcat from 8.5.0 to 8.5.59 could\nre-use an HTTP request header value from the previous stream\nreceived on an HTTP/2 connection for the request associated with\nthe subsequent stream. While this would most likely lead to an\nerror and the closure of the HTTP/2 connection, it is possible\nthat information could leak between requests.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n8.5.54-0+deb9u5.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\nFor the detailed security status of tomcat8 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tomcat8>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:9",
+				"name": "tomcat8",
+				"purl": "pkg:deb/debian/tomcat8?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "8.5.54-0+deb9u5"
+						}
+					]
+				}
+			],
+			"versions": [
+				"8.5.14-1",
+				"8.5.14-1+deb9u1",
+				"8.5.14-1+deb9u2",
+				"8.5.14-1+deb9u3",
+				"8.5.14-2",
+				"8.5.15-1",
+				"8.5.16-1",
+				"8.5.21-1",
+				"8.5.23-1",
+				"8.5.24-1",
+				"8.5.24-2",
+				"8.5.24-2~bpo9+1",
+				"8.5.28-1",
+				"8.5.28-1~bpo9+1",
+				"8.5.29-1",
+				"8.5.29-1~bpo9+1",
+				"8.5.30-1",
+				"8.5.31-1",
+				"8.5.32-1",
+				"8.5.32-2",
+				"8.5.33-1",
+				"8.5.33-1~bpo9+1",
+				"8.5.34-1",
+				"8.5.34-1~bpo9+1",
+				"8.5.35-1",
+				"8.5.35-2",
+				"8.5.35-2~bpo9+1",
+				"8.5.35-3",
+				"8.5.37-1",
+				"8.5.37-1~bpo9+1",
+				"8.5.37-2",
+				"8.5.38-1",
+				"8.5.38-1~bpo9+1",
+				"8.5.38-2",
+				"8.5.38-2~bpo9+1",
+				"8.5.39-1",
+				"8.5.50-0+deb9u1",
+				"8.5.54-0+deb9u1",
+				"8.5.54-0+deb9u2",
+				"8.5.54-0+deb9u3",
+				"8.5.54-0+deb9u4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2495-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2020/dla-2495"
+		}
+	]
+}

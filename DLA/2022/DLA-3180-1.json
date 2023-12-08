@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3180-1",
+	"modified": "2023-06-28T06:25:26.501146Z",
+	"published": "2022-11-07T00:00:00Z",
+	"related": [
+		"CVE-2022-2996"
+	],
+	"summary": "python-scciclient - security update",
+	"details": "\nIt was discovered that scciclient did not verify server TLS certificates\nwhen making requests.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n0.7.2-2+deb10u1.\n\n\nWe recommend that you upgrade your python-scciclient packages.\n\n\nFor the detailed security status of python-scciclient please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-scciclient>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "python-scciclient",
+				"purl": "pkg:deb/debian/python-scciclient?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.7.2-2+deb10u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.7.2-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3180-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2022/dla-3180"
+		}
+	]
+}

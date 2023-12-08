@@ -1,0 +1,45 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-2076-1",
+	"modified": "2023-10-16T00:10:56.933516Z",
+	"published": "2010-07-27T00:00:00Z",
+	"related": [
+		"CVE-2010-2547"
+	],
+	"summary": "gnupg2 - execution of arbitrary code",
+	"details": "\nIt was discovered that GnuPG 2 uses a freed pointer when verifying a\nsignature or importing a certificate with many Subject Alternate Names,\npotentially leading to arbitrary code execution.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.0.9-3.1+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.0.14-2.\n\n\nGnuPG 1 (in the gnupg package) is not affected by this problem.\n\n\nWe recommend that you upgrade your gnupg2 packages.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:5.0",
+				"name": "gnupg2",
+				"purl": "pkg:deb/debian/gnupg2?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.0.9-3.1+lenny1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.0.9-3.1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2076-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2010/dsa-2076"
+		}
+	]
+}

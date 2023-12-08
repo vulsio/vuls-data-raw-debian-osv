@@ -1,0 +1,47 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-561-1",
+	"modified": "2023-06-28T06:27:04.252375Z",
+	"published": "2016-07-26T00:00:00Z",
+	"related": [
+		"CVE-2016-2224",
+		"CVE-2016-2225",
+		"CVE-2016-6264"
+	],
+	"summary": "uclibc - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in uClibc, an\nimplementation of the standard C library that is much smaller than\nglibc, which makes it useful for embedded systems.\n\n\n* [CVE-2016-2224](https://security-tracker.debian.org/tracker/CVE-2016-2224)\nFix possible denial of service via a specially crafted DNS reply\n that could cause an infinite loop.\n* [CVE-2016-2225](https://security-tracker.debian.org/tracker/CVE-2016-2225)\nFix possible denial of service via specially crafted packet that\n will make the parser in libc/inet/resolv.c terminate early.\n* [CVE-2016-6264](https://security-tracker.debian.org/tracker/CVE-2016-6264)\nIt was found that BLT instruction in libc/string/arm/memset.S\n checks for signed values. If the parameter of memset is negative,\n then value added to the PC will be large. An attacker that controls\n the length parameter of memset can also control the value of PC\n register.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.9.32-1+deb7u1.\n\n\nWe recommend that you upgrade your uclibc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:7",
+				"name": "uclibc",
+				"purl": "pkg:deb/debian/uclibc?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.9.32-1+deb7u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.9.32-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-561-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2016/dla-561"
+		}
+	]
+}

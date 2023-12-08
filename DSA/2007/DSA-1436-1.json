@@ -1,0 +1,125 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-1436-1",
+	"modified": "2023-10-16T00:10:25.346796Z",
+	"published": "2007-12-20T00:00:00Z",
+	"related": [
+		"CVE-2006-6058",
+		"CVE-2007-5966",
+		"CVE-2007-6063",
+		"CVE-2007-6206",
+		"CVE-2007-6417"
+	],
+	"summary": "linux-2.6 fai-kernels user-mode-linux - several vulnerabilities",
+	"details": "\nSeveral local vulnerabilities have been discovered in the Linux kernel\nthat may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2006-6058](https://security-tracker.debian.org/tracker/CVE-2006-6058)\nLMH reported an issue in the minix filesystem that allows local users\n with mount privileges to create a DoS (printk flood) by mounting a\n specially crafted corrupt filesystem.\n* [CVE-2007-5966](https://security-tracker.debian.org/tracker/CVE-2007-5966)\nWarren Togami discovered an issue in the hrtimer subsystem that allows\n a local user to cause a DoS (soft lockup) by requesting a timer sleep\n for a long period of time leading to an integer overflow.\n* [CVE-2007-6063](https://security-tracker.debian.org/tracker/CVE-2007-6063)\nVenustech AD-LAB discovered a buffer overflow in the isdn ioctl\n handling, exploitable by a local user.\n* [CVE-2007-6206](https://security-tracker.debian.org/tracker/CVE-2007-6206)\nBlake Frantz discovered that when a core file owned by a non-root user\n exists, and a root-owned process dumps core over it, the core file\n retains its original ownership. This could be used by a local user to\n gain access to sensitive information.\n* [CVE-2007-6417](https://security-tracker.debian.org/tracker/CVE-2007-6417)\nHugh Dickins discovered an issue in the tmpfs filesystem where, under\n a rare circumstance, a kernel page may be improperly cleared, leaking\n sensitive kernel memory to userspace or resulting in a DoS (crash).\n\n\nThese problems have been fixed in the stable distribution in version \n2.6.18.dfsg.1-13etch6.\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17+etch.13etch6 |\n| user-mode-linux | 2.6.18-1um-2etch.13etch6 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "linux-2.6",
+				"purl": "pkg:deb/debian/linux-2.6?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18.dfsg.1-13etch6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18.dfsg.1-12",
+				"2.6.18.dfsg.1-12etch1",
+				"2.6.18.dfsg.1-12etch2",
+				"2.6.18.dfsg.1-13",
+				"2.6.18.dfsg.1-13etch1",
+				"2.6.18.dfsg.1-13etch2",
+				"2.6.18.dfsg.1-13etch3",
+				"2.6.18.dfsg.1-13etch4",
+				"2.6.18.dfsg.1-13etch5"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1436-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "fai-kernels",
+				"purl": "pkg:deb/debian/fai-kernels?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "1.17+etch.13etch6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"1.17",
+				"1.17+etch.13etch3",
+				"1.17+etch.13etch4",
+				"1.17+etch.13etch5",
+				"1.17+etch1",
+				"1.17+etch2",
+				"1.17+etch3",
+				"1.17+etch4",
+				"1.17+etch5",
+				"1.17etch1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1436-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:4.0",
+				"name": "user-mode-linux",
+				"purl": "pkg:deb/debian/user-mode-linux?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "2.6.18-1um-2etch.13etch6"
+						}
+					]
+				}
+			],
+			"versions": [
+				"2.6.18-1um-2",
+				"2.6.18-1um-2etch.13etch3",
+				"2.6.18-1um-2etch.13etch4",
+				"2.6.18-1um-2etch.13etch5",
+				"2.6.18-1um-2etch1",
+				"2.6.18-1um-2etch2",
+				"2.6.18-1um-2etch3",
+				"2.6.18-1um-2etch4"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1436-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2007/dsa-1436"
+		}
+	]
+}
