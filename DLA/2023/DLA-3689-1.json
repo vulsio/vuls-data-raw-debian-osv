@@ -1,0 +1,49 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DLA-3689-1",
+	"modified": "2023-12-14T18:21:01.851091Z",
+	"published": "2023-12-14T00:00:00Z",
+	"related": [
+		"CVE-2023-45866"
+	],
+	"summary": "bluez - security update",
+	"details": "\nIt was discovered that there was FIXME in bluez a ...\n\n\n* [CVE-2023-45866](https://security-tracker.debian.org/tracker/CVE-2023-45866)\nBluetooth HID Hosts in BlueZ may permit an unauthenticated Peripheral role HID Device to initiate and establish an encrypted connection, and accept HID keyboard reports, potentially permitting injection of HID messages when no user interaction has occurred in the Central role to authorize such access. An example affected package is bluez 5.64-0ubuntu1 in Ubuntu 22.04LTS. NOTE: in some cases, a CVE-2020-0556 mitigation would have already addressed this Bluetooth HID Hosts issue.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n5.50-1.2~deb10u4.\n\n\nWe recommend that you upgrade your bluez packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:10",
+				"name": "bluez",
+				"purl": "pkg:deb/debian/bluez?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "5.50-1.2~deb10u4"
+						}
+					]
+				}
+			],
+			"versions": [
+				"5.50-1",
+				"5.50-1.1",
+				"5.50-1.2~deb10u1",
+				"5.50-1.2~deb10u2",
+				"5.50-1.2~deb10u3"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3689-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/lts/security/2023/dla-3689"
+		}
+	]
+}
