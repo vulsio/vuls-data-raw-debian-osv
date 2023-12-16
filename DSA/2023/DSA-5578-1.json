@@ -1,12 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5578-1",
-	"modified": "2023-12-15T22:15:32.889621Z",
+	"modified": "2023-12-15T23:15:32.483737Z",
 	"published": "2023-12-15T00:00:00Z",
 	"related": [
 		"CVE-2023-46751"
 	],
 	"summary": "ghostscript - security update",
+	"details": "\nIt was discovered that Ghostscript, the GPL PostScript/PDF interpreter,\ndoes not properly handle errors in the gdev\\_prn\\_open\\_printer\\_seekable()\nfunction, which could result in the execution of arbitrary commands if\nmalformed document files are processed.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 10.0.0~dfsg-11+deb12u3.\n\n\nWe recommend that you upgrade your ghostscript packages.\n\n\nFor the detailed security status of ghostscript please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/ghostscript](https://security-tracker.debian.org/tracker/ghostscript)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,6 +36,12 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5578-1.json"
 			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5578"
 		}
 	]
 }
