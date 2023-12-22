@@ -1,13 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5586-1",
-	"modified": "2023-12-22T09:18:51.736234Z",
+	"modified": "2023-12-22T11:16:36.547288Z",
 	"published": "2023-12-22T00:00:00Z",
 	"related": [
 		"CVE-2023-48795",
 		"CVE-2023-51385"
 	],
 	"summary": "openssh - security update",
+	"details": "\nSeveral vulnerabilities have been discovered in OpenSSH, an\nimplementation of the SSH protocol suite.\n\n\n* [CVE-2021-41617](https://security-tracker.debian.org/tracker/CVE-2021-41617)\nIt was discovered that sshd failed to correctly initialise\n supplemental groups when executing an AuthorizedKeysCommand or\n AuthorizedPrincipalsCommand, where a AuthorizedKeysCommandUser or\n AuthorizedPrincipalsCommandUser directive has been set to run the\n command as a different user. Instead these commands would inherit\n the groups that sshd was started with.\n* [CVE-2023-28531](https://security-tracker.debian.org/tracker/CVE-2023-28531)\nLuci Stanescu reported that a error prevented constraints being\n communicated to the ssh-agent when adding smartcard keys to the\n agent with per-hop destination constraints, resulting in keys being\n added without constraints.\n* [CVE-2023-48795](https://security-tracker.debian.org/tracker/CVE-2023-48795)\nFabian Baeumer, Marcus Brinkmann and Joerg Schwenk discovered that\n the SSH protocol is prone to a prefix truncation attack, known as\n the Terrapin attack. This attack allows a MITM attacker to effect\n a limited break of the integrity of the early encrypted SSH\n transport protocol by sending extra messages prior to the\n commencement of encryption, and deleting an equal number of\n consecutive messages immediately after encryption starts.\n\n\nDetails can be found at [\\\n https://terrapin-attack.com/](https://terrapin-attack.com/)\n* [CVE-2023-51384](https://security-tracker.debian.org/tracker/CVE-2023-51384)\nIt was discovered that when PKCS#11-hosted private keys were\n added while specifying destination constraints, if the PKCS#11\n token returned multiple keys then only the first key had the\n constraints applied.\n* [CVE-2023-51385](https://security-tracker.debian.org/tracker/CVE-2023-51385)\nIt was discovered that if an invalid user or hostname that contained\n shell metacharacters was passed to ssh, and a ProxyCommand,\n LocalCommand directive or match exec predicate referenced the user\n or hostname via expansion tokens, then an attacker who could supply\n arbitrary user/hostnames to ssh could potentially perform command\n injection. The situation could arise in case of git repositories\n with submodules, where the repository could contain a submodule with\n shell characters in its user or hostname.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 1:8.4p1-5+deb11u3.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 1:9.2p1-2+deb12u2.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\nFor the detailed security status of openssh please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssh](https://security-tracker.debian.org/tracker/openssh)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,6 +64,12 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5586-1.json"
 			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5586"
 		}
 	]
 }
