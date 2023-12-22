@@ -1,12 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5584-1",
-	"modified": "2023-12-21T20:15:37.449902Z",
+	"modified": "2023-12-21T23:15:35.626751Z",
 	"published": "2023-12-21T00:00:00Z",
 	"related": [
 		"CVE-2023-45866"
 	],
 	"summary": "bluez - security update",
+	"details": "\nIt was reported that the BlueZ's HID profile implementation is not\ninline with the HID specification which mandates the use of Security\nMode 4. The HID profile configuration option ClassicBondedOnly now\ndefaults to true to make sure that input connections only come from\nbonded device connections.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 5.55-3.1+deb11u1.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 5.66-1+deb12u1.\n\n\nWe recommend that you upgrade your bluez packages.\n\n\nFor the detailed security status of bluez please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/bluez](https://security-tracker.debian.org/tracker/bluez)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,6 +60,12 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5584-1.json"
 			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5584"
 		}
 	]
 }

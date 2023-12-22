@@ -1,9 +1,10 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5583-1",
-	"modified": "2023-12-21T20:15:35.209762Z",
+	"modified": "2023-12-21T23:15:34.494353Z",
 	"published": "2023-12-21T00:00:00Z",
 	"summary": "gst-plugins-bad1.0 - security update",
+	"details": "\nA buffer overflow was discovered in the AV1 video plugin for the\nGStreamer media framework, which may result in denial of service or\npotentially the execution of arbitrary code if a malformed media file\nis opened.\n\n\nThe oldstable distribution (bullseye) is not affected.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 1.22.0-4+deb12u4.\n\n\nWe recommend that you upgrade your gst-plugins-bad1.0 packages.\n\n\nFor the detailed security status of gst-plugins-bad1.0 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/gst-plugins-bad1.0](https://security-tracker.debian.org/tracker/gst-plugins-bad1.0)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -33,6 +34,12 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5583-1.json"
 			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5583"
 		}
 	]
 }
