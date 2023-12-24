@@ -1,0 +1,71 @@
+{
+	"schema_version": "1.6.0",
+	"id": "DSA-5588-1",
+	"modified": "2023-12-24T16:15:30.823181Z",
+	"published": "2023-12-24T00:00:00Z",
+	"related": [
+		"CVE-2023-48795"
+	],
+	"summary": "putty - security update",
+	"details": "\nFabian Baeumer, Marcus Brinkmann and Joerg Schwenk discovered that the\nSSH protocol is prone to a prefix truncation attack, known as the\nTerrapin attack. This attack allows a MITM attacker to effect a\nlimited break of the integrity of the early encrypted SSH transport\nprotocol by sending extra messages prior to the commencement of\nencryption, and deleting an equal number of consecutive messages\nimmediately after encryption starts.\n\n\nDetails can be found at [\\\nhttps://terrapin-attack.com/](https://terrapin-attack.com/).\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 0.74-1+deb11u1. This update includes a fix for\n[CVE-2021-36367](https://security-tracker.debian.org/tracker/CVE-2021-36367).\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 0.78-2+deb12u1.\n\n\nWe recommend that you upgrade your putty packages.\n\n\nFor the detailed security status of putty please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/putty](https://security-tracker.debian.org/tracker/putty)\n\n\n",
+	"affected": [
+		{
+			"package": {
+				"ecosystem": "Debian:11",
+				"name": "putty",
+				"purl": "pkg:deb/debian/putty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.74-1+deb11u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.74-1"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5588-1.json"
+			}
+		},
+		{
+			"package": {
+				"ecosystem": "Debian:12",
+				"name": "putty",
+				"purl": "pkg:deb/debian/putty?arch=source"
+			},
+			"ranges": [
+				{
+					"type": "ECOSYSTEM",
+					"events": [
+						{
+							"introduced": "0"
+						},
+						{
+							"fixed": "0.78-2+deb12u1"
+						}
+					]
+				}
+			],
+			"versions": [
+				"0.78-2"
+			],
+			"database_specific": {
+				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5588-1.json"
+			}
+		}
+	],
+	"references": [
+		{
+			"type": "ADVISORY",
+			"url": "https://www.debian.org/security/2023/dsa-5588"
+		}
+	]
+}
