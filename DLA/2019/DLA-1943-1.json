@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1943-1",
-	"modified": "2023-06-28T06:21:05.962982Z",
-	"published": "2019-10-03T00:00:00Z",
+	"modified": "2024-01-09T20:31:52.214201Z",
+	"published": "2019-10-02T00:00:00Z",
 	"related": [
 		"CVE-2019-14540",
 		"CVE-2019-16335",
@@ -10,7 +10,6 @@
 		"CVE-2019-16943"
 	],
 	"summary": "jackson-databind - security update",
-	"details": "\nMore deserialization flaws were discovered in jackson-databind\nrelating to the classes in com.zaxxer.hikari.HikariConfig,\ncom.zaxxer.hikari.HikariDataSource, commons-dbcp and\ncom.p6spy.engine.spy.P6DataSource, which could allow an\nunauthenticated user to perform remote code execution. The issue was\nresolved by extending the blacklist and blocking more classes from\npolymorphic deserialization.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.4.2-2+deb8u9.\n\n\nWe recommend that you upgrade your jackson-databind packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1943-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1943"
 		}
 	]
 }

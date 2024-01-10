@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-484-1",
-	"modified": "2023-06-28T06:21:32.904770Z",
+	"modified": "2024-01-09T20:33:03.518890Z",
 	"published": "2016-05-21T00:00:00Z",
 	"related": [
 		"CVE-2015-8808",
@@ -15,7 +15,6 @@
 		"CVE-2016-5239"
 	],
 	"summary": "graphicsmagick - security update",
-	"details": "\nSeveral security vulnerabilities were discovered in graphicsmagick a\ntool to manipulate image files.\n\n\nGraphicsMagick is a fork of ImageMagick and also affected by\nvulnerabilities collectively known as ImageTragick, that are the\nconsequence of lack of sanitization of untrusted input. An attacker\nwith control on the image input could, with the privileges of the user\nrunning the application, \nexecute code \n([CVE-2016-3714](https://security-tracker.debian.org/tracker/CVE-2016-3714)), \nmake HTTP GET or FTP requests \n([CVE-2016-3718](https://security-tracker.debian.org/tracker/CVE-2016-3718)), \nor delete \n([CVE-2016-3715](https://security-tracker.debian.org/tracker/CVE-2016-3715)), \nmove\n([CVE-2016-3716](https://security-tracker.debian.org/tracker/CVE-2016-3716)), \nor read \n([CVE-2016-3717](https://security-tracker.debian.org/tracker/CVE-2016-3717)), \nlocal files.\n\n\nTo address these concerns the following changes have been made:\n\n\n1. Remove automatic detection/execution of MVG based on file header or\n file extension.\n2. Remove the ability to cause an input file to be deleted based on a\n filename specification.\n3. Improve the safety of delegates.mgk by removing gnuplot support,\n removing manual page support, and by adding -dSAFER to all\n ghostscript invocations.\n4. Sanity check the MVG image primitive filename argument to assure\n that \"magick:\" prefix strings will not be interpreted. Please note\n that this patch will break intentional uses of magick prefix\n strings in MVG and so some MVG scripts may fail. We will search\n for a more flexible solution.\n\n\nIn addition the following issues have been fixed:\n\n\n* [CVE-2015-8808](https://security-tracker.debian.org/tracker/CVE-2015-8808)\nAssure that GIF decoder does not use unitialized data and cause an\n out-of-bound read.\n* [CVE-2016-2317](https://security-tracker.debian.org/tracker/CVE-2016-2317) and\n [CVE-2016-2318](https://security-tracker.debian.org/tracker/CVE-2016-2318)\nVulnerabilities that allow to read or write outside memory bounds\n (heap, stack) as well as some null-pointer derreferences to cause a\n denial of service when parsing SVG files.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.16-1.1+deb7u1.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-484-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-484"
 		}
 	]
 }

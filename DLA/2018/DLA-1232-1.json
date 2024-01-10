@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1232-1",
-	"modified": "2023-06-28T06:22:56.596227Z",
+	"modified": "2024-01-09T20:30:51.263448Z",
 	"published": "2018-01-07T00:00:00Z",
 	"related": [
 		"CVE-2017-17558",
@@ -12,7 +12,6 @@
 		"CVE-2017-5754"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2017-5754](https://security-tracker.debian.org/tracker/CVE-2017-5754)\nMultiple researchers have discovered a vulnerability in Intel\n processors, enabling an attacker controlling an unprivileged\n process to read memory from arbitrary addresses, including from\n the kernel and all other processes running on the system.\n\n\nThis specific attack has been named Meltdown and is addressed in\n the Linux kernel for the Intel x86-64 architecture by a patch set\n named Kernel Page Table Isolation, enforcing a near complete\n separation of the kernel and userspace address maps and preventing\n the attack. This solution might have a performance impact, and can\n be disabled at boot time by passing `pti=off' to the kernel\n command line.\n* [CVE-2017-17558](https://security-tracker.debian.org/tracker/CVE-2017-17558)\nAndrey Konovalov reported that that USB core did not correctly\n handle some error conditions during initialisation. A physically\n present user with a specially designed USB device can use this to\n cause a denial of service (crash or memory corruption), or\n possibly for privilege escalation.\n* [CVE-2017-17741](https://security-tracker.debian.org/tracker/CVE-2017-17741)\nDmitry Vyukov reported that the KVM implementation for x86 would\n over-read data from memory when emulating an MMIO write if the\n kvm\\_mmio tracepoint was enabled. A guest virtual machine might be\n able to use this to cause a denial of service (crash).\n* [CVE-2017-17805](https://security-tracker.debian.org/tracker/CVE-2017-17805)\nIt was discovered that some implementations of the Salsa20 block\n cipher did not correctly handle zero-length input. A local user\n could use this to cause a denial of service (crash) or possibly\n have other security impact.\n* [CVE-2017-17806](https://security-tracker.debian.org/tracker/CVE-2017-17806)\nIt was discovered that the HMAC implementation could be used with\n an underlying hash algorithm that requires a key, which was not\n intended. A local user could use this to cause a denial of\n service (crash or memory corruption), or possibly for privilege\n escalation.\n* [CVE-2017-17807](https://security-tracker.debian.org/tracker/CVE-2017-17807)\nEric Biggers discovered that the KEYS subsystem lacked a check for\n write permission when adding keys to a process's default keyring.\n A local user could use this to cause a denial of service or to\n obtain sensitive information.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.96-3.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -108,12 +107,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1232-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1232"
 		}
 	]
 }

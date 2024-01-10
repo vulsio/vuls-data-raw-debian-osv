@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2805-1",
-	"modified": "2023-10-16T00:11:32.148413Z",
+	"modified": "2024-01-09T20:21:30.415531Z",
 	"published": "2013-11-27T00:00:00Z",
 	"related": [
 		"CVE-2013-4478",
 		"CVE-2013-4479"
 	],
 	"summary": "sup-mail - remote command injection",
-	"details": "\njoernchen of Phenoelit discovered two command injection flaws in Sup, a\nconsole-based email client. An attacker might execute arbitrary command \nif the user opens a maliciously crafted email.\n\n\n* [CVE-2013-4478](https://security-tracker.debian.org/tracker/CVE-2013-4478)\nSup wrongly handled the filename of attachments.\n* [CVE-2013-4479](https://security-tracker.debian.org/tracker/CVE-2013-4479)\nSup did not sanitize the content-type of attachments.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 0.11-2+nmu1+deb6u1.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.12.1+git20120407.aaa852f-1+deb7u1.\n\n\nWe recommend that you upgrade your sup-mail packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2805-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2805"
 		}
 	]
 }

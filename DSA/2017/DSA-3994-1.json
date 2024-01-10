@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3994-1",
-	"modified": "2023-10-16T00:12:33.133254Z",
+	"modified": "2024-01-09T20:27:09.049806Z",
 	"published": "2017-10-07T00:00:00Z",
 	"related": [
 		"CVE-2017-14604"
 	],
 	"summary": "nautilus - security update",
-	"details": "\nChristian BoxdĂśrfer discovered a vulnerability in the handling of\nFreeDesktop.org .desktop files in Nautilus, a file manager for the GNOME\ndesktop environment. An attacker can craft a .desktop file intended to run\nmalicious commands but displayed as a innocuous document file in Nautilus. An\nuser would then trust it and open the file, and Nautilus would in turn execute\nthe malicious content. Nautilus protection of only trusting .desktop files with\nexecutable permission can be bypassed by shipping the .desktop file inside a\ntarball.\n\n\nFor the oldstable distribution (jessie), this problem has not been fixed yet.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3.22.3-1+deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 3.26.0-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.26.0-1.\n\n\nWe recommend that you upgrade your nautilus packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3994-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3994"
 		}
 	]
 }

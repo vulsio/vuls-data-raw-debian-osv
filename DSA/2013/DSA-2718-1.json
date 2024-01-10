@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2718-1",
-	"modified": "2023-10-16T00:11:27.831210Z",
+	"modified": "2024-01-09T20:23:26.912435Z",
 	"published": "2013-07-01T00:00:00Z",
 	"related": [
 		"CVE-2013-2173",
@@ -14,7 +14,6 @@
 		"CVE-2013-2205"
 	],
 	"summary": "wordpress - several",
-	"details": "\nSeveral vulnerabilities were identified in WordPress, a web blogging\ntool. As the CVEs were allocated from releases announcements and\nspecific fixes are usually not identified, it has been decided to\nupgrade the wordpress package to the latest upstream version instead of\nbackporting the patches.\n\n\nThis means extra care should be taken when upgrading, especially when\nusing third-party plugins or themes, since compatibility may have been\nimpacted along the way. We recommend that users check their install\nbefore doing the upgrade.\n\n\n* [CVE-2013-2173](https://security-tracker.debian.org/tracker/CVE-2013-2173)\nA denial of service was found in the way WordPress performs hash\n computation when checking password for protected posts. An attacker\n supplying carefully crafted input as a password could make the\n platform use excessive CPU usage.\n* [CVE-2013-2199](https://security-tracker.debian.org/tracker/CVE-2013-2199)\nMultiple server-side requests forgery (SSRF) vulnerabilities were\n found in the HTTP API. This is related to\n [CVE-2013-0235](https://security-tracker.debian.org/tracker/CVE-2013-0235),\n which was specific to SSRF in pingback requests and was fixed in 3.5.1.\n* [CVE-2013-2200](https://security-tracker.debian.org/tracker/CVE-2013-2200)\nInadequate checking of a user's capabilities could lead to a\n privilege escalation, enabling them to publish posts when their\n user role should not allow for it and to assign posts to other\n authors.\n* [CVE-2013-2201](https://security-tracker.debian.org/tracker/CVE-2013-2201)\nMultiple cross-side scripting (XSS) vulnerabilities due to badly\n escaped input were found in the media files and plugins upload forms.\n* [CVE-2013-2202](https://security-tracker.debian.org/tracker/CVE-2013-2202)\nXML External Entity Injection (XXE) vulnerability via oEmbed\n responses.\n* [CVE-2013-2203](https://security-tracker.debian.org/tracker/CVE-2013-2203)\nA Full path disclosure (FPD) was found in the file upload mechanism.\n If the upload directory is not writable, the error message returned\n includes the full directory path.\n* [CVE-2013-2204](https://security-tracker.debian.org/tracker/CVE-2013-2204)\nContent spoofing via Flash applet in the embedded tinyMCE media\n plugin.\n* [CVE-2013-2205](https://security-tracker.debian.org/tracker/CVE-2013-2205)\nCross-domain XSS in the embedded SWFupload uploader.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 3.5.2+dfsg-1~deb6u1.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.5.2+dfsg-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 3.5.2+dfsg-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.5.2+dfsg-1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -85,12 +84,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2718-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2718"
 		}
 	]
 }

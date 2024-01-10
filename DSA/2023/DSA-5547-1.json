@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5547-1",
-	"modified": "2023-11-04T12:18:56.842613Z",
+	"modified": "2024-01-09T20:29:42.201863Z",
 	"published": "2023-11-04T00:00:00Z",
 	"related": [
 		"CVE-2023-41915"
 	],
 	"summary": "pmix - security update",
-	"details": "\nFrancois Diakhate reported that a race condition in pmix, a library\nimplementing Process Management Interface (PMI) Exascale API, could\nallow a malicious user to obtain ownership of an arbitrary file on the\nfilesystem when parts of the PMIx library are called by a process with\nelevated privileges, resulting in privilege escalation. This may\nhappen under the default configuration of certain workload managers,\nincluding Slurm.\n\n\nFor the oldstable distribution (bullseye), this problem has been fixed\nin version 4.0.0-4.1+deb11u1.\n\n\nFor the stable distribution (bookworm), this problem has been fixed in\nversion 4.2.2-1+deb12u1.\n\n\nWe recommend that you upgrade your pmix packages.\n\n\nFor the detailed security status of pmix please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/pmix](https://security-tracker.debian.org/tracker/pmix)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5547-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5547"
 		}
 	]
 }

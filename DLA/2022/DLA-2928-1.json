@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2928-1",
-	"modified": "2023-06-28T06:21:25.039272Z",
+	"modified": "2024-01-09T20:33:10.052444Z",
 	"published": "2022-02-26T00:00:00Z",
 	"related": [
 		"CVE-2021-40985",
@@ -9,7 +9,6 @@
 		"CVE-2022-0534"
 	],
 	"summary": "htmldoc - security update",
-	"details": "\nSeveral issues have been found in htmldoc, an HTML processor that\ngenerates indexed HTML, PS, and PDF.\n\n\n* [CVE-2022-0534](https://security-tracker.debian.org/tracker/CVE-2022-0534)\nA crafted GIF file could lead to a stack out-of-bounds read,\n which could result in a crash (segmentation fault).\n* [CVE-2021-43579](https://security-tracker.debian.org/tracker/CVE-2021-43579)\nConverting an HTML document, which links to a crafted BMP file,\n could lead to a stack-based buffer overflow, which could result\n in remote code execution.\n* [CVE-2021-40985](https://security-tracker.debian.org/tracker/CVE-2021-40985)\nA crafted BMP image could lead to a buffer overflow, which could\n cause a denial of service.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.8.27-8+deb9u2.\n\n\nWe recommend that you upgrade your htmldoc packages.\n\n\nFor the detailed security status of htmldoc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/htmldoc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2928-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2928"
 		}
 	]
 }

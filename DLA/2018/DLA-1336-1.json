@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1336-1",
-	"modified": "2023-06-28T06:20:33.763659Z",
-	"published": "2018-04-01T00:00:00Z",
+	"modified": "2024-01-09T20:31:02.982986Z",
+	"published": "2018-03-31T00:00:00Z",
 	"related": [
 		"CVE-2018-1000075",
 		"CVE-2018-1000076",
@@ -10,7 +10,6 @@
 		"CVE-2018-1000078"
 	],
 	"summary": "rubygems - security update",
-	"details": "\nMultiple vulnerabilities were found in rubygems, a package management framework\nfor Ruby. \n\n\n* [CVE-2018-1000075](https://security-tracker.debian.org/tracker/CVE-2018-1000075)\nA negative size vulnerability in ruby gem package tar header that could\n cause an infinite loop.\n* [CVE-2018-1000076](https://security-tracker.debian.org/tracker/CVE-2018-1000076)\nRuby gems package improperly verifies cryptographic signatures. A mis-signed\n gem could be installed if the tarball contains multiple gem signatures.\n* [CVE-2018-1000077](https://security-tracker.debian.org/tracker/CVE-2018-1000077)\nAn improper input validation vulnerability in ruby gems specification\n homepage attribute could allow malicious gem to set an invalid homepage\n URL.\n* [CVE-2018-1000078](https://security-tracker.debian.org/tracker/CVE-2018-1000078)\nCross Site Scripting (XSS) vulnerability in gem server display of homepage\n attribute\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8.24-1+deb7u2.\n\n\nWe recommend that you upgrade your rubygems packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1336-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1336"
 		}
 	]
 }

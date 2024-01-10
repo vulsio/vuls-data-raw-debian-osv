@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3832-1",
-	"modified": "2023-10-16T00:12:20.811300Z",
+	"modified": "2024-01-09T20:28:21.716879Z",
 	"published": "2017-04-20T00:00:00Z",
 	"related": [
 		"CVE-2017-5373",
@@ -23,7 +23,6 @@
 		"CVE-2017-5410"
 	],
 	"summary": "icedove - security update",
-	"details": "\nMultiple security issues have been found in Thunderbird, which may may\nlead to the execution of arbitrary code or information leaks.\n\n\nWith this update, the Icedove packages are de-branded back to the official\nMozilla branding. With the removing of the Debian branding the packages\nare also renamed back to the official names used by Mozilla.\n\n\nThe Thunderbird package is using a different default profile folder,\nthe default profile folder is now `'\\$(HOME)/.thunderbird'`.\nThe users profile folder, that was used in Icedove, will get migrated\nto the new profile folder on the first start, that can take a little bit\nmore time.\n\n\nPlease read README.Debian for getting more information about the\nchanges.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1:45.8.0-3~deb8u1.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -129,12 +128,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3832-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3832"
 		}
 	]
 }

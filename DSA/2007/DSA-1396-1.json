@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1396-1",
-	"modified": "2023-10-16T00:10:23.329853Z",
+	"modified": "2024-01-09T20:24:39.203733Z",
 	"published": "2007-10-27T00:00:00Z",
 	"related": [
 		"CVE-2007-1095",
@@ -15,7 +15,6 @@
 		"CVE-2007-5340"
 	],
 	"summary": "iceweasel",
-	"details": "\n# Translators: this is nearly a copy of DSA 1392\n\nSeveral remote vulnerabilities have been discovered in the Iceweasel web\nbrowser, an unbranded version of the Firefox browser. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n\n* [CVE-2007-1095](https://security-tracker.debian.org/tracker/CVE-2007-1095)\n\n Michal Zalewski discovered that the unload event handler had access to\n the address of the next page to be loaded, which could allow information\n disclosure or spoofing.\n* [CVE-2007-2292](https://security-tracker.debian.org/tracker/CVE-2007-2292)\n\n Stefano Di Paola discovered that insufficient validation of user names\n used in Digest authentication on a web site allows HTTP response splitting\n attacks.\n* [CVE-2007-3511](https://security-tracker.debian.org/tracker/CVE-2007-3511)\n\n It was discovered that insecure focus handling of the file upload\n control can lead to information disclosure. This is a variant of\n [CVE-2006-2894](https://security-tracker.debian.org/tracker/CVE-2006-2894).\n* [CVE-2007-5334](https://security-tracker.debian.org/tracker/CVE-2007-5334)\n\n Eli Friedman discovered that web pages written in Xul markup can hide the\n titlebar of windows, which can lead to spoofing attacks.\n* [CVE-2007-5337](https://security-tracker.debian.org/tracker/CVE-2007-5337)\n\n Georgi Guninski discovered the insecure handling of smb:// and sftp:// URI\n schemes may lead to information disclosure. This vulnerability is only\n exploitable if Gnome-VFS support is present on the system.\n* [CVE-2007-5338](https://security-tracker.debian.org/tracker/CVE-2007-5338)\n\nmoz\\_bug\\_r\\_a4 discovered that the protection scheme offered by XPCNativeWrappers\n could be bypassed, which might allow privilege escalation.\n* [CVE-2007-5339](https://security-tracker.debian.org/tracker/CVE-2007-5339)\n\n L. David Baron, Boris Zbarsky, Georgi Guninski, Paul Nickerson, Olli Pettay,\n Jesse Ruderman, Vladimir Sukhoy, Daniel Veditz, and Martijn Wargers discovered\n crashes in the layout engine, which might allow the execution of arbitrary code.\n* [CVE-2007-5340](https://security-tracker.debian.org/tracker/CVE-2007-5340)\n\n Igor Bukanov, Eli Friedman, and Jesse Ruderman discovered crashes in the\n JavaScript engine, which might allow the execution of arbitrary code.\n\n\n\nThe Mozilla products in the oldstable distribution (sarge) are no longer\nsupported with security updates.\n\n\n\n\nFor the stable distribution (etch) these problems have been fixed in version\n2.0.0.6+2.0.0.8-0etch1. Builds for arm and sparc will be provided later.\n\n\n\n\nFor the unstable distribution (sid) these problems have been fixed in version\n2.0.0.8-1.\n\n\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1396-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1396"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2993-1",
-	"modified": "2023-10-16T00:06:09.631536Z",
+	"modified": "2024-01-09T20:21:43.089127Z",
 	"published": "2014-07-31T00:00:00Z",
 	"related": [
 		"CVE-2014-5117"
 	],
 	"summary": "tor - security update",
-	"details": "\nSeveral issues have been discovered in Tor, a connection-based\nlow-latency anonymous communication system, resulting in information\nleaks.\n\n\n* Relay-early cells could be used by colluding relays on the network to\n tag user circuits and so deploy traffic confirmation attacks\n [[CVE-2014-5117](https://security-tracker.debian.org/tracker/CVE-2014-5117)]. The updated version emits a warning and drops the\n circuit upon receiving inbound relay-early cells, preventing this\n specific kind of attack. Please consult the following advisory for\n more details about this issue:\n\n\n[\\\n https://blog.torproject.org/blog/tor-security-advisory-relay-early-traffic-confirmation-attack](https://blog.torproject.org/blog/tor-security-advisory-relay-early-traffic-confirmation-attack)\n* A bug in the bounds-checking in the 32-bit curve25519-donna\n implementation could cause incorrect results on 32-bit\n implementations when certain malformed inputs were used along with a\n small class of private ntor keys. This flaw does not currently\n appear to allow an attacker to learn private keys or impersonate a\n Tor server, but it could provide a means to distinguish 32-bit Tor\n implementations from 64-bit Tor implementations.\n\n\nThe following additional security-related improvements have been\nimplemented:\n\n\n* As a client, the new version will effectively stop using CREATE\\_FAST\n cells. While this adds computational load on the network, this\n approach can improve security on connections where Tor's circuit\n handshake is stronger than the available TLS connection security\n levels.\n* Prepare clients to use fewer entry guards by honoring the consensus\n parameters. The following article provides some background:\n\n\n[\\\n https://blog.torproject.org/blog/improving-tors-anonymity-changing-guard-parameters](https://blog.torproject.org/blog/improving-tors-anonymity-changing-guard-parameters)\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.2.4.23-1~deb7u1.\n\n\nFor the testing distribution (jessie) and the unstable distribution\n(sid), these problems have been fixed in version 0.2.4.23-1.\n\n\nFor the experimental distribution, these problems have been fixed in\nversion 0.2.5.6-alpha-1.\n\n\nWe recommend that you upgrade your tor packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,12 +58,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2993-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2993"
 		}
 	]
 }

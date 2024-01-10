@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2708-1",
-	"modified": "2023-06-28T06:30:14.306571Z",
+	"modified": "2024-01-09T20:32:52.735566Z",
 	"published": "2021-07-15T00:00:00Z",
 	"related": [
 		"CVE-2019-18218",
@@ -11,7 +11,6 @@
 		"CVE-2021-21705"
 	],
 	"summary": "php7.0 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in php5, a server-side,\nHTML-embedded scripting language. An attacker could cause denial of\nservice (DoS), memory corruption and potentially execution of\narbitrary code, and server-side request forgery (SSRF) bypass.\n\n\n* [CVE-2019-18218](https://security-tracker.debian.org/tracker/CVE-2019-18218)\nfileinfo: cdf\\_read\\_property\\_info in cdf.c does not restrict the\n number of CDF\\_VECTOR elements, which allows a heap-based buffer\n overflow (4-byte out-of-bounds write).\n* [CVE-2020-7071](https://security-tracker.debian.org/tracker/CVE-2020-7071)\nWhen validating URL with functions like filter\\_var($url,\n FILTER\\_VALIDATE\\_URL), PHP will accept an URL with invalid password\n as valid URL. This may lead to functions that rely on URL being\n valid to mis-parse the URL and produce wrong data as components of\n the URL.\n* [CVE-2021-21702](https://security-tracker.debian.org/tracker/CVE-2021-21702)\nWhen using SOAP extension to connect to a SOAP server, a malicious\n SOAP server could return malformed XML data as a response that\n would cause PHP to access a null pointer and thus cause a crash.\n* [CVE-2021-21704](https://security-tracker.debian.org/tracker/CVE-2021-21704)\nMultiple firebird issues.\n* [CVE-2021-21705](https://security-tracker.debian.org/tracker/CVE-2021-21705)\nSSRF bypass in FILTER\\_VALIDATE\\_URL.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n7.0.33-0+deb9u11.\n\n\nWe recommend that you upgrade your php7.0 packages.\n\n\nFor the detailed security status of php7.0 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/php7.0>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2708-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2708"
 		}
 	]
 }

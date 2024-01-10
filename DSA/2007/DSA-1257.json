@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1257",
-	"modified": "2023-10-16T00:06:32.794577Z",
+	"modified": "2024-01-09T20:24:20.243221Z",
 	"published": "2007-02-05T00:00:00Z",
 	"related": [
 		"CVE-2007-0452",
 		"CVE-2007-0454"
 	],
 	"summary": "samba",
-	"details": "\nSeveral remote vulnerabilities have been discovered in samba, a free\nimplementation of the SMB/CIFS protocol, which may lead to the execution\nof arbitrary code or denial of service. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2007-0452](https://security-tracker.debian.org/tracker/CVE-2007-0452)\nIt was discovered that incorrect handling of deferred file open calls\n may lead to an infinite loop, which results in denial of service.\n* [CVE-2007-0454](https://security-tracker.debian.org/tracker/CVE-2007-0454)\n\"zybadawg333\" discovered that the AFS ACL mapping VFS plugin performs\n insecure format string handling, which may lead to the execution of\n arbitrary code.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 3.0.14a-3sarge4.\n\n\nFor the upcoming stable distribution (etch) these problems have been\nfixed in version 3.0.23d-5.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.0.23d-5.\n\n\nWe recommend that you upgrade your samba package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1257.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1257"
 		}
 	]
 }

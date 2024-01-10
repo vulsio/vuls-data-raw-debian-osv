@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3628-1",
-	"modified": "2023-10-16T00:12:11.126543Z",
+	"modified": "2024-01-09T20:21:57.325675Z",
 	"published": "2016-07-25T00:00:00Z",
 	"related": [
 		"CVE-2016-1238",
 		"CVE-2016-6185"
 	],
 	"summary": "perl - security update",
-	"details": "\nMultiple vulnerabilities were discovered in the implementation of the\nPerl programming language. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2016-1238](https://security-tracker.debian.org/tracker/CVE-2016-1238)\nJohn Lightsey and Todd Rinaldo reported that the opportunistic\n loading of optional modules can make many programs unintentionally\n load code from the current working directory (which might be changed\n to another directory without the user realising) and potentially\n leading to privilege escalation, as demonstrated in Debian with\n certain combinations of installed packages.\n\n\nThe problem relates to Perl loading modules from the includes\n directory array (\"@INC\") in which the last element is the current\n directory (\".\"). That means that, when perl wants to load a module\n (during first compilation or during lazy loading of a module in run\n time), perl will look for the module in the current directory at the\n end, since '.' is the last include directory in its array of include\n directories to seek. The issue is with requiring libraries that are\n in \".\" but are not otherwise installed.\n\n\nWith this update several modules which are known to be vulnerable\n are updated to not load modules from current directory.\n\n\nAdditionally the update allows configurable removal of \".\" from @INC\n in /etc/perl/sitecustomize.pl for a transitional period. It is\n recommended to enable this setting if the possible breakage for a\n specific site has been evaluated. Problems in packages provided in\n Debian resulting from the switch to the removal of '.' from @INC\n should be reported to the Perl maintainers at\n perl@packages.debian.org .\n\n\nIt is planned to switch to the default removal of '.' in @INC in a\n subsequent update to perl via a point release if possible, and in\n any case for the upcoming stable release Debian 9 (stretch).\n* [CVE-2016-6185](https://security-tracker.debian.org/tracker/CVE-2016-6185)\nIt was discovered that XSLoader, a core module from Perl to\n dynamically load C libraries into Perl code, could load shared\n library from incorrect location. XSLoader uses caller() information\n to locate the .so file to load. This can be incorrect if\n XSLoader::load() is called in a string eval. An attacker can take\n advantage of this flaw to execute arbitrary code.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 5.20.2-3+deb8u6. Additionally this update includes the\nfollowing updated packages to address optional module loading\nvulnerabilities related to [CVE-2016-1238](https://security-tracker.debian.org/tracker/CVE-2016-1238),\nor to address build failures which occur when '.' is removed from @INC:\n\n\n* cdbs 0.4.130+deb8u1\n* debhelper 9.20150101+deb8u2\n* devscripts 2.15.3+deb8u12\n* exim4 4.84.2-2+deb8u12\n* libintl-perl 1.23-1+deb8u12\n* libmime-charset-perl 1.011.1-1+deb8u22\n* libmime-encwords-perl 1.014.3-1+deb8u12\n* libmodule-build-perl 0.421000-2+deb8u12\n* libnet-dns-perl 0.81-2+deb8u12\n* libsys-syslog-perl 0.33-1+deb8u12\n* libunicode-linebreak-perl 0.0.20140601-2+deb8u22\n\n\nWe recommend that you upgrade your perl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3628-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3628"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1954-1",
-	"modified": "2023-06-28T06:25:01.764009Z",
+	"modified": "2024-01-09T20:31:52.635615Z",
 	"published": "2019-10-10T00:00:00Z",
 	"related": [
 		"CVE-2019-0193"
 	],
 	"summary": "lucene-solr - security update",
-	"details": "\nA security vulnerability was discovered in lucene-solr, an enterprise\nsearch server.\n\n\nThe DataImportHandler, an optional but popular module to pull in data\nfrom databases and other sources, has a feature in which the whole DIH\nconfiguration can come from a request's dataConfig parameter. The\ndebug mode of the DIH admin screen uses this to allow convenient\ndebugging / development of a DIH config. Since a DIH config can contain\nscripts, this parameter is a security risk. Starting from now on, use\nof this parameter requires setting the Java System property\nenable.dih.dataConfigParam to true. For example this can be achieved\nwith solr-tomcat by adding -Denable.dih.dataConfigParam=true to\nJAVA\\_OPTS in /etc/default/tomcat7.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.6.2+dfsg-5+deb8u3.\n\n\nWe recommend that you upgrade your lucene-solr packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1954-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1954"
 		}
 	]
 }

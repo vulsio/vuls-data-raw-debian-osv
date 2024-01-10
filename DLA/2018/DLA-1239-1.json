@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1239-1",
-	"modified": "2023-06-28T06:20:31.078032Z",
+	"modified": "2024-01-09T20:30:52.255545Z",
 	"published": "2018-01-10T00:00:00Z",
 	"related": [
 		"CVE-2014-0350",
 		"CVE-2017-1000472"
 	],
 	"summary": "poco - security update",
-	"details": "\nThe ZipCommon::isValidPath() function in Zip/src/ZipCommon.cpp in POCO \nC++ Libraries before 1.8 does not properly restrict the filename value \nin the ZIP header, which allows attackers to conduct absolute path \ntraversal attacks during the ZIP decompression, and possibly create or \noverwrite arbitrary files, via a crafted ZIP file, related to a file \npath injection vulnerability.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.6p1-4+deb7u1.\n\n\nWe recommend that you upgrade your poco packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1239-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1239"
 		}
 	]
 }

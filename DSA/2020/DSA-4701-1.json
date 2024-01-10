@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4701-1",
-	"modified": "2023-10-16T00:25:19.425773Z",
+	"modified": "2024-01-09T20:28:59.795788Z",
 	"published": "2020-06-11T00:00:00Z",
 	"related": [
 		"CVE-2020-0543",
@@ -9,7 +9,6 @@
 		"CVE-2020-0549"
 	],
 	"summary": "intel-microcode - security update",
-	"details": "\nThis update ships updated CPU microcode for some types of Intel CPUs and\nprovides mitigations for the Special Register Buffer Data Sampling\n([CVE-2020-0543](https://security-tracker.debian.org/tracker/CVE-2020-0543)),\nVector Register Sampling\n([CVE-2020-0548](https://security-tracker.debian.org/tracker/CVE-2020-0548))\nand L1D Eviction Sampling\n([CVE-2020-0549](https://security-tracker.debian.org/tracker/CVE-2020-0549))\nhardware vulnerabilities.\n\n\nThe microcode update for HEDT and Xeon CPUs with signature 0x50654 which\nwas reverted in DSA 4565-2 is now included again with a fixed release.\n\n\nThe upstream update for Skylake-U/Y (signature 0x406e3) had to be\nexcluded from this update due to reported hangs on boot.\n\n\nFor details refer to\n[\\\nhttps://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00320.html](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00320.html),\n[\\\nhttps://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00329.html](https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00329.html)\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 3.20200609.2~deb9u1.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 3.20200609.2~deb10u1.\n\n\nWe recommend that you upgrade your intel-microcode packages.\n\n\nFor the detailed security status of intel-microcode please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/intel-microcode](https://security-tracker.debian.org/tracker/intel-microcode)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -335,12 +334,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4701-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2020/dsa-4701"
 		}
 	]
 }

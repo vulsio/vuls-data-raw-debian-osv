@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-75-1",
-	"modified": "2023-06-28T06:27:18.537397Z",
+	"modified": "2024-01-09T20:33:56.797443Z",
 	"published": "2014-10-22T00:00:00Z",
 	"related": [
 		"CVE-2013-2162",
@@ -9,7 +9,6 @@
 		"CVE-2014-4274"
 	],
 	"summary": "mysql-5.1 - security update",
-	"details": "\nThis update fixes one important vulnerability ([CVE-2014-4274](https://security-tracker.debian.org/tracker/CVE-2014-4274)) and batches\ntogether two other minor fixes ([CVE-2013-2162](https://security-tracker.debian.org/tracker/CVE-2013-2162), [CVE-2014-0001](https://security-tracker.debian.org/tracker/CVE-2014-0001)).\n\n\n* [CVE-2014-4274](https://security-tracker.debian.org/tracker/CVE-2014-4274)\nInsecure handling of a temporary file that could lead to execution\n of arbitrary code through the creation of a mysql configuration file\n pointing to an attacker-controlled plugin\\_dir.\n* [CVE-2013-2162](https://security-tracker.debian.org/tracker/CVE-2013-2162)\nInsecure creation of the debian.cnf credential file. Credentials could\n be stolen by a local user monitoring that file while the package gets\n installed.\n* [CVE-2014-0001](https://security-tracker.debian.org/tracker/CVE-2014-0001)\nBuffer overrun in the MySQL client when the server sends a version\n string that is too big for the allocated buffer.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in mysql-5.1 version 5.1.73-1+deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-75-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-75"
 		}
 	]
 }

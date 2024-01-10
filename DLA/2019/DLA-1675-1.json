@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1675-1",
-	"modified": "2023-06-28T06:20:53.567773Z",
+	"modified": "2024-01-09T20:31:33.438885Z",
 	"published": "2019-02-14T00:00:00Z",
 	"related": [
 		"CVE-2019-6690"
 	],
 	"summary": "python-gnupg - security update",
-	"details": "\nAlexander KjĂ¤ll and Stig Palmquist discovered a vulnerability in\npython-gnupg, a wrapper around GNU Privacy Guard. It was possible to\ninject data through the passphrase property of the gnupg.GPG.encrypt()\nand gnupg.GPG.decrypt() functions when symmetric encryption is used.\nThe supplied passphrase is not validated for newlines, and the library\npasses --passphrase-fd=0 to the gpg executable, which expects the\npassphrase on the first line of stdin, and the ciphertext to be\ndecrypted or plaintext to be encrypted on subsequent lines.\n\n\nBy supplying a passphrase containing a newline an attacker can\ncontrol/modify the ciphertext/plaintext being decrypted/encrypted.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n0.3.6-1+deb8u1.\n\n\nWe recommend that you upgrade your python-gnupg packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1675-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1675"
 		}
 	]
 }

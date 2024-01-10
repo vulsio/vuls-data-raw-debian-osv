@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-198-1",
-	"modified": "2023-06-28T06:25:02.999523Z",
-	"published": "2015-04-22T00:00:00Z",
+	"modified": "2024-01-09T20:31:53.874295Z",
+	"published": "2015-04-14T00:00:00Z",
 	"related": [
 		"CVE-2014-6422",
 		"CVE-2014-6423",
@@ -23,7 +23,6 @@
 		"CVE-2015-2191"
 	],
 	"summary": "wireshark - security update",
-	"details": "\nThe following vulnerabilities were discovered in the Squeeze's Wireshark\nversion:\n\n\n* [CVE-2015-2188](https://security-tracker.debian.org/tracker/CVE-2015-2188) The WCP dissector could crash\n* [CVE-2015-0564](https://security-tracker.debian.org/tracker/CVE-2015-0564) Wireshark could crash while decypting TLS/SSL sessions\n* [CVE-2015-0562](https://security-tracker.debian.org/tracker/CVE-2015-0562) The DEC DNA Routing Protocol dissector could crash\n* [CVE-2014-8714](https://security-tracker.debian.org/tracker/CVE-2014-8714) TN5250 infinite loops\n* [CVE-2014-8713](https://security-tracker.debian.org/tracker/CVE-2014-8713) NCP crashes\n* [CVE-2014-8712](https://security-tracker.debian.org/tracker/CVE-2014-8712) NCP crashes\n* [CVE-2014-8711](https://security-tracker.debian.org/tracker/CVE-2014-8711) AMQP crash\n* [CVE-2014-8710](https://security-tracker.debian.org/tracker/CVE-2014-8710) SigComp UDVM buffer overflow\n* [CVE-2014-6432](https://security-tracker.debian.org/tracker/CVE-2014-6432) Sniffer file parser crash\n* [CVE-2014-6431](https://security-tracker.debian.org/tracker/CVE-2014-6431) Sniffer file parser crash\n* [CVE-2014-6430](https://security-tracker.debian.org/tracker/CVE-2014-6430) Sniffer file parser crash\n* [CVE-2014-6429](https://security-tracker.debian.org/tracker/CVE-2014-6429) Sniffer file parser crash\n* [CVE-2014-6428](https://security-tracker.debian.org/tracker/CVE-2014-6428) SES dissector crash\n* [CVE-2014-6423](https://security-tracker.debian.org/tracker/CVE-2014-6423) MEGACO dissector infinite loop\n* [CVE-2014-6422](https://security-tracker.debian.org/tracker/CVE-2014-6422) RTP dissector crash\n\n\nSince back-porting upstream patches to 1.2.11-6+squeeze15 did not fix\nall the outstanding issues and some issues are not even tracked publicly\nthe LTS Team decided to sync squeeze-lts's wireshark package with\nwheezy-security to provide the best possible security support.\n\n\nNote that upgrading Wireshark from 1.2.x to 1.8.x introduces\nseveral backward-incompatible changes in package structure, shared\nlibrary API/ABI, availability of dissectors and in syntax of command\nline parameters.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -109,12 +108,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-198-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-198"
 		}
 	]
 }

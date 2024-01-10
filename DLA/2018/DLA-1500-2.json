@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1500-2",
-	"modified": "2023-06-28T06:20:45.646300Z",
-	"published": "2018-09-10T00:00:00Z",
+	"modified": "2024-01-09T20:31:18.326912Z",
+	"published": "2018-09-12T00:00:00Z",
 	"summary": "openssh - regression update",
-	"details": "\nSeveral vulnerabilities have been found in OpenSSH, a free implementation\nof the SSH protocol suite:\n\n\n* [CVE-2015-5352](https://security-tracker.debian.org/tracker/CVE-2015-5352)\nOpenSSH incorrectly verified time window deadlines for X connections.\n Remote attackers could take advantage of this flaw to bypass intended\n access restrictions. Reported by Jann Horn.\n* [CVE-2015-5600](https://security-tracker.debian.org/tracker/CVE-2015-5600)\nOpenSSH improperly restricted the processing of keyboard-interactive\n devices within a single connection, which could allow remote attackers\n to perform brute-force attacks or cause a denial of service, in a\n non-default configuration.\n* [CVE-2015-6563](https://security-tracker.debian.org/tracker/CVE-2015-6563)\nOpenSSH incorrectly handled usernames during PAM authentication. In\n conjunction with an additional flaw in the OpenSSH unprivileged child\n process, remote attackers could make use if this issue to perform user\n impersonation. Discovered by Moritz Jodeit.\n* [CVE-2015-6564](https://security-tracker.debian.org/tracker/CVE-2015-6564)\nMoritz Jodeit discovered a use-after-free flaw in PAM support in\n OpenSSH, that could be used by remote attackers to bypass\n authentication or possibly execute arbitrary code.\n* [CVE-2016-1908](https://security-tracker.debian.org/tracker/CVE-2016-1908)\nOpenSSH mishandled untrusted X11 forwarding when the X server disables\n the SECURITY extension. Untrusted connections could obtain trusted X11\n forwarding privileges. Reported by Thomas Hoger.\n* [CVE-2016-3115](https://security-tracker.debian.org/tracker/CVE-2016-3115)\nOpenSSH improperly handled X11 forwarding data related to\n authentication credentials. Remote authenticated users could make use\n of this flaw to bypass intended shell-command restrictions. Identified\n by github.com/tintinweb.\n* [CVE-2016-6515](https://security-tracker.debian.org/tracker/CVE-2016-6515)\nOpenSSH did not limit password lengths for password authentication.\n Remote attackers could make use of this flaw to cause a denial of\n service via long strings.\n* [CVE-2016-10009](https://security-tracker.debian.org/tracker/CVE-2016-10009)\nJann Horn discovered an untrusted search path vulnerability in\n ssh-agent allowing remote attackers to execute arbitrary local\n PKCS#11 modules by leveraging control over a forwarded agent-socket.\n* [CVE-2016-10011](https://security-tracker.debian.org/tracker/CVE-2016-10011)\nJann Horn discovered that OpenSSH did not properly consider the\n effects of realloc on buffer contents. This may allow local users to\n obtain sensitive private-key information by leveraging access to a\n privilege-separated child process.\n* [CVE-2016-10012](https://security-tracker.debian.org/tracker/CVE-2016-10012)\nGuido Vranken discovered that the OpenSSH shared memory manager\n did not ensure that a bounds check was enforced by all compilers,\n which could allow local users to gain privileges by leveraging access\n to a sandboxed privilege-separation process.\n* [CVE-2016-10708](https://security-tracker.debian.org/tracker/CVE-2016-10708)\nNULL pointer dereference and daemon crash via an out-of-sequence\n NEWKEYS message.\n* [CVE-2017-15906](https://security-tracker.debian.org/tracker/CVE-2017-15906)\nMichal Zalewski reported that OpenSSH improperly prevent write\n operations in readonly mode, allowing attackers to create zero-length\n files.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:6.7p1-5+deb8u6.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1500-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1500"
 		}
 	]
 }

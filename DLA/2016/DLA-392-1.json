@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-392-1",
-	"modified": "2023-06-28T06:25:33.172803Z",
+	"modified": "2024-01-09T20:33:46.070846Z",
 	"published": "2016-01-17T00:00:00Z",
 	"related": [
 		"CVE-2015-8770"
 	],
 	"summary": "roundcube - security update",
-	"details": "\nHigh-Tech Bridge Security Research Lab discovered a path traversal\nvulnerability in a popular webmail client Roundcube. Vulnerability can be\nexploited to gain access to sensitive information and under certain\ncircumstances to execute arbitrary code and totally compromise the vulnerable\nserver.\n\n\nThe vulnerability exists due to insufficient sanitization of \\_skin HTTP POST\nparameter in \"/index.php\" script when changing between different skins of the\nweb application. A remote authenticated attacker can use path traversal\nsequences (e.g. \"../../\") to load a new skin from arbitrary location on the\nsystem, readable by the webserver.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-392-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-392"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2031-1",
-	"modified": "2023-06-28T06:21:09.363054Z",
+	"modified": "2024-01-09T20:31:57.155158Z",
 	"published": "2019-12-10T00:00:00Z",
 	"related": [
 		"CVE-2019-12211",
 		"CVE-2019-12213"
 	],
 	"summary": "freeimage - security update",
-	"details": "\nIt was found that freeimage, a graphics library, was affected by the following\ntwo security issues:\n\n\n* [CVE-2019-12211](https://security-tracker.debian.org/tracker/CVE-2019-12211)\nHeap buffer overflow caused by invalid memcpy in PluginTIFF. This flaw\n might be leveraged by remote attackers to trigger denial of service or any\n other unspecified impact via crafted TIFF data.\n* [CVE-2019-12213](https://security-tracker.debian.org/tracker/CVE-2019-12213)\nStack exhaustion caused by unwanted recursion in PluginTIFF. This flaw\n might be leveraged by remote attackers to trigger denial of service via\n crafted TIFF data.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.15.4-4.2+deb8u2.\n\n\nWe recommend that you upgrade your freeimage packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2031-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2031"
 		}
 	]
 }

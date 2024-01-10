@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-779-1",
-	"modified": "2023-06-28T06:43:15.738774Z",
+	"modified": "2024-01-09T20:33:57.887837Z",
 	"published": "2017-01-10T00:00:00Z",
 	"related": [
 		"CVE-2016-8745"
 	],
 	"summary": "tomcat7 - security update",
-	"details": "\nA bug in the error handling of the send file code for the NIO HTTP\nconnector resulted in the current Processor object being added to the\nProcessor cache multiple times. This in turn meant that the same\nProcessor could be used for concurrent requests. Sharing a Processor\ncan result in information leakage between requests including, not\nlimited to, session ID and the response body.\n\n\nIn addition this update also addresses a regression when running\nTomcat 7 with SecurityManager enabled due to an incomplete fix for\n[CVE-2016-6816](https://security-tracker.debian.org/tracker/CVE-2016-6816).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n7.0.28-4+deb7u9.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-779-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-779"
 		}
 	]
 }

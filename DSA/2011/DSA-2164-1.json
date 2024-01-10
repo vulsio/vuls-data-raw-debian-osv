@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2164-1",
-	"modified": "2023-10-16T00:11:00.733759Z",
+	"modified": "2024-01-09T20:25:37.747572Z",
 	"published": "2011-02-16T00:00:00Z",
 	"related": [
 		"CVE-2011-0721"
 	],
 	"summary": "shadow - missing input sanitization",
-	"details": "\nKees Cook discovered that the chfn and chsh utilities do not properly\nsanitize user input that includes newlines. An attacker could use this\nto corrupt passwd entries and may create users or groups in NIS\nenvironments.\n\n\nPackages in the oldstable distribution (lenny) are not affected by this\nproblem.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:4.1.4.2+svn3283-2+squeeze1.\n\n\nFor the testing (wheezy) and unstable (sid) distributions, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your shadow packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2164-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2164"
 		}
 	]
 }

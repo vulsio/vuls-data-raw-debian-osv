@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-617-1",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-12-24T00:00:00Z",
 	"published": "2004-12-24T00:00:00Z",
 	"related": [
 		"CVE-2004-1308"
 	],
 	"summary": "libtiff - insufficient input validation",
-	"details": "\n\"infamous41md\" discovered a problem in libtiff, the Tag Image File\nFormat library for processing TIFF graphics files. Upon reading a\nTIFF file it is possible to allocate a zero sized buffer and write to\nit which would lead to the execution of arbitrary code.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 3.5.5-6.woody3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 3.6.1-4.\n\n\nWe recommend that you upgrade your libtiff packages immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-617-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-617"
 		}
 	]
 }

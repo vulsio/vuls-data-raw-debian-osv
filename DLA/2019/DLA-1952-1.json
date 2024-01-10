@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1952-1",
-	"modified": "2023-06-28T06:25:01.755596Z",
+	"modified": "2024-01-09T20:31:52.510644Z",
 	"published": "2019-10-09T00:00:00Z",
 	"related": [
 		"CVE-2019-17041",
 		"CVE-2019-17042"
 	],
 	"summary": "rsyslog - security update",
-	"details": "\nIt was discovered that there were two vulnerabilities in the rsyslog\nsystem/kernel logging daemon in the parsers for AIX and Cisco log\nmessages respectfully.\n\n\n* [CVE-2019-17041](https://security-tracker.debian.org/tracker/CVE-2019-17041)\nAn issue was discovered in Rsyslog v8.1908.0.\n contrib/pmaixforwardedfrom/pmaixforwardedfrom.c has a heap overflow in the\n parser for AIX log messages. The parser tries to locate a log message\n delimiter (in this case, a space or a colon) but fails to account for\n strings that do not satisfy this constraint. If the string does not match,\n then the variable lenMsg will reach the value zero and will skip the sanity\n check that detects invalid log messages. The message will then be\n considered valid, and the parser will eat up the nonexistent colon\n delimiter. In doing so, it will decrement lenMsg, a signed integer, whose\n value was zero and now becomes minus one. The following step in the parser\n is to shift left the contents of the message. To do this, it will call\n memmove with the right pointers to the target and destination strings, but\n the lenMsg will now be interpreted as a huge value, causing a heap\n overflow.\n* [CVE-2019-17042](https://security-tracker.debian.org/tracker/CVE-2019-17042)\nAn issue was discovered in Rsyslog v8.1908.0.\n contrib/pmcisconames/pmcisconames.c has a heap overflow in the parser for\n Cisco log messages. The parser tries to locate a log message delimiter (in\n this case, a space or a colon), but fails to account for strings that do\n not satisfy this constraint. If the string does not match, then the\n variable lenMsg will reach the value zero and will skip the sanity check\n that detects invalid log messages. The message will then be considered\n valid, and the parser will eat up the nonexistent colon delimiter. In doing\n so, it will decrement lenMsg, a signed integer, whose value was zero and\n now becomes minus one. The following step in the parser is to shift left\n the contents of the message. To do this, it will call memmove with the\n right pointers to the target and destination strings, but the lenMsg will\n now be interpreted as a huge value, causing a heap overflow.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n8.4.2-1+deb8u3.\n\n\nWe recommend that you upgrade your rsyslog packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1952-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1952"
 		}
 	]
 }

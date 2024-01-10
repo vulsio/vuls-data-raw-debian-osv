@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3140-1",
-	"modified": "2023-10-16T00:06:13.833197Z",
+	"modified": "2024-01-09T20:28:01.309892Z",
 	"published": "2015-01-27T00:00:00Z",
 	"related": [
 		"CVE-2014-8594",
@@ -11,7 +11,6 @@
 		"CVE-2014-9030"
 	],
 	"summary": "xen - security update",
-	"details": "\nMultiple security issues have been discovered in the Xen virtualisation\nsolution which may result in denial of service, information disclosure\nor privilege escalation.\n\n\n* [CVE-2014-8594](https://security-tracker.debian.org/tracker/CVE-2014-8594)\nRoger Pau Monne and Jan Beulich discovered that incomplete\n restrictions on MMU update hypercalls may result in privilege\n escalation.\n* [CVE-2014-8595](https://security-tracker.debian.org/tracker/CVE-2014-8595)\nJan Beulich discovered that missing privilege level checks in the\n x86 emulation of far branches may result in privilege escalation.\n* [CVE-2014-8866](https://security-tracker.debian.org/tracker/CVE-2014-8866)\nJan Beulich discovered that an error in compatibility mode hypercall\n argument translation may result in denial of service.\n* [CVE-2014-8867](https://security-tracker.debian.org/tracker/CVE-2014-8867)\nJan Beulich discovered that an insufficient restriction in\n acceleration support for the REP MOVS instruction may result in\n denial of service.\n* [CVE-2014-9030](https://security-tracker.debian.org/tracker/CVE-2014-9030)\nAndrew Cooper discovered a page reference leak in MMU\\_MACHPHYS\\_UPDATE\n handling, resulting in denial of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.1.4-3+deb7u4.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 4.4.1-4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.4.1-4.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3140-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3140"
 		}
 	]
 }

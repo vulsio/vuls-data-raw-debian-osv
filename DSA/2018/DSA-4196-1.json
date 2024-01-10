@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4196-1",
-	"modified": "2023-10-16T00:05:00.640811Z",
+	"modified": "2024-01-09T20:26:19.029541Z",
 	"published": "2018-05-08T00:00:00Z",
 	"related": [
 		"CVE-2018-1087",
 		"CVE-2018-8897"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation or denial of service.\n\n\n* [CVE-2018-1087](https://security-tracker.debian.org/tracker/CVE-2018-1087)\nAndy Lutomirski discovered that the KVM implementation did not\n properly handle #DB exceptions while deferred by MOV SS/POP SS,\n allowing an unprivileged KVM guest user to crash the guest or\n potentially escalate their privileges.\n* [CVE-2018-8897](https://security-tracker.debian.org/tracker/CVE-2018-8897)\nNick Peterson of Everdox Tech LLC discovered that #DB exceptions\n that are deferred by MOV SS or POP SS are not properly handled,\n allowing an unprivileged user to crash the kernel and cause a denial\n of service.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 3.16.56-1+deb8u1. This update includes various fixes for\nregressions from 3.16.56-1 as released in DSA-4187-1 (Cf. #897427, #898067 and #898100).\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.88-1+deb9u1. The fix for [\\\nCVE-2018-1108](https://security-tracker.debian.org/tracker/CVE-2018-1108) applied in DSA-4188-1\nis temporarily reverted due to various regression, cf. #897599.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -143,12 +142,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4196-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4196"
 		}
 	]
 }

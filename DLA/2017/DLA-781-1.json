@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-781-1",
-	"modified": "2023-06-28T06:43:16.200310Z",
+	"modified": "2024-01-09T20:33:57.943056Z",
 	"published": "2017-01-13T00:00:00Z",
 	"related": [
 		"CVE-2014-2287",
 		"CVE-2016-7551"
 	],
 	"summary": "asterisk - security update",
-	"details": "\nTwo security vulnerabilities were discovered in Asterisk, an Open\nSource PBX and telephony toolkit.\n\n\n* [CVE-2014-2287](https://security-tracker.debian.org/tracker/CVE-2014-2287)\nchannels/chan\\_sip.c in Asterisk when chan\\_sip has a certain\n configuration, allows remote authenticated users to cause a denial\n of service (channel and file descriptor consumption) via an INVITE\n request with a (1) Session-Expires or (2) Min-SE header with a\n malformed or invalid value.\n* [CVE-2016-7551](https://security-tracker.debian.org/tracker/CVE-2016-7551)\nThe overlap dialing feature in chan\\_sip allows chan\\_sip to report\n to a device that the number that has been dialed is incomplete and\n more digits are required. If this functionality is used with a\n device that has performed username/password authentication RTP\n resources are leaked. This occurs because the code fails to release\n the old RTP resources before allocating new ones in this scenario.\n If all resources are used then RTP port exhaustion will occur and\n no RTP sessions are able to be set up.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:1.8.13.1~dfsg1-3+deb7u5.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-781-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-781"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3234-1",
-	"modified": "2023-06-28T06:25:29.942122Z",
+	"modified": "2024-01-09T20:33:24.830924Z",
 	"published": "2022-12-10T00:00:00Z",
 	"related": [
 		"CVE-2022-41853"
 	],
 	"summary": "hsqldb - security update",
-	"details": "\nIt was found that those using java.sql.Statement or java.sql.PreparedStatement\nin hsqldb, a Java SQL database, to process untrusted input may be vulnerable to\na remote code execution attack. By default it is allowed to call any static\nmethod of any Java class in the classpath resulting in code execution. The\nissue can be prevented by updating to 2.4.1-2+deb10u1 or by setting the\nsystem property hsqldb.method\\_class\\_names to classes which are allowed to\nbe called. For example, System.setProperty(\"hsqldb.method\\_class\\_names\",\"abc\")\nor Java argument -Dhsqldb.method\\_class\\_names=\"abc\" can be used. From\nversion 2.4.1-2+deb10u1 all classes by default are not accessible except\nthose in java.lang.Math and need to be manually enabled.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.4.1-2+deb10u1.\n\n\nWe recommend that you upgrade your hsqldb packages.\n\n\nFor the detailed security status of hsqldb please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/hsqldb>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3234-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3234"
 		}
 	]
 }

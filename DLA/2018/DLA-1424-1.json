@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1424-1",
-	"modified": "2021-05-14T07:16:50Z",
-	"published": "2018-07-18T00:00:00Z",
+	"modified": "2018-07-14T00:00:00Z",
+	"published": "2018-07-14T00:00:00Z",
 	"summary": "linux-latest-4.9 - security update",
-	"details": "\nLinux 4.9 has been packaged for Debian 8 as linux-4.9. This provides\na supported upgrade path for systems that currently use kernel\npackages from the \"jessie-backports\" suite.\n\n\nHowever, \"apt full-upgrade\" will \\*not\\* automatically install the\nupdated kernel packages. You should explicitly install one of the\nfollowing metapackages first, as appropriate for your system:\n\n\n* linux-image-4.9-686\n* linux-image-4.9-686-pae\n* linux-image-4.9-amd64\n* linux-image-4.9-armmp\n* linux-image-4.9-armmp-lpae\n* linux-image-4.9-marvell\n\n\nFor example, if the command \"uname -r\" currently shows\n\"4.9.0-0.bpo.6-amd64\", you should install linux-image-4.9-amd64.\n\n\nThere is no need to upgrade systems using Linux 3.16, as that kernel\nversion will also continue to be supported in the LTS period.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\nFor Debian 8 Jessie, these issues have been fixed in linux-latest-4.9 version 80+deb9u5~deb8u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -28,12 +27,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1424-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1424"
 		}
 	]
 }

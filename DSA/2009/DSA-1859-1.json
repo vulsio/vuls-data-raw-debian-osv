@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1859-1",
-	"modified": "2023-10-16T00:10:42.259749Z",
+	"modified": "2024-01-09T20:25:33.662538Z",
 	"published": "2009-08-10T00:00:00Z",
 	"related": [
 		"CVE-2009-2414",
 		"CVE-2009-2416"
 	],
 	"summary": "libxml2 - several issues",
-	"details": "\nRauli Kaksonen, Tero Rontti and Jukka Taimisto discovered several\nvulnerabilities in libxml2, a library for parsing and handling XML data\nfiles, which can lead to denial of service conditions or possibly arbitrary\ncode execution in the application using the library. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2009-2416](https://security-tracker.debian.org/tracker/CVE-2009-2416)\nAn XML document with specially-crafted Notation or Enumeration attribute\ntypes in a DTD definition leads to the use of a pointers to memory areas\nwhich have already been freed.\n* [CVE-2009-2414](https://security-tracker.debian.org/tracker/CVE-2009-2414)\nMissing checks for the depth of ELEMENT DTD definitions when parsing\nchild content can lead to extensive stack-growth due to a function\nrecursion which can be triggered via a crafted XML document.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.6.27.dfsg-6+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.32.dfsg-5+lenny1.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1859-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1859"
 		}
 	]
 }

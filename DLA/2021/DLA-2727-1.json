@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2727-1",
-	"modified": "2023-06-28T06:20:03.781455Z",
+	"modified": "2024-01-09T20:32:53.698373Z",
 	"published": "2021-08-03T00:00:00Z",
 	"related": [
 		"CVE-2019-12761"
 	],
 	"summary": "pyxdg - security update",
-	"details": "\nIt was discovered that there was a code injection issue in PyXDG, a library\nused to locate freedesktop.org configuration/cache/etc. directories.\n\n\n* [CVE-2019-12761](https://security-tracker.debian.org/tracker/CVE-2019-12761)\nA code injection issue was discovered in PyXDG before 0.26 via crafted\n Python code in a Category element of a Menu XML document in a .menu file.\n XDG\\_CONFIG\\_DIRS must be set up to trigger xdg.Menu.parse parsing within the\n directory containing this file. This is due to a lack of sanitization in\n xdg/Menu.py before an eval call.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n0.25-4+deb9u1.\n\n\nWe recommend that you upgrade your pyxdg packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2727-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2727"
 		}
 	]
 }

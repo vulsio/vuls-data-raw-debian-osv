@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-877-1",
-	"modified": "2023-06-28T06:27:10.355446Z",
+	"modified": "2024-01-09T20:34:02.283920Z",
 	"published": "2017-03-28T00:00:00Z",
 	"related": [
 		"CVE-2016-10266",
@@ -10,7 +10,6 @@
 		"CVE-2016-10269"
 	],
 	"summary": "tiff - security update",
-	"details": "\nlibtiff is vulnerable to multiple buffer overflows and integer overflows\nthat can lead to application crashes (denial of service) or worse.\n\n\n* [CVE-2016-10266](https://security-tracker.debian.org/tracker/CVE-2016-10266)\nInteger overflow that can lead to divide-by-zero in\n TIFFReadEncodedStrip (tif\\_read.c).\n* [CVE-2016-10267](https://security-tracker.debian.org/tracker/CVE-2016-10267)\nDivide-by-zero error in OJPEGDecodeRaw (tif\\_ojpeg.c).\n \n[CVE-2016-10268](https://security-tracker.debian.org/tracker/CVE-2016-10268)\n\n\nHeap-based buffer overflow in TIFFReverseBits (tif\\_swab.c).\n* [CVE-2016-10269](https://security-tracker.debian.org/tracker/CVE-2016-10269)\nHeap-based buffer overflow in \\_TIFFmemcpy (tif\\_unix.c).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.0.2-6+deb7u11.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-877-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-877"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-824-1",
-	"modified": "2023-10-16T00:29:15.749612Z",
+	"modified": "2024-01-09T20:34:08.618117Z",
 	"published": "2005-09-29T00:00:00Z",
 	"related": [
 		"CVE-2005-2919",
 		"CVE-2005-2920"
 	],
 	"summary": "clamav - infinite loop, buffer overflow",
-	"details": "\nTwo vulnerabilities have been discovered in Clam AntiVirus, the\nantivirus scanner for Unix, designed for integration with mail servers\nto perform attachment scanning. The following problems were\nidentified:\n\n\n* [CAN-2005-2919](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2919)\nA potentially infinite loop could lead to a denial of service.\n* [CAN-2005-2920](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2920)\nA buffer overflow could lead to a denial of service.\n\n\nThe old stable distribution (woody) does not contain ClamAV packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.84-2.sarge.4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.87-1.\n\n\nWe recommend that you upgrade your clamav package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-824-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-824"
 		}
 	]
 }

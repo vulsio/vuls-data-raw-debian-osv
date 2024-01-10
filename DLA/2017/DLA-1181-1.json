@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1181-1",
-	"modified": "2023-06-28T06:18:06.091885Z",
+	"modified": "2024-01-09T20:30:49.497954Z",
 	"published": "2017-11-20T00:00:00Z",
 	"related": [
 		"CVE-2017-15588",
@@ -11,7 +11,6 @@
 		"CVE-2017-15595"
 	],
 	"summary": "xen - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor:\n\n\n* [CVE-2017-15588](https://security-tracker.debian.org/tracker/CVE-2017-15588)\nJann Horn discovered a race condition that can cause a stale TLB\n entry which might result in privilege escalation, denial of\n service or information leak.\n* [CVE-2017-15589](https://security-tracker.debian.org/tracker/CVE-2017-15589)\nRoger Pau MonnĂŠ discovered a hypervisor stack leak in the x86 I/O\n intercept code, resulting in information leaks.\n* [CVE-2017-15592](https://security-tracker.debian.org/tracker/CVE-2017-15592)\nAndrew Cooper discovered that incorrect handling of self-linear\n shadow mappings for translated guests might result in denial\n of service or privilege escalation.\n* [CVE-2017-15593](https://security-tracker.debian.org/tracker/CVE-2017-15593)\nJan Beulich discovered that page type reference counts are\n mishandled which may result in denial of service.\n* [CVE-2017-15595](https://security-tracker.debian.org/tracker/CVE-2017-15595)\nJann Horn discovered that crafted page-table stacking might result\n in denial of service, privilege escalation or information leaks.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-10.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1181-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1181"
 		}
 	]
 }

@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2234-1",
-	"modified": "2023-06-28T06:35:42.067147Z",
-	"published": "2020-06-05T00:00:00Z",
+	"modified": "2024-01-09T20:32:13.889761Z",
+	"published": "2020-06-04T00:00:00Z",
 	"related": [
 		"CVE-2005-1513",
 		"CVE-2005-1514",
@@ -11,7 +11,6 @@
 		"CVE-2020-3812"
 	],
 	"summary": "netqmail - security update",
-	"details": "\nThere were several CVE bugs reported against src:netqmail.\n\n\n* [CVE-2005-1513](https://security-tracker.debian.org/tracker/CVE-2005-1513)\nInteger overflow in the stralloc\\_readyplus function in qmail,\n when running on 64 bit platforms with a large amount of virtual\n memory, allows remote attackers to cause a denial of service\n and possibly execute arbitrary code via a large SMTP request.\n* [CVE-2005-1514](https://security-tracker.debian.org/tracker/CVE-2005-1514)\ncommands.c in qmail, when running on 64 bit platforms with a\n large amount of virtual memory, allows remote attackers to\n cause a denial of service and possibly execute arbitrary code\n via a long SMTP command without a space character, which causes\n an array to be referenced with a negative index.\n* [CVE-2005-1515](https://security-tracker.debian.org/tracker/CVE-2005-1515)\nInteger signedness error in the qmail\\_put and substdio\\_put\n functions in qmail, when running on 64 bit platforms with a\n large amount of virtual memory, allows remote attackers to\n cause a denial of service and possibly execute arbitrary code\n via a large number of SMTP RCPT TO commands.\n* [CVE-2020-3811](https://security-tracker.debian.org/tracker/CVE-2020-3811)\nqmail-verify as used in netqmail 1.06 is prone to a\n mail-address verification bypass vulnerability.\n* [CVE-2020-3812](https://security-tracker.debian.org/tracker/CVE-2020-3812)\nqmail-verify as used in netqmail 1.06 is prone to an\n information disclosure vulnerability. A local attacker can\n test for the existence of files and directories anywhere in\n the filesystem because qmail-verify runs as root and tests\n for the existence of files in the attacker's home directory,\n without dropping its privileges first.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.06-6.2~deb8u1.\n\n\nWe recommend that you upgrade your netqmail packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2234-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2234"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5381-1",
-	"modified": "2023-10-16T00:16:35.987619Z",
+	"modified": "2024-01-09T20:29:36.554481Z",
 	"published": "2023-04-05T00:00:00Z",
 	"related": [
 		"CVE-2022-42252",
@@ -9,7 +9,6 @@
 		"CVE-2023-28708"
 	],
 	"summary": "tomcat9 - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2022-42252](https://security-tracker.debian.org/tracker/CVE-2022-42252)\nApache Tomcat was configured to ignore invalid HTTP headers via setting\n rejectIllegalHeader to false. Tomcat did not reject a request containing an\n invalid Content-Length header making a request smuggling attack possible if\n Tomcat was located behind a reverse proxy that also failed to reject the\n request with the invalid header.\n* [CVE-2022-45143](https://security-tracker.debian.org/tracker/CVE-2022-45143)\nThe JsonErrorReportValve in Apache Tomcat did not escape the type, message\n or description values. In some circumstances these are constructed from\n user provided data and it was therefore possible for users to supply values\n that invalidated or manipulated the JSON output.\n* [CVE-2023-28708](https://security-tracker.debian.org/tracker/CVE-2023-28708)\nWhen using the RemoteIpFilter with requests received from a reverse proxy\n via HTTP that include the X-Forwarded-Proto header set to https, session\n cookies created by Apache Tomcat did not include the secure attribute. This\n could result in the user agent transmitting the session cookie over an\n insecure channel.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 9.0.43-2~deb11u6.\n\n\nWe recommend that you upgrade your tomcat9 packages.\n\n\nFor the detailed security status of tomcat9 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tomcat9](https://security-tracker.debian.org/tracker/tomcat9)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5381-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5381"
 		}
 	]
 }

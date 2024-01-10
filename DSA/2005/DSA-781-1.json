@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-781-1",
-	"modified": "2023-10-16T00:28:30.193059Z",
+	"modified": "2024-01-09T20:34:07.639360Z",
 	"published": "2005-08-23T00:00:00Z",
 	"related": [
 		"CVE-2005-0989",
@@ -15,7 +15,6 @@
 		"CVE-2005-2270"
 	],
 	"summary": "mozilla-thunderbird - several",
-	"details": "\nSeveral problems have been discovered in Mozilla Thunderbird, the\nstandalone mail client of the Mozilla suite. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CAN-2005-0989](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0989)\nRemote attackers could read portions of heap memory into a\n Javascript string via the lambda replace method.\n\n* [CAN-2005-1159](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1159)\nThe Javascript interpreter could be tricked to continue execution\n at the wrong memory address, which may allow attackers to cause a\n denial of service (application crash) and possibly execute\n arbitrary code.\n\n* [CAN-2005-1160](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1160)\nRemote attackers could override certain properties or methods of\n DOM nodes and gain privileges.\n\n* [CAN-2005-1532](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1532)\nRemote attackers could override certain properties or methods due\n to missing proper limitation of Javascript eval and Script objects\n and gain privileges.\n\n* [CAN-2005-2261](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2261)\nXML scripts ran even when Javascript disabled.\n\n* [CAN-2005-2265](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2265)\nMissing input sanitising of InstallVersion.compareTo() can cause\n the application to crash.\n\n* [CAN-2005-2266](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2266)\nRemote attackers could steal sensitive information such as cookies\n and passwords from web sites by accessing data in alien frames.\n\n* [CAN-2005-2269](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2269)\nRemote attackers could modify certain tag properties of DOM nodes\n that could lead to the execution of arbitrary script or code.\n\n* [CAN-2005-2270](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2270)\nThe Mozilla browser family does not properly clone base objects,\n which allows remote attackers to execute arbitrary code.\n\n\nThe old stable distribution (woody) is not affected by these problems\nsince it does not contain Mozilla Thunderbird packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.0.2-2.sarge1.0.6.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.0.6-1.\n\n\nWe recommend that you upgrade your Mozilla Thunderbird package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-781-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-781"
 		}
 	]
 }

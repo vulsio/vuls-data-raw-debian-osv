@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2928-1",
-	"modified": "2023-10-16T00:11:38.261052Z",
+	"modified": "2024-01-09T20:21:36.454863Z",
 	"published": "2014-05-14T00:00:00Z",
 	"related": [
 		"CVE-2014-0196",
@@ -9,7 +9,6 @@
 		"CVE-2014-1738"
 	],
 	"summary": "linux-2.6 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service, information leak or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2014-0196](https://security-tracker.debian.org/tracker/CVE-2014-0196)\nJiri Slaby discovered a race condition in the pty layer, which could lead\n to a denial of service or privilege escalation.\n* [CVE-2014-1737](https://security-tracker.debian.org/tracker/CVE-2014-1737)\n[CVE-2014-1738](https://security-tracker.debian.org/tracker/CVE-2014-1738)\nMatthew Daley discovered an information leak and missing input\n sanitising in the FDRAWCMD ioctl of the floppy driver. This could result\n in a privilege escalation.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.6.32-48squeeze6.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+48squeeze6 |\n\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n**Note**: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2928-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2928"
 		}
 	]
 }

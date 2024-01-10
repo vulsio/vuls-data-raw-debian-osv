@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-251-2",
-	"modified": "2023-06-28T06:26:34.986706Z",
-	"published": "2015-06-23T00:00:00Z",
+	"modified": "2024-01-09T20:32:40.052139Z",
+	"published": "2015-06-22T00:00:00Z",
 	"summary": "zendframework - regression update",
-	"details": "\nThe previous zendframework upload incorrectly fixes [CVE-2015-3154](https://security-tracker.debian.org/tracker/CVE-2015-3154),\ncausing a regression. This update corrects this problem. Thanks to\nĐĐ˛ĐłĐľĐ˝Đ¸Đš ĐĄĐźĐžĐťĐ¸Đ˝ (Evgeny Smolin).\n\n\n* [CVE-2012-6531](https://security-tracker.debian.org/tracker/CVE-2012-6531)\nPĂĄdraic Brady identified a weakness to handle the SimpleXMLElement\n zendframework class, allowing to remote attackers to read arbitrary\n files or create TCP connections via an XML external entity (XXE)\n injection attack.\n* [CVE-2012-6532](https://security-tracker.debian.org/tracker/CVE-2012-6532)\nPĂĄdraic Brady found that remote attackers could cause a denial of\n service by CPU consumption, via recursive or circular references\n through an XML entity expansion (XEE) attack.\n* [CVE-2014-2681](https://security-tracker.debian.org/tracker/CVE-2014-2681)\nLukas Reschke reported a lack of protection against XML External\n Entity injection attacks in some functions. This fix extends the\n incomplete one from [CVE-2012-5657](https://security-tracker.debian.org/tracker/CVE-2012-5657).\n* [CVE-2014-2682](https://security-tracker.debian.org/tracker/CVE-2014-2682)\nLukas Reschke reported a failure to consider that the\n libxml\\_disable\\_entity\\_loader setting is shared among threads in the\n PHP-FPM case. This fix extends the incomplete one from\n [CVE-2012-5657](https://security-tracker.debian.org/tracker/CVE-2012-5657).\n* [CVE-2014-2683](https://security-tracker.debian.org/tracker/CVE-2014-2683)\nLukas Reschke reported a lack of protection against XML Entity\n Expansion attacks in some functions. This fix extends the incomplete\n one from [CVE-2012-6532](https://security-tracker.debian.org/tracker/CVE-2012-6532).\n* [CVE-2014-2684](https://security-tracker.debian.org/tracker/CVE-2014-2684)\nChristian Mainka and Vladislav Mladenov from the Ruhr-University\n Bochum reported an error in the consumer's verify method that lead\n to acceptance of wrongly sourced tokens.\n* [CVE-2014-2685](https://security-tracker.debian.org/tracker/CVE-2014-2685)\nChristian Mainka and Vladislav Mladenov from the Ruhr-University\n Bochum reported a specification violation in which signing of a\n single parameter is incorrectly considered sufficient.\n* [CVE-2014-4914](https://security-tracker.debian.org/tracker/CVE-2014-4914)\nCassiano Dal Pizzol discovered that the implementation of the ORDER\n BY SQL statement in Zend\\_Db\\_Select contains a potential SQL\n injection when the query string passed contains parentheses.\n* [CVE-2014-8088](https://security-tracker.debian.org/tracker/CVE-2014-8088)\nYury Dyachenko at Positive Research Center identified potential XML\n eXternal Entity injection vectors due to insecure usage of PHP's DOM\n extension.\n* [CVE-2014-8089](https://security-tracker.debian.org/tracker/CVE-2014-8089)\nJonas SandstrĂśm discovered an SQL injection vector when manually\n quoting value for sqlsrv extension, using null byte.\n* [CVE-2015-3154](https://security-tracker.debian.org/tracker/CVE-2015-3154)\nFilippo Tessarotto and Maks3w reported potential CRLF injection\n attacks in mail and HTTP headers.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-251-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-251"
 		}
 	]
 }

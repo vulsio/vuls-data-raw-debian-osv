@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1390-1",
-	"modified": "2023-10-16T00:13:38.888320Z",
+	"modified": "2024-01-09T20:20:57.546414Z",
 	"published": "2007-10-18T00:00:00Z",
 	"related": [
 		"CVE-2007-4033"
 	],
 	"summary": "t1lib - arbitrary code execution",
-	"details": "\nHamid Ebadi discovered a buffer overflow in the\nintT1\\_Env\\_GetCompletePath routine in t1lib, a Type 1 font rasterizer\nlibrary. This flaw could allow an attacker to crash an application\nusing the t1lib shared libraries, and potentially execute arbitrary code\nwithin such an application's security context.\n\n\nFor the old stable distribution (sarge), this problem has been fixed in\nversion 5.0.2-3sarge1.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 5.1.0-2etch1.\n\n\nWe recommend that you upgrade your t1lib package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1390-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1390"
 		}
 	]
 }

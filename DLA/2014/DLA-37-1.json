@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-37-1",
-	"modified": "2023-06-28T06:26:59.480731Z",
+	"modified": "2024-01-09T20:33:44.865309Z",
 	"published": "2014-08-18T00:00:00Z",
 	"related": [
 		"CVE-2014-4341",
@@ -11,7 +11,6 @@
 		"CVE-2014-4345"
 	],
 	"summary": "krb5 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in krb5, the MIT implementation\nof Kerberos. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2014-4341](https://security-tracker.debian.org/tracker/CVE-2014-4341)\nAn unauthenticated remote attacker with the ability to inject\n packets into a legitimately established GSSAPI application session\n can cause a program crash due to invalid memory references when\n attempting to read beyond the end of a buffer.\n* [CVE-2014-4342](https://security-tracker.debian.org/tracker/CVE-2014-4342)\nAn unauthenticated remote attacker with the ability to inject\n packets into a legitimately established GSSAPI application session\n can cause a program crash due to invalid memory references when\n reading beyond the end of a buffer or by causing a null pointer\n dereference.\n* [CVE-2014-4343](https://security-tracker.debian.org/tracker/CVE-2014-4343)\nAn unauthenticated remote attacker with the ability to spoof packets\n appearing to be from a GSSAPI acceptor can cause a double-free\n condition in GSSAPI initiators (clients) which are using the SPNEGO\n mechanism, by returning a different underlying mechanism than was\n proposed by the initiator. A remote attacker could exploit this flaw\n to cause an application crash or potentially execute arbitrary code.\n* [CVE-2014-4344](https://security-tracker.debian.org/tracker/CVE-2014-4344)\nAn unauthenticated or partially authenticated remote attacker can\n cause a NULL dereference and application crash during a SPNEGO\n negotiation by sending an empty token as the second or later context\n token from initiator to acceptor.\n* [CVE-2014-4345](https://security-tracker.debian.org/tracker/CVE-2014-4345)\nWhen kadmind is configured to use LDAP for the KDC database, an\n authenticated remote attacker can cause it to perform an\n out-of-bounds write (buffer overflow).\n\n\nFor Debian 6 Squeeze, these issues have been fixed in krb5 version 1.8.3+dfsg-4squeeze8\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-37-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-37"
 		}
 	]
 }

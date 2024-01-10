@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2877-1",
-	"modified": "2023-10-16T00:11:36.755305Z",
+	"modified": "2024-01-09T20:21:34.872102Z",
 	"published": "2014-03-12T00:00:00Z",
 	"related": [
 		"CVE-2014-2323",
 		"CVE-2014-2324"
 	],
 	"summary": "lighttpd - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the lighttpd web server.\n\n\n* [CVE-2014-2323](https://security-tracker.debian.org/tracker/CVE-2014-2323)\nJann Horn discovered that specially crafted host names can be used\n to inject arbitrary MySQL queries in lighttpd servers using the\n MySQL virtual hosting module (mod\\_mysql\\_vhost).\n\n\nThis only affects installations with the lighttpd-mod-mysql-vhost\n binary package installed and in use.\n* [CVE-2014-2324](https://security-tracker.debian.org/tracker/CVE-2014-2324)\nJann Horn discovered that specially crafted host names can be used\n to traverse outside of the document root under certain situations\n in lighttpd servers using either the mod\\_mysql\\_vhost, mod\\_evhost,\n or mod\\_simple\\_vhost virtual hosting modules.\n\n\nServers not using these modules are not affected.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1.4.28-2+squeeze1.6.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.4.31-4+deb7u3.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.4.33-1+nmu3.\n\n\nWe recommend that you upgrade your lighttpd packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -69,12 +68,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2877-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2877"
 		}
 	]
 }

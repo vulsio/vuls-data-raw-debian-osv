@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-140",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-08-05T00:00:00Z",
 	"published": "2002-08-05T00:00:00Z",
 	"related": [
 		"CVE-2002-0660",
 		"CVE-2002-0728"
 	],
 	"summary": "libpng - buffer overflow",
-	"details": "\nDevelopers of the PNG library have fixed a buffer overflow in the\nprogressive reader when the PNG datastream contains more IDAT data\nthan indicated by the IHDR chunk. Such deliberately malformed\ndatastreams would crash applications which could potentially allow an\nattacker to execute malicious code. Programs such as Galeon,\nKonqueror and various others make use of these libraries.\n\n\nIn addition to that, the packages below fix another\npotential buffer overflow. The PNG libraries implement a safety\nmargin which is also included in a newer upstream release. Thanks to\nGlenn Randers-Pehrson for informing us.\n\n\nTo find out which packages depend on this library, you may want to\nexecute the following commands:\n\n\n\n```\n\n    apt-cache showpkg libpng2\n    apt-cache showpkg libpng3\n\n```\n\nThis problem has been fixed in version 1.0.12-3.woody.2 of libpng and\nversion 1.2.1-1.1.woody.2 of libpng3 for the current stable\ndistribution (woody) and in version 1.0.12-4 of libpng and version\n1.2.1-2 of libpng3 for the unstable distribution (sid).\nThe potato release of Debian does not seem to be vulnerable.\n\n\nWe recommend that you upgrade your libpng packages immediately and\nrestart programs and daemons that link to these libraries and read\nexternal data, such as web browsers.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-140.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-140"
 		}
 	]
 }

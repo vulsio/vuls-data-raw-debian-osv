@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2575-1",
-	"modified": "2023-10-16T00:11:19.453026Z",
+	"modified": "2024-01-09T20:27:49.094808Z",
 	"published": "2012-11-18T00:00:00Z",
 	"related": [
 		"CVE-2012-4564"
 	],
 	"summary": "tiff - heap overflow",
-	"details": "\nIt was discovered that ppm2tiff of the TIFF tools, a set of utilities\nfor TIFF manipulation and conversion, is not properly checking the return\nvalue of an internal function used in order to detect integer overflows.\nAs a consequence, ppm2tiff suffers of a heap-based buffer overflow.\nThis allows attacker to potentially execute arbitrary code via a crafted\nPPM image, especially in scenarios in which images are automatically\nprocessed.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.9.4-5+squeeze7.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.0.2-5.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2575-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2575"
 		}
 	]
 }

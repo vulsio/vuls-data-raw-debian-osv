@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2052-1",
-	"modified": "2023-10-16T00:10:55.728301Z",
+	"modified": "2024-01-09T20:25:37.255709Z",
 	"published": "2010-05-24T00:00:00Z",
 	"related": [
 		"CVE-2010-1321"
 	],
 	"summary": "krb5 - denial of service",
-	"details": "\nShawn Emery discovered that in MIT Kerberos 5 (krb5), a system for\nauthenticating users and services on a network, a null pointer\ndereference flaw in the Generic Security Service Application Program\nInterface (GSS-API) library could allow an authenticated remote attacker\nto crash any server application using the GSS-API authentication\nmechanism, by sending a specially-crafted GSS-API token with a missing\nchecksum field.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.6.dfsg.4~beta1-5lenny4.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 1.8.1+dfsg-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.1+dfsg-3.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2052-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2052"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-177-1",
-	"modified": "2023-06-28T06:20:58.410636Z",
+	"modified": "2024-01-09T20:31:43.286792Z",
 	"published": "2015-03-20T00:00:00Z",
 	"related": [
 		"CVE-2015-0209",
@@ -13,7 +13,6 @@
 		"CVE-2015-0293"
 	],
 	"summary": "openssl - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit. The Common Vulnerabilities and Exposures project\nidentifies the following issues:\n\n\n* [CVE-2015-0209](https://security-tracker.debian.org/tracker/CVE-2015-0209)\nIt was discovered that a malformed EC private key might result in\n memory corruption.\n* [CVE-2015-0286](https://security-tracker.debian.org/tracker/CVE-2015-0286)\nStephen Henson discovered that the ASN1\\_TYPE\\_cmp() function\n can be crashed, resulting in denial of service.\n* [CVE-2015-0287](https://security-tracker.debian.org/tracker/CVE-2015-0287)\nEmilia Kaesper discovered a memory corruption in ASN.1 parsing.\n* [CVE-2015-0288](https://security-tracker.debian.org/tracker/CVE-2015-0288)\nIt was discovered that missing input sanitising in the\n X509\\_to\\_X509\\_REQ() function might result in denial of service.\n* [CVE-2015-0289](https://security-tracker.debian.org/tracker/CVE-2015-0289)\nMichal Zalewski discovered a NULL pointer dereference in the\n PKCS#7 parsing code, resulting in denial of service.\n* [CVE-2015-0292](https://security-tracker.debian.org/tracker/CVE-2015-0292)\nIt was discovered that missing input sanitising in base64 decoding\n might result in memory corruption.\n* [CVE-2015-0293](https://security-tracker.debian.org/tracker/CVE-2015-0293)\nA malicious client can trigger an OPENSSL\\_assert (i.e., an abort) in\n servers that both support SSLv2 and enable export cipher suites by sending\n a specially crafted SSLv2 CLIENT-MASTER-KEY message.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in openssl version 0.9.8o-4squeeze20\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-177-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-177"
 		}
 	]
 }

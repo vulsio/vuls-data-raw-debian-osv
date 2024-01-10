@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-282",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-04-09T00:00:00Z",
 	"published": "2003-04-09T00:00:00Z",
 	"related": [
 		"CVE-2003-0028"
 	],
 	"summary": "glibc - integer overflow",
-	"details": "\neEye Digital Security discovered an integer overflow in the\nxdrmem\\_getbytes() function which is also present in GNU libc. This\nfunction is part of the XDR (external data representation)\nencoder/decoder derived from Sun's RPC implementation. Depending upon\nthe application, this vulnerability can cause buffer overflows and\ncould possibly be exploited to execute arbitrary code.\n\n\nFor the stable distribution (woody) this problem has been\nfixed in version 2.2.5-11.5.\n\n\nFor the old stable distribution (potato) this problem has been\nfixed in version 2.1.3-25.\n\n\nFor the unstable distribution (sid) this problem has been\nfixed in version 2.3.1-16.\n\n\nWe recommend that you upgrade your libc6 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-282.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-282"
 		}
 	]
 }

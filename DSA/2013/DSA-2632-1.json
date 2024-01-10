@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2632-1",
-	"modified": "2023-10-16T00:11:22.328208Z",
+	"modified": "2024-01-09T20:27:50.443091Z",
 	"published": "2013-02-25T00:00:00Z",
 	"related": [
 		"CVE-2013-0231",
 		"CVE-2013-0871"
 	],
 	"summary": "linux-2.6 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service or privilege escalation. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2013-0231](https://security-tracker.debian.org/tracker/CVE-2013-0231)\nJan Beulich provided a fix for an issue in the Xen PCI backend drivers.\n Users of guests on a system using passed-through PCI devices can create\n a denial of service of the host system due to the use of non-ratelimited\n kernel log messages.\n* [CVE-2013-0871](https://security-tracker.debian.org/tracker/CVE-2013-0871)\nSuleiman Souhlal and Salman Qazi of Google, with help from Aaron Durbin\n and Michael Davidson of Google, discovered an issue in the\n ptrace subsystem. Due to a race condition with PTRACE\\_SETREGS, local users\n can cause kernel stack corruption and execution of arbitrary code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in version\n2.6.32-48squeeze1.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+48squeeze1 |\n\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2632-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2632"
 		}
 	]
 }

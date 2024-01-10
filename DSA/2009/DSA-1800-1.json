@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1800-1",
-	"modified": "2023-10-16T00:08:00.070899Z",
+	"modified": "2024-01-09T20:27:34.351035Z",
 	"published": "2009-05-15T00:00:00Z",
 	"related": [
 		"CVE-2009-0028",
@@ -19,7 +19,6 @@
 		"CVE-2009-1439"
 	],
 	"summary": "linux-2.6 user-mode-linux - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, privilege escalation or a sensitive\nmemory leak. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-0028](https://security-tracker.debian.org/tracker/CVE-2009-0028)\nChris Evans discovered a situation in which a child process can\n send an arbitrary signal to its parent.\n* [CVE-2009-0834](https://security-tracker.debian.org/tracker/CVE-2009-0834)\nRoland McGrath discovered an issue on amd64 kernels that allows\n local users to circumvent system call audit configurations which\n filter based on the syscall numbers or argument details.\n* [CVE-2009-0835](https://security-tracker.debian.org/tracker/CVE-2009-0835)\nRoland McGrath discovered an issue on amd64 kernels with\n CONFIG\\_SECCOMP enabled. By making a specially crafted syscall,\n local users can bypass access restrictions.\n* [CVE-2009-0859](https://security-tracker.debian.org/tracker/CVE-2009-0859)\nJiri Olsa discovered that a local user can cause a denial of\n service (system hang) using a SHM\\_INFO shmctl call on kernels\n compiled with CONFIG\\_SHMEM disabled. This issue does not affect\n prebuilt Debian kernels.\n* [CVE-2009-1046](https://security-tracker.debian.org/tracker/CVE-2009-1046)\nMikulas Patocka reported an issue in the console subsystem that\n allows a local user to cause memory corruption by selecting a\n small number of 3-byte UTF-8 characters.\n* [CVE-2009-1072](https://security-tracker.debian.org/tracker/CVE-2009-1072)\nIgor Zhbanov reported that nfsd was not properly dropping\n CAP\\_MKNOD, allowing users to create device nodes on file systems\n exported with root\\_squash.\n* [CVE-2009-1184](https://security-tracker.debian.org/tracker/CVE-2009-1184)\nDan Carpenter reported a coding issue in the selinux subsystem\n that allows local users to bypass certain networking checks when\n running with compat\\_net=1.\n* [CVE-2009-1192](https://security-tracker.debian.org/tracker/CVE-2009-1192)\nShaohua Li reported an issue in the AGP subsystem they may allow\n local users to read sensitive kernel memory due to a leak of\n uninitialized memory.\n* [CVE-2009-1242](https://security-tracker.debian.org/tracker/CVE-2009-1242)\nBenjamin Gilbert reported a local denial of service vulnerability\n in the KVM VMX implementation that allows local users to trigger\n an oops.\n* [CVE-2009-1265](https://security-tracker.debian.org/tracker/CVE-2009-1265)\nThomas Pollet reported an overflow in the af\\_rose implementation\n that allows remote attackers to retrieve uninitialized kernel\n memory that may contain sensitive data.\n* [CVE-2009-1337](https://security-tracker.debian.org/tracker/CVE-2009-1337)\nOleg Nesterov discovered an issue in the exit\\_notify function that\n allows local users to send an arbitrary signal to a process by\n running a program that modifies the exit\\_signal field and then\n uses an exec system call to launch a setuid application.\n* [CVE-2009-1338](https://security-tracker.debian.org/tracker/CVE-2009-1338)\nDaniel Hokka Zakrisson discovered that a kill(-1) is permitted to\n reach processes outside of the current process namespace.\n* [CVE-2009-1439](https://security-tracker.debian.org/tracker/CVE-2009-1439)\nPavan Naregundi reported an issue in the CIFS filesystem code that\n allows remote users to overwrite memory via a long\n nativeFileSystem field in a Tree Connect response during mount.\n\n\nFor the oldstable distribution (etch), these problems, where applicable,\nwill be fixed in future updates to linux-2.6 and linux-2.6.24.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.6.26-15lenny2.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -80,12 +79,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1800-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1800"
 		}
 	]
 }

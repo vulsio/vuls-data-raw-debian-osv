@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4382-1",
-	"modified": "2023-10-16T00:20:16.131736Z",
+	"modified": "2024-01-09T20:28:43.164318Z",
 	"published": "2019-02-02T00:00:00Z",
 	"related": [
 		"CVE-2019-3463",
 		"CVE-2019-3464"
 	],
 	"summary": "rssh - security update",
-	"details": "\nNick Cleaton discovered two vulnerabilities in rssh, a restricted shell\nthat allows users to perform only scp, sftp, cvs, svnserve (Subversion),\nrdist and/or rsync operations. Missing validation in the rsync support\ncould result in the bypass of this restriction, allowing the execution\nof arbitrary shell commands.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.3.4-5+deb9u2.\n\n\nWe recommend that you upgrade your rssh packages.\n\n\nFor the detailed security status of rssh please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/rssh](https://security-tracker.debian.org/tracker/rssh)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4382-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4382"
 		}
 	]
 }

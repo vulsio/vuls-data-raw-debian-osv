@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1485-2",
-	"modified": "2023-10-16T00:10:27.415147Z",
+	"modified": "2024-01-09T20:22:20.656673Z",
 	"published": "2008-02-10T00:00:00Z",
 	"related": [
 		"CVE-2008-0412",
@@ -18,7 +18,6 @@
 		"CVE-2008-0594"
 	],
 	"summary": "icedove - several vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the Icedove mail\nclient, an unbranded version of the Thunderbird client. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-0412](https://security-tracker.debian.org/tracker/CVE-2008-0412)\nJesse Ruderman, Kai Engert, Martijn Wargers, Mats Palmgren and Paul\n Nickerson discovered crashes in the layout engine, which might allow\n the execution of arbitrary code.\n* [CVE-2008-0413](https://security-tracker.debian.org/tracker/CVE-2008-0413)\nCarsten Book, Wesley Garland, Igor Bukanov, moz\\_bug\\_r\\_a4, shutdown,\n Philip Taylor and tgirmann discovered crashes in the JavaScript\n engine, which might allow the execution of arbitrary code.\n* [CVE-2008-0415](https://security-tracker.debian.org/tracker/CVE-2008-0415)\nmoz\\_bug\\_r\\_a4 and Boris Zbarsky discovered several\n vulnerabilities in JavaScript handling, which could allow\n privilege escalation.\n* [CVE-2008-0418](https://security-tracker.debian.org/tracker/CVE-2008-0418)\nGerry Eisenhaur and moz\\_bug\\_r\\_a4 discovered that a directory\n traversal vulnerability in chrome: URI handling could lead to\n information disclosure.\n* [CVE-2008-0419](https://security-tracker.debian.org/tracker/CVE-2008-0419)\nDavid Bloom discovered a race condition in the image handling of\n designMode elements, which can lead to information disclosure and\n potentially the execution of arbitrary code.\n* [CVE-2008-0591](https://security-tracker.debian.org/tracker/CVE-2008-0591)\nMichal Zalewski discovered that timers protecting security-sensitive\n dialogs (by disabling dialog elements until a timeout is reached)\n could be bypassed by window focus changes through JavaScript.\n\n\nThe Mozilla products from the old stable distribution (sarge) are no\nlonger supported with security updates.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.5.0.13+1.5.0.15b.dfsg1-0etch2.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1485-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1485"
 		}
 	]
 }

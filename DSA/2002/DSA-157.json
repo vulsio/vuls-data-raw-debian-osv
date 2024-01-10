@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-157",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-08-23T00:00:00Z",
 	"published": "2002-08-23T00:00:00Z",
 	"related": [
 		"CVE-2002-0983"
 	],
 	"summary": "irssi-text - denial of service",
-	"details": "\nThe IRC client irssi is vulnerable to a denial of service condition.\nThe problem occurs when a user attempts to join a channel that has an\noverly long topic description. When a certain string is appended to\nthe topic, irssi will crash.\n\n\nThis problem has been fixed in version 0.8.4-3.1 for the current\nstable distribution (woody) and in version 0.8.5-2 for the\nunstable distribution (sid). The old stable distribution (potato) is\nnot affected, since the corresponding portions of code are not\npresent. The same applies to irssi-gnome and irssi-gtk, which don't\nseem to be affected as well.\n\n\nWe recommend that you upgrade your irssi-text package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-157.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-157"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-182",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-10-28T00:00:00Z",
 	"published": "2002-10-28T00:00:00Z",
 	"related": [
 		"CVE-2002-0838"
 	],
 	"summary": "kdegraphics - buffer overflow",
-	"details": "\nZen-parse discovered a buffer overflow in gv, a PostScript and PDF\nviewer for X11. The same code is present in kghostview which is part\nof the KDE-Graphics package. This problem is triggered by scanning\nthe PostScript file and can be exploited by an attacker sending a\nmalformed PostScript or PDF file. The attacker is able to cause\narbitrary code to be run with the privileges of the victim.\n\n\nThis problem has been fixed in version 2.2.2-6.8 for the current\nstable distribution (woody) and in version 2.2.2-6.9 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected since no KDE is included.\n\n\nWe recommend that you upgrade your kghostview package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-182.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-182"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-776-1",
-	"modified": "2023-06-28T06:43:15.106280Z",
+	"modified": "2024-01-09T20:33:57.872501Z",
 	"published": "2017-01-02T00:00:00Z",
 	"related": [
 		"CVE-2016-2125"
 	],
 	"summary": "samba - security update",
-	"details": "\nSimo Sorce of Red Hat discovered that the Samba client code always\nrequests a forwardable ticket when using Kerberos authentication. A\ntarget server, which must be in the current or trusted domain/realm,\nis given a valid general purpose Kerberos Ticket Granting Ticket\n(TGT), which can be used to fully impersonate the authenticated user\nor service.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2:3.6.6-6+deb7u11.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-776-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-776"
 		}
 	]
 }

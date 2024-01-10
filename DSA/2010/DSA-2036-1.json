@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2036-1",
-	"modified": "2023-10-16T00:05:43.580065Z",
+	"modified": "2024-01-09T20:21:08.424070Z",
 	"published": "2010-04-17T00:00:00Z",
 	"related": [
 		"CVE-2007-2721"
 	],
 	"summary": "jasper - denial of service",
-	"details": "\nIt was discovered that the JasPer JPEG-2000 runtime library allowed an\nattacker to create a crafted input file that could lead to denial of\nservice and heap corruption.\n\n\nBesides addressing this vulnerability, this updates also addresses a\nregression introduced in the security fix for [CVE-2008-3521](https://security-tracker.debian.org/tracker/CVE-2008-3521), applied\nbefore Debian Lenny's release, that could cause errors when reading some\nJPEG input files.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.900.1-5.1+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.900.1-6.\n\n\nWe recommend that you upgrade your jasper package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2036-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2036"
 		}
 	]
 }

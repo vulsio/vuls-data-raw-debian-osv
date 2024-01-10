@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2014-1",
-	"modified": "2023-06-28T06:21:09.013907Z",
+	"modified": "2024-01-09T20:31:56.631932Z",
 	"published": "2019-11-29T00:00:00Z",
 	"related": [
 		"CVE-2014-6053",
@@ -9,7 +9,6 @@
 		"CVE-2019-15681"
 	],
 	"summary": "vino - security update",
-	"details": "\nSeveral vulnerabilities have been identified in the VNC code of vino, a\ndesktop sharing utility for the GNOME desktop environment.\n\n\nThe vulnerabilities referenced below are issues that have originally been\nreported against Debian source package libvncserver. The vino source\npackage in Debian ships a custom-patched and stripped down variant of\nlibvncserver, thus some of libvncserver's security fixes required porting\nover.\n\n\n* [CVE-2014-6053](https://security-tracker.debian.org/tracker/CVE-2014-6053)\nThe rfbProcessClientNormalMessage function in\n libvncserver/rfbserver.c in LibVNCServer did not properly handle\n attempts to send a large amount of ClientCutText data, which allowed\n remote attackers to cause a denial of service (memory consumption or\n daemon crash) via a crafted message that was processed by using a\n single unchecked malloc.\n* [CVE-2018-7225](https://security-tracker.debian.org/tracker/CVE-2018-7225)\nAn issue was discovered in LibVNCServer.\n rfbProcessClientNormalMessage() in rfbserver.c did not sanitize\n msg.cct.length, leading to access to uninitialized and potentially\n sensitive data or possibly unspecified other impact (e.g., an integer\n overflow) via specially crafted VNC packets.\n* [CVE-2019-15681](https://security-tracker.debian.org/tracker/CVE-2019-15681)\nLibVNC contained a memory leak (CWE-655) in VNC server code, which\n allowed an attacker to read stack memory and could be abused for\n information disclosure. Combined with another vulnerability, it could\n be used to leak stack memory and bypass ASLR. This attack appeared to\n be exploitable via network connectivity.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.14.0-2+deb8u1.\n\n\nWe recommend that you upgrade your vino packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2014-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2014"
 		}
 	]
 }

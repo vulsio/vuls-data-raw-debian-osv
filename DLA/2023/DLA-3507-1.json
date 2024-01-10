@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3507-1",
-	"modified": "2023-07-26T10:15:20.043883Z",
+	"modified": "2024-01-09T20:33:32.732181Z",
 	"published": "2023-07-25T00:00:00Z",
 	"related": [
 		"CVE-2023-35936"
 	],
 	"summary": "pandoc - security update",
-	"details": "\nArbitrary file write vulnerabilities were discovered in pandoc, an\nHaskell library and CLI tool for converting from one markup format to\nanother. These vulnerabilities can be triggered by providing a\nspecially crafted image element in the input when generating files using\nthe `--extract-media` option or outputting to PDF format, and allow an\nattacker to create or overwrite arbitrary files on the system (depending\non the privileges of the process running pandoc).\n\n\n* [CVE-2023-35936](https://security-tracker.debian.org/tracker/CVE-2023-35936)\nEntroy C discovered that by appending percent-encoded directory\n components at the end of malicious `data:` URI, an attacker could\n trick pandoc into creating or overwriting arbitrary files on the\n system.\n* [CVE-2023-38745](https://security-tracker.debian.org/tracker/CVE-2023-38745)\nGuilhem Moulin discovered that the upstream fix for\n [CVE-2023-35936](https://security-tracker.debian.org/tracker/CVE-2023-35936) was\n incomplete, namely that the vulnerability remained when encoding '`%`'\n characters as '`%25`'.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.2.1-3+deb10u1.\n\n\nWe recommend that you upgrade your pandoc packages.\n\n\nFor the detailed security status of pandoc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/pandoc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3507-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3507"
 		}
 	]
 }

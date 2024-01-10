@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-854-1",
-	"modified": "2023-06-28T06:37:34.963645Z",
+	"modified": "2024-01-09T20:34:01.015284Z",
 	"published": "2017-03-13T00:00:00Z",
 	"related": [
 		"CVE-2017-6009",
@@ -9,7 +9,6 @@
 		"CVE-2017-6011"
 	],
 	"summary": "icoutils - security update",
-	"details": "\nIcoutils is a set of programs that deal with MS Windows icons and\ncursors. Resources such as icons and cursors can be extracted from\nMS Windows executable and library files with wrestool.\n\n\nThree vulnerabilities has been found in these tools.\n\n\n* [CVE-2017-6009](https://security-tracker.debian.org/tracker/CVE-2017-6009)\nA buffer overflow was observed in wrestool.\n* [CVE-2017-6010](https://security-tracker.debian.org/tracker/CVE-2017-6010)\nA buffer overflow was observed in the extract\\_icons function.\n This issue can be triggered by processing a corrupted ico file\n and will result in an icotool crash.\n* [CVE-2017-6011](https://security-tracker.debian.org/tracker/CVE-2017-6011)\nAn out-of-bounds read leading to a buffer overflow was observed\n icotool.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.29.1-5deb7u2.\n\n\nWe recommend that you upgrade your icoutils packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-854-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-854"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-317-1",
-	"modified": "2023-06-28T06:33:37.819252Z",
+	"modified": "2024-01-09T20:33:20.857835Z",
 	"published": "2015-09-29T00:00:00Z",
 	"related": [
 		"CVE-2014-9638",
@@ -10,7 +10,6 @@
 		"CVE-2015-6749"
 	],
 	"summary": "vorbis-tools - security update",
-	"details": "\nVarious issues have been fixed in Debian LTS (squeeze) for package\nvorbis-tools.\n\n\n* [CVE-2014-9638](https://security-tracker.debian.org/tracker/CVE-2014-9638)\nA crafted WAV file with number of channels set to 0 will cause oggenc\n to crash due to a division by zero issue. This issue has been fixed\n upstream by providing a fix for [CVE-2014-9639](https://security-tracker.debian.org/tracker/CVE-2014-9639). Reported upstream by\n zuBux.\n* [CVE-2014-9639](https://security-tracker.debian.org/tracker/CVE-2014-9639)\nAn integer overflow issue was discovered in oggenc, related to the\n number of channels in the input WAV file. The issue triggers an\n out-of-bounds memory access which causes oggenc to crash here\n (audio.c). Reported upstream by zuBux.\n\n\nThe upstream fix for this has been backported to vorbis-tools in\n Debian LTS (squeeze).\n* [CVE-2014-9640](https://security-tracker.debian.org/tracker/CVE-2014-9640)\nFix for a crash on closing raw input (dd if=/dev/zero bs=1 count=1 |\n oggenc -r - -o out.ogg). Reported upstream by hanno.\n\n\nThe upstream fix for this has been backported to vorbis-tools in\n Debian LTS (squeeze).\n* [CVE-2015-6749](https://security-tracker.debian.org/tracker/CVE-2015-6749)\nBuffer overflow in the aiff\\_open function in oggenc/audio.c in\n vorbis-tools 1.4.0 and earlier allowed remote attackers to cause a\n denial of service (crash) via a crafted AIFF file. Reported upstream\n by pengsu.\n\n\nThe upstream fix for this has been backported to vorbis-tools in\n Debian LTS (squeeze).\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-317-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-317"
 		}
 	]
 }

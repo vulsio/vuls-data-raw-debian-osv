@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2406-1",
-	"modified": "2023-10-16T00:05:52.893073Z",
+	"modified": "2024-01-09T20:22:49.334661Z",
 	"published": "2012-02-09T00:00:00Z",
 	"related": [
 		"CVE-2011-3670",
@@ -10,7 +10,6 @@
 		"CVE-2012-0449"
 	],
 	"summary": "icedove - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Icedove, Debian's\nvariant of the Mozilla Thunderbird code base.\n\n\n* [CVE-2011-3670](https://security-tracker.debian.org/tracker/CVE-2011-3670)\nIcedove does not not properly enforce the IPv6 literal address\n syntax, which allows remote attackers to obtain sensitive\n information by making XMLHttpRequest calls through a proxy and\n reading the error messages.\n* [CVE-2012-0442](https://security-tracker.debian.org/tracker/CVE-2012-0442)\nMemory corruption bugs could cause Icedove to crash or\n possibly execute arbitrary code.\n* [CVE-2012-0444](https://security-tracker.debian.org/tracker/CVE-2012-0444)\nIcedove does not properly initialize nsChildView data\n structures, which allows remote attackers to cause a denial of\n service (memory corruption and application crash) or possibly\n execute arbitrary code via a crafted Ogg Vorbis file.\n* [CVE-2012-0449](https://security-tracker.debian.org/tracker/CVE-2012-0449)\nIcedove allows remote attackers to cause a denial of service\n (memory corruption and application crash) or possibly execute\n arbitrary code via a malformed XSLT stylesheet that is\n embedded in a document.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.0.11-1+squeeze7.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2406-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2406"
 		}
 	]
 }

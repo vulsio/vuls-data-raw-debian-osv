@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2733-1",
-	"modified": "2023-06-28T06:30:15.196730Z",
+	"modified": "2024-01-09T20:32:53.915402Z",
 	"published": "2021-08-05T00:00:00Z",
 	"related": [
 		"CVE-2021-30640",
 		"CVE-2021-33037"
 	],
 	"summary": "tomcat8 - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2021-30640](https://security-tracker.debian.org/tracker/CVE-2021-30640)\nA vulnerability in the JNDI Realm of Apache Tomcat allows an attacker to\n authenticate using variations of a valid user name and/or to bypass some of\n the protection provided by the LockOut Realm.\n* [CVE-2021-33037](https://security-tracker.debian.org/tracker/CVE-2021-33037)\nApache Tomcat did not correctly parse the HTTP transfer-encoding request\n header in some circumstances leading to the possibility to request\n smuggling when used with a reverse proxy. Specifically: - Tomcat\n incorrectly ignored the transfer encoding header if the client declared it\n would only accept an HTTP/1.0 response; - Tomcat honoured the identify\n encoding; and - Tomcat did not ensure that, if present, the chunked\n encoding was the final encoding.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n8.5.54-0+deb9u7.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\nFor the detailed security status of tomcat8 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tomcat8>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -77,12 +76,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2733-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2733"
 		}
 	]
 }

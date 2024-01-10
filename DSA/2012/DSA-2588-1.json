@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2588-1",
-	"modified": "2023-10-16T00:11:20.511696Z",
+	"modified": "2024-01-09T20:23:02.976622Z",
 	"published": "2012-12-16T00:00:00Z",
 	"related": [
 		"CVE-2012-4201",
@@ -11,7 +11,6 @@
 		"CVE-2012-5842"
 	],
 	"summary": "icedove - several",
-	"details": "\nMultiple vulnerabilities have been found in Icedove, Debian's version\nof the Mozilla Thunderbird mail and news client.\n\n\n* [CVE-2012-4201](https://security-tracker.debian.org/tracker/CVE-2012-4201)\nThe evalInSandbox implementation uses an incorrect context during\n the handling of JavaScript code that sets the location.href\n property, which allows remote attackers to conduct cross-site\n scripting (XSS) attacks or read arbitrary files by leveraging a\n sandboxed add-on.\n* [CVE-2012-4207](https://security-tracker.debian.org/tracker/CVE-2012-4207)\nThe HZ-GB-2312 character-set implementation does not properly handle\n a ~ (tilde) character in proximity to a chunk delimiter, which\n allows remote attackers to conduct cross-site scripting (XSS)\n attacks via a crafted document.\n* [CVE-2012-4216](https://security-tracker.debian.org/tracker/CVE-2012-4216)\nUse-after-free vulnerability in the gfxFont::GetFontEntry function\n allows remote attackers to execute arbitrary code or cause a denial\n of service (heap memory corruption) via unspecified vectors.\n* [CVE-2012-5829](https://security-tracker.debian.org/tracker/CVE-2012-5829)\nHeap-based buffer overflow in the nsWindow::OnExposeEvent function could\n allow remote attackers to execute arbitrary code.\n* [CVE-2012-5842](https://security-tracker.debian.org/tracker/CVE-2012-5842)\nMultiple unspecified vulnerabilities in the browser engine could\n allow remote attackers to cause a denial of service (memory\n corruption and application crash) or possibly execute arbitrary\n code.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 3.0.11-1+squeeze15.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 10.0.11-1.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2588-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2588"
 		}
 	]
 }

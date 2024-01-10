@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-361",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2003-08-01T00:00:00Z",
 	"published": "2003-08-01T00:00:00Z",
 	"related": [
 		"CVE-2003-0370",
 		"CVE-2003-0459"
 	],
 	"summary": "kdelibs, kdelibs-crypto - several vulnerabilities",
-	"details": "\nTwo vulnerabilities were discovered in kdelibs:\n\n\n* [CAN-2003-0459](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0459): KDE Konqueror for KDE 3.1.2 and earlier does not\n remove authentication credentials from URLs of the\n \"user:password@host\" form in the HTTP-Referer header, which could\n allow remote web sites to steal the credentials for pages that link\n to the sites.\n* [CAN-2003-0370](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0370): Konqueror Embedded and KDE 2.2.2 and earlier does not\n validate the Common Name (CN) field for X.509 Certificates, which\n could allow remote attackers to spoof certificates via a\n man-in-the-middle attack.\n\n\nThese vulnerabilities are described in the following security\nadvisories from KDE:\n\n\n* *\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 2.2.2-13.woody.8 of kdelibs and 2.2.2-6woody2 of\nkdelibs-crypto.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nkdelibs version 4:3.1.3-1. The unstable distribution does not contain\na separate kdelibs-crypto package.\n\n\nWe recommend that you update your kdelibs and kdelibs-crypto \npackages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-361.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-361"
 		}
 	]
 }

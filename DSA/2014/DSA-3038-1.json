@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3038-1",
-	"modified": "2023-10-16T00:06:10.547055Z",
+	"modified": "2024-01-09T20:24:05.214659Z",
 	"published": "2014-09-27T00:00:00Z",
 	"related": [
 		"CVE-2014-0179",
 		"CVE-2014-3633"
 	],
 	"summary": "libvirt - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Libvirt, a virtualisation\nabstraction library. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2014-0179](https://security-tracker.debian.org/tracker/CVE-2014-0179)\nRichard Jones and Daniel P. Berrange found that libvirt passes the\n XML\\_PARSE\\_NOENT flag when parsing XML documents using the libxml2\n library, in which case all XML entities in the parsed documents are\n expanded. A user able to force libvirtd to parse an XML document\n with an entity pointing to a special file that blocks on read access\n could use this flaw to cause libvirtd to hang indefinitely,\n resulting in a denial of service on the system.\n* [CVE-2014-3633](https://security-tracker.debian.org/tracker/CVE-2014-3633)\nLuyao Huang of Red Hat found that the qemu implementation of\n virDomainGetBlockIoTune computed an index into the array of disks\n for the live definition, then used it as the index into the array of\n disks for the persistent definition, which could result into an\n out-of-bounds read access in qemuDomainGetBlockIoTune().\n\n\nA remote attacker able to establish a read-only connection to\n libvirtd could use this flaw to crash libvirtd or, potentially, leak\n memory from the libvirtd process.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.9.12.3-1+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.2.8-2.\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3038-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3038"
 		}
 	]
 }

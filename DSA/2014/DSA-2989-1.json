@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2989-1",
-	"modified": "2023-10-16T00:06:09.398242Z",
+	"modified": "2024-01-09T20:21:42.515106Z",
 	"published": "2014-07-24T00:00:00Z",
 	"related": [
 		"CVE-2014-0118",
@@ -9,7 +9,6 @@
 		"CVE-2014-0231"
 	],
 	"summary": "apache2 - security update",
-	"details": "\nSeveral security issues were found in the Apache HTTP server.\n\n\n* [CVE-2014-0118](https://security-tracker.debian.org/tracker/CVE-2014-0118)\nThe DEFLATE input filter (inflates request bodies) in mod\\_deflate\n allows remote attackers to cause a denial of service (resource\n consumption) via crafted request data that decompresses to a much\n larger size.\n* [CVE-2014-0226](https://security-tracker.debian.org/tracker/CVE-2014-0226)\nA race condition was found in mod\\_status. An attacker able to\n access a public server status page on a server could send carefully\n crafted requests which could lead to a heap buffer overflow,\n causing denial of service, disclosure of sensitive information, or\n potentially the execution of arbitrary code.\n* [CVE-2014-0231](https://security-tracker.debian.org/tracker/CVE-2014-0231)\nA flaw was found in mod\\_cgid. If a server using mod\\_cgid hosted\n CGI scripts which did not consume standard input, a remote attacker\n could cause child processes to hang indefinitely, leading to denial\n of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.2.22-13+deb7u3.\n\n\nFor the testing distribution (jessie), these problems will be fixed in\nversion 2.4.10-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.4.10-1.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2989-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2989"
 		}
 	]
 }

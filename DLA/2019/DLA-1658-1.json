@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1658-1",
-	"modified": "2023-06-28T06:29:42.895057Z",
+	"modified": "2024-01-09T20:31:33.468442Z",
 	"published": "2019-02-01T00:00:00Z",
 	"related": [
 		"CVE-2018-19968",
 		"CVE-2018-19970"
 	],
 	"summary": "phpmyadmin - security update",
-	"details": "\nA couple of vulnerabilities have been discovered in phpmyadmin, MySQL web\nadministration tool.\n\n\n* [CVE-2018-19968](https://security-tracker.debian.org/tracker/CVE-2018-19968)\nAn attacker can exploit phpMyAdmin before 4.8.4 to leak the contents of a\n local file because of an error in the transformation feature. The attacker\n must have access to the phpMyAdmin Configuration Storage tables, although\n these can easily be created in any database to which the attacker has\n access. An attacker must have valid credentials to log in to phpMyAdmin;\n this vulnerability does not allow an attacker to circumvent the login\n system.\n* [CVE-2018-19970](https://security-tracker.debian.org/tracker/CVE-2018-19970)\nA XSS vulnerability was found in the navigation tree, where an attacker can\n deliver a payload to a user through a crafted database/table name.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4:4.2.12-2+deb8u4.\n\n\nWe recommend that you upgrade your phpmyadmin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1658-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1658"
 		}
 	]
 }

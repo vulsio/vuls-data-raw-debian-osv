@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1079-1",
-	"modified": "2023-06-28T06:20:20.265754Z",
-	"published": "2017-08-31T00:00:00Z",
+	"modified": "2024-01-09T20:30:44.662992Z",
+	"published": "2017-08-30T00:00:00Z",
 	"related": [
 		"CVE-2017-10788",
 		"CVE-2017-10789"
 	],
 	"summary": "libdbd-mysql-perl - security update",
-	"details": "\nThe Perl library for communicating with MySQL database, used in the\nmysql commandline client is vulnerable to a man in the middle attack\nin SSL configurations and remote crash when connecting to hostile\nservers.\n\n\n* [CVE-2017-10788](https://security-tracker.debian.org/tracker/CVE-2017-10788)\nThe DBD::mysql module through 4.042 for Perl allows remote\n attackers to cause a denial of service (use-after-free and\n application crash) or possibly have unspecified other impact by\n triggering (1) certain error responses from a MySQL server or (2)\n a loss of a network connection to a MySQL server. The\n use-after-free defect was introduced by relying on incorrect\n Oracle mysql\\_stmt\\_close documentation and code examples.\n* [CVE-2017-10789](https://security-tracker.debian.org/tracker/CVE-2017-10789)\nThe DBD::mysql module through 4.042 for Perl uses the mysql\\_ssl=1\n setting to mean that SSL is optional (even though this setting's\n documentation has a your communication with the server will be\n encrypted statement), which allows man-in-the-middle attackers to\n spoof servers via a cleartext-downgrade attack, a related issue to\n [CVE-2015-3152](https://security-tracker.debian.org/tracker/CVE-2015-3152).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.021-1+deb7u3.\n\n\nWe recommend that you upgrade your libdbd-mysql-perl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1079-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1079"
 		}
 	]
 }

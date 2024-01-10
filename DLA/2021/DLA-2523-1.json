@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2523-1",
-	"modified": "2023-06-28T06:26:35.817816Z",
+	"modified": "2024-01-09T20:32:40.619562Z",
 	"published": "2021-01-12T00:00:00Z",
 	"related": [
 		"CVE-2017-14528",
@@ -17,7 +17,6 @@
 		"CVE-2020-29599"
 	],
 	"summary": "imagemagick - security update",
-	"details": "\nSeveral security vulnerabilities were found in ImageMagick, a suite of\nimage manipulation programs. An attacker could cause denial of service\nand execution of arbitrary code when a crafted image file is\nprocessed.\n\n\n* [CVE-2017-14528](https://security-tracker.debian.org/tracker/CVE-2017-14528)\nThe TIFFSetProfiles function in coders/tiff.c has incorrect\n expectations about whether LibTIFF TIFFGetField return values\n imply that data validation has occurred, which allows remote\n attackers to cause a denial of service (use-after-free after an\n invalid call to TIFFSetField, and application crash) via a crafted\n file.\n* [CVE-2020-19667](https://security-tracker.debian.org/tracker/CVE-2020-19667)\nStack-based buffer overflow and unconditional jump in ReadXPMImage\n in coders/xpm.c\n* [CVE-2020-25665](https://security-tracker.debian.org/tracker/CVE-2020-25665)\nThe PALM image coder at coders/palm.c makes an improper call to\n AcquireQuantumMemory() in routine WritePALMImage() because it\n needs to be offset by 256. This can cause a out-of-bounds read\n later on in the routine. This could cause impact to reliability.\n* [CVE-2020-25674](https://security-tracker.debian.org/tracker/CVE-2020-25674)\nWriteOnePNGImage() from coders/png.c (the PNG coder) has a for\n loop with an improper exit condition that can allow an\n out-of-bounds READ via heap-buffer-overflow. This occurs because\n it is possible for the colormap to have less than 256 valid values\n but the loop condition will loop 256 times, attempting to pass\n invalid colormap data to the event logger.\n* [CVE-2020-27560](https://security-tracker.debian.org/tracker/CVE-2020-27560)\nImageMagick allows Division by Zero in OptimizeLayerFrames in\n MagickCore/layer.c, which may cause a denial of service.\n* [CVE-2020-27750](https://security-tracker.debian.org/tracker/CVE-2020-27750)\nA flaw was found in MagickCore/colorspace-private.h and\n MagickCore/quantum.h. An attacker who submits a crafted file that\n is processedcould trigger undefined behavior in the form of values\n outside the range of type `unsigned char` and math division by\n zero. This would most likely lead to an impact to application\n availability, but could potentially cause other problems related\n to undefined behavior.\n* [CVE-2020-27760](https://security-tracker.debian.org/tracker/CVE-2020-27760)\nIn `GammaImage()` of /MagickCore/enhance.c, depending on the\n `gamma` value, it's possible to trigger a divide-by-zero condition\n when a crafted input file is processed by ImageMagick. This could\n lead to an impact to application availability.\n* [CVE-2020-27763](https://security-tracker.debian.org/tracker/CVE-2020-27763)\nA flaw was found in MagickCore/resize.c. An attacker who submits a\n crafted file that is processed by ImageMagick could trigger\n undefined behavior in the form of math division by zero. This\n would most likely lead to an impact to application availability,\n but could potentially cause other problems related to undefined\n behavior.\n* [CVE-2020-27765](https://security-tracker.debian.org/tracker/CVE-2020-27765)\nA flaw was found in MagickCore/segment.c. An attacker who submits\n a crafted file that is processed by ImageMagick could trigger\n undefined behavior in the form of math division by zero. This\n would most likely lead to an impact to application availability,\n but could potentially cause other problems related to undefined\n behavior.\n* [CVE-2020-27773](https://security-tracker.debian.org/tracker/CVE-2020-27773)\nA flaw was found in MagickCore/gem-private.h. An attacker who\n submits a crafted file that is processed by ImageMagick could\n trigger undefined behavior in the form of values outside the range\n of type `unsigned char` or division by zero. This would most\n likely lead to an impact to application availability, but could\n potentially cause other problems related to undefined behavior.\n* [CVE-2020-29599](https://security-tracker.debian.org/tracker/CVE-2020-29599)\nImageMagick mishandles the -authenticate option, which allows\n setting a password for password-protected PDF files. The\n user-controlled password was not properly escaped/sanitized and it\n was therefore possible to inject additional shell commands via\n coders/pdf.c.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n8:6.9.7.4+dfsg-11+deb9u11.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\nFor the detailed security status of imagemagick please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/imagemagick>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -54,12 +53,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2523-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2523"
 		}
 	]
 }

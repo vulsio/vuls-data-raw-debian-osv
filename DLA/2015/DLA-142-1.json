@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-142-1",
-	"modified": "2023-06-28T06:20:41.053294Z",
+	"modified": "2024-01-09T20:31:07.651343Z",
 	"published": "2015-01-29T00:00:00Z",
 	"related": [
 		"CVE-2015-1031",
@@ -9,7 +9,6 @@
 		"CVE-2015-1382"
 	],
 	"summary": "privoxy - security update",
-	"details": "\nSeveral vulnerabilities have been fixed in privoxy, a privacy enhancing\nHTTP proxy:\n\n\n* [CVE-2015-1031](https://security-tracker.debian.org/tracker/CVE-2015-1031), CID66394\n\n unmap(): Prevent use-after-free if the map only consists of one item.\n* [CVE-2015-1031](https://security-tracker.debian.org/tracker/CVE-2015-1031), CID66376 and CID66391\n\n pcrs\\_execute(): Consistently set \\*result to NULL in case of errors.\n Should make use-after-free in the caller less likely.\n* [CVE-2015-1381](https://security-tracker.debian.org/tracker/CVE-2015-1381)\nFix multiple segmentation faults and memory leaks in the pcrs code.\n* [CVE-2015-1382](https://security-tracker.debian.org/tracker/CVE-2015-1382)\nFix invalid read to prevent potential crashes.\n\n\nWe recommend that you upgrade your privoxy packages.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in privoxy version 3.0.16-1+deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-142-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-142"
 		}
 	]
 }

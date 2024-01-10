@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1429-1",
-	"modified": "2023-06-28T06:20:41.211262Z",
+	"modified": "2024-01-09T20:31:09.309841Z",
 	"published": "2018-07-16T00:00:00Z",
 	"related": [
 		"CVE-2018-10852"
 	],
 	"summary": "sssd - security update",
-	"details": "\nThe UNIX pipe which sudo uses to contact SSSD and read the available sudo rules\nfrom SSSD has too wide permissions, which means that anyone who can send a\nmessage using the same raw protocol that sudo and SSSD use can read the sudo\nrules available for any user.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.11.7-3+deb8u1.\n\n\nWe recommend that you upgrade your sssd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1429-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1429"
 		}
 	]
 }

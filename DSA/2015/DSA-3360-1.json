@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3360-1",
-	"modified": "2023-10-16T00:11:57.093127Z",
+	"modified": "2024-01-09T20:21:50.073797Z",
 	"published": "2015-09-15T00:00:00Z",
 	"related": [
 		"CVE-2015-1270"
 	],
 	"summary": "icu - security update",
-	"details": "\nIt was discovered that the International Components for Unicode (ICU)\nlibrary mishandles converter names starting with `x-`, which allows\nremote attackers to cause a denial of service (read of uninitialized\nmemory) or possibly have unspecified other impact via a crafted file.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 52.1-8+deb8u3.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 55.1-5.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 55.1-5.\n\n\nWe recommend that you upgrade your icu packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3360-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3360"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-769-1",
-	"modified": "2023-10-16T00:26:48.800504Z",
+	"modified": "2024-01-09T20:34:06.769210Z",
 	"published": "2005-07-29T00:00:00Z",
 	"related": [
 		"CVE-2005-2370"
 	],
 	"summary": "gaim - memory alignment bug",
-	"details": "\nSzymon Zygmunt and Michal Bartoszkiewicz discovered a memory alignment\nerror in libgadu (from ekg, console Gadu Gadu client, an instant\nmessaging program) which is included in gaim, a multi-protocol instant\nmessaging client, as well. This can not be exploited on the x86\narchitecture but on others, e.g. on Sparc and lead to a bus error,\nin other words a denial of service.\n\n\nThe old stable distribution (woody) does not seem to be affected by\nthis problem.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.2.1-1.4.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your gaim package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-769-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-769"
 		}
 	]
 }

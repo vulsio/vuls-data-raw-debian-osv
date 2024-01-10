@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-888-1",
-	"modified": "2023-10-16T00:29:32.822945Z",
+	"modified": "2024-01-09T20:34:11.267490Z",
 	"published": "2005-11-07T00:00:00Z",
 	"related": [
 		"CVE-2005-2969"
 	],
 	"summary": "openssl - cryptographic weakness",
-	"details": "\nYutaka Oiwa discovered a vulnerability in the Open Secure Socket Layer\n(OpenSSL) library that can allow an attacker to perform active\nprotocol-version rollback attacks that could lead to the use of the\nweaker SSL 2.0 protocol even though both ends support SSL 3.0 or TLS\n1.0.\n\n\nThe following matrix explains which version in which distribution has\nthis problem corrected.\n\n\n\n\n\n|  | oldstable (woody) | stable (sarge) | unstable (sid) |\n| --- | --- | --- | --- |\n| openssl | 0.9.6c-2.woody.8 | 0.9.7e-3sarge1 | 0.9.8-3 |\n| openssl094 | 0.9.4-6.woody.4 | n/a | n/a |\n| openssl095 | 0.9.5a-6.woody.6 | n/a | n/a |\n| openssl096 | n/a | 0.9.6m-1sarge1 | n/a |\n| openssl097 | n/a | n/a | 0.9.7g-5 |\n\n\n\nWe recommend that you upgrade your libssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-888-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-888"
 		}
 	]
 }

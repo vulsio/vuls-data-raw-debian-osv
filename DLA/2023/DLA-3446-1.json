@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3446-1",
-	"modified": "2023-08-02T13:18:53.481492Z",
+	"modified": "2024-01-09T20:33:29.287638Z",
 	"published": "2023-06-05T00:00:00Z",
 	"related": [
 		"CVE-2023-0386",
@@ -9,7 +9,6 @@
 		"CVE-2023-32233"
 	],
 	"summary": "linux-5.10 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2023-0386](https://security-tracker.debian.org/tracker/CVE-2023-0386)\nIt was discovered that under certain conditions the overlayfs\n filesystem implementation did not properly handle copy up\n operations. A local user permitted to mount overlay mounts in user\n namespaces can take advantage of this flaw for local privilege\n escalation.\n* [CVE-2023-31436](https://security-tracker.debian.org/tracker/CVE-2023-31436)\nGwangun Jung reported a a flaw causing heap out-of-bounds\n read/write errors in the traffic control subsystem for the Quick\n Fair Queueing scheduler (QFQ) which may result in information\n leak, denial of service or privilege escalation.\n* [CVE-2023-32233](https://security-tracker.debian.org/tracker/CVE-2023-32233)\nPatryk Sondej and Piotr Krysiuk discovered a use-after-free flaw\n in the Netfilter nf\\_tables implementation when processing batch\n requests, which may result in local privilege escalation for a\n user with the CAP\\_NET\\_ADMIN capability in any user or network\n namespace.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n5.10.179-1~deb10u1.\n\n\nWe recommend that you upgrade your linux-5.10 packages.\n\n\nFor the detailed security status of linux-5.10 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-5.10>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3446-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3446"
 		}
 	]
 }

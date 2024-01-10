@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-237-1",
-	"modified": "2023-06-28T06:26:31.622028Z",
+	"modified": "2024-01-09T20:32:31.535884Z",
 	"published": "2015-06-04T00:00:00Z",
 	"related": [
 		"CVE-2014-9390",
 		"CVE-2014-9462"
 	],
 	"summary": "mercurial - security update",
-	"details": "\n* [CVE-2014-9462](https://security-tracker.debian.org/tracker/CVE-2014-9462)\nJesse Hertz of Matasano Security discovered that Mercurial, a\n distributed version control system, is prone to a command injection\n vulnerability via a crafted repository name in a clone command.\n* [CVE-2014-9390](https://security-tracker.debian.org/tracker/CVE-2014-9390)\nThere is a security vulnerability that affects mercurial repositories in a\n case-insensitive filesystem (eg. VFAT or HFS+). It allows for remote\n code execution of a specially crafted repository. This is less\n severe for the average Debian installation as they are usually set\n up with case-sensitive filesystems.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-237-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-237"
 		}
 	]
 }

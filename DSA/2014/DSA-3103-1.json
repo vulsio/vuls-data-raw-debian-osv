@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3103-1",
-	"modified": "2023-10-16T00:11:47.155644Z",
+	"modified": "2024-01-09T20:26:47.151348Z",
 	"published": "2014-12-13T00:00:00Z",
 	"related": [
 		"CVE-2014-9130"
 	],
 	"summary": "libyaml-libyaml-perl - security update",
-	"details": "\nJonathan Gray and Stanislaw Pitucha found an assertion failure in the\nway wrapped strings are parsed in LibYAML, a fast YAML 1.1 parser and\nemitter library. An attacker able to load specially crafted YAML input\ninto an application using libyaml could cause the application to crash.\n\n\nThis update corrects this flaw in the copy that is embedded in the\nlibyaml-libyaml-perl package.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.38-3+deb7u3.\n\n\nFor the upcoming stable distribution (jessie), this problem has been\nfixed in version 0.41-6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.41-6.\n\n\nWe recommend that you upgrade your libyaml-libyaml-perl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3103-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3103"
 		}
 	]
 }

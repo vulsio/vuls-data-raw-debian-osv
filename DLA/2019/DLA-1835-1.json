@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1835-1",
-	"modified": "2023-06-28T06:29:50.704891Z",
+	"modified": "2024-01-09T20:31:47.711740Z",
 	"published": "2019-06-24T00:00:00Z",
 	"related": [
 		"CVE-2018-14647",
@@ -10,7 +10,6 @@
 		"CVE-2019-9947"
 	],
 	"summary": "python3.4 - security update",
-	"details": "\nMultiple vulnerabilities were discovered in Python, an interactive\nhigh-level object-oriented language, including\n\n\n* [CVE-2018-14647](https://security-tracker.debian.org/tracker/CVE-2018-14647)\nPython's elementtree C accelerator failed to initialise Expat's hash\n salt during initialization. This could make it easy to conduct\n denial of service attacks against Expat by constructing an XML\n document that would cause pathological hash collisions in Expat's\n internal data structures, consuming large amounts CPU and RAM.\n* [CVE-2019-9636](https://security-tracker.debian.org/tracker/CVE-2019-9636)\nImproper Handling of Unicode Encoding (with an incorrect netloc)\n during NFKC normalization resulting in information disclosure\n (credentials, cookies, etc. that are cached against a given\n hostname). A specially crafted URL could be incorrectly parsed to\n locate cookies or authentication data and send that information to\n a different host than when parsed correctly.\n* [CVE-2019-9740](https://security-tracker.debian.org/tracker/CVE-2019-9740)\nAn issue was discovered in urllib where CRLF injection is possible\n if the attacker controls a url parameter, as demonstrated by the\n first argument to urllib.request.urlopen with \\r\\n (specifically in\n the query string after a ? character) followed by an HTTP header or\n a Redis command.\n* [CVE-2019-9947](https://security-tracker.debian.org/tracker/CVE-2019-9947)\nAn issue was discovered in urllib where CRLF injection is possible\n if the attacker controls a url parameter, as demonstrated by the\n first argument to urllib.request.urlopen with \\r\\n (specifically in\n the path component of a URL that lacks a ? character) followed by an\n HTTP header or a Redis command. This is similar to the [CVE-2019-9740](https://security-tracker.debian.org/tracker/CVE-2019-9740)\n query string issue.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.4.2-1+deb8u3.\n\n\nWe recommend that you upgrade your python3.4 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1835-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1835"
 		}
 	]
 }

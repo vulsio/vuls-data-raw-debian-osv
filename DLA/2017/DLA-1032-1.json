@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1032-1",
-	"modified": "2023-06-28T06:18:22.591303Z",
+	"modified": "2024-01-09T20:30:41.479722Z",
 	"published": "2017-07-19T00:00:00Z",
 	"summary": "unattended-upgrades - regression update",
-	"details": "\nSince the release of the last Debian stable release (\"stretch\"),\nDebian LTS (\"wheezy\") has been renamed oldoldstable, which broke\nthe unattended-upgrades package as described in bug #867169. Updates\nwould simply not be performed anymore.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.79.5+wheezy3. Note that later unattended-upgrades version released\nin later Debian versions do not exhibit the same behavior, as they use\nthe release codename (e.g. jessie) instead of the suite name\n(e.g. oldstable) in the configuration file. So later releases will\ntransition correctly for future LTS releases.\n\n\nWe recommend that you upgrade your unattended-upgrades packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -33,12 +32,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1032-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1032"
 		}
 	]
 }

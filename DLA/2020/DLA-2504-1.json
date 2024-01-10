@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2504-1",
-	"modified": "2023-06-28T06:25:16.201917Z",
+	"modified": "2024-01-09T20:32:39.941984Z",
 	"published": "2020-12-22T00:00:00Z",
 	"related": [
 		"CVE-2020-15005",
@@ -10,7 +10,6 @@
 		"CVE-2020-35480"
 	],
 	"summary": "mediawiki - security update",
-	"details": "\nMultiple security issues were discovered in MediaWiki, a website engine\nfor collaborative work.\n\n\n* [CVE-2020-15005](https://security-tracker.debian.org/tracker/CVE-2020-15005)\nPrivate wikis behind a caching server using the img\\_auth.php image\n authorization security feature may have had their files cached\n publicly, so any unauthorized user could view them.\n* [CVE-2020-35477](https://security-tracker.debian.org/tracker/CVE-2020-35477)\nBlocks legitimate attempts to hide log entries in some situations.\n* [CVE-2020-35479](https://security-tracker.debian.org/tracker/CVE-2020-35479)\nAllows XSS via BlockLogFormatter.php. Language::translateBlockExpiry\n itself does not escape in all code paths. For example, the return of\n Language::userTimeAndDate is is always unsafe for HTML in a month\n value.\n* [CVE-2020-35480](https://security-tracker.debian.org/tracker/CVE-2020-35480)\nMissing users (accounts that don't exist) and hidden users (accounts\n that have been explicitly hidden due to being abusive, or similar)\n that the viewer cannot see are handled differently, exposing\n sensitive information about the hidden status to unprivileged\n viewers.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:1.27.7-1~deb9u7.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\nFor the detailed security status of mediawiki please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mediawiki>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2504-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2504"
 		}
 	]
 }

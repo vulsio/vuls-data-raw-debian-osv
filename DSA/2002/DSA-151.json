@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-151",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-08-13T00:00:00Z",
 	"published": "2002-08-13T00:00:00Z",
 	"related": [
 		"CVE-2002-0871"
 	],
 	"summary": "xinetd - pipe exposure",
-	"details": "\nSolar Designer found a vulnerability in xinetd, a replacement for the\nBSD derived inetd. File descriptors for the signal pipe introduced in\nversion 2.3.4 are leaked into services started from xinetd. The\ndescriptors could be used to talk to xinetd resulting in crashing it\nentirely. This is usually called a denial of service.\n\n\nThis problem has been fixed by the package maintainer in version\n2.3.4-1.2 for the current stable distribution (woody) and in version\n2.3.7-1 for the unstable distribution (sid). The old stable\ndistribution (potato) is not affected, since it doesn't contain the\nsignal pipe.\n\n\nWe recommend that you upgrade your xinetd packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-151.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-151"
 		}
 	]
 }

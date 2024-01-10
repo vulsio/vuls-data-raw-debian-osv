@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-494",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-04-21T00:00:00Z",
 	"published": "2004-04-21T00:00:00Z",
 	"related": [
 		"CVE-2004-0408"
 	],
 	"summary": "ident2 - buffer overflow",
-	"details": "\nJack <> discovered a buffer overflow in\nident2, an implementation of the ident protocol (RFC1413), where a\nbuffer in the child\\_service function was slightly too small to hold\nall of the data which could be written into it. This vulnerability\ncould be exploited by a remote attacker to execute arbitrary code with\nthe privileges of the ident2 daemon (by default, the \"identd\" user).\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.03-3woody1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you update your ident2 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-494.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-494"
 		}
 	]
 }

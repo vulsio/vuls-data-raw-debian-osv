@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2631-1",
-	"modified": "2023-06-28T06:26:37.898745Z",
+	"modified": "2024-01-09T20:32:47.056160Z",
 	"published": "2021-04-21T00:00:00Z",
 	"related": [
 		"CVE-2019-15132",
 		"CVE-2020-15803"
 	],
 	"summary": "zabbix - security update",
-	"details": "\nMultiple vulnerabilities were discovered in Zabbix, a network\nmonitoring solution. An attacker may enumerate valid users and\nredirect to external links through the zabbix web frontend.\n\n\n* [CVE-2019-15132](https://security-tracker.debian.org/tracker/CVE-2019-15132)\nZabbix allows User Enumeration. With login requests, it is\n possible to enumerate application usernames based on the\n variability of server responses (e.g., the Login name or password\n is incorrect and No permissions for system access messages, or\n just blocking for a number of seconds). This affects both\n api\\_jsonrpc.php and index.php.\n* [CVE-2020-15803](https://security-tracker.debian.org/tracker/CVE-2020-15803)\nZabbix allows stored XSS in the URL Widget. This fix was\n mistakenly dropped in previous upload 1:3.0.31+dfsg-0+deb9u1.\n\n\nThis update also includes several other bug fixes and\nimprovements. For more information please refer to the upstream\nchangelog file.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:3.0.32+dfsg-0+deb9u1.\n\n\nWe recommend that you upgrade your zabbix packages.\n\n\nFor the detailed security status of zabbix please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/zabbix>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2631-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2631"
 		}
 	]
 }

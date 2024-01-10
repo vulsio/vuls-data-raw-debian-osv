@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4016-1",
-	"modified": "2023-10-16T00:12:33.923660Z",
+	"modified": "2024-01-09T20:26:13.557727Z",
 	"published": "2017-11-03T00:00:00Z",
 	"related": [
 		"CVE-2017-15227",
@@ -11,7 +11,6 @@
 		"CVE-2017-15723"
 	],
 	"summary": "irssi - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in Irssi, a terminal based\nIRC client. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2017-10965](https://security-tracker.debian.org/tracker/CVE-2017-10965)\nBrian geeknik Carpenter of Geeknik Labs discovered that Irssi does\n not properly handle receiving messages with invalid time stamps. A\n malicious IRC server can take advantage of this flaw to cause Irssi\n to crash, resulting in a denial of service.\n* [CVE-2017-10966](https://security-tracker.debian.org/tracker/CVE-2017-10966)\nBrian geeknik Carpenter of Geeknik Labs discovered that Irssi is\n susceptible to a use-after-free flaw triggered while updating the\n internal nick list. A malicious IRC server can take advantage of\n this flaw to cause Irssi to crash, resulting in a denial of service.\n* [CVE-2017-15227](https://security-tracker.debian.org/tracker/CVE-2017-15227)\nJoseph Bisch discovered that while waiting for the channel\n synchronisation, Irssi may incorrectly fail to remove destroyed\n channels from the query list, resulting in use after free conditions\n when updating the state later on. A malicious IRC server can take\n advantage of this flaw to cause Irssi to crash, resulting in a\n denial of service.\n* [CVE-2017-15228](https://security-tracker.debian.org/tracker/CVE-2017-15228)\nHanno Boeck reported that Irssi does not properly handle installing\n themes with unterminated colour formatting sequences, leading to a\n denial of service if a user is tricked into installing a specially\n crafted theme.\n* [CVE-2017-15721](https://security-tracker.debian.org/tracker/CVE-2017-15721)\nJoseph Bisch discovered that Irssi does not properly handle\n incorrectly formatted DCC CTCP messages. A remote attacker can take\n advantage of this flaw to cause Irssi to crash, resulting in a\n denial of service.\n* [CVE-2017-15722](https://security-tracker.debian.org/tracker/CVE-2017-15722)\nJoseph Bisch discovered that Irssi does not properly verify Safe\n channel IDs. A malicious IRC server can take advantage of this flaw\n to cause Irssi to crash, resulting in a denial of service.\n* [CVE-2017-15723](https://security-tracker.debian.org/tracker/CVE-2017-15723)\nJoseph Bisch reported that Irssi does not properly handle overlong\n nicks or targets resulting in a NULL pointer dereference when\n splitting the message and leading to a denial of service.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 0.8.17-1+deb8u5.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.0.2-1+deb9u3. [CVE-2017-10965](https://security-tracker.debian.org/tracker/CVE-2017-10965) and [CVE-2017-10966](https://security-tracker.debian.org/tracker/CVE-2017-10966) were already\nfixed in an earlier point release.\n\n\nWe recommend that you upgrade your irssi packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4016-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-4016"
 		}
 	]
 }

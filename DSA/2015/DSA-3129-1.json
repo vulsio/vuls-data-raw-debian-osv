@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3129-1",
-	"modified": "2023-10-16T00:11:47.812027Z",
+	"modified": "2024-01-09T20:28:00.705116Z",
 	"published": "2015-01-15T00:00:00Z",
 	"related": [
 		"CVE-2013-6435",
 		"CVE-2014-8118"
 	],
 	"summary": "rpm - security update",
-	"details": "\nTwo vulnerabilities have been discovered in the RPM package manager.\n\n\n* [CVE-2013-6435](https://security-tracker.debian.org/tracker/CVE-2013-6435)\nFlorian Weimer discovered a race condition in package signature\n validation.\n* [CVE-2014-8118](https://security-tracker.debian.org/tracker/CVE-2014-8118)\nFlorian Weimer discovered an integer overflow in parsing CPIO headers\n which might result in the execution of arbitrary code.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.10.0-5+deb7u2.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 4.11.3-1.1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.11.3-1.1.\n\n\nWe recommend that you upgrade your rpm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3129-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3129"
 		}
 	]
 }

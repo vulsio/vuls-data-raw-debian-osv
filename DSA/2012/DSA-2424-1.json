@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2424-1",
-	"modified": "2023-10-16T00:05:55.161952Z",
+	"modified": "2024-01-09T20:22:51.132732Z",
 	"published": "2012-03-04T00:00:00Z",
 	"related": [
 		"CVE-2012-1102"
 	],
 	"summary": "libxml-atom-perl - XML entity expansion",
-	"details": "\nIt was discovered that the XML::Atom Perl module did not disable\nexternal entities when parsing XML from potentially untrusted sources.\nThis may allow attackers to gain read access to otherwise protected\nresources, depending on how the library is used.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.37-1+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 0.39-1.\n\n\nWe recommend that you upgrade your libxml-atom-perl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2424-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2424"
 		}
 	]
 }

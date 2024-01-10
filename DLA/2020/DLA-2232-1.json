@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2232-1",
-	"modified": "2023-06-28T06:28:32.953633Z",
+	"modified": "2024-01-09T20:32:14.138324Z",
 	"published": "2020-06-01T00:00:00Z",
 	"related": [
 		"CVE-2020-11078"
 	],
 	"summary": "python-httplib2 - security update",
-	"details": "\nIn httplib2, an attacker controlling unescaped part of uri for `httplib2.Http.request()` could change request headers and body, send additional hidden requests to same server. This vulnerability impacts software that uses httplib2 with uri constructed by string concatenation, as opposed to proper urllib building with escaping.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n0.9+dfsg-2+deb8u1.\n\n\nWe recommend that you upgrade your python-httplib2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2232-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2232"
 		}
 	]
 }

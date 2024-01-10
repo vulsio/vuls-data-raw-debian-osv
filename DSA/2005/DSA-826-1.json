@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-826-1",
-	"modified": "2023-10-16T00:33:48.660147Z",
+	"modified": "2024-01-09T20:34:24.431963Z",
 	"published": "2005-09-29T00:00:00Z",
 	"related": [
 		"CVE-2005-1766",
 		"CVE-2005-2710"
 	],
 	"summary": "helix-player - multiple",
-	"details": "\nMultiple security vulnerabilities have been identified in the\nhelix-player media player that could allow an attacker to execute code\non the victim's machine via specially crafted network resources.\n\n\n* [CAN-2005-1766](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1766)\nBuffer overflow in the RealText parser could allow remote code\n execution via a specially crafted RealMedia file with a long\n RealText string.\n* [CAN-2005-2710](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2710)\nFormat string vulnerability in Real HelixPlayer and RealPlayer 10\n allows remote attackers to execute arbitrary code via the image\n handle attribute in a RealPix (.rp) or RealText (.rt) file.\n\n\nFor the stable distribution (sarge), these problems have been fixed in\nversion 1.0.4-1sarge1\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.6-1\n\n\nWe recommend that you upgrade your helix-player package.\n\n\nhelix-player was distributed only on the i386 and powerpc architectures\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-826-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-826"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3168-1",
-	"modified": "2023-10-16T00:11:49.196810Z",
+	"modified": "2024-01-09T20:25:52.399515Z",
 	"published": "2015-02-22T00:00:00Z",
 	"related": [
 		"CVE-2012-6684"
 	],
 	"summary": "ruby-redcloth - security update",
-	"details": "\nKousuke Ebihara discovered that redcloth, a Ruby module used to\nconvert Textile markup to HTML, did not properly sanitize its\ninput. This allowed a remote attacker to perform a cross-site\nscripting attack by injecting arbitrary JavaScript code into the\ngenerated HTML.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 4.2.9-2+deb7u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.2.9-4.\n\n\nWe recommend that you upgrade your ruby-redcloth packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3168-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3168"
 		}
 	]
 }

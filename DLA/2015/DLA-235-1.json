@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-235-1",
-	"modified": "2023-06-28T06:21:15.766990Z",
+	"modified": "2024-01-09T20:32:30.713049Z",
 	"published": "2015-05-30T00:00:00Z",
 	"related": [
 		"CVE-2011-0188",
@@ -12,7 +12,6 @@
 		"CVE-2015-1855"
 	],
 	"summary": "ruby1.9.1 - security update",
-	"details": "\n* [CVE-2011-0188](https://security-tracker.debian.org/tracker/CVE-2011-0188)\nThe VpMemAlloc function in bigdecimal.c in the BigDecimal class in\n Ruby 1.9.2-p136 and earlier, as used on Apple Mac OS X before 10.6.7\n and other platforms, does not properly allocate memory, which allows\n context-dependent attackers to execute arbitrary code or cause a\n denial of service (application crash) via vectors involving creation\n of a large BigDecimal value within a 64-bit process, related to an\n \"integer truncation issue.\"\n* [CVE-2011-2705](https://security-tracker.debian.org/tracker/CVE-2011-2705)\nuse upstream SVN r32050 to modify PRNG state to prevent random number\n sequence repeatation at forked child process which has same pid.\n Reported by Eric Wong.\n* [CVE-2012-4522](https://security-tracker.debian.org/tracker/CVE-2012-4522)\nThe rb\\_get\\_path\\_check function in file.c in Ruby 1.9.3 before\n patchlevel 286 and Ruby 2.0.0 before r37163 allows context-dependent\n attackers to create files in unexpected locations or with unexpected\n names via a NUL byte in a file path.\n* [CVE-2013-0256](https://security-tracker.debian.org/tracker/CVE-2013-0256)\ndarkfish.js in RDoc 2.3.0 through 3.12 and 4.x before\n 4.0.0.preview2.1, as used in Ruby, does not properly generate\n documents, which allows remote attackers to conduct cross-site\n scripting (XSS) attacks via a crafted URL.\n* [CVE-2013-2065](https://security-tracker.debian.org/tracker/CVE-2013-2065)\n(1) DL and (2) Fiddle in Ruby 1.9 before 1.9.3 patchlevel 426,\n and 2.0 before 2.0.0 patchlevel 195, do not perform taint checking for\n native functions, which allows context-dependent attackers to bypass\n intended $SAFE level restrictions.\n* [CVE-2015-1855](https://security-tracker.debian.org/tracker/CVE-2015-1855)\nOpenSSL extension hostname matching implementation violates RFC 6125\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-235-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-235"
 		}
 	]
 }

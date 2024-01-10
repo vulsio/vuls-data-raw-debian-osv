@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2809-1",
-	"modified": "2023-10-16T00:11:32.047617Z",
+	"modified": "2024-01-09T20:23:33.828774Z",
 	"published": "2013-12-04T00:00:00Z",
 	"related": [
 		"CVE-2013-1821",
@@ -9,7 +9,6 @@
 		"CVE-2013-4164"
 	],
 	"summary": "ruby1.8 - several",
-	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for the\nRuby language. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2013-1821](https://security-tracker.debian.org/tracker/CVE-2013-1821)\nBen Murphy discovered that unrestricted entity expansion in REXML\n can lead to a Denial of Service by consuming all host memory.\n* [CVE-2013-4073](https://security-tracker.debian.org/tracker/CVE-2013-4073)\nWilliam (B.J.) Snow Orvis discovered a vulnerability in the hostname\n checking in Ruby's SSL client that could allow man-in-the-middle\n attackers to spoof SSL servers via a crafted certificate issued by a\n trusted certification authority.\n* [CVE-2013-4164](https://security-tracker.debian.org/tracker/CVE-2013-4164)\nCharlie Somerville discovered that Ruby incorrectly handled floating\n point number conversion. If an application using Ruby accepted\n untrusted input strings and converted them to floating point\n numbers, an attacker able to provide such input could cause the\n application to crash or, possibly, execute arbitrary code with the\n privileges of the application.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1.8.7.302-2squeeze2.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.8.7.358-7.1+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.8.7.358-9.\n\n\nWe recommend that you upgrade your ruby1.8 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2809-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2809"
 		}
 	]
 }

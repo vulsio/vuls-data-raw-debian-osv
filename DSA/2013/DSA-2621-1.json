@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2621-1",
-	"modified": "2023-10-16T00:06:01.318322Z",
+	"modified": "2024-01-09T20:25:43.476600Z",
 	"published": "2013-02-13T00:00:00Z",
 	"related": [
 		"CVE-2013-0166",
 		"CVE-2013-0169"
 	],
 	"summary": "openssl - several vulnerabilities",
-	"details": "\nMultiple vulnerabilities have been found in OpenSSL. The Common\nVulnerabilities and Exposures project identifies the following issues:\n\n\n* [CVE-2013-0166](https://security-tracker.debian.org/tracker/CVE-2013-0166)\nOpenSSL does not properly perform signature verification for OCSP\n responses, which allows remote attackers to cause a denial of\n service via an invalid key.\n* [CVE-2013-0169](https://security-tracker.debian.org/tracker/CVE-2013-0169)\nA timing side channel attack has been found in CBC padding\n allowing an attacker to recover pieces of plaintext via statistical\n analysis of crafted packages, known as the Lucky Thirteen issue.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 0.9.8o-4squeeze14.\n\n\nFor the testing distribution (wheezy), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.1e-1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2621-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2621"
 		}
 	]
 }

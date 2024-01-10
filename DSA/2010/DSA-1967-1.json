@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1967-1",
-	"modified": "2023-10-16T00:10:49.927259Z",
+	"modified": "2024-01-09T20:25:35.894123Z",
 	"published": "2010-01-07T00:00:00Z",
 	"related": [
 		"CVE-2010-0012"
 	],
 	"summary": "transmission - directory traversal",
-	"details": "\nDan Rosenberg discovered that Transmission, a lightwight client for\nthe Bittorrent filesharing protocol, performs insufficient sanitising\nof file names specified in .torrent files. This could lead to the\noverwrite of local files with the privileges of the user running\nTransmission if the user is tricked into opening a malicious torrent\nfile.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.22-1+lenny2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.77-1.\n\n\nWe recommend that you upgrade your transmission packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1967-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-1967"
 		}
 	]
 }

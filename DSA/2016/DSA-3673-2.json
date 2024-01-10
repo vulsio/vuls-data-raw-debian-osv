@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3673-2",
-	"modified": "2023-10-16T00:12:14.065330Z",
-	"published": "2016-09-22T00:00:00Z",
+	"modified": "2024-01-09T20:28:20.709292Z",
+	"published": "2016-09-23T00:00:00Z",
 	"summary": "openssl - regression update",
-	"details": "\nSeveral vulnerabilities were discovered in OpenSSL:\n\n\n* [CVE-2016-2177](https://security-tracker.debian.org/tracker/CVE-2016-2177)\nGuido Vranken discovered that OpenSSL uses undefined pointer\n arithmetic. Additional information can be found at\n <https://www.openssl.org/blog/blog/2016/06/27/undefined-pointer-arithmetic/>\n* [CVE-2016-2178](https://security-tracker.debian.org/tracker/CVE-2016-2178)\nCesar Pereida, Billy Brumley and Yuval Yarom discovered a timing\n leak in the DSA code.\n* [CVE-2016-2179](https://security-tracker.debian.org/tracker/CVE-2016-2179) / [CVE-2016-2181](https://security-tracker.debian.org/tracker/CVE-2016-2181)\nQuan Luo and the OCAP audit team discovered denial of service\n vulnerabilities in DTLS.\n* [CVE-2016-2180](https://security-tracker.debian.org/tracker/CVE-2016-2180) / [CVE-2016-2182](https://security-tracker.debian.org/tracker/CVE-2016-2182) / [CVE-2016-6303](https://security-tracker.debian.org/tracker/CVE-2016-6303)\nShi Lei discovered an out-of-bounds memory read in\n TS\\_OBJ\\_print\\_bio() and an out-of-bounds write in BN\\_bn2dec()\n and MDC2\\_Update().\n* [CVE-2016-2183](https://security-tracker.debian.org/tracker/CVE-2016-2183)\nDES-based cipher suites are demoted from the HIGH group to MEDIUM\n as a mitigation for the SWEET32 attack.\n* [CVE-2016-6302](https://security-tracker.debian.org/tracker/CVE-2016-6302)\nShi Lei discovered that the use of SHA512 in TLS session tickets\n is susceptible to denial of service.\n* [CVE-2016-6304](https://security-tracker.debian.org/tracker/CVE-2016-6304)\nShi Lei discovered that excessively large OCSP status request may\n result in denial of service via memory exhaustion.\n* [CVE-2016-6306](https://security-tracker.debian.org/tracker/CVE-2016-6306)\nShi Lei discovered that missing message length validation when parsing\n certificates may potentially result in denial of service.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.0.1t-1+deb8u4.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3673-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3673"
 		}
 	]
 }

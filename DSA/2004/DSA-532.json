@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-532",
-	"modified": "2023-10-16T00:21:04.141815Z",
-	"published": "2004-07-27T00:00:00Z",
+	"modified": "2024-01-09T20:29:30.003655Z",
+	"published": "2004-07-22T00:00:00Z",
 	"related": [
 		"CVE-2004-0488",
 		"CVE-2004-0700"
 	],
 	"summary": "libapache-mod-ssl - several vulnerabilities",
-	"details": "\nTwo vulnerabilities were discovered in libapache-mod-ssl:\n\n\n* [CAN-2004-0488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0488)\nStack-based buffer overflow in the\n ssl\\_util\\_uuencode\\_binary function in ssl\\_util.c for Apache mod\\_ssl,\n when mod\\_ssl is configured to trust the issuing CA, may allow remote\n attackers to execute arbitrary code via a client certificate with a\n long subject DN.\n\n* [CAN-2004-0700](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0700)\nFormat string vulnerability in the ssl\\_log function\n in ssl\\_engine\\_log.c in mod\\_ssl 2.8.19 for Apache 1.3.31 may allow\n remote attackers to execute arbitrary messages via format string\n specifiers in certain log messages for HTTPS.\n\n\nFor the current stable distribution (woody), these problems have been\nfixed in version 2.8.9-2.4.\n\n\nFor the unstable distribution (sid), [CAN-2004-0488](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0488) was fixed in\nversion 2.8.18, and [CAN-2004-0700](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0700) will be fixed soon.\n\n\nWe recommend that you update your libapache-mod-ssl package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-532.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-532"
 		}
 	]
 }

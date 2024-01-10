@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4151-1",
-	"modified": "2023-10-16T00:12:47.558187Z",
+	"modified": "2024-01-09T20:26:17.326565Z",
 	"published": "2018-03-26T00:00:00Z",
 	"related": [
 		"CVE-2018-1000140"
 	],
 	"summary": "librelp - security update",
-	"details": "\nBas van Schaik and Kevin Backhouse discovered a stack-based buffer\noverflow vulnerability in librelp, a library providing reliable event\nlogging over the network, triggered while checking x509 certificates\nfrom a peer. A remote attacker able to connect to rsyslog can take\nadvantage of this flaw for remote code execution by sending a specially\ncrafted x509 certificate.\n\n\nDetails can be found in the upstream advisory:\n<https://www.rsyslog.com/cve-2018-1000140/>\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 1.2.7-2+deb8u1.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.2.12-1+deb9u1.\n\n\nWe recommend that you upgrade your librelp packages.\n\n\nFor the detailed security status of librelp please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/librelp>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4151-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4151"
 		}
 	]
 }

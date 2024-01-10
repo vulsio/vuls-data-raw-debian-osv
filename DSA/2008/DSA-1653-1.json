@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1653-1",
-	"modified": "2023-10-16T00:10:32.427574Z",
+	"modified": "2024-01-09T20:22:26.274222Z",
 	"published": "2008-10-13T00:00:00Z",
 	"related": [
 		"CVE-2007-6716",
@@ -13,7 +13,6 @@
 		"CVE-2008-4302"
 	],
 	"summary": "fai-kernels linux-2.6 user-mode-linux - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2007-6716](https://security-tracker.debian.org/tracker/CVE-2007-6716)\nJoe Jin reported a local denial of service vulnerability that\n allows system users to trigger an oops due to an improperly\n initialized data structure.\n* [CVE-2008-1514](https://security-tracker.debian.org/tracker/CVE-2008-1514)\nJan Kratochvil reported a local denial of service vulnerability in\n the ptrace interface for the s390 architecture. Local users can\n trigger an invalid pointer dereference, leading to a system panic.\n* [CVE-2008-3276](https://security-tracker.debian.org/tracker/CVE-2008-3276)\nEugene Teo reported an integer overflow in the DCCP subsystem that\n may allow remote attackers to cause a denial of service in the\n form of a kernel panic.\n* [CVE-2008-3525](https://security-tracker.debian.org/tracker/CVE-2008-3525)\nEugene Teo reported a lack of capability checks in the kernel\n driver for Granch SBNI12 leased line adapters (sbni), allowing\n local users to perform privileged operations.\n* [CVE-2008-3833](https://security-tracker.debian.org/tracker/CVE-2008-3833)\nThe S\\_ISUID/S\\_ISGID bits were not being cleared during an inode\n splice, which, under certain conditions, can be exploited by local\n users to obtain the privileges of a group for which they are not a\n member. Mark Fasheh reported this issue.\n* [CVE-2008-4210](https://security-tracker.debian.org/tracker/CVE-2008-4210)\nDavid Watson reported an issue in the open()/creat() system calls\n which, under certain conditions, can be exploited by local users\n to obtain the privileges of a group for which they are not a\n member.\n* [CVE-2008-4302](https://security-tracker.debian.org/tracker/CVE-2008-4302)\nA coding error in the splice subsystem allows local users to\n attempt to unlock a page structure that has not been locked,\n resulting in a system crash.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 2.6.18.dfsg.1-22etch3.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -161,12 +160,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1653-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1653"
 		}
 	]
 }

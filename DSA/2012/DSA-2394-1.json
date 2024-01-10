@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2394-1",
-	"modified": "2023-10-16T00:11:13.374090Z",
-	"published": "2012-01-27T00:00:00Z",
+	"modified": "2024-01-09T20:22:48.461254Z",
+	"published": "2012-01-25T00:00:00Z",
 	"related": [
 		"CVE-2011-0216",
 		"CVE-2011-2821",
@@ -11,7 +11,6 @@
 		"CVE-2011-3919"
 	],
 	"summary": "libxml2 - several",
-	"details": "\nMany security problems have been fixed in libxml2, a popular library to handle\nXML data files.\n\n\n* [CVE-2011-3919](https://security-tracker.debian.org/tracker/CVE-2011-3919):\n\nJĂźri Aedla discovered a heap-based buffer overflow that allows remote attackers\nto cause a denial of service or possibly have unspecified other impact via\nunknown vectors.\n* [CVE-2011-0216](https://security-tracker.debian.org/tracker/CVE-2011-0216):\n\nAn Off-by-one error have been discovered that allows remote attackers to\nexecute arbitrary code or cause a denial of service.\n* [CVE-2011-2821](https://security-tracker.debian.org/tracker/CVE-2011-2821):\n\nA memory corruption (double free) bug has been identified in libxml2's XPath\nengine. Through it, it is possible for an attacker to cause a denial of\nservice or possibly have unspecified other impact. This vulnerability does not\naffect the oldstable distribution (lenny).\n* [CVE-2011-2834](https://security-tracker.debian.org/tracker/CVE-2011-2834):\n\nYang Dingning discovered a double free vulnerability related to XPath handling.\n* [CVE-2011-3905](https://security-tracker.debian.org/tracker/CVE-2011-3905):\n\nAn out-of-bounds read vulnerability had been discovered, which allows remote\nattackers to cause a denial of service.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.6.32.dfsg-5+lenny5.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.7.8.dfsg-2+squeeze2.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2.7.8.dfsg-7.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.7.8.dfsg-7.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -69,12 +68,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2394-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2394"
 		}
 	]
 }

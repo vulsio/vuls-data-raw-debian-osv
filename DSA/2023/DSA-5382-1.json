@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5382-1",
-	"modified": "2023-10-16T00:27:36.040566Z",
+	"modified": "2024-01-09T20:29:37.011890Z",
 	"published": "2023-04-05T00:00:00Z",
 	"related": [
 		"CVE-2023-27586"
 	],
 	"summary": "cairosvg - security update",
-	"details": "\nIt was reported that cairosvg, a SVG converter based on Cairo, can send\nrequests to external hosts when processing specially crafted SVG files\nwith external file resource loading. An attacker can take advantage of\nthis flaw to perform a server-side request forgery or denial of service.\nFetching of external files is disabled by default with this update.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.5.0-1.1+deb11u1.\n\n\nWe recommend that you upgrade your cairosvg packages.\n\n\nFor the detailed security status of cairosvg please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/cairosvg](https://security-tracker.debian.org/tracker/cairosvg)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5382-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5382"
 		}
 	]
 }

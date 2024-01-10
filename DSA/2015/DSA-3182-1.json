@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3182-1",
-	"modified": "2023-10-16T00:11:49.904397Z",
+	"modified": "2024-01-09T20:25:53.252437Z",
 	"published": "2015-03-11T00:00:00Z",
 	"related": [
 		"CVE-2015-1782"
 	],
 	"summary": "libssh2 - security update",
-	"details": "\nMariusz Ziulek reported that libssh2, a SSH2 client-side library, was\nreading and using the SSH\\_MSG\\_KEXINIT packet without doing sufficient\nrange checks when negotiating a new SSH session with a remote server. A\nmalicious attacker could man in the middle a real server and cause a\nclient using the libssh2 library to crash (denial of service) or\notherwise read and use unintended memory areas in this process.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.4.2-1.1+deb7u1.\n\n\nWe recommend that you upgrade your libssh2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3182-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3182"
 		}
 	]
 }

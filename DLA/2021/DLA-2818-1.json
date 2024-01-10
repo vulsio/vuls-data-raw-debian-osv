@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2818-1",
-	"modified": "2023-06-28T06:36:59.415039Z",
-	"published": "2021-11-14T00:00:00Z",
+	"modified": "2024-01-09T20:32:58.778893Z",
+	"published": "2021-11-13T00:00:00Z",
 	"related": [
 		"CVE-2020-20445",
 		"CVE-2020-20446",
@@ -19,7 +19,6 @@
 		"CVE-2021-38291"
 	],
 	"summary": "ffmpeg - security update",
-	"details": "\nMultiple issues have been discovered in ffmpeg - tools for transcoding,\nstreaming and playing of multimedia files.\n\n\n* [CVE-2020-20445](https://security-tracker.debian.org/tracker/CVE-2020-20445)\nDivide By Zero issue via libavcodec/lpc.h, which allows a remote malicious\n user to cause a Denial of Service.\n* [CVE-2020-20446](https://security-tracker.debian.org/tracker/CVE-2020-20446)\nDivide By Zero issue via libavcodec/aacpsy.c, which allows a remote malicious\n user to cause a Denial of Service.\n* [CVE-2020-20451](https://security-tracker.debian.org/tracker/CVE-2020-20451)\nDenial of Service issue due to resource management errors via\n fftools/cmdutils.c.\n* [CVE-2020-20453](https://security-tracker.debian.org/tracker/CVE-2020-20453)\nDivide By Zero issue via libavcodec/aaccoder, which allows a remote\n malicious user to cause a Denial of Service.\n* [CVE-2020-22037](https://security-tracker.debian.org/tracker/CVE-2020-22037)\nA Denial of Service vulnerability due to a memory leak in\n avcodec\\_alloc\\_context3 at options.c\n* [CVE-2020-22041](https://security-tracker.debian.org/tracker/CVE-2020-22041)\nA Denial of Service vulnerability due to a memory leak in\n the av\\_buffersrc\\_add\\_frame\\_flags function in buffersrc.\n* [CVE-2020-22044](https://security-tracker.debian.org/tracker/CVE-2020-22044)\nA Denial of Service vulnerability due to a memory leak in the\n url\\_open\\_dyn\\_buf\\_internal function in libavformat/aviobuf.c.\n* [CVE-2020-22046](https://security-tracker.debian.org/tracker/CVE-2020-22046)\nA Denial of Service vulnerability due to a memory leak in the\n avpriv\\_float\\_dsp\\_allocl function in libavutil/float\\_dsp.c.\n* [CVE-2020-22048](https://security-tracker.debian.org/tracker/CVE-2020-22048)\nA Denial of Service vulnerability due to a memory leak in the\n ff\\_frame\\_pool\\_get function in framepool.c.\n* [CVE-2020-22049](https://security-tracker.debian.org/tracker/CVE-2020-22049)\nA Denial of Service vulnerability due to a memory leak in the\n wtvfile\\_open\\_sector function in wtvdec.c.\n* [CVE-2020-22054](https://security-tracker.debian.org/tracker/CVE-2020-22054)\nA Denial of Service vulnerability due to a memory leak in the av\\_dict\\_set\n function in dict.c.\n* [CVE-2021-38171](https://security-tracker.debian.org/tracker/CVE-2021-38171)\nadts\\_decode\\_extradata in libavformat/adtsenc.c does not check the\n init\\_get\\_bits return value, which is a necessary step because the second\n argument to init\\_get\\_bits can be crafted.\n* [CVE-2021-38291](https://security-tracker.debian.org/tracker/CVE-2021-38291)\nAssertion failure at src/libavutil/mathematics.c, causing ffmpeg aborted\n is detected. In some extreme cases, like with adpcm\\_ms samples with an\n extremely high channel count, get\\_audio\\_frame\\_duration() may return a\n negative frame duration value.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n7:3.2.16-1+deb9u1.\n\n\nWe recommend that you upgrade your ffmpeg packages.\n\n\nFor the detailed security status of ffmpeg please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ffmpeg>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,12 +58,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2818-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2818"
 		}
 	]
 }

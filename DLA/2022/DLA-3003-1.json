@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3003-1",
-	"modified": "2023-06-28T06:37:04.869268Z",
+	"modified": "2024-01-09T20:33:13.995652Z",
 	"published": "2022-05-13T00:00:00Z",
 	"related": [
 		"CVE-2022-24836"
 	],
 	"summary": "ruby-nokogiri - security update",
-	"details": "\nIt was discovered that there was a potential denial of service attack in\nruby-nokogiri, a HTML, XML, SAX etc. parser written in/for the Ruby programming\nlanguage. This was caused by the use of inefficient regular expressions that\nwere susceptible to excessive backtracking.\n\n\n* [CVE-2022-24836](https://security-tracker.debian.org/tracker/CVE-2022-24836)\nCVE-2022-24836: Nokogiri is an open source XML and HTML library for\n Ruby. Nokogiri `< v1.13.4` contains an inefficient regular\n expression that is susceptible to excessive backtracking when\n attempting to detect encoding in HTML documents. Users are advised to\n upgrade to Nokogiri `>= 1.13.4`. There are no known workarounds for\n this issue.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.6.8.1-1+deb9u2.\n\n\nWe recommend that you upgrade your ruby-nokogiri packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3003-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3003"
 		}
 	]
 }

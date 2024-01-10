@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3043-1",
-	"modified": "2023-06-28T06:26:48.665369Z",
+	"modified": "2024-01-09T20:32:35.028842Z",
 	"published": "2022-06-06T00:00:00Z",
 	"related": [
 		"CVE-2022-26491"
 	],
 	"summary": "pidgin - security update",
-	"details": "\nAn issue was discovered in Pidgin before 2.14.9. A remote attacker\nwho can spoof DNS responses can redirect a client connection to a\nmalicious server. The client will perform TLS certificate\nverification of the malicious domain name instead of the original\nXMPP service domain, allowing the attacker to take over control\nover the XMPP connection and to obtain user credentials and all\ncommunication content.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.12.0-1+deb9u1.\n\n\nWe recommend that you upgrade your pidgin packages.\n\n\nFor the detailed security status of pidgin please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/pidgin>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3043-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3043"
 		}
 	]
 }

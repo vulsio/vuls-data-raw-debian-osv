@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2757-1",
-	"modified": "2023-10-16T00:11:29.935689Z",
+	"modified": "2024-01-09T20:25:46.072455Z",
 	"published": "2013-09-14T00:00:00Z",
 	"related": [
 		"CVE-2013-4338",
@@ -11,7 +11,6 @@
 		"CVE-2013-5739"
 	],
 	"summary": "wordpress - several",
-	"details": "\nSeveral vulnerabilities were identified in Wordpress, a web blogging\ntool. As the CVEs were allocated from releases announcements and specific\nfixes are usually not identified, it has been decided to upgrade the\nWordpress package to the latest upstream version instead of backporting\nthe patches.\n\n\nThis means extra care should be taken when upgrading, especially when\nusing third-party plugins or themes, since compatibility may have been\nimpacted along the way. We recommend that users check their install\nbefore doing the upgrade.\n\n\n* [CVE-2013-4338](https://security-tracker.debian.org/tracker/CVE-2013-4338)\nUnsafe PHP unserialization in wp-includes/functions.php could cause\n arbitrary code execution.\n* [CVE-2013-4339](https://security-tracker.debian.org/tracker/CVE-2013-4339)\nInsufficient input validation could result in redirecting or leading\n a user to another website.\n* [CVE-2013-4340](https://security-tracker.debian.org/tracker/CVE-2013-4340)\nPrivilege escalation allowing an user with an author role to create\n an entry appearing as written by another user.\n* [CVE-2013-5738](https://security-tracker.debian.org/tracker/CVE-2013-5738)\nInsufficient capabilities were required for uploading .html/.html\n files, making it easier for authenticated users to conduct cross-site\n scripting attacks (XSS) using crafted html file uploads.\n* [CVE-2013-5739](https://security-tracker.debian.org/tracker/CVE-2013-5739)\nDefault Wordpress configuration allowed file upload for .swf/.exe\n files, making it easier for authenticated users to conduct cross-site\n scripting attacks (XSS).\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 3.6.1+dfsg-1~deb6u1.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.6.1+dfsg-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 3.6.1+dfsg-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.6.1+dfsg-1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -98,12 +97,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2757-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2757"
 		}
 	]
 }

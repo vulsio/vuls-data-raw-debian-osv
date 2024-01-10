@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3688-1",
-	"modified": "2023-10-16T00:12:14.949964Z",
+	"modified": "2024-01-09T20:26:01.366713Z",
 	"published": "2016-10-05T00:00:00Z",
 	"related": [
 		"CVE-2015-4000",
@@ -15,7 +15,6 @@
 		"CVE-2016-2834"
 	],
 	"summary": "nss - security update",
-	"details": "\nSeveral vulnerabilities were discovered in NSS, the cryptography\nlibrary developed by the Mozilla project.\n\n\n* [CVE-2015-4000](https://security-tracker.debian.org/tracker/CVE-2015-4000)\nDavid Adrian et al. reported that it may be feasible to attack\n Diffie-Hellman-based cipher suites in certain circumstances,\n compromising the confidentiality and integrity of data encrypted\n with Transport Layer Security (TLS).\n* [CVE-2015-7181](https://security-tracker.debian.org/tracker/CVE-2015-7181)\n[CVE-2015-7182](https://security-tracker.debian.org/tracker/CVE-2015-7182)\n[CVE-2016-1950](https://security-tracker.debian.org/tracker/CVE-2016-1950)\nTyson Smith, David Keeler, and Francis Gabriel discovered\n heap-based buffer overflows in the ASN.1 DER parser, potentially\n leading to arbitrary code execution.\n* [CVE-2015-7575](https://security-tracker.debian.org/tracker/CVE-2015-7575)\nKarthikeyan Bhargavan discovered that TLS client implementation\n accepted MD5-based signatures for TLS 1.2 connections with forward\n secrecy, weakening the intended security strength of TLS\n connections.\n* [CVE-2016-1938](https://security-tracker.debian.org/tracker/CVE-2016-1938)\nHanno Boeck discovered that NSS miscomputed the result of integer\n division for certain inputs. This could weaken the cryptographic\n protections provided by NSS. However, NSS implements RSA-CRT leak\n hardening, so RSA private keys are not directly disclosed by this\n issue.\n* [CVE-2016-1978](https://security-tracker.debian.org/tracker/CVE-2016-1978)\nEric Rescorla discovered a use-after-free vulnerability in the\n implementation of ECDH-based TLS handshakes, with unknown\n consequences.\n* [CVE-2016-1979](https://security-tracker.debian.org/tracker/CVE-2016-1979)\nTim Taubert discovered a use-after-free vulnerability in ASN.1 DER\n processing, with application-specific impact.\n* [CVE-2016-2834](https://security-tracker.debian.org/tracker/CVE-2016-2834)\nTyson Smith and Jed Davis discovered unspecified memory-safety\n bugs in NSS.\n\n\nIn addition, the NSS library did not ignore environment variables in\nprocesses which underwent a SUID/SGID/AT\\_SECURE transition at process\nstart. In certain system configurations, this allowed local users to\nescalate their privileges.\n\n\nThis update contains further correctness and stability fixes without\nimmediate security impact.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2:3.26-1+debu8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2:3.23-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3688-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3688"
 		}
 	]
 }

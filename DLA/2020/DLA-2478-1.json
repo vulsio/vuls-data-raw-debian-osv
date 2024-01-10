@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2478-1",
-	"modified": "2023-06-28T06:26:33.948409Z",
+	"modified": "2024-01-09T20:32:38.420258Z",
 	"published": "2020-12-02T00:00:00Z",
 	"related": [
 		"CVE-2020-25694",
@@ -9,7 +9,6 @@
 		"CVE-2020-25696"
 	],
 	"summary": "postgresql-9.6 - security update",
-	"details": "\nSeveral vulnerabilities have been found in the PostgreSQL database system.\n\n\n* [CVE-2020-25694](https://security-tracker.debian.org/tracker/CVE-2020-25694)\nPeter Eisentraut found that database reconnections may drop options\n from the original connection, such as encryption, which could lead\n to information disclosure or a man-in-the-middle attack.\n* [CVE-2020-25695](https://security-tracker.debian.org/tracker/CVE-2020-25695)\nEtienne Stalmans reported that a user with permissions to create\n non-temporary objects in an schema can execute arbitrary SQL\n functions as a superuser.\n* [CVE-2020-25696](https://security-tracker.debian.org/tracker/CVE-2020-25696)\nNick Cleaton found that the \\gset command modified variables that\n control the psql behaviour, which could result in a compromised or\n malicious server executing arbitrary code in the user session.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n9.6.20-0+deb9u1.\n\n\nWe recommend that you upgrade your postgresql-9.6 packages.\n\n\nFor the detailed security status of postgresql-9.6 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/postgresql-9.6>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2478-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2478"
 		}
 	]
 }

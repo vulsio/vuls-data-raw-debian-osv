@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2403-1",
-	"modified": "2023-06-28T06:26:32.991006Z",
+	"modified": "2024-01-09T20:32:32.734255Z",
 	"published": "2020-10-09T00:00:00Z",
 	"related": [
 		"CVE-2020-15169"
 	],
 	"summary": "rails - security update",
-	"details": "\nA potential Cross-Site Scripting (XSS) vulnerability was found in rails,\na ruby based MVC framework. Views that allow the user to control the\ndefault (not found) value of the `t` and `translate` helpers could be\nsusceptible to XSS attacks. When an HTML-unsafe string is passed as the\ndefault for a missing translation key named html or ending in \\_html, the\ndefault string is incorrectly marked as HTML-safe and not escaped.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2:4.2.7.1-1+deb9u4.\n\n\nWe recommend that you upgrade your rails packages.\n\n\nFor the detailed security status of rails please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/rails>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2403-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2403"
 		}
 	]
 }

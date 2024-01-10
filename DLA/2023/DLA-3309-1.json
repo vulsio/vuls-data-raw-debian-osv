@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3309-1",
-	"modified": "2023-07-21T12:15:22.306875Z",
+	"modified": "2024-01-09T20:33:27.961071Z",
 	"published": "2023-02-06T00:00:00Z",
 	"related": [
 		"CVE-2022-4728",
@@ -9,7 +9,6 @@
 		"CVE-2022-4730"
 	],
 	"summary": "graphite-web - security update",
-	"details": "\nIt was discovered that there were a number of issues in graphite-web, a\ntool provide realtime graphing of system statistics etc.\n\n\nA series of cross-site scripting (XSS) vulnerabilties existed that could\nhave been exploited remotely. Issues existed in the Cookie Handler, Template\nName Handler and Absolute Time Range Handler components:\n\n\n* [CVE-2022-4728](https://security-tracker.debian.org/tracker/CVE-2022-4728)\nA vulnerability has been found in Graphite Web and classified\n as problematic. This vulnerability affects unknown code of the\n component Cookie Handler. The manipulation leads to cross site\n scripting. VDB-216742 is the identifier assigned to this\n vulnerability.\n* [CVE-2022-4729](https://security-tracker.debian.org/tracker/CVE-2022-4729)\nA vulnerability was found in Graphite Web and classified as\n problematic. This issue affects some unknown processing of the\n component Template Name Handler. The manipulation leads to cross\n site scripting. The associated identifier of this vulnerability is\n VDB-216743.\n* [CVE-2022-4730](https://security-tracker.debian.org/tracker/CVE-2022-4730)\nA vulnerability was found in Graphite Web. It has been\n classified as problematic. Affected is an unknown function of the\n component Absolute Time Range Handler. The manipulation leads to\n cross site scripting. The identifier of this vulnerability is\n VDB-216744.\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n1.1.4-3+deb10u2.\n\n\nWe recommend that you upgrade your graphite-web packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3309-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3309"
 		}
 	]
 }

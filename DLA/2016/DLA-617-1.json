@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-617-1",
-	"modified": "2023-06-28T06:34:14.952499Z",
+	"modified": "2024-01-09T20:33:51.165611Z",
 	"published": "2016-09-10T00:00:00Z",
 	"related": [
 		"CVE-2015-8915",
 		"CVE-2016-7166"
 	],
 	"summary": "libarchive - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in libarchive,\na multi-format archive and compression library. An attacker could\ntake advantage of these flaws to cause an out of bounds read or a\ndenial of service against an application using the libarchive12\nlibrary using a carefully crafted input file.\n\n\n* [CVE-2015-8915](https://security-tracker.debian.org/tracker/CVE-2015-8915)\nParis Zoumpouloglou of Project Zero labs discovered a flaw in\n libarchive bsdtar. Using a crafted file bsdtar can perform an\n out-of-bounds memory read which will lead to a SEGFAULT.\n* [CVE-2016-7166](https://security-tracker.debian.org/tracker/CVE-2016-7166)\nAlexander Cherepanov discovered a flaw in libarchive compression\n handling. Using a crafted gzip file, one can get libarchive to\n invoke an infinite chain of gzip compressors until all the memory\n has been exhausted or another resource limit kicks in.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.0.4-3+wheezy3.\n\n\nWe recommend that you upgrade your libarchive packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-617-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-617"
 		}
 	]
 }

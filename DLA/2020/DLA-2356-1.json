@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2356-1",
-	"modified": "2023-06-28T06:28:55.306221Z",
+	"modified": "2024-01-09T20:32:30.718258Z",
 	"published": "2020-08-30T00:00:00Z",
 	"related": [
 		"CVE-2014-0791",
@@ -20,7 +20,6 @@
 		"CVE-2020-13398"
 	],
 	"summary": "freerdp - security update",
-	"details": "\nSeveral vulnerabilites have been reported against FreeRDP, an Open Source\nserver and client implementation of the Microsoft RDP protocol.\n\n\n* [CVE-2014-0791](https://security-tracker.debian.org/tracker/CVE-2014-0791)\nAn integer overflow in the license\\_read\\_scope\\_list function in\n libfreerdp/core/license.c in FreeRDP allowed remote RDP\n servers to cause a denial of service (application crash) or possibly\n have unspecified other impact via a large ScopeCount value in a Scope\n List in a Server License Request packet.\n* [CVE-2020-11042](https://security-tracker.debian.org/tracker/CVE-2020-11042)\nIn FreeRDP there was an out-of-bounds read in update\\_read\\_icon\\_info.\n It allowed reading an attacker-defined amount of client memory (32bit\n unsigned -> 4GB) to an intermediate buffer. This could have been used\n to crash the client or store information for later retrieval.\n* [CVE-2020-11045](https://security-tracker.debian.org/tracker/CVE-2020-11045)\nIn FreeRDP there was an out-of-bound read in in\n update\\_read\\_bitmap\\_data that allowed client memory to be read to an\n image buffer. The result displayed on screen as colour.\n* [CVE-2020-11046](https://security-tracker.debian.org/tracker/CVE-2020-11046)\nIn FreeRDP there was a stream out-of-bounds seek in\n update\\_read\\_synchronize that could have lead to a later out-of-bounds\n read.\n* [CVE-2020-11048](https://security-tracker.debian.org/tracker/CVE-2020-11048)\nIn FreeRDP there was an out-of-bounds read. It only allowed to abort\n a session. No data extraction was possible.\n* [CVE-2020-11058](https://security-tracker.debian.org/tracker/CVE-2020-11058)\nIn FreeRDP, a stream out-of-bounds seek in\n rdp\\_read\\_font\\_capability\\_set could have lead to a later out-of-bounds\n read. As a result, a manipulated client or server might have forced a\n disconnect due to an invalid data read.\n* [CVE-2020-11521](https://security-tracker.debian.org/tracker/CVE-2020-11521)\nlibfreerdp/codec/planar.c in FreeRDP had an Out-of-bounds Write.\n* [CVE-2020-11522](https://security-tracker.debian.org/tracker/CVE-2020-11522)\nlibfreerdp/gdi/gdi.c in FreeRDP had an Out-of-bounds Read.\n* [CVE-2020-11523](https://security-tracker.debian.org/tracker/CVE-2020-11523)\nlibfreerdp/gdi/region.c in FreeRDP had an Integer Overflow.\n* [CVE-2020-11525](https://security-tracker.debian.org/tracker/CVE-2020-11525)\nlibfreerdp/cache/bitmap.c in FreeRDP had an Out of bounds read.\n* [CVE-2020-11526](https://security-tracker.debian.org/tracker/CVE-2020-11526)\nlibfreerdp/core/update.c in FreeRDP had an Out-of-bounds Read.\n* [CVE-2020-13396](https://security-tracker.debian.org/tracker/CVE-2020-13396)\nAn out-of-bounds (OOB) read vulnerability has been detected in\n ntlm\\_read\\_ChallengeMessage in\n winpr/libwinpr/sspi/NTLM/ntlm\\_message.c.\n* [CVE-2020-13397](https://security-tracker.debian.org/tracker/CVE-2020-13397)\nAn out-of-bounds (OOB) read vulnerability has been detected in\n security\\_fips\\_decrypt in libfreerdp/core/security.c due to an\n uninitialized value.\n* [CVE-2020-13398](https://security-tracker.debian.org/tracker/CVE-2020-13398)\nAn out-of-bounds (OOB) write vulnerability has been detected in\n crypto\\_rsa\\_common in libfreerdp/crypto/crypto.c.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.1.0~git20140921.1.440916e+dfsg1-13+deb9u4.\n\n\nWe recommend that you upgrade your freerdp packages.\n\n\nFor the detailed security status of freerdp please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/freerdp>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2356-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2356"
 		}
 	]
 }

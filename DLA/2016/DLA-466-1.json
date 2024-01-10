@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-466-1",
-	"modified": "2023-06-28T06:25:34.398157Z",
+	"modified": "2024-01-09T20:33:49.072446Z",
 	"published": "2016-05-11T00:00:00Z",
 	"related": [
 		"CVE-2015-8869"
 	],
 	"summary": "ocaml - security update",
-	"details": "\nOCaml versions 4.02.3 and earlier have a runtime bug that,\non 64-bit platforms, causes sizes arguments to an internal\nmemmove call to be sign-extended from 32 to 64-bits before\nbeing passed to the memmove function.\nThis leads arguments between 2GiB and 4GiB to be interpreted\nas larger than they are (specifically, a bit below 2^64),\ncausing a buffer overflow.\nArguments between 4GiB and 6GiB are interpreted as 4GiB smaller\nthan they should be, causing a possible information leak.A\n\n\nFor Debian 7 Wheezy, these issues have been fixed in ocaml version 3.12.1-4+deb7u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-466-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-466"
 		}
 	]
 }

@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1963-2",
-	"modified": "2023-06-28T06:21:06.253165Z",
-	"published": "2019-10-17T00:00:00Z",
+	"modified": "2024-01-09T20:31:53.218449Z",
+	"published": "2019-10-18T00:00:00Z",
 	"summary": "poppler - regression update",
-	"details": "\nTwo buffer allocation issues were identified in poppler.\n\n\n* [CVE-2019-9959](https://security-tracker.debian.org/tracker/CVE-2019-9959)\nAn unexpected negative length value can cause an integer\n overflow, which in turn making it possible to allocate a large\n memory chunk on the heap with size controlled by an attacker.\n* [CVE-2019-10871](https://security-tracker.debian.org/tracker/CVE-2019-10871)\nThe RGB data are considered CMYK data and hence it reads 4 bytes\n instead of 3 bytes at the end of the image. The fixed version\n defines SPLASH\\_CMYK which is the upstream recommended solution.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.26.5-2+deb8u12.\n\n\nWe recommend that you upgrade your poppler packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1963-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1963"
 		}
 	]
 }

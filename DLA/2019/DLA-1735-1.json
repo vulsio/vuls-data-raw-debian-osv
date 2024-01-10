@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1735-1",
-	"modified": "2023-06-28T06:20:55.601944Z",
+	"modified": "2024-01-09T20:31:42.142250Z",
 	"published": "2019-03-29T00:00:00Z",
 	"related": [
 		"CVE-2019-8320",
@@ -11,7 +11,6 @@
 		"CVE-2019-8325"
 	],
 	"summary": "ruby2.1 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in rubygems embedded in\nruby2.1, the interpreted scripting language.\n\n\n* [CVE-2019-8320](https://security-tracker.debian.org/tracker/CVE-2019-8320)\nA Directory Traversal issue was discovered in RubyGems. Before\n making new directories or touching files (which now include\n path-checking code for symlinks), it would delete the target\n destination.\n* [CVE-2019-8322](https://security-tracker.debian.org/tracker/CVE-2019-8322)\nThe gem owner command outputs the contents of the API response\n directly to stdout. Therefore, if the response is crafted, escape\n sequence injection may occur.\n* [CVE-2019-8323](https://security-tracker.debian.org/tracker/CVE-2019-8323)\nGem::GemcutterUtilities#with\\_response may output the API response to\n stdout as it is. Therefore, if the API side modifies the response,\n escape sequence injection may occur.\n* [CVE-2019-8324](https://security-tracker.debian.org/tracker/CVE-2019-8324)\nA crafted gem with a multi-line name is not handled correctly.\n Therefore, an attacker could inject arbitrary code to the stub line\n of gemspec, which is eval-ed by code in ensure\\_loadable\\_spec during\n the preinstall check.\n* [CVE-2019-8325](https://security-tracker.debian.org/tracker/CVE-2019-8325)\nAn issue was discovered in RubyGems 2.6 and later through 3.0.2.\n Since Gem::CommandManager#run calls alert\\_error without escaping,\n escape sequence injection is possible. (There are many ways to cause\n an error.)\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.1.5-2+deb8u7.\n\n\nWe recommend that you upgrade your ruby2.1 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1735-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1735"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1276-1",
-	"modified": "2023-06-28T06:23:46.002839Z",
+	"modified": "2024-01-09T20:30:54.229564Z",
 	"published": "2018-02-11T00:00:00Z",
 	"related": [
 		"CVE-2017-15698"
 	],
 	"summary": "tomcat-native - security update",
-	"details": "\nJonas Klempel discovered that, when parsing the AIA-Extension field of\na client certificate, Apache Tomcat Native did not correctly handle\nfields longer than 127 bytes. The result of the parsing error was to\nskip the\nOCSP check. It was therefore possible for client certificates that\nshould have been rejected (if the OCSP check had been made) to be\naccepted. Users not using OCSP checks are not affected by this\nvulnerability.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.24-1+deb7u1.\n\n\nWe recommend that you upgrade your tomcat-native packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1276-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1276"
 		}
 	]
 }

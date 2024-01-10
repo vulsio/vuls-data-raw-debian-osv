@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4602-1",
-	"modified": "2023-10-16T00:19:11.440100Z",
+	"modified": "2024-01-09T20:28:54.795206Z",
 	"published": "2020-01-13T00:00:00Z",
 	"related": [
 		"CVE-2018-12207",
@@ -23,7 +23,6 @@
 		"CVE-2019-19583"
 	],
 	"summary": "xen - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor, which\ncould result in denial of service, guest-to-host privilege escalation or\ninformation leaks.\n\n\nIn addition this update provides mitigations for the TSX Asynchronous Abort\nspeculative side channel attack. For additional information please refer to\n<https://xenbits.xen.org/xsa/advisory-305.html>\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 4.8.5.final+shim4.10.4-1+deb9u12. Note that this will be the\nlast security update for Xen in the oldstable distribution; upstream\nsupport for the 4.8.x branch ended by the end of December 2019. If you\nrely on security support for your Xen installation an update to the\nstable distribution (buster) is recommended.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.11.3+24-g14b62ab3e5-1~deb10u1.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFor the detailed security status of xen please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/xen>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -88,12 +87,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4602-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2020/dsa-4602"
 		}
 	]
 }

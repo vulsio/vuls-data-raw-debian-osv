@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2370-1",
-	"modified": "2023-10-16T00:11:11.379930Z",
+	"modified": "2024-01-09T20:22:46.101964Z",
 	"published": "2011-12-22T00:00:00Z",
 	"related": [
 		"CVE-2011-4528",
 		"CVE-2011-4869"
 	],
 	"summary": "unbound - several",
-	"details": "\nIt was discovered that Unbound, a recursive DNS resolver, would crash\nwhen processing certain malformed DNS responses from authoritative DNS\nservers, leading to denial of service.\n\n\n* [CVE-2011-4528](https://security-tracker.debian.org/tracker/CVE-2011-4528)\nUnbound attempts to free unallocated memory during processing\n of duplicate CNAME records in a signed zone.\n* [CVE-2011-4869](https://security-tracker.debian.org/tracker/CVE-2011-4869)\nUnbound does not properly process malformed responses which\n lack expected NSEC3 records.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 1.4.6-1~lenny2.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1.4.6-1+squeeze2.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 1.4.14-1.\n\n\nWe recommend that you upgrade your unbound packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -81,12 +80,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2370-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2370"
 		}
 	]
 }

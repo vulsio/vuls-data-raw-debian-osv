@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-131-1",
-	"modified": "2023-06-28T06:20:33.072157Z",
+	"modified": "2024-01-09T20:30:58.975765Z",
 	"published": "2015-01-09T00:00:00Z",
 	"related": [
 		"CVE-2014-8116",
 		"CVE-2014-8117"
 	],
 	"summary": "file - security update",
-	"details": "\nMultiple security issues have been found in file, a tool/library to\ndetermine a file type. Processing a malformed file could result in\ndenial of service. Most of the changes are related to parsing ELF\nfiles.\n\n\nAs part of the fixes, several limits on aspects of the detection were\nadded or tightened, sometimes resulting in messages like recursion\nlimit exceeded or too many program header sections.\n\n\nTo mitigate such shortcomings, these limits are controllable by a new\n\"-R\"/\"--recursion\" parameter in the file program. Note: A future\nupgrade for file in squeeze-lts might replace this with the \"-P\"\nparameter to keep usage consistent across all distributions.\n\n\n* [CVE-2014-8116](https://security-tracker.debian.org/tracker/CVE-2014-8116)\nThe ELF parser (readelf.c) allows remote attackers to cause a\n denial of service (CPU consumption or crash).\n* [CVE-2014-8117](https://security-tracker.debian.org/tracker/CVE-2014-8117)\nsoftmagic.c does not properly limit recursion, which allows remote\n attackers to cause a denial of service (CPU consumption or crash).\n\n\n(no identifier has been assigned so far)\n\n\nout-of-bounds memory access\n\n\nFor Debian 6 Squeeze, these issues have been fixed in file version 5.04-5+squeeze9\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-131-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-131"
 		}
 	]
 }

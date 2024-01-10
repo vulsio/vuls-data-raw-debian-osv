@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2216-1",
-	"modified": "2023-06-28T06:25:09.565229Z",
-	"published": "2020-05-23T00:00:00Z",
+	"modified": "2024-01-09T20:32:13.851141Z",
+	"published": "2020-05-22T00:00:00Z",
 	"related": [
 		"CVE-2020-8161"
 	],
 	"summary": "ruby-rack - security update",
-	"details": "\nThere was a possible directory traversal vulnerability in the\nRack::Directory app that is bundled with Rack.\n\n\nIf certain directories exist in a director that is managed by\n`Rack::Directory`, an attacker could, using this vulnerability,\nread the contents of files on the server that were outside of\nthe root specified in the Rack::Directory initializer.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.5.2-3+deb8u3.\n\n\nWe recommend that you upgrade your ruby-rack packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2216-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2216"
 		}
 	]
 }

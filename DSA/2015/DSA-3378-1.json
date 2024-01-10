@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3378-1",
-	"modified": "2023-10-16T00:06:21.093314Z",
+	"modified": "2024-01-09T20:18:41.743692Z",
 	"published": "2015-10-24T00:00:00Z",
 	"related": [
 		"CVE-2015-7673",
 		"CVE-2015-7674"
 	],
 	"summary": "gdk-pixbuf - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in gdk-pixbuf, a toolkit\nfor image loading and pixel buffer manipulation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2015-7673](https://security-tracker.debian.org/tracker/CVE-2015-7673)\nGustavo Grieco discovered a heap overflow in the processing of TGA\n images which may result in the execution of arbitrary code or denial\n of service (process crash) if a malformed image is opened.\n* [CVE-2015-7674](https://security-tracker.debian.org/tracker/CVE-2015-7674)\nGustavo Grieco discovered an integer overflow flaw in the processing\n of GIF images which may result in the execution of arbitrary code or\n denial of service (process crash) if a malformed image is opened.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 2.26.1-1+deb7u2.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.31.1-2+deb8u3.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 2.32.1-1 or earlier.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.32.1-1 or earlier.\n\n\nWe recommend that you upgrade your gdk-pixbuf packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3378-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3378"
 		}
 	]
 }

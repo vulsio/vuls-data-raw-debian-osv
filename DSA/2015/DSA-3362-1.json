@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3362-1",
-	"modified": "2023-10-16T00:11:57.280276Z",
+	"modified": "2024-01-09T20:28:10.180314Z",
 	"published": "2015-09-18T00:00:00Z",
 	"related": [
 		"CVE-2015-5278",
@@ -10,7 +10,6 @@
 		"CVE-2015-6855"
 	],
 	"summary": "qemu-kvm - security update",
-	"details": "\nSeveral vulnerabilities were discovered in qemu-kvm, a full\nvirtualization solution on x86 hardware.\n\n\n* [CVE-2015-5278](https://security-tracker.debian.org/tracker/CVE-2015-5278)\nQinghao Tang of QIHU 360 Inc. discovered an infinite loop issue in\n the NE2000 NIC emulation. A privileged guest user could use this\n flaw to mount a denial of service (QEMU process crash).\n* [CVE-2015-5279](https://security-tracker.debian.org/tracker/CVE-2015-5279)\nQinghao Tang of QIHU 360 Inc. discovered a heap buffer overflow flaw\n in the NE2000 NIC emulation. A privileged guest user could use this\n flaw to mount a denial of service (QEMU process crash), or\n potentially to execute arbitrary code on the host with the\n privileges of the hosting QEMU process.\n* [CVE-2015-6815](https://security-tracker.debian.org/tracker/CVE-2015-6815)\nQinghao Tang of QIHU 360 Inc. discovered an infinite loop issue in\n the e1000 NIC emulation. A privileged guest user could use this flaw\n to mount a denial of service (QEMU process crash).\n* [CVE-2015-6855](https://security-tracker.debian.org/tracker/CVE-2015-6855)\nQinghao Tang of QIHU 360 Inc. discovered a flaw in the IDE\n subsystem in QEMU occurring while executing IDE's\n WIN\\_READ\\_NATIVE\\_MAX command to determine the maximum size of a\n drive. A privileged guest user could use this flaw to mount a\n denial of service (QEMU process crash).\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.1.2+dfsg-6+deb7u11.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3362-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3362"
 		}
 	]
 }

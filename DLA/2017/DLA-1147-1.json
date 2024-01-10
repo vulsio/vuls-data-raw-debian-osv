@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1147-1",
-	"modified": "2023-06-28T06:22:45.883309Z",
+	"modified": "2024-01-09T20:30:48.546328Z",
 	"published": "2017-10-26T00:00:00Z",
 	"related": [
 		"CVE-2017-11591",
@@ -11,7 +11,6 @@
 		"CVE-2017-14864"
 	],
 	"summary": "exiv2 - security update",
-	"details": "\nThe exiv2 library is vulnerable to multiple issues that can all lead\nto denial of service of the applications relying on the library to parse\nimages' metadata.\n\n\n* [CVE-2017-11591](https://security-tracker.debian.org/tracker/CVE-2017-11591)\nDenial of service via floating point exception in\n the Exiv2::ValueType function.\n* [CVE-2017-11683](https://security-tracker.debian.org/tracker/CVE-2017-11683)\nDenial of service through failing assertion triggered by\n crafted image.\n* [CVE-2017-14859](https://security-tracker.debian.org/tracker/CVE-2017-14859) /\n [CVE-2017-14862](https://security-tracker.debian.org/tracker/CVE-2017-14862) /\n [CVE-2017-14864](https://security-tracker.debian.org/tracker/CVE-2017-14864)\nDenial of service through invalid memory access triggered by a crafted\n image.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.23-1+deb7u2.\n\n\nWe recommend that you upgrade your exiv2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1147-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1147"
 		}
 	]
 }

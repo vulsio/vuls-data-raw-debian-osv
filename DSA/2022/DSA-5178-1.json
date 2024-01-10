@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5178-1",
-	"modified": "2023-10-16T00:25:50.890838Z",
+	"modified": "2024-01-09T20:26:39.778491Z",
 	"published": "2022-07-06T00:00:00Z",
 	"related": [
 		"CVE-2022-21123",
@@ -11,7 +11,6 @@
 		"CVE-2022-21166"
 	],
 	"summary": "intel-microcode - security update",
-	"details": "\nThis update ships updated CPU microcode for some types of Intel CPUs and\nprovides mitigations for security vulnerabilities.\n\n\n* [CVE-2022-21123](https://security-tracker.debian.org/tracker/CVE-2022-21123),\n [CVE-2022-21125](https://security-tracker.debian.org/tracker/CVE-2022-21125),\n [CVE-2022-21127](https://security-tracker.debian.org/tracker/CVE-2022-21127),\n [CVE-2022-21166](https://security-tracker.debian.org/tracker/CVE-2022-21166)\nVarious researchers discovered flaws in Intel processors,\n collectively referred to as MMIO Stale Data vulnerabilities, which\n may result in information leak to local users.\n\n\nFor details please refer to\n [\\\n https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/processor-mmio-stale-data-vulnerabilities.html](https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/processor-mmio-stale-data-vulnerabilities.html)\n* [CVE-2022-21151](https://security-tracker.debian.org/tracker/CVE-2022-21151)\nAlysa Milburn, Jason Brandt, Avishai Redelman and Nir Lavi\n discovered that for some Intel processors optimization removal or\n modification of security-critical code may result in information\n disclosure to local users.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 3.20220510.1~deb10u1.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 3.20220510.1~deb11u1.\n\n\nWe recommend that you upgrade your intel-microcode packages.\n\n\nFor the detailed security status of intel-microcode please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/intel-microcode](https://security-tracker.debian.org/tracker/intel-microcode)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -379,12 +378,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5178-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5178"
 		}
 	]
 }

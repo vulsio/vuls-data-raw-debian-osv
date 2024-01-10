@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-170-1",
-	"modified": "2023-06-28T06:24:54.670757Z",
+	"modified": "2024-01-09T20:31:38.333794Z",
 	"published": "2015-03-14T00:00:00Z",
 	"related": [
 		"CVE-2015-2091"
 	],
 	"summary": "mod-gnutls - security update",
-	"details": "\nThomas Klute discovered that in mod-gnutls, an Apache module providing\nSSL and TLS encryption with GnuTLS, a bug caused the server's client\nverify mode not to be considered at all, in case the directory's\nconfiguration was unset. Clients with invalid certificates were then\nable to leverage this flaw in order to get access to that directory.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in mod-gnutls version 0.5.6-1+squeeze2\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-170-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-170"
 		}
 	]
 }

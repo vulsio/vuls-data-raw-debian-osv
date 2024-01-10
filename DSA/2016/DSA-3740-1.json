@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3740-1",
-	"modified": "2023-10-16T00:12:17.536005Z",
+	"modified": "2024-01-09T20:22:00.709510Z",
 	"published": "2016-12-19T00:00:00Z",
 	"related": [
 		"CVE-2016-2119",
@@ -10,7 +10,6 @@
 		"CVE-2016-2126"
 	],
 	"summary": "samba - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix. The Common Vulnerabilities and\nExposures project identifies the following issues:\n\n\n* [CVE-2016-2119](https://security-tracker.debian.org/tracker/CVE-2016-2119)\nStefan Metzmacher discovered that client-side SMB2/3 required\n signing can be downgraded, allowing a man-in-the-middle attacker to\n impersonate a server being connected to by Samba, and return\n malicious results.\n* [CVE-2016-2123](https://security-tracker.debian.org/tracker/CVE-2016-2123)\nTrend Micro's Zero Day Initiative and Frederic Besler discovered\n that the routine ndr\\_pull\\_dnsp\\_name, used to parse data from the\n Samba Active Directory ldb database, contains an integer overflow\n flaw, leading to an attacker-controlled memory overwrite. An\n authenticated user can take advantage of this flaw for remote\n privilege escalation.\n* [CVE-2016-2125](https://security-tracker.debian.org/tracker/CVE-2016-2125)\nSimo Sorce of Red Hat discovered that the Samba client code always\n requests a forwardable ticket when using Kerberos authentication. A\n target server, which must be in the current or trusted domain/realm,\n is given a valid general purpose Kerberos Ticket Granting Ticket\n (TGT), which can be used to fully impersonate the authenticated user\n or service.\n* [CVE-2016-2126](https://security-tracker.debian.org/tracker/CVE-2016-2126)\nVolker Lendecke discovered several flaws in the Kerberos PAC\n validation. A remote, authenticated, attacker can cause the winbindd\n process to crash using a legitimate Kerberos ticket due to incorrect\n handling of the PAC checksum. A local service with access to the\n winbindd privileged pipe can cause winbindd to cache elevated access\n permissions.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2:4.2.14+dfsg-0+deb8u2. In addition, this update contains\nseveral changes originally targeted for the upcoming jessie point\nrelease.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3740-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3740"
 		}
 	]
 }

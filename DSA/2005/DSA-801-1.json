@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-801-1",
-	"modified": "2023-10-16T00:29:11.263872Z",
+	"modified": "2024-01-09T20:34:08.068781Z",
 	"published": "2005-09-05T00:00:00Z",
 	"related": [
 		"CVE-2005-2496"
 	],
 	"summary": "ntp - programming error",
-	"details": "\nSuSE developers discovered that ntp confuses the given group id with\nthe group id of the given user when called with a group id on the\ncommandline that is specified as a string and not as a numeric gid,\nwhich causes ntpd to run with different privileges than intended.\n\n\nThe old stable distribution (woody) is not affected by this problem.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 4.2.0a+stable-2sarge1.\n\n\nThe unstable distribution (sid) is not affected by this problem.\n\n\nWe recommend that you upgrade your ntp-server package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-801-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-801"
 		}
 	]
 }

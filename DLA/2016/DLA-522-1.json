@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-522-1",
-	"modified": "2023-06-28T06:25:34.267458Z",
+	"modified": "2024-01-09T20:33:05.404720Z",
 	"published": "2016-06-21T00:00:00Z",
 	"related": [
 		"CVE-2016-0772",
@@ -9,7 +9,6 @@
 		"CVE-2016-5699"
 	],
 	"summary": "python2.7 - security update",
-	"details": "\n* [CVE-2016-0772](https://security-tracker.debian.org/tracker/CVE-2016-0772)\nA vulnerability in smtplib allowing MITM attacker to perform a\n startTLS stripping attack. smtplib does not seem to raise an\n exception when the remote end (smtp server) is capable of\n negotiating starttls but fails to respond with 220 (ok) to an\n explicit call of SMTP.starttls(). This may allow a malicious\n MITM to perform a startTLS stripping attack if the client code\n does not explicitly check the response code for startTLS.\n* [CVE-2016-5636](https://security-tracker.debian.org/tracker/CVE-2016-5636)\nIssue #26171: Fix possible integer overflow and heap corruption\n in zipimporter.get\\_data().\n* [CVE-2016-5699](https://security-tracker.debian.org/tracker/CVE-2016-5699)\nProtocol injection can occur not only if an application sets a\n header based on user-supplied values, but also if the application\n ever tries to fetch a URL specified by an attacker (SSRF case) OR\n if the application ever accesses any malicious web server\n (redirection case).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.7.3-6+deb7u3.\n\n\nWe recommend that you upgrade your python2.7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-522-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-522"
 		}
 	]
 }

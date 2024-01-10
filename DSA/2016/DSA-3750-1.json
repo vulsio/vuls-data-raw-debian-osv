@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3750-1",
-	"modified": "2023-10-16T00:12:18.307894Z",
+	"modified": "2024-01-09T20:22:05.011006Z",
 	"published": "2016-12-31T00:00:00Z",
 	"related": [
 		"CVE-2016-10033"
 	],
 	"summary": "libphp-phpmailer - security update",
-	"details": "\nDawid Golunski discovered that PHPMailer, a popular library to send\nemail from PHP applications, allowed a remote attacker to execute\ncode if they were able to provide a crafted Sender address.\n\n\nNote that for this issue also [CVE-2016-10045](https://security-tracker.debian.org/tracker/CVE-2016-10045) was assigned, which is a regression in the original patch\nproposed for [CVE-2016-10033](https://security-tracker.debian.org/tracker/CVE-2016-10033). Because the origial patch was not applied in Debian,\nDebian was not vulnerable to [CVE-2016-10045](https://security-tracker.debian.org/tracker/CVE-2016-10045).\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 5.2.9+dfsg-2+deb8u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.2.14+dfsg-2.1.\n\n\nWe recommend that you upgrade your libphp-phpmailer packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3750-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3750"
 		}
 	]
 }

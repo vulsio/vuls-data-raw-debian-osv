@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1666-1",
-	"modified": "2023-06-28T06:20:52.398150Z",
-	"published": "2019-02-09T00:00:00Z",
+	"modified": "2024-01-09T20:31:33.474091Z",
+	"published": "2019-02-07T00:00:00Z",
 	"related": [
 		"CVE-2018-8786",
 		"CVE-2018-8787",
@@ -10,7 +10,6 @@
 		"CVE-2018-8789"
 	],
 	"summary": "freerdp - security update",
-	"details": "\nFor the FreeRDP version in Debian jessie LTS a security and functionality\nupdate has recently been provided. FreeRDP is a free re-implementation\nof the Microsoft RDP protocol (server and client side) with freerdp-x11\nbeing the most common RDP client these days.\n\n\nFunctional improvements:\n\n\nWith help from FreeRDP upstream (cudos to Bernhard Miklautz and\n Martin Fleisz) we are happy to announce that RDP proto v6 and CredSSP\n v3 support have been backported to the old FreeRDP 1.1 branch.\n\n\nSince Q2/2018, Microsoft Windows servers and clients received an\n update that defaulted their RDP server to proto version 6. Since this\n change, people have not been able anymore to connect to recently\n updated MS Windows machines using old the FreeRDP 1.1 branch as found\n in Debian jessie LTS and Debian stretch.\n\n\nWith the recent FreeRDP upload to Debian jessie LTS, connecting to\n up-to-date MS Windows machines is now again possible.\n\n\nSecurity issues:\n\n\n* [CVE-2018-8786](https://security-tracker.debian.org/tracker/CVE-2018-8786)\nFreeRDP contained an integer truncation that lead to a heap-based\n buffer overflow in function update\\_read\\_bitmap\\_update() and resulted\n in a memory corruption and probably even a remote code execution.\n* [CVE-2018-8787](https://security-tracker.debian.org/tracker/CVE-2018-8787)\nFreeRDP contained an integer overflow that leads to a heap-based\n buffer overflow in function gdi\\_Bitmap\\_Decompress() and resulted in a\n memory corruption and probably even a remote code execution.\n* [CVE-2018-8788](https://security-tracker.debian.org/tracker/CVE-2018-8788)\nFreeRDP contained an out-of-bounds write of up to 4 bytes in function\n nsc\\_rle\\_decode() that resulted in a memory corruption and possibly\n even a remote code execution.\n* [CVE-2018-8789](https://security-tracker.debian.org/tracker/CVE-2018-8789)\nFreeRDP contained several out-of-bounds reads in the NTLM\n authentication module that resulted in a denial of service\n (segfault).\n\n\nFor Debian 8 Jessie, these security problems have been fixed in version\n1.1.0~git20140921.1.440916e+dfsg1-13~deb8u3.\n\n\nWe recommend that you upgrade your freerdp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1666-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1666"
 		}
 	]
 }

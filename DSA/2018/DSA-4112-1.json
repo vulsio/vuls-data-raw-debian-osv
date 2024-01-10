@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4112-1",
-	"modified": "2023-10-16T00:12:40.591333Z",
+	"modified": "2024-01-09T20:26:59.265510Z",
 	"published": "2018-02-14T00:00:00Z",
 	"related": [
 		"CVE-2017-17563",
@@ -10,7 +10,6 @@
 		"CVE-2017-17566"
 	],
 	"summary": "xen - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor:\n\n\n* [CVE-2017-17563](https://security-tracker.debian.org/tracker/CVE-2017-17563)\nJan Beulich discovered that an incorrect reference count overflow\n check in x86 shadow mode may result in denial of service or\n privilege escalation.\n* [CVE-2017-17564](https://security-tracker.debian.org/tracker/CVE-2017-17564)\nJan Beulich discovered that improper x86 shadow mode reference count\n error handling may result in denial of service or privilege\n escalation.\n* [CVE-2017-17565](https://security-tracker.debian.org/tracker/CVE-2017-17565)\nJan Beulich discovered that an incomplete bug check in x86 log-dirty\n handling may result in denial of service.\n* [CVE-2017-17566](https://security-tracker.debian.org/tracker/CVE-2017-17566)\nJan Beulich discovered that x86 PV guests may gain access to\n internally used pages which could result in denial of service or\n potential privilege escalation.\n\n\nIn addition this update ships the Comet shim to address the Meltdown\nclass of vulnerabilities for guests with legacy PV kernels. In addition,\nthe package provides the Xen PTI stage 1 mitigation which is built-in\nand enabled by default on Intel systems, but can be disabled with\n`xpti=false' on the hypervisor command line (It does not make sense to\nuse both xpti and the Comet shim.)\n\n\nPlease refer to the following URL for more details on how to configure\nindividual mitigation strategies:\n[\\\nhttps://xenbits.xen.org/xsa/advisory-254.html](https://xenbits.xen.org/xsa/advisory-254.html)\n\n\nAdditional information can also be found in README.pti and README.comet.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.8.3+comet2+shim4.10.0+comet3-1+deb9u4.1.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFor the detailed security status of xen please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/xen](https://security-tracker.debian.org/tracker/xen)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4112-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4112"
 		}
 	]
 }

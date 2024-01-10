@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5161-1",
-	"modified": "2023-10-16T00:22:40.494864Z",
+	"modified": "2024-01-09T20:26:38.013416Z",
 	"published": "2022-06-11T00:00:00Z",
 	"related": [
 		"CVE-2022-0494",
@@ -19,7 +19,6 @@
 		"CVE-2022-32250"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2022-0494](https://security-tracker.debian.org/tracker/CVE-2022-0494)\nThe scsi\\_ioctl() was susceptible to an information leak only\n exploitable by users with CAP\\_SYS\\_ADMIN or CAP\\_SYS\\_RAWIO\n capabilities.\n* [CVE-2022-0854](https://security-tracker.debian.org/tracker/CVE-2022-0854)\nAli Haider discovered a potential information leak in the DMA\n subsystem. On systems where the swiotlb feature is needed, this\n might allow a local user to read sensitive information.\n* [CVE-2022-1012](https://security-tracker.debian.org/tracker/CVE-2022-1012)\nThe randomisation when calculating port offsets in the IP\n implementation was enhanced.\n* [CVE-2022-1729](https://security-tracker.debian.org/tracker/CVE-2022-1729)\nNorbert Slusarek discovered a race condition in the perf subsystem\n which could result in local privilege escalation to root. The\n default settings in Debian prevent exploitation unless more\n permissive settings have been applied in the\n kernel.perf\\_event\\_paranoid sysctl.\n* [CVE-2022-1786](https://security-tracker.debian.org/tracker/CVE-2022-1786)\nKyle Zeng discovered a use-after-free in the io\\_uring subsystem\n which way result in local privilege escalation to root.\n* [CVE-2022-1789](https://security-tracker.debian.org/tracker/CVE-2022-1789) /\n [CVE-2022-1852](https://security-tracker.debian.org/tracker/CVE-2022-1852)\nYongkang Jia, Gaoning Pan and Qiuhao Li discovered two NULL pointer\n dereferences in KVM's CPU instruction handling, resulting in denial\n of service.\n* [CVE-2022-32250](https://security-tracker.debian.org/tracker/CVE-2022-32250)\nAaron Adams discovered a use-after-free in Netfilter which may\n result in local privilege escalation to root.\n* [CVE-2022-1974](https://security-tracker.debian.org/tracker/CVE-2022-1974) /\n [CVE-2022-1975](https://security-tracker.debian.org/tracker/CVE-2022-1975)\nDuoming Zhou discovered that the NFC netlink interface was\n suspectible to denial of service.\n* [CVE-2022-2078](https://security-tracker.debian.org/tracker/CVE-2022-2078)\nZiming Zhang discovered an out-of-bound write in Netfilter which may\n result in local privilege escalation to root.\n* [CVE-2022-21499](https://security-tracker.debian.org/tracker/CVE-2022-21499)\nIt was discovered that the kernel debugger could be used to bypass\n UEFI Secure Boot restrictions.\n* [CVE-2022-28893](https://security-tracker.debian.org/tracker/CVE-2022-28893)\nFelix Fu discovered a use-after-free in the implementation of the\n Remote Procedure Call (SunRPC) protocol, which could result in denial of\n service or an information leak.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.120-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5161-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5161"
 		}
 	]
 }

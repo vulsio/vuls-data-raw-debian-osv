@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-927-1",
-	"modified": "2023-06-28T06:27:12.950303Z",
+	"modified": "2024-01-09T20:34:03.954627Z",
 	"published": "2017-04-29T00:00:00Z",
 	"related": [
 		"CVE-2017-5661"
 	],
 	"summary": "fop - security update",
-	"details": "\nIn Apache FOP before 2.2, files lying on the filesystem of the server\nwhich uses FOP can be revealed to arbitrary users who send maliciously\nformed SVG files. The file types that can be shown depend on the user\ncontext in which the exploitable application is running. If the user is\nroot a full compromise of the server - including confidential or\nsensitive files - would be possible. XXE can also be used to attack the\navailability of the server via denial of service as the references\nwithin a xml document can trivially trigger an amplification attack.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:1.0.dfsg2-6+deb7u1.\n\n\nWe recommend that you upgrade your fop packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-927-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-927"
 		}
 	]
 }

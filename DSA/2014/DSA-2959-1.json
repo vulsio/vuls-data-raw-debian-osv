@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2959-1",
-	"modified": "2023-10-16T00:10:40.020967Z",
+	"modified": "2024-01-09T20:21:38.796309Z",
 	"published": "2014-06-14T00:00:00Z",
 	"related": [
 		"CVE-2014-3154",
@@ -10,7 +10,6 @@
 		"CVE-2014-3157"
 	],
 	"summary": "chromium-browser - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the chromium web browser.\n\n\n* [CVE-2014-3154](https://security-tracker.debian.org/tracker/CVE-2014-3154)\nCollin Payne discovered a use-after-free issue in the filesystem API.\n* [CVE-2014-3155](https://security-tracker.debian.org/tracker/CVE-2014-3155)\nJames March, Daniel Sommermann, and Alan Frindell discovered several\n out-of-bounds read issues in the SPDY protocol implementation.\n* [CVE-2014-3156](https://security-tracker.debian.org/tracker/CVE-2014-3156)\nAtte Kettunen discovered a buffer overflow issue in bitmap handling\n in the clipboard implementation.\n* [CVE-2014-3157](https://security-tracker.debian.org/tracker/CVE-2014-3157)\nA heap-based buffer overflow issue was discovered in chromium's\n ffmpeg media filter.\n\n\nIn addition, this version corrects a regression in the previous update.\nSupport for older i386 processors had been dropped. This functionality\nis now restored.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 35.0.1916.153-1~deb7u1.\n\n\nFor the testing (jessie) and unstable (sid) distribution, these problems\nhave been fixed in version 35.0.1916.153-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -82,12 +81,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2959-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2959"
 		}
 	]
 }

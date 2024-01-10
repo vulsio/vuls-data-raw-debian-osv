@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3803-1",
-	"modified": "2023-10-16T00:12:20.806908Z",
+	"modified": "2024-01-09T20:22:03.920558Z",
 	"published": "2017-03-08T00:00:00Z",
 	"related": [
 		"CVE-2016-10243"
 	],
 	"summary": "texlive-base - security update",
-	"details": "\nIt was discovered that texlive-base, the TeX Live package which provides\nthe essential TeX programs and files, whitelists mpost as an external\nprogram to be run from within the TeX source code (called \\write18).\nSince mpost allows to specify other programs to be run, an attacker can\ntake advantage of this flaw for arbitrary code execution when compiling\na TeX document.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2014.20141024-2+deb8u1.\n\n\nFor the upcoming stable distribution (stretch), this problem has been\nfixed in version 2016.20161130-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2016.20161130-1.\n\n\nWe recommend that you upgrade your texlive-base packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3803-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3803"
 		}
 	]
 }

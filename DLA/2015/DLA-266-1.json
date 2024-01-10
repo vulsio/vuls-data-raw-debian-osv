@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-266-1",
-	"modified": "2023-06-28T06:30:11.472188Z",
+	"modified": "2024-01-09T20:32:47.967768Z",
 	"published": "2015-07-03T00:00:00Z",
 	"related": [
 		"CVE-2015-1819",
@@ -9,7 +9,6 @@
 		"CVE-2015-8710"
 	],
 	"summary": "libxml2 - security update",
-	"details": "\nThis upload to Debian squeeze-lts fixes three issues found in the libxml2\npackage.\n\n\n(1) [CVE-2015-1819](https://security-tracker.debian.org/tracker/CVE-2015-1819) / #782782\n\n\nFlorian Weimer from Red Hat reported an issue against libxml2, where a\nparser which uses libxml2 chokes on a crafted XML document, allocating\ngigabytes of data. This is a fine line issue between API misuse and a bug\nin libxml2. This issue got addressed in libxml2 upstream and the patch\nhas been backported to libxml2 in squeeze-lts.\n\n\n(2) #782985\n\n\nJun Kokatsu reported an out-of-bounds memory access in libxml2. By\nentering an unclosed html comment the libxml2 parser didn't stop parsing\nat the end of the buffer, causing random memory to be included in the\nparsed comment that was returned to the evoking application.\n\n\nIn the Shopify application (where this issue was originally discovered),\nthis caused ruby objects from previous http requests to be disclosed in\nthe rendered page.\n\n\n(3) #783010\n\n\nMichal Zalewski reported another out-of-bound reads issue in libxml2 that\ndid not cause any crashes but could be detected under ASAN and Valgrind.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-266-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-266"
 		}
 	]
 }

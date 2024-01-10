@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1765-1",
-	"modified": "2023-10-16T00:05:40.307531Z",
+	"modified": "2024-01-09T20:25:30.619120Z",
 	"published": "2009-04-08T00:00:00Z",
 	"related": [
 		"CVE-2008-3330",
@@ -9,7 +9,6 @@
 		"CVE-2009-0932"
 	],
 	"summary": "horde3 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been found in horde3, the horde web application\nframework. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2009-0932](https://security-tracker.debian.org/tracker/CVE-2009-0932)\nGunnar Wrobel discovered a directory traversal vulnerability, which\nallows attackers to include and execute arbitrary local files via the\ndriver parameter in Horde\\_Image.\n* [CVE-2008-3330](https://security-tracker.debian.org/tracker/CVE-2008-3330)\nIt was discovered that an attacker could perform a cross-site scripting\nattack via the contact name, which allows attackers to inject arbitrary\nhtml code. This requires that the attacker has access to create\ncontacts.\n* [CVE-2008-5917](https://security-tracker.debian.org/tracker/CVE-2008-5917)\nIt was discovered that the horde XSS filter is prone to a cross-site\nscripting attack, which allows attackers to inject arbitrary html code.\nThis is only exploitable when Internet Explorer is used.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 3.1.3-4etch5.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 3.2.2+debian0-2, which was already included in the lenny\nrelease.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 3.2.2+debian0-2.\n\n\nWe recommend that you upgrade your horde3 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1765-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1765"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2372-1",
-	"modified": "2023-06-28T06:26:31.904420Z",
+	"modified": "2024-01-09T20:32:31.593578Z",
 	"published": "2020-09-12T00:00:00Z",
 	"related": [
 		"CVE-2020-25219"
 	],
 	"summary": "libproxy - security update",
-	"details": "\nIt was discovered that there was a denial of service attack in libproxy, a\nlibrary to make applications HTTP proxy aware. A remote server could cause an\ninfinite stack recursion.\n\n\n* [CVE-2020-25219](https://security-tracker.debian.org/tracker/CVE-2020-25219)\nurl::recvline in url.cpp in libproxy 0.4.x through 0.4.15 allows a\n remote HTTP server to trigger uncontrolled recursion via a response\n composed of an infinite stream that lacks a newline character. This leads\n to stack exhaustion.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n0.4.14-2+deb9u1.\n\n\nWe recommend that you upgrade your libproxy packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2372-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2372"
 		}
 	]
 }

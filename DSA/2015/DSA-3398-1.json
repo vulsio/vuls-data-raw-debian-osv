@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3398-1",
-	"modified": "2023-10-16T00:11:58.682142Z",
+	"modified": "2024-01-09T20:28:12.026045Z",
 	"published": "2015-11-16T00:00:00Z",
 	"related": [
 		"CVE-2015-8023"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nTobias Brunner found an authentication bypass vulnerability in\nstrongSwan, an IKE/IPsec suite.\n\n\nDue to insufficient validation of its local state the server\nimplementation of the EAP-MSCHAPv2 protocol in the eap-mschapv2 plugin\ncan be tricked into successfully concluding the authentication without\nproviding valid credentials.\n\n\nIt's possible to recognize such attacks by looking at the server logs.\nThe following log message would be seen during the client\nauthentication:\n\n\n`EAP method EAP\\_MSCHAPV2 succeeded, no MSK established`\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 4.5.2-1.5+deb7u8.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 5.2.1-6+deb8u2.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 5.3.3-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.3.3-3.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3398-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3398"
 		}
 	]
 }

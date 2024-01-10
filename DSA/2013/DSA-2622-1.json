@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2622-1",
-	"modified": "2023-10-16T00:06:01.797859Z",
+	"modified": "2024-01-09T20:27:49.508030Z",
 	"published": "2013-02-13T00:00:00Z",
 	"related": [
 		"CVE-2013-0169",
 		"CVE-2013-1621"
 	],
 	"summary": "polarssl - several",
-	"details": "\nMultiple vulnerabilities have been found in PolarSSL. The Common\nVulnerabilities and Exposures project identifies the following issues:\n\n\n* [CVE-2013-0169](https://security-tracker.debian.org/tracker/CVE-2013-0169)\nA timing side channel attack has been found in CBC padding\n allowing an attacker to recover pieces of plaintext via statistical\n analysis of crafted packages, known as the Lucky Thirteen issue.\n* [CVE-2013-1621](https://security-tracker.debian.org/tracker/CVE-2013-1621)\nAn array index error might allow remote attackers to cause a denial\n of service via vectors involving a crafted padding-length value\n during validation of CBC padding in a TLS session.\n* [CVE-2013-1622](https://security-tracker.debian.org/tracker/CVE-2013-1622)\nMalformed CBC data in a TLS session could allow remote attackers to\n conduct distinguishing attacks via statistical analysis of timing\n side-channel data for crafted packets.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 0.12.1-1squeeze1.\n\n\nFor the testing distribution (wheezy), and the unstable distribution\n(sid), these problems have been fixed in version 1.1.4-2.\n\n\nWe recommend that you upgrade your polarssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2622-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2622"
 		}
 	]
 }

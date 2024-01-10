@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3583-1",
-	"modified": "2023-09-25T23:15:20.416350Z",
+	"modified": "2024-01-09T20:33:40.188824Z",
 	"published": "2023-09-25T00:00:00Z",
 	"related": [
 		"CVE-2023-29499",
@@ -9,7 +9,6 @@
 		"CVE-2023-32665"
 	],
 	"summary": "glib2.0 - security update",
-	"details": "\nSeveral security vulnerabilities were found in GLib, a general-purpose utility\nlibrary, used by projects such as GTK+, GIMP, and GNOME.\n\n\n* [CVE-2023-29499](https://security-tracker.debian.org/tracker/CVE-2023-29499)\nGVariant deserialization fails to validate that the input conforms to the\n expected format, leading to denial of service.\n* [CVE-2023-32611](https://security-tracker.debian.org/tracker/CVE-2023-32611)\nGVariant deserialization is vulnerable to a slowdown issue where a crafted\n GVariant can cause excessive processing, leading to denial of service.\n* [CVE-2023-32665](https://security-tracker.debian.org/tracker/CVE-2023-32665)\nGVariant deserialization is vulnerable to an exponential blowup issue where\n a crafted GVariant can cause excessive processing, leading to denial of\n service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.58.3-2+deb10u5.\n\n\nWe recommend that you upgrade your glib2.0 packages.\n\n\nFor the detailed security status of glib2.0 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/glib2.0>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3583-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3583"
 		}
 	]
 }

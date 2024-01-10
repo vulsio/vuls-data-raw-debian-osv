@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2815-1",
-	"modified": "2023-10-16T00:11:32.390178Z",
+	"modified": "2024-01-09T20:25:47.822933Z",
 	"published": "2013-12-09T00:00:00Z",
 	"related": [
 		"CVE-2013-6048",
 		"CVE-2013-6359"
 	],
 	"summary": "munin - denial of service",
-	"details": "\nChristoph Biedl discovered two denial of service vulnerabilities in\nmunin, a network-wide graphing framework. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2013-6048](https://security-tracker.debian.org/tracker/CVE-2013-6048)\nThe Munin::Master::Node module of munin does not properly validate\n certain data a node sends. A malicious node might exploit this to\n drive the munin-html process into an infinite loop with memory\n exhaustion on the munin master.\n* [CVE-2013-6359](https://security-tracker.debian.org/tracker/CVE-2013-6359)\nA malicious node, with a plugin enabled using multigraph as a\n multigraph service name, can abort data collection for the entire\n node the plugin runs on.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.0.6-4+deb7u2.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 2.0.18-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.0.18-1.\n\n\nWe recommend that you upgrade your munin packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2815-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2815"
 		}
 	]
 }

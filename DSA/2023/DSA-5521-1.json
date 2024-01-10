@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5521-1",
-	"modified": "2023-10-16T00:21:45.428286Z",
+	"modified": "2024-01-09T20:28:34.666644Z",
 	"published": "2023-10-10T00:00:00Z",
 	"related": [
 		"CVE-2023-28709",
@@ -11,7 +11,6 @@
 		"CVE-2023-45648"
 	],
 	"summary": "tomcat10 - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2023-28709](https://security-tracker.debian.org/tracker/CVE-2023-28709)\nDenial of Service. If non-default HTTP connector settings were used such\n that the maxParameterCount could be reached using query string parameters\n and a request was submitted that supplied exactly maxParameterCount\n parameters in the query string, the limit for uploaded request parts could\n be bypassed with the potential for a denial of service to occur.\n* [CVE-2023-41080](https://security-tracker.debian.org/tracker/CVE-2023-41080)\nOpen redirect. If the ROOT (default) web application is configured to use\n FORM authentication then it is possible that a specially crafted URL could\n be used to trigger a redirect to an URL of the attackers choice.\n* [CVE-2023-42795](https://security-tracker.debian.org/tracker/CVE-2023-42795)\nInformation Disclosure. When recycling various internal objects, including\n the request and the response, prior to re-use by the next request/response,\n an error could cause Tomcat to skip some parts of the recycling process\n leading to information leaking from the current request/response to the\n next.\n* [CVE-2023-44487](https://security-tracker.debian.org/tracker/CVE-2023-44487)\nDoS caused by HTTP/2 frame overhead (Rapid Reset Attack)\n* [CVE-2023-45648](https://security-tracker.debian.org/tracker/CVE-2023-45648)\nRequest smuggling. Tomcat did not correctly parse HTTP trailer headers. A\n specially crafted, invalid trailer header could cause Tomcat to treat a\n single request as multiple requests leading to the possibility of request\n smuggling when behind a reverse proxy.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 10.1.6-1+deb12u1.\n\n\nWe recommend that you upgrade your tomcat10 packages.\n\n\nFor the detailed security status of tomcat10 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/tomcat10](https://security-tracker.debian.org/tracker/tomcat10)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5521-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5521"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1193-1",
-	"modified": "2023-10-16T00:10:12.865760Z",
+	"modified": "2024-01-09T20:22:09.636735Z",
 	"published": "2006-10-09T00:00:00Z",
 	"related": [
 		"CVE-2006-3467",
@@ -10,7 +10,6 @@
 		"CVE-2006-4447"
 	],
 	"summary": "xfree86",
-	"details": "\nSeveral vulnerabilities have been discovered in the X Window System,\nwhich may lead to the execution of arbitrary code or denial of service.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2006-3467](https://security-tracker.debian.org/tracker/CVE-2006-3467)\nChris Evan discovered an integer overflow in the code to handle\n PCF fonts, which might lead to denial of service if a malformed\n font is opened.\n* [CVE-2006-3739](https://security-tracker.debian.org/tracker/CVE-2006-3739)\nIt was discovered that an integer overflow in the code to handle\n Adobe Font Metrics might lead to the execution of arbitrary code.\n* [CVE-2006-3740](https://security-tracker.debian.org/tracker/CVE-2006-3740)\nIt was discovered that an integer overflow in the code to handle\n CMap and CIDFont font data might lead to the execution of arbitrary\n code.\n* [CVE-2006-4447](https://security-tracker.debian.org/tracker/CVE-2006-4447)\nThe XFree86 initialization code performs insufficient checking of\n the return value of setuid() when dropping privileges, which might\n lead to local privilege escalation.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 4.3.0.dfsg.1-14sarge2. This release lacks builds for the\nMotorola 680x0 architecture, which failed due to diskspace constraints\non the build host. They will be released once this problem has been\nresolved.\n\n\nFor the unstable distribution (sid) these problems have been fixed\nin version 1:1.2.2-1 of libxfont and version 1:1.0.2-9 of xorg-server.\n\n\nWe recommend that you upgrade your XFree86 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1193-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1193"
 		}
 	]
 }

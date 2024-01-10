@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1379-1",
-	"modified": "2023-10-16T00:07:20.407646Z",
+	"modified": "2024-01-09T20:22:16.900898Z",
 	"published": "2007-10-02T00:00:00Z",
 	"related": [
 		"CVE-2007-5135"
 	],
 	"summary": "openssl - arbitrary code execution",
-	"details": "\nAn off-by-one error has been identified in the SSL\\_get\\_shared\\_ciphers()\nroutine in the libssl library from OpenSSL, an implementation of Secure\nSocket Layer cryptographic libraries and utilities. This error could\nallow an attacker to crash an application making use of OpenSSL's libssl\nlibrary, or potentially execute arbitrary code in the security context\nof the user running such an application.\n\n\n\nFor the old stable distribution (sarge), this problem has been fixed in version\n0.9.7e-3sarge5.\n\n\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 0.9.8c-4etch1.\n\n\n\n\nFor the unstable and testing distributions (sid and lenny, respectively),\nthis problem has been fixed in version 0.9.8e-9.\n\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -119,12 +118,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1379-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1379"
 		}
 	]
 }

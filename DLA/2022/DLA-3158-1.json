@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3158-1",
-	"modified": "2023-06-28T06:37:23.292298Z",
+	"modified": "2024-01-09T20:33:21.098254Z",
 	"published": "2022-10-24T00:00:00Z",
 	"related": [
 		"CVE-2020-21365"
 	],
 	"summary": "wkhtmltopdf - security update",
-	"details": "\nIt was found that wkhtmltopdf, a command line utility to render HTML\nfiles into PDF, allowed local filesystem access by default. This update\ndisables local filesystem access, but it can be enabled if necessary\nwith the --enable-local-file-access or the --allow  options.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n0.12.5-1+deb10u1.\n\n\nWe recommend that you upgrade your wkhtmltopdf packages.\n\n\nFor the detailed security status of wkhtmltopdf please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/wkhtmltopdf>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3158-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3158"
 		}
 	]
 }

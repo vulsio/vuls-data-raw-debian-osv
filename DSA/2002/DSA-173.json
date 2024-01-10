@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-173",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-10-09T00:00:00Z",
 	"published": "2002-10-09T00:00:00Z",
 	"related": [
 		"CVE-2002-1196"
 	],
 	"summary": "bugzilla - privilege escalation",
-	"details": "\nThe developers of Bugzilla, a web-based bug tracking system,\ndiscovered a problem in the handling of more than 47 groups. When a\nnew product is added to an installation with 47 groups or more and\n\"usebuggroups\" is enabled, the new group will be assigned a groupset\nbit using Perl math that is not exact beyond 248.\nThis results in\nthe new group being defined with a \"bit\" that has several bits set.\nAs users are given access to the new group, those users will also gain\naccess to spurious lower group privileges. Also, group bits were not\nalways reused when groups were deleted.\n\n\nThis problem has been fixed in version 2.14.2-0woody2 for the current\nstable distribution (woody) and will soon be fixed in the unstable\ndistribution (sid). The old stable distribution (potato) doesn't\ncontain a bugzilla package.\n\n\nWe recommend that you upgrade your bugzilla package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-173.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-173"
 		}
 	]
 }

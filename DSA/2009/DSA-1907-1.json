@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1907-1",
-	"modified": "2023-10-16T00:10:45.953732Z",
+	"modified": "2024-01-09T20:27:35.773926Z",
 	"published": "2009-10-13T00:00:00Z",
 	"related": [
 		"CVE-2008-5714",
 		"CVE-2009-3290"
 	],
 	"summary": "kvm - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in kvm, a full virtualization system.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2008-5714](https://security-tracker.debian.org/tracker/CVE-2008-5714)\nChris Webb discovered an off-by-one bug limiting KVM's VNC passwords to 7\ncharacters. This flaw might make it easier for remote attackers to guess the VNC\npassword, which is limited to seven characters where eight was intended.\n* [CVE-2009-3290](https://security-tracker.debian.org/tracker/CVE-2009-3290)\nIt was discovered that the kvm\\_emulate\\_hypercall function in KVM does not\nprevent access to MMU hypercalls from ring 0, which allows local guest OS users\nto cause a denial of service (guest kernel crash) and read or write guest kernel\nmemory.\n\n\nThe oldstable distribution (etch) does not contain kvm.\n\n\nFor the stable distribution (lenny), these problems have been fixed in version\n72+dfsg-5~lenny3.\n\n\nFor the testing distribution (squeeze) these problems will be fixed soon.\n\n\nFor the unstable distribution (sid) these problems have been fixed in version\n85+dfsg-4.1\n\n\nWe recommend that you upgrade your kvm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1907-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1907"
 		}
 	]
 }

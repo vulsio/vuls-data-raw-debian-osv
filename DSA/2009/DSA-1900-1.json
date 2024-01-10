@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1900-1",
-	"modified": "2023-10-16T00:10:45.658240Z",
+	"modified": "2024-01-09T20:22:35.375365Z",
 	"published": "2009-10-02T00:00:00Z",
 	"related": [
 		"CVE-2009-3229",
@@ -9,7 +9,6 @@
 		"CVE-2009-3231"
 	],
 	"summary": "postgresql-7.4 postgresql-8.1 postgresql-8.3 - various problems",
-	"details": "\nSeveral vulnerabilities have been discovered in PostgreSQL, an SQL\ndatabase system. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-3229](https://security-tracker.debian.org/tracker/CVE-2009-3229)\nAuthenticated users can shut down the backend server by re-LOAD-ing\nlibraries in $libdir/plugins, if any libraries are present there.\n(The old stable distribution (etch) is not affected by this issue.)\n* [CVE-2009-3230](https://security-tracker.debian.org/tracker/CVE-2009-3230)\nAuthenticated non-superusers can gain database superuser privileges if\nthey can create functions and tables due to incorrect execution of\nfunctions in functional indexes.\n* [CVE-2009-3231](https://security-tracker.debian.org/tracker/CVE-2009-3231)\nIf PostgreSQL is configured with LDAP authentication, and the LDAP\nconfiguration allows anonymous binds, it is possible for a user to\nauthenticate themselves with an empty password. (The old stable\ndistribution (etch) is not affected by this issue.)\n\n\nIn addition, this update contains reliability improvements which do\nnot target security issues.\n\n\nFor the old stable distribution (etch), these problems have been fixed\nin version 7.4.26-0etch1 of the postgresql-7.4 source package, and\nversion 8.1.18-0etch1 of the postgresql-8.1 source package.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 8.3.8-0lenny1 of the postgresql-8.3 source package.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 8.3.8-1 of the postgresql-8.3 source package, and version\n8.4.1-1 of the postgresql-8.4 source package.\n\n\nWe recommend that you upgrade your PostgreSQL packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -114,12 +113,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1900-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1900"
 		}
 	]
 }

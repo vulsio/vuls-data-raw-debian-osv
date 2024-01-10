@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1391-1",
-	"modified": "2023-06-28T06:20:37.566654Z",
+	"modified": "2024-01-09T20:31:06.767689Z",
 	"published": "2018-05-31T00:00:00Z",
 	"related": [
 		"CVE-2017-11613",
 		"CVE-2018-5784"
 	],
 	"summary": "tiff - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in the libtiff library and\nthe included tools, which may result in denial of service:\n\n\n* [CVE-2017-11613](https://security-tracker.debian.org/tracker/CVE-2017-11613)\nDdenial of service vulnerability in the TIFFOpen function. A crafted\n input will lead to a denial of service attack and can either make the\n system hand or trigger the OOM killer.\n* [CVE-2018-5784](https://security-tracker.debian.org/tracker/CVE-2018-5784)\nThere is an uncontrolled resource consumption in TIFFSetDirectory function\n of src/libtiff/tif\\_dir.c, which can cause denial of service through a\n crafted tif file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.0.2-6+deb7u21.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1391-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1391"
 		}
 	]
 }

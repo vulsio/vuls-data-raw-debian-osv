@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3218-1",
-	"modified": "2023-06-28T06:37:24.536794Z",
+	"modified": "2024-01-09T20:33:22.988306Z",
 	"published": "2022-12-03T00:00:00Z",
 	"related": [
 		"CVE-2022-41946"
 	],
 	"summary": "libpgjava - security update",
-	"details": "\npgjdbc is an open source postgresql JDBC Driver. In affected versions\na prepared statement using either `PreparedStatement.setText(int,\nInputStream)` or `PreparedStatemet.setBytea(int, InputStream)` will\ncreate a temporary file if the InputStream is larger than 2k. This\nwill create a temporary file which is readable by other users on\nUnix like systems, but not MacOS. On Unix like systems, the system's\ntemporary directory is shared between all users on that system. Because\nof this, when files and directories are written into this directory\nthey are, by default, readable by other users on that same system.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n42.2.5-2+deb10u3.\n\n\nWe recommend that you upgrade your libpgjava packages.\n\n\nFor the detailed security status of libpgjava please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libpgjava>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3218-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3218"
 		}
 	]
 }

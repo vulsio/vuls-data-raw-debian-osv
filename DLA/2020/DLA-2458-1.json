@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2458-1",
-	"modified": "2023-06-28T06:26:33.637112Z",
+	"modified": "2024-01-09T20:32:37.969743Z",
 	"published": "2020-11-19T00:00:00Z",
 	"related": [
 		"CVE-2020-13666",
 		"CVE-2020-13671"
 	],
 	"summary": "drupal7 - security update",
-	"details": "\nTwo vulnerabilities were discovered in Drupal, a fully-featured content\nmanagement framework.\n\n\n* [CVE-2020-13666](https://security-tracker.debian.org/tracker/CVE-2020-13666)\nThe Drupal AJAX API did not disable JSONP by default, which could\n lead to cross-site scripting.\n\n\nFor setups that relied on Drupal's AJAX API for JSONP requests,\n either JSONP will need to be reenabled, or the jQuery AJAX API will\n have to be used instead.\n\n\nSee the upstream advisory for more details:\n <https://www.drupal.org/sa-core-2020-007>\n* [CVE-2020-13671](https://security-tracker.debian.org/tracker/CVE-2020-13671)\nDrupal failed to sanitize filenames on uploaded files, which could\n lead to those files being served as the wrong MIME type, or being\n executed depending on the server configuration.\n\n\nIt is also recommended to check previously uploaded files for\n malicious extensions. For more details see the upstream advisory:\n <https://www.drupal.org/sa-core-2020-012>\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n7.52-2+deb9u12.\n\n\nWe recommend that you upgrade your drupal7 packages.\n\n\nFor the detailed security status of drupal7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/drupal7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2458-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2458"
 		}
 	]
 }

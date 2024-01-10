@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1493-1",
-	"modified": "2023-10-16T00:17:45.296338Z",
+	"modified": "2024-01-09T20:22:21.972084Z",
 	"published": "2008-02-10T00:00:00Z",
 	"related": [
 		"CVE-2007-6697",
 		"CVE-2008-0544"
 	],
 	"summary": "sdl-image1.2",
-	"details": "\nSeveral local/remote vulnerabilities have been discovered in the image\nloading library for the Simple DirectMedia Layer 1.2. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-6697](https://security-tracker.debian.org/tracker/CVE-2007-6697)\nGynvael Coldwind discovered a buffer overflow in GIF image parsing,\n which could result in denial of service and potentially the\n execution of arbitrary code.\n* [CVE-2008-0544](https://security-tracker.debian.org/tracker/CVE-2008-0544)\nIt was discovered that a buffer overflow in IFF ILBM image parsing\n could result in denial of service and potentially the execution of\n arbitrary code.\n\n\nFor the old stable distribution (sarge), these problems have been fixed\nin version 1.2.4-1etch1. Due to a copy & paste error etch1 was appended\nto the version number instead of sarge1. Since the update is otherwise\ntechnically correct, the update was not rebuilt on the buildd network.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.2.5-2+etch1.\n\n\nWe recommend that you upgrade your sdl-image1.2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1493-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1493"
 		}
 	]
 }

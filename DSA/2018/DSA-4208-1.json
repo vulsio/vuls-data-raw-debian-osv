@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4208-1",
-	"modified": "2023-10-16T00:14:30.518606Z",
+	"modified": "2024-01-09T20:28:29.854254Z",
 	"published": "2018-05-22T00:00:00Z",
 	"related": [
 		"CVE-2018-1122",
@@ -11,7 +11,6 @@
 		"CVE-2018-1126"
 	],
 	"summary": "procps - security update",
-	"details": "\nThe Qualys Research Labs discovered multiple vulnerabilities in procps,\na set of command line and full screen utilities for browsing procfs. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2018-1122](https://security-tracker.debian.org/tracker/CVE-2018-1122)\ntop read its configuration from the current working directory if no\n $HOME was configured. If top were started from a directory writable\n by the attacker (such as /tmp) this could result in local privilege\n escalation.\n* [CVE-2018-1123](https://security-tracker.debian.org/tracker/CVE-2018-1123)\nDenial of service against the ps invocation of another user.\n* [CVE-2018-1124](https://security-tracker.debian.org/tracker/CVE-2018-1124)\nAn integer overflow in the file2strvec() function of libprocps could\n result in local privilege escalation.\n* [CVE-2018-1125](https://security-tracker.debian.org/tracker/CVE-2018-1125)\nA stack-based buffer overflow in pgrep could result in denial\n of service for a user using pgrep for inspecting a specially\n crafted process.\n* [CVE-2018-1126](https://security-tracker.debian.org/tracker/CVE-2018-1126)\nIncorrect integer size parameters used in wrappers for standard C\n allocators could cause integer truncation and lead to integer\n overflow issues.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 2:3.3.9-9+deb8u1.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2:3.3.12-3+deb9u1.\n\n\nWe recommend that you upgrade your procps packages.\n\n\nFor the detailed security status of procps please refer to its\nsecurity tracker page at: [\\\nhttps://security-tracker.debian.org/tracker/procps](https://security-tracker.debian.org/tracker/procps)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4208-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4208"
 		}
 	]
 }

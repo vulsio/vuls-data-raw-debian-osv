@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-344",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-07-08T00:00:00Z",
 	"published": "2003-07-08T00:00:00Z",
 	"related": [
 		"CVE-2003-0282"
 	],
 	"summary": "unzip - directory traversal",
-	"details": "\nA directory traversal vulnerability in UnZip 5.50 allows attackers to\nbypass a check for relative pathnames (\"../\") by placing certain invalid\ncharacters between the two \".\" characters. The fix which was\nimplemented in DSA-344-1 may not have protected against all methods of\nexploiting this vulnerability.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 5.50-1woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 5.50-3.\n\n\nWe recommend that you update your unzip package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-344.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-344"
 		}
 	]
 }

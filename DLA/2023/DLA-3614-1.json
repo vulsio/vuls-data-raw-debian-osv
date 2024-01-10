@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3614-1",
-	"modified": "2023-10-11T20:15:29.424239Z",
+	"modified": "2024-01-09T20:33:41.457911Z",
 	"published": "2023-10-11T00:00:00Z",
 	"related": [
 		"CVE-2022-48560",
@@ -11,7 +11,6 @@
 		"CVE-2023-40217"
 	],
 	"summary": "python3.7 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Python 3.7.\n\n\n* [CVE-2022-48560](https://security-tracker.debian.org/tracker/CVE-2022-48560)\nA use-after-free problem was found in the heappushpop function in\n the heapq module.\n* [CVE-2022-48564](https://security-tracker.debian.org/tracker/CVE-2022-48564)\nA potential denial-of-service vulnerability was discovered in the\n read\\_ints function used when processing certain malformed Apple\n Property List files in binary format.\n* [CVE-2022-48565](https://security-tracker.debian.org/tracker/CVE-2022-48565)\nAn XML External Entity (XXE) issue was discovered. In order to\n avoid possible vulnerabilities, the plistlib module no longer\n accepts entity declarations in XML plist files.\n* [CVE-2022-48566](https://security-tracker.debian.org/tracker/CVE-2022-48566)\nPossible constant-time-defeating compiler optimisations were\n discovered in the accumulator variable in hmac.compare\\_digest.\n* [CVE-2023-40217](https://security-tracker.debian.org/tracker/CVE-2023-40217)\nIt was discovered that it might be possible to bypass some of the\n protections implemented by the TLS handshake in the ssl.SSLSocket\n class. For example, unauthenticated data might be read by a program\n expecting data authenticated by client certificates.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.7.3-2+deb10u6.\n\n\nWe recommend that you upgrade your python3.7 packages.\n\n\nFor the detailed security status of python3.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python3.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3614-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3614"
 		}
 	]
 }

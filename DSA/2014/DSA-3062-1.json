@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3062-1",
-	"modified": "2023-10-16T00:11:44.676018Z",
-	"published": "2014-11-01T00:00:00Z",
+	"modified": "2024-01-09T20:27:58.318076Z",
+	"published": "2014-11-02T00:00:00Z",
 	"related": [
 		"CVE-2014-4877"
 	],
 	"summary": "wget - security update",
-	"details": "\nHD Moore of Rapid7 discovered a symlink attack in Wget, a command-line \nutility to retrieve files via HTTP, HTTPS, and FTP. The vulnerability \nallows to create arbitrary files on the user's system when Wget runs in \nrecursive mode against a malicious FTP server. Arbitrary file creation \nmay override content of user's files or permit remote code execution with \nthe user privilege. \n\n\nThis update changes the default setting in Wget such that it no longer \ncreates local symbolic links, but rather traverses them and retrieves the \npointed-to file in such a retrieval.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.13.4-3+deb7u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.16-1.\n\n\nWe recommend that you upgrade your wget packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3062-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3062"
 		}
 	]
 }

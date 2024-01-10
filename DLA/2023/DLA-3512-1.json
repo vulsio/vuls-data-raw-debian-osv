@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3512-1",
-	"modified": "2023-08-03T06:15:21.052302Z",
-	"published": "2023-08-02T00:00:00Z",
+	"modified": "2024-01-09T20:33:31.624013Z",
+	"published": "2023-07-31T00:00:00Z",
 	"related": [
 		"CVE-2023-20593",
 		"CVE-2023-2156",
@@ -12,7 +12,6 @@
 		"CVE-2023-3610"
 	],
 	"summary": "linux-5.10 - security update",
-	"details": "\n[CVE-2023-31248](https://security-tracker.debian.org/tracker/CVE-2023-31248) [CVE-2023-35001](https://security-tracker.debian.org/tracker/CVE-2023-35001)\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2023-2156](https://security-tracker.debian.org/tracker/CVE-2023-2156)\nIt was discovered that a flaw in the handling of the RPL protocol\n may allow an unauthenticated remote attacker to cause a denial of\n service if RPL is enabled (not by default in Debian).\n* [CVE-2023-3390](https://security-tracker.debian.org/tracker/CVE-2023-3390)\nA use-after-free flaw in the netfilter subsystem caused by\n incorrect error path handling may result in denial of service or\n privilege escalation.\n* [CVE-2023-3610](https://security-tracker.debian.org/tracker/CVE-2023-3610)\nA use-after-free flaw in the netfilter subsystem caused by\n incorrect refcount handling on the table and chain destroy path\n may result in denial of service or privilege escalation.\n* [CVE-2023-20593](https://security-tracker.debian.org/tracker/CVE-2023-20593)\nTavis Ormandy discovered that under specific microarchitectural\n circumstances, a vector register in AMD Zen 2 CPUs may not be\n written to 0 correctly. This flaw allows an attacker to leak\n sensitive information across concurrent processes, hyper threads\n and virtualized guests.\n\n\nFor details please refer to\n  and\n .\n\n\nThis issue can also be mitigated by a microcode update through the\n amd64-microcode package or a system firmware (BIOS/UEFI) update.\n However, the initial microcode release by AMD only provides\n updates for second generation EPYC CPUs. Various Ryzen CPUs are\n also affected, but no updates are available yet.\n* [CVE-2023-31248](https://security-tracker.debian.org/tracker/CVE-2023-31248)\nMingi Cho discovered a use-after-free flaw in the Netfilter\n nf\\_tables implementation when using nft\\_chain\\_lookup\\_byid, which\n may result in local privilege escalation for a user with the\n CAP\\_NET\\_ADMIN capability in any user or network namespace.\n* [CVE-2023-35001](https://security-tracker.debian.org/tracker/CVE-2023-35001)\nTanguy DUBROCA discovered an out-of-bounds reads and write flaw in\n the Netfilter nf\\_tables implementation when processing an\n nft\\_byteorder expression, which may result in local privilege\n escalation for a user with the CAP\\_NET\\_ADMIN capability in any\n user or network namespace.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n5.10.179-3~deb10u1.\n\n\nWe recommend that you upgrade your linux-5.10 packages.\n\n\nFor the detailed security status of linux-5.10 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-5.10>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3512-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3512"
 		}
 	]
 }

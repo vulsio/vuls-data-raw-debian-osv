@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1164-1",
-	"modified": "2023-06-28T06:20:25.809947Z",
+	"modified": "2024-01-09T20:30:48.751896Z",
 	"published": "2017-11-07T00:00:00Z",
 	"related": [
 		"CVE-2017-14687",
 		"CVE-2017-15587"
 	],
 	"summary": "mupdf - security update",
-	"details": "\nTwo security issues were discovered in mupdf, a lightweight PDF viewer.\n\n\n* [CVE-2017-14687](https://security-tracker.debian.org/tracker/CVE-2017-14687)\nMuPDF allows attackers to cause a denial of service or possibly have\n unspecified other impact via a crafted .xps file. This occurs\n because of mishandling of XML tag name comparisons.\n* [CVE-2017-15587](https://security-tracker.debian.org/tracker/CVE-2017-15587)\nAn integer overflow was discovered in pdf\\_read\\_new\\_xref\\_section in\n pdf/pdf-xref.c\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.9-2+deb7u4.\n\n\nWe recommend that you upgrade your mupdf packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1164-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1164"
 		}
 	]
 }

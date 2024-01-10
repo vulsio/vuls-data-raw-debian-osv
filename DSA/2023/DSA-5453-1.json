@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5453-1",
-	"modified": "2023-10-16T00:23:15.692236Z",
+	"modified": "2024-01-09T20:26:44.932100Z",
 	"published": "2023-07-16T00:00:00Z",
 	"related": [
 		"CVE-2023-2156",
@@ -9,7 +9,6 @@
 		"CVE-2023-35001"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2023-2156](https://security-tracker.debian.org/tracker/CVE-2023-2156)\nIt was discovered that a flaw in the handling of the RPL protocol\n may allow an unauthenticated remote attacker to cause a denial of\n service if RPL is enabled (not by default in Debian).\n* [CVE-2023-31248](https://security-tracker.debian.org/tracker/CVE-2023-31248)\nMingi Cho discovered a use-after-free flaw in the Netfilter\n nf\\_tables implementation when using nft\\_chain\\_lookup\\_byid, which may\n result in local privilege escalation for a user with the\n CAP\\_NET\\_ADMIN capability in any user or network namespace.\n* [CVE-2023-35001](https://security-tracker.debian.org/tracker/CVE-2023-35001)\nTanguy DUBROCA discovered an out-of-bounds reads and write flaw in\n the Netfilter nf\\_tables implementation when processing an\n nft\\_byteorder expression, which may result in local privilege\n escalation for a user with the CAP\\_NET\\_ADMIN capability in any user\n or network namespace.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 5.10.179-2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5453-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5453"
 		}
 	]
 }

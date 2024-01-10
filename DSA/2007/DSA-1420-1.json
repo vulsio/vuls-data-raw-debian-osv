@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1420-1",
-	"modified": "2023-10-16T00:10:24.785387Z",
+	"modified": "2024-01-09T20:22:17.497561Z",
 	"published": "2007-12-05T00:00:00Z",
 	"related": [
 		"CVE-2007-6210"
 	],
 	"summary": "zabbix - programming error",
-	"details": "\n\nBas van Schaik discovered that the agentd process of Zabbix, a network\nmonitor system, may run user-supplied commands as group id root, not\nzabbix, which may lead to a privilege escalation.\n\n\n\n\nzabbix is not included in the oldstable distribution (sarge).\n\n\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n1:1.1.4-10etch1.\n\n\n\n\nWe recommend that you upgrade your zabbix packages.\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1420-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1420"
 		}
 	]
 }

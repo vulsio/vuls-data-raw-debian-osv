@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2718-1",
-	"modified": "2023-06-28T06:21:20.835932Z",
-	"published": "2021-07-26T00:00:00Z",
+	"modified": "2024-01-09T20:32:53.239740Z",
+	"published": "2021-07-23T00:00:00Z",
 	"related": [
 		"CVE-2020-24489",
 		"CVE-2020-24511",
@@ -10,7 +10,6 @@
 		"CVE-2020-24513"
 	],
 	"summary": "intel-microcode - security update",
-	"details": "\nThis update ships updated CPU microcode for some types of Intel CPUs\nand provides mitigations for security vulnerabilities which could\nresult in privilege escalation in combination with VT-d and various\nside channel attacks.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.20210608.2~deb9u2.\n\n\nPlease note that one of the processors is not receiving this update\nand so the users of 0x906ea processors that don't have Intel Wireless\non-board can use the package from the buster-security, instead.\n\n\nWe recommend that you upgrade your intel-microcode packages.\n\n\nFor the detailed security status of intel-microcode please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/intel-microcode>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -187,12 +186,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2718-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2718"
 		}
 	]
 }

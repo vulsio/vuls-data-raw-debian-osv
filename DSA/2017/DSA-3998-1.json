@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3998-1",
-	"modified": "2023-10-16T00:12:32.805039Z",
+	"modified": "2024-01-09T20:26:56.652809Z",
 	"published": "2017-10-11T00:00:00Z",
 	"related": [
 		"CVE-2017-7805"
 	],
 	"summary": "nss - security update",
-	"details": "\nMartin Thomson discovered that nss, the Mozilla Network Security Service\nlibrary, is prone to a use-after-free vulnerability in the TLS 1.2\nimplementation when handshake hashes are generated. A remote attacker\ncan take advantage of this flaw to cause an application using the nss\nlibrary to crash, resulting in a denial of service, or potentially to\nexecute arbitrary code.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2:3.26-1+debu8u3.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:3.26.2-1.1+deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 2:3.33-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:3.33-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -78,12 +77,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3998-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3998"
 		}
 	]
 }

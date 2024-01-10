@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2662-1",
-	"modified": "2023-10-16T00:06:02.757170Z",
+	"modified": "2024-01-09T20:21:26.742710Z",
 	"published": "2013-04-18T00:00:00Z",
 	"related": [
 		"CVE-2013-1917",
 		"CVE-2013-1919"
 	],
 	"summary": "xen - several",
-	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2013-1917](https://security-tracker.debian.org/tracker/CVE-2013-1917)\nThe SYSENTER instruction can be used by PV guests to accelerate\n system call processing. This instruction, however, leaves the EFLAGS\n register mostly unmodified. This can be used by malicious or buggy\n user space to cause the entire host to crash.\n* [CVE-2013-1919](https://security-tracker.debian.org/tracker/CVE-2013-1919)\nVarious IRQ related access control operations may not have the\n intended effect, potentially permitting a stub domain to grant its\n client domain access to an IRQ it doesn't have access to itself.\n This can be used by malicious or buggy stub domains kernels to mount\n a denial of service attack possibly affecting the whole system.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 4.0.1-5.9.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2662-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2662"
 		}
 	]
 }

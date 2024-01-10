@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1621-1",
-	"modified": "2023-10-16T00:05:32.862920Z",
+	"modified": "2024-01-09T20:27:31.132188Z",
 	"published": "2008-07-27T00:00:00Z",
 	"related": [
 		"CVE-2008-0304",
@@ -15,7 +15,6 @@
 		"CVE-2008-2811"
 	],
 	"summary": "icedove - several vulnerabilities",
-	"details": "\n\nSeveral remote vulnerabilities have been discovered in the Icedove\nmail client, an unbranded version of the Thunderbird client. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n\n* [CVE-2008-0304](https://security-tracker.debian.org/tracker/CVE-2008-0304)\n\n It was discovered that a buffer overflow in MIME decoding can lead\n to the execution of arbitrary code.\n* [CVE-2008-2785](https://security-tracker.debian.org/tracker/CVE-2008-2785)\n\n It was discovered that missing boundary checks on a reference\n counter for CSS objects can lead to the execution of arbitrary code.\n* [CVE-2008-2798](https://security-tracker.debian.org/tracker/CVE-2008-2798)\n\n Devon Hubbard, Jesse Ruderman and Martijn Wargers discovered\n crashes in the layout engine, which might allow the execution of\n arbitrary code.\n* [CVE-2008-2799](https://security-tracker.debian.org/tracker/CVE-2008-2799)\n\n Igor Bukanov, Jesse Ruderman and Gary Kwong discovered crashes in\n the Javascript engine, which might allow the execution of arbitrary code.\n* [CVE-2008-2802](https://security-tracker.debian.org/tracker/CVE-2008-2802)\n\n \"moz\\_bug\\_r\\_a4\" discovered that XUL documents can escalate\n privileges by accessing the pre-compiled \"fastload\" file.\n* [CVE-2008-2803](https://security-tracker.debian.org/tracker/CVE-2008-2803)\n\n \"moz\\_bug\\_r\\_a4\" discovered that missing input sanitising in the\n mozIJSSubScriptLoader.loadSubScript() function could lead to the\n execution of arbitrary code. Iceweasel itself is not affected, but\n some addons are.\n* [CVE-2008-2807](https://security-tracker.debian.org/tracker/CVE-2008-2807)\n\n Daniel Glazman discovered that a programming error in the code for\n parsing .properties files could lead to memory content being\n exposed to addons, which could lead to information disclosure.\n* [CVE-2008-2809](https://security-tracker.debian.org/tracker/CVE-2008-2809)\n\n John G. Myers, Frank Benkstein and Nils Toedtmann discovered that\n alternate names on self-signed certificates were handled\n insufficiently, which could lead to spoofings secure connections.\n* [CVE-2008-2811](https://security-tracker.debian.org/tracker/CVE-2008-2811)\n\n Greg McManus discovered discovered a crash in the block reflow\n code, which might allow the execution of arbitrary code.\n\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.5.0.13+1.5.0.15b.dfsg1+prepatch080614d-0etch1.\nPackages for s390 are not yet available and will be provided later.\n\n\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.0.0.16-1.\n\n\n\n\nWe recommend that you upgrade your icedove package.\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1621-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1621"
 		}
 	]
 }

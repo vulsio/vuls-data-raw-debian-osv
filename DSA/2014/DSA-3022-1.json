@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3022-1",
-	"modified": "2023-10-16T00:11:42.871593Z",
+	"modified": "2024-01-09T20:25:49.219525Z",
 	"published": "2014-09-10T00:00:00Z",
 	"related": [
 		"CVE-2014-3613"
 	],
 	"summary": "curl - security update",
-	"details": "\nTwo vulnerabilities have been discovered in cURL, an URL transfer\nlibrary. They can be use to leak cookie information:\n\n\n* [CVE-2014-3613](https://security-tracker.debian.org/tracker/CVE-2014-3613)\nBy not detecting and rejecting domain names for partial literal IP\n addresses properly when parsing received HTTP cookies, libcurl can\n be fooled to both sending cookies to wrong sites and into allowing\n arbitrary sites to set cookies for others.\n* [CVE-2014-3620](https://security-tracker.debian.org/tracker/CVE-2014-3620)\nlibcurl wrongly allows cookies to be set for Top Level Domains\n (TLDs), thus making them apply broader than cookies are allowed.\n This can allow arbitrary sites to set cookies that then would get\n sent to a different and unrelated site or domain.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 7.26.0-1+wheezy10.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 7.38.0-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 7.38.0-1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3022-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3022"
 		}
 	]
 }

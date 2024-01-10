@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3758-1",
-	"modified": "2023-10-16T00:20:07.536596Z",
+	"modified": "2024-01-09T20:26:51.699910Z",
 	"published": "2017-01-11T00:00:00Z",
 	"related": [
 		"CVE-2016-9131",
@@ -9,7 +9,6 @@
 		"CVE-2016-9444"
 	],
 	"summary": "bind9 - security update",
-	"details": "\nSeveral denial-of-service vulnerabilities (assertion failures) were\ndiscovered in BIND, a DNS server implementation.\n\n\n* [CVE-2016-9131](https://security-tracker.debian.org/tracker/CVE-2016-9131)\nA crafted upstream response to an ANY query could cause an\n assertion failure.\n* [CVE-2016-9147](https://security-tracker.debian.org/tracker/CVE-2016-9147)\nA crafted upstream response with self-contradicting DNSSEC data\n could cause an assertion failure.\n* [CVE-2016-9444](https://security-tracker.debian.org/tracker/CVE-2016-9444)\nSpecially-crafted upstream responses with a DS record could cause\n an assertion failure.\n\n\nThese vulnerabilities predominantly affect DNS servers providing\nrecursive service. Client queries to authoritative-only servers\ncannot trigger these assertion failures. These vulnerabilities are\npresent whether or not DNSSEC validation is enabled in the server\nconfiguration.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1:9.9.5.dfsg-9+deb8u9.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3758-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3758"
 		}
 	]
 }

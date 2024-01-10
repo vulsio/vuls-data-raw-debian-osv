@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-320-1",
-	"modified": "2023-06-28T06:21:26.882702Z",
+	"modified": "2024-01-09T20:33:22.533972Z",
 	"published": "2015-09-30T00:00:00Z",
 	"summary": "libemail-address-perl - security update",
-	"details": "\nPali RohĂĄr [discovered](http://www.openwall.com/lists/oss-security/2015/09/27/1) a possible DoS attack in any software which uses\nthe Email::Address Perl module for parsing string input to a list of\nemail addresses.\n\n\nBy default Email::Address module, version v1.907 (and all before) tries to\nunderstand nestable comments in an input string with depth level 2.\n\n\nWith specially crafted inputs, parsing nestable comments can become too\nslow and can cause high CPU load, freeze the application and end in\nDenial of Service.\n\n\nBecause input strings for Email::Address module come from external\nsources (e.g. from email sent by an attacker) it is a security problem\nimpacting on all software applications which parse email messages using\nthe Email::Address Perl module.\n\n\nWith this upload of libemail-address-perl, the default value of nestable\ncomments has been set to depth level 1 (as proposed by upstream). Please\nnote that this is not proper a fix, just a workaround for pathological\ninputs with nestable comments.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-320-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-320"
 		}
 	]
 }

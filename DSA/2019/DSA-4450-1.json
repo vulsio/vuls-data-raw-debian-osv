@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4450-1",
-	"modified": "2023-10-16T00:18:14.371023Z",
+	"modified": "2024-01-09T20:26:23.116565Z",
 	"published": "2019-05-24T00:00:00Z",
 	"related": [
 		"CVE-2019-11555"
 	],
 	"summary": "wpa - security update",
-	"details": "\nA vulnerability was found in the WPA protocol implementation found in\nwpa\\_supplication (station) and hostapd (access point).\n\n\nThe EAP-pwd implementation in hostapd (EAP server) and wpa\\_supplicant (EAP\npeer) doesn't properly validate fragmentation reassembly state when receiving\nan unexpected fragment. This could lead to a process crash due to a NULL\npointer derefrence.\n\n\nAn attacker in radio range of a station or access point with EAP-pwd support\ncould cause a crash of the relevant process (wpa\\_supplicant or hostapd),\nensuring a denial of service.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2:2.4-1+deb9u4.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\nFor the detailed security status of wpa please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/wpa](https://security-tracker.debian.org/tracker/wpa)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4450-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4450"
 		}
 	]
 }

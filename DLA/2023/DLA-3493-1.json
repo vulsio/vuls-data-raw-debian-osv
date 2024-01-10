@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3493-1",
-	"modified": "2023-07-12T00:15:20.304730Z",
-	"published": "2023-07-12T00:00:00Z",
+	"modified": "2024-01-09T20:33:30.726935Z",
+	"published": "2023-07-11T00:00:00Z",
 	"related": [
 		"CVE-2021-21424",
 		"CVE-2022-24894",
 		"CVE-2022-24895"
 	],
 	"summary": "symfony - security update",
-	"details": "\nMultiple security vulnerabilities were found in symfony, a PHP framework\nfor web and console applications and a set of reusable PHP components,\nwhich could lead to information disclosure or impersonation.\n\n\n* [CVE-2021-21424](https://security-tracker.debian.org/tracker/CVE-2021-21424)\nJames Isaac, Mathias Brodala and Laurent Minguet discovered that it\n was possible to enumerate users without relevant permissions due to\n different exception messages depending on whether the user existed\n or not. It was also possible to enumerate users by using a timing\n attack, by comparing time elapsed when authenticating an existing\n user and authenticating a non-existing user.\n\n\n403s are now returned whether the user exists or not if a user\n cannot switch to a user or if the user does not exist.\n* [CVE-2022-24894](https://security-tracker.debian.org/tracker/CVE-2022-24894)\nSoner Sayakci discovered that when the Symfony HTTP cache system is\n enabled, the response header might be stored with a `Set-Cookie`\n header and returned to some other clients, thereby allowing an\n attacker to retrieve the victim's session.\n\n\nThe `HttpStore` constructor now takes a parameter\n containing a list of private headers that are removed from the HTTP\n response headers. The default value for this parameter is\n `Set-Cookie`, but it can be overridden or extended by the\n application.\n* [CVE-2022-24895](https://security-tracker.debian.org/tracker/CVE-2022-24895)\nMarco Squarcina discovered that CSRF tokens weren't cleared upon\n login, which could enable same-site attackers to bypass the CSRF\n protection mechanism by performing an attack similar to a\n session-fixation.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.4.22+dfsg-2+deb10u2.\n\n\nWe recommend that you upgrade your symfony packages.\n\n\nFor the detailed security status of symfony please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/symfony>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3493-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3493"
 		}
 	]
 }

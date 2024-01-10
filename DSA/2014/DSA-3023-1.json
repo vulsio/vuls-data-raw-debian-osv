@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3023-1",
-	"modified": "2023-10-16T00:11:42.936121Z",
+	"modified": "2024-01-09T20:25:49.219112Z",
 	"published": "2014-09-11T00:00:00Z",
 	"related": [
 		"CVE-2014-0591"
 	],
 	"summary": "bind9 - security update",
-	"details": "\nJared Mauch reported a denial of service flaw in the way BIND, a DNS\nserver, handled queries for NSEC3-signed zones. A remote attacker could\nuse this flaw against an authoritative name server that served\nNCES3-signed zones by sending a specially crafted query, which, when\nprocessed, would cause named to crash.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1:9.8.4.dfsg.P1-6+nmu2+deb7u2.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 1:9.9.5.dfsg-2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:9.9.5.dfsg-2.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3023-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3023"
 		}
 	]
 }

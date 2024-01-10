@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2758-1",
-	"modified": "2023-10-16T00:11:29.982202Z",
+	"modified": "2024-01-09T20:25:45.915885Z",
 	"published": "2013-09-17T00:00:00Z",
 	"related": [
 		"CVE-2013-1443"
 	],
 	"summary": "python-django - denial of service",
-	"details": "\nIt was discovered that python-django, a high-level Python web\ndevelompent framework, is prone to a denial of service vulnerability\nvia large passwords.\n\n\nA non-authenticated remote attacker could mount a denial of service by\nsubmitting arbitrarily large passwords, tying up server resources in\nthe expensive computation of the corresponding hashes to verify the\npassword.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1.2.3-3+squeeze8.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.4.5-1+deb7u4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.5.4-1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2758-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2758"
 		}
 	]
 }

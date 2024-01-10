@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-473-1",
-	"modified": "2023-06-28T06:27:01.901064Z",
+	"modified": "2024-01-09T20:33:02.604739Z",
 	"published": "2016-05-14T00:00:00Z",
 	"related": [
 		"CVE-2016-4476",
 		"CVE-2016-4477"
 	],
 	"summary": "wpa - security update",
-	"details": "\nA vulnerability was found in how hostapd and wpa\\_supplicant writes the\nconfiguration file update for the WPA/WPA2 passphrase parameter. If\nthis parameter has been updated to include control characters either\nthrough a WPS operation ([CVE-2016-4476](https://security-tracker.debian.org/tracker/CVE-2016-4476)) \nor through local configuration\nchange over the wpa\\_supplicant control interface ([CVE-2016-4477](https://security-tracker.debian.org/tracker/CVE-2016-4477)), the\nresulting configuration file may prevent the hostapd and\nwpa\\_supplicant from starting when the updated file is used. In\naddition for wpa\\_supplicant, it may be possible to load a local\nlibrary file and execute code from there with the same privileges\nunder which the wpa\\_supplicant process runs.\n\n\n* [CVE-2016-4476](https://security-tracker.debian.org/tracker/CVE-2016-4476)\nhostapd 0.6.7 through 2.5 and wpa\\_supplicant 0.6.7 through 2.5 do\n not reject \\n and \\r characters in passphrase parameters, which\n allows remote attackers to cause a denial of service (daemon\n outage) via a crafted WPS operation.\n* [CVE-2016-4477](https://security-tracker.debian.org/tracker/CVE-2016-4477)\nwpa\\_supplicant 0.4.0 through 2.5 does not reject \\n and \\r\n characters in passphrase parameters, which allows local users to\n trigger arbitrary library loading and consequently gain privileges,\n or cause a denial of service (daemon outage), via a crafted (1)\n SET, (2) SET\\_CRED, or (3) SET\\_NETWORK command.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.0-3+deb7u4.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-473-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-473"
 		}
 	]
 }

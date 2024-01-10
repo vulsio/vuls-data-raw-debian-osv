@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2641-1",
-	"modified": "2023-10-16T00:11:22.777609Z",
-	"published": "2013-03-20T00:00:00Z",
+	"modified": "2024-01-09T20:27:51.310703Z",
+	"published": "2013-03-09T00:00:00Z",
 	"related": [
 		"CVE-2013-1667"
 	],
 	"summary": "perl - rehashing flaw",
-	"details": "\nYves Orton discovered a flaw in the rehashing code of Perl. This flaw\ncould be exploited to carry out a denial of service attack against code\nthat uses arbitrary user input as hash keys. Specifically an attacker\ncould create a set of keys of a hash causing a denial of service via\nmemory exhaustion.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 5.10.1-17squeeze6 of perl and version\n2.0.4-7+squeeze1 of libapache2-mod-perl2.\n\n\nFor the testing distribution (wheezy), and the unstable distribution\n(sid), this problem has been fixed in version 5.14.2-19\nof perl and version 2.0.7-3 of libapache2-mod-perl2.\n\n\nWe recommend that you upgrade your perl and libapache2-mod-perl2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2641-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2641"
 		}
 	]
 }

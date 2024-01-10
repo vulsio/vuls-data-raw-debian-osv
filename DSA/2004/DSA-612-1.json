@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-612-1",
-	"modified": "2023-10-16T00:27:33.252985Z",
+	"modified": "2024-01-09T20:32:35.601245Z",
 	"published": "2004-12-20T00:00:00Z",
 	"related": [
 		"CVE-2004-1170"
 	],
 	"summary": "a2ps - unsanitised input",
-	"details": "\nRudolf Polzer discovered a vulnerability in a2ps, a converter and\npretty-printer for many formats to PostScript. The program did not\nescape shell meta characters properly which could lead to the\nexecution of arbitrary commands as a privileged user if a2ps is\ninstalled as a printer filter.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 4.13b-16woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1:4.13b-4.2.\n\n\nWe recommend that you upgrade your a2ps package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-612-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-612"
 		}
 	]
 }

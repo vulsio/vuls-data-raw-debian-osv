@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4135-1",
-	"modified": "2023-10-16T00:12:40.932843Z",
+	"modified": "2024-01-09T20:27:00.311250Z",
 	"published": "2018-03-13T00:00:00Z",
 	"related": [
 		"CVE-2018-1050",
 		"CVE-2018-1057"
 	],
 	"summary": "samba - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix. The Common Vulnerabilities and\nExposures project identifies the following issues:\n\n\n* [CVE-2018-1050](https://security-tracker.debian.org/tracker/CVE-2018-1050)\nIt was discovered that Samba is prone to a denial of service\n attack when the RPC spoolss service is configured to be run as an\n external daemon.\n\n\n<https://www.samba.org/samba/security/CVE-2018-1050.html>\n* [CVE-2018-1057](https://security-tracker.debian.org/tracker/CVE-2018-1057)\nBjoern Baumbach from Sernet discovered that on Samba 4 AD DC the\n LDAP server incorrectly validates permissions to modify passwords\n over LDAP allowing authenticated users to change any other users\n passwords, including administrative users.\n\n\n<https://www.samba.org/samba/security/CVE-2018-1057.html>\n\n\n<https://wiki.samba.org/index.php/CVE-2018-1057>\n\n\nFor the oldstable distribution (jessie), CVE-2018-1050 will be addressed\nin a later update. Unfortunately the changes required to fix\nCVE-2018-1057 for Debian oldstable are too invasive to be backported.\nUsers using Samba as an AD-compatible domain controller are encouraged\nto apply the workaround described in the Samba wiki and upgrade to\nDebian stretch.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2:4.5.12+dfsg-2+deb9u2.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFor the detailed security status of samba please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/samba](https://security-tracker.debian.org/tracker/samba)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4135-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4135"
 		}
 	]
 }

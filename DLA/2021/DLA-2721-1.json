@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2721-1",
-	"modified": "2023-06-28T06:20:11.195175Z",
+	"modified": "2024-01-09T20:32:53.193074Z",
 	"published": "2021-07-26T00:00:00Z",
 	"related": [
 		"CVE-2021-32610"
 	],
 	"summary": "drupal7 - security update",
-	"details": "\nThe Drupal project uses the pear Archive\\_Tar library, which has\nreleased a security update that impacts Drupal.\n\n\nThe vulnerability is mitigated by the fact that Drupal core's use of\nthe Archive\\_Tar library is not vulnerable, as it does not permit\nsymlinks.\n\n\nExploitation may be possible if contrib or custom code uses the\nlibrary to extract tar archives (for example .tar, .tar.gz, .bz2, or\n.tlz) which come from a potentially untrusted source.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n7.52-2+deb9u16.\n\n\nWe recommend that you upgrade your drupal7 packages.\n\n\nFor the detailed security status of drupal7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/drupal7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n--u3/rZRmxL6MmkK24\nContent-Type: application/pgp-signature; name=\"signature.asc\"\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2721-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2721"
 		}
 	]
 }

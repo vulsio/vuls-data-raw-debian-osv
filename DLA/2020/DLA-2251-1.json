@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2251-1",
-	"modified": "2023-06-28T06:26:29.006712Z",
+	"modified": "2024-01-09T20:32:15.914360Z",
 	"published": "2020-06-19T00:00:00Z",
 	"related": [
 		"CVE-2020-8164",
 		"CVE-2020-8165"
 	],
 	"summary": "rails - security update",
-	"details": "\nTwo vulnerabilities were found in Ruby on Rails, a MVC ruby-based\nframework geared for web application development, which could lead to\nremote code execution and untrusted user input usage, depending on the\napplication.\n\n\n* [CVE-2020-8164](https://security-tracker.debian.org/tracker/CVE-2020-8164)\nStrong parameters bypass vector in ActionPack. In some cases user\n supplied information can be inadvertently leaked from Strong\n Parameters. Specifically the return value of `each`, or\n `each\\_value`, or `each\\_pair` will return the underlying\n untrusted hash of data that was read from the parameters.\n Applications that use this return value may be inadvertently use\n untrusted user input.\n* [CVE-2020-8165](https://security-tracker.debian.org/tracker/CVE-2020-8165)\nPotentially unintended unmarshalling of user-provided objects in\n MemCacheStore. There is potentially unexpected behaviour in the\n MemCacheStore where, when untrusted user input is written to the\n cache store using the `raw: true` parameter, re-reading the result\n from the cache can evaluate the user input as a Marshalled object\n instead of plain text. Unmarshalling of untrusted user input can\n have impact up to and including RCE. At a minimum, this\n vulnerability allows an attacker to inject untrusted Ruby objects\n into a web application.\n\n\nIn addition to upgrading to the latest versions of Rails,\n developers should ensure that whenever they are calling\n `Rails.cache.fetch` they are using consistent values of the `raw`\n parameter for both reading and writing.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2:4.1.8-1+deb8u7.\n\n\nWe recommend that you upgrade your rails packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2251-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2251"
 		}
 	]
 }

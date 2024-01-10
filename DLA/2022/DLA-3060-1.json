@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3060-1",
-	"modified": "2023-06-28T06:21:26.192775Z",
-	"published": "2022-06-28T00:00:00Z",
+	"modified": "2024-01-09T20:33:16.122380Z",
+	"published": "2022-06-27T00:00:00Z",
 	"related": [
 		"CVE-2022-0544",
 		"CVE-2022-0545",
 		"CVE-2022-0546"
 	],
 	"summary": "blender - security update",
-	"details": "\nSeveral issues have been found in blender, a very fast and versatile 3D\nmodeller/renderer.\n\n\n\n* [CVE-2022-0546](https://security-tracker.debian.org/tracker/CVE-2022-0546)\nAn out-of-bounds heap access due to missing checks in the image\n loader could result in denial of service, memory corruption or\n potentially code execution.\n* [CVE-2022-0545](https://security-tracker.debian.org/tracker/CVE-2022-0545)\nAn integer overflow while processing 2d images might result in a\n write-what-where vulnerability or an out-of-bounds read vulnerability\n which could leak sensitive information or achieve code execution.\n* [CVE-2022-0544](https://security-tracker.debian.org/tracker/CVE-2022-0544)\nCrafted DDS image files could create an integer underflow in the\n DDS loader which leads to an out-of-bounds read and might leak\n sensitive information.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.79.b+dfsg0-1~deb9u2.\n\n\nWe recommend that you upgrade your blender packages.\n\n\nFor the detailed security status of blender please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/blender>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3060-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3060"
 		}
 	]
 }

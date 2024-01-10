@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3650-1",
-	"modified": "2023-11-12T22:15:34.134843Z",
+	"modified": "2024-01-09T20:33:43.183863Z",
 	"published": "2023-11-12T00:00:00Z",
 	"related": [
 		"CVE-2019-13147",
 		"CVE-2022-24599"
 	],
 	"summary": "audiofile - security update",
-	"details": "\nThe audiofile library allows the processing of audio data to and\nfrom audio files of many common formats (currently AIFF, AIFF-C,\nWAVE, NeXT/Sun, BICS, and raw data).\n\n\n* [CVE-2019-13147](https://security-tracker.debian.org/tracker/CVE-2019-13147)\nAudiofile was vulnerable due to an integer overflow.\n Bail out early if NeXT audio files include too many channels.\n* [CVE-2022-24599](https://security-tracker.debian.org/tracker/CVE-2022-24599)\nA memory leak was found due to reading not null\n terminated copyright field. Preallocate zeroed memory and\n always NUL terminates C strings.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.3.6-5+deb10u1.\n\n\nWe recommend that you upgrade your audiofile packages.\n\n\nFor the detailed security status of audiofile please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/audiofile>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3650-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3650"
 		}
 	]
 }

@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1862-1",
-	"modified": "2023-06-28T06:21:01.430944Z",
-	"published": "2019-07-27T00:00:00Z",
+	"modified": "2024-01-09T20:31:48.756108Z",
+	"published": "2019-07-23T00:00:00Z",
 	"related": [
 		"CVE-2019-10639",
 		"CVE-2019-13272",
 		"CVE-2019-2101"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2019-2101](https://security-tracker.debian.org/tracker/CVE-2019-2101)\nAndrey Konovalov discovered that the USB Video Class driver\n (uvcvideo) did not consistently handle a type field in device\n descriptors, which could result in a heap buffer overflow. This\n could be used for denial of service or possibly for privilege\n escalation.\n* [CVE-2019-10639](https://security-tracker.debian.org/tracker/CVE-2019-10639)\nAmit Klein and Benny Pinkas discovered that the generation of IP\n packet IDs used a weak hash function that incorporated a kernel\n virtual address. In Linux 3.16 this hash function is not used for\n IP IDs but is used for other purposes in the network stack. In\n custom kernel configurations that enable kASLR, this might weaken\n kASLR.\n* [CVE-2019-13272](https://security-tracker.debian.org/tracker/CVE-2019-13272)\nJann Horn discovered that the ptrace subsystem in the Linux kernel\n mishandles the management of the credentials of a process that wants\n to create a ptrace relationship, allowing a local user to obtain root\n privileges under certain scenarios.\n\n\nFor Debian 8 Jessie, these problems have been fixed in\nversion 3.16.70-1. This update also fixes a regression introduced by\nthe original fix for [CVE-2019-11478](https://security-tracker.debian.org/tracker/CVE-2019-11478)\n([#930904](https://bugs.debian.org/930904)), and includes\nother fixes from upstream stable updates.\n\n\nWe recommend that you upgrade your linux and linux-latest\npackages. You will need to use \"apt-get upgrade --with-new-pkgs\"\nor apt upgrade as the binary package names have changed.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -100,12 +99,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1862-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1862"
 		}
 	]
 }

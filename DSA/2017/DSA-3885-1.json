@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3885-1",
-	"modified": "2023-10-16T00:12:25.182790Z",
+	"modified": "2024-01-09T20:28:31.738586Z",
 	"published": "2017-06-18T00:00:00Z",
 	"related": [
 		"CVE-2017-9468",
 		"CVE-2017-9469"
 	],
 	"summary": "irssi - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in Irssi, a terminal based\nIRC client. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2017-9468](https://security-tracker.debian.org/tracker/CVE-2017-9468)\nJoseph Bisch discovered that Irssi does not properly handle DCC\n messages without source nick/host. A malicious IRC server can take\n advantage of this flaw to cause Irssi to crash, resulting in a\n denial of service.\n* [CVE-2017-9469](https://security-tracker.debian.org/tracker/CVE-2017-9469)\nJoseph Bisch discovered that Irssi does not properly handle\n receiving incorrectly quoted DCC files. A remote attacker can take\n advantage of this flaw to cause Irssi to crash, resulting in a\n denial of service.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 0.8.17-1+deb8u4.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.0.2-1+deb9u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.3-1.\n\n\nWe recommend that you upgrade your irssi packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3885-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3885"
 		}
 	]
 }

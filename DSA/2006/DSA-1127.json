@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1127",
-	"modified": "2023-10-16T00:05:14.461953Z",
+	"modified": "2024-01-09T20:20:19.663178Z",
 	"published": "2006-07-28T00:00:00Z",
 	"related": [
 		"CVE-2006-3628",
@@ -11,7 +11,6 @@
 		"CVE-2006-3632"
 	],
 	"summary": "ethereal - several",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the Ethereal network\nsniffer, which may lead to the execution of arbitrary code. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2006-3628](https://security-tracker.debian.org/tracker/CVE-2006-3628)\nIlja van Sprundel discovered that the FW-1 and MQ dissectors are\n vulnerable to format string attacks.\n* [CVE-2006-3629](https://security-tracker.debian.org/tracker/CVE-2006-3629)\nIlja van Sprundel discovered that the MOUNT dissector is vulnerable\n to denial of service through memory exhaustion.\n* [CVE-2006-3630](https://security-tracker.debian.org/tracker/CVE-2006-3630)\nIlja van Sprundel discovered off-by-one overflows in the NCP NMAS and\n NDPS dissectors.\n* [CVE-2006-3631](https://security-tracker.debian.org/tracker/CVE-2006-3631)\nIlja van Sprundel discovered a buffer overflow in the NFS dissector.\n* [CVE-2006-3632](https://security-tracker.debian.org/tracker/CVE-2006-3632)\nIlja van Sprundel discovered that the SSH dissector is vulnerable\n to denial of service through an infinite loop.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.10.10-2sarge6.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.99.2-1 of wireshark, the sniffer formerly known as ethereal.\n\n\nWe recommend that you upgrade your ethereal packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1127.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1127"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3433-1",
-	"modified": "2023-10-16T00:12:00.824348Z",
+	"modified": "2024-01-09T20:21:52.427578Z",
 	"published": "2016-01-02T00:00:00Z",
 	"related": [
 		"CVE-2015-3223",
@@ -13,7 +13,6 @@
 		"CVE-2015-8467"
 	],
 	"summary": "samba - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix. The Common Vulnerabilities and\nExposures project identifies the following issues:\n\n\n* [CVE-2015-3223](https://security-tracker.debian.org/tracker/CVE-2015-3223)\nThilo Uttendorfer of Linux Information Systems AG discovered that a\n malicious request can cause the Samba LDAP server to hang, spinning\n using CPU. A remote attacker can take advantage of this flaw to\n mount a denial of service.\n* [CVE-2015-5252](https://security-tracker.debian.org/tracker/CVE-2015-5252)\nJan Yenya Kasprzak and the Computer Systems Unit team at Faculty\n of Informatics, Masaryk University discovered that insufficient\n symlink verification could allow data access outside an exported\n share path.\n* [CVE-2015-5296](https://security-tracker.debian.org/tracker/CVE-2015-5296)\nStefan Metzmacher of SerNet discovered that Samba does not ensure\n that signing is negotiated when creating an encrypted client\n connection to a server. This allows a man-in-the-middle attacker to\n downgrade the connection and connect using the supplied credentials\n as an unsigned, unencrypted connection.\n* [CVE-2015-5299](https://security-tracker.debian.org/tracker/CVE-2015-5299)\nIt was discovered that a missing access control check in the VFS\n shadow\\_copy2 module could allow unauthorized users to access\n snapshots.\n* [CVE-2015-5330](https://security-tracker.debian.org/tracker/CVE-2015-5330)\nDouglas Bagnall of Catalyst discovered that the Samba LDAP server\n is vulnerable to a remote memory read attack. A remote attacker can\n obtain sensitive information from daemon heap memory by sending\n crafted packets and then either read an error message, or a\n database value.\n* [CVE-2015-7540](https://security-tracker.debian.org/tracker/CVE-2015-7540)\nIt was discovered that a malicious client can send packets that\n cause the LDAP server provided by the AD DC in the samba daemon\n process to consume unlimited memory and be terminated.\n* [CVE-2015-8467](https://security-tracker.debian.org/tracker/CVE-2015-8467)\nAndrew Bartlett of the Samba Team and Catalyst discovered that a\n Samba server deployed as an AD DC can expose Windows DCs in the same\n domain to a denial of service via the creation of multiple machine\n accounts. This issue is related to the MS15-096 / [CVE-2015-2535](https://security-tracker.debian.org/tracker/CVE-2015-2535)\n security issue in Windows.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 2:3.6.6-6+deb7u6. The oldstable distribution (wheezy) is only\naffected by [CVE-2015-5252](https://security-tracker.debian.org/tracker/CVE-2015-5252), [CVE-2015-5296](https://security-tracker.debian.org/tracker/CVE-2015-5296) and [CVE-2015-5299](https://security-tracker.debian.org/tracker/CVE-2015-5299).\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2:4.1.17+dfsg-2+deb8u1. The fixes for [CVE-2015-3223](https://security-tracker.debian.org/tracker/CVE-2015-3223) and\n[CVE-2015-5330](https://security-tracker.debian.org/tracker/CVE-2015-5330) required an update to ldb 2:1.1.17-2+deb8u1 to correct the\ndefects.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2:4.1.22+dfsg-1. The fixes for [CVE-2015-3223](https://security-tracker.debian.org/tracker/CVE-2015-3223) and [CVE-2015-5330](https://security-tracker.debian.org/tracker/CVE-2015-5330)\nrequired an update to ldb 2:1.1.24-1 to correct the defects.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -75,12 +74,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3433-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3433"
 		}
 	]
 }

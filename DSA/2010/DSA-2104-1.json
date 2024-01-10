@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2104-1",
-	"modified": "2023-10-16T00:10:58.308770Z",
+	"modified": "2024-01-09T20:22:41.939586Z",
 	"published": "2010-09-06T00:00:00Z",
 	"related": [
 		"CVE-2010-2948",
 		"CVE-2010-2949"
 	],
 	"summary": "quagga - denial of service",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the BGP\nimplementation of Quagga, a routing daemon.\n\n\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2010-2948](https://security-tracker.debian.org/tracker/CVE-2010-2948)\nWhen processing a crafted Route Refresh message received\n from a configured, authenticated BGP neighbor, Quagga\n may crash, leading to a denial of service.\n* [CVE-2010-2949](https://security-tracker.debian.org/tracker/CVE-2010-2949)\nWhen processing certain crafted AS paths, Quagga would crash\n with a NULL pointer dereference, leading to a denial of\n service. In some configurations, such crafted AS paths could\n be relayed by intermediate BGP routers.\n\n\nIn addition, this update contains a reliability fix: Quagga will no\nlonger advertise confederation-related AS paths to non-confederation\npeers, and reject unexpected confederation-related AS paths by\nresetting the session with the BGP peer which is advertising them.\n(Previously, such AS paths would trigger resets of unrelated BGP\nsessions.)\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.99.10-1lenny3.\n\n\nFor the unstable distribution (sid) and the testing distribution\n(squeeze), these problems have been fixed in version 0.99.17-1.\n\n\nWe recommend that you upgrade your quagga package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2104-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2104"
 		}
 	]
 }

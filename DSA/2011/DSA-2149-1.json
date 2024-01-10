@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2149-1",
-	"modified": "2023-10-16T00:10:59.572114Z",
+	"modified": "2024-01-09T20:22:42.257558Z",
 	"published": "2011-01-20T00:00:00Z",
 	"related": [
 		"CVE-2010-4352"
 	],
 	"summary": "dbus - denial of service",
-	"details": "\nRémi Denis-Courmont discovered that dbus, a message bus application,\nis not properly limiting the nesting level when examining messages with\nextensive nested variants. This allows an attacker to crash the dbus system\ndaemon due to a call stack overflow via crafted messages.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.2.1-5+lenny2.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 1.2.24-4.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.2.24-4.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2149-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2149"
 		}
 	]
 }

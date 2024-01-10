@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1166-2",
-	"modified": "2023-06-28T06:20:26.040945Z",
-	"published": "2017-11-07T00:00:00Z",
+	"modified": "2024-01-09T20:30:49.020294Z",
+	"published": "2017-11-08T00:00:00Z",
 	"summary": "tomcat7 - regression update",
-	"details": "\nA remote code execution vulnerability has been discovered in tomcat7.\n\n\nWhen HTTP PUT was enabled (e.g., via setting the readonly initialization\nparameter of the Default servlet to false) it was possible to upload a JSP\nfile to the server via a specially crafted request. This JSP could then be\nrequested and any code it contained would be executed by the server.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n7.0.28-4+deb7u16.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1166-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1166"
 		}
 	]
 }

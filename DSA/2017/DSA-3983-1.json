@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3983-1",
-	"modified": "2023-10-16T00:12:32.138342Z",
+	"modified": "2024-01-09T20:26:12.508562Z",
 	"published": "2017-09-22T00:00:00Z",
 	"related": [
 		"CVE-2017-12150",
@@ -9,7 +9,6 @@
 		"CVE-2017-12163"
 	],
 	"summary": "samba - security update",
-	"details": "\nMultiple security issues have been discoverd in Samba, a SMB/CIFS file,\nprint, and login server for Unix:\n\n\n* [CVE-2017-12150](https://security-tracker.debian.org/tracker/CVE-2017-12150)\nStefan Metzmacher discovered multiple code paths where SMB signing\n was not enforced.\n* [CVE-2017-12151](https://security-tracker.debian.org/tracker/CVE-2017-12151)\nStefan Metzmacher discovered that tools using libsmbclient did not\n enforce encryption when following DFS redirects, which could allow a\n man-in-the-middle attacker to read or modify connections which were\n meant to be encrypted.\n* [CVE-2017-12163](https://security-tracker.debian.org/tracker/CVE-2017-12163)\nYihan Lian and Zhibin Hu discovered that insufficient range checks\n in the processing of SMB1 write requests could result in disclosure\n of server memory.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 2:4.2.14+dfsg-0+deb8u8.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2:4.5.8+dfsg-2+deb9u2.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -83,12 +82,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3983-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3983"
 		}
 	]
 }

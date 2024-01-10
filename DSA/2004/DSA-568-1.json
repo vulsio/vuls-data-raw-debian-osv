@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-568-1",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-10-16T00:00:00Z",
 	"published": "2004-10-16T00:00:00Z",
 	"related": [
 		"CVE-2004-0884"
 	],
 	"summary": "cyrus-sasl-mit - unsanitised input",
-	"details": "\nA vulnerability has been discovered in the Cyrus implementation of the\nSASL library, the Simple Authentication and Security Layer, a method\nfor adding authentication support to connection-based protocols. The\nlibrary honors the environment variable SASL\\_PATH blindly, which\nallows a local user to link against a malicious library to run\narbitrary code with the privileges of a setuid or setgid application.\n\n\nThe MIT version of the Cyrus implementation of the SASL library \nprovides bindings against MIT GSSAPI and MIT Kerberos4.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.5.24-15woody3.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your libsasl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-568-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-568"
 		}
 	]
 }

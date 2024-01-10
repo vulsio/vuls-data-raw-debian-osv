@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2865-1",
-	"modified": "2023-10-16T00:11:35.855226Z",
+	"modified": "2024-01-09T20:21:33.389793Z",
 	"published": "2014-02-20T00:00:00Z",
 	"related": [
 		"CVE-2014-0060",
@@ -15,7 +15,6 @@
 		"CVE-2014-2669"
 	],
 	"summary": "postgresql-9.1 - several",
-	"details": "\nVarious vulnerabilities were discovered in PostgreSQL:\n\n\n* [CVE-2014-0060](https://security-tracker.debian.org/tracker/CVE-2014-0060) \n Shore up GRANT ... WITH ADMIN OPTION restrictions (Noah Misch)\n\n Granting a role without ADMIN OPTION is supposed to prevent the grantee\n from adding or removing members from the granted role, but this\n restriction was easily bypassed by doing SET ROLE first. The security\n impact is mostly that a role member can revoke the access of others,\n contrary to the wishes of his grantor. Unapproved role member additions\n are a lesser concern, since an uncooperative role member could provide\n most of his rights to others anyway by creating views or SECURITY\n DEFINER functions.\n* [CVE-2014-0061](https://security-tracker.debian.org/tracker/CVE-2014-0061)\n Prevent privilege escalation via manual calls to PL validator functions \n (Andres Freund)\n\n The primary role of PL validator functions is to be called implicitly\n during CREATE FUNCTION, but they are also normal SQL functions that a\n user can call explicitly. Calling a validator on a function actually\n written in some other language was not checked for and could be\n exploited for privilege-escalation purposes. The fix involves adding a\n call to a privilege-checking function in each validator function.\n Non-core procedural languages will also need to make this change to\n their own validator functions, if any.\n* [CVE-2014-0062](https://security-tracker.debian.org/tracker/CVE-2014-0062)\n Avoid multiple name lookups during table and index DDL \n (Robert Haas, Andres Freund)\n\n If the name lookups come to different conclusions due to concurrent\n activity, we might perform some parts of the DDL on a different table\n than other parts. At least in the case of CREATE INDEX, this can be used\n to cause the permissions checks to be performed against a different\n table than the index creation, allowing for a privilege escalation\n attack.\n* [CVE-2014-0063](https://security-tracker.debian.org/tracker/CVE-2014-0063)\n Prevent buffer overrun with long datetime strings (Noah Misch)\n\n The MAXDATELEN constant was too small for the longest possible value of\n type interval, allowing a buffer overrun in interval\\_out(). Although the\n datetime input functions were more careful about avoiding buffer\n overrun, the limit was short enough to cause them to reject some valid\n inputs, such as input containing a very long timezone name. The ecpg\n library contained these vulnerabilities along with some of its own.\n* [CVE-2014-0064](https://security-tracker.debian.org/tracker/CVE-2014-0064)\n[CVE-2014-2669](https://security-tracker.debian.org/tracker/CVE-2014-2669)\n Prevent buffer overrun due to integer overflow in size calculations \n (Noah Misch, Heikki Linnakangas)\n\n Several functions, mostly type input functions, calculated an allocation\n size without checking for overflow. If overflow did occur, a too-small\n buffer would be allocated and then written past.\n* [CVE-2014-0065](https://security-tracker.debian.org/tracker/CVE-2014-0065)\n Prevent overruns of fixed-size buffers (Peter Eisentraut, Jozef Mlich)\n\n Use strlcpy() and related functions to provide a clear guarantee that\n fixed-size buffers are not overrun. Unlike the preceding items, it is\n unclear whether these cases really represent live issues, since in most\n cases there appear to be previous constraints on the size of the input\n string. Nonetheless it seems prudent to silence all Coverity warnings of\n this type.\n* [CVE-2014-0066](https://security-tracker.debian.org/tracker/CVE-2014-0066)\n Avoid crashing if crypt() returns NULL (Honza Horak, Bruce Momjian)\n\n There are relatively few scenarios in which crypt() could return NULL,\n but contrib/chkpass would crash if it did. One practical case in which\n this could be an issue is if libc is configured to refuse to execute\n unapproved hashing algorithms (e.g., FIPS mode).\n* [CVE-2014-0067](https://security-tracker.debian.org/tracker/CVE-2014-0067)\n Document risks of make check in the regression testing instructions\n (Noah Misch, Tom Lane)\n\n Since the temporary server started by make check uses trust\n authentication, another user on the same machine could connect to it as\n database superuser, and then potentially exploit the privileges of the\n operating-system user who started the tests. A future release will\n probably incorporate changes in the testing procedure to prevent this\n risk, but some public discussion is needed first. So for the moment,\n just warn people against using make check when there are untrusted users\n on the same machine.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 9.1\\_9.1.12-0wheezy1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 9.3.3-1 of the postgresql-9.3 package.\n\n\nWe recommend that you upgrade your postgresql-9.1 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -53,12 +52,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2865-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2865"
 		}
 	]
 }

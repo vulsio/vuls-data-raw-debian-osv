@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2724-1",
-	"modified": "2023-10-16T00:11:28.224834Z",
+	"modified": "2024-01-09T20:23:29.779211Z",
 	"published": "2013-07-17T00:00:00Z",
 	"related": [
 		"CVE-2013-2853",
@@ -19,7 +19,6 @@
 		"CVE-2013-2880"
 	],
 	"summary": "chromium-browser - several",
-	"details": "\nSeveral vulnerabilities have been discovered in the Chromium web browser.\n\n\n* [CVE-2013-2853](https://security-tracker.debian.org/tracker/CVE-2013-2853)\nThe HTTPS implementation does not ensure that headers are terminated\n by \\r\\n\\r\\n (carriage return, newline, carriage return, newline).\n* [CVE-2013-2867](https://security-tracker.debian.org/tracker/CVE-2013-2867)\nChrome does not properly prevent pop-under windows.\n* [CVE-2013-2868](https://security-tracker.debian.org/tracker/CVE-2013-2868)\ncommon/extensions/sync\\_helper.cc proceeds with sync operations for\n NPAPI extensions without checking for a certain plugin permission\n setting.\n* [CVE-2013-2869](https://security-tracker.debian.org/tracker/CVE-2013-2869)\nDenial of service (out-of-bounds read) via a crafted JPEG2000\n image.\n* [CVE-2013-2870](https://security-tracker.debian.org/tracker/CVE-2013-2870)\nUse-after-free vulnerability in network sockets.\n* [CVE-2013-2871](https://security-tracker.debian.org/tracker/CVE-2013-2871)\nUse-after-free vulnerability in input handling.\n* [CVE-2013-2873](https://security-tracker.debian.org/tracker/CVE-2013-2873)\nUse-after-free vulnerability in resource loading.\n* [CVE-2013-2875](https://security-tracker.debian.org/tracker/CVE-2013-2875)\nOut-of-bounds read in SVG file handling.\n* [CVE-2013-2876](https://security-tracker.debian.org/tracker/CVE-2013-2876)\nChromium does not properly enforce restrictions on the capture of\n screenshots by extensions, which could lead to information\n disclosure from previous page visits.\n* [CVE-2013-2877](https://security-tracker.debian.org/tracker/CVE-2013-2877)\nOut-of-bounds read in XML file handling.\n* [CVE-2013-2878](https://security-tracker.debian.org/tracker/CVE-2013-2878)\nOut-of-bounds read in text handling.\n* [CVE-2013-2879](https://security-tracker.debian.org/tracker/CVE-2013-2879)\nThe circumstances in which a renderer process can be considered a\n trusted process for sign-in and subsequent sync operations were\n not propertly checked.\n* [CVE-2013-2880](https://security-tracker.debian.org/tracker/CVE-2013-2880)\nThe Chromium 28 development team found various issues from internal\n fuzzing, audits, and other studies.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 28.0.1500.71-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 28.0.1500.71-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2724-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2724"
 		}
 	]
 }

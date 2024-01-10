@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-88-1",
-	"modified": "2023-06-28T06:27:10.517585Z",
+	"modified": "2024-01-09T20:34:02.245892Z",
 	"published": "2014-11-21T00:00:00Z",
 	"related": [
 		"CVE-2011-0188",
@@ -12,7 +12,6 @@
 		"CVE-2014-8090"
 	],
 	"summary": "ruby1.8 - security update",
-	"details": "\nThis update fixes multiple local and remote denial of service and remote code\nexecute problems:\n\n\n* [CVE-2011-0188](https://security-tracker.debian.org/tracker/CVE-2011-0188)\nProperly allocate memory, to prevent arbitrary code execution or application\ncrash. Reported by Drew Yao.\n* [CVE-2011-2686](https://security-tracker.debian.org/tracker/CVE-2011-2686)\nReinitialize the random seed when forking to prevent [CVE-2003-0900](https://security-tracker.debian.org/tracker/CVE-2003-0900) like\nsituations.\n* [CVE-2011-2705](https://security-tracker.debian.org/tracker/CVE-2011-2705)\nModify PRNG state to prevent random number sequence repeatation at forked\nchild process which has same pid. Reported by Eric Wong.\n* [CVE-2011-4815](https://security-tracker.debian.org/tracker/CVE-2011-4815)\nFix a problem with predictable hash collisions resulting in denial of service\n(CPU consumption) attacks. Reported by Alexander Klink and Julian Waelde.\n* [CVE-2014-8080](https://security-tracker.debian.org/tracker/CVE-2014-8080)\nFix REXML parser to prevent memory consumption denial of service via crafted\nXML documents. Reported by Willis Vandevanter.\n* [CVE-2014-8090](https://security-tracker.debian.org/tracker/CVE-2014-8090)\nAdd REXML::Document#document to complement the fix for [CVE-2014-8080](https://security-tracker.debian.org/tracker/CVE-2014-8080).\nReported by Tomas Hoger.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in ruby1.8 version 1.8.7.302-2squeeze3\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-88-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-88"
 		}
 	]
 }

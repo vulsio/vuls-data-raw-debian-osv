@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4044-1",
-	"modified": "2023-10-16T00:12:36.383207Z",
+	"modified": "2024-01-09T20:26:15.788524Z",
 	"published": "2017-11-21T00:00:00Z",
 	"related": [
 		"CVE-2017-16613"
 	],
 	"summary": "swauth - security update",
-	"details": "\nA vulnerability has been discovered in swauth, an authentication system for\nSwift, a distributed virtual object store used in Openstack.\n\n\nThe authentication token for an user is saved in clear text to the log file,\nwhich could enable an attacker with access to the logs to bypass the\nauthentication provided by swauth.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 1.2.0-2+deb9u1.\n\n\nWe recommend that you upgrade your swauth packages.\n\n\nFor the detailed security status of swauth please refer to\nits security tracker page at: [\\\nhttps://security-tracker.debian.org/tracker/swauth](https://security-tracker.debian.org/tracker/swauth)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4044-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-4044"
 		}
 	]
 }

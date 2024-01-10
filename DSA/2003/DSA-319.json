@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-319",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-06-12T00:00:00Z",
 	"published": "2003-06-12T00:00:00Z",
 	"related": [
 		"CVE-2003-0101"
 	],
 	"summary": "webmin - session ID spoofing",
-	"details": "\nminiserv.pl in the webmin package does not properly handle\nmetacharacters, such as line feeds and carriage returns, in\nBase64-encoded strings used in Basic authentication. This\nvulnerability allows remote attackers to spoof a session ID, and\nthereby gain root privileges.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.94-7woody1.\n\n\nThe old stable distribution (potato) does not contain a webmin package.\n\n\nFor the unstable distribution (sid) this problem is fixed in version\n1.070-1.\n\n\nWe recommend that you update your webmin package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-319.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-319"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3448-1",
-	"modified": "2023-10-16T00:12:01.719302Z",
+	"modified": "2024-01-09T20:25:55.024128Z",
 	"published": "2016-01-19T00:00:00Z",
 	"related": [
 		"CVE-2013-4312",
@@ -11,7 +11,6 @@
 		"CVE-2016-0728"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation or denial-of-service.\n\n\n* [CVE-2013-4312](https://security-tracker.debian.org/tracker/CVE-2013-4312)\nTetsuo Handa discovered that it is possible for a process to open\n far more files than the process' limit leading to denial-of-service\n conditions.\n* [CVE-2015-7566](https://security-tracker.debian.org/tracker/CVE-2015-7566)\nRalf Spenneberg of OpenSource Security reported that the visor\n driver crashes when a specially crafted USB device without bulk-out\n endpoint is detected.\n* [CVE-2015-8767](https://security-tracker.debian.org/tracker/CVE-2015-8767)\nAn SCTP denial-of-service was discovered which can be triggered by a\n local attacker during a heartbeat timeout event after the 4-way\n handshake.\n* [CVE-2016-0723](https://security-tracker.debian.org/tracker/CVE-2016-0723)\nA use-after-free vulnerability was discovered in the TIOCGETD ioctl.\n A local attacker could use this flaw for denial-of-service.\n* [CVE-2016-0728](https://security-tracker.debian.org/tracker/CVE-2016-0728)\nThe Perception Point research team discovered a use-after-free\n vulnerability in the keyring facility, possibly leading to local\n privilege escalation.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.7-ckt20-1+deb8u3.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,12 +58,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3448-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3448"
 		}
 	]
 }

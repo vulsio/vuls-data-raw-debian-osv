@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2932-1",
-	"modified": "2023-06-28T06:37:03.694205Z",
+	"modified": "2024-01-09T20:33:10.332788Z",
 	"published": "2022-03-06T00:00:00Z",
 	"related": [
 		"CVE-2022-0561",
@@ -9,7 +9,6 @@
 		"CVE-2022-22844"
 	],
 	"summary": "tiff - security update",
-	"details": "\nSeveral issues have been found in tiff, a library and tools to manipulate\nand convert files in the Tag Image File Format (TIFF).\n\n\n* [CVE-2022-22844](https://security-tracker.debian.org/tracker/CVE-2022-22844)\nout-of-bounds read in \\_TIFFmemcpy in certain situations involving a\n custom tag and 0x0200 as the second word of the DE field.\n* [CVE-2022-0562](https://security-tracker.debian.org/tracker/CVE-2022-0562)\nNull source pointer passed as an argument to memcpy() function within\n TIFFReadDirectory(). This could result in a Denial of Service via\n crafted TIFF files.\n* [CVE-2022-0561](https://security-tracker.debian.org/tracker/CVE-2022-0561)\nNull source pointer passed as an argument to memcpy() function within\n TIFFFetchStripThing(). This could result in a Denial of Service via\n crafted TIFF files.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.0.8-2+deb9u8.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFor the detailed security status of tiff please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/tiff>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2932-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2932"
 		}
 	]
 }

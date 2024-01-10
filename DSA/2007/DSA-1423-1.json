@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1423-1",
-	"modified": "2023-10-16T00:10:24.428015Z",
+	"modified": "2024-01-09T20:22:17.630371Z",
 	"published": "2007-12-07T00:00:00Z",
 	"related": [
 		"CVE-2007-5491",
@@ -12,7 +12,6 @@
 		"CVE-2007-5695"
 	],
 	"summary": "sitebar - several vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in sitebar, a\nweb based bookmark manager written in PHP. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2007-5491](https://security-tracker.debian.org/tracker/CVE-2007-5491)\nA directory traversal vulnerability in the translation module allows\n remote authenticated users to chmod arbitrary files to 0777 via ..\n sequences in the lang parameter.\n* [CVE-2007-5492](https://security-tracker.debian.org/tracker/CVE-2007-5492)\nA static code injection vulnerability in the translation module allows\n a remote authenticated user to execute arbitrary PHP code via the value\n parameter.\n* [CVE-2007-5693](https://security-tracker.debian.org/tracker/CVE-2007-5693)\nAn eval injection vulnerability in the translation module allows \n remote authenticated users to execute arbitrary PHP code via the\n edit parameter in an upd cmd action.\n* [CVE-2007-5694](https://security-tracker.debian.org/tracker/CVE-2007-5694)\nA path traversal vulnerability in the translation module allows \n remote authenticated users to read arbitrary files via an absolute\n path in the dir parameter.\n* [CVE-2007-5695](https://security-tracker.debian.org/tracker/CVE-2007-5695)\nAn error in command.php allows remote attackers to redirect users\n to arbitrary web sites via the forward parameter in a Log In action.\n* [CVE-2007-5692](https://security-tracker.debian.org/tracker/CVE-2007-5692)\nMultiple cross site scripting flaws allow remote attackers to inject\n arbitrary script or HTML fragments into several scripts.\n\n\nFor the old stable distribution (sarge), these problems have been fixed in\nversion 3.2.6-7.1sarge1.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n3.3.8-7etch1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in version\n3.3.8-12.1.\n\n\nWe recommend that you upgrade your sitebar package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1423-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1423"
 		}
 	]
 }

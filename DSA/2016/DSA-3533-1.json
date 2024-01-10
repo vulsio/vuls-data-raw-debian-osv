@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3533-1",
-	"modified": "2023-10-16T00:12:06.151709Z",
+	"modified": "2024-01-09T20:26:00.136600Z",
 	"published": "2016-03-29T00:00:00Z",
 	"related": [
 		"CVE-2016-2074"
 	],
 	"summary": "openvswitch - security update",
-	"details": "\nKashyap Thimmaraju and Bhargava Shastry discovered a remotely\ntriggerable buffer overflow vulnerability in openvswitch, a production\nquality, multilayer virtual switch implementation. Specially crafted\nMPLS packets could overflow the buffer reserved for MPLS labels in an\nOVS internal data structure. A remote attacker can take advantage of\nthis flaw to cause a denial of service, or potentially, execution of\narbitrary code.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.3.0+git20140819-3+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.3.0+git20140819-4.\n\n\nWe recommend that you upgrade your openvswitch packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3533-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3533"
 		}
 	]
 }

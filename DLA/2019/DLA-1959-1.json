@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1959-1",
-	"modified": "2023-06-28T06:25:03.804883Z",
+	"modified": "2024-01-09T20:33:13.109599Z",
 	"published": "2019-10-14T00:00:00Z",
 	"related": [
 		"CVE-2016-10894"
 	],
 	"summary": "xtrlock - security update",
-	"details": "\nIt was discovered that multitouch devices were not being disabled\nby the xtrlock screen locking utility.\n\n\nxtrlock did not block multitouch events so an attacker could still\ninput and thus control various programs such as Chromium, etc. via\nso-called \"multitouch\" events including pan scrolling, \"pinch and\nzoom\" or even being able to provide regular mouse clicks by\ndepressing the touchpad once and then clicking with a secondary\nfinger.\n\n\n* [CVE-2016-10894](https://security-tracker.debian.org/tracker/CVE-2016-10894)\nxtrlock through 2.10 does not block multitouch events. Consequently, an\n attacker at a locked screen can send input to (and thus control) various\n programs such as Chromium via events such as pan scrolling, \"pinch and zoom\"\n gestures, or even regular mouse clicks (by depressing the touchpad once and\n then clicking with a different finger).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.6+deb8u1. However, this fix does not the situation where an\nattacker plugs in a multitouch device *after* the screen has been\nlocked ([more info](https://bugs.debian.org/830726#115)).\n\n\nWe recommend that you upgrade your xtrlock packages pending a\ndeeper fix.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1959-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1959"
 		}
 	]
 }

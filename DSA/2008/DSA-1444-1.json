@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1444-1",
-	"modified": "2023-10-16T00:10:25.930133Z",
-	"published": "2008-01-23T00:00:00Z",
+	"modified": "2024-01-09T20:24:46.235141Z",
+	"published": "2008-01-03T00:00:00Z",
 	"related": [
 		"CVE-2007-3799",
 		"CVE-2007-3998",
@@ -14,7 +14,6 @@
 		"CVE-2007-5899"
 	],
 	"summary": "php5 several issues",
-	"details": "\n\nIt was discovered that the patch for [CVE-2007-4659](https://security-tracker.debian.org/tracker/CVE-2007-4659) could lead to\nregressions in some scenarios. The fix has been reverted for now,\na revised update will be provided in a future PHP DSA.\n\n\n\nFor reference the original advisory below:\n\n\n\nSeveral remote vulnerabilities have been discovered in PHP, a\nserver-side, HTML-embedded scripting language. The Common \nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n\n* [CVE-2007-3799](https://security-tracker.debian.org/tracker/CVE-2007-3799)\n\n It was discovered that the session\\_start() function allowed the\n insertion of attributes into the session cookie.\n* [CVE-2007-3998](https://security-tracker.debian.org/tracker/CVE-2007-3998)\n\n Mattias Bengtsson and Philip Olausson discovered that a\n programming error in the implementation of the wordwrap() function\n allowed denial of service through an infinite loop.\n* [CVE-2007-4658](https://security-tracker.debian.org/tracker/CVE-2007-4658)\n\n Stanislav Malyshev discovered that a format string vulnerability\n in the money\\_format() function could allow the execution of\n arbitrary code.\n* [CVE-2007-4659](https://security-tracker.debian.org/tracker/CVE-2007-4659)\n\n Stefan Esser discovered that execution control flow inside the\n zend\\_alter\\_ini\\_entry() function is handled incorrectly in case\n of a memory limit violation.\n* [CVE-2007-4660](https://security-tracker.debian.org/tracker/CVE-2007-4660)\n\n Gerhard Wagner discovered an integer overflow inside the\n chunk\\_split() function.\n* [CVE-2007-5898](https://security-tracker.debian.org/tracker/CVE-2007-5898)\n\n Rasmus Lerdorf discovered that incorrect parsing of multibyte\n sequences may lead to disclosure of memory contents.\n* [CVE-2007-5899](https://security-tracker.debian.org/tracker/CVE-2007-5899)\n\n It was discovered that the output\\_add\\_rewrite\\_var() function could\n leak session ID information, resulting in information disclosure.\n\n\n\nThis update also fixes two bugs from the PHP 5.2.4 release which\ndon't have security impact according to the Debian PHP security policy\n([CVE-2007-4657](https://security-tracker.debian.org/tracker/CVE-2007-4657) and [CVE-2007-4662](https://security-tracker.debian.org/tracker/CVE-2007-4662)), but which are fixed nonetheless.\n\n\n\n\nThe old stable distribution (sarge) doesn't contain php5.\n\n\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 5.2.0-8+etch10.\n\n\n\n\nFor the unstable distribution (sid), these problems have been fixed\nin version 5.2.4-1, with the exception of [CVE-2007-5898](https://security-tracker.debian.org/tracker/CVE-2007-5898) and\n[CVE-2007-5899](https://security-tracker.debian.org/tracker/CVE-2007-5899), which will be fixed soon. Please note that Debian's\nversion of PHP is hardened with the Suhosin patch beginning with\nversion 5.2.4-1, which renders several vulnerabilities ineffective.\n\n\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1444-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1444"
 		}
 	]
 }

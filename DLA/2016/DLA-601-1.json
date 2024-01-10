@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-601-1",
-	"modified": "2023-06-28T06:21:40.607242Z",
-	"published": "2016-08-27T00:00:00Z",
+	"modified": "2024-01-09T20:33:50.408224Z",
+	"published": "2016-08-26T00:00:00Z",
 	"related": [
 		"CVE-2016-4036",
 		"CVE-2016-4049"
 	],
 	"summary": "quagga - security update",
-	"details": "\nThe quagga package installs world readable sensitive files in /etc/quagga,\nand might be subject to denial of service because of lacking packet size\nchecks.\n\n\n* [CVE-2016-4036](https://security-tracker.debian.org/tracker/CVE-2016-4036)\nThe quagga package before 0.99.23-2.6.1 uses weak permissions for\n /etc/quagga, which allows local users to obtain sensitive information\n by reading files in the directory.\n* [CVE-2016-4049](https://security-tracker.debian.org/tracker/CVE-2016-4049)\nThe bgp\\_dump\\_routes\\_func function in bgpd/bgp\\_dump.c in Quagga does\n not perform size checks when dumping data, which might allow remote\n attackers to cause a denial of service (assertion failure and daemon\n crash) via a large BGP packet.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.99.22.4-1+wheezy3.\n\n\nWe recommend that you upgrade your quagga packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-601-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-601"
 		}
 	]
 }

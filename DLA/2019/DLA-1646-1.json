@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1646-1",
-	"modified": "2023-06-28T06:29:41.830836Z",
+	"modified": "2024-01-09T20:31:31.687170Z",
 	"published": "2019-01-29T00:00:00Z",
 	"related": [
 		"CVE-2018-17958",
@@ -9,7 +9,6 @@
 		"CVE-2018-19489"
 	],
 	"summary": "qemu - security update",
-	"details": "\nSeveral vulnerabilities were found in QEMU, a fast processor emulator:\n\n\n* [CVE-2018-17958](https://security-tracker.debian.org/tracker/CVE-2018-17958)\nThe rtl8139 emulator is affected by an integer overflow and subsequent\n buffer overflow. This vulnerability might be triggered by remote\n attackers with crafted packets to perform denial of service (via OOB\n stack buffer access).\n* [CVE-2018-19364](https://security-tracker.debian.org/tracker/CVE-2018-19364)\nThe 9pfs subsystem is affected by a race condition allowing threads to\n modify an fid path while it is being accessed by another thread,\n leading to (for example) a use-after-free outcome. This vulnerability\n might be triggered by local attackers to perform denial of service.\n* [CVE-2018-19489](https://security-tracker.debian.org/tracker/CVE-2018-19489)\nThe 9pfs subsystem is affected by a race condition during file\n renaming. This vulnerability might be triggered by local attackers to\n perform denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:2.1+dfsg-12+deb8u9.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1646-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1646"
 		}
 	]
 }

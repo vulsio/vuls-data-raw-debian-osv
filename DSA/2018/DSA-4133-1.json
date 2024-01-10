@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4133-1",
-	"modified": "2023-10-16T00:12:40.953880Z",
+	"modified": "2024-01-09T20:27:00.238073Z",
 	"published": "2018-03-07T00:00:00Z",
 	"related": [
 		"CVE-2017-3144",
@@ -9,7 +9,6 @@
 		"CVE-2018-5733"
 	],
 	"summary": "isc-dhcp - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the ISC DHCP client,\nrelay and server. The Common Vulnerabilities and Exposures project\nidentifies the following issues:\n\n\n* [CVE-2017-3144](https://security-tracker.debian.org/tracker/CVE-2017-3144)\nIt was discovered that the DHCP server does not properly clean up\n closed OMAPI connections, which can lead to exhaustion of the pool\n of socket descriptors available to the DHCP server, resulting in\n denial of service.\n* [CVE-2018-5732](https://security-tracker.debian.org/tracker/CVE-2018-5732)\nFelix Wilhelm of the Google Security Team discovered that the DHCP\n client is prone to an out-of-bound memory access vulnerability when\n processing specially constructed DHCP options responses, resulting\n in potential execution of arbitrary code by a malicious DHCP server.\n* [CVE-2018-5733](https://security-tracker.debian.org/tracker/CVE-2018-5733)\nFelix Wilhelm of the Google Security Team discovered that the DHCP\n server does not properly handle reference counting when processing\n client requests. A malicious client can take advantage of this flaw\n to cause a denial of service (dhcpd crash) by sending large amounts\n of traffic.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 4.3.1-6+deb8u3.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.3.5-3+deb9u1.\n\n\nWe recommend that you upgrade your isc-dhcp packages.\n\n\nFor the detailed security status of isc-dhcp please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/isc-dhcp>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4133-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4133"
 		}
 	]
 }

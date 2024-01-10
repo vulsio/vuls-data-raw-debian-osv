@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2751-1",
-	"modified": "2023-06-28T06:21:22.244891Z",
+	"modified": "2024-01-09T20:32:54.756892Z",
 	"published": "2021-08-31T00:00:00Z",
 	"summary": "postgresql-9.6 - security update",
-	"details": "\nPostgreSQL 9.6.23 fixes this security issue:\n\n\nDisallow SSL renegotiation more completely (Michael Paquier)\n\n\nSSL renegotiation has been disabled for some time, but the server would\n still cooperate with a client-initiated renegotiation request. A\n maliciously crafted renegotiation request could result in a server crash\n (see OpenSSL issue [CVE-2021-3449](https://security-tracker.debian.org/tracker/CVE-2021-3449)). Disable the feature altogether on\n OpenSSL versions that permit doing so, which are 1.1.0h and newer.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n9.6.23-0+deb9u1.\n\n\nWe recommend that you upgrade your postgresql-9.6 packages.\n\n\nFor the detailed security status of postgresql-9.6 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/postgresql-9.6>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2751-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2751"
 		}
 	]
 }

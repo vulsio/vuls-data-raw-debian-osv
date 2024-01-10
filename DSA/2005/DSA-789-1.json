@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-789-1",
-	"modified": "2023-10-16T00:24:27.482710Z",
+	"modified": "2024-01-09T20:34:07.632290Z",
 	"published": "2005-08-29T00:00:00Z",
 	"related": [
 		"CVE-2005-1751",
@@ -9,7 +9,6 @@
 		"CVE-2005-2498"
 	],
 	"summary": "php4 - several",
-	"details": "\nSeveral security related problems have been found in PHP4, the\nserver-side, HTML-embedded scripting language. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CAN-2005-1751](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1751)\nEric Romang discovered insecure temporary files in the shtool\n utility shipped with PHP that can exploited by a local attacker to\n overwrite arbitrary files. Only this vulnerability affects\n packages in oldstable.\n\n* [CAN-2005-1921](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1921)\nGulfTech has discovered that PEAR XML\\_RPC is vulnerable to a\n remote PHP code execution vulnerability that may allow an attacker\n to compromise a vulnerable server.\n\n* [CAN-2005-2498](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2498)\nStefan Esser discovered another vulnerability in the XML-RPC\n libraries that allows injection of arbitrary PHP code into eval()\n statements.\n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 4.1.2-7.woody5.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 4.3.10-16.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.4.0-2.\n\n\nWe recommend that you upgrade your PHP packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-789-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-789"
 		}
 	]
 }

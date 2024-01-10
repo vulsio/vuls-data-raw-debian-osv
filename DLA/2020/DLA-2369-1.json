@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2369-1",
-	"modified": "2023-06-28T06:26:31.575703Z",
-	"published": "2020-09-10T00:00:00Z",
+	"modified": "2024-01-09T20:32:31.468912Z",
+	"published": "2020-09-09T00:00:00Z",
 	"related": [
 		"CVE-2017-18258",
 		"CVE-2017-8872",
@@ -14,7 +14,6 @@
 		"CVE-2020-7595"
 	],
 	"summary": "libxml2 - security update",
-	"details": "\nSeveral security vulnerabilities were corrected in libxml2, the GNOME\nXML library.\n\n\n* [CVE-2017-8872](https://security-tracker.debian.org/tracker/CVE-2017-8872)\nGlobal buffer-overflow in the htmlParseTryOrFinish function.\n* [CVE-2017-18258](https://security-tracker.debian.org/tracker/CVE-2017-18258)\nThe xz\\_head function in libxml2 allows remote attackers to cause a\n denial of service (memory consumption) via a crafted LZMA file,\n because the decoder functionality does not restrict memory usage to\n what is required for a legitimate file.\n* [CVE-2018-14404](https://security-tracker.debian.org/tracker/CVE-2018-14404)\nA NULL pointer dereference vulnerability exists in the\n xpath.c:xmlXPathCompOpEval() function of libxml2 when parsing an\n invalid XPath expression in the XPATH\\_OP\\_AND or XPATH\\_OP\\_OR case.\n Applications processing untrusted XSL format inputs may be\n vulnerable to a denial of service attack.\n* [CVE-2018-14567](https://security-tracker.debian.org/tracker/CVE-2018-14567)\nIf the option --with-lzma is used, allows remote attackers to cause\n a denial of service (infinite loop) via a crafted XML file.\n* [CVE-2019-19956](https://security-tracker.debian.org/tracker/CVE-2019-19956)\nThe xmlParseBalancedChunkMemoryRecover function has a memory leak\n related to newDoc->oldNs.\n* [CVE-2019-20388](https://security-tracker.debian.org/tracker/CVE-2019-20388)\nA memory leak was found in the xmlSchemaValidateStream function of\n libxml2. Applications that use this library may be vulnerable to\n memory not being freed leading to a denial of service.\n* [CVE-2020-7595](https://security-tracker.debian.org/tracker/CVE-2020-7595)\nInfinite loop in xmlStringLenDecodeEntities can cause a denial of\n service.\n* [CVE-2020-24977](https://security-tracker.debian.org/tracker/CVE-2020-24977)\nOut-of-bounds read restricted to xmllint --htmlout.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.9.4+dfsg1-2.2+deb9u3.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFor the detailed security status of libxml2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxml2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2369-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2369"
 		}
 	]
 }

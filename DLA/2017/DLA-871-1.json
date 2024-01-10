@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-871-1",
-	"modified": "2023-06-28T06:27:10.364288Z",
-	"published": "2017-03-25T00:00:00Z",
+	"modified": "2024-01-09T20:34:03.007829Z",
+	"published": "2017-03-24T00:00:00Z",
 	"related": [
 		"CVE-2016-0772"
 	],
 	"summary": "python3.2 - security update",
-	"details": "\nIt was discovered that there was a TLS stripping vulnerability in the smptlib\nlibrary distributed with the CPython interpreter.\n\n\nThe library did not return an error if StartTLS failed, which might have\nallowed man-in-the-middle attackers to bypass the TLS protections by leveraging\na network position to block the StartTLS command.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in python3.2 version\n3.2.3-7+deb7u1.\n\n\nWe recommend that you upgrade your python3.2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-871-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-871"
 		}
 	]
 }

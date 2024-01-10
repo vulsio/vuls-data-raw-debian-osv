@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1851-1",
-	"modified": "2023-06-28T06:21:00.415812Z",
+	"modified": "2024-01-09T20:31:48.634647Z",
 	"published": "2019-07-10T00:00:00Z",
 	"related": [
 		"CVE-2016-9112",
 		"CVE-2018-20847"
 	],
 	"summary": "openjpeg2 - security update",
-	"details": "\nTwo security vulnerabilities were discovered in openjpeg2, a JPEG 2000\nimage library.\n\n\n* [CVE-2016-9112](https://security-tracker.debian.org/tracker/CVE-2016-9112)\nA floating point exception or divide by zero in the function\n opj\\_pi\\_next\\_cprl may lead to a denial-of-service.\n* [CVE-2018-20847](https://security-tracker.debian.org/tracker/CVE-2018-20847)\nAn improper computation of values in the function\n opj\\_get\\_encoding\\_parameters can lead to an integer overflow.\n This issue was partly fixed by the patch for [CVE-2015-1239](https://security-tracker.debian.org/tracker/CVE-2015-1239).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.1.0-2+deb8u7.\n\n\nWe recommend that you upgrade your openjpeg2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1851-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1851"
 		}
 	]
 }

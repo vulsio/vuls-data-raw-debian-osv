@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1000-2",
-	"modified": "2023-10-16T00:04:27.185924Z",
+	"modified": "2024-01-09T20:15:35.023899Z",
 	"published": "2006-03-14T00:00:00Z",
 	"related": [
 		"CVE-2006-0042"
 	],
 	"summary": "libapreq2-perl - design error",
-	"details": "\nGunnar Wolf noticed that the correction for the following problem was\nnot complete and requires an update. For completeness we're\nproviding the original problem description:\n\n\n\n> \n> An algorithm weakness has been discovered in Apache2::Request, the\n> generic request library for Apache2 which can be exploited remotely\n> and cause a denial of service via CPU consumption.\n> \n> \n> \n\n\nThe old stable distribution (woody) does not contain this package.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 2.04-dev-1sarge2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.07-1.\n\n\nWe recommend that you upgrade your libapreq2, libapache2-mod-apreq2\nand libapache2-request-perl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1000-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1000"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1985-1",
-	"modified": "2023-10-16T00:10:51.143240Z",
+	"modified": "2024-01-09T20:21:05.020603Z",
 	"published": "2010-01-31T00:00:00Z",
 	"related": [
 		"CVE-2009-4565"
 	],
 	"summary": "sendmail - insufficient input validation",
-	"details": "\nIt was discovered that sendmail, a Mail Transport Agent, does not properly handle\na '\\0' character in a Common Name (CN) field of an X.509 certificate.\n\n\nThis allows an attacker to spoof arbitrary SSL-based SMTP servers via a crafted server\ncertificate issued by a legitimate Certification Authority, and to bypass intended\naccess restrictions via a crafted client certificate issued by a legitimate\nCertification Authority.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 8.13.8-3+etch1\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 8.14.3-5+lenny1\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8.14.3-9.1, and will migrate to the testing distribution (squeeze)\nshortly.\n\n\nWe recommend that you upgrade your sendmail package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1985-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-1985"
 		}
 	]
 }

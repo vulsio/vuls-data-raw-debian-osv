@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4396-1",
-	"modified": "2023-10-16T00:26:59.969264Z",
+	"modified": "2024-01-09T20:28:43.932560Z",
 	"published": "2019-02-19T00:00:00Z",
 	"related": [
 		"CVE-2018-10855",
@@ -11,7 +11,6 @@
 		"CVE-2019-3828"
 	],
 	"summary": "ansible - security update",
-	"details": "\nSeveral vulnerabilities have been found in Ansible, a configuration\nmanagement, deployment, and task execution system:\n\n\n* [CVE-2018-10855](https://security-tracker.debian.org/tracker/CVE-2018-10855)\n/ [CVE-2018-16876](https://security-tracker.debian.org/tracker/CVE-2018-16876)\nThe no\\_log task flag wasn't honored, resulting in an information leak.\n* [CVE-2018-10875](https://security-tracker.debian.org/tracker/CVE-2018-10875)\nansible.cfg was read from the current working directory.\n* [CVE-2018-16837](https://security-tracker.debian.org/tracker/CVE-2018-16837)\nThe user module leaked parameters passed to ssh-keygen to the process\n environment.\n* [CVE-2019-3828](https://security-tracker.debian.org/tracker/CVE-2019-3828)\nThe fetch module was susceptible to path traversal.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.2.1.0-2+deb9u1.\n\n\nWe recommend that you upgrade your ansible packages.\n\n\nFor the detailed security status of ansible please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ansible>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4396-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4396"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3772-1",
-	"modified": "2023-10-16T00:06:26.375205Z",
+	"modified": "2024-01-09T20:26:53.137337Z",
 	"published": "2017-01-26T00:00:00Z",
 	"related": [
 		"CVE-2016-10164"
 	],
 	"summary": "libxpm - security update",
-	"details": "\nTobias Stoeckmann discovered that the libXpm library contained two\ninteger overflow flaws, leading to a heap out-of-bounds write, while\nparsing XPM extensions in a file. An attacker can provide a specially\ncrafted XPM file that, when processed by an application using the libXpm\nlibrary, would cause a denial-of-service against the application, or\npotentially, the execution of arbitrary code with the privileges of the\nuser running the application.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:3.5.12-0+deb8u1. This update is based on a new upstream\nversion of libxpm including additional bug fixes.\n\n\nFor the testing distribution (stretch) and the unstable distribution\n(sid), this problem has been fixed in version 1:3.5.12-1.\n\n\nWe recommend that you upgrade your libxpm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3772-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3772"
 		}
 	]
 }

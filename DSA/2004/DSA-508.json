@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-508",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-05-22T00:00:00Z",
 	"published": "2004-05-22T00:00:00Z",
 	"related": [
 		"CVE-2004-0402"
 	],
 	"summary": "xpcd - buffer overflow",
-	"details": "\nJaguar discovered a vulnerability in one component of xpcd, a PhotoCD\nviewer. xpcd-svga, part of xpcd which uses svgalib to display\ngraphics on the console, would copy user-supplied data of arbitrary\nlength into a fixed-size buffer in the pcd\\_open function.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 2.08-8woody2.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you update your xpcd package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-508.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-508"
 		}
 	]
 }

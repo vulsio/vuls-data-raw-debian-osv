@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1748-1",
-	"modified": "2023-06-28T06:20:56.422353Z",
+	"modified": "2024-01-09T20:31:42.149468Z",
 	"published": "2019-04-03T00:00:00Z",
 	"related": [
 		"CVE-2019-0217",
 		"CVE-2019-0220"
 	],
 	"summary": "apache2 - security update",
-	"details": "\nSeveral vulnerabilities have been found in the Apache HTTP server.\n\n\n* [CVE-2019-0217](https://security-tracker.debian.org/tracker/CVE-2019-0217)\nA race condition in mod\\_auth\\_digest when running in a threaded\n server could allow a user with valid credentials to authenticate\n using another username, bypassing configured access control\n restrictions. The issue was discovered by Simon Kappel.\n* [CVE-2019-0220](https://security-tracker.debian.org/tracker/CVE-2019-0220)\nBernhard Lorenz of Alpha Strike Labs GmbH reported that URL\n normalizations were inconsistently handled. When the path component\n of a request URL contains multiple consecutive slashes ('/'),\n directives such as LocationMatch and RewriteRule must account for\n duplicates in regular expressions while other aspects of the servers\n processing will implicitly collapse them.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.4.10-10+deb8u14.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1748-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1748"
 		}
 	]
 }

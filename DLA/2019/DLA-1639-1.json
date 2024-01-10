@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1639-1",
-	"modified": "2023-06-28T06:19:57.660723Z",
-	"published": "2019-01-23T00:00:00Z",
+	"modified": "2024-01-09T20:31:31.715716Z",
+	"published": "2019-01-22T00:00:00Z",
 	"related": [
 		"CVE-2018-16864",
 		"CVE-2018-16865"
 	],
 	"summary": "systemd - security update",
-	"details": "\nMultiple vulnerabilities were found in the journald component of\nsystemd which can lead to a crash or code execution.\n\n\n* [CVE-2018-16864](https://security-tracker.debian.org/tracker/CVE-2018-16864)\nAn allocation of memory without limits, that could result in the\n stack clashing with another memory region, was discovered in\n systemd-journald when many entries are sent to the journal\n socket. A local attacker, or a remote one if\n systemd-journal-remote is used, may use this flaw to crash\n systemd-journald or execute code with journald privileges.\n* [CVE-2018-16865](https://security-tracker.debian.org/tracker/CVE-2018-16865)\nAn allocation of memory without limits, that could result in the\n stack clashing with another memory region, was discovered in\n systemd-journald when a program with long command line arguments\n calls syslog. A local attacker may use this flaw to crash\n systemd-journald or escalate his privileges. Versions through v240\n are vulnerable.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n215-17+deb8u9.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1639-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1639"
 		}
 	]
 }

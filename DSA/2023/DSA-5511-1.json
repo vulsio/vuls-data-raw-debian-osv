@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5511-1",
-	"modified": "2023-10-16T00:21:41.930267Z",
+	"modified": "2024-01-09T20:27:23.278461Z",
 	"published": "2023-10-01T00:00:00Z",
 	"related": [
 		"CVE-2021-34434",
@@ -10,7 +10,6 @@
 		"CVE-2023-3592"
 	],
 	"summary": "mosquitto - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in mosquitto, a MQTT\ncompatible message broker, which may be abused for a denial of service attack.\n\n\n* [CVE-2021-34434](https://security-tracker.debian.org/tracker/CVE-2021-34434)\nIn Eclipse Mosquitto when using the dynamic security plugin, if the ability\n for a client to make subscriptions on a topic is revoked when a durable\n client is offline, then existing subscriptions for that client are not\n revoked.\n* [CVE-2023-0809](https://security-tracker.debian.org/tracker/CVE-2023-0809)\nFix excessive memory being allocated based on malicious initial packets\n that are not CONNECT packets.\n* [CVE-2023-3592](https://security-tracker.debian.org/tracker/CVE-2023-3592)\nFix memory leak when clients send v5 CONNECT packets with a will message\n that contains invalid property types.\n* [CVE-2023-28366](https://security-tracker.debian.org/tracker/CVE-2023-28366)\nThe broker in Eclipse Mosquitto has a memory leak that can be abused\n remotely when a client sends many QoS 2 messages with duplicate message\n IDs, and fails to respond to PUBREC commands. This occurs because of\n mishandling of EAGAIN from the libc send function.\nAdditionally [CVE-2021-41039](https://security-tracker.debian.org/tracker/CVE-2021-41039) has been fixed for Debian 11 Bullseye.\n\n* [CVE-2021-41039](https://security-tracker.debian.org/tracker/CVE-2021-41039)\nAn MQTT v5 client connecting with a large number of user-property\n properties could cause excessive CPU usage, leading to a loss of\n performance and possible denial of service.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 2.0.11-1+deb11u1.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 2.0.11-1.2+deb12u1.\n\n\nWe recommend that you upgrade your mosquitto packages.\n\n\nFor the detailed security status of mosquitto please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/mosquitto](https://security-tracker.debian.org/tracker/mosquitto)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5511-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5511"
 		}
 	]
 }

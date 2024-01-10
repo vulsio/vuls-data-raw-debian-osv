@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5003-1",
-	"modified": "2023-10-16T00:22:39.323459Z",
+	"modified": "2024-01-09T20:29:19.197266Z",
 	"published": "2021-11-09T00:00:00Z",
 	"related": [
 		"CVE-2016-2124",
@@ -14,7 +14,6 @@
 		"CVE-2021-3738"
 	],
 	"summary": "samba - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in Samba, a SMB/CIFS file,\nprint, and login server for Unix.\n\n\n* [CVE-2016-2124](https://security-tracker.debian.org/tracker/CVE-2016-2124)\nStefan Metzmacher reported that SMB1 client connections can be\n downgraded to plaintext authentication.\n* [CVE-2020-25717](https://security-tracker.debian.org/tracker/CVE-2020-25717)\nAndrew Bartlett reported that Samba may map domain users to local\n users in an undesired way, allowing for privilege escalation. The\n update introduces a new parameter min domain uid (default to 1000)\n to not accept a UNIX uid below this value.\n* [CVE-2020-25718](https://security-tracker.debian.org/tracker/CVE-2020-25718)\nAndrew Bartlett reported that Samba as AD DC, when joined by an\n RODC, did not confirm if the RODC was allowed to print a ticket for\n that user, allowing an RODC to print administrator tickets.\n* [CVE-2020-25719](https://security-tracker.debian.org/tracker/CVE-2020-25719)\nAndrew Bartlett reported that Samba as AD DC, did not always rely on\n the SID and PAC in Kerberos tickets and could be confused about the\n user a ticket represents. If a privileged account was attacked this\n could lead to total domain compromise.\n* [CVE-2020-25721](https://security-tracker.debian.org/tracker/CVE-2020-25721)\nAndrew Bartlett reported that Samba as a AD DC did not provide a way\n for Linux applications to obtain a reliable SID (and samAccountName)\n in issued tickets.\n* [CVE-2020-25722](https://security-tracker.debian.org/tracker/CVE-2020-25722)\nAndrew Bartlett reported that Samba as AD DC did not do sufficient\n access and conformance checking of data stored, potentially allowing\n total domain compromise.\n* [CVE-2021-3738](https://security-tracker.debian.org/tracker/CVE-2021-3738)\nWilliam Ross reported that the Samba AD DC RPC server can use memory\n that was free'd when a sub-connection is closed, resulting in denial\n of service, and potentially, escalation of privileges.\n* [CVE-2021-23192](https://security-tracker.debian.org/tracker/CVE-2021-23192)\nStefan Metzmacher reported that if a client to a Samba server sent a\n very large DCE/RPC request, and chose to fragment it, an attacker\n could replace later fragments with their own data, bypassing the\n signature requirements.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2:4.13.13+dfsg-1~deb11u2.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nFor the detailed security status of samba please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/samba](https://security-tracker.debian.org/tracker/samba)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5003-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-5003"
 		}
 	]
 }

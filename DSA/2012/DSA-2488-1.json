@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2488-1",
-	"modified": "2023-10-16T00:05:57.945856Z",
+	"modified": "2024-01-09T20:18:10.514701Z",
 	"published": "2012-06-07T00:00:00Z",
 	"related": [
 		"CVE-2012-1937",
@@ -9,7 +9,6 @@
 		"CVE-2012-1947"
 	],
 	"summary": "iceweasel - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in Iceweasel, a web\nbrowser based on Firefox. The included XULRunner library provides\nrendering services for several other applications included in Debian.\n\n\n* [CVE-2012-1937](https://security-tracker.debian.org/tracker/CVE-2012-1937)\nMozilla developers discovered several memory corruption bugs,\n which may lead to the execution of arbitrary code.\n* [CVE-2012-1940](https://security-tracker.debian.org/tracker/CVE-2012-1940)\nAbhishek Arya discovered a use-after-free problem when working\n with column layout with absolute positioning in a container that\n changes size, which may lead to the execution of arbitrary code.\n* [CVE-2012-1947](https://security-tracker.debian.org/tracker/CVE-2012-1947)\nAbhishek Arya discovered a heap buffer overflow in utf16 to latin1\n character set conversion, allowing to execute arbitrary code.\n\n\nNote: We'd like to advise users of Iceweasel's 3.5 branch in Debian\nstable to consider to upgrade to the Iceweasel 10.0 ESR (Extended\nSupport Release) which is now available in Debian Backports.\nAlthough Debian will continue to support Iceweasel 3.5 in stable with\nsecurity updates, this can only be done on a best effort base as\nupstream provides no such support anymore. On top of that, the 10.0\nbranch adds proactive security features to the browser.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.5.16-16.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 10.0.5esr-1.\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -53,12 +52,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2488-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2488"
 		}
 	]
 }

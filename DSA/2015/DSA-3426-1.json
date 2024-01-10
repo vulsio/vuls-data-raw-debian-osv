@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3426-1",
-	"modified": "2023-10-16T00:12:00.167110Z",
+	"modified": "2024-01-09T20:21:51.559734Z",
 	"published": "2015-12-17T00:00:00Z",
 	"related": [
 		"CVE-2013-7446",
@@ -10,7 +10,6 @@
 		"CVE-2015-8104"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service, information leak\nor data loss.\n\n\n* [CVE-2013-7446](https://security-tracker.debian.org/tracker/CVE-2013-7446)\nDmitry Vyukov discovered that a particular sequence of valid\n operations on local (AF\\_UNIX) sockets can result in a\n use-after-free. This may be used to cause a denial of service\n (crash) or possibly for privilege escalation.\n* [CVE-2015-7799](https://security-tracker.debian.org/tracker/CVE-2015-7799)\nIt was discovered that a user granted access to /dev/ppp can cause a\n denial of service (crash) by passing invalid parameters to the\n PPPIOCSMAXCID ioctl. This also applies to ISDN PPP device nodes.\n* [CVE-2015-7833](https://security-tracker.debian.org/tracker/CVE-2015-7833)\nSergej Schumilo, Hendrik Schwartke and Ralf Spenneberg discovered a\n flaw in the processing of certain USB device descriptors in the\n usbvision driver. An attacker with physical access to the system can\n use this flaw to crash the system. This was partly fixed by the\n changes listed in DSA 3396-1.\n* [CVE-2015-8104](https://security-tracker.debian.org/tracker/CVE-2015-8104)\nJan Beulich reported a guest to host denial-of-service flaw\n affecting the KVM hypervisor running on AMD processors. A malicious\n guest can trigger an infinite stream of debug (#DB) exceptions\n causing the processor microcode to enter an infinite loop where the\n core never receives another interrupt. This leads to a panic of the\n host kernel.\n* [CVE-2015-8374](https://security-tracker.debian.org/tracker/CVE-2015-8374)\nIt was discovered that Btrfs did not correctly implement truncation\n of compressed inline extents. This could lead to an information\n leak, if a file is truncated and later made readable by other users.\n Additionally, it could cause data loss. This has been fixed for the\n stable distribution (jessie) only.\n* [CVE-2015-8543](https://security-tracker.debian.org/tracker/CVE-2015-8543)\nIt was discovered that a local user permitted to create raw sockets\n could cause a denial-of-service by specifying an invalid protocol\n number for the socket. The attacker must have the CAP\\_NET\\_RAW\n capability in their user namespace. This has been fixed for the\n stable distribution (jessie) only.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 3.2.73-2+deb7u1. In addition, this update contains several\nchanges originally targeted for the upcoming Wheezy point release.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.7-ckt20-1+deb8u1. In addition, this update contains several\nchanges originally targeted for the upcoming Jessie point release.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -132,12 +131,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3426-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3426"
 		}
 	]
 }

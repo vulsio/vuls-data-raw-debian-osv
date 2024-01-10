@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-198",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-11-18T00:00:00Z",
 	"published": "2002-11-18T00:00:00Z",
 	"related": [
 		"CVE-2002-1313"
 	],
 	"summary": "nullmailer - denial of service",
-	"details": "\nA problem has been discovered in nullmailer, a simple relay-only mail\ntransport agent for hosts that relay mail to a fixed set of smart\nrelays. When a mail is to be delivered locally to a user that doesn't\nexist, nullmailer tries to deliver it, discovers a user unknown error\nand stops delivering. Unfortunately, it stops delivering entirely,\nnot only this mail. Hence, it's very easy to craft a denial of service.\n\n\nThis problem has been fixed in version 1.00RC5-16.1woody2 for the\ncurrent stable distribution (woody) and in version 1.00RC5-17 for the\nunstable distribution (sid). The old stable distribution (potato)\ndoes not contain a nullmailer package.\n\n\nWe recommend that you upgrade your nullmailer package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-198.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-198"
 		}
 	]
 }

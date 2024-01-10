@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-27-1",
-	"modified": "2023-06-28T06:25:17.702666Z",
+	"modified": "2024-01-09T20:32:52.147461Z",
 	"published": "2014-07-31T00:00:00Z",
 	"related": [
 		"CVE-2014-0207",
@@ -13,7 +13,6 @@
 		"CVE-2014-3487"
 	],
 	"summary": "file - security update",
-	"details": "\nFix various denial of service attacks:\n\n\n* [CVE-2014-3487](https://security-tracker.debian.org/tracker/CVE-2014-3487)\nThe cdf\\_read\\_property\\_info function does not properly validate a stream\n offset, which allows remote attackers to cause a denial of service\n (application crash) via a crafted CDF file.\n* [CVE-2014-3480](https://security-tracker.debian.org/tracker/CVE-2014-3480)\nThe cdf\\_count\\_chain function in cdf.c in does not properly validate\n sector-count data, which allows remote attackers to cause a denial of\nservice\n (application crash) via a crafted CDF file.\n* [CVE-2014-3479](https://security-tracker.debian.org/tracker/CVE-2014-3479)\nThe cdf\\_check\\_stream\\_offset function in cdf.c relies on incorrect\n sector-size data, which allows remote attackers to cause a denial of service\n (application crash) via a crafted stream offset in a CDF file.\n* [CVE-2014-3478](https://security-tracker.debian.org/tracker/CVE-2014-3478)\nBuffer overflow in the mconvert function in softmagic.c allows remote\n attackers to cause a denial of service (application crash) via a crafted\n Pascal string in a FILE\\_PSTRING conversion.\n* [CVE-2014-0238](https://security-tracker.debian.org/tracker/CVE-2014-0238)\nThe cdf\\_read\\_property\\_info function in cdf.c allows remote attackers to\n cause a denial of service (infinite loop or out-of-bounds memory access) via\n a vector that (1) has zero length or (2) is too long.\n* [CVE-2014-0237](https://security-tracker.debian.org/tracker/CVE-2014-0237)\nThe cdf\\_unpack\\_summary\\_info function in cdf.c allows remote attackers to\n cause a denial of service (performance degradation) by triggering many\n file\\_printf calls.\n* [CVE-2014-0207](https://security-tracker.debian.org/tracker/CVE-2014-0207)\nThe cdf\\_read\\_short\\_sector function in cdf.c allows remote attackers to\n cause a denial of service (assertion failure and application exit) via a\n crafted CDF file.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in file version 5.04-5+squeeze6\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-27-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-27"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3209-1",
-	"modified": "2023-10-16T00:11:49.820303Z",
+	"modified": "2024-01-09T20:28:04.408088Z",
 	"published": "2015-03-30T00:00:00Z",
 	"related": [
 		"CVE-2013-4449",
@@ -9,7 +9,6 @@
 		"CVE-2015-1545"
 	],
 	"summary": "openldap - security update",
-	"details": "\nMultiple vulnerabilities were found in OpenLDAP, a free implementation\nof the Lightweight Directory Access Protocol.\n\n\n* [CVE-2013-4449](https://security-tracker.debian.org/tracker/CVE-2013-4449)\nMichael Vishchers from Seven Principles AG discovered a denial of\n service vulnerability in slapd, the directory server implementation.\n When the server is configured to used the RWM overlay, an attacker\n can make it crash by unbinding just after connecting, because of an\n issue with reference counting.\n* [CVE-2014-9713](https://security-tracker.debian.org/tracker/CVE-2014-9713)\nThe default Debian configuration of the directory database allows\n every users to edit their own attributes. When LDAP directories are\n used for access control, and this is done using user attributes, an\n authenticated user can leverage this to gain access to unauthorized\n resources.\n \n\n\nPlease note this is a Debian specific vulnerability.\n\n\nThe new package won't use the unsafe access control rule for new\n databases, but existing configurations won't be automatically\n modified. Administrators are incited to look at the README.Debian\n file provided by the updated package if they need to fix the access\n control rule.\n* [CVE-2015-1545](https://security-tracker.debian.org/tracker/CVE-2015-1545)\nRyan Tandy discovered a denial of service vulnerability in slapd.\n When using the deref overlay, providing an empty attribute list in\n a query makes the daemon crashes.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.4.31-2.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 2.4.40-4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.4.40-4.\n\n\nWe recommend that you upgrade your openldap packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3209-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3209"
 		}
 	]
 }

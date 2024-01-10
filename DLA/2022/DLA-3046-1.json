@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3046-1",
-	"modified": "2023-06-28T06:26:48.661390Z",
+	"modified": "2024-01-09T20:33:15.444640Z",
 	"published": "2022-06-07T00:00:00Z",
 	"related": [
 		"CVE-2021-21897"
 	],
 	"summary": "librecad - security update",
-	"details": "\nIt was discovered that there was a potential heap buffer overflow in\nlibrecad, a popular computer-aided design (CAD) system. A specially crafted\n.dxf file could have led to arbitrary code execution.\n\n\n* [CVE-2021-21897](https://security-tracker.debian.org/tracker/CVE-2021-21897)\nA code execution vulnerability exists in the\n DL\\_Dxf::handleLWPolylineData functionality of Ribbonsoft dxflib 3.17.0. A\n specially-crafted .dxf file can lead to a heap buffer overflow. An attacker\n can provide a malicious file to trigger this vulnerability.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n2.1.2-1+deb9u4.\n\n\nWe recommend that you upgrade your librecad packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3046-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3046"
 		}
 	]
 }

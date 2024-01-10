@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-921-1",
-	"modified": "2023-10-16T00:37:24.436522Z",
+	"modified": "2024-01-09T20:34:20.448229Z",
 	"published": "2005-12-14T00:00:00Z",
 	"related": [
 		"CVE-2005-0756",
@@ -18,7 +18,6 @@
 		"CVE-2005-3275"
 	],
 	"summary": "kernel-source-2.4.27 - several",
-	"details": "\nSeveral local and remote vulnerabilities have been discovered in the\nLinux kernel that may lead to a denial of service or the execution of\narbitrary code. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2005-0756](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0756)\nAlexander Nyberg discovered that the ptrace() system call does not\n properly verify addresses on the amd64 architecture which can be\n exploited by a local attacker to crash the kernel.\n* [CVE-2005-0757](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0757)\nA problem in the offset handling in the xattr file system code for\n ext3 has been discovered that may allow users on 64-bit systems\n that have access to an ext3 filesystem with extended attributes to\n cause the kernel to crash.\n* [CVE-2005-1762](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1762)\nA vulnerability has been discovered in the ptrace() system call on\n the amd64 architecture that allows a local attacker to cause the\n kernel to crash.\n* [CVE-2005-1767](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1767)\nA vulnerability has been discovered in the stack segment fault\n handler that could allow a local attacker to cause a stack exception\n that will lead the kernel to crash under certain circumstances.\n* [CVE-2005-1768](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-1768)\nIlja van Sprundel discovered a race condition in the IA32 (x86)\n compatibility execve() systemcall for amd64 and IA64 that allows\n local attackers to cause the kernel to panic and possibly execute\n arbitrary code.\n* [CVE-2005-2456](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2456)\nBalazs Scheidler discovered that a local attacker could call\n setsockopt() with an invalid xfrm\\_user policy message which would\n cause the kernel to write beyond the boundaries of an array and\n crash.\n* [CVE-2005-2458](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2458)\nVladimir Volovich discovered a bug in the zlib routines which are\n also present in the Linux kernel and allows remote attackers to\n crash the kernel.\n* [CVE-2005-2459](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2459)\nAnother vulnerability has been discovered in the zlib routines\n which are also present in the Linux kernel and allows remote\n attackers to crash the kernel.\n* [CVE-2005-2553](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2553)\nA null pointer dereference in ptrace when tracing a 64-bit\n executable can cause the kernel to crash.\n* [CVE-2005-2801](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2801)\nAndreas Gruenbacher discovered a bug in the ext2 and ext3 file\n systems. When data areas are to be shared among two inodes not\n all information were compared for equality, which could expose\n wrong ACLs for files.\n* [CVE-2005-2872](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2872)\nChad Walstrom discovered that the ipt\\_recent kernel module to stop\n SSH bruteforce attacks could cause the kernel to crash on 64-bit\n architectures.\n* [CVE-2005-3275](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3275)\nAn error in the NAT code allows remote attackers to cause a denial\n of service (memory corruption) by causing two packets for the same\n protocol to be NATed at the same time, which leads to memory\n corruption.\n\n\nThe following matrix explains which kernel version for which architecture\nfix the problems mentioned above:\n\n\n\n\n\n|  | Debian 3.1 (sarge) |\n| --- | --- |\n| Source | 2.4.27-10sarge1 |\n| Alpha architecture | 2.4.27-10sarge1 |\n| ARM architecture | 2.4.27-2sarge1 |\n| Intel IA-32 architecture | 2.4.27-10sarge1 |\n| Intel IA-64 architecture | 2.4.27-10sarge1 |\n| Motorola 680x0 architecture | 2.4.27-3sarge1 |\n| Big endian MIPS architecture | 2.4.27-10.sarge1.040815-1 |\n| Little endian MIPS architecture | 2.4.27-10.sarge1.040815-1 |\n| PowerPC architecture | 2.4.27-10sarge1 |\n| IBM S/390 architecture | 2.4.27-2sarge1 |\n| Sun Sparc architecture | 2.4.27-9sarge1 |\n\n\n\nWe recommend that you upgrade your kernel package immediately and\nreboot the machine.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -305,12 +304,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-921-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-921"
 		}
 	]
 }

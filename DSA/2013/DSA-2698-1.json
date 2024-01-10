@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2698-1",
-	"modified": "2023-10-16T00:11:25.978037Z",
+	"modified": "2024-01-09T20:25:44.555722Z",
 	"published": "2013-06-18T00:00:00Z",
 	"related": [
 		"CVE-2013-1960",
 		"CVE-2013-1961"
 	],
 	"summary": "tiff - buffer overflow",
-	"details": "\nMultiple issues were discovered in the TIFF tools, a set of utilities for\nTIFF image file manipulation and conversion.\n\n\n* [CVE-2013-1960](https://security-tracker.debian.org/tracker/CVE-2013-1960)\nEmmanuel Bouillon discovered a heap-based buffer overflow in the\n tp\\_process\\_jpeg\\_strip function in the tiff2pdf tool. This could\n potentially lead to a crash or arbitrary code execution.\n* [CVE-2013-1961](https://security-tracker.debian.org/tracker/CVE-2013-1961)\nEmmanuel Bouillon discovered many stack-based buffer overflows in\n the TIFF tools. These issues could potentially lead to a crash or\n arbitrary code execution.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 3.9.4-5+squeeze9.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.0.2-6+deb7u1.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.0.2-6+nmu1.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -69,12 +68,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2698-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2698"
 		}
 	]
 }

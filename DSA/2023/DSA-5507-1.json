@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5507-1",
-	"modified": "2023-10-16T00:21:39.677488Z",
+	"modified": "2024-01-09T20:27:21.996764Z",
 	"published": "2023-09-28T00:00:00Z",
 	"related": [
 		"CVE-2023-26048",
@@ -11,7 +11,6 @@
 		"CVE-2023-41900"
 	],
 	"summary": "jetty9 - security update",
-	"details": "\nMultiple security vulnerabilities were found in Jetty, a Java based web server\nand servlet engine.\n\n\nThe org.eclipse.jetty.servlets.CGI class has been deprecated. It is potentially\nunsafe to use it. The upstream developers of Jetty recommend to use Fast CGI\ninstead. See also [CVE-2023-36479](https://security-tracker.debian.org/tracker/CVE-2023-36479).\n\n\n* [CVE-2023-26048](https://security-tracker.debian.org/tracker/CVE-2023-26048)\nIn affected versions servlets with multipart support (e.g. annotated with\n `@MultipartConfig`) that call `HttpServletRequest.getParameter()` or\n `HttpServletRequest.getParts()` may cause `OutOfMemoryError` when the\n client sends a multipart request with a part that has a name but no\n filename and very large content. This happens even with the default\n settings of `fileSizeThreshold=0` which should stream the whole part\n content to disk.\n* [CVE-2023-26049](https://security-tracker.debian.org/tracker/CVE-2023-26049)\nNonstandard cookie parsing in Jetty may allow an attacker to smuggle\n cookies within other cookies, or otherwise perform unintended behavior by\n tampering with the cookie parsing mechanism.\n* [CVE-2023-40167](https://security-tracker.debian.org/tracker/CVE-2023-40167)\nPrior to this version Jetty accepted the `+` character proceeding the\n content-length value in a HTTP/1 header field. This is more permissive than\n allowed by the RFC and other servers routinely reject such requests with\n 400 responses. There is no known exploit scenario, but it is conceivable\n that request smuggling could result if jetty is used in combination with a\n server that does not close the connection after sending such a 400\n response.\n* [CVE-2023-36479](https://security-tracker.debian.org/tracker/CVE-2023-36479)\nUsers of the CgiServlet with a very specific command structure may have the\n wrong command executed. If a user sends a request to a\n org.eclipse.jetty.servlets.CGI Servlet for a binary with a space in its\n name, the servlet will escape the command by wrapping it in quotation\n marks. This wrapped command, plus an optional command prefix, will then be\n executed through a call to Runtime.exec. If the original binary name\n provided by the user contains a quotation mark followed by a space, the\n resulting command line will contain multiple tokens instead of one.\n* [CVE-2023-41900](https://security-tracker.debian.org/tracker/CVE-2023-41900)\nJetty is vulnerable to weak authentication. If a Jetty\n `OpenIdAuthenticator` uses the optional nested `LoginService`, and that\n `LoginService` decides to revoke an already authenticated user, then the\n current request will still treat the user as authenticated. The\n authentication is then cleared from the session and subsequent requests\n will not be treated as authenticated. So a request on a previously\n authenticated session could be allowed to bypass authentication after it\n had been rejected by the `LoginService`. This impacts usages of the\n jetty-openid which have configured a nested `LoginService` and where that\n `LoginService` is capable of rejecting previously authenticated users.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 9.4.39-3+deb11u2.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 9.4.50-4+deb12u1.\n\n\nWe recommend that you upgrade your jetty9 packages.\n\n\nFor the detailed security status of jetty9 please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/jetty9](https://security-tracker.debian.org/tracker/jetty9)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5507-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5507"
 		}
 	]
 }

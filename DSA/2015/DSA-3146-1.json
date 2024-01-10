@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3146-1",
-	"modified": "2023-10-16T00:06:14.669225Z",
+	"modified": "2024-01-09T20:21:44.013314Z",
 	"published": "2015-01-30T00:00:00Z",
 	"related": [
 		"CVE-2014-1829",
 		"CVE-2014-1830"
 	],
 	"summary": "requests - security update",
-	"details": "\nJakub Wilk discovered that in requests, an HTTP library for the Python\nlanguage, authentication information was improperly handled when a\nredirect occured. This would allow remote servers to obtain two\ndifferent types of sensitive information: proxy passwords from the\nProxy-Authorization header \n([\\\nCVE-2014-1830](https://security-tracker.debian.org/tracker/CVE-2014-1830)), or netrc passwords from the Authorization header \n([\\\nCVE-2014-1829](https://security-tracker.debian.org/tracker/CVE-2014-1829)).\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.12.1-1+deb7u1.\n\n\nFor the upcoming stable distribution (jessie) and unstable\ndistribution (sid), this problem has been fixed in version 2.3.0-1.\n\n\nWe recommend that you upgrade your requests packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3146-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3146"
 		}
 	]
 }

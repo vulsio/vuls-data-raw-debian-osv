@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-106-1",
-	"modified": "2023-06-28T06:20:18.222762Z",
+	"modified": "2024-01-09T20:30:43.513924Z",
 	"published": "2014-12-12T00:00:00Z",
 	"related": [
 		"CVE-2014-7273",
@@ -9,7 +9,6 @@
 		"CVE-2014-7275"
 	],
 	"summary": "getmail4 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in getmail4, a mail retriever\nwith support for POP3, IMAP4 and SDPS, that could allow man-in-the-middle\nattacks.\n\n\n* [CVE-2014-7273](https://security-tracker.debian.org/tracker/CVE-2014-7273)\nThe IMAP-over-SSL implementation in getmail 4.0.0 through 4.43.0 does\n not verify X.509 certificates from SSL servers, which allows\n man-in-the-middle attackers to spoof IMAP servers and obtain sensitive\n information via a crafted certificate.\n* [CVE-2014-7274](https://security-tracker.debian.org/tracker/CVE-2014-7274)\nThe IMAP-over-SSL implementation in getmail 4.44.0 does not verify\n that the server hostname matches a domain name in the subject's Common\n Name (CN) field of the X.509 certificate, which allows\n man-in-the-middle attackers to spoof IMAP servers and obtain sensitive\n information via a crafted certificate from a recognized Certification\n Authority.\n* [CVE-2014-7275](https://security-tracker.debian.org/tracker/CVE-2014-7275)\nThe POP3-over-SSL implementation in getmail 4.0.0 through 4.44.0 does\n not verify X.509 certificates from SSL servers, which allows\n man-in-the-middle attackers to spoof POP3 servers and obtain sensitive\n information via a crafted certificate.\n\n\nFor the squeeze distribution, those problems have been fixed by importing\na new upstream version: 4.46.0-1~deb6u1. The updated package has been\nprepared by Osamu Aoki.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-106-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-106"
 		}
 	]
 }

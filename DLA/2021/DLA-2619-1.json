@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2619-1",
-	"modified": "2023-06-28T06:26:37.063023Z",
+	"modified": "2024-01-09T20:32:46.242809Z",
 	"published": "2021-04-05T00:00:00Z",
 	"related": [
 		"CVE-2021-23336",
@@ -9,7 +9,6 @@
 		"CVE-2021-3426"
 	],
 	"summary": "python3.5 - security update",
-	"details": "\nThree security issues have been discovered in python3.5:\n\n\n* [CVE-2021-3177](https://security-tracker.debian.org/tracker/CVE-2021-3177)\nPython 3.x has a buffer overflow in PyCArg\\_repr in \\_ctypes/callproc.c,\n which may lead to remote code execution in certain Python applications that accept\n floating-point numbers as untrusted input.\n This occurs because sprintf is used unsafely.\n* [CVE-2021-3426](https://security-tracker.debian.org/tracker/CVE-2021-3426)\nRunning `pydoc -p` allows other local users to extract arbitrary files.\n The `/getfile?key=path` URL allows to read arbitrary file on the filesystem.\n\n\nThe fix removes the getfile feature of the pydoc module which\n could be abused to read arbitrary files on the disk (directory\n traversal vulnerability).\n* [CVE-2021-23336](https://security-tracker.debian.org/tracker/CVE-2021-23336)\nThe Python3.5 vulnerable to Web Cache Poisoning via urllib.parse.parse\\_qsl\n and urllib.parse.parse\\_qs by using a vector called parameter cloaking. When\n the attacker can separate query parameters using a semicolon (;), they can\n cause a difference in the interpretation of the request between the proxy\n (running with default configuration) and the server. This can result in malicious\n requests being cached as completely safe ones, as the proxy would usually not\n see the semicolon as a separator, and therefore would not include it in a cache\n key of an unkeyed parameter.\n\n\n**Attention, API-change!** \n\n\n Please be sure your software is working properly if it uses `urllib.parse.parse\\_qs`\n or `urllib.parse.parse\\_qsl`, `cgi.parse` or `cgi.parse\\_multipart`.\n\n\nEarlier Python versions allowed using both ``;`` and ``&`` as query parameter\n separators in `urllib.parse.parse\\_qs` and `urllib.parse.parse\\_qsl`.\n Due to security concerns, and to conform with\n newer W3C recommendations, this has been changed to allow only a single\n separator key, with ``&`` as the default. This change also affects\n `cgi.parse` and `cgi.parse\\_multipart` as they use the affected\n functions internally. For more details, please see their respective\n documentation.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.5.3-1+deb9u4.\n\n\nWe recommend that you upgrade your python3.5 packages.\n\n\nFor the detailed security status of python3.5 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python3.5>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2619-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2619"
 		}
 	]
 }

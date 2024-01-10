@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-150",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-08-13T00:00:00Z",
 	"published": "2002-08-13T00:00:00Z",
 	"related": [
 		"CVE-2002-0874"
 	],
 	"summary": "interchange - illegal file exposition",
-	"details": "\nA problem has been discovered in Interchange, an e-commerce and\ngeneral HTTP database display system, which can lead to an attacker\nbeing able to read any file to which the user of the Interchange\ndaemon has sufficient permissions, when Interchange runs in \"INET\nmode\" (internet domain socket). This is not the default setting in\nDebian packages, but configurable with Debconf and via configuration\nfile. We also believe that this bug cannot exploited on a regular\nDebian system.\n\n\nThis problem has been fixed by the package maintainer in version\n4.8.3.20020306-1.woody.1 for the current stable distribution (woody)\nand in version 4.8.6-1 for the unstable distribution (sid). The old\nstable distribution (potato) is not affected, since it doesn't ship\nthe Interchange system.\n\n\nWe recommend that you upgrade your interchange packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-150.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-150"
 		}
 	]
 }

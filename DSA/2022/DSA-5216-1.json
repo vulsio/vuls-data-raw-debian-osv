@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5216-1",
-	"modified": "2023-10-16T00:15:49.681006Z",
+	"modified": "2024-01-09T20:26:42.662417Z",
 	"published": "2022-08-24T00:00:00Z",
 	"related": [
 		"CVE-2021-30560"
 	],
 	"summary": "libxslt - security update",
-	"details": "\nNick Wellnhofer discovered that the xsltApplyTemplates function in\nlibxslt, an XSLT processing runtime library, is prone to a\nuse-after-free flaw, resulting in a denial of service, or potentially\nthe execution of arbitrary code if a specially crafted file is\nprocessed.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.1.34-4+deb11u1.\n\n\nWe recommend that you upgrade your libxslt packages.\n\n\nFor the detailed security status of libxslt please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libxslt](https://security-tracker.debian.org/tracker/libxslt)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5216-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5216"
 		}
 	]
 }

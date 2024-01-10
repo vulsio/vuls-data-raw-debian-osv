@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-412-1",
-	"modified": "2023-06-28T06:27:00.374180Z",
-	"published": "2016-02-06T00:00:00Z",
+	"modified": "2024-01-09T20:33:46.636188Z",
+	"published": "2016-02-05T00:00:00Z",
 	"related": [
 		"CVE-2015-7566",
 		"CVE-2015-8767",
@@ -11,7 +11,6 @@
 		"CVE-2016-2069"
 	],
 	"summary": "linux-2.6 - security update",
-	"details": "\nThis update fixes the CVEs described below.\n\n\n* [CVE-2015-7566](https://security-tracker.debian.org/tracker/CVE-2015-7566)\nRalf Spenneberg of OpenSource Security reported that the visor\n driver crashes when a specially crafted USB device without bulk-out\n endpoint is detected.\n* [CVE-2015-8767](https://security-tracker.debian.org/tracker/CVE-2015-8767)\nAn SCTP denial-of-service was discovered which can be triggered by a\n local attacker during a heartbeat timeout event after the 4-way\n handshake.\n* [CVE-2015-8785](https://security-tracker.debian.org/tracker/CVE-2015-8785)\nIt was discovered that local users permitted to write to a file on\n a FUSE filesystem could cause a denial of service (unkillable loop\n in the kernel).\n* [CVE-2016-0723](https://security-tracker.debian.org/tracker/CVE-2016-0723)\nA use-after-free vulnerability was discovered in the TIOCGETD ioctl.\n A local attacker could use this flaw for denial-of-service.\n* [CVE-2016-2069](https://security-tracker.debian.org/tracker/CVE-2016-2069)\nAndy Lutomirski discovered a race condition in flushing of the TLB\n when switching tasks. On an SMP system this could possibly lead to\n a crash, information leak or privilege escalation.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 2.6.32-48squeeze19. Additionally, this version\nincludes upstream stable update 2.6.32.70. This is the final update\nto the linux-2.6 package for squeeze.\n\n\nFor the oldstable distribution (wheezy), these problems will be fixed\nsoon.\n\n\nFor the stable distribution (jessie), [CVE-2015-7566](https://security-tracker.debian.org/tracker/CVE-2015-7566), [CVE-2015-8767](https://security-tracker.debian.org/tracker/CVE-2015-8767) and\n[CVE-2016-0723](https://security-tracker.debian.org/tracker/CVE-2016-0723) were fixed in linux version 3.16.7-ckt20-1+deb8u3 and\nthe remaining problems will be fixed soon.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -81,12 +80,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-412-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-412"
 		}
 	]
 }

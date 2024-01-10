@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2529-1",
-	"modified": "2023-10-16T00:11:16.977087Z",
+	"modified": "2024-01-09T20:22:58.197048Z",
 	"published": "2012-08-14T00:00:00Z",
 	"related": [
 		"CVE-2012-3442",
@@ -9,7 +9,6 @@
 		"CVE-2012-3444"
 	],
 	"summary": "python-django - several",
-	"details": "\nJeroen Dekkers and others reported several vulnerabilities in Django,\na Python Web framework. The Common Vulnerabilities and Exposures\nproject defines the following issues:\n\n\n* [CVE-2012-3442](https://security-tracker.debian.org/tracker/CVE-2012-3442)\nTwo functions do not validate the scheme of a redirect target,\n which might allow remote attackers to conduct cross-site scripting\n (XSS) attacks via a data: URL.\n* [CVE-2012-3443](https://security-tracker.debian.org/tracker/CVE-2012-3443)\nThe ImageField class completely decompresses image data during image\n validation, which allows remote attackers to cause a denial of service\n (memory consumption) by uploading an image file.\n* [CVE-2012-3444](https://security-tracker.debian.org/tracker/CVE-2012-3444)\nThe get\\_image\\_dimensions function in the image-handling functionality\n uses a constant chunk size in all attempts to determine dimensions,\n which allows remote attackers to cause a denial of service (process\n or thread consumption) via a large TIFF image.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.2.3-3+squeeze3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.4.1-1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2529-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2529"
 		}
 	]
 }

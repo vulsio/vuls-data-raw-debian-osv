@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1872-1",
-	"modified": "2023-06-28T06:21:02.168736Z",
+	"modified": "2024-01-09T20:31:49.565719Z",
 	"published": "2019-08-06T00:00:00Z",
 	"related": [
 		"CVE-2019-14232",
 		"CVE-2019-14233"
 	],
 	"summary": "python-django - security update",
-	"details": "\nIt was discovered that there were two vulnerabilities in the Django web development framework:\n\n\n* [CVE-2019-14232](https://security-tracker.debian.org/tracker/CVE-2019-14232)\nPrevent a possible denial-of-service in django.utils.text.Truncator.\n\n\nIf django.utils.text.Truncator's chars() and words() methods were passed\n the html=True argument, they were extremely slow to evaluate certain inputs\n due to a catastrophic backtracking vulnerability in a regular expression.\n The chars() and words() methods are used to implement the\n truncatechars\\_html and truncatewords\\_html template filters, which were thus\n vulnerable.\n\n\nThe regular expressions used by Truncator have been simplified in order\n to avoid potential backtracking issues. As a consequence, trailing\n punctuation may now at times be included in the truncated output.\n* [CVE-2019-14233](https://security-tracker.debian.org/tracker/CVE-2019-14233)\nPrevent a possible denial-of-service in strip\\_tags().\n\n\nDue to the behavior of the underlying HTMLParser,\n django.utils.html.strip\\_tags() would be extremely slow to evaluate certain\n inputs containing large sequences of nested incomplete HTML entities. The\n strip\\_tags() method is used to implement the corresponding striptags\n template filter, which was thus also vulnerable.\n\n\nstrip\\_tags() now avoids recursive calls to HTMLParser when progress\n removing tags, but necessarily incomplete HTML entities, stops being\n made.\n\n\nRemember that absolutely NO guarantee is provided about the results of\n strip\\_tags() being HTML safe. So NEVER mark safe the result of a\n strip\\_tags() call without escaping it first, for example with\n django.utils.html.escape().\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.7.11-1+deb8u7.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1872-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1872"
 		}
 	]
 }

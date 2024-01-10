@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-247-1",
-	"modified": "2023-06-28T06:29:00.562335Z",
+	"modified": "2024-01-09T20:32:38.099631Z",
 	"published": "2015-06-17T00:00:00Z",
 	"related": [
 		"CVE-2014-8176",
@@ -12,7 +12,6 @@
 		"CVE-2015-4000"
 	],
 	"summary": "openssl - security update",
-	"details": "\nMultiple vulnerabilities were discovered in OpenSSL, a Secure Sockets\nLayer toolkit.\n\n\n* [CVE-2014-8176](https://security-tracker.debian.org/tracker/CVE-2014-8176)\nPraveen Kariyanahalli, Ivan Fratric and Felix Groebert discovered\n that an invalid memory free could be triggered when buffering DTLS\n data. This could allow remote attackers to cause a denial of service\n (crash) or potentially execute arbitrary code. This issue only\n affected the oldstable distribution (wheezy).\n* [CVE-2015-1789](https://security-tracker.debian.org/tracker/CVE-2015-1789)\nRobert Swiecki and Hanno BĂśck discovered that the X509\\_cmp\\_time\n function could read a few bytes out of bounds. This could allow remote\n attackers to cause a denial of service (crash) via crafted\n certificates and CRLs.\n* [CVE-2015-1790](https://security-tracker.debian.org/tracker/CVE-2015-1790)\nMichal Zalewski discovered that the PKCS#7 parsing code did not\n properly handle missing content which could lead to a NULL pointer\n dereference. This could allow remote attackers to cause a denial of\n service (crash) via crafted ASN.1-encoded PKCS#7 blobs.\n* [CVE-2015-1791](https://security-tracker.debian.org/tracker/CVE-2015-1791)\nEmilia KĂ¤sper discovered that a race condition could occur due to\n incorrect handling of NewSessionTicket in a multi-threaded client,\n leading to a double free. This could allow remote attackers to cause\n a denial of service (crash).\n* [CVE-2015-1792](https://security-tracker.debian.org/tracker/CVE-2015-1792)\nJohannes Bauer discovered that the CMS code could enter an infinite\n loop when verifying a signedData message, if presented with an\n unknown hash function OID. This could allow remote attackers to cause\n a denial of service.\n\n\nAdditionally OpenSSL will now reject handshakes using DH parameters\nshorter than 768 bits as a countermeasure against the Logjam attack\n([CVE-2015-4000](https://security-tracker.debian.org/tracker/CVE-2015-4000)).\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-247-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-247"
 		}
 	]
 }

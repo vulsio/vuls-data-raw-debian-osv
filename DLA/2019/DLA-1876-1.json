@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1876-1",
-	"modified": "2023-06-28T06:21:02.422744Z",
-	"published": "2019-08-11T00:00:00Z",
+	"modified": "2024-01-09T20:31:49.731739Z",
+	"published": "2019-08-10T00:00:00Z",
 	"related": [
 		"CVE-2019-11187"
 	],
 	"summary": "gosa - security update",
-	"details": "\nIn GOsaÂ˛, an LDAP web-frontend written in PHP, a vulnerability was found\nthat could theoretically have lead to unauthorized access to the LDAP\ndatabase managed with FusionDirectory. LDAP queries' result status\n(\"Success\") checks had not been strict enough. The resulting output\ncontaining the word Success anywhere in the returned data during login\nconnection attempts would have returned LDAP success to FusionDirectory\nand possibly grant unwanted access.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.7.4+reloaded2-1+deb8u4.\n\n\nWe recommend that you upgrade your gosa packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1876-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1876"
 		}
 	]
 }

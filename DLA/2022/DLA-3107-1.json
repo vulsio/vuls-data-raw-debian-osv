@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3107-1",
-	"modified": "2023-06-28T06:26:50.316924Z",
+	"modified": "2024-01-09T20:33:17.997314Z",
 	"published": "2022-09-13T00:00:00Z",
 	"related": [
 		"CVE-2020-35525",
 		"CVE-2020-35527"
 	],
 	"summary": "sqlite3 - security update",
-	"details": "\nThree issues were discovered in SQLite, a popular embedded database:\n\n\n* [CVE-2020-35525](https://security-tracker.debian.org/tracker/CVE-2020-35525): Prevent a potential null pointer deference issue in INTERSEC query processing.\n* [CVE-2020-35527](https://security-tracker.debian.org/tracker/CVE-2020-35527): Prevent an out-of-bounds access issue that could be exploited via ALTER TABLE in views that have a nested FROM clauses.\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n3.27.2-3+deb10u2.\n\n\nWe recommend that you upgrade your sqlite3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3107-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3107"
 		}
 	]
 }

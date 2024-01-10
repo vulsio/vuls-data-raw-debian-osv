@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4172-1",
-	"modified": "2023-10-16T00:16:59.064021Z",
+	"modified": "2024-01-09T20:28:27.809329Z",
 	"published": "2018-04-14T00:00:00Z",
 	"related": [
 		"CVE-2018-6913"
 	],
 	"summary": "perl - security update",
-	"details": "\nMultiple vulnerabilities were discovered in the implementation of the\nPerl programming language. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2018-6797](https://security-tracker.debian.org/tracker/CVE-2018-6797)\nBrian Carpenter reported that a crafted regular expression\n could cause a heap buffer write overflow, with control over the\n bytes written.\n* [CVE-2018-6798](https://security-tracker.debian.org/tracker/CVE-2018-6798)\nNguyen Duc Manh reported that matching a crafted locale\n dependent regular expression can cause a heap-based buffer\n over-read and potentially information disclosure.\n* [CVE-2018-6913](https://security-tracker.debian.org/tracker/CVE-2018-6913)\nGwanYeong Kim reported that 'pack()' could cause a heap buffer write\n overflow with a large item count.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 5.20.2-3+deb8u10. The oldstable distribution (jessie) update\ncontains only a fix for [CVE-2018-6913](https://security-tracker.debian.org/tracker/CVE-2018-6913).\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 5.24.1-3+deb9u3.\n\n\nWe recommend that you upgrade your perl packages.\n\n\nFor the detailed security status of perl please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/perl](https://security-tracker.debian.org/tracker/perl)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -72,12 +71,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4172-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4172"
 		}
 	]
 }

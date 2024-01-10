@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-187-1",
-	"modified": "2023-06-28T06:21:02.512803Z",
-	"published": "2015-04-07T00:00:00Z",
+	"modified": "2024-01-09T20:31:49.289710Z",
+	"published": "2015-04-06T00:00:00Z",
 	"related": [
 		"CVE-2015-2928",
 		"CVE-2015-2929"
 	],
 	"summary": "tor - security update",
-	"details": "\nSeveral hidden service related denial-of-service issues have been\ndiscovered in Tor, a connection-based low-latency anonymous\ncommunication system.\n\n\ndisgleirio discovered that a malicious client could trigger an\n assertion failure in a Tor instance providing a hidden service, thus\n rendering the service inaccessible.\n [[CVE-2015-2928](https://security-tracker.debian.org/tracker/CVE-2015-2928)]\n\n\nDonnchaC discovered that Tor clients would crash with an assertion\n failure upon parsing specially crafted hidden service descriptors.\n [[CVE-2015-2929](https://security-tracker.debian.org/tracker/CVE-2015-2929)]\n\n\nIntroduction points would accept multiple INTRODUCE1 cells on one\n circuit, making it inexpensive for an attacker to overload a hidden\n service with introductions. Introduction points no longer allow\n multiple such cells on the same circuit.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -140,12 +139,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-187-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-187"
 		}
 	]
 }

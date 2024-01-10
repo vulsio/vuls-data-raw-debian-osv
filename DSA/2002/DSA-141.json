@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-141",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-08-01T00:00:00Z",
 	"published": "2002-08-01T00:00:00Z",
 	"related": [
 		"CVE-2002-1425"
 	],
 	"summary": "mpack - buffer overflow",
-	"details": "\nEckehard Berns discovered a buffer overflow in the munpack program\nwhich is used for decoding (respectively) binary files in MIME\n(Multipurpose Internet Mail Extensions) format mail messages. If\nmunpack is run on an appropriately malformed email (or news article)\nthen it will crash, and perhaps can be made to run arbitrary code.\n\n\nHerbert Xu reported a second vulnerability which affected malformed\nfilenames that refer to files in upper directories like \"../a\". The\nsecurity impact is limited, though, because only a single leading\n\"../\" was accepted and only new files can be created (i.e. no files\nwill be overwritten).\n\n\nBoth problems have been fixed in version 1.5-5potato2 for the old\nstable distribution (potato), in version 1.5-7woody2 for the current\nstable distribution (woody) and in version 1.5-9 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your mpack package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-141.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-141"
 		}
 	]
 }

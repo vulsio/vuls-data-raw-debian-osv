@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-584-1",
-	"modified": "2023-06-28T06:19:22.983031Z",
+	"modified": "2024-01-09T20:33:49.945123Z",
 	"published": "2016-08-04T00:00:00Z",
 	"related": [
 		"CVE-2016-1238"
 	],
 	"summary": "libsys-syslog-perl - security update",
-	"details": "\nJohn Lightsey and Todd Rinaldo reported that the opportunistic loading\nof optional modules can make many programs unintentionally load code\nfrom the current working directory (which might be changed to another\ndirectory without the user realising) and potentially leading to\nprivilege escalation, as demonstrated in Debian with certain\ncombinations of installed packages.\n\n\nThe problem relates to Perl loading modules from the includes directory\narray (\"@INC\") in which the last element is the current directory (\".\").\nThat means that, when perl wants to load a module (during first\ncompilation or during lazy loading of a module in run time), perl will\nlook for the module in the current directory at the end, since '.' is\nthe last include directory in its array of include directories to seek.\nThe issue is with requiring libraries that are in \".\" but are not\notherwise installed.\n\n\nWith this update the Sys::Syslog Perl module is updated to not load\nmodules from current directory.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.29-1+deb7u1.\n\n\nWe recommend that you upgrade your libsys-syslog-perl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-584-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-584"
 		}
 	]
 }

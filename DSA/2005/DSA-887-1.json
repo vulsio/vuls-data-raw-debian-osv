@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-887-1",
-	"modified": "2023-10-16T00:29:32.942905Z",
+	"modified": "2024-01-09T20:34:11.180552Z",
 	"published": "2005-11-07T00:00:00Z",
 	"related": [
 		"CVE-2005-3239",
@@ -10,7 +10,6 @@
 		"CVE-2005-3501"
 	],
 	"summary": "clamav - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Clam AntiVirus, the\nantivirus scanner for Unix, designed for integration with mail servers\nto perform attachment scanning. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2005-3239](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3239)\nThe OLE2 unpacker allows remote attackers to cause a segmentation\n fault via a DOC file with an invalid property tree, which triggers\n an infinite recursion.\n* [CVE-2005-3303](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3303)\nA specially crafted executable compressed with FSG 1.33 could\n cause the extractor to write beyond buffer boundaries, allowing an\n attacker to execute arbitrary code.\n* [CVE-2005-3500](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3500)\nA specially crafted CAB file could cause ClamAV to be locked in an\n infinite loop and use all available processor resources, resulting\n in a denial of service.\n* [CVE-2005-3501](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3501)\nA specially crafted CAB file could cause ClamAV to be locked in an\n infinite loop and use all available processor resources, resulting\n in a denial of service.\n\n\nThe old stable distribution (woody) does not contain clamav packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.84-2.sarge.6.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.87.1-1.\n\n\nWe recommend that you upgrade your clamav packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-887-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-887"
 		}
 	]
 }

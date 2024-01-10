@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1708-1",
-	"modified": "2023-10-16T00:10:36.580822Z",
+	"modified": "2024-01-09T20:25:20.268714Z",
 	"published": "2009-01-19T00:00:00Z",
 	"related": [
 		"CVE-2008-5516",
@@ -9,7 +9,6 @@
 		"CVE-2008-5916"
 	],
 	"summary": "git-core - remote code execution",
-	"details": "\nIt was discovered that gitweb, the web interface for the Git version\ncontrol system, contained several vulnerabilities:\n\n\nRemote attackers could use crafted requests to execute shell commands on\nthe web server, using the snapshot generation and pickaxe search\nfunctionality ([CVE-2008-5916](https://security-tracker.debian.org/tracker/CVE-2008-5916)).\n\n\nLocal users with write access to the configuration of a Git repository\nserved by gitweb could cause gitweb to execute arbitrary shell commands\nwith the permission of the web server ([CVE-2008-5516](https://security-tracker.debian.org/tracker/CVE-2008-5516), [CVE-2008-5517](https://security-tracker.debian.org/tracker/CVE-2008-5517)).\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.4.4.4-4+etch1.\n\n\nFor the unstable distribution (sid) and testing distribution (lenny),\nthe remote shell command injection issue ([CVE-2008-5516](https://security-tracker.debian.org/tracker/CVE-2008-5516)) has been fixed\nin version 1.5.6-1. The other issue will be fixed soon.\n\n\nWe recommend that you upgrade your Git packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1708-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1708"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3741-1",
-	"modified": "2023-10-16T00:12:17.654276Z",
+	"modified": "2024-01-09T20:22:00.814536Z",
 	"published": "2016-12-20T00:00:00Z",
 	"related": [
 		"CVE-2016-1254"
 	],
 	"summary": "tor - security update",
-	"details": "\nIt was discovered that Tor, a connection-based low-latency anonymous\ncommunication system, may read one byte past a buffer when parsing\nhidden service descriptors. This issue may enable a hostile hidden\nservice to crash Tor clients depending on hardening options and malloc\nimplementation.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 0.2.5.12-4.\n\n\nFor the testing (stretch) and unstable (sid) distributions, this\nproblem has been fixed in version 0.2.9.8-2.\n\n\nWe recommend that you upgrade your tor packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3741-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3741"
 		}
 	]
 }

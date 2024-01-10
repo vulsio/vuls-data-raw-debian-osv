@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2790-1",
-	"modified": "2023-10-16T00:11:31.091919Z",
+	"modified": "2024-01-09T20:25:47.846300Z",
 	"published": "2013-11-02T00:00:00Z",
 	"related": [
 		"CVE-2013-1739"
 	],
 	"summary": "nss - uninitialized memory read",
-	"details": "\nA flaw was found in the way the Mozilla Network Security Service library\n(nss) read uninitialized data when there was a decryption failure. A\nremote attacker could use this flaw to cause a denial of service\n(application crash) for applications linked with the nss library.\n\n\nThe oldstable distribution (squeeze) is not affected by this problem.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2:3.14.4-1.\n\n\nThe packages in the stable distribution were updated to the latest patch\nrelease 3.14.4 of the library to also include a regression bugfix for a\nflaw that affects the libpkix certificate verification cache. More\ninformation can be found via:\n\n\n[\\\nhttps://developer.mozilla.org/en-US/docs/NSS/NSS\\_3.14.4\\_release\\_notes](https://developer.mozilla.org/en-US/docs/NSS/NSS_3.14.4_release_notes)\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 2:3.15.2-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:3.15.2-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2790-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2790"
 		}
 	]
 }

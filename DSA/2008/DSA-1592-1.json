@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1592-1",
-	"modified": "2023-10-16T00:05:31.112154Z",
+	"modified": "2024-01-09T20:20:48.535041Z",
 	"published": "2008-06-09T00:00:00Z",
 	"related": [
 		"CVE-2008-1673",
 		"CVE-2008-2358"
 	],
 	"summary": "linux-2.6 - overflow conditions",
-	"details": "\nTwo vulnerabilities have been discovered in the Linux kernel that may\nlead to a denial of service or arbitrary code execution. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2008-1673](https://security-tracker.debian.org/tracker/CVE-2008-1673)\nWei Wang from McAfee reported a potential heap overflow in the\n ASN.1 decode code that is used by the SNMP NAT and CIFS\n subsystem. Exploitation of this issue may lead to arbitrary code\n execution. This issue is not believed to be exploitable with the\n pre-built kernel images provided by Debian, but it might be an\n issue for custom images built from the Debian-provided source\n package.\n* [CVE-2008-2358](https://security-tracker.debian.org/tracker/CVE-2008-2358)\nBrandon Edwards of McAfee Avert labs discovered an issue in the\n DCCP subsystem. Due to missing feature length checks it is possible\n to cause an overflow that may result in remote arbitrary code\n execution.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 2.6.18.dfsg.1-18etch6.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1592-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1592"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1239-1",
-	"modified": "2023-10-16T00:06:32.514838Z",
+	"modified": "2024-01-09T20:20:38.833349Z",
 	"published": "2006-12-17T00:00:00Z",
 	"related": [
 		"CVE-2006-4244",
@@ -9,7 +9,6 @@
 		"CVE-2006-5872"
 	],
 	"summary": "sql-ledger",
-	"details": "\nSeveral remote vulnerabilities have been discovered in SQL Ledger, a web\nbased double-entry accounting program, which may lead to the execution\nof arbitrary code. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2006-4244](https://security-tracker.debian.org/tracker/CVE-2006-4244)\nChris Travers discovered that the session management can be tricked\n into hijacking existing sessions.\n* [CVE-2006-4731](https://security-tracker.debian.org/tracker/CVE-2006-4731)\nChris Travers discovered that directory traversal vulnerabilities\n can be exploited to execute arbitrary Perl code.\n* [CVE-2006-5872](https://security-tracker.debian.org/tracker/CVE-2006-5872)\nIt was discovered that missing input sanitising allows execution of\n arbitrary Perl code.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.4.7-2sarge1.\n\n\nFor the upcoming stable distribution (etch) these problems have been\nfixed in version 2.6.21-1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.6.21-1.\n\n\nWe recommend that you upgrade your sql-ledger packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1239-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1239"
 		}
 	]
 }

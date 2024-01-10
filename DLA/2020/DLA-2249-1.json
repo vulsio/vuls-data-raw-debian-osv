@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2249-1",
-	"modified": "2023-06-28T06:26:29.048688Z",
+	"modified": "2024-01-09T20:32:15.658584Z",
 	"published": "2020-06-13T00:00:00Z",
 	"related": [
 		"CVE-2020-0182",
 		"CVE-2020-0198"
 	],
 	"summary": "libexif - security update",
-	"details": "\nThe following CVE(s) were reported against src:libexif.\n\n\n* [CVE-2020-0182](https://security-tracker.debian.org/tracker/CVE-2020-0182)\nIn exif\\_entry\\_get\\_value of exif-entry.c, there is a possible\n out of bounds read due to a missing bounds check. This could\n lead to local information disclosure with no additional execution\n privileges needed. User interaction is not needed for\n exploitation.\n* [CVE-2020-0198](https://security-tracker.debian.org/tracker/CVE-2020-0198)\nIn exif\\_data\\_load\\_data\\_content of exif-data.c, there is a\n possible UBSAN abort due to an integer overflow. This could lead\n to remote denial of service with no additional execution\n privileges needed. User interaction is needed for exploitation.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.6.21-2+deb8u4.\n\n\nWe recommend that you upgrade your libexif packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2249-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2249"
 		}
 	]
 }

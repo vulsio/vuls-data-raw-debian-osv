@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3253-1",
-	"modified": "2023-10-16T00:11:52.806793Z",
+	"modified": "2024-01-09T20:28:07.525220Z",
 	"published": "2015-05-07T00:00:00Z",
 	"related": [
 		"CVE-2009-3555",
@@ -9,7 +9,6 @@
 		"CVE-2014-3566"
 	],
 	"summary": "pound - security update",
-	"details": "\nPound, a HTTP reverse proxy and load balancer, had several issues\nrelated to vulnerabilities in the Secure Sockets Layer (SSL) protocol.\n\n\nFor Debian 7 (wheezy) this update adds a missing part to make it actually\npossible to disable client-initiated renegotiation and disables it by default\n([CVE-2009-3555](https://security-tracker.debian.org/tracker/CVE-2009-3555)).\nTLS compression is disabled ([CVE-2012-4929](https://security-tracker.debian.org/tracker/CVE-2012-4929)),\nalthough this is normally already disabled by the OpenSSL system library.\nFinally it adds the ability to disable the SSLv3 protocol ([CVE-2014-3566](https://security-tracker.debian.org/tracker/CVE-2014-3566))\nentirely via the new DisableSSLv3 configuration directive, although it\nwill not disabled by default in this update. Additionally a non-security\nsensitive issue in redirect encoding is\naddressed.\n\n\nFor Debian 8 (jessie) these issues have been fixed prior to the release,\nwith the exception of client-initiated renegotiation ([CVE-2009-3555](https://security-tracker.debian.org/tracker/CVE-2009-3555)).\nThis update addresses that issue for jessie.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 2.6-2+deb7u1.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.6-6+deb8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.6-6.1.\n\n\nWe recommend that you upgrade your pound packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3253-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3253"
 		}
 	]
 }

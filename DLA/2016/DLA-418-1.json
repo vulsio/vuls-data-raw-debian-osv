@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-418-1",
-	"modified": "2023-06-28T06:34:00.629007Z",
-	"published": "2016-02-17T00:00:00Z",
+	"modified": "2024-01-09T20:33:47.156297Z",
+	"published": "2016-02-16T00:00:00Z",
 	"related": [
 		"CVE-2016-2221",
 		"CVE-2016-2222"
 	],
 	"summary": "wordpress - security update",
-	"details": "\nWordPress versions 4.4.1 and earlier are affected by two security\nissues: a possible Side Request Forgery Vulnerability for certain\nlocal URIs, reported by Ronni Skansing; and an open redirection\nattack, reported by Shailesh Suthar.\n\n\n* [CVE-2016-2221](https://security-tracker.debian.org/tracker/CVE-2016-2221)\nWordpress could be vulnerable for an open redirection attack\n which was fixed by better validation of the URL used in HTTP\n redirects.\n* [CVE-2016-2222](https://security-tracker.debian.org/tracker/CVE-2016-2222)\nIt was discovered that Wordpress was susceptible for a possible Side\n Request Forgery Vulnerability because it considered for instance\n 0.1.2.3 as a valid IP.\n\n\nFor Debian 6 Squeeze, these problems have been fixed in version\n3.6.1+dfsg-1~deb6u9.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-418-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-418"
 		}
 	]
 }

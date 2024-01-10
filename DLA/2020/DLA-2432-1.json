@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2432-1",
-	"modified": "2023-06-28T06:25:15.554165Z",
-	"published": "2020-11-19T00:00:00Z",
+	"modified": "2024-01-09T20:32:34.336318Z",
+	"published": "2020-11-04T00:00:00Z",
 	"related": [
 		"CVE-2018-19351",
 		"CVE-2018-21030",
 		"CVE-2018-8768"
 	],
 	"summary": "jupyter-notebook - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in jupyter-notebook.\n\n\n* [CVE-2018-8768](https://security-tracker.debian.org/tracker/CVE-2018-8768)\nA maliciously forged notebook file can bypass sanitization to execute\n Javascript in the notebook context. Specifically, invalid HTML is\n fixed by jQuery after sanitization, making it dangerous.\n* [CVE-2018-19351](https://security-tracker.debian.org/tracker/CVE-2018-19351)\nallows XSS via an untrusted notebook because nbconvert responses are\n considered to have the same origin as the notebook server.\n* [CVE-2018-21030](https://security-tracker.debian.org/tracker/CVE-2018-21030)\njupyter-notebook does not use a CSP header to treat served files as\n belonging to a separate origin. Thus, for example, an XSS payload can\n be placed in an SVG document.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.2.3-4+deb9u1.\n\n\nWe recommend that you upgrade your jupyter-notebook packages.\n\n\nFor the detailed security status of jupyter-notebook please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/jupyter-notebook>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2432-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2432"
 		}
 	]
 }

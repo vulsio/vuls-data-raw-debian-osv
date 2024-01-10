@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2622-1",
-	"modified": "2023-06-28T06:26:37.241148Z",
+	"modified": "2024-01-09T20:32:46.581593Z",
 	"published": "2021-04-09T00:00:00Z",
 	"related": [
 		"CVE-2021-28658"
 	],
 	"summary": "python-django - security update",
-	"details": "\nIt was discovered that there was a potential directory traversal issue in\nDjango, a Python-based web development framework.\n\n\nThe vulnerability could have been exploited by maliciously crafted\nfilenames. However, the upload handlers built into Django itself were not\naffected.\n\n\n* [CVE-2021-28658](https://security-tracker.debian.org/tracker/CVE-2021-28658)\nIn Django 2.2 before 2.2.20, 3.0 before 3.0.14, and 3.1 before 3.1.8,\n MultiPartParser allowed directory traversal via uploaded files with\n suitably crafted file names. Built-in upload handlers were not affected by\n this vulnerability.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1:1.10.7-2+deb9u12.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2622-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2622"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-778-1",
-	"modified": "2023-10-16T00:28:29.719995Z",
+	"modified": "2024-01-09T20:34:07.640452Z",
 	"published": "2005-08-19T00:00:00Z",
 	"related": [
 		"CVE-2005-2556",
 		"CVE-2005-2557"
 	],
 	"summary": "mantis - missing input sanitising",
-	"details": "\nTwo security related problems have been discovered in Mantis, a\nweb-based bug tracking system. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CAN-2005-2556](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2556)\nA remote attacker could supply a specially crafted URL to scan\n arbitrary ports on arbitrary hosts that may not be accessible\n otherwise.\n\n* [CAN-2005-2557](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2557)\nA remote attacker was able to insert arbitrary HTML code in bug\n reports, hence, cross site scripting.\n\n* [CAN-2005-3090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-3090)\nA remote attacker was able to insert arbitrary HTML code in bug\n reports, hence, cross site scripting.\n\n\nThe old stable distribution (woody) does not seem to be affected by\nthese problems.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.19.2-4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.19.2-4.\n\n\nWe recommend that you upgrade your mantis package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-778-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-778"
 		}
 	]
 }

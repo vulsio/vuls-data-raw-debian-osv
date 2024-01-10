@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2623-1",
-	"modified": "2023-06-28T06:26:37.508353Z",
+	"modified": "2024-01-09T20:32:46.644512Z",
 	"published": "2021-04-10T00:00:00Z",
 	"related": [
 		"CVE-2020-17380",
@@ -13,7 +13,6 @@
 		"CVE-2021-3416"
 	],
 	"summary": "qemu - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in QEMU, a fast processor\nemulator.\n\n\n* [CVE-2021-20257](https://security-tracker.debian.org/tracker/CVE-2021-20257)\nnet: e1000: infinite loop while processing transmit descriptors\n* [CVE-2021-20255](https://security-tracker.debian.org/tracker/CVE-2021-20255)\nA stack overflow via an infinite recursion vulnerability was found in the\n eepro100 i8255x device emulator of QEMU. This issue occurs while processing\n controller commands due to a DMA reentry issue. This flaw allows a guest\n user or process to consume CPU cycles or crash the QEMU process on the\n host, resulting in a denial of service.\n* [CVE-2021-20203](https://security-tracker.debian.org/tracker/CVE-2021-20203)\nAn integer overflow issue was found in the vmxnet3 NIC emulator of the\n QEMU. It may occur if a guest was to supply invalid values for rx/tx queue\n size or other NIC parameters. A privileged guest user may use this flaw to\n crash the QEMU process on the host resulting in DoS scenario.\n* [CVE-2021-3416](https://security-tracker.debian.org/tracker/CVE-2021-3416)\nA potential stack overflow via infinite loop issue was found in various NIC\n emulators of QEMU in versions up to and including 5.2.0. The issue occurs\n in loopback mode of a NIC wherein reentrant DMA checks get bypassed. A\n guest user/process may use this flaw to consume CPU cycles or crash the\n QEMU process on the host resulting in DoS scenario.\n* [CVE-2021-3416](https://security-tracker.debian.org/tracker/CVE-2021-3416)\nThe patch for [CVE-2020-17380](https://security-tracker.debian.org/tracker/CVE-2020-17380)/[CVE-2020-25085](https://security-tracker.debian.org/tracker/CVE-2020-25085) was found to be ineffective,\n thus making QEMU vulnerable to the out-of-bounds read/write access issues\n previously found in the SDHCI controller emulation code. This flaw allows a\n malicious privileged guest to crash the QEMU process on the host, resulting\n in a denial of service or potential code execution.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:2.8+dfsg-6+deb9u14.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFor the detailed security status of qemu please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qemu>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -53,12 +52,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2623-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2623"
 		}
 	]
 }

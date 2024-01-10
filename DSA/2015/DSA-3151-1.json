@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3151-1",
-	"modified": "2023-10-16T00:11:47.567642Z",
+	"modified": "2024-01-09T20:25:50.724956Z",
 	"published": "2015-02-03T00:00:00Z",
 	"related": [
 		"CVE-2015-0219",
@@ -9,7 +9,6 @@
 		"CVE-2015-0221"
 	],
 	"summary": "python-django - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Django, a high-level Python\nweb development framework. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2015-0219](https://security-tracker.debian.org/tracker/CVE-2015-0219)\nJedediah Smith reported that the WSGI environ in Django does not\n distinguish between headers containing dashes and headers containing\n underscores. A remote attacker could use this flaw to spoof WSGI\n headers.\n* [CVE-2015-0220](https://security-tracker.debian.org/tracker/CVE-2015-0220)\nMikko Ohtamaa discovered that the django.util.http.is\\_safe\\_url()\n function in Django does not properly handle leading whitespaces in\n user-supplied redirect URLs. A remote attacker could potentially use\n this flaw to perform a cross-site scripting attack.\n* [CVE-2015-0221](https://security-tracker.debian.org/tracker/CVE-2015-0221)\nAlex Gaynor reported a flaw in the way Django handles reading files\n in the django.views.static.serve() view. A remote attacker could\n possibly use this flaw to mount a denial of service via resource\n consumption.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.4.5-1+deb7u9.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 1.7.1-1.1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.7.1-1.1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3151-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3151"
 		}
 	]
 }

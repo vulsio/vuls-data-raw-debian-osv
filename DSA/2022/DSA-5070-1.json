@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5070-1",
-	"modified": "2023-10-16T00:15:38.730506Z",
+	"modified": "2024-01-09T20:29:23.878135Z",
 	"published": "2022-02-10T00:00:00Z",
 	"related": [
 		"CVE-2021-4122"
 	],
 	"summary": "cryptsetup - security update",
-	"details": "\n* [CVE-2021-4122](https://security-tracker.debian.org/tracker/CVE-2021-4122)\nMilan Broz, its maintainer, discovered an issue in cryptsetup, the disk\n encryption configuration tool for Linux.\n\n\nLUKS2 (an on-disk format) online reencryption is an optional extension to\n allow a user to change the data reencryption key while the data device is\n available for use during the whole reencryption process.\n\n\nAn attacker can modify on-disk metadata to simulate decryption in progress\n with crashed (unfinished) reencryption step and persistently decrypt part\n of the LUKS2 device (LUKS1 devices are indirectly affected as well, see\n below).\n\n\nThis attack requires repeated physical access to the LUKS2 device but no\n knowledge of user passphrases.\n\n\nThe decryption step is performed after a valid user activates the device\n with a correct passphrase and modified metadata.\n\n\nThe size of possible decrypted data per attack step depends on configured\n LUKS2 header size (metadata size is configurable for LUKS2). With the\n default LUKS2 parameters (16 MiB header) and only one allocated keyslot\n (512 bit key for AES-XTS), simulated decryption with checksum resilience\n SHA1 (20 bytes checksum for 4096-byte blocks), the maximal decrypted size\n can be over 3GiB.\n\n\nThe attack is not applicable to LUKS1 format, but the attacker can update\n metadata in place to LUKS2 format as an additional step. For such a\n converted LUKS2 header, the keyslot area is limited to decrypted size (with\n SHA1 checksums) over 300 MiB.\n\n\nLUKS devices that were formatted using a cryptsetup binary from Debian\n Stretch or earlier are using LUKS1. However since Debian Buster the default\n on-disk LUKS format version is LUKS2. In particular, encrypted devices\n formatted by the Debian Buster and Bullseye installers are using LUKS2 by\n default.\n* Key truncation in dm-integrity\n\n This update additionaly fixes a key truncation issue for standalone\n dm-integrity devices using HMAC integrity protection. For existing such\n devices with extra long HMAC keys (typically >106 bytes of length), one\n might need to manually truncate the key using integritysetup(8)'s\n --integrity-key-size option in order to properly map the device under\n 2:2.3.7-1+deb11u1 and later.\n\n\nOnly standalone dm-integrity devices are affected. dm-crypt devices,\n including those using authenticated disk encryption, are unaffected.\n\n\nFor the oldstable distribution (buster), this problem is not present.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2:2.3.7-1+deb11u1.\n\n\nWe recommend that you upgrade your cryptsetup packages.\n\n\nFor the detailed security status of cryptsetup please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/cryptsetup](https://security-tracker.debian.org/tracker/cryptsetup)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5070-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5070"
 		}
 	]
 }

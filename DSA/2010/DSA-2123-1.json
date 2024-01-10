@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2123-1",
-	"modified": "2023-10-16T00:05:46.671381Z",
+	"modified": "2024-01-09T20:21:12.939642Z",
 	"published": "2010-11-01T00:00:00Z",
 	"related": [
 		"CVE-2010-3170",
 		"CVE-2010-3173"
 	],
 	"summary": "nss - cryptographic weaknesses",
-	"details": "\nSeveral vulnerabilities have been discovered in Mozilla's Network\nSecurity Services (NSS) library. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2010-3170](https://security-tracker.debian.org/tracker/CVE-2010-3170)\nNSS recognizes a wildcard IP address in the subject's Common\n Name field of an X.509 certificate, which might allow\n man-in-the-middle attackers to spoof arbitrary SSL servers via\n a crafted certificate issued by a legitimate Certification\n Authority.\n* [CVE-2010-3173](https://security-tracker.debian.org/tracker/CVE-2010-3173)\nNSS does not properly set the minimum key length for\n Diffie-Hellman Ephemeral (DHE) mode, which makes it easier for\n remote attackers to defeat cryptographic protection mechanisms\n via a brute-force attack.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 3.12.3.1-0lenny2.\n\n\nFor the unstable distribution (sid) and the upcoming stable\ndistribution (squeeze), these problems have been fixed in version\n3.12.8-1.\n\n\nWe recommend that you upgrade your NSS packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2123-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2123"
 		}
 	]
 }

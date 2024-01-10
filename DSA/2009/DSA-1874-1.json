@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1874-1",
-	"modified": "2023-10-16T00:10:43.476094Z",
+	"modified": "2024-01-09T20:22:33.185728Z",
 	"published": "2009-08-26T00:00:00Z",
 	"related": [
 		"CVE-2009-2404",
@@ -9,7 +9,6 @@
 		"CVE-2009-2409"
 	],
 	"summary": "nss - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Network Security\nService libraries. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-2404](https://security-tracker.debian.org/tracker/CVE-2009-2404)\nMoxie Marlinspike discovered that a buffer overflow in the regular\n expression parser could lead to the execution of arbitrary code.\n* [CVE-2009-2408](https://security-tracker.debian.org/tracker/CVE-2009-2408)\nDan Kaminsky discovered that NULL characters in certificate\n names could lead to man-in-the-middle attacks by tricking the user\n into accepting a rogue certificate.\n* [CVE-2009-2409](https://security-tracker.debian.org/tracker/CVE-2009-2409)\nCertificates with MD2 hash signatures are no longer accepted\n since they're no longer considered cryptograhically secure.\n\n\nThe old stable distribution (etch) doesn't contain nss.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 3.12.3.1-0lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.12.3.1-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1874-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1874"
 		}
 	]
 }

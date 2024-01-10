@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2551-1",
-	"modified": "2023-06-28T06:29:08.740631Z",
+	"modified": "2024-01-09T20:32:41.824816Z",
 	"published": "2021-02-09T00:00:00Z",
 	"related": [
 		"CVE-2020-7039",
 		"CVE-2020-8608"
 	],
 	"summary": "slirp - security update",
-	"details": "\nTwo issues have been found in slirp, a SLIP/PPP emulator using a dial up\nshell account.\n\n\n* [CVE-2020-7039](https://security-tracker.debian.org/tracker/CVE-2020-7039)\nDue to mismanagement of memory, a heap-based buffer overflow or\n other out-of-bounds access might happen, which can lead to a DoS\n or potential execute arbitrary code.\n* [CVE-2020-8608](https://security-tracker.debian.org/tracker/CVE-2020-8608)\nPrevent a buffer overflow vulnerability due to incorrect usage\n of return values from snprintf.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:1.0.17-8+deb9u1.\n\n\nWe recommend that you upgrade your slirp packages.\n\n\nFor the detailed security status of slirp please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/slirp>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2551-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2551"
 		}
 	]
 }

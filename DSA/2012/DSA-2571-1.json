@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2571-1",
-	"modified": "2023-10-16T00:06:00.837324Z",
+	"modified": "2024-01-09T20:27:50.365826Z",
 	"published": "2012-11-04T00:00:00Z",
 	"related": [
 		"CVE-2012-4505"
 	],
 	"summary": "libproxy - buffer overflow",
-	"details": "\nThe Red Hat Security Response Team discovered that libproxy, a library\nfor automatic proxy configuration management, applied insufficient\nvalidation to the Content-Length header sent by a server providing a\nproxy.pac file. Such remote server could trigger an integer overflow\nand consequently overflow an in-memory buffer.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.3.1-2+squeeze1.\n\n\nFor the testing distribution (wheezy), and the unstable distribution\n(sid), this problem has been fixed in version 0.3.1-5.1.\n\n\nWe recommend that you upgrade your libproxy packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2571-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2571"
 		}
 	]
 }

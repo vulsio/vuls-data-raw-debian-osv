@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-284",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-04-12T00:00:00Z",
 	"published": "2003-04-12T00:00:00Z",
 	"related": [
 		"CVE-2003-0204"
 	],
 	"summary": "kdegraphics - insecure execution",
-	"details": "\nThe KDE team [\\\ndiscovered](http://www.kde.org/info/security/advisory-20030409-1.txt) a vulnerability in the way KDE uses Ghostscript\nsoftware for processing of PostScript (PS) and PDF files. An attacker\ncould provide a malicious PostScript or PDF file via mail or websites\nthat could lead to executing arbitrary commands under the privileges\nof the user viewing the file or when the browser generates a directory\nlisting with thumbnails.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.2.2-6.11 of kdegraphics and associated packages.\n\n\nThe old stable distribution (potato) is not affected since it does not\ncontain KDE.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nFor the unofficial backport of KDE 3.1.1 to woody by Ralf Nolden on\ndownload.kde.org, this problem has been fixed in version 3.1.1-0woody2\nof kdegraphics. Using the normal backport line for apt-get you will\nget the update:\n\n\n deb http://download.kde.org/stable/latest/Debian stable main\n\n\nWe recommend that you upgrade your kdegraphics and associated packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-284.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-284"
 		}
 	]
 }

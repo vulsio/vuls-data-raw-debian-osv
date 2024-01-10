@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2449-1",
-	"modified": "2023-10-16T00:11:15.780975Z",
+	"modified": "2024-01-09T20:21:24.878662Z",
 	"published": "2012-04-12T00:00:00Z",
 	"related": [
 		"CVE-2012-0805"
 	],
 	"summary": "sqlalchemy - missing input sanitization",
-	"details": "\nIt was discovered that SQLAlchemy, an SQL toolkit and object relational\nmapper for Python, is not sanitizing input passed to the limit/offset\nkeywords to select() as well as the value passed to select.limit()/offset().\nThis allows an attacker to perform SQL injection attacks against\napplications using SQLAlchemy that do not implement their own filtering.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.6.3-3+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 0.6.7-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.6.7-1.\n\n\nWe recommend that you upgrade your sqlalchemy packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2449-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2449"
 		}
 	]
 }

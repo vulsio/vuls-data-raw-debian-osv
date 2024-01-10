@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2903-1",
-	"modified": "2023-10-16T00:06:07.489110Z",
+	"modified": "2024-01-09T20:27:55.911788Z",
 	"published": "2014-04-14T00:00:00Z",
 	"related": [
 		"CVE-2014-2338"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nAn authentication bypass vulnerability was found in charon, the daemon\nhandling IKEv2 in strongSwan, an IKE/IPsec suite. The state machine\nhandling the security association (IKE\\_SA) handled some state transitions\nincorrectly.\n\n\nAn attacker can trigger the vulnerability by rekeying an unestablished\nIKE\\_SA during the initiation itself. This will trick the IKE\\_SA state to\nestablished without the need to provide any valid credential.\n\n\nVulnerable setups include those actively initiating IKEv2 IKE\\_SA (like\nâclientsâ or âroadwarriorsâ) but also during re-authentication (which\ncan be initiated by the responder). Installations using IKEv1 (pluto\ndaemon in strongSwan 4 and earlier, and IKEv1 code in charon 5.x) is not\naffected.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 4.4.1-5.5.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 4.5.2-1.5+deb7u3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.1.2-4.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2903-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2903"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2896-1",
-	"modified": "2023-06-28T06:20:12.513534Z",
+	"modified": "2024-01-09T20:33:08.735417Z",
 	"published": "2022-01-24T00:00:00Z",
 	"related": [
 		"CVE-2022-21699"
 	],
 	"summary": "ipython - security update",
-	"details": "\nIt was discovered that there was a potential arbitrary code execution\nvulnerability in IPython, the interactive Python shell.\n\n\nThis issue stemmed from IPython executing untrusted files in the current\nworking directory. According to upstream:\n\n\n\n> \n> \n>  Almost all versions of IPython looks for configuration and profiles in\n>  current working directory. Since IPython was developed before pip and\n>  environments existed, it was used a convenient way to load code/packages in a\n>  project dependant way.\n> \n> \n> \n> \n>  In 2022, it is not necessary anymore, and can lead to confusing behavior\n>  where for example cloning a repository and starting IPython or loading a\n>  notebook from any Jupyter-Compatible interface that has ipython set as a\n>  kernel can lead to code execution.\n> \n> \n> \n> \n\n\nTo address this problem, the current working directory is no longer searched\nfor profiles or configuration files.\n\n\n* [CVE-2022-21699](https://security-tracker.debian.org/tracker/CVE-2022-21699)\nIPython (Interactive Python) is a command shell for interactive computing in multiple programming languages, originally developed for the Python programming language. Affected versions are subject to an arbitrary code execution vulnerability achieved by not properly managing cross user temporary files. This vulnerability allows one user to run code as another on the same machine. All users are advised to upgrade.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n5.1.0-3+deb9u1.\n\n\nWe recommend that you upgrade your ipython packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2896-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2896"
 		}
 	]
 }

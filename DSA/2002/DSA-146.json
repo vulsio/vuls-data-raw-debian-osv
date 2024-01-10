@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-146",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-08-08T00:00:00Z",
 	"published": "2002-08-08T00:00:00Z",
 	"related": [
 		"CVE-2002-0391"
 	],
 	"summary": "dietlibc - integer overflow",
-	"details": "\nAn integer overflow bug has been discovered in the RPC library used by\ndietlibc, a libc optimized for small size, which is derived from the\nSunRPC library. This bug could be exploited to gain unauthorized root\naccess to software linking to this code. The packages below also fix\ninteger overflows in the calloc, fread and fwrite code. They are also\nmore strict regarding hostile DNS packets that could lead to a\nvulnerability otherwise.\n\n\nThese problems have been fixed in version 0.12-2.4 for the current\nstable distribution (woody) and in version 0.20-0cvs20020808 for the\nunstable distribution (sid). Debian 2.2 (potato) is not affected\nsince it doesn't contain dietlibc packages.\n\n\nWe recommend that you upgrade your dietlibc packages immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-146.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-146"
 		}
 	]
 }

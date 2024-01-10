@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2787-1",
-	"modified": "2023-10-16T00:06:05.806188Z",
+	"modified": "2024-01-09T20:25:47.946083Z",
 	"published": "2013-10-27T00:00:00Z",
 	"related": [
 		"CVE-2013-6172"
 	],
 	"summary": "roundcube - design error",
-	"details": "\nIt was discovered that roundcube, a skinnable AJAX based webmail\nsolution for IMAP servers, does not properly sanitize the \\_session\nparameter in steps/utils/save\\_pref.inc during saving preferences. The\nvulnerability can be exploited to overwrite configuration settings and\nsubsequently allowing random file access, manipulated SQL queries and\neven code execution.\n\n\nroundcube in the oldstable distribution (squeeze) is not affected by\nthis problem.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.7.2-9+deb7u1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your roundcube packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2787-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2787"
 		}
 	]
 }

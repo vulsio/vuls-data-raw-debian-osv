@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-598-1",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2004-11-25T00:00:00Z",
 	"published": "2004-11-25T00:00:00Z",
 	"related": [
 		"CVE-2004-0987"
 	],
 	"summary": "yardradius - buffer overflow",
-	"details": "\nMax Vozeler noticed that yardradius, the YARD radius authentication\nand accounting server, contained a stack overflow similar to the one\nfrom radiusd which is referenced as [CAN-2001-0534](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2001-0534). This could lead to\nthe execution of arbitrary code as root.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0.20-2woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0.20-15.\n\n\nWe recommend that you upgrade your yardradius package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-598-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-598"
 		}
 	]
 }

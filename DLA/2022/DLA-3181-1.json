@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3181-1",
-	"modified": "2023-06-28T06:25:26.253300Z",
+	"modified": "2024-01-09T20:33:21.585630Z",
 	"published": "2022-11-07T00:00:00Z",
 	"related": [
 		"CVE-2021-23239"
 	],
 	"summary": "sudo - security update",
-	"details": "\nIt was discovered that there was a information disclosure utility in sudo, a\ntool used to provide limited superuser privileges to specific users. A local\nunprivileged user may have been able to perform arbitrary directory-existence\ntests by exploiting a race condition in sudoedit.\n\n\n* [CVE-2021-23239](https://security-tracker.debian.org/tracker/CVE-2021-23239)\nThe sudoedit personality of Sudo before 1.9.5 may allow a local\n unprivileged user to perform arbitrary directory-existence tests by winning\n a sudo\\_edit.c race condition in replacing a user-controlled directory by a\n symlink to an arbitrary path.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1.8.27-1+deb10u4.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3181-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3181"
 		}
 	]
 }

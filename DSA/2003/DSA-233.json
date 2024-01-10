@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-233",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-01-21T00:00:00Z",
 	"published": "2003-01-21T00:00:00Z",
 	"related": [
 		"CVE-2003-0015"
 	],
 	"summary": "cvs - doubly freed memory",
-	"details": "\nStefan Esser [\\\ndiscovered](http://security.e-matters.de/advisories/012003.html) a problem in cvs, a concurrent versions\nsystem, which is used for many Free Software projects. The current\nversion contains a flaw that can be used by a remote attacker to\nexecute arbitrary code on the CVS server under the user id the CVS\nserver runs as. Anonymous read-only access is sufficient to exploit\nthis problem.\n\n\nFor the stable distribution (woody) this problem has been\nfixed in version 1.11.1p1debian-8.1.\n\n\nFor the old stable distribution (potato) this problem has been fixed\nin version 1.10.7-9.2.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your cvs package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-233.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-233"
 		}
 	]
 }

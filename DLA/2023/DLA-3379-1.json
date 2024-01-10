@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3379-1",
-	"modified": "2023-06-28T06:42:48.516532Z",
+	"modified": "2024-01-09T20:33:36.736894Z",
 	"published": "2023-04-01T00:00:00Z",
 	"related": [
 		"CVE-2022-21216",
@@ -11,7 +11,6 @@
 		"CVE-2022-38090"
 	],
 	"summary": "intel-microcode - security update",
-	"details": "\nMultiple potential security vulnerabilities in some IntelÂŽ Processors\nhave been found which may allow information disclosure or may allow\nescalation of privilege. Intel is releasing firmware updates to mitigate\nthis potential vulnerabilities.\n\n\nPlease pay attention that the fix for [CVE-2022-33196](https://security-tracker.debian.org/tracker/CVE-2022-33196) might require a\nfirmware update.\n\n\n* [CVE-2022-21216](https://security-tracker.debian.org/tracker/CVE-2022-21216)\n(INTEL-SA-00700)\n Insufficient granularity of access control in out-of-band\n management in some Intel(R) Atom and Intel Xeon Scalable Processors\n may allow a privileged user to potentially enable escalation of\n privilege via adjacent network access.\n* [CVE-2022-33196](https://security-tracker.debian.org/tracker/CVE-2022-33196)\n(INTEL-SA-00738)\n Incorrect default permissions in some memory controller\n configurations for some Intel(R) Xeon(R) Processors when using\n Intel(R) Software Guard Extensions which may allow a privileged user\n to potentially enable escalation of privilege via local access.\n\n\nThis fix may require a firmware update to be effective on some\n processors.\n* [CVE-2022-33972](https://security-tracker.debian.org/tracker/CVE-2022-33972)\n(INTEL-SA-00730)\n Incorrect calculation in microcode keying mechanism for some 3rd\n Generation Intel(R) Xeon(R) Scalable Processors may allow a\n privileged user to potentially enable information disclosure via\n local acces\n* [CVE-2022-38090](https://security-tracker.debian.org/tracker/CVE-2022-38090)\n(INTEL-SA-00767)\n Improper isolation of shared resources in some Intel(R) Processors\n when using Intel(R) Software Guard Extensions may allow a privileged\n user to potentially enable information disclosure via local access.\n* [CVE-2022-21233](https://security-tracker.debian.org/tracker/CVE-2022-21233)\n(INTEL-SA-00657)\n Improper isolation of shared resources in some Intel(R) Processors\n may allow a privileged user to potentially enable information\n disclosure via local access.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.20230214.1~deb10u1.\n\n\nWe recommend that you upgrade your intel-microcode packages.\n\n\nFor the detailed security status of intel-microcode please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/intel-microcode>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -201,12 +200,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3379-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3379"
 		}
 	]
 }

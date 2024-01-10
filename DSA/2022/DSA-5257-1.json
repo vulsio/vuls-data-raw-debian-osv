@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5257-1",
-	"modified": "2023-10-16T00:16:12.746221Z",
+	"modified": "2024-01-09T20:29:25.112035Z",
 	"published": "2022-10-18T00:00:00Z",
 	"related": [
 		"CVE-2021-4037",
@@ -23,7 +23,6 @@
 		"CVE-2022-42722"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2021-4037](https://security-tracker.debian.org/tracker/CVE-2021-4037)\nChristian Brauner reported that the inode\\_init\\_owner function for\n the XFS filesystem in the Linux kernel allows local users to create\n files with an unintended group ownership allowing attackers to\n escalate privileges by making a plain file executable and SGID.\n* [CVE-2022-0171](https://security-tracker.debian.org/tracker/CVE-2022-0171)\nMingwei Zhang reported that a cache incoherence issue in the SEV API\n in the KVM subsystem may result in denial of service.\n* [CVE-2022-1184](https://security-tracker.debian.org/tracker/CVE-2022-1184)\nA flaw was discovered in the ext4 filesystem driver which can lead\n to a use-after-free. A local user permitted to mount arbitrary\n filesystems could exploit this to cause a denial of service (crash\n or memory corruption) or possibly for privilege escalation.\n* [CVE-2022-2602](https://security-tracker.debian.org/tracker/CVE-2022-2602)\nA race between handling an io\\_uring request and the Unix socket\n garbage collector was discovered. An attacker can take advantage of\n this flaw for local privilege escalation.\n* [CVE-2022-2663](https://security-tracker.debian.org/tracker/CVE-2022-2663)\nDavid Leadbeater reported flaws in the nf\\_conntrack\\_irc\n connection-tracking protocol module. When this module is enabled\n on a firewall, an external user on the same IRC network as an\n internal user could exploit its lax parsing to open arbitrary TCP\n ports in the firewall, to reveal their public IP address, or to\n block their IRC connection at the firewall.\n* [CVE-2022-3061](https://security-tracker.debian.org/tracker/CVE-2022-3061)\nA flaw was discovered in the i740 driver which may result in denial\n of service.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-3176](https://security-tracker.debian.org/tracker/CVE-2022-3176)\nA use-after-free flaw was discovered in the io\\_uring subsystem which\n may result in local privilege escalation to root.\n* [CVE-2022-3303](https://security-tracker.debian.org/tracker/CVE-2022-3303)\nA race condition in the snd\\_pcm\\_oss\\_sync function in the sound\n subsystem in the Linux kernel due to improper locking may result in\n denial of service.\n* [CVE-2022-20421](https://security-tracker.debian.org/tracker/CVE-2022-20421)\nA use-after-free vulnerability was discovered in the\n binder\\_inc\\_ref\\_for\\_node function in the Android binder driver. On\n systems where the binder driver is loaded, a local user could\n exploit this for privilege escalation.\n* [CVE-2022-39188](https://security-tracker.debian.org/tracker/CVE-2022-39188)\nJann Horn reported a race condition in the kernel's handling of\n unmapping of certain memory ranges. When a driver created a\n memory mapping with the VM\\_PFNMAP flag, which many GPU drivers do,\n the memory mapping could be removed and freed before it was\n flushed from the CPU TLBs. This could result in a page use-after-free.\n A local user with access to such a device could exploit\n this to cause a denial of service (crash or memory corruption) or\n possibly for privilege escalation.\n* [CVE-2022-39842](https://security-tracker.debian.org/tracker/CVE-2022-39842)\nAn integer overflow was discovered in the pxa3xx-gcu video driver\n which could lead to a heap out-of-bounds write.\n\n\nThis driver is not enabled in Debian's official kernel\n configurations.\n* [CVE-2022-40307](https://security-tracker.debian.org/tracker/CVE-2022-40307)\nA race condition was discovered in the EFI capsule-loader driver,\n which could lead to use-after-free. A local user permitted to\n access this device (/dev/efi\\_capsule\\_loader) could exploit this to\n cause a denial of service (crash or memory corruption) or possibly\n for privilege escalation. However, this device is normally only\n accessible by the root user.\n* [CVE-2022-41674](https://security-tracker.debian.org/tracker/CVE-2022-41674),\n [CVE-2022-42719](https://security-tracker.debian.org/tracker/CVE-2022-42719),\n [CVE-2022-42720](https://security-tracker.debian.org/tracker/CVE-2022-42720),\n [CVE-2022-42721](https://security-tracker.debian.org/tracker/CVE-2022-42721),\n [CVE-2022-42722](https://security-tracker.debian.org/tracker/CVE-2022-42722)\nSoenke Huster discovered several vulnerabilities in the mac80211\n subsystem triggered by WLAN frames which may result in denial of\n service or the execution or arbitrary code.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.149-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -69,12 +68,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5257-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5257"
 		}
 	]
 }

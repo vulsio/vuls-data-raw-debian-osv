@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1915-1",
-	"modified": "2023-10-16T00:05:42.897453Z",
+	"modified": "2024-01-09T20:27:36.431034Z",
 	"published": "2009-10-22T00:00:00Z",
 	"related": [
 		"CVE-2009-2695",
@@ -16,7 +16,6 @@
 		"CVE-2009-3613"
 	],
 	"summary": "linux-2.6 - several vulnerabilities",
-	"details": "\nNotice: Debian 5.0.4, the next point release of Debian 'lenny',\nwill include a new default value for the mmap\\_min\\_addr tunable.\nThis change will add an additional safeguard against a class of security\nvulnerabilities known as \"NULL pointer dereference\" vulnerabilities, but\nit will need to be overridden when using certain applications.\nAdditional information about this change, including instructions for\nmaking this change locally in advance of 5.0.4 (recommended), can be\nfound at: <https://wiki.debian.org/mmap_min_addr>.\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, sensitive memory leak or privilege escalation.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2009-2695](https://security-tracker.debian.org/tracker/CVE-2009-2695)\nEric Paris provided several fixes to increase the protection\n provided by the mmap\\_min\\_addr tunable against NULL pointer\n dereference vulnerabilities.\n* [CVE-2009-2903](https://security-tracker.debian.org/tracker/CVE-2009-2903)\nMark Smith discovered a memory leak in the appletalk\n implementation. When the appletalk and ipddp modules are loaded,\n but no ipddp\"N\" device is found, remote attackers can cause a\n denial of service by consuming large amounts of system memory.\n* [CVE-2009-2908](https://security-tracker.debian.org/tracker/CVE-2009-2908)\nLoic Minier discovered an issue in the eCryptfs filesystem. A\n local user can cause a denial of service (kernel oops) by causing\n a dentry value to go negative.\n* [CVE-2009-2909](https://security-tracker.debian.org/tracker/CVE-2009-2909)\nArjan van de Ven discovered an issue in the AX.25 protocol\n implementation. A specially crafted call to setsockopt() can\n result in a denial of service (kernel oops).\n* [CVE-2009-2910](https://security-tracker.debian.org/tracker/CVE-2009-2910)\nJan Beulich discovered the existence of a sensitive kernel memory\n leak. Systems running the 'amd64' kernel do not properly sanitize\n registers for 32-bit processes.\n* [CVE-2009-3001](https://security-tracker.debian.org/tracker/CVE-2009-3001)\nJiri Slaby fixed a sensitive memory leak issue in the ANSI/IEEE\n 802.2 LLC implementation. This is not exploitable in the Debian\n lenny kernel as root privileges are required to exploit this\n issue.\n* [CVE-2009-3002](https://security-tracker.debian.org/tracker/CVE-2009-3002)\nEric Dumazet fixed several sensitive memory leaks in the IrDA,\n X.25 PLP (Rose), NET/ROM, Acorn Econet/AUN, and Controller Area\n Network (CAN) implementations. Local users can exploit these\n issues to gain access to kernel memory.\n* [CVE-2009-3286](https://security-tracker.debian.org/tracker/CVE-2009-3286)\nEric Paris discovered an issue with the NFSv4 server\n implementation. When an O\\_EXCL create fails, files may be left\n with corrupted permissions, possibly granting unintentional\n privileges to other local users.\n* [CVE-2009-3290](https://security-tracker.debian.org/tracker/CVE-2009-3290)\nJan Kiszka noticed that the kvm\\_emulate\\_hypercall function in KVM\n does not prevent access to MMU hypercalls from ring 0, which\n allows local guest OS users to cause a denial of service (guest\n kernel crash) and read or write guest kernel memory.\n* [CVE-2009-3613](https://security-tracker.debian.org/tracker/CVE-2009-3613)\nAlistair Strachan reported an issue in the r8169 driver. Remote\n users can cause a denial of service (IOMMU space exhaustion and\n system crash) by transmitting a large amount of jumbo frames.\n\n\nFor the oldstable distribution (etch), these problems, where\napplicable, will be fixed in updates to linux-2.6 and linux-2.6.24.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.26-19lenny1.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 5.0 (lenny) |\n| --- | --- |\n| user-mode-linux | 2.6.26-1um-2+19lenny1 |\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1915-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1915"
 		}
 	]
 }

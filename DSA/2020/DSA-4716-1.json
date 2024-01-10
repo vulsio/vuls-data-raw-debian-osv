@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4716-1",
-	"modified": "2023-10-16T00:20:24.092227Z",
+	"modified": "2024-01-09T20:27:09.814606Z",
 	"published": "2020-07-02T00:00:00Z",
 	"related": [
 		"CVE-2020-13401"
 	],
 	"summary": "docker.io - security update",
-	"details": "\nEtienne Champetier discovered that Docker, a Linux container runtime,\ncreated network bridges which by default accept IPv6 router advertisements.\nThis could allow an attacker with the CAP\\_NET\\_RAW capability in a\ncontainer to spoof router advertisements, resulting in information\ndisclosure or denial of service.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 18.09.1+dfsg1-7.1+deb10u2.\n\n\nWe recommend that you upgrade your docker.io packages.\n\n\nFor the detailed security status of docker.io please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/docker.io](https://security-tracker.debian.org/tracker/docker.io)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4716-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2020/dsa-4716"
 		}
 	]
 }

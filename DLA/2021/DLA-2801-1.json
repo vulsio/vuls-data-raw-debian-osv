@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2801-1",
-	"modified": "2023-06-28T06:25:20.166735Z",
+	"modified": "2024-01-09T20:32:57.791532Z",
 	"published": "2021-10-30T00:00:00Z",
 	"related": [
 		"CVE-2017-9525",
@@ -10,7 +10,6 @@
 		"CVE-2019-9706"
 	],
 	"summary": "cron - security update",
-	"details": "\nSeveral security problems have been fixed in the cron daemon.\n\n\n* [CVE-2017-9525](https://security-tracker.debian.org/tracker/CVE-2017-9525)\nFix group crontab to root escalation via postinst.\n* [CVE-2019-9704](https://security-tracker.debian.org/tracker/CVE-2019-9704)\nA very large crontab created by a user could crash the daemon.\n* [CVE-2019-9705](https://security-tracker.debian.org/tracker/CVE-2019-9705)\nEnforce maximum crontab line count of 10000 to prevent a malicious\n user from creating an excessivly large crontab.\n* [CVE-2019-9706](https://security-tracker.debian.org/tracker/CVE-2019-9706)\nFix for possible DoS by use-after-free.\n* Additionally, a bypass of /etc/cron.{allow,deny} on failure to open has \nbeen fixed. If these files exist, then they must be readable by the user\nexecuting crontab(1). Users will now be denied by default if they aren't.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.0pl1-128+deb9u2.\n\n\nWe recommend that you upgrade your cron packages.\n\n\nFor the detailed security status of cron please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cron>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2801-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2801"
 		}
 	]
 }

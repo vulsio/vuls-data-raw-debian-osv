@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2041-1",
-	"modified": "2023-06-28T06:21:09.781993Z",
+	"modified": "2024-01-09T20:31:57.864558Z",
 	"published": "2019-12-18T00:00:00Z",
 	"related": [
 		"CVE-2019-3467"
 	],
 	"summary": "debian-edu-config - security update",
-	"details": "\nIt was discovered that debian-edu-config, the package containing the\nconfiguration files and scripts for Debian Edu (Skolelinux), contained an\ninsecure configuration for kadmin, the Kerberos administration server. The\ninsecure configuration allowed every user to change other users' passwords,\nthus impersonating them and possibly gaining their privileges.\n\n\nThe bug was not exposed in the officially documented user management\nfrontends of Debian Edu, but could be abused by local network users knowing\nhow to use the Kerberos backend.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.818+deb8u3.\n\n\nWe recommend that you upgrade your debian-edu-config packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2041-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2041"
 		}
 	]
 }

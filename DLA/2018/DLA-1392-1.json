@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1392-1",
-	"modified": "2023-06-28T06:20:37.651374Z",
+	"modified": "2024-01-09T20:31:06.936236Z",
 	"published": "2018-06-01T00:00:00Z",
 	"related": [
 		"CVE-2018-1093",
@@ -10,7 +10,6 @@
 		"CVE-2018-8897"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service.\n\n\n* [CVE-2018-1093](https://security-tracker.debian.org/tracker/CVE-2018-1093)\nWen Xu reported that a crafted ext4 filesystem image could trigger\n an out-of-bounds read in the ext4\\_valid\\_block\\_bitmap() function. A\n local user able to mount arbitrary filesystems could use this for\n denial of service.\n* [CVE-2018-1130](https://security-tracker.debian.org/tracker/CVE-2018-1130)\nThe syzbot software found that the DCCP implementation of\n sendmsg() does not check the socket state, potentially leading\n to a null pointer dereference. A local user could use this to\n cause a denial of service (crash).\n* [CVE-2018-8897](https://security-tracker.debian.org/tracker/CVE-2018-8897)\nNick Peterson of Everdox Tech LLC discovered that #DB exceptions\n that are deferred by MOV SS or POP SS are not properly handled,\n allowing an unprivileged user to crash the kernel and cause a\n denial of service.\n* [CVE-2018-10940](https://security-tracker.debian.org/tracker/CVE-2018-10940)\nDan Carpenter reported that the cdrom driver does not correctly\n validate the parameter to the CDROM\\_MEDIA\\_CHANGED ioctl. A user\n with access to a cdrom device could use this to cause a denial of\n service (crash).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.102-1. This version also includes bug fixes from upstream version\n3.2.102, including a fix for a regression in the SCTP implementation\nin version 3.2.101.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -108,12 +107,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1392-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1392"
 		}
 	]
 }

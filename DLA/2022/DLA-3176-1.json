@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3176-1",
-	"modified": "2023-06-28T06:26:53.921687Z",
-	"published": "2022-11-07T00:00:00Z",
+	"modified": "2024-01-09T20:33:21.743373Z",
+	"published": "2022-11-03T00:00:00Z",
 	"related": [
 		"CVE-2021-42387",
 		"CVE-2021-42388",
@@ -10,7 +10,6 @@
 		"CVE-2021-43305"
 	],
 	"summary": "clickhouse - security update",
-	"details": "\nSeveral security vulnerabilities were discovered in clickhouse, a\ncolumn-oriented database system.\n\n\nThe vulnerabilities require authentication, but can be triggered by any user\nwith read permissions. This means the attacker must perform reconnaissance on\nthe specific ClickHouse server target to obtain valid credentials. Any set of\ncredentials would do, since even a user with the lowest privileges can trigger\nall of the vulnerabilities. By triggering the vulnerabilities, an attacker can\ncrash the ClickHouse server, leak memory contents or even cause remote code\nexecution.\n\n\n* [CVE-2021-42387](https://security-tracker.debian.org/tracker/CVE-2021-42387):\n\n Heap out-of-bounds read in Clickhouse's LZ4 compression codec when\n parsing a malicious query. As part of the LZ4::decompressImpl() loop,\n a 16-bit unsigned user-supplied value ('offset') is read from the\n compressed data. The offset is later used in the length of a copy\n operation, without checking the upper bounds of the source of the copy\n operation.\n* [CVE-2021-42388](https://security-tracker.debian.org/tracker/CVE-2021-42388):\n\n Heap out-of-bounds read in Clickhouse's LZ4 compression codec when\n parsing a malicious query. As part of the LZ4::decompressImpl() loop,\n a 16-bit unsigned user-supplied value ('offset') is read from the\n compressed data. The offset is later used in the length of a copy\n operation, without checking the lower bounds of the source of the copy\n operation.\n* [CVE-2021-43304](https://security-tracker.debian.org/tracker/CVE-2021-43304):\n\n Heap buffer overflow in Clickhouse's LZ4 compression codec when\n parsing a malicious query. There is no verification that the copy\n operations in the LZ4::decompressImpl loop and especially the\n arbitrary copy operation wildCopy<copy\\_amount>(op, ip,\n copy\\_end), don&#8217;t exceed the destination buffer&#8217;s\n limits.\n* [CVE-2021-43305](https://security-tracker.debian.org/tracker/CVE-2021-43305):\n\n Heap buffer overflow in Clickhouse's LZ4 compression codec when\n parsing a malicious query. There is no verification that the copy\n operations in the LZ4::decompressImpl loop and especially the\n arbitrary copy operation wildCopy<copy\\_amount>(op, ip,\n copy\\_end), don&#8217;t exceed the destination buffer&#8217;s\n limits. This issue is very similar to [CVE-2021-43304](https://security-tracker.debian.org/tracker/CVE-2021-43304), but the\n vulnerable copy operation is in a different wildCopy call.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n18.16.1+ds-4+deb10u1.\n\n\nWe recommend that you upgrade your clickhouse packages.\n\n\nFor the detailed security status of clickhouse please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/clickhouse>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3176-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3176"
 		}
 	]
 }

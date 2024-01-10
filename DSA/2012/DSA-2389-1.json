@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2389-1",
-	"modified": "2023-10-16T00:11:12.907606Z",
+	"modified": "2024-01-09T20:22:47.913464Z",
 	"published": "2012-01-15T00:00:00Z",
 	"related": [
 		"CVE-2011-2183",
@@ -16,7 +16,6 @@
 		"CVE-2011-4914"
 	],
 	"summary": "linux-2.6 - several",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service or privilege escalation. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2011-2183](https://security-tracker.debian.org/tracker/CVE-2011-2183)\nAndrea Righi reported an issue in KSM, a memory-saving de-duplication\n feature. By exploiting a race with exiting tasks, local users can cause\n a kernel oops, resulting in a denial of service.\n* [CVE-2011-2213](https://security-tracker.debian.org/tracker/CVE-2011-2213)\nDan Rosenberg discovered an issue in the INET socket monitoring interface.\n Local users could cause a denial of service by injecting code and causing\n the kernel to execute an infinite loop.\n* [CVE-2011-2898](https://security-tracker.debian.org/tracker/CVE-2011-2898)\nEric Dumazet reported an information leak in the raw packet socket\n implementation.\n* [CVE-2011-3353](https://security-tracker.debian.org/tracker/CVE-2011-3353)\nHan-Wen Nienhuys reported a local denial of service issue in the FUSE\n (Filesystem in Userspace) support in the Linux kernel. Local users could\n cause a buffer overflow, leading to a kernel oops and resulting in a denial\n of service.\n* [CVE-2011-4077](https://security-tracker.debian.org/tracker/CVE-2011-4077)\nCarlos Maiolino reported an issue in the XFS filesystem. A local user\n with the ability to mount a filesystem could corrupt memory resulting\n in a denial of service or possibly gain elevated privileges.\n* [CVE-2011-4110](https://security-tracker.debian.org/tracker/CVE-2011-4110)\nDavid Howells reported an issue in the kernel's access key retention\n system which allow local users to cause a kernel oops leading to a denial\n of service.\n* [CVE-2011-4127](https://security-tracker.debian.org/tracker/CVE-2011-4127)\nPaolo Bonzini of Red Hat reported an issue in the ioctl passthrough\n support for SCSI devices. Users with permission to access restricted\n portions of a device (e.g. a partition or a logical volume) can obtain\n access to the entire device by way of the SG\\_IO ioctl. This could be\n exploited by a local user or privileged VM guest to achieve a privilege\n escalation.\n* [CVE-2011-4611](https://security-tracker.debian.org/tracker/CVE-2011-4611)\nMaynard Johnson reported an issue with the perf support on POWER7 systems\n that allows local users to cause a denial of service.\n* [CVE-2011-4622](https://security-tracker.debian.org/tracker/CVE-2011-4622)\nJan Kiszka reported an issue in the KVM PIT timer support. Local users\n with the permission to use KVM can cause a denial of service by starting\n a PIT timer without first setting up the irqchip.\n* [CVE-2011-4914](https://security-tracker.debian.org/tracker/CVE-2011-4914)\nBen Hutchings reported various bounds checking issues within the ROSE\n protocol support in the kernel. Remote users could possibly use this\n to gain access to sensitive memory or cause a denial of service.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in version\n2.6.32-39squeeze1. Updates for issues impacting the oldstable distribution\n(lenny) will be available soon.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+39squeeze1 |\n\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2389-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2389"
 		}
 	]
 }

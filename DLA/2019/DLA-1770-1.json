@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1770-1",
-	"modified": "2023-06-28T06:26:09.793705Z",
+	"modified": "2024-01-09T20:31:43.102832Z",
 	"published": "2019-04-28T00:00:00Z",
 	"related": [
 		"CVE-2019-9928"
 	],
 	"summary": "gst-plugins-base1.0 - security update",
-	"details": "\nThe RTSP connection parser in the base GStreamer packages version 1.0,\nwhich is a streaming media framework, was vulnerable against an\nheap-based buffer overflow by sending a longer than allowed session id in\na response and including a semicolon to change the maximum length. This\ncould result in a remote code execution.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.4.4-2+deb8u2.\n\n\nWe recommend that you upgrade your gst-plugins-base1.0 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1770-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1770"
 		}
 	]
 }

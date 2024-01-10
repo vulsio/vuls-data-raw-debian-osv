@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2469-1",
-	"modified": "2023-10-16T00:05:56.377456Z",
-	"published": "2012-05-10T00:00:00Z",
+	"modified": "2024-01-09T20:22:54.158134Z",
+	"published": "2012-05-09T00:00:00Z",
 	"related": [
 		"CVE-2011-4086",
 		"CVE-2012-0879",
@@ -11,7 +11,6 @@
 		"CVE-2012-2133"
 	],
 	"summary": "linux-2.6 - several",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may lead\nto a denial of service or privilege escalation. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2011-4086](https://security-tracker.debian.org/tracker/CVE-2011-4086)\nEric Sandeen reported an issue in the journaling layer for ext4 filesystems\n (jbd2). Local users can cause buffers to be accessed after they have been\n torn down, resulting in a denial of service (DoS) due to a system crash.\n* [CVE-2012-0879](https://security-tracker.debian.org/tracker/CVE-2012-0879)\nLouis Rilling reported two reference counting issues in the CLONE\\_IO\n feature of the kernel. Local users can prevent io context structures\n from being freed, resulting in a denial of service.\n* [CVE-2012-1601](https://security-tracker.debian.org/tracker/CVE-2012-1601)\nMichael Ellerman reported an issue in the KVM subsystem. Local users could\n cause a denial of service (NULL pointer dereference) by creating VCPUs\n before a call to KVM\\_CREATE\\_IRQCHIP.\n* [CVE-2012-2123](https://security-tracker.debian.org/tracker/CVE-2012-2123)\nSteve Grubb reported an issue in fcaps, a filesystem-based capabilities\n system. Personality flags set using this mechanism, such as the disabling\n of address space randomization, may persist across suid calls.\n* [CVE-2012-2133](https://security-tracker.debian.org/tracker/CVE-2012-2133)\nShachar Raindel discovered a use-after-free bug in the hugepages\n quota implementation. Local users with permission to use hugepages\n via the hugetlbfs implementation may be able to cause a denial of\n service (system crash).\n\n\nFor the stable distribution (squeeze), this problem has been fixed in version\n2.6.32-44. Updates are currently only available for the amd64, i386 and sparc\nports.\n\n\n\n**Note**: updated linux-2.6 packages will also be made available in the release\nof Debian 6.0.5, scheduled to take place the weekend of 2012.05.12. This\npending update will be version 2.6.32-45, and provides an additional fix for\nbuild failures on some architectures. Users for whom this update is not\ncritical, and who may wish to avoid multiple reboots, should consider waiting\nfor the 6.0.5 release before updating, or installing the 2.6.32-45 version\nahead of time from proposed-updates.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n\n|  | Debian 6.0 (squeeze) |\n| --- | --- |\n| user-mode-linux | 2.6.32-1um-4+44 |\n\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,12 +58,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2469-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2469"
 		}
 	]
 }

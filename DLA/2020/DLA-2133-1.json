@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2133-1",
-	"modified": "2023-06-28T06:21:13.257805Z",
+	"modified": "2024-01-09T20:32:03.169545Z",
 	"published": "2020-03-04T00:00:00Z",
 	"related": [
 		"CVE-2019-17569",
@@ -9,7 +9,6 @@
 		"CVE-2020-1938"
 	],
 	"summary": "tomcat7 - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2019-17569](https://security-tracker.debian.org/tracker/CVE-2019-17569)\nThe refactoring in 7.0.98 introduced a regression. The result of\n the regression was that invalid Transfer-Encoding headers were\n incorrectly processed leading to a possibility of HTTP Request\n Smuggling if Tomcat was located behind a reverse proxy that\n incorrectly handled the invalid Transfer-Encoding header in a\n particular manner. Such a reverse proxy is considered unlikely.\n* [CVE-2020-1935](https://security-tracker.debian.org/tracker/CVE-2020-1935)\nThe HTTP header parsing code used an approach to end-of-line (EOL)\n parsing that allowed some invalid HTTP headers to be parsed as\n valid. This led to a possibility of HTTP Request Smuggling if Tomcat\n was located behind a reverse proxy that incorrectly handled the\n invalid Transfer-Encoding header in a particular manner. Such a\n reverse proxy is considered unlikely.\n* [CVE-2020-1938](https://security-tracker.debian.org/tracker/CVE-2020-1938)\nWhen using the Apache JServ Protocol (AJP), care must be taken when\n trusting incoming connections to Apache Tomcat. Tomcat treats AJP\n connections as having higher trust than, for example, a similar HTTP\n connection. If such connections are available to an attacker, they\n can be exploited in ways that may be surprising. Prior to Tomcat\n 7.0.100, Tomcat shipped with an AJP Connector enabled by default\n that listened on all configured IP addresses. It was expected (and\n recommended in the security guide) that this Connector would be\n disabled if not required.\n\n\nNote that Debian already disabled the AJP connector by default.\n Mitigation is only required if the AJP port was made accessible to\n untrusted users.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n7.0.56-3+really7.0.100-1.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -53,12 +52,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2133-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2133"
 		}
 	]
 }

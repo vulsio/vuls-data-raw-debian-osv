@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-382-1",
-	"modified": "2023-06-28T06:21:30.891135Z",
+	"modified": "2024-01-09T20:33:45.559204Z",
 	"published": "2016-01-11T00:00:00Z",
 	"related": [
 		"CVE-2015-5602"
 	],
 	"summary": "sudo - security update",
-	"details": "\nWhen sudo is configured to allow a user to edit files under a\ndirectory that they can already write to without using sudo, they can\nactually edit (read and write) arbitrary files. Daniel Svartman\nreported that a configuration like this might be introduced\nunintentionally if the editable files are specified using wildcards,\nfor example:\n\n\n\n```\n\n    operator ALL=(root) sudoedit /home/*/*/test.txt\n\n```\n\nThe default behaviour of sudo has been changed so that it does not\nallow editing of a file in a directory that the user can write to, or\nthat is reached by following a symlink in a directory that the user\ncan write to. These restrictions can be disabled, but this is\nstrongly discouraged.\n\n\nFor the oldoldstable distribution (squeeze), this has been fixed in\nversion 1.7.4p4-2.squeeze.6.\n\n\nFor the oldstable distribution (wheezy) and the stable distribution\n(jessie), this will be fixed soon.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-382-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-382"
 		}
 	]
 }

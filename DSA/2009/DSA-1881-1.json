@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1881-1",
-	"modified": "2023-10-16T00:10:44.455857Z",
+	"modified": "2024-01-09T20:22:34.090667Z",
 	"published": "2009-09-07T00:00:00Z",
 	"related": [
 		"CVE-2009-2632"
 	],
 	"summary": "cyrus-imapd - buffer overflow",
-	"details": "\nIt was discovered that the SIEVE component of cyrus-imapd, a highly scalable\nenterprise mail system, is vulnerable to a buffer overflow when processing\nSIEVE scripts. Due to incorrect use of the sizeof() operator an attacker is\nable to pass a negative length to snprintf() calls resulting in large positive\nvalues due to integer conversion. This causes a buffer overflow which can be\nused to elevate privileges to the cyrus system user. An attacker who is able\nto install SIEVE scripts executed by the server is therefore able to read and\nmodify arbitrary email messages on the system.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.2.13-10+etch2.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.2.13-14+lenny1.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your cyrus-imapd-2.2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1881-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1881"
 		}
 	]
 }

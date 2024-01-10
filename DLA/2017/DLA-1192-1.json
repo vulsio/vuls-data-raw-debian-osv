@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1192-1",
-	"modified": "2023-06-28T06:20:28.887133Z",
+	"modified": "2024-01-09T20:35:23.137605Z",
 	"published": "2017-11-26T00:00:00Z",
 	"related": [
 		"CVE-2017-14731",
 		"CVE-2017-2816"
 	],
 	"summary": "libofx - security update",
-	"details": "\n* [CVE-2017-2816](https://security-tracker.debian.org/tracker/CVE-2017-2816)\nAn exploitable buffer overflow vulnerability exists in the tag\n parsing functionality of LibOFX 0.9.11. A specially crafted OFX\n file can cause a write out of bounds resulting in a buffer\n overflow on the stack. An attacker can construct a malicious\n OFX file to trigger this vulnerability.\n* [CVE-2017-14731](https://security-tracker.debian.org/tracker/CVE-2017-14731)\nofx\\_proc\\_file in ofx\\_preproc.cpp allows remote attackers to cause\n a denial of service (heap-based buffer over-read and application\n crash) via a crafted file\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:0.9.4-2.1+deb7u1.\n\n\nWe recommend that you upgrade your libofx packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1192-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1192"
 		}
 	]
 }

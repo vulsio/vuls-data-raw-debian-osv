@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3514-1",
-	"modified": "2023-08-02T11:20:01.000866Z",
+	"modified": "2024-01-09T20:33:31.656598Z",
 	"published": "2023-08-02T00:00:00Z",
 	"related": [
 		"CVE-2023-33201"
 	],
 	"summary": "bouncycastle - security update",
-	"details": "\nIt was discovered that there was a protential LDAP injection vulnerability\nin Bouncy Castle, a cryptographic library for Java. During the certificate\nvalidation process, bouncycastle used the certificate's \"Subject Name\" into an\nLDAP search filter without any escaping.\n\n\n* [CVE-2023-33201](https://security-tracker.debian.org/tracker/CVE-2023-33201)\nBouncy Castle For Java before 1.74 is affected by an LDAP injection\n vulnerability. The vulnerability only affects applications that use an LDAP\n CertStore from Bouncy Castle to validate X.509 certificates. During the\n certificate validation process, Bouncy Castle inserts the certificate's\n Subject Name into an LDAP search filter without any escaping, which leads\n to an LDAP injection vulnerability.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1.60-1+deb10u1.\n\n\nWe recommend that you upgrade your bouncycastle packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3514-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3514"
 		}
 	]
 }

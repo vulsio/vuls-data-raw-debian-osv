@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3407-1",
-	"modified": "2023-10-16T00:11:59.246986Z",
+	"modified": "2024-01-09T20:28:13.029911Z",
 	"published": "2015-11-26T00:00:00Z",
 	"related": [
 		"CVE-2015-0860"
 	],
 	"summary": "dpkg - security update",
-	"details": "\nHanno Boeck discovered a stack-based buffer overflow in the dpkg-deb\ncomponent of dpkg, the Debian package management system. This flaw could\npotentially lead to arbitrary code execution if a user or an automated\nsystem were tricked into processing a specially crafted Debian binary\npackage (.deb) in the old style Debian binary package format.\n\n\nThis update also includes updated translations and additional bug fixes.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.16.17.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.17.26.\n\n\nWe recommend that you upgrade your dpkg packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3407-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3407"
 		}
 	]
 }

@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1845-1",
-	"modified": "2023-10-16T00:10:39.495259Z",
-	"published": "2009-07-28T00:00:00Z",
+	"modified": "2024-01-09T20:22:32.962586Z",
+	"published": "2009-06-28T00:00:00Z",
 	"related": [
 		"CVE-2009-1895",
 		"CVE-2009-2287",
@@ -10,7 +10,6 @@
 		"CVE-2009-2407"
 	],
 	"summary": "linux-2.6 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2009-1895](https://security-tracker.debian.org/tracker/CVE-2009-1895)\nJulien Tinnes and Tavis Ormandy reported an issue in the Linux\n personality code. Local users can take advantage of a setuid\n binary that can either be made to dereference a NULL pointer or\n drop privileges and return control to the user. This allows a\n user to bypass mmap\\_min\\_addr restrictions which can be exploited\n to execute arbitrary code.\n* [CVE-2009-2287](https://security-tracker.debian.org/tracker/CVE-2009-2287)\nMatt T. Yourst discovered an issue in the kvm subsystem. Local\n users with permission to manipulate /dev/kvm can cause a denial\n of service (hang) by providing an invalid cr3 value to the\n KVM\\_SET\\_SREGS call.\n* [CVE-2009-2406](https://security-tracker.debian.org/tracker/CVE-2009-2406)\n[CVE-2009-2407](https://security-tracker.debian.org/tracker/CVE-2009-2407)\nRamon de Carvalho Valle discovered two issues with the eCryptfs\n layered filesystem using the fsfuzzer utility. A local user with\n permissions to perform an eCryptfs mount may modify the contents\n of a eCryptfs file, overflowing the stack and potentially gaining\n elevated privileges.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.6.26-17lenny1.\n\n\nFor the oldstable distribution (etch), these problems, where\napplicable, will be fixed in updates to linux-2.6 and linux-2.6.24.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1845-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1845"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2677-1",
-	"modified": "2023-06-28T06:26:40.056094Z",
+	"modified": "2024-01-09T20:32:51.003882Z",
 	"published": "2021-06-05T00:00:00Z",
 	"related": [
 		"CVE-2018-25009",
@@ -16,7 +16,6 @@
 		"CVE-2020-36331"
 	],
 	"summary": "libwebp - security update",
-	"details": "\nMultiple security issues have been discovered in libwebp\n\n\n* [CVE-2018-25009](https://security-tracker.debian.org/tracker/CVE-2018-25009)\nAn out-of-bounds read was found in function WebPMuxCreateInternal.\n The highest threat from this vulnerability is to data confidentiality\n and to the service availability.\n* [CVE-2018-25010](https://security-tracker.debian.org/tracker/CVE-2018-25010)\nAn out-of-bounds read was found in function ApplyFilter.\n The highest threat from this vulnerability is to data confidentiality\n and to the service availability.\n* [CVE-2018-25011](https://security-tracker.debian.org/tracker/CVE-2018-25011)\nA heap-based buffer overflow was found in PutLE16().\n The highest threat from this vulnerability is to data confidentiality\n and integrity as well as system availability.\n* [CVE-2018-25012](https://security-tracker.debian.org/tracker/CVE-2018-25012)\nAn out-of-bounds read was found in function WebPMuxCreateInternal.\n The highest threat from this vulnerability is to data confidentiality\n and to the service availability.\n* [CVE-2018-25013](https://security-tracker.debian.org/tracker/CVE-2018-25013)\nAn out-of-bounds read was found in function ShiftBytes.\n The highest threat from this vulnerability is to data confidentiality\n and to the service availability.\n* [CVE-2018-25014](https://security-tracker.debian.org/tracker/CVE-2018-25014)\nAn unitialized variable is used in function ReadSymbol.\n The highest threat from this vulnerability is to data confidentiality\n and integrity as well as system availability.\n* [CVE-2020-36328](https://security-tracker.debian.org/tracker/CVE-2020-36328)\nA heap-based buffer overflow in function WebPDecodeRGBInto is possible\n due to an invalid check for buffer size. The highest threat from this\n vulnerability is to data confidentiality and integrity as well as system\n availability.\n* [CVE-2020-36329](https://security-tracker.debian.org/tracker/CVE-2020-36329)\nA use-after-free was found due to a thread being killed too early.\n The highest threat from this vulnerability is to data confidentiality\n and integrity as well as system availability.\n* [CVE-2020-36330](https://security-tracker.debian.org/tracker/CVE-2020-36330)\nAn out-of-bounds read was found in function ChunkVerifyAndAssign.\n The highest threat from this vulnerability is to data confidentiality\n and to the service availability.\n* [CVE-2020-36331](https://security-tracker.debian.org/tracker/CVE-2020-36331)\nAn out-of-bounds read was found in function ChunkAssignData.\n The highest threat from this vulnerability is to data confidentiality\n and to the service availability.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.5.2-1+deb9u1.\n\n\nWe recommend that you upgrade your libwebp packages.\n\n\nFor the detailed security status of libwebp please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libwebp>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2677-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2677"
 		}
 	]
 }

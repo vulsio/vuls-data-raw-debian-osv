@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2676-1",
-	"modified": "2023-06-28T06:26:39.768123Z",
+	"modified": "2024-01-09T20:32:50.949684Z",
 	"published": "2021-06-05T00:00:00Z",
 	"related": [
 		"CVE-2021-33203",
 		"CVE-2021-33571"
 	],
 	"summary": "python-django - security update",
-	"details": "\nTwo issues were discovered in Django, the Python-based web development\nframework:\n\n\n* [CVE-2021-33203](https://security-tracker.debian.org/tracker/CVE-2021-33203)\nPotential directory traversal via admindocs\n\n\nStaff members could use the admindocs TemplateDetailView view to check\n the existence of arbitrary files. Additionally, if (and only if) the\n default admindocs templates have been customized by the developers to also\n expose the file contents, then not only the existence but also the file\n contents would have been exposed.\n\n\nAs a mitigation, path sanitation is now applied and only files within\n the template root directories can be loaded.\n\n\nThis issue has low severity, according to the Django security policy.\n Thanks to Rasmus Lerchedahl Petersen and Rasmus Wriedt Larsen from the\n CodeQL Python team for the report.\n* [CVE-2021-33571](https://security-tracker.debian.org/tracker/CVE-2021-33571)\nPossible indeterminate SSRF, RFI, and LFI attacks since validators\n accepted leading zeros in IPv4 addresses\n\n\nURLValidator, validate\\_ipv4\\_address(), and validate\\_ipv46\\_address()\n didn't prohibit leading zeros in octal literals. If you used such values\n you could suffer from indeterminate SSRF, RFI, and LFI attacks.\n\n\nvalidate\\_ipv4\\_address() and validate\\_ipv46\\_address() validators were not\n affected on Python 3.9.5+.\n\n\nThis issue has medium severity, according to the Django security\n policy.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1:1.10.7-2+deb9u14.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2676-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2676"
 		}
 	]
 }

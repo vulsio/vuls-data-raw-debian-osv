@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-213",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-12-19T00:00:00Z",
 	"published": "2002-12-19T00:00:00Z",
 	"related": [
 		"CVE-2002-1363"
 	],
 	"summary": "libpng - buffer overflow",
-	"details": "\nGlenn Randers-Pehrson discovered a problem in connection with 16-bit\nsamples from libpng, an interface for reading and writing PNG\n(Portable Network Graphics) format files. The starting offsets for\nthe loops are calculated incorrectly which causes a buffer overrun\nbeyond the beginning of the row buffer.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.0.12-3.woody.3 for libpng and in version\n1.2.1-1.1.woody.3 for libpng3.\n\n\nFor the old stable distribution (potato) this problem has been fixed\nin version 1.0.5-1.1 for libpng. There are no other libpng packages.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0.12-7 for libpng and in version 1.2.5-8 for libpng3.\n\n\nWe recommend that you upgrade your libpng packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -54,12 +53,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-213.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-213"
 		}
 	]
 }

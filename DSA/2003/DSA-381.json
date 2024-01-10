@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-381",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-09-13T00:00:00Z",
 	"published": "2003-09-13T00:00:00Z",
 	"related": [
 		"CVE-2003-0780"
 	],
 	"summary": "mysql - buffer overflow",
-	"details": "\nMySQL, a popular relational database system, contains a buffer\noverflow condition which could be exploited by a user who has\npermission to execute \"ALTER TABLE\" commands on the tables in the\n\"mysql\" database. If successfully exploited, this vulnerability\ncould allow the attacker to execute arbitrary code with the\nprivileges of the mysqld process (by default, user \"mysql\"). Since\nthe \"mysql\" database is used for MySQL's internal record keeping, by\ndefault the mysql administrator \"root\" is the only user with\npermission to alter its tables.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 3.23.49-8.5.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\nRefer to Debian [bug #210403](https://bugs.debian.org/210403).\n\n\nWe recommend that you update your mysql package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-381.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-381"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-594-1",
-	"modified": "2023-06-28T06:21:37.551161Z",
+	"modified": "2024-01-09T20:33:50.083751Z",
 	"published": "2016-08-12T00:00:00Z",
 	"related": [
 		"CVE-2016-6515"
 	],
 	"summary": "openssh - security update",
-	"details": "\nOpenSSH secure shell client and server had a denial of service\nvulnerability reported.\n\n\n* [CVE-2016-6515](https://security-tracker.debian.org/tracker/CVE-2016-6515)\nThe password authentication function in sshd in OpenSSH before 7.3\n does not limit password lengths for password authentication, which\n allows remote attackers to cause a denial of service\n (crypt CPU consumption) via a long string.\n\n\nFor Debian 7 Wheezy, this problems has been fixed in version\n6.0p1-4+deb7u6.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-594-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-594"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3525-1",
-	"modified": "2023-08-17T17:17:58.307221Z",
-	"published": "2023-08-11T00:00:00Z",
+	"modified": "2024-01-09T20:33:32.211707Z",
+	"published": "2023-08-10T00:00:00Z",
 	"related": [
 		"CVE-2022-40982",
 		"CVE-2023-20569"
 	],
 	"summary": "linux-5.10 - security update",
-	"details": "\n* [CVE-2022-40982](https://security-tracker.debian.org/tracker/CVE-2022-40982)\nDaniel Moghimi discovered Gather Data Sampling (GDS), a hardware\n vulnerability for Intel CPUs which allows unprivileged speculative\n access to data which was previously stored in vector registers.\n\n\nThis mitigation requires updated CPU microcode provided in the\n intel-microcode package.\n\n\nFor details please refer to <https://downfall.page/> and\n <https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/gather-data-sampling.html>.\n* [CVE-2023-20569](https://security-tracker.debian.org/tracker/CVE-2023-20569)\nDaniel Trujillo, Johannes Wikner and Kaveh Razavi discovered\n INCEPTION, also known as Speculative Return Stack Overflow (SRSO),\n a transient execution attack that leaks arbitrary data on all AMD\n Zen CPUs. An attacker can mis-train the CPU BTB to predict non-architectural CALL instructions in kernel space and use this to\n control the speculative target of a subsequent kernel RET,\n potentially leading to information disclosure via a speculative\n side-channel.\n\n\nFor details please refer to\n <https://comsec.ethz.ch/research/microarch/inception/> and\n <https://www.amd.com/en/corporate/product-security/bulletin/amd-sb-7005>.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n5.10.179-5~deb10u1.\n\n\nWe recommend that you upgrade your linux-5.10 packages.\n\n\nFor the detailed security status of linux-5.10 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-5.10>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3525-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3525"
 		}
 	]
 }

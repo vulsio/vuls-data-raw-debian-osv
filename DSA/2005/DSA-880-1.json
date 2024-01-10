@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-880-1",
-	"modified": "2023-10-16T00:29:29.753775Z",
+	"modified": "2024-01-09T20:34:10.759153Z",
 	"published": "2005-11-02T00:00:00Z",
 	"related": [
 		"CVE-2005-2869",
@@ -10,7 +10,6 @@
 		"CVE-2005-3787"
 	],
 	"summary": "phpmyadmin - several",
-	"details": "\nSeveral cross-site scripting vulnerabilities have been discovered in\nphpmyadmin, a set of PHP-scripts to administrate MySQL over the WWW.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CAN-2005-2869](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2869)\nAndreas Kerber and Michal Cihar discovered several cross-site\n scripting vulnerabilities in the error page and in the cookie\n login.\n* [CVE-2005-3300](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-3300)\nStefan Esser discovered missing safety checks in grab\\_globals.php\n that could allow an attacker to induce phpmyadmin to include an\n arbitrary local file.\n* [CVE-2005-3301](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-3301)\nTobias Klein discovered several cross-site scripting\n vulnerabilities that could allow attackers to inject arbitrary\n HTML or client-side scripting.\n\n\nThe version in the old stable distribution (woody) has probably its\nown flaws and is not easily fixable without a full audit and patch\nsession. The easier way is to upgrade it from woody to sarge.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.6.2-3sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.6.4-pl3-1.\n\n\nWe recommend that you upgrade your phpmyadmin package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -298,7 +297,8 @@
 				"4:5.2.0+dfsg1-1",
 				"4:5.2.0+dfsg1-2",
 				"4:5.2.1+dfsg-1",
-				"4:5.2.1+dfsg-1~bpo11+1"
+				"4:5.2.1+dfsg-1~bpo11+1",
+				"4:5.2.1+dfsg-2"
 			],
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-880-1.json"
@@ -329,12 +329,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-880-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-880"
 		}
 	]
 }

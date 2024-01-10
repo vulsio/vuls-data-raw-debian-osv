@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3526-1",
-	"modified": "2023-08-13T19:18:47.307589Z",
+	"modified": "2024-01-09T20:33:32.204436Z",
 	"published": "2023-08-13T00:00:00Z",
 	"related": [
 		"CVE-2022-38745",
@@ -9,7 +9,6 @@
 		"CVE-2023-2255"
 	],
 	"summary": "libreoffice - security update",
-	"details": "\nLibreOffice an office productivity suite was affected by multiple\nvulnerabilities.\n\n\n* [CVE-2022-38745](https://security-tracker.debian.org/tracker/CVE-2022-3874)\nLibreoffice may be configured to add an empty\n entry to the Java class path.\n This may lead to run arbitrary Java code from the\n current directory.\n* [CVE-2023-0950](https://security-tracker.debian.org/tracker/CVE-2023-0950)\nImproper Validation of Array Index vulnerability in the\n spreadsheet component allows an attacker to craft a\n spreadsheet document that will cause an array index\n underflow when loaded. In the affected versions of LibreOffice\n certain malformed spreadsheet formulas, such as AGGREGATE,\n could be created with less parameters passed to the formula\n interpreter than it expected, leading to an array index\n underflow, in which case there is a risk that arbitrary\n code could be executed.\n* [CVE-2023-2255](https://security-tracker.debian.org/tracker/CVE-2023-2255)\nImproper access control in editor components of\n LibreOffice allowed an attacker to craft\n a document that would cause external links to be loaded without prompt.\n In the affected versions of LibreOffice documents\n that used floating frames\n linked to external files, would load the contents of those frames\n without prompting the user for permission to do so.\n This was inconsistent with the treatment of other linked\n content in LibreOffice.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:6.1.5-3+deb10u10.\n\n\nWe recommend that you upgrade your libreoffice packages.\n\n\nFor the detailed security status of libreoffice please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libreoffice>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3526-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3526"
 		}
 	]
 }

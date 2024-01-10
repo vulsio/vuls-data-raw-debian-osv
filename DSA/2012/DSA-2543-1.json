@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2543-1",
-	"modified": "2023-10-16T00:11:17.908626Z",
+	"modified": "2024-01-09T20:23:00.358525Z",
 	"published": "2012-09-08T00:00:00Z",
 	"related": [
 		"CVE-2012-3515",
 		"CVE-2012-4411"
 	],
 	"summary": "xen-qemu-dm-4.0 - multiple",
-	"details": "\nMultiple vulnerabilities have been discovered in xen-qemu-dm-4.0, the Xen\nQEMU Device Model virtual machine hardware emulator. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2012-3515](https://security-tracker.debian.org/tracker/CVE-2012-3515):\n\n The device model for HVM domains does not properly handle VT100\n escape sequences when emulating certain devices with a virtual\n console backend. An attacker within a guest with access to the\n vulnerable virtual console could overwrite memory of the device\n model and escalate privileges to that of the device model process.\n* [CVE-2012-4411](https://security-tracker.debian.org/tracker/CVE-2012-4411):\n\n The QEMU monitor was enabled by default, allowing administrators of\n a guest to access resources of the host, possibly escalate privileges\n or access resources belonging to another guest.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 4.0.1-2+squeeze2.\n\n\nThe testing distribution (wheezy), and the unstable distribution (sid),\nno longer contain this package.\n\n\nWe recommend that you upgrade your xen-qemu-dm-4.0 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2543-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2543"
 		}
 	]
 }

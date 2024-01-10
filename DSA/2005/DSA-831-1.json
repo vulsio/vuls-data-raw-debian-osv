@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-831-1",
-	"modified": "2023-10-16T00:24:37.082969Z",
+	"modified": "2024-01-09T20:34:08.807649Z",
 	"published": "2005-09-30T00:00:00Z",
 	"related": [
 		"CVE-2005-2558"
 	],
 	"summary": "mysql-dfsg-4.1 - several",
-	"details": "\nA stack-based buffer overflow in the init\\_syms function of MySQL, a\npopular database, has been discovered that allows remote authenticated\nusers who can create user-defined functions to execute arbitrary code\nvia a long function\\_name field. The ability to create user-defined\nfunctions is not typically granted to untrusted users.\n\n\nThe following vulnerability matrix shows which version of MySQL in\nwhich distribution has this problem fixed:\n\n\n\n\n\n|  | woody | sarge | sid |\n| --- | --- | --- | --- |\n| mysql | 3.23.49-8.14 | n/a | n/a |\n| mysql-dfsg | n/a | 4.0.24-10sarge1 | 4.0.24-10sarge1 |\n| mysql-dfsg-4.1 | n/a | 4.1.11a-4sarge2 | 4.1.14-2 |\n| mysql-dfsg-5.0 | n/a | n/a | 5.0.11beta-3 |\n\n\n\nWe recommend that you upgrade your mysql-dfsg packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-831-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-831"
 		}
 	]
 }

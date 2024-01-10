@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4905-1",
-	"modified": "2023-10-16T00:15:04.939517Z",
+	"modified": "2024-01-09T20:27:12.616878Z",
 	"published": "2021-04-27T00:00:00Z",
 	"related": [
 		"CVE-2021-31826"
 	],
 	"summary": "shibboleth-sp - security update",
-	"details": "\nIt was discovered that the Shibboleth Service Provider is prone to a\nNULL pointer dereference flaw in the cookie-based session recovery\nfeature. A remote, unauthenticated attacker can take advantage of this\nflaw to cause a denial of service (crash in the shibd daemon/service).\n\n\nFor additional information please refer to the upstream advisory at\n<https://shibboleth.net/community/advisories/secadv_20210426.txt>\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 3.0.4+dfsg1-1+deb10u2.\n\n\nWe recommend that you upgrade your shibboleth-sp packages.\n\n\nFor the detailed security status of shibboleth-sp please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/shibboleth-sp>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4905-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-4905"
 		}
 	]
 }

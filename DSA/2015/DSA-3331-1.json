@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3331-1",
-	"modified": "2023-10-16T00:06:20.158007Z",
+	"modified": "2024-01-09T20:21:46.793610Z",
 	"published": "2015-08-10T00:00:00Z",
 	"related": [
 		"CVE-2015-3184",
 		"CVE-2015-3187"
 	],
 	"summary": "subversion - security update",
-	"details": "\nSeveral security issues have been found in the server components of the\nversion control system subversion.\n\n\n* [CVE-2015-3184](https://security-tracker.debian.org/tracker/CVE-2015-3184)\nSubversion's mod\\_authz\\_svn does not properly restrict anonymous\n access in some mixed anonymous/authenticated environments when\n using Apache httpd 2.4. The result is that anonymous access may\n be possible to files for which only authenticated access should\n be possible. This issue does not affect the oldstable distribution\n (wheezy) because it only contains Apache httpd 2.2.\n* [CVE-2015-3187](https://security-tracker.debian.org/tracker/CVE-2015-3187)\nSubversion servers, both httpd and svnserve, will reveal some\n paths that should be hidden by path-based authz. When a node is\n copied from an unreadable location to a readable location the\n unreadable path may be revealed. This vulnerablity only reveals\n the path, it does not reveal the contents of the path.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.6.17dfsg-4+deb7u10.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.8.10-6+deb8u1.\n\n\nFor the testing distribution (stretch), these problems will be fixed in\nversion 1.9.0-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.0-1.\n\n\nWe recommend that you upgrade your subversion packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -69,12 +68,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3331-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3331"
 		}
 	]
 }

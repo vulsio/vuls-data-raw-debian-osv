@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2017-1",
-	"modified": "2023-10-16T00:10:53.440773Z",
+	"modified": "2024-01-09T20:25:36.044512Z",
 	"published": "2010-03-15T00:00:00Z",
 	"related": [
 		"CVE-2009-1299"
 	],
 	"summary": "pulseaudio - insecure temporary directory",
-	"details": "\nDan Rosenberg discovered that the PulseAudio sound server creates a\ntemporary directory with a predictable name. This allows a local attacker\nto create a Denial of Service condition or possibly disclose sensitive\ninformation to unprivileged users.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.9.10-3+lenny2.\n\n\nFor the testing (squeeze) and unstable (sid) distribution this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your pulseaudio package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2017-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2017"
 		}
 	]
 }

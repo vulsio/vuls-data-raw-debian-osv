@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-624-1",
-	"modified": "2023-06-28T06:25:35.853358Z",
+	"modified": "2024-01-09T20:33:51.442390Z",
 	"published": "2016-09-16T00:00:00Z",
 	"related": [
 		"CVE-2016-6662"
 	],
 	"summary": "mysql-5.5 - security update",
-	"details": "\nDawid Golunski discovered that the mysqld\\_safe wrapper provided by the\nMySQL database server insufficiently restricted the load path for custom\nmalloc implementations, which could result in privilege escalation.\n\n\nThe vulnerability was addressed by upgrading MySQL to the new upstream\nversion 5.5.52, which includes additional changes, such as performance\nimprovements, bug fixes, new features, and possibly incompatible\nchanges. Please see the MySQL 5.5 Release Notes for further details:\n\n\n* \n* <https://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-52.html>\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.5.52-0+deb7u1.\n\n\nWe recommend that you upgrade your mysql-5.5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -56,12 +55,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-624-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-624"
 		}
 	]
 }

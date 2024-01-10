@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-197",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-11-15T00:00:00Z",
 	"published": "2002-11-15T00:00:00Z",
 	"related": [
 		"CVE-2002-1311"
 	],
 	"summary": "courier - buffer overflow",
-	"details": "\nA problem in the Courier sqwebmail package, a CGI program to grant\nauthenticated access to local mailboxes, has been discovered. The\nprogram did not drop permissions fast enough upon startup under\ncertain circumstances so a local shell user can execute the sqwebmail\nbinary and manage to read an arbitrary file on the local filesystem.\n\n\nThis problem has been fixed in version 0.37.3-2.3 for the current\nstable distribution (woody) and in version 0.40.0-1 for the unstable\ndistribution (sid). The old stable distribution (potato) does not\ncontain Courier sqwebmail packages. `courier-ssl` packages\nare also not affected since they don't expose an sqwebmail package.\n\n\nWe recommend that you upgrade your sqwebmail package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-197.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-197"
 		}
 	]
 }

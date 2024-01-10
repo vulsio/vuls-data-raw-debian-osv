@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1557-1",
-	"modified": "2023-10-16T00:05:28.415267Z",
+	"modified": "2024-01-09T20:25:05.533716Z",
 	"published": "2008-04-24T00:00:00Z",
 	"related": [
 		"CVE-2008-1149",
@@ -9,7 +9,6 @@
 		"CVE-2008-1924"
 	],
 	"summary": "phpmyadmin - several vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in phpMyAdmin,\nan application to administrate MySQL over the WWW. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-1924](https://security-tracker.debian.org/tracker/CVE-2008-1924)\nAttackers with CREATE table permissions were allowed to read\n arbitrary files readable by the webserver via a crafted\n HTTP POST request.\n* [CVE-2008-1567](https://security-tracker.debian.org/tracker/CVE-2008-1567)\nThe PHP session data file stored the username and password of\n a logged in user, which in some setups can be read by a local\n user.\n* [CVE-2008-1149](https://security-tracker.debian.org/tracker/CVE-2008-1149)\nCross site scripting and SQL injection were possible by attackers\n that had permission to create cookies in the same cookie domain\n as phpMyAdmin runs in.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 4:2.9.1.1-7.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4:2.11.5.2-1.\n\n\nWe recommend that you upgrade your phpmyadmin package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1557-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1557"
 		}
 	]
 }

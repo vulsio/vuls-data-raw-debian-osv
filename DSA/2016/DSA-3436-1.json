@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3436-1",
-	"modified": "2023-10-16T00:12:00.867655Z",
+	"modified": "2024-01-09T20:28:13.702044Z",
 	"published": "2016-01-08T00:00:00Z",
 	"related": [
 		"CVE-2015-7575"
 	],
 	"summary": "openssl - security update",
-	"details": "\nKarthikeyan Bhargavan and Gaetan Leurent at INRIA discovered a flaw in\nthe TLS 1.2 protocol which could allow the MD5 hash function to be used\nfor signing ServerKeyExchange and Client Authentication packets during a\nTLS handshake. A man-in-the-middle attacker could exploit this flaw to\nconduct collision attacks to impersonate a TLS server or an\nauthenticated TLS client.\n\n\nMore information can be found at\n[\\\nhttps://www.mitls.org/pages/attacks/SLOTH](https://www.mitls.org/pages/attacks/SLOTH)\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.0.1e-2+deb7u19.\n\n\nFor the stable distribution (jessie), the testing distribution (stretch)\nand the unstable distribution (sid), this issue was already addressed in\nversion 1.0.1f-1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3436-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3436"
 		}
 	]
 }

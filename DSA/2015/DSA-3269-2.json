@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3269-2",
-	"modified": "2023-10-16T00:11:53.726964Z",
-	"published": "2015-05-22T00:00:00Z",
+	"modified": "2024-01-09T20:28:08.598677Z",
+	"published": "2015-05-31T00:00:00Z",
 	"summary": "postgresql-9.1 - regression update",
-	"details": "\nSeveral vulnerabilities have been found in PostgreSQL-9.1, a SQL\ndatabase system.\n\n\n* [CVE-2015-3165](https://security-tracker.debian.org/tracker/CVE-2015-3165)\n (Remote crash)\n\n\nSSL clients disconnecting just before the authentication timeout\n expires can cause the server to crash.\n* [CVE-2015-3166](https://security-tracker.debian.org/tracker/CVE-2015-3166)\n (Information exposure)\n\n\nThe replacement implementation of snprintf() failed to check for\n errors reported by the underlying system library calls; the main\n case that might be missed is out-of-memory situations. In the worst\n case this might lead to information exposure.\n* [CVE-2015-3167](https://security-tracker.debian.org/tracker/CVE-2015-3167)\n (Possible side-channel key exposure)\n\n\nIn contrib/pgcrypto, some cases of decryption with an incorrect key\n could report other error message texts. Fix by using a\n one-size-fits-all message.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 9.1.16-0+deb7u1.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 9.1.16-0+deb8u1. (Jessie contains a reduced postgresql-9.1\npackage; only [CVE-2015-3166](https://security-tracker.debian.org/tracker/CVE-2015-3166) is fixed in the produced binary package\npostgresql-plperl-9.1. We recommend to upgrade to postgresql-9.4 to get\nthe full set of fixes. See the Jessie release notes for details.)\n\n\nThe testing distribution (stretch) and the unstable distribution (sid)\ndo not contain the postgresql-9.1 package.\n\n\nWe recommend that you upgrade your postgresql-9.1 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3269-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3269"
 		}
 	]
 }

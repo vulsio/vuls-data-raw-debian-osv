@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-540-1",
-	"modified": "2023-06-28T06:34:09.018307Z",
+	"modified": "2024-01-09T20:33:06.614074Z",
 	"published": "2016-07-01T00:00:00Z",
 	"related": [
 		"CVE-2016-3710",
 		"CVE-2016-3712"
 	],
 	"summary": "qemu - security update",
-	"details": "\nSeveral vulnerabilities were discovered in qemu, a fast processor\nemulator.\n\n\n* [CVE-2016-3710](https://security-tracker.debian.org/tracker/CVE-2016-3710)\nWei Xiao and Qinghao Tang of 360.cn Inc discovered an out-of-bounds\n read and write flaw in the QEMU VGA module. A privileged guest user\n could use this flaw to execute arbitrary code on the host with the\n privileges of the hosting QEMU process.\n* [CVE-2016-3712](https://security-tracker.debian.org/tracker/CVE-2016-3712)\nZuozhi Fzz of Alibaba Inc discovered potential integer overflow\n or out-of-bounds read access issues in the QEMU VGA module. A\n privileged guest user could use this flaw to mount a denial of\n service (QEMU process crash).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6a+deb7u13.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-540-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-540"
 		}
 	]
 }

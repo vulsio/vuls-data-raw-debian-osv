@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2818-1",
-	"modified": "2023-10-16T00:11:32.722100Z",
+	"modified": "2024-01-09T20:27:53.642586Z",
 	"published": "2013-12-16T00:00:00Z",
 	"related": [
 		"CVE-2013-1861",
@@ -16,7 +16,6 @@
 		"CVE-2013-5807"
 	],
 	"summary": "mysql-5.5 - several",
-	"details": "\nSeveral issues have been discovered in the MySQL database server. The\nvulnerabilities are addressed by upgrading MySQL to a new upstream\nversion, 5.5.33, which includes additional changes, such as performance\nimprovements, bug fixes, new features, and possibly incompatible\nchanges. Please see the MySQL 5.5 Release Notes for further details:\n\n\n* [\\\nhttp://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-32.html](http://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-32.html)\n* [\\\nhttp://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-33.html](http://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-33.html)\n\n\nIn addition this update fixes two issues affecting specifically the\nmysql-5.5 Debian package:\n\n\nA race condition in the post-installation script of the mysql-server-5.5\npackage creates the configuration file /etc/mysql/debian.cnf with\nworld-readable permissions before restricting the permissions, which\nallows local users to read the file and obtain sensitive information\nsuch as credentials for the debian-sys-maint to perform\nadministration tasks. \n([\\\nCVE-2013-2162](https://security-tracker.debian.org/tracker/CVE-2013-2162))\n\n\nMatthias Reichl reported that the mysql-5.5 package misses the patches\napplied previous in Debian's mysql-5.1 to drop the database test and\nthe permissions that allow anonymous access, without a password, from\nlocalhost to the test database and any databases starting with\ntest\\_. This update reintroduces these patches for the mysql-5.5\npackage.\n\n\nExisting databases and permissions are not touched. Please refer to the\nNEWS file provided with this update for further information.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 5.5.33+dfsg-0+wheezy1.\n\n\nFor the unstable distribution (sid), the Debian specific problems will\nbe fixed soon.\n\n\nWe recommend that you upgrade your mysql-5.5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2818-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2818"
 		}
 	]
 }

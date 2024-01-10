@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3647-1",
-	"modified": "2023-11-07T22:01:33.587580Z",
+	"modified": "2024-01-09T20:33:43.428774Z",
 	"published": "2023-11-07T00:00:00Z",
 	"summary": "trapperkeeper-webserver-jetty9-clojure - security update",
-	"details": "\nThe recent update of jetty9, released as DLA 3641-1, caused a regression in\nPuppetDB, a major component of Puppet that helps you manage and automate the\nconfiguration of servers. More specifically another package, trapperkeeperwebserver-jetty9-clojure, still used the deprecated SslContextFactory class\nwhich made PuppetDB fail to start. This update makes use of the preferred new\nSslContextFactory#Server class now.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.7.0-2+deb10u2.\n\n\nWe recommend that you upgrade your trapperkeeper-webserver-jetty9-clojure\npackages.\n\n\nFor the detailed security status of trapperkeeper-webserver-jetty9-clojure\nplease refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/trapperkeeper-webserver-jetty9-clojure>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3647-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3647"
 		}
 	]
 }

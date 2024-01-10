@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1507-1",
-	"modified": "2023-06-28T06:20:46.767372Z",
+	"modified": "2024-01-09T20:31:19.588540Z",
 	"published": "2018-09-18T00:00:00Z",
 	"related": [
 		"CVE-2011-2767"
 	],
 	"summary": "libapache2-mod-perl2 - security update",
-	"details": "\nJan Ingvoldstad discovered that libapache2-mod-perl2 allows attackers to\nexecute arbitrary Perl code by placing it in a user-owned .htaccess\nfile, because (contrary to the documentation) there is no configuration\noption that permits Perl code for the administrator's control of HTTP\nrequest processing without also permitting unprivileged users to run\nPerl code in the context of the user account that runs Apache HTTP\nServer processes.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.0.9~1624218-2+deb8u3.\n\n\nWe recommend that you upgrade your libapache2-mod-perl2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1507-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1507"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4581-1",
-	"modified": "2023-10-16T00:14:22.977235Z",
+	"modified": "2024-01-09T20:28:53.336276Z",
 	"published": "2019-12-10T00:00:00Z",
 	"related": [
 		"CVE-2019-1348",
@@ -11,7 +11,6 @@
 		"CVE-2019-1387"
 	],
 	"summary": "git - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in git, a fast, scalable,\ndistributed revision control system.\n\n\n* [CVE-2019-1348](https://security-tracker.debian.org/tracker/CVE-2019-1348)\nIt was reported that the --export-marks option of git fast-import is\n exposed also via the in-stream command feature export-marks=...,\n allowing to overwrite arbitrary paths.\n* [CVE-2019-1387](https://security-tracker.debian.org/tracker/CVE-2019-1387)\nIt was discovered that submodule names are not validated strictly\n enough, allowing very targeted attacks via remote code execution\n when performing recursive clones.\n* [CVE-2019-19604](https://security-tracker.debian.org/tracker/CVE-2019-19604)\nJoern Schneeweisz reported a vulnerability, where a recursive clone\n followed by a submodule update could execute code contained within\n the repository without the user explicitly having asked for that. It\n is now disallowed for `.gitmodules` to have entries that set\n `submodule.<name>.update=!command`.\n\n\nIn addition this update addresses a number of security issues which are\nonly an issue if git is operating on an NTFS filesystem ([CVE-2019-1349](https://security-tracker.debian.org/tracker/CVE-2019-1349),\n[CVE-2019-1352](https://security-tracker.debian.org/tracker/CVE-2019-1352) and [CVE-2019-1353](https://security-tracker.debian.org/tracker/CVE-2019-1353)).\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 1:2.11.0-3+deb9u5.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1:2.20.1-2+deb10u1.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFor the detailed security status of git please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/git>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -68,12 +67,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4581-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4581"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1006-1",
-	"modified": "2023-10-16T00:04:49.250333Z",
+	"modified": "2024-01-09T20:16:27.287168Z",
 	"published": "2006-03-16T00:00:00Z",
 	"related": [
 		"CVE-2005-3081"
 	],
 	"summary": "wzdftpd - missing input sanitising",
-	"details": "\n\"kcope\" discovered that the wzdftpd FTP server lacks input sanitising\nfor the SITE command, which may lead to the execution of arbitrary\nshell commands.\n\n\nThe old stable distribution (woody) does not contain wzdftpd packages.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 0.5.2-1.1sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.5.5-1.\n\n\nWe recommend that you upgrade your wzdftpd package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1006-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1006"
 		}
 	]
 }

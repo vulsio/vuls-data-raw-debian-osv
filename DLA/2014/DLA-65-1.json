@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-65-1",
-	"modified": "2023-06-28T06:34:17.118973Z",
+	"modified": "2024-01-09T20:33:52.315415Z",
 	"published": "2014-09-29T00:00:00Z",
 	"related": [
 		"CVE-2014-0480",
@@ -10,7 +10,6 @@
 		"CVE-2014-0483"
 	],
 	"summary": "python-django - security update",
-	"details": "\nThis update address an issue with reverse() generating external URLs; a\ndenial of service involving file uploads; a potential session hijacking\nissue in the remote-user middleware; and a data leak in the administrative\ninterface.\n\n\nThis update has been brought to you thanks to the Debian LTS sponsors:\n<http://www.freexian.com/services/debian-lts.html>\n\n\n* [CVE-2014-0480](https://security-tracker.debian.org/tracker/CVE-2014-0480)\nDjango includes the helper function django.core.urlresolvers.reverse,\n typically used to generate a URL from a reference to a view function or\n URL pattern name. However, when presented with input beginning with two\n forward-slash characters (//), reverse() could generate scheme-relative\n URLs to other hosts, allowing an attacker who is aware of unsafe use of\n reverse() (i.e., in a situation where an end user can control the target\n of a redirect, to take a common example) to generate links to sites of\n their choice, enabling phishing and other attacks.\n\n\nTo remedy this, URL reversing now ensures that no URL starts with two\n slashes (//), replacing the second slash with its URL encoded counterpart\n (%2F). This approach ensures that semantics stay the same, while making\n the URL relative to the domain and not to the scheme.\n* [CVE-2014-0481](https://security-tracker.debian.org/tracker/CVE-2014-0481)\nIn the default configuration, when Django's file upload handling system is\n presented with a file that would have the same on-disk path and name as an\n existing file, it attempts to generate a new unique filename by appending\n an underscore and an integer to the end of the (as stored on disk)\n filename, incrementing the integer (i.e., \\_1, \\_2, etc.) until it has\n generated a name which does not conflict with any existing file.\n\n\nAn attacker with knowledge of this can exploit the sequential behavior of\n filename generation by uploading many tiny files which all share a\n filename; Django will, in processing them, generate ever-increasing\n numbers of os.stat() calls as it attempts to generate a unique filename.\n As a result, even a relatively small number of such uploads can\n significantly degrade performance.\n\n\nTo remedy this, Django's file-upload system will no longer use sequential\n integer names to avoid filename conflicts on disk; instead, a short random\n alphanumeric string will be appended, removing the ability to reliably\n generate many repeatedly-conflicting filenames.\n* [CVE-2014-0482](https://security-tracker.debian.org/tracker/CVE-2014-0482)\nDjango provides a middleware django.contrib.auth.middleware.RemoteUserMiddleware -- and an\n authentication backend, django.contrib.auth.backends.RemoteUserBackend,\n which use the REMOTE\\_USER header for authentication purposes.\n\n\nIn some circumstances, use of this middleware and backend could result in\n one user receiving another user's session, if a change to the REMOTE\\_USER\n header occurred without corresponding logout/login actions.\n\n\nTo remedy this, the middleware will now ensure that a change to\n REMOTE\\_USER without an explicit logout will force a logout and subsequent\n login prior to accepting the new REMOTE\\_USER.\n* [CVE-2014-0483](https://security-tracker.debian.org/tracker/CVE-2014-0483)\nDjango's administrative interface, django.contrib.admin, offers a feature\n whereby related objects can be displayed for selection in a popup window.\n The mechanism for this relies on placing values in the URL and querystring\n which specify the related model to display and the field through which the\n relationship is implemented. This mechanism does perform permission checks\n at the level of the model class as a whole.\n\n\nThis mechanism did not, however, verify that the specified field actually\n represents a relationship between models. Thus a user with access to the\n admin interface, and with sufficient knowledge of model structure and the\n appropriate URLs, could construct popup views which would display the\n values of non-relationship fields, including fields the application\n developer had not intended to expose in such a fashion.\n\n\nTo remedy this, the admin interface will now, in addition to its normal\n permission checks, verify that the specified field does indeed represent a\n relationship, to a model registered with the admin, and will raise an\n exception if either condition is not true.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in python-django version 1.2.3-3+squeeze11\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-65-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-65"
 		}
 	]
 }

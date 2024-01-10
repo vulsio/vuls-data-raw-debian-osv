@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1157",
-	"modified": "2023-10-16T00:06:31.390508Z",
+	"modified": "2024-01-09T20:24:11.194018Z",
 	"published": "2006-08-27T00:00:00Z",
 	"related": [
 		"CVE-2006-1931",
 		"CVE-2006-3694"
 	],
 	"summary": "ruby1.8",
-	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for the\nRuby language, which may lead to the bypass of security restrictions or\ndenial of service. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2006-1931](https://security-tracker.debian.org/tracker/CVE-2006-1931)\nIt was discovered that the use of blocking sockets can lead to denial\n of service.\n* [CVE-2006-3964](https://security-tracker.debian.org/tracker/CVE-2006-3964)\nIt was discovered that Ruby does not properly maintain \"safe levels\"\n for aliasing, directory accesses and regular expressions, which might\n lead to a bypass of security restrictions.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.8.2-7sarge4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.8.4-3.\n\n\nWe recommend that you upgrade your Ruby packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1157.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1157"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3537-1",
-	"modified": "2023-08-22T02:15:22.452279Z",
+	"modified": "2024-01-09T20:33:32.639627Z",
 	"published": "2023-08-22T00:00:00Z",
 	"related": [
 		"CVE-2022-40982",
@@ -9,7 +9,6 @@
 		"CVE-2023-23908"
 	],
 	"summary": "intel-microcode - security update",
-	"details": "\nThis update ships updated CPU microcode for some types of Intel CPUs\nand provides mitigations for security vulnerabilities.\n\n\n* [CVE-2022-40982](https://security-tracker.debian.org/tracker/CVE-2022-40982)\nDaniel Moghimi discovered Gather Data Sampling (GDS), a hardware\n vulnerability which allows unprivileged speculative access to data\n which was previously stored in vector registers.\n\n\nFor details please refer to <https://downfall.page/> and\n <https://www.intel.com/content/www/us/en/developer/articles/technical/software-security-guidance/technical-documentation/gather-data-sampling.html.>\n* [CVE-2022-41804](https://security-tracker.debian.org/tracker/CVE-2022-41804)\nUnauthorized error injection in Intel SGX or Intel TDX for some\n Intel Xeon Processors which may allow a local user to potentially\n escalate privileges.\n* [CVE-2023-23908](https://security-tracker.debian.org/tracker/CVE-2023-23908)\nImproper access control in some 3rd Generation Intel Xeon Scalable\n processors may result in an information leak.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.20230808.1~deb10u1.\n\n\nWe recommend that you upgrade your intel-microcode packages.\n\n\nFor the detailed security status of intel-microcode please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/intel-microcode>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -203,12 +202,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3537-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3537"
 		}
 	]
 }

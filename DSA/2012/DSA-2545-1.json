@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2545-1",
-	"modified": "2023-10-16T00:11:18.024095Z",
+	"modified": "2024-01-09T20:23:00.812626Z",
 	"published": "2012-09-08T00:00:00Z",
 	"related": [
 		"CVE-2012-2652",
 		"CVE-2012-3515"
 	],
 	"summary": "qemu - multiple",
-	"details": "\nMultiple vulnerabilities have been discovered in QEMU, a fast processor\nemulator. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2012-2652](https://security-tracker.debian.org/tracker/CVE-2012-2652):\n\n The snapshot mode of QEMU (-snapshot) incorrectly handles temporary\n files used to store the current state, making it vulnerable to \n symlink attacks (including arbitrary file overwriting and guest \n information disclosure) due to a race condition.\n* [CVE-2012-3515](https://security-tracker.debian.org/tracker/CVE-2012-3515):\n\n QEMU does not properly handle VT100 escape sequences when emulating\n certain devices with a virtual console backend. An attacker within a\n guest with access to the vulnerable virtual console could overwrite\n memory of QEMU and escalate privileges to that of the qemu process.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 0.12.5+dfsg-3squeeze2.\n\n\nFor the testing distribution (wheezy), and the unstable distribution\n(sid), these problems will been fixed soon.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2545-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2545"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-168",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-09-18T00:00:00Z",
 	"published": "2002-09-18T00:00:00Z",
 	"related": [
 		"CVE-2002-0985",
 		"CVE-2002-0986"
 	],
 	"summary": "php - bypassing safe_mode, CRLF injection",
-	"details": "\nWojciech Purczynski found out that it is possible for scripts to pass\narbitrary text to sendmail as commandline extension when sending a\nmail through PHP even when safe\\_mode is turned on. Passing 5th\nargument should be disabled if PHP is configured in safe\\_mode, which\nis the case for newer PHP versions and for the versions below. This\ndoes not affect PHP3, though.\n\n\nWojciech Purczynski also found out that arbitrary ASCII control\ncharacters may be injected into string arguments of the mail() function.\nIf mail() arguments are taken from user's input it may give the user\nability to alter message content including mail headers.\n\n\nUlf HĂ¤rnhammar discovered that file() and fopen() are vulnerable to\nCRLF injection. An attacker could use it to escape certain\nrestrictions and add arbitrary text to alleged HTTP requests that are\npassed through.\n\n\nHowever this only happens if something is passed to these functions\nwhich is neither a valid file name nor a valid url. Any string that\ncontains control chars cannot be a valid url. Before you pass a\nstring that should be a url to any function you must use urlencode()\nto encode it.\n\n\nThree problems have been identified in PHP:\n\n\n1. The mail() function can allow arbitrary email headers to be\n specified if a recipient address or subject contains CR/LF\n characters.\n2. The mail() function does not properly disable the passing of\n arbitrary command-line options to sendmail when running in Safe\n Mode.\n3. The fopen() function, when retrieving a URL, can allow manipulation\n of the request for the resource through a URL containing CR/LF\n characters. For example, headers could be added to an HTTP\n request.\n\n\nThese problems have been fixed in version 3.0.18-23.1woody1 for PHP3\nand 4.1.2-5 for PHP4 for the current stable distribution (woody), in\nversion 3.0.18-0potato1.2 for PHP3 and 4.0.3pl1-0potato4 for PHP4 in\nthe old stable distribution (potato) and in version 3.0.18-23.2 for\nPHP3 and 4.2.3-3 for PHP4 for the unstable distribution (sid).\n\n\nWe recommend that you upgrade your PHP packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-168.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-168"
 		}
 	]
 }

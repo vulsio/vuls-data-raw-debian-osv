@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1584-1",
-	"modified": "2023-06-28T06:20:50.189188Z",
+	"modified": "2024-01-09T20:31:27.706137Z",
 	"published": "2018-11-21T00:00:00Z",
 	"related": [
 		"CVE-2014-10077"
 	],
 	"summary": "ruby-i18n - security update",
-	"details": "\nIt was discovered that there was a remote denial-of-service vulnerability\nin ruby-i18n, a I18n and localization solution for Ruby.\n\n\nAn application crash could be engineering a situation where `:some\\_key` is\npresent in the `keep\\_keys` structure but not present in the hash.\n\n\nFor Debian 8 Jessie, this issue has been fixed in ruby-i18n version\n0.6.9-2+deb8u1.\n\n\nWe recommend that you upgrade your ruby-i18n packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1584-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1584"
 		}
 	]
 }

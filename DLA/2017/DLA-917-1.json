@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-917-1",
-	"modified": "2023-06-28T06:27:12.228242Z",
+	"modified": "2024-01-09T20:34:03.247586Z",
 	"published": "2017-04-25T00:00:00Z",
 	"related": [
 		"CVE-2015-8270",
@@ -9,7 +9,6 @@
 		"CVE-2015-8272"
 	],
 	"summary": "rtmpdump - security update",
-	"details": "\nSeveral vulnerabilities were found in rtmpdump and the librtmp\nlibrary.\n\n\n* [CVE-2015-8270](https://security-tracker.debian.org/tracker/CVE-2015-8270)\nA bug in AMF3ReadString in librtmp can cause a denial of service via\n application crash to librtmp users that talk to a malicious server.\n* [CVE-2015-8271](https://security-tracker.debian.org/tracker/CVE-2015-8271)\nThe AMF3\\_Decode function in librtmp doesn't properly validate its\n input, which can lead to arbitrary code execution when talking\n to a malicious attacker.\n* [CVE-2015-8272](https://security-tracker.debian.org/tracker/CVE-2015-8272)\nA bug in rtmpsrv can lead to a crash when talking to a malicious\n client.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.4+20111222.git4e06e21-1+deb7u1.\n\n\nWe recommend that you upgrade your rtmpdump packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-917-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-917"
 		}
 	]
 }

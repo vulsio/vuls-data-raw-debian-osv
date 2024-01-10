@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2597-1",
-	"modified": "2023-06-28T06:26:36.437780Z",
+	"modified": "2024-01-09T20:32:45.614360Z",
 	"published": "2021-03-17T00:00:00Z",
 	"related": [
 		"CVE-2020-13959"
 	],
 	"summary": "velocity-tools - security update",
-	"details": "\nIt was discovered that there was a cross-site scripting (XSS) vulnerability\nin velocity-tools, a collection of useful tools for the \"Velocity\"\ntemplate engine.\n\n\nThe default error page could be exploited to steal session cookies,\nperform requests in the name of the victim, used for phishing attacks\nand many other similar attacks.\n\n\n* [CVE-2020-13959](https://security-tracker.debian.org/tracker/CVE-2020-13959)\nThe default error page for VelocityView in Apache Velocity Tools prior\n to 3.1 reflects back the vm file that was entered as part of the URL. An\n attacker can set an XSS payload file as this vm file in the URL which\n results in this payload being executed. XSS vulnerabilities allow attackers\n to execute arbitrary JavaScript in the context of the attacked website and\n the attacked user. This can be abused to steal session cookies, perform\n requests in the name of the victim or for phishing attacks.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n2.0-6+deb9u1.\n\n\nWe recommend that you upgrade your velocity-tools packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2597-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2597"
 		}
 	]
 }

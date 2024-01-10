@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2647-1",
-	"modified": "2023-06-28T06:26:39.046829Z",
+	"modified": "2024-01-09T20:32:47.424752Z",
 	"published": "2021-05-04T00:00:00Z",
 	"related": [
 		"CVE-2021-25214",
@@ -9,7 +9,6 @@
 		"CVE-2021-25216"
 	],
 	"summary": "bind9 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in BIND, a DNS server\nimplementation.\n\n\n* [CVE-2021-25214](https://security-tracker.debian.org/tracker/CVE-2021-25214)\nGreg Kuechle discovered that a malformed incoming IXFR transfer\n could trigger an assertion failure in named, resulting in denial\n of service.\n* [CVE-2021-25215](https://security-tracker.debian.org/tracker/CVE-2021-25215)\nSiva Kakarla discovered that named could crash when a DNAME record\n placed in the ANSWER section during DNAME chasing turned out to be\n the final answer to a client query.\n* [CVE-2021-25216](https://security-tracker.debian.org/tracker/CVE-2021-25216)\nIt was discovered that the SPNEGO implementation used by BIND is\n prone to a buffer overflow vulnerability. This update switches to\n use the SPNEGO implementation from the Kerberos libraries.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:9.10.3.dfsg.P4-12.3+deb9u9.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\nFor the detailed security status of bind9 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/bind9>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2647-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2647"
 		}
 	]
 }

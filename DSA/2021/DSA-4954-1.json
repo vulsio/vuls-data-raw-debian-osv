@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4954-1",
-	"modified": "2023-10-16T00:20:28.224496Z",
+	"modified": "2024-01-09T20:29:13.497877Z",
 	"published": "2021-08-10T00:00:00Z",
 	"related": [
 		"CVE-2021-3672"
 	],
 	"summary": "c-ares - security update",
-	"details": "\nPhilipp Jeitner and Haya Shulman discovered a flaw in c-ares, a library\nthat performs DNS requests and name resolution asynchronously. Missing\ninput validation of hostnames returned by DNS servers can lead to output\nof wrong hostnames (leading to Domain Hijacking).\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.14.0-1+deb10u1.\n\n\nWe recommend that you upgrade your c-ares packages.\n\n\nFor the detailed security status of c-ares please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/c-ares](https://security-tracker.debian.org/tracker/c-ares)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4954-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-4954"
 		}
 	]
 }

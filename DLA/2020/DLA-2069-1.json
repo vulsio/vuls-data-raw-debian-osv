@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2069-1",
-	"modified": "2023-06-28T06:21:10.851439Z",
+	"modified": "2024-01-09T20:31:59.175402Z",
 	"published": "2020-01-18T00:00:00Z",
 	"related": [
 		"CVE-2020-7106"
 	],
 	"summary": "cacti - security update",
-	"details": "\nIt was discovered that there were a number of cross-site scripting\nvulnerabilities in cacti, a web interface for monitoring systems.\n\n\n* [CVE-2020-7106](https://security-tracker.debian.org/tracker/CVE-2020-7106)\nCacti 1.2.8 has stored XSS in data\\_sources.php,\n color\\_templates\\_item.php, graphs.php, graph\\_items.php,\n lib/api\\_automation.php, user\\_admin.php, and user\\_group\\_admin.php, as\n demonstrated by the description parameter in data\\_sources.php (a raw string\n from the database that is displayed by $header to trigger the\n XSS).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.8.8b+dfsg-8+deb8u9.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2069-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2069"
 		}
 	]
 }

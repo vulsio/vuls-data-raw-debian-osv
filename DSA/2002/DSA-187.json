@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-187",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-11-04T00:00:00Z",
 	"published": "2002-11-04T00:00:00Z",
 	"related": [
 		"CVE-2001-0131",
@@ -11,7 +11,6 @@
 		"CVE-2002-1233"
 	],
 	"summary": "apache - several vulnerabilities",
-	"details": "\nAccording to David Wagner, iDEFENSE and the Apache HTTP Server\nProject, several remotely exploitable vulnerabilities have been found\nin the Apache package, a commonly used webserver. These\nvulnerabilities could allow an attacker to enact a denial of service\nagainst a server or execute a cross scripting attack. The Common\nVulnerabilities and Exposures (CVE) project identified the following\nvulnerabilities:\n\n\n1. CAN-2002-0839: A vulnerability exists on platforms using System V\n shared memory based scoreboards. This vulnerability allows an\n attacker to execute code under the Apache UID to exploit the Apache\n shared memory scoreboard format and send a signal to any process as\n root or cause a local denial of service attack.\n2. CAN-2002-0840: Apache is susceptible to a cross site scripting\n vulnerability in the default 404 page of any web server hosted on a\n domain that allows wildcard DNS lookups.\n3. CAN-2002-0843: There were some possible overflows in the utility\n ApacheBench (ab) which could be exploited by a malicious server.\n4. CAN-2002-1233: A race condition in the htpasswd and htdigest\n program enables a malicious local user to read or even modify the\n contents of a password file or easily create and overwrite files as\n the user running the htpasswd (or htdigest respectively) program.\n5. CAN-2001-0131: htpasswd and htdigest in Apache 2.0a9, 1.3.14, and\n others allows local users to overwrite arbitrary files via a\n symlink attack.\n\n This is the same vulnerability as CAN-2002-1233, which was fixed in\n potato already but got lost later and was never applied upstream.\n6. NO-CAN: Several buffer overflows have been found in the ApacheBench\n (ab) utility that could be exploited by a remote server returning\n very long strings.\n\n\nThese problems have been fixed in version 1.3.26-0woody3 for the\ncurrent stable distribution (woody) and in 1.3.9-14.3 for the old\nstable distribution (potato). Corrected packages for the unstable\ndistribution (sid) are expected soon.\n\n\nWe recommend that you upgrade your Apache package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-187.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-187"
 		}
 	]
 }

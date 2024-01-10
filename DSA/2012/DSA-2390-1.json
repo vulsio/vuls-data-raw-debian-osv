@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2390-1",
-	"modified": "2023-10-16T00:11:12.914835Z",
+	"modified": "2024-01-09T20:22:48.187008Z",
 	"published": "2012-01-15T00:00:00Z",
 	"related": [
 		"CVE-2011-4108",
@@ -11,7 +11,6 @@
 		"CVE-2011-4619"
 	],
 	"summary": "openssl - several",
-	"details": "\nSeveral vulnerabilities were discovered in OpenSSL, an implementation\nof TLS and related protocols. The Common Vulnerabilities and\nExposures project identifies the following vulnerabilities:\n\n\n* [CVE-2011-4108](https://security-tracker.debian.org/tracker/CVE-2011-4108)\nThe DTLS implementation performs a MAC check only if certain\n padding is valid, which makes it easier for remote attackers\n to recover plaintext via a padding oracle attack.\n* [CVE-2011-4109](https://security-tracker.debian.org/tracker/CVE-2011-4109)\nA double free vulnerability when X509\\_V\\_FLAG\\_POLICY\\_CHECK is\n enabled, allows remote attackers to cause applications crashes\n and potentially allow execution of arbitrary code by\n triggering failure of a policy check.\n* [CVE-2011-4354](https://security-tracker.debian.org/tracker/CVE-2011-4354)\nOn 32-bit systems, the operations on NIST elliptic curves\n P-256 and P-384 are not correctly implemented, potentially\n leaking the private ECC key of a TLS server. (Regular\n RSA-based keys are not affected by this vulnerability.)\n* [CVE-2011-4576](https://security-tracker.debian.org/tracker/CVE-2011-4576)\nThe SSL 3.0 implementation does not properly initialize data\n structures for block cipher padding, which might allow remote\n attackers to obtain sensitive information by decrypting the\n padding data sent by an SSL peer.\n* [CVE-2011-4619](https://security-tracker.debian.org/tracker/CVE-2011-4619)\nThe Server Gated Cryptography (SGC) implementation in OpenSSL\n does not properly handle handshake restarts, unnecessarily\n simplifying CPU exhaustion attacks.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed\nin version 0.9.8g-15+lenny15.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 0.9.8o-4squeeze5.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 1.0.0f-1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -80,12 +79,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2390-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2390"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4229-1",
-	"modified": "2023-10-16T00:13:26.148647Z",
+	"modified": "2024-01-09T20:28:36.775112Z",
 	"published": "2018-06-14T00:00:00Z",
 	"related": [
 		"CVE-2018-10811",
 		"CVE-2018-5388"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nTwo vulnerabilities were discovered in strongSwan, an IKE/IPsec suite.\n\n\n* [CVE-2018-5388](https://security-tracker.debian.org/tracker/CVE-2018-5388)\nThe stroke plugin did not verify the message length when reading from its\n control socket. This vulnerability could lead to denial of service. On\n Debian write access to the socket requires root permission on default\n configuration.\n* [CVE-2018-10811](https://security-tracker.debian.org/tracker/CVE-2018-10811)\nA missing variable initialization in IKEv2 key derivation could lead to a\n denial of service (crash of the charon IKE daemon) if the openssl plugin is\n used in FIPS mode and the negotiated PRF is HMAC-MD5.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 5.2.1-6+deb8u6.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 5.5.1-4+deb9u2.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\nFor the detailed security status of strongswan please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/strongswan>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -69,12 +68,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4229-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4229"
 		}
 	]
 }

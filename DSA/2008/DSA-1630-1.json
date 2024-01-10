@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1630-1",
-	"modified": "2023-10-16T00:05:33.977439Z",
+	"modified": "2024-01-09T20:20:56.093344Z",
 	"published": "2008-08-21T00:00:00Z",
 	"related": [
 		"CVE-2007-6282",
@@ -14,7 +14,6 @@
 		"CVE-2008-3275"
 	],
 	"summary": "fai-kernels linux-2.6 user-mode-linux - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may\nlead to a denial of service or arbitrary code execution. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2007-6282](https://security-tracker.debian.org/tracker/CVE-2007-6282)\nDirk Nehring discovered a vulnerability in the IPsec code that allows\n remote users to cause a denial of service by sending a specially crafted\n ESP packet.\n* [CVE-2008-0598](https://security-tracker.debian.org/tracker/CVE-2008-0598)\nTavis Ormandy discovered a vulnerability that allows local users to access\n uninitialized kernel memory, possibly leaking sensitive data. This issue\n is specific to the amd64-flavour kernel images.\n* [CVE-2008-2729](https://security-tracker.debian.org/tracker/CVE-2008-2729)\nAndi Kleen discovered an issue where uninitialized kernel memory\n was being leaked to userspace during an exception. This issue may allow\n local users to gain access to sensitive data. Only the amd64-flavour\n Debian kernel images are affected.\n* [CVE-2008-2812](https://security-tracker.debian.org/tracker/CVE-2008-2812)\nAlan Cox discovered an issue in multiple tty drivers that allows\n local users to trigger a denial of service (NULL pointer dereference)\n and possibly obtain elevated privileges.\n* [CVE-2008-2826](https://security-tracker.debian.org/tracker/CVE-2008-2826)\nGabriel Campana discovered an integer overflow in the sctp code that\n can be exploited by local users to cause a denial of service.\n* [CVE-2008-2931](https://security-tracker.debian.org/tracker/CVE-2008-2931)\nMiklos Szeredi reported a missing privilege check in the do\\_change\\_type()\n function. This allows local, unprivileged users to change the properties\n of mount points.\n* [CVE-2008-3272](https://security-tracker.debian.org/tracker/CVE-2008-3272)\nTobias Klein reported a locally exploitable data leak in the\n snd\\_seq\\_oss\\_synth\\_make\\_info() function. This may allow local users\n to gain access to sensitive information.\n* [CVE-2008-3275](https://security-tracker.debian.org/tracker/CVE-2008-3275)\nZoltan Sogor discovered a coding error in the VFS that allows local users\n to exploit a kernel memory leak resulting in a denial of service.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 2.6.18.dfsg.1-22etch2.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -159,12 +158,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1630-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1630"
 		}
 	]
 }

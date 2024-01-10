@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2937-1",
-	"modified": "2023-10-16T00:06:08.696791Z",
+	"modified": "2024-01-09T20:21:57.995286Z",
 	"published": "2014-05-27T00:00:00Z",
 	"related": [
 		"CVE-2014-0240",
 		"CVE-2014-0242"
 	],
 	"summary": "mod-wsgi - security update",
-	"details": "\nTwo security issues have been found in the Python WSGI adapter module \nfor Apache:\n\n\n* [CVE-2014-0240](https://security-tracker.debian.org/tracker/CVE-2014-0240)\nRobert Kisteleki discovered a potential privilege escalation in\n daemon mode. This is not exploitable with the kernel used in Debian\n 7.0/wheezy.\n* [CVE-2014-0242](https://security-tracker.debian.org/tracker/CVE-2014-0242)\nBuck Golemon discovered that incorrect memory handling could lead to\n information disclosure when processing Content-Type headers.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 3.3-2+deb6u1.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.3-4+deb7u1.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 3.5-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.5-1.\n\n\nWe recommend that you upgrade your mod-wsgi packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2937-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2937"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2190-1",
-	"modified": "2023-10-16T00:05:48.500204Z",
+	"modified": "2024-01-09T20:25:40.109999Z",
 	"published": "2011-03-11T00:00:00Z",
 	"related": [
 		"CVE-2011-0700",
 		"CVE-2011-0701"
 	],
 	"summary": "wordpress - several",
-	"details": "\nTwo XSS bugs and one potential information disclosure issue were discovered\nin WordPress, a weblog manager.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2011-0700](https://security-tracker.debian.org/tracker/CVE-2011-0700)\nInput passed via the post title when performing a Quick Edit or \n Bulk Edit action and via the post\\_status, comment\\_status, \n and ping\\_status parameters is not properly sanitised before being used.\n Certain input passed via tags in the tags meta-box is not properly sanitised\n before being returned to the user.\n* [CVE-2011-0701](https://security-tracker.debian.org/tracker/CVE-2011-0701)\nWordPress incorrectly enforces user access restrictions when accessing posts\n via the media uploader and can be exploited to disclose the contents\n of e.g. private or draft posts.\n\n\nThe oldstable distribution (lenny) is not affected by these problems.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 3.0.5+dfsg-0+squeeze1.\n\n\nFor the testing distribution (wheezy), and the unstable distribution (sid),\nthese problems have been fixed in version 3.0.5+dfsg-1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2190-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2190"
 		}
 	]
 }

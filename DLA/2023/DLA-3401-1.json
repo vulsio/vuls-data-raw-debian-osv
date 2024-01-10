@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3401-1",
-	"modified": "2023-06-28T06:42:59.808769Z",
+	"modified": "2024-01-09T20:33:37.746047Z",
 	"published": "2023-04-24T00:00:00Z",
 	"related": [
 		"CVE-2023-25690",
 		"CVE-2023-27522"
 	],
 	"summary": "apache2 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in apache2,\na webserver that may be used as front-end proxy for other applications.\nThese vulnerabilities may lead to HTTP request smuggling, and thus\nto front-end security controls being bypassed.\n\n\nUnfortunately, fixing these security vulnerabilities may require\nchanges to configuration files. Some out-of-specification\nRewriteRule directives that were previously silently accepted,\nare now rejected with error AH10409. For instance, some RewriteRules\nthat included a back-reference and the flags \"[L,NC]\" will need to\nbe written with extra escaping flags such as \"[B= ?,BNP,QSA]\".\n\n\n* [CVE-2023-25690](https://security-tracker.debian.org/tracker/CVE-2023-25690)\nSome mod\\_proxy configurations allow an HTTP request Smuggling\n attack. Configurations are affected when mod\\_proxy is\n enabled along with some form of RewriteRule\n or ProxyPassMatch in which a non-specific pattern matches\n some portion of the user-supplied request-target (URL)\n data and is then re-inserted into the proxied request-target\n using variable substitution.\n* [CVE-2023-27522](https://security-tracker.debian.org/tracker/CVE-2023-27522)\nHTTP Response Smuggling in mod\\_proxy\\_uwsgi\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.4.38-3+deb10u10.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFor the detailed security status of apache2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/apache2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3401-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3401"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1872-1",
-	"modified": "2023-10-16T00:10:43.215418Z",
+	"modified": "2024-01-09T20:22:33.039719Z",
 	"published": "2009-08-24T00:00:00Z",
 	"related": [
 		"CVE-2009-2698",
@@ -11,7 +11,6 @@
 		"CVE-2009-2849"
 	],
 	"summary": "fai-kernels linux-2.6 user-mode-linux - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to denial of service, privilege escalation or a leak of\nsensitive memory. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-2698](https://security-tracker.debian.org/tracker/CVE-2009-2698)\nHerbert Xu discovered an issue in the way UDP tracks corking\n status that could allow local users to cause a denial of service\n (system crash). Tavis Ormandy and Julien Tinnes discovered that\n this issue could also be used by local users to gain elevated\n privileges.\n* [CVE-2009-2846](https://security-tracker.debian.org/tracker/CVE-2009-2846)\nMichael Buesch noticed a typing issue in the eisa-eeprom driver\n for the hppa architecture. Local users could exploit this issue to\n gain access to restricted memory.\n* [CVE-2009-2847](https://security-tracker.debian.org/tracker/CVE-2009-2847)\nUlrich Drepper noticed an issue in the do\\_sigalstack routine on\n 64-bit systems. This issue allows local users to gain access to\n potentially sensitive memory on the kernel stack.\n* [CVE-2009-2848](https://security-tracker.debian.org/tracker/CVE-2009-2848)\nEric Dumazet discovered an issue in the execve path, where the\n clear\\_child\\_tid variable was not being properly cleared. Local\n users could exploit this issue to cause a denial of service\n (memory corruption).\n* [CVE-2009-2849](https://security-tracker.debian.org/tracker/CVE-2009-2849)\nNeil Brown discovered an issue in the sysfs interface to md\n devices. When md arrays are not active, local users can exploit\n this vulnerability to cause a denial of service (oops).\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.6.18.dfsg.1-24etch4.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17+etch.24etch4 |\n| user-mode-linux | 2.6.18-1um-2etch.24etch4 |\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -178,12 +177,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1872-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1872"
 		}
 	]
 }

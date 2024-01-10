@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-210-1",
-	"modified": "2023-06-28T06:21:11.864432Z",
-	"published": "2015-04-30T00:00:00Z",
+	"modified": "2024-01-09T20:32:00.687645Z",
+	"published": "2015-04-29T00:00:00Z",
 	"related": [
 		"CVE-2013-0254",
 		"CVE-2015-0295",
@@ -11,7 +11,6 @@
 		"CVE-2015-1860"
 	],
 	"summary": "qt4-x11 - security update",
-	"details": "\nThis update fixes multiple security issues in the Qt library.\n\n\n* [CVE-2013-0254](https://security-tracker.debian.org/tracker/CVE-2013-0254)\nThe QSharedMemory class uses weak permissions (world-readable and\n world-writable) for shared memory segments, which allows local users\n to read sensitive information or modify critical program data, as\n demonstrated by reading a pixmap being sent to an X server.\n* [CVE-2015-0295](https://security-tracker.debian.org/tracker/CVE-2015-0295) / [CVE-2015-1858](https://security-tracker.debian.org/tracker/CVE-2015-1858) / [CVE-2015-1859](https://security-tracker.debian.org/tracker/CVE-2015-1859) / [CVE-2015-1860](https://security-tracker.debian.org/tracker/CVE-2015-1860)\nDenial of service (via segmentation faults) through crafted\n images (BMP, GIF, ICO).\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-210-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-210"
 		}
 	]
 }

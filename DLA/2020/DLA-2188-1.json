@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2188-1",
-	"modified": "2023-06-28T06:25:09.065803Z",
+	"modified": "2024-01-09T20:32:08.847412Z",
 	"published": "2020-04-26T00:00:00Z",
 	"related": [
 		"CVE-2020-7064",
@@ -9,7 +9,6 @@
 		"CVE-2020-7067"
 	],
 	"summary": "php5 - security update",
-	"details": "\nThree issues have been found in php5, a server-side, HTML-embedded\nscripting language.\n\n\n* [CVE-2020-7064](https://security-tracker.debian.org/tracker/CVE-2020-7064)\nA one byte out-of-bounds read, which could potentially lead to\n information disclosure or crash.\n* [CVE-2020-7066](https://security-tracker.debian.org/tracker/CVE-2020-7066)\nAn URL containing zero (\\0) character will be truncated at it, which\n may cause some software to make incorrect assumptions and possibly\n send some information to a wrong server.\n* [CVE-2020-7067](https://security-tracker.debian.org/tracker/CVE-2020-7067)\nUsing a malformed url-encoded string an Out-of-Bounds read can occur.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.6.40+dfsg-0+deb8u11.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -91,12 +90,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2188-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2188"
 		}
 	]
 }

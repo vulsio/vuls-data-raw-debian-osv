@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1942-2",
-	"modified": "2023-06-28T06:21:05.771292Z",
+	"modified": "2024-01-09T20:31:52.198094Z",
 	"published": "2019-10-06T00:00:00Z",
 	"related": [
 		"CVE-2019-13376",
 		"CVE-2019-16993"
 	],
 	"summary": "phpbb3 - security update",
-	"details": "\n* [CVE-2019-16993](https://security-tracker.debian.org/tracker/CVE-2019-16993)\nIn phpBB, includes/acp/acp\\_bbcodes.php had improper verification of a\n CSRF token on the BBCode page in the Administration Control Panel. An\n actual CSRF attack was possible if an attacker also managed to retrieve\n the session id of a reauthenticated administrator prior to targeting\n them.\n* [CVE-2019-13776](https://security-tracker.debian.org/tracker/CVE-2019-13776)\nphpBB allowed the stealing of an Administration Control Panel session id\n by leveraging CSRF in the Remote Avatar feature. The CSRF Token Hijacking\n lead to stored XSS.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.0.12-5+deb8u4.\n\n\nWe recommend that you upgrade your phpbb3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1942-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1942"
 		}
 	]
 }

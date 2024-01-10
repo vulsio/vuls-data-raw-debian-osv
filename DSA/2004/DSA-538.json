@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-538",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-08-17T00:00:00Z",
 	"published": "2004-08-17T00:00:00Z",
 	"related": [
 		"CVE-2004-0792"
 	],
 	"summary": "rsync - unauthorised directory traversal and file access",
-	"details": "\nThe rsync developers have discovered a security related problem in\nrsync, a fast remote file copy program, which offers an attacker to\naccess files outside of the defined directory. To exploit this\npath-sanitizing bug, rsync has to run in daemon mode with the chroot\noption being disabled. It does not affect the normal send/receive\nfilenames that specify what files should be transferred. It does\naffect certain option paths that cause auxiliary files to be read or\nwritten.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.5.5-0.6.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.6.2-3.\n\n\nWe recommend that you upgrade your rsync package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-538.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-538"
 		}
 	]
 }

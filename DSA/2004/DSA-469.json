@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-469",
-	"modified": "2023-10-16T00:14:45.136607Z",
+	"modified": "2024-01-09T20:28:58.904025Z",
 	"published": "2004-03-29T00:00:00Z",
 	"related": [
 		"CVE-2004-0366"
 	],
 	"summary": "pam-pgsql - missing input sanitising",
-	"details": "\nPrimoz Bratanic discovered a bug in libpam-pgsql, a PAM module to\nauthenticate using a PostgreSQL database. The library does not escape\nall user-supplied data that are sent to the database. An attacker\ncould exploit this bug to insert SQL statements.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.5.2-3woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.5.2-7.1.\n\n\nWe recommend that you upgrade your libpam-pgsql package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-469.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-469"
 		}
 	]
 }

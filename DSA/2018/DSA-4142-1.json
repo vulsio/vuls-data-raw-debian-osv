@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4142-1",
-	"modified": "2023-10-16T00:33:23.848744Z",
+	"modified": "2024-01-09T20:28:27.990434Z",
 	"published": "2018-03-17T00:00:00Z",
 	"related": [
 		"CVE-2018-7490"
 	],
 	"summary": "uwsgi - security update",
-	"details": "\nMarios Nicolaides discovered that the PHP plugin in uWSGI, a fast,\nself-healing application container server, does not properly handle a\nDOCUMENT\\_ROOT check during use of the --php-docroot option, allowing a\nremote attacker to mount a directory traversal attack and gain\nunauthorized read access to sensitive files located outside of the web\nroot directory.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2.0.7-1+deb8u2. This update additionally includes the fix for\n[\\\nCVE-2018-6758](https://security-tracker.debian.org/tracker/CVE-2018-6758) which was aimed to be addressed in the upcoming jessie\npoint release.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.0.14+20161117-3+deb9u2.\n\n\nWe recommend that you upgrade your uwsgi packages.\n\n\nFor the detailed security status of uwsgi please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/uwsgi](https://security-tracker.debian.org/tracker/uwsgi)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4142-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4142"
 		}
 	]
 }

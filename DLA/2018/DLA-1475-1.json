@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1475-1",
-	"modified": "2023-06-28T06:20:43.747195Z",
+	"modified": "2024-01-09T20:31:17.005452Z",
 	"published": "2018-08-22T00:00:00Z",
 	"related": [
 		"CVE-2018-8019",
 		"CVE-2018-8020"
 	],
 	"summary": "tomcat-native - security update",
-	"details": "\nWhen using an OCSP responder Tomcat Native did not correctly handle\ninvalid responses. This allowed for revoked client certificates to be\nincorrectly identified. It was therefore possible for users to\nauthenticate with revoked certificates when using mutual TLS. Users\nnot using OCSP checks are not affected by this vulnerability.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.1.32~repack-2+deb8u2.\n\n\nWe recommend that you upgrade your tomcat-native packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1475-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1475"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2569-1",
-	"modified": "2023-06-28T06:29:18.895025Z",
+	"modified": "2024-01-09T20:32:43.820413Z",
 	"published": "2021-02-19T00:00:00Z",
 	"related": [
 		"CVE-2021-23336"
 	],
 	"summary": "python-django - security update",
-	"details": "\nIt was discovered that there was a web cache poisoning attack in\nDjango, a popular Python-based web development framework.\n\n\nThis was caused by the unsafe handling of \";\" characters in Python's\nurllib.parse.parse\\_qsl method which had been backported to Django's\ncodebase to fix some other security issues in the past.\n\n\n* [CVE-2021-23336](https://security-tracker.debian.org/tracker/CVE-2021-23336)\nThe package python/cpython from 0 and before 3.6.13, from 3.7.0 and\n before 3.7.10, from 3.8.0 and before 3.8.8, from 3.9.0 and before 3.9.2 are\n vulnerable to Web Cache Poisoning via urllib.parse.parse\\_qsl and\n urllib.parse.parse\\_qs by using a vector called parameter cloaking. When the\n attacker can separate query parameters using a semicolon (;), they can\n cause a difference in the interpretation of the request between the proxy\n (running with default configuration) and the server. This can result in\n malicious requests being cached as completely safe ones, as the proxy would\n usually not see the semicolon as a separator, and therefore would not\n include it in a cache key of an unkeyed parameter.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1:1.10.7-2+deb9u11.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2569-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2569"
 		}
 	]
 }

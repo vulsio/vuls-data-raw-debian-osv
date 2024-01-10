@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2763-1",
-	"modified": "2023-10-16T00:11:30.663009Z",
+	"modified": "2024-01-09T20:25:50.175892Z",
 	"published": "2013-09-24T00:00:00Z",
 	"related": [
 		"CVE-2013-4314"
 	],
 	"summary": "pyopenssl - hostname check bypassing",
-	"details": "\nIt was discovered that PyOpenSSL, a Python wrapper around the OpenSSL\nlibrary, does not properly handle certificates with NULL characters in\nthe Subject Alternative Name field.\n\n\nA remote attacker in the position to obtain a certificate for\n'www.foo.org\\0.example.com' from a CA that a SSL client trusts, could\nuse this to spoof www.foo.org and conduct man-in-the-middle attacks\nbetween the PyOpenSSL-using client and the SSL server.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 0.10-1+squeeze1.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.13-2+deb7u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.13-2.1.\n\n\nWe recommend that you upgrade your pyopenssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2763-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2763"
 		}
 	]
 }

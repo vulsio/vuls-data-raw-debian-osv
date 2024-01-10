@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3629-1",
-	"modified": "2023-10-23T18:15:31.007161Z",
+	"modified": "2024-01-09T20:33:42.205710Z",
 	"published": "2023-10-23T00:00:00Z",
 	"related": [
 		"CVE-2019-10222",
@@ -18,7 +18,6 @@
 		"CVE-2023-43040"
 	],
 	"summary": "ceph - security update",
-	"details": "\nMultiple vulnerabilities were fixed in Ceph, a massively scalable,\nopen-source, distributed storage system that runs on commodity hardware\nand delivers object, block and file system storage.\n\n\n* [CVE-2019-10222](https://security-tracker.debian.org/tracker/CVE-2019-10222)\nA Denial of service was fixed: An unauthenticated attacker could crash\n the Ceph RGW server by sending valid HTTP headers and terminating the\n connection, resulting in a remote denial of service for Ceph RGW clients.\n* [CVE-2020-1700](https://security-tracker.debian.org/tracker/CVE-2020-1700)\nA Denial of Service was fixed: A flaw was found in the way the Ceph RGW\n Beast front-end handles unexpected disconnects. An authenticated attacker\n can abuse this flaw by making multiple disconnect attempts resulting in a\n permanent leak of a socket connection by radosgw. This flaw could lead to\n a denial of service condition by pile up of CLOSE\\_WAIT sockets, eventually\n leading to the exhaustion of available resources, preventing legitimate\n users from connecting to the system.\n* [CVE-2020-1760](https://security-tracker.debian.org/tracker/CVE-2020-1760)\nA XSS attack was fixed: A flaw was found in the Ceph Object Gateway,\n where it supports request sent by an anonymous user in Amazon S3.\n This flaw could lead to potential XSS attacks due to the lack\n of proper neutralization of untrusted input.\n* [CVE-2020-10753](https://security-tracker.debian.org/tracker/CVE-2020-10753)\nA Header Injection attack was fixed: It was possible to\n inject HTTP headers via a CORS ExposeHeader tag in an Amazon S3 bucket. The\n newline character in the ExposeHeader tag in the CORS configuration file\n generates a header injection in the response when the CORS request is\n made.\n* [CVE-2020-12059](https://security-tracker.debian.org/tracker/CVE-2020-12059)\nA Denial of Service was fixed: A POST request with an invalid tagging\n XML could crash the RGW process by triggering a NULL pointer exception.\n* [CVE-2020-25678](https://security-tracker.debian.org/tracker/CVE-2020-25678)\nAn Information Disclosure was fixed: ceph stores mgr module passwords\n in clear text. This can be found by searching the mgr logs for grafana and\n dashboard, with passwords visible.\n* [CVE-2020-27781](https://security-tracker.debian.org/tracker/CVE-2020-27781)\nA Privilege Escalation was fixed: User credentials could be manipulated\n and stolen by Native CephFS consumers of OpenStack Manila, resulting in\n potential privilege escalation. An Open Stack Manila user can request\n access to a share to an arbitrary cephx user, including existing users.\n The access key is retrieved via the interface drivers. Then, all users of\n the requesting OpenStack project can view the access key. This enables the\n attacker to target any resource that the user has access to. This can be\n done to even admin users, compromising the ceph administrator.\n* [CVE-2021-3524](https://security-tracker.debian.org/tracker/CVE-2021-3524)\nSimilar to [CVE-2020-10753](https://security-tracker.debian.org/tracker/CVE-2020-10753), a Header Injection attack was fixed:\n It was possible to inject HTTP headers via a CORS ExposeHeader\n tag in an Amazon S3 bucket\n* [CVE-2021-3531](https://security-tracker.debian.org/tracker/CVE-2021-3531)\nA Denial of Service was fixed: When processing a GET Request in Ceph\n Storage RGW for a swift URL that ends with two slashes it could cause the\n rgw to crash, resulting in a denial of service.\n* [CVE-2021-3979](https://security-tracker.debian.org/tracker/CVE-2021-3979)\nA Loss of Confidentiality was fixed: A key length flaw was found in\n Ceph Storage. An attacker could exploit the fact that the key length is\n incorrectly passed in an encryption algorithm to create a non random key,\n which is weaker and can be exploited for loss of confidentiality and\n integrity on encrypted disks.\n* [CVE-2021-20288](https://security-tracker.debian.org/tracker/CVE-2021-20288)\nA Potential Privilege Escalation was fixed: When handling\n CEPHX\\_GET\\_PRINCIPAL\\_SESSION\\_KEY requests, ignore CEPH\\_ENTITY\\_TYPE\\_AUTH in\n CephXServiceTicketRequest::keys.\n* [CVE-2023-43040](https://security-tracker.debian.org/tracker/CVE-2023-43040)\nA flaw was found in Ceph RGW. An unprivileged\n user can write to any bucket(s) accessible by a given key\n if a POST's form-data contains a key called bucket\n with a value matching the name of the bucket used to sign\n the request. The result of this is that a user could actually\n upload to any bucket accessible by the specified access key\n as long as the bucket in the POST policy matches the bucket\n in said POST form part.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n12.2.11+dfsg1-2.1+deb10u1.\n\n\nWe recommend that you upgrade your ceph packages.\n\n\nFor the detailed security status of ceph please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ceph>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3629-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3629"
 		}
 	]
 }

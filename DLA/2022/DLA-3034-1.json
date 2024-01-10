@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3034-1",
-	"modified": "2023-06-28T06:26:48.037729Z",
+	"modified": "2024-01-09T20:33:15.216868Z",
 	"published": "2022-05-30T00:00:00Z",
 	"related": [
 		"CVE-2018-20102",
@@ -9,7 +9,6 @@
 		"CVE-2019-18277"
 	],
 	"summary": "haproxy - security update",
-	"details": "\nNathan Davison discovered that HAProxy, a load balancing reverse proxy, did not\ncorrectly reject requests or responses featuring a transfer-encoding header\nmissing the chunked value which could facilitate a HTTP request smuggling\nattack. Furthermore several flaws were discovered in DNS related functions that\nmay trigger infinite recursion leading to a denial of service or to information\nleakage due to a out-of-bounds read.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.7.5-2+deb9u1.\n\n\nWe recommend that you upgrade your haproxy packages.\n\n\nFor the detailed security status of haproxy please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/haproxy>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3034-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3034"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1516-1",
-	"modified": "2023-10-16T00:10:27.753608Z",
+	"modified": "2024-01-09T20:22:23.893652Z",
 	"published": "2008-03-14T00:00:00Z",
 	"related": [
 		"CVE-2008-1199",
 		"CVE-2008-1218"
 	],
 	"summary": "dovecot - privilege escalation",
-	"details": "\nPrior to this update, the default configuration for Dovecot used by\nDebian runs the server daemons with group mail privileges. This means\nthat users with write access to their mail directory on the server\n(for example, through an SSH login) could read and also delete via a symbolic link mailboxes owned by\nother users for which they do not have direct access\n([CVE-2008-1199](https://security-tracker.debian.org/tracker/CVE-2008-1199)). In addition, an internal interpretation conflict in\npassword handling has been addressed proactively, even though it is\nnot known to be exploitable ([CVE-2008-1218](https://security-tracker.debian.org/tracker/CVE-2008-1218)).\n\n\nNote that applying this update requires manual action: The\nconfiguration setting mail\\_extra\\_groups = mail has been replaced\nwith mail\\_privileged\\_group = mail. The update will show a\nconfiguration file conflict in /etc/dovecot/dovecot.conf. It is\nrecommended that you keep the currently installed configuration file,\nand change the affected line. For your reference, the sample\nconfiguration (without your local changes) will have been written to\n/etc/dovecot/dovecot.conf.dpkg-new.\n\n\nIf your current configuration uses `mail_extra_groups` with a value\ndifferent from mail, you may have to resort to the\n`mail_access_groups` configuration directive.\n\n\nFor the old stable distribution (sarge), no updates are provided.\nWe recommend that you consider upgrading to the stable distribution.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.0.rc15-2etch4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.13-1.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1516-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1516"
 		}
 	]
 }

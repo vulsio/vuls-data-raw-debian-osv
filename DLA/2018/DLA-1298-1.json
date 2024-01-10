@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1298-1",
-	"modified": "2023-06-28T06:19:42.441532Z",
+	"modified": "2024-01-09T20:30:56.627905Z",
 	"published": "2018-03-02T00:00:00Z",
 	"related": [
 		"CVE-2016-9814",
@@ -9,7 +9,6 @@
 		"CVE-2018-7644"
 	],
 	"summary": "simplesamlphp - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in SimpleSAMLphp, a\nframework for authentication, primarily via the SAML protocol.\n\n\n* [CVE-2016-9814](https://security-tracker.debian.org/tracker/CVE-2016-9814) /\n [CVE-2016-9955](https://security-tracker.debian.org/tracker/CVE-2016-9955)\nAn incorrect check of return values in the signature validation\n utilities allowed an attacker to get invalid signatures accepted\n as valid in the rare case of an error occurring during validation.\n* SSPSA-201802-01 (no CVE yet)\n\n Critical signature validation vulnerability.\n\n\nIn addition this update adds a patch to solve excessive resource\nconsumption in case of SimpleSAMLphp processing a large metadata file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.9.2-1+deb7u3.\n\n\nWe recommend that you upgrade your simplesamlphp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1298-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1298"
 		}
 	]
 }

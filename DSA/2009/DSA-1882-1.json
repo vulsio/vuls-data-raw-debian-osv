@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1882-1",
-	"modified": "2023-10-16T00:10:44.560525Z",
+	"modified": "2024-01-09T20:22:34.959194Z",
 	"published": "2009-09-09T00:00:00Z",
 	"related": [
 		"CVE-2009-2947"
 	],
 	"summary": "xapian-omega - cross-site scripting",
-	"details": "\nIt was discovered that xapian-omega, a CGI interface for searching xapian\ndatabases, is not properly escaping user supplied input when printing\nexceptions. An attacker can use this to conduct cross-site scripting\nattacks via crafted search queries resulting in an exception and steal\npotentially sensitive data from web applications running on the same domain\nor embedding the search engine into a website.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 0.9.9-1+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.0.7-3+lenny1.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your xapian-omega packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1882-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1882"
 		}
 	]
 }

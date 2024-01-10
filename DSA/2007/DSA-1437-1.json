@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1437-1",
-	"modified": "2023-10-16T00:10:25.540761Z",
+	"modified": "2024-01-09T20:22:18.634992Z",
 	"published": "2007-12-26T00:00:00Z",
 	"related": [
 		"CVE-2007-5849",
 		"CVE-2007-6358"
 	],
 	"summary": "cupsys",
-	"details": "\n\nSeveral local vulnerabilities have been discovered in the Common UNIX Printing\nSystem. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n\n* [CVE-2007-5849](https://security-tracker.debian.org/tracker/CVE-2007-5849)\n\n Wei Wang discovered that an buffer overflow in the SNMP backend may lead to\n the execution of arbitrary code.\n* [CVE-2007-6358](https://security-tracker.debian.org/tracker/CVE-2007-6358)\n\n Elias Pipping discovered that insecure handling of a temporary file in the\n pdftops.pl script may lead to local denial of service. This vulnerability\n is not exploitable in the default configuration.\n\n\n\nThe old stable distribution (sarge) is not affected by [CVE-2007-5849](https://security-tracker.debian.org/tracker/CVE-2007-5849).\nThe other issue doesn't warrant an update on it's own and has been\npostponed.\n\n\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n1.2.7-4etch2.\n\n\n\n\nFor the unstable distribution (sid), these problems have been fixed in version\n1.3.5-1.\n\n\n\n\nWe recommend that you upgrade your cupsys packages.\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1437-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1437"
 		}
 	]
 }

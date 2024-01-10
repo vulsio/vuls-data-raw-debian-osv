@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1663-1",
-	"modified": "2023-10-16T00:10:33.207089Z",
+	"modified": "2024-01-09T20:22:27.150140Z",
 	"published": "2008-11-09T00:00:00Z",
 	"related": [
 		"CVE-2008-0960",
@@ -9,7 +9,6 @@
 		"CVE-2008-4309"
 	],
 	"summary": "net-snmp - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in NET SNMP, a suite of\nSimple Network Management Protocol applications. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2008-0960](https://security-tracker.debian.org/tracker/CVE-2008-0960)\nWes Hardaker reported that the SNMPv3 HMAC verification relies on\n the client to specify the HMAC length, which allows spoofing of\n authenticated SNMPv3 packets.\n* [CVE-2008-2292](https://security-tracker.debian.org/tracker/CVE-2008-2292)\nJohn Kortink reported a buffer overflow in the \\_\\_snprint\\_value\n function in snmp\\_get causing a denial of service and potentially\n allowing the execution of arbitrary code via a large OCTETSTRING \n in an attribute value pair (AVP).\n* [CVE-2008-4309](https://security-tracker.debian.org/tracker/CVE-2008-4309)\nIt was reported that an integer overflow in the\n netsnmp\\_create\\_subtree\\_cache function in agent/snmp\\_agent.c allows \n remote attackers to cause a denial of service attack via a crafted \n SNMP GETBULK request.\n\n\nFor the stable distribution (etch), these problems has been fixed in\nversion 5.2.3-7etch4.\n\n\nFor the testing distribution (lenny) and unstable distribution (sid)\nthese problems have been fixed in version 5.4.1~dfsg-11.\n\n\nWe recommend that you upgrade your net-snmp package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1663-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1663"
 		}
 	]
 }

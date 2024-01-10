@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1567-1",
-	"modified": "2023-06-28T06:26:24.118285Z",
+	"modified": "2024-01-09T20:31:38.539338Z",
 	"published": "2018-11-05T00:00:00Z",
 	"related": [
 		"CVE-2018-18718"
 	],
 	"summary": "gthumb - security update",
-	"details": "\n* [CVE-2018-18718](https://security-tracker.debian.org/tracker/CVE-2018-18718) - CWE-415: Double Free\nThe product calls free() twice on the same memory address, potentially\nleading to modification of unexpected memory locations.\n\n\nThere is a suspected double-free bug with\nstatic void add\\_themes\\_from\\_dir() dlg-contact-sheet.c. This method\ninvolves two successive calls of g\\_free(buffer) (line 354 and 373),\nand is likely to cause double-free of the buffer. One possible fix\ncould be directly assigning the buffer to NULL after the first call\nof g\\_free(buffer). Thanks Tianjun Wu\n<https://gitlab.gnome.org/GNOME/gthumb/issues/18>\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3:3.3.1-2.1+deb8u1\n\n\nWe recommend that you upgrade your gthumb packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1567-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1567"
 		}
 	]
 }

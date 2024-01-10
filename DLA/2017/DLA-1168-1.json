@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1168-1",
-	"modified": "2023-06-28T06:20:26.160326Z",
+	"modified": "2024-01-09T20:30:49.026146Z",
 	"published": "2017-11-10T00:00:00Z",
 	"related": [
 		"CVE-2017-16669"
 	],
 	"summary": "graphicsmagick - security update",
-	"details": "\nA remote denial of service vulnerability has been discovered in\ngraphicsmagick, a collection of image processing tools and associated\nlibraries.\n\n\nA specially crafted file can be used to produce a heap-based buffer\noverflow and application crash by exploiting a defect in the\nAcquireCacheNexus function in magick/pixel\\_cache.c.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.16-1.1+deb7u14.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n**Note**: The previous graphicsmagick package inadvertently introduced a\ndependency on liblcms2-2. This version of the package returns to using\nliblcms1. If your system does not otherwise require liblcms2-2, you\nmay want to consider removing it following the graphicsmagick upgrade.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1168-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1168"
 		}
 	]
 }

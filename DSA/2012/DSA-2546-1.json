@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2546-1",
-	"modified": "2023-10-16T00:11:18.040125Z",
+	"modified": "2024-01-09T20:23:00.794914Z",
 	"published": "2012-09-11T00:00:00Z",
 	"related": [
 		"CVE-2012-3547"
 	],
 	"summary": "freeradius - code execution",
-	"details": "\nTimo Warns discovered that the EAP-TLS handling of FreeRADIUS, a\nhigh-performance and highly configurable RADIUS server, is not properly\nperforming length checks on user-supplied input before copying to a local\nstack buffer. As a result, an unauthenticated attacker can exploit this\nflaw to crash the daemon or execute arbitrary code via crafted\ncertificates.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.1.10+dfsg-2+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.1.12+dfsg-1.1.\n\n\nWe recommend that you upgrade your freeradius packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2546-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2546"
 		}
 	]
 }

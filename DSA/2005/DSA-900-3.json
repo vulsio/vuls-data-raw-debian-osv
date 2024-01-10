@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-900-3",
-	"modified": "2023-10-16T00:24:50.909774Z",
-	"published": "2005-11-18T00:00:00Z",
+	"modified": "2024-01-09T20:34:11.719287Z",
+	"published": "2005-11-22T00:00:00Z",
 	"related": [
 		"CVE-2005-3088"
 	],
 	"summary": "fetchmail - programming error",
-	"details": "\nDue to restrictive dependency definition for fetchmail-ssl the updated fetchmailconf\npackage couldn't be installed on the old stable distribution (woody)\ntogether with fetchmail-ssl. Â Hence, this update loosens it, so that\nthe update can be pulled in. Â For completeness we're including the\noriginal advisory text:\n\n\n\n> \n> Thomas Wolff discovered that the fetchmailconf program which is\n> provided as part of fetchmail, an SSL enabled POP3, APOP, IMAP mail\n> gatherer/forwarder, creates the new configuration in an insecure\n> fashion that can lead to leaking passwords for mail accounts to local\n> users.\n> \n> \n> \n\n\nThis update also fixes a regression in the package for stable caused\nby the last security update.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 5.9.11-6.4 of fetchmail and in version 5.9.11-6.3 of\nfetchmail-ssl.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 6.2.5-12sarge3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 6.2.5.4-1.\n\n\nWe recommend that you upgrade your fetchmail package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -89,12 +88,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-900-3.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-900"
 		}
 	]
 }

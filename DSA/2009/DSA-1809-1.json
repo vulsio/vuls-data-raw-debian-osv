@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1809-1",
-	"modified": "2023-10-16T00:10:38.755778Z",
+	"modified": "2024-01-09T20:27:34.949523Z",
 	"published": "2009-06-01T00:00:00Z",
 	"related": [
 		"CVE-2009-1184",
@@ -10,7 +10,6 @@
 		"CVE-2009-1758"
 	],
 	"summary": "linux-2.6 user-mode-linux - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service, or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2009-1630](https://security-tracker.debian.org/tracker/CVE-2009-1630)\nFrank Filz discovered that local users may be able to execute\n files without execute permission when accessed via an nfs4 mount.\n* [CVE-2009-1633](https://security-tracker.debian.org/tracker/CVE-2009-1633)\nJeff Layton and Suresh Jayaraman fixed several buffer overflows in\n the CIFS filesystem which allow remote servers to cause memory\n corruption.\n* [CVE-2009-1758](https://security-tracker.debian.org/tracker/CVE-2009-1758)\nJan Beulich discovered an issue in Xen where local guest users may\n cause a denial of service (oops).\n\n\nThis update also fixes a regression introduced by the fix for\n[CVE-2009-1184](https://security-tracker.debian.org/tracker/CVE-2009-1184) \nin 2.6.26-15lenny3. This prevents a boot time panic on systems with SELinux\nenabled.\n\n\nFor the oldstable distribution (etch), these problems, where\napplicable, will be fixed in future updates to linux-2.6 and\nlinux-2.6.24.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.6.26-15lenny3.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nNote: Debian carefully tracks all known security issues across every\nlinux kernel package in all releases under active security support.\nHowever, given the high frequency at which low-severity security\nissues are discovered in the kernel and the resource requirements of\ndoing an update, updates for lower priority issues will normally not\nbe released for all kernels at the same time. Rather, they will be\nreleased in a staggered or \"leap-frog\" fashion.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -73,12 +72,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1809-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1809"
 		}
 	]
 }

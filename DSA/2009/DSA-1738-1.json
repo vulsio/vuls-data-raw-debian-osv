@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1738-1",
-	"modified": "2023-10-16T00:10:37.518883Z",
+	"modified": "2024-01-09T20:21:02.928255Z",
 	"published": "2009-03-11T00:00:00Z",
 	"related": [
 		"CVE-2009-0037"
 	],
 	"summary": "curl - arbitrary file access",
-	"details": "\nDavid Kierznowski discovered that libcurl, a multi-protocol file transfer\nlibrary, when configured to follow URL redirects automatically, does not\nquestion the new target location. As libcurl also supports file:// and\nscp:// URLs - depending on the setup - an untrusted server could use that\nto expose local files, overwrite local files or even execute arbitrary\ncode via a malicious URL redirect.\n\n\nThis update introduces a new option called CURLOPT\\_REDIR\\_PROTOCOLS which by\ndefault does not include the scp and file protocol handlers.\n\n\nFor the oldstable distribution (etch) this problem has been fixed in\nversion 7.15.5-1etch2.\n\n\nFor the stable distribution (lenny) this problem has been fixed in\nversion 7.18.2-8lenny2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 7.18.2-8.1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1738-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1738"
 		}
 	]
 }

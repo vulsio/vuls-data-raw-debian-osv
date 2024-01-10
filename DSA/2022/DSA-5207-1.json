@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5207-1",
-	"modified": "2023-10-16T00:15:57.315011Z",
+	"modified": "2024-01-09T20:26:41.869006Z",
 	"published": "2022-08-15T00:00:00Z",
 	"related": [
 		"CVE-2022-2585",
@@ -14,7 +14,6 @@
 		"CVE-2022-36946"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2022-2585](https://security-tracker.debian.org/tracker/CVE-2022-2585)\nA use-after-free flaw in the implementation of POSIX CPU timers may\n result in denial of service or in local privilege escalation.\n* [CVE-2022-2586](https://security-tracker.debian.org/tracker/CVE-2022-2586)\nA use-after-free in the Netfilter subsystem may result in local\n privilege escalation for a user with the CAP\\_NET\\_ADMIN capability in\n any user or network namespace.\n* [CVE-2022-2588](https://security-tracker.debian.org/tracker/CVE-2022-2588)\nZhenpeng Lin discovered a use-after-free flaw in the cls\\_route\n filter implementation which may result in local privilege escalation\n for a user with the CAP\\_NET\\_ADMIN capability in any user or network\n namespace.\n* [CVE-2022-26373](https://security-tracker.debian.org/tracker/CVE-2022-26373)\nIt was discovered that on certain processors with Intel's Enhanced\n Indirect Branch Restricted Speculation (eIBRS) capabilities there\n are exceptions to the documented properties in some situations,\n which may result in information disclosure.\n\n\nIntel's explanation of the issue can be found at\n* [CVE-2022-29900](https://security-tracker.debian.org/tracker/CVE-2022-29900)\nJohannes Wikner and Kaveh Razavi reported that for AMD/Hygon\n processors, mis-trained branch predictions for return instructions\n may allow arbitrary speculative code execution under certain\n microarchitecture-dependent conditions.\n\n\nA list of affected AMD CPU types can be found at\n* [CVE-2022-29901](https://security-tracker.debian.org/tracker/CVE-2022-29901)\nJohannes Wikner and Kaveh Razavi reported that for Intel processors\n (Intel Core generation 6, 7 and 8), protections against speculative\n branch target injection attacks were insufficient in some\n circumstances, which may allow arbitrary speculative code execution\n under certain microarchitecture-dependent conditions.\n\n\nMore information can be found at\n* [CVE-2022-36879](https://security-tracker.debian.org/tracker/CVE-2022-36879)\nA flaw was discovered in xfrm\\_expand\\_policies in the xfrm subsystem\n which can cause a reference count to be dropped twice.\n* [CVE-2022-36946](https://security-tracker.debian.org/tracker/CVE-2022-36946)\nDomingo Dirutigliano and Nicola Guerrera reported a memory\n corruption flaw in the Netfilter subsystem which may result in\n denial of service.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.136-1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -57,12 +56,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5207-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5207"
 		}
 	]
 }

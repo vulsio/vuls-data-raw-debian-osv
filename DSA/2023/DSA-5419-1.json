@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5419-1",
-	"modified": "2023-10-16T00:25:59.521031Z",
+	"modified": "2024-01-09T20:29:38.937510Z",
 	"published": "2023-06-07T00:00:00Z",
 	"related": [
 		"CVE-2023-31130",
 		"CVE-2023-32067"
 	],
 	"summary": "c-ares - security update",
-	"details": "\nTwo vunerabilities were discovered in c-ares, an asynchronous name\nresolver library:\n\n\n* [CVE-2023-31130](https://security-tracker.debian.org/tracker/CVE-2023-31130)\nares\\_inet\\_net\\_pton() is found to be vulnerable to a buffer underflow\n for certain ipv6 addresses, in particular \"0::00:00:00/2\" was found\n to cause an issue. c-ares only uses this function internally for\n configuration purposes, however external usage for other purposes may\n cause more severe issues.\n* [CVE-2023-32067](https://security-tracker.debian.org/tracker/CVE-2023-32067)\nTarget resolver may erroneously interprets a malformed UDP packet\n with a lenght of 0 as a graceful shutdown of the connection, which\n could cause a denial of service.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.17.1-1+deb11u3.\n\n\nWe recommend that you upgrade your c-ares packages.\n\n\nFor the detailed security status of c-ares please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/c-ares](https://security-tracker.debian.org/tracker/c-ares)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5419-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5419"
 		}
 	]
 }

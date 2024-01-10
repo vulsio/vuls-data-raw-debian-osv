@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2548-1",
-	"modified": "2023-10-16T00:11:18.131458Z",
+	"modified": "2024-01-09T20:23:00.837255Z",
 	"published": "2012-09-13T00:00:00Z",
 	"related": [
 		"CVE-2012-3518",
@@ -10,7 +10,6 @@
 		"CVE-2012-4922"
 	],
 	"summary": "tor - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Tor, an online privacy\ntool.\n\n\n* [CVE-2012-3518](https://security-tracker.debian.org/tracker/CVE-2012-3518)\nAvoid an uninitialised memory read when reading a vote or consensus\n document that has an unrecognized flavour name. This could lead to\n a remote crash, resulting in denial of service.\n* [CVE-2012-3519](https://security-tracker.debian.org/tracker/CVE-2012-3519)\nTry to leak less information about what relays a client is choosing to\n a side-channel attacker.\n* [CVE-2012-4419](https://security-tracker.debian.org/tracker/CVE-2012-4419)\nBy providing specially crafted date strings to a victim tor instance,\n an attacker can cause it to run into an assertion and shut down.\n\n\nAdditionally the update to stable includes the following fixes:\n when waiting for a client to renegotiate, don't allow it to add any\n bytes to the input buffer. This fixes a potential DoS issue\n[[tor-5934](https://trac.torproject.org/projects/tor/ticket/5934), \n[tor-6007](https://trac.torproject.org/projects/tor/ticket/6007)].\n\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 0.2.2.39-1.\n\n\nFor the unstable distribution, these problems have been fixed in version\n0.2.3.22-rc-1.\n\n\nWe recommend that you upgrade your tor packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -85,12 +84,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2548-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2548"
 		}
 	]
 }

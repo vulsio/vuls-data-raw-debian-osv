@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-118-1",
-	"modified": "2023-06-28T06:20:27.597048Z",
+	"modified": "2024-01-09T20:30:49.503479Z",
 	"published": "2014-12-21T00:00:00Z",
 	"related": [
 		"CVE-2014-3185",
@@ -13,7 +13,6 @@
 		"CVE-2014-8884"
 	],
 	"summary": "linux-2.6 - security update",
-	"details": "\nNon-maintainer upload by the Squeeze LTS and Kernel Teams.\n\n\nNew upstream stable release 2.6.32.65, see\n<http://lkml.org/lkml/2014/12/13/81> for more information.\n\n\nThe stable release 2.6.32.65 includes the following new commits compared\nto the previous 2.6.32-48squeeze9 package:\n\n\n* USB: whiteheat: Added bounds checking for bulk command response\n ([CVE-2014-3185](https://security-tracker.debian.org/tracker/CVE-2014-3185))\n* net: sctp: fix panic on duplicate ASCONF chunks ([CVE-2014-3687](https://security-tracker.debian.org/tracker/CVE-2014-3687))\n* net: sctp: fix remote memory pressure from excessive queueing\n ([CVE-2014-3688](https://security-tracker.debian.org/tracker/CVE-2014-3688))\n* udf: Avoid infinite loop when processing indirect ICBs ([CVE-2014-6410](https://security-tracker.debian.org/tracker/CVE-2014-6410))\n* net: sctp: fix NULL pointer dereference in af->from\\_addr\\_param on\n malformed packet ([CVE-2014-7841](https://security-tracker.debian.org/tracker/CVE-2014-7841))\n* mac80211: fix fragmentation code, particularly for encryption\n ([CVE-2014-8709](https://security-tracker.debian.org/tracker/CVE-2014-8709))\n* ttusb-dec: buffer overflow in ioctl ([CVE-2014-8884](https://security-tracker.debian.org/tracker/CVE-2014-8884))\n\n\nWe recommend that you upgrade your linux-2.6 packages.\n\n\nWe apologize for a minor cosmetic glitch:\n\n\nThe following commits were already included in 2.6.32-48squeeze9 despite\nclaims in debian/changelog they were only fixed in 2.6.32-48squeez10:\n\n\n* vlan: Don't propagate flag changes on down interfaces.\n* sctp: Fix double-free introduced by bad backport in 2.6.32.62\n* md/raid6: Fix misapplied backport in 2.6.32.64\n* block: add missing blk\\_queue\\_dead() checks\n* block: Fix blk\\_execute\\_rq\\_nowait() dead queue handling\n* proc connector: Delete spurious memset in proc\\_exit\\_connector()\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -75,12 +74,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-118-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-118"
 		}
 	]
 }

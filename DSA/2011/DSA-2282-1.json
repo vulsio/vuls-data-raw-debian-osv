@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2282-1",
-	"modified": "2023-10-16T00:11:05.315759Z",
+	"modified": "2024-01-09T20:21:19.306404Z",
 	"published": "2011-07-25T00:00:00Z",
 	"related": [
 		"CVE-2011-2212",
 		"CVE-2011-2527"
 	],
 	"summary": "qemu-kvm - several",
-	"details": "\nTwo vulnerabilities have been discovered in KVM, a solution for full\nvirtualization on x86 hardware:\n\n\n* [CVE-2011-2212](https://security-tracker.debian.org/tracker/CVE-2011-2212)\nNelson Elhage discovered a buffer overflow in the virtio subsystem,\n which could lead to denial of service or privilege escalation.\n* [CVE-2011-2527](https://security-tracker.debian.org/tracker/CVE-2011-2527)\nAndrew Griffiths discovered that group privileges were\n insufficiently dropped when started with -runas option, resulting\n in privilege escalation.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.12.5+dfsg-5+squeeze6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.14.1+dfsg-3.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2282-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2282"
 		}
 	]
 }

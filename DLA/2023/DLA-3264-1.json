@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3264-1",
-	"modified": "2023-06-28T06:33:40.732441Z",
+	"modified": "2024-01-09T20:33:26.024762Z",
 	"published": "2023-01-10T00:00:00Z",
 	"related": [
 		"CVE-2022-45442"
 	],
 	"summary": "ruby-sinatra - security update",
-	"details": "\nIt was discovered that there was a potential reflected file download (RFD)\nvulnerability in ruby-sinatra, a Ruby library for writing HTTP applications. A\nContent-Disposition HTTP header was being incorrectly derived from a\npotentially user-supplied filename.\n\n\n* [CVE-2022-45442](https://security-tracker.debian.org/tracker/CVE-2022-45442)\nSinatra is a domain-specific language for creating web applications in\n Ruby. An issue was discovered in Sinatra 2.0 before 2.2.3 and 3.0 before\n 3.0.4. An application is vulnerable to a reflected file download (RFD)\n attack that sets the Content-Disposition header of a response when the\n filename is derived from user-supplied input. Version 2.2.3 and 3.0.4\n contain patches for this issue.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n2.0.5-4+deb10u2.\n\n\nWe recommend that you upgrade your ruby-sinatra packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3264-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3264"
 		}
 	]
 }

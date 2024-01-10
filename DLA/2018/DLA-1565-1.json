@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1565-1",
-	"modified": "2023-06-28T06:26:23.965336Z",
-	"published": "2018-11-05T00:00:00Z",
+	"modified": "2024-01-09T20:31:23.465329Z",
+	"published": "2018-11-03T00:00:00Z",
 	"related": [
 		"CVE-2018-14651",
 		"CVE-2018-14652",
@@ -11,7 +11,6 @@
 		"CVE-2018-14661"
 	],
 	"summary": "glusterfs - security update",
-	"details": "\nMultiple security vulnerabilities were discovered in GlusterFS, a\nclustered file system. Buffer overflows and path traversal issues may\nlead to information disclosure, denial-of-service or the execution of\narbitrary code.\n\n\n* [CVE-2018-14651](https://security-tracker.debian.org/tracker/CVE-2018-14651)\nIt was found that the fix for [CVE-2018-10927](https://security-tracker.debian.org/tracker/CVE-2018-10927),\n [CVE-2018-10928](https://security-tracker.debian.org/tracker/CVE-2018-10928),\n [CVE-2018-10929](https://security-tracker.debian.org/tracker/CVE-2018-10929),\n [CVE-2018-10930](https://security-tracker.debian.org/tracker/CVE-2018-10930), and\n [CVE-2018-10926](https://security-tracker.debian.org/tracker/CVE-2018-10926) was incomplete.\n A remote, authenticated attacker could use one of these flaws to\n execute arbitrary code, create arbitrary files, or cause denial of\n service on glusterfs server nodes via symlinks to relative paths.\n* [CVE-2018-14652](https://security-tracker.debian.org/tracker/CVE-2018-14652)\nThe Gluster file system is vulnerable to a buffer overflow in the\n 'features/index' translator via the code handling the\n GF\\_XATTR\\_CLRLK\\_CMD xattr in the pl\\_getxattr function. A remote\n authenticated attacker could exploit this on a mounted volume to\n cause a denial of service.\n* [CVE-2018-14653](https://security-tracker.debian.org/tracker/CVE-2018-14653)\nThe Gluster file system is vulnerable to a heap-based buffer\n overflow in the \\_\\_server\\_getspec function via the gf\\_getspec\\_req\n RPC message. A remote authenticated attacker could exploit this to\n cause a denial of service or other potential unspecified impact.\n* [CVE-2018-14659](https://security-tracker.debian.org/tracker/CVE-2018-14659)\nThe Gluster file system is vulnerable to a denial of service attack\n via use of the GF\\_XATTR\\_IOSTATS\\_DUMP\\_KEY xattr. A remote,\n authenticated attacker could exploit this by mounting a Gluster\n volume and repeatedly calling 'setxattr(2)' to trigger a state dump\n and create an arbitrary number of files in the server's runtime\n directory.\n* [CVE-2018-14661](https://security-tracker.debian.org/tracker/CVE-2018-14661)\nIt was found that usage of snprintf function in feature/locks\n translator of glusterfs server was vulnerable to a format string\n attack. A remote, authenticated attacker could use this flaw to\n cause remote denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.5.2-2+deb8u5.\n\n\nWe recommend that you upgrade your glusterfs packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1565-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1565"
 		}
 	]
 }

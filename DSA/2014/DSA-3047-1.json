@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3047-1",
-	"modified": "2023-10-16T00:06:11.125563Z",
+	"modified": "2024-01-09T20:27:57.148354Z",
 	"published": "2014-10-08T00:00:00Z",
 	"related": [
 		"CVE-2014-3683"
 	],
 	"summary": "rsyslog - security update",
-	"details": "\nMancha discovered a vulnerability in rsyslog, a system for log\nprocessing. This vulnerability is an integer overflow that can be\ntriggered by malformed messages to a server, if this one accepts data\nfrom untrusted sources, provoking message loss, denial of service and, potentially, remote code execution.\n\n\nThis vulnerability can be seen as an incomplete fix of [CVE-2014-3634](https://security-tracker.debian.org/tracker/CVE-2014-3634)\n(DSA 3040-1).\n\n\nFor more information: <http://www.rsyslog.com/remote-syslog-pri-vulnerability-cve-2014-3683/>\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 5.8.11-3+deb7u2.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 8.4.2-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8.4.2-1.\n\n\nWe recommend that you upgrade your rsyslog packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3047-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3047"
 		}
 	]
 }

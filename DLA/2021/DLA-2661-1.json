@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2661-1",
-	"modified": "2023-06-28T06:30:11.772132Z",
+	"modified": "2024-01-09T20:32:48.086173Z",
 	"published": "2021-05-14T00:00:00Z",
 	"related": [
 		"CVE-2017-9735",
@@ -11,7 +11,6 @@
 		"CVE-2020-27216"
 	],
 	"summary": "jetty9 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in jetty, a Java servlet\nengine and webserver. An attacker may reveal cryptographic credentials\nsuch as passwords to a local user, disclose installation paths, hijack\nuser sessions or tamper with collocated webapps.\n\n\n* [CVE-2017-9735](https://security-tracker.debian.org/tracker/CVE-2017-9735)\nJetty is prone to a timing channel in util/security/Password.java,\n which makes it easier for remote attackers to obtain access by\n observing elapsed times before rejection of incorrect passwords.\n* [CVE-2018-12536](https://security-tracker.debian.org/tracker/CVE-2018-12536)\nOn webapps deployed using default Error Handling, when an\n intentionally bad query arrives that doesn't match a dynamic\n url-pattern, and is eventually handled by the DefaultServlet's\n static file serving, the bad characters can trigger a\n java.nio.file.InvalidPathException which includes the full path to\n the base resource directory that the DefaultServlet and/or webapp\n is using. If this InvalidPathException is then handled by the\n default Error Handler, the InvalidPathException message is\n included in the error response, revealing the full server path to\n the requesting system.\n* [CVE-2019-10241](https://security-tracker.debian.org/tracker/CVE-2019-10241)\nThe server is vulnerable to XSS conditions if a remote client USES\n a specially formatted URL against the DefaultServlet or\n ResourceHandler that is configured for showing a Listing of\n directory contents.\n* [CVE-2019-10247](https://security-tracker.debian.org/tracker/CVE-2019-10247)\nThe server running on any OS and Jetty version combination will\n reveal the configured fully qualified directory base resource\n location on the output of the 404 error for not finding a Context\n that matches the requested path. The default server behavior on\n jetty-distribution and jetty-home will include at the end of the\n Handler tree a DefaultHandler, which is responsible for reporting\n this 404 error, it presents the various configured contexts as\n HTML for users to click through to. This produced HTML includes\n output that contains the configured fully qualified directory base\n resource location for each context.\n* [CVE-2020-27216](https://security-tracker.debian.org/tracker/CVE-2020-27216)\nOn Unix like systems, the system's temporary directory is shared\n between all users on that system. A collocated user can observe\n the process of creating a temporary sub directory in the shared\n temporary directory and race to complete the creation of the\n temporary subdirectory. If the attacker wins the race then they\n will have read and write permission to the subdirectory used to\n unpack web applications, including their WEB-INF/lib jar files and\n JSP files. If any code is ever executed out of this temporary\n directory, this can lead to a local privilege escalation\n vulnerability.\n\n\nThis update also includes several other bug fixes and\nimprovements. For more information please refer to the upstream\nchangelog file.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n9.2.30-0+deb9u1.\n\n\nWe recommend that you upgrade your jetty9 packages.\n\n\nFor the detailed security status of jetty9 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/jetty9>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2661-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2661"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1716-1",
-	"modified": "2023-06-28T06:29:44.114396Z",
+	"modified": "2024-01-09T20:31:39.917039Z",
 	"published": "2019-03-18T00:00:00Z",
 	"related": [
 		"CVE-2019-9187"
 	],
 	"summary": "ikiwiki - security update",
-	"details": "\nThe ikiwiki maintainers discovered that the aggregate plugin did not use\nLWPx::ParanoidAgent. On sites where the aggregate plugin is enabled, authorized\nwiki editors could tell ikiwiki to fetch potentially undesired URIs even if\nLWPx::ParanoidAgent was installed:\n\n\nlocal files via file: URIs\n other URI schemes that might be misused by attackers, such as gopher:\n hosts that resolve to loopback IP addresses (127.x.x.x)\n hosts that resolve to RFC 1918 IP addresses (192.168.x.x etc.)\n\n\nThis could be used by an attacker to publish information that should not have\nbeen accessible, cause denial of service by requesting tarpit URIs that are\nslow to respond, or cause undesired side-effects if local web servers implement\nunsafe GET requests. ([CVE-2019-9187](https://security-tracker.debian.org/tracker/CVE-2019-9187))\n\n\nAdditionally, if liblwpx-paranoidagent-perl is not installed, the\nblogspam, openid and pinger plugins would fall back to LWP, which is\nsusceptible to similar attacks. This is unlikely to be a practical problem for\nthe blogspam plugin because the URL it requests is under the control of the\nwiki administrator, but the openid plugin can request URLs controlled by\nunauthenticated remote users, and the pinger plugin can request URLs controlled\nby authorized wiki editors.\n\n\nThis is addressed in ikiwiki 3.20190228 as follows, with the same fixes\nbackported to Debian 9 in version 3.20170111.1:\n\n\n* URI schemes other than http: and https: are not accepted, preventing access\n to file:, gopher:, etc.\n* If a proxy is configured in the ikiwiki setup file, it is used for all\n outgoing http: and https: requests. In this case the proxy is responsible for\n blocking any requests that are undesired, including loopback or RFC 1918\n addresses.\n* If a proxy is not configured, and liblwpx-paranoidagent-perl is installed, it\n will be used. This prevents loopback and RFC 1918 IP addresses, and sets a\n timeout to avoid denial of service via tarpit URIs.\n* Otherwise, the ordinary LWP user-agent will be used. This allows requests to\n loopback and RFC 1918 IP addresses, and has less robust timeout behaviour.\n We are not treating this as a vulnerability: if this behaviour is not\n acceptable for your site, please make sure to install LWPx::ParanoidAgent or\n disable the affected plugins.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.20141016.4+deb8u1.\n\n\nWe recommend that you upgrade your ikiwiki packages. In addition it is also\nrecommended that you have liblwpx-paranoidagent-perl installed, which listed in\nthe recommends field of ikiwiki.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1716-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1716"
 		}
 	]
 }

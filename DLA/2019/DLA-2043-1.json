@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2043-1",
-	"modified": "2023-06-28T06:21:09.535042Z",
+	"modified": "2024-01-09T20:31:57.948653Z",
 	"published": "2019-12-19T00:00:00Z",
 	"related": [
 		"CVE-2016-6352",
@@ -11,7 +11,6 @@
 		"CVE-2017-6314"
 	],
 	"summary": "gdk-pixbuf - security update",
-	"details": "\nSeveral issues in gdk-pixbuf, a library to handle pixbuf, have been found.\n\n\n* [CVE-2016-6352](https://security-tracker.debian.org/tracker/CVE-2016-6352)\nfix for denial of service (out-of-bounds write and crash) via\n crafted dimensions in an ICO file\n* [CVE-2017-2870](https://security-tracker.debian.org/tracker/CVE-2017-2870)\nFix for an exploitable integer overflow vulnerability in the\n tiff\\_image\\_parse functionality. When software is compiled with\n clang, A specially crafted tiff file can cause a heap-overflow\n resulting in remote code execution. Debian package is compiled\n with gcc and is not affected, but probably some downstream is.\n* [CVE-2017-6312](https://security-tracker.debian.org/tracker/CVE-2017-6312)\nFix for an integer overflow in io-ico.c that allows attackers\n to cause a denial of service (segmentation fault and application\n crash) via a crafted image\n* [CVE-2017-6313](https://security-tracker.debian.org/tracker/CVE-2017-6313)\nFix for an integer underflow in the load\\_resources function in\n io-icns.c that allows attackers to cause a denial of service\n (out-of-bounds read and program crash) via a crafted image entry\n size in an ICO file\n* [CVE-2017-6314](https://security-tracker.debian.org/tracker/CVE-2017-6314)\nFix for an infinite loop in the make\\_available\\_at\\_least function\n in io-tiff.c that allows attackers to cause a denial of service\n via a large TIFF file.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.31.1-2+deb8u8.\n\n\nWe recommend that you upgrade your gdk-pixbuf packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2043-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2043"
 		}
 	]
 }

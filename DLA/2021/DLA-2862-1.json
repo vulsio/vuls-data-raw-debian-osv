@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2862-1",
-	"modified": "2023-06-28T06:25:23.360377Z",
+	"modified": "2024-01-09T20:33:01.052988Z",
 	"published": "2021-12-29T00:00:00Z",
 	"related": [
 		"CVE-2018-12020",
 		"CVE-2019-6690"
 	],
 	"summary": "python-gnupg - security update",
-	"details": "\nA couple of vulnerabilites were found in python-gnupg, a Python\nwrapper for the GNU Privacy Guard.\n\n\n* [CVE-2018-12020](https://security-tracker.debian.org/tracker/CVE-2018-12020)\nMarcus Brinkmann discovered that GnuPG before 2.2.8 improperly\n handled certain command line parameters. A remote attacker\n could use this to spoof the output of GnuPG and cause unsigned\n e-mail to appear signed.\n* [CVE-2019-6690](https://security-tracker.debian.org/tracker/CVE-2019-6690)\nIt was discovered that python-gnupg incorrectly handled the GPG\n passphrase. A remote attacker could send a specially crafted\n passphrase that would allow them to control the output of\n encryption and decryption operations.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.3.9-1+deb9u1.\n\n\nWe recommend that you upgrade your python-gnupg packages.\n\n\nFor the detailed security status of python-gnupg please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-gnupg>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2862-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2862"
 		}
 	]
 }

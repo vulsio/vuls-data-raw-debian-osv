@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3561-1",
-	"modified": "2023-10-16T00:12:07.294989Z",
+	"modified": "2024-01-09T20:21:54.971950Z",
 	"published": "2016-04-29T00:00:00Z",
 	"related": [
 		"CVE-2016-2167",
 		"CVE-2016-2168"
 	],
 	"summary": "subversion - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Subversion, a version control\nsystem. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2016-2167](https://security-tracker.debian.org/tracker/CVE-2016-2167)\nDaniel Shahaf and James McCoy discovered that an implementation\n error in the authentication against the Cyrus SASL library would\n permit a remote user to specify a realm string which is a prefix of\n the expected realm string and potentially allowing a user to\n authenticate using the wrong realm.\n* [CVE-2016-2168](https://security-tracker.debian.org/tracker/CVE-2016-2168)\nIvan Zhakov of VisualSVN discovered a remotely triggerable denial\n of service vulnerability in the mod\\_authz\\_svn module during COPY or\n MOVE authorization check. An authenticated remote attacker could\n take advantage of this flaw to cause a denial of service\n (Subversion server crash) via COPY or MOVE requests with specially\n crafted header.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.8.10-6+deb8u4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.4-1.\n\n\nWe recommend that you upgrade your subversion packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3561-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3561"
 		}
 	]
 }

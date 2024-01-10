@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3230-1",
-	"modified": "2023-06-28T06:25:28.295608Z",
+	"modified": "2024-01-09T20:33:24.204486Z",
 	"published": "2022-12-07T00:00:00Z",
 	"related": [
 		"CVE-2021-41182",
@@ -10,7 +10,6 @@
 		"CVE-2022-31160"
 	],
 	"summary": "jqueryui - security update",
-	"details": "\njQuery-UI, the official jQuery user interface library, is a curated set\nof user interface interactions, effects, widgets, and themes built on top\nof jQuery were reported to have the following vulnerabilities.\n\n\n* [CVE-2021-41182](https://security-tracker.debian.org/tracker/CVE-2021-41182)\njQuery-UI was accepting the value of the `altField` option of the\n Datepicker widget from untrusted sources may execute untrusted code.\n This has been fixed and now any string value passed to the `altField`\n option is now treated as a CSS selector.\n* [CVE-2021-41183](https://security-tracker.debian.org/tracker/CVE-2021-41183)\njQuery-UI was accepting the value of various `\\*Text` options of the\n Datepicker widget from untrusted sources may execute untrusted code.\n This has been fixed and now the values passed to various `\\*Text`\n options are now always treated as pure text, not HTML.\n* [CVE-2021-41184](https://security-tracker.debian.org/tracker/CVE-2021-41184)\njQuery-UI was accepting the value of the `of` option of the\n `.position()` util from untrusted sources may execute untrusted code.\n This has been fixed and now any string value passed to the `of`\n option is now treated as a CSS selector.\n* [CVE-2022-31160](https://security-tracker.debian.org/tracker/CVE-2022-31160)\njQuery-UI was potentially vulnerable to cross-site scripting.\n Initializing a checkboxradio widget on an input enclosed within a\n label makes that parent label contents considered as the input label.\n Calling `.checkboxradio( refresh )` on such a widget and the initial\n HTML contained encoded HTML entities will make them erroneously get\n decoded. This can lead to potentially executing JavaScript code.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.12.1+dfsg-5+deb10u1.\n\n\nWe recommend that you upgrade your jqueryui packages.\n\n\nFor the detailed security status of jqueryui please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/jqueryui>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3230-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3230"
 		}
 	]
 }

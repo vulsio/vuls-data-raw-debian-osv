@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2090-1",
-	"modified": "2023-10-16T00:10:57.898338Z",
+	"modified": "2024-01-09T20:22:41.150233Z",
 	"published": "2010-08-06T00:00:00Z",
 	"related": [
 		"CVE-2010-2799"
 	],
 	"summary": "socat - arbitrary code execution",
-	"details": "\nA stack overflow vulnerability was found in socat that allows an \nattacker to execute arbitrary code with the privileges of the socat\nprocess.\n\n\nThis vulnerability can only be exploited when an attacker is able to \ninject more than 512 bytes of data into socat's argument.\n\n\nA vulnerable scenario would be a CGI script that reads data from \nclients and uses (parts of) this data as argument for a socat \ninvocation.\n\n\nFor the stable distribution (lenny), this problem has been fixed in \nversion 1.6.0.1-1+lenny1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.7.1.3-1.\n\n\nWe recommend that you upgrade your socat package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2090-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2090"
 		}
 	]
 }

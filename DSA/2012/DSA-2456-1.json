@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2456-1",
-	"modified": "2023-10-16T00:05:55.480406Z",
+	"modified": "2024-01-09T20:21:25.357229Z",
 	"published": "2012-04-23T00:00:00Z",
 	"related": [
 		"CVE-2012-0920"
 	],
 	"summary": "dropbear - use after free",
-	"details": "\nDanny Fullerton discovered a use-after-free in the Dropbear SSH daemon,\nresulting in potential execution of arbitrary code. Exploitation is\nlimited to users, who have been authenticated through public key\nauthentication and for which command restrictions are in place.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.52-5+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2012.55-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2012.55-1.\n\n\nWe recommend that you upgrade your dropbear packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2456-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2456"
 		}
 	]
 }

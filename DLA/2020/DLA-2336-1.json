@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2336-1",
-	"modified": "2023-06-28T06:26:30.581672Z",
+	"modified": "2024-01-09T20:32:30.105106Z",
 	"published": "2020-08-22T00:00:00Z",
 	"related": [
 		"CVE-2020-17367",
 		"CVE-2020-17368"
 	],
 	"summary": "firejail - security update",
-	"details": "\nTim Starling discovered two vulnerabilities in firejail, a sandbox\nprogram to restrict the running environment of untrusted applications.\n\n\n* [CVE-2020-17367](https://security-tracker.debian.org/tracker/CVE-2020-17367)\nIt was reported that firejail does not respect the end-of-options\n separator (\"--\"), allowing an attacker with control over the command\n line options of the sandboxed application, to write data to a\n specified file.\n* [CVE-2020-17368](https://security-tracker.debian.org/tracker/CVE-2020-17368)\nIt was reported that firejail when redirecting output via --output\n or --output-stderr, concatenates all command line arguments into a\n single string that is passed to a shell. An attacker who has control\n over the command line arguments of the sandboxed application could\n take advantage of this flaw to run run arbitrary other commands.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.9.44.8-2+deb9u1.\n\n\nWe recommend that you upgrade your firejail packages.\n\n\nFor the detailed security status of firejail please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/firejail>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2336-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2336"
 		}
 	]
 }

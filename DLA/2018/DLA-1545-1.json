@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1545-1",
-	"modified": "2023-06-28T06:20:47.470382Z",
+	"modified": "2024-01-09T20:31:22.789340Z",
 	"published": "2018-10-15T00:00:00Z",
 	"related": [
 		"CVE-2018-11784"
 	],
 	"summary": "tomcat8 - security update",
-	"details": "\nSergey Bobrov discovered that when the default servlet returned a\nredirect to a directory (e.g. redirecting to /foo/ when the user\nrequested /foo) a specially crafted URL could be used to cause the\nredirect to be generated to any URI of the attackers choice.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n8.0.14-1+deb8u14.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1545-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1545"
 		}
 	]
 }

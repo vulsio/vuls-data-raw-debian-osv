@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2617-1",
-	"modified": "2023-10-16T00:06:01.065614Z",
+	"modified": "2024-01-09T20:25:43.118215Z",
 	"published": "2013-02-02T00:00:00Z",
 	"related": [
 		"CVE-2013-0213",
 		"CVE-2013-0214"
 	],
 	"summary": "samba - several issues",
-	"details": "\nJann Horn had reported two vulnerabilities in Samba, a popular\ncross-platform network file and printer sharing suite. In particular,\nthese vulnerabilities affect to SWAT, the Samba Web Administration Tool.\n\n\n* [CVE-2013-0213](https://security-tracker.debian.org/tracker/CVE-2013-0213):\nClickjacking issue in SWAT\n\n An attacker can integrate a SWAT page into a malicious web page via a\n frame or iframe and then overlaid by other content. If an\n authenticated valid user interacts with this malicious web page, she\n might perform unintended changes in the Samba settings.\n* [CVE-2013-0214](https://security-tracker.debian.org/tracker/CVE-2013-0214):\nPotential Cross-site request forgery\n\n An attacker can persuade a valid SWAT user, who is logged in as root,\n to click in a malicious link and trigger arbitrary unintended changes\n in the Samba settings. In order to be vulnerable, the attacker needs \n to know the victim's password.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 2:3.5.6~dfsg-3squeeze9.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 2:3.6.6-5.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2:3.6.6-5.\n\n\nWe recommend that you upgrade your samba packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2617-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2617"
 		}
 	]
 }

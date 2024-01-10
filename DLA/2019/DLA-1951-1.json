@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1951-1",
-	"modified": "2023-06-28T06:25:01.639969Z",
+	"modified": "2024-01-09T20:31:53.816473Z",
 	"published": "2019-10-09T00:00:00Z",
 	"related": [
 		"CVE-2019-17362"
 	],
 	"summary": "libtomcrypt - security update",
-	"details": "\nIt was discovered that there was a denial of service vulnerability\nin the libtomcrypt cryptographic library.\n\n\nAn out-of-bounds read and crash could occur via carefully-crafted\n\"DER\" encoded data (eg. by importing an X.509 certificate).\n\n\n* [CVE-2019-17362](https://security-tracker.debian.org/tracker/CVE-2019-17362)\nIn LibTomCrypt through 1.18.2, the der\\_decode\\_utf8\\_string function (in der\\_decode\\_utf8\\_string.c) does not properly detect certain invalid UTF-8 sequences. This allows context-dependent attackers to cause a denial of service (out-of-bounds read and crash) or read information from other memory locations via carefully crafted DER-encoded data.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.17-6+deb8u1.\n\n\nWe recommend that you upgrade your libtomcrypt packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1951-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1951"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2382-1",
-	"modified": "2023-10-16T00:11:12.661020Z",
+	"modified": "2024-01-09T20:22:59.770906Z",
 	"published": "2012-01-07T00:00:00Z",
 	"related": [
 		"CVE-2011-1831",
@@ -12,7 +12,6 @@
 		"CVE-2011-3145"
 	],
 	"summary": "ecryptfs-utils - multiple",
-	"details": "\nSeveral problems have been discovered in eCryptfs, a cryptographic\nfilesystem for Linux.\n\n\n* [CVE-2011-1831](https://security-tracker.debian.org/tracker/CVE-2011-1831)\nVasiliy Kulikov of Openwall and Dan Rosenberg discovered that eCryptfs\n incorrectly validated permissions on the requested mountpoint. A local\n attacker could use this flaw to mount to arbitrary locations, leading\n to privilege escalation.\n* [CVE-2011-1832](https://security-tracker.debian.org/tracker/CVE-2011-1832)\nVasiliy Kulikov of Openwall and Dan Rosenberg discovered that eCryptfs\n incorrectly validated permissions on the requested mountpoint. A local\n attacker could use this flaw to unmount to arbitrary locations, leading\n to a denial of service.\n* [CVE-2011-1834](https://security-tracker.debian.org/tracker/CVE-2011-1834)\nDan Rosenberg and Marc Deslauriers discovered that eCryptfs incorrectly\n handled modifications to the mtab file when an error occurs. A local\n attacker could use this flaw to corrupt the mtab file, and possibly\n unmount arbitrary locations, leading to a denial of service.\n* [CVE-2011-1835](https://security-tracker.debian.org/tracker/CVE-2011-1835)\nMarc Deslauriers discovered that eCryptfs incorrectly handled keys when\n setting up an encrypted private directory. A local attacker could use\n this flaw to manipulate keys during creation of a new user.\n* [CVE-2011-1837](https://security-tracker.debian.org/tracker/CVE-2011-1837)\nVasiliy Kulikov of Openwall discovered that eCryptfs incorrectly handled\n lock counters. A local attacker could use this flaw to possibly overwrite\n arbitrary files.\n\n\nWe acknowledge the work of the Ubuntu distribution in preparing patches\nsuitable for near-direct inclusion in the Debian package.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 68-1+lenny1.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 83-4+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution (sid),\nthese problems have been fixed in version 95-1.\n\n\nWe recommend that you upgrade your ecryptfs-utils packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2382-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2382"
 		}
 	]
 }

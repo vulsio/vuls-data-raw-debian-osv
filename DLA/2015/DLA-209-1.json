@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-209-1",
-	"modified": "2023-06-28T06:21:11.093326Z",
+	"modified": "2024-01-09T20:32:00.154307Z",
 	"published": "2015-04-29T00:00:00Z",
 	"related": [
 		"CVE-2011-4838",
 		"CVE-2012-5370"
 	],
 	"summary": "jruby - security update",
-	"details": "\nJRuby before 1.6.5.1 computes hash values without restricting the ability to\ntrigger hash collisions predictably, which allows context-dependent attackers\nto cause a denial of service (CPU consumption) via crafted input to an\napplication that maintains a hash table. Note: This update includes\ncorrections to the original fix for later Debian releases to avoid the issues\nidentified in [CVE-2012-5370](https://security-tracker.debian.org/tracker/CVE-2012-5370).\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-209-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-209"
 		}
 	]
 }

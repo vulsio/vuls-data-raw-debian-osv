@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-217-1",
-	"modified": "2023-06-28T06:21:14.181874Z",
+	"modified": "2024-01-09T20:32:06.520019Z",
 	"published": "2015-05-01T00:00:00Z",
 	"related": [
 		"CVE-2014-9622",
 		"CVE-2015-1877"
 	],
 	"summary": "xdg-utils - security update",
-	"details": "\nThe two below CVE issues have recently been fixed in Debian squeeze-lts:\n\n\n* [CVE-2014-9622](https://security-tracker.debian.org/tracker/CVE-2014-9622)\nJohn Houwer discovered a way to cause xdg-open, a tool that automatically\n opens URLs in a user's preferred application, to execute arbitrary\n commands remotely.\n* [CVE-2015-1877](https://security-tracker.debian.org/tracker/CVE-2015-1877)\nJiri Horner discovered a way to cause xdg-open, a tool that automatically\n opens URLs in a user's preferred application, to execute arbitrary\n commands remotely.\n\n\nThis problem only affects /bin/sh implementations that don't sanitize\n local variables. Dash, which is the default /bin/sh in Debian is\n affected. Bash as /bin/sh is known to be unaffected.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-217-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-217"
 		}
 	]
 }

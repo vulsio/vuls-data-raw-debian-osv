@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3432-1",
-	"modified": "2023-06-28T06:30:36.211787Z",
+	"modified": "2024-01-09T20:33:39.092182Z",
 	"published": "2023-05-24T00:00:00Z",
 	"related": [
 		"CVE-2015-20107",
@@ -15,7 +15,6 @@
 		"CVE-2022-45061"
 	],
 	"summary": "python2.7 - security update",
-	"details": "\nMultiple security issues were discovered in Python, an interactive\nhigh-level object-oriented language. An attacker may cause command\ninjection, denial of service (DoS), request smuggling and port\nscanning.\n\n\n* [CVE-2015-20107](https://security-tracker.debian.org/tracker/CVE-2015-20107)\nThe mailcap module does not add escape characters into commands\n discovered in the system mailcap file. This may allow attackers to\n inject shell commands into applications that call\n mailcap.findmatch with untrusted input (if they lack validation of\n user-provided filenames or arguments).\n* [CVE-2019-20907](https://security-tracker.debian.org/tracker/CVE-2019-20907)\nIn Lib/tarfile.py, an attacker is able to craft a TAR archive\n leading to an infinite loop when opened by tarfile.open, because\n \\_proc\\_pax lacks header validation.\n* [CVE-2020-8492](https://security-tracker.debian.org/tracker/CVE-2020-8492)\nPython allows an HTTP server to conduct Regular Expression Denial\n of Service (ReDoS) attacks against a client because of\n urllib.request.AbstractBasicAuthHandler catastrophic backtracking.\n* [CVE-2020-26116](https://security-tracker.debian.org/tracker/CVE-2020-26116)\nhttp.client allows CRLF injection if the attacker controls the\n HTTP request method, as demonstrated by inserting CR and LF\n control characters in the first argument of\n HTTPConnection.request.\n* [CVE-2021-3177](https://security-tracker.debian.org/tracker/CVE-2021-3177)\nPython has a buffer overflow in PyCArg\\_repr in \\_ctypes/callproc.c,\n which may lead to remote code execution in certain Python\n applications that accept floating-point numbers as untrusted\n input, as demonstrated by a 1e300 argument to\n c\\_double.from\\_param. This occurs because sprintf is used unsafely.\n* [CVE-2021-3733](https://security-tracker.debian.org/tracker/CVE-2021-3733)\nThere's a flaw in urllib's AbstractBasicAuthHandler class. An\n attacker who controls a malicious HTTP server that an HTTP client\n (such as web browser) connects to, could trigger a Regular\n Expression Denial of Service (ReDOS) during an authentication\n request with a specially crafted payload that is sent by the\n server to the client.\n* [CVE-2021-3737](https://security-tracker.debian.org/tracker/CVE-2021-3737)\nAn improperly handled HTTP response in the HTTP client code of\n python may allow a remote attacker, who controls the HTTP server,\n to make the client script enter an infinite loop, consuming CPU\n time.\n* [CVE-2021-4189](https://security-tracker.debian.org/tracker/CVE-2021-4189)\nThe FTP (File Transfer Protocol) client library in PASV (passive)\n mode trusts the host from the PASV response by default. This flaw\n allows an attacker to set up a malicious FTP server that can trick\n FTP clients into connecting back to a given IP address and\n port. This vulnerability could lead to FTP client scanning\n ports. For the rare user who wants the previous behavior, set a\n `trust\\_server\\_pasv\\_ipv4\\_address` attribute on your `ftplib.FTP`\n instance to True.\n* [CVE-2022-45061](https://security-tracker.debian.org/tracker/CVE-2022-45061)\nAn unnecessary quadratic algorithm exists in one path when\n processing some inputs to the IDNA (RFC 3490) decoder, such that a\n crafted, unreasonably long name being presented to the decoder\n could lead to a CPU denial of service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.7.16-2+deb10u2.\n\n\nWe recommend that you upgrade your python2.7 packages.\n\n\nFor the detailed security status of python2.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python2.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3432-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3432"
 		}
 	]
 }

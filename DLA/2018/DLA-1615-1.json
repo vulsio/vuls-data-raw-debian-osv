@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1615-1",
-	"modified": "2023-06-28T06:20:51.684032Z",
+	"modified": "2024-01-09T20:31:28.952930Z",
 	"published": "2018-12-24T00:00:00Z",
 	"related": [
 		"CVE-2013-7108",
@@ -11,7 +11,6 @@
 		"CVE-2018-18245"
 	],
 	"summary": "nagios3 - security update",
-	"details": "\nSeveral issues were corrected in nagios3, a monitoring and management\nsystem for hosts, services and networks.\n\n\n* [CVE-2018-18245](https://security-tracker.debian.org/tracker/CVE-2018-18245)\nMaximilian Boehner of usd AG found a cross-site scripting (XSS)\n vulnerability in Nagios Core. This vulnerability allows attackers\n to place malicious JavaScript code into the web frontend through\n manipulation of plugin output. In order to do this the attacker\n needs to be able to manipulate the output returned by nagios\n checks, e.g. by replacing a plugin on one of the monitored\n endpoints. Execution of the payload then requires that an\n authenticated user creates an alert summary report which contains\n the corresponding output.\n* [CVE-2016-9566](https://security-tracker.debian.org/tracker/CVE-2016-9566)\nIt was discovered that local users with access to an account in\n the nagios group are able to gain root privileges via a symlink\n attack on the debug log file.\n* [CVE-2014-1878](https://security-tracker.debian.org/tracker/CVE-2014-1878)\nAn issue was corrected that allowed remote attackers to cause a\n stack-based buffer overflow and subsequently a denial of service\n (segmentation fault) via a long message to cmd.cgi.\n* [CVE-2013-7205](https://security-tracker.debian.org/tracker/CVE-2013-7205) /\n [CVE-2013-7108](https://security-tracker.debian.org/tracker/CVE-2013-7108)\nA flaw was corrected in Nagios that could be exploited to cause a\n denial-of-service. This vulnerability is induced due to an\n off-by-one error within the process\\_cgivars() function, which can\n be exploited to cause an out-of-bounds read by sending a\n specially-crafted key value to the Nagios web UI.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.5.1.dfsg-2+deb8u1.\n\n\nWe recommend that you upgrade your nagios3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1615-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1615"
 		}
 	]
 }

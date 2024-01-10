@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3590-1",
-	"modified": "2023-09-29T21:15:20.996516Z",
+	"modified": "2024-01-09T20:33:40.499914Z",
 	"published": "2023-09-29T00:00:00Z",
 	"related": [
 		"CVE-2019-19450",
 		"CVE-2020-28463"
 	],
 	"summary": "python-reportlab - security update",
-	"details": "\nSecurity issues were discovered in python-reportlab, a Python library\nfor generating PDFs and graphics, which could lead to remote code\nexecution or authorization bypass.\n\n\n* [CVE-2019-19450](https://security-tracker.debian.org/tracker/CVE-2019-19450)\nRavi Prakash Giri discovered a remote code execution vulnerability\n via crafted XML document where `<unichar code=\"` is followed by\n arbitrary Python code.\n\n\nThis issue is similar to [CVE-2019-17626](https://security-tracker.debian.org/tracker/CVE-2019-17626).\n* [CVE-2020-28463](https://security-tracker.debian.org/tracker/CVE-2020-28463)\nKaran Bamal discovered a Server-side Request Forgery (SSRF)\n vulnerability via `<img>` tags.\n New settings `trustedSchemes` and `trustedHosts`\n have been added as part of the fix/mitigation: they can be used to\n specify an explicit allowlist for remote sources.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n3.5.13-1+deb10u2.\n\n\nWe recommend that you upgrade your python-reportlab packages.\n\n\nFor the detailed security status of python-reportlab please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-reportlab>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3590-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3590"
 		}
 	]
 }

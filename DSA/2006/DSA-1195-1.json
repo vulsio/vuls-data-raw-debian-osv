@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1195-1",
-	"modified": "2023-10-16T00:10:12.076259Z",
+	"modified": "2024-01-09T20:22:09.887646Z",
 	"published": "2006-10-10T00:00:00Z",
 	"related": [
 		"CVE-2006-2940",
@@ -9,7 +9,6 @@
 		"CVE-2006-4343"
 	],
 	"summary": "openssl096",
-	"details": "\nMultiple vulnerabilities have been discovered in the OpenSSL\ncryptographic software package that could allow an attacker to launch\na denial of service attack by exhausting system resources or crashing\nprocesses on a victim's computer.\n\n\n* [CVE-2006-3738](https://security-tracker.debian.org/tracker/CVE-2006-3738)\nTavis Ormandy and Will Drewry of the Google Security Team\n discovered a buffer overflow in SSL\\_get\\_shared\\_ciphers utility\n function, used by some applications such as exim and mysql. An\n attacker could send a list of ciphers that would overrun a\n buffer.\n* [CVE-2006-4343](https://security-tracker.debian.org/tracker/CVE-2006-4343)\nTavis Ormandy and Will Drewry of the Google Security Team\n discovered a possible DoS in the sslv2 client code. Where a\n client application uses OpenSSL to make a SSLv2 connection to\n a malicious server that server could cause the client to\n crash.\n* [CVE-2006-2940](https://security-tracker.debian.org/tracker/CVE-2006-2940)\nDr S N Henson of the OpenSSL core team and Open Network\n Security recently developed an ASN1 test suite for NISCC\n ([www.niscc.gov.uk](http://www.niscc.gov.uk/)). When the test suite was run against\n OpenSSL a DoS was discovered.\n\n\nCertain types of public key can take disproportionate amounts\n of time to process. This could be used by an attacker in a\n denial of service attack.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.9.6m-1sarge4.\n\n\nThis package exists only for compatibility with older software, and is\nnot present in the unstable or testing branches of Debian.\n\n\nWe recommend that you upgrade your openssl096 package. Note that\nservices linking against the openssl shared libraries will need to be\nrestarted. Common examples of such services include most Mail\nTransport Agents, SSH servers, and web servers.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1195-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1195"
 		}
 	]
 }

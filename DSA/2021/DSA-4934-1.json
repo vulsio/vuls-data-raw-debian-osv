@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4934-1",
-	"modified": "2023-10-16T00:25:34.678831Z",
+	"modified": "2024-01-09T20:29:12.238539Z",
 	"published": "2021-06-26T00:00:00Z",
 	"related": [
 		"CVE-2020-24489",
@@ -10,7 +10,6 @@
 		"CVE-2020-24513"
 	],
 	"summary": "intel-microcode - security update",
-	"details": "\nThis update ships updated CPU microcode for some types of Intel CPUs and\nprovides mitigations for security vulnerabilities which could result in\nprivilege escalation in combination with VT-d and various side channel\nattacks.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 3.20210608.2~deb10u1.\n\n\nNote that there are two reported regressions; for some CoffeeLake CPUs\nthis update may break iwlwifi\n(https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/issues/56)\nand some for Skylake R0/D0 CPUs on systems using a very outdated firmware/BIOS,\nthe system may hang on boot:\n(https://github.com/intel/Intel-Linux-Processor-Microcode-Data-Files/issues/31)\n\n\nIf you are affected by those issues, you can recover by disabling microcode\nloading on boot (as documented in README.Debian, also available online at\n[\\\nhttps://salsa.debian.org/hmh/intel-microcode/-/blob/master/debian/README.Debian)](https://salsa.debian.org/hmh/intel-microcode/-/blob/master/debian/README.Debian)\n\n\nWe recommend that you upgrade your intel-microcode packages.\n\n\nFor the detailed security status of intel-microcode please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/intel-microcode](https://security-tracker.debian.org/tracker/intel-microcode)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -188,12 +187,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4934-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-4934"
 		}
 	]
 }

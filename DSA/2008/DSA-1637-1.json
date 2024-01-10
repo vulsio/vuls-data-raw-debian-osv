@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1637-1",
-	"modified": "2023-10-16T00:05:36.474722Z",
+	"modified": "2024-01-09T20:25:14.158144Z",
 	"published": "2008-09-15T00:00:00Z",
 	"related": [
 		"CVE-2008-3546"
 	],
 	"summary": "git-core - buffer overflow",
-	"details": "\nMultiple vulnerabilities have been identified in git-core, the core of\nthe git distributed revision control system. Improper path length\nlimitations in git's diff and grep functions, in combination with\nmaliciously crafted repositories or changes, could enable a stack\nbuffer overflow and potentially the execution of arbitrary code.\n\n\nThe Common Vulnerabilities and Exposures project identifies this\nvulnerability as [CVE-2008-3546](https://security-tracker.debian.org/tracker/CVE-2008-3546).\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 1.4.4.4-2.1+etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.5.6.5-1.\n\n\nWe recommend that you upgrade your git-core packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1637-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1637"
 		}
 	]
 }

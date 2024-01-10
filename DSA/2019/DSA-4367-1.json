@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4367-1",
-	"modified": "2023-10-16T00:17:24.577037Z",
+	"modified": "2024-01-09T20:28:41.928520Z",
 	"published": "2019-01-13T00:00:00Z",
 	"related": [
 		"CVE-2018-16864",
@@ -9,7 +9,6 @@
 		"CVE-2018-16866"
 	],
 	"summary": "systemd - security update",
-	"details": "\nThe Qualys Research Labs discovered multiple vulnerabilities in\nsystemd-journald. Two memory corruption flaws, via attacker-controlled\nallocations using the alloca function ([CVE-2018-16864](https://security-tracker.debian.org/tracker/CVE-2018-16864), \n[CVE-2018-16865](https://security-tracker.debian.org/tracker/CVE-2018-16865))\nand an out-of-bounds read flaw leading to an information leak\n([CVE-2018-16866](https://security-tracker.debian.org/tracker/CVE-2018-16866)), \ncould allow an attacker to cause a denial of service or the execution of\narbitrary code.\n\n\nFurther details in the Qualys Security Advisory at\n<https://www.qualys.com/2019/01/09/system-down/system-down.txt>\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 232-25+deb9u7.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFor the detailed security status of systemd please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/systemd>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4367-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4367"
 		}
 	]
 }

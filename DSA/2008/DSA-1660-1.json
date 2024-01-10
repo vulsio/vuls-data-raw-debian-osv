@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1660-1",
-	"modified": "2023-10-16T00:10:33.316966Z",
+	"modified": "2024-01-09T20:22:26.783481Z",
 	"published": "2008-10-26T00:00:00Z",
 	"related": [
 		"CVE-2008-3912",
@@ -9,7 +9,6 @@
 		"CVE-2008-3914"
 	],
 	"summary": "clamav - denial of service",
-	"details": "\nSeveral denial-of-service vulnerabilities have been discovered in\nthe ClamAV anti-virus toolkit:\n\n\nInsufficient checking for out-of-memory conditions results in null\npointer dereferences ([CVE-2008-3912](https://security-tracker.debian.org/tracker/CVE-2008-3912)).\n\n\nIncorrect error handling logic leads to memory leaks ([CVE-2008-3913](https://security-tracker.debian.org/tracker/CVE-2008-3913))\nand file descriptor leaks ([CVE-2008-3914](https://security-tracker.debian.org/tracker/CVE-2008-3914)).\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 0.90.1dfsg-4etch15.\n\n\nFor the unstable distribution (sid) and the testing distribution\n(lenny), these problems have been fixed in version 0.94.dfsg-1.\n\n\nWe recommend that you upgrade your clamav package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1660-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1660"
 		}
 	]
 }

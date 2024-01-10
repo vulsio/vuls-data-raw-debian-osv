@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1676-1",
-	"modified": "2023-06-28T06:20:53.295827Z",
+	"modified": "2024-01-09T20:31:33.497763Z",
 	"published": "2019-02-14T00:00:00Z",
 	"related": [
 		"CVE-2017-15105"
 	],
 	"summary": "unbound - security update",
-	"details": "\nRalph Dolmans and Karst Koymans found a flaw in the way unbound, a\nvalidating, recursive, caching DNS resolver, validated\nwildcard-synthesized NSEC records.\n\n\nAn improperly validated wildcard NSEC record could be used to prove the\nnon-existence (NXDOMAIN answer) of an existing wildcard record, or trick\nunbound into accepting a NODATA proof.\n\n\nFor more information please refer to the upstream advisory at\n.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.4.22-3+deb8u4.\n\n\nWe recommend that you upgrade your unbound packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1676-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1676"
 		}
 	]
 }

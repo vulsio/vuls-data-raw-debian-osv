@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-167",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-09-16T00:00:00Z",
 	"published": "2002-09-16T00:00:00Z",
 	"related": [
 		"CVE-2002-1151"
 	],
 	"summary": "kdelibs - cross site scripting",
-	"details": "\nA cross site scripting problem has been discovered in Konqueror, a\nfamous browser for KDE and other programs using KHTML. The KDE team\n[reports](http://www.kde.org/info/security/advisory-20020908-2.txt)\nthat Konqueror's cross site scripting protection fails to\ninitialize the domains on sub-(i)frames correctly. As a result,\nJavaScript is able to access any foreign subframe which is defined in\nthe HTML source. Users of Konqueror and other KDE software that uses\nthe KHTML rendering engine may become victim of a cookie stealing and\nother cross site scripting attacks.\n\n\nThis problem has been fixed in version 2.2.2-13.woody.3 for the\ncurrent stable distribution (woody) and in version 2.2.2-14 for the\nunstable distribution (sid). The old stable distribution (potato) is\nnot affected since it didn't ship KDE.\n\n\nWe recommend that you upgrade your kdelibs package and restart\nKonqueror.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-167.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-167"
 		}
 	]
 }

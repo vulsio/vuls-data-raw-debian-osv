@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-831-1",
-	"modified": "2023-06-28T06:31:04.453174Z",
+	"modified": "2024-01-09T20:34:00.474248Z",
 	"published": "2017-02-20T00:00:00Z",
 	"related": [
 		"CVE-2017-5884",
 		"CVE-2017-5885"
 	],
 	"summary": "gtk-vnc - security update",
-	"details": "\nJosef Gajdusek discovered two vulnerabilities in gtk-vnc, a VNC viewer\nwidget for GTK:\n\n\n* [CVE-2017-5884](https://security-tracker.debian.org/tracker/CVE-2017-5884)\nFix bounds checking for RRE, hextile & copyrec encodings. This bug\n allowed a remote server to cause a denial of service by buffer\n overflow via a carefully crafted message containing subrectangles\n outside the drawing area.\n* [CVE-2017-5885](https://security-tracker.debian.org/tracker/CVE-2017-5885)\nCorrectly validate color map range indexes. This bug allowed a\n remote server to cause a denial of service by buffer overflow via\n a carefully crafted message with out-of-range colour values.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.5.0-3.1+deb7u1.\n\n\nWe recommend that you upgrade your gtk-vnc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-831-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-831"
 		}
 	]
 }

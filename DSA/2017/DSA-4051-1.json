@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4051-1",
-	"modified": "2023-10-16T00:12:36.571305Z",
+	"modified": "2024-01-09T20:26:16.021523Z",
 	"published": "2017-11-29T00:00:00Z",
 	"related": [
 		"CVE-2017-8816",
 		"CVE-2017-8817"
 	],
 	"summary": "curl - security update",
-	"details": "\nTwo vulnerabilities were discovered in cURL, an URL transfer library.\n\n\n* [CVE-2017-8816](https://security-tracker.debian.org/tracker/CVE-2017-8816)\nAlex Nichols discovered a buffer overrun flaw in the NTLM authentication\n code which can be triggered on 32bit systems where an integer overflow\n might occur when calculating the size of a memory allocation.\n* [CVE-2017-8817](https://security-tracker.debian.org/tracker/CVE-2017-8817)\nFuzzing by the OSS-Fuzz project led to the discovery of a read out of\n bounds flaw in the FTP wildcard function in libcurl. A malicious server\n could redirect a libcurl-based client to an URL using a wildcard pattern,\n triggering the out-of-bound read.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 7.38.0-4+deb8u8.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 7.52.1-5+deb9u3.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFor the detailed security status of curl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/curl](https://security-tracker.debian.org/tracker/curl)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4051-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-4051"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-939-1",
-	"modified": "2023-06-28T06:25:39.989984Z",
+	"modified": "2024-01-09T20:34:04.300458Z",
 	"published": "2017-05-11T00:00:00Z",
 	"related": [
 		"CVE-2016-9603",
@@ -9,7 +9,6 @@
 		"CVE-2017-7980"
 	],
 	"summary": "qemu-kvm - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in qemu-kvm, a full\nvirtualization solution on x86 hardware based on Quick\nEmulator(Qemu). The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2016-9603](https://security-tracker.debian.org/tracker/CVE-2016-9603)\nqemu-kvm built with the Cirrus CLGD 54xx VGA Emulator and the VNC\n display driver support is vulnerable to a heap buffer overflow\n issue. It could occur when Vnc client attempts to update its\n display after a vga operation is performed by a guest.\n\n\nA privileged user/process inside guest could use this flaw to crash\n the Qemu process resulting in DoS OR potentially leverage it to\n execute arbitrary code on the host with privileges of the Qemu\n process.\n* [CVE-2017-7718](https://security-tracker.debian.org/tracker/CVE-2017-7718)\nqemu-kvm built with the Cirrus CLGD 54xx VGA Emulator support is\n vulnerable to an out-of-bounds access issue. It could occur while\n copying VGA data via bitblt functions cirrus\\_bitblt\\_rop\\_fwd\\_transp\\_\n and/or cirrus\\_bitblt\\_rop\\_fwd\\_.\n\n\nA privileged user inside guest could use this flaw to crash the\n Qemu process resulting in DoS.\n* [CVE-2017-7980](https://security-tracker.debian.org/tracker/CVE-2017-7980)\nqemu-kvm built with the Cirrus CLGD 54xx VGA Emulator support is\n vulnerable to an out-of-bounds r/w access issues. It could occur\n while copying VGA data via various bitblt functions.\n\n\nA privileged user inside guest could use this flaw to crash the\n Qemu process resulting in DoS OR potentially execute arbitrary code\n on a host with privileges of Qemu process on the host.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u21.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -57,12 +56,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-939-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-939"
 		}
 	]
 }

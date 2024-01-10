@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3614-1",
-	"modified": "2023-10-16T00:12:10.277421Z",
+	"modified": "2024-01-09T20:21:55.880419Z",
 	"published": "2016-07-02T00:00:00Z",
 	"related": [
 		"CVE-2016-3092"
 	],
 	"summary": "tomcat7 - security update",
-	"details": "\nThe TERASOLUNA Framework Development Team discovered a denial of service\nvulnerability in Apache Commons FileUpload, a package to make it\neasy to add robust, high-performance, file upload capability to servlets\nand web applications. A remote attacker can take advantage of this flaw\nby sending file upload requests that cause the HTTP server using the\nApache Commons Fileupload library to become unresponsive, preventing the\nserver from servicing other requests.\n\n\nApache Tomcat uses a package renamed copy of Apache Commons FileUpload\nto implement the file upload requirements of the Servlet specification\nand is therefore also vulnerable to the denial of service vulnerability.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 7.0.56-3+deb8u3.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 7.0.70-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 7.0.70-1.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3614-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3614"
 		}
 	]
 }

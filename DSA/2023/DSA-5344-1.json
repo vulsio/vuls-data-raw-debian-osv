@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5344-1",
-	"modified": "2023-10-16T00:28:02.747921Z",
+	"modified": "2024-01-09T20:29:30.416448Z",
 	"published": "2023-02-08T00:00:00Z",
 	"related": [
 		"CVE-2022-45142"
 	],
 	"summary": "heimdal - security update",
-	"details": "\nHelmut Grohne discovered a flaw in Heimdal, an implementation of\nKerberos 5 that aims to be compatible with MIT Kerberos. The backports\nof fixes for [CVE-2022-3437](https://security-tracker.debian.org/tracker/CVE-2022-3437) accidentally inverted important memory\ncomparisons in the arcfour-hmac-md5 and rc4-hmac integrity check\nhandlers for gssapi, resulting in incorrect validation of message\nintegrity codes.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 7.7.0+dfsg-2+deb11u3.\n\n\nWe recommend that you upgrade your heimdal packages.\n\n\nFor the detailed security status of heimdal please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/heimdal](https://security-tracker.debian.org/tracker/heimdal)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5344-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5344"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1749-1",
-	"modified": "2023-10-16T00:07:49.823244Z",
+	"modified": "2024-01-09T20:25:27.262758Z",
 	"published": "2009-03-20T00:00:00Z",
 	"related": [
 		"CVE-2009-0029",
@@ -17,7 +17,6 @@
 		"CVE-2009-0748"
 	],
 	"summary": "linux-2.6 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2009-0029](https://security-tracker.debian.org/tracker/CVE-2009-0029)\nChristian Borntraeger discovered an issue effecting the alpha,\n mips, powerpc, s390 and sparc64 architectures that allows local\n users to cause a denial of service or potentially gain elevated\n privileges.\n* [CVE-2009-0031](https://security-tracker.debian.org/tracker/CVE-2009-0031)\nVegard Nossum discovered a memory leak in the keyctl subsystem\n that allows local users to cause a denial of service by consuming\n all of kernel memory.\n* [CVE-2009-0065](https://security-tracker.debian.org/tracker/CVE-2009-0065)\nWei Yongjun discovered a memory overflow in the SCTP\n implementation that can be triggered by remote users.\n* [CVE-2009-0269](https://security-tracker.debian.org/tracker/CVE-2009-0269)\nDuane Griffin provided a fix for an issue in the eCryptfs\n subsystem which allows local users to cause a denial of service\n (fault or memory corruption).\n* [CVE-2009-0322](https://security-tracker.debian.org/tracker/CVE-2009-0322)\nPavel Roskin provided a fix for an issue in the dell\\_rbu driver\n that allows a local user to cause a denial of service (oops) by\n reading 0 bytes from a sysfs entry.\n* [CVE-2009-0676](https://security-tracker.debian.org/tracker/CVE-2009-0676)\nClement LECIGNE discovered a bug in the sock\\_getsockopt function\n that may result in leaking sensitive kernel memory.\n* [CVE-2009-0675](https://security-tracker.debian.org/tracker/CVE-2009-0675)\nRoel Kluin discovered inverted logic in the skfddi driver that\n permits local, unprivileged users to reset the driver statistics.\n* [CVE-2009-0745](https://security-tracker.debian.org/tracker/CVE-2009-0745)\nPeter Kerwien discovered an issue in the ext4 filesystem that\n allows local users to cause a denial of service (kernel oops)\n during a resize operation.\n* [CVE-2009-0746](https://security-tracker.debian.org/tracker/CVE-2009-0746)\nSami Liedes reported an issue in the ext4 filesystem that allows\n local users to cause a denial of service (kernel oops) when\n accessing a specially crafted corrupt filesystem.\n* [CVE-2009-0747](https://security-tracker.debian.org/tracker/CVE-2009-0747)\nDavid Maciejak reported an issue in the ext4 filesystem that\n allows local users to cause a denial of service (kernel oops) when\n mounting a specially crafted corrupt filesystem.\n* [CVE-2009-0748](https://security-tracker.debian.org/tracker/CVE-2009-0748)\nDavid Maciejak reported an additional issue in the ext4 filesystem\n that allows local users to cause a denial of service (kernel oops)\n when mounting a specially crafted corrupt filesystem.\n\n\nFor the oldstable distribution (etch), these problems, where applicable,\nwill be fixed in future updates to linux-2.6 and linux-2.6.24.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.6.26-13lenny2.\n\n\nWe recommend that you upgrade your linux-2.6 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1749-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1749"
 		}
 	]
 }

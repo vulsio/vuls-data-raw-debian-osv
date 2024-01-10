@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2714-1",
-	"modified": "2023-06-28T06:21:20.929161Z",
+	"modified": "2024-01-09T20:32:52.971999Z",
 	"published": "2021-07-20T00:00:00Z",
 	"related": [
 		"CVE-2020-36311",
@@ -10,7 +10,6 @@
 		"CVE-2021-3609"
 	],
 	"summary": "linux-4.19 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\nThis update is not yet available for the armhf (ARM EABI hard-float)\narchitecture.\n\n\n* [CVE-2020-36311](https://security-tracker.debian.org/tracker/CVE-2020-36311)\nA flaw was discovered in the KVM subsystem for AMD CPUs, allowing an\n attacker to cause a denial of service by triggering destruction of a\n large SEV VM.\n* [CVE-2021-3609](https://security-tracker.debian.org/tracker/CVE-2021-3609)\nNorbert Slusarek reported a race condition vulnerability in the CAN\n BCM networking protocol, allowing a local attacker to escalate\n privileges.\n* [CVE-2021-33909](https://security-tracker.debian.org/tracker/CVE-2021-33909)\nThe Qualys Research Labs discovered a size\\_t-to-int conversion\n vulnerability in the Linux kernel's filesystem layer. An\n unprivileged local attacker able to create, mount, and then delete a\n deep directory structure whose total path length exceeds 1GB, can\n take advantage of this flaw for privilege escalation.\n\n\nDetails can be found in the Qualys advisory at\n <https://www.qualys.com/2021/07/20/cve-2021-33909/sequoia-local-privilege-escalation-linux.txt>\n* [CVE-2021-34693](https://security-tracker.debian.org/tracker/CVE-2021-34693)\nNorbert Slusarek discovered an information leak in the CAN BCM\n networking protocol. A local attacker can take advantage of this\n flaw to obtain sensitive information from kernel stack memory.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.19.194-3~deb9u1. This additionally fixes a regression in the\nprevious update ([#990072](https://bugs.debian.org/990072)) that affected LXC.\n\n\nWe recommend that you upgrade your linux-4.19 packages.\n\n\nFor the detailed security status of linux-4.19 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-4.19>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2714-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2714"
 		}
 	]
 }

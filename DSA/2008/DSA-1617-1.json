@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1617-1",
-	"modified": "2023-10-16T00:10:33.183064Z",
+	"modified": "2024-01-09T20:20:54.978342Z",
 	"published": "2008-07-25T00:00:00Z",
 	"related": [
 		"CVE-2008-1447"
 	],
 	"summary": "refpolicy - incompatible policy",
-	"details": "\n\nIn DSA-1603-1, Debian released an update to the BIND 9 domain name\nserver, which introduced UDP source port randomization to mitigate\nthe threat of DNS cache poisoning attacks (identified by the Common\nVulnerabilities and Exposures project as [CVE-2008-1447](https://security-tracker.debian.org/tracker/CVE-2008-1447)).\nThe fix, while correct, was incompatible with the version of SELinux Reference\nPolicy shipped with Debian Etch, which did not permit a process running in the\nnamed\\_t domain to bind sockets to UDP ports other than the standard 'domain'\nport (53).\nThe incompatibility affects both the 'targeted' and 'strict' policy packages\nsupplied by this version of refpolicy.\n\n\n\n\nThis update to the refpolicy packages grants the ability to bind to\narbitrary UDP ports to named\\_t processes.\nWhen installed, the updated packages will attempt to update the bind policy\nmodule on systems where it had been previously loaded and where the previous\nversion of refpolicy was 0.0.20061018-5 or below.\n\n\n\n\nBecause the Debian refpolicy packages are not yet designed with policy module\nupgradeability in mind, and because SELinux-enabled Debian systems often have\nsome degree of site-specific policy customization, it is difficult to assure\nthat the new bind policy can be successfully upgraded.\nTo this end, the package upgrade will not abort if the bind policy update\nfails.\nThe new policy module can be found at\n/usr/share/selinux/refpolicy-targeted/bind.pp after installation.\nAdministrators wishing to use the bind service policy can reconcile any policy\nincompatibilities and install the upgrade manually thereafter.\nA more detailed discussion of the corrective procedure may be found on\n<https://wiki.debian.org/SELinux/Issues/BindPortRandomization>.\n\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 0.0.20061018-5.1+etch1.\n\n\n\n\nThe unstable distribution (sid) is not affected, as subsequent refpolicy\nreleases have incorporated an analogous change.\n\n\n\n\nWe recommend that you upgrade your refpolicy packages.\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1617-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1617"
 		}
 	]
 }

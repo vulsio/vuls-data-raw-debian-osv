@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3442-1",
-	"modified": "2023-06-28T06:26:58.888300Z",
+	"modified": "2024-01-09T20:33:40.458895Z",
 	"published": "2023-06-03T00:00:00Z",
 	"related": [
 		"CVE-2021-32862"
 	],
 	"summary": "nbconvert - security update",
-	"details": "\nAlvaro MuĂąoz from the GitHub Security Lab discovered sixteen ways to\nexploit a cross-site scripting vulnerability in nbconvert, a tool and\nlibrary used to convert notebooks to various other formats via Jinja\ntemplates.\n\n\nWhen using nbconvert to generate an HTML version of a user-controllable\nnotebook, it is possible to inject arbitrary HTML which may lead to\ncross-site scripting (XSS) vulnerabilities if these HTML notebooks are\nserved by a web server without tight `Content-Security-Policy`\n(e.g., nbviewer).\n\n\n1. GHSL-2021-1013: XSS in `notebook.metadata.language_info.pygments_lexer`;\n2. GHSL-2021-1014: XSS in `notebook.metadata.title`;\n3. GHSL-2021-1015: XSS in `notebook.metadata.widgets`;\n4. GHSL-2021-1016: XSS in `notebook.cell.metadata.tags`;\n5. GHSL-2021-1017: XSS in output data `text/html` cells;\n6. GHSL-2021-1018: XSS in output data `image/svg+xml` cells;\n7. GHSL-2021-1019: XSS in `notebook.cell.output.svg_filename`;\n8. GHSL-2021-1020: XSS in output data `text/markdown` cells;\n9. GHSL-2021-1021: XSS in output data `application/javascript` cells;\n10. GHSL-2021-1022: XSS in output.metadata.filenames `image/png` and `image/jpeg`;\n11. GHSL-2021-1023: XSS in output data `image/png` and `image/jpeg` cells;\n12. GHSL-2021-1024: XSS in output.metadata.width/height `image/png` and `image/jpeg`;\n13. GHSL-2021-1025: XSS in output data `application/vnd.jupyter.widget-state+json` cells;\n14. GHSL-2021-1026: XSS in output data `application/vnd.jupyter.widget-view+json` cells;\n15. GHSL-2021-1027: XSS in raw cells; and\n16. GHSL-2021-1028: XSS in markdown cells.\n\n\n\nSome of these vulnerabilities, namely GHSL-2021-1017, -1020, -1021 and -1028,\nare actually design decisions where `text/html`, `text/markdown`,\n`application/javascript` and markdown cells should allow for arbitrary\nJavaScript code execution. These vulnerabilities are therefore left open\nby default, but users can now opt-out and strip down all JavaScript\nelements via a new `HTMLExporter` option `sanitize_html`.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n5.4-2+deb10u1.\n\n\nWe recommend that you upgrade your nbconvert packages.\n\n\nFor the detailed security status of nbconvert please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/nbconvert>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3442-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3442"
 		}
 	]
 }

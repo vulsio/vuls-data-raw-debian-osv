@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-411-1",
-	"modified": "2023-06-28T06:27:00.096071Z",
+	"modified": "2024-01-09T20:33:46.562358Z",
 	"published": "2016-02-05T00:00:00Z",
 	"related": [
 		"CVE-2014-9761",
@@ -10,7 +10,6 @@
 		"CVE-2015-8779"
 	],
 	"summary": "eglibc - security update",
-	"details": "\nSeveral vulnerabilities have been fixed in the Debian GNU C Library,\neglibc:\n\n\n* [CVE-2014-9761](https://security-tracker.debian.org/tracker/CVE-2014-9761)\nThe math's nan\\* function wrongly handled payload strings, yielding\n to an unbounded stack allocation based on the length of the\n arguments. To solve this issue, payload parsing has been refactored\n out of strtod into a separate functions that nan\\* can call directly.\n* [CVE-2015-8776](https://security-tracker.debian.org/tracker/CVE-2015-8776)\nThe strftime() function made it possible to access invalid memory,\n allowing to segfault the calling application.\n* [CVE-2015-8778](https://security-tracker.debian.org/tracker/CVE-2015-8778)\nhcreate() was susceptible to an integer overflow, that may results\n in out-of-bounds heap accesses.\n* [CVE-2015-8779](https://security-tracker.debian.org/tracker/CVE-2015-8779)\nThe catopen() function suffered from multiple unbounded stack\n allocations.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in eglibc version\neglibc\\_2.11.3-4+deb6u9. We recommend you to upgrade your eglibc\npackages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-411-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-411"
 		}
 	]
 }

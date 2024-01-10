@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-639-1",
-	"modified": "2023-10-16T00:26:05.631136Z",
+	"modified": "2024-01-09T20:34:05.922989Z",
 	"published": "2005-01-14T00:00:00Z",
 	"related": [
 		"CVE-2004-1004",
@@ -16,7 +16,6 @@
 		"CVE-2004-1176"
 	],
 	"summary": "mc - several",
-	"details": "\nAndrew V. Samoilov has noticed that several bugfixes which were\napplied to the source by upstream developers of mc, the midnight\ncommander, a file browser and manager, were not backported to the\ncurrent version of mc that Debian ships in their stable release. The\nCommon Vulnerabilities and Exposures Project identifies the following\nvulnerabilities:\n\n\n* [CAN-2004-1004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1004)\nMultiple format string vulnerabilities\n\n* [CAN-2004-1005](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1005)\nMultiple buffer overflows\n\n* [CAN-2004-1009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1009)\nOne infinite loop vulnerability\n\n* [CAN-2004-1090](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1090)\nDenial of service via corrupted section header\n\n* [CAN-2004-1091](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1091)\nDenial of service via null dereference\n\n* [CAN-2004-1092](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1092)\nFreeing unallocated memory\n\n* [CAN-2004-1093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1093)\nDenial of service via use of already freed memory\n\n* [CAN-2004-1174](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1174)\nDenial of service via manipulating non-existing file handles\n\n* [CAN-2004-1175](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1175)\nUnintended program execution via insecure filename quoting\n\n* [CAN-2004-1176](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1176)\nDenial of service via a buffer underflow\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 4.5.55-1.2woody5.\n\n\nFor the unstable distribution (sid) these problems should already be\nfixed since they were backported from current versions.\n\n\nWe recommend that you upgrade your mc package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-639-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-639"
 		}
 	]
 }

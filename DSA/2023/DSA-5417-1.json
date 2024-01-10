@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5417-1",
-	"modified": "2023-10-16T00:25:59.146570Z",
+	"modified": "2024-01-09T20:29:38.847826Z",
 	"published": "2023-05-31T00:00:00Z",
 	"related": [
 		"CVE-2023-0464",
@@ -10,7 +10,6 @@
 		"CVE-2023-2650"
 	],
 	"summary": "openssl - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit.\n\n\n* [CVE-2023-0464](https://security-tracker.debian.org/tracker/CVE-2023-0464)\nDavid Benjamin reported a flaw related to the verification of X.509\n certificate chains that include policy constraints, which may result\n in denial of service.\n* [CVE-2023-0465](https://security-tracker.debian.org/tracker/CVE-2023-0465)\nDavid Benjamin reported that invalid certificate policies in leaf\n certificates are silently ignored. A malicious CA could take\n advantage of this flaw to deliberately assert invalid certificate\n policies in order to circumvent policy checking on the certificate\n altogether.\n* [CVE-2023-0466](https://security-tracker.debian.org/tracker/CVE-2023-0466)\nDavid Benjamin discovered that the implementation of the\n X509\\_VERIFY\\_PARAM\\_add0\\_policy() function does not enable the check\n which allows certificates with invalid or incorrect policies to pass\n the certificate verification (contrary to its documentation).\n* [CVE-2023-2650](https://security-tracker.debian.org/tracker/CVE-2023-2650)\nIt was discovered that processing malformed ASN.1 object identifiers\n or data may result in denial of service.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1.1.1n-0+deb11u5.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssl](https://security-tracker.debian.org/tracker/openssl)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5417-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5417"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-17-1",
-	"modified": "2023-06-28T06:24:53.726410Z",
+	"modified": "2024-01-09T20:31:38.514179Z",
 	"published": "2014-07-31T00:00:00Z",
 	"related": [
 		"CVE-2012-2249",
@@ -11,7 +11,6 @@
 		"CVE-2014-5117"
 	],
 	"summary": "tor - new upstream version",
-	"details": "\nThe Tor version previously in Debian squeeze, 0.2.2.39, is no longer\nsupported by upstream.\n\n\nThis update brings the currently stable version of Tor, 0.2.4.23, to\nDebian squeeze.\n\n\nChanges include use of stronger cryptographic primitives, always\nclearing bignums before freeing them to avoid leaving key material in\nmemory, mitigating several linkability vectors such as by disabling\nclient-side DNS caches, blacklisting authority signing keys potentially\ncompromised due to heartbleed, updating the list of directory\nauthorities, and much more.\n\n\nWe recommend that you upgrade your tor packages.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in tor version 0.2.4.23-1~deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -137,12 +136,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-17-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-17"
 		}
 	]
 }

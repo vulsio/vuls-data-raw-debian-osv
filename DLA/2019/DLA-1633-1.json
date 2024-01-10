@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1633-1",
-	"modified": "2023-06-28T06:19:56.546385Z",
+	"modified": "2024-01-09T20:31:30.468512Z",
 	"published": "2019-01-11T00:00:00Z",
 	"related": [
 		"CVE-2017-10989",
@@ -11,7 +11,6 @@
 		"CVE-2018-8740"
 	],
 	"summary": "sqlite3 - security update",
-	"details": "\nSeveral flaws were corrected in SQLite, an SQL database engine.\n\n\n* [CVE-2017-2518](https://security-tracker.debian.org/tracker/CVE-2017-2518)\nA use-after-free bug in the query optimizer may cause a\n buffer overflow and application crash via a crafted SQL statement.\n* [CVE-2017-2519](https://security-tracker.debian.org/tracker/CVE-2017-2519)\nInsufficient size of the reference count on Table objects\n could lead to a denial-of-service or arbitrary code execution.\n* [CVE-2017-2520](https://security-tracker.debian.org/tracker/CVE-2017-2520)\nThe sqlite3\\_value\\_text() interface returned a buffer that was not\n large enough to hold the complete string plus zero terminator when\n the input was a zeroblob. This could lead to arbitrary code\n execution or a denial-of-service.\n* [CVE-2017-10989](https://security-tracker.debian.org/tracker/CVE-2017-10989)\nSQLite mishandles undersized RTree blobs in a crafted database\n leading to a heap-based buffer over-read or possibly unspecified\n other impact.\n* [CVE-2018-8740](https://security-tracker.debian.org/tracker/CVE-2018-8740)\nDatabases whose schema is corrupted using a CREATE TABLE AS\n statement could cause a NULL pointer dereference.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.8.7.1-1+deb8u4.\n\n\nWe recommend that you upgrade your sqlite3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1633-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1633"
 		}
 	]
 }

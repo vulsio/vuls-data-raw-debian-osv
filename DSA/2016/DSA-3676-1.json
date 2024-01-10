@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3676-1",
-	"modified": "2023-10-16T00:12:14.449210Z",
+	"modified": "2024-01-09T20:28:21.119350Z",
 	"published": "2016-09-24T00:00:00Z",
 	"related": [
 		"CVE-2016-1243",
 		"CVE-2016-1244"
 	],
 	"summary": "unadf - security update",
-	"details": "\nTuomas RĂ¤sĂ¤nen discovered two vulnerabilities in unADF, a tool to extract\nfiles from an Amiga Disk File dump (.adf):\n\n\n* [CVE-2016-1243](https://security-tracker.debian.org/tracker/CVE-2016-1243)\nA stack buffer overflow in the function extractTree() might allow an\n attacker, with control on the content of a ADF file, to execute\n arbitrary code with the privileges of the program execution.\n* [CVE-2016-1244](https://security-tracker.debian.org/tracker/CVE-2016-1244)\nThe unADF extractor creates the path in the destination via a mkdir\n in a system() call. Since there was no sanitization on the input of\n the filenames, an attacker can directly inject code in the pathnames\n of archived directories in an ADF file.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 0.7.11a-3+deb7u1.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 0.7.11a-3+deb8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.7.11a-4.\n\n\nWe recommend that you upgrade your unadf packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3676-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3676"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2020-1",
-	"modified": "2023-06-28T06:25:04.873083Z",
+	"modified": "2024-01-09T20:31:56.799500Z",
 	"published": "2019-12-04T00:00:00Z",
 	"related": [
 		"CVE-2019-19012",
@@ -9,7 +9,6 @@
 		"CVE-2019-19246"
 	],
 	"summary": "libonig - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the Oniguruma regular\nexpressions library, notably used in PHP mbstring.\n\n\n* [CVE-2019-19012](https://security-tracker.debian.org/tracker/CVE-2019-19012)\nAn integer overflow in the search\\_in\\_range function in regexec.c\n leads to an out-of-bounds read, in which the offset of this read\n is under the control of an attacker. (This only affects the 32-bit\n compiled version). Remote attackers can cause a denial-of-service\n or information disclosure, or possibly have unspecified other\n impact, via a crafted regular expression.\n* [CVE-2019-19204](https://security-tracker.debian.org/tracker/CVE-2019-19204)\nIn the function fetch\\_range\\_quantifier in regparse.c, PFETCH is\n called without checking PEND. This leads to a heap-based buffer\n over-read and lead to denial-of-service via a crafted regular\n expression.\n* [CVE-2019-19246](https://security-tracker.debian.org/tracker/CVE-2019-19246)\nHeap-based buffer over-read in str\\_lower\\_case\\_match in regexec.c\n can lead to denial-of-service via a crafted regular expression.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.9.5-3.2+deb8u4.\n\n\nWe recommend that you upgrade your libonig packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2020-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2020"
 		}
 	]
 }

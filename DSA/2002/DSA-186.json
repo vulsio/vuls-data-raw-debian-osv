@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-186",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-11-01T00:00:00Z",
 	"published": "2002-11-01T00:00:00Z",
 	"related": [
 		"CVE-2002-1251"
 	],
 	"summary": "log2mail - buffer overflow",
-	"details": "\nEnrico Zini discovered a buffer overflow in log2mail, a daemon for\nwatching logfiles and sending lines with matching patterns via mail.\nThe log2mail daemon is started upon system boot and runs as root. A\nspecially crafted (remote) log message could overflow a static buffer,\npotentially leaving log2mail to execute arbitrary code as root.\n\n\nThis problem has been fixed in version 0.2.5.1 the current\nstable distribution (woody) and in version 0.2.6-1 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected since it doesn't contain a log2mail package.\n\n\nWe recommend that you upgrade your log2mail package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-186.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-186"
 		}
 	]
 }

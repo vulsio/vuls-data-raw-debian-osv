@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3139-1",
-	"modified": "2023-06-28T06:26:52.890558Z",
+	"modified": "2024-01-09T20:33:21.351064Z",
 	"published": "2022-10-07T00:00:00Z",
 	"related": [
 		"CVE-2022-40188"
 	],
 	"summary": "knot-resolver - security update",
-	"details": "\nIt was discovered that there was a potential remote denial-of-service\nvulnerability in the knot-resolver DNSSEC-validating DNS resolver.\n\n\nRemote attackers could have caused a denial of service via CPU consumption\nby exploiting algorithmic complexity: during an attack, an authoritative server\nwould return large nameserver or address sets.\n\n\n* [CVE-2022-40188](https://security-tracker.debian.org/tracker/CVE-2022-40188)\nKnot Resolver before 5.5.3 allows remote attackers to cause a denial of\n service (CPU consumption) because of algorithmic complexity. During an\n attack, an authoritative server must return large NS sets or address\n sets.\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n3.2.1-3+deb10u1.\n\n\nWe recommend that you upgrade your knot-resolver packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3139-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3139"
 		}
 	]
 }

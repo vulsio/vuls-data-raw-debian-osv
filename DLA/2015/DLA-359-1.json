@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-359-1",
-	"modified": "2023-06-28T06:26:58.761761Z",
-	"published": "2015-12-16T00:00:00Z",
+	"modified": "2024-01-09T20:33:40.341382Z",
+	"published": "2015-12-04T00:00:00Z",
 	"related": [
 		"CVE-2015-0499",
 		"CVE-2015-0501",
@@ -31,7 +31,6 @@
 		"CVE-2015-4913"
 	],
 	"summary": "mysql-5.5 - packages as an option announcement",
-	"details": "\nOracle, the upstream maintainer of MySQL, no longer supports MySQL\nversion 5.1, which is included in Debian 6.0 squeeze. MySQL 5.1 likely\nsuffers from multiple vulnerabilities fixed in newer versions after the\nend of upstream support, but Oracle does not disclose enough information\neither to verify or to fix them.\n\n\nAs an alternative, the Debian LTS team is providing MySQL 5.5 packages\nfor use in Debian 6.0 squeeze. We recommend that Squeeze LTS users\ninstall them and migrate their MySQL databases.\n\n\nPlease note that a dist-upgrade will not consider these MySQL 5.5\npackages automatically, so users need to install them explicitly.\n\n\nIf you are running a MySQL server:\n\n\n\n```\napt-get install mysql-server-5.5\n```\n\nIf you only need the MySQL client:\n\n\n\n```\napt-get install mysql-client-5.5\n```\n\n### Compatibility updates\n\n\nSome packages were updated to solve incompatibility issues, that were\nfixed in the following versions:\n\n\n* bacula-director-mysql 5.0.2-2.2+squeeze2\n* cacti 0.8.7g-1+squeeze9\n* phpmyadmin 4:3.3.7-10\n* postfix-policyd 1.82-2+deb6u1\n* prelude-manager 1.0.0-1+deb6u1\n\n\nWe recommend that you upgrade these packages before upgrading to\nMySQL 5.5. A common dist-upgrade should be enough.\n\n\nWe have done our best to provide you with reliable MySQL 5.5 packages. We\nhave made available test packages for some time, although we did not get\nany feedback from users. In any case, don't hesitate to report any issues\nrelated to this MySQL upgrade to debian-lts@lists.debian.org.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -93,12 +92,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-359-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-359"
 		}
 	]
 }

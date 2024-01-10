@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2938-1",
-	"modified": "2023-06-28T06:37:04.753126Z",
+	"modified": "2024-01-09T20:33:10.683645Z",
 	"published": "2022-03-08T00:00:00Z",
 	"related": [
 		"CVE-2022-21716"
 	],
 	"summary": "twisted - security update",
-	"details": "\nIt was discovered that there was an issue in the Twisted Python network\nframework where SSH client and server implementions could accept an infinite\namount of data for the peer's SSH version identifier and that a buffer then\nuses all available memory.\n\n\n* [CVE-2022-21716](https://security-tracker.debian.org/tracker/CVE-2022-21716)\nCVE-2022-21716: Twisted is an event-based framework for internet\n applications, supporting Python 3.6+. Prior to 22.2.0, Twisted SSH client\n and server implement is able to accept an infinite amount of data for the\n peer's SSH version identifier. This ends up with a buffer using all the\n available memory. The attach is a simple as `nc -rv localhost 22 <\n /dev/zero`. A patch is available in version 22.2.0. There are currently no\n known workarounds.\n\n\nFor Debian 9 Stretch, this problem has been fixed in version\n16.6.0-2+deb9u2.\n\n\nWe recommend that you upgrade your twisted packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2938-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2938"
 		}
 	]
 }

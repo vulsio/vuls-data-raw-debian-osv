@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2725-1",
-	"modified": "2023-10-16T00:11:28.185850Z",
+	"modified": "2024-01-09T20:23:30.315738Z",
 	"published": "2013-07-18T00:00:00Z",
 	"related": [
 		"CVE-2012-3544",
 		"CVE-2013-2067"
 	],
 	"summary": "tomcat6 - several",
-	"details": "\nTwo security issues have been found in the Tomcat servlet and JSP engine:\n\n\n* [CVE-2012-3544](https://security-tracker.debian.org/tracker/CVE-2012-3544)\nThe input filter for chunked transfer encodings could trigger high\n resource consumption through malformed CRLF sequences, resulting in\n denial of service.\n* [CVE-2013-2067](https://security-tracker.debian.org/tracker/CVE-2013-2067)\nThe FormAuthenticator module was vulnerable to session fixation.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 6.0.35-1+squeeze3. This update also provides fixes for\n[CVE-2012-2733](https://security-tracker.debian.org/tracker/CVE-2012-2733),\n[CVE-2012-3546](https://security-tracker.debian.org/tracker/CVE-2012-3546),\n[CVE-2012-4431](https://security-tracker.debian.org/tracker/CVE-2012-4431),\n[CVE-2012-4534](https://security-tracker.debian.org/tracker/CVE-2012-4534),\n[CVE-2012-5885](https://security-tracker.debian.org/tracker/CVE-2012-5885),\n[CVE-2012-5886](https://security-tracker.debian.org/tracker/CVE-2012-5886) and\n[CVE-2012-5887](https://security-tracker.debian.org/tracker/CVE-2012-5887),\nwhich were all fixed for stable already.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 6.0.35-6+deb7u1.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your tomcat6 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -73,12 +72,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2725-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2725"
 		}
 	]
 }

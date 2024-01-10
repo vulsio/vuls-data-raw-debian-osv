@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-0015-1",
-	"modified": "2023-06-28T06:20:05.683737Z",
+	"modified": "2024-01-09T20:30:36.457542Z",
 	"published": "2014-07-12T00:00:00Z",
 	"related": [
 		"CVE-2013-4387",
@@ -18,7 +18,6 @@
 		"CVE-2014-4699"
 	],
 	"summary": "linux-2.6 - security update",
-	"details": "\nThis update fixes several remote and local denial of service attacks and other \nissues:\n\n\n* [CVE-2013-4387](https://security-tracker.debian.org/tracker/CVE-2013-4387):\n\nipv6: udp packets following an UFO enqueued packet need\nalso be handled by UFO to prevent remote attackers to cause a denial of \nservice\n(memory corruption and system crash) or possibly have unspecified other impact\nvia network traffic that triggers a large response packet.\n* [CVE-2013-4470](https://security-tracker.debian.org/tracker/CVE-2013-4470):\n\ninet: fix possible memory corruption with UDP\\_CORK and UFO to\nprevent local users to cause a denial of service (memory corruption and system\ncrash) or possibly gain privileges via a crafted application.\n* [CVE-2014-0203](https://security-tracker.debian.org/tracker/CVE-2014-0203):\n\nfix autofs/afs/etc. magic mountpoint breakage, preventing \ndenial\nof service attacks by local users.\n* [CVE-2014-2678](https://security-tracker.debian.org/tracker/CVE-2014-2678):\n\nrds: prevent dereference of a NULL device in rds\\_iw\\_laddr\\_check\nto prevent local denial of service attacks (system crash or possibly have \nunspecified other impact).\n* [CVE-2014-3122](https://security-tracker.debian.org/tracker/CVE-2014-3122)\n: Incorrect locking of memory can result in local denial of\nservice.\n* [CVE-2014-3144](https://security-tracker.debian.org/tracker/CVE-2014-3144)\n/ [CVE-2014-3145](https://security-tracker.debian.org/tracker/CVE-2014-3145): A local user can cause a denial of service\n(system crash) via crafted BPF instructions.\n* [CVE-2014-3917](https://security-tracker.debian.org/tracker/CVE-2014-3917):\n\nauditsc: audit\\_krule mask accesses need bounds checking to\nprevent a local denial of service attack (OOPS) or possibly leaking sensitive \nsingle-bit\nvalues from kernel memory.\n* [CVE-2014-4652](https://security-tracker.debian.org/tracker/CVE-2014-4652):\n\nALSA: control: Protect user controls against concurrent access,\nresulting in a race condition, possibly allowing local users access to \nsensitive\ninformation from kernel memory.\n* [CVE-2014-4656](https://security-tracker.debian.org/tracker/CVE-2014-4656):\n\nALSA: control: Make sure that id->index does not overflow, to\nprevent a denial of service of the sound system by local users.\n* [CVE-2014-4667](https://security-tracker.debian.org/tracker/CVE-2014-4667):\n\nsctp: Fix sk\\_ack\\_backlog wrap-around problem, preventing denial\nof service (socket outage) via a crafted SCTP packet by remote attackers.\n* [CVE-2014-4699](https://security-tracker.debian.org/tracker/CVE-2014-4699):\n\nAndy Lutomirski discovered that the ptrace syscall was not\nverifying the RIP register to be valid in the ptrace API on x86\\_64 processors.\nAn unprivileged user could use this flaw to crash the kernel (resulting in\ndenial of service) or for privilege escalation.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in linux-2.6 version 2.6.32-48squeeze8\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -78,12 +77,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-0015-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-0015"
 		}
 	]
 }

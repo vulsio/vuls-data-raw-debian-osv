@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3075-1",
-	"modified": "2023-06-28T06:25:26.276774Z",
+	"modified": "2024-01-09T20:33:16.612165Z",
 	"published": "2022-08-18T00:00:00Z",
 	"related": [
 		"CVE-2022-2787"
 	],
 	"summary": "schroot - security update",
-	"details": "\nJulian Gilbey discovered that schroot, a tool allowing users to execute\ncommands in a chroot environment, had too permissive rules on chroot or\nsession names, allowing a denial of service on the schroot service for\nall users that may start a schroot session.\n\n\nNote that existing chroots and sessions are checked during upgrade, and\nan upgrade is aborted if any future invalid name is detected.\n\n\nProblematic session and chroots can be checked before upgrading with the\nfollowing command:\n\n\nschroot --list --all | LC\\_ALL=C grep -vE '^[a-z]+:[a-zA-Z0-9][a-zA-Z0-9\\_.-]\\*$'\n\n\nSee\n\nfor instructions on how to resolve such a situation.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.6.10-6+deb10u1.\n\n\nWe recommend that you upgrade your schroot packages.\n\n\nFor the detailed security status of schroot please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/schroot>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3075-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3075"
 		}
 	]
 }

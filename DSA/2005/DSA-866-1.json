@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-866-1",
-	"modified": "2023-10-16T00:29:55.582484Z",
+	"modified": "2024-01-09T20:34:10.408699Z",
 	"published": "2005-10-20T00:00:00Z",
 	"related": [
 		"CVE-2005-2701",
@@ -14,7 +14,6 @@
 		"CVE-2005-2871"
 	],
 	"summary": "mozilla - several",
-	"details": "\nSeveral security-related problems have been discovered in Mozilla and\nderived programs. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CAN-2005-2871](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2871)\nTom Ferris discovered a bug in the IDN hostname handling of\n Mozilla that allows remote attackers to cause a denial of service\n and possibly execute arbitrary code via a hostname with dashes.\n* [CAN-2005-2701](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2701)\nA buffer overflow allows remote attackers to execute arbitrary\n code via an XBM image file that ends in a large number of spaces\n instead of the expected end tag.\n* [CAN-2005-2702](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2702)\nMats Palmgren discovered a buffer overflow in the Unicode string\n parser that allows a specially crafted Unicode sequence to\n overflow a buffer and cause arbitrary code to be executed.\n* [CAN-2005-2703](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2703)\nRemote attackers could spoof HTTP headers of XML HTTP requests\n via XMLHttpRequest and possibly use the client to exploit\n vulnerabilities in servers or proxies.\n* [CAN-2005-2704](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2704)\nRemote attackers could spoof DOM objects via an XBL control that\n implements an internal XPCOM interface.\n* [CAN-2005-2705](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2705)\nGeorgi Guninski discovered an integer overflow in the JavaScript\n engine that might allow remote attackers to execute arbitrary\n code.\n* [CAN-2005-2706](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2706)\nRemote attackers could execute Javascript code with chrome\n privileges via an about: page such as about:mozilla.\n* [CAN-2005-2707](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2707)\nRemote attackers could spawn windows without user interface\n components such as the address and status bar that could be used\n to conduct spoofing or phishing attacks.\n* [CAN-2005-2968](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2968)\nPeter Zelezny discovered that shell metacharacters are not\n properly escaped when they are passed to a shell script and allow\n the execution of arbitrary commands, e.g. when a malicious URL is\n automatically copied from another program into Mozilla as default\n browser.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.7.8-1sarge3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 1.7.12-1.\n\n\nWe recommend that you upgrade your mozilla package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -87,12 +86,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-866-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-866"
 		}
 	]
 }

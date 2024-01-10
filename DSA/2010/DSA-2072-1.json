@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2072-1",
-	"modified": "2023-10-16T00:10:56.659564Z",
+	"modified": "2024-01-09T20:22:39.489952Z",
 	"published": "2010-07-19T00:00:00Z",
 	"related": [
 		"CVE-2010-1205",
 		"CVE-2010-2249"
 	],
 	"summary": "libpng - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in libpng, a library for\nreading and writing PNG files. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2010-1205](https://security-tracker.debian.org/tracker/CVE-2010-1205)\nIt was discovered a buffer overflow in libpng which allows remote\n attackers to execute arbitrary code via a PNG image that triggers \n an additional data row.\n* [CVE-2010-2249](https://security-tracker.debian.org/tracker/CVE-2010-2249)\nIt was discovered a memory leak in libpng which allows remote\n attackers to cause a denial of service (memory consumption and\n application crash) via a PNG image containing malformed Physical\n Scale (aka sCAL) chunks.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.2.27-2+lenny4.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, these\nproblems have been fixed in version 1.2.44-1.\n\n\nWe recommend that you upgrade your libpng package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2072-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2072"
 		}
 	]
 }

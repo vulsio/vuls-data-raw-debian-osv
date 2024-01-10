@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1509-1",
-	"modified": "2023-10-16T00:05:25.442239Z",
+	"modified": "2024-01-09T20:22:22.947600Z",
 	"published": "2008-02-25T00:00:00Z",
 	"related": [
 		"CVE-2007-4352",
@@ -9,7 +9,6 @@
 		"CVE-2007-5393"
 	],
 	"summary": "koffice - multiple vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in xpdf code that is\nembedded in koffice, an integrated office suite for KDE. These flaws\ncould allow an attacker to execute arbitrary code by inducing the user\nto import a specially crafted PDF document. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2007-4352](https://security-tracker.debian.org/tracker/CVE-2007-4352)\nArray index error in the DCTStream::readProgressiveDataUnit method in\nxpdf/Stream.cc in Xpdf 3.02pl1, as used in poppler, teTeX, KDE, KOffice,\nCUPS, and other products, allows remote attackers to trigger memory\ncorruption and execute arbitrary code via a crafted PDF file.\n* [CVE-2007-5392](https://security-tracker.debian.org/tracker/CVE-2007-5392)\nInteger overflow in the DCTStream::reset method in xpdf/Stream.cc in\nXpdf 3.02p11 allows remote attackers to execute arbitrary code via a\ncrafted PDF file, resulting in a heap-based buffer overflow.\n* [CVE-2007-5393](https://security-tracker.debian.org/tracker/CVE-2007-5393)\nHeap-based buffer overflow in the CCITTFaxStream::lookChar method in\nxpdf/Stream.cc in Xpdf 3.02p11 allows remote attackers to execute\narbitrary code via a PDF file that contains a crafted CCITTFaxDecode\nfilter.\n\n\nUpdates for the old stable distribution (sarge) will be made available\nas soon as possible.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n1:1.6.1-2etch2.\n\n\nWe recommend that you upgrade your koffice package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1509-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1509"
 		}
 	]
 }

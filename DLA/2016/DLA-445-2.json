@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-445-2",
-	"modified": "2023-06-28T06:34:04.143700Z",
+	"modified": "2024-01-09T20:33:48.120755Z",
 	"published": "2016-03-03T00:00:00Z",
 	"summary": "squid3 - regression update",
-	"details": "\nThe backported patch to solve [CVE-2016-2569](https://security-tracker.debian.org/tracker/CVE-2016-2569) yielded to failed assertions\nthat made squid3 to crash when closing connections. The fix for this CVE\nstrongly relies on exception handling present in more recent versions of\nsquid3, that I failed to identify in the previous update. I have\nreverted the patch to take the safest position, taking into account that\nSqueeze users should migrate to a supported version of Debian. This\npost-EOL update is intended to keep a functional squid3 package in the\narchive.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-445-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-445"
 		}
 	]
 }

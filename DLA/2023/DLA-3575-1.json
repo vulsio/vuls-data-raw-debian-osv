@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3575-1",
-	"modified": "2023-09-20T20:15:22.976253Z",
+	"modified": "2024-01-09T20:33:40.117172Z",
 	"published": "2023-09-20T00:00:00Z",
 	"related": [
 		"CVE-2021-23336",
@@ -13,7 +13,6 @@
 		"CVE-2023-40217"
 	],
 	"summary": "python2.7 - security update",
-	"details": "\nThis update fixes multiple vulnerabilities concerning the `urlparse` module as\nwell as vulnerabilities concerning the `heapq`, `hmac`, `plistlib` and `ssl` modules.\n\n\n* [CVE-2021-23336](https://security-tracker.debian.org/tracker/CVE-2021-23336)\nPython was vulnerable to Web Cache Poisoning via `urlparse.parse_qsl` and\n `urlparse.parse_qs` by using a vector called parameter cloaking. When the\n attacker can separate query parameters using a semicolon (`;`), they can\n cause a difference in the interpretation of the request between the proxy\n (running with default configuration) and the server. This can result in\n malicious requests being cached as completely safe ones, as the proxy would\n usually not see the semicolon as a separator, and therefore would not\n include it in a cache key of an unkeyed parameter.\n* [CVE-2022-0391](https://security-tracker.debian.org/tracker/CVE-2022-0391)\nThe `urlparse` module helps break Uniform Resource Locator (URL) strings into\n components. The issue involves how the urlparse method does not sanitize\n input and allows characters like `'\\r'` and `'\\n'` in the URL path. This flaw\n allows an attacker to input a crafted URL, leading to injection attacks.\n* [CVE-2022-48560](https://security-tracker.debian.org/tracker/CVE-2022-48560)\nA use-after-free exists in Python via `heappushpop` in `heapq`.\n* [CVE-2022-48565](https://security-tracker.debian.org/tracker/CVE-2022-48565)\nAn XML External Entity (XXE) issue was discovered in Python. The `plistlib`\n module no longer accepts entity declarations in XML plist files to avoid\n XML vulnerabilities.\n* [CVE-2022-48566](https://security-tracker.debian.org/tracker/CVE-2022-48566)\nAn issue was discovered in `compare_digest` in `Lib/hmac.py` in Python.\n Constant-time-defeating optimisations were possible in the accumulator\n variable in `hmac.compare_digest`.\n* [CVE-2023-24329](https://security-tracker.debian.org/tracker/CVE-2023-24329)\nAn issue in the `urlparse` component of Python allows attackers to bypass\n blocklisting methods by supplying a URL that starts with blank characters.\n* [CVE-2023-40217](https://security-tracker.debian.org/tracker/CVE-2023-40217)\nThe issue primarily affects servers written in Python (such as HTTP\n servers) that use TLS client authentication. If a TLS server-side socket is\n created, receives data into the socket buffer, and then is closed quickly,\n there is a brief window where the `SSLSocket` instance will detect the socket\n as not connected and won't initiate a handshake, but buffered data will\n still be readable from the socket buffer. This data will not be\n authenticated if the server-side TLS peer is expecting client certificate\n authentication, and is indistinguishable from valid TLS stream data. Data\n is limited in size to the amount that will fit in the buffer. (The TLS\n connection cannot directly be used for data exfiltration because the\n vulnerable code path requires that the connection be closed on\n initialization of the `SSLSocket`.)\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.7.16-2+deb10u3.\n\n\nWe recommend that you upgrade your python2.7 packages.\n\n\nFor the detailed security status of python2.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python2.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3575-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3575"
 		}
 	]
 }

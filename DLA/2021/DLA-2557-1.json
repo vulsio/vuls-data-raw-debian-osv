@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2557-1",
-	"modified": "2023-06-28T06:29:12.910451Z",
+	"modified": "2024-01-09T20:32:42.126498Z",
 	"published": "2021-02-12T00:00:00Z",
 	"related": [
 		"CVE-2020-27815",
@@ -17,7 +17,6 @@
 		"CVE-2021-3347"
 	],
 	"summary": "linux-4.19 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2020-27815](https://security-tracker.debian.org/tracker/CVE-2020-27815)\nA flaw was reported in the JFS filesystem code allowing a local\n attacker with the ability to set extended attributes to cause a\n denial of service.\n* [CVE-2020-27825](https://security-tracker.debian.org/tracker/CVE-2020-27825)\nAdam pi3 Zabrocki reported a use-after-free flaw in the ftrace\n ring buffer resizing logic due to a race condition, which could\n result in denial of service or information leak.\n* [CVE-2020-27830](https://security-tracker.debian.org/tracker/CVE-2020-27830)\nShisong Qin reported a NULL pointer dereference flaw in the Speakup\n screen reader core driver.\n* [CVE-2020-28374](https://security-tracker.debian.org/tracker/CVE-2020-28374)\nDavid Disseldorp discovered that the LIO SCSI target implementation\n performed insufficient checking in certain XCOPY requests. An\n attacker with access to a LUN and knowledge of Unit Serial Number\n assignments can take advantage of this flaw to read and write to any\n LIO backstore, regardless of the SCSI transport settings.\n* [CVE-2020-29568](https://security-tracker.debian.org/tracker/CVE-2020-29568) ([XSA-349](https://xenbits.xen.org/xsa/advisory-349.html))\n\n Michael Kurth and Pawel Wieczorkiewicz reported that frontends can\n trigger OOM in backends by updating a watched path.\n* [CVE-2020-29569](https://security-tracker.debian.org/tracker/CVE-2020-29569) ([XSA-350](https://xenbits.xen.org/xsa/advisory-350.html))\n\n Olivier Benjamin and Pawel Wieczorkiewicz reported a use-after-free\n flaw which can be triggered by a block frontend in Linux blkback. A\n misbehaving guest can trigger a dom0 crash by continuously\n connecting / disconnecting a block frontend.\n* [CVE-2020-29660](https://security-tracker.debian.org/tracker/CVE-2020-29660)\nJann Horn reported a locking inconsistency issue in the tty\n subsystem which may allow a local attacker to mount a\n read-after-free attack against TIOCGSID.\n* [CVE-2020-29661](https://security-tracker.debian.org/tracker/CVE-2020-29661)\nJann Horn reported a locking issue in the tty subsystem which can\n result in a use-after-free. A local attacker can take advantage of\n this flaw for memory corruption or privilege escalation.\n* [CVE-2020-36158](https://security-tracker.debian.org/tracker/CVE-2020-36158)\nA buffer overflow flaw was discovered in the mwifiex WiFi driver\n which could result in denial of service or the execution of\n arbitrary code via a long SSID value.\n* [CVE-2021-3347](https://security-tracker.debian.org/tracker/CVE-2021-3347)\nIt was discovered that PI futexes have a kernel stack use-after-free\n during fault handling. An unprivileged user could use this flaw to\n crash the kernel (resulting in denial of service) or for privilege\n escalation.\n* [CVE-2021-20177](https://security-tracker.debian.org/tracker/CVE-2021-20177)\nA flaw was discovered in the Linux implementation of string matching\n within a packet. A privileged user (with root or CAP\\_NET\\_ADMIN) can\n take advantage of this flaw to cause a kernel panic when inserting\n iptables rules.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.19.171-2~deb9u1.\n\n\nWe recommend that you upgrade your linux-4.19 packages.\n\n\nFor the detailed security status of linux-4.19 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-4.19>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2557-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2557"
 		}
 	]
 }

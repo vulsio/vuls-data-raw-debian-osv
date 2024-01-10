@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5092-1",
-	"modified": "2023-10-16T00:15:34.361682Z",
+	"modified": "2024-01-09T20:27:17.693210Z",
 	"published": "2022-03-07T00:00:00Z",
 	"related": [
 		"CVE-2021-43976",
@@ -16,7 +16,6 @@
 		"CVE-2022-25375"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2021-43976](https://security-tracker.debian.org/tracker/CVE-2021-43976)\nZekun Shen and Brendan Dolan-Gavitt discovered a flaw in the\n mwifiex\\_usb\\_recv() function of the Marvell WiFi-Ex USB Driver. An\n attacker able to connect a crafted USB device can take advantage of\n this flaw to cause a denial of service.\n* [CVE-2022-0330](https://security-tracker.debian.org/tracker/CVE-2022-0330)\nSushma Venkatesh Reddy discovered a missing GPU TLB flush in the\n i915 driver, resulting in denial of service or privilege escalation.\n* [CVE-2022-0435](https://security-tracker.debian.org/tracker/CVE-2022-0435)\nSamuel Page and Eric Dumazet reported a stack overflow in the\n networking module for the Transparent Inter-Process Communication\n (TIPC) protocol, resulting in denial of service or potentially the\n execution of arbitrary code.\n* [CVE-2022-0516](https://security-tracker.debian.org/tracker/CVE-2022-0516)\nIt was discovered that an insufficient check in the KVM subsystem\n for s390x could allow unauthorized memory read or write access.\n* [CVE-2022-0847](https://security-tracker.debian.org/tracker/CVE-2022-0847)\nMax Kellermann discovered a flaw in the handling of pipe buffer\n flags. An attacker can take advantage of this flaw for local\n privilege escalation.\n* [CVE-2022-22942](https://security-tracker.debian.org/tracker/CVE-2022-22942)\nIt was discovered that wrong file descriptor handling in the\n VMware Virtual GPU driver (vmwgfx) could result in information leak\n or privilege escalation.\n* [CVE-2022-24448](https://security-tracker.debian.org/tracker/CVE-2022-24448)\nLyu Tao reported a flaw in the NFS implementation in the Linux\n kernel when handling requests to open a directory on a regular file,\n which could result in a information leak.\n* [CVE-2022-24959](https://security-tracker.debian.org/tracker/CVE-2022-24959)\nA memory leak was discovered in the yam\\_siocdevprivate() function of\n the YAM driver for AX.25, which could result in denial of service.\n* [CVE-2022-25258](https://security-tracker.debian.org/tracker/CVE-2022-25258)\nSzymon Heidrich reported the USB Gadget subsystem lacks certain\n validation of interface OS descriptor requests, resulting in memory\n corruption.\n* [CVE-2022-25375](https://security-tracker.debian.org/tracker/CVE-2022-25375)\nSzymon Heidrich reported that the RNDIS USB gadget lacks validation\n of the size of the RNDIS\\_MSG\\_SET command, resulting in information\n leak from kernel memory.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.92-2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5092-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5092"
 		}
 	]
 }

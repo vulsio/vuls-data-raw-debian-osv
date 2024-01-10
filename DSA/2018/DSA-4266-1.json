@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4266-1",
-	"modified": "2023-10-16T00:17:59.627328Z",
+	"modified": "2024-01-09T20:27:04.507713Z",
 	"published": "2018-08-06T00:00:00Z",
 	"related": [
 		"CVE-2018-13405",
 		"CVE-2018-5390"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation or denial of service.\n\n\n* [CVE-2018-5390](https://security-tracker.debian.org/tracker/CVE-2018-5390)\nJuha-Matti Tilli discovered that a remote attacker can trigger the\n worst case code paths for TCP stream reassembly with low rates of\n specially crafted packets leading to remote denial of service.\n* [CVE-2018-13405](https://security-tracker.debian.org/tracker/CVE-2018-13405)\nJann Horn discovered that the inode\\_init\\_owner function in\n fs/inode.c in the Linux kernel allows local users to create files\n with an unintended group ownership allowing attackers to escalate\n privileges by making a plain file executable and SGID.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.110-3+deb9u1. This update includes fixes for several\nregressions in the latest point release.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4266-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4266"
 		}
 	]
 }

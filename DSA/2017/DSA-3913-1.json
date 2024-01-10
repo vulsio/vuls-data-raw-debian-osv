@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3913-1",
-	"modified": "2023-10-16T00:12:27.184164Z",
+	"modified": "2024-01-09T20:26:08.128716Z",
 	"published": "2017-07-18T00:00:00Z",
 	"related": [
 		"CVE-2017-9788"
 	],
 	"summary": "apache2 - security update",
-	"details": "\nRobert Swiecki reported that mod\\_auth\\_digest does not properly\ninitialize or reset the value placeholder in [Proxy-]Authorization\nheaders of type Digest between successive key=value assignments,\nleading to information disclosure or denial of service.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 2.4.10-10+deb8u10.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 2.4.25-3+deb9u2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.4.27-1.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3913-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3913"
 		}
 	]
 }

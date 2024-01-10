@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3508-1",
-	"modified": "2023-10-16T00:06:23.008336Z",
+	"modified": "2024-01-09T20:28:15.153177Z",
 	"published": "2016-03-06T00:00:00Z",
 	"related": [
 		"CVE-2016-1577",
@@ -9,7 +9,6 @@
 		"CVE-2016-2116"
 	],
 	"summary": "jasper - security update",
-	"details": "\nSeveral vulnerabilities were discovered in JasPer, a library for\nmanipulating JPEG-2000 files. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2016-1577](https://security-tracker.debian.org/tracker/CVE-2016-1577)\nJacob Baines discovered a double-free flaw in the\n jas\\_iccattrval\\_destroy function. A remote attacker could exploit\n this flaw to cause an application using the JasPer library to crash,\n or potentially, to execute arbitrary code with the privileges of the\n user running the application.\n* [CVE-2016-2089](https://security-tracker.debian.org/tracker/CVE-2016-2089)\nThe Qihoo 360 Codesafe Team discovered a NULL pointer dereference\n flaw within the jas\\_matrix\\_clip function. A remote attacker could\n exploit this flaw to cause an application using the JasPer library\n to crash, resulting in a denial-of-service.\n* [CVE-2016-2116](https://security-tracker.debian.org/tracker/CVE-2016-2116)\nTyler Hicks discovered a memory leak flaw in the\n jas\\_iccprof\\_createfrombuf function. A remote attacker could exploit\n this flaw to cause the JasPer library to consume memory, resulting\n in a denial-of-service.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.900.1-13+deb7u4.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.900.1-debian1-2.4+deb8u1.\n\n\nWe recommend that you upgrade your jasper packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3508-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3508"
 		}
 	]
 }

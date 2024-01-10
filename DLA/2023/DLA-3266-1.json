@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3266-1",
-	"modified": "2023-06-28T06:33:41.002798Z",
+	"modified": "2024-01-09T20:33:26.052411Z",
 	"published": "2023-01-11T00:00:00Z",
 	"related": [
 		"CVE-2023-22456",
 		"CVE-2023-22464"
 	],
 	"summary": "viewvc - security update",
-	"details": "\nIt was discovered that there were two issues in viewvc, a web-based\ninterface for browsing Subversion and CVS repositories. The attack vectors\ninvolved files with unsafe names; names that, when embedded into an HTML\nstream, could cause the browser to run unwanted code.\n\n\n* [CVE-2023-22456](https://security-tracker.debian.org/tracker/CVE-2023-22456)\nViewVC, a browser interface for CVS and Subversion version control\n repositories, as a cross-site scripting vulnerability that affects versions\n prior to 1.2.2 and 1.1.29. The impact of this vulnerability is mitigated by\n the need for an attacker to have commit privileges to a Subversion\n repository exposed by an otherwise trusted ViewVC instance. The attack\n vector involves files with unsafe names (names that, when embedded into an\n HTML stream, would cause the browser to run unwanted code), which\n themselves can be challenging to create. Users should update to at least\n version 1.2.2 (if they are using a 1.2.x version of ViewVC) or 1.1.29 (if\n they are using a 1.1.x version). ViewVC 1.0.x is no longer supported, so\n users of that release lineage should implement a workaround. Users can edit\n their ViewVC EZT view templates to manually HTML-escape changed paths\n during rendering. Locate in your template set's `revision.ezt` file\n references to those changed paths, and wrap them with `[format \"html\"]` and\n `[end]`. For most users, that means that references to `[changes.path]`\n will become `[format \"html\"][changes.path][end]`. (This workaround should\n be reverted after upgrading to a patched version of ViewVC, else changed\n path names will be doubly escaped.)\n* [CVE-2023-22464](https://security-tracker.debian.org/tracker/CVE-2023-22464)\nViewVC is a browser interface for CVS and Subversion version control\n repositories. Versions prior to 1.2.3 and 1.1.30 are vulnerable to\n cross-site scripting. The impact of this vulnerability is mitigated by the\n need for an attacker to have commit privileges to a Subversion repository\n exposed by an otherwise trusted ViewVC instance. The attack vector involves\n files with unsafe names (names that, when embedded into an HTML stream,\n would cause the browser to run unwanted code), which themselves can be\n challenging to create. Users should update to at least version 1.2.3 (if\n they are using a 1.2.x version of ViewVC) or 1.1.30 (if they are using a\n 1.1.x version). ViewVC 1.0.x is no longer supported, so users of that\n release lineage should implement one of the following workarounds. Users\n can edit their ViewVC EZT view templates to manually HTML-escape changed\n path \"copyfrom paths\" during rendering. Locate in your template set's\n `revision.ezt` file references to those changed paths, and wrap them with\n `[format \"html\"]` and `[end]`. For most users, that means that references\n to `[changes.copy\\_path]` will become `[format\n \"html\"][changes.copy\\_path][end]`. (This workaround should be reverted after\n upgrading to a patched version of ViewVC, else \"copyfrom path\" names will\n be doubly escaped.)\n\n\nFor Debian 10 Buster, these problems have been fixed in version\n1.1.26-1+deb10u1.\n\n\nWe recommend that you upgrade your viewvc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3266-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3266"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1386-1",
-	"modified": "2023-06-28T06:20:37.371223Z",
+	"modified": "2024-01-09T20:31:05.036546Z",
 	"published": "2018-05-26T00:00:00Z",
 	"related": [
 		"CVE-2018-7866",
@@ -11,7 +11,6 @@
 		"CVE-2018-9132"
 	],
 	"summary": "ming - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in Ming:\n\n\n* [CVE-2018-7866](https://security-tracker.debian.org/tracker/CVE-2018-7866)\nNULL pointer dereference in the newVar3 function (util/decompile.c).\n Remote attackers might leverage this vulnerability to cause a denial\n of service via a crafted swf file.\n* [CVE-2018-7873](https://security-tracker.debian.org/tracker/CVE-2018-7873)\nHeap-based buffer overflow vulnerability in the getString function\n (util/decompile.c). Remote attackers might leverage this vulnerability\n to cause a denial of service via a crafted swf file.\n* [CVE-2018-7876](https://security-tracker.debian.org/tracker/CVE-2018-7876)\nInteger overflow and resulting memory exhaustion in the\n parseSWF\\_ACTIONRECORD function (util/parser.c). Remote attackers might\n leverage this vulnerability to cause a denial of service via a crafted\n swf file.\n* [CVE-2018-9009](https://security-tracker.debian.org/tracker/CVE-2018-9009)\nVarious heap-based buffer overflow vulnerabilites in util/decompiler.c.\n Remote attackers might leverage this vulnerability to cause a denial of\n service via a crafted swf file.\n* [CVE-2018-9132](https://security-tracker.debian.org/tracker/CVE-2018-9132)\nNULL pointer dereference in the getInt function (util/decompile.c).\n Remote attackers might leverage this vulnerability to cause a denial\n of service via a crafted swf file.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:0.4.4-1.1+deb7u9.\n\n\nWe recommend that you upgrade your ming packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1386-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1386"
 		}
 	]
 }

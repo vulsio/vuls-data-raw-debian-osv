@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5095-1",
-	"modified": "2023-10-16T00:15:35.810481Z",
+	"modified": "2024-01-09T20:27:17.833077Z",
 	"published": "2022-03-09T00:00:00Z",
 	"related": [
 		"CVE-2020-36310",
@@ -13,7 +13,6 @@
 		"CVE-2022-25636"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2020-36310](https://security-tracker.debian.org/tracker/CVE-2020-36310)\nA flaw was discovered in the KVM implementation for AMD processors,\n which could lead to an infinite loop. A malicious VM guest could\n exploit this to cause a denial of service.\n* [CVE-2022-0001](https://security-tracker.debian.org/tracker/CVE-2022-0001) (INTEL-SA-00598)\n\n Researchers at VUSec discovered that the Branch History Buffer in\n Intel processors can be exploited to create information side channels with speculative execution. This issue is similar to\n Spectre variant 2, but requires additional mitigations on some\n processors.\n\n\nThis can be exploited to obtain sensitive information from a\n different security context, such as from user-space to the kernel,\n or from a KVM guest to the kernel.\n* [CVE-2022-0002](https://security-tracker.debian.org/tracker/CVE-2022-0002) (INTEL-SA-00598)\n\n This is a similar issue to [CVE-2022-0001](https://security-tracker.debian.org/tracker/CVE-2022-0001), but covers exploitation\n within a security context, such as from JIT-compiled code in a\n sandbox to hosting code in the same process.\n\n\nThis is partly mitigated by disabling eBPF for unprivileged users\n with the sysctl: kernel.unprivileged\\_bpf\\_disabled=2. This is\n already the default in Debian 11 bullseye.\n* [CVE-2022-0487](https://security-tracker.debian.org/tracker/CVE-2022-0487)\nA use-after-free was discovered in the MOXART SD/MMC Host Controller\n support driver. This flaw does not impact the Debian binary packages\n as CONFIG\\_MMC\\_MOXART is not set.\n* [CVE-2022-0492](https://security-tracker.debian.org/tracker/CVE-2022-0492)\nYiqi Sun and Kevin Wang reported that the cgroup-v1 subsystem does\n not properly restrict access to the release-agent feature. A local\n user can take advantage of this flaw for privilege escalation and\n bypass of namespace isolation.\n* [CVE-2022-0617](https://security-tracker.debian.org/tracker/CVE-2022-0617)\nbutt3rflyh4ck discovered a NULL pointer dereference in the UDF\n filesystem. A local user that can mount a specially crafted UDF\n image can use this flaw to crash the system.\n* [CVE-2022-25636](https://security-tracker.debian.org/tracker/CVE-2022-25636)\nNick Gregory reported a heap out-of-bounds write flaw in the\n netfilter subsystem. A user with the CAP\\_NET\\_ADMIN capability could\n use this for denial of service or possibly for privilege escalation.\n\n\nFor the stable distribution (bullseye), these problems have been fixed\nin version 5.10.103-1. This update additionally includes many more\nbug fixes from stable updates 5.10.93-5.10.103 inclusive.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5095-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5095"
 		}
 	]
 }

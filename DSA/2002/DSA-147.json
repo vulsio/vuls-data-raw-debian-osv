@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-147",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-08-08T00:00:00Z",
 	"published": "2002-08-08T00:00:00Z",
 	"related": [
 		"CVE-2002-0388",
 		"CVE-2002-0855"
 	],
 	"summary": "mailman - cross-site scripting",
-	"details": "\nA cross-site scripting vulnerability was discovered in mailman, a\nsoftware to manage electronic mailing lists. When a properly crafted\nURL is accessed with Internet Explorer (other browsers don't seem to\nbe affected), the resulting webpage is rendered similar to the real\none, but the javascript component is executed as well, which could be\nused by an attacker to get access to sensitive information. The new\nversion for Debian 2.2 also includes backports of security related\npatches from mailman 2.0.11.\n\n\nThis problem has been fixed in version 2.0.11-1woody4 for the current\nstable distribution (woody), in version 1.1-10.1 for the old stable\ndistribution (potato) and in version 2.0.12-1 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your mailman package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-147.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-147"
 		}
 	]
 }

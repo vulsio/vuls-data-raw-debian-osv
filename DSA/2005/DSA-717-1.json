@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-717-1",
-	"modified": "2023-10-16T00:26:37.523239Z",
+	"modified": "2024-01-09T20:32:52.069743Z",
 	"published": "2005-04-27T00:00:00Z",
 	"related": [
 		"CVE-2003-0826",
 		"CVE-2005-0814"
 	],
 	"summary": "lsh-utils - buffer overflow, typo",
-	"details": "\nSeveral security relevant problems have been discovered in lsh, the\nalternative secure shell v2 (SSH2) protocol server. The Common\nVulnerabilities and Exposures project identifies the following\nvulnerabilities:\n\n\n* [CAN-2003-0826](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0826)\nBennett Todd discovered a heap buffer overflow in lshd which could\n lead to the execution of arbitrary code.\n\n* [CAN-2005-0814](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0814)\nNiels MĂśller discovered a denial of service condition in lshd.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 1.2.5-2woody3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.0.1-2.\n\n\nWe recommend that you upgrade your lsh-server package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-717-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-717"
 		}
 	]
 }

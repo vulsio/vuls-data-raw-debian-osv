@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3044-1",
-	"modified": "2023-10-16T00:06:10.905823Z",
+	"modified": "2024-01-09T20:27:56.888920Z",
 	"published": "2014-10-04T00:00:00Z",
 	"related": [
 		"CVE-2014-0142",
@@ -16,7 +16,6 @@
 		"CVE-2014-3640"
 	],
 	"summary": "qemu-kvm - security update",
-	"details": "\nSeveral vulnerabilities were discovered in qemu-kvm, a full \nvirtualization solution on x86 hardware:\n\n\n* Various security issues have been found in the block qemu drivers. \n Malformed disk images might result in the execution of arbitrary code.\n* A NULL pointer dereference in SLIRP may result in denial of service\n* An information leak was discovered in the VGA emulation\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.1.2+dfsg-6+deb7u4.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3044-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3044"
 		}
 	]
 }

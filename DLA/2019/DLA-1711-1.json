@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1711-1",
-	"modified": "2023-06-28T06:24:58.029295Z",
+	"modified": "2024-01-09T20:31:38.336736Z",
 	"published": "2019-03-13T00:00:00Z",
 	"related": [
 		"CVE-2019-3815"
 	],
 	"summary": "systemd - security update",
-	"details": "\nA memory leak was discovered in the backport of fixes for\n[CVE-2018-16864](https://security-tracker.debian.org/tracker/CVE-2018-16864) in systemd-journald.\n\n\nFunction dispatch\\_message\\_real() in journald-server.c does not free\nallocated memory to store the `\\_CMDLINE=` entry. A local attacker may\nuse this flaw to make systemd-journald crash.\n\n\nNote that as the systemd-journald service is not restarted automatically\na restart of the service or more safely a reboot is advised.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n215-17+deb8u11.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1711-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1711"
 		}
 	]
 }

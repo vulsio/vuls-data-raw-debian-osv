@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2108-1",
-	"modified": "2023-10-16T00:05:45.222837Z",
+	"modified": "2024-01-09T20:27:42.087120Z",
 	"published": "2010-09-14T00:00:00Z",
 	"related": [
 		"CVE-2010-1326"
 	],
 	"summary": "cvsnt - arbitrary code execution",
-	"details": "\nIt has been discovered that in cvsnt, a multi-platform version of the\noriginal source code versioning system CVS, an error in the\nauthentication code allows a malicious, unprivileged user, through the\nuse of a specially crafted branch name, to gain write access to any\nmodule or directory, including CVSROOT itself. The attacker can then\nexecute arbitrary code as root by modifying or adding administrative\nscripts in that directory.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.5.03.2382-3.3+lenny1.\n\n\nWe recommend that you upgrade your cvsnt package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2108-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2108"
 		}
 	]
 }

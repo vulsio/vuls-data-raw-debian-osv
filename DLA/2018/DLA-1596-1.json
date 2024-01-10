@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1596-1",
-	"modified": "2023-06-28T06:26:24.293331Z",
+	"modified": "2024-01-09T20:31:27.783119Z",
 	"published": "2018-11-26T00:00:00Z",
 	"related": [
 		"CVE-2018-19132"
 	],
 	"summary": "squid3 - security update",
-	"details": "\nIt was discovered that there can be a denial of service (DoS)\nvulnerability in squid3 due to a memory leak in SNMP query rejection\ncode when SNMP is enabled. In environments where per-process memory\nrestrictions are not enforced strictly, a remote attacker to consume\nall memory available to the Squid process, causing it to crash.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.4.8-6+deb8u6.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1596-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1596"
 		}
 	]
 }

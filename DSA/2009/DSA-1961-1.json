@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1961-1",
-	"modified": "2023-10-16T00:10:49.551054Z",
+	"modified": "2024-01-09T20:25:35.016684Z",
 	"published": "2009-12-23T00:00:00Z",
 	"related": [
 		"CVE-2009-4022"
 	],
 	"summary": "bind9 - cache poisoning",
-	"details": "\nMichael Sinatra discovered that the DNS resolver component in BIND\ndoes not properly check DNS records contained in additional sections\nof DNS responses, leading to a cache poisoning vulnerability. This\nvulnerability is only present in resolvers which have been configured\nwith DNSSEC trust anchors, which is still rare.\n\n\nNote that this update contains an internal ABI change, which means\nthat all BIND-related packages (bind9, dnsutils and the library\npackages) must be updated at the same time (preferably using \"apt-get\nupdate\" and \"apt-get upgrade\"). In the unlikely event that you have\ncompiled your own software against libdns, you must recompile this\nprograms, too.\n\n\nFor the old stable distribution (etch), this problem has been fixed in\nversion 9.3.4-2etch6.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 9.5.1.dfsg.P3-1+lenny1.\n\n\nFor the unstable distribution (sid) and the testing distribution\n(squeeze), this problem has been fixed in version 9.6.1.dfsg.P2-1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1961-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1961"
 		}
 	]
 }

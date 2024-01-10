@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1940-1",
-	"modified": "2023-10-16T00:10:48.141651Z",
+	"modified": "2024-01-09T20:22:36.198813Z",
 	"published": "2009-11-25T00:00:00Z",
 	"related": [
 		"CVE-2009-2626",
@@ -11,7 +11,6 @@
 		"CVE-2009-4017"
 	],
 	"summary": "php5 - multiple issues",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the PHP 5\nhypertext preprocessor. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\nThe following issues have been fixed in both the stable (lenny)\nand the oldstable (etch) distributions:\n\n* [CVE-2009-2687](https://security-tracker.debian.org/tracker/CVE-2009-2687)\n[CVE-2009-3292](https://security-tracker.debian.org/tracker/CVE-2009-3292)\nThe exif module did not properly handle malformed jpeg files,\n allowing an attacker to cause a segfault, resulting in a denial\n of service.\n* [CVE-2009-3291](https://security-tracker.debian.org/tracker/CVE-2009-3291)\nThe php\\_openssl\\_apply\\_verification\\_policy() function did not\n properly perform certificate validation.\n* No CVE id yet\n\n Bogdan Calin discovered that a remote attacker could cause a denial\n of service by uploading a large number of files in using multipart/\n form-data requests, causing the creation of a large number of\n temporary files.\n\n\nTo address this issue, the max\\_file\\_uploads option introduced in PHP\n 5.3.1 has been backported. This option limits the maximum number of\n files uploaded per request. The default value for this new option is\n 50. See NEWS.Debian for more information.\n\n\nThe following issue has been fixed in the stable (lenny) distribution:\n\n\n* [CVE-2009-2626](https://security-tracker.debian.org/tracker/CVE-2009-2626)\nA flaw in the ini\\_restore() function could lead to a memory\n disclosure, possibly leading to the disclosure of sensitive data.\n\n\nIn the oldstable (etch) distribution, this update also fixes a regression\nintroduced by the fix for\n[CVE-2008-5658](https://security-tracker.debian.org/tracker/CVE-2008-5658)\nin DSA-1789-1 (bug #527560).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 5.2.6.dfsg.1-1+lenny4.\n\n\nThe oldstable distribution (etch), these problems have been fixed in\nversion 5.2.0+dfsg-8+etch16.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems will be fixed in version 5.2.11.dfsg.1-2.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -82,12 +81,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1940-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1940"
 		}
 	]
 }

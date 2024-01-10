@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-965-1",
-	"modified": "2023-06-28T06:27:13.768744Z",
-	"published": "2017-05-31T00:00:00Z",
+	"modified": "2024-01-09T20:34:05.169990Z",
+	"published": "2017-05-30T00:00:00Z",
 	"related": [
 		"CVE-2016-9602",
 		"CVE-2017-7377",
@@ -10,7 +10,6 @@
 		"CVE-2017-8086"
 	],
 	"summary": "qemu-kvm - security update",
-	"details": "\nSeveral vulnerabilities were discovered in qemu-kvm, a full\nvirtualization solution for Linux hosts on x86 hardware with x86 guests\nbased on the Quick Emulator(Qemu).\n\n\n* [CVE-2016-9602](https://security-tracker.debian.org/tracker/CVE-2016-9602)\nQuick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to an improper link\n following issue. It could occur while accessing symbolic link files\n on a shared host directory.\n\n\nA privileged user inside guest could use this flaw to access host file\n system beyond the shared folder and potentially escalating their\n privileges on a host.\n* [CVE-2017-7377](https://security-tracker.debian.org/tracker/CVE-2017-7377)\nQuick Emulator(Qemu) built with the virtio-9p back-end support is\n vulnerable to a memory leakage issue. It could occur while doing a I/O\n operation via v9fs\\_create/v9fs\\_lcreate routine.\n\n\nA privileged user/process inside guest could use this flaw to leak\n host memory resulting in Dos.\n* [CVE-2017-7471](https://security-tracker.debian.org/tracker/CVE-2017-7471)\nQuick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to an improper access\n control issue. It could occur while accessing files on a shared host\n directory.\n\n\nA privileged user inside guest could use this flaw to access host file\n system beyond the shared folder and potentially escalating their\n privileges on a host.\n* [CVE-2017-7493](https://security-tracker.debian.org/tracker/CVE-2017-7493)\nQuick Emulator(Qemu) built with the VirtFS, host directory sharing via\n Plan 9 File System(9pfs) support, is vulnerable to an improper access\n control issue. It could occur while accessing virtfs metadata files\n in mapped-file security mode.\n\n\nA guest user could use this flaw to escalate their privileges inside\n guest.\n* [CVE-2017-8086](https://security-tracker.debian.org/tracker/CVE-2017-8086)\nQuick Emulator(Qemu) built with the virtio-9p back-end support is\n vulnerable to a memory leakage issue. It could occur while querying\n file system extended attributes via 9pfs\\_list\\_xattr() routine.\n\n\nA privileged user/process inside guest could use this flaw to leak\n host memory resulting in Dos.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u22.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,12 +58,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-965-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-965"
 		}
 	]
 }

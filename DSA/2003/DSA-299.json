@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-299",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-05-06T00:00:00Z",
 	"published": "2003-05-06T00:00:00Z",
 	"related": [
 		"CVE-2003-0262"
 	],
 	"summary": "leksbot - improper setuid-root execution",
-	"details": "\nMaurice Massar discovered that, due to a packaging error, the program\n/usr/bin/KATAXWR was inadvertently installed setuid root. This\nprogram was not designed to run setuid, and contained multiple\nvulnerabilities which could be exploited to gain root privileges.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.2-3.1.\n\n\nThe old stable distribution (potato) does not contain a leksbot\npackage.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.2-5.\n\n\nWe recommend that you update your leksbot package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-299.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-299"
 		}
 	]
 }

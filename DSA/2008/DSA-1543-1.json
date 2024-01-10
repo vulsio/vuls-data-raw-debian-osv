@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1543-1",
-	"modified": "2023-10-16T00:10:29.382271Z",
+	"modified": "2024-01-09T20:25:00.137389Z",
 	"published": "2008-04-09T00:00:00Z",
 	"related": [
 		"CVE-2007-6681",
@@ -14,7 +14,6 @@
 		"CVE-2008-1489"
 	],
 	"summary": "vlc - several vulnerabilities",
-	"details": "\nLuigi Auriemma, Alin Rad Pop, Rémi Denis-Courmont, Quovodis, Guido\nLandi, Felipe Manzano, Anibal Sacco and others discovered multiple\nvulnerabilities in vlc, an application for playback and streaming of\naudio and video. In the worst case, these weaknesses permit a remote,\nunauthenticated attacker to execute arbitrary code with the privileges\nof the user running vlc.\n\n\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing eight problems:\n\n\n* [CVE-2007-6681](https://security-tracker.debian.org/tracker/CVE-2007-6681)\nA buffer overflow vulnerability in subtitle handling allows an\n attacker to execute arbitrary code through the opening of a\n maliciously crafted MicroDVD, SSA or Vplayer file.\n* [CVE-2007-6682](https://security-tracker.debian.org/tracker/CVE-2007-6682)\nA format string vulnerability in the HTTP-based remote control\n facility of the vlc application allows a remote, unauthenticated\n attacker to execute arbitrary code.\n* [CVE-2007-6683](https://security-tracker.debian.org/tracker/CVE-2007-6683)\nInsecure argument validation allows a remote attacker to overwrite\n arbitrary files writable by the user running vlc, if a maliciously\n crafted M3U playlist or MP3 audio file is opened.\n* [CVE-2008-0295](https://security-tracker.debian.org/tracker/CVE-2008-0295), [CVE-2008-0296](https://security-tracker.debian.org/tracker/CVE-2008-0296)\nHeap buffer overflows in RTSP stream and session description\n protocol (SDP) handling allow an attacker to execute arbitrary\n code if a maliciously crafted RTSP stream is played.\n* [CVE-2008-0073](https://security-tracker.debian.org/tracker/CVE-2008-0073)\nInsufficient integer bounds checking in SDP handling allows the\n execution of arbitrary code through a maliciously crafted SDP\n stream ID parameter in an RTSP stream.\n* [CVE-2008-0984](https://security-tracker.debian.org/tracker/CVE-2008-0984)\nInsufficient integrity checking in the MP4 demuxer allows a remote\n attacker to overwrite arbitrary memory and execute arbitrary code\n if a maliciously crafted MP4 file is opened.\n* [CVE-2008-1489](https://security-tracker.debian.org/tracker/CVE-2008-1489)\nAn integer overflow vulnerability in MP4 handling allows a remote\n attacker to cause a heap buffer overflow, inducing a crash and\n possibly the execution of arbitrary code if a maliciously crafted\n MP4 file is opened.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 0.8.6-svn20061012.debian-5.1+etch2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.8.6.e-2.\n\n\nWe recommend that you upgrade your vlc packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1543-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1543"
 		}
 	]
 }

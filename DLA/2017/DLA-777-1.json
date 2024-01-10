@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-777-1",
-	"modified": "2023-06-28T06:43:15.098629Z",
+	"modified": "2024-01-09T20:33:57.884624Z",
 	"published": "2017-01-03T00:00:00Z",
 	"related": [
 		"CVE-2016-9941",
 		"CVE-2016-9942"
 	],
 	"summary": "libvncserver - security update",
-	"details": "\nIt was discovered that there were two vulnerabilities in libvncserver, a\nlibrary to create/embed a VNC server:\n\n\n* [CVE-2016-9941](https://security-tracker.debian.org/tracker/CVE-2016-9941)\nFix a heap-based buffer overflow that allows remote servers\n to cause a denial of service via a crafted FramebufferUpdate message\n containing a subrectangle outside of the drawing area.\n* [CVE-2016-9942](https://security-tracker.debian.org/tracker/CVE-2016-9942)\nFix a heap-based buffer overflow that allow remote servers\n to cause a denial of service via a crafted FramebufferUpdate message with\n the Ultra type tile such that the LZO decompressed payload exceeds the\n size of the tile dimensions.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in libvncserver version\n0.9.9+dfsg-1+deb7u2.\n\n\nWe recommend that you upgrade your libvncserver packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-777-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-777"
 		}
 	]
 }

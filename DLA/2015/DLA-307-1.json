@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-307-1",
-	"modified": "2023-06-28T06:25:25.170455Z",
+	"modified": "2024-01-09T20:33:16.447730Z",
 	"published": "2015-09-07T00:00:00Z",
 	"related": [
 		"CVE-2015-3307",
@@ -26,7 +26,6 @@
 		"CVE-2015-5590"
 	],
 	"summary": "php5 - security update",
-	"details": "\n* [CVE-2015-3307](https://security-tracker.debian.org/tracker/CVE-2015-3307)\nThe phar\\_parse\\_metadata function in ext/phar/phar.c in PHP before\n 5.4.40, 5.5.x before 5.5.24, and 5.6.x before 5.6.8 allows remote\n attackers to cause a denial of service (heap metadata corruption)\n or possibly have unspecified other impact via a crafted tar archive.\n* [CVE-2015-3411](https://security-tracker.debian.org/tracker/CVE-2015-3411) + [CVE-2015-3412](https://security-tracker.debian.org/tracker/CVE-2015-3412)\nFixed bug #69353 (Missing null byte checks for paths in various\n PHP extensions).\n* [CVE-2015-4021](https://security-tracker.debian.org/tracker/CVE-2015-4021)\nThe phar\\_parse\\_tarfile function in ext/phar/tar.c in PHP\n before 5.4.41, 5.5.x before 5.5.25, and 5.6.x before 5.6.9\n does not verify that the first character of a filename is\n different from the \\0 character, which allows remote attackers\n to cause a denial of service (integer underflow and memory\n corruption) via a crafted entry in a tar archive.\n* [CVE-2015-4022](https://security-tracker.debian.org/tracker/CVE-2015-4022)\nInteger overflow in the ftp\\_genlist function in ext/ftp/ftp.c in PHP\n before 5.4.41, 5.5.x before 5.5.25, and 5.6.x before 5.6.9 allows\n remote FTP servers to execute arbitrary code via a long reply to a\n LIST command, leading to a heap-based buffer overflow.\n* [CVE-2015-4025](https://security-tracker.debian.org/tracker/CVE-2015-4025)\nPHP before 5.4.41, 5.5.x before 5.5.25, and 5.6.x before 5.6.9\n truncates a pathname upon encountering a \\x00 character in certain\n situations, which allows remote attackers to bypass intended\n extension restrictions and access files or directories with\n unexpected names via a crafted argument to (1) set\\_include\\_path,\n (2) tempnam, (3) rmdir, or (4) readlink. NOTE: this vulnerability\n exists because of an incomplete fix for [CVE-2006-7243](https://security-tracker.debian.org/tracker/CVE-2006-7243).\n* [CVE-2015-4026](https://security-tracker.debian.org/tracker/CVE-2015-4026)\nThe pcntl\\_exec implementation in PHP before 5.4.41, 5.5.x before\n 5.5.25, and 5.6.x before 5.6.9 truncates a pathname upon encountering\n a \\x00 character, which might allow remote attackers to bypass\n intended extension restrictions and execute files with unexpected\n names via a crafted first argument. NOTE: this vulnerability exists\n because of an incomplete fix for [CVE-2006-7243](https://security-tracker.debian.org/tracker/CVE-2006-7243).\n* [CVE-2015-4147](https://security-tracker.debian.org/tracker/CVE-2015-4147)\nThe SoapClient::\\_\\_call method in ext/soap/soap.c in PHP before\n 5.4.39, 5.5.x before 5.5.23, and 5.6.x before 5.6.7 does not\n verify that \\_\\_default\\_headers is an array, which allows remote\n attackers to execute arbitrary code by providing crafted\n serialized data with an unexpected data type, related to a type\n confusion issue.\n* [CVE-2015-4148](https://security-tracker.debian.org/tracker/CVE-2015-4148)\nThe do\\_soap\\_call function in ext/soap/soap.c in PHP before 5.4.39,\n 5.5.x before 5.5.23, and 5.6.x before 5.6.7 does not verify that\n the uri property is a string, which allows remote attackers to\n obtain sensitive information by providing crafted serialized data\n with an int data type, related to a type confusion issue.\n* [CVE-2015-4598](https://security-tracker.debian.org/tracker/CVE-2015-4598)\nIncorrect handling of paths with NULs.\n* [CVE-2015-4599](https://security-tracker.debian.org/tracker/CVE-2015-4599)\nType confusion vulnerability in exception::getTraceAsString.\n* [CVE-2015-4600](https://security-tracker.debian.org/tracker/CVE-2015-4600) + [CVE-2015-4601](https://security-tracker.debian.org/tracker/CVE-2015-4601)\nAdded type checks.\n* [CVE-2015-4602](https://security-tracker.debian.org/tracker/CVE-2015-4602)\nType Confusion Infoleak Vulnerability in unserialize() with SoapFault.\n* [CVE-2015-4604](https://security-tracker.debian.org/tracker/CVE-2015-4604) + [CVE-2015-4605](https://security-tracker.debian.org/tracker/CVE-2015-4605)\ndenial of service when processing a crafted file with Fileinfo\n (already fixed in CVE-2015-temp-68819.patch).\n* [CVE-2015-4643](https://security-tracker.debian.org/tracker/CVE-2015-4643)\nImproved fix for bug #69545 (Integer overflow in ftp\\_genlist()\n resulting in heap overflow).\n* [CVE-2015-4644](https://security-tracker.debian.org/tracker/CVE-2015-4644)\nFixed bug #69667 (segfault in php\\_pgsql\\_meta\\_data).\n* [CVE-2015-5589](https://security-tracker.debian.org/tracker/CVE-2015-5589)\nSegfault in Phar::convertToData on invalid file.\n* [CVE-2015-5590](https://security-tracker.debian.org/tracker/CVE-2015-5590)\nBuffer overflow and stack smashing error in phar\\_fix\\_filepath.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -75,12 +74,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-307-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-307"
 		}
 	]
 }

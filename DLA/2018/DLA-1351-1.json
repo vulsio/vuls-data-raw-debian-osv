@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1351-1",
-	"modified": "2023-06-28T06:20:35.376799Z",
+	"modified": "2024-01-09T20:31:02.909993Z",
 	"published": "2018-04-17T00:00:00Z",
 	"related": [
 		"CVE-2018-7550"
 	],
 	"summary": "qemu - security update",
-	"details": "\nThe load\\_multiboot function in hw/i386/multiboot.c in Quick Emulator\n(aka QEMU) allows local guest OS users to execute arbitrary code on\nthe QEMU host via a mh\\_load\\_end\\_addr value greater than\nmh\\_bss\\_end\\_addr, which triggers an out-of-bounds read or write memory\naccess.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u25.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1351-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1351"
 		}
 	]
 }

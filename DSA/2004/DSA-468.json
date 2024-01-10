@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-468",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2004-03-24T00:00:00Z",
 	"published": "2004-03-24T00:00:00Z",
 	"related": [
 		"CVE-2004-0152",
 		"CVE-2004-0153"
 	],
 	"summary": "emil - several vulnerabilities",
-	"details": "\nUlf HĂ¤rnhammar discovered a number of vulnerabilities in emil, a\nfilter for converting Internet mail messages. The vulnerabilities\nfall into two categories:\n\n\n* [CAN-2004-0152](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0152)\nBuffer overflows in (1) the encode\\_mime function,\n (2) the encode\\_uuencode function, (3) the decode\\_uuencode\n function. These bugs could allow a carefully crafted email message\n to cause the execution of arbitrary code supplied with the message\n when it is acted upon by emil.\n\n* [CAN-2004-0153](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0153)\nFormat string bugs in statements which print\n various error messages. The exploit potential of these bugs has\n not been established, and is probably configuration-dependent.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.1.0-beta9-11woody1.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you update your emil package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-468.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-468"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3053-1",
-	"modified": "2023-10-16T00:11:43.938053Z",
+	"modified": "2024-01-09T20:27:57.315621Z",
 	"published": "2014-10-16T00:00:00Z",
 	"related": [
 		"CVE-2014-3513",
@@ -9,7 +9,6 @@
 		"CVE-2014-3568"
 	],
 	"summary": "openssl - security update",
-	"details": "\nSeveral vulnerabilities have been found in OpenSSL, the Secure Sockets\nLayer library and toolkit.\n\n\n* [CVE-2014-3513](https://security-tracker.debian.org/tracker/CVE-2014-3513)\nA memory leak flaw was found in the way OpenSSL parsed the DTLS Secure\n Real-time Transport Protocol (SRTP) extension data. A remote attacker\n could send multiple specially crafted handshake messages to exhaust\n all available memory of an SSL/TLS or DTLS server.\n* [CVE-2014-3566 (\"POODLE\")](https://security-tracker.debian.org/tracker/CVE-2014-3566)\nA flaw was found in the way SSL 3.0 handled padding bytes when\n decrypting messages encrypted using block ciphers in cipher block\n chaining (CBC) mode. This flaw allows a man-in-the-middle (MITM)\n attacker to decrypt a selected byte of a cipher text in as few as 256\n tries if they are able to force a victim application to repeatedly send\n the same data over newly created SSL 3.0 connections. \n\n\nThis update adds support for Fallback SCSV to mitigate this issue.\n* [CVE-2014-3567](https://security-tracker.debian.org/tracker/CVE-2014-3567)\nA memory leak flaw was found in the way an OpenSSL handled failed\n session ticket integrity checks. A remote attacker could exhaust all\n available memory of an SSL/TLS or DTLS server by sending a large number\n of invalid session tickets to that server.\n* [CVE-2014-3568](https://security-tracker.debian.org/tracker/CVE-2014-3568)\nWhen OpenSSL is configured with \"no-ssl3\" as a build option, servers\n could accept and complete a SSL 3.0 handshake, and clients could be\n configured to send them.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.0.1e-2+deb7u13.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.1j-1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3053-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3053"
 		}
 	]
 }

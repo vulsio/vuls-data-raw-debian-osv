@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2927-1",
-	"modified": "2023-10-16T00:11:38.155812Z",
+	"modified": "2024-01-09T20:25:47.995039Z",
 	"published": "2014-05-13T00:00:00Z",
 	"related": [
 		"CVE-2014-0209",
@@ -9,7 +9,6 @@
 		"CVE-2014-0211"
 	],
 	"summary": "libxfont - security update",
-	"details": "\nIlja van Sprundel of IOActive discovered several security issues in the\nX.Org libXfont library, which may allow a local, authenticated user to\nattempt to raise privileges; or a remote attacker who can control the\nfont server to attempt to execute code with the privileges of the X\nserver.\n\n\n* [CVE-2014-0209](https://security-tracker.debian.org/tracker/CVE-2014-0209)\nInteger overflow of allocations in font metadata file parsing could\n allow a local user who is already authenticated to the X server to\n overwrite other memory in the heap.\n* [CVE-2014-0210](https://security-tracker.debian.org/tracker/CVE-2014-0210)\nlibxfont does not validate length fields when parsing xfs protocol\n replies allowing to write past the bounds of allocated memory when\n storing the returned data from the font server.\n* [CVE-2014-0211](https://security-tracker.debian.org/tracker/CVE-2014-0211)\nInteger overflows calculating memory needs for xfs replies could\n result in allocating too little memory and then writing the returned\n data from the font server past the end of the allocated buffer.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1:1.4.1-5.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1:1.4.5-4.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:1.4.7-2.\n\n\nWe recommend that you upgrade your libxfont packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2927-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2927"
 		}
 	]
 }

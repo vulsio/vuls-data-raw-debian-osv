@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1541-1",
-	"modified": "2023-10-16T00:10:29.352907Z",
+	"modified": "2024-01-09T20:24:59.853637Z",
 	"published": "2008-04-08T00:00:00Z",
 	"related": [
 		"CVE-2007-5707",
@@ -10,7 +10,6 @@
 		"CVE-2008-0658"
 	],
 	"summary": "openldap2.3",
-	"details": "\nSeveral remote vulnerabilities have been discovered in OpenLDAP, a\nfree implementation of the Lightweight Directory Access Protocol. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2007-5707](https://security-tracker.debian.org/tracker/CVE-2007-5707)\nThomas Sesselmann discovered that slapd could be crashed by a\n malformed modify requests.\n* [CVE-2007-5708](https://security-tracker.debian.org/tracker/CVE-2007-5708)\nToby Blade discovered that incorrect memory handling in slapo-pcache\n could lead to denial of service through crafted search requests.\n* [CVE-2007-6698](https://security-tracker.debian.org/tracker/CVE-2007-6698)\nIt was discovered that a programming error in the interface to the\n BDB storage backend could lead to denial of service through\n crafted modify requests.\n* [CVE-2008-0658](https://security-tracker.debian.org/tracker/CVE-2008-0658)\nIt was discovered that a programming error in the interface to the\n BDB storage backend could lead to denial of service through\n crafted modrdn requests.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.3.30-5+etch1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.4.7-6.1.\n\n\nWe recommend that you upgrade your openldap2.3 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1541-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1541"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3221-1",
-	"modified": "2023-06-28T06:25:27.964528Z",
+	"modified": "2024-01-09T20:33:23.788339Z",
 	"published": "2022-12-05T00:00:00Z",
 	"related": [
 		"CVE-2018-16472",
 		"CVE-2021-23518"
 	],
 	"summary": "node-cached-path-relative - security update",
-	"details": "\nCristian-Alexandru Staicu discovered a prototype pollution vulnerability\nin inode-cached-path-relative, a Node.js module used to cache (memoize)\nthe result of path.relative.\n\n\n* [CVE-2018-16472](https://security-tracker.debian.org/tracker/CVE-2018-16472)\nAn attacker controlling both the path and the cached value, can\n mount a prototype pollution attack and thus overwrite arbitrary\n properties on Object.prototype, which may result in denial of\n service.\n* [CVE-2021-23518](https://security-tracker.debian.org/tracker/CVE-2021-23518)\nThe fix for [CVE-2018-16472](https://security-tracker.debian.org/tracker/CVE-2018-16472) was incomplete and other prototype\n pollution vulnerabilities were found in the meantime, resulting in a\n new CVE.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.0.1-2+deb10u1.\n\n\nWe recommend that you upgrade your node-cached-path-relative packages.\n\n\nFor the detailed security status of node-cached-path-relative please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-cached-path-relative>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3221-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3221"
 		}
 	]
 }

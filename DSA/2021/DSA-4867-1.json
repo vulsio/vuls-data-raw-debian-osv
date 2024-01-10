@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4867-1",
-	"modified": "2023-10-16T00:14:57.644507Z",
+	"modified": "2024-01-09T20:29:09.060914Z",
 	"published": "2021-03-02T00:00:00Z",
 	"related": [
 		"CVE-2020-14372",
@@ -13,7 +13,6 @@
 		"CVE-2021-20233"
 	],
 	"summary": "grub2 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the GRUB2 bootloader.\n\n\n* [CVE-2020-14372](https://security-tracker.debian.org/tracker/CVE-2020-14372)\nIt was discovered that the acpi command allows a privileged user to\n load crafted ACPI tables when Secure Boot is enabled.\n* [CVE-2020-25632](https://security-tracker.debian.org/tracker/CVE-2020-25632)\nA use-after-free vulnerability was found in the rmmod command.\n* [CVE-2020-25647](https://security-tracker.debian.org/tracker/CVE-2020-25647)\nAn out-of-bound write vulnerability was found in the\n grub\\_usb\\_device\\_initialize() function, which is called to handle USB\n device initialization.\n* [CVE-2020-27749](https://security-tracker.debian.org/tracker/CVE-2020-27749)\nA stack buffer overflow flaw was found in grub\\_parser\\_split\\_cmdline.\n* [CVE-2020-27779](https://security-tracker.debian.org/tracker/CVE-2020-27779)\nIt was discovered that the cutmem command allows a privileged user\n to remove memory regions when Secure Boot is enabled.\n* [CVE-2021-20225](https://security-tracker.debian.org/tracker/CVE-2021-20225)\nA heap out-of-bounds write vulnerability was found in the short form\n option parser.\n* [CVE-2021-20233](https://security-tracker.debian.org/tracker/CVE-2021-20233)\nA heap out-of-bound write flaw was found caused by mis-calculation\n of space required for quoting in the menu rendering.\n\n\nFurther detailed information can be found at\n<https://www.debian.org/security/2021-GRUB-UEFI-SecureBoot>\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2.02+dfsg1-20+deb10u4.\n\n\nWe recommend that you upgrade your grub2 packages.\n\n\nFor the detailed security status of grub2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/grub2>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4867-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-4867"
 		}
 	]
 }

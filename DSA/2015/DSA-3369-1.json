@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3369-1",
-	"modified": "2023-10-16T00:11:57.321173Z",
+	"modified": "2024-01-09T20:25:54.353782Z",
 	"published": "2015-10-06T00:00:00Z",
 	"related": [
 		"CVE-2015-5723",
 		"CVE-2015-7695"
 	],
 	"summary": "zendframework - security update",
-	"details": "\nMultiple vulnerabilities were discovered in Zend Framework, a PHP\nframework:\n\n\n* [CVE-2015-5723](https://security-tracker.debian.org/tracker/CVE-2015-5723)\nIt was discovered that due to incorrect permissions masks when\n creating directories, local attackers could potentially execute\n arbitrary code or escalate privileges.\n* ZF2015-08 (no CVE assigned)\n\n Chris Kings-Lynne discovered an SQL injection vector caused by\n missing null byte filtering in the MS SQL PDO backend, and a similar\n issue was also found in the SQLite backend.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.11.13-1.1+deb7u4.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.12.9+dfsg-2+deb8u4.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 1.12.16+dfsg-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.12.16+dfsg-1.\n\n\nWe recommend that you upgrade your zendframework packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3369-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3369"
 		}
 	]
 }

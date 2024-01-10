@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1286-1",
-	"modified": "2023-06-28T06:20:32.351087Z",
+	"modified": "2024-01-09T20:30:56.022003Z",
 	"published": "2018-02-16T00:00:00Z",
 	"related": [
 		"CVE-2018-5379",
@@ -9,7 +9,6 @@
 		"CVE-2018-5381"
 	],
 	"summary": "quagga - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in Quagga, a routing\ndaemon. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues:\n\n\n* [CVE-2018-5378](https://security-tracker.debian.org/tracker/CVE-2018-5378)\nIt was discovered that the Quagga BGP daemon, bgpd, does not\n properly bounds check data sent with a NOTIFY to a peer, if an\n attribute length is invalid. A configured BGP peer can take\n advantage of this bug to read memory from the bgpd process or cause\n a denial of service (daemon crash).\n* [CVE-2018-5379](https://security-tracker.debian.org/tracker/CVE-2018-5379)\nIt was discovered that the Quagga BGP daemon, bgpd, can double-free\n memory when processing certain forms of UPDATE message, containing\n cluster-list and/or unknown attributes, resulting in a denial of\n service (bgpd daemon crash).\n* [CVE-2018-5380](https://security-tracker.debian.org/tracker/CVE-2018-5380)\nIt was discovered that the Quagga BGP daemon, bgpd, does not\n properly handle internal BGP code-to-string conversion tables.\n* [CVE-2018-5381](https://security-tracker.debian.org/tracker/CVE-2018-5381)\nIt was discovered that the Quagga BGP daemon, bgpd, can enter an\n infinite loop if sent an invalid OPEN message by a configured peer.\n A configured peer can take advantage of this flaw to cause a denial\n of service (bgpd daemon not responding to any other events; BGP\n sessions will drop and not be reestablished; unresponsive CLI\n interface).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.99.22.4-1+wheezy3+deb7u3.\n\n\nWe recommend that you upgrade your quagga packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1286-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1286"
 		}
 	]
 }

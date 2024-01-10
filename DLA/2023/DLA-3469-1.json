@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3469-1",
-	"modified": "2023-06-28T06:30:48.619693Z",
+	"modified": "2024-01-09T20:33:29.695056Z",
 	"published": "2023-06-23T00:00:00Z",
 	"related": [
 		"CVE-2019-6706",
 		"CVE-2020-24370"
 	],
 	"summary": "lua5.3 - security update",
-	"details": "\nIssues were found in lua5.3, a powerful, light-weight programming\nlanguage designed for extending applications, which may result in denial\nof service.\n\n\n* [CVE-2019-6706](https://security-tracker.debian.org/tracker/CVE-2019-6706)\nFady Osman discovered a heap-user-after-free vulnerability in\n `lua_upvaluejoin()` in `lapi.c`, which might\n result in denial of service or potentially arbitary code execution\n upon calling `debug.upvaluejoin()` with specific\n arguments.\n* [CVE-2020-24370](https://security-tracker.debian.org/tracker/CVE-2020-24370)\nYongheng Chen discovered a negation overflow and segmentation fault\n issue in `getlocal()` and `setlocal()`, as\n demonstrated by `getlocal(3,2^31)`.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n5.3.3-1.1+deb10u1.\n\n\nWe recommend that you upgrade your lua5.3 packages.\n\n\nFor the detailed security status of lua5.3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/lua5.3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3469-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3469"
 		}
 	]
 }

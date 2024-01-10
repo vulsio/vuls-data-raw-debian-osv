@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2686-1",
-	"modified": "2023-06-28T06:26:40.752335Z",
-	"published": "2021-06-28T00:00:00Z",
+	"modified": "2024-01-09T20:32:51.678853Z",
+	"published": "2021-06-15T00:00:00Z",
 	"related": [
 		"CVE-2018-20060",
 		"CVE-2019-11236",
@@ -10,7 +10,6 @@
 		"CVE-2020-26137"
 	],
 	"summary": "python-urllib3 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in python-urllib3, a HTTP\nclient for Python.\n\n\n* [CVE-2018-20060](https://security-tracker.debian.org/tracker/CVE-2018-20060)\nUrllib3 does not remove the Authorization HTTP header when\n following a cross-origin redirect (i.e., a redirect that differs\n in host, port, or scheme). This can allow for credentials in the\n Authorization header to be exposed to unintended hosts or\n transmitted in cleartext.\n* [CVE-2019-11236](https://security-tracker.debian.org/tracker/CVE-2019-11236)\nCRLF injection is possible if the attacker controls the request\n parameter.\n* [CVE-2019-11324](https://security-tracker.debian.org/tracker/CVE-2019-11324)\nUrllib3 mishandles certain cases where the desired set of CA\n certificates is different from the OS store of CA certificates,\n which results in SSL connections succeeding in situations where a\n verification failure is the correct outcome. This is related to\n use of the ssl\\_context, ca\\_certs, or ca\\_certs\\_dir argument.\n* [CVE-2020-26137](https://security-tracker.debian.org/tracker/CVE-2020-26137)\nUrllib3 allows CRLF injection if the attacker controls the HTTP\n request method, as demonstrated by inserting CR and LF control\n characters in the first argument of putrequest().\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.19.1-1+deb9u1.\n\n\nWe recommend that you upgrade your python-urllib3 packages.\n\n\nFor the detailed security status of python-urllib3 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python-urllib3>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2686-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2686"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2285-1",
-	"modified": "2023-10-16T00:05:52.314849Z",
+	"modified": "2024-01-09T20:21:19.984795Z",
 	"published": "2011-07-26T00:00:00Z",
 	"related": [
 		"CVE-2011-2703",
 		"CVE-2011-2704"
 	],
 	"summary": "mapserver - several",
-	"details": "\nSeveral vulnerabilities have been discovered in mapserver, a CGI-based\nweb framework to publish spatial data and interactive mapping applications.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2011-2703](https://security-tracker.debian.org/tracker/CVE-2011-2703)\nSeveral instances of insufficient escaping of user input, leading to\n SQL injection attacks via OGC filter encoding (in WMS, WFS, and SOS\n filters).\n* [CVE-2011-2704](https://security-tracker.debian.org/tracker/CVE-2011-2704)\nMissing length checks in the processing of OGC filter encoding that can\n lead to stack-based buffer overflows and the execution of arbitrary code.\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 5.0.3-3+lenny7.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 5.6.5-2+squeeze2.\n\n\nFor the testing (squeeze) and unstable (sid) distributions, these problems\nwill be fixed soon.\n\n\nWe recommend that you upgrade your mapserver packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2285-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2285"
 		}
 	]
 }

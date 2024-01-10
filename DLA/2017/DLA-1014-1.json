@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1014-1",
-	"modified": "2023-06-28T06:20:07.770325Z",
+	"modified": "2024-01-09T20:30:39.519719Z",
 	"published": "2017-07-05T00:00:00Z",
 	"related": [
 		"CVE-2012-6706"
 	],
 	"summary": "libclamunrar - security update",
-	"details": "\nIt was discovered that there was an arbitrary code execution vulnerability in\nlibcamunrar, a library to add unrar support to the Clam anti-virus software.\n\n\nThis was caused by an integer overflow resulting in a negative value of the\n``DestPos`` variable, which allows the attacker to write out of bounds when\nsetting ``Mem[DestPos]``.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libclamunrar version\n0.99-0+deb7u2.\n\n\nWe recommend that you upgrade your libclamunrar packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1014-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1014"
 		}
 	]
 }

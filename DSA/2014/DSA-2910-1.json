@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2910-1",
-	"modified": "2023-10-16T00:11:37.100213Z",
+	"modified": "2024-01-09T20:27:56.178574Z",
 	"published": "2014-04-18T00:00:00Z",
 	"related": [
 		"CVE-2014-0150"
 	],
 	"summary": "qemu-kvm - security update",
-	"details": "\nMichael S. Tsirkin of Red Hat discovered a buffer overflow flaw in the\nway qemu processed MAC addresses table update requests from the guest.\n\n\nA privileged guest user could use this flaw to corrupt qemu process\nmemory on the host, which could potentially result in arbitrary code\nexecution on the host with the privileges of the qemu process.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 0.12.5+dfsg-5+squeeze11.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 1.1.2+dfsg-6+deb7u1.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2910-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2910"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2041-1",
-	"modified": "2023-10-16T00:10:54.986698Z",
+	"modified": "2024-01-09T20:21:09.492044Z",
 	"published": "2010-05-03T00:00:00Z",
 	"related": [
 		"CVE-2010-1150"
 	],
 	"summary": "mediawiki - cross-site request forgery",
-	"details": "\nIt was discovered that mediawiki, a website engine for collaborative\nwork, is vulnerable to a Cross-Site Request Forgery login attack, which\ncould be used to conduct phishing or similar attacks to users via\naffected mediawiki installations.\n\n\nNote that the fix used breaks the login API and may require clients using it to \nbe updated.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1:1.12.0-2lenny5.\n\n\nFor the testing distribution (squeeze) and the unstable distribution (sid),\nthis problem has been fixed in version 1:1.15.3-1.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2041-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2041"
 		}
 	]
 }

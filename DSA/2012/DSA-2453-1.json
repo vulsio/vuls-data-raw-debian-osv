@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2453-1",
-	"modified": "2023-10-16T00:11:15.966712Z",
+	"modified": "2024-01-09T20:27:45.570269Z",
 	"published": "2012-04-16T00:00:00Z",
 	"related": [
 		"CVE-2012-2085",
@@ -9,7 +9,6 @@
 		"CVE-2012-2093"
 	],
 	"summary": "gajim - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Gajim, a feature-rich\nJabber client. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2012-1987](https://security-tracker.debian.org/tracker/CVE-2012-1987)\nGajim is not properly sanitizing input before passing it to shell\n commands. An attacker can use this flaw to execute arbitrary code\n on behalf of the victim if the user e.g. clicks on a specially crafted\n URL in an instant message.\n* [CVE-2012-2093](https://security-tracker.debian.org/tracker/CVE-2012-2093)\nGajim is using predictable temporary files in an insecure manner when\n converting instant messages containing LaTeX to images. A local\n attacker can use this flaw to conduct symlink attacks and overwrite\n files the victim has write access to.\n* [CVE-2012-2086](https://security-tracker.debian.org/tracker/CVE-2012-2086)\nGajim is not properly sanitizing input when logging conversations\n which results in the possibility to conduct SQL injection attacks.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.13.4-3+squeeze3.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 0.15-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.15-1.\n\n\nWe recommend that you upgrade your gajim packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2453-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2453"
 		}
 	]
 }

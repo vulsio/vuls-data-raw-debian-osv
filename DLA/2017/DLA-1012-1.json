@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1012-1",
-	"modified": "2023-06-28T06:20:08.766469Z",
+	"modified": "2024-01-09T20:30:38.715481Z",
 	"published": "2017-07-03T00:00:00Z",
 	"related": [
 		"CVE-2017-2295"
 	],
 	"summary": "puppet - security update",
-	"details": "\nVersions of Puppet prior to 4.10.1 will deserialize data off the wire\n(from the agent to the server, in this case) with a attacker-specified\nformat. This could be used to force YAML deserialization in an unsafe\nmanner, which would lead to remote code execution.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.7.23-1~deb7u4, by enabling PSON serialization on clients and refusing\nnon-PSON formats on the server.\n\n\nWe recommend that you upgrade your puppet packages. Make sure you\nupdate all your clients before you update the server otherwise older\nclients won't be able to connect to the server.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1012-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1012"
 		}
 	]
 }

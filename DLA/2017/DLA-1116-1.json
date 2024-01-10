@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1116-1",
-	"modified": "2023-06-28T06:20:23.728030Z",
+	"modified": "2024-01-09T20:30:45.713934Z",
 	"published": "2017-09-27T00:00:00Z",
 	"related": [
 		"CVE-2017-14517",
@@ -9,7 +9,6 @@
 		"CVE-2017-14617"
 	],
 	"summary": "poppler - security update",
-	"details": "\nIt was discovered that poppler, a PDF rendering library, was affected\nby several denial-of-service (application crash), null pointer\ndereferences and memory corruption bugs:\n\n\n* [CVE-2017-14517](https://security-tracker.debian.org/tracker/CVE-2017-14517)\nNULL Pointer Dereference in the XRef::parseEntry() function in\n XRef.cc\n* [CVE-2017-14519](https://security-tracker.debian.org/tracker/CVE-2017-14519)\nMemory corruption occurs in a call to Object::streamGetChar that\n may lead to a denial of service or other unspecified impact.\n* [CVE-2017-14617](https://security-tracker.debian.org/tracker/CVE-2017-14617)\nPotential buffer overflow in the ImageStream class in Stream.cc,\n which may lead to a denial of service or other unspecified impact.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.18.4-6+deb7u3.\n\n\nWe recommend that you upgrade your poppler packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1116-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1116"
 		}
 	]
 }

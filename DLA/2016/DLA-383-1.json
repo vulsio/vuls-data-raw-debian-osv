@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-383-1",
-	"modified": "2023-06-28T06:24:02.985320Z",
+	"modified": "2024-01-09T20:33:45.487855Z",
 	"published": "2016-01-12T00:00:00Z",
 	"related": [
 		"CVE-2015-8614"
 	],
 	"summary": "claws-mail - security update",
-	"details": "\n\"DrWhax\" of the Tails project reported that Claws Mail is missing\nrange checks in some text conversion functions. A remote attacker\ncould exploit this to run arbitrary code under the account of a user\nthat receives a message from them using Claws Mail.\n\n\n* [CVE-2015-8614](https://security-tracker.debian.org/tracker/CVE-2015-8614)\nThere were no checks on the output length for conversions between\n JIS (ISO-2022-JP) and EUC-JP, between JIS and UTF-8, and from\n Shift\\_JIS to EUC-JP.\n* [CVE-2015-8708](https://security-tracker.debian.org/tracker/CVE-2015-8708)\nThe original fix for [CVE-2015-8614](https://security-tracker.debian.org/tracker/CVE-2015-8614) was incomplete.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 3.7.6-4+squeeze2.\n\n\nFor the oldstable distribution (wheezy) and the stable distribution\n(jessie), this will be fixed soon. These versions were built with\nhardening features that make this issue harder to exploit.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-383-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-383"
 		}
 	]
 }

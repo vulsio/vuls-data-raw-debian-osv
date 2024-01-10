@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-961-1",
-	"modified": "2023-06-28T06:25:40.966612Z",
-	"published": "2017-05-30T00:00:00Z",
+	"modified": "2024-01-09T20:34:04.967123Z",
+	"published": "2017-05-29T00:00:00Z",
 	"related": [
 		"CVE-2017-7650"
 	],
 	"summary": "mosquitto - security update",
-	"details": "\n* [CVE-2017-7650](https://security-tracker.debian.org/tracker/CVE-2017-7650)\nPattern based ACLs can be bypassed by clients that set their username/client id to â#â or â+â.\nThis allows locally or remotely connected clients to access MQTT topics that they do have the rights to.\nThe same issue may be present in third party authentication/access control plugins for Mosquitto.\n\n\nThe vulnerability only comes into effect where pattern based ACLs are in use,\nor potentially where third party plugins are in use.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.15-2+deb7u1.\n\n\nWe recommend that you upgrade your mosquitto packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-961-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-961"
 		}
 	]
 }

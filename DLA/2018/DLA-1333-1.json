@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1333-1",
-	"modified": "2023-06-28T06:20:33.407655Z",
+	"modified": "2024-01-09T20:31:02.802865Z",
 	"published": "2018-03-31T00:00:00Z",
 	"related": [
 		"CVE-2017-14461",
@@ -9,7 +9,6 @@
 		"CVE-2017-15132"
 	],
 	"summary": "dovecot - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Dovecot email\nserver. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues:\n\n\n* [CVE-2017-14461](https://security-tracker.debian.org/tracker/CVE-2017-14461)\nAleksandar Nikolic of Cisco Talos and flxflndy discovered that\n Dovecot does not properly parse invalid email addresses, which may\n cause a crash or leak memory contents to an attacker.\n* [CVE-2017-15130](https://security-tracker.debian.org/tracker/CVE-2017-15130)\nIt was discovered that TLS SNI config lookups may lead to excessive\n memory usage, causing imap-login/pop3-login VSZ limit to be reached\n and the process restarted, resulting in a denial of service. Only\n Dovecot configurations containing local\\_name { } or local { }\n configuration blocks are affected.\n* [CVE-2017-15132](https://security-tracker.debian.org/tracker/CVE-2017-15132)\nIt was discovered that Dovecot contains a memory leak flaw in the\n login process on aborted SASL authentication.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:2.1.7-7+deb7u2.\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1333-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1333"
 		}
 	]
 }

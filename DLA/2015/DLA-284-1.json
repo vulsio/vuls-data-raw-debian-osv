@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-284-1",
-	"modified": "2023-06-28T06:25:21.464333Z",
+	"modified": "2024-01-09T20:32:59.777237Z",
 	"published": "2015-07-28T00:00:00Z",
 	"related": [
 		"CVE-2015-3183"
 	],
 	"summary": "apache2 - security update",
-	"details": "\nA vulnerability has been found in the Apache HTTP Server.\n\n\n* [CVE-2015-3183](https://security-tracker.debian.org/tracker/CVE-2015-3183)\nApache HTTP Server did not properly parse chunk headers, which\n allowed remote attackers to conduct HTTP request smuggling via a\n crafted request. This flaw relates to mishandling of large\n chunk-size values and invalid chunk-extension characters in\n modules/http/http\\_filters.c.\n\n\nFor the squeeze distribution, these issues have been fixed in version\n2.2.16-6+squeeze15 of apache2.\n\n\nWe recommend you to upgrade your apache2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-284-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-284"
 		}
 	]
 }

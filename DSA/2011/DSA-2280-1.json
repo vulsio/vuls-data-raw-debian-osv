@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2280-1",
-	"modified": "2023-10-16T00:11:05.215270Z",
+	"modified": "2024-01-09T20:27:45.419424Z",
 	"published": "2011-07-19T00:00:00Z",
 	"related": [
 		"CVE-2011-1486",
 		"CVE-2011-2511"
 	],
 	"summary": "libvirt - several",
-	"details": "\nIt was discovered that libvirt, a library for interfacing with different\nvirtualization systems, is prone to an integer overflow ([CVE-2011-2511](https://security-tracker.debian.org/tracker/CVE-2011-2511)).\nAdditionally, the stable version is prone to a denial of service,\nbecause its error reporting is not thread-safe ([CVE-2011-1486](https://security-tracker.debian.org/tracker/CVE-2011-1486)).\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 0.8.3-5+squeeze2.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 0.4.6-10+lenny2.\n\n\nFor the testing distribution (wheezy), these problems will fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.9.2-7).\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2280-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2280"
 		}
 	]
 }

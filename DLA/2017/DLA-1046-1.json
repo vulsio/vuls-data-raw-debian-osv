@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1046-1",
-	"modified": "2023-06-28T06:20:16.306246Z",
+	"modified": "2024-01-09T20:30:43.471182Z",
 	"published": "2017-07-30T00:00:00Z",
 	"related": [
 		"CVE-2017-3163"
 	],
 	"summary": "lucene-solr - security update",
-	"details": "\nlucene-solr handler supports an HTTP API (/replication?command=filecontent&file=<file\\_name>)\nwhich is vulnerable to path traversal attack. Specifically, this API does not\nperform any validation of the user specified file\\_name parameter. This can\nallow an attacker to download any file readable to Solr server process even if\nit is not related to the actual Solr index state.\n\n\nFor Debian 7 Wheezy, this problem has been fixed in version\n3.6.0+dfsg-1+deb7u2.\n\n\nWe recommend that you upgrade your lucene-solr packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1046-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1046"
 		}
 	]
 }

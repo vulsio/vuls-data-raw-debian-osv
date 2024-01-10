@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3538-1",
-	"modified": "2023-10-16T00:12:06.422469Z",
+	"modified": "2024-01-09T20:26:00.230168Z",
 	"published": "2016-03-31T00:00:00Z",
 	"related": [
 		"CVE-2015-8789",
@@ -9,7 +9,6 @@
 		"CVE-2015-8791"
 	],
 	"summary": "libebml - security update",
-	"details": "\nSeveral vulnerabilities were discovered in libebml, a library for\nmanipulating Extensible Binary Meta Language files.\n\n\n* [CVE-2015-8789](https://security-tracker.debian.org/tracker/CVE-2015-8789)\nContext-dependent attackers could trigger a use-after-free\n vulnerability by providing a maliciously crafted EBML document.\n* [CVE-2015-8790](https://security-tracker.debian.org/tracker/CVE-2015-8790)\nContext-dependent attackers could obtain sensitive information\n from the process' heap memory by using a maliciously crafted UTF-8\n string.\n* [CVE-2015-8791](https://security-tracker.debian.org/tracker/CVE-2015-8791)\nContext-dependent attackers could obtain sensitive information\n from the process' heap memory by using a maliciously crafted\n length value in an EBML id.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.2.2-2+deb7u1.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.3.0-2+deb8u1.\n\n\nFor the testing (stretch) and unstable (sid) distributions, these\nproblems have been fixed in version 1.3.3-1.\n\n\nWe recommend that you upgrade your libebml packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3538-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3538"
 		}
 	]
 }

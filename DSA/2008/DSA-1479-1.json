@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1479-1",
-	"modified": "2023-10-16T00:05:24.134120Z",
+	"modified": "2024-01-09T20:22:20.464637Z",
 	"published": "2008-01-29T00:00:00Z",
 	"related": [
 		"CVE-2007-2878",
@@ -10,7 +10,6 @@
 		"CVE-2008-0001"
 	],
 	"summary": "linux-2.6",
-	"details": "\nSeveral local vulnerabilities have been discovered in the Linux kernel\nthat may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2007-2878](https://security-tracker.debian.org/tracker/CVE-2007-2878)\nBart Oldeman reported a denial of service (DoS) issue in the VFAT\n filesystem that allows local users to corrupt a kernel structure resulting\n in a system crash. This is only an issue for systems which make use\n of the VFAT compat ioctl interface, such as systems running an 'amd64'\n flavor kernel.\n* [CVE-2007-4571](https://security-tracker.debian.org/tracker/CVE-2007-4571)\nTakashi Iwai supplied a fix for a memory leak in the snd\\_page\\_alloc module.\n Local users could exploit this issue to obtain sensitive information from\n the kernel.\n* [CVE-2007-6151](https://security-tracker.debian.org/tracker/CVE-2007-6151)\nADLAB discovered a possible memory overrun in the ISDN subsystem that\n may permit a local user to overwrite kernel memory by issuing\n ioctls with unterminated data.\n* [CVE-2008-0001](https://security-tracker.debian.org/tracker/CVE-2008-0001)\nBill Roman of Datalight noticed a coding error in the linux VFS subsystem\n that, under certain conditions, can allow local users to remove\n directories for which they should not have removal privileges.\n\n\nThese problems have been fixed in the stable distribution in version\n2.6.18.dfsg.1-17etch1.\n\n\nWe recommend that you upgrade your kernel packages immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1479-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1479"
 		}
 	]
 }

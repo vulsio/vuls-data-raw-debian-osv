@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2341-1",
-	"modified": "2023-10-16T00:11:09.696083Z",
+	"modified": "2024-01-09T20:22:43.892179Z",
 	"published": "2011-11-09T00:00:00Z",
 	"related": [
 		"CVE-2011-3647",
@@ -9,7 +9,6 @@
 		"CVE-2011-3650"
 	],
 	"summary": "iceweasel - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Iceweasel, a web browser\nbased on Firefox. The included XULRunner library provides rendering\nservices for several other applications included in Debian.\n\n\n* [CVE-2011-3647](https://security-tracker.debian.org/tracker/CVE-2011-3647)\nmoz\\_bug\\_r\\_a4 discovered a privilege escalation vulnerability in\n addon handling.\n* [CVE-2011-3648](https://security-tracker.debian.org/tracker/CVE-2011-3648)\nYosuke Hasegawa discovered that incorrect handling of Shift-JIS\n encodings could lead to cross-site scripting.\n* [CVE-2011-3650](https://security-tracker.debian.org/tracker/CVE-2011-3650)\nMarc Schoenefeld discovered that profiling the JavaScript code\n could lead to memory corruption.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.9.0.19-15 of the xulrunner source package.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.5.16-11.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8.0-1.\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -106,12 +105,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2341-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2341"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2045-1",
-	"modified": "2023-06-28T06:21:10.020131Z",
+	"modified": "2024-01-09T20:34:30.791244Z",
 	"published": "2019-12-21T00:00:00Z",
 	"related": [
 		"CVE-2014-6053",
@@ -15,7 +15,6 @@
 		"CVE-2019-8287"
 	],
 	"summary": "tightvnc - security update",
-	"details": "\nSeveral vulnerabilities have recently been discovered in TightVNC 1.x, an\nX11 based VNC server/viewer application for Windows and Unix.\n\n\n* [CVE-2014-6053](https://security-tracker.debian.org/tracker/CVE-2014-6053)\nThe rfbProcessClientNormalMessage function in rfbserver.c in TightVNC\n server did not properly handle attempts to send a large amount of\n ClientCutText data, which allowed remote attackers to cause a denial\n of service (memory consumption or daemon crash) via a crafted message\n that was processed by using a single unchecked malloc.\n* [CVE-2018-7225](https://security-tracker.debian.org/tracker/CVE-2018-7225)\nrfbProcessClientNormalMessage() in rfbserver.c did not sanitize\n msg.cct.length, leading to access to uninitialized and potentially\n sensitive data or possibly unspecified other impact (e.g., an integer\n overflow) via specially crafted VNC packets.\n* [CVE-2019-8287](https://security-tracker.debian.org/tracker/CVE-2019-8287)\nTightVNC code contained global buffer overflow in HandleCoRREBBP\n macro function, which could potentially have result in code\n execution. This attack appeared to be exploitable via network\n connectivity.\n\n\n(aka [CVE-2018-20020](https://security-tracker.debian.org/tracker/CVE-2018-20020)/libvncserver)\n* [CVE-2018-20021](https://security-tracker.debian.org/tracker/CVE-2018-20021)\nTightVNC in vncviewer/rfbproto.c contained a CWE-835: Infinite loop\n vulnerability. The vulnerability allowed an attacker to consume\n an excessive amount of resources like CPU and RAM.\n* [CVE-2018-20022](https://security-tracker.debian.org/tracker/CVE-2018-20022)\nTightVNC's vncviewer contained multiple weaknesses CWE-665: Improper\n Initialization vulnerability in VNC client code that allowed\n attackers to read stack memory and could be abused for information\n disclosure. Combined with another vulnerability, it could be used to\n leak stack memory layout and in bypassing ASLR.\n* [CVE-2019-15678](https://security-tracker.debian.org/tracker/CVE-2019-15678)\nTightVNC code version contained heap buffer overflow in\n rfbServerCutText handler, which could have potentially resulted in\n code execution. This attack appeared to be exploitable via network\n connectivity.\n\n\n(partially aka [CVE-2018-20748](https://security-tracker.debian.org/tracker/CVE-2018-20748)/libvnvserver)\n* [CVE-2019-15679](https://security-tracker.debian.org/tracker/CVE-2019-15679)\nTightVNC's vncviewer code contained a heap buffer overflow in\n InitialiseRFBConnection function, which could have potentially\n resulted in code execution. This attack appeared to be exploitable\n via network connectivity.\n\n\n(partially aka [CVE-2018-20748](https://security-tracker.debian.org/tracker/CVE-2018-20748)/libvnvserver)\n* [CVE-2019-15680](https://security-tracker.debian.org/tracker/CVE-2019-15680)\nTightVNC's vncviewer code contained a null pointer dereference in\n HandleZlibBPP function, which could have resulted in Denial of System\n (DoS). This attack appeared to be exploitable via network\n connectivity.\n* [CVE-2019-15681](https://security-tracker.debian.org/tracker/CVE-2019-15681)\nTightVNC contained a memory leak (CWE-655) in VNC server code, which\n allowed an attacker to read stack memory and could have been abused\n for information disclosure. Combined with another vulnerability, it\n could have been used to leak stack memory and bypass ASLR. This\n attack appeared to be exploitable via network connectivity.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.3.9-6.5+deb8u1.\n\n\nWe recommend that you upgrade your tightvnc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2045-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2045"
 		}
 	]
 }

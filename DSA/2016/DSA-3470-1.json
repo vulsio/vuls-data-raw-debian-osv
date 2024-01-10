@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3470-1",
-	"modified": "2023-10-16T00:12:02.321748Z",
+	"modified": "2024-01-09T20:25:57.033959Z",
 	"published": "2016-02-08T00:00:00Z",
 	"related": [
 		"CVE-2015-7295",
@@ -17,7 +17,6 @@
 		"CVE-2016-1981"
 	],
 	"summary": "qemu-kvm - security update",
-	"details": "\nSeveral vulnerabilities were discovered in qemu-kvm, a full\nvirtualization solution on x86 hardware.\n\n\n* [CVE-2015-7295](https://security-tracker.debian.org/tracker/CVE-2015-7295)\nJason Wang of Red Hat Inc. discovered that the Virtual Network\n Device support is vulnerable to denial-of-service (via resource\n exhaustion), that could occur when receiving large packets.\n* [CVE-2015-7504](https://security-tracker.debian.org/tracker/CVE-2015-7504)\nQinghao Tang of Qihoo 360 Inc. and Ling Liu of Qihoo 360 Inc.\n discovered that the PC-Net II ethernet controller is vulnerable to\n a heap-based buffer overflow that could result in\n denial-of-service (via application crash) or arbitrary code\n execution.\n* [CVE-2015-7512](https://security-tracker.debian.org/tracker/CVE-2015-7512)\nLing Liu of Qihoo 360 Inc. and Jason Wang of Red Hat Inc.\n discovered that the PC-Net II ethernet controller is vulnerable to\n a buffer overflow that could result in denial-of-service (via\n application crash) or arbitrary code execution.\n* [CVE-2015-8345](https://security-tracker.debian.org/tracker/CVE-2015-8345)\nQinghao Tang of Qihoo 360 Inc. discovered that the eepro100\n emulator contains a flaw that could lead to an infinite loop when\n processing Command Blocks, eventually resulting in\n denial-of-service (via application crash).\n* [CVE-2015-8504](https://security-tracker.debian.org/tracker/CVE-2015-8504)\nLian Yihan of Qihoo 360 Inc. discovered that the VNC display\n driver support is vulnerable to an arithmetic exception flaw that\n could lead to denial-of-service (via application crash).\n* [CVE-2015-8558](https://security-tracker.debian.org/tracker/CVE-2015-8558)\nQinghao Tang of Qihoo 360 Inc. discovered that the USB EHCI\n emulation support contains a flaw that could lead to an infinite\n loop during communication between the host controller and a device\n driver. This could lead to denial-of-service (via resource\n exhaustion).\n* [CVE-2015-8743](https://security-tracker.debian.org/tracker/CVE-2015-8743)\nLing Liu of Qihoo 360 Inc. discovered that the NE2000 emulator is\n vulnerable to an out-of-bound read/write access issue, potentially\n resulting in information leak or memory corruption.\n* [CVE-2016-1568](https://security-tracker.debian.org/tracker/CVE-2016-1568)\nQinghao Tang of Qihoo 360 Inc. discovered that the IDE AHCI\n emulation support is vulnerable to a use-after-free issue, that\n could lead to denial-of-service (via application crash) or\n arbitrary code execution.\n* [CVE-2016-1714](https://security-tracker.debian.org/tracker/CVE-2016-1714)\nDonghai Zhu of Alibaba discovered that the Firmware Configuration\n emulation support is vulnerable to an out-of-bound read/write\n access issue, that could lead to denial-of-service (via\n application crash) or arbitrary code execution.\n* [CVE-2016-1922](https://security-tracker.debian.org/tracker/CVE-2016-1922)\nLing Liu of Qihoo 360 Inc. discovered that 32-bit Windows guests\n support is vulnerable to a null pointer dereference issue, that\n could lead to denial-of-service (via application crash).\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.1.2+dfsg-6+deb7u12.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -56,12 +55,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3470-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3470"
 		}
 	]
 }

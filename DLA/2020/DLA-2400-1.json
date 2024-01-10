@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2400-1",
-	"modified": "2023-06-28T06:26:32.915814Z",
-	"published": "2020-10-08T00:00:00Z",
+	"modified": "2024-01-09T20:32:32.686737Z",
+	"published": "2020-10-07T00:00:00Z",
 	"related": [
 		"CVE-2020-13920"
 	],
 	"summary": "activemq - security update",
-	"details": "\nApache ActiveMQ, a Java message broker, uses\nLocateRegistry.createRegistry() to create the JMX RMI registry and binds\nthe server to the jmxrmi entry. It is possible to connect to the\nregistry without authentication and call the rebind method to rebind\njmxrmi to something else. If an attacker creates another server to proxy\nthe original, and bound that, he effectively becomes a man in the middle\nand is able to intercept the credentials when an user connects.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n5.14.3-3+deb9u1.\n\n\nWe recommend that you upgrade your activemq packages.\n\n\nFor the detailed security status of activemq please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/activemq>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2400-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2400"
 		}
 	]
 }

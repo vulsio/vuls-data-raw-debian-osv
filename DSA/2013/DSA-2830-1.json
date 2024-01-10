@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2830-1",
-	"modified": "2023-10-16T00:11:33.776547Z",
+	"modified": "2024-01-09T20:24:07.926602Z",
 	"published": "2013-12-30T00:00:00Z",
 	"related": [
 		"CVE-2013-4492"
 	],
 	"summary": "ruby-i18n - cross-site scripting",
-	"details": "\nPeter McLarnan discovered that the internationalization component of\nRuby on Rails does not properly encode parameters in generated HTML\ncode, resulting in a cross-site scripting vulnerability. This update\ncorrects the underlying vulnerability in the i18n gem, as provided by\nthe ruby-i18n package.\n\n\nThe oldstable distribution (squeeze) is not affected by this problem;\nthe libi18n-ruby package does not contain the vulnerable code.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.6.0-3+deb7u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.6.9-1.\n\n\nWe recommend that you upgrade your ruby-i18n packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2830-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2830"
 		}
 	]
 }

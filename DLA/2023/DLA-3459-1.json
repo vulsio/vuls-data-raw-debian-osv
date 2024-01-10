@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3459-1",
-	"modified": "2023-06-28T06:50:40.995775Z",
+	"modified": "2024-01-09T20:33:29.366730Z",
 	"published": "2023-06-20T00:00:00Z",
 	"related": [
 		"CVE-2022-44617",
@@ -9,7 +9,6 @@
 		"CVE-2022-4883"
 	],
 	"summary": "libxpm - security update",
-	"details": "\nlibxpm is a library handling X PixMap image format (so called xpm files).\nxpm files are an extension of the monochrome X BitMap format specified\nin the X protocol, and are commonly used in traditional X applications.\n\n\n* [CVE-2022-4883](https://security-tracker.debian.org/tracker/CVE-2022-4883)\nWhen processing files with\n .Z or .gz extensions, the library calls external programs\n to compress and uncompress files, relying on the\n PATH environment variable to find these programs,\n which could allow a malicious user to execute other programs\n by manipulating the PATH environment variable.\n* [CVE-2022-44617](https://security-tracker.debian.org/tracker/CVE-2022-44617)\nWhen processing a file with width of 0\n and a very large height, some parser functions will be\n called repeatedly and can lead to an infinite loop,\n resulting in a Denial of Service in the application linked\n to the library.\n* [CVE-2022-46285](https://security-tracker.debian.org/tracker/CVE-2022-46285)\nWhen parsing a file with a comment\n not closed, an end-of-file condition will not be detected,\n leading to an infinite loop and resulting in a\n Denial of Service in the application linked to the library.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:3.5.12-1+deb10u1.\n\n\nWe recommend that you upgrade your libxpm packages.\n\n\nFor the detailed security status of libxpm please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxpm>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3459-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3459"
 		}
 	]
 }

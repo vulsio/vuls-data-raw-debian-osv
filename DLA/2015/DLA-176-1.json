@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-176-1",
-	"modified": "2023-06-28T06:20:58.700687Z",
+	"modified": "2024-01-09T20:31:42.955635Z",
 	"published": "2015-03-19T00:00:00Z",
 	"related": [
 		"CVE-2015-2318",
@@ -9,7 +9,6 @@
 		"CVE-2015-2320"
 	],
 	"summary": "mono - security update",
-	"details": "\nThree issues with Mono's TLS stack are addressed.\n\n\n* [CVE-2015-2318](https://security-tracker.debian.org/tracker/CVE-2015-2318)\nMono's implementation of the SSL/TLS stack failed to check\n the order of the handshake messages. Which would allow\n various attacks on the protocol to succeed. (\"SKIP-TLS\")\n* [CVE-2015-2319](https://security-tracker.debian.org/tracker/CVE-2015-2319)\nMono's implementation of SSL/TLS also contained support for\n the weak EXPORT cyphers and was susceptible to the FREAK attack.\n* [CVE-2015-2320](https://security-tracker.debian.org/tracker/CVE-2015-2320)\nMono contained SSLv2 fallback code, which is no longer needed\n and can be considered insecure.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in mono version 2.6.7-5.1+deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-176-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-176"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1723-1",
-	"modified": "2023-06-28T06:20:55.029712Z",
+	"modified": "2024-01-09T20:31:53.371498Z",
 	"published": "2019-03-21T00:00:00Z",
 	"related": [
 		"CVE-2017-9525",
@@ -10,7 +10,6 @@
 		"CVE-2019-9706"
 	],
 	"summary": "cron - security update",
-	"details": "\nVarious security problems have been discovered in Debian's CRON scheduler.\n\n\n* [CVE-2017-9525](https://security-tracker.debian.org/tracker/CVE-2017-9525)\nFix group crontab to root escalation via the Debian package's\n postinst script as described by Alexander Peslyak (Solar Designer) in\n <http://www.openwall.com/lists/oss-security/2017/06/08/3>\n* [CVE-2019-9704](https://security-tracker.debian.org/tracker/CVE-2019-9704)\nDoS: Fix unchecked return of calloc(). Florian Weimer discovered that\n a missing check for the return value of calloc() could crash the\n daemon, which could be triggered by a very large crontab created by a\n user.\n* [CVE-2019-9705](https://security-tracker.debian.org/tracker/CVE-2019-9705)\nEnforce maximum crontab line count of 1000 to prevent a malicious\n user from creating an excessivly large crontab. The daemon will log a\n warning for existing files, and crontab(1) will refuse to create new\n ones.\n* [CVE-2019-9706](https://security-tracker.debian.org/tracker/CVE-2019-9706)\nA user reported a use-after-free condition in the cron daemon,\n leading to a possible Denial-of-Service scenario by crashing the\n daemon.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.0pl1-127+deb8u2.\n\n\nWe recommend that you upgrade your cron packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1723-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1723"
 		}
 	]
 }

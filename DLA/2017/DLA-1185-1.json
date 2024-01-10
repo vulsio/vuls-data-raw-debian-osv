@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1185-1",
-	"modified": "2023-06-28T06:20:28.441234Z",
+	"modified": "2024-01-09T20:30:49.846408Z",
 	"published": "2017-11-22T00:00:00Z",
 	"related": [
 		"CVE-2017-16663"
 	],
 	"summary": "sam2p - security update",
-	"details": "\nIt was discovered that sam2p, a utility to convert raster images and\nother image formats, was affected by an integer overflow vulnerability\nwith resultant heap-based buffer overflow in input-bmp.ci because\nwidth and height multiplications occur unsafely. This may lead to an\napplication crash or unspecified other impact when a maliciously\ncrafted file is processed.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.49.1-1+deb7u2.\n\n\nWe recommend that you upgrade your sam2p packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1185-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1185"
 		}
 	]
 }

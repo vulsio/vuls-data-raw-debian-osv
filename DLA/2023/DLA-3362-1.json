@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3362-1",
-	"modified": "2023-06-28T06:25:32.139467Z",
+	"modified": "2024-01-09T20:33:35.872344Z",
 	"published": "2023-03-14T00:00:00Z",
 	"related": [
 		"CVE-2020-14394",
@@ -16,7 +16,6 @@
 		"CVE-2022-1050"
 	],
 	"summary": "qemu - security update",
-	"details": "\nMultiple security issues were discovered in QEMU, a fast processor\nemulator, which could result in denial of service, information leak,\nor potentially the execution of arbitrary code.\n\n\n* [CVE-2020-14394](https://security-tracker.debian.org/tracker/CVE-2020-14394)\nAn infinite loop flaw was found in the USB xHCI controller\n emulation of QEMU while computing the length of the Transfer\n Request Block (TRB) Ring. This flaw allows a privileged guest user\n to hang the QEMU process on the host, resulting in a denial of\n service.\n* [CVE-2020-17380](https://security-tracker.debian.org/tracker/CVE-2020-17380)/[CVE-2021-3409](https://security-tracker.debian.org/tracker/CVE-2021-3409)\nA heap-based buffer overflow was found in QEMU in the SDHCI device\n emulation support. It could occur while doing a multi block SDMA\n transfer via the sdhci\\_sdma\\_transfer\\_multi\\_blocks() routine in\n hw/sd/sdhci.c. A guest user or process could use this flaw to\n crash the QEMU process on the host, resulting in a denial of\n service condition, or potentially execute arbitrary code with\n privileges of the QEMU process on the host.\n* [CVE-2020-29130](https://security-tracker.debian.org/tracker/CVE-2020-29130)\nslirp.c has a buffer over-read because it tries to read a certain\n amount of header data even if that exceeds the total packet\n length.\n* [CVE-2021-3592](https://security-tracker.debian.org/tracker/CVE-2021-3592)\nAn invalid pointer initialization issue was found in the SLiRP\n networking implementation of QEMU. The flaw exists in the\n bootp\\_input() function and could occur while processing a udp\n packet that is smaller than the size of the bootp\\_t structure. A\n malicious guest could use this flaw to leak 10 bytes of\n uninitialized heap memory from the host.\n* [CVE-2021-3593](https://security-tracker.debian.org/tracker/CVE-2021-3593)\nAn invalid pointer initialization issue was found in the SLiRP\n networking implementation of QEMU. The flaw exists in the\n udp6\\_input() function and could occur while processing a udp\n packet that is smaller than the size of the udphdr\n structure. This issue may lead to out-of-bounds read access or\n indirect host memory disclosure to the guest.\n* [CVE-2021-3594](https://security-tracker.debian.org/tracker/CVE-2021-3594)\nAn invalid pointer initialization issue was found\n in the SLiRP networking implementation of QEMU. The flaw exists in\n the udp\\_input() function and could occur while processing a udp\n packet that is smaller than the size of the udphdr\n structure. This issue may lead to out-of-bounds read access or\n indirect host memory disclosure to the guest.\n* [CVE-2021-3595](https://security-tracker.debian.org/tracker/CVE-2021-3595)\nAn invalid pointer initialization issue was found in the SLiRP\n networking implementation of QEMU. The flaw exists in the\n tftp\\_input() function and could occur while processing a udp\n packet that is smaller than the size of the tftp\\_t\n structure. This issue may lead to out-of-bounds read access or\n indirect host memory disclosure to the guest.\n* [CVE-2022-0216](https://security-tracker.debian.org/tracker/CVE-2022-0216)\nA use-after-free vulnerability was found in the LSI53C895A SCSI\n Host Bus Adapter emulation of QEMU. The flaw occurs while\n processing repeated messages to cancel the current SCSI request\n via the lsi\\_do\\_msgout function. This flaw allows a malicious\n privileged user within the guest to crash the QEMU process on the\n host, resulting in a denial of service.\n* [CVE-2022-1050](https://security-tracker.debian.org/tracker/CVE-2022-1050)\nA flaw was found in the QEMU implementation of VMWare's\n paravirtual RDMA device. This flaw allows a crafted guest driver\n to execute HW commands when shared buffers are not yet allocated,\n potentially leading to a use-after-free condition.\n Note: PVRDMA is disabled in buster, but this was fixed\n preventively in case this changes in the future.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:3.1+dfsg-8+deb10u10.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFor the detailed security status of qemu please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qemu>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3362-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3362"
 		}
 	]
 }

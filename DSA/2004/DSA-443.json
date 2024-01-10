@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-443",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2004-02-19T00:00:00Z",
 	"published": "2004-02-19T00:00:00Z",
 	"related": [
 		"CVE-2003-0690",
@@ -12,7 +12,6 @@
 		"CVE-2004-0106"
 	],
 	"summary": "xfree86 - several vulnerabilities",
-	"details": "\nA number of vulnerabilities have been discovered in XFree86. The corrections\nare listed below with the identification from the Common\nVulnerabilities and Exposures (CVE) project:\n\n\n* [CAN-2004-0083](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0083):\n\n Buffer overflow in ReadFontAlias from dirfile.c of\n XFree86 4.1.0 through 4.3.0 allows local users and remote attackers to\n execute arbitrary code via a font alias file (font.alias) with a long\n token, a different vulnerability than CAN-2004-0084.\n\n* [CAN-2004-0084](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0084):\n\n Buffer overflow in the ReadFontAlias function in XFree86\n 4.1.0 to 4.3.0, when using the CopyISOLatin1Lowered function, allows\n local or remote authenticated users to execute arbitrary code via a\n malformed entry in the font alias (font.alias) file, a different\n vulnerability than CAN-2004-0083.\n\n* [CAN-2004-0106](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0106):\n\n Miscellaneous additional flaws in XFree86's handling of\n font files.\n\n* [CAN-2003-0690](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0690):\n\n xdm does not verify whether the pam\\_setcred function call\n succeeds, which may allow attackers to gain root privileges by\n triggering error conditions within PAM modules, as demonstrated in\n certain configurations of the MIT pam\\_krb5 module.\n\n* [CAN-2004-0093](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0093), [CAN-2004-0094](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0094):\n\n Denial-of-service attacks against the X\n server by clients using the GLX extension and Direct Rendering\n Infrastructure are possible due to unchecked client data (out-of-bounds\n array indexes [CAN-2004-0093] and integer signedness errors\n [CAN-2004-0094]).\n\n\nExploitation of CAN-2004-0083, CAN-2004-0084, CAN-2004-0106,\nCAN-2004-0093 and CAN-2004-0094 would require a connection to the X\nserver. By default, display managers in Debian start the X server\nwith a configuration which only accepts local connections, but if the\nconfiguration is changed to allow remote connections, or X servers are\nstarted by other means, then these bugs could be exploited remotely.\nSince the X server usually runs with root privileges, these bugs could\npotentially be exploited to gain root privileges.\n\n\nNo attack vector for CAN-2003-0690 is known at this time.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 4.1.0-16woody3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.3.0-2.\n\n\nWe recommend that you update your xfree86 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-443.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-443"
 		}
 	]
 }

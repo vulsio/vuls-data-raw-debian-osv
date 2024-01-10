@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-81-1",
-	"modified": "2023-06-28T06:32:44.085352Z",
+	"modified": "2024-01-09T20:33:59.108489Z",
 	"published": "2014-11-01T00:00:00Z",
 	"related": [
 		"CVE-2014-3567",
@@ -9,7 +9,6 @@
 		"CVE-2014-3569"
 	],
 	"summary": "openssl - security update",
-	"details": "\nSeveral vulnerabilities have been found in OpenSSL.\n\n\n* [CVE-2014-3566](https://security-tracker.debian.org/tracker/CVE-2014-3566)\n(\"POODLE\")\n\n\nA flaw was found in the way SSL 3.0 handled padding bytes when\n decrypting messages encrypted using block ciphers in cipher block\n chaining (CBC) mode. This flaw allows a man-in-the-middle (MITM)\n attacker to decrypt a selected byte of a cipher text in as few as 256\n tries if they are able to force a victim application to repeatedly\n send the same data over newly created SSL 3.0 connections.\n\n\nThis update adds support for Fallback SCSV to mitigate this issue.\n This does not fix the issue. The proper way to fix this is to\n disable SSL 3.0.\n* [CVE-2014-3567](https://security-tracker.debian.org/tracker/CVE-2014-3567)\nA memory leak flaw was found in the way an OpenSSL handled failed\n session ticket integrity checks. A remote attacker could exhaust all\n available memory of an SSL/TLS or DTLS server by sending a large number\n of invalid session tickets to that server.\n* [CVE-2014-3568](https://security-tracker.debian.org/tracker/CVE-2014-3568)\nWhen OpenSSL is configured with \"no-ssl3\" as a build option, servers\n could accept and complete a SSL 3.0 handshake, and clients could be\n configured to send them.\n\n\nNote that the package is Debian is not build with this option.\n* [CVE-2014-3569](https://security-tracker.debian.org/tracker/CVE-2014-3569)\nWhen OpenSSL is build with the \"no-ssl3\" option and a SSL v3 Client\n Hello is received the ssl method would be set to NULL which could\n later result in a NULL pointer dereference.\n\n\nNote that the package is Debian is not build with this option.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in openssl version 0.9.8o-4squeeze18\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-81-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-81"
 		}
 	]
 }

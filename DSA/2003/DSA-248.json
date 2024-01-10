@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-248",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-01-31T00:00:00Z",
 	"published": "2003-01-31T00:00:00Z",
 	"related": [
 		"CVE-2003-0057"
 	],
 	"summary": "hypermail - buffer overflows",
-	"details": "\nUlf HĂ¤rnhammar discovered two problems in hypermail, a program to\ncreate HTML archives of mailing lists.\n\n\nAn attacker could craft a long filename for an attachment that would\noverflow two buffers when a certain option for interactive use was\ngiven, opening the possibility to inject arbitrary code. This code\nwould then be executed under the user id hypermail runs as, mostly as\na local user. Automatic and silent use of hypermail does not seem to\nbe affected.\n\n\nThe CGI program mail, which is not installed by the Debian package,\ndoes a reverse look-up of the user's IP number and copies the\nresulting hostname into a fixed-size buffer. A specially crafted DNS\nreply could overflow this buffer, opening the program to an exploit.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.1.3-2.0.\n\n\nFor the old stable distribution (potato) this problem has been fixed\nin version 2.0b25-1.1.\n\n\nFor the unstable distribution (sid) this problem has been fixed\nin version 2.1.6-1.\n\n\nWe recommend that you upgrade your hypermail packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-248.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-248"
 		}
 	]
 }

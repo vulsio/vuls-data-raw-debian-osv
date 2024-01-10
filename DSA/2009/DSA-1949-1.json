@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1949-1",
-	"modified": "2023-10-16T00:10:48.920941Z",
+	"modified": "2024-01-09T20:22:36.910502Z",
 	"published": "2009-12-12T00:00:00Z",
 	"related": [
 		"CVE-2009-4024"
 	],
 	"summary": "php-net-ping - arbitrary code execution",
-	"details": "\nIt was discovered that php-net-ping, a PHP PEAR module to execute ping\nindependently of the Operating System, performs insufficient input\nsanitising, which might be used to inject arguments (no CVE yet) or\nexecute arbitrary commands ([CVE-2009-4024](https://security-tracker.debian.org/tracker/CVE-2009-4024)) on a system that uses\nphp-net-ping.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.4.2-1+etch1.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.4.2-1+lenny1.\n\n\nFor the testing distribution (squeeze), this problem will be fixed\nsoon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.4.2-1.1.\n\n\nWe recommend that you upgrade your php-net-ping packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1949-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1949"
 		}
 	]
 }

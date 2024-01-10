@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4637-1",
-	"modified": "2023-10-16T00:19:47.345564Z",
+	"modified": "2024-01-09T20:26:29.841904Z",
 	"published": "2020-03-09T00:00:00Z",
 	"related": [
 		"CVE-2020-9355"
 	],
 	"summary": "network-manager-ssh - security update",
-	"details": "\nKobus van Schoor discovered that network-manager-ssh, a plugin to\nprovide VPN integration for SSH in NetworkManager, is prone to a\nprivilege escalation vulnerability. A local user with privileges to\nmodify a connection can take advantage of this flaw to execute arbitrary\ncommands as root.\n\n\nThis update drops support to pass extra SSH options to the ssh\ninvocation.\n\n\nFor the oldstable distribution (stretch), this problem has been fixed\nin version 1.2.1-1+deb9u1.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.2.10-1+deb10u1.\n\n\nWe recommend that you upgrade your network-manager-ssh packages.\n\n\nFor the detailed security status of network-manager-ssh please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/network-manager-ssh>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4637-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2020/dsa-4637"
 		}
 	]
 }

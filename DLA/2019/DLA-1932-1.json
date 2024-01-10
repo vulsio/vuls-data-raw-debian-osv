@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1932-1",
-	"modified": "2023-06-28T06:21:05.092415Z",
+	"modified": "2024-01-09T20:31:51.857072Z",
 	"published": "2019-09-25T00:00:00Z",
 	"related": [
 		"CVE-2019-1547",
 		"CVE-2019-1563"
 	],
 	"summary": "openssl - security update",
-	"details": "\nTwo security vulnerabilities were found in OpenSSL, the Secure Sockets\nLayer toolkit.\n\n\n* [CVE-2019-1547](https://security-tracker.debian.org/tracker/CVE-2019-1547)\nNormally in OpenSSL EC groups always have a co-factor present and\n this is used in side channel resistant code paths. However, in some\n cases, it is possible to construct a group using explicit parameters\n (instead of using a named curve). In those cases it is possible that\n such a group does not have the cofactor present. This can occur even\n where all the parameters match a known named curve. If such a curve\n is used then OpenSSL falls back to non-side channel resistant code\n paths which may result in full key recovery during an ECDSA\n signature operation. In order to be vulnerable an attacker\n would have to have the ability to time the creation of a large\n number of signatures where explicit parameters with no co-factor\n present are in use by an application using libcrypto. For the\n avoidance of doubt libssl is not vulnerable because explicit\n parameters are never used.\n* [CVE-2019-1563](https://security-tracker.debian.org/tracker/CVE-2019-1563)\nIn situations where an attacker receives automated notification of\n the success or failure of a decryption attempt an attacker, after\n sending a very large number of messages to be decrypted, can recover\n a CMS/PKCS7 transported encryption key or decrypt any RSA encrypted\n message that was encrypted with the public RSA key, using a\n Bleichenbacher padding oracle attack. Applications are not affected\n if they use a certificate together with the private RSA key to the\n CMS\\_decrypt or PKCS7\\_decrypt functions to select the correct\n recipient info to decrypt.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.0.1t-1+deb8u12.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1932-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1932"
 		}
 	]
 }

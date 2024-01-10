@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2456-1",
-	"modified": "2023-06-28T06:21:19.209877Z",
+	"modified": "2024-01-09T20:32:37.476118Z",
 	"published": "2020-11-18T00:00:00Z",
 	"related": [
 		"CVE-2019-20907",
 		"CVE-2020-26116"
 	],
 	"summary": "python3.5 - security update",
-	"details": "\nMultiple security issues were discovered in Python.\n\n\n* [CVE-2019-20907](https://security-tracker.debian.org/tracker/CVE-2019-20907)\nIn Lib/tarfile.py, an attacker is able to craft a TAR\n archive leading to an infinite loop when opened by tarfile.open,\n because \\_proc\\_pax lacks header validation\n* [CVE-2020-26116](https://security-tracker.debian.org/tracker/CVE-2020-26116)\nhttp.client allows CRLF injection if the attacker controls\n the HTTP request method\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n3.5.3-1+deb9u3.\n\n\nWe recommend that you upgrade your python3.5 packages.\n\n\nFor the detailed security status of python3.5 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/python3.5>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2456-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2456"
 		}
 	]
 }

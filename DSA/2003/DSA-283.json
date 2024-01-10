@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-283",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-04-11T00:00:00Z",
 	"published": "2003-04-11T00:00:00Z",
 	"related": [
 		"CVE-2003-0173"
 	],
 	"summary": "xfsdump - insecure file creation",
-	"details": "\nEthan Benson discovered a problem in xfsdump, that contains\nadministrative utilities for the XFS filesystem. When filesystem\nquotas are enabled xfsdump runs xfsdq to save the quota information\ninto a file at the root of the filesystem being dumped. The manner in\nwhich this file is created is unsafe.\n\n\nWhile fixing this, a new option “-f path” has been added to xfsdq(8)\nto specify an output file instead of using the standard output stream.\nThis file is created by xfsdq and xfsdq will fail to run if it exists\nalready. The file is also created with a more appropriate mode than\nwhatever the umask happened to be when xfsdump(8) was run.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.0.1-2.\n\n\nThe old stable distribution (potato) is not affected since it doesn't\ncontain xfsdump packages.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.2.8-1.\n\n\nWe recommend that you upgrade your xfsdump package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-283.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-283"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3625-1",
-	"modified": "2023-10-16T00:12:11.003390Z",
+	"modified": "2024-01-09T20:21:57.107089Z",
 	"published": "2016-07-22T00:00:00Z",
 	"related": [
 		"CVE-2016-3948",
@@ -15,7 +15,6 @@
 		"CVE-2016-4556"
 	],
 	"summary": "squid3 - security update",
-	"details": "\nSeveral security issues have been discovered in the Squid caching proxy.\n\n\n* [CVE-2016-4051](https://security-tracker.debian.org/tracker/CVE-2016-4051):\n\n CESG and Yuriy M. Kaminskiy discovered that Squid cachemgr.cgi was\n vulnerable to a buffer overflow when processing remotely supplied\n inputs relayed through Squid.\n* [CVE-2016-4052](https://security-tracker.debian.org/tracker/CVE-2016-4052):\n\n CESG discovered that a buffer overflow made Squid vulnerable to a\n Denial of Service (DoS) attack when processing ESI responses.\n* [CVE-2016-4053](https://security-tracker.debian.org/tracker/CVE-2016-4053):\n\n CESG found that Squid was vulnerable to public information\n disclosure of the server stack layout when processing ESI responses.\n* [CVE-2016-4054](https://security-tracker.debian.org/tracker/CVE-2016-4054):\n\n CESG discovered that Squid was vulnerable to remote code execution\n when processing ESI responses.\n* [CVE-2016-4554](https://security-tracker.debian.org/tracker/CVE-2016-4554):\n\n Jianjun Chen found that Squid was vulnerable to a header smuggling\n attack that could lead to cache poisoning and to bypass of\n same-origin security policy in Squid and some client browsers.\n* [CVE-2016-4555](https://security-tracker.debian.org/tracker/CVE-2016-4555),\n [CVE-2016-4556](https://security-tracker.debian.org/tracker/CVE-2016-4556):\n\n \"bfek-18\" and \"@vftable\" found that Squid was vulnerable to a Denial\n of Service (DoS) attack when processing ESI responses, due to\n incorrect pointer handling and reference counting.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.4.8-6+deb8u3.\n\n\nFor the testing (stretch) and unstable (sid) distributions, these\nproblems have been fixed in version 3.5.19-1.\n\n\nWe recommend that you upgrade your squid3 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3625-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3625"
 		}
 	]
 }

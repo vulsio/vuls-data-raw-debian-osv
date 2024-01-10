@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1519-1",
-	"modified": "2023-06-28T06:26:22.345318Z",
+	"modified": "2024-01-09T20:31:20.596080Z",
 	"published": "2018-09-25T00:00:00Z",
 	"related": [
 		"CVE-2017-1000158",
@@ -10,7 +10,6 @@
 		"CVE-2018-1061"
 	],
 	"summary": "python2.7 - security update",
-	"details": "\nMultiple vulnerabilities were found in the CPython interpreter which\ncan cause denial of service, information gain, and arbitrary code\nexecution.\n\n\n* [CVE-2017-1000158](https://security-tracker.debian.org/tracker/CVE-2017-1000158)\nCPython (aka Python) is vulnerable to an integer overflow in the\n PyString\\_DecodeEscape function in stringobject.c, resulting in\n heap-based buffer overflow (and possible arbitrary code execution)\n* [CVE-2018-1060](https://security-tracker.debian.org/tracker/CVE-2018-1060)\npython is vulnerable to catastrophic backtracking in pop3lib's\n apop() method. An attacker could use this flaw to cause denial of\n service.\n* [CVE-2018-1061](https://security-tracker.debian.org/tracker/CVE-2018-1061)\npython is vulnerable to catastrophic backtracking in the\n difflib.IS\\_LINE\\_JUNK method. An attacker could use this flaw to\n cause denial of service.\n* [CVE-2018-1000802](https://security-tracker.debian.org/tracker/CVE-2018-1000802)\nPython Software Foundation Python (CPython) version 2.7 contains a\n CWE-77: Improper Neutralization of Special Elements used in a\n Command ('Command Injection') vulnerability in shutil module\n (make\\_archive function) that can result in Denial of service,\n Information gain via injection of arbitrary files on the system or\n entire drive. This attack appear to be exploitable via Passage of\n unfiltered user input to the function.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.7.9-2+deb8u2.\n\n\nWe recommend that you upgrade your python2.7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1519-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1519"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3669-1",
-	"modified": "2023-11-27T19:15:33.509038Z",
+	"modified": "2024-01-09T20:33:44.065080Z",
 	"published": "2023-11-27T00:00:00Z",
 	"related": [
 		"CVE-2023-46233"
 	],
 	"summary": "cryptojs - security update",
-	"details": "\nThomas Neil James Shadwell reported that cryptojs, a collection of\ncryptographic algorithms implemented in JavaScript, had default PBKDF2\nsettings 1000 times weaker than when specified back in 1993, and 1.3M\ntimes weaker than OWASP's current recommendations.\n\n\nThe default settings are now changed to use SHA256 with 250k iterations.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n3.1.2+dfsg-2+deb10u1.\n\n\nWe recommend that you upgrade your cryptojs packages.\n\n\nFor the detailed security status of cryptojs please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cryptojs>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3669-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3669"
 		}
 	]
 }

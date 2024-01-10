@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-571-1",
-	"modified": "2023-06-28T06:25:35.517801Z",
+	"modified": "2024-01-09T20:33:49.125114Z",
 	"published": "2016-07-30T00:00:00Z",
 	"related": [
 		"CVE-2014-3672",
@@ -14,7 +14,6 @@
 		"CVE-2016-6258"
 	],
 	"summary": "xen - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in the Xen hypervisor. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2014-3672](https://security-tracker.debian.org/tracker/CVE-2014-3672) (XSA-180)\n\n Andrew Sorensen discovered that a HVM domain can exhaust the hosts\n disk space by filling up the log file.\n* [CVE-2016-3158](https://security-tracker.debian.org/tracker/CVE-2016-3158) /\n [CVE-2016-3159](https://security-tracker.debian.org/tracker/CVE-2016-3159) (XSA-172)\n\n Jan Beulich from SUSE discovered that Xen does not properly handle\n writes to the hardware FSW.ES bit when running on AMD64 processors.\n A malicious domain can take advantage of this flaw to obtain address\n space usage and timing information, about another domain, at a\n fairly low rate.\n* [CVE-2016-3710](https://security-tracker.debian.org/tracker/CVE-2016-3710) (XSA-179)\n\n Wei Xiao and Qinghao Tang of 360.cn Inc discovered an out-of-bounds\n read and write flaw in the QEMU VGA module. A privileged guest user\n could use this flaw to execute arbitrary code on the host with the\n privileges of the hosting QEMU process.\n* [CVE-2016-3712](https://security-tracker.debian.org/tracker/CVE-2016-3712) (XSA-179)\n\n Zuozhi Fzz of Alibaba Inc discovered potential integer overflow\n or out-of-bounds read access issues in the QEMU VGA module. A\n privileged guest user could use this flaw to mount a denial of\n service (QEMU process crash).\n* [CVE-2016-3960](https://security-tracker.debian.org/tracker/CVE-2016-3960) (XSA-173)\n\n Ling Liu and Yihan Lian of the Cloud Security Team, Qihoo 360\n discovered an integer overflow in the x86 shadow pagetable code. A\n HVM guest using shadow pagetables can cause the host to crash. A PV\n guest using shadow pagetables (i.e. being migrated) with PV\n superpages enabled (which is not the default) can crash the host, or\n corrupt hypervisor memory, potentially leading to privilege\n escalation.\n* [CVE-2016-4480](https://security-tracker.debian.org/tracker/CVE-2016-4480) (XSA-176)\n\n Jan Beulich discovered that incorrect page table handling could\n result in privilege escalation inside a Xen guest instance.\n* [CVE-2016-6258](https://security-tracker.debian.org/tracker/CVE-2016-6258) (XSA-182)\n\n JĂŠrĂŠmie Boutoille discovered that incorrect pagetable handling in\n PV instances could result in guest to host privilege escalation.\n* Additionally this Xen Security Advisory without a CVE was fixed: XSA-166\n\n Konrad Rzeszutek Wilk and Jan Beulich discovered that ioreq handling\n is possibly susceptible to a multiple read issue.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4.1.6.lts1-1.\n\n\nWe recommend that you upgrade your xen packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-571-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-571"
 		}
 	]
 }

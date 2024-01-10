@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3383-1",
-	"modified": "2023-10-16T00:06:20.872423Z",
+	"modified": "2024-01-09T20:28:10.990150Z",
 	"published": "2015-10-29T00:00:00Z",
 	"related": [
 		"CVE-2015-2213",
@@ -14,7 +14,6 @@
 		"CVE-2015-7989"
 	],
 	"summary": "wordpress - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Wordpress, a web blogging\ntool. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2015-2213](https://security-tracker.debian.org/tracker/CVE-2015-2213)\nSQL Injection allowed a remote attacker to compromise the site.\n* [CVE-2015-5622](https://security-tracker.debian.org/tracker/CVE-2015-5622)\nThe robustness of the shortcodes HTML tags filter has been improved.\n The parsing is a bit more strict, which may affect your\n installation.\n* [CVE-2015-5714](https://security-tracker.debian.org/tracker/CVE-2015-5714)\nA cross-site scripting vulnerability when processing shortcode tags.\n* [CVE-2015-5715](https://security-tracker.debian.org/tracker/CVE-2015-5715)\nA vulnerability has been discovered, allowing users without proper\n permissions to publish private posts and make them sticky.\n* [CVE-2015-5731](https://security-tracker.debian.org/tracker/CVE-2015-5731)\nAn attacker could lock a post that was being edited.\n* [CVE-2015-5732](https://security-tracker.debian.org/tracker/CVE-2015-5732)\nCross-site scripting in a widget title allows an attacker to steal\n sensitive information.\n* [CVE-2015-5734](https://security-tracker.debian.org/tracker/CVE-2015-5734)\nFix some broken links in the legacy theme preview.\n* [CVE-2015-7989](https://security-tracker.debian.org/tracker/CVE-2015-7989)\nA cross-site scripting vulnerability in user list tables.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 3.6.1+dfsg-1~deb7u8.\n\n\nFor the stable distribution (jessie), these problems have been fixed\nin version 4.1+dfsg-1+deb8u5 or earlier in DSA-3332-1 and DSA-3375-1.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 4.3.1+dfsg-1 or earlier versions.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.3.1+dfsg-1 or earlier versions.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3383-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3383"
 		}
 	]
 }

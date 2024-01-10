@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1515-1",
-	"modified": "2023-10-16T00:10:28.397336Z",
+	"modified": "2024-01-09T20:22:23.820863Z",
 	"published": "2008-03-11T00:00:00Z",
 	"related": [
 		"CVE-2007-3377",
@@ -9,7 +9,6 @@
 		"CVE-2007-6341"
 	],
 	"summary": "libnet-dns-perl - several vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in libnet-dns-perl.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\nIt was discovered that libnet-dns-perl generates very weak transaction\nIDs when sending queries ([CVE-2007-3377](https://security-tracker.debian.org/tracker/CVE-2007-3377)). This update switches\ntransaction ID generation to the Perl random generator, making\nprediction attacks more difficult.\n\n\nCompression loops in domain names resulted in an infinite loop in the\ndomain name expander written in Perl ([CVE-2007-3409](https://security-tracker.debian.org/tracker/CVE-2007-3409)). The Debian\npackage uses an expander written in C by default, but this vulnerability\nhas been addressed nevertheless.\n\n\nDecoding malformed A records could lead to a crash (via an uncaught\nPerl exception) of certain applications using libnet-dns-perl\n([CVE-2007-6341](https://security-tracker.debian.org/tracker/CVE-2007-6341)).\n\n\nFor the old stable distribution (sarge), these problems have been fixed in\nversion 0.48-1sarge1.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 0.59-1etch1.\n\n\nWe recommend that you upgrade your libnet-dns-perl package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1515-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1515"
 		}
 	]
 }

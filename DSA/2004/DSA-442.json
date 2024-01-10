@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-442",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2004-02-19T00:00:00Z",
 	"published": "2004-02-19T00:00:00Z",
 	"related": [
 		"CVE-2002-0429",
@@ -16,7 +16,6 @@
 		"CVE-2004-0077"
 	],
 	"summary": "linux-kernel-2.4.17-s390 - several vulnerabilities",
-	"details": "\nSeveral security related problems have been fixed in the Linux kernel\n2.4.17 used for the S/390 architecture, mostly by backporting fixes\nfrom 2.4.18 and incorporating recent security fixes. The corrections\nare listed below with the identification from the Common\nVulnerabilities and Exposures (CVE) project:\n\n\n* [CVE-2002-0429](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2002-0429):\n\n The iBCS routines in arch/i386/kernel/traps.c for Linux kernels\n 2.4.18 and earlier on x86 systems allow local users to kill\n arbitrary processes via a binary compatibility interface (lcall).\n\n* [CAN-2003-0001](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0001):\n\n Multiple ethernet network interface card (NIC) device drivers do\n not pad frames with null bytes, which allows remote attackers to\n obtain information from previous packets or kernel memory by using\n malformed packets, as demonstrated by Etherleak.\n\n* [CAN-2003-0244](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0244):\n\n The route cache implementation in Linux 2.4, and the Netfilter IP\n conntrack module, allows remote attackers to cause a denial of\n service (CPU consumption) via packets with forged source addresses\n that cause a large number of hash table collisions related to the\n PREROUTING chain.\n\n* [CAN-2003-0246](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0246):\n\n The ioperm system call in Linux kernel 2.4.20 and earlier does not\n properly restrict privileges, which allows local users to gain read\n or write access to certain I/O ports.\n\n* [CAN-2003-0247](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0247):\n\n A vulnerability in the TTY layer of the Linux kernel 2.4 allows\n attackers to cause a denial of service (\"kernel oops\").\n\n* [CAN-2003-0248](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0248):\n\n The mxcsr code in Linux kernel 2.4 allows attackers to modify CPU\n state registers via a malformed address.\n\n* [CAN-2003-0364](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0364):\n\n The TCP/IP fragment reassembly handling in the Linux kernel 2.4\n allows remote attackers to cause a denial of service (CPU\n consumption) via certain packets that cause a large number of hash\n table collisions.\n\n* [CAN-2003-0961](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0961):\n\n An integer overflow in brk() system call (do\\_brk() function) for\n Linux allows a local attacker to gain root privileges. Fixed\n upstream in Linux 2.4.23.\n\n* [CAN-2003-0985](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0985):\n\n Paul Starzetz [discovered](http://isec.pl/vulnerabilities/isec-0013-mremap.txt)\n a flaw in bounds checking in mremap() in\n the Linux kernel (present in version 2.4.x and 2.6.x) which may\n allow a local attacker to gain root privileges. Version 2.2 is not\n affected by this bug. Fixed upstream in Linux 2.4.24.\n\n* [CAN-2004-0077](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0077):\n\n Paul Starzetz and Wojciech Purczynski of isec.pl [discovered](http://isec.pl/vulnerabilities/isec-0014-mremap-unmap.txt) a\n critical security vulnerability in the memory management code of\n Linux inside the mremap(2) system call. Due to missing function\n return value check of internal functions a local attacker can gain\n root privileges. Fixed upstream in Linux 2.4.25 and 2.6.3.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.4.17-2.woody.3 of s390 images and in version\n0.0.20020816-0.woody.2 of the patch packages.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your Linux kernel packages immediately.\n\n\n[Vulnerability matrix](CAN-2004-0077) for CAN-2004-0077\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-442.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-442"
 		}
 	]
 }

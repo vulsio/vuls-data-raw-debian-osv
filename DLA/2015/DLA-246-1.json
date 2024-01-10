@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-246-1",
-	"modified": "2023-06-28T06:26:33.669990Z",
-	"published": "2015-06-17T00:00:00Z",
+	"modified": "2024-01-09T20:32:37.958443Z",
+	"published": "2015-06-14T00:00:00Z",
 	"related": [
 		"CVE-2011-5321",
 		"CVE-2012-6689",
@@ -22,7 +22,6 @@
 		"CVE-2015-4167"
 	],
 	"summary": "linux-2.6 - security update",
-	"details": "\nThe linux-2.6 update issued as DLA-246-1 caused regressions. This\nupdate corrects the defective patches applied in that update causing\nthese problems. For reference the original advisory text follows.\n\n\nThis update fixes the CVEs described below.\n\n\n* [CVE-2011-5321](https://security-tracker.debian.org/tracker/CVE-2011-5321)\nJiri Slaby discovered that tty\\_driver\\_lookup\\_tty() may leak a\n reference to the tty driver. A local user could use this flaw\n to crash the system.\n* [CVE-2012-6689](https://security-tracker.debian.org/tracker/CVE-2012-6689)\nPablo Neira Ayuso discovered that non-root user-space processes\n can send forged Netlink notifications to other processes. A local\n user could use this flaw for denial of service or privilege\n escalation.\n* [CVE-2014-3184](https://security-tracker.debian.org/tracker/CVE-2014-3184)\nBen Hawkes discovered that various HID drivers may over-read the\n report descriptor buffer, possibly resulting in a crash if a HID\n with a crafted descriptor is plugged in.\n* [CVE-2014-8159](https://security-tracker.debian.org/tracker/CVE-2014-8159)\nIt was found that the Linux kernel's InfiniBand/RDMA subsystem did\n not properly sanitize input parameters while registering memory\n regions from user space via the (u)verbs API. A local user with\n access to a /dev/infiniband/uverbsX device could use this flaw to\n crash the system or, potentially, escalate their privileges on the\n system.\n* [CVE-2014-9683](https://security-tracker.debian.org/tracker/CVE-2014-9683)\nDmitry Chernenkov discovered that eCryptfs writes past the end of\n the allocated buffer during encrypted filename decoding, resulting\n in local denial of service.\n* [CVE-2014-9728](https://security-tracker.debian.org/tracker/CVE-2014-9728) / [CVE-2014-9729](https://security-tracker.debian.org/tracker/CVE-2014-9729) / [CVE-2014-9730](https://security-tracker.debian.org/tracker/CVE-2014-9730) / [CVE-2014-9731](https://security-tracker.debian.org/tracker/CVE-2014-9731) / [CVE-2015-4167](https://security-tracker.debian.org/tracker/CVE-2015-4167)\nCarl Henrik Lunde discovered that the UDF implementation is\n missing several necessary length checks. A local user that can\n mount devices could use these various flaws to crash the system,\n to leak information from the kernel, or possibly for privilege\n escalation.\n* [CVE-2015-1805](https://security-tracker.debian.org/tracker/CVE-2015-1805)\nRed Hat discovered that the pipe iovec read and write\n implementations may iterate over the iovec twice but will modify\n the iovec such that the second iteration accesses the wrong\n memory. A local user could use this flaw to crash the system or\n possibly for privilege escalation. This may also result in data\n corruption and information leaks in pipes between non-malicious\n processes.\n* [CVE-2015-2041](https://security-tracker.debian.org/tracker/CVE-2015-2041)\nSasha Levin discovered that the LLC subsystem exposed some\n variables as sysctls with the wrong type. On a 64-bit kernel, this\n possibly allows privilege escalation from a process with\n CAP\\_NET\\_ADMIN capability; it also results in a trivial information\n leak.\n* [CVE-2015-2042](https://security-tracker.debian.org/tracker/CVE-2015-2042)\nSasha Levin discovered that the RDS subsystem exposed some\n variables as sysctls with the wrong type. On a 64-bit kernel, this\n results in a trivial information leak.\n* [CVE-2015-2830](https://security-tracker.debian.org/tracker/CVE-2015-2830)\nAndrew Lutomirski discovered that when a 64-bit task on an amd64\n kernel makes a fork(2) or clone(2) system call using int $0x80,\n the 32-bit compatibility flag is set (correctly) but is not\n cleared on return. As a result, both seccomp and audit will\n misinterpret the following system call by the task(s), possibly\n leading to a violation of security policy.\n* [CVE-2015-2922](https://security-tracker.debian.org/tracker/CVE-2015-2922)\nModio AB discovered that the IPv6 subsystem would process a router\n advertisement that specifies no route but only a hop limit, which\n would then be applied to the interface that received it. This can\n result in loss of IPv6 connectivity beyond the local network.\n\n\nThis may be mitigated by disabling processing of IPv6 router\n advertisements if they are not needed:\n\n\n\n```\n\n        sysctl net.ipv6.conf.default.accept_ra=0\n        sysctl net.ipv6.conf.<interface>.accept_ra=0\n\n```\n* [CVE-2015-3339](https://security-tracker.debian.org/tracker/CVE-2015-3339)\nIt was found that the execve(2) system call can race with inode\n attribute changes made by chown(2). Although chown(2) clears the\n setuid/setgid bits of a file if it changes the respective owner ID,\n this race condition could result in execve(2) setting effective\n uid/gid to the new owner ID, a privilege escalation.\n\n\nFor the oldoldstable distribution (squeeze), these problems have been\nfixed in version 2.6.32-48squeeze12.\n\n\nFor the oldstable distribution (wheezy), these problems were fixed in\nlinux version 3.2.68-1+deb7u1 or earlier, except for [CVE-2015-1805](https://security-tracker.debian.org/tracker/CVE-2015-1805) and\n[CVE-2015-4167](https://security-tracker.debian.org/tracker/CVE-2015-4167) which will be fixed soon.\n\n\nFor the stable distribution (jessie), these problems were fixed in\nlinux version 3.16.7-ckt11-1 or earlier, except for [CVE-2015-4167](https://security-tracker.debian.org/tracker/CVE-2015-4167) which\nwill be fixed later.\n\n\nWe recommend that you upgrade your linux-2.6 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -86,12 +85,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-246-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-246"
 		}
 	]
 }

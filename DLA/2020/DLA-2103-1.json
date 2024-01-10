@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2103-1",
-	"modified": "2023-06-28T06:21:12.173594Z",
+	"modified": "2024-01-09T20:32:01.181606Z",
 	"published": "2020-02-13T00:00:00Z",
 	"summary": "debian-security-support - security update",
-	"details": "\ndebian-security-support, the Debian security support coverage checker,\nhas been updated in jessie-security.\n\n\nThis marks the end of life of the libqb package in jessie. A recently\nreported vulnerability against libqb which allows users to overwrite\narbitrary files via a symlink attack cannot be adequately addressed in\nlibqb in jessie. Upstream no longer supports this version and no\npackages in jessie depend upon libqb.\n\n\nWe recommend that if your systems or applications depend upon the libqb\npackage provided from the Debian archive that you upgrade your systems\nto a more recent Debian release or find an alternate and up to date\nsource of libqb packages.\n\n\nAdditionally, MySQL 5.5 is no longer supported. Upstream has ended its\nsupport and we are unable to backport fixes from newer versions due to\nthe lack of patch details. Options are to switch to MariaDB 10.0 in\njessie or to a newer version of MySQL in more recent Debian releases.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at:\n<https://wiki.debian.org/LTS>https://wiki.debian.org/LTS\n\n\nFor Debian 8 Lenny, these issues have been fixed in\ndebian-security-support version 2019.12.12~deb8u2\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2103-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2103"
 		}
 	]
 }

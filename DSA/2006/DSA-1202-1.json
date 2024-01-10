@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1202-1",
-	"modified": "2023-10-16T00:10:13.629478Z",
+	"modified": "2024-01-09T20:22:10.523129Z",
 	"published": "2006-10-31T00:00:00Z",
 	"related": [
 		"CVE-2006-4573"
 	],
 	"summary": "screen - programming error",
-	"details": "\ncstone and Rich Felker discovered that specially crafted UTF-8 sequences\nmay lead an out of bands memory write when displayed inside the screen\nterminal multiplexer, allowing denial of service and potentially the\nexecution of arbitrary code.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 4.0.2-4.1sarge1. Due to technical problems with the security\nbuildd infrastructure this update lacks a build for the Sun Sparc\narchitecture. It will be released as soon as the problems are resolved.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 4.0.3-0.1.\n\n\nWe recommend that you upgrade your screen package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1202-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1202"
 		}
 	]
 }

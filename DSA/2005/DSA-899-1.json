@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-899-1",
-	"modified": "2023-10-16T00:29:27.469302Z",
+	"modified": "2024-01-09T20:34:11.713687Z",
 	"published": "2005-11-17T00:00:00Z",
 	"related": [
 		"CVE-2005-0870",
@@ -10,7 +10,6 @@
 		"CVE-2005-3348"
 	],
 	"summary": "egroupware - programming errors",
-	"details": "\nSeveral vulnerabilities have been discovered in egroupware, a\nweb-based groupware suite. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2005-0870](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-0870)\nMaksymilian Arciemowicz discovered several cross site scripting\n problems in phpsysinfo, which are also present in the imported\n version in egroupware and of which not all were fixed in\n DSA [724](dsa-724).\n* [CVE-2005-2600](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2600)\nAlexander Heidenreich discovered a cross-site scripting problem in\n the tree view of FUD Forum Bulletin Board Software, which is also\n present in egroupware and allows remote attackers to read private\n posts via a modified mid parameter.\n* [CVE-2005-3347](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3347)\nChristopher Kunz discovered that local variables get overwritten\n unconditionally in phpsysinfo, which are also present in\n egroupware, and are trusted later, which could lead to the\n inclusion of arbitrary files.\n* [CVE-2005-3348](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3348)\nChristopher Kunz discovered that user-supplied input is used\n unsanitised in phpsysinfo and imported in egroupware, causing a\n HTTP Response splitting problem.\n\n\nThe old stable distribution (woody) does not contain egroupware packages.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.0.0.007-2.dfsg-2sarge4.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.0.0.009.dfsg-3-3.\n\n\nWe recommend that you upgrade your egroupware packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-899-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-899"
 		}
 	]
 }

@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1883-2",
-	"modified": "2023-10-16T00:10:44.167534Z",
-	"published": "2009-09-10T00:00:00Z",
+	"modified": "2024-01-09T20:22:34.054411Z",
+	"published": "2009-09-14T00:00:00Z",
 	"related": [
 		"CVE-2007-5624",
 		"CVE-2007-5803",
 		"CVE-2008-1360"
 	],
 	"summary": "nagios2 - regression fix",
-	"details": "\nSeveral vulnerabilities have been found in nagios2, a host/service/network\nmonitoring and management system. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\nSeveral cross-site scripting issues via several parameters were\ndiscovered in the CGI scripts, allowing attackers to inject arbitrary\nHTML code. In order to cover the different attack vectors, these issues\nhave been assigned [CVE-2007-5624](https://security-tracker.debian.org/tracker/CVE-2007-5624), [CVE-2007-5803](https://security-tracker.debian.org/tracker/CVE-2007-5803) and [CVE-2008-1360](https://security-tracker.debian.org/tracker/CVE-2008-1360).\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 2.6-2+etch4.\n\n\nThe stable distribution (lenny) does not include nagios2, and nagios3 is\nnot affected by these problems.\n\n\nThe testing distribution (squeeze) and the unstable distribution (sid)\ndo not contain nagios2, and nagios3 is not affected by these problems.\n\n\nWe recommend that you upgrade your nagios2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1883-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1883"
 		}
 	]
 }

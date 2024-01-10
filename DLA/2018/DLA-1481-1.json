@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1481-1",
-	"modified": "2023-06-28T06:20:44.066496Z",
+	"modified": "2024-01-09T20:31:18.186385Z",
 	"published": "2018-08-28T00:00:00Z",
 	"related": [
 		"CVE-2018-3620",
 		"CVE-2018-3646"
 	],
 	"summary": "linux-4.9 - security update",
-	"details": "\nMultiple researchers have discovered a vulnerability in the way the\nIntel processor designs have implemented speculative execution of\ninstructions in combination with handling of page-faults. This flaw\ncould allow an attacker controlling an unprivileged process to read\nmemory from arbitrary (non-user controlled) addresses, including from\nthe kernel and all other processes running on the system or cross\nguest/host boundaries to read host memory.\n\n\nTo fully resolve these vulnerabilities it is also necessary to install\nupdated CPU microcode (only available in Debian non-free). Common server\nclass CPUs are covered in the update released as DLA 1446-1.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.9.110-3+deb9u4~deb8u1.\n\n\nWe recommend that you upgrade your linux-4.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1481-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1481"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-358-1",
-	"modified": "2023-06-28T06:26:58.649456Z",
+	"modified": "2024-01-09T20:33:40.120001Z",
 	"published": "2015-12-03T00:00:00Z",
 	"related": [
 		"CVE-2015-3195"
 	],
 	"summary": "openssl - security update",
-	"details": "\nWhen presented with a malformed X509\\_ATTRIBUTE structure OpenSSL will leak\nmemory. This structure is used by the PKCS#7 and CMS routines so any\napplication which reads PKCS#7 or CMS data from untrusted sources is affected.\nSSL/TLS is not affected.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -54,12 +53,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-358-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-358"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1264-1",
-	"modified": "2023-10-16T00:10:17.706352Z",
+	"modified": "2024-01-09T20:24:22.511961Z",
 	"published": "2007-03-07T00:00:00Z",
 	"related": [
 		"CVE-2007-0906",
@@ -12,7 +12,6 @@
 		"CVE-2007-0988"
 	],
 	"summary": "php4",
-	"details": "\nSeveral remote vulnerabilities have been discovered in PHP, a server-side,\nHTML-embedded scripting language, which may lead to the execution of\narbitrary code. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2007-0906](https://security-tracker.debian.org/tracker/CVE-2007-0906)\nIt was discovered that an integer overflow in the str\\_replace()\n function could lead to the execution of arbitrary code.\n* [CVE-2007-0907](https://security-tracker.debian.org/tracker/CVE-2007-0907)\nIt was discovered that a buffer underflow in the sapi\\_header\\_op()\n function could crash the PHP interpreter.\n* [CVE-2007-0908](https://security-tracker.debian.org/tracker/CVE-2007-0908)\nStefan Esser discovered that a programming error in the wddx\n extension allows information disclosure.\n* [CVE-2007-0909](https://security-tracker.debian.org/tracker/CVE-2007-0909)\nIt was discovered that a format string vulnerability in the\n odbc\\_result\\_all() functions allows the execution of arbitrary code.\n* [CVE-2007-0910](https://security-tracker.debian.org/tracker/CVE-2007-0910)\nIt was discovered that super-global variables could be overwritten\n with session data.\n* [CVE-2007-0988](https://security-tracker.debian.org/tracker/CVE-2007-0988)\nStefan Esser discovered that the zend\\_hash\\_init() function could\n be tricked into an endless loop, allowing denial of service through\n resource consumption until a timeout is triggered.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 4:4.3.10-19.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 6:4.4.4-9 of php4 and version 5.2.0-9 of php5.\n\n\nWe recommend that you upgrade your php4 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1264-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1264"
 		}
 	]
 }

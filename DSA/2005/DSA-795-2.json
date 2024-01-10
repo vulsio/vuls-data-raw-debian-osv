@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-795-2",
-	"modified": "2023-10-16T00:27:49.738026Z",
+	"modified": "2024-01-09T20:34:07.703085Z",
 	"published": "2005-09-01T00:00:00Z",
 	"related": [
 		"CVE-2005-2390"
 	],
 	"summary": "proftpd - format string error",
-	"details": "\ninfamous42md reported that proftpd suffers from two format string\nvulnerabilities. In the first, a user with the ability to create a\ndirectory could trigger the format string error if there is a\nproftpd shutdown message configured to use the \"%C\", \"%R\", or \"%U\"\nvariables. In the second, the error is triggered if mod\\_sql is used\nto retrieve messages from a database and if format strings have been\ninserted into the database by a user with permission to do so.\n\n\nThe old stable distribution (woody) is not affected by these\nvulnerabilities.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 1.2.10-15sarge1. There was an error in the packages originally\nprepared for i386, which was corrected in 1.2.10-15sarge1.0.1 for i386.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.2.10-20.\n\n\nWe recommend that you upgrade your proftpd package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-795-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-795"
 		}
 	]
 }

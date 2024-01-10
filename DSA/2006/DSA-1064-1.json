@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1064-1",
-	"modified": "2023-10-16T00:09:52.592204Z",
+	"modified": "2024-01-09T20:18:12.062314Z",
 	"published": "2006-05-19T00:00:00Z",
 	"related": [
 		"CVE-2004-2541"
 	],
 	"summary": "cscope - buffer overflows",
-	"details": "\nJason Duell discovered that cscope, a source code browsing tool, does not\nverify the length of file names sourced in include statements, which may\npotentially lead to the execution of arbitrary code through specially\ncrafted source code files.\n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 15.3-1woody3.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 15.5-1.1sarge1.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your cscope package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1064-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1064"
 		}
 	]
 }

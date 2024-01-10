@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2218-1",
-	"modified": "2023-10-16T00:05:49.419913Z",
+	"modified": "2024-01-09T20:21:16.654414Z",
 	"published": "2011-04-12T00:00:00Z",
 	"related": [
 		"CVE-2011-1684"
 	],
 	"summary": "vlc - heap-based buffer overflow",
-	"details": "\nAliz Hammond discovered that the MP4 decoder plugin of VLC, a multimedia\nplayer and streamer, is vulnerable to a heap-based buffer overflow.\nThis has been introduced by a wrong data type being used for a size\ncalculation. An attacker could use this flaw to trick a victim into\nopening a specially crafted MP4 file and possibly execute arbitrary code\nor crash the media player.\n\n\nThe oldstable distribution (lenny) is not affected by this problem.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.1.3-1squeeze5.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.8-3.\n\n\nWe recommend that you upgrade your vlc packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2218-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2218"
 		}
 	]
 }

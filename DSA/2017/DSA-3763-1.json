@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3763-1",
-	"modified": "2023-10-16T00:06:25.351232Z",
+	"modified": "2024-01-09T20:26:51.888625Z",
 	"published": "2017-01-13T00:00:00Z",
 	"related": [
 		"CVE-2016-7068"
 	],
 	"summary": "pdns-recursor - security update",
-	"details": "\nFlorian Heinz and Martin Kluge reported that pdns-recursor, a recursive\nDNS server, parses all records present in a query regardless of whether\nthey are needed or even legitimate, allowing a remote, unauthenticated\nattacker to cause an abnormal CPU usage load on the pdns server,\nresulting in a partial denial of service if the system becomes\noverloaded.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 3.6.2-2+deb8u3.\n\n\nWe recommend that you upgrade your pdns-recursor packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3763-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3763"
 		}
 	]
 }

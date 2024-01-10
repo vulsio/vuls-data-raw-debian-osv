@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2257-1",
-	"modified": "2023-10-16T00:11:03.600485Z",
+	"modified": "2024-01-09T20:27:43.141123Z",
 	"published": "2011-06-10T00:00:00Z",
 	"related": [
 		"CVE-2011-2194"
 	],
 	"summary": "vlc - buffer overflow",
-	"details": "\nRocco Calvi discovered that the XSPF playlist parser of VLC, a multimedia\nplayer and streamer, is prone to an integer overflow resulting in a\nheap-based buffer overflow. This might allow an attacker to execute\narbitrary code by tricking a victim into opening a specially crafted\nfile.\n\n\nThe oldstable distribution (lenny) is not affected by this problem.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.1.3-1squeeze6.\n\n\nFor the testing (wheezy) and unstable (sid) distributions, this\nproblem will be fixed soon.\n\n\nWe recommend that you upgrade your vlc packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2257-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2257"
 		}
 	]
 }

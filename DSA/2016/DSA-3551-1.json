@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3551-1",
-	"modified": "2023-10-16T00:06:23.879446Z",
+	"modified": "2024-01-09T20:21:54.678933Z",
 	"published": "2016-04-16T00:00:00Z",
 	"related": [
 		"CVE-2015-8836",
 		"CVE-2015-8837"
 	],
 	"summary": "fuseiso - security update",
-	"details": "\nIt was discovered that fuseiso, a user-space implementation of the\nISO 9660 file system based on FUSE, contains several vulnerabilities.\n\n\n* [CVE-2015-8836](https://security-tracker.debian.org/tracker/CVE-2015-8836)\nA stack-based buffer overflow may allow attackers who can trick a\n user into mounting a crafted ISO 9660 file system to cause a\n denial of service (crash), or, potentially, execute arbitrary\n code.\n* [CVE-2015-8837](https://security-tracker.debian.org/tracker/CVE-2015-8837)\nAn integer overflow leads to a heap-based buffer overflow, which\n allows an attacker (who can trick a user into mounting a crafted\n ISO 9660 file system) to cause a denial of service (crash), or,\n potentially, execute arbitrary code.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 20070708-3+deb7u1.\n\n\nThe stable distribution (jessie) does not contain fuseiso packages.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 20070708-3.2.\n\n\nWe recommend that you upgrade your fuseiso packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3551-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3551"
 		}
 	]
 }

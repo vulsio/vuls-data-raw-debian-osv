@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2642-1",
-	"modified": "2023-10-16T00:11:22.843135Z",
+	"modified": "2024-01-09T20:27:51.322264Z",
 	"published": "2013-03-09T00:00:00Z",
 	"related": [
 		"CVE-2013-1775",
@@ -10,7 +10,6 @@
 		"CVE-2013-2777"
 	],
 	"summary": "sudo - several issues",
-	"details": "\nSeveral vulnerabilities have been discovered in sudo, a program designed\nto allow a sysadmin to give limited root privileges to users. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2013-1775](https://security-tracker.debian.org/tracker/CVE-2013-1775)\nMarco Schoepl discovered an authentication bypass when the clock is\n set to the UNIX epoch [00:00:00 UTC on 1 January 1970].\n* [CVE-2013-1776](https://security-tracker.debian.org/tracker/CVE-2013-1776)\nRyan Castellucci and James Ogden discovered aspects of an issue that\n would allow session id hijacking from another authorized tty.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1.7.4p4-2.squeeze.4.\n\n\nFor the testing (wheezy) and unstable (sid) distributions, these problems\nhave been fixed in version 1.8.5p2-1+nmu1.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2642-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2642"
 		}
 	]
 }

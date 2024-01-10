@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3284-1",
-	"modified": "2023-06-28T06:26:54.537136Z",
+	"modified": "2024-01-09T20:33:27.449638Z",
 	"published": "2023-01-28T00:00:00Z",
 	"related": [
 		"CVE-2020-36658"
 	],
 	"summary": "libapache-session-ldap-perl - security update",
-	"details": "\nIn Apache::Session::LDAP before 0.5, validity of the X.509 certificate\nis not checked by default when connecting to remote LDAP backends,\nbecause the default configuration of the Net::LDAPS module for Perl is\nused.\n\n\nThis update changes the default behavior to require X.509 validation\nagainst the distribution bundle `/etc/ssl/certs/ca-certificates.crt`.\nPrevious behavior can reverted by setting `ldapVerify => \"none\"` when\ninitializing the Apache::Session::LDAP object.\n**Note**: this update is a prerequisite for LemonLDAP::NG's [CVE-2020-16093](https://security-tracker.debian.org/tracker/CVE-2020-16093)\nfix when its session backend is set to Apache::Session::LDAP.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n0.4-1+deb10u1.\n\n\nWe recommend that you upgrade your libapache-session-ldap-perl packages.\n\n\nFor the detailed security status of libapache-session-ldap-perl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libapache-session-ldap-perl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3284-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3284"
 		}
 	]
 }

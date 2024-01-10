@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5286-1",
-	"modified": "2023-10-16T00:16:32.716509Z",
+	"modified": "2024-01-09T20:29:27.358048Z",
 	"published": "2022-11-19T00:00:00Z",
 	"related": [
 		"CVE-2022-42898"
 	],
 	"summary": "krb5 - security update",
-	"details": "\nGreg Hudson discovered integer overflow flaws in the PAC parsing in\nkrb5, the MIT implementation of Kerberos, which may result in remote\ncode execution (in a KDC, kadmin, or GSS or Kerberos application server\nprocess), information exposure (to a cross-realm KDC acting\nmaliciously), or denial of service (KDC or kadmind process crash).\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.18.3-6+deb11u3.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\nFor the detailed security status of krb5 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/krb5>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5286-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5286"
 		}
 	]
 }

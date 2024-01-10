@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-99-1",
-	"modified": "2023-06-28T06:32:49.150659Z",
+	"modified": "2024-01-09T20:32:36.972677Z",
 	"published": "2014-12-05T00:00:00Z",
 	"related": [
 		"CVE-2014-8962",
 		"CVE-2014-9028"
 	],
 	"summary": "flac - security update",
-	"details": "\nMichele Spagnuolo, of Google Security Team, and Miroslav Lichvar, of\nRed Hat, discovered two issues in flac, a library handling Free\nLossless Audio Codec media: by providing a specially crafted FLAC\nfile, an attacker could execute arbitrary code.\n\n\n* [CVE-2014-8962](https://security-tracker.debian.org/tracker/CVE-2014-8962)\nHeap-based buffer overflow in stream\\_decoder.c, allowing\n remote attackers to execute arbitrary code via a specially\n crafted .flac file.\n* [CVE-2014-9028](https://security-tracker.debian.org/tracker/CVE-2014-9028)\nStack-based buffer overflow in stream\\_decoder.c, allowing\n remote attackers to execute arbitrary code via a specially\n crafted .flac file.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in flac version 1.2.1-2+deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-99-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-99"
 		}
 	]
 }

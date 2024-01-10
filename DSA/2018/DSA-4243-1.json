@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4243-1",
-	"modified": "2023-10-16T00:13:33.888110Z",
+	"modified": "2024-01-09T20:27:02.233657Z",
 	"published": "2018-07-11T00:00:00Z",
 	"related": [
 		"CVE-2017-15400",
@@ -10,7 +10,6 @@
 		"CVE-2018-6553"
 	],
 	"summary": "cups - security update",
-	"details": "\nSeveral vulnerabilities were discovered in CUPS, the Common UNIX Printing\nSystem. These issues have been identified with the following CVE ids:\n\n\n* [CVE-2017-15400](https://security-tracker.debian.org/tracker/CVE-2017-15400)\nRory McNamara discovered that an attacker is able to execute arbitrary\n commands (with the privilege of the CUPS daemon) by setting a\n malicious IPP server with a crafted PPD file.\n* [CVE-2018-4180](https://security-tracker.debian.org/tracker/CVE-2018-4180)\nDan Bastone of Gotham Digital Science discovered that a local\n attacker with access to cupsctl could escalate privileges by setting\n an environment variable.\n* [CVE-2018-4181](https://security-tracker.debian.org/tracker/CVE-2018-4181)\nEric Rafaloff and John Dunlap of Gotham Digital Science discovered\n that a local attacker can perform limited reads of arbitrary files\n as root by manipulating cupsd.conf.\n* [CVE-2018-6553](https://security-tracker.debian.org/tracker/CVE-2018-6553)\nDan Bastone of Gotham Digital Science discovered that an attacker\n can bypass the AppArmor cupsd sandbox by invoking the dnssd backend\n using an alternate name that has been hard linked to dnssd.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.2.1-8+deb9u2.\n\n\nWe recommend that you upgrade your cups packages.\n\n\nFor the detailed security status of cups please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cups>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4243-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4243"
 		}
 	]
 }

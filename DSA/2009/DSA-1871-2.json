@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1871-2",
-	"modified": "2023-10-16T00:10:43.097455Z",
-	"published": "2009-08-23T00:00:00Z",
+	"modified": "2024-01-09T20:27:35.634053Z",
+	"published": "2009-08-26T00:00:00Z",
 	"related": [
 		"CVE-2008-1502",
 		"CVE-2008-4106",
@@ -17,7 +17,6 @@
 		"CVE-2009-2854"
 	],
 	"summary": "wordpress - regression fix",
-	"details": "\nSeveral vulnerabilities have been discovered in wordpress, weblog\nmanager. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2008-6762](https://security-tracker.debian.org/tracker/CVE-2008-6762)\nIt was discovered that wordpress is prone to an open redirect \nvulnerability which allows remote attackers to conduct phishing atacks.\n* [CVE-2008-6767](https://security-tracker.debian.org/tracker/CVE-2008-6767)\nIt was discovered that remote attackers had the ability to trigger an\napplication upgrade, which could lead to a denial of service attack.\n* [CVE-2009-2334](https://security-tracker.debian.org/tracker/CVE-2009-2334)\nIt was discovered that wordpress lacks authentication checks in the\nplugin configuration, which might leak sensitive information.\n* [CVE-2009-2854](https://security-tracker.debian.org/tracker/CVE-2009-2854)\nIt was discovered that wordpress lacks authentication checks in various\nactions, thus allowing remote attackers to produce unauthorised edits or\nadditions.\n* [CVE-2009-2851](https://security-tracker.debian.org/tracker/CVE-2009-2851)\nIt was discovered that the administrator interface is prone to a\ncross-site scripting attack.\n* [CVE-2009-2853](https://security-tracker.debian.org/tracker/CVE-2009-2853)\nIt was discovered that remote attackers can gain privileges via certain\ndirect requests.\n* [CVE-2008-1502](https://security-tracker.debian.org/tracker/CVE-2008-1502)\nIt was discovered that the \\_bad\\_protocol\\_once function in KSES, as used\nby wordpress, allows remote attackers to perform cross-site scripting\nattacks.\n* [CVE-2008-4106](https://security-tracker.debian.org/tracker/CVE-2008-4106)\nIt was discovered that wordpress lacks certain checks around user\ninformation, which could be used by attackers to change the password of\na user.\n* [CVE-2008-4769](https://security-tracker.debian.org/tracker/CVE-2008-4769)\nIt was discovered that the get\\_category\\_template function is prone to a\ndirectory traversal vulnerability, which could lead to the execution of\narbitrary code.\n* [CVE-2008-4796](https://security-tracker.debian.org/tracker/CVE-2008-4796)\nIt was discovered that the \\_httpsrequest function in the embedded snoopy\nversion is prone to the execution of arbitrary commands via shell\nmetacharacters in https URLs.\n* [CVE-2008-5113](https://security-tracker.debian.org/tracker/CVE-2008-5113)\nIt was discovered that wordpress relies on the REQUEST superglobal array\nin certain dangerous situations, which makes it easier to perform\nattacks via crafted cookies.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 2.0.10-1etch4.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.5.1-11+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 2.8.3-1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1871-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1871"
 		}
 	]
 }

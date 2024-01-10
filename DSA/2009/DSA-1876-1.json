@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1876-1",
-	"modified": "2023-10-16T00:10:43.659933Z",
+	"modified": "2024-01-09T20:22:33.421237Z",
 	"published": "2009-09-01T00:00:00Z",
 	"related": [
 		"CVE-2009-2957",
 		"CVE-2009-2958"
 	],
 	"summary": "dnsmasq - remote code execution",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the TFTP\ncomponent of dnsmasq. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2009-2957](https://security-tracker.debian.org/tracker/CVE-2009-2957)\nA buffer overflow in TFTP processing may enable arbitrary code\n execution to attackers which are permitted to use the TFTP service.\n* [CVE-2009-2958](https://security-tracker.debian.org/tracker/CVE-2009-2958)\nMalicious TFTP clients may crash dnsmasq, leading to denial of\n service.\n\n\nThe old stable distribution is not affected by these problems.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.45-1+lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.50-1.\n\n\nWe recommend that you upgrade your dnsmasq packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1876-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1876"
 		}
 	]
 }

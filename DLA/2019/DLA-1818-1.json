@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1818-1",
-	"modified": "2023-06-28T06:29:46.364291Z",
+	"modified": "2024-01-09T20:31:47.621233Z",
 	"published": "2019-06-14T00:00:00Z",
 	"related": [
 		"CVE-2019-12749"
 	],
 	"summary": "dbus - security update",
-	"details": "\nJoe Vennix discovered an authentication bypass vulnerability in dbus, an\nasynchronous inter-process communication system. The implementation of\nthe DBUS\\_COOKIE\\_SHA1 authentication mechanism was susceptible to a\nsymbolic link attack. A local attacker could take advantage of this flaw\nto bypass authentication and connect to a DBusServer with elevated\nprivileges.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.8.22-0+deb8u2.\n\n\nWe recommend that you upgrade your dbus packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1818-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1818"
 		}
 	]
 }

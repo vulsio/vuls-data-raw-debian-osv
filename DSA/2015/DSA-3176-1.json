@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3176-1",
-	"modified": "2023-10-16T00:06:15.334190Z",
+	"modified": "2024-01-09T20:28:02.163702Z",
 	"published": "2015-02-26T00:00:00Z",
 	"related": [
 		"CVE-2014-9472",
@@ -9,7 +9,6 @@
 		"CVE-2015-1464"
 	],
 	"summary": "request-tracker4 - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in Request Tracker, an\nextensible trouble-ticket tracking system. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2014-9472](https://security-tracker.debian.org/tracker/CVE-2014-9472)\nChristian Loos discovered a remote denial of service vulnerability,\n exploitable via the email gateway and affecting any installation\n which accepts mail from untrusted sources. Depending on RT's\n logging configuration, a remote attacker can take advantage of\n this flaw to cause CPU and excessive disk usage.\n* [CVE-2015-1165](https://security-tracker.debian.org/tracker/CVE-2015-1165)\nChristian Loos discovered an information disclosure flaw which may\n reveal RSS feeds URLs, and thus ticket data.\n* [CVE-2015-1464](https://security-tracker.debian.org/tracker/CVE-2015-1464)\nIt was discovered that RSS feed URLs can be leveraged to perform\n session hijacking, allowing a user with the URL to log in as the\n user that created the feed.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.0.7-5+deb7u3.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.2.8-3.\n\n\nWe recommend that you upgrade your request-tracker4 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3176-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3176"
 		}
 	]
 }

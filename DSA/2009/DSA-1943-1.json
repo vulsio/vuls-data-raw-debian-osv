@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1943-1",
-	"modified": "2023-10-16T00:10:48.561687Z",
+	"modified": "2024-01-09T20:25:35.278579Z",
 	"published": "2009-12-02T00:00:00Z",
 	"related": [
 		"CVE-2009-3767"
 	],
 	"summary": "openldap openldap2.3 - SSL certificate",
-	"details": "\nIt was discovered that OpenLDAP, a free implementation of the Lightweight\nDirectory Access Protocol, when OpenSSL is used, does not properly handle a '\\0'\ncharacter in a domain name in the subject's Common Name (CN) field of an X.509\ncertificate, which allows man-in-the-middle attackers to spoof arbitrary SSL\nservers via a crafted certificate issued by a legitimate Certification Authority.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in version\n2.3.30-5+etch3 for openldap2.3.\n\n\nFor the stable distribution (lenny), this problem has been fixed in version\n2.4.11-1+lenny1 for openldap.\n\n\nFor the testing distribution (squeeze), and the unstable distribution (sid),\nthis problem has been fixed in version 2.4.17-2.1 for openldap.\n\n\nWe recommend that you upgrade your openldap2.3/openldap packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1943-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1943"
 		}
 	]
 }

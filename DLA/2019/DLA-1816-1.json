@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1816-1",
-	"modified": "2023-06-28T06:29:45.969027Z",
+	"modified": "2024-01-09T20:31:47.456328Z",
 	"published": "2019-06-11T00:00:00Z",
 	"related": [
 		"CVE-2019-12248",
 		"CVE-2019-12497"
 	],
 	"summary": "otrs2 - security update",
-	"details": "\nTwo security vulnerabilities were discovered in the Open Ticket\nRequest System that could lead to information disclosure or privilege\nescalation. New configuration options were added to resolve those\nproblems.\n\n\n* [CVE-2019-12248](https://security-tracker.debian.org/tracker/CVE-2019-12248)\nAn attacker could send a malicious email to an OTRS system. If a\n logged in agent user quotes it, the email could cause the browser to\n load external image resources.\n* [CVE-2019-12497](https://security-tracker.debian.org/tracker/CVE-2019-12497)\nIn the customer or external frontend, personal information of agents\n can be disclosed like Name and mail address in external notes.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.3.18-1+deb8u10.\n\n\nWe recommend that you upgrade your otrs2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1816-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1816"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1880-1",
-	"modified": "2023-10-16T00:10:43.941731Z",
+	"modified": "2024-01-09T20:22:34.040547Z",
 	"published": "2009-09-04T00:00:00Z",
 	"related": [
 		"CVE-2009-0200",
@@ -9,7 +9,6 @@
 		"CVE-2009-2139"
 	],
 	"summary": "openoffice.org - arbitrary code execution",
-	"details": "\nSeveral vulnerabilities have been discovered in the OpenOffice.org\noffice suite. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2009-0200](https://security-tracker.debian.org/tracker/CVE-2009-0200)\nDyon Balding of Secunia Research has discovered a vulnerability,\n which can be exploited by opening a specially crafted Microsoft\n Word document.\n\n\nWhen reading a Microsoft Word document, a bug in the parser of\n sprmTDelete records can result in an integer underflow that may\n lead to heap-based buffer overflows.\n\n\nSuccessful exploitation may allow arbitrary code execution in the \n context of the OpenOffice.org process.\n* [CVE-2009-0201](https://security-tracker.debian.org/tracker/CVE-2009-0201)\nDyon Balding of Secunia Research has discovered a vulnerability,\n which can be exploited by opening a specially crafted Microsoft\n Word document.\n\n\nWhen reading a Microsoft Word document, a bug in the parser of\n sprmTDelete records can result in heap-based buffer overflows.\n\n\nSuccessful exploitation may allow arbitrary code execution in the \n context of the OpenOffice.org process.\n* [CVE-2009-2139](https://security-tracker.debian.org/tracker/CVE-2009-2139)\nA vulnerability has been discovered in the parser of EMF files of\n OpenOffice/Go-oo 2.x and 3.x that can be triggered by a specially\n crafted document and lead to the execution of arbitrary commands\n the privileges of the user running OpenOffice.org/Go-oo.\n\n\nThis vulnerability does not exist in the packages for oldstable,\n testing and unstable.\n\n\nFor the old stable distribution (etch) these problems have been fixed in\nversion 2.0.4.dfsg.2-7etch7.\n\n\nFor the stable distribution (lenny) these problems have been fixed in\nversion 2.4.1+dfsg-1+lenny3 and higher.\n\n\nFor the unstable (sid) and testing (squeeze) distribution these\nproblems have been fixed in version 3.1.1~ooo310m15-1.\n\n\nWe recommend that you upgrade your Openoffice.org package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -72,12 +71,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1880-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1880"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2060-1",
-	"modified": "2023-10-16T00:10:55.908977Z",
+	"modified": "2024-01-09T20:22:38.444713Z",
 	"published": "2010-06-13T00:00:00Z",
 	"related": [
 		"CVE-2010-2092"
 	],
 	"summary": "cacti - SQL injection",
-	"details": "\nStefan Esser discovered that cacti, a front-end to rrdtool for monitoring\nsystems and services, is not properly validating input passed to the rra\\_id\nparameter of the graph.php script. Due to checking the input of $\\_REQUEST\nbut using $\\_GET input in a query an unauthenticated attacker is able to\nperform SQL injections via a crafted rra\\_id $\\_GET value and an additional\nvalid rra\\_id $\\_POST or $\\_COOKIE value.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.8.7b-2.1+lenny3.\n\n\nFor the testing distribution (squeeze), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.8.7e-4.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2060-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2060"
 		}
 	]
 }

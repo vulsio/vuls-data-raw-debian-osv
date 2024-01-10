@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2306-1",
-	"modified": "2023-10-16T00:11:07.276308Z",
+	"modified": "2024-01-09T20:21:22.213875Z",
 	"published": "2011-09-11T00:00:00Z",
 	"related": [
 		"CVE-2010-3908",
@@ -14,7 +14,6 @@
 		"CVE-2011-2162"
 	],
 	"summary": "ffmpeg - several",
-	"details": "\nSeveral vulnerabilities have been discovered in FFmpeg, a multimedia player,\nserver and encoder.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2010-3908](https://security-tracker.debian.org/tracker/CVE-2010-3908)\nFFmpeg before 0.5.4, allows remote attackers to cause a denial of service\n (memory corruption and application crash) or possibly execute arbitrary code\n via a malformed WMV file.\n* [CVE-2010-4704](https://security-tracker.debian.org/tracker/CVE-2010-4704)\nlibavcodec/vorbis\\_dec.c in the Vorbis decoder in FFmpeg allows remote\n attackers to cause a denial of service (application crash) via a crafted\n Ogg file, related to the vorbis\\_floor0\\_decode function.\n* [CVE-2011-0480](https://security-tracker.debian.org/tracker/CVE-2011-0480)\nMultiple buffer overflows in vorbis\\_dec.c in the Vorbis decoder in FFmpeg\n allow remote attackers to cause a denial of service (memory corruption and\n application crash) or possibly have unspecified other impact via a crafted\n WebM file, related to buffers for the channel floor and the channel residue.\n* [CVE-2011-0722](https://security-tracker.debian.org/tracker/CVE-2011-0722)\nFFmpeg allows remote attackers to cause a denial of service (heap memory\n corruption and application crash) or possibly execute arbitrary code via a\n malformed RealMedia file.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4:0.5.4-1.\n\n\nSecurity support for ffmpeg has been discontinued for the oldstable\ndistribution (lenny).\nThe current version in oldstable is not supported by upstream anymore\nand is affected by several security issues. Backporting fixes for these\nand any future issues has become unfeasible and therefore we need to\ndrop our security support for the version in oldstable.\n\n\nWe recommend that you upgrade your ffmpeg packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2306-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2306"
 		}
 	]
 }

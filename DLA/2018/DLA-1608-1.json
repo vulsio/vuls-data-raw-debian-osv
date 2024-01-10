@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1608-1",
-	"modified": "2023-06-28T06:29:39.774620Z",
-	"published": "2018-12-17T00:00:00Z",
+	"modified": "2024-01-09T20:31:27.844684Z",
+	"published": "2018-12-16T00:00:00Z",
 	"related": [
 		"CVE-2018-19518",
 		"CVE-2018-19935",
 		"CVE-2018-20783"
 	],
 	"summary": "php5 - security update",
-	"details": "\nVulnerabilities have been discovered in php5, a server-side,\nHTML-embedded scripting language. Note that this update includes a\nchange to the default behavior for IMAP connections. See below for\ndetails.\n\n\n* [CVE-2018-19518](https://security-tracker.debian.org/tracker/CVE-2018-19518)\nAn argument injection vulnerability in imap\\_open() may allow a\n remote attacker to execute arbitrary OS commands on the IMAP server.\n\n\nThe fix for the [CVE-2018-19518](https://security-tracker.debian.org/tracker/CVE-2018-19518) vulnerability included this\n additional note from the upstream developers:\n\n\nStarting with 5.6.38, rsh/ssh logins are disabled by default. Use\n imap.enable\\_insecure\\_rsh if you want to enable them. Note that the\n IMAP library does not filter mailbox names before passing them to\n rsh/ssh command, thus passing untrusted data to this function with\n rsh/ssh enabled is insecure.\n* [CVE-2018-19935](https://security-tracker.debian.org/tracker/CVE-2018-19935)\nA NULL pointer dereference leads to an application crash and a\n denial of service via an empty string in the message argument to the\n imap\\_mail function of ext/imap/php\\_imap.c.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.6.39+dfsg-0+deb8u1.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -79,12 +78,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1608-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1608"
 		}
 	]
 }

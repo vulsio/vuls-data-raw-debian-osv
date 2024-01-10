@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3044-1",
-	"modified": "2023-06-28T06:26:48.582846Z",
+	"modified": "2024-01-09T20:33:15.506932Z",
 	"published": "2022-06-06T00:00:00Z",
 	"related": [
 		"CVE-2021-27218",
@@ -9,7 +9,6 @@
 		"CVE-2021-28153"
 	],
 	"summary": "glib2.0 - security update",
-	"details": "\nSeveral security vulnerabilities were found in glib2.0, a general-purpose\nutility library for the GNOME environment.\n\n\n* [CVE-2021-27218](https://security-tracker.debian.org/tracker/CVE-2021-27218)\nIf g\\_byte\\_array\\_new\\_take() was called with a buffer of 4GB or more on a\n 64-bit platform, the length would be truncated modulo 2\\*\\*32, causing\n unintended length truncation.\n* [CVE-2021-27219](https://security-tracker.debian.org/tracker/CVE-2021-27219)\nThe function g\\_bytes\\_new has an integer overflow on 64-bit platforms due to\n an implicit cast from 64 bits to 32 bits. The overflow could potentially\n lead to memory corruption.\n* [CVE-2021-28153](https://security-tracker.debian.org/tracker/CVE-2021-28153)\nWhen g\\_file\\_replace() is used with G\\_FILE\\_CREATE\\_REPLACE\\_DESTINATION to\n replace a path that is a dangling symlink, it incorrectly also creates the\n target of the symlink as an empty file, which could conceivably have\n security relevance if the symlink is attacker-controlled. (If the path is\n a symlink to a file that already exists, then the contents of that file\n correctly remain unchanged.)\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.50.3-2+deb9u3.\n\n\nWe recommend that you upgrade your glib2.0 packages.\n\n\nFor the detailed security status of glib2.0 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/glib2.0>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3044-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3044"
 		}
 	]
 }

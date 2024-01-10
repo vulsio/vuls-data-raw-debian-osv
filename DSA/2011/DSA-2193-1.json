@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2193-1",
-	"modified": "2023-10-16T00:05:49.093379Z",
+	"modified": "2024-01-09T20:25:52.764300Z",
 	"published": "2011-03-16T00:00:00Z",
 	"related": [
 		"CVE-2011-1006",
 		"CVE-2011-1022"
 	],
 	"summary": "libcgroup - several",
-	"details": "\nSeveral issues have been discovered in libcgroup, a library to control\nand monitor control groups:\n\n\n* [CVE-2011-1006](https://security-tracker.debian.org/tracker/CVE-2011-1006)\nHeap-based buffer overflow by converting list of controllers for\n given task into an array of strings could lead to privilege\n escalation by a local attacker.\n* [CVE-2011-1022](https://security-tracker.debian.org/tracker/CVE-2011-1022)\nlibcgroup did not properly check the origin of Netlink messages,\n allowing a local attacker to send crafted Netlink messages which\n could lead to privilege escalation.\n\n\nThe oldstable distribution (lenny) does not contain libcgroup packages.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.36.2-3+squeeze1.\n\n\nFor the testing distribution (wheezy) and unstable distribution (sid),\nthis problem will be fixed soon.\n\n\nWe recommend that you upgrade your libcgroup packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2193-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2193"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-970-1",
-	"modified": "2023-06-28T06:25:41.179593Z",
+	"modified": "2024-01-09T20:34:05.262838Z",
 	"published": "2017-05-30T00:00:00Z",
 	"related": [
 		"CVE-2017-1000367"
 	],
 	"summary": "sudo - security update",
-	"details": "\nThe Qualys Security team discovered that sudo, a program designed to\nprovide limited super user privileges to specific users, does not\nproperly parse \"/proc/[pid]/stat\" to read the device number of the tty\nfrom field 7 (tty\\_nr). A sudoers user can take advantage of this flaw on\nan SELinux-enabled system to obtain full root privileges.\n\n\nFor Debian 7 Wheezy, this problem has been fixed in version\n1.8.5p2-1+nmu3+deb7u3.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.8.10p3-1+deb8u4.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-970-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-970"
 		}
 	]
 }

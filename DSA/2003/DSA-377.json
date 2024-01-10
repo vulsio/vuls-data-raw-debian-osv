@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-377",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-09-04T00:00:00Z",
 	"published": "2003-09-04T00:00:00Z",
 	"related": [
 		"CVE-1999-0997"
 	],
 	"summary": "wu-ftpd - insecure program execution",
-	"details": "\nwu-ftpd, an FTP server, implements a feature whereby multiple files\ncan be fetched in the form of a dynamically constructed archive file,\nsuch as a tar archive. The names of the files to be included are\npassed as command line arguments to tar, without protection against\nthem being interpreted as command-line options. GNU tar supports\nseveral command line options which can be abused, by means of this\nvulnerability, to execute arbitrary programs with the privileges of\nthe wu-ftpd process.\n\n\nGeorgi Guninski pointed out that this vulnerability exists in Debian\nwoody.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.6.2-3woody2.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you update your wu-ftpd package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-377.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-377"
 		}
 	]
 }

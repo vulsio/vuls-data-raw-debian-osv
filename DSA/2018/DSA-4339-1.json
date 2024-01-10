@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4339-1",
-	"modified": "2023-10-16T00:27:26.749738Z",
+	"modified": "2024-01-09T20:27:31.731894Z",
 	"published": "2018-11-13T00:00:00Z",
 	"related": [
 		"CVE-2017-7519",
@@ -10,7 +10,6 @@
 		"CVE-2018-1129"
 	],
 	"summary": "ceph - security update",
-	"details": "\nMultiple vulnerabilities were discovered in Ceph, a distributed storage\nand file system: The cephx authentication protocol was suspectible to\nreplay attacks and calculated signatures incorrectly, ceph mon did not\nvalidate capabilities for pool operations (resulting in potential\ncorruption or deletion of snapshot images) and a format string\nvulnerability in libradosstriper could result in denial of service.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 10.2.11-1.\n\n\nWe recommend that you upgrade your ceph packages.\n\n\nFor the detailed security status of ceph please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ceph>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4339-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4339"
 		}
 	]
 }

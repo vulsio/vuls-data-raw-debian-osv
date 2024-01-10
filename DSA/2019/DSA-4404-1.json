@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4404-1",
-	"modified": "2023-10-16T00:14:02.136505Z",
+	"modified": "2024-01-09T20:28:44.415124Z",
 	"published": "2019-03-09T00:00:00Z",
 	"related": [
 		"CVE-2019-5786"
 	],
 	"summary": "chromium - security update",
-	"details": "\nClement Lecigne discovered a use-after-free issue in chromium's file\nreader implementation. A maliciously crafted file could be used to\nremotely execute arbitrary code because of this problem.\n\n\nThis update also fixes a regression introduced in a previous update. The\nbrowser would always crash when launched in remote debugging mode.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 72.0.3626.122-1~deb9u1.\n\n\nWe recommend that you upgrade your chromium packages.\n\n\nFor the detailed security status of chromium please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/chromium](https://security-tracker.debian.org/tracker/chromium)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4404-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4404"
 		}
 	]
 }

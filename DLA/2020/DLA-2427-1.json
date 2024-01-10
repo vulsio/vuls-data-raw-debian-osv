@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2427-1",
-	"modified": "2023-06-28T06:25:14.530877Z",
+	"modified": "2024-01-09T20:32:33.694567Z",
 	"published": "2020-11-01T00:00:00Z",
 	"related": [
 		"CVE-2020-14355"
 	],
 	"summary": "spice - security update",
-	"details": "\nMultiple buffer overflow vulnerabilities were found in the QUIC\nimage decoding process of the SPICE remote display system,\nbefore spice-0.14.2-1.\n\n\nBoth the SPICE client (spice-gtk) and server are affected by\nthese flaws. These flaws allow a malicious client or server to\nsend specially crafted messages that, when processed by the\nQUIC image compression algorithm, result in a process crash\nor potential code execution.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n0.12.8-2.1+deb9u4.\n\n\nWe recommend that you upgrade your spice packages.\n\n\nFor the detailed security status of spice please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/spice>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2427-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2427"
 		}
 	]
 }

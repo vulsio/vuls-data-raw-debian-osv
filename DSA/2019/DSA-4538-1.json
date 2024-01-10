@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4538-1",
-	"modified": "2023-10-16T00:18:51.709222Z",
+	"modified": "2024-01-09T20:28:51.495468Z",
 	"published": "2019-09-29T00:00:00Z",
 	"related": [
 		"CVE-2019-13377",
 		"CVE-2019-16275"
 	],
 	"summary": "wpa - security update",
-	"details": "\nTwo vulnerabilities were found in the WPA protocol implementation found in\nwpa\\_supplication (station) and hostapd (access point).\n\n\n* [CVE-2019-13377](https://security-tracker.debian.org/tracker/CVE-2019-13377)\nA timing-based side-channel attack against WPA3's Dragonfly handshake when\n using Brainpool curves could be used by an attacker to retrieve the\n password.\n* [CVE-2019-16275](https://security-tracker.debian.org/tracker/CVE-2019-16275)\nInsufficient source address validation for some received Management frames\n in hostapd could lead to a denial of service for stations associated to an\n access point. An attacker in radio range of the access point could inject a\n specially constructed unauthenticated IEEE 802.11 frame to the access point\n to cause associated stations to be disconnected and require a reconnection\n to the network.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2:2.7+git20190128+0c1e29f-6+deb10u1.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\nFor the detailed security status of wpa please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/wpa](https://security-tracker.debian.org/tracker/wpa)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4538-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4538"
 		}
 	]
 }

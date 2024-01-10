@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-464",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-03-16T00:00:00Z",
 	"published": "2004-03-16T00:00:00Z",
 	"related": [
 		"CVE-2004-0111"
 	],
 	"summary": "gdk-pixbuf - broken image handling",
-	"details": "\nThomas Kristensen discovered a vulnerability in gdk-pixbuf (binary\npackage libgdk-pixbuf2), the GdkPixBuf image library for Gtk, that can\ncause the surrounding application to crash. To exploit this problem,\na remote attacker could send a carefully-crafted BMP file via mail,\nwhich would cause e.g. Evolution to crash but is probably not limited\nto Evolution.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.17.0-2woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.22.0-3.\n\n\nWe recommend that you upgrade your libgdk-pixbuf2 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-464.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-464"
 		}
 	]
 }

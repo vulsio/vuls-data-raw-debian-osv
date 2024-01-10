@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2966-1",
-	"modified": "2023-06-28T06:26:45.210284Z",
+	"modified": "2024-01-09T20:33:12.152328Z",
 	"published": "2022-03-30T00:00:00Z",
 	"related": [
 		"CVE-2016-9427"
 	],
 	"summary": "libgc - security update",
-	"details": "\nlibgc, a conservative garbage collector, is vulnerable to integer\noverflows in multiple places. In some cases, when asked to allocate a huge\nquantity of memory, instead of failing the request, it will return a\npointer to a small amount of memory possibly tricking the application into\na buffer overwrite.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1:7.4.2-8+deb9u1.\n\n\nWe recommend that you upgrade your libgc packages.\n\n\nFor the detailed security status of libgc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libgc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2966-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2966"
 		}
 	]
 }

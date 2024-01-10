@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1858-1",
-	"modified": "2023-10-16T00:10:42.134510Z",
+	"modified": "2024-01-09T20:25:33.449679Z",
 	"published": "2009-08-10T00:00:00Z",
 	"related": [
 		"CVE-2007-1667",
@@ -15,7 +15,6 @@
 		"CVE-2009-1882"
 	],
 	"summary": "imagemagick - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the imagemagick image\nmanipulation programs which can lead to the execution of arbitrary code,\nexposure of sensitive information or cause DoS. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2007-1667](https://security-tracker.debian.org/tracker/CVE-2007-1667)\nMultiple integer overflows in XInitImage function in xwd.c for\n ImageMagick, allow user-assisted remote attackers to cause a denial of\n service (crash) or obtain sensitive information via crafted images with\n large or negative values that trigger a buffer overflow. It only affects\n the oldstable distribution (etch).\n* [CVE-2007-1797](https://security-tracker.debian.org/tracker/CVE-2007-1797)\nMultiple integer overflows allow remote attackers to execute arbitrary\n code via a crafted DCM image, or the colors or comments field in a \n crafted XWD image. It only affects the oldstable distribution (etch).\n* [CVE-2007-4985](https://security-tracker.debian.org/tracker/CVE-2007-4985)\nA crafted image file can trigger an infinite loop in the ReadDCMImage\n function or in the ReadXCFImage function. It only affects the oldstable\n distribution (etch).\n* [CVE-2007-4986](https://security-tracker.debian.org/tracker/CVE-2007-4986)\nMultiple integer overflows allow context-dependent attackers to execute\n arbitrary code via a crafted .dcm, .dib, .xbm, .xcf, or .xwd image file,\n which triggers a heap-based buffer overflow. It only affects the \n oldstable distribution (etch).\n* [CVE-2007-4987](https://security-tracker.debian.org/tracker/CVE-2007-4987)\nOff-by-one error allows context-dependent attackers to execute arbitrary\n code via a crafted image file, which triggers the writing of a '\\0'\n character to an out-of-bounds address. It affects only the oldstable\n distribution (etch).\n* [CVE-2007-4988](https://security-tracker.debian.org/tracker/CVE-2007-4988)\nA sign extension error allows context-dependent attackers to execute \n arbitrary code via a crafted width value in an image file, which \n triggers an integer overflow and a heap-based buffer overflow. It \n affects only the oldstable distribution (etch).\n* [CVE-2008-1096](https://security-tracker.debian.org/tracker/CVE-2008-1096)\nThe load\\_tile function in the XCF coder allows user-assisted remote\n attackers to cause a denial of service or possibly execute arbitrary \n code via a crafted .xcf file that triggers an out-of-bounds heap write.\n It affects only to oldstable (etch).\n* [CVE-2008-1097](https://security-tracker.debian.org/tracker/CVE-2008-1097)\nHeap-based buffer overflow in the PCX coder allows user-assisted remote\n attackers to cause a denial of service or possibly execute arbitrary \n code via a crafted .pcx file that triggers incorrect memory allocation \n for the scanline array, leading to memory corruption. It affects only to\n oldstable (etch).\n* [CVE-2009-1882](https://security-tracker.debian.org/tracker/CVE-2009-1882)\nInteger overflow allows remote attackers to cause a denial of service\n (crash) and possibly execute arbitrary code via a crafted TIFF file, \n which triggers a buffer overflow.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 7:6.2.4.5.dfsg1-0.15+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 7:6.3.7.9.dfsg2-1~lenny3.\n\n\nFor the upcoming stable distribution (squeeze) and the unstable\ndistribution (sid), these problems have been fixed in version\n7:6.5.1.0-1.1.\n\n\nWe recommend that you upgrade your imagemagick packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1858-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1858"
 		}
 	]
 }

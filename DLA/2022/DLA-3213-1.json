@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3213-1",
-	"modified": "2023-06-28T06:25:27.267213Z",
+	"modified": "2024-01-09T20:33:22.903146Z",
 	"published": "2022-11-29T00:00:00Z",
 	"related": [
 		"CVE-2022-42898"
 	],
 	"summary": "krb5 - security update",
-	"details": "\nIt was discovered that there was a potential Denial of Service (DoS) attack\nagainst krb5, a suite of tools implementing the Kerberos authentication system.\nAn integer overflow in PAC parsing could have been exploited if a cross-realm\nentity acted maliciously.\n\n\n* [CVE-2022-42898](https://security-tracker.debian.org/tracker/CVE-2022-42898)\nkrb5\\_pac\\_parse() buffer parsing vulnerability\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1.17-3+deb10u5.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3213-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3213"
 		}
 	]
 }

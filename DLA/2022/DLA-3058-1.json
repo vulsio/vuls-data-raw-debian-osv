@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3058-1",
-	"modified": "2023-06-28T06:21:25.533970Z",
-	"published": "2022-06-28T00:00:00Z",
+	"modified": "2024-01-09T20:33:16.044560Z",
+	"published": "2022-06-26T00:00:00Z",
 	"related": [
 		"CVE-2017-12562",
 		"CVE-2021-4156"
 	],
 	"summary": "libsndfile - security update",
-	"details": "\nTwo issues have been found in libsndfile, a library for reading/writing\naudio files.\n\n\n* [CVE-2017-12562](https://security-tracker.debian.org/tracker/CVE-2017-12562)\nDue to a possible heap buffer overflow attack in an attacker could\n cause a remote denial of service attack by tricking the function into\n outputting a largeamount of data.\n* [CVE-2021-4156](https://security-tracker.debian.org/tracker/CVE-2021-4156)\nUsing a crafted FLAC file, an attacker could trigger an out-of-bounds\n read that would most likely cause a crash but could potentially leak\n memory information.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.0.27-3+deb9u3.\n\n\nWe recommend that you upgrade your libsndfile packages.\n\n\nFor the detailed security status of libsndfile please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libsndfile>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3058-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3058"
 		}
 	]
 }

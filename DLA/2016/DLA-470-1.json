@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-470-1",
-	"modified": "2023-06-28T06:27:01.649070Z",
+	"modified": "2024-01-09T20:33:01.934434Z",
 	"published": "2016-05-13T00:00:00Z",
 	"related": [
 		"CVE-2016-4579"
 	],
 	"summary": "libksba - security update",
-	"details": "\nIt was discovered that there was a possible read access beyond a buffer\nvulnerability in libksba, a X.509 and CMS certificate support library.\n\n\nThe returned length of the object from \\_ksba\\_ber\\_parse\\_tl (ti.length)\nwas not always checked against the actual buffer length, thus leading\nto a read access after the end of the buffer and thus a SEGV.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libksba version\n1.2.0-2+deb7u2.\n\n\nWe recommend that you upgrade your libksba packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-470-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-470"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3265-1",
-	"modified": "2023-10-16T00:11:53.144556Z",
+	"modified": "2024-01-09T20:28:08.055763Z",
 	"published": "2015-05-20T00:00:00Z",
 	"related": [
 		"CVE-2014-2681",
@@ -15,7 +15,6 @@
 		"CVE-2015-3154"
 	],
 	"summary": "zendframework - security update",
-	"details": "\nMultiple vulnerabilities were discovered in Zend Framework, a PHP\nframework. Except for [CVE-2015-3154](https://security-tracker.debian.org/tracker/CVE-2015-3154), all these issues were already fixed\nin the version initially shipped with Jessie.\n\n\n* [CVE-2014-2681](https://security-tracker.debian.org/tracker/CVE-2014-2681)\nLukas Reschke reported a lack of protection against XML External\n Entity injection attacks in some functions. This fix extends the\n incomplete one from [CVE-2012-5657](https://security-tracker.debian.org/tracker/CVE-2012-5657).\n* [CVE-2014-2682](https://security-tracker.debian.org/tracker/CVE-2014-2682)\nLukas Reschke reported a failure to consider that the\n libxml\\_disable\\_entity\\_loader setting is shared among threads in the\n PHP-FPM case. This fix extends the incomplete one from\n [CVE-2012-5657](https://security-tracker.debian.org/tracker/CVE-2012-5657).\n* [CVE-2014-2683](https://security-tracker.debian.org/tracker/CVE-2014-2683)\nLukas Reschke reported a lack of protection against XML Entity\n Expansion attacks in some functions. This fix extends the incomplete\n one from [CVE-2012-6532](https://security-tracker.debian.org/tracker/CVE-2012-6532).\n* [CVE-2014-2684](https://security-tracker.debian.org/tracker/CVE-2014-2684)\nChristian Mainka and Vladislav Mladenov from the Ruhr-University\n Bochum reported an error in the consumer's verify method that lead\n to acceptance of wrongly sourced tokens.\n* [CVE-2014-2685](https://security-tracker.debian.org/tracker/CVE-2014-2685)\nChristian Mainka and Vladislav Mladenov from the Ruhr-University\n Bochum reported a specification violation in which signing of a\n single parameter is incorrectly considered sufficient.\n* [CVE-2014-4914](https://security-tracker.debian.org/tracker/CVE-2014-4914)\nCassiano Dal Pizzol discovered that the implementation of the ORDER\n BY SQL statement in Zend\\_Db\\_Select contains a potential SQL\n injection when the query string passed contains parentheses.\n* [CVE-2014-8088](https://security-tracker.debian.org/tracker/CVE-2014-8088)\nYury Dyachenko at Positive Research Center identified potential XML\n eXternal Entity injection vectors due to insecure usage of PHP's DOM\n extension.\n* [CVE-2014-8089](https://security-tracker.debian.org/tracker/CVE-2014-8089)\nJonas SandstrĂśm discovered an SQL injection vector when manually\n quoting value for sqlsrv extension, using null byte.\n* [CVE-2015-3154](https://security-tracker.debian.org/tracker/CVE-2015-3154)\nFilippo Tessarotto and Maks3w reported potential CRLF injection\n attacks in mail and HTTP headers.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.11.13-1.1+deb7u1.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.12.9+dfsg-2+deb8u1.\n\n\nFor the testing distribution (stretch), these problems will be fixed\nin version 1.12.12+dfsg-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.12.12+dfsg-1.\n\n\nWe recommend that you upgrade your zendframework packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3265-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3265"
 		}
 	]
 }

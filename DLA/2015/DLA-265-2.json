@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-265-2",
-	"modified": "2023-06-28T06:26:39.753057Z",
-	"published": "2015-07-03T00:00:00Z",
+	"modified": "2024-01-09T20:32:48.124735Z",
+	"published": "2015-08-26T00:00:00Z",
 	"related": [
 		"CVE-2015-3206"
 	],
 	"summary": "pykerberos - regression update",
-	"details": "\nMartin Prpic has reported the possibility of a man-in-the-middle attack\nin the pykerberos code to the Red Hat Bugzilla (Fedora bug tracker). The\noriginal issue has earlier been [reported upstream](https://www.calendarserver.org/ticket/833). We are quoting the\nupstream bug reported partially below:\n\n\nThe python-kerberos checkPassword() method has been badly insecure in\nprevious releases. It used to do (and still does by default) a kinit\n(AS-REQ) to ask a KDC for a TGT for the given user principal, and\ninterprets the success or failure of that as indicating whether the\npassword is correct. It does not, however, verify that it actually spoke\nto a trusted KDC: an attacker may simply reply instead with an AS-REP\nwhich matches the password he just gave you.\n\n\nImagine you were verifying a password using LDAP authentication rather\nthan Kerberos: you would, of course, use TLS in conjunction with LDAP to\nmake sure you were talking to a real, trusted LDAP server. The same\nrequirement applies here. kinit is not a password-verification service.\n\n\nThe usual way of doing this is to take the TGT you've obtained with the\nuser's password, and then obtain a ticket for a principal for which the\nverifier has keys (e.g. a web server processing a username/password form\nlogin might get a ticket for its own HTTP/host@REALM principal), which\nit can then verify. Note that this requires that the verifier has its\nown Kerberos identity, which is mandated by the symmetric nature of\nKerberos (whereas in the LDAP case, the use of public-key cryptography\nallows anonymous verification).\n\n\nWith this version of the pykerberos package a new option is introduced\nfor the checkPassword() method. Setting verify to True when using\ncheckPassword() will perform a KDC verification. For this to work, you\nneed to provide a krb5.keytab file containing service principal keys for\nthe service you intend to use.\n\n\nAs the default krb5.keytab file in /etc is normally not accessible by\nnon-root users/processes, you have to make sure a custom krb5.keytab\nfile containing the correct principal keys is provided to your\napplication using the KRB5\\_KTNAME environment variable.\n\n\n**Note**: In Debian squeeze(-lts), KDC verification support is disabled by\ndefault in order not to break existing setups.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-265-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-265"
 		}
 	]
 }

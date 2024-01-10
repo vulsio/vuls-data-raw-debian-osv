@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2186-1",
-	"modified": "2023-10-16T00:05:48.217642Z",
+	"modified": "2024-01-09T20:25:39.908949Z",
 	"published": "2011-03-09T00:00:00Z",
 	"related": [
 		"CVE-2010-1585",
@@ -14,7 +14,6 @@
 		"CVE-2011-0059"
 	],
 	"summary": "iceweasel - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Iceweasel, a web browser \nbased on Firefox. The included XULRunner library provides rendering\nservices for several other applications included in Debian.\n\n\n* [CVE-2010-1585](https://security-tracker.debian.org/tracker/CVE-2010-1585)\nRoberto Suggi Liverani discovered that the sanitising performed by\n ParanoidFragmentSink was incomplete.\n* [CVE-2011-0051](https://security-tracker.debian.org/tracker/CVE-2011-0051)\nZach Hoffmann discovered that incorrect parsing of recursive eval()\n calls could lead to attackers forcing acceptance of a confirmation\n dialogue.\n* [CVE-2011-0053](https://security-tracker.debian.org/tracker/CVE-2011-0053)\nCrashes in the layout engine may lead to the execution of arbitrary\n code.\n* [CVE-2011-0054](https://security-tracker.debian.org/tracker/CVE-2011-0054), \n [CVE-2010-0056](https://security-tracker.debian.org/tracker/CVE-2010-0056)\nChristian Holler discovered buffer overflows in the Javascript engine,\n which could allow the execution of arbitrary code.\n* [CVE-2011-0055](https://security-tracker.debian.org/tracker/CVE-2011-0055)\nregenrecht and Igor Bukanov discovered a use-after-free error in the\n JSON-Implementation, which could lead to the execution of arbitrary code.\n* [CVE-2011-0057](https://security-tracker.debian.org/tracker/CVE-2011-0057)\nDaniel Kozlowski discovered that incorrect memory handling the web workers\n implementation could lead to the execution of arbitrary code.\n* [CVE-2011-0059](https://security-tracker.debian.org/tracker/CVE-2011-0059)\nPeleus Uhley discovered a cross-site request forgery risk in the plugin\n code.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.9.0.19-8 of the xulrunner source package.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.5.16-5.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.5.17-1.\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2186-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2186"
 		}
 	]
 }

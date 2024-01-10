@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-393",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-10-01T00:00:00Z",
 	"published": "2003-10-01T00:00:00Z",
 	"related": [
 		"CVE-2003-0543",
@@ -9,7 +9,6 @@
 		"CVE-2003-0545"
 	],
 	"summary": "openssl - denial of service",
-	"details": "\nDr. Stephen Henson (), using a test suite\nprovided by NISCC (), discovered a number of\nerrors in the OpenSSL\nASN1 code. Combined with an error that causes the OpenSSL code to parse\nclient certificates even when it should not, these errors can cause a\ndenial of service (DoS) condition on a system using the OpenSSL code,\ndepending on how that code is used. For example, even though apache-ssl\nand ssh link to OpenSSL libraries, they should not be affected by this\nvulnerability. However, other SSL-enabled applications may be\nvulnerable and an OpenSSL upgrade is recommended.\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 0.9.6c-2.woody.4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.9.7c-1.\n\n\nWe recommend that you update your openssl package. Note that you will\nneed to restart services which use the libssl library for this update\nto take effect.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -33,12 +32,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-393.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-393"
 		}
 	]
 }

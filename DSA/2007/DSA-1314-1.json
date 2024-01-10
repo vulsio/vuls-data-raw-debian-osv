@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1314-1",
-	"modified": "2023-10-16T00:05:18.644413Z",
+	"modified": "2024-01-09T20:22:13.648178Z",
 	"published": "2007-06-19T00:00:00Z",
 	"related": [
 		"CVE-2007-3099",
 		"CVE-2007-3100"
 	],
 	"summary": "open-iscsi",
-	"details": "\nSeveral local and remote vulnerabilities have been discovered in\nopen-iscsi, a transport-independent iSCSI implementation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-3099](https://security-tracker.debian.org/tracker/CVE-2007-3099)\nOlaf Kirch discovered that due to a programming error access to the\n management interface socket was insufficiently protected, which allows\n denial of service.\n* [CVE-2007-3100](https://security-tracker.debian.org/tracker/CVE-2007-3100)\nOlaf Kirch discovered that access to a semaphore used in the logging\n code was insufficiently protected, allowing denial of service.\n\n\nThe oldstable distribution (sarge) doesn't include open-iscsi.\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 2.0.730-1etch1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.0.865-1.\n\n\nWe recommend that you upgrade your open-iscsi packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1314-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1314"
 		}
 	]
 }

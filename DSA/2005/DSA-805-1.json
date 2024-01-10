@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-805-1",
-	"modified": "2023-10-16T00:29:12.732661Z",
+	"modified": "2024-01-09T20:34:08.299268Z",
 	"published": "2005-09-08T00:00:00Z",
 	"related": [
 		"CVE-2005-1268",
@@ -10,7 +10,6 @@
 		"CVE-2005-2728"
 	],
 	"summary": "apache2 - several",
-	"details": "\nSeveral problems have been discovered in Apache2, the next generation,\nscalable, extendable web server. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CAN-2005-1268](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-1268)\nMarc Stern discovered an off-by-one error in the mod\\_ssl\n Certificate Revocation List (CRL) verification callback. When\n Apache is configured to use a CRL this can be used to cause a\n denial of service.\n\n* [CAN-2005-2088](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2088)\nA vulnerability has been discovered in the Apache web server.\n When it is acting as an HTTP proxy, it allows remote attackers to\n poison the web cache, bypass web application firewall protection,\n and conduct cross-site scripting attacks, which causes Apache to\n incorrectly handle and forward the body of the request.\n\n* [CAN-2005-2700](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2700)\nA problem has been discovered in mod\\_ssl, which provides strong\n cryptography (HTTPS support) for Apache that allows remote\n attackers to bypass access restrictions.\n\n* [CAN-2005-2728](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2728)\nThe byte-range filter in Apache 2.0 allows remote attackers to\n cause a denial of service via an HTTP header with a large Range\n field.\n\n\nThe old stable distribution (woody) does not contain Apache2 packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.0.54-5.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.0.54-5.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-805-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-805"
 		}
 	]
 }

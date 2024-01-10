@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2736-1",
-	"modified": "2023-10-16T00:06:04.693033Z",
+	"modified": "2024-01-09T20:27:52.609908Z",
 	"published": "2013-08-11T00:00:00Z",
 	"related": [
 		"CVE-2013-4206",
@@ -10,7 +10,6 @@
 		"CVE-2013-4852"
 	],
 	"summary": "putty - several",
-	"details": "\nSeveral vulnerabilities where discovered in PuTTY, a Telnet/SSH client\nfor X. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2013-4206](https://security-tracker.debian.org/tracker/CVE-2013-4206)\nMark Wooding discovered a heap-corrupting buffer underrun bug in the\n modmul function which performs modular multiplication. As the modmul\n function is called during validation of any DSA signature received\n by PuTTY, including during the initial key exchange phase, a\n malicious server could exploit this vulnerability before the client\n has received and verified a host key signature. An attack to this\n vulnerability can thus be performed by a man-in-the-middle between\n the SSH client and server, and the normal host key protections\n against man-in-the-middle attacks are bypassed.\n* [CVE-2013-4207](https://security-tracker.debian.org/tracker/CVE-2013-4207)\nIt was discovered that non-coprime values in DSA signatures can\n cause a buffer overflow in the calculation code of modular inverses\n when verifying a DSA signature. Such a signature is invalid. This\n bug however applies to any DSA signature received by PuTTY,\n including during the initial key exchange phase and thus it can be\n exploited by a malicious server before the client has received and\n verified a host key signature.\n* [CVE-2013-4208](https://security-tracker.debian.org/tracker/CVE-2013-4208)\nIt was discovered that private keys were left in memory after being\n used by PuTTY tools.\n* [CVE-2013-4852](https://security-tracker.debian.org/tracker/CVE-2013-4852)\nGergely Eberhardt from SEARCH-LAB Ltd. discovered that PuTTY is\n vulnerable to an integer overflow leading to heap overflow during\n the SSH handshake before authentication due to improper bounds\n checking of the length parameter received from the SSH server. A\n remote attacker could use this vulnerability to mount a local denial\n of service attack by crashing the putty client.\n\n\nAdditionally this update backports some general proactive potentially\nsecurity-relevant tightening from upstream.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 0.60+2010-02-20-1+squeeze2. This update also provides a fix for\n[CVE-2011-4607](https://security-tracker.debian.org/tracker/CVE-2011-4607), which was fixed for stable already.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.62-9+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.63-1.\n\n\nWe recommend that you upgrade your putty packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2736-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2736"
 		}
 	]
 }

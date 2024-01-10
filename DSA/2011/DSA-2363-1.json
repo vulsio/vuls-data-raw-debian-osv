@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2363-1",
-	"modified": "2023-10-16T00:11:11.106778Z",
+	"modified": "2024-01-09T20:22:45.298994Z",
 	"published": "2011-12-16T00:00:00Z",
 	"related": [
 		"CVE-2011-2778"
 	],
 	"summary": "tor - buffer overflow",
-	"details": "\nIt was discovered that Tor, an online privacy tool, incorrectly computes\nbuffer sizes in certain cases involving SOCKS connections. Malicious\nparties could use this to cause a heap-based buffer overflow, potentially \nallowing execution of arbitrary code.\n\n\nIn Tor's default configuration this issue can only be triggered by\nclients that can connect to Tor's SOCKS port, which listens only on\nlocalhost by default.\n\n\nIn non-default configurations where Tor's SocksPort listens not only on\nlocalhost or where Tor was configured to use another SOCKS server for all of\nits outgoing connections, Tor is vulnerable to a larger set of malicious\nparties.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 0.2.1.32-1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.2.2.35-1~squeeze+1.\n\n\nFor the unstable (sid) and testing (wheezy) distributions, this problem has been fixed in\nversion 0.2.2.35-1.\n\n\nFor the experimental distribution, this problem has has fixed in\nversion 0.2.3.10-alpha-1.\n\n\nWe recommend that you upgrade your tor packages.\n\n\nPlease note that the update for stable (squeeze) updates this package\nfrom 0.2.1.31 to 0.2.2.35, a new major release of Tor, as upstream has\nannounced end-of-life for the 0.2.1.x tree for the near future. Please\ncheck your Tor runs as expected after the upgrade.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -155,12 +154,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2363-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2363"
 		}
 	]
 }

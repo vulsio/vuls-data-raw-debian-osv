@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3867-1",
-	"modified": "2023-10-16T00:12:24.049689Z",
+	"modified": "2024-01-09T20:26:54.917340Z",
 	"published": "2017-05-30T00:00:00Z",
 	"related": [
 		"CVE-2017-1000367"
 	],
 	"summary": "sudo - security update",
-	"details": "\nThe Qualys Security team discovered that sudo, a program designed to\nprovide limited super user privileges to specific users, does not\nproperly parse \"/proc/[pid]/stat\" to read the device number of the tty\nfrom field 7 (tty\\_nr). A sudoers user can take advantage of this flaw on\nan SELinux-enabled system to obtain full root privileges.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.8.10p3-1+deb8u4.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3867-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3867"
 		}
 	]
 }

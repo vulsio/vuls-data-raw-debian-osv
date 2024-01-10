@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4313-1",
-	"modified": "2023-10-16T00:17:16.987249Z",
+	"modified": "2024-01-09T20:28:39.312898Z",
 	"published": "2018-10-08T00:00:00Z",
 	"related": [
 		"CVE-2018-15471",
 		"CVE-2018-18021"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2018-15471](https://security-tracker.debian.org/tracker/CVE-2018-15471) (XSA-270)\n\n Felix Wilhelm of Google Project Zero discovered a flaw in the hash\n handling of the xen-netback Linux kernel module. A malicious or\n buggy frontend may cause the (usually privileged) backend to make\n out of bounds memory accesses, potentially resulting in privilege\n escalation, denial of service, or information leaks.\n* [CVE-2018-18021](https://security-tracker.debian.org/tracker/CVE-2018-18021)\nIt was discovered that the KVM subsystem on the arm64 platform does\n not properly handle the KVM\\_SET\\_ON\\_REG ioctl. An attacker who can\n create KVM based virtual machines can take advantage of this flaw\n for denial of service (hypervisor panic) or privilege escalation\n (arbitrarily redirect the hypervisor flow of control with full\n register control).\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.110-3+deb9u6.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4313-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4313"
 		}
 	]
 }

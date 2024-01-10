@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1490-1",
-	"modified": "2023-06-28T06:20:44.664056Z",
-	"published": "2018-09-01T00:00:00Z",
+	"modified": "2024-01-09T20:31:18.357635Z",
+	"published": "2018-08-31T00:00:00Z",
 	"related": [
 		"CVE-2018-14851",
 		"CVE-2018-14883"
 	],
 	"summary": "php5 - security update",
-	"details": "\nTwo vulnerabilities have been discovered in php5, a server-side,\nHTML-embedded scripting language. One ([CVE-2018-14851](https://security-tracker.debian.org/tracker/CVE-2018-14851)) results in a\npotential denial of service (out-of-bounds read and application crash)\nvia a crafted JPEG file. The other ([CVE-2018-14883](https://security-tracker.debian.org/tracker/CVE-2018-14883)) is an Integer\nOverflow that leads to a heap-based buffer over-read.\n\n\nAdditionally, a previously introduced patch for [CVE-2017-7272](https://security-tracker.debian.org/tracker/CVE-2017-7272) was found\nto negatively affect existing PHP applications (#890266). As a result\nof the negative effects and the fact that the security team has marked\nthe CVE in question as \"ignore,\" the patch has been dropped.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.6.37+dfsg-0+deb8u1.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -76,12 +75,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1490-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1490"
 		}
 	]
 }

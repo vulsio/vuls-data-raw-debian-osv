@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-515",
-	"modified": "2023-10-16T00:21:55.483563Z",
+	"modified": "2024-01-09T20:26:37.386224Z",
 	"published": "2004-06-05T00:00:00Z",
 	"related": [
 		"CVE-2004-0234",
 		"CVE-2004-0235"
 	],
 	"summary": "lha - several vulnerabilities",
-	"details": "\nTwo vulnerabilities were discovered in lha:\n\n\n* [CAN-2004-0234](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0234) - Multiple stack-based buffer overflows in the\n get\\_header function in header.c for LHA 1.14 allow remote attackers\n or local users to execute arbitrary code via long directory or file\n names in an LHA archive, which triggers the overflow when testing\n or extracting the archive.\n\n* [CAN-2004-0235](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0235) - Multiple directory traversal vulnerabilities in LHA\n 1.14 allow remote attackers or local users to create arbitrary\n files via an LHA archive containing filenames with (1) .. sequences\n or (2) absolute pathnames with double leading slashes\n (\"//absolute/path\").\n\n\nFor the current stable distribution (woody), these problems have been\nfixed in version 1.14i-2woody1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.14i-8.\n\n\nWe recommend that you update your lha package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-515.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-515"
 		}
 	]
 }

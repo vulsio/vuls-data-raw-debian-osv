@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-79-1",
-	"modified": "2023-06-28T06:43:17.789724Z",
+	"modified": "2024-01-09T20:33:58.789827Z",
 	"published": "2014-10-29T00:00:00Z",
 	"related": [
 		"CVE-2014-8763",
 		"CVE-2014-8764"
 	],
 	"summary": "dokuwiki - security update",
-	"details": "\nThis fixes a possibility of bypassing the wiki authentication when an Active\nDirectory is used for LDAP authentication. These two CVE are almost the same,\none apparently being a superset of the other. They are fixed together.\n\n\n* [CVE-2014-8763](https://security-tracker.debian.org/tracker/CVE-2014-8763)\nDokuWiki before 2014-05-05b, when using Active Directory for LDAP\n authentication, allows remote attackers to bypass authentication via a\n password starting with a null (\\0) character and a valid user name, which\n triggers an unauthenticated bind.\n* [CVE-2014-8764](https://security-tracker.debian.org/tracker/CVE-2014-8764)\nDokuWiki 2014-05-05a and earlier, when using Active Directory for LDAP\n authentication, allows remote attackers to bypass authentication via a\n user name and password starting with a null (\\0) character, which triggers\n an anonymous bind.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in dokuwiki version 0.0.20091225c-10+squeeze3\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-79-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-79"
 		}
 	]
 }

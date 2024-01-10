@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-435",
-	"modified": "2023-10-16T00:20:12.495875Z",
+	"modified": "2024-01-09T20:26:21.601199Z",
 	"published": "2004-02-06T00:00:00Z",
 	"related": [
 		"CVE-2003-0865"
 	],
 	"summary": "mpg123 - heap overflow",
-	"details": "\nA vulnerability was discovered in mpg123, a command-line mp3 player,\nwhereby a response from a remote HTTP server could overflow a buffer\nallocated on the heap, potentially permitting execution of arbitrary\ncode with the privileges of the user invoking mpg123. In order for\nthis vulnerability to be exploited, mpg123 would need to request an\nmp3 stream from a malicious remote server via HTTP.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 0.59r-13woody2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.59r-15.\n\n\nWe recommend that you update your mpg123 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-435.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-435"
 		}
 	]
 }

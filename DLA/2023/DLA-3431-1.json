@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3431-1",
-	"modified": "2023-06-28T06:30:46.989423Z",
+	"modified": "2024-01-09T20:33:40.405334Z",
 	"published": "2023-05-22T00:00:00Z",
 	"related": [
 		"CVE-2016-6153",
 		"CVE-2018-8740"
 	],
 	"summary": "sqlite - security update",
-	"details": "\nTwo vulnerabilities have been fixed in sqlite (V2) which which might\nallow local users to obtain sensitive information, cause a denial of\nservice (application crash), or have unspecified other impact.\n\n\n* [CVE-2016-6153](https://security-tracker.debian.org/tracker/CVE-2016-6153)\nsqlite improperly implemented the temporary directory search algorithm,\nwhich might allow local users to obtain sensitive information, cause a\ndenial of service (application crash), or have unspecified other impact\nby leveraging use of the current working directory for temporary files.\n* [CVE-2018-8740](https://security-tracker.debian.org/tracker/CVE-2018-8740)\nDatabases whose schema is corrupted using a CREATE TABLE AS statement\ncould cause a NULL pointer dereference,\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.8.17-15+deb10u1.\n\n\nWe recommend that you upgrade your sqlite packages.\n\n\nFor the detailed security status of sqlite please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/sqlite>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3431-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3431"
 		}
 	]
 }

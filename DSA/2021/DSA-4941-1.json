@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4941-1",
-	"modified": "2023-10-16T00:15:14.380674Z",
+	"modified": "2024-01-09T20:26:32.329060Z",
 	"published": "2021-07-20T00:00:00Z",
 	"related": [
 		"CVE-2020-36311",
@@ -10,7 +10,6 @@
 		"CVE-2021-3609"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2020-36311](https://security-tracker.debian.org/tracker/CVE-2020-36311)\nA flaw was discovered in the KVM subsystem for AMD CPUs, allowing an\n attacker to cause a denial of service by triggering destruction of a\n large SEV VM.\n* [CVE-2021-3609](https://security-tracker.debian.org/tracker/CVE-2021-3609)\nNorbert Slusarek reported a race condition vulnerability in the CAN\n BCM networking protocol, allowing a local attacker to escalate\n privileges.\n* [CVE-2021-33909](https://security-tracker.debian.org/tracker/CVE-2021-33909)\nThe Qualys Research Labs discovered a size\\_t-to-int conversion\n vulnerability in the Linux kernel's filesystem layer. An\n unprivileged local attacker able to create, mount, and then delete a\n deep directory structure whose total path length exceeds 1GB, can\n take advantage of this flaw for privilege escalation.\n\n\nDetails can be found in the Qualys advisory at\n <https://www.qualys.com/2021/07/20/cve-2021-33909/sequoia-local-privilege-escalation-linux.txt>\n* [CVE-2021-34693](https://security-tracker.debian.org/tracker/CVE-2021-34693)\nNorbert Slusarek discovered an information leak in the CAN BCM\n networking protocol. A local attacker can take advantage of this\n flaw to obtain sensitive information from kernel stack memory.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.19.194-3.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4941-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-4941"
 		}
 	]
 }

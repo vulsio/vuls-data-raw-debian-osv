@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2416-1",
-	"modified": "2023-10-16T00:05:54.117668Z",
+	"modified": "2024-01-09T20:22:50.713409Z",
 	"published": "2012-02-22T00:00:00Z",
 	"related": [
 		"CVE-2012-1103"
 	],
 	"summary": "notmuch - information disclosure",
-	"details": "\nIt was discovered that Notmuch, an email indexer, did not sufficiently\nescape Emacs MML tags. When using the Emacs interface, a user could\nbe tricked into replying to a maliciously formatted message which could\nlead to files from the local machine being attached to the outgoing\nmessage.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.3.1+squeeze1.\n\n\nFor the testing distribution (wheezy) and unstable distribution (sid),\nthis problem has been fixed in version 0.11.1-1.\n\n\nWe recommend that you upgrade your notmuch packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2416-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2416"
 		}
 	]
 }

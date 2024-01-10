@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3962-1",
-	"modified": "2023-10-16T00:12:30.651861Z",
+	"modified": "2024-01-09T20:26:10.317173Z",
 	"published": "2017-09-03T00:00:00Z",
 	"related": [
 		"CVE-2017-11185"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nA denial of service vulnerability was identified in strongSwan, an IKE/IPsec\nsuite, using Google's OSS-Fuzz fuzzing project.\n\n\nThe gmp plugin in strongSwan had insufficient input validation when verifying\nRSA signatures. This coding error could lead to a null pointer dereference,\nleading to process crash.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 5.2.1-6+deb8u5.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 5.5.1-4+deb9u1.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 5.6.0-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.6.0-1.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3962-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3962"
 		}
 	]
 }

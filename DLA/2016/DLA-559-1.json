@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-559-1",
-	"modified": "2023-06-28T06:27:03.491763Z",
+	"modified": "2024-01-09T20:33:07.270157Z",
 	"published": "2016-07-25T00:00:00Z",
 	"related": [
 		"CVE-2015-7974",
@@ -17,7 +17,6 @@
 		"CVE-2016-2518"
 	],
 	"summary": "ntp - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the Network Time Protocol\ndaemon and utility programs:\n\n\n* [CVE-2015-7974](https://security-tracker.debian.org/tracker/CVE-2015-7974)\nMatt Street discovered that insufficient key validation allows\n impersonation attacks between authenticated peers.\n* [CVE-2015-7977](https://security-tracker.debian.org/tracker/CVE-2015-7977) /\n [CVE-2015-7978](https://security-tracker.debian.org/tracker/CVE-2015-7978)\nStephen Gray discovered that a NULL pointer dereference and a\n buffer overflow in the handling of ntpdc reslist commands may\n result in denial of service.\n* [CVE-2015-7979](https://security-tracker.debian.org/tracker/CVE-2015-7979)\nAanchal Malhotra discovered that if NTP is configured for broadcast\n mode, an attacker can send malformed authentication packets which\n break associations with the server for other broadcast clients.\n* [CVE-2015-8138](https://security-tracker.debian.org/tracker/CVE-2015-8138)\nMatthew van Gundy and Jonathan Gardner discovered that missing\n validation of origin timestamps in ntpd clients may result in denial\n of service.\n* [CVE-2015-8158](https://security-tracker.debian.org/tracker/CVE-2015-8158)\nJonathan Gardner discovered that missing input sanitising in ntpq\n may result in denial of service.\n* [CVE-2016-1547](https://security-tracker.debian.org/tracker/CVE-2016-1547)\nStephen Gray and Matthew van Gundy discovered that incorrect handling\n of crypto NAK packets my result in denial of service.\n* [CVE-2016-1548](https://security-tracker.debian.org/tracker/CVE-2016-1548)\nJonathan Gardner and Miroslav Lichvar discovered that ntpd clients\n could be forced to change from basic client/server mode to interleaved\n symmetric mode, preventing time synchronisation.\n* [CVE-2016-1550](https://security-tracker.debian.org/tracker/CVE-2016-1550)\nMatthew van Gundy, Stephen Gray and Loganaden Velvindron discovered\n that timing leaks in the the packet authentication code could result\n in recovery of a message digest.\n* [CVE-2016-2516](https://security-tracker.debian.org/tracker/CVE-2016-2516)\nYihan Lian discovered that duplicate IPs on unconfig directives will\n trigger an assert.\n* [CVE-2016-2518](https://security-tracker.debian.org/tracker/CVE-2016-2518)\nYihan Lian discovered that an OOB memory access could potentially\n crash ntpd.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:4.2.6.p5+dfsg-2+deb7u7.\n\n\nWe recommend that you upgrade your ntp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-559-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-559"
 		}
 	]
 }

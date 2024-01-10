@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-608-1",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2004-12-14T00:00:00Z",
 	"published": "2004-12-14T00:00:00Z",
 	"related": [
 		"CVE-2004-0999",
 		"CVE-2004-1095"
 	],
 	"summary": "zgv - integer overflows, unsanitised input",
-	"details": "\nSeveral vulnerabilities have been discovered in zgv, an SVGAlib\ngraphics viewer for the i386 architecture. The Common Vulnerabilities\nand Exposures Project identifies the following problems:\n\n\n* [CAN-2004-1095](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1095)\n\"infamous41md\" discovered multiple\n integer overflows in zgv. Remote exploitation of an integer\n overflow vulnerability could allow the execution of arbitrary\n code.\n\n* [CAN-2004-0999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0999)\nMikulas Patocka discovered that malicious multiple-image (e.g.\n animated) GIF images can cause a segmentation fault in zgv.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 5.5-3woody1.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your zgv package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-608-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-608"
 		}
 	]
 }

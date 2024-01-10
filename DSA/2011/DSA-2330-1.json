@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2330-1",
-	"modified": "2023-10-16T00:11:09.047324Z",
+	"modified": "2024-01-09T20:25:41.824258Z",
 	"published": "2011-10-27T00:00:00Z",
 	"related": [
 		"CVE-2011-4625"
 	],
 	"summary": "simplesamlphp - several",
-	"details": "\nIssues were found in the handling of XML encryption in simpleSAMLphp,\nan application for federated authentication. The following two issues\nhave been addressed:\n\n\nIt may be possible to use an SP as an oracle to decrypt encrypted\nmessages sent to that SP.\n\n\nIt may be possible to use the SP as a key oracle which can be used\nto forge messages from that SP by issuing 300000-2000000 queries to\nthe SP. \n\n\nThe oldstable distribution (lenny) does not contain simplesamlphp.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.6.3-2.\n\n\nThe testing distribution (wheezy) will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.8.2-1.\n\n\nWe recommend that you upgrade your simplesamlphp packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2330-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2330"
 		}
 	]
 }

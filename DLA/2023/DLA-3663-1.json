@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3663-1",
-	"modified": "2023-11-24T15:15:30.893768Z",
+	"modified": "2024-01-09T20:33:43.477196Z",
 	"published": "2023-11-24T00:00:00Z",
 	"related": [
 		"CVE-2023-41913"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nIt was discovered that there was a potential buffer overflow in strongswan,\na IPsec-based VPN (Virtual Private Network) server.\n\n\nA vulnerability related to processing public Diffie-Hellman key exchange\nvalues could have resulted in a buffer overflow and potentially remote code\nexecution as a result.\n\n\n* [CVE-2023-41913](https://security-tracker.debian.org/tracker/CVE-2023-41913)\nA vulnerability in charon-tkm related to processing DH public values was\n discovered in strongSwan that can result in a buffer overflow and\n potentially remote code execution. All versions since 5.3.0 are\n affected.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n5.7.2-1+deb10u4.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3663-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3663"
 		}
 	]
 }

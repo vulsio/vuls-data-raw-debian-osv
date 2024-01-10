@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-458-1",
-	"modified": "2023-06-28T06:23:14.916214Z",
+	"modified": "2024-01-09T20:33:48.910329Z",
 	"published": "2016-05-05T00:00:00Z",
 	"related": [
 		"CVE-2016-4352"
 	],
 	"summary": "mplayer2 - security update",
-	"details": "\nMplayer2 is crashing when playing a fuzzed gif file. The gif demuxes\nassumes in many places that width\\*height is <= INT\\_MAX; this might\nnot be true. Fixed by validating the picture size.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in mplayer2 version 2.0-554-gf63dbad-1+deb7u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-458-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-458"
 		}
 	]
 }

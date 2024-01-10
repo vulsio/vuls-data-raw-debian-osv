@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2943-1",
-	"modified": "2023-10-16T00:11:39.084557Z",
+	"modified": "2024-01-09T20:21:37.502013Z",
 	"published": "2014-06-01T00:00:00Z",
 	"related": [
 		"CVE-2014-0185",
@@ -10,7 +10,6 @@
 		"CVE-2014-2270"
 	],
 	"summary": "php5 - security update",
-	"details": "\nSeveral vulnerabilities were found in PHP, a general-purpose scripting\nlanguage commonly used for web application development:\n\n\n* [CVE-2014-0185](https://security-tracker.debian.org/tracker/CVE-2014-0185)\nThe default PHP FPM socket permission has been changed from 0666\n to 0660 to mitigate a security vulnerability \n ([\\\n CVE-2014-0185](https://security-tracker.debian.org/tracker/CVE-2014-0185)) in PHP FPM that allowed any local user to run a PHP code \n under the active user of FPM process via crafted FastCGI client.\n\n\nThe default Debian setup now correctly sets the listen.owner and\n listen.group to www-data:www-data in default php-fpm.conf. If you\n have more FPM instances or a webserver not running under www-data\n user you need to adjust the configuration of FPM pools in\n /etc/php5/fpm/pool.d/ so the accessing process has rights to\n access the socket.\n* [CVE-2014-0237](https://security-tracker.debian.org/tracker/CVE-2014-0237) / \n [CVE-2014-0238](https://security-tracker.debian.org/tracker/CVE-2014-0238)\nDenial of service in the CDF parser of the fileinfo module.\n* [CVE-2014-2270](https://security-tracker.debian.org/tracker/CVE-2014-2270)\nDenial of service in the fileinfo module.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 5.4.4-14+deb7u10.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2943-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2943"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3291-1",
-	"modified": "2023-06-28T06:26:55.539239Z",
+	"modified": "2024-01-09T20:33:27.398183Z",
 	"published": "2023-01-29T00:00:00Z",
 	"related": [
 		"CVE-2021-23434",
 		"CVE-2021-3805"
 	],
 	"summary": "node-object-path - security update",
-	"details": "\nIt was discovered that node-object-path, a Node.js module to access deep\nobject properties using dot-separated paths, was vulnerable to prototype\npollution.\n\n\n* [CVE-2021-3805](https://security-tracker.debian.org/tracker/CVE-2021-3805)\nPrototype pollution vulnerability in the `del()`, `empty()`,\n `push()` and `insert()` functions when using the inherited props\n mode (e.g. when a new `object-path` instance is created with the\n `includeInheritedProps` option set to `true` or when using the\n `withInheritedProps` default instance).\n* [CVE-2021-23434](https://security-tracker.debian.org/tracker/CVE-2021-23434)\nA type confusion vulnerability can lead to a bypass of the\n [CVE-2020-15256](https://security-tracker.debian.org/tracker/CVE-2020-15256) fix when the path components used in the path\n parameter are arrays, because the `===` operator returns always `false`\n when the type of the operands is different.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.11.4-2+deb10u2.\n\n\nWe recommend that you upgrade your node-object-path packages.\n\n\nFor the detailed security status of node-object-path please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-object-path>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3291-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3291"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-455-1",
-	"modified": "2023-06-28T06:21:31.973385Z",
+	"modified": "2024-01-09T20:33:48.503957Z",
 	"published": "2016-05-03T00:00:00Z",
 	"related": [
 		"CVE-2014-2286",
@@ -12,7 +12,6 @@
 		"CVE-2015-3008"
 	],
 	"summary": "asterisk - security update",
-	"details": "\n* [CVE-2014-6610](https://security-tracker.debian.org/tracker/CVE-2014-6610)\nAsterisk Open Source 11.x before 11.12.1 and 12.x before 12.5.1\n and Certified Asterisk 11.6 before 11.6-cert6, when using the\n res\\_fax\\_spandsp module, allows remote authenticated users to\n cause a denial of service (crash) via an out of call message,\n which is not properly handled in the ReceiveFax dialplan\n application.\n* [CVE-2014-4046](https://security-tracker.debian.org/tracker/CVE-2014-4046)\nAsterisk Open Source 11.x before 11.10.1 and 12.x before 12.3.1\n and Certified Asterisk 11.6 before 11.6-cert3 allows remote\n authenticated Manager users to execute arbitrary shell commands\n via a MixMonitor action.\n* [CVE-2014-2286](https://security-tracker.debian.org/tracker/CVE-2014-2286)\nmain/http.c in Asterisk Open Source 1.8.x before 1.8.26.1, 11.8.x\n before 11.8.1, and 12.1.x before 12.1.1, and Certified Asterisk\n 1.8.x before 1.8.15-cert5 and 11.6 before 11.6-cert2, allows remote\n attackers to cause a denial of service (stack consumption) and\n possibly execute arbitrary code via an HTTP request with a large\n number of Cookie headers.\n* [CVE-2014-8412](https://security-tracker.debian.org/tracker/CVE-2014-8412)\nThe (1) VoIP channel drivers, (2) DUNDi, and (3) Asterisk Manager\n Interface (AMI) in Asterisk Open Source 1.8.x before 1.8.32.1,\n 11.x before 11.14.1, 12.x before 12.7.1, and 13.x before 13.0.1\n and Certified Asterisk 1.8.28 before 1.8.28-cert3 and 11.6 before\n 11.6-cert8 allows remote attackers to bypass the ACL restrictions\n via a packet with a source IP that does not share the address family\n as the first ACL entry.\n* [CVE-2014-8418](https://security-tracker.debian.org/tracker/CVE-2014-8418)\nThe DB dialplan function in Asterisk Open Source 1.8.x before 1.8.32,\n 11.x before 11.1.4.1, 12.x before 12.7.1, and 13.x before 13.0.1 and\n Certified Asterisk 1.8 before 1.8.28-cert8 and 11.6 before 11.6-cert8\n allows remote authenticated users to gain privileges via a call from\n an external protocol, as demonstrated by the AMI protocol.\n* [CVE-2015-3008](https://security-tracker.debian.org/tracker/CVE-2015-3008)\nAsterisk Open Source 1.8 before 1.8.32.3, 11.x before 11.17.1, 12.x\n before 12.8.2, and 13.x before 13.3.2 and Certified Asterisk 1.8.28\n before 1.8.28-cert5, 11.6 before 11.6-cert11, and 13.1 before\n 13.1-cert2, when registering a SIP TLS device, does not properly\n handle a null byte in a domain name in the subject's Common Name (CN)\n field of an X.509 certificate, which allows man-in-the-middle attackers\n to spoof arbitrary SSL servers via a crafted certificate issued by a\n legitimate Certification Authority.\n\n\nFor Debian 7 Wheezy, these issues have been fixed in asterisk version 1:1.8.13.1~dfsg1-3+deb7u4\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-455-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-455"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1619-1",
-	"modified": "2023-10-16T00:05:32.638160Z",
+	"modified": "2024-01-09T20:20:55.660340Z",
 	"published": "2008-07-27T00:00:00Z",
 	"related": [
 		"CVE-2008-1447",
@@ -9,7 +9,6 @@
 		"CVE-2008-4126"
 	],
 	"summary": "python-dns - DNS response spoofing",
-	"details": "\nMultiple weaknesses have been identified in PyDNS, a DNS client\nimplementation for the Python language. Dan Kaminsky identified a\npractical vector of DNS response spoofing and cache poisoning,\nexploiting the limited entropy in a DNS transaction ID and lack of\nUDP source port randomization in many DNS implementations. Scott\nKitterman noted that python-dns is vulnerable to this predictability,\nas it randomizes neither its transaction ID nor its source port.\nTaken together, this lack of entropy leaves applications using\npython-dns to perform DNS queries highly susceptible to response\nforgery.\n\n\nThe Common Vulnerabilities and Exposures project identifies this\nclass of weakness as [CVE-2008-1447](https://security-tracker.debian.org/tracker/CVE-2008-1447)\nand this specific instance in PyDNS as [CVE-2008-4099](https://security-tracker.debian.org/tracker/CVE-2008-4099).\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.3.0-5.2+etch1.\n\n\nWe recommend that you upgrade your python-dns package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1619-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1619"
 		}
 	]
 }

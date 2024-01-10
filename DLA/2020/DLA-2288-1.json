@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2288-1",
-	"modified": "2023-06-28T06:25:11.429266Z",
-	"published": "2020-07-26T00:00:00Z",
+	"modified": "2024-01-09T20:32:24.608596Z",
+	"published": "2020-07-25T00:00:00Z",
 	"related": [
 		"CVE-2017-9503",
 		"CVE-2019-12068",
@@ -19,7 +19,6 @@
 		"CVE-2020-8608"
 	],
 	"summary": "qemu - security update",
-	"details": "\nThe following CVE(s) were reported against src:qemu:\n\n\n* [CVE-2017-9503](https://security-tracker.debian.org/tracker/CVE-2017-9503)\nQEMU (aka Quick Emulator), when built with MegaRAID SAS 8708EM2\n Host Bus Adapter emulation support, allows local guest OS\n privileged users to cause a denial of service (NULL pointer\n dereference and QEMU process crash) via vectors involving megasas\n command processing.\n* [CVE-2019-12068](https://security-tracker.debian.org/tracker/CVE-2019-12068)\nIn QEMU 1:4.1-1 (1:2.8+dfsg-6+deb9u8), when executing script in\n lsi\\_execute\\_script(), the LSI scsi adapter emulator advances\n 's->dsp' index to read next opcode. This can lead to an infinite\n loop if the next opcode is empty. Move the existing loop exit\n after 10k iterations so that it covers no-op opcodes as well.\n* [CVE-2019-20382](https://security-tracker.debian.org/tracker/CVE-2019-20382)\nQEMU 4.1.0 has a memory leak in zrle\\_compress\\_data in\n ui/vnc-enc-zrle.c during a VNC disconnect operation because libz\n is misused, resulting in a situation where memory allocated in\n deflateInit2 is not freed in deflateEnd.\n* [CVE-2020-1983](https://security-tracker.debian.org/tracker/CVE-2020-1983)\nA use after free vulnerability in ip\\_reass() in ip\\_input.c of\n libslirp 4.2.0 and prior releases allows crafted packets to cause\n a denial of service.\n* [CVE-2020-8608](https://security-tracker.debian.org/tracker/CVE-2020-8608)\nIn libslirp 4.1.0, as used in QEMU 4.2.0, tcp\\_subr.c misuses\n snprintf return values, leading to a buffer overflow in later\n code.\n* [CVE-2020-10756](https://security-tracker.debian.org/tracker/CVE-2020-10756)\nAn out-of-bounds read vulnerability was found in the SLiRP\n networking implementation of the QEMU emulator. This flaw occurs\n in the icmp6\\_send\\_echoreply() routine while replying to an ICMP\n echo request, also known as ping. This flaw allows a malicious\n guest to leak the contents of the host memory, resulting in\n possible information disclosure. This flaw affects versions of\n libslirp before 4.3.1.\n* [CVE-2020-13361](https://security-tracker.debian.org/tracker/CVE-2020-13361)\nIn QEMU 5.0.0 and earlier, es1370\\_transfer\\_audio in\n hw/audio/es1370.c does not properly validate the frame count,\n which allows guest OS users to trigger an out-of-bounds access\n during an es1370\\_write() operation.\n* [CVE-2020-13362](https://security-tracker.debian.org/tracker/CVE-2020-13362)\nIn QEMU 5.0.0 and earlier, megasas\\_lookup\\_frame in\n hw/scsi/megasas.c has an out-of-bounds read via a crafted\n reply\\_queue\\_head field from a guest OS user.\n* [CVE-2020-13659](https://security-tracker.debian.org/tracker/CVE-2020-13659)\naddress\\_space\\_map in exec.c in QEMU 4.2.0 can trigger a NULL\n pointer dereference related to BounceBuffer.\n* [CVE-2020-13754](https://security-tracker.debian.org/tracker/CVE-2020-13754)\nhw/pci/msix.c in QEMU 4.2.0 allows guest OS users to trigger\n an out-of-bounds access via a crafted address in an msi-x mmio\n operation.\n* [CVE-2020-13765](https://security-tracker.debian.org/tracker/CVE-2020-13765)\nrom\\_copy() in hw/core/loader.c in QEMU 4.1.0 does not validate\n the relationship between two addresses, which allows attackers\n to trigger an invalid memory copy operation.\n* [CVE-2020-15863](https://security-tracker.debian.org/tracker/CVE-2020-15863)\nStack-based overflow in xgmac\\_enet\\_send() in hw/net/xgmac.c.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:2.8+dfsg-6+deb9u10.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFor the detailed security status of qemu please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/qemu>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2288-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2288"
 		}
 	]
 }

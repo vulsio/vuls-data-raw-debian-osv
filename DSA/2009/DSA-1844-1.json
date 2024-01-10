@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1844-1",
-	"modified": "2023-10-16T00:10:39.346302Z",
+	"modified": "2024-01-09T20:22:32.888639Z",
 	"published": "2009-07-28T00:00:00Z",
 	"related": [
 		"CVE-2009-1385",
@@ -15,7 +15,6 @@
 		"CVE-2009-2407"
 	],
 	"summary": "linux-2.6.24 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2009-1385](https://security-tracker.debian.org/tracker/CVE-2009-1385)\nNeil Horman discovered a missing fix from the e1000 network driver.\n A remote user may cause a denial of service by way of a kernel panic\n triggered by specially crafted frame sizes.\n* [CVE-2009-1389](https://security-tracker.debian.org/tracker/CVE-2009-1389)\nMichael Tokarev discovered an issue in the r8169 network driver.\n Remote users on the same LAN may cause a denial of service by way\n of a kernel panic triggered by receiving a large size frame.\n* [CVE-2009-1630](https://security-tracker.debian.org/tracker/CVE-2009-1630)\nFrank Filz discovered that local users may be able to execute\n files without execute permission when accessed via an nfs4 mount.\n* [CVE-2009-1633](https://security-tracker.debian.org/tracker/CVE-2009-1633)\nJeff Layton and Suresh Jayaraman fixed several buffer overflows in\n the CIFS filesystem which allow remote servers to cause memory\n corruption.\n* [CVE-2009-1895](https://security-tracker.debian.org/tracker/CVE-2009-1895)\nJulien Tinnes and Tavis Ormandy reported an issue in the Linux\n personality code. Local users can take advantage of a setuid\n binary that can either be made to dereference a NULL pointer or\n drop privileges and return control to the user. This allows a\n user to bypass mmap\\_min\\_addr restrictions which can be exploited\n to execute arbitrary code.\n* [CVE-2009-1914](https://security-tracker.debian.org/tracker/CVE-2009-1914)\nMikulas Patocka discovered an issue in sparc64 kernels that allows\n local users to cause a denial of service (crash) by reading the\n /proc/iomem file.\n* [CVE-2009-1961](https://security-tracker.debian.org/tracker/CVE-2009-1961)\nMiklos Szeredi reported an issue in the ocfs2 filesystem. Local\n users can create a denial of service (filesystem deadlock) using\n a particular sequence of splice system calls.\n* [CVE-2009-2406](https://security-tracker.debian.org/tracker/CVE-2009-2406)\n[CVE-2009-2407](https://security-tracker.debian.org/tracker/CVE-2009-2407)\nRamon de Carvalho Valle discovered two issues with the eCryptfs\n layered filesystem using the fsfuzzer utility. A local user with\n permissions to perform an eCryptfs mount may modify the contents\n of a eCryptfs file, overflowing the stack and potentially gaining\n elevated privileges.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 2.6.24-6~etchnhalf.8etch2.\n\n\nWe recommend that you upgrade your linux-2.6.24 packages.\n\n\nNote: Debian 'etch' includes linux kernel packages based upon both the\n2.6.18 and 2.6.24 linux releases. All known security issues are\ncarefully tracked against both packages and both packages will receive\nsecurity updates until security support for Debian 'etch'\nconcludes. However, given the high frequency at which low-severity\nsecurity issues are discovered in the kernel and the resource\nrequirements of doing an update, lower severity 2.6.18 and 2.6.24\nupdates will typically release in a staggered or \"leap-frog\" fashion.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1844-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1844"
 		}
 	]
 }

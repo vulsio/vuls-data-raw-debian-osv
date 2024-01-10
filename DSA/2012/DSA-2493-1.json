@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2493-1",
-	"modified": "2023-10-16T00:05:58.450168Z",
+	"modified": "2024-01-09T20:22:56.520087Z",
 	"published": "2012-06-12T00:00:00Z",
 	"related": [
 		"CVE-2012-2947",
 		"CVE-2012-2948"
 	],
 	"summary": "asterisk - denial of service",
-	"details": "\nSeveral vulnerabilities were discovered in Asterisk, a PBX and\ntelephony toolkit.\n\n\n* [CVE-2012-2947](https://security-tracker.debian.org/tracker/CVE-2012-2947)\nThe IAX2 channel driver allows remote attackers to cause a\n denial of service (daemon crash) by placing a call on hold\n (when a certain mohinterpret setting is enabled).\n* [CVE-2012-2948](https://security-tracker.debian.org/tracker/CVE-2012-2948)\nThe Skinny channel driver allows remote authenticated users to\n cause a denial of service (NULL pointer dereference and daemon\n crash) by closing a connection in off-hook mode.\n\n\nIn addition, it was discovered that Asterisk does not set the\nalwaysauthreject option by default in the SIP channel driver. This\nallows remote attackers to observe a difference in response behavior\nand check for the presence of account names. ([CVE-2011-2666](https://security-tracker.debian.org/tracker/CVE-2011-2666)) System\nadministrators concerned by this user enumerating vulnerability should\nenable the alwaysauthreject option in the configuration. We do not\nplan to change the default setting in the stable version\n(Asterisk 1.6) in order to preserve backwards compatibility.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:1.6.2.9-2+squeeze6.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 1:1.8.13.0~dfsg-1.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2493-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2493"
 		}
 	]
 }

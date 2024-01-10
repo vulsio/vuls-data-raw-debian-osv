@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3501-1",
-	"modified": "2023-07-25T05:15:19.425406Z",
+	"modified": "2024-01-09T20:33:31.625721Z",
 	"published": "2023-07-25T00:00:00Z",
 	"related": [
 		"CVE-2023-33863",
@@ -9,7 +9,6 @@
 		"CVE-2023-33865"
 	],
 	"summary": "renderdoc - security update",
-	"details": "\nMultiple security issues were discovered in renderdoc a stand-alone\ngraphics debugging tool, which potentially allows a remote attacker\nto execute arbitrary code.\n\n\n* [CVE-2023-33863](https://security-tracker.debian.org/tracker/CVE-2023-33863)\nan integer overflow that results in a heap-based buffer overflow\n that might be exploitable by a remote attacker to execute arbitrary\n code on the machine that runs RenderDoc\n* [CVE-2023-33864](https://security-tracker.debian.org/tracker/CVE-2023-33864)\nan integer underflow that results in a heap-based buffer overflow\n that might be exploitable by a remote attacker to execute arbitrary\n code on the machine that runs RenderDoc.\n* [CVE-2023-33865](https://security-tracker.debian.org/tracker/CVE-2023-33865)\na symlink vulnerability that might be exploitable by a unprivileged\n local attacker to obtain the privileges of the user who runs\n RenderDoc.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.2+dfsg-2+deb10u1.\n\n\nWe recommend that you upgrade your renderdoc packages.\n\n\nFor the detailed security status of renderdoc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/renderdoc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3501-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3501"
 		}
 	]
 }

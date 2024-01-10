@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5391-1",
-	"modified": "2023-10-16T00:21:18.252418Z",
+	"modified": "2024-01-09T20:29:37.110362Z",
 	"published": "2023-04-20T00:00:00Z",
 	"related": [
 		"CVE-2023-28484",
 		"CVE-2023-29469"
 	],
 	"summary": "libxml2 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in libxml2, a library providing\nsupport to read, modify and write XML and HTML files.\n\n\n* [CVE-2023-28484](https://security-tracker.debian.org/tracker/CVE-2023-28484)\nA NULL pointer dereference flaw when parsing invalid XML schemas may\n result in denial of service.\n* [CVE-2023-29469](https://security-tracker.debian.org/tracker/CVE-2023-29469)\nIt was reported that when hashing empty strings which aren't\n null-terminated, xmlDictComputeFastKey could produce inconsistent\n results, which may lead to various logic or memory errors.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 2.9.10+dfsg-6.7+deb11u4.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFor the detailed security status of libxml2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/libxml2>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5391-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5391"
 		}
 	]
 }

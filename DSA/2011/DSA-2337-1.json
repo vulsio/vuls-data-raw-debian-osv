@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2337-1",
-	"modified": "2023-10-16T00:11:09.291543Z",
+	"modified": "2024-01-09T20:21:25.549888Z",
 	"published": "2011-11-06T00:00:00Z",
 	"related": [
 		"CVE-2011-1166",
@@ -10,7 +10,6 @@
 		"CVE-2011-3262"
 	],
 	"summary": "xen - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities were discovered in the Xen virtual machine\nhypervisor.\n\n\n* [CVE-2011-1166](https://security-tracker.debian.org/tracker/CVE-2011-1166)\nA 64-bit guest can get one of its vCPUs into non-kernel\n mode without first providing a valid non-kernel pagetable,\n thereby locking up the host system.\n* [CVE-2011-1583](https://security-tracker.debian.org/tracker/CVE-2011-1583), [CVE-2011-3262](https://security-tracker.debian.org/tracker/CVE-2011-3262)\nLocal users can cause a denial of service and possibly execute\n arbitrary code via a crafted paravirtualised guest kernel image.\n* [CVE-2011-1898](https://security-tracker.debian.org/tracker/CVE-2011-1898)\nWhen using PCI passthrough on Intel VT-d chipsets that do not\n have interrupt remapping, guest OS users can gain host OS\n privileges by writing to the interrupt injection registers.\n\n\nThe oldstable distribution (lenny) contains a different version of Xen\nnot affected by these problems.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4.0.1-4.\n\n\nFor the testing (wheezy) and unstable distribution (sid), this problem\nhas been fixed in version 4.1.1-1.\n\n\nWe recommend that you upgrade your xen packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2337-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2337"
 		}
 	]
 }

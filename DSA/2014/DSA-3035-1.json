@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3035-1",
-	"modified": "2023-10-16T00:11:43.971503Z",
+	"modified": "2024-01-09T20:24:14.744092Z",
 	"published": "2014-09-25T00:00:00Z",
 	"related": [
 		"CVE-2014-7169",
@@ -9,7 +9,6 @@
 		"CVE-2014-7187"
 	],
 	"summary": "bash - security update",
-	"details": "\nTavis Ormandy discovered that the patch applied to fix [CVE-2014-6271](https://security-tracker.debian.org/tracker/CVE-2014-6271)\nreleased in DSA-3032-1 for bash, the GNU Bourne-Again Shell, was\nincomplete and could still allow some characters to be injected into\nanother environment ([CVE-2014-7169](https://security-tracker.debian.org/tracker/CVE-2014-7169)). With this update prefix and suffix\nfor environment variable names which contain shell functions are added\nas hardening measure.\n\n\nAdditionally two out-of-bounds array accesses in the bash parser are\nfixed which were revealed in Red Hat's internal analysis for these\nissues and also independently reported by Todd Sabin.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 4.2+dfsg-0.1+deb7u3.\n\n\nWe recommend that you upgrade your bash packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3035-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3035"
 		}
 	]
 }

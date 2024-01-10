@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-244",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-01-27T00:00:00Z",
 	"published": "2003-01-27T00:00:00Z",
 	"related": [
 		"CVE-2003-0037"
 	],
 	"summary": "noffle - buffer overflows",
-	"details": "\nDan Jacobson noticed a problem in noffle, an offline news server, that\nleads to a segmentation fault. It is not yet clear whether this\nproblem is exploitable. However, if it is, a remote attacker could\ntrigger arbitrary code execution under the user that calls noffle,\nprobably news.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.0.1-1.1.\n\n\nThe old stable distribution (potato) does not contain a noffle\npackage.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.1.2-1.\n\n\nWe recommend that you upgrade your noffle package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-244.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-244"
 		}
 	]
 }

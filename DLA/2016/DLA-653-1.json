@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-653-1",
-	"modified": "2023-06-28T06:27:04.632023Z",
+	"modified": "2024-01-09T20:33:52.449033Z",
 	"published": "2016-10-11T00:00:00Z",
 	"related": [
 		"CVE-2016-7161",
@@ -9,7 +9,6 @@
 		"CVE-2016-7908"
 	],
 	"summary": "qemu-kvm - security update",
-	"details": "\nMultiple vulnerabilities have been found in qemu-kvm:\n\n\n* [CVE-2016-7161](https://security-tracker.debian.org/tracker/CVE-2016-7161)\nHeap-based buffer overflow in the .receive callback of xlnx.xps-ethernetlite\n in qemu-kvm allows attackers to execute arbitrary code on the QEMU host via\n a large ethlite packet.\n* [CVE-2016-7170](https://security-tracker.debian.org/tracker/CVE-2016-7170)\nThe vmsvga\\_fifo\\_run function in hw/display/vmware\\_vga.c in qemu-kvm is\n vulnerable to an OOB memory access.\n* [CVE-2016-7908](https://security-tracker.debian.org/tracker/CVE-2016-7908)\nThe mcf\\_fec\\_do\\_tx function in hw/net/mcf\\_fec.c in qemu-kvm does not\n properly limit the buffer descriptor count when transmitting packets, which\n allows local guest OS administrators to cause a denial of service (infinite\n loop and QEMU process crash) via vectors involving a buffer descriptor with\n a length of 0 and crafted values in bd.flags.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u16.\n\n\nWe recommend that you upgrade your qemu-kvm packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-653-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-653"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-836-1",
-	"modified": "2023-10-16T00:24:49.280422Z",
+	"modified": "2024-01-09T20:34:09.599898Z",
 	"published": "2005-10-01T00:00:00Z",
 	"related": [
 		"CVE-2005-2960",
 		"CVE-2005-3137"
 	],
 	"summary": "cfengine2 - insecure temporary files",
-	"details": "\nJavier FernĂĄndez-Sanguino PeĂąa discovered insecure temporary file use\nin cfengine2, a tool for configuring and maintaining networked\nmachines, that can be exploited by a symlink attack to overwrite\narbitrary files owned by the user executing cfengine, which is\nprobably root.\n\n\nThe oldstable distribution (woody) is not affected by this problem.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.1.14-1sarge1.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your cfengine2 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-836-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-836"
 		}
 	]
 }

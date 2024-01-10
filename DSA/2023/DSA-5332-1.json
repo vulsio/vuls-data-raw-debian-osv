@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5332-1",
-	"modified": "2023-10-16T00:21:11.731932Z",
+	"modified": "2024-01-09T20:29:32.401386Z",
 	"published": "2023-01-29T00:00:00Z",
 	"related": [
 		"CVE-2022-23521",
@@ -12,7 +12,6 @@
 		"CVE-2022-41903"
 	],
 	"summary": "git - security update",
-	"details": "\nMultiple issues were found in Git, a distributed revision control system.\nAn attacker may trigger remote code execution, cause local users into\nexecuting arbitrary commands, leak information from the local filesystem,\nand bypass restricted shell.\n\n\nThis update includes two changes of behavior that may affect certain setup:\n - It stops when directory traversal changes ownership from the current\n user while looking for a top-level git directory, a user could make an\n exception by using the new safe.directory configuration.\n - The default of protocol.file.allow has been changed from \"always\" to\n \"user\".\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 1:2.30.2-1+deb11u1.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFor the detailed security status of git please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/git>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5332-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5332"
 		}
 	]
 }

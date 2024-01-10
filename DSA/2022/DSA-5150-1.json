@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5150-1",
-	"modified": "2023-10-16T00:20:42.652900Z",
+	"modified": "2024-01-09T20:26:37.011246Z",
 	"published": "2022-05-28T00:00:00Z",
 	"related": [
 		"CVE-2022-24903"
 	],
 	"summary": "rsyslog - security update",
-	"details": "\nPeter Agten discovered that several modules for TCP syslog reception in\nrsyslog, a system and kernel logging daemon, have buffer overflow flaws\nwhen octet-counted framing is used, which could result in denial of\nservice or potentially the execution of arbitrary code.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 8.1901.0-1+deb10u2.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 8.2102.0-2+deb11u1.\n\n\nWe recommend that you upgrade your rsyslog packages.\n\n\nFor the detailed security status of rsyslog please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/rsyslog](https://security-tracker.debian.org/tracker/rsyslog)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5150-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5150"
 		}
 	]
 }

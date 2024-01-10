@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-342",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-07-07T00:00:00Z",
 	"published": "2003-07-07T00:00:00Z",
 	"related": [
 		"CVE-2003-0538"
 	],
 	"summary": "mozart - unsafe mailcap configuration",
-	"details": "\nmozart, a development platform based on the Oz language, includes MIME\nconfiguration data which specifies that Oz applications should be\npassed to the Oz interpreter for execution. This means that file\nmanagers, web browsers, and other programs which honor the mailcap\nfile could automatically execute Oz programs downloaded from untrusted\nsources. Thus, a malicious Oz program could execute arbitrary code\nunder the uid of a user running a MIME-aware client program if the\nuser selected a file (for example, choosing a link in a web browser).\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.2.3.20011204-3woody1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.2.5.20030212-2.\n\n\nWe recommend that you update your mozart package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-342.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-342"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1628-1",
-	"modified": "2023-10-16T00:05:34.537903Z",
+	"modified": "2024-01-09T20:27:31.513110Z",
 	"published": "2008-08-10T00:00:00Z",
 	"related": [
 		"CVE-2008-3337"
 	],
 	"summary": "pdns - DNS spoofing",
-	"details": "\nBrian Dowling discovered that the PowerDNS authoritative name server\ndoes not respond to DNS queries which contain certain characters,\nincreasing the risk of successful DNS spoofing ([CVE-2008-3337](https://security-tracker.debian.org/tracker/CVE-2008-3337)). This\nupdate changes PowerDNS to respond with SERVFAIL responses instead.\n\n\nFor the stable distribution (etch), this problem has been fixed in version \n2.9.20-8+etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.9.21.1-1.\n\n\nWe recommend that you upgrade your pdns package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1628-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1628"
 		}
 	]
 }

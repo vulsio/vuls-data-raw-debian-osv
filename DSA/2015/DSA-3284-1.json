@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3284-1",
-	"modified": "2023-10-16T00:11:54.165587Z",
+	"modified": "2024-01-09T20:16:59.465043Z",
 	"published": "2015-06-13T00:00:00Z",
 	"related": [
 		"CVE-2015-3209",
@@ -12,7 +12,6 @@
 		"CVE-2015-4106"
 	],
 	"summary": "qemu - security update",
-	"details": "\nSeveral vulnerabilities were discovered in qemu, a fast processor\nemulator.\n\n\n* [CVE-2015-3209](https://security-tracker.debian.org/tracker/CVE-2015-3209)\nMatt Tait of Google's Project Zero security team discovered a flaw\n in the way QEMU's AMD PCnet Ethernet emulation handles multi-TMD\n packets with a length above 4096 bytes. A privileged guest user in a\n guest with an AMD PCNet ethernet card enabled can potentially use\n this flaw to execute arbitrary code on the host with the privileges\n of the hosting QEMU process.\n* [CVE-2015-4037](https://security-tracker.debian.org/tracker/CVE-2015-4037)\nKurt Seifried of Red Hat Product Security discovered that QEMU's\n user mode networking stack uses predictable temporary file names\n when the -smb option is used. An unprivileged user can use this flaw\n to cause a denial of service.\n* [CVE-2015-4103](https://security-tracker.debian.org/tracker/CVE-2015-4103)\nJan Beulich of SUSE discovered that the QEMU Xen code does not\n properly restrict write access to the host MSI message data field,\n allowing a malicious guest to cause a denial of service.\n* [CVE-2015-4104](https://security-tracker.debian.org/tracker/CVE-2015-4104)\nJan Beulich of SUSE discovered that the QEMU Xen code does not\n properly restrict access to PCI MSI mask bits, allowing a malicious\n guest to cause a denial of service.\n* [CVE-2015-4105](https://security-tracker.debian.org/tracker/CVE-2015-4105)\nJan Beulich of SUSE reported that the QEMU Xen code enables\n logging for PCI MSI-X pass-through error messages, allowing a\n malicious guest to cause a denial of service.\n* [CVE-2015-4106](https://security-tracker.debian.org/tracker/CVE-2015-4106)\nJan Beulich of SUSE discovered that the QEMU Xen code does not\n properly restrict write access to the PCI config space for certain\n PCI pass-through devices, allowing a malicious guest to cause a\n denial of service, obtain sensitive information or potentially\n execute arbitrary code.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.1.2+dfsg-6a+deb7u8. Only [CVE-2015-3209](https://security-tracker.debian.org/tracker/CVE-2015-3209) and [CVE-2015-4037](https://security-tracker.debian.org/tracker/CVE-2015-4037)\naffect oldstable.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1:2.1+dfsg-12+deb8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:2.3+dfsg-6.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3284-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3284"
 		}
 	]
 }

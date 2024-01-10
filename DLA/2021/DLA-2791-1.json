@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2791-1",
-	"modified": "2023-06-28T06:21:23.314239Z",
-	"published": "2021-10-26T00:00:00Z",
+	"modified": "2024-01-09T20:32:56.903509Z",
+	"published": "2021-10-23T00:00:00Z",
 	"related": [
 		"CVE-2021-42096",
 		"CVE-2021-42097"
 	],
 	"summary": "mailman - security update",
-	"details": "\nIt was discovered that there was a potential remote privilege escalation\nvulnerability in the Mailman mailing-list manager. Some CSRF token values were\nderived from the admin password, and that could have been used to conductg a\nbrute-force attack against that password.\n\n\n* [CVE-2021-42096](https://security-tracker.debian.org/tracker/CVE-2021-42096)\n &\n [CVE-2021-42097](https://security-tracker.debian.org/tracker/CVE-2021-42097)\nGNU Mailman before 2.1.35 may allow remote Privilege Escalation. A\n certain csrf\\_token value is derived from the admin password, and may be\n useful in conducting a brute-force attack against that password.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1:2.1.23-1+deb9u7.\n\n\nWe recommend that you upgrade your mailman packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2791-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2791"
 		}
 	]
 }

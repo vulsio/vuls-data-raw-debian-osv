@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2656-1",
-	"modified": "2023-10-16T00:11:23.739747Z",
-	"published": "2013-03-30T00:00:00Z",
+	"modified": "2024-01-09T20:27:52.312417Z",
+	"published": "2013-03-29T00:00:00Z",
 	"related": [
 		"CVE-2013-2266"
 	],
 	"summary": "bind9 - denial of service",
-	"details": "\nMatthew Horsfall of Dyn, Inc. discovered that BIND, a DNS server, is\nprone to a denial of service vulnerability. A remote attacker could use\nthis flaw to send a specially-crafted DNS query to named that, when\nprocessed, would cause named to use an excessive amount of memory, or\npossibly crash.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:9.7.3.dfsg-1~squeeze10.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1:9.8.4.dfsg.P1-6+nmu1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:9.8.4.dfsg.P1-6+nmu1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2656-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2656"
 		}
 	]
 }

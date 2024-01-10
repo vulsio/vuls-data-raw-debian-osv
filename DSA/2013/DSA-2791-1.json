@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2791-1",
-	"modified": "2023-10-16T00:11:31.435946Z",
+	"modified": "2024-01-09T20:25:48.468854Z",
 	"published": "2013-11-04T00:00:00Z",
 	"related": [
 		"CVE-2013-4510"
 	],
 	"summary": "tryton-client - missing input sanitization",
-	"details": "\nCedric Krier discovered that the Tryton client does not sanitize the\nfile extension supplied by the server when processing reports. As a\nresult, a malicious server could send a report with a crafted file\nextension that causes the client to write any local file to which the\nuser running the client has write access.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 1.6.1-1+deb6u1.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.2.3-1+deb7u1.\n\n\nWe recommend that you upgrade your tryton-client packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2791-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2791"
 		}
 	]
 }

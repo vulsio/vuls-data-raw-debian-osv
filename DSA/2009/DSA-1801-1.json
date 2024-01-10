@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1801-1",
-	"modified": "2023-10-16T00:08:02.554009Z",
+	"modified": "2024-01-09T20:27:34.381244Z",
 	"published": "2009-05-19T00:00:00Z",
 	"related": [
 		"CVE-2009-0159",
 		"CVE-2009-1252"
 	],
 	"summary": "ntp - several vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in NTP, the Network\nTime Protocol reference implementation. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-0159](https://security-tracker.debian.org/tracker/CVE-2009-0159)\nA buffer overflow in ntpq allow a remote NTP server to create a\n denial of service attack or to execute arbitrary code via a crafted\n response.\n* [CVE-2009-1252](https://security-tracker.debian.org/tracker/CVE-2009-1252)\nA buffer overflow in ntpd allows a remote attacker to create a\n denial of service attack or to execute arbitrary code when the\n autokey functionality is enabled.\n\n\nFor the old stable distribution (etch), these problems have been fixed in\nversion 4.2.2.p4+dfsg-2etch3.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 4.2.4p4+dfsg-8lenny2.\n\n\nThe unstable distribution (sid) will be fixed soon.\n\n\nWe recommend that you upgrade your ntp package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1801-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1801"
 		}
 	]
 }

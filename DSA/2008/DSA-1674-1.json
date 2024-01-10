@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1674-1",
-	"modified": "2023-10-16T00:10:34.814171Z",
+	"modified": "2024-01-09T20:22:28.403120Z",
 	"published": "2008-11-30T00:00:00Z",
 	"related": [
 		"CVE-2008-5139"
 	],
 	"summary": "jailer - denial of service",
-	"details": "\nJavier Fernandez-Sanguino Pena discovered that updatejail, a component\nof the chroot maintenance tool Jailer, creates a predictable temporary\nfile name, which may lead to local denial of service through a symlink\nattack.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 0.4-9+etch1.\n\n\nFor the upcoming stable distribution (lenny) and the unstable\ndistribution (sid), this problem has been fixed in version 0.4-10.\n\n\nWe recommend that you upgrade your jailer package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1674-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1674"
 		}
 	]
 }

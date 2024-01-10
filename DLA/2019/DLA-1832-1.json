@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1832-1",
-	"modified": "2023-06-28T06:29:49.947494Z",
+	"modified": "2024-01-09T20:31:47.688959Z",
 	"published": "2019-06-24T00:00:00Z",
 	"related": [
 		"CVE-2019-10161",
 		"CVE-2019-10167"
 	],
 	"summary": "libvirt - security update",
-	"details": "\nIt was discovered that there were two vulnerabilities in libvirt, an\nabstraction API for various virtualisation mechanisms:\n\n* [CVE-2019-10161](https://security-tracker.debian.org/tracker/CVE-2019-10161)\nReadonly clients could use the API to specify an arbitrary path which\n would be accessed with the permissions of the libvirtd process. An attacker\n with access to the libvirtd socket could use this to probe the existence of\n arbitrary files, cause a denial of service or otherwise cause libvirtd to\n execute arbitrary programs.\n* [CVE-2019-10167](https://security-tracker.debian.org/tracker/CVE-2019-10167)\nAn arbitrary code execution vulnerability via the API where a\n user-specified binary used to probe the domain's capabilities. Read-only\n clients could specify an arbitrary path for this argument, causing libvirtd\n to execute a crafted executable with its own privileges.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.2.9-9+deb8u7.\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1832-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1832"
 		}
 	]
 }

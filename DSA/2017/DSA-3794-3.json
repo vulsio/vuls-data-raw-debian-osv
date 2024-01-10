@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3794-3",
-	"modified": "2023-10-16T00:06:27.195882Z",
-	"published": "2017-02-25T00:00:00Z",
+	"modified": "2024-01-09T20:22:02.758583Z",
+	"published": "2017-03-03T00:00:00Z",
 	"summary": "munin - regression update",
-	"details": "\nStevie Trujillo discovered a local file write vulnerability in munin, a\nnetwork-wide graphing framework, when CGI graphs are enabled. GET\nparameters are not properly handled, allowing to inject options into\nmunin-cgi-graph and overwriting any file accessible by the user\nrunning the cgi-process.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 2.0.25-1+deb8u1.\n\n\nWe recommend that you upgrade your munin packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3794-3.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3794"
 		}
 	]
 }

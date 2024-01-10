@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-977-1",
-	"modified": "2023-10-16T00:30:22.261681Z",
+	"modified": "2024-01-09T20:34:16.227022Z",
 	"published": "2006-02-16T00:00:00Z",
 	"related": [
 		"CVE-2006-0582",
 		"CVE-2006-0677"
 	],
 	"summary": "heimdal - several",
-	"details": "\nTwo vulnerabilities have been discovered in heimdal, a free\nimplementation of Kerberos 5. The Common Vulnerabilities and\nExposures project identifies the following vulnerabilities:\n\n\n* [CVE-2006-0582](https://security-tracker.debian.org/tracker/CVE-2006-0582)\nPrivilege escalation in the rsh server allows an authenticated\n attacker to overwrite arbitrary files and gain ownership of them.\n* [CVE-2006-0677](https://security-tracker.debian.org/tracker/CVE-2006-0677)\nA remote attacker could force the telnet server to crash before\n the user logged in, resulting in inetd turning telnetd off because\n it forked too fast.\n\n\nThe old stable distribution (woody) does not expose rsh and telnet servers.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.6.3-10sarge2.\n\n\nFor the unstable distribution (sid) these problems will be fixed soon.\n\n\nWe recommend that you upgrade your heimdal packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-977-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-977"
 		}
 	]
 }

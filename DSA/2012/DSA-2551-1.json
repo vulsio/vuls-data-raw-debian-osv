@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2551-1",
-	"modified": "2023-10-16T00:11:18.365054Z",
+	"modified": "2024-01-09T20:27:47.217738Z",
 	"published": "2012-09-23T00:00:00Z",
 	"related": [
 		"CVE-2012-3955"
 	],
 	"summary": "isc-dhcp - denial of service",
-	"details": "\nGlen Eustace discovered that the ISC DHCP server, a server for automatic\nIP address assignment, is not properly handling changes in the expiration\ntimes of a lease. An attacker may use this flaw to crash the service\nand cause denial of service conditions, by reducing the expiration time\nof an active IPv6 lease.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4.1.1-P1-15+squeeze8.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 4.2.2.dfsg.1-5+deb70u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.2.4-2.\n\n\nWe recommend that you upgrade your isc-dhcp packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2551-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2551"
 		}
 	]
 }

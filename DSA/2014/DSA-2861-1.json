@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2861-1",
-	"modified": "2023-10-16T00:11:35.708099Z",
+	"modified": "2024-01-09T20:21:32.759085Z",
 	"published": "2014-02-16T00:00:00Z",
 	"related": [
 		"CVE-2014-1943"
 	],
 	"summary": "file - denial of service",
-	"details": "\nIt was discovered that file, a file type classification tool, contains a\nflaw in the handling of indirect magic rules in the libmagic library,\nwhich leads to an infinite recursion when trying to determine the file\ntype of certain files. The Common Vulnerabilities and Exposures project\nID [CVE-2014-1943](https://security-tracker.debian.org/tracker/CVE-2014-1943) has been assigned to identify this flaw. Additionally,\nother well-crafted files might result in long computation times (while\nusing 100% CPU) and overlong results.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 5.04-5+squeeze3.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 5.11-2+deb7u1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your file packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2861-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2861"
 		}
 	]
 }

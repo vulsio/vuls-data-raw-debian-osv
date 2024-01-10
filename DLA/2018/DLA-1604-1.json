@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1604-1",
-	"modified": "2023-06-28T06:20:51.259776Z",
+	"modified": "2024-01-09T20:31:27.813213Z",
 	"published": "2018-12-10T00:00:00Z",
 	"summary": "lxml - security update",
-	"details": "\nIt was discovered that there was a XSS injection vulnerability in\nthe LXML HTML/XSS manipulation library for Python.\n\n\nLXML did not remove \"javascript:\" URLs that used escaping such as\nj a v a s c r i p t. This is a similar issue to [CVE-2014-3146](https://security-tracker.debian.org/tracker/CVE-2014-3146).\n\n\nFor Debian 8 Jessie, this issue has been fixed in lxml version\n3.4.0-1+deb8u1.\n\n\nWe recommend that you upgrade your lxml packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1604-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1604"
 		}
 	]
 }

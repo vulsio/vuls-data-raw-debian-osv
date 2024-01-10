@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3390-1",
-	"modified": "2023-06-28T06:33:53.426416Z",
+	"modified": "2024-01-09T20:33:36.970964Z",
 	"published": "2023-04-12T00:00:00Z",
 	"related": [
 		"CVE-2019-15132",
@@ -14,7 +14,6 @@
 		"CVE-2022-35230"
 	],
 	"summary": "zabbix - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in zabbix,\na network monitoring solution, potentially allowing User Enumeration,\nCross-Site-Scripting or Cross-Site Request Forgery.\n\n\n* [CVE-2019-15132](https://security-tracker.debian.org/tracker/CVE-2019-15132)\nZabbix through 4.4.0alpha1 allows User Enumeration. With login requests, it is\npossible to enumerate application usernames based on the variability of server\nresponses (e.g., the Login name or password is incorrect and No permissions\nfor system access messages, or just blocking for a number of seconds). This\naffects both api\\_jsonrpc.php and index.php.\n* [CVE-2020-15803](https://security-tracker.debian.org/tracker/CVE-2020-15803)\nZabbix before 3.0.32rc1, 4.x before 4.0.22rc1, 4.1.x through 4.4.x\nbefore 4.4.10rc1, and 5.x before 5.0.2rc1 allows stored XSS in the URL\nWidget.\n* [CVE-2021-27927](https://security-tracker.debian.org/tracker/CVE-2021-27927)\nIn Zabbix from 4.0.x before 4.0.28rc1, 5.0.0alpha1 before 5.0.10rc1,\n5.2.x before 5.2.6rc1, and 5.4.0alpha1 before 5.4.0beta2, the\nCControllerAuthenticationUpdate controller lacks a CSRF protection\nmechanism. The code inside this controller calls diableSIDValidation\ninside the init() method. An attacker doesn't have to know Zabbix user\nlogin credentials, but has to know the correct Zabbix URL and contact\ninformation of an existing user with sufficient privileges.\n* [CVE-2022-24349](https://security-tracker.debian.org/tracker/CVE-2022-24349)\nAn authenticated user can create a link with reflected XSS payload for\nactionsâ pages, and send it to other users. Malicious code has access to\nall the same objects as the rest of the web page and can make arbitrary\nmodifications to the contents of the page being displayed to a victim.\nThis attack can be implemented with the help of social engineering and\nexpiration of a number of factors - an attacker should have authorized\naccess to the Zabbix Frontend and allowed network connection between a\nmalicious server and victimâs computer, understand attacked\ninfrastructure, be recognized by the victim as a trustee and use trusted\ncommunication channel.\n* [CVE-2022-24917](https://security-tracker.debian.org/tracker/CVE-2022-24917)\nAn authenticated user can create a link with reflected Javascript code\ninside it for servicesâ page and send it to other users. The payload can\nbe executed only with a known CSRF token value of the victim, which is\nchanged periodically and is difficult to predict. Malicious code has\naccess to all the same objects as the rest of the web page and can make\narbitrary modifications to the contents of the page being displayed to a\nvictim during social engineering attacks.\n* [CVE-2022-24919](https://security-tracker.debian.org/tracker/CVE-2022-24919)\nAn authenticated user can create a link with reflected Javascript code\ninside it for graphsâ page and send it to other users. The payload can\nbe executed only with a known CSRF token value of the victim, which is\nchanged periodically and is difficult to predict. Malicious code has\naccess to all the same objects as the rest of the web page and can make\narbitrary modifications to the contents of the page being displayed to a\nvictim during social engineering attacks.\n* [CVE-2022-35229](https://security-tracker.debian.org/tracker/CVE-2022-35229)\nAn authenticated user can create a link with reflected Javascript code\ninside it for the discovery page and send it to other users. The payload\ncan be executed only with a known CSRF token value of the victim, which\nis changed periodically and is difficult to predict.\n* [CVE-2022-35230](https://security-tracker.debian.org/tracker/CVE-2022-35230)\nAn authenticated user can create a link with reflected Javascript code\ninside it for the graphs page and send it to other users. The payload\ncan be executed only with a known CSRF token value of the victim, which\nis changed periodically and is difficult to predict.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:4.0.4+dfsg-1+deb10u1.\n\n\nWe recommend that you upgrade your zabbix packages.\n\n\nFor the detailed security status of zabbix please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/zabbix>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3390-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3390"
 		}
 	]
 }

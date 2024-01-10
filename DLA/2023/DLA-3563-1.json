@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3563-1",
-	"modified": "2023-09-14T12:17:55.610768Z",
-	"published": "2023-09-14T00:00:00Z",
+	"modified": "2024-01-09T20:33:33.726600Z",
+	"published": "2023-09-12T00:00:00Z",
 	"related": [
 		"CVE-2016-2124",
 		"CVE-2019-10218",
@@ -13,7 +13,6 @@
 		"CVE-2019-19344"
 	],
 	"summary": "samba - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Samba, the SMB/CIFS file, print, and\nlogin server for Unix.\n\n\n* [CVE-2016-2124](https://security-tracker.debian.org/tracker/CVE-2016-2124)\nA flaw was found in the way samba implemented SMB1 authentication. An\n attacker could use this flaw to retrieve the plaintext password sent over\n the wire even if Kerberos authentication was required.\n* [CVE-2019-10218](https://security-tracker.debian.org/tracker/CVE-2019-10218)\nA flaw was found in the samba client, all samba versions before samba\n 4.11.2, 4.10.10 and 4.9.15, where a malicious server can supply a pathname\n to the client with separators. This could allow the client to access files\n and folders outside of the SMB network pathnames. An attacker could use this\n vulnerability to create files outside of the current working directory using\n the privileges of the client user.\n* [CVE-2019-14833](https://security-tracker.debian.org/tracker/CVE-2019-14833)\nA flaw was found in Samba, all versions starting samba 4.5.0 before samba\n 4.9.15, samba 4.10.10, samba 4.11.2, in the way it handles a user password\n change or a new password for a samba user. The Samba Active Directory Domain\n Controller can be configured to use a custom script to check for password\n complexity. This configuration can fail to verify password complexity when\n non-ASCII characters are used in the password, which could lead to weak\n passwords being set for samba users, making it vulnerable to dictionary\n attacks.\n* [CVE-2019-14847](https://security-tracker.debian.org/tracker/CVE-2019-14847)\nA flaw was found in samba 4.0.0 before samba 4.9.15 and samba 4.10.x before\n 4.10.10. An attacker can crash AD DC LDAP server via dirsync resulting in\n denial of service. Privilege escalation is not possible with this issue.\n* [CVE-2019-14902](https://security-tracker.debian.org/tracker/CVE-2019-14902)\nThere is an issue in all samba 4.11.x versions before 4.11.5, all samba\n 4.10.x versions before 4.10.12 and all samba 4.9.x versions before 4.9.18,\n where the removal of the right to create or modify a subtree would not\n automatically be taken away on all domain controllers.\n* [CVE-2019-14907](https://security-tracker.debian.org/tracker/CVE-2019-14907)\nAll samba versions 4.9.x before 4.9.18, 4.10.x before 4.10.12 and 4.11.x\n before 4.11.5 have an issue where if it is set with \"log level = 3\" (or\n above) then the string obtained from the client, after a failed character\n conversion, is printed. Such strings can be provided during the NTLMSSP\n authentication exchange. In the Samba AD DC in particular, this may cause a\n long-lived process(such as the RPC server) to terminate. (In the file server\n case, the most likely target, smbd, operates as process-per-client and so a\n crash there is harmless).\n* [CVE-2019-19344](https://security-tracker.debian.org/tracker/CVE-2019-19344)\nThere is a use-after-free issue in all samba 4.9.x versions before 4.9.18,\n all samba 4.10.x versions before 4.10.12 and all samba 4.11.x versions\n before 4.11.5, essentially due to a call to realloc() while other local\n variables still point at the original buffer.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2:4.9.5+dfsg-5+deb10u4.\n\n\nWe recommend that you upgrade your samba packages.\n\n\nAdmins of AD DC setups are reminded and strongly encouraged to upgrade to\nbullseye and then bookworm, as AD DC setups are unsupported in buster since [DSA\n5015-1](https://www.debian.org/security/2021/dsa-5015), and in bullseye since [DSA 5477-1](https://www.debian.org/security/2023/dsa-5477).\n\n\nFor the detailed security status of samba please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/samba>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3563-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3563"
 		}
 	]
 }

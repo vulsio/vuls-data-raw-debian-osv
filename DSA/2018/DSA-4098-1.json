@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4098-1",
-	"modified": "2023-10-16T00:12:39.382679Z",
+	"modified": "2024-01-09T20:26:57.884269Z",
 	"published": "2018-01-26T00:00:00Z",
 	"related": [
 		"CVE-2018-1000007"
 	],
 	"summary": "curl - security update",
-	"details": "\nTwo vulnerabilities were discovered in cURL, an URL transfer library.\n\n\n* [CVE-2018-1000005](https://security-tracker.debian.org/tracker/CVE-2018-1000005)\nZhouyihai Ding discovered an out-of-bounds read in the code\n handling HTTP/2 trailers. This issue doesn't affect the oldstable\n distribution (jessie).\n* [CVE-2018-1000007](https://security-tracker.debian.org/tracker/CVE-2018-1000007)\nCraig de Stigter discovered that authentication data might be leaked\n to third parties when following HTTP redirects.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 7.38.0-4+deb8u9.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 7.52.1-5+deb9u4.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFor the detailed security status of curl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/curl](https://security-tracker.debian.org/tracker/curl)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4098-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4098"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-605-1",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-12-06T00:00:00Z",
 	"published": "2004-12-06T00:00:00Z",
 	"related": [
 		"CVE-2004-0915"
 	],
 	"summary": "viewcvs - settings not honored",
-	"details": "\nHaris Sehic discovered several vulnerabilities in viewcvs, a utility\nfor viewing CVS and Subversion repositories via HTTP. When exporting\na repository as a tar archive the hide\\_cvsroot and forbidden settings\nwere not honoured enough.\n\n\nWhen upgrading the package for woody, please make a copy of your\n/etc/viewcvs/viewcvs.conf file if you have manually edited this file.\nUpon upgrade the debconf mechanism may alter it in a way so that\nviewcvs doesn't understand it anymore.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 0.9.2-4woody1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.9.2+cvs.1.0.dev.2004.07.28-1.2.\n\n\nWe recommend that you upgrade your viewcvs package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-605-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-605"
 		}
 	]
 }

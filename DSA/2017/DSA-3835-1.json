@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3835-1",
-	"modified": "2023-10-16T00:12:21.830293Z",
+	"modified": "2024-01-09T20:28:21.852650Z",
 	"published": "2017-04-26T00:00:00Z",
 	"related": [
 		"CVE-2016-9013",
@@ -10,7 +10,6 @@
 		"CVE-2017-7234"
 	],
 	"summary": "python-django - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Django, a high-level Python\nweb development framework. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2016-9013](https://security-tracker.debian.org/tracker/CVE-2016-9013)\nMarti Raudsepp reported that a user with a hardcoded password is\n created when running tests with an Oracle database.\n* [CVE-2016-9014](https://security-tracker.debian.org/tracker/CVE-2016-9014)\nAymeric Augustin discovered that Django does not properly validate\n the Host header against settings.ALLOWED\\_HOSTS when the debug\n setting is enabled. A remote attacker can take advantage of this\n flaw to perform DNS rebinding attacks.\n* [CVE-2017-7233](https://security-tracker.debian.org/tracker/CVE-2017-7233)\nIt was discovered that is\\_safe\\_url() does not properly handle\n certain numeric URLs as safe. A remote attacker can take advantage\n of this flaw to perform XSS attacks or to use a Django server as an\n open redirect.\n* [CVE-2017-7234](https://security-tracker.debian.org/tracker/CVE-2017-7234)\nPhithon from Chaitin Tech discovered an open redirect vulnerability\n in the django.views.static.serve() view. Note that this view is not\n intended for production use.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.7.11-1+deb8u2.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3835-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3835"
 		}
 	]
 }

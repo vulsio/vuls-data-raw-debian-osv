@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3213-1",
-	"modified": "2023-10-16T00:11:50.548876Z",
+	"modified": "2024-01-09T20:28:05.188290Z",
 	"published": "2015-04-06T00:00:00Z",
 	"related": [
 		"CVE-2015-0556",
@@ -9,7 +9,6 @@
 		"CVE-2015-2782"
 	],
 	"summary": "arj - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in arj, an open source\nversion of the arj archiver. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2015-0556](https://security-tracker.debian.org/tracker/CVE-2015-0556)\nJakub Wilk discovered that arj follows symlinks created during\n unpacking of an arj archive. A remote attacker could use this flaw\n to perform a directory traversal attack if a user or automated\n system were tricked into processing a specially crafted arj archive.\n* [CVE-2015-0557](https://security-tracker.debian.org/tracker/CVE-2015-0557)\nJakub Wilk discovered that arj does not sufficiently protect from\n directory traversal while unpacking an arj archive containing file\n paths with multiple leading slashes. A remote attacker could use\n this flaw to write to arbitrary files if a user or automated system\n were tricked into processing a specially crafted arj archive.\n* [CVE-2015-2782](https://security-tracker.debian.org/tracker/CVE-2015-2782)\nJakub Wilk and Guillem Jover discovered a buffer overflow\n vulnerability in arj. A remote attacker could use this flaw to cause\n an application crash or, possibly, execute arbitrary code with the\n privileges of the user running arj.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 3.10.22-10+deb7u1.\n\n\nFor the upcoming stable distribution (jessie), these problems have been\nfixed in version 3.10.22-13.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 3.10.22-13.\n\n\nWe recommend that you upgrade your arj packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3213-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3213"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-0019-1",
-	"modified": "2023-06-28T06:20:06.721575Z",
+	"modified": "2024-01-09T20:30:37.034009Z",
 	"published": "2014-07-29T00:00:00Z",
 	"related": [
 		"CVE-2014-0067"
 	],
 	"summary": "postgresql-8.4 - new upstream minor release",
-	"details": "\nNew upstream minor release. Users should upgrade to this version at their next\nscheduled maintenance window.\n\n\nNoteworthy change:\n\n\nSecure Unix-domain sockets of temporary postmasters started during make\n check (Noah Misch)\n\n\nAny local user able to access the socket file could connect as the server's\n bootstrap superuser, then proceed to execute arbitrary code as the\n operating-system user running the test, as we previously noted in\n [CVE-2014-0067](https://security-tracker.debian.org/tracker/CVE-2014-0067). This change defends against that risk by placing the server's\n socket in a temporary, mode 0700 subdirectory of /tmp.\n\n\n8.4.22 marks the end of life of the PostgreSQL 8.4 branch. No further\nreleases will be made by the PostgreSQL Global Development Group.\n\n\nUsers of PostgreSQL 8.4 should look into upgrading to a newer PostgreSQL\nrelease. Options are:\n\n\n* Upgrading to Debian 7 (Wheezy), providing postgresql-9.1.\n* The use of the apt.postgresql.org repository, providing packages for all\n active PostgreSQL branches (9.0 up to 9.4 at the time of writing).\n\n\nSee <https://wiki.postgresql.org/wiki/Apt> for more information about the\n repository.\n\n\nA helper script to activate the repository is provided in\n /usr/share/doc/postgresql-8.4/examples/apt.postgresql.org.sh.\n* An LTS version of 8.4 is in planning that will cover the lifetime of\n squeeze-lts. Updates will probably made on a best-effort basis. Users can\n take advantage of this, but should still consider upgrading to newer\n PostgreSQL versions over the next months.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in postgresql-8.4 version 8.4.22-0+deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -78,12 +77,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-0019-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-0019"
 		}
 	]
 }

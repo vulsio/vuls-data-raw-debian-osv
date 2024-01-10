@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-787-1",
-	"modified": "2023-06-28T06:43:18.146354Z",
+	"modified": "2024-01-09T20:33:58.785813Z",
 	"published": "2017-01-16T00:00:00Z",
 	"related": [
 		"CVE-2016-9139"
 	],
 	"summary": "otrs2 - security update",
-	"details": "\nA cross-site sripting vulnerability (XSS) was discovered in OTRS, a\nticket requesting system for the web. An attacker could trick an\nauthenticated user into opening a malicious attachment which could\nlead to the execution of JavaScript in OTRS context.\nThis update addresses the vulnerability by setting a strict default\nHTTP content security policy that forbids loading of third-party files.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.1.7+dfsg1-8+deb7u6.\n\n\nWe recommend that you upgrade your otrs2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-787-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-787"
 		}
 	]
 }

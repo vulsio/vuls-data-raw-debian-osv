@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2994-1",
-	"modified": "2023-10-16T00:06:09.669332Z",
+	"modified": "2024-01-09T20:23:49.080375Z",
 	"published": "2014-07-31T00:00:00Z",
 	"related": [
 		"CVE-2013-1741",
@@ -10,7 +10,6 @@
 		"CVE-2014-1492"
 	],
 	"summary": "nss - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in nss, the Mozilla Network\nSecurity Service library:\n\n\n* [CVE-2013-1741](https://security-tracker.debian.org/tracker/CVE-2013-1741)\nRunaway memset in certificate parsing on 64-bit computers leading to\n a crash by attempting to write 4Gb of nulls.\n* [CVE-2013-5606](https://security-tracker.debian.org/tracker/CVE-2013-5606)\nCertificate validation with the verifylog mode did not return\n validation errors, but instead expected applications to determine\n the status by looking at the log.\n* [CVE-2014-1491](https://security-tracker.debian.org/tracker/CVE-2014-1491)\nTicket handling protection mechanisms bypass due to the lack of\n restriction of public values in Diffie-Hellman key exchanges.\n* [CVE-2014-1492](https://security-tracker.debian.org/tracker/CVE-2014-1492)\nIncorrect IDNA domain name matching for wildcard certificates could\n allow specially-crafted invalid certificates to be considered as\n valid.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2:3.14.5-1+deb7u1.\n\n\nFor the testing distribution (jessie), and the unstable distribution (sid),\nthese problems have been fixed in version 2:3.16-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2994-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2994"
 		}
 	]
 }

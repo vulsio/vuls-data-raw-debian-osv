@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1428-1",
-	"modified": "2023-10-16T00:05:23.959223Z",
-	"published": "2007-12-11T00:00:00Z",
+	"modified": "2024-01-09T20:22:17.878746Z",
+	"published": "2007-12-10T00:00:00Z",
 	"related": [
 		"CVE-2007-3104",
 		"CVE-2007-4997",
@@ -10,7 +10,6 @@
 		"CVE-2007-5904"
 	],
 	"summary": "fai-kernels linux-2.6 user-mode-linux - several vulnerabilities",
-	"details": "\nSeveral local and remote vulnerabilities have been discovered in the Linux\nkernel that may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\nThis is an update to DSA 1428-1 which omitted a reference to CVE-2007-5904.\n\n\n* [CVE-2007-3104](https://security-tracker.debian.org/tracker/CVE-2007-3104)\nEric Sandeen provided a backport of Tejun Heo's fix for a local denial\n of service vulnerability in sysfs. Under memory pressure, a dentry\n structure maybe reclaimed resulting in a bad pointer dereference causing\n an oops during a readdir.\n* [CVE-2007-4997](https://security-tracker.debian.org/tracker/CVE-2007-4997)\nChris Evans discovered an issue with certain drivers that make use of the\n Linux kernel's ieee80211 layer. A remote user could generate a malicious\n 802.11 frame that could result in a denial of service (crash). The ipw2100\n driver is known to be affected by this issue, while the ipw2200 is\n believed not to be.\n* [CVE-2007-5500](https://security-tracker.debian.org/tracker/CVE-2007-5500)\nScott James Remnant diagnosed a coding error in the implementation of\n ptrace which could be used by a local user to cause the kernel to enter\n an infinite loop.\n* [CVE-2007-5904](https://security-tracker.debian.org/tracker/CVE-2007-5904)\nPrzemyslaw Wegrzyn discovered an issue in the CIFS filesystem that could\n allow a malicious server to cause a denial of service (crash) by overflowing\n a buffer.\n\n\nThese problems have been fixed in the stable distribution in version \n2.6.18.dfsg.1-13etch5.\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17+etch.13etch5 |\n| user-mode-linux | 2.6.18-1um-2etch.13etch5 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -110,12 +109,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1428-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1428"
 		}
 	]
 }

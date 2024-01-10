@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-711-1",
-	"modified": "2023-06-28T06:32:33.887339Z",
+	"modified": "2024-01-09T20:33:54.916799Z",
 	"published": "2016-11-17T00:00:00Z",
 	"related": [
 		"CVE-2016-8615",
@@ -15,7 +15,6 @@
 		"CVE-2016-8624"
 	],
 	"summary": "curl - security update",
-	"details": "\n* [CVE-2016-8615](https://security-tracker.debian.org/tracker/CVE-2016-8615)\nIf cookie state is written into a cookie jar file that is later read\n back and used for subsequent requests, a malicious HTTP server can\n inject new cookies for arbitrary domains into said cookie jar.\n The issue pertains to the function that loads cookies into memory, which\n reads the specified file into a fixed-size buffer in a line-by-line\n manner using the `fgets()` function. If an invocation of fgets() cannot\n read the whole line into the destination buffer due to it being too\n small, it truncates the output.\n This way, a very long cookie (name + value) sent by a malicious server\n would be stored in the file and subsequently that cookie could be read\n partially and crafted correctly, it could be treated as a different\n cookie for another server.\n* [CVE-2016-8616](https://security-tracker.debian.org/tracker/CVE-2016-8616)\nWhen re-using a connection, curl was doing case insensitive comparisons\n of user name and password with the existing connections.\n This means that if an unused connection with proper credentials exists\n for a protocol that has connection-scoped credentials, an attacker can\n cause that connection to be reused if s/he knows the case-insensitive\n version of the correct password.\n* [CVE-2016-8617](https://security-tracker.debian.org/tracker/CVE-2016-8617)\nIn libcurl's base64 encode function, the output buffer is allocated\n as follows without any checks on insize:\n malloc( insize \\* 4 / 3 + 4 )\n On systems with 32-bit addresses in userspace (e.g. x86, ARM, x32),\n the multiplication in the expression wraps around if insize is at\n least 1GB of data. If this happens, an undersized output buffer will\n be allocated, but the full result will be written, thus causing the\n memory behind the output buffer to be overwritten.\n Systems with 64 bit versions of the `size\\_t` type are not affected\n by this issue.\n* [CVE-2016-8618](https://security-tracker.debian.org/tracker/CVE-2016-8618)\nThe libcurl API function called `curl\\_maprintf()` can be tricked into\n doing a double-free due to an unsafe `size\\_t` multiplication, on\n systems using 32 bit `size\\_t` variables. The function is also used\n internallty in numerous situations.\n Systems with 64 bit versions of the `size\\_t` type are not affected\n by this issue.\n* [CVE-2016-8619](https://security-tracker.debian.org/tracker/CVE-2016-8619)\nIn curl's implementation of the Kerberos authentication mechanism,\n the function `read\\_data()` in security.c is used to fill the\n necessary krb5 structures. When reading one of the length fields from\n the socket, it fails to ensure that the length parameter passed to\n realloc() is not set to 0.\n* [CVE-2016-8621](https://security-tracker.debian.org/tracker/CVE-2016-8621)\nThe `curl\\_getdate` converts a given date string into a numerical\n timestamp and it supports a range of different formats and\n possibilites to express a date and time. The underlying date\n parsing function is also used internally when parsing for example\n HTTP cookies (possibly received from remote servers) and it can be\n used when doing conditional HTTP requests.\n* [CVE-2016-8622](https://security-tracker.debian.org/tracker/CVE-2016-8622)\nThe URL percent-encoding decode function in libcurl is called\n `curl\\_easy\\_unescape`. Internally, even if this function would be\n made to allocate a unescape destination buffer larger than 2GB, it\n would return that new length in a signed 32 bit integer variable,\n thus the length would get either just truncated or both truncated\n and turned negative. That could then lead to libcurl writing outside\n of its heap based buffer.\n* [CVE-2016-8623](https://security-tracker.debian.org/tracker/CVE-2016-8623)\nlibcurl explicitly allows users to share cookies between multiple\n easy handles that are concurrently employed by different threads.\n When cookies to be sent to a server are collected, the matching\n function collects all cookies to send and the cookie lock is released\n immediately afterwards. That function however only returns a list with\n \\*references\\* back to the original strings for name, value, path and so\n on. Therefore, if another thread quickly takes the lock and frees one\n of the original cookie structs together with its strings,\n a use-after-free can occur and lead to information disclosure. Another\n thread can also replace the contents of the cookies from separate HTTP\n responses or API calls.\n* [CVE-2016-8624](https://security-tracker.debian.org/tracker/CVE-2016-8624)\ncurl doesn't parse the authority component of the URL correctly when\n the host name part ends with a '#' character, and could instead be\n tricked into connecting to a different host. This may have security\n implications if you for example use an URL parser that follows the RFC\n to check for allowed domains before using curl to request them.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n7.26.0-1+wheezy17.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -56,12 +55,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-711-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-711"
 		}
 	]
 }

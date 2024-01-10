@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3559-1",
-	"modified": "2023-09-08T12:19:44.070822Z",
+	"modified": "2024-01-09T20:33:33.617301Z",
 	"published": "2023-09-08T00:00:00Z",
 	"related": [
 		"CVE-2019-13115",
@@ -9,7 +9,6 @@
 		"CVE-2020-22218"
 	],
 	"summary": "libssh2 - security update",
-	"details": "\nVulnerabilities were found in libssh2, a client-side C library\nimplementing the SSH2 protocol, which could lead to denial of service or\nremote information disclosure.\n\n\n* [CVE-2019-13115](https://security-tracker.debian.org/tracker/CVE-2019-13115)\nKevin Backhouse discovered an integer overflow vulnerability in\n `kex.c`'s `kex_method_diffie_hellman_group_exchange_sha256_key_exchange()`\n function, which could lead to an out-of-bounds read in the way\n packets are read from the server. A remote attacker who compromises\n an SSH server may be able to disclose sensitive information or cause\n a denial of service condition on the client system when a user\n connects to the server.\n* [CVE-2019-17498](https://security-tracker.debian.org/tracker/CVE-2019-17498)\nKevin Backhouse discovered that the `SSH_MSG_DISCONNECT` logic in\n packet.c has an integer overflow in a bounds check, thereby enabling\n an attacker to specify an arbitrary (out-of-bounds) offset for a\n subsequent memory read. A malicious SSH server may be able to\n disclose sensitive information or cause a denial of service\n condition on the client system when a user connects to the server.\n* [CVE-2020-22218](https://security-tracker.debian.org/tracker/CVE-2020-22218)\nAn issue was discovered in `function _libssh2_packet_add()`, which\n could allow attackers to access out of bounds memory.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.8.0-2.1+deb10u1.\n\n\nWe recommend that you upgrade your libssh2 packages.\n\n\nFor the detailed security status of libssh2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libssh2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3559-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3559"
 		}
 	]
 }

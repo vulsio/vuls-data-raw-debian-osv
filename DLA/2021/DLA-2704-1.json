@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2704-1",
-	"modified": "2023-06-28T06:26:40.618239Z",
+	"modified": "2024-01-09T20:32:52.572923Z",
 	"published": "2021-07-05T00:00:00Z",
 	"related": [
 		"CVE-2021-29505"
 	],
 	"summary": "libxstream-java - security update",
-	"details": "\nA vulnerability in XStream, a Java library to serialize objects to and\nfrom XML, may allow a remote attacker to execute commands of the host\nonly by manipulating the processed input stream.\n**Note**: the XStream project recommends to setup its security framework\nwith a whitelist limited to the minimal required types, rather than\nrelying on the black list (which got updated to address this\nvulnerability). The project is also phasing out maintainance of the\nblack list, see <https://x-stream.github.io/security.html> .\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.4.11.1-1+deb9u3.\n\n\nWe recommend that you upgrade your libxstream-java packages.\n\n\nFor the detailed security status of libxstream-java please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxstream-java>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2704-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2704"
 		}
 	]
 }

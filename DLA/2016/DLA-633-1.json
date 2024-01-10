@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-633-1",
-	"modified": "2023-06-28T06:25:36.613298Z",
+	"modified": "2024-01-09T20:33:51.895854Z",
 	"published": "2016-09-22T00:00:00Z",
 	"related": [
 		"CVE-2015-8834",
@@ -13,7 +13,6 @@
 		"CVE-2016-7169"
 	],
 	"summary": "wordpress - security update",
-	"details": "\nSeveral vulnerabilities were discovered in wordpress, a web blogging\ntool. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues.\n\n\n* [CVE-2015-8834](https://security-tracker.debian.org/tracker/CVE-2015-8834)\nCross-site scripting (XSS) vulnerability in wp-includes/wp-db.php in\n WordPress before 4.2.2 allows remote attackers to inject arbitrary\n web script or HTML via a long comment that is improperly stored\n because of limitations on the MySQL TEXT data type.\n NOTE: this vulnerability exists because of an incomplete fix for\n [CVE-2015-3440](https://security-tracker.debian.org/tracker/CVE-2015-3440)\n* [CVE-2016-4029](https://security-tracker.debian.org/tracker/CVE-2016-4029)\nWordPress before 4.5 does not consider octal and hexadecimal IP\n address formats when determining an intranet address, which allows\n remote attackers to bypass an intended SSRF protection mechanism\n via a crafted address.\n* [CVE-2016-5836](https://security-tracker.debian.org/tracker/CVE-2016-5836)\nThe oEmbed protocol implementation in WordPress before 4.5.3 allows\n remote attackers to cause a denial of service via unspecified\n vectors.\n* [CVE-2016-6634](https://security-tracker.debian.org/tracker/CVE-2016-6634)\nCross-site scripting (XSS) vulnerability in the network settings\n page in WordPress before 4.5 allows remote attackers to inject\n arbitrary web script or HTML via unspecified vectors.\n* [CVE-2016-6635](https://security-tracker.debian.org/tracker/CVE-2016-6635)\nCross-site request forgery (CSRF) vulnerability in the\n wp\\_ajax\\_wp\\_compression\\_test function in wp-admin/includes/ajaxactions.php \n in WordPress before 4.5 allows remote attackers to\n hijack the authentication of administrators for requests that\n change the script compression option.\n* [CVE-2016-7168](https://security-tracker.debian.org/tracker/CVE-2016-7168)\nFix a cross-site scripting vulnerability via image filename.\n* [CVE-2016-7169](https://security-tracker.debian.org/tracker/CVE-2016-7169)\nFix a path traversal vulnerability in the upgrade package uploader.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.6.1+dfsg-1~deb7u12.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-633-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-633"
 		}
 	]
 }

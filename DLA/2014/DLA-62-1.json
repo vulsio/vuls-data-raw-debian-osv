@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-62-1",
-	"modified": "2023-06-28T06:27:04.328387Z",
+	"modified": "2024-01-09T20:33:51.226483Z",
 	"published": "2014-09-25T00:00:00Z",
 	"related": [
 		"CVE-2014-1568"
 	],
 	"summary": "nss - security update",
-	"details": "\nAntoine Delignat-Lavaud from Inria discovered an issue in the way NSS\n(the Mozilla Network Security Service library) was parsing ASN.1 data\nused in signatures, making it vulnerable to a signature forgery attack.\n\n\nAn attacker could craft ASN.1 data to forge RSA certificates with a\nvalid certification chain to a trusted CA.\n\n\nThis update fixes this issue for the NSS libraries.\n\n\nNote that iceweasel, which is also affected by [CVE-2014-1568](https://security-tracker.debian.org/tracker/CVE-2014-1568), however\nhas reached end-of-life in Squeeze(-LTS) and thus has not been fixed.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in nss version 3.12.8-1+squeeze9\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-62-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-62"
 		}
 	]
 }

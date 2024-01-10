@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-230",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-01-16T00:00:00Z",
 	"published": "2003-01-16T00:00:00Z",
 	"related": [
 		"CVE-2003-0012",
 		"CVE-2003-0013"
 	],
 	"summary": "bugzilla - insecure permissions, spurious backup files",
-	"details": "\nTwo vulnerabilities have been discovered in Bugzilla, a web-based bug\ntracking system, by its authors. The Common Vulnerabilities and\nExposures Project identifies the following vulnerabilities:\n\n\n\nCAN-2003-0012 (BugTraq ID 6502)\n\n\n The provided data collection\n script intended to be run as a nightly cron job changes the\n permissions of the data/mining directory to be world-writable every\n time it runs. This would enable local users to alter or delete the\n collected data.\n \n\n\n\nCAN-2003-0013 (BugTraq ID 6501)\n\n\n The default .htaccess scripts\n provided by checksetup.pl do not block access to backups of the\n localconfig file that might be created by editors such as vi or\n emacs (typically these will have a .swp or ~ suffix). This allows\n an end user to download one of the backup copies and potentially\n obtain your database password.\n \n\n\n\n This does not affect the Debian installation because there is no\n .htaccess as all data file aren't under the CGI path as they are on\n the standard Bugzilla package. Additionally, the configuration is\n in /etc/bugzilla/localconfig and hence outside of the web directory.\n\n\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 2.14.2-0woody4.\n\n\nThe old stable distribution (potato) does not contain a Bugzilla\npackage.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your bugzilla packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-230.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-230"
 		}
 	]
 }

@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4735-2",
-	"modified": "2023-10-16T00:25:24.483115Z",
-	"published": "2020-07-29T00:00:00Z",
+	"modified": "2024-01-09T20:27:10.803606Z",
+	"published": "2020-07-30T00:00:00Z",
 	"summary": "grub2 - regression update",
-	"details": "\nSeveral vulnerabilities have been discovered in the GRUB2 bootloader.\n\n\n* [CVE-2020-10713](https://security-tracker.debian.org/tracker/CVE-2020-10713)\nA flaw in the grub.cfg parsing code was found allowing to break\n UEFI Secure Boot and load arbitrary code. Details can be found at\n <https://www.eclypsium.com/2020/07/29/theres-a-hole-in-the-boot/>\n* [CVE-2020-14308](https://security-tracker.debian.org/tracker/CVE-2020-14308)\nIt was discovered that grub\\_malloc does not validate the allocation\n size allowing for arithmetic overflow and subsequently a heap-based\n buffer overflow.\n* [CVE-2020-14309](https://security-tracker.debian.org/tracker/CVE-2020-14309)\nAn integer overflow in grub\\_squash\\_read\\_symlink may lead to a heap based buffer overflow.\n* [CVE-2020-14310](https://security-tracker.debian.org/tracker/CVE-2020-14310)\nAn integer overflow in read\\_section\\_from\\_string may lead to a heap based buffer overflow.\n* [CVE-2020-14311](https://security-tracker.debian.org/tracker/CVE-2020-14311)\nAn integer overflow in grub\\_ext2\\_read\\_link may lead to a heap-based\n buffer overflow.\n* [CVE-2020-15706](https://security-tracker.debian.org/tracker/CVE-2020-15706)\nscript: Avoid a use-after-free when redefining a function during\n execution.\n* [CVE-2020-15707](https://security-tracker.debian.org/tracker/CVE-2020-15707)\nAn integer overflow flaw was found in the initrd size handling.\n\n\nFurther detailed information can be found at\n<https://www.debian.org/security/2020-GRUB-UEFI-SecureBoot>\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 2.02+dfsg1-20+deb10u1.\n\n\nWe recommend that you upgrade your grub2 packages.\n\n\nFor the detailed security status of grub2 please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/grub2>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4735-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2020/dsa-4735"
 		}
 	]
 }

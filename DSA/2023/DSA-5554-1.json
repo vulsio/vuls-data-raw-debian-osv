@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5554-1",
-	"modified": "2023-11-14T11:17:55.012350Z",
+	"modified": "2024-01-09T20:29:42.425908Z",
 	"published": "2023-11-13T00:00:00Z",
 	"related": [
 		"CVE-2023-39417",
@@ -10,7 +10,6 @@
 		"CVE-2023-5870"
 	],
 	"summary": "postgresql-13 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the PostgreSQL\ndatabase system.\n\n\n* [CVE-2023-5868](https://security-tracker.debian.org/tracker/CVE-2023-5868)\nJingzhou Fu discovered a memory disclosure flaw in aggregate\n function calls.\n* [CVE-2023-5869](https://security-tracker.debian.org/tracker/CVE-2023-5869)\nPedro Gallegos reported integer overflow flaws resulting in buffer\n overflows in the array modification functions.\n* [CVE-2023-5870](https://security-tracker.debian.org/tracker/CVE-2023-5870)\nHemanth Sandrana and Mahendrakar Srinivasarao reported that the\n pg\\_cancel\\_backend role can signal certain superuser processes,\n potentially resulting in denial of service.\n* [CVE-2023-39417](https://security-tracker.debian.org/tracker/CVE-2023-39417)\nMicah Gate, Valerie Woolard, Tim Carey-Smith, and Christoph Berg\n reported that an extension script using @substitutions@ within\n quoting may allow to perform an SQL injection for an attacker having\n database-level CREATE privileges.\n\n\nFor the oldstable distribution (bullseye), these problems have been\nfixed in version 13.13-0+deb11u1.\n\n\nWe recommend that you upgrade your postgresql-13 packages.\n\n\nFor the detailed security status of postgresql-13 please refer to its\nsecurity tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/postgresql-13](https://security-tracker.debian.org/tracker/postgresql-13)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5554-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5554"
 		}
 	]
 }

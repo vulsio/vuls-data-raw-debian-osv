@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-389",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-09-20T00:00:00Z",
 	"published": "2003-09-20T00:00:00Z",
 	"related": [
 		"CVE-2003-0785"
 	],
 	"summary": "ipmasq - insecure packet filtering rules",
-	"details": "\nipmasq is a package which simplifies configuration of Linux IP\nmasquerading, a form of network address translation which allows a\nnumber of hosts to share a single public IP address. Due to use of\ncertain improper filtering rules, traffic arriving on the external\ninterface addressed for an internal host would be forwarded,\nregardless of whether it was associated with an established\nconnection. This vulnerability could be exploited by an attacker\ncapable of forwarding IP traffic with an arbitrary destination address\nto the external interface of a system with ipmasq installed.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 3.5.10c.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 3.5.12.\n\n\nWe recommend that you update your ipmasq package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-389.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-389"
 		}
 	]
 }

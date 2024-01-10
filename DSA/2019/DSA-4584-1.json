@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4584-1",
-	"modified": "2023-10-16T00:14:24.136675Z",
+	"modified": "2024-01-09T20:28:53.404667Z",
 	"published": "2019-12-14T00:00:00Z",
 	"related": [
 		"CVE-2018-11805",
 		"CVE-2019-12420"
 	],
 	"summary": "spamassassin - security update",
-	"details": "\nTwo vulnerabilities were discovered in spamassassin, a Perl-based spam\nfilter using text analysis.\n\n\n* [CVE-2018-11805](https://security-tracker.debian.org/tracker/CVE-2018-11805)\nMalicious rule or configuration files, possibly downloaded from an\n updates server, could execute arbitrary commands under multiple\n scenarios.\n* [CVE-2019-12420](https://security-tracker.debian.org/tracker/CVE-2019-12420)\nSpecially crafted mulitpart messages can cause spamassassin to use\n excessive resources, resulting in a denial of service.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 3.4.2-1~deb9u2.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 3.4.2-1+deb10u1.\n\n\nWe recommend that you upgrade your spamassassin packages.\n\n\nFor the detailed security status of spamassassin please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/spamassassin](https://security-tracker.debian.org/tracker/spamassassin)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4584-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4584"
 		}
 	]
 }

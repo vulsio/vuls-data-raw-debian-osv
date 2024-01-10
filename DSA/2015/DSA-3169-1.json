@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3169-1",
-	"modified": "2023-10-16T00:11:48.797718Z",
+	"modified": "2024-01-09T20:25:51.987992Z",
 	"published": "2015-02-23T00:00:00Z",
 	"related": [
 		"CVE-2012-3406",
@@ -12,7 +12,6 @@
 		"CVE-2015-1473"
 	],
 	"summary": "eglibc - security update",
-	"details": "\nSeveral vulnerabilities have been fixed in eglibc, Debian's version of\nthe GNU C library:\n\n\n* [CVE-2012-3406](https://security-tracker.debian.org/tracker/CVE-2012-3406)\nThe vfprintf function in stdio-common/vfprintf.c in GNU C Library (aka\n glibc) 2.5, 2.12, and probably other versions does not properly restrict\n the use of the alloca function when allocating the SPECS array, which\n allows context-dependent attackers to bypass the FORTIFY\\_SOURCE\n format-string protection mechanism and cause a denial of service (crash)\n or possibly execute arbitrary code via a crafted format string using\n positional parameters and a large number of format specifiers, a different\n vulnerability than \n [\\\n CVE-2012-3404](https://security-tracker.debian.org/tracker/CVE-2012-3404) and \n [\\\n CVE-2012-3405](https://security-tracker.debian.org/tracker/CVE-2012-3405).\n* [CVE-2013-7424](https://security-tracker.debian.org/tracker/CVE-2013-7424)\nAn invalid free flaw was found in glibc's getaddrinfo() function when used\n with the AI\\_IDN flag. A remote attacker able to make an application call\n this function could use this flaw to execute arbitrary code with the\n permissions of the user running the application. Note that this flaw only\n affected applications using glibc compiled with libidn support.\n* [CVE-2014-4043](https://security-tracker.debian.org/tracker/CVE-2014-4043)\nThe posix\\_spawn\\_file\\_actions\\_addopen function in glibc before 2.20 does not\n copy its path argument in accordance with the POSIX specification, which\n allows context-dependent attackers to trigger use-after-free\n vulnerabilities.\n* [CVE-2014-9402](https://security-tracker.debian.org/tracker/CVE-2014-9402)\nThe getnetbyname function in glibc 2.21 or earlier will enter an infinite\n loop if the DNS backend is activated in the system Name Service Switch\n configuration, and the DNS resolver receives a positive answer while\n processing the network name.\n* [CVE-2015-1472](https://security-tracker.debian.org/tracker/CVE-2015-1472) / \n [CVE-2015-1473](https://security-tracker.debian.org/tracker/CVE-2015-1473)\nUnder certain conditions wscanf can allocate too little memory for the\n to-be-scanned arguments and overflow the allocated buffer. The incorrect\n use of \"\\_\\_libc\\_use\\_alloca (newsize)\" caused a different (and weaker)\n policy to be enforced which could allow a denial of service attack.\n\n\nFor the stable distribution (wheezy), these issues are fixed in version\n2.13-38+deb7u8 of the eglibc package.\n\n\nFor the unstable distribution (sid), all the above issues are fixed in version\n2.19-15 of the glibc package.\n\n\nWe recommend that you upgrade your eglibc packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3169-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3169"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3143-1",
-	"modified": "2023-06-28T06:26:52.563297Z",
+	"modified": "2024-01-09T20:33:19.863663Z",
 	"published": "2022-10-10T00:00:00Z",
 	"related": [
 		"CVE-2022-40617"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nIt was discovered that there was a potential denial of service vulnerability\nin strongswan, an IPsec VPN solution.\n\n\nStrongswan could have queried URLs with untrusted certificates, and this\ncould potentially lead to a DoS attack by blocking the fetcher thread.\n\n\n* [CVE-2022-40617](https://security-tracker.debian.org/tracker/CVE-2022-40617)\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n5.7.2-1+deb10u3.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3143-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3143"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5287-1",
-	"modified": "2023-10-16T00:16:33.007109Z",
+	"modified": "2024-01-09T20:29:27.364590Z",
 	"published": "2022-11-22T00:00:00Z",
 	"related": [
 		"CVE-2021-3671",
@@ -12,7 +12,6 @@
 		"CVE-2022-44640"
 	],
 	"summary": "heimdal - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Heimdal, an implementation of\nKerberos 5 that aims to be compatible with MIT Kerberos.\n\n\n* [CVE-2021-3671](https://security-tracker.debian.org/tracker/CVE-2021-3671)\nJoseph Sutton discovered that the Heimdal KDC does not validate that\n the server name in the TGS-REQ is present before dereferencing,\n which may result in denial of service.\n* [CVE-2021-44758](https://security-tracker.debian.org/tracker/CVE-2021-44758)\nIt was discovered that Heimdal is prone to a NULL dereference in\n acceptors where an initial SPNEGO token that has no acceptable\n mechanisms, which may result in denial of service for a server\n application that uses SPNEGO.\n* [CVE-2022-3437](https://security-tracker.debian.org/tracker/CVE-2022-3437)\nSeveral buffer overflow flaws and non-constant time leaks were\n discovered when using 1DES, 3DES or RC4 (arcfour).\n* [CVE-2022-41916](https://security-tracker.debian.org/tracker/CVE-2022-41916)\nAn out-of-bounds memory access was discovered when Heimdal\n normalizes Unicode, which may result in denial of service.\n* [CVE-2022-42898](https://security-tracker.debian.org/tracker/CVE-2022-42898)\nIt was discovered that integer overflows in PAC parsing may result\n in denial of service for Heimdal KDCs or possibly Heimdal servers.\n* [CVE-2022-44640](https://security-tracker.debian.org/tracker/CVE-2022-44640)\nIt was discovered that the Heimdal's ASN.1 compiler generates code\n that allows specially crafted DER encodings to invoke an invalid\n free on the decoded structure upon decode error, which may result in\n remote code execution in the Heimdal KDC.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 7.7.0+dfsg-2+deb11u2.\n\n\nWe recommend that you upgrade your heimdal packages.\n\n\nFor the detailed security status of heimdal please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/heimdal>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5287-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5287"
 		}
 	]
 }

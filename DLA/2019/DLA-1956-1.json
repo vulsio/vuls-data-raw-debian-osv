@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1956-1",
-	"modified": "2023-06-28T06:25:02.759396Z",
+	"modified": "2024-01-09T20:32:06.637099Z",
 	"published": "2019-10-11T00:00:00Z",
 	"related": [
 		"CVE-2019-11027"
 	],
 	"summary": "ruby-openid - security update",
-	"details": "\nruby-openid performed discovery first, and then verification. This allowed an\nattacker to change the URL used for discovery and trick the server into\nconnecting to the URL. This server in turn could be a private server not\npublicly accessible.\n\n\nFurthermore, if the client that uses this library discloses connection errors,\nthis in turn could disclose information from the private server to the\nattacker.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.5.0debian-1+deb8u1.\n\n\nWe recommend that you upgrade your ruby-openid packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1956-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1956"
 		}
 	]
 }

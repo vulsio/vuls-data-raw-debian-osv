@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-356-1",
-	"modified": "2023-06-28T06:30:54.944992Z",
+	"modified": "2024-01-09T20:33:33.667848Z",
 	"published": "2015-11-30T00:00:00Z",
 	"related": [
 		"CVE-2014-9496",
@@ -9,7 +9,6 @@
 		"CVE-2015-7805"
 	],
 	"summary": "libsndfile - security update",
-	"details": "\n* [CVE-2014-9496](https://security-tracker.debian.org/tracker/CVE-2014-9496)\nThe sd2\\_parse\\_rsrc\\_fork function in sd2.c in libsndfile allows\n attackers to have unspecified impact via vectors related to a (1) map\n offset or (2) rsrc marker, which triggers an out-of-bounds read.\n* [CVE-2014-9756](https://security-tracker.debian.org/tracker/CVE-2014-9756)\nThe psf\\_fwrite function in file\\_io.c in libsndfile allows attackers to\n cause a denial of service (divide-by-zero error and application crash)\n via unspecified vectors related to the headindex variable.\n* [CVE-2015-7805](https://security-tracker.debian.org/tracker/CVE-2015-7805)\nHeap-based buffer overflow in libsndfile 1.0.25 allows remote\n attackers to have unspecified impact via the headindex value in the\n header in an AIFF file.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-356-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-356"
 		}
 	]
 }

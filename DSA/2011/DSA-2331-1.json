@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2331-1",
-	"modified": "2023-10-16T00:11:08.804798Z",
+	"modified": "2024-01-09T20:22:43.589598Z",
 	"published": "2011-10-28T00:00:00Z",
 	"related": [
 		"CVE-2011-2768",
 		"CVE-2011-2769"
 	],
 	"summary": "tor - several",
-	"details": "\nIt has been discovered by frosty\\_un that a design flaw in Tor, an online\nprivacy tool, allows malicious relay servers to learn certain information\nthat they should not be able to learn. Specifically, a relay that a user\nconnects to directly could learn which other relays that user is\nconnected to directly. In combination with other attacks, this issue\ncan lead to deanonymizing the user. The Common Vulnerabilities and\nExposures project has assigned [\\\nCVE-2011-2768](https://security-tracker.debian.org/tracker/CVE-2011-2768) to this issue.\n\n\nIn addition to fixing the above mentioned issues, the updates to oldstable\nand stable fix a number of less critical issues ([\\\nCVE-2011-2769](https://security-tracker.debian.org/tracker/CVE-2011-2769)). Please\nsee the [\\\nposting from the Tor blog](https://blog.torproject.org/blog/tor-02234-released-security-patches) for more information.\n\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 0.2.1.31-1~lenny+1. Due to technical limitations in the Debian\narchive scripts, the update cannot be released synchronously with the\npackages for stable. It will be released shortly.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.2.1.31-1.\n\n\nFor the unstable (sid) and testing (wheezy) distributions, this problem has been fixed in\nversion 0.2.2.34-1.\n\n\nFor the experimental distribution, this problem have has been fixed in version\n0.2.3.6-alpha-1.\n\n\nWe recommend that you upgrade your tor packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -115,12 +114,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2331-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2331"
 		}
 	]
 }

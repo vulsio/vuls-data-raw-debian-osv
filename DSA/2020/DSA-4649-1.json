@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4649-1",
-	"modified": "2023-10-16T00:14:31.662309Z",
+	"modified": "2024-01-09T20:28:56.457042Z",
 	"published": "2020-04-02T00:00:00Z",
 	"related": [
 		"CVE-2020-11100"
 	],
 	"summary": "haproxy - security update",
-	"details": "\nFelix Wilhelm of Google Project Zero discovered that HAProxy, a TCP/HTTP\nreverse proxy, did not properly handle HTTP/2 headers. This would allow\nan attacker to write arbitrary bytes around a certain location on the\nheap, resulting in denial-of-service or potential arbitrary code\nexecution.\n\n\nFor the stable distribution (buster), this problem has been fixed in\nversion 1.8.19-1+deb10u2.\n\n\nWe recommend that you upgrade your haproxy packages.\n\n\nFor the detailed security status of haproxy please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/haproxy](https://security-tracker.debian.org/tracker/haproxy)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4649-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2020/dsa-4649"
 		}
 	]
 }

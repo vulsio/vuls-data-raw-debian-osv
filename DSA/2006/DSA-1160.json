@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1160",
-	"modified": "2023-10-16T00:10:05.560507Z",
+	"modified": "2024-01-09T20:24:11.960765Z",
 	"published": "2006-08-29T00:00:00Z",
 	"related": [
 		"CVE-2006-2779",
@@ -13,7 +13,6 @@
 		"CVE-2006-3811"
 	],
 	"summary": "mozilla - several",
-	"details": "\nThe latest security updates of Mozilla introduced a regression that\nled to a dysfunctional attachment panel which warrants a correction to\nfix this issue. For reference please find below the original advisory\ntext:\n\n\n\n> \n> Several security related problems have been discovered in Mozilla and\n> derived products. The Common Vulnerabilities and Exposures project\n> identifies the following vulnerabilities:\n> \n> \n> * [CVE-2006-2779](https://security-tracker.debian.org/tracker/CVE-2006-2779)\n> Mozilla team members discovered several crashes during testing of\n>  the browser engine showing evidence of memory corruption which may\n>  also lead to the execution of arbitrary code. The last bit of\n>  this problem will be corrected with the next update. You can\n>  prevent any trouble by disabling Javascript. [MFSA-2006-32]\n> * [CVE-2006-3805](https://security-tracker.debian.org/tracker/CVE-2006-3805)\n> The Javascript engine might allow remote attackers to execute\n>  arbitrary code. [MFSA-2006-50]\n> * [CVE-2006-3806](https://security-tracker.debian.org/tracker/CVE-2006-3806)\n> Multiple integer overflows in the Javascript engine might allow\n>  remote attackers to execute arbitrary code. [MFSA-2006-50]\n> * [CVE-2006-3807](https://security-tracker.debian.org/tracker/CVE-2006-3807)\n> Specially crafted Javascript allows remote attackers to execute\n>  arbitrary code. [MFSA-2006-51]\n> * [CVE-2006-3808](https://security-tracker.debian.org/tracker/CVE-2006-3808)\n> Remote Proxy AutoConfig (PAC) servers could execute code with elevated\n>  privileges via a specially crafted PAC script. [MFSA-2006-52]\n> * [CVE-2006-3809](https://security-tracker.debian.org/tracker/CVE-2006-3809)\n> Scripts with the UniversalBrowserRead privilege could gain\n>  UniversalXPConnect privileges and possibly execute code or obtain\n>  sensitive data. [MFSA-2006-53]\n> * [CVE-2006-3810](https://security-tracker.debian.org/tracker/CVE-2006-3810)\n> A cross-site scripting vulnerability allows remote attackers to\n>  inject arbitrary web script or HTML. [MFSA-2006-54]\n> \n> \n> \n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 1.7.8-1sarge7.2.2.\n\n\nFor the unstable distribution (sid) these problems won't be fixed\nsince its end of lifetime has been reached and the package will soon\nbe removed.\n\n\nWe recommend that you upgrade your mozilla package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1160.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1160"
 		}
 	]
 }

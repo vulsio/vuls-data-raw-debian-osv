@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2307-1",
-	"modified": "2023-06-28T06:28:45.670400Z",
+	"modified": "2024-01-09T20:32:29.348238Z",
 	"published": "2020-08-02T00:00:00Z",
 	"related": [
 		"CVE-2018-1000544"
 	],
 	"summary": "ruby-zip - security update",
-	"details": "\nrubyzip gem version 1.2.1 and earlier contains a Directory Traversal\nvulnerability in Zip::File component that can result in write\narbitrary files to the filesystem.\n\n\nThis attack appear to be exploitable via if a site allows\nuploading of .zip files, an attacker can upload a malicious file\nthat contains symlinks or files with absolute pathnames \"../\"\nto write arbitrary files to the filesystem..\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.2.0-1.1+deb9u1.\n\n\nWe recommend that you upgrade your ruby-zip packages.\n\n\nFor the detailed security status of ruby-zip please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ruby-zip>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2307-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2307"
 		}
 	]
 }

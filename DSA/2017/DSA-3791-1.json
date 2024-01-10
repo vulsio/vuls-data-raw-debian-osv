@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3791-1",
-	"modified": "2023-10-16T00:12:19.411498Z",
+	"modified": "2024-01-09T20:26:54.358177Z",
 	"published": "2017-02-22T00:00:00Z",
 	"related": [
 		"CVE-2016-6786",
@@ -20,7 +20,6 @@
 		"CVE-2017-6074"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or have other\nimpacts.\n\n\n* [CVE-2016-6786](https://security-tracker.debian.org/tracker/CVE-2016-6786) / [CVE-2016-6787](https://security-tracker.debian.org/tracker/CVE-2016-6787)\nIt was discovered that the performance events subsystem does not\n properly manage locks during certain migrations, allowing a local\n attacker to escalate privileges. This can be mitigated by\n disabling unprivileged use of performance events:\n `sysctl kernel.perf_event_paranoid=3`\n* [CVE-2016-8405](https://security-tracker.debian.org/tracker/CVE-2016-8405)\nPeter Pi of Trend Micro discovered that the frame buffer video\n subsystem does not properly check bounds while copying color maps to\n userspace, causing a heap buffer out-of-bounds read, leading to\n information disclosure.\n* [CVE-2016-9191](https://security-tracker.debian.org/tracker/CVE-2016-9191)\nCAI Qian discovered that reference counting is not properly handled\n within proc\\_sys\\_readdir in the sysctl implementation, allowing a\n local denial of service (system hang) or possibly privilege\n escalation.\n* [CVE-2017-2583](https://security-tracker.debian.org/tracker/CVE-2017-2583)\nXiaohan Zhang reported that KVM for amd64 does not correctly\n emulate loading of a null stack selector. This can be used by a\n user in a guest VM for denial of service (on an Intel CPU) or to\n escalate privileges within the VM (on an AMD CPU).\n* [CVE-2017-2584](https://security-tracker.debian.org/tracker/CVE-2017-2584)\nDmitry Vyukov reported that KVM for x86 does not correctly emulate\n memory access by the SGDT and SIDT instructions, which can result\n in a use-after-free and information leak.\n* [CVE-2017-2596](https://security-tracker.debian.org/tracker/CVE-2017-2596)\nDmitry Vyukov reported that KVM leaks page references when\n emulating a VMON for a nested hypervisor. This can be used by a\n privileged user in a guest VM for denial of service or possibly\n to gain privileges in the host.\n* [CVE-2017-2618](https://security-tracker.debian.org/tracker/CVE-2017-2618)\nIt was discovered that an off-by-one in the handling of SELinux\n attributes in /proc/pid/attr could result in local denial of\n service.\n* [CVE-2017-5549](https://security-tracker.debian.org/tracker/CVE-2017-5549)\nIt was discovered that the KLSI KL5KUSB105 serial USB device\n driver could log the contents of uninitialised kernel memory,\n resulting in an information leak.\n* [CVE-2017-5551](https://security-tracker.debian.org/tracker/CVE-2017-5551)\nJan Kara found that changing the POSIX ACL of a file on tmpfs never\n cleared its set-group-ID flag, which should be done if the user\n changing it is not a member of the group-owner. In some cases, this\n would allow the user-owner of an executable to gain the privileges\n of the group-owner.\n* [CVE-2017-5897](https://security-tracker.debian.org/tracker/CVE-2017-5897)\nAndrey Konovalov discovered an out-of-bounds read flaw in the\n ip6gre\\_err function in the IPv6 networking code.\n* [CVE-2017-5970](https://security-tracker.debian.org/tracker/CVE-2017-5970)\nAndrey Konovalov discovered a denial-of-service flaw in the IPv4\n networking code. This can be triggered by a local or remote\n attacker if a local UDP or raw socket has the IP\\_RETOPTS option\n enabled.\n* [CVE-2017-6001](https://security-tracker.debian.org/tracker/CVE-2017-6001)\nDi Shen discovered a race condition between concurrent calls to\n the performance events subsystem, allowing a local attacker to\n escalate privileges. This flaw exists because of an incomplete fix\n of [CVE-2016-6786](https://security-tracker.debian.org/tracker/CVE-2016-6786).\n This can be mitigated by disabling unprivileged use of performance\n events: `sysctl kernel.perf_event_paranoid=3`\n* [CVE-2017-6074](https://security-tracker.debian.org/tracker/CVE-2017-6074)\nAndrey Konovalov discovered a use-after-free vulnerability in the\n DCCP networking code, which could result in denial of service or\n local privilege escalation. On systems that do not already have\n the dccp module loaded, this can be mitigated by disabling it:\n `echo >> /etc/modprobe.d/disable-dccp.conf install dccp false`\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.39-1+deb8u1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -88,12 +87,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3791-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3791"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3380-1",
-	"modified": "2023-10-16T00:06:20.872553Z",
+	"modified": "2024-01-09T20:28:10.797391Z",
 	"published": "2015-10-27T00:00:00Z",
 	"related": [
 		"CVE-2015-7803",
 		"CVE-2015-7804"
 	],
 	"summary": "php5 - security update",
-	"details": "\nTwo vulnerabilities were found in PHP, a general-purpose scripting\nlanguage commonly used for web application development.\n\n\n* [CVE-2015-7803](https://security-tracker.debian.org/tracker/CVE-2015-7803)\nThe phar extension could crash with a NULL pointer dereference\n when processing tar archives containing links referring to\n non-existing files. This could lead to a denial of service.\n* [CVE-2015-7804](https://security-tracker.debian.org/tracker/CVE-2015-7804)\nThe phar extension does not correctly process directory entries\n found in archive files with the name \"/\", leading to a denial of\n service and, potentially, information disclosure.\n\n\nThe update for Debian stable (jessie) contains additional bug fixes\nfrom PHP upstream version 5.6.14, as described in the upstream\nchangelog:\n\n\n* \n\n\nNote to users of the oldstable distribution (wheezy): PHP 5.4 has\nreached end-of-life on September 14th, 2015. As a result, there will\nbe no more new upstream releases. The security support of PHP 5.4 in\nDebian oldstable (wheezy) will be best effort only, and you are\nstrongly advised to upgrade to latest Debian stable release (jessie),\nwhich includes PHP 5.6.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 5.4.45-0+deb7u2.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 5.6.14+dfsg-0+deb8u1.\n\n\nFor the testing distribution (stretch) and the unstable distribution\n(sid), these problems have been fixed in version 5.6.14+dfsg-1.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -104,12 +103,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3380-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3380"
 		}
 	]
 }

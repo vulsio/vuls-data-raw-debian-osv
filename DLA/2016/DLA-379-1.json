@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-379-1",
-	"modified": "2023-06-28T06:21:30.692960Z",
-	"published": "2016-01-03T00:00:00Z",
+	"modified": "2024-01-09T20:33:45.526936Z",
+	"published": "2016-01-02T00:00:00Z",
 	"related": [
 		"CVE-2015-5252",
 		"CVE-2015-5296",
 		"CVE-2015-5299"
 	],
 	"summary": "samba - security update",
-	"details": "\nSeveral vulnerabilities were found in Samba, a SMB/CIFS implementation\nthat provides a file, print, and login server.\n\n\n* [CVE-2015-5252](https://security-tracker.debian.org/tracker/CVE-2015-5252)\nJan Yenya Kasprzak and the Computer Systems Unit team at Faculty\n of Informatics, Masaryk University, reported that samba wrongly\n verified symlinks, making it possible to access resources outside\n the shared path, under certain circumstances.\n* [CVE-2015-5296](https://security-tracker.debian.org/tracker/CVE-2015-5296)\nStefan Metzmacher of SerNet and the Samba Team discovered that samba\n did not ensure that signing was negotiated when a client established\n an encrypted connection against a samba server.\n* [CVE-2015-5299](https://security-tracker.debian.org/tracker/CVE-2015-5299)\nSamba was vulnerable to a missing access control check in the\n VFS shadow\\_copy2 module, that could allow unauthorized users to\n access snapshots.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in samba version\n2:3.5.6~dfsg-3squeeze13. We recommend you to upgrade your samba\npackages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-379-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-379"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3070-1",
-	"modified": "2023-10-16T00:11:45.101666Z",
+	"modified": "2024-01-09T20:26:46.550264Z",
 	"published": "2014-11-07T00:00:00Z",
 	"related": [
 		"CVE-2014-3711",
@@ -10,7 +10,6 @@
 		"CVE-2014-8476"
 	],
 	"summary": "kfreebsd-9 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the FreeBSD kernel that\nmay lead to a denial of service or information disclosure.\n\n\n* [CVE-2014-3711](https://security-tracker.debian.org/tracker/CVE-2014-3711)\nDenial of service through memory leak in sandboxed namei lookups.\n* [CVE-2014-3952](https://security-tracker.debian.org/tracker/CVE-2014-3952)\nKernel memory disclosure in sockbuf control messages.\n* [CVE-2014-3953](https://security-tracker.debian.org/tracker/CVE-2014-3953)\nKernel memory disclosure in SCTP. This update disables SCTP, since the\n userspace tools shipped in Wheezy didn't support SCTP anyway.\n* [CVE-2014-8476](https://security-tracker.debian.org/tracker/CVE-2014-8476)\nKernel stack disclosure in setlogin() and getlogin().\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 9.0-10+deb70.8.\n\n\nWe recommend that you upgrade your kfreebsd-9 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3070-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3070"
 		}
 	]
 }

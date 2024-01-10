@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4036-1",
-	"modified": "2023-10-16T00:12:35.439798Z",
+	"modified": "2024-01-09T20:26:14.454724Z",
 	"published": "2017-11-15T00:00:00Z",
 	"related": [
 		"CVE-2017-8808",
@@ -13,7 +13,6 @@
 		"CVE-2017-8815"
 	],
 	"summary": "mediawiki - security update",
-	"details": "\nMultiple security vulnerabilities have been discovered in MediaWiki, a\nwebsite engine for collaborative work:\n\n\n* [CVE-2017-8808](https://security-tracker.debian.org/tracker/CVE-2017-8808)\nCross-site-scripting with non-standard URL escaping and\n $wgShowExceptionDetails disabled.\n* [CVE-2017-8809](https://security-tracker.debian.org/tracker/CVE-2017-8809)\nReflected file download in API.\n* [CVE-2017-8810](https://security-tracker.debian.org/tracker/CVE-2017-8810)\nOn private wikis the login form didn't distinguish between\n login failure due to bad username and bad password.\n* [CVE-2017-8811](https://security-tracker.debian.org/tracker/CVE-2017-8811)\nIt was possible to mangle HTML via raw message parameter\n expansion.\n* [CVE-2017-8812](https://security-tracker.debian.org/tracker/CVE-2017-8812)\nid attributes in headlines allowed raw '>'.\n* [CVE-2017-8814](https://security-tracker.debian.org/tracker/CVE-2017-8814)\nLanguage converter could be tricked into replacing text inside tags.\n* [CVE-2017-8815](https://security-tracker.debian.org/tracker/CVE-2017-8815)\nUnsafe attribute injection via glossary rules in language converter.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1:1.27.4-1~deb9u1.\n\n\nWe recommend that you upgrade your mediawiki packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4036-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-4036"
 		}
 	]
 }

@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-575-2",
-	"modified": "2023-06-28T06:28:10.417288Z",
-	"published": "2016-07-30T00:00:00Z",
+	"modified": "2024-01-09T20:33:49.475007Z",
+	"published": "2016-08-03T00:00:00Z",
 	"summary": "collectd - regression update",
-	"details": "\nEmilien Gaspar discovered that collectd, a statistics collection and\nmonitoring daemon, incorrectly processed incoming network\npackets. This resulted in a heap overflow, allowing a remote attacker\nto either cause a DoS via application crash, or potentially execute\narbitrary code.\n\n\nAdditionally, security researchers at Columbia University and the\nUniversity of Virginia discovered that collectd failed to verify a\nreturn value during initialization. This meant the daemon could\nsometimes be started without the desired, secure settings.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.1.0-3+deb7u1.\n\n\nWe recommend that you upgrade your collectd packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-575-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-575"
 		}
 	]
 }

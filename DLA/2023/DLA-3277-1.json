@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3277-1",
-	"modified": "2023-06-28T06:26:54.042457Z",
+	"modified": "2024-01-09T20:33:26.983266Z",
 	"published": "2023-01-20T00:00:00Z",
 	"related": [
 		"CVE-2022-42906"
 	],
 	"summary": "powerline-gitstatus - security update",
-	"details": "\nPowerline Gitstatus, a status line plugin for the VIM editor, allows\narbitrary code execution. Git repositories can contain per-repository\nconfiguration that changes the behavior of git, including running arbitrary\ncommands. When using powerline-gitstatus, changing to a directory\nautomatically runs git commands in order to display information about the\ncurrent repository in the prompt. If an attacker can convince a user to\nchange their current directory to one controlled by the attacker, such as\nin a shared filesystem or extracted archive, powerline-gitstatus will run\narbitrary commands under the attacker's control.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.3.2-0+deb10u1.\n\n\nWe recommend that you upgrade your powerline-gitstatus packages.\n\n\nFor the detailed security status of powerline-gitstatus please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/powerline-gitstatus>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3277-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3277"
 		}
 	]
 }

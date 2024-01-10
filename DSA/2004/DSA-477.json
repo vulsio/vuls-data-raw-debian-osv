@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-477",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-04-06T00:00:00Z",
 	"published": "2004-04-06T00:00:00Z",
 	"related": [
 		"CVE-2004-0372"
 	],
 	"summary": "xine-ui - insecure temporary file creation",
-	"details": "\nShaun Colley discovered a problem in xine-ui, the xine video player\nuser interface. A script contained in the package to possibly remedy\na problem or report a bug does not create temporary files in a secure\nfashion. This could allow a local attacker to overwrite files with\nthe privileges of the user invoking xine.\n\n\nThis update also removes the bug reporting facility since bug reports\ncan't be processed upstream anymore.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.9.8-5.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you upgrade your xine-ui package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-477.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-477"
 		}
 	]
 }

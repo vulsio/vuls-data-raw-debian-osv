@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-149-1",
-	"modified": "2023-06-28T06:20:44.670571Z",
+	"modified": "2024-01-09T20:31:18.300675Z",
 	"published": "2015-02-07T00:00:00Z",
 	"related": [
 		"CVE-2014-9750",
 		"CVE-2014-9751"
 	],
 	"summary": "ntp - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the ntp package, an\nimplementation of the Network Time Protocol. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2014-9297](https://security-tracker.debian.org/tracker/CVE-2014-9297)\nStephen Roettger of the Google Security Team, Sebastian Krahmer of\n the SUSE Security Team and Harlan Stenn of Network Time Foundation\n discovered that the length value in extension fields is not properly\n validated in several code paths in ntp\\_crypto.c, which could lead to\n information leakage or denial of service (ntpd crash).\n* [CVE-2014-9298](https://security-tracker.debian.org/tracker/CVE-2014-9298)\nStephen Roettger of the Google Security Team reported that ACLs\n based on IPv6 ::1 addresses can be bypassed.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in ntp version 1:4.2.6.p2+dfsg-1+deb6u2\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-149-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-149"
 		}
 	]
 }

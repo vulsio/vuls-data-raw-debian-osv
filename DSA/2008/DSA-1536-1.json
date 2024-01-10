@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1536-1",
-	"modified": "2023-10-16T00:05:26.468448Z",
+	"modified": "2024-01-09T20:24:56.580324Z",
 	"published": "2008-03-31T00:00:00Z",
 	"related": [
 		"CVE-2007-1246",
@@ -11,7 +11,6 @@
 		"CVE-2008-1161"
 	],
 	"summary": "xine-lib - several vulnerabilities",
-	"details": "\nSeveral local vulnerabilities have been discovered in Xine, a\nmedia player library, allowed for a denial of service or arbitrary code\nexecution, which could be exploited through viewing malicious content.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2007-1246](https://security-tracker.debian.org/tracker/CVE-2007-1246) / [CVE-2007-1387](https://security-tracker.debian.org/tracker/CVE-2007-1387)\nThe DMO\\_VideoDecoder\\_Open function does not set the biSize before use in a\n memcpy, which allows user-assisted remote attackers to cause a buffer overflow\n and possibly execute arbitrary code (applies to sarge only).\n* [CVE-2008-0073](https://security-tracker.debian.org/tracker/CVE-2008-0073)\nArray index error in the sdpplin\\_parse function allows remote RTSP servers\n to execute arbitrary code via a large streamid SDP parameter.\n* [CVE-2008-0486](https://security-tracker.debian.org/tracker/CVE-2008-0486)\nArray index vulnerability in libmpdemux/demux\\_audio.c might allow remote\n attackers to execute arbitrary code via a crafted FLAC tag, which triggers\n a buffer overflow (applies to etch only).\n* [CVE-2008-1161](https://security-tracker.debian.org/tracker/CVE-2008-1161)\nBuffer overflow in the Matroska demuxer allows remote attackers to cause a\n denial of service (crash) and possibly execute arbitrary code via a Matroska\n file with invalid frame sizes.\n\n\nFor the old stable distribution (sarge), these problems have been fixed in\nversion 1.0.1-1sarge7.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n1.1.2+dfsg-6.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.1.11-1.\n\n\nWe recommend that you upgrade your xine-lib package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1536-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1536"
 		}
 	]
 }

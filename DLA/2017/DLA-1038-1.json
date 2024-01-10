@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1038-1",
-	"modified": "2023-06-28T06:20:15.847103Z",
+	"modified": "2024-01-09T20:30:43.280572Z",
 	"published": "2017-07-24T00:00:00Z",
 	"related": [
 		"CVE-2017-10790"
 	],
 	"summary": "libtasn1-3 - security update",
-	"details": "\n* [CVE-2017-10790](https://security-tracker.debian.org/tracker/CVE-2017-10790)\nThe \\_asn1\\_check\\_identifier function in GNU Libtasn1 through 4.12\n causes a NULL pointer dereference and crash when reading crafted\n input that triggers assignment of a NULL value within an asn1\\_node\n structure. It may lead to a remote denial of service attack.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.13-2+deb7u5.\n\n\nWe recommend that you upgrade your libtasn1-3 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1038-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1038"
 		}
 	]
 }

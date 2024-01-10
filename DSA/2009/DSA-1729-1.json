@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1729-1",
-	"modified": "2023-10-16T00:05:38.488746Z",
+	"modified": "2024-01-09T20:22:30.098717Z",
 	"published": "2009-03-02T00:00:00Z",
 	"related": [
 		"CVE-2009-0386",
@@ -9,7 +9,6 @@
 		"CVE-2009-0397"
 	],
 	"summary": "gst-plugins-bad0.10 - multiple vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been found in gst-plugins-bad0.10, a\ncollection of various GStreamer plugins. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-0386](https://security-tracker.debian.org/tracker/CVE-2009-0386)\nTobias Klein discovered a buffer overflow in the quicktime stream\n demuxer (qtdemux), which could potentially lead to the execution of\n arbitrary code via crafted .mov files.\n* [CVE-2009-0387](https://security-tracker.debian.org/tracker/CVE-2009-0387)\nTobias Klein discovered an array index error in the quicktime stream\n demuxer (qtdemux), which could potentially lead to the execution of\n arbitrary code via crafted .mov files.\n* [CVE-2009-0397](https://security-tracker.debian.org/tracker/CVE-2009-0397)\nTobias Klein discovered a buffer overflow in the quicktime stream\n demuxer (qtdemux) similar to the issue reported in [CVE-2009-0386](https://security-tracker.debian.org/tracker/CVE-2009-0386), which\n could also lead to the execution of arbitrary code via crafted .mov\n files.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 0.10.3-3.1+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.10.8-4.1~lenny1 of gst-plugins-good0.10, since the affected\nplugin has been moved there. The fix was already included in the lenny\nrelease.\n\n\nFor the unstable distribution (sid) and the testing distribution\n(squeeze), these problems have been fixed in version 0.10.8-4.1 of\ngst-plugins-good0.10.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1729-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1729"
 		}
 	]
 }

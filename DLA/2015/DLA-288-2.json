@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-288-2",
-	"modified": "2023-06-28T06:26:41.635241Z",
-	"published": "2015-09-30T00:00:00Z",
+	"modified": "2024-01-09T20:33:07.914064Z",
+	"published": "2015-09-29T00:00:00Z",
 	"summary": "openssh - regression update",
-	"details": "\nIn Debian LTS (squeeze), the fix for [CVE-2015-5600](https://security-tracker.debian.org/tracker/CVE-2015-5600) in openssh\n1:5.5p1-6+squeeze7 breaks authentication mechanisms that rely on the\nkeyboard-interactive method. Thanks to Colin Watson for making aware of\nthat.\n\n\nThe patch fixing [CVE-2015-5600](https://security-tracker.debian.org/tracker/CVE-2015-5600) introduces the field devices\\_done to the\nKbdintAuthctxt struct, but does not initialize the field in the\nkbdint\\_alloc() function. On Linux, this ends up filling that field with\njunk data. The result of this are random login failures when\nkeyboard-interactive authentication is used.\n\n\nThis upload of openssh 1:5.5p1-6+squeeze7 to Debian LTS (squeeze) adds\nthat initialization of the `devices\\_done` field alongside the existing\ninitialization code.\n\n\nPeople relying on keyboard-interactive based authentication mechanisms with\nOpenSSH on Debian squeeze(-lts) systems are recommended to upgrade\nOpenSSH to 1:5.5p1-6+squeeze7.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-288-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-288"
 		}
 	]
 }

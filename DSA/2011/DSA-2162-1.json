@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2162-1",
-	"modified": "2023-10-16T00:11:00.775999Z",
+	"modified": "2024-01-09T20:25:37.933775Z",
 	"published": "2011-02-14T00:00:00Z",
 	"related": [
 		"CVE-2011-0014"
 	],
 	"summary": "openssl - invalid memory access",
-	"details": "\nNeel Mehta discovered that an incorrectly formatted ClientHello handshake\nmessage could cause OpenSSL to parse past the end of the message. This\nallows an attacker to crash an application using OpenSSL by triggering\nan invalid memory access. Additionally, some applications may be vulnerable\nto expose contents of a parsed OCSP nonce extension.\n\n\nPackages in the oldstable distribution (lenny) are not affected by this\nproblem.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.9.8o-4squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 0.9.8o-5.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.9.8o-5.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2162-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2162"
 		}
 	]
 }

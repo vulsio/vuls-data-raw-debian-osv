@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4031-1",
-	"modified": "2023-10-16T00:12:35.038038Z",
+	"modified": "2024-01-09T20:26:56.890644Z",
 	"published": "2017-11-11T00:00:00Z",
 	"related": [
 		"CVE-2017-0898",
@@ -10,7 +10,6 @@
 		"CVE-2017-14033"
 	],
 	"summary": "ruby2.3 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the interpreter for the\nRuby language. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2017-0898](https://security-tracker.debian.org/tracker/CVE-2017-0898)\naerodudrizzt reported a buffer underrun vulnerability in the sprintf\n method of the Kernel module resulting in heap memory corruption or\n information disclosure from the heap.\n* [CVE-2017-0903](https://security-tracker.debian.org/tracker/CVE-2017-0903)\nMax Justicz reported that RubyGems is prone to an unsafe object\n deserialization vulnerability. When parsed by an application which\n processes gems, a specially crafted YAML formatted gem specification\n can lead to remote code execution.\n* [CVE-2017-10784](https://security-tracker.debian.org/tracker/CVE-2017-10784)\nYusuke Endoh discovered an escape sequence injection vulnerability\n in the Basic authentication of WEBrick. An attacker can take\n advantage of this flaw to inject malicious escape sequences to the\n WEBrick log and potentially execute control characters on the\n victim's terminal emulator when reading logs.\n* [CVE-2017-14033](https://security-tracker.debian.org/tracker/CVE-2017-14033)\nasac reported a buffer underrun vulnerability in the OpenSSL\n extension. A remote attacker can take advantage of this flaw to\n cause the Ruby interpreter to crash leading to a denial of service.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 2.3.3-1+deb9u2.\n\n\nWe recommend that you upgrade your ruby2.3 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4031-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-4031"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-180",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-10-21T00:00:00Z",
 	"published": "2002-10-21T00:00:00Z",
 	"related": [
 		"CVE-2002-1232"
 	],
 	"summary": "nis - information leak",
-	"details": "\nThorsten Kukuck discovered a problem in the ypserv program which is\npart of the Network Information Services (NIS). A memory leak in all\nversions of ypserv prior to 2.5 is remotely exploitable. When a\nmalicious user could request a non-existing map the server will leak\nparts of an old domainname and mapname.\n\n\nThis problem has been fixed in version 3.9-6.1 for the current stable\ndistribution (woody), in version 3.8-2.1 for the old stable\ndistribution (potato) and in version 3.9-6.2 for the unstable\ndistribution (sid).\n\n\nWe recommend that you upgrade your nis package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-180.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-180"
 		}
 	]
 }

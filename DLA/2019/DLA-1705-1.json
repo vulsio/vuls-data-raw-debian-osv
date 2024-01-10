@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1705-1",
-	"modified": "2023-06-28T06:24:55.955420Z",
+	"modified": "2024-01-09T20:31:38.313310Z",
 	"published": "2019-03-05T00:00:00Z",
 	"related": [
 		"CVE-2017-11332",
@@ -10,7 +10,6 @@
 		"CVE-2017-15371"
 	],
 	"summary": "sox - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in SoX (Sound eXchange),\na sound processing program:\n\n\n* [CVE-2017-11332](https://security-tracker.debian.org/tracker/CVE-2017-11332)\nThe startread function (wav.c) is affected by a divide-by-zero\n vulnerability when processing WAV file with zero channel count. This\n flaw might be leveraged by remote attackers using a crafted WAV file\n to perform denial of service (application crash).\n* [CVE-2017-11358](https://security-tracker.debian.org/tracker/CVE-2017-11358)\nThe read\\_samples function (hcom.c) is affected by an invalid memory read\n vulnerability when processing HCOM files with invalid dictionnaries. This\n flaw might be leveraged by remote attackers using a crafted HCOM file to\n perform denial of service (application crash).\n* [CVE-2017-11359](https://security-tracker.debian.org/tracker/CVE-2017-11359)\nThe wavwritehdr function (wav.c) is affected by a divide-by-zero\n vulnerability when processing WAV files with invalid channel count over\n 16 bits. This flaw might be leveraged by remote attackers using a crafted\n WAV file to perform denial of service (application crash).\n* [CVE-2017-15371](https://security-tracker.debian.org/tracker/CVE-2017-15371)\nThe sox\\_append\\_comment() function (formats.c) is vulnerable to a reachable\n assertion when processing FLAC files with metadata declaring more comments\n than provided. This flaw might be leveraged by remote attackers using\n crafted FLAC data to perform denial of service (application crash).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n14.4.1-5+deb8u3.\n\n\nWe recommend that you upgrade your sox packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1705-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1705"
 		}
 	]
 }

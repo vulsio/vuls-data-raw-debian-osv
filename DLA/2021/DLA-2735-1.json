@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2735-1",
-	"modified": "2023-06-28T06:25:17.990255Z",
-	"published": "2021-08-11T00:00:00Z",
+	"modified": "2024-01-09T20:32:54.029453Z",
+	"published": "2021-08-09T00:00:00Z",
 	"related": [
 		"CVE-2018-14662",
 		"CVE-2018-16846",
@@ -11,7 +11,6 @@
 		"CVE-2021-3524"
 	],
 	"summary": "ceph - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Ceph, a distributed storage\nand file system.\n\n\n* [CVE-2018-14662](https://security-tracker.debian.org/tracker/CVE-2018-14662)\nAuthenticated ceph users with read only permissions could steal dm-crypt\n encryption keys used in ceph disk encryption.\n* [CVE-2018-16846](https://security-tracker.debian.org/tracker/CVE-2018-16846)\nAuthenticated ceph RGW users can cause a denial of service against OMAPs\n holding bucket indices.\n* [CVE-2020-10753](https://security-tracker.debian.org/tracker/CVE-2020-10753)\nA flaw was found in the Red Hat Ceph Storage RadosGW (Ceph Object\n Gateway).\n The vulnerability is related to the injection of HTTP headers via a CORS\n ExposeHeader tag. The newline character in the ExposeHeader tag in the\n CORS configuration file generates a header injection in the response when\n the CORS request is made.\n* [CVE-2020-1760](https://security-tracker.debian.org/tracker/CVE-2020-1760)\nA flaw was found in the Ceph Object Gateway, where it supports request\n sent by an anonymous user in Amazon S3. This flaw could lead to potential\n XSS attacks due to the lack of proper neutralization of untrusted input.\n* [CVE-2021-3524](https://security-tracker.debian.org/tracker/CVE-2021-3524)\nA flaw was found in the Red Hat Ceph Storage RadosGW (Ceph Object Gateway)\n The vulnerability is related to the injection of HTTP headers via a CORS\n ExposeHeader tag. The newline character in the ExposeHeader tag in the\n CORS configuration file generates a header injection in the response when\n the CORS request is made. In addition, the prior bug fix for CVE-2020 10753 did not account for the use of \\r as a header separator, thus a new\n flaw has been created.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n10.2.11-2+deb9u1.\n\n\nWe recommend that you upgrade your ceph packages.\n\n\nFor the detailed security status of ceph please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ceph>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2735-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2735"
 		}
 	]
 }

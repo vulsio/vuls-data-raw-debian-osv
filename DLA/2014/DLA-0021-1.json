@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-0021-1",
-	"modified": "2023-06-28T06:20:06.997720Z",
+	"modified": "2024-01-09T20:30:36.976286Z",
 	"published": "2014-07-26T00:00:00Z",
 	"related": [
 		"CVE-2013-7176",
 		"CVE-2013-7177"
 	],
 	"summary": "fail2ban - security update",
-	"details": "\n* Use anchored failregex for filters to avoid possible DoS. Manually\n picked up from the current status of 0.8 branch (as of\n 0.8.13-29-g09b2016):\n\t+ [CVE-2013-7176](https://security-tracker.debian.org/tracker/CVE-2013-7176): postfix.conf - anchored on the front, expects\n\t \"postfix/smtpd\" prefix in the log line\n\t+ [CVE-2013-7177](https://security-tracker.debian.org/tracker/CVE-2013-7177): cyrus-imap.conf - anchored on the front, and\n\t refactored to have a single failregex\n\t+ couriersmtp.conf - anchored on both sides\n\t+ exim.conf - front-anchored versions picked up from exim.conf\n\t and exim-spam.conf\n\t+ lighttpd-fastcgi.conf - front-anchored picked up from suhosin.conf\n\t (copied from the Wheezy version)\n* Catch also failed logins via secured (imaps/pop3s) for cyrus-imap.\n Regression was introduced while strengthening failregex in 0.8.11 (bd175f)\n Debian bug #755173\n* cyrus-imap: catch user not found attempts\n\n\nFor Debian 6 Squeeze, these issues have been fixed in fail2ban version 0.8.4-3+squeeze3\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-0021-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-0021"
 		}
 	]
 }

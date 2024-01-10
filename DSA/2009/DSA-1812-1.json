@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1812-1",
-	"modified": "2023-10-16T00:10:38.732245Z",
+	"modified": "2024-01-09T20:27:35.104306Z",
 	"published": "2009-06-04T00:00:00Z",
 	"related": [
 		"CVE-2009-0023",
 		"CVE-2009-1955"
 	],
 	"summary": "apr-util - several vulnerabilities",
-	"details": "\nApr-util, the Apache Portable Runtime Utility library, is used by\nApache 2.x, Subversion, and other applications. Two denial of service\nvulnerabilities have been found in apr-util:\n\n\n* \"kcope\" discovered a flaw in the handling of internal XML entities in\nthe apr\\_xml\\_\\* interface that can be exploited to use all available\nmemory. This denial of service can be triggered remotely in the Apache\nmod\\_dav and mod\\_dav\\_svn modules. (No CVE id yet)\n* [CVE-2009-0023](https://security-tracker.debian.org/tracker/CVE-2009-0023)\nMatthew Palmer discovered an underflow flaw in the\napr\\_strmatch\\_precompile function that can be exploited to cause a\ndaemon crash. The vulnerability can be triggered (1) remotely in\nmod\\_dav\\_svn for Apache if the \"SVNMasterURI\" directive is in use, (2)\nremotely in mod\\_apreq2 for Apache or other applications using\nlibapreq2, or (3) locally in Apache by a crafted \".htaccess\" file.\n\n\nOther exploit paths in other applications using apr-util may exist.\n\n\nIf you use Apache, or if you use svnserve in standalone mode, you need\nto restart the services after you upgraded the libaprutil1 package.\n\n\nThe oldstable distribution (etch), these problems have been fixed in\nversion 1.2.7+dfsg-2+etch2.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.2.12+dfsg-8+lenny2.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your apr-util packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1812-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1812"
 		}
 	]
 }

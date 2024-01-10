@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-20-1",
-	"modified": "2023-06-28T06:21:08.003323Z",
+	"modified": "2024-01-09T20:31:55.887747Z",
 	"published": "2014-08-07T00:00:00Z",
 	"related": [
 		"CVE-2012-3512",
@@ -9,7 +9,6 @@
 		"CVE-2013-6359"
 	],
 	"summary": "munin - security update",
-	"details": "\n[ Christoph Biedl ]\n\n\n* munin-node: more secure state file handling, introducing a new plugin\n state directory root, owned by uid 0. Then each plugin runs in its own\n UID plugin state directory, owned by that UID. (Closes: #684075),\n (Closes: #679897), closes [CVE-2012-3512](https://security-tracker.debian.org/tracker/CVE-2012-3512).\n* plugins: use runtime $ENV{MUNIN\\_PLUGSTATE}. So all properly written\n plugins will use /var/lib/munin-node/plugin-state/$uid/$some\\_file now please report plugins that are still using /var/lib/munin/plugin-state/ as those might pose a security risk!\n* Don't abort data collection for a node due to malicious node, fixing\n munin#1397, [CVE-2013-6048](https://security-tracker.debian.org/tracker/CVE-2013-6048).\n* Validate multigraph plugin name, [CVE-2013-6359](https://security-tracker.debian.org/tracker/CVE-2013-6359).\n\n\nFor Debian 6 Squeeze, these issues have been fixed in munin version 1.4.5-3+deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-20-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-20"
 		}
 	]
 }

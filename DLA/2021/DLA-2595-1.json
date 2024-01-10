@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2595-1",
-	"modified": "2023-06-28T06:48:12.088090Z",
+	"modified": "2024-01-09T20:32:48.401372Z",
 	"published": "2021-03-17T00:00:00Z",
 	"related": [
 		"CVE-2020-13936"
 	],
 	"summary": "velocity - security update",
-	"details": "\nIt was discovered that there was a potential arbitrary code execution\nvulnerability in velocity, a Java-based template engine for writing web\napplications. It could be exploited by applications which allowed untrusted\nusers to upload/modify templates.\n\n\n* [CVE-2020-13936](https://security-tracker.debian.org/tracker/CVE-2020-13936)\nAn attacker that is able to modify Velocity templates may execute\n arbitrary Java code or run arbitrary system commands with the same\n privileges as the account running the Servlet container. This applies to\n applications that allow untrusted users to upload/modify velocity templates\n running Apache Velocity Engine versions up to 2.2.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n1.7-5+deb9u1.\n\n\nWe recommend that you upgrade your velocity packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2595-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2595"
 		}
 	]
 }

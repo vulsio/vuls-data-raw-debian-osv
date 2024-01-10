@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2087-1",
-	"modified": "2023-06-28T06:25:06.862720Z",
-	"published": "2020-01-31T00:00:00Z",
+	"modified": "2024-01-09T20:32:00.037670Z",
+	"published": "2020-01-30T00:00:00Z",
 	"related": [
 		"CVE-2019-18625",
 		"CVE-2019-18792"
 	],
 	"summary": "suricata - security update",
-	"details": "\nTwo vulnerabilities have recently been discovered in the stream-tcp code\nof the intrusion detection and prevention tool Suricata.\n\n\n* [CVE-2019-18625](https://security-tracker.debian.org/tracker/CVE-2019-18625)\nIt was possible to bypass/evade any tcp based signature by faking a\n closed TCP session using an evil server. After the TCP SYN packet, it\n was possible to inject a RST ACK and a FIN ACK packet with a bad TCP\n Timestamp option. The client would have ignored the RST ACK and the\n FIN ACK packets because of the bad TCP Timestamp option.\n* [CVE-2019-18792](https://security-tracker.debian.org/tracker/CVE-2019-18792)\nIt was possible to bypass/evade any tcp based signature by\n overlapping a TCP segment with a fake FIN packet. The fake FIN packet\n had to be injected just before the PUSH ACK packet we wanted to\n bypass. The PUSH ACK packet (containing the data) would have been\n ignored by Suricata because it would have overlapped the FIN packet\n (the sequence and ack number are identical in the two packets). The\n client would have ignored the fake FIN packet because the ACK flag\n would not have been set.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.0.7-2+deb8u5.\n\n\nWe recommend that you upgrade your suricata packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2087-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2087"
 		}
 	]
 }

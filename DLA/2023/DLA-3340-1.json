@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3340-1",
-	"modified": "2023-06-28T06:26:56.407720Z",
+	"modified": "2024-01-09T20:33:34.758439Z",
 	"published": "2023-02-23T00:00:00Z",
 	"related": [
 		"CVE-2020-12278",
@@ -9,7 +9,6 @@
 		"CVE-2023-22742"
 	],
 	"summary": "libgit2 - security update",
-	"details": "\nA vulnerability have been found in libgit2, a cross-platform, linkable\nlibrary implementation of Git, which may result in remote code execution\nwhen cloning a repository on a NTFS-like filesystem or man-in-the-middle\nattacks due to improper verification of cryptographic Signature.\n\n\n* [CVE-2020-12278](https://security-tracker.debian.org/tracker/CVE-2020-12278)\nAn issue was discovered in libgit2 before 0.28.4 and 0.9x before\n 0.99.0. path.c mishandles equivalent filenames that exist because of\n NTFS Alternate Data Streams. This may allow remote code execution when\n cloning a repository.\n* [CVE-2020-12279](https://security-tracker.debian.org/tracker/CVE-2020-12279)\nAn issue was discovered in libgit2 before 0.28.4 and 0.9x before\n 0.99.0. checkout.c mishandles equivalent filenames that exist because\n of NTFS short names. This may allow remote code execution when cloning a\n repository\n* [CVE-2023-22742](https://security-tracker.debian.org/tracker/CVE-2023-22742)\nlibgit2 is a cross-platform, linkable library implementation of Git.\n When using an SSH remote with the optional libssh2 backend, libgit2 does\n not perform certificate checking by default. Prior versions of libgit2\n require the caller to set the `certificate\\_check` field of libgit2's\n `git\\_remote\\_callbacks` structure - if a certificate check callback is\n not set, libgit2 does not perform any certificate checking. This means\n that by default - without configuring a certificate check callback,\n clients will not perform validation on the server SSH keys and may be\n subject to a man-in-the-middle attack.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.27.7+dfsg.1-0.2+deb10u1.\n\n\nWe recommend that you upgrade your libgit2 packages.\n\n\nFor the detailed security status of libgit2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libgit2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3340-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3340"
 		}
 	]
 }

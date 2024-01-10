@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1979-1",
-	"modified": "2023-10-16T00:10:52.465496Z",
+	"modified": "2024-01-09T20:22:38.264814Z",
 	"published": "2010-01-27T00:00:00Z",
 	"related": [
 		"CVE-2009-4013",
@@ -9,7 +9,6 @@
 		"CVE-2009-4015"
 	],
 	"summary": "lintian - multiple vulnerabilities",
-	"details": "\nMultiple vulnerabilities have been discovered in lintian,\na Debian package checker. The following Common Vulnerabilities and\nExposures project ids have been assigned to identify them:\n\n\n* [CVE-2009-4013](https://security-tracker.debian.org/tracker/CVE-2009-4013): missing control files sanitation\n\n Control field names and values were not sanitised before using them\n in certain operations that could lead to directory traversals.\n\n\nPatch systems' control files were not sanitised before using them\n in certain operations that could lead to directory traversals.\n\n\nAn attacker could exploit these vulnerabilities to overwrite\n arbitrary files or disclose system information.\n* [CVE-2009-4014](https://security-tracker.debian.org/tracker/CVE-2009-4014): format string vulnerabilities\n\n Multiple check scripts and the Lintian::Schedule module were using\n user-provided input as part of the sprintf/printf format string.\n* [CVE-2009-4015](https://security-tracker.debian.org/tracker/CVE-2009-4015): arbitrary command execution\n\n File names were not properly escaped when passing them as arguments\n to certain commands, allowing the execution of other commands as\n pipes or as a set of shell commands.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 1.23.28+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.24.2.1+lenny1.\n\n\nFor the testing distribution (squeeze), these problems will be fixed\nsoon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.3.2\n\n\nWe recommend that you upgrade your lintian packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1979-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-1979"
 		}
 	]
 }

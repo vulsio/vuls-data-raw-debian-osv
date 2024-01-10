@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2803-1",
-	"modified": "2023-10-16T00:11:31.635909Z",
+	"modified": "2024-01-09T20:21:30.060445Z",
 	"published": "2013-11-26T00:00:00Z",
 	"related": [
 		"CVE-2013-2236",
 		"CVE-2013-6051"
 	],
 	"summary": "quagga - several",
-	"details": "\nMultiple vulnerabilities were discovered in Quagga, a BGP/OSPF/RIP \nrouting daemon:\n\n\n* [CVE-2013-2236](https://security-tracker.debian.org/tracker/CVE-2013-2236)\nA buffer overflow was found in the OSPF API-server (exporting the LSDB \n and allowing announcement of Opaque-LSAs).\n* [CVE-2013-6051](https://security-tracker.debian.org/tracker/CVE-2013-6051)\nbgpd could be crashed through BGP updates. This only affects Wheezy/stable.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 0.99.20.1-0+squeeze5.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.99.22.4-1+wheezy1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.99.22.4-1.\n\n\nWe recommend that you upgrade your quagga packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -82,12 +81,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2803-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2803"
 		}
 	]
 }

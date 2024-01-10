@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2282-1",
-	"modified": "2023-06-28T06:25:10.875942Z",
+	"modified": "2024-01-09T20:32:23.416110Z",
 	"published": "2020-07-20T00:00:00Z",
 	"related": [
 		"CVE-2020-8163",
@@ -9,7 +9,6 @@
 		"CVE-2020-8165"
 	],
 	"summary": "rails - security update",
-	"details": "\nMultiple vulnerabilities were found in Ruby on Rails, a MVC ruby-based\nframework geared for web application development, which could lead to\nremote code execution and untrusted user input usage, depending on the\napplication.\n\n\n* [CVE-2020-8163](https://security-tracker.debian.org/tracker/CVE-2020-8163)\nA code injection vulnerability in Rails would allow an attacker\n who controlled the `locals` argument of a `render` call to perform\n a RCE.\n* [CVE-2020-8164](https://security-tracker.debian.org/tracker/CVE-2020-8164)\nA deserialization of untrusted data vulnerability exists in rails\n which can allow an attacker to supply information can be\n inadvertently leaked from Strong Parameters.\n* [CVE-2020-8165](https://security-tracker.debian.org/tracker/CVE-2020-8165)\nA deserialization of untrusted data vulnernerability exists in\n rails that can allow an attacker to unmarshal user-provided objects\n in MemCacheStore and RedisCacheStore potentially resulting in an\n RCE.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2:4.2.7.1-1+deb9u3.\n\n\nWe recommend that you upgrade your rails packages.\n\n\nFor the detailed security status of rails please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/rails>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2282-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2282"
 		}
 	]
 }

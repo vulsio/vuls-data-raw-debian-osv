@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2865-1",
-	"modified": "2023-06-28T06:25:23.475636Z",
+	"modified": "2024-01-09T20:33:01.149842Z",
 	"published": "2021-12-29T00:00:00Z",
 	"related": [
 		"CVE-2017-11521",
 		"CVE-2018-12584"
 	],
 	"summary": "resiprocate - security update",
-	"details": "\nTwo vulnerabilities were fixed in the reSIProcate SIP stack.\n\n\n* [CVE-2017-11521](https://security-tracker.debian.org/tracker/CVE-2017-11521)\nThe SdpContents::Session::Medium::parse function allowed remote\n attackers to cause a denial of service.\n* [CVE-2018-12584](https://security-tracker.debian.org/tracker/CVE-2018-12584)\nThe ConnectionBase::preparseNewBytes function allowed remote\n attackers to cause a denial of service or possibly execute arbitrary\n code when TLS communication is enabled.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1:1.11.0~beta1-3+deb9u2.\n\n\nWe recommend that you upgrade your resiprocate packages.\n\n\nFor the detailed security status of resiprocate please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/resiprocate>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2865-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2865"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4984-1",
-	"modified": "2023-10-16T00:15:18.919874Z",
+	"modified": "2024-01-09T20:29:17.449079Z",
 	"published": "2021-10-12T00:00:00Z",
 	"related": [
 		"CVE-2021-41133"
 	],
 	"summary": "flatpak - security update",
-	"details": "\nIt was discovered that sandbox restrictions in Flatpak, an application\ndeployment framework for desktop apps, could be bypassed for a Flatpak\napp with direct access to AF\\_UNIX sockets, by manipulating the VFS using\nmount-related syscalls that are not blocked by Flatpak's denylist\nseccomp filter.\n\n\nDetails can be found in the upstream advisory at\n[\\\nhttps://github.com/flatpak/flatpak/security/advisories/GHSA-67h7-w3jq-vh4q](https://github.com/flatpak/flatpak/security/advisories/GHSA-67h7-w3jq-vh4q)\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 1.10.5-0+deb11u1.\n\n\nWe recommend that you upgrade your flatpak packages.\n\n\nFor the detailed security status of flatpak please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/flatpak](https://security-tracker.debian.org/tracker/flatpak)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4984-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-4984"
 		}
 	]
 }

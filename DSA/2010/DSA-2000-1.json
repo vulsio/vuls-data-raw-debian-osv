@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2000-1",
-	"modified": "2023-10-16T00:10:52.363262Z",
+	"modified": "2024-01-09T20:27:39.692373Z",
 	"published": "2010-02-18T00:00:00Z",
 	"related": [
 		"CVE-2009-4631",
@@ -15,7 +15,6 @@
 		"CVE-2009-4640"
 	],
 	"summary": "ffmpeg-debian - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in ffmpeg, a multimedia \nplayer, server and encoder, which also provides a range of multimedia\nlibraries used in applications like MPlayer:\n\n\nVarious programming errors in container and codec implementations\nmay lead to denial of service or the execution of arbitrary code\nif the user is tricked into opening a malformed media file or stream.\n\n\nThe implementations of the following affected codecs and container formats\nhave been updated:\n\n\n* the Vorbis audio codec\n* the Ogg container implementation\n* the FF Video 1 codec\n* the MPEG audio codec\n* the H264 video codec\n* the MOV container implementation\n* the Oggedc container implementation\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.svn20080206-18+lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4:0.5+svn20090706-5.\n\n\nWe recommend that you upgrade your ffmpeg packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2000-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2000"
 		}
 	]
 }

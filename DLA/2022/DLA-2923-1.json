@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2923-1",
-	"modified": "2023-06-28T06:21:25.215194Z",
+	"modified": "2024-01-09T20:33:09.973798Z",
 	"published": "2022-02-15T00:00:00Z",
 	"related": [
 		"CVE-2021-42392",
 		"CVE-2022-23221"
 	],
 	"summary": "h2database - security update",
-	"details": "\nSecurity researchers of JFrog Security and Ismail Aydemir discovered two\nremote code execution vulnerabilities in the H2 Java SQL database engine\nwhich can be exploited through various attack vectors, most notably through\nthe H2 Console and by loading custom classes from remote servers through\nJNDI. The H2 console is a developer tool and not required by any reversedependency in Debian. It has been disabled in (old)stable releases.\nDatabase developers are advised to use at least version 2.1.210-1, currently\navailable in Debian unstable.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.4.193-1+deb9u1.\n\n\nWe recommend that you upgrade your h2database packages.\n\n\nFor the detailed security status of h2database please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/h2database>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2923-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2923"
 		}
 	]
 }

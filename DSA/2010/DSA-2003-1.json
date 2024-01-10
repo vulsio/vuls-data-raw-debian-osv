@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2003-1",
-	"modified": "2023-10-16T00:10:52.487862Z",
+	"modified": "2024-01-09T20:27:40.158372Z",
 	"published": "2010-02-22T00:00:00Z",
 	"related": [
 		"CVE-2009-3080",
@@ -16,7 +16,6 @@
 		"CVE-2010-0622"
 	],
 	"summary": "linux-2.6 - several vulnerabilities",
-	"details": "\nNOTE: This kernel update marks the final planned kernel security update for\nthe 2.6.18 kernel in the Debian release 'etch'. Although security support for\n'etch' officially ended on Feburary 15th, 2010, this update was already in\npreparation before that date. A final update that includes fixes for these\nissues in the 2.6.24 kernel is also in preparation and will be released\nshortly.\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2009-3080](https://security-tracker.debian.org/tracker/CVE-2009-3080)\nDave Jones reported an issue in the gdth SCSI driver. A missing\n check for negative offsets in an ioctl call could be exploited by\n local users to create a denial of service or potentially gain\n elevated privileges.\n* [CVE-2009-3726](https://security-tracker.debian.org/tracker/CVE-2009-3726)\nTrond Myklebust reported an issue where a malicious NFS server\n could cause a denial of service condition on its clients by\n returning incorrect attributes during an open call.\n* [CVE-2009-4005](https://security-tracker.debian.org/tracker/CVE-2009-4005)\nRoel Kluin discovered an issue in the hfc\\_usb driver, an ISDN\n driver for Colognechip HFC-S USB chip. A potential read overflow\n exists which may allow remote users to cause a denial of service\n condition (oops).\n* [CVE-2009-4020](https://security-tracker.debian.org/tracker/CVE-2009-4020)\nAmerigo Wang discovered an issue in the HFS filesystem that would\n allow a denial of service by a local user who has sufficient\n privileges to mount a specially crafted filesystem.\n* [CVE-2009-4021](https://security-tracker.debian.org/tracker/CVE-2009-4021)\nAnana V. Avati discovered an issue in the fuse subsystem. If the\n system is sufficiently low on memory, a local user can cause the\n kernel to dereference an invalid pointer resulting in a denial of\n service (oops) and potentially an escalation of privileges.\n* [CVE-2009-4536](https://security-tracker.debian.org/tracker/CVE-2009-4536)\nFabian Yamaguchi reported an issue in the e1000 driver for Intel\n gigabit network adapters which allow remote users to bypass packet\n filters using specially crafted ethernet frames.\n* [CVE-2010-0007](https://security-tracker.debian.org/tracker/CVE-2010-0007)\nFlorian Westphal reported a lack of capability checking in the\n ebtables netfilter subsystem. If the ebtables module is loaded,\n local users can add and modify ebtables rules.\n* [CVE-2010-0410](https://security-tracker.debian.org/tracker/CVE-2010-0410)\nSebastian Krahmer discovered an issue in the netlink connector\n subsystem that permits local users to allocate large amounts of\n system memory resulting in a denial of service (out of memory).\n* [CVE-2010-0415](https://security-tracker.debian.org/tracker/CVE-2010-0415)\nRamon de Carvalho Valle discovered an issue in the sys\\_move\\_pages\n interface, limited to amd64, ia64 and powerpc64 flavors in Debian.\n Local users can exploit this issue to cause a denial of service\n (system crash) or gain access to sensitive kernel memory.\n* [CVE-2010-0622](https://security-tracker.debian.org/tracker/CVE-2010-0622)\nJerome Marchand reported an issue in the futex subsystem that\n allows a local user to force an invalid futex state which results\n in a denial of service (oops).\n\n\nThis update also fixes a regression introduced by a previous security\nupdate that caused problems booting on certain s390 systems.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.6.18.dfsg.1-26etch2.\n\n\nWe recommend that you upgrade your linux-2.6, fai-kernels, and\nuser-mode-linux packages.\n\n\nThe following matrix lists additional source packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17+etch.26etch2 |\n| user-mode-linux | 2.6.18-1um-2etch.26etch2 |\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -80,12 +79,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2003-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2003"
 		}
 	]
 }

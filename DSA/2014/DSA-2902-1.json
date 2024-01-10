@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2902-1",
-	"modified": "2023-10-16T00:06:07.434974Z",
+	"modified": "2024-01-09T20:27:55.766892Z",
 	"published": "2014-04-13T00:00:00Z",
 	"related": [
 		"CVE-2014-0138",
 		"CVE-2014-0139"
 	],
 	"summary": "curl - security update",
-	"details": "\nTwo vulnerabilities have been discovered in cURL, an URL transfer\nlibrary. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2014-0138](https://security-tracker.debian.org/tracker/CVE-2014-0138)\nSteve Holme discovered that libcurl can in some circumstances re-use\n the wrong connection when asked to do transfers using other\n protocols than HTTP and FTP.\n* [CVE-2014-0139](https://security-tracker.debian.org/tracker/CVE-2014-0139)\nRichard Moore from Westpoint Ltd. reported that libcurl does not\n behave compliant to RFC 2828 under certain conditions and\n incorrectly validates wildcard SSL certificates containing literal\n IP addresses.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 7.21.0-2.1+squeeze8.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 7.26.0-1+wheezy9.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 7.36.0-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 7.36.0-1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -75,12 +74,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2902-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2902"
 		}
 	]
 }

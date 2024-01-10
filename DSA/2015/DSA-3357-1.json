@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3357-1",
-	"modified": "2023-10-16T00:11:57.226480Z",
+	"modified": "2024-01-09T20:21:51.920621Z",
 	"published": "2015-09-13T00:00:00Z",
 	"related": [
 		"CVE-2015-6927"
 	],
 	"summary": "vzctl - security update",
-	"details": "\nIt was discovered that vzctl, a set of control tools for the OpenVZ\nserver virtualisation solution, determined the storage layout of\ncontainers based on the presence of an XML file inside the container.\nAn attacker with local root privileges in a simfs-based container\ncould gain control over ploop-based containers. Further information on\nthe prerequisites of such an attack can be found at\n[\\\nsrc.openvz.org](https://src.openvz.org/projects/OVZL/repos/vzctl/commits/9e98ea630ac0e88b44e3e23c878a5166aeb74e1c).\n\n\nThe oldstable distribution (wheezy) is not affected.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 4.8-1+deb8u2. During the update existing configurations are\nautomatically updated.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 4.9.4-2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4.9.4-2.\n\n\nWe recommend that you upgrade your vzctl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3357-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3357"
 		}
 	]
 }

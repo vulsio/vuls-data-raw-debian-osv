@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3638-1",
-	"modified": "2023-10-31T15:15:28.872990Z",
-	"published": "2023-10-31T00:00:00Z",
+	"modified": "2024-01-09T20:33:42.523155Z",
+	"published": "2023-10-29T00:00:00Z",
 	"related": [
 		"CVE-2023-44487"
 	],
 	"summary": "h2o - security update",
-	"details": "\nA vulnerability has been identified in h2o, a high-performance web server\nwith support for HTTP/2.\n\n\nA security vulnerability [CVE-2023-44487](https://security-tracker.debian.org/tracker/CVE-2023-44487) was discovered that could potentially\nbe exploited to disrupt server operation.\n\n\nThe vulnerability in the h2o HTTP/2 server was related to the handling of\ncertain types of HTTP/2 requests. In certain scenarios, an attacker could\nsend a series of malicious requests, causing the server to process them\nrapidly and exhaust system resources.\n\n\nThe applied upstream patch changes the ABI. Therefore, if your application\nis built against any shared libraries of h2o, you need to rebuild it.\nNo Debian package is affected.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n2.2.5+dfsg2-2+deb10u2.\n\n\nWe recommend that you upgrade your h2o packages.\n\n\nFor the detailed security status of h2o please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/h2o>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3638-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3638"
 		}
 	]
 }

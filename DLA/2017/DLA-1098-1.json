@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1098-1",
-	"modified": "2023-06-28T06:20:22.077331Z",
+	"modified": "2024-01-09T20:30:45.782407Z",
 	"published": "2017-09-17T00:00:00Z",
 	"related": [
 		"CVE-2017-2923",
 		"CVE-2017-2924"
 	],
 	"summary": "freexl - security update",
-	"details": "\nThe Cisco Talos team reported two sensitive security issues affecting\nFreeXL-1.0.3 and any previous version.\n\n\n* [CVE-2017-2923](https://security-tracker.debian.org/tracker/CVE-2017-2923)\nAn exploitable heap based buffer overflow vulnerability exists in\n the read\\_biff\\_next\\_record function of FreeXL 1.0.3. A specially\n crafted XLS file can cause a memory corruption resulting in remote\n code execution. An attacker can send malicious XLS file to trigger\n this vulnerability.\n* [CVE-2017-2924](https://security-tracker.debian.org/tracker/CVE-2017-2924)\nAn exploitable heap-based buffer overflow vulnerability exists in\n the read\\_legacy\\_biff function of FreeXL 1.0.3. A specially crafted\n XLS file can cause a memory corruption resulting in remote code\n execution. An attacker can send malicious XLS file to trigger this\n vulnerability.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.0.0b-1+deb7u4.\n\n\nWe recommend that you upgrade your freexl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1098-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1098"
 		}
 	]
 }

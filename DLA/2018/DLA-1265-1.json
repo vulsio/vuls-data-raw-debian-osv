@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1265-1",
-	"modified": "2023-06-28T06:29:33.072140Z",
+	"modified": "2024-01-09T20:30:53.800579Z",
 	"published": "2018-01-31T00:00:00Z",
 	"related": [
 		"CVE-2013-1418",
@@ -12,7 +12,6 @@
 		"CVE-2016-3120"
 	],
 	"summary": "krb5 - security update",
-	"details": "\nKerberos, a system for authenticating users and services on a network,\nwas affected by several vulnerabilities. The Common Vulnerabilities\nand Exposures project identifies the following issues.\n\n\n* [CVE-2013-1418](https://security-tracker.debian.org/tracker/CVE-2013-1418)\nKerberos allows remote attackers to cause a denial of service\n (NULL pointer dereference and daemon crash) via a crafted request\n when multiple realms are configured.\n* [CVE-2014-5351](https://security-tracker.debian.org/tracker/CVE-2014-5351)\nKerberos sends old keys in a response to a -randkey -keepold\n request, which allows remote authenticated users to forge tickets by\n leveraging administrative access.\n* [CVE-2014-5353](https://security-tracker.debian.org/tracker/CVE-2014-5353)\nWhen the KDC uses LDAP, allows remote authenticated users to cause a\n denial of service (daemon crash) via a successful LDAP query with no\n results, as demonstrated by using an incorrect object type for a\n password policy.\n* [CVE-2014-5355](https://security-tracker.debian.org/tracker/CVE-2014-5355)\nKerberos expects that a krb5\\_read\\_message data field is represented\n as a string ending with a '\\0' character, which allows remote\n attackers to (1) cause a denial of service (NULL pointer\n dereference) via a zero-byte version string or (2) cause a denial of\n service (out-of-bounds read) by omitting the '\\0' character,\n* [CVE-2016-3119](https://security-tracker.debian.org/tracker/CVE-2016-3119)\nKerberos allows remote authenticated users to cause a denial of\n service (NULL pointer dereference and daemon crash) via a crafted\n request to modify a principal.\n* [CVE-2016-3120](https://security-tracker.debian.org/tracker/CVE-2016-3120)\nKerberos allows remote authenticated users to cause a denial of\n service (NULL pointer dereference and daemon crash) via an S4U2Self\n request.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.10.1+dfsg-5+deb7u9.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1265-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1265"
 		}
 	]
 }

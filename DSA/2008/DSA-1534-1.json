@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1534-1",
-	"modified": "2023-10-16T00:05:26.352261Z",
+	"modified": "2024-01-09T20:22:25.397807Z",
 	"published": "2008-03-28T00:00:00Z",
 	"related": [
 		"CVE-2007-4879",
@@ -17,7 +17,6 @@
 		"CVE-2008-1241"
 	],
 	"summary": "iceape",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the Iceape internet\nsuite, an unbranded version of the Seamonkey Internet Suite. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-4879](https://security-tracker.debian.org/tracker/CVE-2007-4879)\nPeter Brodersen and Alexander Klink discovered that the\n autoselection of SSL client certificates could lead to users\n being tracked, resulting in a loss of privacy.\n* [CVE-2008-1233](https://security-tracker.debian.org/tracker/CVE-2008-1233)\nmoz\\_bug\\_r\\_a4 discovered that variants of [CVE-2007-3738](https://security-tracker.debian.org/tracker/CVE-2007-3738) and\n [CVE-2007-5338](https://security-tracker.debian.org/tracker/CVE-2007-5338) allow the execution of arbitrary code through\n XPCNativeWrapper.\n* [CVE-2008-1234](https://security-tracker.debian.org/tracker/CVE-2008-1234)\nmoz\\_bug\\_r\\_a4 discovered that insecure handling of event\n handlers could lead to cross-site scripting.\n* [CVE-2008-1235](https://security-tracker.debian.org/tracker/CVE-2008-1235)\nBoris Zbarsky, Johnny Stenback and moz\\_bug\\_r\\_a4 discovered\n that incorrect principal handling could lead to cross-site\n scripting and the execution of arbitrary code.\n* [CVE-2008-1236](https://security-tracker.debian.org/tracker/CVE-2008-1236)\nTom Ferris, Seth Spitzer, Martin Wargers, John Daggett and Mats\n Palmgren discovered crashes in the layout engine, which might\n allow the execution of arbitrary code.\n* [CVE-2008-1237](https://security-tracker.debian.org/tracker/CVE-2008-1237)\ngeorgi, tgirmann and Igor Bukanov discovered crashes in the\n Javascript engine, which might allow the execution of arbitrary\n code.\n* [CVE-2008-1238](https://security-tracker.debian.org/tracker/CVE-2008-1238)\nGregory Fleischer discovered that HTTP Referrer headers were\n handled incorrectly in combination with URLs containing Basic\n Authentication credentials with empty usernames, resulting\n in potential Cross-Site Request Forgery attacks.\n* [CVE-2008-1240](https://security-tracker.debian.org/tracker/CVE-2008-1240)\nGregory Fleischer discovered that web content fetched through\n the jar: protocol can use Java to connect to arbitrary ports.\n This is only an issue in combination with the non-free Java\n plugin.\n* [CVE-2008-1241](https://security-tracker.debian.org/tracker/CVE-2008-1241)\nChris Thomas discovered that background tabs could generate\n XUL popups overlaying the current tab, resulting in potential\n spoofing attacks.\n\n\nThe Mozilla products from the old stable distribution (sarge) are no\nlonger supported.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.0.13~pre080323b-0etch1.\n\n\nWe recommend that you upgrade your iceape packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -53,12 +52,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1534-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1534"
 		}
 	]
 }

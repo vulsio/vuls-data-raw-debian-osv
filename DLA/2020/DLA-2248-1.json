@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2248-1",
-	"modified": "2023-06-28T06:26:28.826343Z",
+	"modified": "2024-01-09T20:32:15.657707Z",
 	"published": "2020-06-13T00:00:00Z",
 	"related": [
 		"CVE-2020-0543",
@@ -9,7 +9,6 @@
 		"CVE-2020-0549"
 	],
 	"summary": "intel-microcode - security update",
-	"details": "\nThe following CVE(s) were reported against src:intel-microcode.\n\n\n* [CVE-2020-0543](https://security-tracker.debian.org/tracker/CVE-2020-0543)\nA new domain bypass transient execution attack known as Special\n Register Buffer Data Sampling (SRBDS) has been found. This flaw\n allows data values from special internal registers to be leaked\n by an attacker able to execute code on any core of the CPU. An\n unprivileged, local attacker can use this flaw to infer values\n returned by affected instructions known to be commonly used\n during cryptographic operations that rely on uniqueness, secrecy,\n or both.\n* [CVE-2020-0548](https://security-tracker.debian.org/tracker/CVE-2020-0548)\nA flaw was found in Intel processors where a local attacker is\n able to gain information about registers used for vector\n calculations by observing register states from other processes\n running on the system. This results in a race condition where\n store buffers, which were not cleared, could be read by another\n process or a CPU sibling. The highest threat from this\n vulnerability is data confidentiality where an attacker could\n read arbitrary data as it passes through the processor.\n* [CVE-2020-0549](https://security-tracker.debian.org/tracker/CVE-2020-0549)\nA microarchitectural timing flaw was found on some Intel\n processors. A corner case exists where data in-flight during the\n eviction process can end up in the âfill buffersâ and not properly\n cleared by the MDS mitigations. The fill buffer contents (which\n were expected to be blank) can be inferred using MDS or TAA style\n attack methods to allow a local attacker to infer fill buffer\n values.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.20200609.2~deb8u1.\n\n\nWe recommend that you upgrade your intel-microcode packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -171,12 +170,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2248-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2248"
 		}
 	]
 }

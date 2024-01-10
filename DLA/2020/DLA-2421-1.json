@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2421-1",
-	"modified": "2023-06-28T06:25:14.164574Z",
+	"modified": "2024-01-09T20:32:33.609537Z",
 	"published": "2020-10-30T00:00:00Z",
 	"related": [
 		"CVE-2018-7588",
@@ -14,7 +14,6 @@
 		"CVE-2019-1010174"
 	],
 	"summary": "cimg - security update",
-	"details": "\nSeveral issues have been found in cimg, a powerful image processing\nlibrary.\n\n\n* [CVE-2019-1010174](https://security-tracker.debian.org/tracker/CVE-2019-1010174)\nis related to a missing string sanitization on URLs,\nwhich might result in a command injection when loading a special crafted\nimage.\n\n\nThe other CVEs are about heap-based buffer over-reads or double frees when\nloading a crafted image.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.7.9+dfsg-1+deb9u1.\n\n\nWe recommend that you upgrade your cimg packages.\n\n\nFor the detailed security status of cimg please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/cimg>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2421-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2421"
 		}
 	]
 }

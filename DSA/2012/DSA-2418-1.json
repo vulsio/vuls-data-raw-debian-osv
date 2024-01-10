@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2418-1",
-	"modified": "2023-10-16T00:05:54.371773Z",
+	"modified": "2024-01-09T20:22:50.383496Z",
 	"published": "2012-02-27T00:00:00Z",
 	"related": [
 		"CVE-2012-0866",
@@ -9,7 +9,6 @@
 		"CVE-2012-0868"
 	],
 	"summary": "postgresql-8.4 - several",
-	"details": "\nSeveral local vulnerabilities have been discovered in PostgreSQL, an\nobject-relational SQL database. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2012-0866](https://security-tracker.debian.org/tracker/CVE-2012-0866)\nIt was discovered that the permissions of a function called by a\n trigger are not checked. This could result in privilege escalation.\n* [CVE-2012-0867](https://security-tracker.debian.org/tracker/CVE-2012-0867)\nIt was discovered that only the first 32 characters of a host name\n are checked when validating host names through SSL certificates.\n This could result in spoofing the connection in limited\n circumstances.\n* [CVE-2012-0868](https://security-tracker.debian.org/tracker/CVE-2012-0868)\nIt was discovered that pg\\_dump did not sanitise object names.\n This could result in arbitrary SQL command execution if a\n malformed dump file is opened.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 8.4.11-0squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 8.4.11-1.\n\n\nWe recommend that you upgrade your postgresql-8.4 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -56,12 +55,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2418-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2418"
 		}
 	]
 }

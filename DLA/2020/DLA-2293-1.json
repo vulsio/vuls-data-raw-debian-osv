@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2293-1",
-	"modified": "2023-06-28T06:18:38.456552Z",
+	"modified": "2024-01-09T20:32:26.091345Z",
 	"published": "2020-07-27T00:00:00Z",
 	"related": [
 		"CVE-2017-17458",
@@ -12,7 +12,6 @@
 		"CVE-2019-3902"
 	],
 	"summary": "mercurial - security update",
-	"details": "\nSeveral vulnerabilities were discovered in mercurial, an easy-to-use,\nscalable distributed version control system.\n\n\n* [CVE-2017-17458](https://security-tracker.debian.org/tracker/CVE-2017-17458)\nIn Mercurial before 4.4.1, it is possible that a specially\n malformed repository can cause Git subrepositories to run\n arbitrary code in the form of a .git/hooks/post-update script\n checked into the repository. Typical use of Mercurial prevents\n construction of such repositories, but they can be created\n programmatically.\n* [CVE-2018-13346](https://security-tracker.debian.org/tracker/CVE-2018-13346)\nThe mpatch\\_apply function in mpatch.c in Mercurial before 4.6.1\n incorrectly proceeds in cases where the fragment start is past the\n end of the original data.\n* [CVE-2018-13347](https://security-tracker.debian.org/tracker/CVE-2018-13347)\nmpatch.c in Mercurial before 4.6.1 mishandles integer addition and\n subtraction.\n* [CVE-2018-13348](https://security-tracker.debian.org/tracker/CVE-2018-13348)\nThe mpatch\\_decode function in mpatch.c in Mercurial before 4.6.1\n mishandles certain situations where there should be at least 12\n bytes remaining after the current position in the patch data, but\n actually are not.\n* [CVE-2018-1000132](https://security-tracker.debian.org/tracker/CVE-2018-1000132)\nMercurial version 4.5 and earlier contains a Incorrect Access\n Control (CWE-285) vulnerability in Protocol server that can result\n in Unauthorized data access. This attack appear to be exploitable\n via network connectivity. This vulnerability appears to have been\n fixed in 4.5.1.\n* [CVE-2019-3902](https://security-tracker.debian.org/tracker/CVE-2019-3902)\nSymbolic links and subrepositories could be used defeat Mercurial's\n path-checking logic and write files outside the repository root.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.0-1+deb9u2.\n\n\nWe recommend that you upgrade your mercurial packages.\n\n\nFor the detailed security status of mercurial please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/mercurial>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2293-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2293"
 		}
 	]
 }

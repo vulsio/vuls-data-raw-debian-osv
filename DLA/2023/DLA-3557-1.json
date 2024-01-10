@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3557-1",
-	"modified": "2023-09-07T19:18:57.756392Z",
+	"modified": "2024-01-09T20:33:33.563598Z",
 	"published": "2023-09-07T00:00:00Z",
 	"related": [
 		"CVE-2022-48571"
 	],
 	"summary": "memcached - security update",
-	"details": "\nIt was discovered that there was a potential Denial of Service (DoS)\nvulnerability in memcached, a high-performance in-memory object caching\nsystem.\n\n\nA crash could have occured when handling \"multi-packet\" uploads in UDP mode.\nDeployments of memcached that only use TCP are likely unaffected by this\nissue.\n\n\n* [CVE-2022-48571](https://security-tracker.debian.org/tracker/CVE-2022-48571)\nmemcached 1.6.7 allows a Denial of Service via multi-packet uploads in UDP.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1.5.6-1.1+deb10u1.\n\n\nWe recommend that you upgrade your memcached packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3557-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3557"
 		}
 	]
 }

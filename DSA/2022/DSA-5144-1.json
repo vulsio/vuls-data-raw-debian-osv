@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5144-1",
-	"modified": "2023-10-16T00:20:40.465609Z",
+	"modified": "2024-01-09T20:26:36.723267Z",
 	"published": "2022-05-22T00:00:00Z",
 	"related": [
 		"CVE-2019-18823",
 		"CVE-2022-26110"
 	],
 	"summary": "condor - security update",
-	"details": "\nSeveral flaws have been discovered in HTCondor, a distributed workload\nmanagement system, which allow users with only READ access to any daemon to use\na different authentication method than the administrator has specified. If the\nadministrator has configured the READ or WRITE methods to include CLAIMTOBE,\nthen it is possible to impersonate another user and submit or remove jobs.\n\n\nFor the oldstable distribution (buster), these problems have been fixed\nin version 8.6.8~dfsg.1-2+deb10u1.\n\n\nWe recommend that you upgrade your condor packages.\n\n\nFor the detailed security status of condor please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/condor](https://security-tracker.debian.org/tracker/condor)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5144-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5144"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1390-1",
-	"modified": "2023-06-28T06:20:39.110445Z",
+	"modified": "2024-01-09T20:31:06.319975Z",
 	"published": "2018-05-31T00:00:00Z",
 	"related": [
 		"CVE-2018-1122",
@@ -11,7 +11,6 @@
 		"CVE-2018-1126"
 	],
 	"summary": "procps - security update",
-	"details": "\nThe Qualys Research Labs discovered multiple vulnerabilities in procps,\na set of command line and full screen utilities for browsing procfs. The\nCommon Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2018-1122](https://security-tracker.debian.org/tracker/CVE-2018-1122)\ntop read its configuration from the current working directory if no\n $HOME was configured. If top were started from a directory writable\n by the attacker (such as /tmp) this could result in local privilege\n escalation.\n* [CVE-2018-1123](https://security-tracker.debian.org/tracker/CVE-2018-1123)\nDenial of service against the ps invocation of another user.\n* [CVE-2018-1124](https://security-tracker.debian.org/tracker/CVE-2018-1124)\nAn integer overflow in the file2strvec() function of libprocps could\n result in local privilege escalation.\n* [CVE-2018-1125](https://security-tracker.debian.org/tracker/CVE-2018-1125)\nA stack-based buffer overflow in pgrep could result in denial\n of service for a user using pgrep for inspecting a specially\n crafted process.\n* [CVE-2018-1126](https://security-tracker.debian.org/tracker/CVE-2018-1126)\nIncorrect integer size parameters used in wrappers for standard C\n allocators could cause integer truncation and lead to integer\n overflow issues.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:3.3.3.3+deb7u1.\n\n\nWe recommend that you upgrade your procps packages.\n\n\nThe Debian LTS team would like to thank Abhijith PA for preparing this update.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1390-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1390"
 		}
 	]
 }

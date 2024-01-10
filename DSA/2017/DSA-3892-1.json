@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3892-1",
-	"modified": "2023-10-16T00:12:25.653280Z",
+	"modified": "2024-01-09T20:26:05.662427Z",
 	"published": "2017-06-22T00:00:00Z",
 	"related": [
 		"CVE-2017-5664"
 	],
 	"summary": "tomcat7 - security update",
-	"details": "\nAniket Nandkishor Kulkarni discovered that in tomcat7, a servlet and\nJSP engine, static error pages used the original request's HTTP method\nto serve content, instead of systematically using the GET method. This\ncould under certain conditions result in undesirable results,\nincluding the replacement or removal of the custom error page.\n\n\nFor the oldstable distribution (jessie), this problem has been fixed\nin version 7.0.56-3+deb8u11.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 7.0.72-3.\n\n\nFor the testing distribution (buster), this problem has been fixed\nin version 7.0.72-3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 7.0.72-3.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3892-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3892"
 		}
 	]
 }

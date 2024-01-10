@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-996-1",
-	"modified": "2023-06-28T06:39:03.524509Z",
+	"modified": "2024-01-09T20:32:36.952713Z",
 	"published": "2017-06-20T00:00:00Z",
 	"related": [
 		"CVE-2017-5664"
 	],
 	"summary": "tomcat7 - security update",
-	"details": "\nThe error page mechanism of the Java Servlet Specification requires\nthat, when an error occurs and an error page is configured for the\nerror that occurred, the original request and response are forwarded\nto the error page. This means that the request is presented to the\nerror page with the original HTTP method. If the error page is a\nstatic file, expected behaviour is to serve content of the file as if\nprocessing a GET request, regardless of the actual HTTP method. The\nDefault Servlet in Apache Tomcat did not do this. Depending on the\noriginal request this could lead to unexpected and undesirable results\nfor static error pages including, if the DefaultServlet is configured\nto permit writes, the replacement or removal of the custom error page.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n7.0.28-4+deb7u14.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-996-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-996"
 		}
 	]
 }

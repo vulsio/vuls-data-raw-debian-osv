@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1595-1",
-	"modified": "2023-10-16T00:05:33.158628Z",
+	"modified": "2024-01-09T20:20:48.494307Z",
 	"published": "2008-06-11T00:00:00Z",
 	"related": [
 		"CVE-2008-1377",
@@ -11,7 +11,6 @@
 		"CVE-2008-2362"
 	],
 	"summary": "xorg-server - several vulnerabilities",
-	"details": "\nSeveral local vulnerabilities have been discovered in the X Window system.\nThe Common Vulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CVE-2008-1377](https://security-tracker.debian.org/tracker/CVE-2008-1377)\nLack of validation of the parameters of the\n SProcSecurityGenerateAuthorization and SProcRecordCreateContext\n functions makes it possible for a specially crafted request to trigger\n the swapping of bytes outside the parameter of these requests, causing\n memory corruption.\n* [CVE-2008-1379](https://security-tracker.debian.org/tracker/CVE-2008-1379)\nAn integer overflow in the validation of the parameters of the\n ShmPutImage() request makes it possible to trigger the copy of\n arbitrary server memory to a pixmap that can subsequently be read by\n the client, to read arbitrary parts of the X server memory space.\n* [CVE-2008-2360](https://security-tracker.debian.org/tracker/CVE-2008-2360)\nAn integer overflow may occur in the computation of the size of the\n glyph to be allocated by the AllocateGlyph() function which will cause\n less memory to be allocated than expected, leading to later heap\n overflow.\n* [CVE-2008-2361](https://security-tracker.debian.org/tracker/CVE-2008-2361)\nAn integer overflow may occur in the computation of the size of the\n glyph to be allocated by the ProcRenderCreateCursor() function which\n will cause less memory to be allocated than expected, leading later\n to dereferencing un-mapped memory, causing a crash of the X server.\n* [CVE-2008-2362](https://security-tracker.debian.org/tracker/CVE-2008-2362)\nInteger overflows can also occur in the code validating the parameters\n for the SProcRenderCreateLinearGradient, SProcRenderCreateRadialGradient\n and SProcRenderCreateConicalGradient functions, leading to memory\n corruption by swapping bytes outside of the intended request\n parameters.\n\n\nFor the stable distribution (etch), these problems have been fixed in version\n2:1.1.1-21etch5.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2:1.4.1~git20080517-2.\n\n\nWe recommend that you upgrade your xorg-server package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1595-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1595"
 		}
 	]
 }

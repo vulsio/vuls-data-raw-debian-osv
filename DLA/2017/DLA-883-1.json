@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-883-1",
-	"modified": "2023-06-28T06:27:11.036032Z",
+	"modified": "2024-01-09T20:34:02.277859Z",
 	"published": "2017-04-04T00:00:00Z",
 	"related": [
 		"CVE-2017-7407"
 	],
 	"summary": "curl - security update",
-	"details": "\nIt was discovered that there was a buffer read overrun vulnerability in curl,\na tool for downloading files from the internet, etc.\n\n\nIf a \"%\" ended the --write-out parameter, the string's trailing NUL would be\nskipped and memory past the end of the buffer could be accessed and potentially\ndisplayed as part of the output.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in curl version\n7.26.0-1+wheezy18+deb7u1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-883-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-883"
 		}
 	]
 }

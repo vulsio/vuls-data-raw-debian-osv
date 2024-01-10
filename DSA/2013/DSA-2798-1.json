@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2798-1",
-	"modified": "2023-10-16T00:06:06.032128Z",
+	"modified": "2024-01-09T20:21:29.592102Z",
 	"published": "2013-11-17T00:00:00Z",
 	"related": [
 		"CVE-2013-4545"
 	],
 	"summary": "curl - unchecked ssl certificate host name",
-	"details": "\nScott Cantor discovered that curl, a file retrieval tool, would disable\nthe CURLOPT\\_SSLVERIFYHOST check when the CURLOPT\\_SSL\\_VERIFYPEER setting\nwas disabled. This would also disable ssl certificate host name checks\nwhen it should have only disabled verification of the certificate trust\nchain.\n\n\nThe default configuration for the curl package is not affected by this\nissue since CURLOPT\\_SSLVERIFYPEER is enabled by default.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 7.21.0-2.1+squeeze5.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 7.26.0-1+wheezy5.\n\n\nFor the testing (jessie) and unstable (sid) distributions, this problem\nhas been fixed in version 7.33.0-1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2798-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2798"
 		}
 	]
 }

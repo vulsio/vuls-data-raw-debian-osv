@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2063-1",
-	"modified": "2023-10-16T00:10:56.383008Z",
+	"modified": "2024-01-09T20:22:39.177788Z",
 	"published": "2010-06-17T00:00:00Z",
 	"related": [
 		"CVE-2010-2192"
 	],
 	"summary": "pmount - denial of service",
-	"details": "\nDan Rosenberg discovered that pmount, a wrapper around the standard mount\nprogram which permits normal users to mount removable devices without a\nmatching /etc/fstab entry, creates files in /var/lock insecurely.\nA local attacker could overwrite arbitrary files utilising a symlink attack.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.9.18-2+lenny1\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.9.23-1, and will migrate to the testing distribution (squeeze)\nshortly.\n\n\nWe recommend that you upgrade your pmount package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2063-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2063"
 		}
 	]
 }

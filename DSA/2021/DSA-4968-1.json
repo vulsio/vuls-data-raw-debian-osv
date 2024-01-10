@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4968-1",
-	"modified": "2023-10-16T00:20:29.204880Z",
+	"modified": "2024-01-09T20:29:15.542568Z",
 	"published": "2021-09-07T00:00:00Z",
 	"related": [
 		"CVE-2021-40346"
 	],
 	"summary": "haproxy - security update",
-	"details": "\nOri Hollander reported that missing header name length checks in the\nhtx\\_add\\_header() and htx\\_add\\_trailer() functions in HAProxy, a fast and\nreliable load balancing reverse proxy, could result in request smuggling\nattacks or response splitting attacks.\n\n\nAdditionally this update addresses #993303 introduced in DSA 4960-1\ncausing HAProxy to fail serving URLs with HTTP/2 containing '//'.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.2.9-2+deb11u2.\n\n\nWe recommend that you upgrade your haproxy packages.\n\n\nFor the detailed security status of haproxy please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/haproxy](https://security-tracker.debian.org/tracker/haproxy)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4968-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2021/dsa-4968"
 		}
 	]
 }

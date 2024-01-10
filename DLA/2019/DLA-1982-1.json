@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1982-1",
-	"modified": "2023-06-28T06:21:06.896660Z",
-	"published": "2019-11-06T00:00:00Z",
+	"modified": "2024-01-09T20:31:54.098464Z",
+	"published": "2019-11-05T00:00:00Z",
 	"related": [
 		"CVE-2019-18601",
 		"CVE-2019-18602",
 		"CVE-2019-18603"
 	],
 	"summary": "openafs - security update",
-	"details": "\nSeveral security vulnerabilities were discovered in OpenAFS, a\ndistributed file system.\n\n\n* [CVE-2019-18601](https://security-tracker.debian.org/tracker/CVE-2019-18601)\nOpenAFS is prone to denial of service from unserialized data access\n because remote attackers can make a series of VOTE\\_Debug RPC calls\n to crash a database server within the SVOTE\\_Debug RPC handler.\n* [CVE-2019-18602](https://security-tracker.debian.org/tracker/CVE-2019-18602)\nOpenAFS is prone to an information disclosure vulnerability because\n uninitialized scalars are sent over the network to a peer.\n* [CVE-2019-18603](https://security-tracker.debian.org/tracker/CVE-2019-18603)\nOpenAFS is prone to information leakage upon certain error\n conditions because uninitialized RPC output variables are sent over\n the network to a peer.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.6.9-2+deb8u9.\n\n\nWe recommend that you upgrade your openafs packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1982-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1982"
 		}
 	]
 }

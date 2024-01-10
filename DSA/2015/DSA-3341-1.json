@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3341-1",
-	"modified": "2023-10-16T00:11:56.222200Z",
+	"modified": "2024-01-09T20:21:49.213535Z",
 	"published": "2015-08-20T00:00:00Z",
 	"related": [
 		"CVE-2015-6496"
 	],
 	"summary": "conntrack - security update",
-	"details": "\nIt was discovered that in certain configurations, if the relevant\nconntrack kernel module is not loaded, conntrackd will crash when\nhandling DCCP, SCTP or ICMPv6 packets.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1:1.2.1-1+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1:1.4.2-2+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:1.4.2-3.\n\n\nWe recommend that you upgrade your conntrack packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3341-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3341"
 		}
 	]
 }

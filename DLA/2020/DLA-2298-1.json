@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2298-1",
-	"modified": "2023-06-28T06:30:06.914562Z",
+	"modified": "2024-01-09T20:32:27.202473Z",
 	"published": "2020-07-29T00:00:00Z",
 	"related": [
 		"CVE-2019-1010247",
@@ -9,7 +9,6 @@
 		"CVE-2019-20479"
 	],
 	"summary": "libapache2-mod-auth-openidc - security update",
-	"details": "\nSeveral issues have been found in libapache2-mod-auth-openidc, the OpenID\nConnect authentication module for the Apache HTTP server.\n\n\n* [CVE-2019-14857](https://security-tracker.debian.org/tracker/CVE-2019-14857)\nInsufficient validation of URLs leads to an Open Redirect\n vulnerability. An attacker may trick a victim into providing\n credentials for an OpenID provider by forwarding the request to an\n illegitimate website.\n* [CVE-2019-20479](https://security-tracker.debian.org/tracker/CVE-2019-20479)\nDue to insufficient validatation of URLs an Open Redirect\n vulnerability for URLs beginning with a slash and backslash could be\n abused.\n* [CVE-2019-1010247](https://security-tracker.debian.org/tracker/CVE-2019-1010247)\nThe OIDCRedirectURI page contains generated JavaScript code that uses\n a poll parameter as a string variable, thus might contain additional\n JavaScript code. This might result in Criss-Site Scripting (XSS).\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.1.6-1+deb9u1.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-openidc packages.\n\n\nFor the detailed security status of libapache2-mod-auth-openidc please\nrefer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libapache2-mod-auth-openidc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2298-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2298"
 		}
 	]
 }

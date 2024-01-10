@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5251-1",
-	"modified": "2023-10-16T00:28:00.618947Z",
+	"modified": "2024-01-09T20:29:24.596081Z",
 	"published": "2022-10-06T00:00:00Z",
 	"related": [
 		"CVE-2022-2928",
 		"CVE-2022-2929"
 	],
 	"summary": "isc-dhcp - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the ISC DHCP client,\nrelay and server.\n\n\n* [CVE-2022-2928](https://security-tracker.debian.org/tracker/CVE-2022-2928)\nIt was discovered that the DHCP server does not correctly perform\n option reference counting when configured with \"allow leasequery;\".\n A remote attacker can take advantage of this flaw to cause a denial\n of service (daemon crash).\n* [CVE-2022-2929](https://security-tracker.debian.org/tracker/CVE-2022-2929)\nIt was discovered that the DHCP server is prone to a memory leak\n flaw when handling contents of option 81 (fqdn) data received in\n a DHCP packet. A remote attacker can take advantage of this flaw\n to cause DHCP servers to consume resources, resulting in denial\n of service.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 4.4.1-2.3+deb11u1.\n\n\nWe recommend that you upgrade your isc-dhcp packages.\n\n\nFor the detailed security status of isc-dhcp please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/isc-dhcp>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5251-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5251"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-466",
-	"modified": "2023-10-16T00:35:31.889207Z",
+	"modified": "2024-01-09T20:26:30.755849Z",
 	"published": "2004-03-18T00:00:00Z",
 	"related": [
 		"CVE-2004-0077"
 	],
 	"summary": "linux-kernel-2.2.10-powerpc-apus - failing function and TLB flush",
-	"details": "\nPaul Starzetz and Wojciech Purczynski of isec.pl \n[\\\ndiscovered](http://isec.pl/vulnerabilities/isec-0014-mremap-unmap.txt) a critical\nsecurity vulnerability in the memory management code of Linux inside\nthe mremap(2) system call. Due to flushing the TLB (Translation\nLookaside Buffer, an address cache) too early it is possible for an\nattacker to trigger a local root exploit.\n\n\nThe attack vectors for 2.4.x and 2.2.x kernels are exclusive for the\nrespective kernel series, though. We formerly believed that the\nexploitable vulnerability in 2.4.x does not exist in 2.2.x which is\nstill true. However, it turned out that a second (sort of)\nvulnerability is indeed exploitable in 2.2.x, but not in 2.4.x, with a\ndifferent exploit, of course.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.2.10-13woody1 of 2.2 kernel images for the powerpc/apus\narchitecture and in version 2.2.10-2 of Linux 2.2.10 source.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon\nwith the 2.4.20 kernel-image package for powerpc/apus. The old 2.2.10\nkernel image will be removed from Debian unstable.\n\n\nYou are strongly advised to switch to the fixed 2.4.17 kernel-image\npackage for powerpc/apus from woody until the 2.4.20 kernel-image\npackage is fixed in the unstable distribution.\n\n\nWe recommend that you upgrade your Linux kernel package.\n\n\n[Vulnerability matrix](CAN-2004-0077) for CAN-2004-0077\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -57,12 +56,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-466.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-466"
 		}
 	]
 }

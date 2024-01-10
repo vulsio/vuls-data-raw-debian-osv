@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3492-1",
-	"modified": "2023-07-11T19:17:54.059928Z",
+	"modified": "2024-01-09T20:33:30.660332Z",
 	"published": "2023-07-11T00:00:00Z",
 	"related": [
 		"CVE-2017-16516",
@@ -9,7 +9,6 @@
 		"CVE-2023-33460"
 	],
 	"summary": "yajl - security update",
-	"details": "\nMultiple vulnerabilties have been found in yajl, a JSON parser / small\nvalidating JSON generator# written in ANSI C, which potentially can\ncause memory corruption or DoS.\n\n\nThe [CVE-20117-16516](https://security-tracker.debian.org/tracker/CVE-20117-16516) had been addressed already in DLA-3478, however the\nfix has been found to be incomplete as it missed an additional memory\nleak. This update fixes that problem.\n\n\n* [CVE-2017-16516](https://security-tracker.debian.org/tracker/CVE-2017-16516)\nWhen a crafted JSON file is supplied to yajl, the process might\n crash with a SIGABRT in the yajl\\_string\\_decode function in\n yajl\\_encode.c. This results potentially in a denial of service.\n* [CVE-2022-24795](https://security-tracker.debian.org/tracker/CVE-2022-24795)\nThe 1.x branch and the 2.x branch of `yajl` contain an integer\n overflow which leads to subsequent heap memory corruption when dealing\n with large (~2GB) inputs.\n* [CVE-2023-33460](https://security-tracker.debian.org/tracker/CVE-2023-33460)\nThere's a memory leak in yajl 2.1.0 with use of yajl\\_tree\\_parse\n function, which potentially cause out-of-memory in server and cause\n crash.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.1.0-3+deb10u2.\n\n\nWe recommend that you upgrade your yajl packages.\n\n\nFor the detailed security status of yajl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/yajl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3492-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3492"
 		}
 	]
 }

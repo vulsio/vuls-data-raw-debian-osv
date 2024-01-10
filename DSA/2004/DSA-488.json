@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-488",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-04-16T00:00:00Z",
 	"published": "2004-04-16T00:00:00Z",
 	"related": [
 		"CVE-2004-0404"
 	],
 	"summary": "logcheck - insecure temporary directory",
-	"details": "\nChristian Jaeger reported a bug in logcheck which could potentially be\nexploited by a local user to overwrite files with root privileges.\nlogcheck utilized a temporary directory under /var/tmp without taking\nsecurity precautions. While this directory is created when logcheck\nis installed, and while it exists there is no vulnerability, if at\nany time this directory is removed, the potential for exploitation exists.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 1.1.1-13.1woody1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.1-13.2.\n\n\nWe recommend that you update your logcheck package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-488.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-488"
 		}
 	]
 }

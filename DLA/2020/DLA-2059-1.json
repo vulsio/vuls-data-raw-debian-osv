@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2059-1",
-	"modified": "2023-06-28T06:25:05.997062Z",
+	"modified": "2024-01-09T20:31:58.956362Z",
 	"published": "2020-01-06T00:00:00Z",
 	"related": [
 		"CVE-2019-1348",
@@ -11,7 +11,6 @@
 		"CVE-2019-1387"
 	],
 	"summary": "git - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in git, a fast, scalable,\ndistributed revision control system.\n\n\n* [CVE-2019-1348](https://security-tracker.debian.org/tracker/CVE-2019-1348)\nIt was reported that the --export-marks option of git fast-import is\n exposed also via the in-stream command feature export-marks=...,\n allowing to overwrite arbitrary paths.\n* [CVE-2019-1387](https://security-tracker.debian.org/tracker/CVE-2019-1387)\nIt was discovered that submodule names are not validated strictly\n enough, allowing very targeted attacks via remote code execution\n when performing recursive clones.\n\n\nIn addition this update addresses a number of security issues which are\nonly an issue if git is operating on an NTFS filesystem ([CVE-2019-1349](https://security-tracker.debian.org/tracker/CVE-2019-1349),\n[CVE-2019-1352](https://security-tracker.debian.org/tracker/CVE-2019-1352) and [CVE-2019-1353](https://security-tracker.debian.org/tracker/CVE-2019-1353)).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:2.1.4-2.1+deb8u8.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2059-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2059"
 		}
 	]
 }

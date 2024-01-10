@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1701-1",
-	"modified": "2023-06-28T06:20:00.085830Z",
+	"modified": "2024-01-09T20:31:38.318980Z",
 	"published": "2019-03-01T00:00:00Z",
 	"related": [
 		"CVE-2019-1559"
 	],
 	"summary": "openssl - security update",
-	"details": "\nJuraj Somorovsky, Robert Merget and Nimrod Aviram discovered a padding\noracle attack in OpenSSL.\n\n\nIf an application encounters a fatal protocol error and then calls\nSSL\\_shutdown() twice (once to send a close\\_notify, and once to receive\none) then OpenSSL can respond differently to the calling application\nif a 0 byte record is received with invalid padding compared to if a 0\nbyte record is received with an invalid MAC. If the application then\nbehaves differently based on that in a way that is detectable to the\nremote peer, then this amounts to a padding oracle that could be used\nto decrypt data.\n\n\nIn order for this to be exploitable \"non-stitched\" ciphersuites must\nbe in use. Stitched ciphersuites are optimised implementations of\ncertain commonly used ciphersuites. Also the application must call\nSSL\\_shutdown() twice even if a protocol error has occurred\n(applications should not do this but some do anyway).\nAEAD ciphersuites are not impacted.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n1.0.1t-1+deb8u11.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1701-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1701"
 		}
 	]
 }

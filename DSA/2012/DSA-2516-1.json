@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2516-1",
-	"modified": "2023-10-16T00:11:16.077819Z",
+	"modified": "2024-01-09T20:27:46.503204Z",
 	"published": "2012-07-26T00:00:00Z",
 	"related": [
 		"CVE-2012-3571",
 		"CVE-2012-3954"
 	],
 	"summary": "isc-dhcp - denial of service",
-	"details": "\nTwo security vulnerabilities affecting ISC dhcpd, a server for automatic\nIP address assignment, in Debian have been discovered.\n\n\n* [CVE-2012-3571](https://security-tracker.debian.org/tracker/CVE-2012-3571)\nMarkus Hietava of the Codenomicon CROSS project discovered that it is\n possible to force the server to enter an infinite loop via messages with\n malformed client identifiers.\n* [CVE-2012-3954](https://security-tracker.debian.org/tracker/CVE-2012-3954)\nGlen Eustace discovered that DHCP servers running in DHCPv6 mode\n and possibly DHCPv4 mode suffer of memory leaks while processing messages.\n An attacker can use this flaw to exhaust resources and perform denial\n of service attacks.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4.1.1-P1-15+squeeze4.\n\n\nFor the testing (wheezy) and unstable (sid) distributions, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your isc-dhcp packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2516-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2516"
 		}
 	]
 }

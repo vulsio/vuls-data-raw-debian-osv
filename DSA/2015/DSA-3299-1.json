@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3299-1",
-	"modified": "2023-10-16T00:20:02.669420Z",
+	"modified": "2024-01-09T20:21:45.362020Z",
 	"published": "2015-07-02T00:00:00Z",
 	"related": [
 		"CVE-2015-3644"
 	],
 	"summary": "stunnel4 - security update",
-	"details": "\nJohan Olofsson discovered an authentication bypass vulnerability in\nStunnel, a program designed to work as an universal SSL tunnel for\nnetwork daemons. When Stunnel in server mode is used with the redirect\noption and certificate-based authentication is enabled with verify = 2\nor higher, then only the initial connection is redirected to the hosts\nspecified with redirect. This allows a remote attacker to bypass\nauthentication.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 3:5.06-2+deb8u1.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 3:5.18-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3:5.18-1.\n\n\nWe recommend that you upgrade your stunnel4 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3299-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3299"
 		}
 	]
 }

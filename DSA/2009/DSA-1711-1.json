@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1711-1",
-	"modified": "2014-04-30T09:15:55Z",
+	"modified": "2009-01-26T00:00:00Z",
 	"published": "2009-01-26T00:00:00Z",
 	"related": [
 		"CVE-2009-0255",
@@ -10,7 +10,6 @@
 		"CVE-2009-0258"
 	],
 	"summary": "typo3-src - remote code execution",
-	"details": "\nSeveral remotely exploitable vulnerabilities have been discovered in the\nTYPO3 web content management framework. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-0255](https://security-tracker.debian.org/tracker/CVE-2009-0255)\nChris John Riley discovered that the TYPO3-wide used encryption key is\n generated with an insufficiently random seed resulting in low entropy\n which makes it easier for attackers to crack this key.\n* [CVE-2009-0256](https://security-tracker.debian.org/tracker/CVE-2009-0256)\nMarcus Krause discovered that TYPO3 is not invalidating a supplied session\n on authentication which allows an attacker to take over a victims\n session via a session fixation attack.\n* [CVE-2009-0257](https://security-tracker.debian.org/tracker/CVE-2009-0257)\nMultiple cross-site scripting vulnerabilities allow remote attackers to\n inject arbitrary web script or HTML via various arguments and user supplied\n strings used in the indexed search system extension, adodb extension test\n scripts or the workspace module.\n* [CVE-2009-0258](https://security-tracker.debian.org/tracker/CVE-2009-0258)\nMads Olesen discovered a remote command injection vulnerability in\n the indexed search system extension which allows attackers to\n execute arbitrary code via a crafted file name which is passed\n unescaped to various system tools that extract file content for\n the indexing.\n\n\nBecause of [CVE-2009-0255](https://security-tracker.debian.org/tracker/CVE-2009-0255), please make sure that besides installing\nthis update, you also create a new encryption key after the\ninstallation.\n\n\nFor the stable distribution (etch) these problems have been fixed in\nversion 4.0.2+debian-7.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 4.2.5-1.\n\n\nWe recommend that you upgrade your TYPO3 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1711-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1711"
 		}
 	]
 }

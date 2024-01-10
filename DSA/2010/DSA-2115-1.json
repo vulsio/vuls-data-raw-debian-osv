@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2115-1",
-	"modified": "2023-10-16T00:05:45.732117Z",
+	"modified": "2024-01-09T20:21:11.213696Z",
 	"published": "2010-09-29T00:00:00Z",
 	"related": [
 		"CVE-2009-4300",
@@ -19,7 +19,6 @@
 		"CVE-2010-2231"
 	],
 	"summary": "moodle - several vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in Moodle, a\ncourse management system. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2010-1613](https://security-tracker.debian.org/tracker/CVE-2010-1613)\nMoodle does not enable the Regenerate session id during\n login setting by default, which makes it easier for remote\n attackers to conduct session fixation attacks.\n* [CVE-2010-1614](https://security-tracker.debian.org/tracker/CVE-2010-1614)\nMultiple cross-site scripting (XSS) vulnerabilities allow\n remote attackers to inject arbitrary web script or HTML via\n vectors related to (1) the Login-As feature or (2) when the\n global search feature is enabled, unspecified global search\n forms in the Global Search Engine.\n* [CVE-2010-1615](https://security-tracker.debian.org/tracker/CVE-2010-1615)\nMultiple SQL injection vulnerabilities allow remote attackers\n to execute arbitrary SQL commands via vectors related to (1)\n the add\\_to\\_log function in mod/wiki/view.php in the wiki\n module, or (2) data validation in some forms elements\n related to lib/form/selectgroups.php.\n* [CVE-2010-1616](https://security-tracker.debian.org/tracker/CVE-2010-1616)\nMoodle can create new roles when restoring a course, which\n allows teachers to create new accounts even if they do not\n have the moodle/user:create capability.\n* [CVE-2010-1617](https://security-tracker.debian.org/tracker/CVE-2010-1617)\nuser/view.php does not properly check a role, which allows\n remote authenticated users to obtain the full names of other\n users via the course profile page.\n* [CVE-2010-1618](https://security-tracker.debian.org/tracker/CVE-2010-1618)\nA Cross-site scripting (XSS) vulnerability in the phpCAS\n client library allows remote attackers to inject arbitrary web\n script or HTML via a crafted URL, which is not properly\n handled in an error message.\n* [CVE-2010-1619](https://security-tracker.debian.org/tracker/CVE-2010-1619)\nA Cross-site scripting (XSS) vulnerability in the\n fix\\_non\\_standard\\_entities function in the KSES HTML text\n cleaning library (weblib.php) allows remote attackers to\n inject arbitrary web script or HTML via crafted HTML entities.\n* [CVE-2010-2228](https://security-tracker.debian.org/tracker/CVE-2010-2228)\nA Cross-site scripting (XSS) vulnerability in the MNET\n access-control interface allows remote attackers to inject\n arbitrary web script or HTML via vectors involving extended\n characters in a username.\n* [CVE-2010-2229](https://security-tracker.debian.org/tracker/CVE-2010-2229)\nMultiple cross-site scripting (XSS) vulnerabilities in\n blog/index.php allow remote attackers to inject arbitrary web\n script or HTML via unspecified parameters.\n* [CVE-2010-2230](https://security-tracker.debian.org/tracker/CVE-2010-2230)\nThe KSES text cleaning filter in lib/weblib.php does\n not properly handle vbscript URIs, which allows remote\n authenticated users to conduct cross-site scripting (XSS)\n attacks via HTML input.\n* [CVE-2010-2231](https://security-tracker.debian.org/tracker/CVE-2010-2231)\nA Cross-site request forgery (CSRF) vulnerability in\n report/overview/report.php in the quiz module allows remote\n attackers to hijack the authentication of arbitrary users for\n requests that delete quiz attempts via the attemptid\n parameter.\n\n\nThis security update switches to a new upstream version and requires\ndatabase updates. After installing the fixed package, you must visit\n<http://localhost/moodle/admin/> and follow the update instructions.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.8.13-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.9.dfsg2-1.\n\n\nWe recommend that you upgrade your moodle package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -54,12 +53,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2115-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2115"
 		}
 	]
 }

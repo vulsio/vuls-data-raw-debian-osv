@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1976-1",
-	"modified": "2023-10-16T00:10:51.362301Z",
+	"modified": "2024-01-09T20:25:36.369495Z",
 	"published": "2010-01-22T00:00:00Z",
 	"related": [
 		"CVE-2010-0287",
@@ -9,7 +9,6 @@
 		"CVE-2010-0289"
 	],
 	"summary": "dokuwiki - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in dokuwiki, a standards compliant\nsimple to use wiki.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2010-0287](https://security-tracker.debian.org/tracker/CVE-2010-0287)\nIt was discovered that an internal variable is not properly sanitized before\nbeing used to list directories. This can be exploited to list contents of\narbitrary directories.\n* [CVE-2010-0288](https://security-tracker.debian.org/tracker/CVE-2010-0288)\nIt was discovered that the ACL Manager plugin doesn't properly check the\nadministrator permissions. This allow an attacker to introduce arbitrary ACL\nrules and thus gaining access to a closed Wiki.\n* [CVE-2010-0289](https://security-tracker.debian.org/tracker/CVE-2010-0289)\nIt was discovered that the ACL Manager plugin doesn't have protections against\ncross-site request forgeries (CSRF). This can be exploited to change the\naccess control rules by tricking a logged in administrator into visiting\na malicious web site.\n\n\nThe oldstable distribution (etch) is not affected by these problems.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 0.0.20080505-4+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 0.0.20090214b-3.1.\n\n\nWe recommend that you upgrade your dokuwiki package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1976-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-1976"
 		}
 	]
 }

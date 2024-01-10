@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1065-1",
-	"modified": "2023-10-16T00:10:38.508123Z",
+	"modified": "2024-01-09T20:15:40.348254Z",
 	"published": "2006-05-19T00:00:00Z",
 	"related": [
 		"CVE-2006-2213"
 	],
 	"summary": "hostapd - missing input sanitising",
-	"details": "\nMatteo Rosi and Leonardo Maccari discovered that hostapd, a wifi network\nauthenticator daemon, performs insufficient boundary checks on a key length\nvalue, which might be exploited to crash the service.\n\n\nThe old stable distribution (woody) does not contain hostapd packages.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 0.3.7-2sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.5-1.\n\n\nWe recommend that you upgrade your hostapd package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1065-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1065"
 		}
 	]
 }

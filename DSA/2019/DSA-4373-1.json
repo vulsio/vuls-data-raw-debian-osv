@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4373-1",
-	"modified": "2023-10-16T00:17:28.338632Z",
+	"modified": "2024-01-09T20:28:42.714247Z",
 	"published": "2019-01-28T00:00:00Z",
 	"related": [
 		"CVE-2018-4056",
@@ -9,7 +9,6 @@
 		"CVE-2018-4059"
 	],
 	"summary": "coturn - security update",
-	"details": "\nMultiple vulnerabilities were discovered in coTURN, a TURN and STUN server for\nVoIP.\n\n\n* [CVE-2018-4056](https://security-tracker.debian.org/tracker/CVE-2018-4056)\nAn SQL injection vulnerability was discovered in the coTURN administrator\n web portal. As the administration web interface is shared with the\n production, it is unfortunately not possible to easily filter outside\n access and this security update completely disable the web interface. Users\n should use the local, command line interface instead.\n* [CVE-2018-4058](https://security-tracker.debian.org/tracker/CVE-2018-4058)\nDefault configuration enables unsafe loopback forwarding. A remote attacker\n with access to the TURN interface can use this vulnerability to gain access\n to services that should be local only.\n* [CVE-2018-4059](https://security-tracker.debian.org/tracker/CVE-2018-4059)\nDefault configuration uses an empty password for the local command line\n administration interface. An attacker with access to the local console\n (either a local attacker or a remote attacker taking advantage of\n [CVE-2018-4058](https://security-tracker.debian.org/tracker/CVE-2018-4058))\n could escalade privileges to administrator of the coTURN\n server.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.5.0.5-1+deb9u1.\n\n\nWe recommend that you upgrade your coturn packages.\n\n\nFor the detailed security status of coturn please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/coturn](https://security-tracker.debian.org/tracker/coturn)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4373-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4373"
 		}
 	]
 }

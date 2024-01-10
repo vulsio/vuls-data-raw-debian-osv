@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2195-1",
-	"modified": "2023-10-16T00:11:01.917223Z",
+	"modified": "2024-01-09T20:25:40.424684Z",
 	"published": "2011-03-19T00:00:00Z",
 	"related": [
 		"CVE-2010-1128",
@@ -12,7 +12,6 @@
 		"CVE-2011-0441"
 	],
 	"summary": "php5 - several",
-	"details": "\nStephane Chazelas discovered that the cronjob of the PHP 5 package in\nDebian suffers from a race condition which might be used to remove\narbitrary files from a system ([CVE-2011-0441](https://security-tracker.debian.org/tracker/CVE-2011-0441)).\n\n\nWhen upgrading your php5-common package take special care to **accept**\nthe changes to the /etc/cron.d/php5 file. Ignoring them would leave the\nsystem vulnerable.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 5.2.6.dfsg.1-1+lenny10.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 5.3.3-7+squeeze1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.3.6-1.\n\n\nAdditionally, the following vulnerabilities have also been fixed in the\noldstable distribution (lenny):\n\n\n* [CVE-2010-3709](https://security-tracker.debian.org/tracker/CVE-2010-3709)\nMaksymilian Arciemowicz discovered that the ZipArchive class\n may dereference a NULL pointer when extracting comments from a ZIP\n archive, leading to application crash and possible denial of\n service.\n* [CVE-2010-3710](https://security-tracker.debian.org/tracker/CVE-2010-3710)\nStefan Neufeind discovered that the FILTER\\_VALIDATE\\_EMAIL filter\n does not correctly handle long, to be validated, strings. Such\n crafted strings may lead to denial of service because of high memory\n consumption and application crash.\n* [CVE-2010-3870](https://security-tracker.debian.org/tracker/CVE-2010-3870)\nIt was discovered that PHP does not correctly handle certain UTF-8\n sequences and may be used to bypass XSS protections.\n* [CVE-2010-4150](https://security-tracker.debian.org/tracker/CVE-2010-4150)\nMateusz Kocielski discovered that the IMAP extension may try to\n free already freed memory when processing user credentials, leading\n to application crash and possibly arbitrary code execution.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2195-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2195"
 		}
 	]
 }

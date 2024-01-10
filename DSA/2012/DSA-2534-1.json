@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2534-1",
-	"modified": "2023-10-16T00:11:17.270097Z",
+	"modified": "2024-01-09T20:22:59.125723Z",
 	"published": "2012-08-25T00:00:00Z",
 	"related": [
 		"CVE-2012-3488",
 		"CVE-2012-3489"
 	],
 	"summary": "postgresql-8.4 - several",
-	"details": "\nTwo vulnerabilities related to XML processing were discovered in\nPostgreSQL, an SQL database.\n\n\n* [CVE-2012-3488](https://security-tracker.debian.org/tracker/CVE-2012-3488)\ncontrib/xml2's xslt\\_process() can be used to read and write\n external files and URLs.\n* [CVE-2012-3489](https://security-tracker.debian.org/tracker/CVE-2012-3489)\nxml\\_parse() fetches external files or URLs to resolve DTD and\n entity references in XML values.\n\n\nThis update removes the problematic functionality, potentially\nbreaking applications which use it in a legitimate way.\n\n\nDue to the nature of these vulnerabilities, it is possible that\nattackers who have only indirect access to the database can supply\ncrafted XML data which exploits this vulnerability.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 8.4.13-0squeeze1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 9.1.5-1 of the postgresql-9.1 package.\n\n\nWe recommend that you upgrade your postgresql-8.4 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2534-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2534"
 		}
 	]
 }

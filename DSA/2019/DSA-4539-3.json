@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4539-3",
-	"modified": "2023-10-16T00:18:52.730595Z",
-	"published": "2019-10-01T00:00:00Z",
+	"modified": "2024-01-09T20:28:51.600018Z",
+	"published": "2019-10-13T00:00:00Z",
 	"summary": "openssl - regression update",
-	"details": "\nThree security issues were discovered in OpenSSL: A timing attack against\nECDSA, a padding oracle in PKCS7\\_dataDecode() and CMS\\_decrypt\\_set1\\_pkey()\nand it was discovered that a feature of the random number generator (RNG)\nintended to protect against shared RNG state between parent and child\nprocesses in the event of a fork() syscall was not used by default.\n\n\nFor the oldstable distribution (stretch), these problems have been fixed\nin version 1.1.0l-1~deb9u1.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 1.1.1d-0+deb10u1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/openssl](https://security-tracker.debian.org/tracker/openssl)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4539-3.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4539"
 		}
 	]
 }

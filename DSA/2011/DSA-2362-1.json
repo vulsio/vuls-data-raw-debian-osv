@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2362-1",
-	"modified": "2023-10-16T00:11:11.110857Z",
+	"modified": "2024-01-09T20:22:45.720797Z",
 	"published": "2011-12-10T00:00:00Z",
 	"related": [
 		"CVE-2011-1159",
 		"CVE-2011-4578"
 	],
 	"summary": "acpid - several",
-	"details": "\nMultiple vulnerabilities were found in the ACPI Daemon, the Advanced\nConfiguration and Power Interface event daemon:\n\n\n* [CVE-2011-1159](https://security-tracker.debian.org/tracker/CVE-2011-1159)\nVasiliy Kulikov of OpenWall discovered that the socket handling\n is vulnerable to denial of service.\n* [CVE-2011-2777](https://security-tracker.debian.org/tracker/CVE-2011-2777)\nOliver-Tobias Ripka discovered that incorrect process handling in\n the Debian-specific powerbtn.sh script could lead to local\n privilege escalation. This issue doesn't affect oldstable. The\n script is only shipped as an example in /usr/share/doc/acpid/examples.\n See /usr/share/doc/acpid/README.Debian for details.\n* [CVE-2011-4578](https://security-tracker.debian.org/tracker/CVE-2011-4578)\nHelmut Grohne and Michael Biebl discovered that acpid sets a umask\n of 0 when executing scripts, which could result in local privilege\n escalation.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.0.8-1lenny4.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1:2.0.7-1squeeze3.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your acpid packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2362-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2362"
 		}
 	]
 }

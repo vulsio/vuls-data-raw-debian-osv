@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4065-1",
-	"modified": "2023-10-16T00:12:37.338892Z",
+	"modified": "2024-01-09T20:28:25.223103Z",
 	"published": "2017-12-17T00:00:00Z",
 	"related": [
 		"CVE-2017-3737",
 		"CVE-2017-3738"
 	],
 	"summary": "openssl1.0 - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit. The Common Vulnerabilities and Exposures project\nidentifies the following issues:\n\n\n* [CVE-2017-3737](https://security-tracker.debian.org/tracker/CVE-2017-3737)\nDavid Benjamin of Google reported that OpenSSL does not properly\n handle SSL\\_read() and SSL\\_write() while being invoked in an error\n state, causing data to be passed without being decrypted or\n encrypted directly from the SSL/TLS record layer.\n* [CVE-2017-3738](https://security-tracker.debian.org/tracker/CVE-2017-3738)\nIt was discovered that OpenSSL contains an overflow bug in the AVX2\n Montgomery multiplication procedure used in exponentiation with\n 1024-bit moduli.\n\n\nDetails can be found in the upstream advisory:\n<https://www.openssl.org/news/secadv/20171207.txt>\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.0.2l-2+deb9u2.\n\n\nWe recommend that you upgrade your openssl1.0 packages.\n\n\nFor the detailed security status of openssl1.0 please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/openssl1.0>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4065-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-4065"
 		}
 	]
 }

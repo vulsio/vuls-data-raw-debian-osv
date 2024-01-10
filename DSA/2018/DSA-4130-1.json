@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4130-1",
-	"modified": "2023-10-16T00:16:57.883565Z",
+	"modified": "2024-01-09T20:27:00.048472Z",
 	"published": "2018-03-02T00:00:00Z",
 	"related": [
 		"CVE-2017-14461",
@@ -9,7 +9,6 @@
 		"CVE-2017-15132"
 	],
 	"summary": "dovecot - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Dovecot email\nserver. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues:\n\n\n* [CVE-2017-14461](https://security-tracker.debian.org/tracker/CVE-2017-14461)\nAleksandar Nikolic of Cisco Talos and flxflndy discovered that\n Dovecot does not properly parse invalid email addresses, which may\n cause a crash or leak memory contents to an attacker.\n* [CVE-2017-15130](https://security-tracker.debian.org/tracker/CVE-2017-15130)\nIt was discovered that TLS SNI config lookups may lead to excessive\n memory usage, causing imap-login/pop3-login VSZ limit to be reached\n and the process restarted, resulting in a denial of service. Only\n Dovecot configurations containing `local_name { }` or `local { }`\n configuration blocks are affected.\n* [CVE-2017-15132](https://security-tracker.debian.org/tracker/CVE-2017-15132)\nIt was discovered that Dovecot contains a memory leak flaw in the\n login process on aborted SASL authentication.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1:2.2.13-12~deb8u4.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1:2.2.27-3+deb9u2.\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\nFor the detailed security status of dovecot please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/dovecot>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4130-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4130"
 		}
 	]
 }

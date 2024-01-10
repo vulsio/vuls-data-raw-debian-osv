@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-173-1",
-	"modified": "2023-06-28T06:20:55.350931Z",
+	"modified": "2024-01-09T20:31:41.660288Z",
 	"published": "2015-03-15T00:00:00Z",
 	"related": [
 		"CVE-2015-2157"
 	],
 	"summary": "putty - security update",
-	"details": "\nMATTA-2015-002\n\n\nFlorent Daigniere discovered that PuTTY did not enforce an\n acceptable range for the Diffie-Hellman server value, as required by\n RFC 4253, potentially allowing an eavesdroppable connection to be\n established in the event of a server weakness.\n\n\n#779488,\n[CVE-2015-2157](https://security-tracker.debian.org/tracker/CVE-2015-2157)\n\n\nPatrick Coleman discovered that PuTTY did not clear SSH-2 private\n key information from memory when loading and saving key files, which\n could result in disclosure of private key material.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in putty version 0.60+2010-02-20-1+squeeze3\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-173-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-173"
 		}
 	]
 }

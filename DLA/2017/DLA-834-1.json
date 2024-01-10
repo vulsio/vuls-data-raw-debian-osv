@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-834-1",
-	"modified": "2023-06-28T06:31:05.474242Z",
+	"modified": "2024-01-09T20:34:00.139986Z",
 	"published": "2017-02-24T00:00:00Z",
 	"related": [
 		"CVE-2016-6621"
 	],
 	"summary": "phpmyadmin - security update",
-	"details": "\nA server-side request forgery vulnerability was reported for the setup\nscript in phpmyadmin, a MYSQL web administration tool. This flaw may\nallow an unauthenticated attacker to brute-force MYSQL passwords,\ndetect internal hostnames or opened ports on the internal network.\nAdditionally there was a race condition between writing configuration\nand administrator moving it allowing unauthenticated users to read or\nalter it. Debian users who configured phpmyadmin via debconf and used\nthe default configuration for Apache 2 or Lighttpd were never affected.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4:3.4.11.1-2+deb7u8.\n\n\nWe recommend that you upgrade your phpmyadmin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-834-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-834"
 		}
 	]
 }

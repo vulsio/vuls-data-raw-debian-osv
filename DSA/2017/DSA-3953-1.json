@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3953-1",
-	"modified": "2023-10-16T00:12:30.468544Z",
+	"modified": "2024-01-09T20:26:55.804645Z",
 	"published": "2017-08-23T00:00:00Z",
 	"related": [
 		"CVE-2017-12440"
 	],
 	"summary": "aodh - security update",
-	"details": "\nZane Bitter from Red Hat discovered a vulnerability in Aodh, the alarm\nengine for OpenStack. Aodh does not verify that the user creating the\nalarm is the trustor or has the same rights as the trustor, nor that the\ntrust is for the same project as the alarm. The bug allows that an\nauthenticated user without a Keystone token with knowledge of trust IDs\nto perform unspecified authenticated actions by adding alarm actions.\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3.0.0-4+deb9u1.\n\n\nWe recommend that you upgrade your aodh packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3953-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3953"
 		}
 	]
 }

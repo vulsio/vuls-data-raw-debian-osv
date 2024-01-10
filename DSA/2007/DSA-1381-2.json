@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1381-2",
-	"modified": "2023-10-16T00:05:20.645401Z",
+	"modified": "2024-01-09T20:22:16.795458Z",
 	"published": "2007-10-02T00:00:00Z",
 	"related": [
 		"CVE-2006-5755",
@@ -10,7 +10,6 @@
 		"CVE-2007-5093"
 	],
 	"summary": "linux-2.6",
-	"details": "\nSeveral local vulnerabilities have been discovered in the Linux kernel\nthat may lead to a denial of service or the execution of arbitrary\ncode. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2006-5755](https://security-tracker.debian.org/tracker/CVE-2006-5755)\n The NT bit maybe leaked into the next task which can make it possible for local attackers\n to cause a Denial of Service (crash) on systems which run the amd64\n flavour kernel. The stable distribution (etch) was not believed to\n be vulnerable to this issue at the time of release, however Bastian\n Blank discovered that this issue still applied to the xen-amd64 and\n xen-vserver-amd64 flavours, and is resolved by this DSA.\n* [CVE-2007-4133](https://security-tracker.debian.org/tracker/CVE-2007-4133)\n Hugh Dickins discovered a potential local DoS (panic) in hugetlbfs.\n A misconversion of hugetlb\\_vmtruncate\\_list to prio\\_tree may allow\n local users to trigger a BUG\\_ON() call in exit\\_mmap.\n* [CVE-2007-4573](https://security-tracker.debian.org/tracker/CVE-2007-4573)\n Wojciech Purczynski discovered a vulnerability that can be exploited\n by a local user to obtain superuser privileges on x86\\_64 systems.\n This resulted from improper clearing of the high bits of registers\n during ia32 system call emulation. This vulnerability is relevant\n to the Debian amd64 port as well as users of the i386 port who run\n the amd64 linux-image flavour.\n \n\n\n DSA-1378 resolved this problem for the amd64 flavour kernels, but\n Tim Wickberg and Ralf Hemmenstädt reported an outstanding issue with\n the xen-amd64 and xen-vserver-amd64 flavours that is resolved by\n this DSA.\n* [CVE-2007-5093](https://security-tracker.debian.org/tracker/CVE-2007-5093)\n Alex Smith discovered an issue with the pwc driver for certain webcam\n devices. If the device is removed while a userspace application has it\n open, the driver will wait for userspace to close the device, resulting\n in a blocked USB subsystem. This issue is of low security impact as\n it requires the attacker to either have physical access to the system\n or to convince users with local access to remove the device on their\n behalf.\n\n\n\nThese problems have been fixed in the stable distribution in version \n2.6.18.dfsg.1-13etch4.\n\n\nThis is an update to DSA-1381-1 which included only amd64 binaries for\nlinux-2.6. Builds for all other architectures are now available, as well as\nrebuilds of ancillary packages that make use of the included linux source.\n\n\nThe following matrix lists additional packages that were rebuilt for\ncompatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 4.0 (etch) |\n| --- | --- |\n| fai-kernels | 1.17+etch.13etch4 |\n| kernel-patch-openvz | 028.18.1etch5 |\n| user-mode-linux | 2.6.18-1um-2etch.13etch4 |\n\n\nWe recommend that you upgrade your kernel package immediately and reboot\nthe machine. If you have built a custom kernel from the kernel source\npackage, you will need to rebuild to take advantage of these fixes.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1381-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1381"
 		}
 	]
 }

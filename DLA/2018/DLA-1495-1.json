@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1495-1",
-	"modified": "2023-06-28T06:20:45.594665Z",
+	"modified": "2024-01-09T20:31:18.320714Z",
 	"published": "2018-09-05T00:00:00Z",
 	"related": [
 		"CVE-2017-12976",
@@ -9,7 +9,6 @@
 		"CVE-2018-10859"
 	],
 	"summary": "git-annex - security update",
-	"details": "\nThe git-annex package was found to have multiple vulnerabilities when\noperating on untrusted data that could lead to arbitrary command\nexecution and encrypted data exfiltration.\n\n\n* [CVE-2017-12976](https://security-tracker.debian.org/tracker/CVE-2017-12976)\ngit-annex before 6.20170818 allows remote attackers to execute\n arbitrary commands via an ssh URL with an initial dash character\n in the hostname, as demonstrated by an ssh://-eProxyCommand= URL,\n a related issue to [CVE-2017-9800](https://security-tracker.debian.org/tracker/CVE-2017-9800),\n [CVE-2017-12836](https://security-tracker.debian.org/tracker/CVE-2017-12836),\n [CVE-2017-1000116](https://security-tracker.debian.org/tracker/CVE-2017-1000116), and\n [CVE-2017-1000117](https://security-tracker.debian.org/tracker/CVE-2017-1000117).\n* [CVE-2018-10857](https://security-tracker.debian.org/tracker/CVE-2018-10857)\ngit-annex is vulnerable to a private data exposure and\n exfiltration attack. It could expose the content of files located\n outside the git-annex repository, or content from a private web\n server on localhost or the LAN.\n* [CVE-2018-10859](https://security-tracker.debian.org/tracker/CVE-2018-10859)\ngit-annex is vulnerable to an Information Exposure when decrypting\n files. A malicious server for a special remote could trick\n git-annex into decrypting a file that was encrypted to the user's\n gpg key. This attack could be used to expose encrypted data that\n was never stored in git-annex\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n5.20141125+oops-1+deb8u2.\n\n\nWe recommend that you upgrade your git-annex packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1495-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1495"
 		}
 	]
 }

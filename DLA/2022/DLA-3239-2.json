@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3239-2",
-	"modified": "2023-06-28T06:25:29.216657Z",
+	"modified": "2024-01-09T20:33:24.892584Z",
 	"published": "2022-12-14T00:00:00Z",
 	"summary": "git - regression update",
-	"details": "\nMultiple issues were found in Git, a distributed revision control\nsystem. An attacker may cause other local users into executing\narbitrary commands, leak information from the local filesystem, and\nbypass restricted shell.\n**Note**: Due to new security checks, access to repositories owned and\naccessed by different local users may now be rejected by Git; in case\nchanging ownership is not practical, git displays a way to bypass\nthese checks using the new safe.directory configuration entry.\n\n\n* [CVE-2022-24765](https://security-tracker.debian.org/tracker/CVE-2022-24765)\nGit is not checking the ownership of directories in a local\n multi-user system when running commands specified in the local\n repository configuration. This allows the owner of the repository\n to cause arbitrary commands to be executed by other users who\n access the repository.\n* [CVE-2022-29187](https://security-tracker.debian.org/tracker/CVE-2022-29187)\nAn unsuspecting user could still be affected by the issue reported\n in [CVE-2022-24765](https://security-tracker.debian.org/tracker/CVE-2022-24765), for example when navigating as root into a\n shared tmp directory that is owned by them, but where an attacker\n could create a git repository.\n* [CVE-2022-39253](https://security-tracker.debian.org/tracker/CVE-2022-39253)\nExposure of sensitive information to a malicious actor. When\n performing a local clone (where the source and target of the clone\n are on the same volume), Git copies the contents of the source's\n `$GIT\\_DIR/objects` directory into the destination by either\n creating hardlinks to the source contents, or copying them (if\n hardlinks are disabled via `--no-hardlinks`). A malicious actor\n could convince a victim to clone a repository with a symbolic link\n pointing at sensitive information on the victim's machine.\n* [CVE-2022-39260](https://security-tracker.debian.org/tracker/CVE-2022-39260)\n`git shell` improperly uses an `int` to represent the number of\n entries in the array, allowing a malicious actor to intentionally\n overflow the return value, leading to arbitrary heap\n writes. Because the resulting array is then passed to `execv()`,\n it is possible to leverage this attack to gain remote code\n execution on a victim machine.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:2.20.1-2+deb10u5.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFor the detailed security status of git please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/git>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3239-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3239"
 		}
 	]
 }

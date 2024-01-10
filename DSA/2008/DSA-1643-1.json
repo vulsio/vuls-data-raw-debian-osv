@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1643-1",
-	"modified": "2023-10-16T00:10:32.583539Z",
+	"modified": "2024-01-09T20:27:32.175664Z",
 	"published": "2008-10-05T00:00:00Z",
 	"related": [
 		"CVE-2008-4440"
 	],
 	"summary": "feta - denial of service",
-	"details": "\nDmitry E. Oboukhov discovered that the \"to-upgrade\" plugin of Feta,\na simpler interface to APT, dpkg, and other Debian package tools\ncreates temporary files insecurely, which may lead to local denial\nof service through symlink attacks.\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 1.4.15+etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.4.16+nmu1.\n\n\nWe recommend that you upgrade your feta package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1643-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1643"
 		}
 	]
 }

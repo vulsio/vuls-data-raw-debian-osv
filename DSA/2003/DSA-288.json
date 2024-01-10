@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-288",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2003-04-17T00:00:00Z",
 	"published": "2003-04-17T00:00:00Z",
 	"related": [
 		"CVE-2003-0131",
 		"CVE-2003-0147"
 	],
 	"summary": "openssl - several vulnerabilities",
-	"details": "\nResearchers discovered two flaws in OpenSSL, a Secure Socket Layer\n(SSL) library and related cryptographic tools. Applications that are\nlinked against this library are generally vulnerable to attacks that\ncould leak the server's private key or make the encrypted session\ndecryptable otherwise. The Common Vulnerabilities and Exposures (CVE)\nproject identified the following vulnerabilities:\n\n\n\n[CAN-2003-0147](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0147)\n\n OpenSSL does not use RSA blinding by default, which allows local and\n remote attackers to obtain the server's private key.\n[CAN-2003-0131](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0131)\n\n The SSL allows remote attackers to perform an unauthorized RSA\n private key operation that causes OpenSSL to leak information\n regarding the relationship between ciphertext and the associated\n plaintext.\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 0.9.6c-2.woody.3.\n\n\nFor the old stable distribution (potato) these problems have been\nfixed in version 0.9.6c-0.potato.6.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.9.7b-1 of openssl and version 0.9.6j-1 of openssl096.\n\n\nWe recommend that you upgrade your openssl packages immediately and\nrestart the applications that use OpenSSL.\n\n\nUnfortunately, RSA blinding is not thread-safe and will cause failures\nfor programs that use threads and OpenSSL such as stunnel. However,\nsince the proposed fix would change the binary interface (ABI),\nprograms that are dynamically linked against OpenSSL won't run\nanymore. This is a dilemma we can't solve.\n\n\nYou will have to decide whether you want the security update which is\nnot thread-safe and recompile all applications that apparently fail\nafter the upgrade, or fetch the additional source packages at the end\nof this advisory, recompile it and use a thread-safe OpenSSL library\nagain, but also recompile all applications that make use of it (such\nas apache-ssl, mod\\_ssl, ssh etc.).\n\n\nHowever, since only very few packages use threads and link against the\nOpenSSL library most users will be able to use packages from this\nupdate without any problems.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-288.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-288"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-175-1",
-	"modified": "2023-06-28T06:20:56.659803Z",
+	"modified": "2024-01-09T20:31:42.166573Z",
 	"published": "2015-03-17T00:00:00Z",
 	"related": [
 		"CVE-2014-3591",
@@ -9,7 +9,6 @@
 		"CVE-2015-1606"
 	],
 	"summary": "gnupg - security update",
-	"details": "\nMultiple vulnerabilities were discovered in GnuPG, the GNU Privacy Guard:\n\n\n* [CVE-2014-3591](https://security-tracker.debian.org/tracker/CVE-2014-3591)\nThe Elgamal decryption routine was susceptible to a side-channel\n attack discovered by researchers of Tel Aviv University. Ciphertext\n blinding was enabled to counteract it. Note that this may have a quite\n noticeable impact on Elgamal decryption performance.\n* [CVE-2015-0837](https://security-tracker.debian.org/tracker/CVE-2015-0837)\nThe modular exponentiation routine mpi\\_powm() was susceptible to a\n side-channel attack caused by data-dependent timing variations when\n accessing its internal pre-computed table.\n* [CVE-2015-1606](https://security-tracker.debian.org/tracker/CVE-2015-1606)\nThe keyring parsing code did not properly reject certain packet types\n not belonging in a keyring, which caused an access to memory already\n freed. This could allow remote attackers to cause a denial of service\n (crash) via crafted keyring files.\n\n\nFor the oldstable distribution (squeeze), those problems have been fixed in\nversion 1.4.10-4+squeeze7.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.4.12-7+deb7u7.\n\n\nWe recommend that you upgrade your gnupg packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-175-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-175"
 		}
 	]
 }

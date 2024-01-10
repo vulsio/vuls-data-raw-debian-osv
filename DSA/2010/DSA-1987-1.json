@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1987-1",
-	"modified": "2023-10-16T00:10:51.418834Z",
+	"modified": "2024-01-09T20:27:38.514821Z",
 	"published": "2010-02-02T00:00:00Z",
 	"related": [
 		"CVE-2010-0295"
 	],
 	"summary": "lighttpd - denial of service",
-	"details": "\nLi Ming discovered that lighttpd, a small and fast webserver with minimal\nmemory footprint, is vulnerable to a denial of service attack due to bad\nmemory handling. Slowly sending very small chunks of request data causes\nlighttpd to allocate new buffers for each read instead of appending to\nold ones. An attacker can abuse this behaviour to cause denial of service\nconditions due to memory exhaustion.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 1.4.13-4etch12.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.4.19-5+lenny1.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your lighttpd packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1987-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-1987"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3323-1",
-	"modified": "2023-10-16T00:06:19.558910Z",
+	"modified": "2024-01-09T20:28:10.004424Z",
 	"published": "2015-08-01T00:00:00Z",
 	"related": [
 		"CVE-2014-8146",
@@ -9,7 +9,6 @@
 		"CVE-2015-4760"
 	],
 	"summary": "icu - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the International Components\nfor Unicode (ICU) library.\n\n\n* [CVE-2014-8146](https://security-tracker.debian.org/tracker/CVE-2014-8146)\nThe Unicode Bidirectional Algorithm implementation does not properly\n track directionally isolated pieces of text, which allows remote\n attackers to cause a denial of service (heap-based buffer overflow)\n or possibly execute arbitrary code via crafted text.\n* [CVE-2014-8147](https://security-tracker.debian.org/tracker/CVE-2014-8147)\nThe Unicode Bidirectional Algorithm implementation uses an integer\n data type that is inconsistent with a header file, which allows\n remote attackers to cause a denial of service (incorrect malloc\n followed by invalid free) or possibly execute arbitrary code via\n crafted text.\n* [CVE-2015-4760](https://security-tracker.debian.org/tracker/CVE-2015-4760)\nThe Layout Engine was missing multiple boundary checks. These could\n lead to buffer overflows and memory corruption. A specially crafted\n file could cause an application using ICU to parse untrusted font\n files to crash and, possibly, execute arbitrary code.\n\n\nAdditionally, it was discovered that the patch applied to ICU in DSA-3187-1\nfor [CVE-2014-6585](https://security-tracker.debian.org/tracker/CVE-2014-6585) was incomplete, possibly leading to an invalid memory\naccess. This could allow remote attackers to disclose portion of private\nmemory via crafted font files.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 4.8.1.1-12+deb7u3.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 52.1-8+deb8u2.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 52.1-10.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 52.1-10.\n\n\nWe recommend that you upgrade your icu packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3323-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3323"
 		}
 	]
 }

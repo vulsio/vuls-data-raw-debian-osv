@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2500-1",
-	"modified": "2023-06-28T06:25:15.778823Z",
+	"modified": "2024-01-09T20:32:39.793536Z",
 	"published": "2020-12-18T00:00:00Z",
 	"related": [
 		"CVE-2020-8284",
@@ -9,7 +9,6 @@
 		"CVE-2020-8286"
 	],
 	"summary": "curl - security update",
-	"details": "\nSeveral vulnerabilities were discovered in curl, a command line tool for\ntransferring data with URL syntax and an easy-to-use client-side URL\ntransfer library.\n\n\n* [CVE-2020-8284](https://security-tracker.debian.org/tracker/CVE-2020-8284)\nWhen curl performs a passive FTP transfer, it first tries the EPSV\n command and if that is not supported, it falls back to using PASV.\n Passive mode is what curl uses by default. A server response to a\n PASV command includes the (IPv4) address and port number for the\n client to connect back to in order to perform the actual data\n transfer. This is how the FTP protocol is designed to work. A\n malicious server can use the PASV response to trick curl into\n connecting back to a given IP address and port, and this way\n potentially make curl extract information about services that are\n otherwise private and not disclosed, for example doing port scanning\n and service banner extractions.\n\n\nThe IP address part of the response is now ignored by default, by\n making CURLOPT\\_FTP\\_SKIP\\_PASV\\_IP default to 1L instead of previously\n being 0L. This has the minor drawback that a small fraction of use\n cases might break, when a server truly needs the client to connect\n back to a different IP address than what the control connection uses\n and for those CURLOPT\\_FTP\\_SKIP\\_PASV\\_IP can be set to 0L. The same\n goes for the command line tool, which then might need\n --no-ftp-skip-pasv-ip set to prevent curl from ignoring the address\n in the server response.\n* [CVE-2020-8285](https://security-tracker.debian.org/tracker/CVE-2020-8285)\nlibcurl offers a wildcard matching functionality, which allows a\n callback (set with CURLOPT\\_CHUNK\\_BGN\\_FUNCTION) to return information\n back to libcurl on how to handle a specific entry in a directory\n when libcurl iterates over a list of all available entries. When\n this callback returns CURL\\_CHUNK\\_BGN\\_FUNC\\_SKIP, to tell libcurl to\n not deal with that file, the internal function in libcurl then calls\n itself recursively to handle the next directory entry. If there's a\n sufficient amount of file entries and if the callback returns skip\n enough number of times, libcurl runs out of stack space. The exact\n amount will of course vary with platforms, compilers and other\n environmental factors. The content of the remote directory is not\n kept on the stack, so it seems hard for the attacker to control\n exactly what data that overwrites the stack - however it remains a\n Denial-Of-Service vector as a malicious user who controls a server\n that a libcurl-using application works with under these premises can\n trigger a crash.\n\n\nThe internal function is rewritten to instead and more appropriately\n use an ordinary loop instead of the recursive approach. This way,\n the stack use will remain the same no matter how many files that are\n skipped.\n* [CVE-2020-8286](https://security-tracker.debian.org/tracker/CVE-2020-8286)\nlibcurl offers OCSP stapling via the CURLOPT\\_SSL\\_VERIFYSTATUS\n option. When set, libcurl verifies the OCSP response that a server\n responds with as part of the TLS handshake. It then aborts the TLS\n negotiation if something is wrong with the response. The same\n feature can be enabled with --cert-status using the curl tool. As\n part of the OCSP response verification, a client should verify that\n the response is indeed set out for the correct certificate. This\n step was not performed by libcurl when built or told to use OpenSSL\n as TLS backend. This flaw would allow an attacker, who perhaps\n could have breached a TLS server, to provide a fraudulent OCSP\n response that would appear fine, instead of the real one. Like if\n the original certificate actually has been revoked.\n\n\nThe OCSP response checker function now also verifies that the\n certificate id is the correct one.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n7.52.1-5+deb9u13.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFor the detailed security status of curl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/curl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2500-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2500"
 		}
 	]
 }

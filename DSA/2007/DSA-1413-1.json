@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1413-1",
-	"modified": "2023-10-16T00:05:23.301011Z",
+	"modified": "2024-01-09T20:20:43.701553Z",
 	"published": "2007-11-26T00:00:00Z",
 	"related": [
 		"CVE-2007-2583",
@@ -12,7 +12,6 @@
 		"CVE-2007-5925"
 	],
 	"summary": "mysql - multiple",
-	"details": "\nSeveral vulnerabilities have been found in the MySQL database packages\nwith implications ranging from unauthorized database modifications to\nremotely triggered server crashes. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2007-2583](https://security-tracker.debian.org/tracker/CVE-2007-2583)\nThe in\\_decimal::set function in item\\_cmpfunc.cc in MySQL\n before 5.0.40 allows context-dependent attackers to cause a\n denial of service (crash) via a crafted IF clause that results\n in a divide-by-zero error and a NULL pointer dereference.\n (Affects source version 5.0.32.)\n* [CVE-2007-2691](https://security-tracker.debian.org/tracker/CVE-2007-2691)\nMySQL does not require the DROP privilege for RENAME TABLE\n statements, which allows remote authenticated users to rename\n arbitrary tables. (All supported versions affected.)\n* [CVE-2007-2692](https://security-tracker.debian.org/tracker/CVE-2007-2692)\nThe mysql\\_change\\_db function does not restore THD::db\\_access\n privileges when returning from SQL SECURITY INVOKER stored\n routines, which allows remote authenticated users to gain\n privileges. (Affects source version 5.0.32.)\n* [CVE-2007-3780](https://security-tracker.debian.org/tracker/CVE-2007-3780)\nMySQL could be made to overflow a signed char during\n authentication. Remote attackers could use specially crafted\n authentication requests to cause a denial of\n service. (Upstream source versions 4.1.11a and 5.0.32\n affected.)\n* [CVE-2007-3782](https://security-tracker.debian.org/tracker/CVE-2007-3782)\nPhil Anderton discovered that MySQL did not properly verify\n access privileges when accessing external tables. As a result,\n authenticated users could exploit this to obtain UPDATE\n privileges to external tables. (Affects source version\n 5.0.32.)\n* [CVE-2007-5925](https://security-tracker.debian.org/tracker/CVE-2007-5925)\nThe convert\\_search\\_mode\\_to\\_innobase function in ha\\_innodb.cc\n in the InnoDB engine in MySQL 5.1.23-BK and earlier allows\n remote authenticated users to cause a denial of service\n (database crash) via a certain CONTAINS operation on an\n indexed column, which triggers an assertion error. (Affects\n source version 5.0.32.)\n\n\nFor the old stable distribution (sarge), these problems have been fixed in\nversion 4.0.24-10sarge3 of mysql-dfsg and version 4.1.11a-4sarge8 of\nmysql-dfsg-4.1.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 5.0.32-7etch3 of the mysql-dfsg-5.0 packages.\n\n\nWe recommend that you upgrade your mysql packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -100,12 +99,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1413-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1413"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2832-1",
-	"modified": "2023-10-16T00:11:33.469040Z",
+	"modified": "2024-01-09T20:23:48.008181Z",
 	"published": "2014-01-01T00:00:00Z",
 	"related": [
 		"CVE-2011-4971",
 		"CVE-2013-7239"
 	],
 	"summary": "memcached - several",
-	"details": "\nMultiple vulnerabilities have been found in memcached, a high-performance\nmemory object caching system. The Common Vulnerabilities and Exposures\nproject identifies the following issues:\n\n\n* [CVE-2011-4971](https://security-tracker.debian.org/tracker/CVE-2011-4971)\nStefan Bucur reported that memcached could be caused to crash by\n sending a specially crafted packet.\n* [CVE-2013-7239](https://security-tracker.debian.org/tracker/CVE-2013-7239)\nIt was reported that SASL authentication could be bypassed due to a\n flaw related to the managment of the SASL authentication state. With\n a specially crafted request, a remote attacker may be able to\n authenticate with invalid SASL credentials.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed\nin version 1.4.5-1+deb6u1. Note that the patch for [CVE-2013-7239](https://security-tracker.debian.org/tracker/CVE-2013-7239) was not\napplied for the oldstable distribution as SASL support is not enabled in\nthis version. This update also provides the fix for [CVE-2013-0179](https://security-tracker.debian.org/tracker/CVE-2013-0179) which\nwas fixed for stable already.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.4.13-0.2+deb7u1.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your memcached packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2832-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2832"
 		}
 	]
 }

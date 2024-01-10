@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2591-1",
-	"modified": "2023-06-28T06:30:10.255345Z",
-	"published": "2021-03-15T00:00:00Z",
+	"modified": "2024-01-09T20:32:44.913037Z",
+	"published": "2021-03-13T00:00:00Z",
 	"related": [
 		"CVE-2017-15041",
 		"CVE-2018-16873",
@@ -13,7 +13,6 @@
 		"CVE-2021-3114"
 	],
 	"summary": "golang-1.7 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the Go programming\nlanguage. An attacker could trigger a denial-of-service (DoS), bypasss\naccess control, and execute arbitrary code on the developer's\ncomputer.\n\n\n* [CVE-2017-15041](https://security-tracker.debian.org/tracker/CVE-2017-15041)\nGo allows go get remote command execution. Using custom\n domains, it is possible to arrange things so that\n example.com/pkg1 points to a Subversion repository but\n example.com/pkg1/pkg2 points to a Git repository. If the\n Subversion repository includes a Git checkout in its pkg2\n directory and some other work is done to ensure the proper\n ordering of operations, go get can be tricked into reusing this\n Git checkout for the fetch of code from pkg2. If the Subversion\n repository's Git checkout has malicious commands in .git/hooks/,\n they will execute on the system running \"go get.\"\n* [CVE-2018-16873](https://security-tracker.debian.org/tracker/CVE-2018-16873)\nThe go get command is vulnerable to remote code execution when\n executed with the -u flag and the import path of a malicious Go\n package, as it may treat the parent directory as a Git repository\n root, containing malicious configuration.\n* [CVE-2018-16874](https://security-tracker.debian.org/tracker/CVE-2018-16874)\nThe go get command is vulnerable to directory traversal when\n executed with the import path of a malicious Go package which\n contains curly braces (both '{' and '}' characters). The attacker\n can cause an arbitrary filesystem write, which can lead to code\n execution.\n* [CVE-2019-9741](https://security-tracker.debian.org/tracker/CVE-2019-9741)\nIn net/http, CRLF injection is possible if the attacker controls a\n url parameter, as demonstrated by the second argument to\n http.NewRequest with \\r\\n followed by an HTTP header or a Redis\n command.\n* [CVE-2019-16276](https://security-tracker.debian.org/tracker/CVE-2019-16276)\nGo allows HTTP Request Smuggling.\n* [CVE-2019-17596](https://security-tracker.debian.org/tracker/CVE-2019-17596)\nGo can panic upon an attempt to process network traffic containing\n an invalid DSA public key. There are several attack scenarios,\n such as traffic from a client to a server that verifies client\n certificates.\n* [CVE-2021-3114](https://security-tracker.debian.org/tracker/CVE-2021-3114)\ncrypto/elliptic/p224.go can generate incorrect outputs, related to\n an underflow of the lowest limb during the final complete\n reduction in the P-224 field.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.7.4-2+deb9u3.\n\n\nWe recommend that you upgrade your golang-1.7 packages.\n\n\nFor the detailed security status of golang-1.7 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/golang-1.7>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2591-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2591"
 		}
 	]
 }

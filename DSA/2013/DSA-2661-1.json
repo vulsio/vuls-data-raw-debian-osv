@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2661-1",
-	"modified": "2023-10-16T00:06:02.805592Z",
+	"modified": "2024-01-09T20:21:26.714963Z",
 	"published": "2013-04-17T00:00:00Z",
 	"related": [
 		"CVE-2013-1940"
 	],
 	"summary": "xorg-server - information disclosure",
-	"details": "\nDavid Airlie and Peter Hutterer of Red Hat discovered that xorg-server,\nthe X.Org X server was vulnerable to an information disclosure flaw\nrelated to input handling and devices hotplug.\n\n\nWhen an X server is running but not on front (for example because of a VT\nswitch), a newly plugged input device would still be recognized and\nhandled by the X server, which would actually transmit input events to\nits clients on the background.\n\n\nThis could allow an attacker to recover some input events not intended\nfor the X clients, including sensitive information.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2:1.7.7-16.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2:1.12.4-6.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:1.12.4-6.\n\n\nWe recommend that you upgrade your xorg-server packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2661-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2661"
 		}
 	]
 }

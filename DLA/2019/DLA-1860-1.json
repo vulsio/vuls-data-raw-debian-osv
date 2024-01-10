@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1860-1",
-	"modified": "2023-06-28T06:21:01.137898Z",
+	"modified": "2024-01-09T20:31:48.633943Z",
 	"published": "2019-07-22T00:00:00Z",
 	"related": [
 		"CVE-2016-4609",
@@ -10,7 +10,6 @@
 		"CVE-2019-13118"
 	],
 	"summary": "libxslt - security update",
-	"details": "\nSeveral vulnerabilities were found in libxslt the XSLT 1.0 processing\nlibrary.\n\n\n* [CVE-2016-4610](https://security-tracker.debian.org/tracker/CVE-2016-4610)\nInvalid memory access leading to DoS at exsltDynMapFunction. libxslt\n allows remote attackers to cause a denial of service (memory\n corruption) or possibly have unspecified other impact via unknown\n vectors.\n* [CVE-2016-4609](https://security-tracker.debian.org/tracker/CVE-2016-4609)\nOut-of-bounds read at xmlGetLineNoInternal()\n libxslt allows remote attackers to cause a denial of service (memory\n corruption) or possibly have unspecified other impact via unknown\n vectors.\n* [CVE-2019-13117](https://security-tracker.debian.org/tracker/CVE-2019-13117)\nAn xsl:number with certain format strings could lead to an\n uninitialized read in xsltNumberFormatInsertNumbers. This could\n allow an attacker to discern whether a byte on the stack contains\n the characters A, a, I, i, or 0, or any other character.\n* [CVE-2019-13118](https://security-tracker.debian.org/tracker/CVE-2019-13118)\nA type holding grouping characters of an xsl:number instruction was\n too narrow and an invalid character/length combination could be\n passed to xsltNumberFormatDecimal, leading to a read of\n uninitialized stack data.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.1.28-2+deb8u5.\n\n\nWe recommend that you upgrade your libxslt packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1860-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1860"
 		}
 	]
 }

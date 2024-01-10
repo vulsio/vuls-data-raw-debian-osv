@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1364-1",
-	"modified": "2023-10-16T00:10:22.256073Z",
-	"published": "2007-09-19T00:00:00Z",
+	"modified": "2024-01-09T20:22:15.447514Z",
+	"published": "2007-09-01T00:00:00Z",
 	"related": [
 		"CVE-2007-2438",
 		"CVE-2007-2953"
 	],
 	"summary": "vim",
-	"details": "\nSeveral vulnerabilities have been discovered in the vim editor. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2007-2953](https://security-tracker.debian.org/tracker/CVE-2007-2953)\nUlf HĂ¤rnhammar discovered that a format string flaw in helptags\\_one() from\n src/ex\\_cmds.c (triggered through the helptags command) can lead to the\n execution of arbitrary code.\n* [CVE-2007-2438](https://security-tracker.debian.org/tracker/CVE-2007-2438)\nEditors often provide a way to embed editor configuration commands (aka\n modelines) which are executed once a file is opened. Harmful commands\n are filtered by a sandbox mechanism. It was discovered that function\n calls to writefile(), feedkeys() and system() were not filtered, allowing\n shell command execution with a carefully crafted file opened in vim.\n\n\nThis updated advisory repairs issues with missing files in the packages\nfor the oldstable distribution (sarge) for the alpha, mips, and mipsel\narchitectures.\n\n\nFor the oldstable distribution (sarge) these problems have been fixed in\nversion 6.3-071+1sarge2. Sarge is not affected by [CVE-2007-2438](https://security-tracker.debian.org/tracker/CVE-2007-2438).\n\n\nFor the stable distribution (etch) these problems have been fixed\nin version 7.0-122+1etch3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 7.1-056+1.\n\n\nWe recommend that you upgrade your vim packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1364-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1364"
 		}
 	]
 }

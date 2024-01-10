@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1952-1",
-	"modified": "2023-10-16T00:10:48.754347Z",
+	"modified": "2024-01-09T20:22:36.863951Z",
 	"published": "2009-12-15T00:00:00Z",
 	"related": [
 		"CVE-2007-2383",
@@ -12,7 +12,6 @@
 		"CVE-2009-4055"
 	],
 	"summary": "asterisk - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in asterisk, an Open Source\nPBX and telephony toolkit. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2009-0041](https://security-tracker.debian.org/tracker/CVE-2009-0041)\nIt is possible to determine valid login names via probing, due to the\nIAX2 response from asterisk (AST-2009-001).\n* [CVE-2008-3903](https://security-tracker.debian.org/tracker/CVE-2008-3903)\nIt is possible to determine a valid SIP username, when Digest\nauthentication and authalwaysreject are enabled (AST-2009-003).\n* [CVE-2009-3727](https://security-tracker.debian.org/tracker/CVE-2009-3727)\nIt is possible to determine a valid SIP username via multiple crafted\nREGISTER messages (AST-2009-008).\n* [CVE-2008-7220](https://security-tracker.debian.org/tracker/CVE-2008-7220) [CVE-2007-2383](https://security-tracker.debian.org/tracker/CVE-2007-2383)\nIt was discovered that asterisk contains an obsolete copy of the\nPrototype JavaScript framework, which is vulnerable to several security\nissues. This copy is unused and now removed from asterisk\n(AST-2009-009).\n* [CVE-2009-4055](https://security-tracker.debian.org/tracker/CVE-2009-4055)\nIt was discovered that it is possible to perform a denial of service\nattack via RTP comfort noise payload with a long data length\n(AST-2009-010).\n\n\nThe current version in oldstable is not supported by upstream anymore\nand is affected by several security issues. Backporting fixes for these\nand any future issues has become unfeasible and therefore we need to\ndrop our security support for the version in oldstable. We recommend\nthat all asterisk users upgrade to the stable distribution (lenny).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1:1.4.21.2~dfsg-3+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 1:1.6.2.0~rc7-1.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1952-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1952"
 		}
 	]
 }

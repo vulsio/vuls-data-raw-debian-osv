@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3500-1",
-	"modified": "2023-07-19T10:15:24.553465Z",
+	"modified": "2024-01-09T20:33:31.323338Z",
 	"published": "2023-07-19T00:00:00Z",
 	"related": [
 		"CVE-2023-36053"
 	],
 	"summary": "python-django - security update",
-	"details": "\nIt was discovered that there was a potential denial of service attack in\nDjango, the popular Python-based web development framework.\n\n\n`EmailValidator` and `URLValidator` were subject to\npotential regular expression denial of service attack via a very large number\nof domain name labels of emails and URLs.\n\n\n* [CVE-2023-36053](https://security-tracker.debian.org/tracker/CVE-2023-36053)\nIn Django 3.2 before 3.2.20, 4 before 4.1.10, and 4.2 before 4.2.3,\n EmailValidator and URLValidator are subject to a potential ReDoS (regular\n expression denial of service) attack via a very large number of domain name\n labels of emails and URLs.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1:1.11.29-1+deb10u9.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3500-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3500"
 		}
 	]
 }

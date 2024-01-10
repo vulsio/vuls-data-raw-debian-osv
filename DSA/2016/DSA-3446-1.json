@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3446-1",
-	"modified": "2023-10-16T00:12:01.595539Z",
+	"modified": "2024-01-09T20:28:13.758390Z",
 	"published": "2016-01-14T00:00:00Z",
 	"related": [
 		"CVE-2016-0777",
 		"CVE-2016-0778"
 	],
 	"summary": "openssh - security update",
-	"details": "\nThe Qualys Security team discovered two vulnerabilities in the roaming\ncode of the OpenSSH client (an implementation of the SSH protocol\nsuite).\n\n\nSSH roaming enables a client, in case an SSH connection breaks\nunexpectedly, to resume it at a later time, provided the server also\nsupports it.\n\n\nThe OpenSSH server doesn't support roaming, but the OpenSSH client\nsupports it (even though it's not documented) and it's enabled by\ndefault.\n\n\n* [CVE-2016-0777](https://security-tracker.debian.org/tracker/CVE-2016-0777)\nAn information leak (memory disclosure) can be exploited by a rogue\n SSH server to trick a client into leaking sensitive data from the\n client memory, including for example private keys.\n* [CVE-2016-0778](https://security-tracker.debian.org/tracker/CVE-2016-0778)\nA buffer overflow (leading to file descriptor leak), can also be\n exploited by a rogue SSH server, but due to another bug in the code\n is possibly not exploitable, and only under certain conditions (not\n the default configuration), when using ProxyCommand, ForwardAgent or\n ForwardX11.\n\n\nThis security update completely disables the roaming code in the OpenSSH\nclient.\n\n\nIt is also possible to disable roaming by adding the (undocumented)\noption UseRoaming no to the global /etc/ssh/ssh\\_config file, or to the\nuser configuration in ~/.ssh/config, or by passing -oUseRoaming=no on\nthe command line.\n\n\nUsers with passphrase-less private keys, especially in non interactive\nsetups (automated jobs using ssh, scp, rsync+ssh etc.) are advised to\nupdate their keys if they have connected to an SSH server they don't\ntrust.\n\n\nMore details about identifying an attack and mitigations will be\navailable in the Qualys Security Advisory.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1:6.0p1-4+deb7u3.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1:6.7p1-5+deb8u1.\n\n\nFor the testing distribution (stretch) and unstable distribution (sid), these\nproblems will be fixed in a later version.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3446-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3446"
 		}
 	]
 }

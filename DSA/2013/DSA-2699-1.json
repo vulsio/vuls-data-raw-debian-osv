@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2699-1",
-	"modified": "2023-10-16T00:11:26.077566Z",
+	"modified": "2024-01-09T20:25:44.820251Z",
 	"published": "2013-06-02T00:00:00Z",
 	"related": [
 		"CVE-2013-0773",
@@ -28,7 +28,6 @@
 		"CVE-2013-1681"
 	],
 	"summary": "iceweasel - several",
-	"details": "\nMultiple security issues have been found in Iceweasel, Debian's version \nof the Mozilla Firefox web browser: Multiple memory safety errors, \nmissing input sanitising vulnerabilities, use-after-free vulnerabilities, \nbuffer overflows and other programming errors may lead to the execution \nof arbitrary code, privilege escalation, information leaks or \ncross-site-scripting.\n\n\nWe're changing the approach for security updates for Iceweasel, Icedove \nand Iceape in stable-security: Instead of backporting security fixes, \nwe now provide releases based on the Extended Support Release branch. As \nsuch, this update introduces packages based on Firefox 17 and at some \npoint in the future we will switch to the next ESR branch once ESR 17 \nhas reached it's end of life.\n\n\nSome Xul extensions currently packaged in the Debian archive are not\ncompatible with the new browser engine. Up-to-date and compatible \nversions can be retrieved from <http://addons.mozilla.org> as a short \nterm solution. A solution to keep packaged extensions compatible with \nthe Mozilla releases is still being sorted out.\n\n\nWe don't have the resources to backport security fixes to the Iceweasel \nrelease in oldstable-security any longer. If you're up to the task and \nwant to help, please get in touch with team@security.debian.org. \nOtherwise, we'll announce the end of security support for Iceweasel, \nIcedove and Iceape in Squeeze in the next update round.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 17.0.6esr-1~deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 17.0.6esr-1.\n\n\nWe recommend that you upgrade your iceweasel packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -90,12 +89,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2699-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2699"
 		}
 	]
 }

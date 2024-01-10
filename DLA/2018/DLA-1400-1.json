@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1400-1",
-	"modified": "2023-06-28T06:20:38.414145Z",
+	"modified": "2024-01-09T20:31:07.459113Z",
 	"published": "2018-06-27T00:00:00Z",
 	"related": [
 		"CVE-2017-12616",
@@ -11,7 +11,6 @@
 		"CVE-2018-8014"
 	],
 	"summary": "tomcat7 - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in the Tomcat\nservlet and JSP engine.\n\n\n* [CVE-2017-7674](https://security-tracker.debian.org/tracker/CVE-2017-7674)\nThe CORS Filter in Apache Tomcat did not add an HTTP Vary header\n indicating that the response varies depending on Origin. This\n permitted client and server side cache poisoning in some\n circumstances.\n* [CVE-2017-12616](https://security-tracker.debian.org/tracker/CVE-2017-12616)\nWhen using a VirtualDirContext with Apache Tomcat it was possible to\n bypass security constraints and/or view the source code of JSPs for\n resources served by the VirtualDirContext using a specially crafted\n request.\n* [CVE-2018-1304](https://security-tracker.debian.org/tracker/CVE-2018-1304)\nThe URL pattern of \"\" (the empty string) which exactly maps to the\n context root was not correctly handled in Apache Tomcat when used as\n part of a security constraint definition. This caused the constraint\n to be ignored. It was, therefore, possible for unauthorized users to\n gain access to web application resources that should have been\n protected. Only security constraints with a URL pattern of the empty\n string were affected.\n* [CVE-2018-1305](https://security-tracker.debian.org/tracker/CVE-2018-1305)\nSecurity constraints defined by annotations of Servlets in Apache\n Tomcat were only applied once a Servlet had been loaded. Because\n security constraints defined in this way apply to the URL pattern\n and any URLs below that point, it was possible - depending on the\n order Servlets were loaded - for some security constraints not to be\n applied. This could have exposed resources to users who were not\n authorized to access them.\n* [CVE-2018-8014](https://security-tracker.debian.org/tracker/CVE-2018-8014)\nThe defaults settings for the CORS filter provided in Apache Tomcat\n are insecure and enable supportsCredentials for all origins. It is\n expected that users of the CORS filter will have configured it\n appropriately for their environment rather than using it in the\n default configuration. Therefore, it is expected that most users\n will not be impacted by this issue.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n7.0.56-3+really7.0.88-1.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1400-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1400"
 		}
 	]
 }

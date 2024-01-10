@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3313-1",
-	"modified": "2023-10-16T00:06:18.389053Z",
+	"modified": "2024-01-09T20:28:09.460181Z",
 	"published": "2015-07-23T00:00:00Z",
 	"related": [
 		"CVE-2015-3290",
@@ -12,7 +12,6 @@
 		"CVE-2015-5366"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation or denial of service.\n\n\n* [CVE-2015-3290](https://security-tracker.debian.org/tracker/CVE-2015-3290)\nAndy Lutomirski discovered that the Linux kernel does not properly\n handle nested NMIs. A local, unprivileged user could use this flaw\n for privilege escalation.\n* [CVE-2015-3291](https://security-tracker.debian.org/tracker/CVE-2015-3291)\nAndy Lutomirski discovered that under certain conditions a malicious\n userspace program can cause the kernel to skip NMIs leading to a\n denial of service.\n* [CVE-2015-4167](https://security-tracker.debian.org/tracker/CVE-2015-4167)\nCarl Henrik Lunde discovered that the UDF implementation is missing\n a necessary length check. A local user that can mount devices could\n use this flaw to crash the system.\n* [CVE-2015-5157](https://security-tracker.debian.org/tracker/CVE-2015-5157)\nPetr Matousek and Andy Lutomirski discovered that an NMI that\n interrupts userspace and encounters an IRET fault is incorrectly\n handled. A local, unprivileged user could use this flaw for denial\n of service or possibly for privilege escalation.\n* [CVE-2015-5364](https://security-tracker.debian.org/tracker/CVE-2015-5364)\nIt was discovered that the Linux kernel does not properly handle\n invalid UDP checksums. A remote attacker could exploit this flaw to\n cause a denial of service using a flood of UDP packets with invalid\n checksums.\n* [CVE-2015-5366](https://security-tracker.debian.org/tracker/CVE-2015-5366)\nIt was discovered that the Linux kernel does not properly handle\n invalid UDP checksums. A remote attacker can cause a denial of\n service against applications that use epoll by injecting a single\n packet with an invalid checksum.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 3.16.7-ckt11-1+deb8u2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.0.8-2 or earlier versions.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3313-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3313"
 		}
 	]
 }

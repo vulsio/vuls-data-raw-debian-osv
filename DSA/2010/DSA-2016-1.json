@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2016-1",
-	"modified": "2023-10-16T00:10:53.495189Z",
+	"modified": "2024-01-09T20:27:41.045432Z",
 	"published": "2010-03-13T00:00:00Z",
 	"related": [
 		"CVE-2010-2250",
@@ -10,7 +10,6 @@
 		"CVE-2010-2473"
 	],
 	"summary": "drupal6 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities (SA-CORE-2010-001) have been discovered in\ndrupal6, a fully-featured content management framework.\n\n\n### Installation cross site scripting\n\n\nA user-supplied value is directly output during installation allowing a\nmalicious user to craft a URL and perform a cross-site scripting attack.\nThe exploit can only be conducted on sites not yet installed.\n\n\n### Open redirection\n\n\nThe API function drupal\\_goto() is susceptible to a phishing attack.\nAn attacker could formulate a redirect in a way that gets the Drupal site\nto send the user to an arbitrarily provided URL.\nNo user submitted data will be sent to that URL.\n\n\n### Locale module cross site scripting\n\n\nLocale module and dependent contributed modules do not sanitize the display\nof language codes, native and English language names properly.\nWhile these usually come from a preselected list, arbitrary administrator\ninput is allowed.\nThis vulnerability is mitigated by the fact that the attacker must have a\nrole with the 'administer languages' permission.\n\n\n### Blocked user session regeneration\n\n\nUnder certain circumstances, a user with an open session that is blocked\ncan maintain his/her session on the Drupal site, despite being blocked.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 6.6-3lenny5.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 6.16-1, and will migrate to the testing distribution (squeeze)\nshortly.\n\n\nWe recommend that you upgrade your drupal6 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2016-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2016"
 		}
 	]
 }

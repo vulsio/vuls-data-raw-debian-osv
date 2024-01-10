@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-843-1",
-	"modified": "2023-10-16T00:28:23.353909Z",
+	"modified": "2024-01-09T20:34:15.462054Z",
 	"published": "2005-10-05T00:00:00Z",
 	"related": [
 		"CVE-2005-2945",
 		"CVE-2005-2992"
 	],
 	"summary": "arc - insecure temporary file",
-	"details": "\nTwo vulnerabilities have been discovered in the ARC archive program\nunder Unix. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CAN-2005-2945](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2945)\nEric Romang discovered that the ARC archive program under Unix\n creates a temporary file with insecure permissions which may lead\n to an attacker stealing sensitive information.\n* [CAN-2005-2992](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2992)\nJoey Schulze discovered that the temporary file was created in an\n insecure fashion as well, leaving it open to a classic symlink\n attack.\n\n\nThe old stable distribution (woody) does not contain arc packages.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 5.21l-1sarge1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 5.21m-1.\n\n\nWe recommend that you upgrade your arc package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-843-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-843"
 		}
 	]
 }

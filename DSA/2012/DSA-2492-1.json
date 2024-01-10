@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2492-1",
-	"modified": "2023-10-16T00:05:58.406287Z",
+	"modified": "2024-01-09T20:22:56.230705Z",
 	"published": "2012-06-10T00:00:00Z",
 	"related": [
 		"CVE-2012-2386"
 	],
 	"summary": "php5 - buffer overflow",
-	"details": "\nThe Phar extension for PHP does not properly handle crafted tar files,\nleading to a heap-based buffer overflow. PHP applications processing\ntar files could crash or, potentially, execute arbitrary code.\n\n\nIn addition, this update addresses a regression which caused a crash\nwhen accessing a global object that is returned as $this from \\_\\_get.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 5.3.3-7+squeeze13.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 5.4.4~rc1-1.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2492-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2492"
 		}
 	]
 }

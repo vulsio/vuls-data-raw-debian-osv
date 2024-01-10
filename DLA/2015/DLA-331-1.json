@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-331-1",
-	"modified": "2023-06-28T06:37:26.022757Z",
+	"modified": "2024-01-09T20:33:27.921003Z",
 	"published": "2015-10-22T00:00:00Z",
 	"related": [
 		"CVE-2015-5291"
 	],
 	"summary": "polarssl - security update",
-	"details": "\nA flaw was found in PolarSSl and mbed TLS:\n\n\nWhen the client creates its ClientHello message, due to insufficient bounds\nchecking it can overflow the heap-based buffer containing the message while\nwriting some extensions. Two extensions in particular could be used by a remote\nattacker to trigger the overflow: the session ticket extension and the server\nname indication (SNI) extension.\n\n\nAlthough most of the vulnerable code is not present in the Squeeze version,\nthis upload contains at least a length check for incoming data.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,12 +58,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-331-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-331"
 		}
 	]
 }

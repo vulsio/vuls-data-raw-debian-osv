@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2088-1",
-	"modified": "2023-10-16T00:05:45.059907Z",
+	"modified": "2024-01-09T20:22:40.986112Z",
 	"published": "2010-08-05T00:00:00Z",
 	"related": [
 		"CVE-2010-2252"
 	],
 	"summary": "wget - potential code execution",
-	"details": "\nIt was discovered that wget, a command line tool for downloading files\nfrom the WWW, uses server-provided file names when creating local\nfiles. This may lead to code execution in some scenarios.\n\n\nAfter this update, wget will ignore server-provided file names. You\ncan restore the old behavior in cases where it is not desirable by\ninvoking wget with the new --use-server-file-name option.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.11.4-2+lenny2.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your wget package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2088-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2088"
 		}
 	]
 }

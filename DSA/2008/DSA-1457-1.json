@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1457-1",
-	"modified": "2023-10-16T00:05:23.617130Z",
+	"modified": "2024-01-09T20:24:51.322208Z",
 	"published": "2008-01-09T00:00:00Z",
 	"related": [
 		"CVE-2007-6598"
 	],
 	"summary": "dovecot",
-	"details": "\n\nIt was discovered that Dovecot, a POP3 and IMAP server, only when used\n# Remark: \"base\" refers to a variable(?!) and should not contain something as\n# base = %r!\nwith LDAP authentication and base contains variables, could allow\na user to log in to the account of another user with the same password.\n\n\n\n\nThe old stable distribution (sarge) is not affected.\n\n\n\n\nFor the stable distribution (etch), this problem has been fixed in\nversion 1.0.rc15-2etch3.\n\n\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.0.10-1.\n\n\n\n\nWe recommend that you upgrade your dovecot packages.\n\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1457-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1457"
 		}
 	]
 }

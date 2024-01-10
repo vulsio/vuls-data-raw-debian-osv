@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3555-1",
-	"modified": "2023-10-16T00:06:23.857832Z",
+	"modified": "2024-01-09T20:25:59.769705Z",
 	"published": "2016-04-23T00:00:00Z",
 	"related": [
 		"CVE-2011-5326",
@@ -11,7 +11,6 @@
 		"CVE-2016-4024"
 	],
 	"summary": "imlib2 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in imlib2, an image manipulation\nlibrary.\n\n\n* [CVE-2011-5326](https://security-tracker.debian.org/tracker/CVE-2011-5326)\nKevin Ryde discovered that attempting to draw a 2x1 radi ellipse\n results in a floating point exception.\n* [CVE-2014-9771](https://security-tracker.debian.org/tracker/CVE-2014-9771)\nIt was discovered that an integer overflow could lead to invalid\n memory reads and unreasonably large memory allocations.\n* [CVE-2016-3993](https://security-tracker.debian.org/tracker/CVE-2016-3993)\nYuriy M. Kaminskiy discovered that drawing using coordinates from\n an untrusted source could lead to an out-of-bound memory read, which\n in turn could result in an application crash.\n* [CVE-2016-3994](https://security-tracker.debian.org/tracker/CVE-2016-3994)\nJakub Wilk discovered that a malformed image could lead to an\n out-of-bound read in the GIF loader, which may result in an\n application crash or information leak.\n* [CVE-2016-4024](https://security-tracker.debian.org/tracker/CVE-2016-4024)\nYuriy M. Kaminskiy discovered an integer overflow that could lead to\n an insufficient heap allocation and out-of-bound memory write.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.4.5-1+deb7u2.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.4.6-2+deb8u2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.4.8-1.\n\n\nWe recommend that you upgrade your imlib2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3555-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3555"
 		}
 	]
 }

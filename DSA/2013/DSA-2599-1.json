@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2599-1",
-	"modified": "2023-10-16T00:11:21.186737Z",
+	"modified": "2024-01-09T20:27:49.423696Z",
 	"published": "2013-01-06T00:00:00Z",
 	"summary": "nss - mis-issued intermediates",
-	"details": "\nGoogle, Inc. discovered that the TurkTrust certification authority\nincluded in the Network Security Service libraries (nss) mis-issued\ntwo intermediate CAs which could be used to generate rogue end-entity\ncertificates. This update explicitly distrusts those two intermediate\nCAs. The two existing TurkTrust root CAs remain active.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.12.8-1+squeeze6.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2:3.13.6-2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:3.14.1.with.ckbi.1.93-1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2599-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2599"
 		}
 	]
 }

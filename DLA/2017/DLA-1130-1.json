@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1130-1",
-	"modified": "2023-06-28T06:20:23.816942Z",
-	"published": "2017-10-19T00:00:00Z",
+	"modified": "2024-01-09T20:30:48.026608Z",
+	"published": "2017-10-10T00:00:00Z",
 	"related": [
 		"CVE-2017-14103",
 		"CVE-2017-14314",
@@ -12,7 +12,6 @@
 		"CVE-2017-14997"
 	],
 	"summary": "graphicsmagick - security update",
-	"details": "\nThis upload fixes a number of security issues in graphicsmagick.\n\n\n* [CVE-2017-14103](https://security-tracker.debian.org/tracker/CVE-2017-14103)\nThe ReadJNGImage and ReadOneJNGImage functions in\n coders/png.c did not properly manage image pointers after certain error\n conditions.\n* [CVE-2017-14314](https://security-tracker.debian.org/tracker/CVE-2017-14314)\nHeap-based buffer over-read in DrawDashPolygon() .\n* [CVE-2017-14504](https://security-tracker.debian.org/tracker/CVE-2017-14504)\nNULL pointer dereference triggered by malformed file.\n* [CVE-2017-14733](https://security-tracker.debian.org/tracker/CVE-2017-14733)\nEnsure we detect alpha images with too few colors.\n* [CVE-2017-14994](https://security-tracker.debian.org/tracker/CVE-2017-14994)\nDCM\\_ReadNonNativeImages() can produce image list with\n no frames, resulting in null image pointer.\n* [CVE-2017-14997](https://security-tracker.debian.org/tracker/CVE-2017-14997)\nUnsigned underflow leading to astonishingly\n large allocation request.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.3.16-1.1+deb7u10.\n\n\nWe recommend that you upgrade your graphicsmagick packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1130-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1130"
 		}
 	]
 }

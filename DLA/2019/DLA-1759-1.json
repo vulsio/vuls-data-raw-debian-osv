@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1759-1",
-	"modified": "2023-06-28T06:20:57.243710Z",
+	"modified": "2024-01-09T20:31:42.969703Z",
 	"published": "2019-04-22T00:00:00Z",
 	"related": [
 		"CVE-2019-1787",
@@ -9,7 +9,6 @@
 		"CVE-2019-1789"
 	],
 	"summary": "clamav - security update",
-	"details": "\nOut-of-bounds read and write conditions have been fixed in clamav.\n\n\n* [CVE-2019-1787](https://security-tracker.debian.org/tracker/CVE-2019-1787)\nAn out-of-bounds heap read condition may occur when scanning PDF\n documents. The defect is a failure to correctly keep track of the number\n of bytes remaining in a buffer when indexing file data.\n* [CVE-2019-1788](https://security-tracker.debian.org/tracker/CVE-2019-1788)\nAn out-of-bounds heap write condition may occur when scanning OLE2 files\n such as Microsoft Office 97-2003 documents. The invalid write happens when\n an invalid pointer is mistakenly used to initialize a 32bit integer to\n zero. This is likely to crash the application.\n* [CVE-2019-1789](https://security-tracker.debian.org/tracker/CVE-2019-1789)\nAn out-of-bounds heap read condition may occur when scanning PE files\n (i.e. Windows EXE and DLL files) that have been packed using Aspack as a\n result of inadequate bound-checking.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.100.3+dfsg-0+deb8u1.\n\n\nWe recommend that you upgrade your clamav packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -78,12 +77,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1759-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1759"
 		}
 	]
 }

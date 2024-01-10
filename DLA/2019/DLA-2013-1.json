@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2013-1",
-	"modified": "2023-06-28T06:21:08.427346Z",
+	"modified": "2024-01-09T20:31:56.866386Z",
 	"published": "2019-11-27T00:00:00Z",
 	"related": [
 		"CVE-2017-14160",
@@ -9,7 +9,6 @@
 		"CVE-2018-10393"
 	],
 	"summary": "libvorbis - security update",
-	"details": "\nSeveral issues have been found in libvorbis, a decoder library for Vorbis\nGeneral Audio Compression Codec.\n\n\nThe fix for [CVE-2017-14160](https://security-tracker.debian.org/tracker/CVE-2017-14160) and [CVE-2018-10393](https://security-tracker.debian.org/tracker/CVE-2018-10393) improve the bound checking\nfor very low sample rates.\n\n\n* [CVE-2018-10392](https://security-tracker.debian.org/tracker/CVE-2018-10392)\nwas found because the number of channels was not validated\nand a remote attacker could cause a denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.3.4-2+deb8u2.\n\n\nWe recommend that you upgrade your libvorbis packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2013-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2013"
 		}
 	]
 }

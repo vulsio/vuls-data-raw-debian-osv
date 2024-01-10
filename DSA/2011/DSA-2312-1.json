@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2312-1",
-	"modified": "2023-10-16T00:11:07.735159Z",
+	"modified": "2024-01-09T20:21:22.366033Z",
 	"published": "2011-09-29T00:00:00Z",
 	"related": [
 		"CVE-2011-2372",
@@ -11,7 +11,6 @@
 		"CVE-2011-3000"
 	],
 	"summary": "iceape - several",
-	"details": "\nSeveral vulnerabilities have been found in the Iceape internet suite,\nan unbranded version of Seamonkey:\n\n\n* [CVE-2011-2372](https://security-tracker.debian.org/tracker/CVE-2011-2372)\nMariusz Mlynski discovered that websites could open a download\n dialog âÂ which has open as the default actionÂ â, while a user\n presses the ENTER key.\n* [CVE-2011-2995](https://security-tracker.debian.org/tracker/CVE-2011-2995)\nBenjamin Smedberg, Bob Clary and Jesse Ruderman discovered crashes\n in the rendering engine, which could lead to the execution of\n arbitrary code.\n* [CVE-2011-2998](https://security-tracker.debian.org/tracker/CVE-2011-2998)\nMark Kaplan discovered an integer underflow in the JavaScript\n engine, which could lead to the execution of arbitrary code.\n* [CVE-2011-2999](https://security-tracker.debian.org/tracker/CVE-2011-2999)\nBoris Zbarsky discovered that incorrect handling of the\n window.location object could lead to bypasses of the same-origin\n policy.\n* [CVE-2011-3000](https://security-tracker.debian.org/tracker/CVE-2011-3000)\nIan Graham discovered that multiple Location headers might lead to\n CRLF injection.\n\n\nThe oldstable distribution (lenny) is not affected. The iceape package\nonly provides the XPCOM code.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.0.11-8. This update also marks the compromised DigiNotar\nroot certs as revoked rather then untrusted.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.0.14-8.\n\n\nWe recommend that you upgrade your iceape packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2312-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2312"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2833-1",
-	"modified": "2023-10-16T00:11:33.565198Z",
+	"modified": "2024-01-09T20:23:37.908724Z",
 	"published": "2014-01-01T00:00:00Z",
 	"related": [
 		"CVE-2013-6449",
 		"CVE-2013-6450"
 	],
 	"summary": "openssl - several",
-	"details": "\nMultiple security issues have been fixed in OpenSSL: The TLS 1.2 support\nwas susceptible to denial of service and retransmission of DTLS messages\nwas fixed. In addition this update disables the insecure Dual\\_EC\\_DRBG\nalgorithm (which was unused anyway, see\n<http://marc.info/?l=openssl-announce&m=138747119822324&w=2> for further\ninformation) and no longer uses the RdRand feature available on some\nIntel CPUs as a sole source of entropy unless explicitly requested.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.0.1e-2+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.1e-5.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2833-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2833"
 		}
 	]
 }

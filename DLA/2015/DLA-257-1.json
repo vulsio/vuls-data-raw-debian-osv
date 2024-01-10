@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-257-1",
-	"modified": "2023-06-28T06:29:18.979493Z",
+	"modified": "2024-01-09T20:32:43.805207Z",
 	"published": "2015-06-29T00:00:00Z",
 	"related": [
 		"CVE-2015-4695",
 		"CVE-2015-4696"
 	],
 	"summary": "libwmf - security update",
-	"details": "\nlibwmf is vulnerable to two denial of service due to invalid read\noperations when processing specially crafted WMF files.\n\n\n* [CVE-2015-4695](https://security-tracker.debian.org/tracker/CVE-2015-4695)\nHeap buffer overread in libwmf\n* [CVE-2015-4696](https://security-tracker.debian.org/tracker/CVE-2015-4696)\nRead after free() in wmf2gd/wmf2eps\n\n\nFor the squeeze distribution, those issues have been fixed in libwmf\n0.2.8.4-6.2+deb6u2. We recommend that you upgrade your libwmf packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-257-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-257"
 		}
 	]
 }

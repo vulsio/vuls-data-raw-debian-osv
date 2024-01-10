@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3315-1",
-	"modified": "2023-10-16T00:06:18.482444Z",
+	"modified": "2024-01-09T20:28:09.412625Z",
 	"published": "2015-07-23T00:00:00Z",
 	"related": [
 		"CVE-2015-1266",
@@ -29,7 +29,6 @@
 		"CVE-2015-1289"
 	],
 	"summary": "chromium-browser - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the chromium web browser.\n\n\n* [CVE-2015-1266](https://security-tracker.debian.org/tracker/CVE-2015-1266)\nIntended access restrictions could be bypassed for certain URLs like\n chrome://gpu.\n* [CVE-2015-1267](https://security-tracker.debian.org/tracker/CVE-2015-1267)\nA way to bypass the Same Origin Policy was discovered.\n* [CVE-2015-1268](https://security-tracker.debian.org/tracker/CVE-2015-1268)\nMariusz Mlynski also discovered a way to bypass the Same Origin Policy.\n* [CVE-2015-1269](https://security-tracker.debian.org/tracker/CVE-2015-1269)\nMike Rudy discovered that hostnames were not properly compared in the\n HTTP Strict Transport Policy and HTTP Public Key Pinning features,\n which could allow those access restrictions to be bypassed.\n* [CVE-2015-1270](https://security-tracker.debian.org/tracker/CVE-2015-1270)\nAtte Kettunen discovered an uninitialized memory read in the ICU library.\n* [CVE-2015-1271](https://security-tracker.debian.org/tracker/CVE-2015-1271)\ncloudfuzzer discovered a buffer overflow in the pdfium library.\n* [CVE-2015-1272](https://security-tracker.debian.org/tracker/CVE-2015-1272)\nChamal de Silva discovered race conditions in the GPU process\n implementation.\n* [CVE-2015-1273](https://security-tracker.debian.org/tracker/CVE-2015-1273)\nmakosoft discovered a buffer overflow in openjpeg, which is used by\n the pdfium library embedded in chromium.\n* [CVE-2015-1274](https://security-tracker.debian.org/tracker/CVE-2015-1274)\nandrewm.bpi discovered that the auto-open list allowed certain file\n types to be executed immediately after download.\n* [CVE-2015-1276](https://security-tracker.debian.org/tracker/CVE-2015-1276)\nColin Payne discovered a use-after-free issue in the IndexedDB\n implementation.\n* [CVE-2015-1277](https://security-tracker.debian.org/tracker/CVE-2015-1277)\nSkyLined discovered a use-after-free issue in chromium's accessibility\n implementation.\n* [CVE-2015-1278](https://security-tracker.debian.org/tracker/CVE-2015-1278)\nChamal de Silva discovered a way to use PDF documents to spoof a URL.\n* [CVE-2015-1279](https://security-tracker.debian.org/tracker/CVE-2015-1279)\nmlafon discovered a buffer overflow in the pdfium library.\n* [CVE-2015-1280](https://security-tracker.debian.org/tracker/CVE-2015-1280)\ncloudfuzzer discovered a memory corruption issue in the SKIA library.\n* [CVE-2015-1281](https://security-tracker.debian.org/tracker/CVE-2015-1281)\nMasato Knugawa discovered a way to bypass the Content Security\n Policy.\n* [CVE-2015-1282](https://security-tracker.debian.org/tracker/CVE-2015-1282)\nChamal de Silva discovered multiple use-after-free issues in the\n pdfium library.\n* [CVE-2015-1283](https://security-tracker.debian.org/tracker/CVE-2015-1283)\nHuzaifa Sidhpurwala discovered a buffer overflow in the expat\n library.\n* [CVE-2015-1284](https://security-tracker.debian.org/tracker/CVE-2015-1284)\nAtte Kettunen discovered that the maximum number of page frames\n was not correctly checked.\n* [CVE-2015-1285](https://security-tracker.debian.org/tracker/CVE-2015-1285)\ngazheyes discovered an information leak in the XSS auditor,\n which normally helps to prevent certain classes of cross-site\n scripting problems.\n* [CVE-2015-1286](https://security-tracker.debian.org/tracker/CVE-2015-1286)\nA cross-site scripting issue was discovered in the interface to\n the v8 javascript library.\n* [CVE-2015-1287](https://security-tracker.debian.org/tracker/CVE-2015-1287)\nfiledescriptor discovered a way to bypass the Same Origin Policy.\n* [CVE-2015-1288](https://security-tracker.debian.org/tracker/CVE-2015-1288)\nMike Ruddy discovered that the spellchecking dictionaries could\n still be downloaded over plain HTTP (related to [CVE-2015-1263](https://security-tracker.debian.org/tracker/CVE-2015-1263)).\n* [CVE-2015-1289](https://security-tracker.debian.org/tracker/CVE-2015-1289)\nThe chrome 44 development team found and fixed various issues\n during internal auditing.\n\n\nIn addition to the above issues, Google disabled the hotword extension\nby default in this version, which if enabled downloads files without\nthe user's intervention.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 44.0.2403.89-1~deb8u1.\n\n\nFor the testing distribution (stretch), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 44.0.2403.89-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -69,12 +68,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3315-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3315"
 		}
 	]
 }

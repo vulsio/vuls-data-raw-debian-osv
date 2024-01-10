@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2533-1",
-	"modified": "2023-10-16T00:11:17.509731Z",
+	"modified": "2024-01-09T20:29:45.781976Z",
 	"published": "2012-08-23T00:00:00Z",
 	"related": [
 		"CVE-2012-3418",
@@ -10,7 +10,6 @@
 		"CVE-2012-3421"
 	],
 	"summary": "pcp - several",
-	"details": "\nIt was discovered that Performance Co-Pilot (pcp), a framework for\nperformance monitoring, contains several vulnerabilities.\n\n\n* [CVE-2012-3418](https://security-tracker.debian.org/tracker/CVE-2012-3418)\nMultiple buffer overflows in the PCP protocol decoders can\n cause PCP clients and servers to crash or, potentially,\n execute arbitrary code while processing crafted PDUs.\n* [CVE-2012-3419](https://security-tracker.debian.org/tracker/CVE-2012-3419)\nThe linux PMDA used by the pmcd daemon discloses sensitive\n information from the /proc file system to unauthenticated\n clients.\n* [CVE-2012-3420](https://security-tracker.debian.org/tracker/CVE-2012-3420)\nMultiple memory leaks processing crafted requests can cause\n pmcd to consume large amounts of memory and eventually crash.\n* [CVE-2012-3421](https://security-tracker.debian.org/tracker/CVE-2012-3421)\nIncorrect event-driven programming allows malicious clients to\n prevent other clients from accessing the pmcd daemon.\n\n\nTo address the information disclosure vulnerability, \n[CVE-2012-3419](https://security-tracker.debian.org/tracker/CVE-2012-3419), a\nnew proc PMDA was introduced, which is disabled by default. If you\nneed access to this information, you need to enable the proc PMDA.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 3.3.3-squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.6.5.\n\n\nWe recommend that you upgrade your pcp packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2533-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2533"
 		}
 	]
 }

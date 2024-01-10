@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-764-1",
-	"modified": "2023-06-28T06:25:39.094698Z",
-	"published": "2016-12-26T00:00:00Z",
+	"modified": "2024-01-09T20:33:57.816773Z",
+	"published": "2016-12-25T00:00:00Z",
 	"related": [
 		"CVE-2016-9911",
 		"CVE-2016-9921",
 		"CVE-2016-9922"
 	],
 	"summary": "qemu - security update",
-	"details": "\nMultiple vulnerabilities have been found in QEMU:\n\n\n* [CVE-2016-9911](https://security-tracker.debian.org/tracker/CVE-2016-9911)\nQuick Emulator (Qemu) built with the USB EHCI Emulation support\n is vulnerable to a memory leakage issue. It could occur while\n processing packet data in ehci\\_init\\_transfer. A guest user/\n process could use this issue to leak host memory, resulting in\n DoS for a host.\n* [CVE-2016-9921](https://security-tracker.debian.org/tracker/CVE-2016-9921) /\n [CVE-2016-9922](https://security-tracker.debian.org/tracker/CVE-2016-9922)\nQuick emulator (Qemu) built with the Cirrus CLGD 54xx VGA Emulator\n support is vulnerable to a divide by zero issue. It could occur\n while copying VGA data when cirrus graphics mode was set to be\n VGA. A privileged user inside guest could use this flaw to crash\n the Qemu process instance on the host, resulting in DoS.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.1.2+dfsg-6+deb7u19.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-764-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-764"
 		}
 	]
 }

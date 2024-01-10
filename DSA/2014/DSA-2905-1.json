@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2905-1",
-	"modified": "2023-10-16T00:06:07.606245Z",
+	"modified": "2024-01-09T20:27:56.002355Z",
 	"published": "2014-04-15T00:00:00Z",
 	"related": [
 		"CVE-2014-1716",
@@ -20,7 +20,6 @@
 		"CVE-2014-1729"
 	],
 	"summary": "chromium-browser - security update",
-	"details": "\nSeveral vulnerabilities were discovered in the chromium web browser.\n\n\n* [CVE-2014-1716](https://security-tracker.debian.org/tracker/CVE-2014-1716)\nA cross-site scripting issue was discovered in the v8 javascript\n library.\n* [CVE-2014-1717](https://security-tracker.debian.org/tracker/CVE-2014-1717)\nAn out-of-bounds read issue was discovered in the v8 javascript\n library.\n* [CVE-2014-1718](https://security-tracker.debian.org/tracker/CVE-2014-1718)\nAaron Staple discovered an integer overflow issue in chromium's\n software compositor.\n* [CVE-2014-1719](https://security-tracker.debian.org/tracker/CVE-2014-1719)\nColin Payne discovered a use-after-free issue in the web workers\n implementation.\n* [CVE-2014-1720](https://security-tracker.debian.org/tracker/CVE-2014-1720)\ncloudfuzzer discovered a use-after-free issue in the Blink/Webkit\n document object model implementation.\n* [CVE-2014-1721](https://security-tracker.debian.org/tracker/CVE-2014-1721)\nChristian Holler discovered a memory corruption issue in the v8\n javascript library.\n* [CVE-2014-1722](https://security-tracker.debian.org/tracker/CVE-2014-1722)\nmiaubiz discovered a use-after-free issue in block rendering.\n* [CVE-2014-1723](https://security-tracker.debian.org/tracker/CVE-2014-1723)\nGeorge McBay discovered a url spoofing issue.\n* [CVE-2014-1724](https://security-tracker.debian.org/tracker/CVE-2014-1724)\nAtte Kettunen discovered a use-after-free issue in freebsoft's\n libspeechd library.\n\n\nBecause of this issue, the text-to-speech feature is now disabled\n by default (\"--enable-speech-dispatcher\" at the command-line can \n re-enable it).\n* [CVE-2014-1725](https://security-tracker.debian.org/tracker/CVE-2014-1725)\nAn out-of-bounds read was discovered in the base64 implementation.\n* [CVE-2014-1726](https://security-tracker.debian.org/tracker/CVE-2014-1726)\nJann Horn discovered a way to bypass the same origin policy.\n* [CVE-2014-1727](https://security-tracker.debian.org/tracker/CVE-2014-1727)\nKhalil Zhani discovered a use-after-free issue in the web color\n chooser implementation.\n* [CVE-2014-1728](https://security-tracker.debian.org/tracker/CVE-2014-1728)\nThe Google Chrome development team discovered and fixed multiple\n issues with potential security impact.\n* [CVE-2014-1729](https://security-tracker.debian.org/tracker/CVE-2014-1729)\nThe Google Chrome development team discovered and fixed multiple\n issues in version 3.24.35.22 of the v8 javascript library.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 34.0.1847.116-1~deb7u1.\n\n\nFor the testing distribution (jessie), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 34.0.1847.116-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -79,12 +78,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2905-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2905"
 		}
 	]
 }

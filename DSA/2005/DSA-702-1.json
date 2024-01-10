@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-702-1",
-	"modified": "2023-10-16T00:26:14.259432Z",
+	"modified": "2024-01-09T20:32:49.611595Z",
 	"published": "2005-04-01T00:00:00Z",
 	"related": [
 		"CVE-2005-0397",
@@ -10,7 +10,6 @@
 		"CVE-2005-0762"
 	],
 	"summary": "imagemagick - several",
-	"details": "\nSeveral vulnerabilities have been discovered in ImageMagick, a\ncommonly used image manipulation library. These problems can be\nexploited by a carefully crafted graphic image. The Common\nVulnerabilities and Exposures project identifies the following\nproblems:\n\n\n* [CAN-2005-0397](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0397)\nTavis Ormandy discovered a format string vulnerability in the\n filename handling code which allows a remote attacker to cause a\n denial of service and possibly execute arbitrary code.\n\n* [CAN-2005-0759](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0759)\nAndrei Nigmatulin discovered a denial of service condition which\n can be caused by an invalid tag in a TIFF image.\n\n* [CAN-2005-0760](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0760)\nAndrei Nigmatulin discovered that the TIFF decoder is vulnerable\n to accessing memory out of bounds which will result in a\n segmentation fault.\n\n* [CAN-2005-0762](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0762)\nAndrei Nigmatulin discovered a buffer overflow in the SGI parser\n which allows a remote attacker to execute arbitrary code via a\n specially crafted SGI image file.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 5.4.4.5-1woody6.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 6.0.6.2-2.2.\n\n\nWe recommend that you upgrade your imagemagick package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-702-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-702"
 		}
 	]
 }

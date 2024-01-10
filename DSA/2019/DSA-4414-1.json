@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4414-1",
-	"modified": "2023-10-16T00:17:35.779709Z",
+	"modified": "2024-01-09T20:28:45.401682Z",
 	"published": "2019-03-23T00:00:00Z",
 	"related": [
 		"CVE-2019-3877",
 		"CVE-2019-3878"
 	],
 	"summary": "libapache2-mod-auth-mellon - security update",
-	"details": "\nSeveral issues have been discovered in Apache module auth\\_mellon, which\nprovides SAML 2.0 authentication.\n\n\n* [CVE-2019-3877](https://security-tracker.debian.org/tracker/CVE-2019-3877)\nIt was possible to bypass the redirect URL checking on logout, so\n the module could be used as an open redirect facility.\n* [CVE-2019-3878](https://security-tracker.debian.org/tracker/CVE-2019-3878)\nWhen mod\\_auth\\_mellon is used in an Apache configuration which\n serves as a remote proxy with the http\\_proxy module, it was\n possible to bypass authentication by sending SAML ECP headers.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 0.12.0-2+deb9u1.\n\n\nWe recommend that you upgrade your libapache2-mod-auth-mellon packages.\n\n\nFor the detailed security status of libapache2-mod-auth-mellon please\nrefer to its security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libapache2-mod-auth-mellon](https://security-tracker.debian.org/tracker/libapache2-mod-auth-mellon)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4414-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4414"
 		}
 	]
 }

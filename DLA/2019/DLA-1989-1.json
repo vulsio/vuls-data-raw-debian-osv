@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1989-1",
-	"modified": "2023-06-28T06:25:03.397115Z",
+	"modified": "2024-01-09T20:31:55.724746Z",
 	"published": "2019-11-12T00:00:00Z",
 	"related": [
 		"CVE-2019-0154",
 		"CVE-2019-11135"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service, or information\nleak.\n\n\n* [CVE-2019-0154](https://security-tracker.debian.org/tracker/CVE-2019-0154)\nIntel discovered that on their 8th and 9th generation GPUs,\n reading certain registers while the GPU is in a low-power state\n can cause a system hang. A local user permitted to use the GPU\n can use this for denial of service.\n\n\nThis update mitigates the issue through changes to the i915\n driver.\n\n\nThe affected chips (gen8) are listed at\n [en.wikipedia.org/wiki/List\\_of\\_Intel\\_graphics\\_processing\\_units](https://en.wikipedia.org/wiki/List_of_Intel_graphics_processing_units#Gen8).\n* [CVE-2019-11135](https://security-tracker.debian.org/tracker/CVE-2019-11135)\nIt was discovered that on Intel CPUs supporting transactional\n memory (TSX), a transaction that is going to be aborted may\n continue to execute speculatively, reading sensitive data from\n internal buffers and leaking it through dependent operations.\n Intel calls this TSX Asynchronous Abort (TAA).\n\n\nFor CPUs affected by the previously published Microarchitectural\n Data Sampling (MDS) issues ([CVE-2018-12126](https://security-tracker.debian.org/tracker/CVE-2018-12126), [CVE-2018-12127](https://security-tracker.debian.org/tracker/CVE-2018-12127),\n [CVE-2018-12130](https://security-tracker.debian.org/tracker/CVE-2018-12130), [CVE-2019-11091](https://security-tracker.debian.org/tracker/CVE-2019-11091)), the existing mitigation also\n mitigates this issue.\n\n\nFor processors that are vulnerable to TAA but not MDS, this update\n disables TSX by default. This mitigation requires updated CPU\n microcode. An updated intel-microcode package (only available in\n Debian non-free) will be provided via a future DLA. The updated\n CPU microcode may also be available as part of a system firmware\n (\"BIOS\") update.\n\n\nFurther information on the mitigation can be found at\n [www.kernel.org/âŚ/tsx\\_async\\_abort.html](https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/tsx_async_abort.html)\n or in the linux-doc-3.16 package.\n\n\nIntel's explanation of the issue can be found at\n [software.intel.com/âŚ/deep-dive-intel-transactional-synchronization-extensions-intel-tsx-asynchronous-abort](https://software.intel.com/security-software-guidance/insights/deep-dive-intel-transactional-synchronization-extensions-intel-tsx-asynchronous-abort).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.16.76-1. This update also includes other fixes from upstream stable\nupdates.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -102,12 +101,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1989-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1989"
 		}
 	]
 }

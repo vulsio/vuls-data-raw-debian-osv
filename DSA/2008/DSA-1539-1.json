@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1539-1",
-	"modified": "2023-10-16T00:10:29.079746Z",
+	"modified": "2024-01-09T20:24:57.964693Z",
 	"published": "2008-04-04T00:00:00Z",
 	"related": [
 		"CVE-2007-4542",
 		"CVE-2007-4629"
 	],
 	"summary": "mapserver - multiple vulnerabilities",
-	"details": "\nChris Schmidt and Daniel Morissette discovered two vulnerabilities\nin mapserver, a development environment for spatial and mapping\napplications. The Common Vulnerabilities and Exposures project\nidentifies the following two problems:\n\n\n* [CVE-2007-4542](https://security-tracker.debian.org/tracker/CVE-2007-4542)\nLack of input sanitizing and output escaping in the CGI\n mapserver's template handling and error reporting routines leads\n to cross-site scripting vulnerabilities.\n* [CVE-2007-4629](https://security-tracker.debian.org/tracker/CVE-2007-4629)\nMissing bounds checking in mapserver's template handling leads to\n a stack-based buffer overrun vulnerability, allowing a remote\n attacker to execute arbitrary code with the privileges of the CGI\n or httpd user.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 4.10.0-5.1+etch2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.10.3-1.\n\n\nWe recommend that you upgrade your mapserver (4.10.0-5.1+etch2) package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1539-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1539"
 		}
 	]
 }

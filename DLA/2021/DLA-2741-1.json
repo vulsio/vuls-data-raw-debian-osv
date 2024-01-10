@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2741-1",
-	"modified": "2023-06-28T06:21:21.749931Z",
+	"modified": "2024-01-09T20:33:09.967179Z",
 	"published": "2021-08-12T00:00:00Z",
 	"related": [
 		"CVE-2021-29425"
 	],
 	"summary": "commons-io - security update",
-	"details": "\nLukas Euler discovered a path traversal vulnerability in commons-io, a Java\nlibrary for common useful IO related classes. When invoking the method\nFileNameUtils.normalize with an improper input string, like \"//../foo\", or\n\"\\\\..\\foo\", the result would be the same value, thus possibly providing access\nto files in the parent directory, but not further above (thus limited path\ntraversal), if the calling code would use the result to construct a path value.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.5-1+deb9u1.\n\n\nWe recommend that you upgrade your commons-io packages.\n\n\nFor the detailed security status of commons-io please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/commons-io>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2741-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2741"
 		}
 	]
 }

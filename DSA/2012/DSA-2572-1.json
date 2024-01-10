@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2572-1",
-	"modified": "2023-10-16T00:06:00.424865Z",
+	"modified": "2024-01-09T20:27:48.851879Z",
 	"published": "2012-11-04T00:00:00Z",
 	"related": [
 		"CVE-2012-3982",
@@ -15,7 +15,6 @@
 		"CVE-2012-4188"
 	],
 	"summary": "iceape - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Iceape, an internet\nsuite based on Seamonkey:\n\n\n* [CVE-2012-3982](https://security-tracker.debian.org/tracker/CVE-2012-3982)\nMultiple unspecified vulnerabilities in the browser engine\n allow remote attackers to cause a denial of service (memory\n corruption and application crash) or possibly execute\n arbitrary code via unknown vectors.\n* [CVE-2012-3986](https://security-tracker.debian.org/tracker/CVE-2012-3986)\nIcedove does not properly restrict calls to DOMWindowUtils\n methods, which allows remote attackers to bypass intended\n access restrictions via crafted JavaScript code.\n* [CVE-2012-3990](https://security-tracker.debian.org/tracker/CVE-2012-3990)\nA Use-after-free vulnerability in the IME State Manager\n implementation allows remote attackers to execute arbitrary\n code via unspecified vectors, related to the\n nsIContent::GetNameSpaceID function.\n* [CVE-2012-3991](https://security-tracker.debian.org/tracker/CVE-2012-3991)\nIcedove does not properly restrict JSAPI access to the\n GetProperty function, which allows remote attackers to bypass\n the Same Origin Policy and possibly have unspecified other\n impact via a crafted web site.\n* [CVE-2012-4179](https://security-tracker.debian.org/tracker/CVE-2012-4179)\nA use-after-free vulnerability in the\n nsHTMLCSSUtils::CreateCSSPropertyTxn function allows remote\n attackers to execute arbitrary code or cause a denial of\n service (heap memory corruption) via unspecified vectors.\n* [CVE-2012-4180](https://security-tracker.debian.org/tracker/CVE-2012-4180)\nA heap-based buffer overflow in the\n nsHTMLEditor::IsPrevCharInNodeWhitespace function allows\n remote attackers to execute arbitrary code via unspecified\n vectors.\n* [CVE-2012-4182](https://security-tracker.debian.org/tracker/CVE-2012-4182)\nA use-after-free vulnerability in the\n nsTextEditRules::WillInsert function allows remote attackers\n to execute arbitrary code or cause a denial of service (heap\n memory corruption) via unspecified vectors.\n* [CVE-2012-4186](https://security-tracker.debian.org/tracker/CVE-2012-4186)\nA heap-based buffer overflow in the\n nsWav-eReader::DecodeAudioData function allows remote attackers\n to execute arbitrary code via unspecified vectors.\n* [CVE-2012-4188](https://security-tracker.debian.org/tracker/CVE-2012-4188)\nA heap-based buffer overflow in the Convolve3x3 function\n allows remote attackers to execute arbitrary code via\n unspecified vectors.\n\n\nAdditionally, this update fixes a regression in the patch for\n[CVE-2012-3959](https://security-tracker.debian.org/tracker/CVE-2012-3959),\nreleased in [DSA-2554-1](dsa-2554).\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 2.0.11-16.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 10.0.10esr-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 10.0.10esr-1.\n\n\nWe recommend that you upgrade your iceape packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2572-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2572"
 		}
 	]
 }

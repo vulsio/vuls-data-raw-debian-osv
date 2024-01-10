@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2407-1",
-	"modified": "2023-06-28T06:26:33.493571Z",
+	"modified": "2024-01-09T20:32:32.820873Z",
 	"published": "2020-10-14T00:00:00Z",
 	"related": [
 		"CVE-2020-13943"
 	],
 	"summary": "tomcat8 - security update",
-	"details": "\nIt was discovered that there was an issue in Apache Tomcat 8, the Java\napplication server. An excessive number of concurrent streams could have\nresulted in users seeing responses for unexpected resources.\n\n\n* [CVE-2020-13943](https://security-tracker.debian.org/tracker/CVE-2020-13943)\nIf an HTTP/2 client connecting to Apache Tomcat 10.0.0-M1 to 10.0.0-M7,\n 9.0.0.M1 to 9.0.37 or 8.5.0 to 8.5.57 exceeded the agreed maximum number of\n concurrent streams for a connection (in violation of the HTTP/2 protocol),\n it was possible that a subsequent request made on that connection could\n contain HTTP headers - including HTTP/2 pseudo headers - from a previous\n request rather than the intended headers. This could lead to users seeing\n responses for unexpected resources.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n8.5.54-0+deb9u4.\n\n\nWe recommend that you upgrade your tomcat8 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -73,12 +72,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2407-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2407"
 		}
 	]
 }

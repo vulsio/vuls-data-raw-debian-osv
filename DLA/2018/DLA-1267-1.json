@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1267-1",
-	"modified": "2023-06-28T06:36:33.379387Z",
+	"modified": "2024-01-09T20:30:53.821035Z",
 	"published": "2018-02-02T00:00:00Z",
 	"related": [
 		"CVE-2018-1000027"
 	],
 	"summary": "squid - security update",
-	"details": "\nSquid, a high-performance proxy caching server for web clients, has been\nfound vulnerable to denial of service attacks associated with ESI\nresponse processing and intermediate CA certificate downloading.\n\n\n* [CVE-2018-1000027](https://security-tracker.debian.org/tracker/CVE-2018-1000027)\nIncorrect pointer handling resulted in the possibility of a remote\n client delivering certain HTTP requests in conjunction with certain\n trusted server reponses involving the processing of ESI responses or\n downloading of intermediate CA certificates to trigger a denial of\n service for all clients accessing the squid service.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.7.STABLE9-4.1+deb7u3.\n\n\nWe recommend that you upgrade your squid packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1267-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1267"
 		}
 	]
 }

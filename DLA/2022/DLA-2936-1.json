@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2936-1",
-	"modified": "2023-06-28T06:37:04.609504Z",
-	"published": "2022-03-21T00:00:00Z",
+	"modified": "2024-01-09T20:33:10.633163Z",
+	"published": "2022-03-07T00:00:00Z",
 	"related": [
 		"CVE-2018-10887",
 		"CVE-2018-10888",
@@ -13,7 +13,6 @@
 		"CVE-2020-12279"
 	],
 	"summary": "libgit2 - security update",
-	"details": "\nMultiple vulnerabilities were found in libgit2, a low-level Git library,\nand are as follows:\n\n\n* [CVE-2018-8098](https://security-tracker.debian.org/tracker/CVE-2018-8098)\nInteger overflow in the index.c:read\\_entry() function while\n decompressing a compressed prefix length in libgit2 before\n v0.26.2 allows an attacker to cause a denial of service\n (out-of-bounds read) via a crafted repository index file.\n* [CVE-2018-8099](https://security-tracker.debian.org/tracker/CVE-2018-8099)\nIncorrect returning of an error code in the index.c:read\\_entry()\n function leads to a double free in libgit2 before v0.26.2, which\n allows an attacker to cause a denial of service via a crafted\n repository index file.\n* [CVE-2018-10887](https://security-tracker.debian.org/tracker/CVE-2018-10887)\nIt has been discovered that an unexpected sign extension in\n git\\_delta\\_apply function in delta-apply.c file may lead to an\n integer overflow which in turn leads to an out of bound read,\n allowing to read before the base object. An attacker may use\n this flaw to leak memory addresses or cause a Denial of Service.\n* [CVE-2018-10888](https://security-tracker.debian.org/tracker/CVE-2018-10888)\nA missing check in git\\_delta\\_apply function in delta-apply.c file,\n may lead to an out-of-bound read while reading a binary delta file.\n An attacker may use this flaw to cause a Denial of Service.\n* [CVE-2018-15501](https://security-tracker.debian.org/tracker/CVE-2018-15501)\nIn ng\\_pkt in transports/smart\\_pkt.c in libgit2, a remote attacker\n can send a crafted smart-protocol ng packet that lacks a '\\0'\n byte to trigger an out-of-bounds read that leads to DoS.\n* [CVE-2020-12278](https://security-tracker.debian.org/tracker/CVE-2020-12278)\npath.c mishandles equivalent filenames that exist because of NTFS\n Alternate Data Streams. This may allow remote code execution when\n cloning a repository. This issue is similar to [CVE-2019-1352](https://security-tracker.debian.org/tracker/CVE-2019-1352).\n* [CVE-2020-12279](https://security-tracker.debian.org/tracker/CVE-2020-12279)\ncheckout.c mishandles equivalent filenames that exist because of\n NTFS short names. This may allow remote code execution when cloning\n a repository. This issue is similar to [CVE-2019-1353](https://security-tracker.debian.org/tracker/CVE-2019-1353).\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n0.25.1+really0.24.6-1+deb9u1.\n\n\nWe recommend that you upgrade your libgit2 packages.\n\n\nFor the detailed security status of libgit2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libgit2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2936-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2936"
 		}
 	]
 }

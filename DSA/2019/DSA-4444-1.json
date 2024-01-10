@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4444-1",
-	"modified": "2023-10-16T00:17:41.698848Z",
+	"modified": "2024-01-09T20:28:47.368078Z",
 	"published": "2019-05-14T00:00:00Z",
 	"related": [
 		"CVE-2018-12126",
@@ -10,7 +10,6 @@
 		"CVE-2019-11091"
 	],
 	"summary": "linux - security update",
-	"details": "\nMultiple researchers have discovered vulnerabilities in the way the\nIntel processor designs have implemented speculative forwarding of data\nfilled into temporary microarchitectural structures (buffers). This\nflaw could allow an attacker controlling an unprivileged process to\nread sensitive information, including from the kernel and all other\nprocesses running on the system or cross guest/host boundaries to read\nhost memory.\n\n\nSee [\\\nhttps://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html](https://www.kernel.org/doc/html/latest/admin-guide/hw-vuln/mds.html)\nfor more details.\n\n\nTo fully resolve these vulnerabilities it is also necessary to install\nupdated CPU microcode. An updated intel-microcode package (only\navailable in Debian non-free) will be provided via a separate DSA. The\nupdated CPU microcode may also be available as part of a system firmware\n(\"BIOS\") update.\n\n\nIn addition, this update includes a fix for a regression causing\ndeadlocks inside the loopback driver, which was introduced by the update\nto 4.9.168 in the last Stretch point release.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 4.9.168-1+deb9u2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -83,12 +82,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4444-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2019/dsa-4444"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2952-1",
-	"modified": "2023-06-28T06:26:44.213783Z",
+	"modified": "2024-01-09T20:33:11.047798Z",
 	"published": "2022-03-17T00:00:00Z",
 	"related": [
 		"CVE-2019-1551",
 		"CVE-2022-0778"
 	],
 	"summary": "openssl - security update",
-	"details": "\nTavis Ormandy discovered that the BN\\_mod\\_sqrt() function of OpenSSL\ncould be tricked into an infinite loop. This could result in denial of\nservice via malformed certificates.\n\n\nIn addition, this update fixes an overflow bug in the x64\\_64 Montgomery\nsquaring procedure.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.1.0l-1~deb9u5.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openssl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2952-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2952"
 		}
 	]
 }

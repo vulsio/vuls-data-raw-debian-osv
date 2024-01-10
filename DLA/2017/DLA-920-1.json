@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-920-1",
-	"modified": "2023-06-28T06:27:12.459822Z",
+	"modified": "2024-01-09T20:34:03.419464Z",
 	"published": "2017-04-26T00:00:00Z",
 	"related": [
 		"CVE-2016-10251",
 		"CVE-2016-9591"
 	],
 	"summary": "jasper - security update",
-	"details": "\n* [CVE-2016-9591](https://security-tracker.debian.org/tracker/CVE-2016-9591)\nUse-after-free on heap in jas\\_matrix\\_destroy\n The vulnerability exists in code responsible for re-encoding the\n decoded input image file to a JP2 image. The vulnerability is\n caused by not setting related pointers to be null after the\n pointers are freed (i.e. missing Setting-Pointer-Null operations\n after free). The vulnerability can further cause double-free.\n* [CVE-2016-10251](https://security-tracker.debian.org/tracker/CVE-2016-10251)\nInteger overflow in the jpc\\_pi\\_nextcprl function in jpc\\_t2cod.c in\n JasPer before 1.900.20 allows remote attackers to have unspecified\n impact via a crafted file, which triggers use of an uninitialized\n value.\n\n* Additional fix for TEMP-CVE from last upload to avoid hassle with\n SIZE\\_MAX\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.900.1-13+deb7u6.\n\n\nWe recommend that you upgrade your jasper packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-920-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-920"
 		}
 	]
 }

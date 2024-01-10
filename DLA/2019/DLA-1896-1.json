@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1896-1",
-	"modified": "2023-06-28T06:29:56.678419Z",
+	"modified": "2024-01-09T20:32:08.729500Z",
 	"published": "2019-08-24T00:00:00Z",
 	"related": [
 		"CVE-2019-10086"
 	],
 	"summary": "commons-beanutils - security update",
-	"details": "\nIt was discovered that there was a remote arbitrary code\nvulnerability in commons-beanutils, a set of utilities for\nmanipulating JavaBeans code.\n\n\n* [CVE-2019-10086](https://security-tracker.debian.org/tracker/CVE-2019-10086)\nIn Apache Commons Beanutils 1.9.2, a special BeanIntrospector class was added which allows suppressing the ability for an attacker to access the classloader via the class property available on all Java objects. We, however were not using this by default characteristic of the PropertyUtilsBean.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.9.2-1+deb8u1.\n\n\nWe recommend that you upgrade your commons-beanutils packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1896-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1896"
 		}
 	]
 }

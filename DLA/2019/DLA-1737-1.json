@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1737-1",
-	"modified": "2023-06-28T06:20:56.130764Z",
+	"modified": "2024-01-09T20:31:42.118062Z",
 	"published": "2019-03-29T00:00:00Z",
 	"related": [
 		"CVE-2019-3871"
 	],
 	"summary": "pdns - security update",
-	"details": "\nA vulnerability was found in PowerDNS Authoritative Server before\n4.0.7 and before 4.1.7. An insufficient validation of data coming from\nthe user when building a HTTP request from a DNS query in the HTTP\nConnector of the Remote backend, allowing a remote user to cause a\ndenial of service by making the server connect to an invalid endpoint,\nor possibly information disclosure by making the server connect to an\ninternal endpoint and somehow extracting meaningful information about\nthe response.\n\n\nOnly installations using the pdns-backend-remote package are affected.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n3.4.1-4+deb8u9.\n\n\nWe recommend that you upgrade your pdns packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1737-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1737"
 		}
 	]
 }

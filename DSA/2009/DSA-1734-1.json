@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1734-1",
-	"modified": "2023-10-16T00:10:37.322162Z",
+	"modified": "2024-01-09T20:21:01.408084Z",
 	"published": "2009-03-05T00:00:00Z",
 	"related": [
 		"CVE-2009-0368"
 	],
 	"summary": "opensc - information disclosure",
-	"details": "\nb.badrignans discovered that OpenSC, a set of smart card utilities,\ncould stores private data on a smart card without proper access\nrestrictions.\n\n\nOnly blank cards initialised with OpenSC are affected by this problem.\nThis update only improves creating new private data objects, but cards\nalready initialised with such private data objects need to be\nmodified to repair the access control conditions on such cards.\nInstructions for a variety of situations can be found at the OpenSC\nweb site: http://www.opensc-project.org/security.html\n\n\nThe oldstable distribution (etch) is not affected by this problem.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 0.11.4-5+lenny1.\n\n\nFor the unstable distribution (sid), this problem wil be fixed soon.\n\n\nWe recommend that you upgrade your opensc package and recreate any\nprivate data objects stored on your smart cards.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1734-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1734"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3851-1",
-	"modified": "2023-10-16T00:12:22.957511Z",
+	"modified": "2024-01-09T20:28:23.063473Z",
 	"published": "2017-05-12T00:00:00Z",
 	"related": [
 		"CVE-2017-7484",
@@ -9,7 +9,6 @@
 		"CVE-2017-7486"
 	],
 	"summary": "postgresql-9.4 - security update",
-	"details": "\nSeveral vulnerabilities have been found in the PostgreSQL database\nsystem:\n\n\n* [CVE-2017-7484](https://security-tracker.debian.org/tracker/CVE-2017-7484)\nRobert Haas discovered that some selectivity estimators did not\n validate user privileges which could result in information\n disclosure.\n* [CVE-2017-7485](https://security-tracker.debian.org/tracker/CVE-2017-7485)\nDaniel Gustafsson discovered that the PGREQUIRESSL environment\n variable did no longer enforce a TLS connection.\n* [CVE-2017-7486](https://security-tracker.debian.org/tracker/CVE-2017-7486)\nAndrew Wheelwright discovered that user mappings were insufficiently\n restricted.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 9.4.12-0+deb8u1.\n\n\nWe recommend that you upgrade your postgresql-9.4 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -59,12 +58,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3851-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3851"
 		}
 	]
 }

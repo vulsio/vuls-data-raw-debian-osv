@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3221-1",
-	"modified": "2023-10-16T00:06:16.441706Z",
+	"modified": "2024-01-09T20:16:51.547961Z",
 	"published": "2015-04-12T00:00:00Z",
 	"related": [
 		"CVE-2015-2831"
 	],
 	"summary": "das-watchdog - security update",
-	"details": "\nAdam Sampson discovered a buffer overflow in the handling of the\nXAUTHORITY environment variable in das-watchdog, a watchdog daemon to\nensure a realtime process won't hang the machine. A local user can\nexploit this flaw to escalate his privileges and execute arbitrary\ncode as root.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 0.9.0-2+deb7u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 0.9.0-3.1.\n\n\nWe recommend that you upgrade your das-watchdog packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3221-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3221"
 		}
 	]
 }

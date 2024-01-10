@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3476-1",
-	"modified": "2023-10-16T00:06:22.167712Z",
+	"modified": "2024-01-09T20:25:57.314946Z",
 	"published": "2016-02-13T00:00:00Z",
 	"related": [
 		"CVE-2016-0766",
 		"CVE-2016-0773"
 	],
 	"summary": "postgresql-9.4 - security update",
-	"details": "\nSeveral vulnerabilities have been found in PostgreSQL-9.4, a SQL\ndatabase system.\n\n\n* [CVE-2016-0766](https://security-tracker.debian.org/tracker/CVE-2016-0766)\nA privilege escalation vulnerability for users of PL/Java was\n discovered. Certain custom configuration settings (GUCs) for PL/Java\n will now be modifiable only by the database superuser to mitigate\n this issue.\n* [CVE-2016-0773](https://security-tracker.debian.org/tracker/CVE-2016-0773)\nTom Lane and Greg Stark discovered a flaw in the way PostgreSQL\n processes specially crafted regular expressions. Very large\n character ranges in bracket expressions could cause infinite\n loops or memory overwrites. A remote attacker can exploit this\n flaw to cause a denial of service or, potentially, to execute\n arbitrary code.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 9.4.6-0+deb8u1.\n\n\nWe recommend that you upgrade your postgresql-9.4 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3476-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3476"
 		}
 	]
 }

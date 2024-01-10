@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2728-1",
-	"modified": "2023-06-28T06:20:04.260436Z",
+	"modified": "2024-01-09T20:32:53.763368Z",
 	"published": "2021-08-03T00:00:00Z",
 	"related": [
 		"CVE-2021-25801",
@@ -10,7 +10,6 @@
 		"CVE-2021-25804"
 	],
 	"summary": "vlc - security update",
-	"details": "\nIt was discovered that there were a number of issues in VideoLAN (aka 'vlc',\na popular video and multimedia player:\n\n\n* [CVE-2021-25801](https://security-tracker.debian.org/tracker/CVE-2021-25801)\nA buffer overflow vulnerability in the \\_\\_Parse\\_indx component allowed\n attackers to cause an out-of-bounds read via a crafted .avi file.\n* [CVE-2021-25802](https://security-tracker.debian.org/tracker/CVE-2021-25802)\nA buffer overflow vulnerability in the AVI\\_ExtractSubtitle component\n could have allowed attackers to cause an out-of-bounds read via a crafted\n .avi file.\n* [CVE-2021-25803](https://security-tracker.debian.org/tracker/CVE-2021-25803)\nA buffer overflow vulnerability in the vlc\\_input\\_attachment\\_New\n component allowed attackers to cause an out-of-bounds read via a\n specially-crafted .avi file.\n* [CVE-2021-25804](https://security-tracker.debian.org/tracker/CVE-2021-25804)\nA NULL-pointer dereference in \"Open\" in avi.c can result in a denial of\n service (DoS) vulnerability.\n\n\nFor Debian 9 Stretch, these problems have been fixed in version\n3.0.11-0+deb9u2.\n\n\nWe recommend that you upgrade your vlc packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -102,12 +101,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2728-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2728"
 		}
 	]
 }

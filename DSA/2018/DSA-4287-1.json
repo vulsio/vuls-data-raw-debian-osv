@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4287-1",
-	"modified": "2023-10-16T00:13:42.134228Z",
+	"modified": "2024-01-09T20:28:30.504137Z",
 	"published": "2018-09-07T00:00:00Z",
 	"related": [
 		"CVE-2018-12376",
@@ -10,7 +10,6 @@
 		"CVE-2018-18499"
 	],
 	"summary": "firefox-esr - security update",
-	"details": "\nSeveral security issues have been found in the Mozilla Firefox web\nbrowser: Multiple memory safety errors and use-after-frees may lead to\nthe execution of arbitrary code or denial of service.\n\n\nDebian follows the extended support releases (ESR) of Firefox. Support\nfor the 52.x series has ended, so starting with this update we're now\nfollowing the 60.x releases.\n\n\nBetween 52.x and 60.x, Firefox has undergone significant internal\nupdates, which makes it incompatible with a number of extensions. For\nmore information please refer to\n[\\\nhttps://www.mozilla.org/en-US/firefox/60.0esr/releasenotes/](https://www.mozilla.org/en-US/firefox/60.0esr/releasenotes/)\n\n\nIn addition, the new Firefox packages require Rust to build. A\ncompatible Rust toolchain has been backported to Debian stretch, but is\nnot available for all architectures which previously supported the\npurely C++-based Firefox packages. Thus, the new Firefox packages\ndon't support the armel, armhf, mips, mips64el and mipsel architectures\nat this point.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 60.2.0esr-1~deb9u2.\n\n\nWe recommend that you upgrade your firefox-esr packages.\n\n\nFor the detailed security status of firefox-esr please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/firefox-esr>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -106,12 +105,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4287-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4287"
 		}
 	]
 }

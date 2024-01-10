@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2357-1",
-	"modified": "2023-10-16T00:11:10.720841Z",
+	"modified": "2024-01-09T20:22:45.307855Z",
 	"published": "2011-12-03T00:00:00Z",
 	"related": [
 		"CVE-2010-2640",
@@ -11,7 +11,6 @@
 		"CVE-2011-5244"
 	],
 	"summary": "evince - several",
-	"details": "\nJon Larimer from IBM X-Force Advanced Research discovered multiple\nvulnerabilities in the DVI backend of the Evince document viewer:\n\n\n* [CVE-2010-2640](https://security-tracker.debian.org/tracker/CVE-2010-2640)\nInsufficient array bounds checks in the PK fonts parser could lead\n to function pointer overwrite, causing arbitrary code execution.\n* [CVE-2010-2641](https://security-tracker.debian.org/tracker/CVE-2010-2641)\nInsufficient array bounds checks in the VF fonts parser could lead\n to function pointer overwrite, causing arbitrary code execution.\n* [CVE-2010-2642](https://security-tracker.debian.org/tracker/CVE-2010-2642)\nInsufficient bounds checks in the AFM fonts parser when writing\n data to a memory buffer allocated on heap could lead to arbitrary\n memory overwrite and arbitrary code execution.\n* [CVE-2010-2643](https://security-tracker.debian.org/tracker/CVE-2010-2643)\nInsufficient check on an integer used as a size for memory\n allocation can lead to arbitrary write outside the allocated range\n and cause arbitrary code execution.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.22.2-4~lenny2.\n\n\nFor the stable distribution (squeeze), [CVE-2010-2640](https://security-tracker.debian.org/tracker/CVE-2010-2640), [CVE-2010-2641](https://security-tracker.debian.org/tracker/CVE-2010-2641)\nand [CVE-2010-2643](https://security-tracker.debian.org/tracker/CVE-2010-2643) have been fixed in version 2.30.3-2 but the fix for\n[CVE-2010-2642](https://security-tracker.debian.org/tracker/CVE-2010-2642) was incomplete. The final fix is present in version\n2.30.3-2+squeeze1.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 3.0.2-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.0.2-1.\n\n\nWe recommend that you upgrade your evince packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2357-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2357"
 		}
 	]
 }

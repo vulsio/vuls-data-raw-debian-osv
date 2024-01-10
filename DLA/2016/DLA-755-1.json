@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-755-1",
-	"modified": "2023-06-28T06:27:08.355556Z",
-	"published": "2016-12-20T00:00:00Z",
+	"modified": "2024-01-09T20:33:56.853130Z",
+	"published": "2016-12-21T00:00:00Z",
 	"related": [
 		"CVE-2015-8979"
 	],
 	"summary": "dcmtk - security update",
-	"details": "\nAt several places in the code a wrong length of ACSE data structures\nreceived over the network can cause overflows or underflows when\nprocessing those data structures. Related checks have been added at\nvarious places in order to prevent such (possible) attacks. Thanks to\nKevin Basista for the report.\n\n\nThe bug will indeed affect all DCMTK-based server applications that\naccept incoming DICOM network connections that are using the\ndcmtk-3.6.0 and earlier versions.\n\n\n(From: <http://zeroscience.mk/en/vulnerabilities/ZSL-2016-5384.php)>\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.6.0-12+deb7u1.\n\n\nWe recommend that you upgrade your dcmtk packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-755-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-755"
 		}
 	]
 }

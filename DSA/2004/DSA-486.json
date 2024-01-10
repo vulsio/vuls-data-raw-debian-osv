@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-486",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2004-04-16T00:00:00Z",
 	"published": "2004-04-16T00:00:00Z",
 	"related": [
 		"CVE-2004-0180",
 		"CVE-2004-0405"
 	],
 	"summary": "cvs - several vulnerabilities",
-	"details": "\nTwo vulnerabilities have been discovered and fixed in CVS:\n\n\n* [CAN-2004-0180](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0180)\nSebastian Krahmer discovered a vulnerability whereby\n a malicious CVS pserver could create arbitrary files on the client\n system during an update or checkout operation, by supplying absolute\n pathnames in RCS diffs.\n\n* [CAN-2004-0405](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0405)\nDerek Robert Price discovered a vulnerability whereby\n a CVS pserver could be abused by a malicious client to view the\n contents of certain files outside of the CVS root directory using\n relative pathnames containing \"../\".\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 1.11.1p1debian-9woody2.\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you update your cvs package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-486.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-486"
 		}
 	]
 }

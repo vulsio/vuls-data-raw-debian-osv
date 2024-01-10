@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1768-1",
-	"modified": "2023-10-16T00:05:40.362996Z",
+	"modified": "2024-01-09T20:25:31.365896Z",
 	"published": "2009-04-10T00:00:00Z",
 	"related": [
 		"CVE-2009-1250",
 		"CVE-2009-1251"
 	],
 	"summary": "openafs - potential code execution",
-	"details": "\nTwo vulnerabilities were discovered in the client part of OpenAFS, a\ndistributed file system.\n\n\n* [CVE-2009-1251](https://security-tracker.debian.org/tracker/CVE-2009-1251)\nAn attacker with control of a file server or the ability to forge RX\npackets may be able to execute arbitrary code in kernel mode on an\nOpenAFS client, due to a vulnerability in XDR array decoding.\n* [CVE-2009-1250](https://security-tracker.debian.org/tracker/CVE-2009-1250)\nAn attacker with control of a file server or the ability to forge RX\npackets may crash OpenAFS clients because of wrongly handled error\nreturn codes in the kernel module.\n\n\nNote that in order to apply this security update, you must rebuild the\nOpenAFS kernel module. Be sure to also upgrade openafs-modules-source,\nbuild a new kernel module for your system following the instructions in\n/usr/share/doc/openafs-client/README.modules.gz, and then either stop\nand restart openafs-client or reboot the system to reload the kernel\nmodule.\n\n\nFor the old stable distribution (etch), these problems have been fixed\nin version 1.4.2-6etch2.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.4.7.dfsg1-6+lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.4.10+dfsg1-1.\n\n\nWe recommend that you upgrade your openafs packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1768-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1768"
 		}
 	]
 }

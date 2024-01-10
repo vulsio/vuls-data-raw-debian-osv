@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-707-1",
-	"modified": "2023-06-28T06:32:30.807045Z",
+	"modified": "2024-01-09T20:33:54.586251Z",
 	"published": "2016-11-14T00:00:00Z",
 	"related": [
 		"CVE-2016-7032",
 		"CVE-2016-7076"
 	],
 	"summary": "sudo - security update",
-	"details": "\nIt was discovered that the sudo noexec restriction could have been\nbypassed if application run via sudo executed system(), popen() or\nwordexp() C library functions with a user supplied argument. A local\nuser permitted to run such application via sudo with noexec\nrestriction could possibly use this flaw to execute arbitrary commands\nwith elevated privileges.\n\n\n* [CVE-2016-7032](https://security-tracker.debian.org/tracker/CVE-2016-7032)\nnoexec bypass via system() and popen()\n* [CVE-2016-7076](https://security-tracker.debian.org/tracker/CVE-2016-7076)\nnoexec bypass via wordexp()\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.8.5p2-1+nmu3+deb7u2.\n\n\nWe recommend that you upgrade your sudo packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-707-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-707"
 		}
 	]
 }

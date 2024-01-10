@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2975-1",
-	"modified": "2023-06-28T06:25:23.867796Z",
+	"modified": "2024-01-09T20:33:12.035341Z",
 	"published": "2022-04-10T00:00:00Z",
 	"related": [
 		"CVE-2020-27842",
@@ -10,7 +10,6 @@
 		"CVE-2022-1122"
 	],
 	"summary": "openjpeg2 - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in openjpeg2, the open-source\nJPEG 2000 codec.\n\n\n* [CVE-2020-27842](https://security-tracker.debian.org/tracker/CVE-2020-27842)\nNull pointer dereference through specially crafted input. The highest impact\n of this flaw is to application availability.\n* [CVE-2020-27843](https://security-tracker.debian.org/tracker/CVE-2020-27843)\nThe flaw allows an attacker to provide specially crafted input to the\n conversion or encoding functionality, causing an out-of-bounds read. The\n highest threat from this vulnerability is system availability.\n* [CVE-2021-29338](https://security-tracker.debian.org/tracker/CVE-2021-29338)\nInteger overflow allows remote attackers to crash the application, causing a\n denial of service. This occurs when the attacker uses the command line\n option \"-ImgDir\" on a directory that contains 1048576 files.\n* [CVE-2022-1122](https://security-tracker.debian.org/tracker/CVE-2022-1122)\nInput directory with a large number of files can lead to a segmentation\n fault and a denial of service due to a call of free() on an uninitialized\n pointer.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n2.1.2-1.1+deb9u7.\n\n\nWe recommend that you upgrade your openjpeg2 packages.\n\n\nFor the detailed security status of openjpeg2 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openjpeg2>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2975-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2975"
 		}
 	]
 }

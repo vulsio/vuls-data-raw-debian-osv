@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-165-1",
-	"modified": "2023-06-28T06:20:51.669815Z",
+	"modified": "2024-01-09T20:31:32.177567Z",
 	"published": "2015-03-06T00:00:00Z",
 	"related": [
 		"CVE-2011-5320",
@@ -24,7 +24,6 @@
 		"CVE-2015-1473"
 	],
 	"summary": "eglibc - security update",
-	"details": "\nSeveral vulnerabilities have been fixed in eglibc, Debian's version of\nthe GNU C library.\n\n\n* #553206,\n[CVE-2015-1472](https://security-tracker.debian.org/tracker/CVE-2015-1472),\n[CVE-2015-1473](https://security-tracker.debian.org/tracker/CVE-2015-1473)\nThe scanf family of functions do not properly limit stack\n allocation, which allows context-dependent attackers to cause a\n denial of service (crash) or possibly execute arbitrary code.\n\n* [CVE-2012-3405](https://security-tracker.debian.org/tracker/CVE-2012-3405)\nThe printf family of functions do not properly calculate a buffer\n length, which allows context-dependent attackers to bypass the\n FORTIFY\\_SOURCE format-string protection mechanism and cause a\n denial of service.\n* [CVE-2012-3406](https://security-tracker.debian.org/tracker/CVE-2012-3406)\nThe printf family of functions do not properly limit stack\n allocation, which allows context-dependent attackers to bypass the\n FORTIFY\\_SOURCE format-string protection mechanism and cause a\n denial of service (crash) or possibly execute arbitrary code via a\n crafted format string.\n* [CVE-2012-3480](https://security-tracker.debian.org/tracker/CVE-2012-3480)\nMultiple integer overflows in the strtod, strtof, strtold,\n strtod\\_l, and other related functions allow local users to cause a\n denial of service (application crash) and possibly execute\n arbitrary code via a long string, which triggers a stack-based\n buffer overflow.\n* [CVE-2012-4412](https://security-tracker.debian.org/tracker/CVE-2012-4412)\nInteger overflow in the strcoll and wcscoll functions allows\n context-dependent attackers to cause a denial of service (crash)\n or possibly execute arbitrary code via a long string, which\n triggers a heap-based buffer overflow.\n* [CVE-2012-4424](https://security-tracker.debian.org/tracker/CVE-2012-4424)\nStack-based buffer overflow in the strcoll and wcscoll functions\n allows context-dependent attackers to cause a denial of service\n (crash) or possibly execute arbitrary code via a long string that\n triggers a malloc failure and use of the alloca function.\n* [CVE-2013-0242](https://security-tracker.debian.org/tracker/CVE-2013-0242)\nBuffer overflow in the extend\\_buffers function in the regular\n expression matcher allows context-dependent attackers to cause a\n denial of service (memory corruption and crash) via crafted\n multibyte characters.\n* [CVE-2013-1914](https://security-tracker.debian.org/tracker/CVE-2013-1914),\n [CVE-2013-4458](https://security-tracker.debian.org/tracker/CVE-2013-4458)\nStack-based buffer overflow in the getaddrinfo function allows\n remote attackers to cause a denial of service (crash) via a\n hostname or IP address that triggers a large number of domain\n conversion results.\n* [CVE-2013-4237](https://security-tracker.debian.org/tracker/CVE-2013-4237)\nreaddir\\_r allows context-dependent attackers to cause a denial of\n service (out-of-bounds write and crash) or possibly execute\n arbitrary code via a malicious NTFS image or CIFS service.\n* [CVE-2013-4332](https://security-tracker.debian.org/tracker/CVE-2013-4332)\nMultiple integer overflows in malloc/malloc.c allow\n context-dependent attackers to cause a denial of service (heap\n corruption) via a large value to the pvalloc, valloc,\n posix\\_memalign, memalign, or aligned\\_alloc functions.\n* [CVE-2013-4357](https://security-tracker.debian.org/tracker/CVE-2013-4357)\nThe getaliasbyname, getaliasbyname\\_r, getaddrinfo, getservbyname,\n getservbyname\\_r, getservbyport, getservbyport\\_r, and glob\n functions do not properly limit stack allocation, which allows\n context-dependent attackers to cause a denial of service (crash)\n or possibly execute arbitrary code.\n* [CVE-2013-4788](https://security-tracker.debian.org/tracker/CVE-2013-4788)\nWhen the GNU C library is statically linked into an executable,\n the PTR\\_MANGLE implementation does not initialize the random value\n for the pointer guard, so that various hardening mechanisms are not\n effective.\n* [CVE-2013-7423](https://security-tracker.debian.org/tracker/CVE-2013-7423)\nThe send\\_dg function in resolv/res\\_send.c does not properly reuse\n file descriptors, which allows remote attackers to send DNS\n queries to unintended locations via a large number of requests that\n trigger a call to the getaddrinfo function.\n* [CVE-2013-7424](https://security-tracker.debian.org/tracker/CVE-2013-7424)\nThe getaddrinfo function may attempt to free an invalid pointer\n when handling IDNs (Internationalised Domain Names), which allows\n remote attackers to cause a denial of service (crash) or possibly\n execute arbitrary code.\n* [CVE-2014-4043](https://security-tracker.debian.org/tracker/CVE-2014-4043)\nThe posix\\_spawn\\_file\\_actions\\_addopen function does not copy its\n path argument in accordance with the POSIX specification, which\n allows context-dependent attackers to trigger use-after-free\n vulnerabilities.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed\nin version 2.11.3-4+deb6u5.\n\n\nFor the stable distribution (wheezy), these problems were fixed in\nversion 2.13-38+deb7u8 or earlier.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-165-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-165"
 		}
 	]
 }

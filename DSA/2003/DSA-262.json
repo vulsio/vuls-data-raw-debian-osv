@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-262",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-03-15T00:00:00Z",
 	"published": "2003-03-15T00:00:00Z",
 	"related": [
 		"CVE-2003-0085",
 		"CVE-2003-0086"
 	],
 	"summary": "samba - remote exploit",
-	"details": "\nSebastian Krahmer of the SuSE security audit team found two problems\nin samba, a popular SMB/CIFS implementation. The problems are:\n\n\n* a buffer overflow in the SMB/CIFS packet fragment re-assembly code\n used by smbd. Since smbd runs as root an attacker can use this to\n gain root access to a machine running smbd.\n* the code to write reg files was vulnerable for a chown race which made\n it possible for a local user to overwrite system files\n\n\nBoth problems have been fixed in upstream version 2.2.8, and version\n2.2.3a-12.1 of package for Debian GNU/Linux 3.0/woody.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-262.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-262"
 		}
 	]
 }

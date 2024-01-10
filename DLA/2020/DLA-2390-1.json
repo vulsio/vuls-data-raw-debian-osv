@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2390-1",
-	"modified": "2023-06-28T06:33:05.602219Z",
+	"modified": "2024-01-09T20:32:32.200671Z",
 	"published": "2020-10-01T00:00:00Z",
 	"related": [
 		"CVE-2019-18848"
 	],
 	"summary": "ruby-json-jwt - security update",
-	"details": "\nThe json-jwt gem before 1.11.0 for Ruby lacks an element\ncount during the splitting of a JWE string.\n\n\nTherefore, there was a need to explicitly specify the number\nof elements when splitting a JWE string.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n1.6.2-1+deb9u2.\n\n\nWe recommend that you upgrade your ruby-json-jwt packages.\n\n\nFor the detailed security status of ruby-json-jwt please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/ruby-json-jwt>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2390-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2390"
 		}
 	]
 }

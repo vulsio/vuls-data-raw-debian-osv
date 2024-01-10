@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-853-1",
-	"modified": "2023-10-16T00:29:22.253881Z",
+	"modified": "2024-01-09T20:34:09.699363Z",
 	"published": "2005-10-09T00:00:00Z",
 	"related": [
 		"CVE-2005-2360",
@@ -13,7 +13,6 @@
 		"CVE-2005-2367"
 	],
 	"summary": "ethereal - several",
-	"details": "\nSeveral security problems have been discovered in ethereal, a commonly\nused network traffic analyser. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CAN-2005-2360](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2360)\nMemory allocation errors in the LDAP dissector can cause a denial\n of service.\n* [CAN-2005-2361](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2361)\nVarious errors in the AgentX, PER, DOCSIS, RADIUS, Telnet, IS-IS,\n HTTP, DCERPC, DHCP and SCTP dissectors can cause a denial of\n service.\n* [CAN-2005-2363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2363)\nVarious errors in the SMPP, 802.3, H1 and DHCP dissectors can\n cause a denial of service.\n* [CAN-2005-2364](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2364)\nNull pointer dereferences in the WBXML and GIOP dissectors can\n cause a denial of service.\n* [CAN-2005-2365](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2365)\nA buffer overflow and null pointer dereferences in the SMB\n dissector can cause a denial of service.\n* [CAN-2005-2366](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2366)\nWrong address calculation in the BER dissector can cause an\n infinite loop or abortion.\n* [CAN-2005-2367](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-2367)\nFormat string vulnerabilities in several dissectors allow\n remote attackers to write to arbitrary memory locations and thus\n gain privileges.\n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 0.9.4-1woody13.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 0.10.10-2sarge3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 0.10.12-2.\n\n\nWe recommend that you upgrade your ethereal packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -68,12 +67,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-853-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-853"
 		}
 	]
 }

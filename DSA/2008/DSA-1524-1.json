@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1524-1",
-	"modified": "2023-10-16T00:10:28.686110Z",
+	"modified": "2024-01-09T20:22:24.434884Z",
 	"published": "2008-03-18T00:00:00Z",
 	"related": [
 		"CVE-2008-0062",
@@ -9,7 +9,6 @@
 		"CVE-2008-0947"
 	],
 	"summary": "krb5 - multiple vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the kdc component\nof the krb5, a system for authenticating users and services on a\nnetwork. The Common Vulnerabilities and Exposures project identifies the \nfollowing problems:\n\n\n* [CVE-2008-0062](https://security-tracker.debian.org/tracker/CVE-2008-0062)\nAn unauthenticated remote attacker may cause a krb4-enabled KDC to\ncrash, expose information, or execute arbitrary code. Successful\nexploitation of this vulnerability could compromise the Kerberos key\ndatabase and host security on the KDC host.\n* [CVE-2008-0063](https://security-tracker.debian.org/tracker/CVE-2008-0063)\nAn unauthenticated remote attacker may cause a krb4-enabled KDC to\nexpose information. It is theoretically possible for the exposed\ninformation to include secret key data on some platforms.\n* [CVE-2008-0947](https://security-tracker.debian.org/tracker/CVE-2008-0947)\nAn unauthenticated remote attacker can cause memory corruption in the\nkadmind process, which is likely to cause kadmind to crash, resulting in\na denial of service. It is at least theoretically possible for such\ncorruption to result in database corruption or arbitrary code execution,\nthough we have no such exploit and are not aware of any such exploits in\nuse in the wild. In versions of MIT Kerberos shipped by Debian, this\nbug can only be triggered in configurations that allow large numbers of\nopen file descriptors in a process.\n\n\nFor the old stable distribution (sarge), these problems have been fixed\nin version krb5 1.3.6-2sarge6.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 1.4.4-7etch5.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -70,12 +69,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1524-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1524"
 		}
 	]
 }

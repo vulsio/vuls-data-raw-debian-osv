@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1120-1",
-	"modified": "2023-06-28T06:19:14.799097Z",
+	"modified": "2024-01-09T20:30:45.766430Z",
 	"published": "2017-10-02T00:00:00Z",
 	"related": [
 		"CVE-2017-14867"
 	],
 	"summary": "git - security update",
-	"details": "\njoernchen discovered that the git-cvsserver subcommand of Git, a\ndistributed version control system, suffers from a shell command\ninjection vulnerability due to unsafe use of the Perl backtick\noperator. The git-cvsserver subcommand is reachable from the\ngit-shell subcommand even if CVS support has not been configured\n(however, the git-cvs package needs to be installed).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:1.7.10.4-1+wheezy6.\n\n\nWe recommend that you upgrade your git packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1120-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1120"
 		}
 	]
 }

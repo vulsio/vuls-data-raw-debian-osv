@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-301",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-05-07T00:00:00Z",
 	"published": "2003-05-07T00:00:00Z",
 	"related": [
 		"CVE-2001-0928"
 	],
 	"summary": "libgtop - buffer overflow",
-	"details": "\nThe gtop daemon, used for monitoring remote machines, contains a\nbuffer overflow which could be used by an attacker to execute\narbitrary code with the privileges of the daemon process. If started\nas root, the daemon process drops root privileges, assuming uid and\ngid 99 by default.\n\n\nThis bug was previously fixed in [DSA-098](../2002/dsa-098),\nbut one of the patches was not carried over to later versions of libgtop.\n\n\nFor the stable distribution (woody), this problem has been fixed in\nversion 1.0.13-3.1.\n\n\nFor the old stable distribution (potato), this problem was fixed in\n[DSA-098](../2002/dsa-098).\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.0.13-4.\n\n\nWe recommend that you update your libgtop package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-301.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-301"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-367-1",
-	"modified": "2019-02-08T23:54:51Z",
+	"modified": "2015-12-10T00:00:00Z",
 	"published": "2015-12-10T00:00:00Z",
 	"related": [
 		"CVE-2015-7543"
 	],
 	"summary": "kdelibs - security update",
-	"details": "\nIt has been reported that kdelibs uses the insecure mktemp() function\nto create the temporary directory it uses to host user-specific sockets.\nIt is thus possible for another user to hijack this temporary directory\nand gain socket accesses it should not have.\n\n\nIn Debian 6 Squeeze, this issue has been addressed in kdelibs\n3.5.10.dfsg.1-5+deb6u1 with the use of the safer mkdtemp() function.\nWe recommend that you upgrade your kdelibs packages.\n\n\nOther Debian releases have newer versions of the libraries (kdelibs4) that\nare not affected by this problem.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-367-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-367"
 		}
 	]
 }

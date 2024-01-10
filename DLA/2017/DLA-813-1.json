@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-813-1",
-	"modified": "2023-06-28T06:32:45.169714Z",
+	"modified": "2024-01-09T20:33:59.658959Z",
 	"published": "2017-02-01T00:00:00Z",
 	"related": [
 		"CVE-2017-5488",
@@ -15,7 +15,6 @@
 		"CVE-2017-5612"
 	],
 	"summary": "wordpress - security update",
-	"details": "\nSeveral vulnerabilities were discovered in wordpress, a web blogging\ntool. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues.\n\n\n* [CVE-2017-5488](https://security-tracker.debian.org/tracker/CVE-2017-5488)\nMultiple cross-site scripting (XSS) vulnerabilities in\nwp-admin/update-core.php in WordPress before 4.7.1 allow remote\nattackers to inject arbitrary web script or HTML via the name or\nversion header of a plugin.\n* [CVE-2017-5489](https://security-tracker.debian.org/tracker/CVE-2017-5489)\nCross-site request forgery (CSRF) vulnerability in WordPress before\n4.7.1 allows remote attackers to hijack the authentication of\nunspecified victims via vectors involving a Flash file upload.\n* [CVE-2017-5490](https://security-tracker.debian.org/tracker/CVE-2017-5490)\nCross-site scripting (XSS) vulnerability in the theme-name fallback\nfunctionality in wp-includes/class-wp-theme.php in WordPress before\n4.7.1 allows remote attackers to inject arbitrary web script or HTML\nvia a crafted directory name of a theme, related to\nwp-admin/includes/class-theme-installer-skin.php.\n* [CVE-2017-5491](https://security-tracker.debian.org/tracker/CVE-2017-5491)\nwp-mail.php in WordPress before 4.7.1 might allow remote attackers to\nbypass intended posting restrictions via a spoofed mail server with the\nmail.example.com name.\n* [CVE-2017-5492](https://security-tracker.debian.org/tracker/CVE-2017-5492)\nCross-site request forgery (CSRF) vulnerability in the widget-editing\naccessibility-mode feature in WordPress before 4.7.1 allows remote\nattackers to hijack the authentication of unspecified victims for\nrequests that perform a widgets-access action, related to\nwp-admin/includes/class-wp-screen.php and wp-admin/widgets.php.\n* [CVE-2017-5493](https://security-tracker.debian.org/tracker/CVE-2017-5493)\nwp-includes/ms-functions.php in the Multisite WordPress API in WordPress\nbefore 4.7.1 does not properly choose random numbers for keys, which\nmakes it easier for remote attackers to bypass intended access\nrestrictions via a crafted site signup or user signup.\n* [CVE-2017-5610](https://security-tracker.debian.org/tracker/CVE-2017-5610)\nwp-admin/includes/class-wp-press-this.php in Press This in WordPress\nbefore 4.7.2 does not properly restrict visibility of a\ntaxonomy-assignment user interface, which allows remote attackers to\nbypass intended access restrictions by reading terms.\n* [CVE-2017-5611](https://security-tracker.debian.org/tracker/CVE-2017-5611)\nSQL injection vulnerability in wp-includes/class-wp-query.php in\nWP\\_Query in WordPress before 4.7.2 allows remote attackers to execute\narbitrary SQL commands by leveraging the presence of an affected\nplugin or theme that mishandles a crafted post type name.\n* [CVE-2017-5612](https://security-tracker.debian.org/tracker/CVE-2017-5612)\nCross-site scripting (XSS) vulnerability in\nwp-admin/includes/class-wp-posts-list-table.php in the posts list\ntable in WordPress before 4.7.2 allows remote attackers to inject\narbitrary web script or HTML via a crafted excerpt.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.6.1+dfsg-1~deb7u13.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-813-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-813"
 		}
 	]
 }

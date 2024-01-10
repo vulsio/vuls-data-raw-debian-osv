@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-23-1",
-	"modified": "2023-06-28T06:28:38.770104Z",
+	"modified": "2024-01-09T20:32:27.537398Z",
 	"published": "2014-07-31T00:00:00Z",
 	"related": [
 		"CVE-2013-1741",
@@ -10,7 +10,6 @@
 		"CVE-2014-1492"
 	],
 	"summary": "nss - security update",
-	"details": "\n* [CVE-2013-1741](https://security-tracker.debian.org/tracker/CVE-2013-1741)\nRunaway memset in certificate parsing on 64-bit computers leading to\n a crash by attempting to write 4Gb of nulls.\n* [CVE-2013-5606](https://security-tracker.debian.org/tracker/CVE-2013-5606)\nCertificate validation with the verifylog mode did not return\n validation errors, but instead expected applications to determine\n the status by looking at the log.\n* [CVE-2014-1491](https://security-tracker.debian.org/tracker/CVE-2014-1491)\nTicket handling protection mechanisms bypass due to the lack of\n restriction of public values in Diffie-Hellman key exchanges.\n* [CVE-2014-1492](https://security-tracker.debian.org/tracker/CVE-2014-1492)\nIncorrect IDNA domain name matching for wildcard certificates could\n allow specially-crafted invalid certificates to be considered as\n valid.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in nss version 3.12.8-1+squeeze8\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-23-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-23"
 		}
 	]
 }

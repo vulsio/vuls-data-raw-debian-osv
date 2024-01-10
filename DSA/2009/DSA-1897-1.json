@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1897-1",
-	"modified": "2023-10-16T00:10:45.462328Z",
+	"modified": "2024-01-09T20:22:35.290290Z",
 	"published": "2009-09-28T00:00:00Z",
 	"related": [
 		"CVE-2008-7218",
@@ -9,7 +9,6 @@
 		"CVE-2009-4824"
 	],
 	"summary": "horde3 - arbitrary code execution",
-	"details": "\nStefan Esser discovered that Horde, a web application framework providing\nclasses for dealing with preferences, compression, browser detection,\nconnection tracking, MIME, and more, is insufficiently validating and\nescaping user provided input. The Horde\\_Form\\_Type\\_image form element\nallows to reuse a temporary filename on reuploads which are stored in a\nhidden HTML field and then trusted without prior validation. An attacker\ncan use this to overwrite arbitrary files on the system or to upload PHP\ncode and thus execute arbitrary code with the rights of the webserver.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 3.1.3-4etch6.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 3.2.2+debian0-2+lenny1.\n\n\nFor the testing distribution (squeeze), this problem has been fixed in\nversion 3.3.5+debian0-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.3.5+debian0-1.\n\n\nWe recommend that you upgrade your horde3 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1897-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1897"
 		}
 	]
 }

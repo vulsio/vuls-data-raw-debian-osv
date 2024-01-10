@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3063-1",
-	"modified": "2023-06-28T06:26:49.570007Z",
+	"modified": "2024-01-09T20:33:16.193098Z",
 	"published": "2022-06-30T00:00:00Z",
 	"related": [
 		"CVE-2020-1712"
 	],
 	"summary": "systemd - security update",
-	"details": "\nA heap use-after-free vulnerability was found in systemd, a system and\nservice manager, where asynchronous Polkit queries are performed while\nhandling dbus messages. A local unprivileged attacker can abuse this\nflaw to crash systemd services or potentially execute code and elevate\ntheir privileges, by sending specially crafted dbus messages.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n232-25+deb9u14.\n\n\nWe recommend that you upgrade your systemd packages.\n\n\nFor the detailed security status of systemd please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/systemd>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3063-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3063"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2031-1",
-	"modified": "2023-10-16T00:10:54.633585Z",
+	"modified": "2024-01-09T20:21:07.480576Z",
 	"published": "2010-04-11T00:00:00Z",
 	"related": [
 		"CVE-2010-0629"
 	],
 	"summary": "krb5 - denial of service",
-	"details": "\nSol Jerome discovered that kadmind service in krb5, a system for authenticating\nusers and services on a network, allows remote authenticated users to cause a\ndenial of service (daemon crash) via a request from a kadmin client that sends\nan invalid API version number.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.6.dfsg.4~beta1-5lenny3.\n\n\nThe testing distribution (squeeze), and the unstable distribution (sid) are\nnot affected by this issue.\n\n\nWe recommend that you upgrade your krb5 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2031-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2031"
 		}
 	]
 }

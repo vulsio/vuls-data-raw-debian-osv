@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2445-1",
-	"modified": "2023-10-16T00:11:15.071744Z",
+	"modified": "2024-01-09T20:22:52.865367Z",
 	"published": "2012-03-31T00:00:00Z",
 	"related": [
 		"CVE-2012-1606",
@@ -9,7 +9,6 @@
 		"CVE-2012-1608"
 	],
 	"summary": "typo3-src - several",
-	"details": "\nSeveral remote vulnerabilities have been discovered in the TYPO3 web\ncontent management framework:\n\n\n* [CVE-2012-1606](https://security-tracker.debian.org/tracker/CVE-2012-1606)\nFailing to properly HTML-encode user input in several places,\n the TYPO3 backend is susceptible to Cross-Site Scripting. A\n valid backend user is required to exploit these\n vulnerabilities.\n* [CVE-2012-1607](https://security-tracker.debian.org/tracker/CVE-2012-1607)\nAccessing a CLI Script directly with a browser may disclose\n the database name used for the TYPO3 installation.\n* [CVE-2012-1608](https://security-tracker.debian.org/tracker/CVE-2012-1608)\nBy not removing non printable characters, the API method\n t3lib\\_div::RemoveXSS() fails to filter specially crafted HTML\n injections, thus is susceptible to Cross-Site Scripting.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 4.3.9+dfsg1-1+squeeze3.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 4.5.14+dfsg1-1.\n\n\nWe recommend that you upgrade your typo3-src packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2445-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2445"
 		}
 	]
 }

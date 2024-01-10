@@ -1,15 +1,16 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5527-1",
-	"modified": "2023-10-16T00:23:25.312442Z",
+	"modified": "2024-01-09T20:27:24.099720Z",
 	"published": "2023-10-12T00:00:00Z",
 	"related": [
+		"CVE-2023-32359",
 		"CVE-2023-39928",
 		"CVE-2023-41074",
-		"CVE-2023-41993"
+		"CVE-2023-41993",
+		"CVE-2023-42890"
 	],
 	"summary": "webkit2gtk - security update",
-	"details": "\nThe following vulnerabilities have been discovered in the WebKitGTK\nweb engine:\n\n\n* [CVE-2023-39928](https://security-tracker.debian.org/tracker/CVE-2023-39928)\nMarcin Noga discovered that a specially crafted web page can abuse\n a vulnerability in the MediaRecorder API to cause memory\n corruption and potentially arbitrary code execution.\n* [CVE-2023-41074](https://security-tracker.debian.org/tracker/CVE-2023-41074)\nJunsung Lee and Me Li discovered that processing web content may\n lead to arbitrary code execution.\n* [CVE-2023-41993](https://security-tracker.debian.org/tracker/CVE-2023-41993)\nBill Marczak and Maddie Stone discovered that processing web\n content may lead to arbitrary code execution. Apple is aware of a\n report that this issue may have been actively exploited.\n\n\nFor the oldstable distribution (bullseye), these problems have been fixed\nin version 2.42.1-1~deb11u1.\n\n\nFor the stable distribution (bookworm), these problems have been fixed in\nversion 2.42.1-1~deb12u1.\n\n\nWe recommend that you upgrade your webkit2gtk packages.\n\n\nFor the detailed security status of webkit2gtk please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/webkit2gtk](https://security-tracker.debian.org/tracker/webkit2gtk)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -189,17 +190,12 @@
 				"2.42.0-1",
 				"2.42.0-1~bpo12+1",
 				"2.42.1-1~bpo12+1",
-				"2.42.1-1~deb11u1"
+				"2.42.1-1~deb11u1",
+				"2.42.1-1~deb11u2"
 			],
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5527-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2023/dsa-5527"
 		}
 	]
 }

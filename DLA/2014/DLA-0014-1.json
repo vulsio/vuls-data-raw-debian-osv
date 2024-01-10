@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-0014-1",
-	"modified": "2023-06-28T06:20:05.586010Z",
+	"modified": "2024-01-09T20:30:35.983309Z",
 	"published": "2014-07-09T00:00:00Z",
 	"related": [
 		"CVE-2013-3239",
@@ -10,7 +10,6 @@
 		"CVE-2013-5003"
 	],
 	"summary": "phpmyadmin - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in phpMyAdmin, a tool to\nadminister MySQL over the web. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2013-3239](https://security-tracker.debian.org/tracker/CVE-2013-3239)\nAuthenticated users could execute arbitrary code, when a SaveDir\n directory is configured and Apache HTTP Server has the mod\\_mime\n module enabled, by employing double filename extensions.\n* [CVE-2013-4995](https://security-tracker.debian.org/tracker/CVE-2013-4995)\nAuthenticatd users could inject arbitrary web script or HTML\n via a crafted SQL query.\n* [CVE-2013-4996](https://security-tracker.debian.org/tracker/CVE-2013-4996)\nCross site scripting was possible via a crafted logo URL in\n the navigation panel or a crafted entry in the Trusted Proxy list.\n* [CVE-2013-5003](https://security-tracker.debian.org/tracker/CVE-2013-5003)\nAuthenticated users could execute arbitrary SQL commands as\n the phpMyAdmin control user via the scale parameter of PMD PDF\n export.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in phpmyadmin version 4:3.3.7-8\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-0014-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-0014"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3945-1",
-	"modified": "2023-10-16T00:12:29.447958Z",
+	"modified": "2024-01-09T20:28:33.605006Z",
 	"published": "2017-08-17T00:00:00Z",
 	"related": [
 		"CVE-2014-9940",
@@ -18,7 +18,6 @@
 		"CVE-2017-9605"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service or information\nleaks.\n\n\n* [CVE-2014-9940](https://security-tracker.debian.org/tracker/CVE-2014-9940)\nA use-after-free flaw in the voltage and current regulator driver\n could allow a local user to cause a denial of service or potentially\n escalate privileges.\n* [CVE-2017-7346](https://security-tracker.debian.org/tracker/CVE-2017-7346)\nLi Qiang discovered that the DRM driver for VMware virtual GPUs does\n not properly check user-controlled values in the\n vmw\\_surface\\_define\\_ioctl() functions for upper limits. A local user\n can take advantage of this flaw to cause a denial of service.\n* [CVE-2017-7482](https://security-tracker.debian.org/tracker/CVE-2017-7482)\nShi Lei discovered that RxRPC Kerberos 5 ticket handling code does\n not properly verify metadata, leading to information disclosure,\n denial of service or potentially execution of arbitrary code.\n* [CVE-2017-7533](https://security-tracker.debian.org/tracker/CVE-2017-7533)\nFan Wu and Shixiong Zhao discovered a race condition between inotify\n events and VFS rename operations allowing an unprivileged local\n attacker to cause a denial of service or escalate privileges.\n* [CVE-2017-7541](https://security-tracker.debian.org/tracker/CVE-2017-7541)\nA buffer overflow flaw in the Broadcom IEEE802.11n PCIe SoftMAC WLAN\n driver could allow a local user to cause kernel memory corruption,\n leading to a denial of service or potentially privilege escalation.\n* [CVE-2017-7542](https://security-tracker.debian.org/tracker/CVE-2017-7542)\nAn integer overflow vulnerability in the ip6\\_find\\_1stfragopt()\n function was found allowing a local attacker with privileges to open\n raw sockets to cause a denial of service.\n* [CVE-2017-7889](https://security-tracker.debian.org/tracker/CVE-2017-7889)\nTommi Rantala and Brad Spengler reported that the mm subsystem does\n not properly enforce the CONFIG\\_STRICT\\_DEVMEM protection mechanism,\n allowing a local attacker with access to /dev/mem to obtain\n sensitive information or potentially execute arbitrary code.\n* [CVE-2017-9605](https://security-tracker.debian.org/tracker/CVE-2017-9605)\nMurray McAllister discovered that the DRM driver for VMware virtual\n GPUs does not properly initialize memory, potentially allowing a\n local attacker to obtain sensitive information from uninitialized\n kernel memory via a crafted ioctl call.\n* [CVE-2017-10911](https://security-tracker.debian.org/tracker/CVE-2017-10911)\n/ XSA-216\n\n\nAnthony Perard of Citrix discovered an information leak flaw in Xen\n blkif response handling, allowing a malicious unprivileged guest to\n obtain sensitive information from the host or other guests.\n* [CVE-2017-11176](https://security-tracker.debian.org/tracker/CVE-2017-11176)\nIt was discovered that the mq\\_notify() function does not set the\n sock pointer to NULL upon entry into the retry logic. An attacker\n can take advantage of this flaw during a userspace close of a\n Netlink socket to cause a denial of service or potentially cause\n other impact.\n* [CVE-2017-1000363](https://security-tracker.debian.org/tracker/CVE-2017-1000363)\nRoee Hay reported that the lp driver does not properly bounds-check\n passed arguments, allowing a local attacker with write access to the\n kernel command line arguments to execute arbitrary code.\n* [CVE-2017-1000365](https://security-tracker.debian.org/tracker/CVE-2017-1000365)\nIt was discovered that argument and environment pointers are not\n taken properly into account to the imposed size restrictions on\n arguments and environmental strings passed through\n RLIMIT\\_STACK/RLIMIT\\_INFINITY. A local attacker can take advantage of\n this flaw in conjunction with other flaws to execute arbitrary code.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 3.16.43-2+deb8u3.\n\n\nWe recommend that you upgrade your linux packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -92,12 +91,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3945-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3945"
 		}
 	]
 }

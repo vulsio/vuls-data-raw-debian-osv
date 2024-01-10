@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-498",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-04-30T00:00:00Z",
 	"published": "2004-04-30T00:00:00Z",
 	"related": [
 		"CVE-2004-0421"
 	],
 	"summary": "libpng - out of bound access",
-	"details": "\nSteve Grubb discovered a problem in the Portable Network Graphics\nlibrary libpng which is utilised in several applications. When\nprocessing a broken PNG image, the error handling routine will access\nmemory that is out of bounds when creating an error message.\nDepending on machine architecture, bounds checking and other\nprotective measures, this problem could cause the program to crash if\na defective or intentionally prepared PNG image file is handled by\nlibpng.\n\n\nThis could be used as a denial of service attack against various\nprograms that link against this library. The following commands will\nshow you which packages utilise this library and whose programs should\nprobably restarted after an upgrade:\n\n\n\n```\n\n   apt-cache showpkg libpng2\n   apt-cache showpkg libpng3\n\n```\n\nThe following security matrix explains which package versions will\ncontain a correction.\n\n\n\n\n| Package | stable (woody) | unstable (sid) |\n| --- | --- | --- |\n| libpng | 1.0.12-3.woody.5 | 1.0.15-5 |\n| libpng3 | 1.2.1-1.1.woody.5 | 1.2.5.0-6 |\n\n\nWe recommend that you upgrade your libpng and related packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -54,12 +53,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-498.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-498"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-681-1",
-	"modified": "2023-10-16T00:27:42.442007Z",
+	"modified": "2024-01-09T20:32:48.955568Z",
 	"published": "2005-02-14T00:00:00Z",
 	"related": [
 		"CVE-2005-0070"
 	],
 	"summary": "synaesthesia - privilege escalation",
-	"details": "\nErik SjĂślund and Devin Carraway discovered that synaesthesia, a\nprogram for representing sounds visually, accesses user-controlled\nconfiguration and mixer files with elevated privileges. Thus, it is\npossible to read arbitrary files.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.1-2.1woody3.\n\n\nFor the testing (sarge) and unstable (sid) distribution this problem\ndoes not exist since synaesthesia is not installed setuid root\nanymore.\n\n\nWe recommend that you upgrade your synaesthesia package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-681-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-681"
 		}
 	]
 }

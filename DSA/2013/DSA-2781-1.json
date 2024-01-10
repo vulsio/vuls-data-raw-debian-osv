@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2781-1",
-	"modified": "2023-10-16T00:06:05.077515Z",
-	"published": "2013-10-18T00:00:00Z",
+	"modified": "2024-01-09T20:21:29.506154Z",
+	"published": "2013-10-15T00:00:00Z",
 	"related": [
 		"CVE-2013-1445"
 	],
 	"summary": "python-crypto - PRNG not correctly reseeded in some situations",
-	"details": "\nA cryptographic vulnerability was discovered in the pseudo random number\ngenerator in python-crypto.\n\n\nIn some situations, a race condition could prevent the reseeding of the\ngenerator when multiple processes are forked from the same parent. This would\nlead it to generate identical output on all processes, which might leak\nsensitive values like cryptographic keys.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.1.0-2+squeeze2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.6-4+deb7u3.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 2.6.1-2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.6.1-1.\n\n\nWe recommend that you upgrade your python-crypto packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2781-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2781"
 		}
 	]
 }

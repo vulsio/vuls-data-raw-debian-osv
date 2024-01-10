@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2379-1",
-	"modified": "2023-10-16T00:11:12.154133Z",
+	"modified": "2024-01-09T20:22:46.941077Z",
 	"published": "2012-01-04T00:00:00Z",
 	"related": [
 		"CVE-2011-1528",
 		"CVE-2011-1529"
 	],
 	"summary": "krb5 - several",
-	"details": "\nIt was discovered that the Key Distribution Center (KDC) in Kerberos 5\ncrashes when processing certain crafted requests:\n\n\n* [CVE-2011-1528](https://security-tracker.debian.org/tracker/CVE-2011-1528)\nWhen the LDAP backend is used, remote users can trigger\n a KDC daemon crash and denial of service.\n* [CVE-2011-1529](https://security-tracker.debian.org/tracker/CVE-2011-1529)\nWhen the LDAP or Berkeley DB backend is used, remote users\n can trigger a NULL pointer dereference in the KDC daemon\n and a denial of service.\n\n\nThe oldstable distribution (lenny) is not affected by these problems.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 1.8.3+dfsg-4squeeze5.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 1.10+dfsg~alpha1-1.\n\n\nWe recommend that you upgrade your krb5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2379-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2379"
 		}
 	]
 }

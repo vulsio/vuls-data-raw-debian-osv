@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3179-1",
-	"modified": "2023-06-28T06:25:25.673695Z",
+	"modified": "2024-01-09T20:33:21.434790Z",
 	"published": "2022-11-07T00:00:00Z",
 	"related": [
 		"CVE-2022-44638"
 	],
 	"summary": "pixman - security update",
-	"details": "\nIt was discovered that there was a potential out-of-bounds write\nvulnerability in pixman, a pixel-manipulation library used in many Linux\ngraphical applications.\n\n\n* [CVE-2022-44638](https://security-tracker.debian.org/tracker/CVE-2022-44638)\nIn libpixman in Pixman before 0.42.2, there is an out-of-bounds write\n (aka heap-based buffer overflow) in rasterize\\_edges\\_8 due to an integer\n overflow in pixman\\_sample\\_floor\\_y.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n0.36.0-1+deb10u1.\n\n\nWe recommend that you upgrade your pixman packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3179-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3179"
 		}
 	]
 }

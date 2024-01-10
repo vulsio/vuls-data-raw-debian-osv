@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-805-1",
-	"modified": "2023-06-28T06:32:40.477713Z",
+	"modified": "2024-01-09T20:33:58.927129Z",
 	"published": "2017-01-29T00:00:00Z",
 	"related": [
 		"CVE-2016-9131",
@@ -9,7 +9,6 @@
 		"CVE-2016-9444"
 	],
 	"summary": "bind9 - security update",
-	"details": "\nSeveral denial-of-service vulnerabilities (assertion failures) were\ndiscovered in BIND, a DNS server implementation.\n\n\n* [CVE-2016-9131](https://security-tracker.debian.org/tracker/CVE-2016-9131)\nA crafted upstream response to an ANY query could cause an\n assertion failure.\n* [CVE-2016-9147](https://security-tracker.debian.org/tracker/CVE-2016-9147)\nA crafted upstream response with self-contradicting DNSSEC data\n could cause an assertion failure.\n* [CVE-2016-9444](https://security-tracker.debian.org/tracker/CVE-2016-9444)\nSpecially-crafted upstream responses with a DS record could cause\n an assertion failure.\n\n\nThese vulnerabilities predominantly affect DNS servers providing\nrecursive service. Client queries to authoritative-only servers\ncannot trigger these assertion failures. These vulnerabilities are\npresent whether or not DNSSEC validation is enabled in the server\nconfiguration.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1:9.8.4.dfsg.P1-6+nmu2+deb7u14.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-805-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-805"
 		}
 	]
 }

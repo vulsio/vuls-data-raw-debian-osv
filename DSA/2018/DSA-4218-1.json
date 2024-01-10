@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4218-1",
-	"modified": "2023-10-16T00:05:07.175522Z",
+	"modified": "2024-01-09T20:28:35.893625Z",
 	"published": "2018-06-06T00:00:00Z",
 	"related": [
 		"CVE-2017-9951",
@@ -9,7 +9,6 @@
 		"CVE-2018-1000127"
 	],
 	"summary": "memcached - security update",
-	"details": "\nSeveral vulnerabilities were discovered in memcached, a high-performance\nmemory object caching system. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2017-9951](https://security-tracker.debian.org/tracker/CVE-2017-9951)\nDaniel Shapira reported a heap-based buffer over-read in memcached\n (resulting from an incomplete fix for [CVE-2016-8705](https://security-tracker.debian.org/tracker/CVE-2016-8705)) triggered by\n specially crafted requests to add/set a key and allowing a remote\n attacker to cause a denial of service.\n* [CVE-2018-1000115](https://security-tracker.debian.org/tracker/CVE-2018-1000115)\nIt was reported that memcached listens to UDP by default. A remote\n attacker can take advantage of it to use the memcached service as a\n DDoS amplifier.\n\n\nDefault installations of memcached in Debian are not affected by\n this issue as the installation defaults to listen only on localhost.\n This update disables the UDP port by default. Listening on the UDP\n can be re-enabled in the /etc/memcached.conf (cf.\n /usr/share/doc/memcached/NEWS.Debian.gz).\n* [CVE-2018-1000127](https://security-tracker.debian.org/tracker/CVE-2018-1000127)\nAn integer overflow was reported in memcached, resulting in resource\n leaks, data corruption, deadlocks or crashes.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.4.21-1.1+deb8u2.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1.4.33-1+deb9u1.\n\n\nWe recommend that you upgrade your memcached packages.\n\n\nFor the detailed security status of memcached please refer to its\nsecurity tracker page at:\n<https://security-tracker.debian.org/tracker/memcached>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4218-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4218"
 		}
 	]
 }

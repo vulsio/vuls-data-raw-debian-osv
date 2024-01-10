@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1750-1",
-	"modified": "2023-10-16T00:05:40.009388Z",
+	"modified": "2024-01-09T20:25:28.320882Z",
 	"published": "2009-03-22T00:00:00Z",
 	"related": [
 		"CVE-2008-5907",
@@ -9,7 +9,6 @@
 		"CVE-2009-0040"
 	],
 	"summary": "libpng - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in libpng, a library for\nreading and writing PNG files. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2007-2445](https://security-tracker.debian.org/tracker/CVE-2007-2445)\nThe png\\_handle\\_tRNS function allows attackers to cause a denial of service\n (application crash) via a grayscale PNG image with a bad tRNS chunk CRC value.\n* [CVE-2007-5269](https://security-tracker.debian.org/tracker/CVE-2007-5269)\nCertain chunk handlers allow attackers to cause a denial of service (crash)\n via crafted pCAL, sCAL, tEXt, iTXt, and ztXT chunking in PNG images, which\n trigger out-of-bounds read operations.\n* [CVE-2008-1382](https://security-tracker.debian.org/tracker/CVE-2008-1382)\nlibpng allows context-dependent attackers to cause a denial of service\n (crash) and possibly execute arbitrary code via a PNG file with zero\n length \"unknown\" chunks, which trigger an access of uninitialized\n memory.\n* [CVE-2008-5907](https://security-tracker.debian.org/tracker/CVE-2008-5907)\nThe png\\_check\\_keyword might allow context-dependent attackers to set the\n value of an arbitrary memory location to zero via vectors involving\n creation of crafted PNG files with keywords.\n* [CVE-2008-6218](https://security-tracker.debian.org/tracker/CVE-2008-6218)\nA memory leak in the png\\_handle\\_tEXt function allows context-dependent\n attackers to cause a denial of service (memory exhaustion) via a crafted\n PNG file.\n* [CVE-2009-0040](https://security-tracker.debian.org/tracker/CVE-2009-0040)\nlibpng allows context-dependent attackers to cause a denial of service\n (application crash) or possibly execute arbitrary code via a crafted PNG\n file that triggers a free of an uninitialized pointer in (1) the\n png\\_read\\_png function, (2) pCAL chunk handling, or (3) setup of 16-bit\n gamma tables.\n\n\nFor the old stable distribution (etch), these problems have been fixed\nin version 1.2.15~beta5-1+etch2.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.2.27-2+lenny2. (Only [CVE-2008-5907](https://security-tracker.debian.org/tracker/CVE-2008-5907), [CVE-2008-5907](https://security-tracker.debian.org/tracker/CVE-2008-5907) and\n[CVE-2009-0040](https://security-tracker.debian.org/tracker/CVE-2009-0040) affect the stable distribution.)\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.2.35-1.\n\n\nWe recommend that you upgrade your libpng packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1750-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1750"
 		}
 	]
 }

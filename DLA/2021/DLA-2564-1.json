@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2564-1",
-	"modified": "2023-06-28T06:31:48.108489Z",
+	"modified": "2024-01-09T20:32:44.262860Z",
 	"published": "2021-02-18T00:00:00Z",
 	"related": [
 		"CVE-2021-26929"
 	],
 	"summary": "php-horde-text-filter - security update",
-	"details": "\nAlex Birnberg discovered a cross-site scripting (XSS) vulnerability in\nthe Horde Application Framework, more precisely its Text Filter API.\nAn attacker could take control of a user's mailbox by sending a\ncrafted e-mail.\n\n\n* [CVE-2021-26929](https://security-tracker.debian.org/tracker/CVE-2021-26929)\nAn XSS issue was discovered in Horde Groupware Webmail Edition\n (where the Horde\\_Text\\_Filter library is used). The attacker can\n send a plain text e-mail message, with JavaScript encoded as a\n link or email that is mishandled by preProcess in Text2html.php,\n because bespoke use of \\x00\\x00\\x00 and \\x01\\x01\\x01 interferes\n with XSS defenses.\n\n\nFor Debian 9 stretch, this problem has been fixed in version\n2.3.5-1+deb9u1.\n\n\nWe recommend that you upgrade your php-horde-text-filter packages.\n\n\nFor the detailed security status of php-horde-text-filter please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/php-horde-text-filter>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2564-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2564"
 		}
 	]
 }

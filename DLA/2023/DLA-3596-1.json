@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3596-1",
-	"modified": "2023-09-30T20:15:20.491690Z",
+	"modified": "2024-01-09T20:33:41.199415Z",
 	"published": "2023-09-30T00:00:00Z",
 	"related": [
 		"CVE-2022-27635",
@@ -11,7 +11,6 @@
 		"CVE-2022-46329"
 	],
 	"summary": "firmware-nonfree - security update",
-	"details": "\nIntelÂŽ released the INTEL-SA-00766 advisory about potential security\nvulnerabilities in some IntelÂŽ PROSet/Wireless WiFi and Killerâ˘ WiFi products\nmay allow escalation of privilege or denial of service. The full advisory is\navailable at [1]\n\n\n[1] <https://www.intel.com/content/www/us/en/security-center/advisory/intel-sa-00766.html>\n\n\nThis updated firmware-nonfree package includes the following firmware files:\n - Intel Bluetooth AX2xx series:\n ibt-0041-0041.sfi\n ibt-19-0-0.sfi\n ibt-19-0-1.sfi\n ibt-19-0-4.sfi\n ibt-19-16-4.sfi\n ibt-19-240-1.sfi\n ibt-19-240-4.sfi\n ibt-19-32-0.sfi\n ibt-19-32-1.sfi\n ibt-19-32-4.sfi\n ibt-20-0-3.sfi\n ibt-20-1-3.sfi\n ibt-20-1-4.sfi\n - Intel Wireless 22000 series\n iwlwifi-Qu-b0-hr-b0-77.ucode\n iwlwifi-Qu-b0-jf-b0-77.ucode\n iwlwifi-Qu-c0-hr-b0-77.ucode\n iwlwifi-Qu-c0-jf-b0-77.ucode\n iwlwifi-QuZ-a0-hr-b0-77.ucode\n iwlwifi-cc-a0-77.ucode\n\n\nThe updated firmware files might need updated kernel to work. It is encouraged\nto verify whether the kernel loaded the updated firmware file and take\nadditional measures if needed.\n\n\n\n* [CVE-2022-27635](https://security-tracker.debian.org/tracker/CVE-2022-27635)\nImproper access control for some Intel(R) PROSet/Wireless WiFi and Killer(TM)\n WiFi software may allow a privileged user to potentially enable escalation of\n privilege via local access.\n* [CVE-2022-36351](https://security-tracker.debian.org/tracker/CVE-2022-36351)\nImproper input validation in some Intel(R) PROSet/Wireless WiFi and Killer(TM)\n WiFi software may allow an unauthenticated user to potentially enable denial of\n service via adjacent access.\n* [CVE-2022-38076](https://security-tracker.debian.org/tracker/CVE-2022-38076)\nImproper input validation in some Intel(R) PROSet/Wireless WiFi and Killer(TM)\n WiFi software may allow an authenticated user to potentially enable escalation\n of privilege via local access.\n* [CVE-2022-40964](https://security-tracker.debian.org/tracker/CVE-2022-40964)\nImproper access control for some Intel(R) PROSet/Wireless WiFi and Killer(TM)\n WiFi software may allow a privileged user to potentially enable escalation of\n privilege via local access.\n* [CVE-2022-46329](https://security-tracker.debian.org/tracker/CVE-2022-46329)\nProtection mechanism failure for some Intel(R) PROSet/Wireless WiFi software\n may allow a privileged user to potentially enable escalation of privilege via\n local access.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n20190114+really20220913-0+deb10u2.\n\n\nWe recommend that you upgrade your firmware-nonfree packages.\n\n\nFor the detailed security status of firmware-nonfree please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/firmware-nonfree>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -134,12 +133,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3596-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3596"
 		}
 	]
 }

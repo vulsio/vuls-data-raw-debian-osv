@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3283-1",
-	"modified": "2023-06-28T06:26:54.173828Z",
+	"modified": "2024-01-09T20:33:26.998642Z",
 	"published": "2023-01-26T00:00:00Z",
 	"related": [
 		"CVE-2022-48279",
 		"CVE-2023-24021"
 	],
 	"summary": "modsecurity-apache - security update",
-	"details": "\nMultiple issues were found in modsecurity-apache, open source, cross\nplatform web application firewall (WAF) engine for Apache which allows\nremote attackers to bypass the applications firewall and other\nunspecified impact.\n\n\n* [CVE-2022-48279](https://security-tracker.debian.org/tracker/CVE-2022-48279)\nIn ModSecurity before 2.9.6 and 3.x before 3.0.8, HTTP multipart\n requests were incorrectly parsed and could bypass the Web\n Application Firewall.\n NOTE: this is related to [CVE-2022-39956](https://security-tracker.debian.org/tracker/CVE-2022-39956)\n but can be considered independent changes to the ModSecurity\n (C language) codebase.\n* [CVE-2023-24021](https://security-tracker.debian.org/tracker/CVE-2023-24021)\nIncorrect handling of null-bytes in file uploads in ModSecurity\n before 2.9.7 may allow for Web Application Firewall bypasses\n and buffer overflows on the Web Application Firewall\n when executing rules reading the FILES\\_TMP\\_CONTENT collection.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.9.3-1+deb10u2.\n\n\nWe recommend that you upgrade your modsecurity-apache packages.\n\n\nFor the detailed security status of modsecurity-apache please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/modsecurity-apache>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3283-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3283"
 		}
 	]
 }

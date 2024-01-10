@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1411-1",
-	"modified": "2023-06-28T06:20:39.454193Z",
+	"modified": "2024-01-09T20:31:07.524084Z",
 	"published": "2018-07-02T00:00:00Z",
 	"related": [
 		"CVE-2017-11613",
@@ -11,7 +11,6 @@
 		"CVE-2018-8905"
 	],
 	"summary": "tiff - security update",
-	"details": "\nSeveral issues were discovered in TIFF, the Tag Image File Format\nlibrary, that allowed remote attackers to cause a denial-of-service or\nother unspecified impact via a crafted image file.\n\n\n* [CVE-2017-11613](https://security-tracker.debian.org/tracker/CVE-2017-11613)\nDoS vulnerability:\n A crafted input will lead to a denial of service attack. During the\n TIFFOpen process, td\\_imagelength is not checked. The value of\n td\\_imagelength can be directly controlled by an input file. In the\n ChopUpSingleUncompressedStrip function, the \\_TIFFCheckMalloc\n function is called based on td\\_imagelength. If the value of\n td\\_imagelength is set close to the amount of system memory, it will\n hang the system or trigger the OOM killer.\n* [CVE-2018-10963](https://security-tracker.debian.org/tracker/CVE-2018-10963)\nDoS vulnerability:\n The TIFFWriteDirectorySec() function in tif\\_dirwrite.c in LibTIFF\n allows remote attackers to cause a denial of service (assertion\n failure and application crash) via a crafted file, a different\n vulnerability than [CVE-2017-13726](https://security-tracker.debian.org/tracker/CVE-2017-13726).\n* [CVE-2018-5784](https://security-tracker.debian.org/tracker/CVE-2018-5784)\nDoS vulnerability: \n In LibTIFF, there is an uncontrolled resource consumption in the\n TIFFSetDirectory function of tif\\_dir.c. Remote attackers could\n leverage this vulnerability to cause a denial of service via a\n crafted tif file.\n This occurs because the declared number of directory entries is not\n validated against the actual number of directory entries.\n* [CVE-2018-7456](https://security-tracker.debian.org/tracker/CVE-2018-7456)\nNULL Pointer Dereference:\n A NULL Pointer Dereference occurs in the function TIFFPrintDirectory\n in tif\\_print.c in LibTIFF when using the tiffinfo tool to print\n crafted TIFF information, a different vulnerability than\n [CVE-2017-18013](https://security-tracker.debian.org/tracker/CVE-2017-18013). (This affects an earlier part of the\n TIFFPrintDirectory function that was not addressed by the\n [CVE-2017-18013](https://security-tracker.debian.org/tracker/CVE-2017-18013) patch.)\n* [CVE-2018-8905](https://security-tracker.debian.org/tracker/CVE-2018-8905)\nHeap-based buffer overflow:\n In LibTIFF, a heap-based buffer overflow occurs in the function\n LZWDecodeCompat in tif\\_lzw.c via a crafted TIFF file, as\n demonstrated by tiff2ps.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.0.3-12.3+deb8u6.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1411-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1411"
 		}
 	]
 }

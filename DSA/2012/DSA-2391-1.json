@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2391-1",
-	"modified": "2023-10-16T00:11:13.145309Z",
+	"modified": "2024-01-09T20:22:48.172954Z",
 	"published": "2012-01-22T00:00:00Z",
 	"related": [
 		"CVE-2011-1940",
@@ -9,7 +9,6 @@
 		"CVE-2011-4107"
 	],
 	"summary": "phpmyadmin - several",
-	"details": "\nSeveral vulnerabilities have been discovered in phpMyAdmin, a tool\nto administer MySQL over the web. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2011-4107](https://security-tracker.debian.org/tracker/CVE-2011-4107)\nThe XML import plugin allowed a remote attacker to read arbitrary\n files via XML data containing external entity references.\n* [CVE-2011-1940](https://security-tracker.debian.org/tracker/CVE-2011-1940), [CVE-2011-3181](https://security-tracker.debian.org/tracker/CVE-2011-3181)\nCross site scripting was possible in the table tracking feature,\n allowing a remote attacker to inject arbitrary web script or HTML.\n\n\nThe oldstable distribution (lenny) is not affected by these problems.\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 4:3.3.7-7.\n\n\nFor the testing distribution (wheezy) and unstable distribution (sid),\nthese problems have been fixed in version 4:3.4.7.1-1.\n\n\nWe recommend that you upgrade your phpmyadmin packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2391-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2391"
 		}
 	]
 }

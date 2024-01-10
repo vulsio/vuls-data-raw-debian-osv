@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-204-1",
-	"modified": "2023-06-28T06:21:08.990927Z",
+	"modified": "2024-01-09T20:31:57.804328Z",
 	"published": "2015-04-19T00:00:00Z",
 	"related": [
 		"CVE-2014-9653"
 	],
 	"summary": "file - security update",
-	"details": "\nThis update fixes the following issue in the file package:\n\n\n* [CVE-2014-9653](https://security-tracker.debian.org/tracker/CVE-2014-9653)\nreadelf.c does not consider that pread calls sometimes read only\n a subset of the available data, which allows remote attackers to\n cause a denial of service (uninitialized memory access) or\n possibly have unspecified other impact via a crafted ELF file.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-204-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-204"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-396",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2003-10-29T00:00:00Z",
 	"published": "2003-10-29T00:00:00Z",
 	"related": [
 		"CVE-2002-1562",
 		"CVE-2003-0899"
 	],
 	"summary": "thttpd - missing input sanitizing, wrong calculation",
-	"details": "\nSeveral vulnerabilities have been discovered in thttpd, a tiny HTTP\nserver.\n\n\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing vulnerabilities:\n\n\n* [CAN-2002-1562](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-1562): Information leak\n\n Marcus Breiing discovered that if thttpd it is used for virtual\n hosting, and an attacker supplies a specially crafted “Host:”\n header with a pathname instead of a hostname, thttpd will reveal\n information about the host system. Hence, an attacker can browse\n the entire disk.\n* [CAN-2003-0899](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0899): Arbitrary code execution\n\n Joel SĂśderberg and Christer Ăberg discovered a remote overflow which\n allows an attacker to partially overwrite the EBP register and\n hence execute arbitrary code.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 2.21b-11.2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.23beta1-2.3.\n\n\nWe recommend that you upgrade your thttpd package immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-396.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-396"
 		}
 	]
 }

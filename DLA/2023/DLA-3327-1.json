@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3327-1",
-	"modified": "2023-06-28T06:26:55.963439Z",
+	"modified": "2024-01-09T20:33:28.630858Z",
 	"published": "2023-02-20T00:00:00Z",
 	"related": [
 		"CVE-2020-12400",
@@ -11,7 +11,6 @@
 		"CVE-2023-0767"
 	],
 	"summary": "nss - security update",
-	"details": "\nMultiple security vulnerabilities have been discovered in nss, the Network\nSecurity Service libraries.\n\n\n* [CVE-2020-6829](https://security-tracker.debian.org/tracker/CVE-2020-6829)\nWhen performing EC scalar point multiplication, the wNAF point\n multiplication algorithm was used; which leaked partial information about\n the nonce used during signature generation. Given an electro-magnetic trace\n of a few signature generations, the private key could have been computed.\n* [CVE-2020-12400](https://security-tracker.debian.org/tracker/CVE-2020-12400)\nWhen converting coordinates from projective to affine, the modular\n inversion was not performed in constant time, resulting in a possible\n timing-based side channel attack.\n* [CVE-2020-12401](https://security-tracker.debian.org/tracker/CVE-2020-12401)\nDuring ECDSA signature generation, padding applied in the nonce designed to\n ensure constant-time scalar multiplication was removed, resulting in\n variable-time execution dependent on secret data.\n* [CVE-2020-12403](https://security-tracker.debian.org/tracker/CVE-2020-12403)\nA flaw was found in the way CHACHA20-POLY1305 was implemented in NSS.\n When using multi-part Chacha20, it could cause out-of-bounds reads.\n This issue was fixed by explicitly disabling multi-part ChaCha20 \n (which was not functioning correctly) and strictly enforcing tag length.\n* [CVE-2023-0767](https://security-tracker.debian.org/tracker/CVE-2023-0767)\nChristian Holler discovered that incorrect handling of PKCS 12 Safe Bag\n attributes may result in execution of arbitrary code if a specially crafted\n PKCS 12 certificate bundle is processed.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2:3.42.1-1+deb10u6.\n\n\nWe recommend that you upgrade your nss packages.\n\n\nFor the detailed security status of nss please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/nss>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3327-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3327"
 		}
 	]
 }

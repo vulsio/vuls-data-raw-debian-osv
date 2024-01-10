@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1303-1",
-	"modified": "2023-06-28T06:19:49.342273Z",
+	"modified": "2024-01-09T20:30:57.802011Z",
 	"published": "2018-03-08T00:00:00Z",
 	"related": [
 		"CVE-2018-7536",
 		"CVE-2018-7537"
 	],
 	"summary": "python-django - security update",
-	"details": "\nSeveral functions were extremely slow to evaluate certain inputs due to\ncatastrophic backtracking vulnerabilities in several regular expressions.\n\n\n* [CVE-2018-7536](https://security-tracker.debian.org/tracker/CVE-2018-7536)\nThe django.utils.html.urlize() function was extremely slow to evaluate\n certain inputs due to catastrophic backtracking vulnerabilities in two\n regular expressions. The urlize() function is used to implement the urlize\n and urlizetrunc template filters, which were thus vulnerable.\n\n\nThe problematic regular expressions are replaced with parsing logic that\n behaves similarly.\n* [CVE-2018-7537](https://security-tracker.debian.org/tracker/CVE-2018-7537)\nIf django.utils.text.Truncatorâs chars() and words() methods were passed\n the html=True argument, they were extremely slow to evaluate certain inputs\n due to a catastrophic backtracking vulnerability in a regular expression.\n The chars() and words() methods are used to implement the truncatechars\\_html\n and truncatewords\\_html template filters, which were thus vulnerable.\n\n\nThe backtracking problem in the regular expression is fixed.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.4.22-1+deb7u4.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1303-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1303"
 		}
 	]
 }

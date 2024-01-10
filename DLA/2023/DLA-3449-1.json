@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3449-1",
-	"modified": "2023-06-28T06:30:37.407769Z",
+	"modified": "2024-01-09T20:33:29.282006Z",
 	"published": "2023-06-08T00:00:00Z",
 	"related": [
 		"CVE-2023-0464",
@@ -10,7 +10,6 @@
 		"CVE-2023-2650"
 	],
 	"summary": "openssl - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit.\n\n\n* [CVE-2023-0464](https://security-tracker.debian.org/tracker/CVE-2023-0464)\nDavid Benjamin reported a flaw related to the verification of\n X.509 certificate chains that include policy constraints, which\n may result in denial of service.\n* [CVE-2023-0465](https://security-tracker.debian.org/tracker/CVE-2023-0465)\nDavid Benjamin reported that invalid certificate policies in leaf\n certificates are silently ignored. A malicious CA could take\n advantage of this flaw to deliberately assert invalid certificate\n policies in order to circumvent policy checking on the certificate\n altogether.\n* [CVE-2023-0466](https://security-tracker.debian.org/tracker/CVE-2023-0466)\nDavid Benjamin discovered that the implementation of the\n X509\\_VERIFY\\_PARAM\\_add0\\_policy() function does not enable the check\n which allows certificates with invalid or incorrect policies to\n pass the certificate verification (contrary to its documentation).\n* [CVE-2023-2650](https://security-tracker.debian.org/tracker/CVE-2023-2650)\nIt was discovered that processing malformed ASN.1 object\n identifiers or data may result in denial of service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.1.1n-0+deb10u5.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\nFor the detailed security status of openssl please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/openssl>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3449-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3449"
 		}
 	]
 }

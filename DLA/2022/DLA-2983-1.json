@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2983-1",
-	"modified": "2023-06-28T06:30:24.789637Z",
-	"published": "2022-04-17T00:00:00Z",
+	"modified": "2024-01-09T20:35:44.033791Z",
+	"published": "2022-04-16T00:00:00Z",
 	"related": [
 		"CVE-2018-10753",
 		"CVE-2018-10771",
@@ -12,7 +12,6 @@
 		"CVE-2021-32436"
 	],
 	"summary": "abcm2ps - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in abcm2ps: program which\ntranslates ABC music description files to PostScript.\n\n\n* [CVE-2018-10753](https://security-tracker.debian.org/tracker/CVE-2018-10753)\nStack-based buffer overflow in the delayed\\_output function in music.c\n allows remote attackers to cause a denial of service (application crash) or\n possibly have unspecified other impact.\n* [CVE-2018-10771](https://security-tracker.debian.org/tracker/CVE-2018-10771)\nStack-based buffer overflow in the get\\_key function in parse.c allows remote\n attackers to cause a denial of service (application crash) or possibly have\n unspecified other impact.\n* [CVE-2019-1010069](https://security-tracker.debian.org/tracker/CVE-2019-1010069)\nIncorrect access control allows attackers to cause a denial of service via a\n crafted file.\n* [CVE-2021-32434](https://security-tracker.debian.org/tracker/CVE-2021-32434)\nArray overflow when wrong duration in voice overlay.\n* [CVE-2021-32435](https://security-tracker.debian.org/tracker/CVE-2021-32435)\nStack-based buffer overflow in the function get\\_key in parse.c allows remote\n attackers to cause a senial of service (DoS) via unspecified vectors.\n* [CVE-2021-32436](https://security-tracker.debian.org/tracker/CVE-2021-32436)\nOut-of-bounds read in the function write\\_title() in subs.c allows remote\n attackers to cause a denial of service via unspecified vectors.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n7.8.9-1+deb9u1.\n\n\nWe recommend that you upgrade your abcm2ps packages.\n\n\nFor the detailed security status of abcm2ps please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/abcm2ps>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2983-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2983"
 		}
 	]
 }

@@ -1,12 +1,11 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3538-1",
-	"modified": "2023-08-22T14:18:30.236598Z",
+	"modified": "2024-01-09T20:33:32.643678Z",
 	"published": "2023-08-22T00:00:00Z",
 	"related": [
 		"CVE-2013-7484",
 		"CVE-2019-17382",
-		"CVE-2022-35229",
 		"CVE-2022-43515",
 		"CVE-2023-29450",
 		"CVE-2023-29451",
@@ -16,7 +15,6 @@
 		"CVE-2023-29457"
 	],
 	"summary": "zabbix - security update",
-	"details": "\nSeveral security vulnerabilities have been discovered in zabbix, a network\nmonitoring solution, potentially allowing to crash the server, information\ndisclosure or Cross-Site-Scripting attacks.\n\n\nImportant Notices:\nTo mitigate [CVE-2019-17382](https://security-tracker.debian.org/tracker/CVE-2019-17382), on existing installations, the guest account\nneeds to be manually disabled, for example by disabling the the Guest\ngroup in the UI:\n Administration -> User groups -> Guests -> Untick Enabled\n\n\nThis update also fixes a regression with [CVE-2022-35229](https://security-tracker.debian.org/tracker/CVE-2022-35229), which broke the\npossiblity to edit and add discovery rules in the UI.\n\n\n\n* [CVE-2013-7484](https://security-tracker.debian.org/tracker/CVE-2013-7484)\nZabbix before version 4.4.0alpha2 stores credentials in the users\n table with the password hash stored as a MD5 hash, which is a known\n insecure hashing method. Furthermore, no salt is used with the hash.\n* [CVE-2019-17382](https://security-tracker.debian.org/tracker/CVE-2019-17382)\n(Disputed, not seen by upstream as not a security issue)\n\n\nAn issue was discovered in\n zabbix.php?actionÚshboard.view&dashboardid=1 in Zabbix through\n 4.4. An attacker can bypass the login page and access the dashboard\n page, and then create a Dashboard, Report, Screen, or Map without\n any Username/Password (i.e., anonymously). All created elements\n (Dashboard/Report/Screen/Map) are accessible by other users and by\n an admin.\n* [CVE-2022-35229](https://security-tracker.debian.org/tracker/CVE-2022-35229)\nAn authenticated user can create a link with reflected\n Javascript code inside it for the discovery page and send it to\n other users. The payload can be executed only with a known CSRF\n token value of the victim, which is changed periodically and is\n difficult to predict.\n* [CVE-2022-43515](https://security-tracker.debian.org/tracker/CVE-2022-43515)\nZabbix Frontend provides a feature that allows admins to\n maintain the installation and ensure that only certain IP addresses\n can access it. In this way, any user will not be able to access the\n Zabbix Frontend while it is being maintained and possible sensitive\n data will be prevented from being disclosed. An attacker can bypass\n this protection and access the instance using IP address not listed\n in the defined range.\n* [CVE-2023-29450](https://security-tracker.debian.org/tracker/CVE-2023-29450)\nJavaScript pre-processing can be used by the attacker to gain\n access to the file system (read-only access on behalf of user\n zabbix) on the Zabbix Server or Zabbix Proxy, potentially leading\n to unauthorized access to sensitive data.\n* [CVE-2023-29451](https://security-tracker.debian.org/tracker/CVE-2023-29451)\nSpecially crafted string can cause a buffer overrun in the JSON\n parser library leading to a crash of the Zabbix Server or a Zabbix\n Proxy.\n* [CVE-2023-29454](https://security-tracker.debian.org/tracker/CVE-2023-29454)\nA Stored or persistent cross-site scripting (XSS) vulnerability\n was found on âUsersâ section in âMediaâ tab in âSend toâ form field.\n When new media is created with malicious code included into field\n âSend toâ then it will execute when editing the same media.\n* [CVE-2023-29455](https://security-tracker.debian.org/tracker/CVE-2023-29455)\nA Reflected XSS attacks, also known as non-persistent attacks, was\n found where an attacker can pass malicious code as GET request to\n graph.php and system will save it and will execute when current\n graph page is opened.\n* [CVE-2023-29456](https://security-tracker.debian.org/tracker/CVE-2023-29456)\nURL validation scheme receives input from a user and then parses\n it to identify its various components. The validation scheme can\n ensure that all URL components comply with internet standards.\n* [CVE-2023-29457](https://security-tracker.debian.org/tracker/CVE-2023-29457)\nA Reflected XSS attacks, also known as non-persistent attacks, was\n found where XSS session cookies could be revealed, enabling a\n perpetrator to impersonate valid users and abuse their private\n accounts.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1:4.0.4+dfsg-1+deb10u2.\n\n\nWe recommend that you upgrade your zabbix packages.\n\n\nFor the detailed security status of zabbix please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/zabbix>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3538-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3538"
 		}
 	]
 }

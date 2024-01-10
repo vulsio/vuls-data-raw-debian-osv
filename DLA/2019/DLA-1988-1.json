@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1988-1",
-	"modified": "2023-06-28T06:21:07.536440Z",
+	"modified": "2024-01-09T20:31:55.877717Z",
 	"published": "2019-11-11T00:00:00Z",
 	"related": [
 		"CVE-2019-12385",
 		"CVE-2019-12386"
 	],
 	"summary": "ampache - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Ampache, a web-based audio\nfile management system.\n\n\n* [CVE-2019-12385](https://security-tracker.debian.org/tracker/CVE-2019-12385)\nA stored XSS exists in the localplay.php LocalPlay add instance\n functionality. The injected code is reflected in the instances menu.\n This vulnerability can be abused to force an admin to create a new\n privileged user whose credentials are known by the attacker.\n* [CVE-2019-12386](https://security-tracker.debian.org/tracker/CVE-2019-12386)\nThe search engine is affected by a SQL Injection, so any user able\n to perform lib/class/search.class.php searches (even guest users)\n can dump any data contained in the database (sessions, hashed\n passwords, etc.). This may lead to a full compromise of admin\n accounts, when combined with the weak password generator algorithm\n used in the lostpassword functionality.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.6-rzb2752+dfsg-5+deb8u1.\n\n\nWe recommend that you upgrade your ampache packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1988-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1988"
 		}
 	]
 }

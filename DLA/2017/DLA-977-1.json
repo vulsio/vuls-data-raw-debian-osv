@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-977-1",
-	"modified": "2023-06-28T06:39:01.910020Z",
+	"modified": "2024-01-09T20:34:05.328064Z",
 	"published": "2017-06-05T00:00:00Z",
 	"related": [
 		"CVE-2014-2015",
@@ -9,7 +9,6 @@
 		"CVE-2017-9148"
 	],
 	"summary": "freeradius - security update",
-	"details": "\nSeveral issues were discovered in FreeRADIUS, a high-performance and\nhighly configurable RADIUS server.\n\n\n* [CVE-2014-2015](https://security-tracker.debian.org/tracker/CVE-2014-2015)\nA stack-based buffer overflow was found in the normify function in\n the rlm\\_pap module, which can be attacked by existing users to\n cause denial of service or other issues.\n* [CVE-2015-4680](https://security-tracker.debian.org/tracker/CVE-2015-4680)\nIt was discovered that freeradius failed to check revocation of\n intermediate CA certificates, thus accepting client certificates\n issued by revoked certificates from intermediate CAs.\n\n\nNote that to enable checking of intermediate CA certificates, it\n is necessary to enable the check\\_all\\_crl option of the EAP TLS\n section in eap.conf. This is only necessary for servers using\n certificates signed by intermediate CAs. Servers that use\n self-signed CAs are unaffected.\n* [CVE-2017-9148](https://security-tracker.debian.org/tracker/CVE-2017-9148)\nThe TLS session cache fails to reliably prevent resumption of an\n unauthenticated session, which allows remote attackers (such as\n malicious 802.1X supplicants) to bypass authentication via PEAP or\n TTLS.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.1.12+dfsg-1.2+deb7u1.\n\n\nWe recommend that you upgrade your freeradius packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-977-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-977"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-410-1",
-	"modified": "2023-06-28T06:33:59.994895Z",
+	"modified": "2024-01-09T20:33:46.574945Z",
 	"published": "2016-02-04T00:00:00Z",
 	"related": [
 		"CVE-2015-7575",
@@ -14,7 +14,6 @@
 		"CVE-2016-0494"
 	],
 	"summary": "openjdk-6 - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in OpenJDK, an\nimplementation of the Oracle Java platform, resulting in breakouts of\nthe Java sandbox, information disclosure, denial of service and insecure\ncryptography.\n\n\n* [CVE-2015-7575](https://security-tracker.debian.org/tracker/CVE-2015-7575)\nA flaw was found in the way TLS 1.2 could use the MD5 hash\n function for signing ServerKeyExchange and Client\n Authentication packets during a TLS handshake.\n* [CVE-2015-8126](https://security-tracker.debian.org/tracker/CVE-2015-8126)\nMultiple buffer overflows in the (1) png\\_set\\_PLTE and (2)\n png\\_get\\_PLTE functions in libpng before 1.0.64, 1.1.x and 1.2.x\n before 1.2.54, 1.3.x and 1.4.x before 1.4.17, 1.5.x before\n 1.5.24, and 1.6.x before 1.6.19 allow remote attackers to cause\n a denial of service (application crash) or possibly have\n unspecified other impact via a small bit-depth value in an IHDR\n (aka image header) chunk in a PNG image.\n* [CVE-2015-8472](https://security-tracker.debian.org/tracker/CVE-2015-8472)\nBuffer overflow in the png\\_set\\_PLTE function in libpng before\n 1.0.65, 1.1.x and 1.2.x before 1.2.55, 1.3.x, 1.4.x before\n 1.4.18, 1.5.x before 1.5.25, and 1.6.x before 1.6.20 allows\n remote attackers to cause a denial of service (application\n crash) or possibly have unspecified other impact via a small\n bit-depth value in an IHDR (aka image header) chunk in a PNG\n image. NOTE: this vulnerability exists because of an incomplete\n fix for [CVE-2015-8126](https://security-tracker.debian.org/tracker/CVE-2015-8126).\n* [CVE-2016-0402](https://security-tracker.debian.org/tracker/CVE-2016-0402)\nUnspecified vulnerability in the Java SE and Java SE Embedded\n components in Oracle Java SE 6u105, 7u91, and 8u66 and Java SE\n Embedded 8u65 allows remote attackers to affect integrity via\n unknown vectors related to Networking.\n* [CVE-2016-0448](https://security-tracker.debian.org/tracker/CVE-2016-0448)\nUnspecified vulnerability in the Java SE and Java SE Embedded\n components in Oracle Java SE 6u105, 7u91, and 8u66, and Java SE\n Embedded 8u65 allows remote authenticated users to affect\n confidentiality via vectors related to JMX.\n* [CVE-2016-0466](https://security-tracker.debian.org/tracker/CVE-2016-0466)\nIt was discovered that the JAXP component in OpenJDK did not\n properly enforce the totalEntitySizeLimit limit. An attacker\n able to make a Java application process a specially crafted XML\n file could use this flaw to make the application consume an\n excessive amount of memory.\n* [CVE-2016-0483](https://security-tracker.debian.org/tracker/CVE-2016-0483)\nUnspecified vulnerability in the Java SE, Java SE Embedded, and\n JRockit components in Oracle Java SE 6u105, 7u91, and 8u66;\n Java SE Embedded 8u65; and JRockit R28.3.8 allows remote\n attackers to affect confidentiality, integrity, and\n availability via vectors related to AWT.\n* [CVE-2016-0494](https://security-tracker.debian.org/tracker/CVE-2016-0494)\nUnspecified vulnerability in the Java SE and Java SE Embedded\n components in Oracle Java SE 6u105, 7u91, and 8u66 and Java SE\n Embedded 8u65 allows remote attackers to affect\n confidentiality, integrity, and availability via\n unknown vectors related to 2D.\n\n\nFor Debian 6 Squeeze, these problems have been fixed in version\n6b38-1.13.10-1~deb6u1.\n\n\nWe recommend that you upgrade your openjdk-6 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -147,12 +146,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-410-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-410"
 		}
 	]
 }

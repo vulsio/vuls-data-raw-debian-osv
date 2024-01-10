@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2269-1",
-	"modified": "2023-06-28T06:26:29.538609Z",
+	"modified": "2024-01-09T20:32:20.126081Z",
 	"published": "2020-07-01T00:00:00Z",
 	"related": [
 		"CVE-2020-4047",
@@ -10,7 +10,6 @@
 		"CVE-2020-4050"
 	],
 	"summary": "wordpress - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Wordpress, a web\nblogging tool. They allowed remote attackers to perform\nvarious Cross-Side Scripting (XSS) attacks, create open\nredirects, escalate privileges, and bypass authorization\naccess.\n\n\n* [CVE-2020-4046](https://security-tracker.debian.org/tracker/CVE-2020-4046)\nIn affected versions of WordPress, users with low\n privileges (like contributors and authors) can use the\n embed block in a certain way to inject unfiltered HTML\n in the block editor. When affected posts are viewed by a\n higher privileged user, this could lead to script\n execution in the editor/wp-admin.\n* [CVE-2020-4047](https://security-tracker.debian.org/tracker/CVE-2020-4047)\nIn affected versions of WordPress, authenticated users with\n upload permissions (like authors) are able to inject\n JavaScript into some media file attachment pages in a certain\n way. This can lead to script execution in the context of a\n higher privileged user when the file is viewed by them.\n* [CVE-2020-4048](https://security-tracker.debian.org/tracker/CVE-2020-4048)\nIn affected versions of WordPress, due to an issue in\n wp\\_validate\\_redirect() and URL sanitization, an arbitrary\n external link can be crafted leading to unintended/open\n redirect when clicked.\n* [CVE-2020-4049](https://security-tracker.debian.org/tracker/CVE-2020-4049)\nIn affected versions of WordPress, when uploading themes, the\n name of the theme folder can be crafted in a way that could\n lead to JavaScript execution in /wp-admin on the themes page.\n This does require an admin to upload the theme, and is low\n severity self-XSS.\n* [CVE-2020-4050](https://security-tracker.debian.org/tracker/CVE-2020-4050)\nIn affected versions of WordPress, misuse of the\n `set-screen-option` filter's return value allows arbitrary\n user meta fields to be saved. It does require an admin to\n install a plugin that would misuse the filter. Once installed,\n it can be leveraged by low privileged users.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n4.1.31+dfsg-0+deb8u1.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2269-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2269"
 		}
 	]
 }

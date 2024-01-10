@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-254",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-02-27T00:00:00Z",
 	"published": "2003-02-27T00:00:00Z",
 	"related": [
 		"CVE-2002-1051",
@@ -10,7 +10,6 @@
 		"CVE-2002-1387"
 	],
 	"summary": "traceroute-nanog - buffer overflow",
-	"details": "\nA vulnerability has been discovered in NANOG traceroute, an enhanced\nversion of the Van Jacobson/BSD traceroute program. A buffer overflow\noccurs in the 'get\\_origin()' function. Due to insufficient bounds\nchecking performed by the whois parser, it may be possible to corrupt\nmemory on the system stack. This vulnerability can be exploited by a\nremote attacker to gain root privileges on a target host. Though,\nmost probably not in Debian.\n\n\nThe Common Vulnerabilities and Exposures (CVE) project additionally\nidentified the following vulnerabilities which were already fixed in\nthe Debian version in stable (woody) and oldstable (potato) and are\nmentioned here for completeness (and since other distributions had to\nrelease a separate advisory for them):\n\n\n* CAN-2002-1364 (BugTraq ID 6166) talks about a buffer overflow in\n the get\\_origin function which allows attackers to execute arbitrary\n code via long WHOIS responses.\n* CAN-2002-1051 (BugTraq ID 4956) talks about a format string\n vulnerability that allows local users to execute arbitrary code via\n the -T (terminator) command line argument.\n* CAN-2002-1386 talks about a buffer overflow that may allow local\n users to execute arbitrary code via a long hostname argument.\n* CAN-2002-1387 talks about the spray mode that may allow local users\n to overwrite arbitrary memory locations.\n\n\nFortunately, the Debian package drops privileges quite early after\nstartup, so those problems are not likely to result in an exploit on a\nDebian machine.\n\n\nFor the current stable distribution (woody) the above problem has been\nfixed in version 6.1.1-1.2.\n\n\nFor the old stable distribution (potato) the above problem has been\nfixed in version 6.0-2.2.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 6.3.0-1.\n\n\nWe recommend that you upgrade your traceroute-nanog package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-254.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-254"
 		}
 	]
 }

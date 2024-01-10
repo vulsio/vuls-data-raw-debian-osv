@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3481-1",
-	"modified": "2023-10-16T00:06:22.617593Z",
+	"modified": "2024-01-09T20:25:57.752961Z",
 	"published": "2016-02-16T00:00:00Z",
 	"related": [
 		"CVE-2015-7547",
@@ -10,7 +10,6 @@
 		"CVE-2015-8779"
 	],
 	"summary": "glibc - security update",
-	"details": "\nSeveral vulnerabilities have been fixed in the GNU C Library, glibc.\n\n\nThe first vulnerability listed below is considered to have critical\nimpact.\n\n\n* [CVE-2015-7547](https://security-tracker.debian.org/tracker/CVE-2015-7547)\nThe Google Security Team and Red Hat discovered that the glibc\n host name resolver function, getaddrinfo, when processing\n AF\\_UNSPEC queries (for dual A/AAAA lookups), could mismanage its\n internal buffers, leading to a stack-based buffer overflow and\n arbitrary code execution. This vulnerability affects most\n applications which perform host name resolution using getaddrinfo,\n including system services.\n* [CVE-2015-8776](https://security-tracker.debian.org/tracker/CVE-2015-8776)\nAdam Nielsen discovered that if an invalid separated time value\n is passed to strftime, the strftime function could crash or leak\n information. Applications normally pass only valid time\n information to strftime; no affected applications are known.\n* [CVE-2015-8778](https://security-tracker.debian.org/tracker/CVE-2015-8778)\nSzabolcs Nagy reported that the rarely-used hcreate and hcreate\\_r\n functions did not check the size argument properly, leading to a\n crash (denial of service) for certain arguments. No impacted\n applications are known at this time.\n* [CVE-2015-8779](https://security-tracker.debian.org/tracker/CVE-2015-8779)\nThe catopen function contains several unbound stack allocations\n (stack overflows), causing it the crash the process (denial of\n service). No applications where this issue has a security impact\n are currently known.\n\n\nWhile it is only necessary to ensure that all processes are not using\nthe old glibc anymore, it is recommended to reboot the machines after\napplying the security upgrade.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.19-18+deb8u3.\n\n\nFor the unstable distribution (sid), these problems will be fixed in\nversion 2.21-8.\n\n\nWe recommend that you upgrade your glibc packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3481-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3481"
 		}
 	]
 }

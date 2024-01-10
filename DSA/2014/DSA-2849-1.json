@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2849-1",
-	"modified": "2023-10-16T00:11:34.750627Z",
+	"modified": "2024-01-09T20:21:31.115103Z",
 	"published": "2014-01-31T00:00:00Z",
 	"related": [
 		"CVE-2014-0015"
 	],
 	"summary": "curl - information disclosure",
-	"details": "\nParas Sethia discovered that libcurl, a client-side URL transfer\nlibrary, would sometimes mix up multiple HTTP and HTTPS connections\nwith NTLM authentication to the same server, sending requests for one\nuser over the connection authenticated as a different user.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 7.21.0-2.1+squeeze7.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 7.26.0-1+wheezy8.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 7.35.0-1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -72,12 +71,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2849-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2849"
 		}
 	]
 }

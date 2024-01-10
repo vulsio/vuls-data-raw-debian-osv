@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1505-1",
-	"modified": "2023-06-28T06:20:46.393105Z",
+	"modified": "2024-01-09T20:31:50.033533Z",
 	"published": "2018-09-15T00:00:00Z",
 	"related": [
 		"CVE-2018-1000637"
 	],
 	"summary": "zutils - security update",
-	"details": "\nzutils version prior to version 1.8-pre2 contains a buffer\noverflow vulnerability in zcat which happened with some\ninput files when the '-v, --show-nonprinting' option was\nused (or indirectly enabled). This can result in potential\ndenial of service or arbitrary code execution. This attack\nappear is exploitable via the victim openning a crafted\ncompressed file and has been fixed in 1.8-pre2.\n\n\nFor Debian 8 Jessie, this problem has been fixed in\nversion 1.3-4+deb8u1.\n\n\nWe recommend that you upgrade your zutils packages.\n\n\nFurther information about Debian LTS security advisories,\nhow to apply these updates to your system and frequently\nasked questions can be found at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1505-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1505"
 		}
 	]
 }

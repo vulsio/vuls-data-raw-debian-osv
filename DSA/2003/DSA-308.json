@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-308",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-06-06T00:00:00Z",
 	"published": "2003-06-06T00:00:00Z",
 	"related": [
 		"CVE-1999-1332",
 		"CVE-2003-0367"
 	],
 	"summary": "gzip - insecure temporary files",
-	"details": "\nPaul Szabo discovered that znew, a script included in the gzip\npackage, creates its temporary files without taking precautions to\navoid a symlink attack (CAN-2003-0367).\n\n\nThe gzexe script has a similar vulnerability which was patched in an\nearlier release but inadvertently reverted.\n\n\nFor the stable distribution (woody) both problems have been fixed in\nversion 1.3.2-3woody1.\n\n\nFor the old stable distribution (potato) CAN-2003-0367 has been fixed\nin version 1.2.4-33.2. This version is not vulnerable to\nCVE-1999-1332 due to an earlier patch.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you update your gzip package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-308.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-308"
 		}
 	]
 }

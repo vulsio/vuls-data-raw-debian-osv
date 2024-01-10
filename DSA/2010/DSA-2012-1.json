@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2012-1",
-	"modified": "2023-10-16T00:10:53.322945Z",
+	"modified": "2024-01-09T20:27:40.696484Z",
 	"published": "2010-03-11T00:00:00Z",
 	"related": [
 		"CVE-2009-3725",
 		"CVE-2010-0622"
 	],
 	"summary": "linux-2.6 - several issues",
-	"details": "\nTwo vulnerabilities have been discovered in the Linux kernel that\nmay lead to a denial of service or privilege escalation. The Common\nVulnerabilities and Exposures project identifies the following problems:\n\n\n* [CVE-2009-3725](https://security-tracker.debian.org/tracker/CVE-2009-3725)\nPhilipp Reisner reported an issue in the connector subsystem\n which allows unprivileged users to send netlink packets. This\n allows local users to manipulate settings for uvesafb devices\n which are normally reserved for privileged users.\n* [CVE-2010-0622](https://security-tracker.debian.org/tracker/CVE-2010-0622)\nJerome Marchand reported an issue in the futex subsystem that\n allows a local user to force an invalid futex state which results\n in a denial of service (oops).\n\n\nThis update also includes fixes for regressions introduced by previous\nupdates. See the referenced Debian bug pages for details.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 2.6.26-21lenny4.\n\n\nWe recommend that you upgrade your linux-2.6 and user-mode-linux\npackages.\n\n\nThe following matrix lists additional source packages that were\nrebuilt for compatibility with or to take advantage of this update:\n\n\n\n\n|  | Debian 5.0 (lenny) |\n| --- | --- |\n| user-mode-linux | 2.6.26-1um-2+21lenny4 |\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2012-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2012"
 		}
 	]
 }

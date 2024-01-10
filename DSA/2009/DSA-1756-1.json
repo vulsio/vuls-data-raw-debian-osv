@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1756-1",
-	"modified": "2023-10-16T00:05:39.283736Z",
+	"modified": "2024-01-09T20:25:29.332196Z",
 	"published": "2009-03-29T00:00:00Z",
 	"related": [
 		"CVE-2009-1044",
 		"CVE-2009-1169"
 	],
 	"summary": "xulrunner - multiple vulnerabilities",
-	"details": "\nSeveral remote vulnerabilities have been discovered in Xulrunner, a\nruntime environment for XUL applications, such as the Iceweasel web\nbrowser. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2009-1169](https://security-tracker.debian.org/tracker/CVE-2009-1169)\nSecurity researcher Guido Landi discovered that a XSL stylesheet could\n be used to crash the browser during a XSL transformation. An attacker\n could potentially use this crash to run arbitrary code on a victim's\n computer.\n* [CVE-2009-1044](https://security-tracker.debian.org/tracker/CVE-2009-1044)\nSecurity researcher Nils reported via TippingPoint's Zero Day Initiative\n that the XUL tree method \\_moveToEdgeShift was in some cases triggering\n garbage collection routines on objects which were still in use. In such\n cases, the browser would crash when attempting to access a previously\n destroyed object and this crash could be used by an attacker to run\n arbitrary code on a victim's computer.\n\n\nNote that after installing these updates, you will need to restart any\npackages using xulrunner, typically iceweasel or epiphany.\n\n\nAs indicated in the Etch release notes, security support for the\nMozilla products in the oldstable distribution needed to be stopped\nbefore the end of the regular Etch security maintenance life cycle.\nYou are strongly encouraged to upgrade to stable or switch to a still\nsupported browser.\n\n\nFor the stable distribution (lenny), these problems have been fixed in version\n1.9.0.7-0lenny2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.9.0.8-1\n\n\nWe recommend that you upgrade your xulrunner package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1756-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1756"
 		}
 	]
 }

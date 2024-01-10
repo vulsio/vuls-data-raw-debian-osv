@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1345-1",
-	"modified": "2023-10-16T00:10:21.502823Z",
+	"modified": "2024-01-09T20:15:52.203786Z",
 	"published": "2007-08-04T00:00:00Z",
 	"related": [
 		"CVE-2007-3844",
@@ -9,7 +9,6 @@
 		"CVE-2007-4041"
 	],
 	"summary": "xulrunner",
-	"details": "\nSeveral remote vulnerabilities have been discovered in Xulrunner, a\nruntime environment for XUL applications. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2007-3844](https://security-tracker.debian.org/tracker/CVE-2007-3844)\nmoz\\_bug\\_r\\_a4 discovered that a regression in the handling of\n about:blank windows used by addons may lead to an attacker being\n able to modify the content of web sites.\n* [CVE-2007-3845](https://security-tracker.debian.org/tracker/CVE-2007-3845)\nJesper Johansson discovered that missing sanitising of double-quotes\n and spaces in URIs passed to external programs may allow an attacker\n to pass arbitrary arguments to the helper program if the user is\n tricked into opening a malformed web page.\n\n\nThe oldstable distribution (sarge) doesn't include xulrunner.\n\n\nFor the stable distribution (etch) these problems have been fixed in version\n1.8.0.13~pre070720-0etch3.\n\n\nFor the unstable distribution (sid) these problems have been fixed in version\n1.8.1.6-1.\n\n\nWe recommend that you upgrade your xulrunner packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1345-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2007/dsa-1345"
 		}
 	]
 }

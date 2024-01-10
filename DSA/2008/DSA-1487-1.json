@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1487-1",
-	"modified": "2023-10-16T00:06:35.570855Z",
+	"modified": "2024-01-09T20:22:20.941138Z",
 	"published": "2008-02-08T00:00:00Z",
 	"related": [
 		"CVE-2007-2645",
@@ -9,7 +9,6 @@
 		"CVE-2007-6352"
 	],
 	"summary": "libexif - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the EXIF parsing code\nof the libexif library, which can lead to denial of service or the \nexecution of arbitrary code if a user is tricked into opening a\nmalformed image. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\n* [CVE-2007-2645](https://security-tracker.debian.org/tracker/CVE-2007-2645)\nVictor Stinner discovered an integer overflow, which may result in\n denial of service or potentially the execution of arbitrary code.\n* [CVE-2007-6351](https://security-tracker.debian.org/tracker/CVE-2007-6351)\nMeder Kydyraliev discovered an infinite loop, which may result in\n denial of service.\n* [CVE-2007-6352](https://security-tracker.debian.org/tracker/CVE-2007-6352)\nVictor Stinner discovered an integer overflow, which may result\n in denial of service or potentially the execution of arbitrary\n code.\n\n\nThis update also fixes two potential NULL pointer deferences.\n\n\nFor the old stable distribution (sarge), these problems have been\nfixed in 0.6.9-6sarge2.\n\n\nFor the stable distribution (etch), these problems have been fixed in\nversion 0.6.13-5etch2.\n\n\nWe recommend that you upgrade your libexif packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1487-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1487"
 		}
 	]
 }

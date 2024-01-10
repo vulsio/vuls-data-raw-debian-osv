@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2184-1",
-	"modified": "2023-10-16T00:11:01.959587Z",
+	"modified": "2024-01-09T20:25:39.380651Z",
 	"published": "2011-03-05T00:00:00Z",
 	"related": [
 		"CVE-2011-0413"
 	],
 	"summary": "isc-dhcp - denial of service",
-	"details": "\nIt was discovered that the ISC DHCPv6 server does not correctly\nprocess requests which come from unexpected source addresses, leading\nto an assertion failure and a daemon crash.\n\n\nThe oldstable distribution (lenny) is not affected by this problem.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 4.1.1-P1-15+squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), this problem has been fixed in version 4.1.1-P1-16.\n\n\nWe recommend that you upgrade your isc-dhcp packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2184-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2184"
 		}
 	]
 }

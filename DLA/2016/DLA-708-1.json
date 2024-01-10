@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-708-1",
-	"modified": "2023-06-28T06:32:31.631381Z",
+	"modified": "2024-01-09T20:33:54.720523Z",
 	"published": "2016-11-16T00:00:00Z",
 	"related": [
 		"CVE-2016-5584",
 		"CVE-2016-7440"
 	],
 	"summary": "mysql-5.5 - security update",
-	"details": "\nSeveral issues have been discovered in the MySQL database server. The\nvulnerabilities are addressed by upgrading MySQL to the new upstream\nversion 5.5.53, which includes additional changes, such as performance\nimprovements, bug fixes, new features, and possibly incompatible\nchanges. Please see the MySQL 5.5 Release Notes and Oracle's Critical\nPatch Update advisory for further details:\n\n\n* <https://dev.mysql.com/doc/relnotes/mysql/5.5/en/news-5-5-53.html>\n* <http://www.oracle.com/technetwork/security-advisory/cpuoct2016-2881722.html>\n\n\nAlso note that packaging will now create /var/lib/mysql-files, as\nserver will now by default restrict all import/export operations to\nthis directory.This can be changed using the secure-file-priv\nconfiguration option.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.5.53-0+deb7u1.\n\n\nWe recommend that you upgrade your mysql-5.5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-708-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-708"
 		}
 	]
 }

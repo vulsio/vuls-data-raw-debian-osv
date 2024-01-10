@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2646-1",
-	"modified": "2023-10-16T00:11:23.053090Z",
+	"modified": "2024-01-09T20:27:51.573323Z",
 	"published": "2013-03-15T00:00:00Z",
 	"related": [
 		"CVE-2013-1842",
 		"CVE-2013-1843"
 	],
 	"summary": "typo3-src - several",
-	"details": "\nTYPO3, a PHP-based content management system, was found vulnerable to several vulnerabilities.\n\n\n* [CVE-2013-1842](https://security-tracker.debian.org/tracker/CVE-2013-1842)\nHelmut Hummel and Markus Opahle discovered that the Extbase database layer\n was not correctly sanitizing user input when using the Query object model.\n This can lead to SQL injection by a malicious user inputing crafted\n relation values.\n* [CVE-2013-1843](https://security-tracker.debian.org/tracker/CVE-2013-1843)\nMissing user input validation in the access tracking mechanism could lead\n to arbitrary URL redirection.\n\n\n\n Note: the fix will break already published links. Upstream advisory\n [TYPO3-CORE-SA-2013-001](http://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2013-001/)\n has more information on how to mitigate that.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 4.3.9+dfsg1-1+squeeze8.\n\n\nFor the testing distribution (wheezy), these problems have been fixed in\nversion 4.5.19+dfsg1-5.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 4.5.19+dfsg1-5.\n\n\nWe recommend that you upgrade your typo3-src packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2646-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2646"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2183-1",
-	"modified": "2023-10-16T00:11:02.154181Z",
+	"modified": "2024-01-09T20:25:39.614958Z",
 	"published": "2011-03-04T00:00:00Z",
 	"related": [
 		"CVE-2011-0530"
 	],
 	"summary": "nbd - arbitrary code execution",
-	"details": "\nIt was discovered a regression of a buffer overflow ([CVE-2005-3534](https://security-tracker.debian.org/tracker/CVE-2005-3534)) in NBD, \nthe Network Block Device server, that could allow arbitrary code execution\non the NBD server via a large request.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1:2.9.11-3lenny1.\n\n\nThe stable distribution (squeeze), the testing distribution (wheezy),\nand the unstable distribution (sid) are not affected. This problem was\nfixed prior the release of squeeze in version 1:2.9.16-8.\n\n\nWe recommend that you upgrade your nbd packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2183-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2183"
 		}
 	]
 }

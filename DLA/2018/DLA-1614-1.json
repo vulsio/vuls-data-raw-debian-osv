@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1614-1",
-	"modified": "2023-06-28T06:29:41.423969Z",
+	"modified": "2024-01-09T20:31:28.908449Z",
 	"published": "2018-12-22T00:00:00Z",
 	"related": [
 		"CVE-2018-14423",
 		"CVE-2018-6616"
 	],
 	"summary": "openjpeg2 - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in openjpeg2, the\nopen-source JPEG 2000 codec.\n\n\n* [CVE-2018-6616](https://security-tracker.debian.org/tracker/CVE-2018-6616)\nExcessive iteration in the opj\\_t1\\_encode\\_cblks function (openjp2/t1.c).\n Remote attackers could leverage this vulnerability to cause a denial\n of service via a crafted bmp file.\n* [CVE-2018-14423](https://security-tracker.debian.org/tracker/CVE-2018-14423)\nDivision-by-zero vulnerabilities in the functions pi\\_next\\_pcrl,\n pi\\_next\\_cprl, and pi\\_next\\_rpcl in (lib/openjp3d/pi.c). Remote attackers\n could leverage this vulnerability to cause a denial of service\n (application crash).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.1.0-2+deb8u6.\n\n\nWe recommend that you upgrade your openjpeg2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1614-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1614"
 		}
 	]
 }

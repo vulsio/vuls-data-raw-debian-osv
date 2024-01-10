@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3397-1",
-	"modified": "2023-10-16T00:11:58.514974Z",
+	"modified": "2024-01-09T20:28:12.001791Z",
 	"published": "2015-11-10T00:00:00Z",
 	"related": [
 		"CVE-2015-4141",
@@ -17,7 +17,6 @@
 		"CVE-2015-8041"
 	],
 	"summary": "wpa - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in wpa\\_supplicant and\nhostapd. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2015-4141](https://security-tracker.debian.org/tracker/CVE-2015-4141)\nKostya Kortchinsky of the Google Security Team discovered a\n vulnerability in the WPS UPnP function with HTTP chunked transfer\n encoding which may result in a denial of service.\n* [CVE-2015-4142](https://security-tracker.debian.org/tracker/CVE-2015-4142)\nKostya Kortchinsky of the Google Security Team discovered a\n vulnerability in the WMM Action frame processing which may result in\n a denial of service.\n* [CVE-2015-4143](https://security-tracker.debian.org/tracker/CVE-2015-4143)\n[CVE-2015-4144](https://security-tracker.debian.org/tracker/CVE-2015-4144)\n[CVE-2015-4145](https://security-tracker.debian.org/tracker/CVE-2015-4145)\n[CVE-2015-4146](https://security-tracker.debian.org/tracker/CVE-2015-4146)\nKostya Kortchinsky of the Google Security Team discovered that\n EAP-pwd payload is not properly validated which may result in a\n denial of service.\n* [CVE-2015-5310](https://security-tracker.debian.org/tracker/CVE-2015-5310)\nJouni Malinen discovered a flaw in the WMM Sleep Mode Response frame\n processing. A remote attacker can take advantage of this flaw to\n mount a denial of service.\n* [CVE-2015-5314](https://security-tracker.debian.org/tracker/CVE-2015-5314)\n[CVE-2015-5315](https://security-tracker.debian.org/tracker/CVE-2015-5315)\nJouni Malinen discovered a flaw in the handling of EAP-pwd messages\n which may result in a denial of service.\n* [CVE-2015-5316](https://security-tracker.debian.org/tracker/CVE-2015-5316)\nJouni Malinen discovered a flaw in the handling of EAP-pwd Confirm\n messages which may result in a denial of service.\n* [CVE-2015-8041](https://security-tracker.debian.org/tracker/CVE-2015-8041)\nIncomplete WPS and P2P NFC NDEF record payload length validation may\n result in a denial of service.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.0-3+deb7u3. The oldstable distribution (wheezy) is only\naffected by \n[CVE-2015-4141](https://security-tracker.debian.org/tracker/CVE-2015-4141),\n[CVE-2015-4142](https://security-tracker.debian.org/tracker/CVE-2015-4142),\n[CVE-2015-4143](https://security-tracker.debian.org/tracker/CVE-2015-4143) and\n[CVE-2015-8041](https://security-tracker.debian.org/tracker/CVE-2015-8041).\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 2.3-1+deb8u3.\n\n\nWe recommend that you upgrade your wpa packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -74,12 +73,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3397-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3397"
 		}
 	]
 }

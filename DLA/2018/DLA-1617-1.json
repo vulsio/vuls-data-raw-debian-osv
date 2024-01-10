@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1617-1",
-	"modified": "2023-06-28T06:26:24.427503Z",
-	"published": "2018-12-27T00:00:00Z",
+	"modified": "2024-01-09T20:31:28.969518Z",
+	"published": "2018-12-25T00:00:00Z",
 	"related": [
 		"CVE-2018-15127",
 		"CVE-2018-20019",
@@ -15,7 +15,6 @@
 		"CVE-2018-6307"
 	],
 	"summary": "libvncserver - security update",
-	"details": "\nKaspersky Lab discovered several vulnerabilities in libvncserver, a C\nlibrary to implement VNC server/client functionalities.\n\n\n* [CVE-2018-6307](https://security-tracker.debian.org/tracker/CVE-2018-6307)\na heap use-after-free vulnerability in the server code of the file\n transfer extension, which can result in remote code execution. This\n attack appears to be exploitable via network connectivity.\n* [CVE-2018-15127](https://security-tracker.debian.org/tracker/CVE-2018-15127)\ncontains a heap out-of-bound write vulnerability in the server code\n of the file transfer extension, which can result in remote code\n execution. This attack appears to be exploitable via network\n connectivity.\n* [CVE-2018-20019](https://security-tracker.debian.org/tracker/CVE-2018-20019)\nmultiple heap out-of-bound write vulnerabilities in VNC client code,\n which can result in remote code execution.\n* [CVE-2018-20020](https://security-tracker.debian.org/tracker/CVE-2018-20020)\nheap out-of-bound write vulnerability in a structure in VNC client\n code, which can result in remote code execution.\n* [CVE-2018-20021](https://security-tracker.debian.org/tracker/CVE-2018-20021)\nCWE-835: Infinite Loop vulnerability in VNC client code. The\n vulnerability could allow an attacker to consume an excessive amount\n of resources, such as CPU and RAM.\n* [CVE-2018-20022](https://security-tracker.debian.org/tracker/CVE-2018-20022)\nCWE-665: Improper Initialization weaknesses in VNC client code,\n which could allow an attacker to read stack memory and can be abused\n for information disclosure. Combined with another vulnerability, it\n can be used to leak stack memory layout and bypass ASLR.\n* [CVE-2018-20023](https://security-tracker.debian.org/tracker/CVE-2018-20023)\nImproper Initialization vulnerability in VNC Repeater client code,\n which could allow an attacker to read stack memory and can be abused\n for information disclosure. Combined with another vulnerability, it\n can be used to leak stack memory layout and bypass ASLR.\n* [CVE-2018-20024](https://security-tracker.debian.org/tracker/CVE-2018-20024)\na null pointer dereference in VNC client code, which can result in\n DoS.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.9.9+dfsg2-6.1+deb8u4.\n\n\nWe recommend that you upgrade your libvncserver packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -45,12 +44,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1617-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1617"
 		}
 	]
 }

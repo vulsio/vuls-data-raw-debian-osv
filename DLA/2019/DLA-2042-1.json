@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2042-1",
-	"modified": "2023-06-28T06:21:09.438849Z",
+	"modified": "2024-01-09T20:31:57.858737Z",
 	"published": "2019-12-18T00:00:00Z",
 	"related": [
 		"CVE-2019-19844"
 	],
 	"summary": "python-django - security update",
-	"details": "\nIt was discovered that there was a potential account hijack\nvulnerabilility in Django, the Python-based web development\nframework.\n\n\nDjango's password-reset form used a case-insensitive query to\nretrieve accounts matching the email address requesting the password\nreset. Because this typically involves explicit or implicit case\ntransformations, an attacker who knew the email address associated\nwith a user account could craft an email address which is distinct\nfrom the address associated with that account, but which -- due to\nthe behavior of Unicode case transformations -- ceases to be distinct\nafter case transformation, or which will otherwise compare equal\ngiven database case-transformation or collation behavior. In such a\nsituation, the attacker can receive a valid password-reset token for\nthe user account.\n\n\nTo resolve this, two changes were made in Django:\n\n\n* After retrieving a list of potentially-matching accounts from the database,\n Django's password reset functionality now also checks the email address for\n equivalence in Python, using the recommended identifier-comparison process from\n Unicode Technical Report 36, section 2.11.2(B)(2).\n* When generating password-reset emails, Django now sends to the email\n address retrieved from the database, rather than the email address submitted in\n the password-reset request form.\n\n\nFor more information, please see:\n<https://www.djangoproject.com/weblog/2019/dec/18/security-releases/>.\n\n\n* [CVE-2019-19844](https://security-tracker.debian.org/tracker/CVE-2019-19844)\nPotential account hijack via password reset form\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.7.11-1+deb8u8.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2042-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-2042"
 		}
 	]
 }

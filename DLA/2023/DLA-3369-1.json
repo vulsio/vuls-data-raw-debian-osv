@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3369-1",
-	"modified": "2023-06-28T06:37:31.180941Z",
+	"modified": "2024-01-09T20:33:35.920140Z",
 	"published": "2023-03-27T00:00:00Z",
 	"related": [
 		"CVE-2019-16884",
@@ -12,7 +12,6 @@
 		"CVE-2023-28642"
 	],
 	"summary": "runc - security update",
-	"details": "\nMultiple vulnerabilities were discovered in runc, the Open Container\nProject runtime, which is often used with virtualization environments\nsuch as Docker. Malicious Docker images or OCI bundles could breach\nisolation.\n\n\n* [CVE-2019-16884](https://security-tracker.debian.org/tracker/CVE-2019-16884)\nrunc, as used in Docker and other products, allows AppArmor and\n SELinux restriction bypass because libcontainer/rootfs\\_linux.go\n incorrectly checks mount targets, and thus a malicious Docker\n image can mount over a /proc directory.\n* [CVE-2019-19921](https://security-tracker.debian.org/tracker/CVE-2019-19921)\nrunc has Incorrect Access Control leading to Escalation of\n Privileges, related to libcontainer/rootfs\\_linux.go. To exploit\n this, an attacker must be able to spawn two containers with custom\n volume-mount configurations, and be able to run custom\n images. (This vulnerability does not affect Docker due to an\n implementation detail that happens to block the attack.)\n* [CVE-2021-30465](https://security-tracker.debian.org/tracker/CVE-2021-30465)\nrunc allows a Container Filesystem Breakout via Directory\n Traversal. To exploit the vulnerability, an attacker must be able\n to create multiple containers with a fairly specific mount\n configuration. The problem occurs via a symlink-exchange attack\n that relies on a race condition.\n* [CVE-2022-29162](https://security-tracker.debian.org/tracker/CVE-2022-29162)\n`runc exec --cap` created processes with non-empty inheritable\n Linux process capabilities, creating an atypical Linux environment\n and enabling programs with inheritable file capabilities to\n elevate those capabilities to the permitted set during\n execve(2). This bug did not affect the container security sandbox\n as the inheritable set never contained more capabilities than were\n included in the container's bounding set.\n* [CVE-2023-27561](https://security-tracker.debian.org/tracker/CVE-2023-27561)\n[CVE-2019-19921](https://security-tracker.debian.org/tracker/CVE-2019-19921) was re-introduced by the fix for [CVE-2021-30465](https://security-tracker.debian.org/tracker/CVE-2021-30465).\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.0.0~rc6+dfsg1-3+deb10u2.\n\n\nWe recommend that you upgrade your runc packages.\n\n\nFor the detailed security status of runc please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/runc>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3369-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3369"
 		}
 	]
 }

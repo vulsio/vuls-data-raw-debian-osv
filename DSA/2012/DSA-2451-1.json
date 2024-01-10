@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2451-1",
-	"modified": "2023-10-16T00:11:15.425907Z",
+	"modified": "2024-01-09T20:21:24.640429Z",
 	"published": "2012-04-13T00:00:00Z",
 	"related": [
 		"CVE-2012-1906",
@@ -10,7 +10,6 @@
 		"CVE-2012-1988"
 	],
 	"summary": "puppet - several",
-	"details": "\nSeveral vulnerabilities have been discovered in Puppet, a centralized\nconfiguration management system. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2012-1906](https://security-tracker.debian.org/tracker/CVE-2012-1906)\nPuppet is using predictable temporary file names when downloading\n Mac OS X package files. This allows a local attacker to either\n overwrite arbitrary files on the system or to install an arbitrary\n package.\n* [CVE-2012-1986](https://security-tracker.debian.org/tracker/CVE-2012-1986)\nWhen handling requests for a file from a remote filebucket, Puppet\n can be tricked into overwriting its defined location for filebucket\n storage. This allows an authorized attacker with access to the Puppet\n master to read arbitrary files.\n* [CVE-2012-1987](https://security-tracker.debian.org/tracker/CVE-2012-1987)\nPuppet is incorrectly handling filebucket store requests. This allows\n an attacker to perform denial of service attacks against Puppet by\n resource exhaustion.\n* [CVE-2012-1988](https://security-tracker.debian.org/tracker/CVE-2012-1988)\nPuppet is incorrectly handling filebucket requests. This allows an\n attacker with access to the certificate on the agent and an unprivileged\n account on Puppet master to execute arbitrary code via crafted file\n path names and making a filebucket request.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.6.2-5+squeeze5.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 2.7.13-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.7.13-1.\n\n\nWe recommend that you upgrade your puppet packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2451-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2451"
 		}
 	]
 }

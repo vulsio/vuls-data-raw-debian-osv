@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1241-1",
-	"modified": "2023-06-28T06:20:31.339096Z",
+	"modified": "2024-01-09T20:30:53.432160Z",
 	"published": "2018-01-14T00:00:00Z",
 	"related": [
 		"CVE-2016-10510"
 	],
 	"summary": "libkohana2-php - security update",
-	"details": "\nDavid Sopas discovered that Kohana, a PHP framework, was vulnerable to\na Cross-site scripting (XSS) attack that allowed remote attackers to\ninject arbitrary web script or HTML by bypassing the strip\\_image\\_tags\nprotection mechanism in system/classes/Kohana/Security.php. This issue\nwas resolved by permanently removing the strip\\_image\\_tags function.\nUsers are advised to sanitize user input by using external libraries\ninstead.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.3.4-2+deb7u1.\n\n\nWe recommend that you upgrade your libkohana2-php packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1241-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1241"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2634-1",
-	"modified": "2023-10-16T00:11:22.433301Z",
+	"modified": "2024-01-09T20:27:50.470529Z",
 	"published": "2013-02-27T00:00:00Z",
 	"related": [
 		"CVE-2012-4520",
@@ -10,7 +10,6 @@
 		"CVE-2013-1665"
 	],
 	"summary": "python-django - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in Django, a high-level\nPython web development framework. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2012-4520](https://security-tracker.debian.org/tracker/CVE-2012-4520)\nJames Kettle discovered that Django did not properly filter the HTTP\n Host header when processing certain requests. An attacker could exploit\n this to generate and cause parts of Django, particularly the\n password-reset mechanism, to display arbitrary URLs to users.\n* [CVE-2013-0305](https://security-tracker.debian.org/tracker/CVE-2013-0305)\nOrange Tsai discovered that the bundled administrative interface\n of Django could expose supposedly-hidden information via its history\n log.\n* [CVE-2013-0306](https://security-tracker.debian.org/tracker/CVE-2013-0306)\nMozilla discovered that an attacker can abuse Django's tracking of\n the number of forms in a formset to cause a denial-of-service attack\n due to extreme memory consumption.\n* [CVE-2013-1665](https://security-tracker.debian.org/tracker/CVE-2013-1665)\nMichael Koziarski discovered that Django's XML deserialization is\n vulnerable to entity-expansion and external-entity/DTD attacks.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 1.2.3-3+squeeze5.\n\n\nFor the testing distribution (wheezy), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.4.4-1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2634-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2634"
 		}
 	]
 }

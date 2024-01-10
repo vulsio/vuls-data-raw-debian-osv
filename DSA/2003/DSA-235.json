@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-235",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-01-22T00:00:00Z",
 	"published": "2003-01-22T00:00:00Z",
 	"related": [
 		"CVE-2002-1393"
 	],
 	"summary": "kdegraphics - several vulnerabilities",
-	"details": "\nThe KDE team [\\\ndiscovered](http://www.kde.org/info/security/advisory-20021220-1.txt) several vulnerabilities in the K Desktop\nEnvironment. In some instances KDE fails to properly quote parameters\nof instructions passed to a command shell for execution. These\nparameters may incorporate data such as URLs, filenames and e-mail\naddresses, and this data may be provided remotely to a victim in an\ne-mail, a webpage or files on a network filesystem or other untrusted\nsource.\n\n\nBy carefully crafting such data an attacker might be able to execute\narbitrary commands on a vulnerable system using the victim's account and\nprivileges. The KDE Project is not aware of any existing exploits of\nthese vulnerabilities. The patches also provide better safe guards\nand check data from untrusted sources more strictly in multiple\nplaces.\n\n\nFor the current stable distribution (woody), these problems have been fixed\nin version 2.2.2-6.10.\n\n\nThe old stable distribution (potato) does not contain KDE packages.\n\n\nFor the unstable distribution (sid), these problems will most probably\nnot be fixed but new packages for KDE 3.1 for sid are expected for\nthis year.\n\n\nWe recommend that you upgrade your KDE packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-235.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-235"
 		}
 	]
 }

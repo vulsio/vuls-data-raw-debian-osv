@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2110-1",
-	"modified": "2023-06-28T06:25:38.170468Z",
+	"modified": "2024-01-09T20:34:48.667138Z",
 	"published": "2020-02-19T00:00:00Z",
 	"related": [
 		"CVE-2014-0193",
@@ -12,7 +12,6 @@
 		"CVE-2020-7238"
 	],
 	"summary": "netty-3.9 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Netty, a Java NIO\nclient/server socket framework:\n\n\n* [CVE-2014-0193](https://security-tracker.debian.org/tracker/CVE-2014-0193)\nWebSocket08FrameDecoder allows remote attackers to cause a denial\n of service (memory consumption) via a TextWebSocketFrame followed\n by a long stream of ContinuationWebSocketFrames.\n* [CVE-2014-3488](https://security-tracker.debian.org/tracker/CVE-2014-3488)\nThe SslHandler allows remote attackers to cause a denial of\n service (infinite loop and CPU consumption) via a crafted\n SSLv2Hello message.\n* [CVE-2019-16869](https://security-tracker.debian.org/tracker/CVE-2019-16869)\nNetty mishandles whitespace before the colon in HTTP headers (such\n as a \"Transfer-Encoding : chunked\" line), which leads to HTTP\n request smuggling.\n* [CVE-2019-20444](https://security-tracker.debian.org/tracker/CVE-2019-20444)\nHttpObjectDecoder.java allows an HTTP header that lacks a colon,\n which might be interpreted as a separate header with an incorrect\n syntax, or might be interpreted as an \"invalid fold.\"\n* [CVE-2019-20445](https://security-tracker.debian.org/tracker/CVE-2019-20445)\nHttpObjectDecoder.java allows a Content-Length header to be\n accompanied by a second Content-Length header, or by a\n Transfer-Encoding header.\n* [CVE-2020-7238](https://security-tracker.debian.org/tracker/CVE-2020-7238)\nNetty allows HTTP Request Smuggling because it mishandles\n Transfer-Encoding whitespace (such as a\n [space]Transfer-Encoding:chunked line) and a later Content-Length\n header.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.9.0.Final-1+deb8u1.\n\n\nWe recommend that you upgrade your netty-3.9 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2110-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2110"
 		}
 	]
 }

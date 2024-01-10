@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1792-1",
-	"modified": "2023-10-16T00:10:38.470965Z",
+	"modified": "2024-01-09T20:27:33.778405Z",
 	"published": "2009-05-06T00:00:00Z",
 	"related": [
 		"CVE-2009-1575",
 		"CVE-2009-1576"
 	],
 	"summary": "drupal6 - multiple vulnerabilities",
-	"details": "\nMultiple vulnerabilities have been discovered in drupal, a web content\nmanagement system. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2009-1575](https://security-tracker.debian.org/tracker/CVE-2009-1575)\npod.Edge discovered a cross-site scripting vulnerability due that can be\n triggered when some browsers interpret UTF-8 strings as UTF-7 if they\n appear before the generated HTML document defines its Content-Type.\n This allows a malicious user to execute arbitrary javascript in the\n context of the web site if they're allowed to post content.\n* [CVE-2009-1576](https://security-tracker.debian.org/tracker/CVE-2009-1576)\nMoritz Naumann discovered an information disclosure vulnerability. If\n a user is tricked into visiting the site via a specially crafted URL\n and then submits a form (such as the search box) from that page, the\n information in their form submission may be directed to a third-party\n site determined by the URL and thus disclosed to the third party. The\n third party site may then execute a cross-site request forgery attack\n against the submitted form.\n\n\nThe old stable distribution (etch) does not contain drupal and is not\naffected.\n\n\nFor the stable distribution (lenny), these problems have been fixed in version\n6.6-3lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 6.11-1\n\n\nWe recommend that you upgrade your drupal6 package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1792-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1792"
 		}
 	]
 }

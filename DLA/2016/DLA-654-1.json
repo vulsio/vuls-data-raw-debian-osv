@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-654-1",
-	"modified": "2023-06-28T06:27:05.291863Z",
+	"modified": "2024-01-09T20:33:52.466515Z",
 	"published": "2016-10-14T00:00:00Z",
 	"related": [
 		"CVE-2016-7944"
 	],
 	"summary": "libxfixes - security update",
-	"details": "\nIt was discovered that there was a integer overflow in libxfixes, a library\nproviding a client interface to the X11 XFIXES extension.\n\n\nThe 32 bit field rep.length was not checked for validity, which allowed an\ninteger overflow on 32 bit systems. A malicious server could send INT\\_MAX as\nlength which was then multiplied by the size of XRectangle. In this case the\nclient would not read the whole data from server, getting out of sync.\n\n\nFor Debian 7 Wheezy, this issue has been fixed in libxfixes version\n1:5.0-4+deb7u2.\n\n\nWe recommend that you upgrade your libxfixes packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-654-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-654"
 		}
 	]
 }

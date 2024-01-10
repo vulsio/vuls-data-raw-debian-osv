@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-171",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-10-07T00:00:00Z",
 	"published": "2002-10-07T00:00:00Z",
 	"related": [
 		"CVE-2002-1174",
 		"CVE-2002-1175"
 	],
 	"summary": "fetchmail - buffer overflows",
-	"details": "\nStefan Esser [\\\ndiscovered](http://security.e-matters.de/advisories/032002.html) several buffer overflows and a broken boundary\ncheck within fetchmail. If fetchmail is running in multidrop mode\nthese flaws can be used by remote attackers to crash it or to execute\narbitrary code under the user id of the user running fetchmail.\nDepending on the configuration this even allows a remote root\ncompromise.\n\n\nThese problems have been fixed in version 5.9.11-6.1 for both\nfetchmail and fetchmail-ssl for the current stable distribution\n(woody), in version 5.3.3-4.2 for fetchmail for the old stable\ndistribution (potato) and in version 6.1.0-1 for both fetchmail and\nfetchmail-ssl for the unstable distribution (sid). There are no\nfetchmail-ssl packages for the old stable distribution (potato) and\nthus no updates.\n\n\nWe recommend that you upgrade your fetchmail packages immediately.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-171.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-171"
 		}
 	]
 }

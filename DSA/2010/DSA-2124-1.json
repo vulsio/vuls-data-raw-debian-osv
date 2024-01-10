@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2124-1",
-	"modified": "2023-10-16T00:05:46.456704Z",
+	"modified": "2024-01-09T20:21:12.713429Z",
 	"published": "2010-11-01T00:00:00Z",
 	"related": [
 		"CVE-2010-0654",
@@ -16,7 +16,6 @@
 		"CVE-2010-3765"
 	],
 	"summary": "xulrunner - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in Xulrunner, the\ncomponent that provides the core functionality of Iceweasel, Debian's\nvariant of Mozilla's browser technology.\n\n\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2010-3765](https://security-tracker.debian.org/tracker/CVE-2010-3765)\nXulrunner allows remote attackers to execute arbitrary code\n via vectors related to nsCSSFrameConstructor::ContentAppended,\n the appendChild method, incorrect index tracking, and the\n creation of multiple frames, which triggers memory corruption.\n* [CVE-2010-3174](https://security-tracker.debian.org/tracker/CVE-2010-3174)\n[CVE-2010-3176](https://security-tracker.debian.org/tracker/CVE-2010-3176)\nMultiple unspecified vulnerabilities in the browser engine in\n Xulrunner allow remote attackers to cause a denial of service\n (memory corruption and application crash) or possibly execute\n arbitrary code via unknown vectors.\n* [CVE-2010-3177](https://security-tracker.debian.org/tracker/CVE-2010-3177)\nMultiple cross-site scripting (XSS) vulnerabilities in the\n Gopher parser in Xulrunner allow remote attackers to inject\n arbitrary web script or HTML via a crafted name of a (1) file\n or (2) directory on a Gopher server.\n* [CVE-2010-3178](https://security-tracker.debian.org/tracker/CVE-2010-3178)\nXulrunner does not properly handle certain modal calls made by\n javascript: URLs in circumstances related to opening a new\n window and performing cross-domain navigation, which allows\n remote attackers to bypass the Same Origin Policy via a\n crafted HTML document.\n* [CVE-2010-3179](https://security-tracker.debian.org/tracker/CVE-2010-3179)\nStack-based buffer overflow in the text-rendering\n functionality in Xulrunner allows remote attackers to execute\n arbitrary code or cause a denial of service (memory corruption\n and application crash) via a long argument to the\n document.write method.\n* [CVE-2010-3180](https://security-tracker.debian.org/tracker/CVE-2010-3180)\nUse-after-free vulnerability in the nsBarProp function in\n Xulrunner allows remote attackers to execute arbitrary code by\n accessing the locationbar property of a closed window.\n* [CVE-2010-3183](https://security-tracker.debian.org/tracker/CVE-2010-3183)\nThe LookupGetterOrSetter function in Xulrunner does not\n properly support window.\\_\\_lookupGetter\\_\\_ function calls that\n lack arguments, which allows remote attackers to execute\n arbitrary code or cause a denial of service (incorrect pointer\n dereference and application crash) via a crafted HTML\n document.\n\n\nIn addition, this security update includes corrections for regressions\ncaused by the fixes for [CVE-2010-0654](https://security-tracker.debian.org/tracker/CVE-2010-0654) and [CVE-2010-2769](https://security-tracker.debian.org/tracker/CVE-2010-2769) in DSA-2075-1\nand DSA-2106-1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.9.0.19-6.\n\n\nFor the unstable distribution (sid) and the upcoming stable\ndistribution (squeeze), these problems have been fixed in version\n3.5.15-1 of the iceweasel package.\n\n\nWe recommend that you upgrade your Xulrunner packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2124-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2124"
 		}
 	]
 }

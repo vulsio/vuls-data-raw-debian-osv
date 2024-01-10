@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2770-1",
-	"modified": "2023-10-16T00:11:30.741749Z",
+	"modified": "2024-01-09T20:21:28.010719Z",
 	"published": "2013-10-09T00:00:00Z",
 	"related": [
 		"CVE-2013-4319"
 	],
 	"summary": "torque - authentication bypass",
-	"details": "\nJohn Fitzpatrick of MWR InfoSecurity discovered an authentication bypass\nvulnerability in torque, a PBS-derived batch processing queueing system.\n\n\nThe torque authentication model revolves around the use of privileged\nports. If a request is not made from a privileged port then it is\nassumed not to be trusted or authenticated. It was found that pbs\\_mom\ndoes not perform a check to ensure that connections are established\nfrom a privileged port.\n\n\nA user who can run jobs or login to a node running pbs\\_server or pbs\\_mom\ncan exploit this vulnerability to remotely execute code as root on the\ncluster by submitting a command directly to a pbs\\_mom daemon\nto queue and run a job.\n\n\nFor the oldstable distribution (squeeze), this problem has been fixed in\nversion 2.4.8+dfsg-9squeeze2.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.4.16+dfsg-1+deb7u1.\n\n\nFor the unstable distribution (sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your torque packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2770-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2770"
 		}
 	]
 }

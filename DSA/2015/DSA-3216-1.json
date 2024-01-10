@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3216-1",
-	"modified": "2023-10-16T00:11:50.528082Z",
+	"modified": "2024-01-09T20:28:05.120718Z",
 	"published": "2015-04-06T00:00:00Z",
 	"related": [
 		"CVE-2015-2928",
 		"CVE-2015-2929"
 	],
 	"summary": "tor - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in Tor, a connection-based\nlow-latency anonymous communication system:\n\n\n* [CVE-2015-2928](https://security-tracker.debian.org/tracker/CVE-2015-2928)\ndisgleirio discovered that a malicious client could trigger an\n assertion failure in a Tor instance providing a hidden service,\n thus rendering the service inaccessible.\n* [CVE-2015-2929](https://security-tracker.debian.org/tracker/CVE-2015-2929)\nDonnchaC discovered that Tor clients would crash with an\n assertion failure upon parsing specially crafted hidden service\n descriptors.\n\n\nIntroduction points would accept multiple INTRODUCE1 cells on one\ncircuit, making it inexpensive for an attacker to overload a hidden\nservice with introductions. Introduction points now no longer allow\nmultiple cells of that type on the same circuit.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 0.2.4.27-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 0.2.5.12-1.\n\n\nFor the experimental distribution, these problems have been\nfixed in version 0.2.6.7-1.\n\n\nWe recommend that you upgrade your tor packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3216-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3216"
 		}
 	]
 }

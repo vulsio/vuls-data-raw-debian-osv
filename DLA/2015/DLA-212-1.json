@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-212-1",
-	"modified": "2023-06-28T06:25:07.860721Z",
+	"modified": "2024-01-09T20:32:01.718316Z",
 	"published": "2015-04-29T00:00:00Z",
 	"related": [
 		"CVE-2014-9705",
@@ -14,7 +14,6 @@
 		"CVE-2015-3330"
 	],
 	"summary": "php5 - security update",
-	"details": "\n* [CVE-2014-9705](https://security-tracker.debian.org/tracker/CVE-2014-9705)\nHeap-based buffer overflow in the enchant\\_broker\\_request\\_dict\n function in ext/enchant/enchant.c in PHP before 5.4.38, 5.5.x\n before 5.5.22, and 5.6.x before 5.6.6 allows remote attackers\n to execute arbitrary code via vectors that trigger creation of\n multiple dictionaries.\n* [CVE-2015-0232](https://security-tracker.debian.org/tracker/CVE-2015-0232)\nThe exif\\_process\\_unicode function in ext/exif/exif.c in PHP\n before 5.4.37, 5.5.x before 5.5.21, and 5.6.x before 5.6.5\n allows remote attackers to execute arbitrary code or cause a\n denial of service (uninitialized pointer free and application\n crash) via crafted EXIF data in a JPEG image.\n* [CVE-2015-2301](https://security-tracker.debian.org/tracker/CVE-2015-2301)\nUse-after-free vulnerability in the phar\\_rename\\_archive function\n in phar\\_object.c in PHP before 5.5.22 and 5.6.x before 5.6.6\n allows remote attackers to cause a denial of service or possibly\n have unspecified other impact via vectors that trigger an attempted\n renaming of a Phar archive to the name of an existing file.\n* [CVE-2015-2331](https://security-tracker.debian.org/tracker/CVE-2015-2331)\nInteger overflow in the \\_zip\\_cdir\\_new function in zip\\_dirent.c\n in libzip 0.11.2 and earlier, as used in the ZIP extension in PHP\n before 5.4.39, 5.5.x before 5.5.23, and 5.6.x before 5.6.7 and\n other products, allows remote attackers to cause a denial of\n service (application crash) or possibly execute arbitrary code\n via a ZIP archive that contains many entries, leading to a\n heap-based buffer overflow.\n* [CVE-2015-2783](https://security-tracker.debian.org/tracker/CVE-2015-2783)\nBuffer Over-read in unserialize when parsing Phar\n* [CVE-2015-2787](https://security-tracker.debian.org/tracker/CVE-2015-2787)\nUse-after-free vulnerability in the process\\_nested\\_data function\n in ext/standard/var\\_unserializer.re in PHP before 5.4.39, 5.5.x\n before 5.5.23, and 5.6.x before 5.6.7 allows remote attackers to\n execute arbitrary code via a crafted unserialize call that\n leverages use of the unset function within an \\_\\_wakeup function,\n a related issue to [CVE-2015-0231](https://security-tracker.debian.org/tracker/CVE-2015-0231).\n* [CVE-2015-3329](https://security-tracker.debian.org/tracker/CVE-2015-3329)\nBuffer Overflow when parsing tar/zip/phar in phar\\_set\\_inode\n* [CVE-2015-3330](https://security-tracker.debian.org/tracker/CVE-2015-3330)\nPHP potential remote code execution with apache 2.4 apache2handler\n\n* CVE-2015-temp-68819\n\n Denial of service when processing a crafted file with Fileinfo\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-212-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-212"
 		}
 	]
 }

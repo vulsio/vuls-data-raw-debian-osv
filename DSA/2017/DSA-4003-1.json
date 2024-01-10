@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4003-1",
-	"modified": "2023-10-16T00:12:33.248316Z",
+	"modified": "2024-01-09T20:28:23.855771Z",
 	"published": "2017-10-19T00:00:00Z",
 	"related": [
 		"CVE-2017-1000256"
 	],
 	"summary": "libvirt - security update",
-	"details": "\nDaniel P. Berrange reported that Libvirt, a virtualisation abstraction\nlibrary, does not properly handle the default\\_tls\\_x509\\_verify (and\nrelated) parameters in qemu.conf when setting up TLS clients and servers\nin QEMU, resulting in TLS clients for character devices and disk devices\nhaving verification turned off and ignoring any errors while validating\nthe server certificate.\n\n\nMore informations in <https://security.libvirt.org/2017/0002.html> .\n\n\nFor the stable distribution (stretch), this problem has been fixed in\nversion 3.0.0-4+deb9u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 3.8.0-3.\n\n\nWe recommend that you upgrade your libvirt packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4003-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-4003"
 		}
 	]
 }

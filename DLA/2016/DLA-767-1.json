@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-767-1",
-	"modified": "2023-06-28T06:43:10.344229Z",
+	"modified": "2024-01-09T20:33:57.846477Z",
 	"published": "2016-12-29T00:00:00Z",
 	"related": [
 		"CVE-2016-9586"
 	],
 	"summary": "curl - security update",
-	"details": "\nIt was discovered that libcurl's implementation of the printf()\nfunctions triggers a buffer overflow when doing a large floating point\noutput. The bug occurs when the conversion outputs more than 255 bytes.\n\n\nThe flaw happens because the floating point conversion is using system\nfunctions without the correct boundary checks.\n\n\nIf there are any application that accepts a format string from the\noutside without necessary input filtering, it could allow remote\nattacks.\n\n\nThis flaw does not exist in the command line tool.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n7.26.0-1+wheezy18.\n\n\nWe recommend that you upgrade your curl packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-767-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-767"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2151-1",
-	"modified": "2023-10-16T00:10:59.610076Z",
+	"modified": "2024-01-09T20:22:42.649185Z",
 	"published": "2011-01-26T00:00:00Z",
 	"related": [
 		"CVE-2010-3450",
@@ -14,7 +14,6 @@
 		"CVE-2010-4643"
 	],
 	"summary": "openoffice.org - several vulnerabilities",
-	"details": "\nSeveral security related problems have been discovered in the\nOpenOffice.org package that allows malformed documents to trick the\nsystem into crashes or even the execution of arbitrary code.\n\n\n* [CVE-2010-3450](https://security-tracker.debian.org/tracker/CVE-2010-3450)\nDuring an internal security audit within Red Hat, a directory\n traversal vulnerability has been discovered in the way\n OpenOffice.org 3.1.1 through 3.2.1 processes XML filter files. If\n a local user is tricked into opening a specially-crafted OOo XML\n filters package file, this problem could allow remote attackers to\n create or overwrite arbitrary files belonging to local user or,\n potentially, execute arbitrary code.\n* [CVE-2010-3451](https://security-tracker.debian.org/tracker/CVE-2010-3451)\nDuring his work as a consultant at Virtual Security Research\n (VSR), Dan Rosenberg discovered a vulnerability in\n OpenOffice.org's RTF parsing functionality. Opening a maliciously\n crafted RTF document can cause an out-of-bounds memory read into\n previously allocated heap memory, which may lead to the execution\n of arbitrary code.\n* [CVE-2010-3452](https://security-tracker.debian.org/tracker/CVE-2010-3452)\nDan Rosenberg discovered a vulnerability in the RTF file parser\n which can be leveraged by attackers to achieve arbitrary code\n execution by convincing a victim to open a maliciously crafted RTF\n file.\n* [CVE-2010-3453](https://security-tracker.debian.org/tracker/CVE-2010-3453)\nAs part of his work with Virtual Security Research, Dan Rosenberg\n discovered a vulnerability in the WW8ListManager::WW8ListManager()\n function of OpenOffice.org that allows a maliciously crafted file\n to cause the execution of arbitrary code.\n* [CVE-2010-3454](https://security-tracker.debian.org/tracker/CVE-2010-3454)\nAs part of his work with Virtual Security Research, Dan Rosenberg\n discovered a vulnerability in the WW8DopTypography::ReadFromMem()\n function in OpenOffice.org that may be exploited by a maliciously\n crafted file which allows an attacker to control program flow\n and potentially execute arbitrary code.\n* [CVE-2010-3689](https://security-tracker.debian.org/tracker/CVE-2010-3689)\nDmitri Gribenko discovered that the soffice script does not treat\n an empty LD\\_LIBRARY\\_PATH variable like an unset one, which may lead to\n the execution of arbitrary code.\n* [CVE-2010-4253](https://security-tracker.debian.org/tracker/CVE-2010-4253)\nA heap based buffer overflow has been discovered with unknown \n impact.\n* [CVE-2010-4643](https://security-tracker.debian.org/tracker/CVE-2010-4643)\nA vulnerability has been discovered in the way OpenOffice.org\n handles TGA graphics which can be tricked by a specially crafted\n TGA file that could cause the program to crash due to a heap-based\n buffer overflow with unknown impact.\n\n\nFor the stable distribution (lenny) these problems have been fixed in\nversion 2.4.1+dfsg-1+lenny11.\n\n\nFor the upcoming stable distribution (squeeze) these problems have\nbeen fixed in version 3.2.1-11+squeeze1.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 3.2.1-11+squeeze1.\n\n\nFor the experimental distribution these problems have been fixed in\nversion 3.3.0~rc3-1.\n\n\nWe recommend that you upgrade your OpenOffice.org packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2151-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2151"
 		}
 	]
 }

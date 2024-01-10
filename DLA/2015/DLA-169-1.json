@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-169-1",
-	"modified": "2023-06-28T06:20:54.658317Z",
+	"modified": "2024-01-09T20:31:37.765093Z",
 	"published": "2015-03-10T00:00:00Z",
 	"related": [
 		"CVE-2012-5784",
 		"CVE-2014-3596"
 	],
 	"summary": "axis - security update",
-	"details": "\nA vulnerability was fixed in axis, a SOAP implementation in Java:\n\n\nThe getCN function in Apache Axis 1.4 and earlier does not properly verify\n that the server hostname matches a domain name in the subject's Common Name\n (CN) or subjectAltName field of the X.509 certificate, which allows\n man-in-the-middle attackers to spoof SSL servers via a certificate with a\n subject that specifies a common name in a field that is not the CN field.\n\n\nThanks to Markus Koschany for providing the fixed package and David Jorm\n and Arun Neelicattu (Red Hat Product Security) for providing the patch.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in axis version 1.4-12+deb6u1\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-169-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-169"
 		}
 	]
 }

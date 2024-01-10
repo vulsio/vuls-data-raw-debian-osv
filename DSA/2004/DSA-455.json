@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-455",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2004-03-03T00:00:00Z",
 	"published": "2004-03-03T00:00:00Z",
 	"related": [
 		"CVE-2004-0110"
 	],
 	"summary": "libxml - buffer overflows",
-	"details": "\nlibxml2 is a library for manipulating XML files.\n\n\nYuuichi Teranishi (寺西 裕一)\ndiscovered a flaw in libxml, the GNOME XML library.\nWhen fetching a remote resource via FTP or HTTP, the library uses\nspecial parsing routines which can overflow a buffer if passed a very\nlong URL. If an attacker is able to find an application using libxml1\nor libxml2 that parses remote resources and allows the attacker to\ncraft the URL, then this flaw could be used to execute arbitrary code.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.8.17-2woody1 of libxml and version 2.4.19-4woody1 of libxml2.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 1.8.17-5 of libxml and version 2.6.6-1 of libxml2.\n\n\nWe recommend that you upgrade your libxml1 and libxml2 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -54,12 +53,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-455.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-455"
 		}
 	]
 }

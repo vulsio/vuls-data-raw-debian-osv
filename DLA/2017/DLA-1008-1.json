@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1008-1",
-	"modified": "2023-06-28T06:19:10.641740Z",
+	"modified": "2024-01-09T20:30:39.128555Z",
 	"published": "2017-06-30T00:00:00Z",
 	"related": [
 		"CVE-2017-7375",
@@ -11,7 +11,6 @@
 		"CVE-2017-9050"
 	],
 	"summary": "libxml2 - security update",
-	"details": "\n* [CVE-2017-7375](https://security-tracker.debian.org/tracker/CVE-2017-7375)\nMissing validation for external entities in xmlParsePEReference\n* [CVE-2017-9047](https://security-tracker.debian.org/tracker/CVE-2017-9047) /\n [CVE-2017-9048](https://security-tracker.debian.org/tracker/CVE-2017-9048)\nA buffer overflow was discovered in libxml2 20904-GITv2.9.4-16-g0741801.\n The function xmlSnprintfElementContent in valid.c is supposed to\n recursively dump the element content definition into a char buffer buf\n of size size. The variable len is assigned strlen(buf).\n If the content->type is XML\\_ELEMENT\\_CONTENT\\_ELEMENT, then (i) the\n content->prefix is appended to buf (if it actually fits) whereupon\n (ii) content->name is written to the buffer. However, the check for\n whether the content->name actually fits also uses len rather than\n the updated buffer length strlen(buf). This allows us to write about\n size many bytes beyond the allocated memory. This vulnerability\n causes programs that use libxml2, such as PHP, to crash.\n* [CVE-2017-9049](https://security-tracker.debian.org/tracker/CVE-2017-9049) /\n [CVE-2017-9050](https://security-tracker.debian.org/tracker/CVE-2017-9050)\nlibxml2 20904-GITv2.9.4-16-g0741801 is vulnerable to a heap-based\n buffer over-read in the xmlDictComputeFastKey function in dict.c.\n This vulnerability causes programs that use libxml2, such as PHP,\n to crash. This vulnerability exists because of an incomplete fix\n for libxml2 Bug 759398.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.8.0+dfsg1-7+wheezy8.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1008-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1008"
 		}
 	]
 }

@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-620-1",
-	"modified": "2023-10-16T00:23:47.652768Z",
+	"modified": "2024-01-09T20:32:35.686719Z",
 	"published": "2004-12-30T00:00:00Z",
 	"related": [
 		"CVE-2004-0452",
 		"CVE-2004-0976"
 	],
 	"summary": "perl - insecure temporary files / directories",
-	"details": "\nSeveral vulnerabilities have been discovered in Perl, the popular\nscripting language. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CAN-2004-0452](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0452)\nJeroen van Wolffelaar discovered that the rmtree() function in the\n File::Path module removes directory trees in an insecure manner\n which could lead to the removal of arbitrary files and directories\n through a symlink attack.\n\n* [CAN-2004-0976](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0976)\nTrustix developers discovered several insecure uses of temporary\n files in many modules which allow a local attacker to overwrite\n files via a symlink attack.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nversion 5.6.1-8.8.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 5.8.4-5.\n\n\nWe recommend that you upgrade your perl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-620-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-620"
 		}
 	]
 }

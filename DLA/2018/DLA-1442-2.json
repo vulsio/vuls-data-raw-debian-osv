@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1442-2",
-	"modified": "2023-06-28T06:29:37.561310Z",
-	"published": "2018-07-24T00:00:00Z",
+	"modified": "2024-01-09T20:31:11.873199Z",
+	"published": "2018-07-27T00:00:00Z",
 	"summary": "mailman - regression update",
-	"details": "\nTwo flaws were discovered in mailman, a web-based mailing list manager.\n\n\n* [CVE-2018-0618](https://security-tracker.debian.org/tracker/CVE-2018-0618)\nToshitsugu Yoneyama of Mitsui Bussan Secure Directions, Inc.\n discovered that mailman is prone to a cross-site scripting flaw\n allowing a malicious listowner to inject scripts into the listinfo\n page, due to not validated input in the host\\_name field.\n* [CVE-2018-13796](https://security-tracker.debian.org/tracker/CVE-2018-13796)\nHammad Qureshi discovered a content spoofing vulnerability with\n invalid list name messages in the web UI.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:2.1.18-2+deb8u3.\n\n\nWe recommend that you upgrade your mailman packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1442-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1442"
 		}
 	]
 }

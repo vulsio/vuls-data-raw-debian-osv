@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1988-1",
-	"modified": "2023-10-16T00:10:51.461417Z",
+	"modified": "2024-01-09T20:27:38.623835Z",
 	"published": "2010-02-02T00:00:00Z",
 	"related": [
 		"CVE-2009-0945",
@@ -16,7 +16,6 @@
 		"CVE-2009-2700"
 	],
 	"summary": "qt4-x11 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in qt4-x11, a cross-platform\nC++ application framework.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2009-0945](https://security-tracker.debian.org/tracker/CVE-2009-0945)\nArray index error in the insertItemBefore method in WebKit, as used in qt4-x11,\nallows remote attackers to execute arbitrary code.\n* [CVE-2009-1687](https://security-tracker.debian.org/tracker/CVE-2009-1687)\nThe JavaScript garbage collector in WebKit, as used in qt4-x11 does not\nproperly handle allocation failures, which allows remote attackers to\nexecute arbitrary code or cause a denial of service (memory corruption\nand application crash) via a crafted HTML document that triggers write\naccess to an \"offset of a NULL pointer.\n* [CVE-2009-1690](https://security-tracker.debian.org/tracker/CVE-2009-1690)\nUse-after-free vulnerability in WebKit, as used in qt4-x11, allows remote\nattackers to execute arbitrary code or cause a denial of service (memory\ncorruption and application crash) by setting an unspecified property of\nan HTML tag that causes child elements to be freed and later accessed\nwhen an HTML error occurs.\n* [CVE-2009-1698](https://security-tracker.debian.org/tracker/CVE-2009-1698)\nWebKit in qt4-x11 does not initialize a pointer during handling of a\nCascading Style Sheets (CSS) attr function call with a large numerical\nargument, which allows remote attackers to execute arbitrary code or\ncause a denial of service (memory corruption and application crash) via\na crafted HTML document.\n* [CVE-2009-1699](https://security-tracker.debian.org/tracker/CVE-2009-1699)\nThe XSL stylesheet implementation in WebKit, as used in qt4-x11 does\nnot properly handle XML external entities, which allows remote attackers to read\narbitrary files via a crafted DTD.\n* [CVE-2009-1711](https://security-tracker.debian.org/tracker/CVE-2009-1711)\nWebKit in qt4-x11 does not properly initialize memory for Attr DOM objects,\nwhich allows remote attackers to execute arbitrary code or cause a denial\nof service (application crash) via a crafted HTML document.\n* [CVE-2009-1712](https://security-tracker.debian.org/tracker/CVE-2009-1712)\nWebKit in qt4-x11 does not prevent remote loading of local Java applets,\nwhich allows remote attackers to execute arbitrary code, gain privileges, or\nobtain sensitive information via an APPLET or OBJECT element.\n* [CVE-2009-1713](https://security-tracker.debian.org/tracker/CVE-2009-1713)\nThe XSLT functionality in WebKit, as used in qt4-x11 does not properly\nimplement the document function, which allows remote attackers to read\narbitrary local files and files from different security zones.\n* [CVE-2009-1725](https://security-tracker.debian.org/tracker/CVE-2009-1725)\nWebKit in qt4-x11 does not properly handle numeric character references,\nwhich allows remote attackers to execute arbitrary code or cause a\ndenial of service (memory corruption and application crash) via a\ncrafted HTML document.\n* [CVE-2009-2700](https://security-tracker.debian.org/tracker/CVE-2009-2700)\nqt4-x11 does not properly handle a '\\0' character in a domain name in the\nSubject Alternative Name field of an X.509 certificate, which allows\nman-in-the-middle attackers to spoof arbitrary SSL servers via a crafted\ncertificate issued by a legitimate Certification Authority.\n\n\nThe oldstable distribution (etch) is not affected by these problems.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 4.4.3-1+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 4.5.3-1.\n\n\nWe recommend that you upgrade your qt4-x11 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1988-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-1988"
 		}
 	]
 }

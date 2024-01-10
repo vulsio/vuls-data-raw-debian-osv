@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-247",
-	"modified": "2023-10-16T00:05:56.773044Z",
+	"modified": "2024-01-09T20:22:54.239509Z",
 	"published": "2003-01-30T00:00:00Z",
 	"related": [
 		"CVE-2003-0040"
 	],
 	"summary": "courier-ssl - missing input sanitizing",
-	"details": "\nThe developers of courier, an integrated user side mail server,\ndiscovered a problem in the PostgreSQL auth module. Not all\npotentially malicious characters were sanitized before the username\nwas passed to the PostgreSQL engine. An attacker could inject\narbitrary SQL commands and queries exploiting this vulnerability. The\nMySQL auth module is not affected.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 0.37.3-3.3.\n\n\nThe old stable distribution (potato) does not contain courier packages.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.40.2-3.\n\n\nWe recommend that you upgrade your courier-authpostgresql package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-247.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-247"
 		}
 	]
 }

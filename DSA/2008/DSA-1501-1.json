@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1501-1",
-	"modified": "2023-10-16T00:10:27.987136Z",
+	"modified": "2024-01-09T20:22:22.850245Z",
 	"published": "2008-02-21T00:00:00Z",
 	"related": [
 		"CVE-2007-6418"
 	],
 	"summary": "dspam - information disclosure",
-	"details": "\nTobias Grützmacher discovered that a Debian-provided CRON script in dspam,\na statistical spam filter, included a database password on the command line.\nThis allowed a local attacker to read the contents of the dspam database,\nsuch as emails.\n\n\nThe old stable distribution (sarge) does not contain the dspam package.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n3.6.8-5etch1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in version\n3.6.8-5.1.\n\n\nWe recommend that you upgrade your dspam package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1501-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1501"
 		}
 	]
 }

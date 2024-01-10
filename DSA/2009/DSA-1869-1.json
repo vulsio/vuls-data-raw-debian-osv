@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1869-1",
-	"modified": "2023-10-16T00:10:42.872083Z",
+	"modified": "2024-01-09T20:25:34.544339Z",
 	"published": "2009-08-19T00:00:00Z",
 	"related": [
 		"CVE-2009-2417"
 	],
 	"summary": "curl - SSL certificate verification weakness",
-	"details": "\nIt was discovered that curl, a client and library to get files from servers\nusing HTTP, HTTPS or FTP, is vulnerable to the \"Null Prefix Attacks Against\nSSL/TLS Certificates\" recently published at the Blackhat conference. This\nallows an attacker to perform undetected man-in-the-middle attacks via a\ncrafted ITU-T X.509 certificate with an injected null byte in the Common\nName field.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 7.15.5-1etch3.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 7.18.2-8lenny3.\n\n\nFor the testing (squeeze) and unstable (sid) distribution, this problem\nwill be fixed soon.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -63,12 +62,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1869-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1869"
 		}
 	]
 }

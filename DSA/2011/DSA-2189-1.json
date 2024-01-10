@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2189-1",
-	"modified": "2023-10-16T00:05:48.710504Z",
+	"modified": "2024-01-09T20:25:39.955448Z",
 	"published": "2011-03-10T00:00:00Z",
 	"related": [
 		"CVE-2011-1108",
@@ -18,7 +18,6 @@
 		"CVE-2011-1203"
 	],
 	"summary": "chromium-browser - several",
-	"details": "\nSeveral vulnerabilities were discovered in the Chromium browser.\nThe Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2011-1108](https://security-tracker.debian.org/tracker/CVE-2011-1108)\nGoogle Chrome before 9.0.597.107 does not properly implement JavaScript\n dialogs, which allows remote attackers to cause a denial of service\n (application crash) or possibly have unspecified other impact via a crafted\n HTML document.\n* [CVE-2011-1109](https://security-tracker.debian.org/tracker/CVE-2011-1109)\nGoogle Chrome before 9.0.597.107 does not properly process nodes in Cascading\n Style Sheets (CSS) stylesheets, which allows remote attackers to cause a\n denial of service or possibly have unspecified other impact via unknown\n vectors that lead to a stale pointer.\n* [CVE-2011-1113](https://security-tracker.debian.org/tracker/CVE-2011-1113)\nGoogle Chrome before 9.0.597.107 on 64-bit Linux platforms does not properly\n perform pickle deserialization, which allows remote attackers to cause a\n denial of service (out-of-bounds read) via unspecified vectors.\n* [CVE-2011-1114](https://security-tracker.debian.org/tracker/CVE-2011-1114)\nGoogle Chrome before 9.0.597.107 does not properly handle tables, which allows\n remote attackers to cause a denial of service or possibly have unspecified\n other impact via unknown vectors that lead to a stale node.\n* [CVE-2011-1115](https://security-tracker.debian.org/tracker/CVE-2011-1115)\nGoogle Chrome before 9.0.597.107 does not properly render tables, which allows\n remote attackers to cause a denial of service or possibly have unspecified\n other impact via unknown vectors that lead to a stale pointer.\n* [CVE-2011-1121](https://security-tracker.debian.org/tracker/CVE-2011-1121)\nInteger overflow in Google Chrome before 9.0.597.107 allows remote attackers\n to cause a denial of service or possibly have unspecified other impact via\n vectors involving a TEXTAREA element.\n* [CVE-2011-1122](https://security-tracker.debian.org/tracker/CVE-2011-1122)\nThe WebGL implementation in Google Chrome before 9.0.597.107 allows remote\n attackers to cause a denial of service (out-of-bounds read) via unspecified\n vectors, aka Issue 71960.\n* In addition, this upload fixes the following issues (they don't have a CVE \n id yet):\n\n\n\t+ Out-of-bounds read in text searching. [69640]\n\t+ Memory corruption in SVG fonts. [72134]\n\t+ Memory corruption with counter nodes. [69628]\n\t+ Stale node in box layout. [70027]\n\t+ Cross-origin error message leak with workers. [70336]\n\t+ Stale pointer in table painting. [72028]\n\t+ Stale pointer with SVG cursors. [73746]\n\n\nFor the stable distribution (squeeze), these problems have been fixed\nin version 6.0.472.63~r59945-5+squeeze3.\n\n\nFor the testing distribution (wheezy), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed\nversion 10.0.648.127~r76697-1.\n\n\nWe recommend that you upgrade your chromium-browser packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2189-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2189"
 		}
 	]
 }

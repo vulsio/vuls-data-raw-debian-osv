@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2058-1",
-	"modified": "2023-10-16T00:05:44.328790Z",
+	"modified": "2024-01-09T20:22:38.097022Z",
 	"published": "2010-06-10T00:00:00Z",
 	"related": [
 		"CVE-2008-1391",
@@ -11,7 +11,6 @@
 		"CVE-2010-0830"
 	],
 	"summary": "glibc - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in the GNU C Library (aka\nglibc) and its derivatives. The Common Vulnerabilities and Exposures \nproject identifies the following problems:\n\n\n* [CVE-2008-1391](https://security-tracker.debian.org/tracker/CVE-2008-1391), [CVE-2009-4880](https://security-tracker.debian.org/tracker/CVE-2009-4880), [CVE-2009-4881](https://security-tracker.debian.org/tracker/CVE-2009-4881)\nMaksymilian Arciemowicz discovered that the GNU C library did not\n correctly handle integer overflows in the strfmon family of \n functions. If a user or automated system were tricked into \n processing a specially crafted format string, a remote attacker \n could crash applications, leading to a denial of service.\n* [CVE-2010-0296](https://security-tracker.debian.org/tracker/CVE-2010-0296)\nJeff Layton and Dan Rosenberg discovered that the GNU C library did\n not correctly handle newlines in the mntent family of functions. If\n a local attacker were able to inject newlines into a mount entry \n through other vulnerable mount helpers, they could disrupt the \n system or possibly gain root privileges.\n* [CVE-2010-0830](https://security-tracker.debian.org/tracker/CVE-2010-0830)\nDan Rosenberg discovered that the GNU C library did not correctly\n validate certain ELF program headers. If a user or automated system\n were tricked into verifying a specially crafted ELF program, a \n remote attacker could execute arbitrary code with user privileges.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.7-18lenny4 of the glibc package.\n\n\nFor the testing distribution (squeeze), these problems will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems has been fixed in\nversion 2.1.11-1 of the eglibc package.\n\n\nWe recommend that you upgrade your glibc or eglibc packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2058-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2058"
 		}
 	]
 }

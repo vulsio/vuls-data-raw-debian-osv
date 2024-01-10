@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1603-1",
-	"modified": "2023-06-28T06:20:51.251706Z",
+	"modified": "2024-01-09T20:31:27.785885Z",
 	"published": "2018-12-04T00:00:00Z",
 	"related": [
 		"CVE-2017-15377",
@@ -9,7 +9,6 @@
 		"CVE-2018-6794"
 	],
 	"summary": "suricata - security update",
-	"details": "\nSeveral issues were found in suricata, an intrusion detection and\nprevention tool.\n\n\n* [CVE-2017-7177](https://security-tracker.debian.org/tracker/CVE-2017-7177)\nSuricata has an IPv4 defragmentation evasion issue caused by lack\n of a check for the IP protocol during fragment matching.\n* [CVE-2017-15377](https://security-tracker.debian.org/tracker/CVE-2017-15377)\nIt was possible to trigger lots of redundant checks on the content\n of crafted network traffic with a certain signature, because of\n DetectEngineContentInspection in detect-engine-content-inspection.c.\n The search engine doesn't stop when it should after no match is\n found; instead, it stops only upon reaching inspection-recursion limit (3000 by default).\n* [CVE-2018-6794](https://security-tracker.debian.org/tracker/CVE-2018-6794)\nSuricata is prone to an HTTP detection bypass vulnerability in\n detect.c and stream-tcp.c. If a malicious server breaks a normal\n TCP flow and sends data before the 3-way handshake is complete,\n then the data sent by the malicious server will be accepted by web\n clients such as a web browser or Linux CLI utilities, but ignored\n by Suricata IDS signatures. This mostly affects IDS signatures for\n the HTTP protocol and TCP stream content; signatures for TCP packets\n will inspect such network traffic as usual.\n\n\nTEMP-0856648-2BC2C9 (no CVE assigned yet)\n\n\nOut of bounds read in app-layer-dns-common.c.\n On a zero size A or AAAA record, 4 or 16 bytes would still be read.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.0.7-2+deb8u3.\n\n\nWe recommend that you upgrade your suricata packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1603-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1603"
 		}
 	]
 }

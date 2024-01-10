@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3386-2",
-	"modified": "2023-10-16T00:06:21.214706Z",
-	"published": "2015-10-31T00:00:00Z",
+	"modified": "2024-01-09T20:28:10.981353Z",
+	"published": "2015-11-09T00:00:00Z",
 	"summary": "unzip - regression update",
-	"details": "\nTwo vulnerabilities have been found in unzip, a de-archiver for .zip\nfiles. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2015-7696](https://security-tracker.debian.org/tracker/CVE-2015-7696)\nGustavo Grieco discovered that unzip incorrectly handled certain\n password protected archives. If a user or automated system were\n tricked into processing a specially crafted zip archive, an attacker\n could possibly execute arbitrary code.\n* [CVE-2015-7697](https://security-tracker.debian.org/tracker/CVE-2015-7697)\nGustavo Grieco discovered that unzip incorrectly handled certain\n malformed archives. If a user or automated system were tricked into\n processing a specially crafted zip archive, an attacker could\n possibly cause unzip to hang, resulting in a denial of service.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 6.0-8+deb7u4.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 6.0-16+deb8u1.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 6.0-19.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 6.0-19.\n\n\nWe recommend that you upgrade your unzip packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3386-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3386"
 		}
 	]
 }

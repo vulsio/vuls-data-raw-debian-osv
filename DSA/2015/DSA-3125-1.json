@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3125-1",
-	"modified": "2023-10-16T00:06:13.552191Z",
+	"modified": "2024-01-09T20:28:00.153467Z",
 	"published": "2015-01-11T00:00:00Z",
 	"related": [
 		"CVE-2014-3569",
@@ -14,7 +14,6 @@
 		"CVE-2015-0206"
 	],
 	"summary": "openssl - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit. The Common Vulnerabilities and Exposures project\nidentifies the following issues:\n\n\n* [CVE-2014-3569](https://security-tracker.debian.org/tracker/CVE-2014-3569)\nFrank Schmirler reported that the ssl23\\_get\\_client\\_hello function in\n OpenSSL does not properly handle attempts to use unsupported\n protocols. When OpenSSL is built with the no-ssl3 option and a SSL\n v3 ClientHello is received, the ssl method would be set to NULL which\n could later result in a NULL pointer dereference and daemon crash.\n* [CVE-2014-3570](https://security-tracker.debian.org/tracker/CVE-2014-3570)\nPieter Wuille of Blockstream reported that the bignum squaring\n (BN\\_sqr) may produce incorrect results on some platforms, which\n might make it easier for remote attackers to defeat cryptographic\n protection mechanisms.\n* [CVE-2014-3571](https://security-tracker.debian.org/tracker/CVE-2014-3571)\nMarkus Stenberg of Cisco Systems, Inc. reported that a carefully\n crafted DTLS message can cause a segmentation fault in OpenSSL due\n to a NULL pointer dereference. A remote attacker could use this flaw\n to mount a denial of service attack.\n* [CVE-2014-3572](https://security-tracker.debian.org/tracker/CVE-2014-3572)\nKarthikeyan Bhargavan of the PROSECCO team at INRIA reported that an\n OpenSSL client would accept a handshake using an ephemeral ECDH\n ciphersuite if the server key exchange message is omitted. This\n allows remote SSL servers to conduct ECDHE-to-ECDH downgrade attacks\n and trigger a loss of forward secrecy.\n* [CVE-2014-8275](https://security-tracker.debian.org/tracker/CVE-2014-8275)\nAntti Karjalainen and Tuomo Untinen of the Codenomicon CROSS project\n and Konrad Kraszewski of Google reported various certificate\n fingerprint issues, which allow remote attackers to defeat a\n fingerprint-based certificate-blacklist protection mechanism.\n* [CVE-2015-0204](https://security-tracker.debian.org/tracker/CVE-2015-0204)\nKarthikeyan Bhargavan of the PROSECCO team at INRIA reported that\n an OpenSSL client will accept the use of an ephemeral RSA key in a\n non-export RSA key exchange ciphersuite, violating the TLS\n standard. This allows remote SSL servers to downgrade the security\n of the session.\n* [CVE-2015-0205](https://security-tracker.debian.org/tracker/CVE-2015-0205)\nKarthikeyan Bhargavan of the PROSECCO team at INRIA reported that an\n OpenSSL server will accept a DH certificate for client\n authentication without the certificate verify message. This flaw\n effectively allows a client to authenticate without the use of a\n private key via crafted TLS handshake protocol traffic to a server\n that recognizes a certification authority with DH support.\n* [CVE-2015-0206](https://security-tracker.debian.org/tracker/CVE-2015-0206)\nChris Mueller discovered a memory leak in the dtls1\\_buffer\\_record\n function. A remote attacker could exploit this flaw to mount a\n denial of service through memory exhaustion by repeatedly sending\n specially crafted DTLS records.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.0.1e-2+deb7u14.\n\n\nFor the upcoming stable distribution (jessie), these problems will be\nfixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.1k-1.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -54,12 +53,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3125-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3125"
 		}
 	]
 }

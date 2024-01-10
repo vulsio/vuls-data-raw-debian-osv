@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3413-1",
-	"modified": "2023-10-16T00:11:59.583832Z",
+	"modified": "2024-01-09T20:28:13.186068Z",
 	"published": "2015-12-04T00:00:00Z",
 	"related": [
 		"CVE-2015-3194",
@@ -9,7 +9,6 @@
 		"CVE-2015-3196"
 	],
 	"summary": "openssl - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL, a Secure\nSockets Layer toolkit. The Common Vulnerabilities and Exposures project\nidentifies the following issues:\n\n\n* [CVE-2015-3194](https://security-tracker.debian.org/tracker/CVE-2015-3194)\nLoic Jonas Etienne of Qnective AG discovered that the signature\n verification routines will crash with a NULL pointer dereference if\n presented with an ASN.1 signature using the RSA PSS algorithm and\n absent mask generation function parameter. A remote attacker can\n exploit this flaw to crash any certificate verification operation\n and mount a denial of service attack.\n* [CVE-2015-3195](https://security-tracker.debian.org/tracker/CVE-2015-3195)\nAdam Langley of Google/BoringSSL discovered that OpenSSL will leak\n memory when presented with a malformed X509\\_ATTRIBUTE structure.\n* [CVE-2015-3196](https://security-tracker.debian.org/tracker/CVE-2015-3196)\nA race condition flaw in the handling of PSK identify hints was\n discovered, potentially leading to a double free of the identify\n hint data.\n\n\nFor the oldstable distribution (wheezy), these problems have been fixed\nin version 1.0.1e-2+deb7u18.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.0.1k-3+deb8u2.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.0.2e-1 or earlier.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -81,12 +80,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3413-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3413"
 		}
 	]
 }

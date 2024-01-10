@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2927-1",
-	"modified": "2023-06-28T06:21:25.330157Z",
+	"modified": "2024-01-09T20:33:10.091253Z",
 	"published": "2022-02-19T00:00:00Z",
 	"related": [
 		"CVE-2020-10108",
@@ -9,7 +9,6 @@
 		"CVE-2022-21712"
 	],
 	"summary": "twisted - security update",
-	"details": "\nIt was discovered that Twisted, a Python event-based framework for\ninternet applications, is affected by HTTP request splitting\nvulnerabilities, and may expose sensitive data when following\nredirects. An attacker may bypass validation checks and retrieve\ncredentials.\n\n\n* [CVE-2020-10108](https://security-tracker.debian.org/tracker/CVE-2020-10108)\nHTTP request splitting vulnerability. When presented with two\n content-length headers, it ignored the first header. When the\n second content-length value was set to zero, the request body was\n interpreted as a pipelined request.\n* [CVE-2020-10109](https://security-tracker.debian.org/tracker/CVE-2020-10109)\nHTTP request splitting vulnerability. When presented with a\n content-length and a chunked encoding header, the content-length\n took precedence and the remainder of the request body was\n interpreted as a pipelined request.\n* [CVE-2022-21712](https://security-tracker.debian.org/tracker/CVE-2022-21712)\nTwisted exposes cookies and authorization headers when following\n cross-origin redirects. This issue is present in the\n `twisted.web.RedirectAgent` and\n `twisted.web.BrowserLikeRedirectAgent` functions.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n16.6.0-2+deb9u1.\n\n\nWe recommend that you upgrade your twisted packages.\n\n\nFor the detailed security status of twisted please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/twisted>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2927-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-2927"
 		}
 	]
 }

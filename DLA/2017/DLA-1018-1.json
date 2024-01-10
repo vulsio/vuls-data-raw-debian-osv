@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1018-1",
-	"modified": "2023-06-28T06:20:07.641001Z",
+	"modified": "2024-01-09T20:30:38.695221Z",
 	"published": "2017-07-09T00:00:00Z",
 	"related": [
 		"CVE-2017-10989"
 	],
 	"summary": "sqlite3 - security update",
-	"details": "\nIt was discovered that there was a heap-based buffer over-read vulnerability in\nSQLite, a lightweight database engine. The getNodeSize function in\next/rtree/rtree.c mishandled undersized RTree blobs in a specially-crafted\ndatabase,\n\n\nFor Debian 7 Wheezy, this issue has been fixed in sqlite3 version\n3.7.13-1+deb7u4.\n\n\nWe recommend that you upgrade your sqlite3 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1018-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1018"
 		}
 	]
 }

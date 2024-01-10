@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-903-1",
-	"modified": "2023-10-16T00:29:45.823429Z",
+	"modified": "2024-01-09T20:34:11.923299Z",
 	"published": "2005-11-21T00:00:00Z",
 	"related": [
 		"CVE-2005-2475"
 	],
 	"summary": "unzip - race condition",
-	"details": "\nThe unzip update in DSA 903 contained a regression so that symbolic\nlinks that are resolved later in a zip archive aren't supported\nanymore. Â This update corrects this behaviour. Â For completeness,\nbelow please find the original advisory text:\n\n\n\n> \n> Imran Ghory discovered a race condition in the permissions setting\n> code in unzip. When decompressing a file in a directory an attacker\n> has access to, unzip could be tricked to set the file permissions to a\n> different file the user has permissions to.\n> \n> \n> \n\n\nFor the old stable distribution (woody) this problem has been fixed in\nversion 5.50-1woody5.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 5.52-1sarge3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 5.52-6.\n\n\nWe recommend that you upgrade your unzip package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-903-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-903"
 		}
 	]
 }

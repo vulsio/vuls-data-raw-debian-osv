@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1998-1",
-	"modified": "2023-06-28T06:21:07.987212Z",
+	"modified": "2024-01-09T20:32:02.341640Z",
 	"published": "2019-11-18T00:00:00Z",
 	"related": [
 		"CVE-2019-18874"
 	],
 	"summary": "python-psutil - security update",
-	"details": "\nIt was discovered that there were multiple double free\nvulnerabilities in python-psutil, a Python module providing\nconvenience functions for accessing system process data.\n\n\nThis was caused by incorrect reference counting handling within\nfor/while loops that convert system data into said Python objects.\n\n\n* [CVE-2019-18874](https://security-tracker.debian.org/tracker/CVE-2019-18874)\npsutil (aka python-psutil) through 5.6.5 can have a double free. This occurs because of refcount mishandling within a while or for loop that converts system data into a Python object.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.1.1-1+deb8u1.\n\n\nWe recommend that you upgrade your python-psutil packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1998-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1998"
 		}
 	]
 }

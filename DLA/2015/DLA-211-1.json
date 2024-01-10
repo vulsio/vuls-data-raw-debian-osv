@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-211-1",
-	"modified": "2023-06-28T06:21:12.806503Z",
+	"modified": "2024-01-09T20:32:01.492331Z",
 	"published": "2015-04-29T00:00:00Z",
 	"related": [
 		"CVE-2015-3143",
 		"CVE-2015-3148"
 	],
 	"summary": "curl - security update",
-	"details": "\nSeveral vulnerabilities were discovered in cURL, an URL transfer library:\n\n\n* [CVE-2015-3143](https://security-tracker.debian.org/tracker/CVE-2015-3143)\nNTLM-authenticated connections could be wrongly reused for requests\n without any credentials set, leading to HTTP requests being sent\n over the connection authenticated as a different user. This is\n similar to the issue fixed in DSA-2849-1.\n* [CVE-2015-3148](https://security-tracker.debian.org/tracker/CVE-2015-3148)\nWhen doing HTTP requests using the Negotiate authentication method\n along with NTLM, the connection used would not be marked as\n authenticated, making it possible to reuse it and send requests for\n one user over the connection authenticated as a different user.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -47,12 +46,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-211-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-211"
 		}
 	]
 }

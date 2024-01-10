@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3207-1",
-	"modified": "2023-06-28T06:21:27.322475Z",
+	"modified": "2024-01-09T20:33:22.770667Z",
 	"published": "2022-11-27T00:00:00Z",
 	"related": [
 		"CVE-2020-36518",
@@ -9,7 +9,6 @@
 		"CVE-2022-42004"
 	],
 	"summary": "jackson-databind - security update",
-	"details": "\nSeveral flaws were discovered in jackson-databind, a fast and powerful JSON\nlibrary for Java.\n\n\n* [CVE-2020-36518](https://security-tracker.debian.org/tracker/CVE-2020-36518)\nJava StackOverflow exception and denial of service via a large depth of\n nested objects.\n* [CVE-2022-42003](https://security-tracker.debian.org/tracker/CVE-2022-42003)\nIn FasterXML jackson-databind resource exhaustion can occur because of a\n lack of a check in primitive value deserializers to avoid deep wrapper\n array nesting, when the UNWRAP\\_SINGLE\\_VALUE\\_ARRAYS feature is enabled.\n* [CVE-2022-42004](https://security-tracker.debian.org/tracker/CVE-2022-42004)\nIn FasterXML jackson-databind resource exhaustion can occur because of a\n lack of a check in BeanDeserializerBase.deserializeFromArray to prevent use\n of deeply nested arrays. An application is vulnerable only with certain\n customized choices for deserialization.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n2.9.8-3+deb10u4.\n\n\nWe recommend that you upgrade your jackson-databind packages.\n\n\nFor the detailed security status of jackson-databind please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/jackson-databind>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3207-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3207"
 		}
 	]
 }

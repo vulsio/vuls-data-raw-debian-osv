@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4161-1",
-	"modified": "2023-10-16T00:12:45.280770Z",
+	"modified": "2024-01-09T20:26:17.988439Z",
 	"published": "2018-04-01T00:00:00Z",
 	"related": [
 		"CVE-2018-7536",
 		"CVE-2018-7537"
 	],
 	"summary": "python-django - security update",
-	"details": "\nJames Davis discovered two issues in Django, a high-level Python web\ndevelopment framework, that can lead to a denial-of-service attack.\nAn attacker with control on the input of the django.utils.html.urlize()\nfunction or django.utils.text.Truncator's chars() and words() methods\ncould craft a string that might stuck the execution of the application.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 1.7.11-1+deb8u3.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 1:1.10.7-2+deb9u1.\n\n\nWe recommend that you upgrade your python-django packages.\n\n\nFor the detailed security status of python-django please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/python-django](https://security-tracker.debian.org/tracker/python-django)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -71,12 +70,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4161-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2018/dsa-4161"
 		}
 	]
 }

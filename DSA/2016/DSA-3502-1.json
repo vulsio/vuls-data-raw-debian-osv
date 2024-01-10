@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3502-1",
-	"modified": "2023-10-16T00:12:04.079425Z",
+	"modified": "2024-01-09T20:28:14.737134Z",
 	"published": "2016-03-03T00:00:00Z",
 	"related": [
 		"CVE-2014-6276"
 	],
 	"summary": "roundup - security update",
-	"details": "\nRalf Schlatterbeck discovered an information leak in roundup, a\nweb-based issue tracking system. An authenticated attacker could use it\nto see sensitive details about other users, including their hashed\npassword.\n\n\nAfter applying the update, which will fix the shipped templates, the\nsite administrator should ensure the instanced versions (in\n/var/lib/roundup usually) are also updated, either by patching them\nmanually or by recreating them.\n\n\nMore info can be found in the upstream documentation at\n<http://www.roundup-tracker.org/docs/upgrading.html#user-data-visibility>\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 1.4.20-1.1+deb7u1.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 1.4.20-1.1+deb8u1.\n\n\nFor the testing (stretch) and unstable (sid) distribution, this problem has not\nyet been fixed.\n\n\nWe recommend that you upgrade your roundup packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3502-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3502"
 		}
 	]
 }

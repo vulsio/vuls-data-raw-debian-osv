@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2549-1",
-	"modified": "2023-06-28T06:29:38.924104Z",
-	"published": "2021-02-11T00:00:00Z",
+	"modified": "2024-01-09T20:32:42.034919Z",
+	"published": "2021-02-08T00:00:00Z",
 	"related": [
 		"CVE-2020-0256",
 		"CVE-2021-0308"
 	],
 	"summary": "gdisk - security update",
-	"details": "\n* [CVE-2020-0256](https://security-tracker.debian.org/tracker/CVE-2020-0256)\nIn LoadPartitionTable of gpt.cc, there is a possible\n out of bounds write due to a missing bounds check. This\n could lead to local escalation of privilege with no\n additional execution privileges needed.\n* [CVE-2021-0308](https://security-tracker.debian.org/tracker/CVE-2021-0308)\nIn ReadLogicalParts of basicmbr.cc, there is a possible\n out of bounds write due to a missing bounds check. This\n could lead to local escalation of privilege with no\n additional execution privileges needed.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.0.1-1+deb9u1.\n\n\nWe recommend that you upgrade your gdisk packages.\n\n\nFor the detailed security status of gdisk please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/gdisk>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2549-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2549"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2608-1",
-	"modified": "2023-10-16T00:11:21.616113Z",
+	"modified": "2024-01-09T20:25:42.419684Z",
 	"published": "2013-01-15T00:00:00Z",
 	"related": [
 		"CVE-2012-6075"
 	],
 	"summary": "qemu - buffer overflow",
-	"details": "\nIt was discovered that the e1000 emulation code in QEMU does not\nenforce frame size limits in the same way as the real hardware does.\nThis could trigger buffer overflows in the guest operating system\ndriver for that network card, assuming that the host system does not\ndiscard such frames (which it will by default).\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.12.5+dfsg-3squeeze3.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.2+dfsg-4.\n\n\nWe recommend that you upgrade your qemu packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2608-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2608"
 		}
 	]
 }

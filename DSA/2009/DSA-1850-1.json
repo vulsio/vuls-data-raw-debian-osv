@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1850-1",
-	"modified": "2023-10-16T00:10:41.751737Z",
+	"modified": "2024-01-09T20:25:32.404231Z",
 	"published": "2009-08-04T00:00:00Z",
 	"related": [
 		"CVE-2009-1438",
 		"CVE-2009-1513"
 	],
 	"summary": "libmodplug - arbitrary code execution",
-	"details": "\nSeveral vulnerabilities have been discovered in libmodplug, the shared\nlibraries for mod music based on ModPlug. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2009-1438](https://security-tracker.debian.org/tracker/CVE-2009-1438)\nIt was discovered that libmodplug is prone to an integer overflow when\nprocessing a MED file with a crafted song comment or song name.\n* [CVE-2009-1513](https://security-tracker.debian.org/tracker/CVE-2009-1513)\nIt was discovered that libmodplug is prone to a buffer overflow in the\nPATinst function, when processing a long instrument name.\n\n\nFor the oldstable distribution (etch), these problems have been fixed in\nversion 1:0.7-5.2+etch1.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1:0.8.4-1+lenny1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), these problems have been fixed in version 1:0.8.7-1.\n\n\nWe recommend that you upgrade your libmodplug packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -61,12 +60,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1850-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1850"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3033-1",
-	"modified": "2023-10-16T00:11:43.461254Z",
+	"modified": "2024-01-09T20:24:02.942474Z",
 	"published": "2014-09-25T00:00:00Z",
 	"related": [
 		"CVE-2014-1568"
 	],
 	"summary": "nss - security update",
-	"details": "\nAntoine Delignat-Lavaud from Inria discovered an issue in the way NSS\n(the Mozilla Network Security Service library) was parsing ASN.1 data\nused in signatures, making it vulnerable to a signature forgery attack.\n\n\nAn attacker could craft ASN.1 data to forge RSA certificates with a\nvalid certification chain to a trusted CA.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2:3.14.5-1+deb7u2.\n\n\nFor the testing distribution (jessie), this problem has been fixed in\nversion 2:3.17.1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2:3.17.1.\n\n\nWe recommend that you upgrade your nss packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3033-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3033"
 		}
 	]
 }

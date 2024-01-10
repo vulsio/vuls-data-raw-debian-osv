@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1033-1",
-	"modified": "2023-06-28T06:20:14.703926Z",
+	"modified": "2024-01-09T20:30:41.664963Z",
 	"published": "2017-07-20T00:00:00Z",
 	"related": [
 		"CVE-2017-9951"
 	],
 	"summary": "memcached - security update",
-	"details": "\nIt was discovered that there was a remote denial-of-service (DoS) vulnerability\nin memcached, a high-performance memory object caching system.\n\n\nThe try\\_read\\_command function allowed remote attackers to cause a DoS via a\nrequest to add/set a key that makes a comparison between a signed and unsigned\ninteger which triggered a heap-based buffer over-read.\n\n\nThis vulnerability existed due to an incomplete upstream fix for [CVE-2016-8705](https://security-tracker.debian.org/tracker/CVE-2016-8705).\n\n\nFor Debian 7 Wheezy, this issue has been fixed in memcached version\n1.4.13-0.2+deb7u3.\n\n\nWe recommend that you upgrade your memcached packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1033-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1033"
 		}
 	]
 }

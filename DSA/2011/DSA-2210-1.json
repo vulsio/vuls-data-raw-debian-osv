@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2210-1",
-	"modified": "2023-10-16T00:11:03.019824Z",
+	"modified": "2024-01-09T20:21:16.110820Z",
 	"published": "2011-04-03T00:00:00Z",
 	"related": [
 		"CVE-2011-0191",
@@ -9,7 +9,6 @@
 		"CVE-2011-1167"
 	],
 	"summary": "tiff - several",
-	"details": "\nSeveral vulnerabilities were discovered in the TIFF manipulation and\nconversion library:\n\n\n* [CVE-2011-0191](https://security-tracker.debian.org/tracker/CVE-2011-0191)\nA buffer overflow allows to execute arbitrary code or cause\n a denial of service via a crafted TIFF image with JPEG encoding.\n This issue affects the Debian 5.0 Lenny package only.\n* [CVE-2011-0192](https://security-tracker.debian.org/tracker/CVE-2011-0192)\nA buffer overflow allows to execute arbitrary code or cause\n a denial of service via a crafted TIFF Internet Fax image\n file that has been compressed using CCITT Group 4 encoding.\n* [CVE-2011-1167](https://security-tracker.debian.org/tracker/CVE-2011-1167)\nHeap-based buffer overflow in the thunder (aka ThunderScan)\n decoder allows to execute arbitrary code via a TIFF file that\n has an unexpected BitsPerSample value.\n\n\nFor the oldstable distribution (lenny), these problems have been\nfixed in version 3.8.2-11.4.\n\n\nFor the stable distribution (squeeze), these problems have been\nfixed in version 3.9.4-5+squeeze1.\n\n\nFor the testing distribution, the first two problems have been fixed\nin version 3.9.4-8, the last problem will be fixed soon.\n\n\nFor the unstable distribution (sid), these problems have been fixed\nin version 3.9.4-9.\n\n\nWe recommend that you upgrade your tiff packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2210-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2210"
 		}
 	]
 }

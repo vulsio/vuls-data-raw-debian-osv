@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2276-2",
-	"modified": "2023-10-16T00:11:04.253180Z",
-	"published": "2011-07-10T00:00:00Z",
+	"modified": "2024-01-09T20:27:44.834898Z",
+	"published": "2011-07-11T00:00:00Z",
 	"related": [
 		"CVE-2011-2529",
 		"CVE-2011-2535",
 		"CVE-2011-2536"
 	],
 	"summary": "asterisk - multiple issues",
-	"details": "\nPaul Belanger reported a vulnerability in Asterisk identified as\n[AST-2011-008](http://downloads.asterisk.org/pub/security/AST-2011-008.html)\n([CVE-2011-2529](https://security-tracker.debian.org/tracker/CVE-2011-2529))\nthrough which an unauthenticated attacker may crash an Asterisk\nserver remotely. A package containing a NULL char causes the SIP header parser\nto alter unrelated memory structures.\n\n\nJared Mauch reported a vulnerability in Asterisk identified as \n[AST-2011-009](http://downloads.asterisk.org/pub/security/AST-2011-009.html)\nthrough which an unauthenticated attacker may crash an Asterisk server remotely.\nIf a user sends a package with a Contact header with a missing left angle\nbracket (<) the server will crash. A possible workaround is to disable chan\\_sip.\n\n\nThe vulnerability identified as \n[AST-2011-010](http://downloads.asterisk.org/pub/security/AST-2011-010.html)\n([CVE-2011-2535](https://security-tracker.debian.org/tracker/CVE-2011-2535))\nreported about an\ninput validation error in the IAX2 channel driver. An unauthenticated attacker\nmay crash an Asterisk server remotely by sending a crafted option control frame.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 1.4.21.2~dfsg-3+lenny5.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 1.6.2.9-2+squeeze3.\n\n\nFor the testing distribution (wheezy), this problem has been fixed in\nversion 1:1.8.4.3-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1:1.8.4.3-1.\n\n\nWe recommend that you upgrade your asterisk packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2276-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2276"
 		}
 	]
 }

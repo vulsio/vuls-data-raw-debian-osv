@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3282-1",
-	"modified": "2023-10-16T00:11:53.943260Z",
+	"modified": "2024-01-09T20:16:55.954853Z",
 	"published": "2015-06-08T00:00:00Z",
 	"related": [
 		"CVE-2015-4171"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nAlexander E. Patrakov discovered an issue in strongSwan, an IKE/IPsec\nsuite used to establish IPsec protected links.\n\n\nWhen an IKEv2 client authenticates the server with certificates and the\nclient authenticates itself to the server using pre-shared key or EAP,\nthe constraints on the server certificate are only enforced by the\nclient after all authentication steps are completed successfully. A\nrogue server which can authenticate using a valid certificate issued by\nany CA trusted by the client could trick the user into continuing the\nauthentication, revealing the username and password digest (for EAP) or\neven the cleartext password (if EAP-GTC is accepted).\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 4.5.2-1.5+deb7u7.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 5.2.1-6+deb8u1.\n\n\nFor the testing distribution (stretch), this problem has been fixed\nin version 5.3.1-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 5.3.1-1.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3282-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2015/dsa-3282"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-511-1",
-	"modified": "2023-06-28T06:22:22.531514Z",
+	"modified": "2024-01-09T20:33:04.858134Z",
 	"published": "2016-06-11T00:00:00Z",
 	"related": [
 		"CVE-2016-5301"
 	],
 	"summary": "libtorrent-rasterbar - security update",
-	"details": "\nA specially crafted HTTP response from a tracker (or potentially a UPnP\nbroadcast) can crash libtorrent in the parse\\_chunk\\_header() function.\nAlthough this function is not present in this version, upstream's\nadditional sanity checks were added to abort the program if necessary\ninstead of crashing it.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.15.10-1+deb7u1.\n\n\nWe recommend that you upgrade your libtorrent-rasterbar packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-511-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-511"
 		}
 	]
 }

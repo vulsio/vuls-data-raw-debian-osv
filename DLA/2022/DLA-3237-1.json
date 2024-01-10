@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3237-1",
-	"modified": "2023-06-28T06:25:29.310437Z",
+	"modified": "2024-01-09T20:33:24.943360Z",
 	"published": "2022-12-12T00:00:00Z",
 	"related": [
 		"CVE-2021-37701",
 		"CVE-2021-37712"
 	],
 	"summary": "node-tar - security update",
-	"details": "\nCache poisoning vulnerabilities were found in node-tar, a Node.js module\nused to read and write portable tar archives, which may result in\narbitrary file creation or overwrite.\n\n\n* [CVE-2021-37701](https://security-tracker.debian.org/tracker/CVE-2021-37701)\nIt was discovered that node-tar performed insufficient symlink\n protection, thereby making directory cache vulnerable to poisoning\n using symbolic links.\n\n\nUpon extracting an archive containing a directory `foo/bar` followed\n with a symbolic link `foo\\\\bar` to an arbitrary location, node-tar\n would extract arbitrary files into the symlink target, thus allowing\n arbitrary file creation and overwrite.\n\n\nMoreover, on case-insensitive filesystems, a similar issue occurred\n with a directory `FOO` followed with a symbolic link `foo`.\n* [CVE-2021-37712](https://security-tracker.debian.org/tracker/CVE-2021-37712)\nSimilar to [CVE-2021-37701](https://security-tracker.debian.org/tracker/CVE-2021-37701), a specially crafted tar archive\n containing two directories and a symlink with names containing\n unicode values that normalized to the same value, would bypass\n node-tar's symlink checks on directories, thus allowing arbitrary\n file creation and overwrite.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n4.4.6+ds1-3+deb10u2.\n\n\nWe recommend that you upgrade your node-tar packages.\n\n\nFor the detailed security status of node-tar please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-tar>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3237-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3237"
 		}
 	]
 }

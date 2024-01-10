@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3618-1",
-	"modified": "2023-10-20T00:15:31.351831Z",
-	"published": "2023-10-19T00:00:00Z",
+	"modified": "2024-01-09T20:33:43.393381Z",
+	"published": "2023-10-14T00:00:00Z",
 	"related": [
 		"CVE-2023-45133"
 	],
 	"summary": "node-babel - security update",
-	"details": "\nIn @babel/traverse prior to versions 7.23.2 and 8.0.0-alpha.4 and all\nversions of `babel-traverse`, using Babel to compile code that was\nspecifically crafted by an attacker can lead to arbitrary code execution\nduring compilation, when using plugins that rely on the path.evaluate() or\npath.evaluateTruthy() internal Babel methods.\n\n\nFor Debian 10 buster, this problem has been fixed in version\n6.26.0+dfsg-3+deb10u1.\n\n\nWe recommend that you upgrade your node-babel packages.\n\n\nFor the detailed security status of node-babel please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/node-babel>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3618-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3618"
 		}
 	]
 }

@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-875-1",
-	"modified": "2023-06-28T06:27:10.306428Z",
-	"published": "2017-03-27T00:00:00Z",
+	"modified": "2024-01-09T20:34:02.295696Z",
+	"published": "2017-03-28T00:00:00Z",
 	"related": [
 		"CVE-2016-7478",
 		"CVE-2016-7479",
 		"CVE-2017-7272"
 	],
 	"summary": "php5 - security update",
-	"details": "\nSeveral issues have been discovered in PHP (recursive acronym for PHP:\nHypertext Preprocessor), a widely-used open source general-purpose\nscripting language that is especially suited for web development and can\nbe embedded into HTML.\n\n\n* [CVE-2016-7478](https://security-tracker.debian.org/tracker/CVE-2016-7478)\nZend/zend\\_exceptions.c in PHP allows remote attackers to\n cause a denial of service (infinite loop) via a crafted Exception\n object in serialized data, a related issue to [CVE-2015-8876](https://security-tracker.debian.org/tracker/CVE-2015-8876).\n* [CVE-2016-7479](https://security-tracker.debian.org/tracker/CVE-2016-7479)\nDuring the unserialization process, resizing the properties hash\n table of a serialized object may lead to use-after-free. A remote\n attacker may exploit this bug to gain the ability of arbitrary code\n execution. Even though the property table issue only affects PHP 7\n this change also prevents a wide range of other \\_\\_wakeup() based\n attacks.\n* [CVE-2017-7272](https://security-tracker.debian.org/tracker/CVE-2017-7272)\nThe fsockopen() function will use the port number which is defined\n in hostname instead of the port number passed to the second\n parameter of the function. This misbehavior may introduce another\n attack vector for an already known application vulnerability (e.g.\n Server Side Request Forgery).\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n5.4.45-0+deb7u8.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -77,12 +76,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-875-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-875"
 		}
 	]
 }

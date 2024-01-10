@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2866-1",
-	"modified": "2023-10-16T00:11:35.871079Z",
+	"modified": "2024-01-09T20:21:33.319905Z",
 	"published": "2014-02-22T00:00:00Z",
 	"related": [
 		"CVE-2014-1959"
 	],
 	"summary": "gnutls26 - certificate verification flaw",
-	"details": "\nSuman Jana reported that GnuTLS, deviating from the documented behavior,\nconsiders a version 1 intermediate certificate as a CA certificate by\ndefault.\n\n\nThe oldstable distribution (squeeze) is not affected by this problem as\nX.509 version 1 trusted CA certificates are not allowed by default.\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 2.12.20-8.\n\n\nFor the testing distribution (jessie) and the unstable distribution\n(sid), this problem has been fixed in version 2.12.23-12.\n\n\nWe recommend that you upgrade your gnutls26 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2866-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2866"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1866-2",
-	"modified": "2023-06-28T06:21:01.836553Z",
-	"published": "2019-07-31T00:00:00Z",
+	"modified": "2024-01-09T20:31:49.015160Z",
+	"published": "2019-08-06T00:00:00Z",
 	"related": [
 		"CVE-2019-13012"
 	],
 	"summary": "glib2.0 - regression update",
-	"details": "\nVarious minor issues have been addressed in the GLib library. GLib is a\nuseful general-purpose C library used by projects such as GTK+, GIMP,\nand GNOME.\n\n\n* [CVE-2018-16428](https://security-tracker.debian.org/tracker/CVE-2018-16428)\nIn GNOME GLib, g\\_markup\\_parse\\_context\\_end\\_parse() in gmarkup.c\n had a NULL pointer dereference.\n* [CVE-2018-16429](https://security-tracker.debian.org/tracker/CVE-2018-16429)\nGNOME GLib had an out-of-bounds read vulnerability in\n g\\_markup\\_parse\\_context\\_parse() in gmarkup.c, related to utf8\\_str().\n* [CVE-2019-13012](https://security-tracker.debian.org/tracker/CVE-2019-13012)\nThe keyfile settings backend in GNOME GLib (aka glib2.0) before\n created directories using g\\_file\\_make\\_directory\\_with\\_parents\n (kfsb->dir, NULL, NULL) and files using g\\_file\\_replace\\_contents\n (kfsb->file, contents, length, NULL, FALSE,\n G\\_FILE\\_CREATE\\_REPLACE\\_DESTINATION, NULL, NULL, NULL). Consequently,\n it did not properly restrict directory (and file) permissions.\n Instead, for directories, 0777 permissions were used; for files,\n default file permissions were used. This issue is similar to\n [CVE-2019-12450](https://security-tracker.debian.org/tracker/CVE-2019-12450).\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.42.1-1+deb8u2.\n\n\nWe recommend that you upgrade your glib2.0 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1866-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1866"
 		}
 	]
 }

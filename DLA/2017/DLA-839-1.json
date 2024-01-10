@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-839-1",
-	"modified": "2023-06-28T06:32:46.460457Z",
+	"modified": "2024-01-09T20:34:00.563237Z",
 	"published": "2017-02-27T00:00:00Z",
 	"related": [
 		"CVE-2017-6307",
@@ -10,7 +10,6 @@
 		"CVE-2017-6310"
 	],
 	"summary": "tnef - security update",
-	"details": "\n* [CVE-2017-6307](https://security-tracker.debian.org/tracker/CVE-2017-6307)\nAn issue was discovered in tnef before 1.4.13. Two OOB Writes have\n been identified in src/mapi\\_attr.c:mapi\\_attr\\_read(). These might\n lead to invalid read and write operations, controlled by an attacker.\n* [CVE-2017-6308](https://security-tracker.debian.org/tracker/CVE-2017-6308)\nAn issue was discovered in tnef before 1.4.13. Several Integer\n Overflows, which can lead to Heap Overflows, have been identified\n in the functions that wrap memory allocation.\n* [CVE-2017-6309](https://security-tracker.debian.org/tracker/CVE-2017-6309)\nAn issue was discovered in tnef before 1.4.13. Two type confusions\n have been identified in the parse\\_file() function. These might lead\n to invalid read and write operations, controlled by an attacker.\n* [CVE-2017-6310](https://security-tracker.debian.org/tracker/CVE-2017-6310)\nAn issue was discovered in tnef before 1.4.13. Four type confusions\n have been identified in the file\\_add\\_mapi\\_attrs() function.\n These might lead to invalid read and write operations, controlled\n by an attacker.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n1.4.9-1+deb7u1.\n\n\nWe recommend that you upgrade your tnef packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-839-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-839"
 		}
 	]
 }

@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3370-1",
-	"modified": "2023-06-28T06:37:32.357022Z",
-	"published": "2023-03-30T00:00:00Z",
+	"modified": "2024-01-09T20:33:35.961550Z",
+	"published": "2023-03-28T00:00:00Z",
 	"related": [
 		"CVE-2022-23468",
 		"CVE-2022-23478",
@@ -12,7 +12,6 @@
 		"CVE-2022-23493"
 	],
 	"summary": "xrdp - security update",
-	"details": "\nSeveral out of bounds memory access and buffer overflows were fixed in xrdp,\nan open source project which provides a graphical login to remote machines\nusing Microsoft Remote Desktop Protocol (RDP)\n\n\n* [CVE-2022-23468](https://security-tracker.debian.org/tracker/CVE-2022-23468)\nxrdp < v0.9.21 contain a buffer over flow in xrdp\\_login\\_wnd\\_create() function.\n There are no known workarounds for this issue.\n* [CVE-2022-23478](https://security-tracker.debian.org/tracker/CVE-2022-23478)\nxrdp < v0.9.21 contain a Out of Bound Write in\n xrdp\\_mm\\_trans\\_process\\_drdynvc\\_channel\\_open() function. There are no known\n workarounds for this issue.\n* [CVE-2022-23479](https://security-tracker.debian.org/tracker/CVE-2022-23479)\nxrdp < v0.9.21 contain a buffer over flow in xrdp\\_mm\\_chan\\_data\\_in() function.\n There are no known workarounds for this issue.\n* [CVE-2022-23483](https://security-tracker.debian.org/tracker/CVE-2022-23483)\nxrdp < v0.9.21 contain a Out of Bound Read in libxrdp\\_send\\_to\\_channel() function.\n There are no known workarounds for this issue.\n* [CVE-2022-23484](https://security-tracker.debian.org/tracker/CVE-2022-23484)\nxrdp < v0.9.21 contain a Integer Overflow in xrdp\\_mm\\_process\\_rail\\_update\\_window\\_text()\n function. There are no known workarounds for this issue.\n* [CVE-2022-23493](https://security-tracker.debian.org/tracker/CVE-2022-23493)\nxrdp < v0.9.21 contain a Out of Bound Read in xrdp\\_mm\\_trans\\_process\\_drdynvc\\_channel\\_close()\n function. There are no known workarounds for this issue.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n0.9.9-1+deb10u2.\n\n\nWe recommend that you upgrade your xrdp packages.\n\n\nFor the detailed security status of xrdp please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/xrdp>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -40,12 +39,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3370-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3370"
 		}
 	]
 }

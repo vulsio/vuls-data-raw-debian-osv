@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1541-1",
-	"modified": "2023-06-28T06:20:47.832084Z",
+	"modified": "2024-01-09T20:31:23.203013Z",
 	"published": "2018-10-10T00:00:00Z",
 	"related": [
 		"CVE-2018-17567"
 	],
 	"summary": "jekyll - security update",
-	"details": "\nParker Moore from Github Inc, discovered a vulnerability in include:\nsetting in the config file of jekyll which allow arbitrary file reads.\nBy simply including a symlink in the include array allowed the\nsymlinked file to be read into the build when they shouldnât actually\nbe read in any circumstance.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2.2.0+dfsg-2+deb8u1.\n\n\nWe recommend that you upgrade your jekyll packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1541-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1541"
 		}
 	]
 }

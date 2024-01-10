@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3485-1",
-	"modified": "2023-07-08T15:17:05.144417Z",
+	"modified": "2024-01-09T20:33:30.345393Z",
 	"published": "2023-07-08T00:00:00Z",
 	"related": [
 		"CVE-2022-39369"
 	],
 	"summary": "php-cas - security update",
-	"details": "\nA vulnerability has been found in phpCAS, a Central Authentication\nService client library in php, which may allow an attacker to gain\naccess to a victim's account on a vulnerable CASified service without\nvictim's knowledge, when the victim visits attacker's website while\nbeing logged in to the same CAS server.\n\n\nThe fix for this vulnerabilty requires an API breaking change in php-cas\nand will require that software using the library be updated.\n\n\nFor buster, all packages in the Debian repositories which are using\nphp-cas have been updated, though additional manual configuration is to\nbe expected, as php-cas needs additional site information -- the service\nbase URL -- for it to function. The DLAs for the respective packages\nwill have additional information, as well as the package's NEWS files.\n\n\nFor 3rd party software using php-cas, please be note that upstream\nprovided following instructions how to update this software [1]:\n\n\nphpCAS now requires an additional service base URL argument when constructing\nthe client class. It accepts any argument of:\n\n\n1. A service base URL string. The service URL discovery will always use this\n server name (protocol, hostname and port number) without using any external\n host names.\n2. An array of service base URL strings. The service URL discovery will check\n against this list before using the auto discovered base URL. If there is no\n match, the first base URL in the array will be used as the default. This\n option is helpful if your PHP website is accessible through multiple domains\n without a canonical name, or through both HTTP and HTTPS.\n3. A class that implements CAS\\_ServiceBaseUrl\\_Interface. If you need to\n customize the base URL discovery behavior, you can pass in a class that\n implements the interface.\n\n\nConstructing the client class is usually done with phpCAS::client().\n\n\nFor example, using the first possiblity:\n phpCAS::client(CAS\\_VERSION\\_2\\_0, $cas\\_host, $cas\\_port, $cas\\_context);\ncould become:\n phpCAS::client(CAS\\_VERSION\\_2\\_0, $cas\\_host, $cas\\_port, $cas\\_context, \"https://casified-service.example.org:8080\");\n\n\nDetails of the vulnerability:\n\n\n* [CVE-2022-39369](https://security-tracker.debian.org/tracker/CVE-2022-39369)\nThe phpCAS library uses HTTP headers to determine the service URL used\n to validate tickets. This allows an attacker to control the host header\n and use a valid ticket granted for any authorized service in the same\n SSO realm (CAS server) to authenticate to the service protected by\n phpCAS. Depending on the settings of the CAS server service registry in\n worst case this may be any other service URL (if the allowed URLs are\n configured to \"^(https)://.\\*\") or may be strictly limited to known and\n authorized services in the same SSO federation if proper URL service\n validation is applied.\n\n\n[1] <https://github.com/apereo/phpCAS/blob/f3db27efd1f5020e71f2116f637a25cc9dbda1e3/docs/Upgrading#L1C1-L1C1>\n\n\nFor Debian 10 buster, this problem has been fixed in version\n1.3.6-1+deb10u1.\n\n\nWe recommend that you upgrade your php-cas packages.\n\n\nFor the detailed security status of php-cas please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/php-cas>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3485-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3485"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-4667-1",
-	"modified": "2023-10-16T00:20:21.706978Z",
+	"modified": "2024-01-09T20:28:58.140861Z",
 	"published": "2020-04-28T00:00:00Z",
 	"related": [
 		"CVE-2020-10942",
@@ -11,7 +11,6 @@
 		"CVE-2020-8428"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to a privilege escalation, denial of service, or information\nleak.\n\n\n* [CVE-2020-2732](https://security-tracker.debian.org/tracker/CVE-2020-2732)\nPaulo Bonzini discovered that the KVM implementation for Intel\n processors did not properly handle instruction emulation for L2\n guests when nested virtualization is enabled. This could allow\n an L2 guest to cause privilege escalation, denial of service,\n or information leaks in the L1 guest.\n* [CVE-2020-8428](https://security-tracker.debian.org/tracker/CVE-2020-8428)\nAl Viro discovered a use-after-free vulnerability in the VFS\n layer. This allowed local users to cause a denial-of-service\n (crash) or obtain sensitive information from kernel memory.\n* [CVE-2020-10942](https://security-tracker.debian.org/tracker/CVE-2020-10942)\nIt was discovered that the vhost\\_net driver did not properly\n validate the type of sockets set as back-ends. A local user\n permitted to access /dev/vhost-net could use this to cause a stack\n corruption via crafted system calls, resulting in denial of\n service (crash) or possibly privilege escalation.\n* [CVE-2020-11565](https://security-tracker.debian.org/tracker/CVE-2020-11565)\nEntropy Moe reported that the shared memory filesystem (tmpfs) did\n not correctly handle an mpol mount option specifying an empty\n node list, leading to a stack-based out-of-bounds write. If user\n namespaces are enabled, a local user could use this to cause a\n denial of service (crash) or possibly for privilege escalation.\n* [CVE-2020-11884](https://security-tracker.debian.org/tracker/CVE-2020-11884)\nAl Viro reported a race condition in memory management code for\n IBM Z (s390x architecture), that can result in the kernel\n executing code from the user address space. A local user could\n use this for privilege escalation.\n\n\nFor the stable distribution (buster), these problems have been fixed in\nversion 4.19.98-1+deb10u1.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/linux>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -52,12 +51,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-4667-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2020/dsa-4667"
 		}
 	]
 }

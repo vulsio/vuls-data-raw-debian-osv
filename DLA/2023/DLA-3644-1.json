@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3644-1",
-	"modified": "2023-11-02T15:15:31.213938Z",
+	"modified": "2024-01-09T20:33:43.036046Z",
 	"published": "2023-11-02T00:00:00Z",
 	"related": [
 		"CVE-2023-40619"
 	],
 	"summary": "phppgadmin - security update",
-	"details": "\nIt was discovered there was a potential remote code execution vulnerability\nin phppgadmin, a web-based administration tool for the PostgreSQL database\nserver. This issue concerned the deserialisation of untrusted data, which may\nhave led to remote code execution because user-controlled data was being passed\ndirectly to the PHP `unserialize()` function.\n\n\n* [CVE-2023-40619](https://security-tracker.debian.org/tracker/CVE-2023-40619)\nphpPgAdmin 7.14.4 and earlier is vulnerable to deserialization of\n untrusted data which may lead to remote code execution because\n user-controlled data is directly passed to the PHP 'unserialize()' function\n in multiple places. An example is the functionality to manage tables in\n 'tables.php' where the 'ma[]' POST parameter is deserialized.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n5.1+ds-4+deb10u1.\n\n\nWe recommend that you upgrade your phppgadmin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3644-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3644"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2305-1",
-	"modified": "2023-10-16T00:11:07.498450Z",
-	"published": "2011-09-19T00:00:00Z",
+	"modified": "2024-01-09T20:21:22.316887Z",
+	"published": "2011-09-08T00:00:00Z",
 	"related": [
 		"CVE-2011-0762"
 	],
 	"summary": "vsftpd - denial of service",
-	"details": "\nTwo security issue have been discovered that affect vsftpd, a lightweight,\nefficient FTP server written for security.\n\n\n* [CVE-2011-2189](https://security-tracker.debian.org/tracker/CVE-2011-2189)\nIt was discovered that Linux kernels < 2.6.35 are considerably slower in\n releasing than in the creation of network namespaces. As a result of this\n and because vsftpd is using this feature as a security enhancement to\n provide network isolation for connections, it is possible to cause denial\n of service conditions due to excessive memory allocations by the kernel.\n This is technically no vsftpd flaw, but a kernel issue. However, this\n feature has legitimate use cases and backporting the specific kernel patch\n is too intrusive. Additionally, a local attacker requires the CAP\\_SYS\\_ADMIN\n capability to abuse this functionality. Therefore, as a fix, a kernel\n version check has been added to vsftpd in order to disable this feature\n for kernels < 2.6.35.\n* [CVE-2011-0762](https://security-tracker.debian.org/tracker/CVE-2011-0762)\nMaksymilian Arciemowicz discovered that vsftpd is incorrectly handling\n certain glob expressions in STAT commands. This allows a remote authenticated\n attacker to conduct denial of service attacks (excessive CPU and process\n slot exhaustion) via crafted STAT commands.\n\n\nFor the oldstable distribution (lenny), this problem has been fixed in\nversion 2.0.7-1+lenny1.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 2.3.2-3+squeeze2. Please note that \n[\\\nCVE-2011-2189](https://security-tracker.debian.org/tracker/CVE-2011-2189) does not affect the lenny version.\n\n\nFor the testing distribution (wheezy), this problem will be fixed soon.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.3.4-1.\n\n\nWe recommend that you upgrade your vsftpd packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -60,12 +59,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2305-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2305"
 		}
 	]
 }

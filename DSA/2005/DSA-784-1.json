@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-784-1",
-	"modified": "2023-10-16T00:28:27.775931Z",
+	"modified": "2024-01-09T20:34:07.570806Z",
 	"published": "2005-08-25T00:00:00Z",
 	"related": [
 		"CVE-2005-2151"
 	],
 	"summary": "courier - programming error",
-	"details": "\nA problem has been discovered in the Courier Mail Server. DNS\nfailures were not handled properly when looking up Sender Policy\nFramework (SPF) records, which could allow attackers to cause memory\ncorruption. The default configuration on Debian has SPF checking\ndisabled, so most machines are not vulnerable. This is explained in\nthe \"courier\" manpage, section SENDER POLICY FRAMEWORK KEYWORDS.\n\n\nThe old stable distribution (woody) is not affected by this problem.\n\n\nFor the stable distribution (sarge) this problem has been fixed in\nversion 0.47-4sarge1.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 0.47-6.\n\n\nWe recommend that you upgrade your courier-mta package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-784-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2005/dsa-784"
 		}
 	]
 }

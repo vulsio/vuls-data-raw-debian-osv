@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-322-1",
-	"modified": "2023-06-28T06:25:27.919474Z",
-	"published": "2015-10-01T00:00:00Z",
+	"modified": "2024-01-09T20:33:23.164325Z",
+	"published": "2015-09-30T00:00:00Z",
 	"related": [
 		"CVE-2015-5262"
 	],
 	"summary": "commons-httpclient - security update",
-	"details": "\nTrevin Beattie [1] [discovered](https://bugzilla.redhat.com/show_bug.cgi?id=1259892) an issue where one could observe hanging\nthreads in a multi-threaded Java application. After debugging the issue,\nit became evident that the hanging threads were caused by the SSL\ninitialization code in commons-httpclient.\n\n\nThis upload fixes this issue by respecting the configured SO\\_TIMEOUT\nduring SSL handshakes with the server.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-322-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-322"
 		}
 	]
 }

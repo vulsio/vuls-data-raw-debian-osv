@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3992-1",
-	"modified": "2023-10-16T00:12:32.626943Z",
+	"modified": "2024-01-09T20:26:56.077541Z",
 	"published": "2017-10-06T00:00:00Z",
 	"related": [
 		"CVE-2017-1000100",
@@ -9,7 +9,6 @@
 		"CVE-2017-1000254"
 	],
 	"summary": "curl - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in cURL, an URL transfer\nlibrary. The Common Vulnerabilities and Exposures project identifies the\nfollowing problems:\n\n\n* [CVE-2017-1000100](https://security-tracker.debian.org/tracker/CVE-2017-1000100)\nEven Rouault reported that cURL does not properly handle long file\n names when doing an TFTP upload. A malicious HTTP(S) server can take\n advantage of this flaw by redirecting a client using the cURL\n library to a crafted TFTP URL and trick it to send private memory\n contents to a remote server over UDP.\n* [CVE-2017-1000101](https://security-tracker.debian.org/tracker/CVE-2017-1000101)\nBrian Carpenter and Yongji Ouyang reported that cURL contains a flaw\n in the globbing function that parses the numerical range, leading to\n an out-of-bounds read when parsing a specially crafted URL.\n* [CVE-2017-1000254](https://security-tracker.debian.org/tracker/CVE-2017-1000254)\nMax Dymond reported that cURL contains an out-of-bounds read flaw in\n the FTP PWD response parser. A malicious server can take advantage\n of this flaw to effectively prevent a client using the cURL library\n to work with it, causing a denial of service.\n\n\nFor the oldstable distribution (jessie), these problems have been fixed\nin version 7.38.0-4+deb8u6.\n\n\nFor the stable distribution (stretch), these problems have been fixed in\nversion 7.52.1-5+deb9u1.\n\n\nWe recommend that you upgrade your curl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -67,12 +66,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3992-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2017/dsa-3992"
 		}
 	]
 }

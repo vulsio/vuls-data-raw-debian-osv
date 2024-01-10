@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2797-1",
-	"modified": "2023-10-16T00:06:05.863366Z",
+	"modified": "2024-01-09T20:21:29.460345Z",
 	"published": "2013-11-13T00:00:00Z",
 	"related": [
 		"CVE-2013-5590",
@@ -14,7 +14,6 @@
 		"CVE-2013-5604"
 	],
 	"summary": "icedove - several",
-	"details": "\nMultiple security issues have been found in Icedove, Debian's version of\nthe Mozilla Thunderbird mail and news client. Multiple memory safety\nerrors, and other implementation errors may lead to the execution of\narbitrary code.\n\n\nThe Icedove version in the oldstable distribution (squeeze) is no longer\nsupported with full security updates. However, it should be noted that\nalmost all security issues in Icedove stem from the included browser engine.\nThese security problems only affect Icedove if scripting and HTML mails\nare enabled. If there are security issues specific to Icedove (e.g. a\nhypothetical buffer overflow in the IMAP implementation) we'll make an\neffort to backport such fixes to oldstable.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 17.0.10-1~deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 17.0.10-1.\n\n\nWe recommend that you upgrade your icedove packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2797-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2797"
 		}
 	]
 }

@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-428",
-	"modified": "2023-10-16T00:20:09.673114Z",
+	"modified": "2024-01-09T20:27:07.309387Z",
 	"published": "2004-01-20T00:00:00Z",
 	"related": [
 		"CVE-2003-0848"
 	],
 	"summary": "slocate - buffer overflow",
-	"details": "\nA vulnerability was discovered in slocate, a program to index and\nsearch for files, whereby a specially crafted database could overflow\na heap-based buffer. This vulnerability could be exploited by a local\nattacker to gain the privileges of the \"slocate\" group, which can\naccess the global database containing a list of pathnames of all files\non the system, including those which should only be visible to\nprivileged users.\n\n\nThis problem, and a category of potential similar problems, have been\nfixed by modifying slocate to drop privileges before reading a\nuser-supplied database.\n\n\nFor the current stable distribution (woody) this problem has been\nfixed in version 2.6-1.3.2.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\nRefer to Debian bug [#226103](https://bugs.debian.org/226103) \nfor status information.\n\n\nWe recommend that you update your slocate package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-428.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2004/dsa-428"
 		}
 	]
 }

@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-191",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-11-07T00:00:00Z",
 	"published": "2002-11-07T00:00:00Z",
 	"related": [
 		"CVE-2002-1131",
@@ -9,7 +9,6 @@
 		"CVE-2002-1276"
 	],
 	"summary": "squirrelmail - cross site scripting",
-	"details": "\nSeveral cross site scripting vulnerabilities have been found in\nsquirrelmail, a feature-rich webmail package written in PHP4. The\nCommon Vulnerabilities and Exposures (CVE) project identified the\nfollowing vulnerabilities:\n\n\n1. CAN-2002-1131: User input is not always sanitized so execution of\n arbitrary code on a client computer is possible. This can happen\n after following a malicious URL or by viewing a malicious\n addressbook entry.\n2. CAN-2002-1132: Another problem could make it possible for an\n attacker to gain sensitive information under some conditions.\n When a malformed argument is appended to a link, an error page\n will be generated which contains the absolute pathname of the\n script. However, this information is available through the\n Contents file of the distribution anyway.\n\n\nThese problems have been fixed in version 1.2.6-1.1 for the current stable\ndistribution (woody) and in version 1.2.8-1.1 for the unstable\ndistribution (sid). The old stable distribution (potato) is not\naffected since it doesn't contain a squirrelmail package.\n\n\nWe recommend that you upgrade your squirrelmail package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -33,12 +32,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-191.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-191"
 		}
 	]
 }

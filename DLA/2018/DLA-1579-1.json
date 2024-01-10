@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1579-1",
-	"modified": "2023-06-28T06:20:49.118968Z",
-	"published": "2018-11-20T00:00:00Z",
+	"modified": "2024-01-09T20:31:27.495280Z",
+	"published": "2018-11-19T00:00:00Z",
 	"related": [
 		"CVE-2017-17480",
 		"CVE-2018-18088"
 	],
 	"summary": "openjpeg2 - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in openjpeg2, the\nopen-source JPEG 2000 codec.\n\n\n* [CVE-2017-17480](https://security-tracker.debian.org/tracker/CVE-2017-17480)\nWrite stack buffer overflow due to missing buffer length formatter in\n fscanf call (jp3d and jpwl codecs). This vulnerability might be\n leveraged by remote attackers using crafted jp3d and jpwl files to\n cause denial of service or possibly remote code execution.\n* [CVE-2018-18088](https://security-tracker.debian.org/tracker/CVE-2018-18088)\nNull pointer dereference caused by null image components in imagetopnm.\n This vulnerability might be leveraged by remote attackers using crafted\n BMP files to cause denial of service.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n2.1.0-2+deb8u5.\n\n\nWe recommend that you upgrade your openjpeg2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1579-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1579"
 		}
 	]
 }

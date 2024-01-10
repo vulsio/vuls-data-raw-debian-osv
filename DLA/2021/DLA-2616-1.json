@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2616-1",
-	"modified": "2023-06-28T06:26:36.773483Z",
+	"modified": "2024-01-09T20:32:46.056377Z",
 	"published": "2021-04-03T00:00:00Z",
 	"related": [
 		"CVE-2021-21341",
@@ -17,7 +17,6 @@
 		"CVE-2021-21351"
 	],
 	"summary": "libxstream-java - security update",
-	"details": "\nIn XStream there is a vulnerability which may allow a remote attacker to\nload and execute arbitrary code from a remote host only by manipulating the\nprocessed input stream.\n\n\nThe type hierarchies for java.io.InputStream, java.nio.channels.Channel,\njavax.activation.DataSource and javax.sql.rowsel.BaseRowSet are now\nblacklisted as well as the individual types\ncom.sun.corba.se.impl.activation.ServerTableEntry,\ncom.sun.tools.javac.processing.JavacProcessingEnvironment$NameProcessIterator,\nsun.awt.datatransfer.DataTransferer$IndexOrderComparator, and\nsun.swing.SwingLazyValue. Additionally the internal type\nAccessor$GetterSetterReflection of JAXB, the internal types\nMethodGetter$PrivilegedGetter and ServiceFinder$ServiceNameIterator of\nJAX-WS, all inner classes of javafx.collections.ObservableList and an\ninternal ClassLoader used in a private BCEL copy are now part of the\ndefault blacklist and the deserialization of XML containing one of the\ntypes will fail. You will have to enable these types by explicit\nconfiguration, if you need them.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n1.4.11.1-1+deb9u2.\n\n\nWe recommend that you upgrade your libxstream-java packages.\n\n\nFor the detailed security status of libxstream-java please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/libxstream-java>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2616-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2616"
 		}
 	]
 }

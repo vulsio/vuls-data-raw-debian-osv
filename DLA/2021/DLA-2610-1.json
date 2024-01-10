@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2610-1",
-	"modified": "2023-06-28T06:36:48.785491Z",
-	"published": "2021-03-30T00:00:00Z",
+	"modified": "2024-01-09T20:32:45.906808Z",
+	"published": "2021-03-29T00:00:00Z",
 	"related": [
 		"CVE-2020-27170",
 		"CVE-2020-27171",
@@ -18,7 +18,6 @@
 		"CVE-2021-3428"
 	],
 	"summary": "linux-4.19 - security update",
-	"details": "\n[CVE-2021-26930](https://security-tracker.debian.org/tracker/CVE-2021-26930) [CVE-2021-26931](https://security-tracker.debian.org/tracker/CVE-2021-26931) [CVE-2021-26932](https://security-tracker.debian.org/tracker/CVE-2021-26932) [CVE-2021-27363](https://security-tracker.debian.org/tracker/CVE-2021-27363)\n[CVE-2021-27364](https://security-tracker.debian.org/tracker/CVE-2021-27364) [CVE-2021-27365](https://security-tracker.debian.org/tracker/CVE-2021-27365) [CVE-2021-28038](https://security-tracker.debian.org/tracker/CVE-2021-28038) [CVE-2021-28660](https://security-tracker.debian.org/tracker/CVE-2021-28660)\nDebian Bug : 983595\n\n\nSeveral vulnerabilities have been discovered in the Linux kernel that\nmay lead to the execution of arbitrary code, privilege escalation,\ndenial of service, or information leaks.\n\n\n* [CVE-2020-27170](https://security-tracker.debian.org/tracker/CVE-2020-27170)\n, [CVE-2020-27171](https://security-tracker.debian.org/tracker/CVE-2020-27171)\n\n\nPiotr Krysiuk discovered flaws in the BPF subsystem's checks for\n information leaks through speculative execution. A local user\n could use these to obtain sensitive information from kernel\n memory.\n* [CVE-2021-3348](https://security-tracker.debian.org/tracker/CVE-2021-3348)\nADlab of venustech discovered a race condition in the nbd block\n driver that can lead to a use-after-free. A local user with\n access to an nbd block device could use this to cause a denial of\n service (crash or memory corruption) or possibly for privilege\n escalation.\n* [CVE-2021-3428](https://security-tracker.debian.org/tracker/CVE-2021-3428)\nWolfgang Frisch reported a potential integer overflow in the\n ext4 filesystem driver. A user permitted to mount arbitrary\n filesystem images could use this to cause a denial of service\n (crash).\n* [CVE-2021-26930](https://security-tracker.debian.org/tracker/CVE-2021-26930)\n(XSA-365)\n\n\nOlivier Benjamin, Norbert Manthey, Martin Mazein, and Jan\n H. SchĂśnherr discovered that the Xen block backend driver\n (xen-blkback) did not handle grant mapping errors correctly. A\n malicious guest could exploit this bug to cause a denial of\n service (crash), or possibly an information leak or privilege\n escalation, within the domain running the backend, which is\n typically dom0.\n* [CVE-2021-26931](https://security-tracker.debian.org/tracker/CVE-2021-26931)\n(XSA-362), [CVE-2021-26932](https://security-tracker.debian.org/tracker/CVE-2021-26932) (XSA-361), [CVE-2021-28038](https://security-tracker.debian.org/tracker/CVE-2021-28038) (XSA-367)\n\n\nJan Beulich discovered that the Xen support code and various Xen\n backend drivers did not handle grant mapping errors correctly. A\n malicious guest could exploit these bugs to cause a denial of\n service (crash) within the domain running the backend, which is\n typically dom0.\n* [CVE-2021-27363](https://security-tracker.debian.org/tracker/CVE-2021-27363)\nAdam Nichols reported that the iSCSI initiator subsystem did not\n properly restrict access to transport handle attributes in sysfs.\n On a system acting as an iSCSI initiator, this is an information\n leak to local users and makes it easier to exploit [CVE-2021-27364](https://security-tracker.debian.org/tracker/CVE-2021-27364).\n* [CVE-2021-27364](https://security-tracker.debian.org/tracker/CVE-2021-27364)\nAdam Nichols reported that the iSCSI initiator subsystem did not\n properly restrict access to its netlink management interface. On\n a system acting as an iSCSI initiator, a local user could use\n these to cause a denial of service (disconnection of storage) or\n possibly for privilege escalation.\n* [CVE-2021-27365](https://security-tracker.debian.org/tracker/CVE-2021-27365)\nAdam Nichols reported that the iSCSI initiator subsystem did not\n correctly limit the lengths of parameters or passthrough PDUs\n sent through its netlink management interface. On a system acting\n as an iSCSI initiator, a local user could use these to leak the\n contents of kernel memory, to cause a denial of service (kernel\n memory corruption or crash), and probably for privilege\n escalation.\n* [CVE-2021-28660](https://security-tracker.debian.org/tracker/CVE-2021-28660)\nIt was discovered that the rtl8188eu WiFi driver did not correctly\n limit the length of SSIDs copied into scan results. An attacker\n within WiFi range could use this to cause a denial of service\n (crash or memory corruption) or possibly to execute code on a\n vulnerable system.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n4.19.181-1~deb9u1. This update additionally fixes Debian bug\n#983595, and includes many more bug fixes from stable updates\n4.19.172-4.19.181 inclusive.\n\n\nWe recommend that you upgrade your linux-4.19 packages.\n\n\nFor the detailed security status of linux-4.19 please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/linux-4.19>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2610-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2021/dla-2610"
 		}
 	]
 }

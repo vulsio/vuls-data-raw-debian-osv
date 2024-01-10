@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2950-1",
-	"modified": "2023-10-16T00:11:39.307465Z",
+	"modified": "2024-01-09T20:21:38.306054Z",
 	"published": "2014-06-05T00:00:00Z",
 	"related": [
 		"CVE-2014-0195",
@@ -10,7 +10,6 @@
 		"CVE-2014-3470"
 	],
 	"summary": "openssl - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in OpenSSL:\n\n\n* [CVE-2014-0195](https://security-tracker.debian.org/tracker/CVE-2014-0195)\nJueri Aedla discovered that a buffer overflow in processing DTLS\n fragments could lead to the execution of arbitrary code or denial\n of service.\n* [CVE-2014-0221](https://security-tracker.debian.org/tracker/CVE-2014-0221)\nImre Rad discovered the processing of DTLS hello packets is \n susceptible to denial of service.\n* [CVE-2014-0224](https://security-tracker.debian.org/tracker/CVE-2014-0224)\nKIKUCHI Masashi discovered that carefully crafted handshakes can\n force the use of weak keys, resulting in potential man-in-the-middle\n attacks.\n* [CVE-2014-3470](https://security-tracker.debian.org/tracker/CVE-2014-3470)\nFelix Groebert and Ivan Fratric discovered that the implementation of\n anonymous ECDH ciphersuites is suspectible to denial of service.\n\n\nAdditional information can be found at \n<http://www.openssl.org/news/secadv_20140605.txt>\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1.0.1e-2+deb7u10. All applications linked to openssl need to\nbe restarted. You can use the tool checkrestart from the package\ndebian-goodies to detect affected programs or reboot your system. There's\nalso a forthcoming security update for the Linux kernel later the day\n([CVE-2014-3153](https://security-tracker.debian.org/tracker/CVE-2014-3153)), so you need to reboot anyway. Perfect timing, isn't it?\n\n\nFor the unstable distribution (sid), these problems will be fixed soon.\n\n\nWe recommend that you upgrade your openssl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2950-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2950"
 		}
 	]
 }

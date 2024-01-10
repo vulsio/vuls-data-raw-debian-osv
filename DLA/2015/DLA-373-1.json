@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-373-1",
-	"modified": "2023-06-28T06:26:59.735459Z",
+	"modified": "2024-01-09T20:33:45.557593Z",
 	"published": "2015-12-26T00:00:00Z",
 	"related": [
 		"CVE-2015-5312",
@@ -11,7 +11,6 @@
 		"CVE-2015-7500"
 	],
 	"summary": "libxml2 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in libxml2, a library providing\nsupport to read, modify and write XML and HTML files. A remote attacker\ncould provide a specially crafted XML or HTML file that, when processed\nby an application using libxml2, would cause that application to use an\nexcessive amount of CPU, leak potentially sensitive information, or\ncrash the application.\n\n\n* [CVE-2015-5312](https://security-tracker.debian.org/tracker/CVE-2015-5312)\nCPU exhaustion when processing specially crafted XML input.\n* [CVE-2015-7497](https://security-tracker.debian.org/tracker/CVE-2015-7497)\nHeap-based buffer overflow in xmlDictComputeFastQKey.\n* [CVE-2015-7498](https://security-tracker.debian.org/tracker/CVE-2015-7498)\nHeap-based buffer overflow in xmlParseXmlDecl.\n* [CVE-2015-7499](https://security-tracker.debian.org/tracker/CVE-2015-7499)\nHeap-based buffer overflow in xmlGROW.\n* [CVE-2015-7500](https://security-tracker.debian.org/tracker/CVE-2015-7500)\nHeap buffer overflow in xmlParseMisc.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -53,12 +52,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-373-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-373"
 		}
 	]
 }

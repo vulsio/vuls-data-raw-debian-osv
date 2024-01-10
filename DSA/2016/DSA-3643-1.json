@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3643-1",
-	"modified": "2023-10-16T00:12:12.046414Z",
+	"modified": "2024-01-09T20:21:59.490519Z",
 	"published": "2016-08-06T00:00:00Z",
 	"related": [
 		"CVE-2016-6232"
 	],
 	"summary": "kde4libs - security update",
-	"details": "\nAndreas Cord-Landwehr discovered that kde4libs, the core libraries\nfor all KDE 4 applications, do not properly handle the extraction\nof archives with \"../\" in the file paths. A remote attacker can\ntake advantage of this flaw to overwrite files outside of the\nextraction folder, if a user is tricked into extracting a specially\ncrafted archive.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 4:4.14.2-5+deb8u1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 4:4.14.22-2.\n\n\nWe recommend that you upgrade your kde4libs packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3643-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3643"
 		}
 	]
 }

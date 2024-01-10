@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2894-1",
-	"modified": "2023-10-16T00:06:06.861465Z",
+	"modified": "2024-01-09T20:27:54.916789Z",
 	"published": "2014-04-05T00:00:00Z",
 	"related": [
 		"CVE-2014-2532",
 		"CVE-2014-2653"
 	],
 	"summary": "openssh - security update",
-	"details": "\nTwo vulnerabilities were discovered in OpenSSH, an implementation of the\nSSH protocol suite. The Common Vulnerabilities and Exposures project\nidentifies the following problems:\n\n\n* [CVE-2014-2532](https://security-tracker.debian.org/tracker/CVE-2014-2532)\nJann Horn discovered that OpenSSH incorrectly handled wildcards in\n AcceptEnv lines. A remote attacker could use this issue to trick\n OpenSSH into accepting any environment variable that contains the\n characters before the wildcard character.\n* [CVE-2014-2653](https://security-tracker.debian.org/tracker/CVE-2014-2653)\nMatthew Vernon reported that if a SSH server offers a\n HostCertificate that the ssh client doesn't accept, then the client\n doesn't check the DNS for SSHFP records. As a consequence a\n malicious server can disable SSHFP-checking by presenting a\n certificate.\n\n\nNote that a host verification prompt is still displayed before\n connecting.\n\n\nFor the oldstable distribution (squeeze), these problems have been fixed in\nversion 1:5.5p1-6+squeeze5.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 1:6.0p1-4+deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1:6.6p1-1.\n\n\nWe recommend that you upgrade your openssh packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2894-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2894"
 		}
 	]
 }

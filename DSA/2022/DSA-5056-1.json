@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5056-1",
-	"modified": "2023-10-16T00:25:42.976297Z",
+	"modified": "2024-01-09T20:29:22.439399Z",
 	"published": "2022-01-24T00:00:00Z",
 	"related": [
 		"CVE-2021-45079"
 	],
 	"summary": "strongswan - security update",
-	"details": "\nZhuowei Zhang discovered a bug in the EAP authentication client code of\nstrongSwan, an IKE/IPsec suite, that may allow to bypass the client and in some\nscenarios even the server authentication, or could lead to a denial-of-service\nattack.\n\n\nWhen using EAP authentication (RFC 3748), the successful completion of the\nauthentication is indicated by an EAP-Success message sent by the server to the\nclient. strongSwan's EAP client code handled early EAP-Success messages\nincorrectly, either crashing the IKE daemon or concluding the EAP method\nprematurely.\n\n\nEnd result depend on the used configuration, more details can be found in\nupstream advisory at\n[\\\nhttps://www.strongswan.org/blog/2022/01/24/strongswan-vulnerability-(cve-2021-45079).html](https://www.strongswan.org/blog/2022/01/24/strongswan-vulnerability-(cve-2021-45079).html)\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 5.7.2-1+deb10u2.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 5.9.1-1+deb11u2.\n\n\nWe recommend that you upgrade your strongswan packages.\n\n\nFor the detailed security status of strongswan please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/strongswan](https://security-tracker.debian.org/tracker/strongswan)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5056-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5056"
 		}
 	]
 }

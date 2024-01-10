@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2130-1",
-	"modified": "2023-10-16T00:10:59.011845Z",
+	"modified": "2024-01-09T20:21:13.853400Z",
 	"published": "2010-12-10T00:00:00Z",
 	"related": [
 		"CVE-2010-3613",
@@ -9,7 +9,6 @@
 		"CVE-2010-3762"
 	],
 	"summary": "bind9 - denial of service",
-	"details": "\nSeveral remote vulnerabilities have been discovered in BIND, an\nimplementation of the DNS protocol suite. The Common Vulnerabilities\nand Exposures project identifies the following problems:\n\n\n* [CVE-2010-3762](https://security-tracker.debian.org/tracker/CVE-2010-3762)\nWhen DNSSEC validation is enabled, BIND does not properly\n handle certain bad signatures if multiple trust anchors exist\n for a single zone, which allows remote attackers to cause a\n denial of service (server crash) via a DNS query.\n* [CVE-2010-3614](https://security-tracker.debian.org/tracker/CVE-2010-3614)\nBIND does not properly determine the security status of an NS\n RRset during a DNSKEY algorithm rollover, which may lead to\n zone unavailability during rollovers.\n* [CVE-2010-3613](https://security-tracker.debian.org/tracker/CVE-2010-3613)\nBIND does not properly handle the combination of signed\n negative responses and corresponding RRSIG records in the\n cache, which allows remote attackers to cause a denial of\n service (server crash) via a query for cached data.\n\n\nIn addition, this security update improves compatibility with\npreviously installed versions of the bind9 package. As a result, it\nis necessary to initiate the update with \"apt-get dist-upgrade\"\ninstead of \"apt-get update\".\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1:9.6.ESV.R3+dfsg-0+lenny1.\n\n\nFor the upcoming stable distribution (squeeze) and the unstable\ndistribution (sid), these problems have been fixed in version\n1:9.7.2.dfsg.P3-1.\n\n\nWe recommend that you upgrade your bind9 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -58,12 +57,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2130-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2130"
 		}
 	]
 }

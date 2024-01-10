@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-386",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-09-18T00:00:00Z",
 	"published": "2003-09-18T00:00:00Z",
 	"related": [
 		"CVE-2002-1271"
 	],
 	"summary": "libmailtools-perl - input validation bug",
-	"details": "\nThe SuSE security team discovered during an audit a bug in\nMail::Mailer, a Perl module used for sending email, whereby\npotentially untrusted input is passed to a program such as mailx,\nwhich may interpret certain escape sequences as commands to be\nexecuted.\n\n\nThis bug has been fixed by removing support for programs such as mailx\nas a transport for sending mail. Instead, alternative mechanisms are\nused.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 1.44-1woody1.\n\n\nFor the unstable distribution (sid) this problem will be fixed soon.\n\n\nWe recommend that you update your libmailtools-perl package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-386.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-386"
 		}
 	]
 }

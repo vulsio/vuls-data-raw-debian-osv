@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-841-2",
-	"modified": "2023-06-28T06:27:08.774628Z",
-	"published": "2017-02-28T00:00:00Z",
+	"modified": "2024-01-09T20:34:00.768127Z",
+	"published": "2017-07-29T00:00:00Z",
 	"related": [
 		"CVE-2016-8743"
 	],
 	"summary": "apache2 - regression update",
-	"details": "\nThis upload fixes a security vulnerability in the header parsing code.\n\n\nDavid Dennerline, of IBM Security's X-Force Researchers, and Régis\nLeroy discovered problems in the way Apache handled a broad pattern of\nunusual whitespace patterns in HTTP requests. In some configurations,\nthis could lead to response splitting or cache pollution\nvulnerabilities. To fix these issues, this update makes Apache httpd\nbe more strict in what HTTP requests it accepts.\n\n\nIf this causes problems with non-conforming clients, some checks can\nbe relaxed by adding the new directive HttpProtocolOptions unsafe to\nthe configuration. More information is available at\n\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.2.22-13+deb7u8.\n\n\nWe recommend that you upgrade your apache2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-841-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-841"
 		}
 	]
 }

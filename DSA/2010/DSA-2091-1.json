@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2091-1",
-	"modified": "2023-10-16T00:10:57.429849Z",
+	"modified": "2024-01-09T20:22:40.970859Z",
 	"published": "2010-08-12T00:00:00Z",
 	"related": [
 		"CVE-2009-2964",
 		"CVE-2010-2813"
 	],
 	"summary": "squirrelmail - cross-site request forgery",
-	"details": "\nSquirrelMail, a webmail application, does not employ a user-specific token \nfor webforms. This allows a remote attacker to perform a Cross Site Request \nForgery (CSRF) attack. The attacker may hijack the authentication of \nunspecified victims and send messages or change user preferences among other \nactions, by tricking the victim into following a link controlled by the \noffender.\n\n\nIn addition, a denial-of-service was fixed, which could be triggered when a \npassword containing 8-bit characters was used to log in ([CVE-2010-2813](https://security-tracker.debian.org/tracker/CVE-2010-2813)).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.4.15-4+lenny3.1.\n\n\nFor the testing distribution (squeeze) and the unstable distribution (sid),\nthese problems have been fixed in version 1.4.21-1.\n\n\nWe recommend that you upgrade your squirrelmail packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2091-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2091"
 		}
 	]
 }

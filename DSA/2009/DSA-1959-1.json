@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1959-1",
-	"modified": "2023-10-16T00:10:49.449394Z",
+	"modified": "2024-01-09T20:21:05.215681Z",
 	"published": "2009-12-19T00:00:00Z",
 	"related": [
 		"CVE-2009-4261"
 	],
 	"summary": "ganeti - arbitrary command execution",
-	"details": "\nIt was discovered that ganeti, a virtual server cluster manager, does\nnot validate the path of scripts passed as arguments to certain\ncommands, which allows local or remote users (via the web interface in\nversions 2.x) to execute arbitrary commands on a host acting as a\ncluster master.\n\n\nThe oldstable distribution (etch) does not include ganeti.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1.2.6-3+lenny2.\n\n\nFor the testing distribution (squeeze), this problem will be fixed\nin version 2.0.5-1.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 2.0.5-1.\n\n\nWe recommend that you upgrade your ganeti packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1959-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1959"
 		}
 	]
 }

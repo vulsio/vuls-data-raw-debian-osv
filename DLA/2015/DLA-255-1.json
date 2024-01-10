@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-255-1",
-	"modified": "2023-06-28T06:29:07.939207Z",
+	"modified": "2024-01-09T20:32:41.778194Z",
 	"published": "2015-06-27T00:00:00Z",
 	"related": [
 		"CVE-2015-2665",
@@ -10,7 +10,6 @@
 		"CVE-2015-4454"
 	],
 	"summary": "cacti - security update",
-	"details": "\nSeveral vulnerabilities (cross-site scripting and SQL injection) have\nbeen discovered in Cacti, a web interface for graphing of monitoring\nsystems.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\n* [CVE-2015-2665](https://security-tracker.debian.org/tracker/CVE-2015-2665)\nCross-site scripting (XSS) vulnerability in Cacti before 0.8.8d\n allows remote attackers to inject arbitrary web script or HTML via\n unspecified vectors.\n* [CVE-2015-4342](https://security-tracker.debian.org/tracker/CVE-2015-4342)\nSQL Injection and Location header injection from cdef id\n* [CVE-2015-4454](https://security-tracker.debian.org/tracker/CVE-2015-4454)\nSQL injection vulnerability in the get\\_hash\\_graph\\_template function\n in lib/functions.php in Cacti before 0.8.8d allows remote attackers\n to execute arbitrary SQL commands via the graph\\_template\\_id\n parameter to graph\\_templates.php\n\n* Unassigned CVE SQL injection VN:JVN#78187936 / TN:JPCERT#98968540\n\n SQL injection vulnerability in the settings page\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-255-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-255"
 		}
 	]
 }

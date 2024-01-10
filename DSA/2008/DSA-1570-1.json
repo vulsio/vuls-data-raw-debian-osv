@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1570-1",
-	"modified": "2023-10-16T00:10:30.974448Z",
+	"modified": "2024-01-09T20:22:25.949718Z",
 	"published": "2008-05-06T00:00:00Z",
 	"related": [
 		"CVE-2006-7227",
@@ -16,7 +16,6 @@
 		"CVE-2007-4768"
 	],
 	"summary": "kazehakase - execution of arbitrary code",
-	"details": "\nAndrews Salomon reported that kazehakase, a GTK+-based web browser that\nallows pluggable rendering engines, contained an embedded copy of the\nPCRE library in its source tree which was compiled in and used in preference\nto the system-wide version of this library.\n\n\nThe PCRE library has been updated to fix the security issues reported\nagainst it in previous Debian Security Advisories. This update ensures that\nkazehakase uses that supported library, and not its own embedded and\ninsecure version.\n\n\nFor the stable distribution (etch), this problem has been fixed in version\n0.4.2-1etch1.\n\n\nWe recommend that you upgrade your kazehakase package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1570-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2008/dsa-1570"
 		}
 	]
 }

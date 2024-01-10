@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1895-2",
-	"modified": "2023-10-16T00:10:45.564827Z",
-	"published": "2009-09-24T00:00:00Z",
+	"modified": "2024-01-09T20:22:35.545597Z",
+	"published": "2009-10-09T00:00:00Z",
 	"related": [
 		"CVE-2009-3474",
 		"CVE-2009-3475",
 		"CVE-2009-3476"
 	],
 	"summary": "opensaml2, shibboleth-sp2 - interpretation conflict",
-	"details": "\nSeveral vulnerabilities have been discovered in the xmltooling packages,\nas used by Shibboleth:\n\n\n* Chris Ries discovered that decoding a crafted URL leads to a crash (and\npotentially, arbitrary code execution).\n* Ian Young discovered that embedded NUL characters in certificate names\nwere not correctly handled, exposing configurations using PKIX trust\nvalidation to impersonation attacks.\n* Incorrect processing of SAML metadata ignores key usage constraints.\nThis minor issue also needs a correction in the opensaml2 packages,\nwhich will be provided in an upcoming stable point release (and,\nbefore that, via stable-proposed-updates).\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 1.0-2+lenny1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.2.2-1.\n\n\nWe recommend that you upgrade your xmltooling packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1895-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1895"
 		}
 	]
 }

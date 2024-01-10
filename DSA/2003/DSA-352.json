@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-352",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-07-22T00:00:00Z",
 	"published": "2003-07-22T00:00:00Z",
 	"related": [
 		"CVE-2003-0596"
 	],
 	"summary": "fdclone - insecure temporary directory",
-	"details": "\nfdclone creates a temporary directory in /tmp as a workspace.\nHowever, if this directory already exists, the existing directory is\nused instead, regardless of its ownership or permissions. This would\nallow an attacker to gain access to fdclone's temporary files and\ntheir contents, or replace them with other files under the attacker's\ncontrol.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.00a-1woody3.\n\n\nFor the unstable distribution (sid) this problem has been fixed in\nversion 2.04-1.\n\n\nWe recommend that you update your fdclone package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-352.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-352"
 		}
 	]
 }

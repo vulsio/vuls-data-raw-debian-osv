@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5191-1",
-	"modified": "2023-10-16T00:25:53.055755Z",
+	"modified": "2024-01-09T20:26:40.892726Z",
 	"published": "2022-07-26T00:00:00Z",
 	"related": [
 		"CVE-2021-33655",
@@ -15,7 +15,6 @@
 		"CVE-2022-34918"
 	],
 	"summary": "linux - security update",
-	"details": "\nSeveral vulnerabilities have been discovered in the Linux kernel that may\nlead to privilege escalation, denial of service or information leaks:\n\n\n* [CVE-2021-33655](https://security-tracker.debian.org/tracker/CVE-2021-33655)\nA user with access to a framebuffer console driver could cause a\n memory out-of-bounds write via the FBIOPUT\\_VSCREENINFO ioctl.\n* [CVE-2022-2318](https://security-tracker.debian.org/tracker/CVE-2022-2318)\nA use-after-free in the Amateur Radio X.25 PLP (Rose) support may\n result in denial of service.\n* [CVE-2022-26365](https://security-tracker.debian.org/tracker/CVE-2022-26365),\n [CVE-2022-33740](https://security-tracker.debian.org/tracker/CVE-2022-33740),\n [CVE-2022-33741](https://security-tracker.debian.org/tracker/CVE-2022-33741),\n [CVE-2022-33742](https://security-tracker.debian.org/tracker/CVE-2022-33742)\nRoger Pau Monne discovered that Xen block and network PV device\n frontends don't zero out memory regions before sharing them with the\n backend, which may result in information disclosure. Additionally it\n was discovered that the granularity of the grant table doesn't permit\n sharing less than a 4k page, which may also result in information\n disclosure.\n* [CVE-2022-33743](https://security-tracker.debian.org/tracker/CVE-2022-33743)\nJan Beulich discovered that incorrect memory handling in the Xen\n network backend may lead to denial of service.\n* [CVE-2022-33744](https://security-tracker.debian.org/tracker/CVE-2022-33744)\nOleksandr Tyshchenko discovered that ARM Xen guests can cause a denial\n of service to the Dom0 via paravirtual devices.\n* [CVE-2022-34918](https://security-tracker.debian.org/tracker/CVE-2022-34918)\nArthur Mongodin discovered a heap buffer overflow in the Netfilter\n subsystem which may result in local privilege escalation.\n\n\nFor the stable distribution (bullseye), these problems have been fixed in\nversion 5.10.127-2.\n\n\nWe recommend that you upgrade your linux packages.\n\n\nFor the detailed security status of linux please refer to\nits security tracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/linux](https://security-tracker.debian.org/tracker/linux)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -57,12 +56,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5191-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5191"
 		}
 	]
 }

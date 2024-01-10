@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-420-1",
-	"modified": "2023-06-28T06:35:13.465604Z",
+	"modified": "2024-01-09T20:33:47.256611Z",
 	"published": "2016-02-18T00:00:00Z",
 	"related": [
 		"CVE-2015-8792"
 	],
 	"summary": "libmatroska - security update",
-	"details": "\nIt was discovered that there was a invalid memory address issue\nin libmatroska, an extensible open standard audio/video container\nformat.\n\n\nWhen reading a block group or a simple block that uses EBML\nlacing the frame sizes indicated in the lacing weren't checked\nagainst the available number of bytes. If the indicated frame\nsize was bigger than the whole block's size the parser would read\nbeyond the end of the buffer resulting in a heap information\nleak.\n\n\nFor Debian 6 Squeeze, this issue has been fixed in libmatroska\nversion 0.8.1-1.1+deb6u1.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-420-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-420"
 		}
 	]
 }

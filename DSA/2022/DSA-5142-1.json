@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-5142-1",
-	"modified": "2023-10-16T00:20:39.330361Z",
+	"modified": "2024-01-09T20:26:36.079609Z",
 	"published": "2022-05-22T00:00:00Z",
 	"related": [
 		"CVE-2022-29824"
 	],
 	"summary": "libxml2 - security update",
-	"details": "\nFelix Wilhelm reported that several buffer handling functions in\nlibxml2, a library providing support to read, modify and write XML and\nHTML files, don't check for integer overflows, resulting in\nout-of-bounds memory writes if specially crafted, multi-gigabyte XML\nfiles are processed. An attacker can take advantage of this flaw for\ndenial of service or execution of arbitrary code.\n\n\nFor the oldstable distribution (buster), this problem has been fixed\nin version 2.9.4+dfsg1-7+deb10u4.\n\n\nFor the stable distribution (bullseye), this problem has been fixed in\nversion 2.9.10+dfsg-6.7+deb11u2.\n\n\nWe recommend that you upgrade your libxml2 packages.\n\n\nFor the detailed security status of libxml2 please refer to its security\ntracker page at:\n[\\\nhttps://security-tracker.debian.org/tracker/libxml2](https://security-tracker.debian.org/tracker/libxml2)\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -64,12 +63,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-5142-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2022/dsa-5142"
 		}
 	]
 }

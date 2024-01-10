@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-360",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2003-08-01T00:00:00Z",
 	"published": "2003-08-01T00:00:00Z",
 	"related": [
 		"CVE-2003-0581",
 		"CVE-2003-0625"
 	],
 	"summary": "xfstt - several vulnerabilities",
-	"details": "\nxfstt, a TrueType font server for the X window system was found to\ncontain two classes of vulnerabilities:\n\n\n[\\\n CAN-2003-0581](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0581): a remote attacker could send requests crafted to\n trigger any of several buffer overruns, causing a denial of service or\n possibly executing arbitrary code on the server with the privileges\n of the \"nobody\" user.\n\n\n[\\\n CAN-2003-0625](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0625): certain invalid data sent during the connection\n handshake could allow a remote attacker to read certain regions of\n memory belonging to the xfstt process. This information could be\n used for fingerprinting, or to aid in exploitation of a different\n vulnerability.\n\n\nFor the current stable distribution (woody) these problems have been\nfixed in version 1.2.1-3.\n\n\nFor the unstable distribution (sid), CAN-2003-0581 is fixed in xfstt\n1.5-1, and CAN-2003-0625 will be fixed soon.\n\n\nWe recommend that you update your xfstt package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -32,12 +31,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-360.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-360"
 		}
 	]
 }

@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-227-1",
-	"modified": "2023-06-28T06:26:29.562432Z",
-	"published": "2015-05-29T00:00:00Z",
+	"modified": "2024-01-09T20:32:20.060107Z",
+	"published": "2015-05-26T00:00:00Z",
 	"related": [
 		"CVE-2015-3165",
 		"CVE-2015-3166",
 		"CVE-2015-3167"
 	],
 	"summary": "postgresql-8.4 - security update",
-	"details": "\nSeveral vulnerabilities were discovered in PostgreSQL, a relational\ndatabase server system. The 8.4 branch is EOLed upstream, but still\npresent in Debian squeeze. This new LTS minor version contains the\nfixes that were applied upstream to the 9.0.20 version, backported to\n8.4.22 which was the last version officially released by the PostgreSQL\ndevelopers. This LTS effort for squeeze-lts is a community project\nsponsored by credativ GmbH.\n\n\n* [CVE-2015-3165](https://security-tracker.debian.org/tracker/CVE-2015-3165)\nRemote crash\nSSL clients disconnecting just before the authentication timeout expires\ncan cause the server to crash.\n* [CVE-2015-3166](https://security-tracker.debian.org/tracker/CVE-2015-3166)\nInformation exposure\nThe replacement implementation of snprintf() failed to check for errors\nreported by the underlying system library calls; the main case that\nmight be missed is out-of-memory situations. In the worst case this\nmight lead to information exposure.\n* [CVE-2015-3167](https://security-tracker.debian.org/tracker/CVE-2015-3167)\nPossible side-channel key exposure\nIn contrib/pgcrypto, some cases of decryption with an incorrect key\ncould report other error message texts. Fix by using a one-size-fits-all\nmessage.\n\n\nNote that the next round of minor releases for PostgreSQL have already\nbeen scheduled for early June 2015. There will be a corresponding\n8.4.22lts3 update at the same time.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -80,12 +79,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-227-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-227"
 		}
 	]
 }

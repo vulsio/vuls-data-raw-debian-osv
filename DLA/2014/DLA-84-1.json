@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-84-1",
-	"modified": "2023-06-28T06:27:08.499636Z",
+	"modified": "2024-01-09T20:34:00.743099Z",
 	"published": "2014-11-09T00:00:00Z",
 	"related": [
 		"CVE-2014-3707"
 	],
 	"summary": "curl - security update",
-	"details": "\nSymeon Paraschoudis discovered that the curl\\_easy\\_duphandle() function\nin cURL, an URL transfer library, has a bug that can lead to libcurl\neventually sending off sensitive data that was not intended for sending,\nwhile performing a HTTP POST operation.\n\n\nThis bug requires CURLOPT\\_COPYPOSTFIELDS and curl\\_easy\\_duphandle() to be\nused in that order, and then the duplicate handle must be used to\nperform the HTTP POST. The curl command line tool is not affected by\nthis problem as it does not use this sequence.\n\n\nFor Debian 6 Squeeze, these issues have been fixed in curl version 7.21.0-2.1+squeeze10\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-84-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2014/dla-84"
 		}
 	]
 }

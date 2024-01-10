@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1578-1",
-	"modified": "2023-06-28T06:20:49.396045Z",
+	"modified": "2024-01-09T20:31:27.439196Z",
 	"published": "2018-11-13T00:00:00Z",
 	"related": [
 		"CVE-2016-1238",
@@ -10,7 +10,6 @@
 		"CVE-2018-11781"
 	],
 	"summary": "spamassassin - security update",
-	"details": "\nMultiple vulnerabilities were found in Spamassassin, which could lead\nto Remote Code Execution and Denial of Service attacks under certain\ncircumstances.\n\n\n* [CVE-2016-1238](https://security-tracker.debian.org/tracker/CVE-2016-1238)\nMany Perl programs do not properly remove . (period) characters\n from the end of the includes directory array, which might allow\n local users to gain privileges via a Trojan horse module under the\n current working directory.\n* [CVE-2017-15705](https://security-tracker.debian.org/tracker/CVE-2017-15705)\nA denial of service vulnerability was identified that exists in\n Apache SpamAssassin before 3.4.2. The vulnerability arises with\n certain unclosed tags in emails that cause markup to be handled\n incorrectly leading to scan timeouts. This can cause carefully\n crafted emails that might take more scan time than expected\n leading to a Denial of Service.\n* [CVE-2018-11780](https://security-tracker.debian.org/tracker/CVE-2018-11780)\nA potential Remote Code Execution bug exists with the PDFInfo\n plugin in Apache SpamAssassin before 3.4.2.\n* [CVE-2018-11781](https://security-tracker.debian.org/tracker/CVE-2018-11781)\nApache SpamAssassin 3.4.2 fixes a local user code injection in the\n meta rule syntax.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n3.4.2-0+deb8u1. Upstream strongly advocates upgrading to the latest\nupstream version so we are following that recommendation and\nbackported the version published as part of the 9.6 stretch release,\nwhich also fixes many critical bugs.\n\n\nWe recommend that you upgrade your spamassassin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -48,12 +47,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1578-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1578"
 		}
 	]
 }

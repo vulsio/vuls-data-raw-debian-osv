@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2761-1",
-	"modified": "2023-10-16T00:11:30.151963Z",
+	"modified": "2024-01-09T20:25:46.393967Z",
 	"published": "2013-09-19T00:00:00Z",
 	"related": [
 		"CVE-2013-4761",
 		"CVE-2013-4956"
 	],
 	"summary": "puppet - several",
-	"details": "\nSeveral vulnerabilities were discovered in puppet, a centralized\nconfiguration management system. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2013-4761](https://security-tracker.debian.org/tracker/CVE-2013-4761)\nThe resource\\_type service (disabled by default) could be used to\n make puppet load arbitrary Ruby code from puppet master's file\n system.\n* [CVE-2013-4956](https://security-tracker.debian.org/tracker/CVE-2013-4956)\nModules installed with the Puppet Module Tool might be installed\n with weak permissions, possibly allowing local users to read or\n modify them.\n\n\nThe stable distribution (wheezy) has been updated to version 2.7.33 of\npuppet. This version includes the patches for all the previous DSAs\nrelated to puppet in wheezy. In this version, the puppet report format\nis now correctly reported as version 3.\n\n\nIt is to be expected that future DSAs for puppet update to a newer,\nbug fix-only, release of the 2.7 branch.\n\n\nThe oldstable distribution (squeeze) has not been updated for this\nadvisory: as of this time there is no fix for \n[CVE-2013-4761](https://security-tracker.debian.org/tracker/CVE-2013-4761) \nand the package is not affected by \n[CVE-2013-4956](https://security-tracker.debian.org/tracker/CVE-2013-4956).\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.7.23-1~deb7u1.\n\n\nFor the testing distribution (jessie) and the unstable distribution (sid),\nthese problems have been fixed in version 3.2.4-1.\n\n\nWe recommend that you upgrade your puppet packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2761-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2013/dsa-2761"
 		}
 	]
 }

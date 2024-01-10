@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2859-1",
-	"modified": "2023-10-16T00:11:35.531885Z",
+	"modified": "2024-01-09T20:21:32.479041Z",
 	"published": "2014-02-10T00:00:00Z",
 	"related": [
 		"CVE-2013-6477",
@@ -18,7 +18,6 @@
 		"CVE-2014-0020"
 	],
 	"summary": "pidgin - several",
-	"details": "\nMultiple vulnerabilities have been discovered in Pidgin, a multi-protocol\ninstant messaging client:\n\n\n* [CVE-2013-6477](https://security-tracker.debian.org/tracker/CVE-2013-6477)\nJaime Breva Ribes discovered that a remote XMPP user can trigger a \n crash by sending a message with a timestamp in the distant future.\n* [CVE-2013-6478](https://security-tracker.debian.org/tracker/CVE-2013-6478)\nPidgin could be crashed through overly wide tooltip windows.\n* [CVE-2013-6479](https://security-tracker.debian.org/tracker/CVE-2013-6479)\nJacob Appelbaum discovered that a malicious server or a man in the \n middle could send a malformed HTTP header resulting in denial of\n service.\n* [CVE-2013-6481](https://security-tracker.debian.org/tracker/CVE-2013-6481)\nDaniel Atallah discovered that Pidgin could be crashed through \n malformed Yahoo! P2P messages.\n* [CVE-2013-6482](https://security-tracker.debian.org/tracker/CVE-2013-6482)\nFabian Yamaguchi and Christian Wressnegger discovered that Pidgin\n could be crashed through malformed MSN messages.\n* [CVE-2013-6483](https://security-tracker.debian.org/tracker/CVE-2013-6483)\nFabian Yamaguchi and Christian Wressnegger discovered that Pidgin\n could be crashed through malformed XMPP messages.\n* [CVE-2013-6484](https://security-tracker.debian.org/tracker/CVE-2013-6484)\nIt was discovered that incorrect error handling when reading the \n response from a STUN server could result in a crash.\n* [CVE-2013-6485](https://security-tracker.debian.org/tracker/CVE-2013-6485)\nMatt Jones discovered a buffer overflow in the parsing of malformed\n HTTP responses.\n* [CVE-2013-6487](https://security-tracker.debian.org/tracker/CVE-2013-6487)\nYves Younan and Ryan Pentney discovered a buffer overflow when parsing\n Gadu-Gadu messages.\n* [CVE-2013-6489](https://security-tracker.debian.org/tracker/CVE-2013-6489)\nYves Younan and Pawel Janic discovered an integer overflow when parsing\n MXit emoticons.\n* [CVE-2013-6490](https://security-tracker.debian.org/tracker/CVE-2013-6490)\nYves Younan discovered a buffer overflow when parsing SIMPLE headers.\n* [CVE-2014-0020](https://security-tracker.debian.org/tracker/CVE-2014-0020)\nDaniel Atallah discovered that Pidgin could be crashed via malformed\n IRC arguments.\n\n\nFor the oldstable distribution (squeeze), no direct backport is provided.\nA fixed package will be provided through backports.debian.org shortly.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 2.10.9-1~deb7u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.10.9-1.\n\n\nWe recommend that you upgrade your pidgin packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -50,12 +49,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2859-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2859"
 		}
 	]
 }

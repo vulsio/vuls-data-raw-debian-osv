@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1912-2",
-	"modified": "2023-10-16T00:05:42.891336Z",
-	"published": "2009-10-16T00:00:00Z",
+	"modified": "2024-01-09T20:27:36.469561Z",
+	"published": "2009-10-23T00:00:00Z",
 	"related": [
 		"CVE-2009-2295",
 		"CVE-2009-2660",
 		"CVE-2009-3296"
 	],
 	"summary": "advi - arbitrary code execution",
-	"details": "\nIt was discovered that CamlImages, an open source image processing\nlibrary, suffers from several integer overflows, which may lead to a\npotentially exploitable heap overflow and result in arbitrary code\nexecution. This advisory addresses issues with the reading of TIFF\nfiles. It also expands the patch for [CVE-2009-2660](https://security-tracker.debian.org/tracker/CVE-2009-2660) to cover another\npotential overflow in the processing of JPEG images.\n\n\nFor the oldstable distribution (etch), this problem has been fixed in\nversion 2.20-8+etch3.\n\n\nFor the stable distribution (lenny), this problem has been fixed in\nversion 1:2.2.0-4+lenny3.\n\n\nFor the testing distribution (squeeze) and the unstable distribution\n(sid), this problem will be fixed soon.\n\n\nWe recommend that you upgrade your camlimages package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -62,12 +61,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1912-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1912"
 		}
 	]
 }

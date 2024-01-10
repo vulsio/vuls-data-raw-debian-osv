@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-757-1",
-	"modified": "2023-06-28T06:27:08.148432Z",
-	"published": "2016-12-24T00:00:00Z",
+	"modified": "2024-01-09T20:33:56.808017Z",
+	"published": "2016-12-22T00:00:00Z",
 	"related": [
 		"CVE-2016-4412",
 		"CVE-2016-6626",
@@ -13,7 +13,6 @@
 		"CVE-2016-9865"
 	],
 	"summary": "phpmyadmin - security update",
-	"details": "\nVarious security issues where found and fixed in phpmyadmin in wheezy.\n\n\n* [CVE-2016-4412](https://security-tracker.debian.org/tracker/CVE-2016-4412) / PMASA-2016-57\n\n A user can be tricked in following a link leading to phpMyAdmin, which\n after authentication redirects to another malicious site.\n* [CVE-2016-6626](https://security-tracker.debian.org/tracker/CVE-2016-6626) / PMASA-2016-49\n\n In the fix for PMASA-2016-57, we didn't have sufficient checking and was\n possible to bypass whitelist.\n* [CVE-2016-9849](https://security-tracker.debian.org/tracker/CVE-2016-9849) / PMASA-2016-60\n\n Username deny rules bypass (AllowRoot & Others) by using Null Byte.\n* [CVE-2016-9850](https://security-tracker.debian.org/tracker/CVE-2016-9850) / PMASA-2016-61\n\n Username matching for the allow/deny rules\n may result in wrong matches and detection of the username in the rule due\n to non-constant execution time.\n* [CVE-2016-9861](https://security-tracker.debian.org/tracker/CVE-2016-9861) / PMASA-2016-66\n\n In the fix for PMASA-2016-49, we has buggy checks and was possible to\n bypass whitelist.\n* [CVE-2016-9864](https://security-tracker.debian.org/tracker/CVE-2016-9864) / PMASA-2016-69\n\n Multiple SQL injection vulnerabilities.\n* [CVE-2016-9865](https://security-tracker.debian.org/tracker/CVE-2016-9865) / PMASA-2016-70\n\n Due to a bug in serialized string parsing, it was possible to bypass the\n protection offered by PMA\\_safeUnserialize() function.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n4:3.4.11.1-2+deb7u7.\n\n\nWe recommend that you upgrade your phpmyadmin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -46,12 +45,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-757-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-757"
 		}
 	]
 }

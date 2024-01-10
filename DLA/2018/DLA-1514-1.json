@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1514-1",
-	"modified": "2023-06-28T06:29:38.918711Z",
+	"modified": "2024-01-09T20:31:20.571034Z",
 	"published": "2018-09-22T00:00:00Z",
 	"related": [
 		"CVE-2018-17407"
 	],
 	"summary": "texlive-bin - security update",
-	"details": "\nNick Roessler from the University of Pennsylvania has found a buffer overflow\nin texlive-bin, the executables for TexLive, the popular distribution of TeX\ndocument production system.\n\n\nThis buffer overflow can be used for arbitrary code execution by crafting a\nspecial type1 font (.pfb) and provide it to users running pdf(la)tex, dvips or\nluatex in a way that the font is loaded.\n\n\nFor Debian 8 Jessie, this problem has been fixed in version\n2014.20140926.35254-6+deb8u1.\n\n\nWe recommend that you upgrade your texlive-bin packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1514-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1514"
 		}
 	]
 }

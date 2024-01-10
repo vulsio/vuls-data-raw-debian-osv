@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-960-3",
-	"modified": "2023-10-16T00:32:50.145063Z",
+	"modified": "2024-01-09T20:34:16.329636Z",
 	"published": "2006-01-31T00:00:00Z",
 	"related": [
 		"CVE-2005-4536"
 	],
 	"summary": "libmail-audit-perl - insecure temporary file creation",
-	"details": "\nThe former update caused temporary files to be created in the current\nworking directory due to a wrong function argument. This update will\ncreate temporary files in the users home directory if HOME is set or\nin the common temporary directory otherwise, usually /tmp. For\ncompleteness below is a copy of the original advisory text:\n\n\n\n> \n> Niko Tyni discovered that the Mail::Audit module, a Perl library for\n> creating simple mail filters, logs to a temporary file with a\n> predictable filename in an insecure fashion when logging is turned on,\n> which is not the case by default.\n> \n> \n> \n\n\nFor the old stable distribution (woody) these problems have been fixed in\nversion 2.0-4woody3.\n\n\nFor the stable distribution (sarge) these problems have been fixed in\nversion 2.1-5sarge4.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nversion 2.1-5.1.\n\n\nWe recommend that you upgrade your libmail-audit-perl package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -65,12 +64,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-960-3.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-960"
 		}
 	]
 }

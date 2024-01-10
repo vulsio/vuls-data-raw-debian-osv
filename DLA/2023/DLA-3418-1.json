@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3418-1",
-	"modified": "2023-06-28T06:59:20.432155Z",
+	"modified": "2024-01-09T20:33:40.225738Z",
 	"published": "2023-05-11T00:00:00Z",
 	"related": [
 		"CVE-2022-34670",
@@ -14,7 +14,6 @@
 		"CVE-2022-42259"
 	],
 	"summary": "nvidia-graphics-drivers-legacy-390xx - security update",
-	"details": "\nNVIDIA has released a software security update for the NVIDIA GPU Display\nDriver R390 linux driver branch. This update addresses issues that may lead to\ndenial of service, escalation of privileges, information disclosure, data\ntampering or undefined behavior.\n\n\n\n* [CVE-2022-34670](https://security-tracker.debian.org/tracker/CVE-2022-34670)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where an unprivileged regular user can\n cause truncation errors when casting a primitive to a primitive of\n smaller size causes data to be lost in the conversion, which may\n lead to denial of service or information disclosure.\n* [CVE-2022-34674](https://security-tracker.debian.org/tracker/CVE-2022-34674)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where a helper function maps more\n physical pages than were requested, which may lead to undefined\n behavior or an information leak.\n* [CVE-2022-34675](https://security-tracker.debian.org/tracker/CVE-2022-34675)\nNVIDIA Display Driver for Linux contains a vulnerability in the\n Virtual GPU Manager, where it does not check the return value from a\n null-pointer dereference, which may lead to denial of service.\n* [CVE-2022-34677](https://security-tracker.debian.org/tracker/CVE-2022-34677)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where an unprivileged regular user can\n cause an integer to be truncated, which may lead to denial of\n service or data tampering.\n* [CVE-2022-34680](https://security-tracker.debian.org/tracker/CVE-2022-34680)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer handler, where an integer truncation can lead to\n an out-of-bounds read, which may lead to denial of service.\n* [CVE-2022-42257](https://security-tracker.debian.org/tracker/CVE-2022-42257)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer (nvidia.ko), where an integer overflow may lead to\n information disclosure, data tampering or denial of service.\n* [CVE-2022-42258](https://security-tracker.debian.org/tracker/CVE-2022-42258)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer (nvidia.ko), where an integer overflow may lead to\n denial of service, data tampering, or information disclosure.\n* [CVE-2022-42259](https://security-tracker.debian.org/tracker/CVE-2022-42259)\nNVIDIA GPU Display Driver for Linux contains a vulnerability in the\n kernel mode layer (nvidia.ko), where an integer overflow may lead to\n denial of service.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n390.157-1~deb10u1.\n\n\nWe recommend that you upgrade your nvidia-graphics-drivers-legacy-390xx packages.\n\n\nFor the detailed security status of\nnvidia-graphics-drivers-legacy-390xx please refer to its security\ntracker page at:\n<https://security-tracker.debian.org/tracker/nvidia-graphics-drivers-legacy-390xx>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -94,12 +93,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3418-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3418"
 		}
 	]
 }

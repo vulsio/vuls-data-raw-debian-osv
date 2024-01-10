@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-279-1",
-	"modified": "2023-06-28T06:30:17.790074Z",
+	"modified": "2024-01-09T20:33:04.306293Z",
 	"published": "2015-07-22T00:00:00Z",
 	"related": [
 		"CVE-2014-9720"
 	],
 	"summary": "python-tornado - security update",
-	"details": "\nA vulnerability was discovered in python-tornado, a Python scalable, nonblocking web server.\n\n\n* [CVE-2014-9720](https://security-tracker.debian.org/tracker/CVE-2014-9720)\nCSRF cookie allows side-channel attack against TLS (BREACH)\n\n\nSecurity Fix\n\n\nThe XSRF token is now encoded with a random mask on each request. This makes\nit safe to include in compressed pages without being vulnerable to the BREACH\nattack.\n\n\nFor the oldoldstable distribution (squeeze), this problem has been fixed in\nversion 1.0.1-1+deb6u1.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -34,12 +33,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-279-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2015/dla-279"
 		}
 	]
 }

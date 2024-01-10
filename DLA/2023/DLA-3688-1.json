@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3688-1",
-	"modified": "2023-12-14T15:15:28.258299Z",
+	"modified": "2024-01-09T20:33:44.355620Z",
 	"published": "2023-12-14T00:00:00Z",
 	"related": [
 		"CVE-2023-45539"
 	],
 	"summary": "haproxy - security update",
-	"details": "\nIt was discovered that there was a potential information disclosure\nvulnerability in HAProxy, a reverse proxy server used to load balance\nHTTP requests across multiple servers.\n\n\nHAProxy formerly accepted the `#` (ie. the \"pound\" or \"hash\")\nsymbol as part of a URI component. This might have allowed remote attackers to\nobtain sensitive information upon HAProxy's misinterpretation of a\n`path_end` rule, such as by routing `index.html#.png` to\na static server.\n\n\n* [CVE-2023-45539](https://security-tracker.debian.org/tracker/CVE-2023-45539)\nHAProxy before 2.8.2 accepts # as part of the URI component, which might\n allow remote attackers to obtain sensitive information or have unspecified\n other impact upon misinterpretation of a path\\_end rule, such as routing\n index.html#.png to a static server.\n\n\nFor Debian 10 Buster, this problem has been fixed in version\n1.8.19-1+deb10u5.\n\n\nWe recommend that you upgrade your haproxy packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3688-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3688"
 		}
 	]
 }

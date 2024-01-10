@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-604-1",
-	"modified": "2023-06-28T06:21:45.231113Z",
+	"modified": "2024-01-09T20:33:50.478697Z",
 	"published": "2016-08-28T00:00:00Z",
 	"related": [
 		"CVE-2015-7576",
@@ -12,7 +12,6 @@
 		"CVE-2016-6316"
 	],
 	"summary": "ruby-actionpack-3.2 - security update",
-	"details": "\nMultiple vulnerabilities have been discovered in ruby-actionpack-3.2, a\nweb-flow and rendering framework and part of Rails:\n\n\n* [CVE-2015-7576](https://security-tracker.debian.org/tracker/CVE-2015-7576)\nA flaw was found in the way the Action Controller component compared\n user names and passwords when performing HTTP basic\n authentication. Time taken to compare strings could differ depending\n on input, possibly allowing a remote attacker to determine valid user\n names and passwords using a timing attack.\n* [CVE-2016-0751](https://security-tracker.debian.org/tracker/CVE-2016-0751)\nA flaw was found in the way the Action Pack component performed MIME\n type lookups. Since queries were cached in a global cache of MIME\n types, an attacker could use this flaw to grow the cache indefinitely,\n potentially resulting in a denial of service.\n* [CVE-2016-0752](https://security-tracker.debian.org/tracker/CVE-2016-0752)\nA directory traversal flaw was found in the way the Action View\n component searched for templates for rendering. If an application\n passed untrusted input to the render method, a remote,\n unauthenticated attacker could use this flaw to render unexpected\n files and, possibly, execute arbitrary code.\n* [CVE-2016-2097](https://security-tracker.debian.org/tracker/CVE-2016-2097)\nCrafted requests to Action View might result in rendering files from\n arbitrary locations, including files beyond the application's view\n directory. This vulnerability is the result of an incomplete fix of\n [CVE-2016-0752](https://security-tracker.debian.org/tracker/CVE-2016-0752). \n This bug was found by Jyoti Singh and Tobias Kraze\n from Makandra.\n* [CVE-2016-2098](https://security-tracker.debian.org/tracker/CVE-2016-2098)\nIf a web applications does not properly sanitize user inputs, an\n attacker might control the arguments of the render method in a\n controller or a view, resulting in the possibility of executing\n arbitrary ruby code. This bug was found by Tobias Kraze from\n Makandra and joernchen of Phenoelit.\n* [CVE-2016-6316](https://security-tracker.debian.org/tracker/CVE-2016-6316)\nAndrew Carpenter of Critical Juncture discovered a cross-site\n scripting vulnerability affecting Action View. Text declared as HTML\n safe will not have quotes escaped when used as attribute values in\n tag helpers.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.2.6-6+deb7u3.\n\n\nWe recommend that you upgrade your ruby-actionpack-3.2 packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -41,12 +40,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-604-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-604"
 		}
 	]
 }

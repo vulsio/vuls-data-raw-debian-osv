@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1964-1",
-	"modified": "2023-10-16T00:10:49.817111Z",
+	"modified": "2024-01-09T20:25:35.344570Z",
 	"published": "2009-12-31T00:00:00Z",
 	"related": [
 		"CVE-2009-4034",
 		"CVE-2009-4136"
 	],
 	"summary": "postgresql-7.4 postgresql-8.1 postgresql-8.3 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in PostgreSQL, a database\nserver. The Common Vulnerabilities and Exposures project identifies\nthe following problems:\n\n\nIt was discovered that PostgreSQL did not properly verify the Common\nName attribute in X.509 certificates, enabling attackers to bypass the\n(optional) TLS protection on client-server connections, by relying on\na certificate from a trusted CA which contains an embedded NUL byte in\nthe Common Name ([CVE-2009-4034](https://security-tracker.debian.org/tracker/CVE-2009-4034)).\n\n\nAuthenticated database users could elevate their privileges by\ncreating specially-crafted index functions ([CVE-2009-4136](https://security-tracker.debian.org/tracker/CVE-2009-4136)).\n\n\nThe following matrix shows fixed source package versions for the\nrespective distributions.\n\n\n\n\n|  | oldstable/etch | stable/lenny | testing/unstable |\n| --- | --- | --- | --- |\n| postgresql-7.4 | 7.4.27-0etch1 |  |  |\n| postgresql-8.1 | 8.1.19-0etch1 |  |  |\n| postgresql-8.3 |  | 8.3.9-0lenny1 | 8.3.9-1 |\n| postgresql-8.4 |  |  | 8.4.2-1 |\n\n\nIn addition to these security fixes, the updates contain reliability\nimprovements and fix other defects.\n\n\nWe recommend that you upgrade your PostgreSQL packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -119,12 +118,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1964-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2009/dsa-1964"
 		}
 	]
 }

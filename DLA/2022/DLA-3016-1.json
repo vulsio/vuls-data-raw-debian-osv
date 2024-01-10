@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3016-1",
-	"modified": "2023-06-28T06:26:46.977294Z",
+	"modified": "2024-01-09T20:33:14.280551Z",
 	"published": "2022-05-20T00:00:00Z",
 	"related": [
 		"CVE-2018-16881",
 		"CVE-2022-24903"
 	],
 	"summary": "rsyslog - security update",
-	"details": "\nSeveral vulnerabilities were discovered in rsyslog, a system and\nkernel logging daemon. When a log server is configured to accept logs\nfrom remote clients through specific modules such as imptcp, an\nattacker can cause a denial of service (DoS) and possibly execute code\non the server.\n\n\n* [CVE-2018-16881](https://security-tracker.debian.org/tracker/CVE-2018-16881)\nA denial of service vulnerability was found in rsyslog\n in the imptcp module. An attacker could send a specially crafted\n message to the imptcp socket, which would cause rsyslog to crash.\n* [CVE-2022-24903](https://security-tracker.debian.org/tracker/CVE-2022-24903)\nModules for TCP syslog reception have a potential heap buffer\n overflow when octet-counted framing is used. This can result in a\n segfault or some other malfunction.\n\n\nFor Debian 9 stretch, these problems have been fixed in version\n8.24.0-1+deb9u2.\n\n\nWe recommend that you upgrade your rsyslog packages.\n\n\nFor the detailed security status of rsyslog please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/rsyslog>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3016-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2022/dla-3016"
 		}
 	]
 }

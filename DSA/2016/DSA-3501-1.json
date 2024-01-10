@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3501-1",
-	"modified": "2023-10-16T00:12:03.954399Z",
+	"modified": "2024-01-09T20:28:14.553588Z",
 	"published": "2016-03-01T00:00:00Z",
 	"related": [
 		"CVE-2016-2381"
 	],
 	"summary": "perl - security update",
-	"details": "\nStephane Chazelas discovered a bug in the environment handling in Perl.\nPerl provides a Perl-space hash variable, %ENV, in which environment\nvariables can be looked up. If a variable appears twice in envp, only\nthe last value would appear in %ENV, but getenv would return the first.\nPerl's taint security mechanism would be applied to the value in %ENV,\nbut not to the other rest of the environment. This could result in an\nambiguous environment causing environment variables to be propagated to\nsubprocesses, despite the protections supposedly offered by taint\nchecking.\n\n\nWith this update Perl changes the behavior to match the following:\n\n\n1. %ENV is populated with the first environment variable, as getenv\n would return.\n2. Duplicate environment entries are removed.\n\n\nFor the oldstable distribution (wheezy), this problem has been fixed\nin version 5.14.2-21+deb7u3.\n\n\nFor the stable distribution (jessie), this problem has been fixed in\nversion 5.20.2-3+deb8u4.\n\n\nFor the unstable distribution (sid), this problem will be fixed in\nversion 5.22.1-8.\n\n\nWe recommend that you upgrade your perl packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -66,12 +65,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3501-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3501"
 		}
 	]
 }

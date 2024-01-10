@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-384",
-	"modified": "2019-03-31T21:35:49Z",
+	"modified": "2003-09-17T00:00:00Z",
 	"published": "2003-09-17T00:00:00Z",
 	"related": [
 		"CVE-2003-0681",
 		"CVE-2003-0694"
 	],
 	"summary": "sendmail - buffer overflows",
-	"details": "\nTwo vulnerabilities were reported in sendmail.\n\n\n* [\\\n CAN-2003-0681](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0681):\n\n A \"potential buffer overflow in ruleset parsing\" for Sendmail\n 8.12.9, when using the nonstandard rulesets (1) recipient (2),\n final, or (3) mailer-specific envelope recipients, has unknown\n consequences.\n* [\\\n CAN-2003-0694](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0694):\n\n The prescan function in Sendmail 8.12.9 allows remote attackers to\n execute arbitrary code via buffer overflow attacks, as demonstrated\n using the parseaddr function in parseaddr.c.\n\n\nFor the stable distribution (woody) these problems have been fixed in\nsendmail version 8.12.3-6.6 and sendmail-wide version\n8.12.3+3.5Wbeta-5.5.\n\n\nFor the unstable distribution (sid) these problems have been fixed in\nsendmail version 8.12.10-1.\n\n\nWe recommend that you update your sendmail package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -55,12 +54,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-384.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-384"
 		}
 	]
 }

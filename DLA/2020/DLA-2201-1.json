@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2201-1",
-	"modified": "2023-06-28T06:20:02.707109Z",
+	"modified": "2024-01-09T20:32:11.163951Z",
 	"published": "2020-05-05T00:00:00Z",
 	"related": [
 		"CVE-2020-11868"
 	],
 	"summary": "ntp - security update",
-	"details": "\nA Denial of Service (DoS) vulnerability was discovered in the network time\nprotocol server/client, ntp.\n\n\nntp allowed an \"off-path\" attacker to block unauthenticated\nsynchronisation via a server mode packet with a spoofed source IP\naddress because transmissions were rescheduled even if a packet\nlacked a valid \"origin timestamp\"\n\n\n* [CVE-2020-11868](https://security-tracker.debian.org/tracker/CVE-2020-11868)\nntpd in ntp before 4.2.8p14 and 4.3.x before 4.3.100 allows an off-path\n attacker to block unauthenticated synchronization via a server mode packet\n with a spoofed source IP address, because transmissions are rescheduled\n even when a packet lacks a valid origin timestamp\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1:4.2.6.p5+dfsg-7+deb8u3.\n\n\nWe recommend that you upgrade your ntp packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -36,12 +35,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2201-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2201"
 		}
 	]
 }

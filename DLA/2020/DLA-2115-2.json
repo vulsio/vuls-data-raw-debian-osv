@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-2115-2",
-	"modified": "2023-06-28T06:25:07.517368Z",
-	"published": "2020-02-21T00:00:00Z",
+	"modified": "2024-01-09T20:32:01.613861Z",
+	"published": "2020-03-02T00:00:00Z",
 	"related": [
 		"CVE-2020-9273"
 	],
 	"summary": "proftpd-dfsg - regression update",
-	"details": "\nIt was discovered that there was a use-after-free vulnerability in in the\nproftpd-dfsg FTP server.\n\n\nExploitation of this vulnerability within the memory pool handling\ncould have allowed a remote attacker to execute arbitrary code on the\naffected system.\n\n\n* [CVE-2020-9273](https://security-tracker.debian.org/tracker/CVE-2020-9273)\nIn ProFTPD 1.3.7, it is possible to corrupt the memory pool by\n interrupting the data transfer channel. This triggers a use-after-free in\n alloc\\_pool in pool.c, and possible remote code\n execution.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n1.3.5e+r1.3.5-2+deb8u6.\n\n\nWe recommend that you upgrade your proftpd-dfsg packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -51,12 +50,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-2115-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2020/dla-2115"
 		}
 	]
 }

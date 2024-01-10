@@ -1,10 +1,9 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3074-2",
-	"modified": "2023-10-16T00:06:11.459970Z",
-	"published": "2014-11-18T00:00:00Z",
+	"modified": "2024-01-09T20:25:50.093931Z",
+	"published": "2014-11-19T00:00:00Z",
 	"summary": "php5 - regression update",
-	"details": "\nFrancisco Alonso of Red Hat Product Security found an issue in the file\nutility, whose code is embedded in PHP, a general-purpose scripting\nlanguage. When checking ELF files, note headers are incorrectly\nchecked, thus potentially allowing attackers to cause a denial of\nservice (out-of-bounds read and application crash) by supplying a\nspecially crafted ELF file.\n\n\nAs announced in DSA-3064-1 it has been decided to follow the stable\n5.4.x releases for the Wheezy php5 packages. Consequently the\nvulnerability is addressed by upgrading PHP to a new upstream version\n5.4.35, which includes additional bug fixes, new features and possibly\nincompatible changes. Please refer to the upstream changelog for more\ninformation:\n\n\n\nFor the stable distribution (wheezy), this problem has been fixed in\nversion 5.4.35-0+deb7u1.\n\n\nWe recommend that you upgrade your php5 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -57,12 +56,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3074-2.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-3074"
 		}
 	]
 }

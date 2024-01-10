@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3687-1",
-	"modified": "2023-10-16T00:12:14.863652Z",
+	"modified": "2024-01-09T20:26:01.284495Z",
 	"published": "2016-10-05T00:00:00Z",
 	"related": [
 		"CVE-2016-1951"
 	],
 	"summary": "nspr - security update",
-	"details": "\nTwo vulnerabilities were reported in NSPR, a library to abstract over\noperating system interfaces developed by the Mozilla project.\n\n\n* [CVE-2016-1951](https://security-tracker.debian.org/tracker/CVE-2016-1951)\nq1 reported that the NSPR implementation of sprintf-style string\n formatting function miscomputed memory allocation sizes,\n potentially leading to heap-based buffer overflows\n\n\nThe second issue concerns environment variable processing in NSPR.\nThe library did not ignore environment variables used to configuring\nlogging and tracing in processes which underwent a SUID/SGID/AT\\_SECURE\ntransition at process start. In certain system configurations, this\nallowed local users to escalate their privileges.\n\n\nIn addition, this nspr update contains further stability and\ncorrectness fixes and contains support code for an upcoming nss\nupdate.\n\n\nFor the stable distribution (jessie), these problems have been fixed\nin version 2:4.12-1+debu8u1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2:4.12-1.\n\n\nWe recommend that you upgrade your nspr packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -43,12 +42,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3687-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3687"
 		}
 	]
 }

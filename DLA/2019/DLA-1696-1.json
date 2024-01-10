@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1696-1",
-	"modified": "2023-06-28T06:24:52.310950Z",
-	"published": "2019-03-01T00:00:00Z",
+	"modified": "2024-01-09T20:31:38.051744Z",
+	"published": "2019-02-28T00:00:00Z",
 	"related": [
 		"CVE-2018-14662",
 		"CVE-2018-16846"
 	],
 	"summary": "ceph - security update",
-	"details": "\nSeveral vulnerabilities were discovered in Ceph, a distributed storage\nand file system.\n\n\n* [CVE-2018-14662](https://security-tracker.debian.org/tracker/CVE-2018-14662)\nIt was found that authenticated ceph users with read only\n permissions could steal dm-crypt encryption keys used in ceph disk\n encryption.\n* [CVE-2018-16846](https://security-tracker.debian.org/tracker/CVE-2018-16846)\nIt was found that authenticated ceph RGW users can cause a denial of\n service against OMAPs holding bucket indices.\n\n\nFor Debian 8 Jessie, these problems have been fixed in version\n0.80.7-2+deb8u3.\n\n\nWe recommend that you upgrade your ceph packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -37,12 +36,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1696-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2019/dla-1696"
 		}
 	]
 }

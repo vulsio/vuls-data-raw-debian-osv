@@ -1,15 +1,14 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-560-1",
-	"modified": "2023-06-28T06:27:03.516586Z",
-	"published": "2016-07-25T00:00:00Z",
+	"modified": "2024-01-09T20:33:07.658165Z",
+	"published": "2016-07-26T00:00:00Z",
 	"related": [
 		"CVE-2016-2313",
 		"CVE-2016-3172",
 		"CVE-2016-3659"
 	],
 	"summary": "cacti - security update",
-	"details": "\nThree security issues have been found in cacti:\n\n\n* [CVE-2016-2313](https://security-tracker.debian.org/tracker/CVE-2016-2313)\nauth\\_login.php allows remote authenticated users who use web\n authentication to bypass intended access restrictions by logging in\n as a user not in the cacti database.\n* [CVE-2016-3172](https://security-tracker.debian.org/tracker/CVE-2016-3172)\nAn SQL injection vulnerability in tree.php allows remote authenticated\n users to execute arbitrary SQL commands via the parent\\_id parameter in\n an item\\_edit action.\n* [CVE-2016-3659](https://security-tracker.debian.org/tracker/CVE-2016-3659)\nAn SQL injection vulnerability in graph\\_view.php allows remote\n authenticated users to execute arbitrary SQL commands via the\n host\\_group\\_data parameter.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n0.8.8a+dfsg-5+deb7u9.\n\n\nWe recommend that you upgrade your cacti packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -44,12 +43,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-560-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2016/dla-560"
 		}
 	]
 }

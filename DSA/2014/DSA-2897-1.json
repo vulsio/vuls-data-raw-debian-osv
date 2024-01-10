@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2897-1",
-	"modified": "2023-10-16T00:06:07.513276Z",
+	"modified": "2024-01-09T20:27:55.206929Z",
 	"published": "2014-04-08T00:00:00Z",
 	"related": [
 		"CVE-2012-3544",
@@ -12,7 +12,6 @@
 		"CVE-2014-0050"
 	],
 	"summary": "tomcat7 - security update",
-	"details": "\nMultiple security issues were found in the Tomcat servlet and JSP engine:\n\n\n* [CVE-2013-2067](https://security-tracker.debian.org/tracker/CVE-2013-2067)\nFORM authentication associates the most recent request requiring \n authentication with the current session. By repeatedly sending a request \n for an authenticated resource while the victim is completing the login \n form, an attacker could inject a request that would be executed using the \n victim's credentials.\n* [CVE-2013-2071](https://security-tracker.debian.org/tracker/CVE-2013-2071)\nA runtime exception in AsyncListener.onComplete() prevents the request from \n being recycled. This may expose elements of a previous request to a current \n request.\n* [CVE-2013-4286](https://security-tracker.debian.org/tracker/CVE-2013-4286)\nReject requests with multiple content-length headers or with a content-length \n header when chunked encoding is being used.\n* [CVE-2013-4322](https://security-tracker.debian.org/tracker/CVE-2013-4322)\nWhen processing a request submitted using the chunked transfer encoding, \n Tomcat ignored but did not limit any extensions that were included. This allows \n a client to perform a limited denial of service by streaming an unlimited amount \n of data to the server.\n* [CVE-2014-0050](https://security-tracker.debian.org/tracker/CVE-2014-0050)\nMultipart requests with a malformed Content-Type header could trigger an \n infinite loop causing a denial of service.\n\n\nFor the stable distribution (wheezy), these problems have been fixed in\nversion 7.0.28-4+deb7u1.\n\n\nFor the testing distribution (jessie), these problems have been fixed in\nversion 7.0.52-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 7.0.52-1.\n\n\nWe recommend that you upgrade your tomcat7 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2897-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2014/dsa-2897"
 		}
 	]
 }

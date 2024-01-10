@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-1073-1",
-	"modified": "2023-10-16T00:05:07.349486Z",
+	"modified": "2024-01-09T20:19:48.541504Z",
 	"published": "2006-05-22T00:00:00Z",
 	"related": [
 		"CVE-2006-0903",
@@ -10,7 +10,6 @@
 		"CVE-2006-1518"
 	],
 	"summary": "mysql-dfsg-4.1 - several vulnerabilities",
-	"details": "\nSeveral vulnerabilities have been discovered in MySQL, a popular SQL\ndatabase. The Common Vulnerabilities and Exposures Project identifies\nthe following problems:\n\n\n* [CVE-2006-0903](https://security-tracker.debian.org/tracker/CVE-2006-0903)\nImproper handling of SQL queries containing the NULL character\n allows local users to bypass logging mechanisms.\n* [CVE-2006-1516](https://security-tracker.debian.org/tracker/CVE-2006-1516)\nUsernames without a trailing null byte allow remote attackers to\n read portions of memory.\n* [CVE-2006-1517](https://security-tracker.debian.org/tracker/CVE-2006-1517)\nA request with an incorrect packet length allows remote attackers\n to obtain sensitive information.\n* [CVE-2006-1518](https://security-tracker.debian.org/tracker/CVE-2006-1518)\nSpecially crafted request packets with invalid length values allow\n the execution of arbitrary code.\n\n\nThe following vulnerability matrix shows which version of MySQL in\nwhich distribution has this problem fixed:\n\n\n\n\n|  | woody | sarge | sid |\n| --- | --- | --- | --- |\n| mysql | 3.23.49-8.15 | n/a | n/a |\n| mysql-dfsg | n/a | 4.0.24-10sarge2 | n/a |\n| mysql-dfsg-4.1 | n/a | 4.1.11a-4sarge3 | n/a |\n| mysql-dfsg-5.0 | n/a | n/a | 5.0.21-3 |\n\n\nWe recommend that you upgrade your mysql packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -39,12 +38,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-1073-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2006/dsa-1073"
 		}
 	]
 }

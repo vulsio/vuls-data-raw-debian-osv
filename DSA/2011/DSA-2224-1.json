@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2224-1",
-	"modified": "2023-10-16T00:05:49.925601Z",
+	"modified": "2024-01-09T20:21:17.620044Z",
 	"published": "2011-04-20T00:00:00Z",
 	"related": [
 		"CVE-2010-4351",
@@ -16,7 +16,6 @@
 		"CVE-2011-0706"
 	],
 	"summary": "openjdk-6 - several",
-	"details": "\nSeveral security vulnerabilities were discovered in OpenJDK, an\nimplementation of the Java platform.\n\n\n* [CVE-2010-4351](https://security-tracker.debian.org/tracker/CVE-2010-4351)\nThe JNLP SecurityManager returns from the checkPermission method\n instead of throwing an exception in certain circumstances, which\n might allow context-dependent attackers to bypass the intended\n security policy by creating instances of ClassLoader.\n* [CVE-2010-4448](https://security-tracker.debian.org/tracker/CVE-2010-4448)\nMalicious applets can perform DNS cache poisoning.\n* [CVE-2010-4450](https://security-tracker.debian.org/tracker/CVE-2010-4450)\nAn empty (but set) LD\\_LIBRARY\\_PATH environment variable results in\n a misconstructed library search path, resulting in code execution\n from possibly untrusted sources.\n* [CVE-2010-4465](https://security-tracker.debian.org/tracker/CVE-2010-4465)\nMalicious applets can extend their privileges by abusing Swing\n timers.\n* [CVE-2010-4469](https://security-tracker.debian.org/tracker/CVE-2010-4469)\nThe Hotspot just-in-time compiler miscompiles crafted byte\n sequences, resulting in heap corruption.\n* [CVE-2010-4470](https://security-tracker.debian.org/tracker/CVE-2010-4470)\nJAXP can be exploited by untrusted code to elevate privileges.\n* [CVE-2010-4471](https://security-tracker.debian.org/tracker/CVE-2010-4471)\nJava2D can be exploited by untrusted code to elevate privileges.\n* [CVE-2010-4472](https://security-tracker.debian.org/tracker/CVE-2010-4472)\nUntrusted code can replace the XML DSIG implementation.\n* [CVE-2011-0025](https://security-tracker.debian.org/tracker/CVE-2011-0025)\nSignatures on JAR files are not properly verified, which allows\n remote attackers to trick users into executing code that appears\n to come from a trusted source.\n* [CVE-2011-0706](https://security-tracker.debian.org/tracker/CVE-2011-0706)\nThe JNLPClassLoader class allows remote attackers to gain\n privileges via unknown vectors related to multiple signers and the\n assignment of an inappropriate security descriptor.\n\n\n\nIn addition, this security update contains stability fixes, such as\nswitching to the recommended Hotspot version (hs14) for this\nparticular version of OpenJDK.\n\n\n\nFor the oldstable distribution (lenny), these problems have been fixed in\nversion 6b18-1.8.7-2~lenny1.\n\n\nFor the stable distribution (squeeze), these problems have been fixed in\nversion 6b18-1.8.7-2~squeeze1.\n\n\nFor the testing distribution (wheezy) and the unstable distribution\n(sid), these problems have been fixed in version 1.8.7-1.\n\n\nWe recommend that you upgrade your openjdk-6 packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -122,12 +121,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2224-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2011/dsa-2224"
 		}
 	]
 }

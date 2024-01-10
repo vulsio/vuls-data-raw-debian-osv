@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1354-1",
-	"modified": "2023-06-28T06:19:53.800293Z",
+	"modified": "2024-01-09T20:31:02.871602Z",
 	"published": "2018-04-18T00:00:00Z",
 	"related": [
 		"CVE-2018-5268",
 		"CVE-2018-5269"
 	],
 	"summary": "opencv - security update",
-	"details": "\nTwo vulnerabilities were found in OpenCV, the Open Computer Vision\nLibrary.\n\n\n* [CVE-2018-5268](https://security-tracker.debian.org/tracker/CVE-2018-5268)\nIn OpenCV 3.3.1, a heap-based buffer overflow happens in\n cv::Jpeg2KDecoder::readComponent8u in\n modules/imgcodecs/src/grfmt\\_jpeg2000.cpp when parsing a crafted\n image file.\n* [CVE-2018-5269](https://security-tracker.debian.org/tracker/CVE-2018-5269)\nIn OpenCV 3.3.1, an assertion failure happens in\n cv::RBaseStream::setPos in modules/imgcodecs/src/bitstrm.cpp\n because of an incorrect integer cast.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n2.3.1-11+deb7u4.\n\n\nWe recommend that you upgrade your opencv packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1354-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2018/dla-1354"
 		}
 	]
 }

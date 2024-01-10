@@ -1,8 +1,8 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-3399-1",
-	"modified": "2023-06-28T06:42:58.412873Z",
-	"published": "2023-04-25T00:00:00Z",
+	"modified": "2024-01-09T20:33:37.747070Z",
+	"published": "2023-04-24T00:00:00Z",
 	"related": [
 		"CVE-2019-10224",
 		"CVE-2019-14824",
@@ -15,7 +15,6 @@
 		"CVE-2022-2850"
 	],
 	"summary": "389-ds-base - security update",
-	"details": "\nMultiple security issues were discovered in 389-ds-base: an open source LDAP\nserver for Linux.\n\n\n* [CVE-2019-3883](https://security-tracker.debian.org/tracker/CVE-2019-3883)\nSSL/TLS requests do not enforce ioblocktimeout limit, leading to DoS\n vulnerability by hanging all workers with hanging LDAP requests.\n* [CVE-2019-10224](https://security-tracker.debian.org/tracker/CVE-2019-10224)\nThe vulnerability may disclose sensitive information, such as the Directory\n Manager password, when the dscreate and dsconf commands are executed in\n verbose mode. An attacker who can view the screen or capture the terminal\n standard error output can exploit thisvulnerability to obtain confidential information.\n* [CVE-2019-14824](https://security-tracker.debian.org/tracker/CVE-2019-14824)\nThe deref plugin of 389-ds-base has a vulnerability that enables it to\n disclose attribute values using the search permission. In certain setups,\n an authenticated attacker can exploit this flaw to access confidential\n attributes, including password hashes.\n* [CVE-2021-3514](https://security-tracker.debian.org/tracker/CVE-2021-3514)\nIf a sync\\_repl client is used, an authenticated attacker can trigger a crash\n by exploiting a specially crafted query that leads to a NULL pointer\n dereference.\n* [CVE-2021-3652](https://security-tracker.debian.org/tracker/CVE-2021-3652)\nImporting an asterisk as password hashes enables successful authentication\n with any password, allowing attackers to access accounts with disabled\n passwords.\n* [CVE-2021-4091](https://security-tracker.debian.org/tracker/CVE-2021-4091)\nA double free was found in the way 389-ds-base handles virtual attributes\n context in persistent searches. An attacker could send a series of search\n requests, forcing the server to behave unexpectedly, and crash.\n* [CVE-2022-0918](https://security-tracker.debian.org/tracker/CVE-2022-0918)\nAn unauthenticated attacker with network access to the LDAP port can cause a\n denial of service. The denial of service is triggered by a single message\n sent over a TCP connection, no bind or other authentication is required. The\n message triggers a segmentation fault that results in slapd crashing.\n* [CVE-2022-0996](https://security-tracker.debian.org/tracker/CVE-2022-0996)\nExpired password was still allowed to access the database. A user whose\n password was expired was still allowed to access the database as if the\n password was not expired. Once a password is expired, and grace logins\n have been used up, the account is basically supposed to be locked out and\n should not be allowed to perform any privileged action.\n* [CVE-2022-2850](https://security-tracker.debian.org/tracker/CVE-2022-2850)\nThe vulnerability in content synchronization plugin enables an authenticated attacker to trigger a denial of service via a crafted query through a NULL\n pointer dereference.\n\n\nFor Debian 10 buster, these problems have been fixed in version\n1.4.0.21-1+deb10u1.\n\n\nWe recommend that you upgrade your 389-ds-base packages.\n\n\nFor the detailed security status of 389-ds-base please refer to\nits security tracker page at:\n<https://security-tracker.debian.org/tracker/389-ds-base>\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -42,12 +41,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-3399-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2023/dla-3399"
 		}
 	]
 }

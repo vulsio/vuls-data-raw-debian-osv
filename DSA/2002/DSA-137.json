@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-137",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2002-07-30T00:00:00Z",
 	"published": "2002-07-30T00:00:00Z",
 	"related": [
 		"CVE-2002-0658"
 	],
 	"summary": "mm - insecure temporary files",
-	"details": "\nMarcus Meissner and Sebastian Krahmer discovered and fixed a temporary\nfile vulnerability in the mm shared memory library. This problem can\nbe exploited to gain root access to a machine running Apache which is\nlinked against this library, if shell access to the user “www-data”\nis already available (which could easily be triggered through PHP).\n\n\nThis problem has been fixed in the upstream version 1.2.0 of mm, which\nwill be uploaded to the unstable Debian distribution while this\nadvisory is released. Fixed packages for potato (Debian 2.2) and\nwoody (Debian 3.0) are linked below.\n\n\nWe recommend that you upgrade your libmm packages immediately and\nrestart your Apache server.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-137.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2002/dsa-137"
 		}
 	]
 }

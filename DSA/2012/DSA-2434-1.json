@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2434-1",
-	"modified": "2023-10-16T00:11:14.389692Z",
+	"modified": "2024-01-09T20:22:51.713854Z",
 	"published": "2012-03-19T00:00:00Z",
 	"related": [
 		"CVE-2012-1180"
 	],
 	"summary": "nginx - sensitive information leak",
-	"details": "\nMatthew Daley discovered a memory disclosure vulnerability in nginx. In\nprevious versions of this web server, an attacker can receive the content of\npreviously freed memory if an upstream server returned a specially crafted HTTP\nresponse, potentially exposing sensitive information.\n\n\nFor the stable distribution (squeeze), this problem has been fixed in\nversion 0.7.67-3+squeeze2.\n\n\nFor the unstable distribution (sid), this problem has been fixed in\nversion 1.1.17-1.\n\n\nWe recommend that you upgrade your nginx packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -35,12 +34,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2434-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2012/dsa-2434"
 		}
 	]
 }

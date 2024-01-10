@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-2038-1",
-	"modified": "2023-10-16T00:10:54.672204Z",
+	"modified": "2024-01-09T20:21:08.950461Z",
 	"published": "2010-04-18T00:00:00Z",
 	"related": [
 		"CVE-2009-3083",
@@ -11,7 +11,6 @@
 		"CVE-2010-0423"
 	],
 	"summary": "pidgin - denial of service",
-	"details": "\nSeveral remote vulnerabilities have been discovered in Pidgin, a multi\nprotocol instant messaging client. The Common Vulnerabilities and\nExposures project identifies the following problems:\n\n\n* [CVE-2010-0420](https://security-tracker.debian.org/tracker/CVE-2010-0420)\nCrafted nicknames in the XMPP protocol can crash Pidgin remotely.\n* [CVE-2010-0423](https://security-tracker.debian.org/tracker/CVE-2010-0423)\nRemote contacts may send too many custom smilies, crashing Pidgin.\n\n\nSince a few months, Microsoft's servers for MSN have changed the protocol,\nmaking Pidgin non-functional for use with MSN. It is not feasible to port\nthese changes to the version of Pidgin in Debian Lenny. This update\nformalises that situation by disabling the protocol in the client. Users\nof the MSN protocol are advised to use the version of Pidgin in the\nrepositories of www.backports.org.\n\n\nFor the stable distribution (lenny), these problems have been fixed in\nversion 2.4.3-4lenny6.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 2.6.6-1.\n\n\nWe recommend that you upgrade your pidgin package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -49,12 +48,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-2038-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2010/dsa-2038"
 		}
 	]
 }

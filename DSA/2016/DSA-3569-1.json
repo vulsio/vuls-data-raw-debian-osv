@@ -1,14 +1,13 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-3569-1",
-	"modified": "2023-10-16T00:12:07.801725Z",
+	"modified": "2024-01-09T20:21:55.763148Z",
 	"published": "2016-05-05T00:00:00Z",
 	"related": [
 		"CVE-2015-8312",
 		"CVE-2016-2860"
 	],
 	"summary": "openafs - security update",
-	"details": "\nTwo vulnerabilities were discovered in openafs, an implementation of the\ndistributed filesystem AFS. The Common Vulnerabilities and Exposures\nproject identifies the following problems:\n\n\n* [CVE-2015-8312](https://security-tracker.debian.org/tracker/CVE-2015-8312)\nPotential denial of service caused by a bug in the pioctl\n logic allowing a local user to overrun a kernel buffer with a\n single NUL byte.\n* [CVE-2016-2860](https://security-tracker.debian.org/tracker/CVE-2016-2860)\nPeter Iannucci discovered that users from foreign Kerberos realms\n can create groups as if they were administrators.\n\n\nFor the stable distribution (jessie), these problems have been fixed in\nversion 1.6.9-2+deb8u5.\n\n\nFor the testing distribution (stretch), these problems have been fixed\nin version 1.6.17-1.\n\n\nFor the unstable distribution (sid), these problems have been fixed in\nversion 1.6.17-1.\n\n\nWe recommend that you upgrade your openafs packages.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -38,12 +37,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-3569-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2016/dsa-3569"
 		}
 	]
 }

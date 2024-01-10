@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DLA-1216-1",
-	"modified": "2023-06-28T06:20:09.987847Z",
+	"modified": "2024-01-09T20:30:50.492433Z",
 	"published": "2017-12-21T00:00:00Z",
 	"related": [
 		"CVE-2017-17091",
@@ -10,7 +10,6 @@
 		"CVE-2017-17094"
 	],
 	"summary": "wordpress - security update",
-	"details": "\nSeveral vulnerabilities were discovered in wordpress, a web blogging\ntool. The Common Vulnerabilities and Exposures project identifies the\nfollowing issues.\n\n\n* [CVE-2017-17091](https://security-tracker.debian.org/tracker/CVE-2017-17091)\nwp-admin/user-new.php in WordPress sets the newbloguser\n key to a string that can be directly derived from the user ID, which\n allows remote attackers to bypass intended access restrictions by\n entering this string.\n* [CVE-2017-17092](https://security-tracker.debian.org/tracker/CVE-2017-17092)\nwp-includes/functions.php in WordPress does not require the\n unfiltered\\_html capability for upload of .js files, which might\n allow remote attackers to conduct XSS attacks via a crafted file.\n* [CVE-2017-17093](https://security-tracker.debian.org/tracker/CVE-2017-17093)\nwp-includes/general-template.php in WordPress does not properly\n restrict the lang attribute of an HTML element, which might allow\n attackers to conduct XSS attacks via the language setting of a site.\n* [CVE-2017-17094](https://security-tracker.debian.org/tracker/CVE-2017-17094)\nwp-includes/feed.php in WordPress does not properly\n restrict enclosures in RSS and Atom fields, which might allow\n attackers to conduct XSS attacks via a crafted URL.\n\n\nFor Debian 7 Wheezy, these problems have been fixed in version\n3.6.1+dfsg-1~deb7u20.\n\n\nWe recommend that you upgrade your wordpress packages.\n\n\nFurther information about Debian LTS security advisories, how to apply\nthese updates to your system and frequently asked questions can be\nfound at: <https://wiki.debian.org/LTS>\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -68,12 +67,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dla-osv/DLA-1216-1.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/lts/security/2017/dla-1216"
 		}
 	]
 }

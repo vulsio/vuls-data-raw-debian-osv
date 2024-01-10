@@ -1,13 +1,12 @@
 {
 	"schema_version": "1.6.0",
 	"id": "DSA-385",
-	"modified": "2014-04-29T17:19:40Z",
+	"modified": "2003-09-18T00:00:00Z",
 	"published": "2003-09-18T00:00:00Z",
 	"related": [
 		"CVE-2003-0783"
 	],
 	"summary": "hztty - buffer overflows",
-	"details": "\nJens Steube reported a pair of buffer overflow vulnerabilities in\nhztty, a program to translate Chinese character encodings in a\nterminal session. These vulnerabilities could be exploited by a local\nattacker to gain root privileges on a system where hztty is installed.\n\n\nAdditionally, hztty had been incorrectly installed setuid root, when\nit only requires the privileges of group utmp. This has also been\ncorrected in this update.\n\n\nFor the stable distribution (woody) this problem has been fixed in\nversion 2.0-5.2woody1.\n\n\nFor the unstable distribution (sid) this problem will be fixed in\nversion 2.0-6.\n\n\nWe recommend that you update your hztty package.\n\n\n",
 	"affected": [
 		{
 			"package": {
@@ -31,12 +30,6 @@
 			"database_specific": {
 				"source": "https://storage.googleapis.com/debian-osv/dsa-osv/DSA-385.json"
 			}
-		}
-	],
-	"references": [
-		{
-			"type": "ADVISORY",
-			"url": "https://www.debian.org/security/2003/dsa-385"
 		}
 	]
 }
